@@ -1,0 +1,47 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhirfli.dev/fhir/ig/cicada/CodeSystem/ValidAgeReason> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "ValidAgeReason"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This  code system <code>http://fhirfli.dev/fhir/ig/cicada/CodeSystem/ValidAgeReason</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">gracePeriod<a name=\"ValidAgeReason-gracePeriod\"> </a></td><td>Age: Grace Period</td><td>Age: Grace Period</td></tr><tr><td style=\"white-space:nowrap\">tooYoung<a name=\"ValidAgeReason-tooYoung\"> </a></td><td>Age: Too Young</td><td>Age: Too Young</td></tr><tr><td style=\"white-space:nowrap\">tooOld<a name=\"ValidAgeReason-tooOld\"> </a></td><td>Age: Too Old</td><td>Age: Too Old</td></tr></table></div>"
+  ] ; # 
+  fhir:url [ fhir:v "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/ValidAgeReason"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "ValidAgeReasonCS"] ; # 
+  fhir:title [ fhir:v "Valid Age Reason"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:date [ fhir:v "2024-05-06T15:25:10-04:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "FHIR-FLI"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "FHIR-FLI" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://fhirfli.dev" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Value set for reasons why a patient's age is considered valid/invalid for a vaccine."] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:count [ fhir:v "3"^^xsd:nonNegativeInteger] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "gracePeriod" ] ;
+     fhir:display [ fhir:v "Age: Grace Period" ] ;
+     fhir:definition [ fhir:v "Age: Grace Period" ]
+  ] [
+     fhir:code [ fhir:v "tooYoung" ] ;
+     fhir:display [ fhir:v "Age: Too Young" ] ;
+     fhir:definition [ fhir:v "Age: Too Young" ]
+  ] [
+     fhir:code [ fhir:v "tooOld" ] ;
+     fhir:display [ fhir:v "Age: Too Old" ] ;
+     fhir:definition [ fhir:v "Age: Too Old" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

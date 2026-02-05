@@ -1,0 +1,78 @@
+{
+  "resourceType": "ValueSet",
+  "status": "draft",
+  "name": "EvalReasonVS",
+  "id": "eval-reason",
+  "title": "Evaluation Reason",
+  "description": "The reason for the evaluation.",
+  "url": "http://fhirfli.dev/fhir/ig/cicada/ValueSet/eval-reason",
+  "compose": {
+    "include": [
+      {
+        "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/EvalReason",
+        "concept": [
+          {
+            "code": "noDateGiven",
+            "display": "No Date Given"
+          },
+          {
+            "code": "noCvx",
+            "display": "No Cvx"
+          },
+          {
+            "code": "expired",
+            "display": "Expired Product"
+          },
+          {
+            "code": "ageTooOld",
+            "display": "Age: Too Old"
+          },
+          {
+            "code": "ageTooYoung",
+            "display": "Age: Too Young"
+          },
+          {
+            "code": "inadvertentVaccine",
+            "display": "Inadvertent Vaccine"
+          },
+          {
+            "code": "notPreferableOrAllowable",
+            "display": "Not a preferable or allowable vaccine"
+          },
+          {
+            "code": "notRecommendedVolume",
+            "display": "Volume administered is less than recommended volume"
+          },
+          {
+            "code": "partialDose",
+            "display": "Partial Dose"
+          },
+          {
+            "code": "coldChainBreak",
+            "display": "Cold Chain Break"
+          },
+          {
+            "code": "recall",
+            "display": "Manufacturer Recall"
+          },
+          {
+            "code": "adverseStorage",
+            "display": "Adverse Storage"
+          },
+          {
+            "code": "intervalTooShort",
+            "display": "Interval: too short"
+          },
+          {
+            "code": "seriesAlreadyCompleted",
+            "display": "Series Already Completed"
+          },
+          {
+            "code": "liveVirusConflict",
+            "display": "Live Virus Conflict"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,633 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Evaluate Vaccine Dose Administered - The Cicada Vaccine Forecasting Engine and Guide v0.1.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+
+    <style type="text/css">h2{--heading-prefix:"5"}
+    h3,h4,h5,h6{--heading-prefix:"5"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+        <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">The Cicada Vaccine Forecasting Engine and Guide</span>
+            <br/>
+            <span style="display:inline-block;">0.1.0 - ci-build
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifacts</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Evaluate Vaccine Dose Administered</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">The Cicada Vaccine Forecasting Engine and Guide - Local Development build (v0.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href="http://fhirfli.dev/fhir/ig/cicada/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Evaluate Vaccine Dose Administered</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#evaluate-dose-administered-condition" id="markdown-toc-evaluate-dose-administered-condition">Evaluate Dose Administered Condition</a></li>
+  <li><a href="#evaluate-skip-condition" id="markdown-toc-evaluate-skip-condition">Evaluate Skip Condition</a></li>
+  <li><a href="#inadvertent-adminsitration" id="markdown-toc-inadvertent-adminsitration">Inadvertent Adminsitration</a></li>
+  <li><a href="#valid-age" id="markdown-toc-valid-age">Valid Age</a></li>
+  <li><a href="#evalute-preferable-interval" id="markdown-toc-evalute-preferable-interval">Evalute Preferable Interval</a></li>
+  <li><a href="#evalute-allowable-interval" id="markdown-toc-evalute-allowable-interval">Evalute Allowable Interval</a></li>
+  <li><a href="#evaluate-live-virus-conflicts" id="markdown-toc-evaluate-live-virus-conflicts">Evaluate Live Virus Conflicts</a></li>
+  <li><a href="#evaluate-for-preferable-vaccine" id="markdown-toc-evaluate-for-preferable-vaccine">Evaluate for Preferable Vaccine</a></li>
+  <li><a href="#evaluate-for-allowable-vaccine" id="markdown-toc-evaluate-for-allowable-vaccine">Evaluate for Allowable Vaccine</a></li>
+</ul>
+
+</div>
+<p>Table Evaluate Process Steps</p>
+<table border="1">
+  <tr>
+    <th>Activity</th>
+    <th>Goal</th>
+  </tr>
+  <tr>
+    <td>Evaluate Dose Administered Condition</td>
+    <td>Determine if this dose is expired or subpotent (some reason it shouldn't be evaluated)</td>
+  </tr>
+  <tr>
+    <td>Evaluate Conditional Skip</td>
+    <td>The goal of this step is to determine if the target dose can be skipped due to a patient’s age or immunization history</td>
+  </tr>
+  <tr>
+    <td>Evaluate For Inadvertent Vaccine</td>
+    <td>The goal of this step is to determine if the vaccine dose administered was an inadvertent administration due to the vaccine type that was administered.</td>
+  </tr>
+  <tr>
+    <td>Evaluate Age</td>
+    <td>Was it given at the appropriate age</td>
+  </tr>
+  <tr>
+    <td>Evaluate Preferable Interval</td>
+    <td>Was it given within the preferred interval from the last dose</td>
+  </tr>
+  <tr>
+    <td>Evaluate Allowable Interval</td>
+    <td>Was it given within the allowed interval from the last dose</td>
+  </tr>
+  <tr>
+    <td>Evaluate Live Virus Conflict</td>
+    <td>Is there a conflict between this dose and any live virus vaccines</td>
+  </tr>
+  <tr>
+    <td>Evaluate For Preferable Vaccine</td>
+    <td>If there are preferred vaccines available for this dose, is it one of them</td>
+  </tr>
+  <tr>
+    <td>Evaluate For Allowable Vaccine</td>
+    <td>Is it an allowed vaccine for this dose</td>
+  </tr>
+  <tr>
+    <td>Satisfy Target Dose</td>
+    <td>Is the target dose satisfied</td>
+  </tr>
+</table>
+
+<h3 id="evaluate-dose-administered-condition">Evaluate Dose Administered Condition</h3>
+
+<p>This one is pretty easy. Was the vaccine expired before it was given? Is the vaccine subpotent for some reason? If the answer is yes to either of these, the dose can’t be evaluated. Of note, we actually do this slightly earlier when we’re first sorting the vaccines. When we’re first assigning the vaccine doses given to the individual antigens, we bucket them at that point as either subpar or available for evaluation. This just saves us the trouble of looking at them as we evaluate each series, and we only look at the valid ones.</p>
+
+<p>Also, a brief note on how FHIR handles this. It’s very similar. With the [Immunization resource] there is a field where it notes the <code class="language-plaintext highlighter-rouge">expirationDate</code> of the vaccine, which can be compared to the <code class="language-plaintext highlighter-rouge">occurrence[x]</code> which is the date the vaccine was given. There is also a boolean field, <code class="language-plaintext highlighter-rouge">isSubpotent</code> that indicates whether or not it is. There is also a list of CodeableConcepts in a field <code class="language-plaintext highlighter-rouge">subpotentReason</code> that can list why. The CDC manual lists examples such as sub-potent and recall, FHIR uses an <a href="https://build.fhir.org/valueset-immunization-subpotent-reason.html">Immunization Subpotent Reason ValueSet</a> that contains partialdose, coldchainbreak, recall, adversestorage, and expired.</p>
+
+<h3 id="evaluate-skip-condition">Evaluate Skip Condition</h3>
+
+<p>Can the dose be skipped? Not the most complicated logic, but some of the terms, as usual, I found unclear. But the idea behind this is that there are times when you can skip a dose. This may be part of catch-up dosing, or the patient may have aged out. There is also skip logic, at both the set level and the condition level. Sets are lists of conditions. For a list of Conditions, we may have “AND” logic or “OR” logic. This is about what you’d expect. “AND” means that all of the listed conditions have to be true for that Set to be true. “OR” means that if any of the conditions are true, that set is true. Likewise, while it rarely happens, you can have set logic, also “AND” or “OR” with similar specifications. Now, the types of conditions that can define a skip come in 5 choices, so let’s look at all the options, shall we?</p>
+
+<h4 id="conditional-age"><strong>CONDITIONAL AGE</strong></h4>
+
+<table border="1">
+  <tr>
+    <th>Conditions</th>
+    <th colspan="2" style="text-align:center;">Rules</th>
+  </tr>
+  <tr>
+    <td>Is the Conditional Skip End Age Date &gt; Conditional Skip Reference Date &gt;= Conditional Skip Begin Age Date?</td>
+    <td style="text-align:center;">Yes</td>
+    <td style="text-align:center;">No</td>
+  </tr>
+  <tr>
+    <th>Outcomes</th>
+    <td style="text-align:center;">Yes, the condition is met</td>
+    <td style="text-align:center;">No, the condition is not met</td>
+  </tr>
+</table>
+
+<p>You should be given a start and end age for this one. I think what confused me about this one is that you need a reference date. Since you’re evaluating each targetDose in a series, there’s not exactly a reference date. So instead, what you do is take the next dose you’re evaluating and use the date administered as the reference date. If that lets you skip, you can skip that targetDose and use THE SAME dose administered that you were just looking at to see if it satisfies the next targetDose.</p>
+
+<p>Still confused? Try this. Dragonpox is a 3-dose vaccine series. Johnny got a dragonpox vaccine when he was 3 years old. For the first dose in the series, there is an age skip condition, with a start age of 2 years and end age of 4 years. Since Johnny’s first dose falls within this period, we can mark the 1st targetDose in the series as skipped. Then, using that same vaccine that Johnny got at 3 years old, we can see if that dose satisfies the 2nd targetDose in the series.</p>
+
+<h4 id="conditional-type-of-completed-series"><strong>CONDITIONAL TYPE OF COMPLETED SERIES</strong></h4>
+
+<table border="1">
+  <tr>
+    <th>Conditions</th>
+    <th>Rules</th>
+    <th></th>
+  </tr>
+  <tr>
+    <td>Does the Conditional Skip Series Group identify a Series Group with at least one series with a status of 'Complete'</td>
+    <td>Yes</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>Outcomes</td>
+    <td>Yes, the condition is met</td>
+    <td>No, the condition is not met</td>
+  </tr>
+</table>
+
+<p>This condition should specify a Series Group. If there is a series in that series group that is complete, this condition has been met.</p>
+
+<h4 id="conditional-type-of-interval"><strong>CONDITIONAL TYPE OF INTERVAL</strong></h4>
+
+<table border="1">
+  <tr>
+    <th>Conditions</th>
+    <th>Rules</th>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+    <td>Has at least one dose been administered to the patient?</td>
+    <td>Yes</td>
+    <td>No</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>Is the Conditional Skip Reference Date &ge; Conditional Skip Interval Date</td>
+    <td>Yes</td>
+    <td>No</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td>Outcomes</td>
+    <td>Yes, the condition is met</td>
+    <td>No, the condition is not met</td>
+    <td>No, the condition is not met</td>
+  </tr>
+</table>
+
+<p>An interval is given. Does the dose that you’re evaluating fall within the given interval compared to the last dose given? Note, this does not specify if the last dose needs to be valid or not, so I’m including them.</p>
+
+<h4 id="conditional-type-of-vaccine-count-by-age-or-date"><strong>CONDITIONAL TYPE OF VACCINE COUNT BY AGE OR DATE</strong></h4>
+
+<table border="1">
+  <tr>
+    <th>Dose Count Logic</th>
+    <th># Doses Given &gt; "doseCount"</th>
+    <th># Doses Given == "doseCount"</th>
+    <th># Doses Given &lt; "doseCount"</th>
+  </tr>
+  <tr>
+    <td>Greater Than</td>
+    <td>Yes, the condition is met</td>
+    <td>No, the condition is not met</td>
+    <td>No, the condition is not met</td>
+  </tr>
+  <tr>
+    <td>Equal</td>
+    <td>No, the condition is not met</td>
+    <td>Yes, the condition is met</td>
+    <td>No, the condition is not met</td>
+  </tr>
+  <tr>
+    <td>Less Than</td>
+    <td>No, the condition is not met</td>
+    <td>No, the condition is not met</td>
+    <td>Yes, the condition is met</td>
+  </tr>
+</table>
+
+<h4 id="count-by-age">Count by Age</h4>
+
+<p>There’s a list of CVX codes, a start and end age, a count, a specification of “greater than”, “lower than”, or “equal to”, and a specification of “VALID” or “TOTAL”. First, we must look back through the previous doses see if they are included in the list of CVX codes. If they are, we look to see if they have to be valid (“VALID”) or we can count any past doses (“TOTAL”). If all of that’s true, then we look to see if the dose was given before the end age, or after (or on) the start age. If the answer is yes, then we add that to our total count. Finally, once we have that tally, we check if that count is “greater than”, “lower than”, or “equal to” the count that is given. If the answer is again yes, then the condition is true.</p>
+
+<h4 id="count-by-date">Count by Date</h4>
+
+<p>Exactly the same as above, except that instead of specifying ages, it specifies dates. Otherwise, the
+logic is the same.</p>
+
+<h4 id="consistency-in-terms">Consistency in terms</h4>
+
+<p>This is one of my favorite things about the manual. While trying to maintain exact consistency in terminology, they have ended up with sentences such as:
+The Date Administered of the vaccine dose administered when evaluating a vaccine dose
+administered.</p>
+
+<p>“How much wood could a woodchuck chuck, if a woodchuck could chuck wood?” anyone?</p>
+
+<h3 id="inadvertent-adminsitration">Inadvertent Adminsitration</h3>
+
+<p>There’s a list of possible inadvertent vaccines for each seriesDose. If the dose you’re evaluating is one of them, then it’s marked as inadvertent and not valid, and we move onto the next dose that was given.</p>
+
+<h3 id="valid-age">Valid Age</h3>
+
+<p>Probably makes the most sense. It’s just calculated given date of birth, plus minimum and maximum ages. If the vaccine was given within that time period, it is valid under the age criteria.</p>
+<table border="1">
+  <tr>
+    <th>Conditions</th>
+    <th colspan="6">Rules</th>
+  </tr>
+  <tr>
+    <td>Date given &lt; absolute minimum age date?</td>
+    <td>Yes</td>
+    <td>No</td>
+    <td>No</td>
+    <td>No</td>
+    <td>No</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>Absolute minimum age date &le; date given &lt; minimum age date</td>
+    <td>No</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>No</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>Minimum age date &le; date given &lt; maximum age date</td>
+    <td>No</td>
+    <td>No</td>
+    <td>No</td>
+    <td>No</td>
+    <td>Yes</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>Date given &ge; maximum age date</td>
+    <td>No</td>
+    <td>No</td>
+    <td>No</td>
+    <td>No</td>
+    <td>No</td>
+    <td>Yes</td>
+  </tr>
+  <tr>
+    <td>First target dose in series</td>
+    <td>-</td>
+    <td>No</td>
+    <td>No</td>
+    <td>Yes</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td>Evaluation of the previous dose 'not valid' due to age or interval recommendations?</td>
+    <td>-</td>
+    <td>Yes</td>
+    <td>No</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td colspan="7"></td> <!-- Blank row for separation -->
+  </tr>
+  <tr>
+    <th colspan="7">Outcomes</th>
+  </tr>
+  <tr>
+    <th>Age Validity</th>
+    <td>Invalid</td>
+    <td>Invalid</td>
+    <td>Valid</td>
+    <td>Valid</td>
+    <td>Valid</td>
+    <td>Invalid</td>
+  </tr>
+  <tr>
+    <th>Evaluation reason</th>
+    <td>'too young'</td>
+    <td>'too young'</td>
+    <td>'grace period'</td>
+    <td>'grace period'</td>
+    <td>'valid age'</td>
+    <td>'too old'</td>
+  </tr>
+</table>
+
+<h3 id="evalute-preferable-interval">Evalute Preferable Interval</h3>
+
+<p>Intervals also make sense, they’re just more complicated. Currently I only perform logic for previous vaccine doses, not observations. There are certain conditions (such as pregnancy) that effect when to give certain vaccines. And the vaccines are supposed to be given a certain time period after the condition.</p>
+<table border="1">
+  <tr>
+    <th>Conditions</th>
+    <th colspan="5">Rules</th>
+  </tr>
+  <tr>
+    <td>Date Given &lt; absolute minimum interval date*</td>
+    <td>Yes</td>
+    <td>No</td>
+    <td>No</td>
+    <td>No</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>Absolute minimum interval date &le; <br /> date given &lt; minimum interval date</td>
+    <td>No</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>Minimum Interval date &le; date given</td>
+    <td>-</td>
+    <td>No</td>
+    <td>No</td>
+    <td>Yes</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td>Evaluation of the previous dose 'not valid' due to age or interval recommendations?</td>
+    <td>-</td>
+    <td>Yes</td>
+    <td>No</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <th>Interval Validity</th>
+    <td>Invalid</td>
+    <td>Invalid</td>
+    <td>Valid</td>
+    <td>Valid</td>
+    <td>Valid</td>
+  </tr>
+  <tr>
+    <th>Evaluation reason</th>
+    <td>'too soon'</td>
+    <td>'too soon'</td>
+    <td>'grace period'</td>
+    <td>'grace period'</td>
+    <td>'preferable interval'</td>
+  </tr>
+</table>
+
+<p>*As long as this requirement is met, the dose has an allowable interval, even if it is not a preferable interval.</p>
+
+<p>This is certainly more complicated logic. If the interval for that dose is null, then the interval is valid. If it is the first in the series it is also valid. Otherwise, it loops through the list of intervals, and first checks to see if the interval listed is from the previous dose or another dose, then checks the interval compared to that dose. Allowable and preferable intervals are closely intertwined, so the logic for both is encapsulated in the same function.</p>
+
+<h3 id="evalute-allowable-interval">Evalute Allowable Interval</h3>
+
+<p>This one’s easy. Is the date given less than the absolute minimum interval date? If so, then you’re good to go. The CDC instructions only refer to previous doses given for this one, not observations, so for the time being intervals from observations are not part of this logic. This logic IS however, baked into the above logic, since it’s part of that process as well.</p>
+
+<h3 id="evaluate-live-virus-conflicts">Evaluate Live Virus Conflicts</h3>
+
+<p>So now we get into where the manual relies too heavily on consistent terminology to make any sense:</p>
+
+<ol>
+  <li><em>Is the current vaccine type of the vaccine dose administered one of the supporting data defined live virus conflict current vaccine types?</em> Seriously? Who writes like that?</li>
+  <li><em>Is the vaccine type of the previous vaccine dose administered the same as one of the supporting data defined live virus conflict previous vaccine types when the current vaccine dose administered type is the same as the live virus conflict current vaccine type?</em> Drowning…in…adjectives…</li>
+</ol>
+
+<p>First, it’s helpful to know about the supporting data. In the supporting data, there is a list of live virus conflicts. Each of these has a current type and a previous type. And we apply these to the dose being evaluated.</p>
+
+<ol>
+  <li>So, the supporting data has a list of live virus conflict types. Is the type of the current dose being evaluated included in this list?</li>
+  <li>Make a list of each entry where the current type is the same as the dose being evaluated. For each of entry in this list, look at the type defined in the previous field. If it is indeed the same as the previously given dose, then you have to check if there is a conflict using the dates given in that entry.</li>
+</ol>
+
+<h3 id="evaluate-for-preferable-vaccine">Evaluate for Preferable Vaccine</h3>
+
+<p>There are vaccines that are allowed, and those that are preferred. This checks if the dose being evaluated is one of the latter. It’s mostly used for scoring the series during the next few steps, and it DOES makes use of the MVX codes.</p>
+
+<table border="1">
+  <tr>
+    <th>Conditions</th>
+    <th colspan="5">Rules</th>
+  </tr>
+  <tr>
+    <td>Is the dose given a preferable vaccine for the current target dose in the series? (cvx)</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>Preferable vaccine type begin age date &le; date administered &lt; preferable vaccine type end age date?</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>No</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td>Is the trade name of the current dose the same as the trade name of the preferable vaccine? (mvx)</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>No</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td>Is the volume of the current dose &ge; volume of the preferable vaccine</td>
+    <td>Yes</td>
+    <td>No</td>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <th>Outcomes</th>
+    <td>Preferable vaccine</td>
+    <td>Preferable Vaccine, but <br /> Eval Reason: volume administered &lt; than recommended volume</td>
+    <td>Not preferable, wrong trade name</td>
+    <td>Not preferable, given out of preferred age range</td>
+    <td>Not preferable vaccine</td>
+  </tr>
+</table>
+
+<h3 id="evaluate-for-allowable-vaccine">Evaluate for Allowable Vaccine</h3>
+
+<p>Similar to the above, except this time it has to be one of these to be considered a valid dose.</p>
+
+<table border="1">
+  <tr>
+    <th>Conditions</th>
+    <th colspan="3">Rules</th>
+  </tr>
+  <tr>
+    <td>Is the dose given an allowable vaccine for the current target dose in the series? (cvx)</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>Allowable vaccine type begin age date &le; date administered &lt; Allowable vaccine type end age date?</td>
+    <td>Yes</td>
+    <td>No</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <th>Outcomes</th>
+    <td>Allowable vaccine</td>
+    <td>Not allowable, given outside of allowable age range</td>
+    <td>Not allowable</td>
+  </tr>
+</table>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://fhirfli.dev">FHIR-FLI</a>.  Package cicada.ig#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, May 6, 2024 15:25-0400">2024-05-06</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+  
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

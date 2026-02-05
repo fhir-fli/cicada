@@ -1,0 +1,110 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "Vaccine",
+  "url": "http://example.org/fhir/StructureDefinition/Vaccine",
+  "name": "Vaccine",
+  "title": "Vaccine",
+  "status": "draft",
+  "description": "Simple vaccine to easily obtain needed information for forecasting",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Medication",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Medication",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Medication.extension",
+        "path": "Medication.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      },
+      {
+        "id": "Medication.extension:beginAge",
+        "path": "Medication.extension",
+        "sliceName": "beginAge",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/begin-age"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Medication.extension:endAge",
+        "path": "Medication.extension",
+        "sliceName": "endAge",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/end-age"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Medication.extension:vaccineType",
+        "path": "Medication.extension",
+        "sliceName": "vaccineType",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/vaccine-type"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Medication.identifier",
+        "path": "Medication.identifier",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "type"
+            }
+          ],
+          "rules": "open"
+        }
+      },
+      {
+        "id": "Medication.identifier:tradeName",
+        "path": "Medication.identifier",
+        "sliceName": "tradeName",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Medication.identifier:tradeName.type",
+        "path": "Medication.identifier.type",
+        "min": 1,
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "official"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

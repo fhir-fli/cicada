@@ -1,0 +1,49 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "preferred-vaccine-reason",
+  "url": "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/preferred-vaccine-reason",
+  "name": "PreferredVaccineReason",
+  "title": "Preferred Vaccine Reason",
+  "status": "draft",
+  "description": "Captures the reason why a particular vaccine is preferred.",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "Element"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "Preferred Vaccine Reason",
+        "definition": "Captures the reason why a particular vaccine is preferred."
+      },
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/preferred-vaccine-reason"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://fhirfli.dev/fhir/ig/cicada/ValueSet/preferred-allowed-reason"
+        }
+      }
+    ]
+  }
+}

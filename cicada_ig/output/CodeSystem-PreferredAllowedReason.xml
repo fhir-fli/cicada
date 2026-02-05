@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="PreferredAllowedReason"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p>This  code system <code>http://fhirfli.dev/fhir/ig/cicada/CodeSystem/PreferredAllowedReason</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap">notAPreferableOrAllowableVaccine<a name="PreferredAllowedReason-notAPreferableOrAllowableVaccine"> </a></td><td>Not a preferable or allowable vaccine</td><td>Not a preferable or allowable vaccine</td></tr><tr><td style="white-space:nowrap">wrongTradeName<a name="PreferredAllowedReason-wrongTradeName"> </a></td><td>Wrong trade name</td><td>Wrong trade name</td></tr><tr><td style="white-space:nowrap">lessThanRecommendedVolume<a name="PreferredAllowedReason-lessThanRecommendedVolume"> </a></td><td>Less than recommended volume</td><td>Less than recommended volume</td></tr><tr><td style="white-space:nowrap">administeredOutsideOfPreferredAgeRange<a name="PreferredAllowedReason-administeredOutsideOfPreferredAgeRange"> </a></td><td>Administered outside of preferred age range</td><td>Administered outside of preferred age range</td></tr><tr><td style="white-space:nowrap">noPreferredTypes<a name="PreferredAllowedReason-noPreferredTypes"> </a></td><td>No preferred types</td><td>No preferred types</td></tr><tr><td style="white-space:nowrap">noAllowedTypes<a name="PreferredAllowedReason-noAllowedTypes"> </a></td><td>No allowed types</td><td>No allowed types</td></tr></table></div>
+  </text>
+  <url value="http://fhirfli.dev/fhir/ig/cicada/CodeSystem/PreferredAllowedReason"/>
+  <version value="0.1.0"/>
+  <name value="PreferredAllowedReasonCS"/>
+  <title value="Reasons why certain doses are Preferred or Allowed doses"/>
+  <status value="draft"/>
+  <date value="2024-05-06T15:25:10-04:00"/>
+  <publisher value="FHIR-FLI"/>
+  <contact>
+    <name value="FHIR-FLI"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://fhirfli.dev"/>
+    </telecom>
+  </contact>
+  <description value="Reasons why certain doses are Preferred or Allowed doses"/>
+  <content value="complete"/>
+  <count value="6"/>
+  <concept>
+    <code value="notAPreferableOrAllowableVaccine"/>
+    <display value="Not a preferable or allowable vaccine"/>
+    <definition value="Not a preferable or allowable vaccine"/>
+  </concept>
+  <concept>
+    <code value="wrongTradeName"/>
+    <display value="Wrong trade name"/>
+    <definition value="Wrong trade name"/>
+  </concept>
+  <concept>
+    <code value="lessThanRecommendedVolume"/>
+    <display value="Less than recommended volume"/>
+    <definition value="Less than recommended volume"/>
+  </concept>
+  <concept>
+    <code value="administeredOutsideOfPreferredAgeRange"/>
+    <display value="Administered outside of preferred age range"/>
+    <definition value="Administered outside of preferred age range"/>
+  </concept>
+  <concept>
+    <code value="noPreferredTypes"/>
+    <display value="No preferred types"/>
+    <definition value="No preferred types"/>
+  </concept>
+  <concept>
+    <code value="noAllowedTypes"/>
+    <display value="No allowed types"/>
+    <definition value="No allowed types"/>
+  </concept>
+</CodeSystem>

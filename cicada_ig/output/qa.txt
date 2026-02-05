@@ -1,0 +1,524 @@
+CicadaIG : Validation Results
+=========================================
+
+err = 79, warn = 332, info = 8
+IG Publisher Version: 1.6.6
+Generated Mon May 06 15:26:34 EDT 2024. FHIR version 4.0.1 for cicada.ig#0.1.0 (canonical = http://fhirfli.dev/fhir/ig/cicada)
+ Build Errors : 0 / 5 / 0
+ /home/grey/dev/cicada/cicada_ig/fsh-generated/resources/CodeSystem-EvalReason : 0 / 2 / 2
+ /home/grey/dev/cicada/cicada_ig/fsh-generated/resources/CodeSystem-EvalStatus : 0 / 2 / 2
+ /home/grey/dev/cicada/cicada_ig/fsh-generated/resources/CodeSystem-IntervalReason : 0 / 2 / 2
+ /home/grey/dev/cicada/cicada_ig/fsh-generated/resources/CodeSystem-PreferredAllowedReason : 0 / 2 / 2
+ /home/grey/dev/cicada/cicada_ig/fsh-generated/resources/CodeSystem-VaccineGender : 0 / 2 / 2
+ /home/grey/dev/cicada/cicada_ig/fsh-generated/resources/CodeSystem-ValidAgeReason : 0 / 2 / 2
+ /home/grey/dev/cicada/cicada_ig/fsh-generated/resources/CodeSystem-cdsi-observation-codes : 0 / 3 / 2
+ /home/grey/dev/cicada/cicada_ig/fsh-generated/resources/ImplementationGuide-cicada.ig : 0 / 0 / 1
+ /home/grey/dev/cicada/cicada_ig/fsh-generated/resources/StructureDefinition-MedicationAdministrationProfile : 0 / 1 / 1
+ /home/grey/dev/cicada/cicada_ig/fsh-generated/resources/StructureDefinition-MedicationDispenseProfile : 0 / 1 / 2
+ /home/grey/dev/cicada/cicada_ig/fsh-generated/resources/StructureDefinition-MedicationRequestProfile : 0 / 1 / 1
+ /home/grey/dev/cicada/cicada_ig/fsh-generated/resources/StructureDefinition-MedicationStatementProfile : 0 / 1 / 1
+ /home/grey/dev/cicada/cicada_ig/fsh-generated/resources/StructureDefinition-ProcedureProfile : 0 / 1 / 1
+ /home/grey/dev/cicada/cicada_ig/fsh-generated/resources/StructureDefinition-ReactionProfile : 0 / 1 / 1
+ /home/grey/dev/cicada/cicada_ig/fsh-generated/resources/StructureDefinition-Vaccine : 2 / 3 / 1
+ /home/grey/dev/cicada/cicada_ig/fsh-generated/resources/StructureDefinition-VaccineConditionFhir : 0 / 1 / 1
+ /home/grey/dev/cicada/cicada_ig/fsh-generated/resources/StructureDefinition-VaccineObservationFhir : 0 / 1 / 1
+ /home/grey/dev/cicada/cicada_ig/fsh-generated/resources/StructureDefinition-allowed-interval-reason : 0 / 2 / 1
+ /home/grey/dev/cicada/cicada_ig/fsh-generated/resources/StructureDefinition-allowed-interval-status : 0 / 2 / 1
+ /home/grey/dev/cicada/cicada_ig/fsh-generated/resources/StructureDefinition-allowed-vaccine-reason : 0 / 2 / 1
+ /home/grey/dev/cicada/cicada_ig/fsh-generated/resources/StructureDefinition-allowed-vaccine-status : 0 / 2 / 1
+ /home/grey/dev/cicada/cicada_ig/fsh-generated/resources/StructureDefinition-antigen-supporting-data : 2 / 157 / 1
+ /home/grey/dev/cicada/cicada_ig/fsh-generated/resources/StructureDefinition-assessment-date : 0 / 2 / 1
+ /home/grey/dev/cicada/cicada_ig/fsh-generated/resources/StructureDefinition-begin-age : 0 / 2 / 1
+ /home/grey/dev/cicada/cicada_ig/fsh-generated/resources/StructureDefinition-end-age : 0 / 2 / 1
+ /home/grey/dev/cicada/cicada_ig/fsh-generated/resources/StructureDefinition-inadvertent-administration-status : 0 / 2 / 1
+ /home/grey/dev/cicada/cicada_ig/fsh-generated/resources/StructureDefinition-preferred-interval-reason : 0 / 2 / 1
+ /home/grey/dev/cicada/cicada_ig/fsh-generated/resources/StructureDefinition-preferred-interval-status : 0 / 2 / 1
+ /home/grey/dev/cicada/cicada_ig/fsh-generated/resources/StructureDefinition-preferred-vaccine-reason : 0 / 2 / 1
+ /home/grey/dev/cicada/cicada_ig/fsh-generated/resources/StructureDefinition-preferred-vaccine-status : 0 / 2 / 1
+ /home/grey/dev/cicada/cicada_ig/fsh-generated/resources/StructureDefinition-schedule-supporting-data : 2 / 98 / 1
+ /home/grey/dev/cicada/cicada_ig/fsh-generated/resources/StructureDefinition-vaccination-conflict : 0 / 2 / 1
+ /home/grey/dev/cicada/cicada_ig/fsh-generated/resources/StructureDefinition-vaccine-type : 0 / 2 / 1
+ /home/grey/dev/cicada/cicada_ig/fsh-generated/resources/StructureDefinition-valid-age-reason : 0 / 2 / 1
+ /home/grey/dev/cicada/cicada_ig/fsh-generated/resources/StructureDefinition-valid-age-status : 0 / 2 / 1
+ /home/grey/dev/cicada/cicada_ig/fsh-generated/resources/StructureDefinition-vax-dose : 3 / 1 / 1
+ /home/grey/dev/cicada/cicada_ig/fsh-generated/resources/StructureDefinition-vax-patient : 1 / 1 / 1
+ /home/grey/dev/cicada/cicada_ig/fsh-generated/resources/ValueSet-VaccineCodesCvxMvx : 0 / 3 / 1
+ /home/grey/dev/cicada/cicada_ig/fsh-generated/resources/ValueSet-eval-reason : 0 / 1 / 1
+ /home/grey/dev/cicada/cicada_ig/fsh-generated/resources/ValueSet-eval-status : 0 / 1 / 1
+ /home/grey/dev/cicada/cicada_ig/fsh-generated/resources/ValueSet-interval-reason : 0 / 1 / 1
+ /home/grey/dev/cicada/cicada_ig/fsh-generated/resources/ValueSet-preferred-allowed-reason : 0 / 1 / 1
+ /home/grey/dev/cicada/cicada_ig/fsh-generated/resources/ValueSet-procedures : 0 / 1 / 1
+ /home/grey/dev/cicada/cicada_ig/fsh-generated/resources/ValueSet-vaccine-condition-codes-snomed : 10 / 1 / 1
+ /home/grey/dev/cicada/cicada_ig/fsh-generated/resources/ValueSet-vaccine-gender : 0 / 1 / 1
+ /home/grey/dev/cicada/cicada_ig/fsh-generated/resources/ValueSet-vaccine-medication-codes-snomed : 0 / 1 / 1
+ /home/grey/dev/cicada/cicada_ig/fsh-generated/resources/ValueSet-valid-age-reason : 0 / 1 / 1
+ /home/grey/dev/cicada/cicada_ig/input/resources/map_vaccine_codes : 59 / 0 / 1
+</table>
+== n/a ==
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource ValueSet/VaccineCodesCvxMvx.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: 1: The HTML fragment 'ip-statements.xhtml' is not included anywhere in the produced implementation guide
+WARNING: 2: An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide
+WARNING: 3: An HTML fragment from the set [dependency-table.xhtml, dependency-table-short.xhtml] is not included anywhere in the produced implementation guide
+WARNING: 4: The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide
+== fsh-generated/resources/CodeSystem-EvalReason.json ==
+INFORMATION: CodeSystem/EvalReason: CodeSystem: CodeSystems SHOULD have a stated value for the caseSensitive element so that users know the status and meaning of the code system clearly
+WARNING: CodeSystem/EvalReason: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.experimental is mandatory, but it is not present
+WARNING: CodeSystem/EvalReason: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.caseSensitive is mandatory, but it is not present
+== fsh-generated/resources/CodeSystem-EvalStatus.json ==
+INFORMATION: CodeSystem/EvalStatus: CodeSystem: CodeSystems SHOULD have a stated value for the caseSensitive element so that users know the status and meaning of the code system clearly
+WARNING: CodeSystem/EvalStatus: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.experimental is mandatory, but it is not present
+WARNING: CodeSystem/EvalStatus: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.caseSensitive is mandatory, but it is not present
+== fsh-generated/resources/CodeSystem-IntervalReason.json ==
+INFORMATION: CodeSystem/IntervalReason: CodeSystem: CodeSystems SHOULD have a stated value for the caseSensitive element so that users know the status and meaning of the code system clearly
+WARNING: CodeSystem/IntervalReason: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.experimental is mandatory, but it is not present
+WARNING: CodeSystem/IntervalReason: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.caseSensitive is mandatory, but it is not present
+== fsh-generated/resources/CodeSystem-PreferredAllowedReason.json ==
+INFORMATION: CodeSystem/PreferredAllowedReason: CodeSystem: CodeSystems SHOULD have a stated value for the caseSensitive element so that users know the status and meaning of the code system clearly
+WARNING: CodeSystem/PreferredAllowedReason: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.experimental is mandatory, but it is not present
+WARNING: CodeSystem/PreferredAllowedReason: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.caseSensitive is mandatory, but it is not present
+== fsh-generated/resources/CodeSystem-VaccineGender.json ==
+INFORMATION: CodeSystem/VaccineGender: CodeSystem: CodeSystems SHOULD have a stated value for the caseSensitive element so that users know the status and meaning of the code system clearly
+WARNING: CodeSystem/VaccineGender: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.experimental is mandatory, but it is not present
+WARNING: CodeSystem/VaccineGender: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.caseSensitive is mandatory, but it is not present
+== fsh-generated/resources/CodeSystem-ValidAgeReason.json ==
+INFORMATION: CodeSystem/ValidAgeReason: CodeSystem: CodeSystems SHOULD have a stated value for the caseSensitive element so that users know the status and meaning of the code system clearly
+WARNING: CodeSystem/ValidAgeReason: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.experimental is mandatory, but it is not present
+WARNING: CodeSystem/ValidAgeReason: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.caseSensitive is mandatory, but it is not present
+== fsh-generated/resources/CodeSystem-cdsi-observation-codes.json ==
+WARNING: CodeSystem/cdsi-observation-codes: CodeSystem.concept[122].definition: value should not start or finish with whitespace 'Severe allergic reaction to rice protein '
+INFORMATION: CodeSystem/cdsi-observation-codes: CodeSystem: CodeSystems SHOULD have a stated value for the caseSensitive element so that users know the status and meaning of the code system clearly
+WARNING: CodeSystem/cdsi-observation-codes: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.experimental is mandatory, but it is not present
+WARNING: CodeSystem/cdsi-observation-codes: CodeSystem: Published code systems SHOULD conform to the ShareableCodeSystem profile, which says that the element CodeSystem.caseSensitive is mandatory, but it is not present
+== fsh-generated/resources/ImplementationGuide-cicada.ig.json ==
+== fsh-generated/resources/StructureDefinition-MedicationAdministrationProfile.json ==
+WARNING: StructureDefinition.where(url = 'http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/MedicationAdministrationProfile'): The Implementation Guide contains no examples for this profile
+== fsh-generated/resources/StructureDefinition-MedicationDispenseProfile.json ==
+INFORMATION: StructureDefinition/MedicationDispenseProfile: StructureDefinition.snapshot.element[29].mapping[0].map: The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
+WARNING: StructureDefinition.where(url = 'http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/MedicationDispenseProfile'): The Implementation Guide contains no examples for this profile
+== fsh-generated/resources/StructureDefinition-MedicationRequestProfile.json ==
+WARNING: StructureDefinition.where(url = 'http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/MedicationRequestProfile'): The Implementation Guide contains no examples for this profile
+== fsh-generated/resources/StructureDefinition-MedicationStatementProfile.json ==
+WARNING: StructureDefinition.where(url = 'http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/MedicationStatementProfile'): The Implementation Guide contains no examples for this profile
+== fsh-generated/resources/StructureDefinition-ProcedureProfile.json ==
+WARNING: StructureDefinition.where(url = 'http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/ProcedureProfile'): The Implementation Guide contains no examples for this profile
+== fsh-generated/resources/StructureDefinition-ReactionProfile.json ==
+WARNING: StructureDefinition.where(url = 'http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/ReactionProfile'): The Implementation Guide contains no examples for this profile
+== fsh-generated/resources/StructureDefinition-Vaccine.json ==
+ERROR: StructureDefinition.where(url = 'http://example.org/fhir/StructureDefinition/Vaccine'): Conformance resource /home/grey/dev/cicada/cicada_ig/fsh-generated/resources/StructureDefinition-Vaccine.json - the canonical URL (http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/Vaccine) does not match the URL (http://example.org/fhir/StructureDefinition/Vaccine)
+WARNING: StructureDefinition/Vaccine: StructureDefinition.snapshot.element[17].pattern.ofType(CodeableConcept).coding[0]: Coding has no system. A code with no system has no defined meaning, and it cannot be validated. A system should be provided
+WARNING: StructureDefinition/Vaccine: StructureDefinition.differential.element[7].pattern.ofType(CodeableConcept).coding[0]: Coding has no system. A code with no system has no defined meaning, and it cannot be validated. A system should be provided
+WARNING: StructureDefinition.where(url = 'http://example.org/fhir/StructureDefinition/Vaccine'): The Implementation Guide contains no examples for this profile
+ERROR: /home/grey/dev/cicada/cicada_ig/fsh-generated/resources/StructureDefinition-Vaccine: URL Mismatch http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/Vaccine vs http://example.org/fhir/StructureDefinition/Vaccine
+== fsh-generated/resources/StructureDefinition-VaccineConditionFhir.json ==
+WARNING: StructureDefinition.where(url = 'http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/VaccineConditionFhir'): The Implementation Guide contains no examples for this profile
+== fsh-generated/resources/StructureDefinition-VaccineObservationFhir.json ==
+WARNING: StructureDefinition.where(url = 'http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/VaccineObservationFhir'): The Implementation Guide contains no examples for this profile
+== fsh-generated/resources/StructureDefinition-allowed-interval-reason.json ==
+WARNING: StructureDefinition/allowed-interval-reason: StructureDefinition.context[0]: Review the extension type for allowed-interval-reason: extensions should not have a context of Element unless it's really intended that they can be used anywhere
+WARNING: StructureDefinition.where(url = 'http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/allowed-interval-reason'): The Implementation Guide contains no examples for this extension
+== fsh-generated/resources/StructureDefinition-allowed-interval-status.json ==
+WARNING: StructureDefinition/allowed-interval-status: StructureDefinition.context[0]: Review the extension type for allowed-interval-status: extensions should not have a context of Element unless it's really intended that they can be used anywhere
+WARNING: StructureDefinition.where(url = 'http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/allowed-interval-status'): The Implementation Guide contains no examples for this extension
+== fsh-generated/resources/StructureDefinition-allowed-vaccine-reason.json ==
+WARNING: StructureDefinition/allowed-vaccine-reason: StructureDefinition.context[0]: Review the extension type for allowed-vaccine-reason: extensions should not have a context of Element unless it's really intended that they can be used anywhere
+WARNING: StructureDefinition.where(url = 'http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/allowed-vaccine-reason'): The Implementation Guide contains no examples for this extension
+== fsh-generated/resources/StructureDefinition-allowed-vaccine-status.json ==
+WARNING: StructureDefinition/allowed-vaccine-status: StructureDefinition.context[0]: Review the extension type for allowed-vaccine-status: extensions should not have a context of Element unless it's really intended that they can be used anywhere
+WARNING: StructureDefinition.where(url = 'http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/allowed-vaccine-status'): The Implementation Guide contains no examples for this extension
+== fsh-generated/resources/StructureDefinition-antigen-supporting-data.json ==
+ERROR: StructureDefinition/antigen-supporting-data: StructureDefinition.type: The type antigen-supporting-data is not legal because it is not defined in the FHIR specification. Other types must have a namespace on them
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.snapshot.element[0]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.snapshot.element[1]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.snapshot.element[2]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.snapshot.element[3]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.snapshot.element[4]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.snapshot.element[5]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.snapshot.element[6]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.snapshot.element[7]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.snapshot.element[8]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.snapshot.element[9]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.snapshot.element[10]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.snapshot.element[11]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.snapshot.element[12]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.snapshot.element[13]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.snapshot.element[14]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.snapshot.element[15]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.snapshot.element[16]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.snapshot.element[17]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.snapshot.element[18]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.snapshot.element[19]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.snapshot.element[20]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.snapshot.element[21]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.snapshot.element[22]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.snapshot.element[23]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.snapshot.element[24]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.snapshot.element[25]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.snapshot.element[26]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.snapshot.element[27]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.snapshot.element[28]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.snapshot.element[29]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.snapshot.element[30]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.snapshot.element[31]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.snapshot.element[32]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.snapshot.element[33]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.snapshot.element[34]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.snapshot.element[35]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.snapshot.element[36]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.snapshot.element[37]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.snapshot.element[38]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.snapshot.element[39]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.snapshot.element[40]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.snapshot.element[41]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.snapshot.element[42]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.snapshot.element[43]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.snapshot.element[44]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.snapshot.element[45]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.snapshot.element[46]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.snapshot.element[47]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.snapshot.element[48]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.snapshot.element[49]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.snapshot.element[50]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.snapshot.element[51]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.snapshot.element[52]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.snapshot.element[53]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.snapshot.element[54]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.snapshot.element[55]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.snapshot.element[56]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.snapshot.element[57]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.snapshot.element[58]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.snapshot.element[59]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.snapshot.element[60]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.snapshot.element[61]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.snapshot.element[62]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.snapshot.element[63]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.snapshot.element[64]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.snapshot.element[65]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.snapshot.element[66]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.snapshot.element[67]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.snapshot.element[68]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.snapshot.element[69]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.snapshot.element[70]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.snapshot.element[71]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.snapshot.element[72]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.snapshot.element[73]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.snapshot.element[74]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.snapshot.element[75]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.snapshot.element[76]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.snapshot.element[77]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.snapshot.element[78]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.snapshot.element[79]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.snapshot.element[80]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.snapshot.element[81]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.snapshot.element[82]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.snapshot.element[83]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.snapshot.element[84]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.snapshot.element[85]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.snapshot.element[86]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.snapshot.element[87]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.snapshot.element[88]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.snapshot.element[89]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.snapshot.element[90]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.snapshot.element[91]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.snapshot.element[92]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.snapshot.element[93]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.snapshot.element[94]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.snapshot.element[95]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.snapshot.element[96]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.snapshot.element[97]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.snapshot.element[98]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.snapshot.element[99]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.differential.element[0]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.differential.element[1]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.differential.element[2]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.differential.element[3]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.differential.element[4]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.differential.element[5]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.differential.element[6]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.differential.element[7]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.differential.element[8]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.differential.element[9]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.differential.element[10]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.differential.element[11]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.differential.element[12]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.differential.element[13]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.differential.element[14]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.differential.element[15]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.differential.element[16]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.differential.element[17]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.differential.element[18]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.differential.element[19]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.differential.element[20]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.differential.element[21]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.differential.element[22]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.differential.element[23]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.differential.element[24]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.differential.element[25]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.differential.element[26]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.differential.element[27]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.differential.element[28]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.differential.element[29]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.differential.element[30]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.differential.element[31]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.differential.element[32]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.differential.element[33]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.differential.element[34]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.differential.element[35]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.differential.element[36]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.differential.element[37]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.differential.element[38]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.differential.element[39]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.differential.element[40]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.differential.element[41]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.differential.element[42]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.differential.element[43]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.differential.element[44]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.differential.element[45]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.differential.element[46]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.differential.element[47]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.differential.element[48]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.differential.element[49]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.differential.element[50]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.differential.element[51]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.differential.element[52]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.differential.element[53]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.differential.element[54]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/antigen-supporting-data: StructureDefinition.differential.element[55]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition.where(url = 'http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/antigen-supporting-data'): The Implementation Guide contains no examples for this profile
+ERROR: StructureDefinition: Error Rendering Resource: Not the right kind of structure to generate schematrons for
+== fsh-generated/resources/StructureDefinition-assessment-date.json ==
+WARNING: StructureDefinition/assessment-date: StructureDefinition.context[0]: Review the extension type for assessment-date: extensions should not have a context of Element unless it's really intended that they can be used anywhere
+WARNING: StructureDefinition.where(url = 'http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/assessment-date'): The Implementation Guide contains no examples for this extension
+== fsh-generated/resources/StructureDefinition-begin-age.json ==
+WARNING: StructureDefinition/begin-age: StructureDefinition.context[0]: Review the extension type for begin-age: extensions should not have a context of Element unless it's really intended that they can be used anywhere
+WARNING: StructureDefinition.where(url = 'http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/begin-age'): The Implementation Guide contains no examples for this extension
+== fsh-generated/resources/StructureDefinition-end-age.json ==
+WARNING: StructureDefinition/end-age: StructureDefinition.context[0]: Review the extension type for end-age: extensions should not have a context of Element unless it's really intended that they can be used anywhere
+WARNING: StructureDefinition.where(url = 'http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/end-age'): The Implementation Guide contains no examples for this extension
+== fsh-generated/resources/StructureDefinition-inadvertent-administration-status.json ==
+WARNING: StructureDefinition/inadvertent-administration-status: StructureDefinition.context[0]: Review the extension type for inadvertent-administration-status: extensions should not have a context of Element unless it's really intended that they can be used anywhere
+WARNING: StructureDefinition.where(url = 'http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/inadvertent-administration-status'): The Implementation Guide contains no examples for this extension
+== fsh-generated/resources/StructureDefinition-preferred-interval-reason.json ==
+WARNING: StructureDefinition/preferred-interval-reason: StructureDefinition.context[0]: Review the extension type for preferred-interval-reason: extensions should not have a context of Element unless it's really intended that they can be used anywhere
+WARNING: StructureDefinition.where(url = 'http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/preferred-interval-reason'): The Implementation Guide contains no examples for this extension
+== fsh-generated/resources/StructureDefinition-preferred-interval-status.json ==
+WARNING: StructureDefinition/preferred-interval-status: StructureDefinition.context[0]: Review the extension type for preferred-interval-status: extensions should not have a context of Element unless it's really intended that they can be used anywhere
+WARNING: StructureDefinition.where(url = 'http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/preferred-interval-status'): The Implementation Guide contains no examples for this extension
+== fsh-generated/resources/StructureDefinition-preferred-vaccine-reason.json ==
+WARNING: StructureDefinition/preferred-vaccine-reason: StructureDefinition.context[0]: Review the extension type for preferred-vaccine-reason: extensions should not have a context of Element unless it's really intended that they can be used anywhere
+WARNING: StructureDefinition.where(url = 'http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/preferred-vaccine-reason'): The Implementation Guide contains no examples for this extension
+== fsh-generated/resources/StructureDefinition-preferred-vaccine-status.json ==
+WARNING: StructureDefinition/preferred-vaccine-status: StructureDefinition.context[0]: Review the extension type for preferred-vaccine-status: extensions should not have a context of Element unless it's really intended that they can be used anywhere
+WARNING: StructureDefinition.where(url = 'http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/preferred-vaccine-status'): The Implementation Guide contains no examples for this extension
+== fsh-generated/resources/StructureDefinition-schedule-supporting-data.json ==
+ERROR: StructureDefinition/schedule-supporting-data: StructureDefinition.type: The type schedule-supporting-data is not legal because it is not defined in the FHIR specification. Other types must have a namespace on them
+WARNING: StructureDefinition/schedule-supporting-data: StructureDefinition.snapshot.element[0]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/schedule-supporting-data: StructureDefinition.snapshot.element[1]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/schedule-supporting-data: StructureDefinition.snapshot.element[2]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/schedule-supporting-data: StructureDefinition.snapshot.element[3]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/schedule-supporting-data: StructureDefinition.snapshot.element[4]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/schedule-supporting-data: StructureDefinition.snapshot.element[5]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/schedule-supporting-data: StructureDefinition.snapshot.element[6]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/schedule-supporting-data: StructureDefinition.snapshot.element[7]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/schedule-supporting-data: StructureDefinition.snapshot.element[8]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/schedule-supporting-data: StructureDefinition.snapshot.element[9]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/schedule-supporting-data: StructureDefinition.snapshot.element[10]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/schedule-supporting-data: StructureDefinition.snapshot.element[11]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/schedule-supporting-data: StructureDefinition.snapshot.element[12]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/schedule-supporting-data: StructureDefinition.snapshot.element[13]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/schedule-supporting-data: StructureDefinition.snapshot.element[14]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/schedule-supporting-data: StructureDefinition.snapshot.element[15]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/schedule-supporting-data: StructureDefinition.snapshot.element[16]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/schedule-supporting-data: StructureDefinition.snapshot.element[17]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/schedule-supporting-data: StructureDefinition.snapshot.element[18]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/schedule-supporting-data: StructureDefinition.snapshot.element[19]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/schedule-supporting-data: StructureDefinition.snapshot.element[20]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/schedule-supporting-data: StructureDefinition.snapshot.element[21]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/schedule-supporting-data: StructureDefinition.snapshot.element[22]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/schedule-supporting-data: StructureDefinition.snapshot.element[23]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/schedule-supporting-data: StructureDefinition.snapshot.element[24]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/schedule-supporting-data: StructureDefinition.snapshot.element[25]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/schedule-supporting-data: StructureDefinition.snapshot.element[26]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/schedule-supporting-data: StructureDefinition.snapshot.element[27]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/schedule-supporting-data: StructureDefinition.snapshot.element[28]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/schedule-supporting-data: StructureDefinition.snapshot.element[29]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/schedule-supporting-data: StructureDefinition.snapshot.element[30]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/schedule-supporting-data: StructureDefinition.snapshot.element[31]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/schedule-supporting-data: StructureDefinition.snapshot.element[32]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/schedule-supporting-data: StructureDefinition.snapshot.element[33]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/schedule-supporting-data: StructureDefinition.snapshot.element[34]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/schedule-supporting-data: StructureDefinition.snapshot.element[35]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/schedule-supporting-data: StructureDefinition.snapshot.element[36]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/schedule-supporting-data: StructureDefinition.snapshot.element[37]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/schedule-supporting-data: StructureDefinition.snapshot.element[38]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/schedule-supporting-data: StructureDefinition.snapshot.element[39]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/schedule-supporting-data: StructureDefinition.snapshot.element[40]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/schedule-supporting-data: StructureDefinition.snapshot.element[41]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/schedule-supporting-data: StructureDefinition.snapshot.element[42]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/schedule-supporting-data: StructureDefinition.snapshot.element[43]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/schedule-supporting-data: StructureDefinition.snapshot.element[44]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/schedule-supporting-data: StructureDefinition.snapshot.element[45]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/schedule-supporting-data: StructureDefinition.snapshot.element[46]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/schedule-supporting-data: StructureDefinition.snapshot.element[47]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/schedule-supporting-data: StructureDefinition.snapshot.element[48]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/schedule-supporting-data: StructureDefinition.snapshot.element[49]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/schedule-supporting-data: StructureDefinition.snapshot.element[50]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/schedule-supporting-data: StructureDefinition.snapshot.element[51]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/schedule-supporting-data: StructureDefinition.snapshot.element[52]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/schedule-supporting-data: StructureDefinition.snapshot.element[53]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/schedule-supporting-data: StructureDefinition.snapshot.element[54]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/schedule-supporting-data: StructureDefinition.snapshot.element[55]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/schedule-supporting-data: StructureDefinition.snapshot.element[56]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/schedule-supporting-data: StructureDefinition.snapshot.element[57]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/schedule-supporting-data: StructureDefinition.snapshot.element[58]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/schedule-supporting-data: StructureDefinition.snapshot.element[59]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/schedule-supporting-data: StructureDefinition.snapshot.element[60]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/schedule-supporting-data: StructureDefinition.snapshot.element[61]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/schedule-supporting-data: StructureDefinition.snapshot.element[62]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/schedule-supporting-data: StructureDefinition.differential.element[0]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/schedule-supporting-data: StructureDefinition.differential.element[1]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/schedule-supporting-data: StructureDefinition.differential.element[2]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/schedule-supporting-data: StructureDefinition.differential.element[3]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/schedule-supporting-data: StructureDefinition.differential.element[4]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/schedule-supporting-data: StructureDefinition.differential.element[5]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/schedule-supporting-data: StructureDefinition.differential.element[6]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/schedule-supporting-data: StructureDefinition.differential.element[7]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/schedule-supporting-data: StructureDefinition.differential.element[8]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/schedule-supporting-data: StructureDefinition.differential.element[9]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/schedule-supporting-data: StructureDefinition.differential.element[10]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/schedule-supporting-data: StructureDefinition.differential.element[11]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/schedule-supporting-data: StructureDefinition.differential.element[12]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/schedule-supporting-data: StructureDefinition.differential.element[13]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/schedule-supporting-data: StructureDefinition.differential.element[14]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/schedule-supporting-data: StructureDefinition.differential.element[15]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/schedule-supporting-data: StructureDefinition.differential.element[16]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/schedule-supporting-data: StructureDefinition.differential.element[17]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/schedule-supporting-data: StructureDefinition.differential.element[18]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/schedule-supporting-data: StructureDefinition.differential.element[19]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/schedule-supporting-data: StructureDefinition.differential.element[20]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/schedule-supporting-data: StructureDefinition.differential.element[21]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/schedule-supporting-data: StructureDefinition.differential.element[22]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/schedule-supporting-data: StructureDefinition.differential.element[23]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/schedule-supporting-data: StructureDefinition.differential.element[24]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/schedule-supporting-data: StructureDefinition.differential.element[25]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/schedule-supporting-data: StructureDefinition.differential.element[26]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/schedule-supporting-data: StructureDefinition.differential.element[27]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/schedule-supporting-data: StructureDefinition.differential.element[28]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/schedule-supporting-data: StructureDefinition.differential.element[29]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/schedule-supporting-data: StructureDefinition.differential.element[30]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/schedule-supporting-data: StructureDefinition.differential.element[31]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/schedule-supporting-data: StructureDefinition.differential.element[32]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition/schedule-supporting-data: StructureDefinition.differential.element[33]: Constraint failed: eld-20: 'Element names should be simple alphanumerics with a max of 64 characters, or code generation tools may be broken'
+WARNING: StructureDefinition.where(url = 'http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/schedule-supporting-data'): The Implementation Guide contains no examples for this profile
+ERROR: StructureDefinition: Error Rendering Resource: Not the right kind of structure to generate schematrons for
+== fsh-generated/resources/StructureDefinition-vaccination-conflict.json ==
+WARNING: StructureDefinition/vaccination-conflict: StructureDefinition.context[0]: Review the extension type for vaccination-conflict: extensions should not have a context of Element unless it's really intended that they can be used anywhere
+WARNING: StructureDefinition.where(url = 'http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/vaccination-conflict'): The Implementation Guide contains no examples for this extension
+== fsh-generated/resources/StructureDefinition-vaccine-type.json ==
+WARNING: StructureDefinition/vaccine-type: StructureDefinition.context[0]: Review the extension type for vaccine-type: extensions should not have a context of Element unless it's really intended that they can be used anywhere
+WARNING: StructureDefinition.where(url = 'http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/vaccine-type'): The Implementation Guide contains no examples for this extension
+== fsh-generated/resources/StructureDefinition-valid-age-reason.json ==
+WARNING: StructureDefinition/valid-age-reason: StructureDefinition.context[0]: Review the extension type for valid-age-reason: extensions should not have a context of Element unless it's really intended that they can be used anywhere
+WARNING: StructureDefinition.where(url = 'http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/valid-age-reason'): The Implementation Guide contains no examples for this extension
+== fsh-generated/resources/StructureDefinition-valid-age-status.json ==
+WARNING: StructureDefinition/valid-age-status: StructureDefinition.context[0]: Review the extension type for valid-age-status: extensions should not have a context of Element unless it's really intended that they can be used anywhere
+WARNING: StructureDefinition.where(url = 'http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/valid-age-status'): The Implementation Guide contains no examples for this extension
+== fsh-generated/resources/StructureDefinition-vax-dose.json ==
+ERROR: StructureDefinition.where(url = 'http://example.org/fhir/StructureDefinition/vax-dose'): Conformance resource /home/grey/dev/cicada/cicada_ig/fsh-generated/resources/StructureDefinition-vax-dose.json - the canonical URL (http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/vax-dose) does not match the URL (http://example.org/fhir/StructureDefinition/vax-dose)
+ERROR: Dose of a Vaccine.Immunization.status: Binding http://fhirfli.dev/fhir/ig/cicada/ValueSet/eval-status is not a subset of binding http://hl7.org/fhir/ValueSet/immunization-status|4.0.1
+WARNING: StructureDefinition.where(url = 'http://example.org/fhir/StructureDefinition/vax-dose'): The Implementation Guide contains no examples for this profile
+ERROR: /home/grey/dev/cicada/cicada_ig/fsh-generated/resources/StructureDefinition-vax-dose: URL Mismatch http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/vax-dose vs http://example.org/fhir/StructureDefinition/vax-dose
+== fsh-generated/resources/StructureDefinition-vax-patient.json ==
+ERROR: Vaccination Patient.Patient.gender: Binding http://fhirfli.dev/fhir/ig/cicada/ValueSet/vaccine-gender is not a subset of binding http://hl7.org/fhir/ValueSet/administrative-gender|4.0.1
+WARNING: StructureDefinition.where(url = 'http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/vax-patient'): The Implementation Guide contains no examples for this profile
+== fsh-generated/resources/ValueSet-VaccineCodesCvxMvx.json ==
+WARNING: ValueSet/VaccineCodesCvxMvx: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.title is mandatory, but it is not present
+WARNING: ValueSet/VaccineCodesCvxMvx: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present
+WARNING: ValueSet/VaccineCodesCvxMvx: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.description is mandatory, but it is not present
+== fsh-generated/resources/ValueSet-eval-reason.json ==
+WARNING: ValueSet/eval-reason: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present
+== fsh-generated/resources/ValueSet-eval-status.json ==
+WARNING: ValueSet/eval-status: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present
+== fsh-generated/resources/ValueSet-interval-reason.json ==
+WARNING: ValueSet/interval-reason: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present
+== fsh-generated/resources/ValueSet-preferred-allowed-reason.json ==
+WARNING: ValueSet/preferred-allowed-reason: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present
+== fsh-generated/resources/ValueSet-procedures.json ==
+WARNING: ValueSet/procedures: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present
+== fsh-generated/resources/ValueSet-vaccine-condition-codes-snomed.json ==
+ERROR: ValueSet/vaccine-condition-codes-snomed: ValueSet.compose.include[117].filter[0]: The value for a filter based on property 'concept' must be a valid code from the system 'http://snomed.info/sct', and '451301000124103' is not (Unknown code '451301000124103' in the CodeSystem 'http://snomed.info/sct' version 'http://snomed.info/sct/900000000000207008/version/20240201')
+ERROR: ValueSet/vaccine-condition-codes-snomed: ValueSet.compose.include[118].filter[0]: The value for a filter based on property 'concept' must be a valid code from the system 'http://snomed.info/sct', and '429301000124101' is not (Unknown code '429301000124101' in the CodeSystem 'http://snomed.info/sct' version 'http://snomed.info/sct/900000000000207008/version/20240201')
+ERROR: ValueSet/vaccine-condition-codes-snomed: ValueSet.compose.include[124].filter[0]: The value for a filter based on property 'concept' must be a valid code from the system 'http://snomed.info/sct', and '451331000124106' is not (Unknown code '451331000124106' in the CodeSystem 'http://snomed.info/sct' version 'http://snomed.info/sct/900000000000207008/version/20240201')
+ERROR: ValueSet/vaccine-condition-codes-snomed: ValueSet.compose.include[125].filter[0]: The value for a filter based on property 'concept' must be a valid code from the system 'http://snomed.info/sct', and '429311000124103' is not (Unknown code '429311000124103' in the CodeSystem 'http://snomed.info/sct' version 'http://snomed.info/sct/900000000000207008/version/20240201')
+ERROR: ValueSet/vaccine-condition-codes-snomed: ValueSet.compose.include[130].filter[0]: The value for a filter based on property 'concept' must be a valid code from the system 'http://snomed.info/sct', and '2219088009' is not (Unknown code '2219088009' in the CodeSystem 'http://snomed.info/sct' version 'http://snomed.info/sct/900000000000207008/version/20240201')
+ERROR: ValueSet/vaccine-condition-codes-snomed: ValueSet.compose.include[131].filter[0]: The value for a filter based on property 'concept' must be a valid code from the system 'http://snomed.info/sct', and '451111000124103' is not (Unknown code '451111000124103' in the CodeSystem 'http://snomed.info/sct' version 'http://snomed.info/sct/900000000000207008/version/20240201')
+ERROR: ValueSet/vaccine-condition-codes-snomed: ValueSet.compose.include[136].filter[0]: The value for a filter based on property 'concept' must be a valid code from the system 'http://snomed.info/sct', and '451291000124104' is not (Unknown code '451291000124104' in the CodeSystem 'http://snomed.info/sct' version 'http://snomed.info/sct/900000000000207008/version/20240201')
+ERROR: ValueSet/vaccine-condition-codes-snomed: ValueSet.compose.include[156].filter[0]: The value for a filter based on property 'concept' must be a valid code from the system 'http://snomed.info/sct', and '451281000124102' is not (Unknown code '451281000124102' in the CodeSystem 'http://snomed.info/sct' version 'http://snomed.info/sct/900000000000207008/version/20240201')
+ERROR: ValueSet/vaccine-condition-codes-snomed: ValueSet.compose.include[184].filter[0]: The value for a filter based on property 'concept' must be a valid code from the system 'http://snomed.info/sct', and '451291000124104' is not (Unknown code '451291000124104' in the CodeSystem 'http://snomed.info/sct' version 'http://snomed.info/sct/900000000000207008/version/20240201')
+WARNING: ValueSet/vaccine-condition-codes-snomed: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present
+ERROR: ValueSet.where(id = 'vaccine-condition-codes-snomed'): Error from http://tx.fhir.org/r4: The Snomed Concept 451301000124103 was not known
+== fsh-generated/resources/ValueSet-vaccine-gender.json ==
+WARNING: ValueSet/vaccine-gender: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present
+== fsh-generated/resources/ValueSet-vaccine-medication-codes-snomed.json ==
+WARNING: ValueSet/vaccine-medication-codes-snomed: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present
+== fsh-generated/resources/ValueSet-valid-age-reason.json ==
+WARNING: ValueSet/valid-age-reason: ValueSet: Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present
+== input/resources/map_vaccine_codes.json ==
+ERROR: StructureMap.where(url = 'http://fhirfli.dev/fhir/ig/cicada/StructureMap/map-vaccine-codes'): Conformance resource /home/grey/dev/cicada/cicada_ig/input/resources/map_vaccine_codes.json - the canonical URL (http://fhirfli.dev/fhir/ig/cicada/StructureMap/MapVaccineCodes) does not match the URL (http://fhirfli.dev/fhir/ig/cicada/StructureMap/map-vaccine-codes)
+ERROR: StructureMap.url: Resource id/url mismatch: MapVaccineCodes/http://fhirfli.dev/fhir/ig/cicada/StructureMap/map-vaccine-codes
+ERROR: StructureMap/MapVaccineCodes: StructureMap.group[0].input[0]: The type any is not known, so the paths cannot be validated
+ERROR: StructureMap/MapVaccineCodes: StructureMap.group[1].rule[0].target[0]: The target path tgt.status refers to the path Condition.status which is unknown
+ERROR: StructureMap/MapVaccineCodes: StructureMap.group[1].rule[1].target[0]: The target context 'code' is not known at this point
+ERROR: StructureMap/MapVaccineCodes: StructureMap.group[1].rule[1].dependent[0].variable[0]: The source parameter 'src'  was not found
+ERROR: StructureMap/MapVaccineCodes: StructureMap.group[1].rule[2].target[0]: The target path tgt.onsetDateTime refers to the path Condition.onsetDateTime which is unknown
+ERROR: StructureMap/MapVaccineCodes: StructureMap.group[1].rule[3].target[0]: The target path tgt.onsetPeriod refers to the path Condition.onsetPeriod which is unknown
+ERROR: StructureMap/MapVaccineCodes: StructureMap.group[1].rule[4].target[0]: The target path tgt.onsetDateTime refers to the path Condition.onsetDateTime which is unknown
+ERROR: StructureMap/MapVaccineCodes: StructureMap.group[2].rule[0].target[0]: The target path tgt.status refers to the path Condition.status which is unknown
+ERROR: StructureMap/MapVaccineCodes: StructureMap.group[2].rule[1].target[0]: The target context 'code' is not known at this point
+ERROR: StructureMap/MapVaccineCodes: StructureMap.group[2].rule[1].dependent[0].variable[0]: The source parameter 'src'  was not found
+ERROR: StructureMap/MapVaccineCodes: StructureMap.group[2].rule[2].target[0]: The target path tgt.onsetDateTime refers to the path Condition.onsetDateTime which is unknown
+ERROR: StructureMap/MapVaccineCodes: StructureMap.group[2].rule[3].target[0]: The target path tgt.onsetAge refers to the path Condition.onsetAge which is unknown
+ERROR: StructureMap/MapVaccineCodes: StructureMap.group[2].rule[4].target[0]: The target path tgt.onsetPeriod refers to the path Condition.onsetPeriod which is unknown
+ERROR: StructureMap/MapVaccineCodes: StructureMap.group[2].rule[5].target[0]: The target path tgt.onsetRange refers to the path Condition.onsetRange which is unknown
+ERROR: StructureMap/MapVaccineCodes: StructureMap.group[2].rule[6].target[0]: The target path tgt.onsetString refers to the path Condition.onsetString which is unknown
+ERROR: StructureMap/MapVaccineCodes: StructureMap.group[2].rule[7].target[0]: The target path tgt.abatementDateTime refers to the path Condition.abatementDateTime which is unknown
+ERROR: StructureMap/MapVaccineCodes: StructureMap.group[2].rule[8].target[0]: The target path tgt.abatementAge refers to the path Condition.abatementAge which is unknown
+ERROR: StructureMap/MapVaccineCodes: StructureMap.group[2].rule[9].target[0]: The target path tgt.abatementPeriod refers to the path Condition.abatementPeriod which is unknown
+ERROR: StructureMap/MapVaccineCodes: StructureMap.group[2].rule[10].target[0]: The target path tgt.abatementRange refers to the path Condition.abatementRange which is unknown
+ERROR: StructureMap/MapVaccineCodes: StructureMap.group[2].rule[11].target[0]: The target path tgt.abatementString refers to the path Condition.abatementString which is unknown
+ERROR: StructureMap/MapVaccineCodes: StructureMap.group[3].rule[0].target[0]: The target path tgt.status refers to the path Condition.status which is unknown
+ERROR: StructureMap/MapVaccineCodes: StructureMap.group[3].rule[1].target[0]: The target context 'code' is not known at this point
+ERROR: StructureMap/MapVaccineCodes: StructureMap.group[3].rule[1].dependent[0].variable[0]: The source parameter 'src'  was not found
+ERROR: StructureMap/MapVaccineCodes: StructureMap.group[3].rule[2].target[0]: The target path tgt.onsetDateTime refers to the path Condition.onsetDateTime which is unknown
+ERROR: StructureMap/MapVaccineCodes: StructureMap.group[3].rule[3].target[0]: The target path tgt.onsetAge refers to the path Condition.onsetAge which is unknown
+ERROR: StructureMap/MapVaccineCodes: StructureMap.group[3].rule[4].target[0]: The target path tgt.onsetPeriod refers to the path Condition.onsetPeriod which is unknown
+ERROR: StructureMap/MapVaccineCodes: StructureMap.group[3].rule[5].target[0]: The target path tgt.onsetRange refers to the path Condition.onsetRange which is unknown
+ERROR: StructureMap/MapVaccineCodes: StructureMap.group[3].rule[6].target[0]: The target path tgt.onsetString refers to the path Condition.onsetString which is unknown
+ERROR: StructureMap/MapVaccineCodes: StructureMap.group[4].rule[0].target[0]: The target path tgt.status refers to the path Condition.status which is unknown
+ERROR: StructureMap/MapVaccineCodes: StructureMap.group[4].rule[1].target[0]: The target context 'code' is not known at this point
+ERROR: StructureMap/MapVaccineCodes: StructureMap.group[4].rule[1].dependent[0].variable[0]: The source parameter 'src'  was not found
+ERROR: StructureMap/MapVaccineCodes: StructureMap.group[4].rule[2].target[0]: The target path tgt.onsetDateTime refers to the path Condition.onsetDateTime which is unknown
+ERROR: StructureMap/MapVaccineCodes: StructureMap.group[4].rule[3].target[0]: The target path tgt.onsetString refers to the path Condition.onsetString which is unknown
+ERROR: StructureMap/MapVaccineCodes: StructureMap.group[5].rule[0].target[0]: The target path tgt.status refers to the path Condition.status which is unknown
+ERROR: StructureMap/MapVaccineCodes: StructureMap.group[5].rule[1].target[0]: The target context 'code' is not known at this point
+ERROR: StructureMap/MapVaccineCodes: StructureMap.group[5].rule[1].dependent[0].variable[0]: The source parameter 'src'  was not found
+ERROR: StructureMap/MapVaccineCodes: StructureMap.group[6].rule[0].target[0]: The target path tgt.status refers to the path Condition.status which is unknown
+ERROR: StructureMap/MapVaccineCodes: StructureMap.group[6].rule[1].source[0]: The source path src.medicationCodeableConcept refers to the path MedicationStatement.medicationCodeableConcept which is unknown
+ERROR: StructureMap/MapVaccineCodes: StructureMap.group[6].rule[1].target[0]: The target context 'code' is not known at this point
+ERROR: StructureMap/MapVaccineCodes: StructureMap.group[6].rule[1].dependent[0].variable[0]: The source parameter 'src'  was not found
+ERROR: StructureMap/MapVaccineCodes: StructureMap.group[7].rule[0].target[0]: The target path tgt.status refers to the path Condition.status which is unknown
+ERROR: StructureMap/MapVaccineCodes: StructureMap.group[7].rule[1].source[0]: The source path src.medicationCodeableConcept refers to the path MedicationRequest.medicationCodeableConcept which is unknown
+ERROR: StructureMap/MapVaccineCodes: StructureMap.group[7].rule[1].target[0]: The target context 'code' is not known at this point
+ERROR: StructureMap/MapVaccineCodes: StructureMap.group[7].rule[1].dependent[0].variable[0]: The source parameter 'src'  was not found
+ERROR: StructureMap/MapVaccineCodes: StructureMap.group[7].rule[2].target[0]: The target path tgt.onsetDateTime refers to the path Condition.onsetDateTime which is unknown
+ERROR: StructureMap/MapVaccineCodes: StructureMap.group[8].rule[0].target[0]: The target path tgt.status refers to the path Condition.status which is unknown
+ERROR: StructureMap/MapVaccineCodes: StructureMap.group[8].rule[1].source[0]: The source path src.medicationCodeableConcept refers to the path MedicationAdministration.medicationCodeableConcept which is unknown
+ERROR: StructureMap/MapVaccineCodes: StructureMap.group[8].rule[1].target[0]: The target context 'code' is not known at this point
+ERROR: StructureMap/MapVaccineCodes: StructureMap.group[8].rule[1].dependent[0].variable[0]: The source parameter 'src'  was not found
+ERROR: StructureMap/MapVaccineCodes: StructureMap.group[8].rule[2].target[0]: The target path tgt.onsetDateTime refers to the path Condition.onsetDateTime which is unknown
+ERROR: StructureMap/MapVaccineCodes: StructureMap.group[8].rule[3].target[0]: The target path tgt.onsetPeriod refers to the path Condition.onsetPeriod which is unknown
+ERROR: StructureMap/MapVaccineCodes: StructureMap.group[9].rule[0].target[0]: The target path tgt.status refers to the path Condition.status which is unknown
+ERROR: StructureMap/MapVaccineCodes: StructureMap.group[9].rule[1].source[0]: The source path src.medicationCodeableConcept refers to the path MedicationDispense.medicationCodeableConcept which is unknown
+ERROR: StructureMap/MapVaccineCodes: StructureMap.group[9].rule[1].target[0]: The target context 'code' is not known at this point
+ERROR: StructureMap/MapVaccineCodes: StructureMap.group[9].rule[1].dependent[0].variable[0]: The source parameter 'src'  was not found
+ERROR: StructureMap/MapVaccineCodes: StructureMap.group[9].rule[2].target[0]: The target path tgt.onsetDateTime refers to the path Condition.onsetDateTime which is unknown
+ERROR: /home/grey/dev/cicada/cicada_ig/input/resources/map_vaccine_codes: URL Mismatch http://fhirfli.dev/fhir/ig/cicada/StructureMap/MapVaccineCodes vs http://fhirfli.dev/fhir/ig/cicada/StructureMap/map-vaccine-codes

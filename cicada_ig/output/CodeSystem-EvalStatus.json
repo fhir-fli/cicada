@@ -1,0 +1,45 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "EvalStatus",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This  code system <code>http://fhirfli.dev/fhir/ig/cicada/CodeSystem/EvalStatus</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">valid<a name=\"EvalStatus-valid\"> </a></td><td>Valid</td><td>Valid</td></tr><tr><td style=\"white-space:nowrap\">not_valid<a name=\"EvalStatus-not_valid\"> </a></td><td>Not Valid</td><td>Not Valid</td></tr><tr><td style=\"white-space:nowrap\">extraneous<a name=\"EvalStatus-extraneous\"> </a></td><td>Extraneous</td><td>Extraneous</td></tr><tr><td style=\"white-space:nowrap\">sub_standard<a name=\"EvalStatus-sub_standard\"> </a></td><td>Substandard</td><td>Substandard</td></tr></table></div>"
+  },
+  "url" : "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/EvalStatus",
+  "version" : "0.1.0",
+  "name" : "EvalStatusCS",
+  "title" : "Evaluation Status",
+  "status" : "draft",
+  "date" : "2024-05-06T15:25:10-04:00",
+  "publisher" : "FHIR-FLI",
+  "contact" : [{
+    "name" : "FHIR-FLI",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://fhirfli.dev"
+    }]
+  }],
+  "description" : "The status of the result of an evaluation.",
+  "content" : "complete",
+  "count" : 4,
+  "concept" : [{
+    "code" : "valid",
+    "display" : "Valid",
+    "definition" : "Valid"
+  },
+  {
+    "code" : "not_valid",
+    "display" : "Not Valid",
+    "definition" : "Not Valid"
+  },
+  {
+    "code" : "extraneous",
+    "display" : "Extraneous",
+    "definition" : "Extraneous"
+  },
+  {
+    "code" : "sub_standard",
+    "display" : "Substandard",
+    "definition" : "Substandard"
+  }]
+}

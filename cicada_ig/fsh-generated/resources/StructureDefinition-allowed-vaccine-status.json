@@ -1,0 +1,50 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "allowed-vaccine-status",
+  "url": "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/allowed-vaccine-status",
+  "name": "AllowedVaccineStatus",
+  "title": "Allowed Vaccine Status",
+  "status": "draft",
+  "description": "Indicates if the vaccine administered is allowed under certain conditions.",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "Element"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "Allowed Vaccine Status",
+        "definition": "Indicates if the vaccine administered is allowed under certain conditions."
+      },
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/allowed-vaccine-status"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ]
+      }
+    ]
+  }
+}

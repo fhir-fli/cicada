@@ -1,0 +1,43 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "draft",
+  "content": "complete",
+  "name": "PreferredAllowedReasonCS",
+  "id": "PreferredAllowedReason",
+  "title": "Reasons why certain doses are Preferred or Allowed doses",
+  "description": "Reasons why certain doses are Preferred or Allowed doses",
+  "url": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/PreferredAllowedReason",
+  "concept": [
+    {
+      "code": "notAPreferableOrAllowableVaccine",
+      "display": "Not a preferable or allowable vaccine",
+      "definition": "Not a preferable or allowable vaccine"
+    },
+    {
+      "code": "wrongTradeName",
+      "display": "Wrong trade name",
+      "definition": "Wrong trade name"
+    },
+    {
+      "code": "lessThanRecommendedVolume",
+      "display": "Less than recommended volume",
+      "definition": "Less than recommended volume"
+    },
+    {
+      "code": "administeredOutsideOfPreferredAgeRange",
+      "display": "Administered outside of preferred age range",
+      "definition": "Administered outside of preferred age range"
+    },
+    {
+      "code": "noPreferredTypes",
+      "display": "No preferred types",
+      "definition": "No preferred types"
+    },
+    {
+      "code": "noAllowedTypes",
+      "display": "No allowed types",
+      "definition": "No allowed types"
+    }
+  ],
+  "count": 6
+}

@@ -1,0 +1,47 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhirfli.dev/fhir/ig/cicada/CodeSystem/IntervalReason> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "IntervalReason"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This  code system <code>http://fhirfli.dev/fhir/ig/cicada/CodeSystem/IntervalReason</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">tooLate<a name=\"IntervalReason-tooLate\"> </a></td><td>Interval: too late</td><td>Interval: too late</td></tr><tr><td style=\"white-space:nowrap\">tooShort<a name=\"IntervalReason-tooShort\"> </a></td><td>Interval: too short</td><td>Interval: too short</td></tr><tr><td style=\"white-space:nowrap\">gracePeriod<a name=\"IntervalReason-gracePeriod\"> </a></td><td>Interval: grace period</td><td>Interval: grace period</td></tr></table></div>"
+  ] ; # 
+  fhir:url [ fhir:v "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/IntervalReason"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "IntervalReasonCS"] ; # 
+  fhir:title [ fhir:v "Interval Reason"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:date [ fhir:v "2024-05-06T15:25:10-04:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "FHIR-FLI"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "FHIR-FLI" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://fhirfli.dev" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "This value set includes codes for the reason an interval is considered to be invalid."] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:count [ fhir:v "3"^^xsd:nonNegativeInteger] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "tooLate" ] ;
+     fhir:display [ fhir:v "Interval: too late" ] ;
+     fhir:definition [ fhir:v "Interval: too late" ]
+  ] [
+     fhir:code [ fhir:v "tooShort" ] ;
+     fhir:display [ fhir:v "Interval: too short" ] ;
+     fhir:definition [ fhir:v "Interval: too short" ]
+  ] [
+     fhir:code [ fhir:v "gracePeriod" ] ;
+     fhir:display [ fhir:v "Interval: grace period" ] ;
+     fhir:definition [ fhir:v "Interval: grace period" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

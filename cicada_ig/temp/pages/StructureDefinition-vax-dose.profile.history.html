@@ -1,0 +1,21 @@
+---
+---
+<!-- get modelType -->
+{% include fragment-modelType.html id='vax-dose' %}
+
+{% include fragment-pagebegin.html %}
+
+<div style="counter-reset: section 10" class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Publish Box goes here</p><!--EndReleaseHeader-->
+  {% include fragment-profile-navtabs.html type='StructureDefinition' id='vax-dose' active='history' %}
+
+  <a name="root"> </a>
+  <h2 id="root">{{modelType}}: VaxDose - Change History</h2>
+{% include fragment-simpletable.html %}
+  <p>Changes in the vax-dose {{modelType | downcase}}.</p>
+
+  {%include StructureDefinition-vax-dose-history.xhtml%}
+
+</div>
+{% assign includetabscripts = 'true' %}
+{% include fragment-pageend.html %}

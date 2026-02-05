@@ -1,0 +1,28 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "draft",
+  "content": "complete",
+  "name": "ValidAgeReasonCS",
+  "id": "ValidAgeReason",
+  "title": "Valid Age Reason",
+  "description": "Value set for reasons why a patient's age is considered valid/invalid for a vaccine.",
+  "url": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/ValidAgeReason",
+  "concept": [
+    {
+      "code": "gracePeriod",
+      "display": "Age: Grace Period",
+      "definition": "Age: Grace Period"
+    },
+    {
+      "code": "tooYoung",
+      "display": "Age: Too Young",
+      "definition": "Age: Too Young"
+    },
+    {
+      "code": "tooOld",
+      "display": "Age: Too Old",
+      "definition": "Age: Too Old"
+    }
+  ],
+  "count": 3
+}

@@ -1,0 +1,33 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "draft",
+  "content": "complete",
+  "name": "VaccineGenderCS",
+  "id": "VaccineGender",
+  "title": "Vaccine Gender",
+  "description": "Value set for gender categories relevant to vaccination data.",
+  "url": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/VaccineGender",
+  "concept": [
+    {
+      "code": "female",
+      "display": "Female",
+      "definition": "Female"
+    },
+    {
+      "code": "transgender",
+      "display": "Transgender",
+      "definition": "Transgender"
+    },
+    {
+      "code": "unknown",
+      "display": "Unknown",
+      "definition": "Unknown"
+    },
+    {
+      "code": "male",
+      "display": "Male",
+      "definition": "Male"
+    }
+  ],
+  "count": 4
+}

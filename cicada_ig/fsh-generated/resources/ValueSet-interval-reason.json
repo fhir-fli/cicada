@@ -1,0 +1,30 @@
+{
+  "resourceType": "ValueSet",
+  "status": "draft",
+  "name": "IntervalReasonVS",
+  "id": "interval-reason",
+  "title": "Interval Reason",
+  "description": "This value set includes codes for the reason an interval is considered to be invalid.",
+  "url": "http://fhirfli.dev/fhir/ig/cicada/ValueSet/interval-reason",
+  "compose": {
+    "include": [
+      {
+        "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/IntervalReason",
+        "concept": [
+          {
+            "code": "tooLate",
+            "display": "Interval: too late"
+          },
+          {
+            "code": "tooShort",
+            "display": "Interval: too short"
+          },
+          {
+            "code": "gracePeriod",
+            "display": "Interval: grace period"
+          }
+        ]
+      }
+    ]
+  }
+}

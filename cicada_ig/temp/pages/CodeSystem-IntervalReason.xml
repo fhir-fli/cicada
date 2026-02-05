@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="IntervalReason"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p>This  code system <code>http://fhirfli.dev/fhir/ig/cicada/CodeSystem/IntervalReason</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap">tooLate<a name="IntervalReason-tooLate"> </a></td><td>Interval: too late</td><td>Interval: too late</td></tr><tr><td style="white-space:nowrap">tooShort<a name="IntervalReason-tooShort"> </a></td><td>Interval: too short</td><td>Interval: too short</td></tr><tr><td style="white-space:nowrap">gracePeriod<a name="IntervalReason-gracePeriod"> </a></td><td>Interval: grace period</td><td>Interval: grace period</td></tr></table></div>
+  </text>
+  <url value="http://fhirfli.dev/fhir/ig/cicada/CodeSystem/IntervalReason"/>
+  <version value="0.1.0"/>
+  <name value="IntervalReasonCS"/>
+  <title value="Interval Reason"/>
+  <status value="draft"/>
+  <date value="2024-05-06T15:25:10-04:00"/>
+  <publisher value="FHIR-FLI"/>
+  <contact>
+    <name value="FHIR-FLI"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://fhirfli.dev"/>
+    </telecom>
+  </contact>
+  <description value="This value set includes codes for the reason an interval is considered to be invalid."/>
+  <content value="complete"/>
+  <count value="3"/>
+  <concept>
+    <code value="tooLate"/>
+    <display value="Interval: too late"/>
+    <definition value="Interval: too late"/>
+  </concept>
+  <concept>
+    <code value="tooShort"/>
+    <display value="Interval: too short"/>
+    <definition value="Interval: too short"/>
+  </concept>
+  <concept>
+    <code value="gracePeriod"/>
+    <display value="Interval: grace period"/>
+    <definition value="Interval: grace period"/>
+  </concept>
+</CodeSystem>

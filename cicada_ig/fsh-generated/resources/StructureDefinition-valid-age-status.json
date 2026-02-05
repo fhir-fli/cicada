@@ -1,0 +1,50 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "valid-age-status",
+  "url": "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/valid-age-status",
+  "name": "ValidAgeStatus",
+  "title": "Valid Age Status",
+  "status": "draft",
+  "description": "Indicates if the vaccine was administered at the correct age.",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "Element"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "Valid Age Status",
+        "definition": "Indicates if the vaccine was administered at the correct age."
+      },
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/valid-age-status"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ]
+      }
+    ]
+  }
+}

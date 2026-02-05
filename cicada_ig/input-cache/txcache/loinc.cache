@@ -1,0 +1,374 @@
+-------------------------------------------------------------------------------------
+{"hierarchical" : false, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "inactive" : false,
+    "include" : [{
+      "system" : "http://loinc.org",
+      "concept" : [{
+        "code" : "LA22878-5",
+        "display" : "Male"
+      },
+      {
+        "code" : "LA22879-3",
+        "display" : "Female"
+      },
+      {
+        "code" : "LA22880-1",
+        "display" : "Transgender"
+      },
+      {
+        "code" : "LA22881-9",
+        "display" : "Transgender"
+      },
+      {
+        "code" : "LA22882-7",
+        "display" : "Transgender"
+      },
+      {
+        "code" : "LA46-8",
+        "display" : "Other"
+      },
+      {
+        "code" : "LA20384-6",
+        "display" : "Other"
+      }]
+    }]
+  }
+}}####
+e: {
+  "valueSet" : {
+  "resourceType" : "ValueSet",
+  "status" : "active",
+  "expansion" : {
+    "identifier" : "urn:uuid:cf30c785-f0e4-41ac-97f2-af1caff74464",
+    "timestamp" : "2024-04-29T14:45:58.801Z",
+    "total" : 7,
+    "offset" : 0,
+    "parameter" : [{
+      "name" : "excludeNested",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "offset",
+      "valueInteger" : 0
+    },
+    {
+      "name" : "count",
+      "valueInteger" : 1000
+    },
+    {
+      "name" : "used-codesystem",
+      "valueUri" : "http://loinc.org|2.77"
+    },
+    {
+      "name" : "version",
+      "valueUri" : "http://loinc.org|2.77"
+    }],
+    "contains" : [{
+      "system" : "http://loinc.org",
+      "code" : "LA22878-5",
+      "display" : "Identifies as male"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "LA22879-3",
+      "display" : "Identifies as female"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "LA22880-1",
+      "display" : "Female-to-male transsexual"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "LA22881-9",
+      "display" : "Male-to-female transsexual"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "LA22882-7",
+      "display" : "Identifies as non-conforming"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "LA46-8",
+      "display" : "Other"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "LA20384-6",
+      "display" : "Asked but unknown"
+    }]
+  }
+},
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "LA22878-5"
+}, "valueSet" :null, "langs":"en, en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "exampleOK":"true", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "x-system-cache-id",
+    "valueString" : "dc8fd4bc-091a-424a-8a3b-6198ef146891"
+  }]
+}}####
+v: {
+  "display" : "Identifies as male",
+  "code" : "LA22878-5",
+  "system" : "http://loinc.org",
+  "version" : "2.77",
+  "server" : "http://tx.fhir.org/r4",
+  "unknown-systems" : "",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "LA22879-3"
+}, "valueSet" :null, "langs":"en, en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "exampleOK":"true", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "x-system-cache-id",
+    "valueString" : "dc8fd4bc-091a-424a-8a3b-6198ef146891"
+  }]
+}}####
+v: {
+  "display" : "Identifies as female",
+  "code" : "LA22879-3",
+  "system" : "http://loinc.org",
+  "version" : "2.77",
+  "server" : "http://tx.fhir.org/r4",
+  "unknown-systems" : "",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "LA22880-1"
+}, "valueSet" :null, "langs":"en, en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "exampleOK":"true", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "x-system-cache-id",
+    "valueString" : "dc8fd4bc-091a-424a-8a3b-6198ef146891"
+  }]
+}}####
+v: {
+  "display" : "Female-to-male transsexual",
+  "code" : "LA22880-1",
+  "system" : "http://loinc.org",
+  "version" : "2.77",
+  "server" : "http://tx.fhir.org/r4",
+  "unknown-systems" : "",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "LA22881-9"
+}, "valueSet" :null, "langs":"en, en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "exampleOK":"true", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "x-system-cache-id",
+    "valueString" : "dc8fd4bc-091a-424a-8a3b-6198ef146891"
+  }]
+}}####
+v: {
+  "display" : "Male-to-female transsexual",
+  "code" : "LA22881-9",
+  "system" : "http://loinc.org",
+  "version" : "2.77",
+  "server" : "http://tx.fhir.org/r4",
+  "unknown-systems" : "",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "LA22882-7"
+}, "valueSet" :null, "langs":"en, en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "exampleOK":"true", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "x-system-cache-id",
+    "valueString" : "dc8fd4bc-091a-424a-8a3b-6198ef146891"
+  }]
+}}####
+v: {
+  "display" : "Identifies as non-conforming",
+  "code" : "LA22882-7",
+  "system" : "http://loinc.org",
+  "version" : "2.77",
+  "server" : "http://tx.fhir.org/r4",
+  "unknown-systems" : "",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "LA46-8"
+}, "valueSet" :null, "langs":"en, en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "exampleOK":"true", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "x-system-cache-id",
+    "valueString" : "dc8fd4bc-091a-424a-8a3b-6198ef146891"
+  }]
+}}####
+v: {
+  "display" : "Other",
+  "code" : "LA46-8",
+  "system" : "http://loinc.org",
+  "version" : "2.77",
+  "server" : "http://tx.fhir.org/r4",
+  "unknown-systems" : "",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "LA20384-6"
+}, "valueSet" :null, "langs":"en, en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "exampleOK":"true", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "x-system-cache-id",
+    "valueString" : "dc8fd4bc-091a-424a-8a3b-6198ef146891"
+  }]
+}}####
+v: {
+  "display" : "Asked but unknown",
+  "code" : "LA20384-6",
+  "system" : "http://loinc.org",
+  "version" : "2.77",
+  "server" : "http://tx.fhir.org/r4",
+  "unknown-systems" : "",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : false, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "inactive" : true,
+    "include" : [{
+      "system" : "http://loinc.org",
+      "concept" : [{
+        "code" : "LA22878-5",
+        "display" : "Male"
+      },
+      {
+        "code" : "LA22879-3",
+        "display" : "Female"
+      },
+      {
+        "code" : "LA22880-1",
+        "display" : "Transgender"
+      },
+      {
+        "code" : "LA22881-9",
+        "display" : "Transgender"
+      },
+      {
+        "code" : "LA22882-7",
+        "display" : "Transgender"
+      },
+      {
+        "code" : "LA46-8",
+        "display" : "Other"
+      },
+      {
+        "code" : "LA20384-6",
+        "display" : "Other"
+      }]
+    }]
+  }
+}}####
+e: {
+  "valueSet" : {
+  "resourceType" : "ValueSet",
+  "status" : "active",
+  "expansion" : {
+    "identifier" : "urn:uuid:bd448f4b-47f6-4536-9612-bd366f54d31a",
+    "timestamp" : "2024-04-29T14:46:07.519Z",
+    "total" : 7,
+    "offset" : 0,
+    "parameter" : [{
+      "name" : "excludeNested",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "offset",
+      "valueInteger" : 0
+    },
+    {
+      "name" : "count",
+      "valueInteger" : 1000
+    },
+    {
+      "name" : "used-codesystem",
+      "valueUri" : "http://loinc.org|2.77"
+    },
+    {
+      "name" : "version",
+      "valueUri" : "http://loinc.org|2.77"
+    }],
+    "contains" : [{
+      "system" : "http://loinc.org",
+      "code" : "LA22878-5",
+      "display" : "Identifies as male"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "LA22879-3",
+      "display" : "Identifies as female"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "LA22880-1",
+      "display" : "Female-to-male transsexual"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "LA22881-9",
+      "display" : "Male-to-female transsexual"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "LA22882-7",
+      "display" : "Identifies as non-conforming"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "LA46-8",
+      "display" : "Other"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "LA20384-6",
+      "display" : "Asked but unknown"
+    }]
+  }
+},
+  "error" : ""
+}
+-------------------------------------------------------------------------------------

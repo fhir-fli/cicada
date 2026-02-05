@@ -1,0 +1,60 @@
+{
+  "codeSystems" : [
+    {
+      "url" : "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/EvalReason",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "EvalReasonCS",
+      "title" : "Evaluation Reason",
+      "description" : "The reason for the evaluation."
+    },
+    {
+      "url" : "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/EvalStatus",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "EvalStatusCS",
+      "title" : "Evaluation Status",
+      "description" : "The status of the result of an evaluation."
+    },
+    {
+      "url" : "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/IntervalReason",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "IntervalReasonCS",
+      "title" : "Interval Reason",
+      "description" : "This value set includes codes for the reason an interval is considered to be invalid."
+    },
+    {
+      "url" : "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/PreferredAllowedReason",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "PreferredAllowedReasonCS",
+      "title" : "Reasons why certain doses are Preferred or Allowed doses",
+      "description" : "Reasons why certain doses are Preferred or Allowed doses"
+    },
+    {
+      "url" : "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/VaccineGender",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "VaccineGenderCS",
+      "title" : "Vaccine Gender",
+      "description" : "Value set for gender categories relevant to vaccination data."
+    },
+    {
+      "url" : "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/ValidAgeReason",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "ValidAgeReasonCS",
+      "title" : "Valid Age Reason",
+      "description" : "Value set for reasons why a patient's age is considered valid/invalid for a vaccine."
+    },
+    {
+      "url" : "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "CdsiObservationCodes",
+      "title" : "CDSI Observation Codes",
+      "description" : "Observations and Conditions that are important to indications or contraindications in vaccine forecasting"
+    }
+  ]
+}

@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Logical Specification Concepts - The Cicada Vaccine Forecasting Engine and Guide v0.1.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+
+    <style type="text/css">h2{--heading-prefix:"3"}
+    h3,h4,h5,h6{--heading-prefix:"3"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+        <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">The Cicada Vaccine Forecasting Engine and Guide</span>
+            <br/>
+            <span style="display:inline-block;">0.1.0 - ci-build
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifacts</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Logical Specification Concepts</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">The Cicada Vaccine Forecasting Engine and Guide - Local Development build (v0.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href="http://fhirfli.dev/fhir/ig/cicada/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Logical Specification Concepts</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#target-dose" id="markdown-toc-target-dose">Target Dose</a>    <ul>
+      <li><a href="#statuses" id="markdown-toc-statuses">Statuses</a></li>
+      <li><a href="#selecting-supporting-data" id="markdown-toc-selecting-supporting-data">Selecting Supporting Data</a></li>
+      <li><a href="#date-calculations" id="markdown-toc-date-calculations">Date Calculations</a></li>
+    </ul>
+  </li>
+</ul>
+
+</div>
+<p>There are a number of concepts that are involved in the evaluation and prediction of immunizations. Some of these terms make logical sense, but others do not. Here’s a description of some of them. Again, this was all taken from the <a href="https://www.cdc.gov/vaccines/programs/iis/cdsi.html">Clinical Decision Support for Immunization (CDSi)</a>.</p>
+
+<h2 id="target-dose">Target Dose</h2>
+
+<h4 id="a-targetdose-is-said-to-be-unsatisfied-until-a-dose-matches-all-of-its-required-criteria-at-that-time-the-targetdose-is-incremented-by-one-below-is-a-basic-example-from-the-cdc">A TargetDose is said to be ‘unsatisfied’ until a dose matches all of its required criteria. At that time, the TargetDose is incremented by one. Below is a basic example from the CDC</h4>
+
+<p>How a Vaccine Dose Administered Satisfies a Target Dose - TODO (add image) <img src="dose_satisfies_target.png" alt="Satisfy a Target Dose" /></p>
+
+<ul>
+  <li>Target dose - this is a term that makes some intrinsic sense, and then has been used in confusing ways, at least I thought so. The target dose is the next recommended dose in a series. When we evaluate past vaccines, we check to see if a particular vaccine that was given meets the requirements of the target dose. If it is, that target dose is considered complete, and we move onto the next target dose.</li>
+</ul>
+
+<h4 id="as-a-side-note-anytime-you-see-the-term-vaccine-dose-administered-replace-it-with-dose-given-and-it-makes-much-more-sense">*As a side note, anytime you see the term ‘Vaccine Dose Administered’ replace it with ‘Dose Given’, and it makes much more sense</h4>
+
+<h3 id="statuses">Statuses</h3>
+
+<div xmlns="http://www.w3.org/1999/xhtml">
+    <table border="1">
+        <caption>TABLE DOSE STATUS: recorded for each dose within each series</caption>
+        <tr>
+            <th>Status</th>
+            <th>Meaning</th>
+        </tr>
+        <tr>
+            <td>Extraneous</td>
+            <td>Meaning the dose doesn't count towards the series, but doesn't need to be repeated (including maximum age and extra doses)</td>
+        </tr>
+        <tr>
+            <td>Not Valid</td>
+            <td>Not administered according to ACIP recommendations, does not count towards the series, will need to be repeated</td>
+        </tr>
+        <tr>
+            <td>Sub-standard</td>
+            <td>Dose had a condition (e.g., expired, sub-potent, and recall) making it invalid, will need to be repeated</td>
+        </tr>
+        <tr>
+            <td>Valid</td>
+            <td>Meets ACIP requirements for that dose</td>
+        </tr>
+    </table>
+</div>
+
+<div xmlns="http://www.w3.org/1999/xhtml">
+    <table border="1">
+        <caption>TABLE DOSE STATUSES: recorded for each dose within each series.</caption>
+        <tr>
+            <th>Status</th>
+            <th>Meaning</th>
+        </tr>
+        <tr>
+            <td>Not Satisfied</td>
+            <td>No dose given meets the target dose requirements</td>
+        </tr>
+        <tr>
+            <td>Satisfied</td>
+            <td>A dose has been given that meets target dose requirements</td>
+        </tr>
+        <tr>
+            <td>Skipped</td>
+            <td>No dose given meets requirements, but due to age/previous doses/other reasons, this target dose does not need to be satisfied and is skipped</td>
+        </tr>
+    </table>
+</div>
+
+<div xmlns="http://www.w3.org/1999/xhtml">
+    <table border="1">
+        <caption>TABLE PATIENT SERIES STATUSES: recorded for each series within the antigen group.</caption>
+        <tr>
+            <th>Status</th>
+            <th>Meaning</th>
+        </tr>
+        <tr>
+            <td>Aged Out</td>
+            <td>Patient exceeded the maximum age prior to completing this series</td>
+        </tr>
+        <tr>
+            <td>Complete</td>
+            <td>Patient has met all of the ACIP recommendations for this series</td>
+        </tr>
+        <tr>
+            <td>Contraindicated</td>
+            <td>Patient history indicates no more immunizations in this series should be given</td>
+        </tr>
+        <tr>
+            <td>Immune</td>
+            <td>Patient has evidence of immunity, no further immunizations are needed for this series</td>
+        </tr>
+        <tr>
+            <td>Not Complete</td>
+            <td>Patient has not met all of the ACIP recommendations for this series</td>
+        </tr>
+        <tr>
+            <td>Not Recommended</td>
+            <td>Patient's immunization history provides sufficient immunity, and further doses in this series are not recommended</td>
+        </tr>
+    </table>
+</div>
+
+<h3 id="selecting-supporting-data">Selecting Supporting Data</h3>
+
+<div xmlns="http://www.w3.org/1999/xhtml">
+    <table border="1">
+        <caption>TABLE Is the Logical Component Relevant?</caption>
+        <tr>
+            <th>Business Rule ID</th>
+            <th>Business Rule</th>
+        </tr>
+        <tr>
+            <td>RELEVANT-1</td>
+            <td>A component applies to a previously given vaccination if there is no Effective Date or Cessation Date, they are both "n/a", or the date given is between the two</td>
+        </tr>
+        <tr>
+            <td>RELEVANT-2</td>
+            <td>A component applies to forecasting a vaccination if there is no Effective Date or Cessation Date, they are both "n/a", or the assessment date is between the two</td>
+        </tr>
+    </table>
+</div>
+
+<h3 id="date-calculations">Date Calculations</h3>
+
+<p>As anyone who has worked with dates can tell you, they’re a huge pain in the ass. I’ve created a dedicated class for dealing with them called VaxDate. The CDC has stated how they expect for dates to be processed, I’ve reproduced this below.</p>
+
+<div xmlns="http://www.w3.org/1999/xhtml">
+    <table border="1">
+        <caption>TABLE DATE RULES</caption>
+        <tr>
+            <th>Business Rule</th>
+            <th>Example</th>
+        </tr>
+        <tr>
+            <td>When adding only years, <br /> month and days stay constant</td>
+            <td>01/01/2000 + 3 years = 01/01/2003</td>
+        </tr>
+        <tr>
+            <td>When adding months, <br /> day must stay constant</td>
+            <td>01/01/2000 + 6 months = 07/01/2000 <br /> 11/01/2000 + 6 months = 05/01/2001</td>
+        </tr>
+        <tr>
+            <td>When adding weeks or days, <br /> add that total number of days <br /> to the existing date</td>
+            <td>01/01/2000 + 3 days = 01/04/2000 <br /> 01/01/2000 + 3 weeks = 01/22/2000 <br /> 02/01/2000 + 5 weeks = 03/07/2000 (leap year) <br /> 02/01/2001 + 5 weeks = 03/08/2001 (not a leap year)</td>
+        </tr>
+        <tr>
+            <td>Subtracting days is just subtracting <br /> days from the date I've implemented <br /> it as just negative addition</td>
+            <td>01/15/2000 – 4 days = 01/11/2000</td>
+        </tr>
+        <tr>
+            <td>If the calculated date isn't a real date, <br /> it is moved to the first of the next month</td>
+            <td>03/31/2000 + 6 months = 10/01/2000 (September 31 does not exist) <br /> 08/31/2000 + 6 months = 03/01/2001 (February 31 does not exist)</td>
+        </tr>
+        <tr>
+            <td>Date must be calculated by first years, <br /> then months, then weeks/days <br /> (ToDo: not sure I completely did this)</td>
+            <td>01/31/2000 + 6 months – 4 days = 07/27/2000</td>
+        </tr>
+    </table>
+</div>
+
+<p>It’s important to note, and it took me a while to catch onto their wording, there are ages and age dates. They are what they say they are, but I struggled with them at first. An age (or an interval) is a string description of a period of time (‘4 years’, ‘19 years - 4 days’, etc) these are supposed to be added (or subtracted) to a date (usually the DOB, although sometimes the date given of the previous dose). Also, these terms probably won’t all make as much sense until you work through it some more.</p>
+
+<div xmlns="http://www.w3.org/1999/xhtml">
+    <table border="1">
+        <caption>TABLE DATE RULES</caption>
+        <tr>
+            <th>Business Rule</th>
+            <th>Calculation</th>
+        </tr>
+        <tr>
+            <td>Maximum age date</td>
+            <td>DOB + maximum age</td>
+        </tr>
+        <tr>
+            <td>Latest recommended age date</td>
+            <td>DOB + latest recommended age</td>
+        </tr>
+        <tr>
+            <td>Earliest recommended age date</td>
+            <td>DOB + earliest recommended age</td>
+        </tr>
+        <tr>
+            <td>Minimum age date</td>
+            <td>DOB + minimum age</td>
+        </tr>
+        <tr>
+            <td>Absolute minimum age date</td>
+            <td>DOB + absolute minimum age</td>
+        </tr>
+        <tr>
+            <td>Allowable vaccine type begin age date</td>
+            <td>DOB + vaccine type begin age (only applied for allowable vaccines)</td>
+        </tr>
+        <tr>
+            <td>Allowable vaccine type end age date</td>
+            <td>DOB + vaccine type end age (only applied for allowable vaccines)</td>
+        </tr>
+        <tr>
+            <td>Contraindication begin age date</td>
+            <td>DOB + contraindication begin age (for either an antigen or a vaccine)</td>
+        </tr>
+        <tr>
+            <td>Contraindication end age date</td>
+            <td>DOB + contraindication end age (for either an antigen or a vaccine)</td>
+        </tr>
+        <tr>
+            <td>Indication begin age date</td>
+            <td>DOB + indication begin age</td>
+        </tr>
+        <tr>
+            <td>Indication end age date</td>
+            <td>DOB + indication end age</td>
+        </tr>
+        <tr>
+            <td colspan="2">Reference dose date: when evaluating intervals, sometimes this is from the previous dose, sometimes from another dose in the series (usually the first).</td>
+        </tr>
+        <tr>
+            <td colspan="2">Reference Dose Date: doses will have an interval entry/recommendation, this is calculated from the immediate previous dose if: <br /> - an interval entry with "FromPrevious" dose is "Y" <br /> - the dose being evaluated has status of 'Valid' or 'Not Valid' <br /> - (ToDo: current?) vaccine dose is not an inadvertent administration. <br /> "interval": [{"fromPrevious": "Y", "fromTargetDose": null, "minInt": "4 weeks"}]</td>
+        </tr>
+        <tr>
+            <td colspan="2">Reference dose date is calculated from a different dose in the series (and the interval is therefore calculated from the date of that dose) if the following are true: <br /> - the interval entry states immediate previous dose administered is 'N'<br /> - the interval entry target dose number is not null. <br /> "interval": [{"fromPrevious": "N", "fromTargetDose": "1","minInt": "6 months"}]</td>
+        </tr>
+        <tr>
+            <td colspan="2">Reference dose date is calculated from the most recent dose of the same vaccine type if the following are true: <br /> - the "FromPrevious" is "N" <br /> - "fromMostRecent" is not null <br /> - the current dose is not an inadvertent administration. <br /> "interval": [{"fromPrevious": "N", "fromTargetDose": null, "fromMostRecent": "21; 94; 121", "absMinInt": "0 days", "minInt": "8 weeks"}]</td>
+        </tr>
+        <tr>
+            <td colspan="2">Reference dose date is calculated from an observation if:<br />
+            - "fromPrevious" is "N" <br /> - "fromRelevantObs" is not null. <br /> - "interval": [{"fromPrevious": "N", "fromTargetDose": null, "fromMostRecent": null, "fromRelevantObs": {"text": "Date of hematopoietic stem cell transplant", "code": "171"}, "earliestRecInt": "6 months", "latestRecInt": "12 months"}]</td>
+        </tr>
+        <tr>
+            <td>Absolute minimum interval date</td>
+            <td>Date reference dose was given + absolute minimum interval.</td>
+        </tr>
+        <tr>
+            <td>Minimum interval date</td>
+            <td>Date reference dose was given + minimum interval.</td>
+        </tr>
+        <tr>
+            <td>Earliest recommended interval date</td>
+            <td>Date reference dose was given + earliest recommended interval.</td>
+        </tr>
+        <tr>
+            <td>Latest recommended interval date</td>
+            <td>Date reference dose was given + latest recommended interval.</td>
+        </tr>
+        <tr>
+            <td>Latest minimum interval date</td>
+            <td>If there is more than one interval specified (such as from previous and from a target dose), whichever comes later.</td>
+        </tr>
+        <tr>
+            <td>Conflict begin interval date</td>
+            <td>Date given of the conflicting dose + live virus conflict begin interval.</td>
+        </tr>
+        <tr>
+            <td>Conflict end interval date (valid conflicting dose)</td>
+            <td>Date given of the conflicting dose + live virus <strong>MINIMUM CONFLICT</strong> end interval if the conflicting dose <strong>HAS</strong> evaluation status of valid.</td>
+        </tr>
+        <tr>
+            <td>Conflict end interval date (invalid conflicting dose)</td>
+            <td>Date given of the conflicting dose + live virus <strong>CONFLICT</strong> end interval if the conflicting dose <strong>DOES NOT HAVE</strong> evaluation status of valid.</td>
+        </tr>
+        <tr>
+            <td>Latest conflict end interval date</td>
+            <td>If there is more than one interval specified (such as from previous and from an observation), whichever comes later.</td>
+        </tr>
+        <tr>
+            <td>Preferable vaccine type begin age date</td>
+            <td>DOB + vaccine type begin age of a preferable vaccine.</td>
+        </tr>
+        <tr>
+            <td>Conditional skip begin age date</td>
+            <td>DOB + begin age of the conditional skip condition.</td>
+        </tr>
+        <tr>
+            <td>Conditional skip end age date</td>
+            <td>DOB + end age of the conditional skip condition.</td>
+        </tr>
+        <tr>
+            <td>Conditional skip interval date</td>
+            <td>Date given of the immediate previous dose + interval of the conditional skip condition.</td>
+        </tr>
+    </table>
+</div>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://fhirfli.dev">FHIR-FLI</a>.  Package cicada.ig#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, May 6, 2024 15:25-0400">2024-05-06</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+  
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

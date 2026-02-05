@@ -1,0 +1,83 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhirfli.dev/fhir/ig/cicada/ValueSet/eval-reason> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "eval-reason"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>Include these codes as defined in <a href=\"CodeSystem-EvalReason.html\"><code>http://fhirfli.dev/fhir/ig/cicada/CodeSystem/EvalReason</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td><a href=\"CodeSystem-EvalReason.html#EvalReason-noDateGiven\">noDateGiven</a></td><td>No Date Given</td><td>No Date Given</td></tr><tr><td><a href=\"CodeSystem-EvalReason.html#EvalReason-noCvx\">noCvx</a></td><td>No Cvx</td><td>No Cvx</td></tr><tr><td><a href=\"CodeSystem-EvalReason.html#EvalReason-expired\">expired</a></td><td>Expired Product</td><td>Expired Product</td></tr><tr><td><a href=\"CodeSystem-EvalReason.html#EvalReason-ageTooOld\">ageTooOld</a></td><td>Age: Too Old</td><td>Age: Too Old</td></tr><tr><td><a href=\"CodeSystem-EvalReason.html#EvalReason-ageTooYoung\">ageTooYoung</a></td><td>Age: Too Young</td><td>Age: Too Young</td></tr><tr><td><a href=\"CodeSystem-EvalReason.html#EvalReason-inadvertentVaccine\">inadvertentVaccine</a></td><td>Inadvertent Vaccine</td><td>Inadvertent Vaccine</td></tr><tr><td><a href=\"CodeSystem-EvalReason.html#EvalReason-notPreferableOrAllowable\">notPreferableOrAllowable</a></td><td>Not a preferable or allowable vaccine</td><td>Not a preferable or allowable vaccine</td></tr><tr><td><a href=\"CodeSystem-EvalReason.html#EvalReason-notRecommendedVolume\">notRecommendedVolume</a></td><td>Volume administered is less than recommended volume</td><td>Volume administered is less than recommended volume</td></tr><tr><td><a href=\"CodeSystem-EvalReason.html#EvalReason-partialDose\">partialDose</a></td><td>Partial Dose</td><td>Partial Dose</td></tr><tr><td><a href=\"CodeSystem-EvalReason.html#EvalReason-coldChainBreak\">coldChainBreak</a></td><td>Cold Chain Break</td><td>Cold Chain Break</td></tr><tr><td><a href=\"CodeSystem-EvalReason.html#EvalReason-recall\">recall</a></td><td>Manufacturer Recall</td><td>Manufacturer Recall</td></tr><tr><td><a href=\"CodeSystem-EvalReason.html#EvalReason-adverseStorage\">adverseStorage</a></td><td>Adverse Storage</td><td>Adverse Storage</td></tr><tr><td><a href=\"CodeSystem-EvalReason.html#EvalReason-intervalTooShort\">intervalTooShort</a></td><td>Interval: too short</td><td>Interval: too short</td></tr><tr><td><a href=\"CodeSystem-EvalReason.html#EvalReason-seriesAlreadyCompleted\">seriesAlreadyCompleted</a></td><td>Series Already Completed</td><td>Series Already Completed</td></tr><tr><td><a href=\"CodeSystem-EvalReason.html#EvalReason-liveVirusConflict\">liveVirusConflict</a></td><td>Live Virus Conflict</td><td>Live Virus Conflict</td></tr></table></li></ul></div>"
+  ] ; # 
+  fhir:url [ fhir:v "http://fhirfli.dev/fhir/ig/cicada/ValueSet/eval-reason"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "EvalReasonVS"] ; # 
+  fhir:title [ fhir:v "Evaluation Reason"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:date [ fhir:v "2024-05-06T15:25:10-04:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "FHIR-FLI"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "FHIR-FLI" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://fhirfli.dev" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "The reason for the evaluation."] ; # 
+  fhir:compose [
+     fhir:include ( [
+       fhir:system [ fhir:v "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/EvalReason"^^xsd:anyURI ] ;
+       fhir:concept ( [
+         fhir:code [ fhir:v "noDateGiven" ] ;
+         fhir:display [ fhir:v "No Date Given" ]
+       ] [
+         fhir:code [ fhir:v "noCvx" ] ;
+         fhir:display [ fhir:v "No Cvx" ]
+       ] [
+         fhir:code [ fhir:v "expired" ] ;
+         fhir:display [ fhir:v "Expired Product" ]
+       ] [
+         fhir:code [ fhir:v "ageTooOld" ] ;
+         fhir:display [ fhir:v "Age: Too Old" ]
+       ] [
+         fhir:code [ fhir:v "ageTooYoung" ] ;
+         fhir:display [ fhir:v "Age: Too Young" ]
+       ] [
+         fhir:code [ fhir:v "inadvertentVaccine" ] ;
+         fhir:display [ fhir:v "Inadvertent Vaccine" ]
+       ] [
+         fhir:code [ fhir:v "notPreferableOrAllowable" ] ;
+         fhir:display [ fhir:v "Not a preferable or allowable vaccine" ]
+       ] [
+         fhir:code [ fhir:v "notRecommendedVolume" ] ;
+         fhir:display [ fhir:v "Volume administered is less than recommended volume" ]
+       ] [
+         fhir:code [ fhir:v "partialDose" ] ;
+         fhir:display [ fhir:v "Partial Dose" ]
+       ] [
+         fhir:code [ fhir:v "coldChainBreak" ] ;
+         fhir:display [ fhir:v "Cold Chain Break" ]
+       ] [
+         fhir:code [ fhir:v "recall" ] ;
+         fhir:display [ fhir:v "Manufacturer Recall" ]
+       ] [
+         fhir:code [ fhir:v "adverseStorage" ] ;
+         fhir:display [ fhir:v "Adverse Storage" ]
+       ] [
+         fhir:code [ fhir:v "intervalTooShort" ] ;
+         fhir:display [ fhir:v "Interval: too short" ]
+       ] [
+         fhir:code [ fhir:v "seriesAlreadyCompleted" ] ;
+         fhir:display [ fhir:v "Series Already Completed" ]
+       ] [
+         fhir:code [ fhir:v "liveVirusConflict" ] ;
+         fhir:display [ fhir:v "Live Virus Conflict" ]
+       ] )
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

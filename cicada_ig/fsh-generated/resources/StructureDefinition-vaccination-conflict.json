@@ -1,0 +1,50 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "vaccination-conflict",
+  "url": "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/vaccination-conflict",
+  "name": "VaccinationConflict",
+  "title": "Vaccination Conflict",
+  "status": "draft",
+  "description": "Indicates any conflicts with other vaccinations.",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "Element"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "Vaccination Conflict",
+        "definition": "Indicates any conflicts with other vaccinations."
+      },
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/vaccination-conflict"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ]
+      }
+    ]
+  }
+}

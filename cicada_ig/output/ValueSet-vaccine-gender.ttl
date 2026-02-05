@@ -1,0 +1,50 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhirfli.dev/fhir/ig/cicada/ValueSet/vaccine-gender> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "vaccine-gender"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>Include these codes as defined in <a href=\"CodeSystem-VaccineGender.html\"><code>http://fhirfli.dev/fhir/ig/cicada/CodeSystem/VaccineGender</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td><a href=\"CodeSystem-VaccineGender.html#VaccineGender-female\">female</a></td><td>Female</td><td>Female</td></tr><tr><td><a href=\"CodeSystem-VaccineGender.html#VaccineGender-transgender\">transgender</a></td><td>Transgender</td><td>Transgender</td></tr><tr><td><a href=\"CodeSystem-VaccineGender.html#VaccineGender-unknown\">unknown</a></td><td>Unknown</td><td>Unknown</td></tr><tr><td><a href=\"CodeSystem-VaccineGender.html#VaccineGender-male\">male</a></td><td>Male</td><td>Male</td></tr></table></li></ul></div>"
+  ] ; # 
+  fhir:url [ fhir:v "http://fhirfli.dev/fhir/ig/cicada/ValueSet/vaccine-gender"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "VaccineGenderVS"] ; # 
+  fhir:title [ fhir:v "Vaccine Gender"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:date [ fhir:v "2024-05-06T15:25:10-04:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "FHIR-FLI"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "FHIR-FLI" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://fhirfli.dev" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Value set for gender categories relevant to vaccination data."] ; # 
+  fhir:compose [
+     fhir:include ( [
+       fhir:system [ fhir:v "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/VaccineGender"^^xsd:anyURI ] ;
+       fhir:concept ( [
+         fhir:code [ fhir:v "female" ] ;
+         fhir:display [ fhir:v "Female" ]
+       ] [
+         fhir:code [ fhir:v "transgender" ] ;
+         fhir:display [ fhir:v "Transgender" ]
+       ] [
+         fhir:code [ fhir:v "unknown" ] ;
+         fhir:display [ fhir:v "Unknown" ]
+       ] [
+         fhir:code [ fhir:v "male" ] ;
+         fhir:display [ fhir:v "Male" ]
+       ] )
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

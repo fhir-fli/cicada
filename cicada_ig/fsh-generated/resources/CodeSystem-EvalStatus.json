@@ -1,0 +1,33 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "draft",
+  "content": "complete",
+  "name": "EvalStatusCS",
+  "id": "EvalStatus",
+  "title": "Evaluation Status",
+  "description": "The status of the result of an evaluation.",
+  "url": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/EvalStatus",
+  "concept": [
+    {
+      "code": "valid",
+      "display": "Valid",
+      "definition": "Valid"
+    },
+    {
+      "code": "not_valid",
+      "display": "Not Valid",
+      "definition": "Not Valid"
+    },
+    {
+      "code": "extraneous",
+      "display": "Extraneous",
+      "definition": "Extraneous"
+    },
+    {
+      "code": "sub_standard",
+      "display": "Substandard",
+      "definition": "Substandard"
+    }
+  ],
+  "count": 4
+}

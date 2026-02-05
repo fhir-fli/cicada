@@ -1,0 +1,50 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhirfli.dev/fhir/ig/cicada/ValueSet/eval-status> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "eval-status"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>Include these codes as defined in <a href=\"CodeSystem-EvalStatus.html\"><code>http://fhirfli.dev/fhir/ig/cicada/CodeSystem/EvalStatus</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td><a href=\"CodeSystem-EvalStatus.html#EvalStatus-valid\">valid</a></td><td>Valid</td><td>Valid</td></tr><tr><td><a href=\"CodeSystem-EvalStatus.html#EvalStatus-not_valid\">not_valid</a></td><td>Not Valid</td><td>Not Valid</td></tr><tr><td><a href=\"CodeSystem-EvalStatus.html#EvalStatus-extraneous\">extraneous</a></td><td>Extraneous</td><td>Extraneous</td></tr><tr><td><a href=\"CodeSystem-EvalStatus.html#EvalStatus-sub_standard\">sub_standard</a></td><td>Substandard</td><td>Substandard</td></tr></table></li></ul></div>"
+  ] ; # 
+  fhir:url [ fhir:v "http://fhirfli.dev/fhir/ig/cicada/ValueSet/eval-status"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "EvalStatusVS"] ; # 
+  fhir:title [ fhir:v "Evaluation Status Value Set"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:date [ fhir:v "2024-05-06T15:25:10-04:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "FHIR-FLI"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "FHIR-FLI" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://fhirfli.dev" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Value Set for the status of the result of an evaluation."] ; # 
+  fhir:compose [
+     fhir:include ( [
+       fhir:system [ fhir:v "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/EvalStatus"^^xsd:anyURI ] ;
+       fhir:concept ( [
+         fhir:code [ fhir:v "valid" ] ;
+         fhir:display [ fhir:v "Valid" ]
+       ] [
+         fhir:code [ fhir:v "not_valid" ] ;
+         fhir:display [ fhir:v "Not Valid" ]
+       ] [
+         fhir:code [ fhir:v "extraneous" ] ;
+         fhir:display [ fhir:v "Extraneous" ]
+       ] [
+         fhir:code [ fhir:v "sub_standard" ] ;
+         fhir:display [ fhir:v "Substandard" ]
+       ] )
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

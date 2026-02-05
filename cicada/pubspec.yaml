@@ -1,0 +1,20 @@
+name: cicada
+description: Immunization Forecasting Engine for use with Dart and FHIR
+version: 0.0.1
+homepage: https://github.com/Dokotela/cicada/cicada
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+  
+dependencies:
+  collection: ^1.19.0
+  fhir_r4: ^0.4.1
+  fhir_r4_bulk: ^0.4.0
+  riverpod: ^2.6.1
+  riverpod_annotation: ^2.6.1
+
+dev_dependencies:
+  test: ^1.25.15
+  build_runner: ^2.4.15
+  riverpod_generator: ^2.6.5
+  very_good_analysis: ^7.0.0

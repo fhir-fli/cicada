@@ -1,0 +1,454 @@
+-------------------------------------------------------------------------------------
+{"hierarchical" : false, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "inactive" : true,
+    "include" : [{
+      "system" : "http://hl7.org/fhir/sid/mvx"
+    }]
+  }
+}}####
+e: {
+  "valueSet" : {
+  "resourceType" : "ValueSet",
+  "status" : "active",
+  "expansion" : {
+    "identifier" : "urn:uuid:88efb39a-feda-4c4b-bcd4-1741ccea979a",
+    "timestamp" : "2024-05-06T19:26:03.794Z",
+    "total" : 82,
+    "offset" : 0,
+    "parameter" : [{
+      "name" : "excludeNested",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "offset",
+      "valueInteger" : 0
+    },
+    {
+      "name" : "count",
+      "valueInteger" : 1000
+    },
+    {
+      "name" : "used-codesystem",
+      "valueUri" : "http://hl7.org/fhir/sid/mvx|20201030"
+    },
+    {
+      "name" : "version",
+      "valueUri" : "http://hl7.org/fhir/sid/mvx|20201030"
+    }],
+    "contains" : [{
+      "system" : "http://hl7.org/fhir/sid/mvx",
+      "code" : "AB",
+      "display" : "Abbott Laboratories"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/mvx",
+      "code" : "ACA",
+      "display" : "Acambis, Inc"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/mvx",
+      "code" : "AD",
+      "display" : "Adams Laboratories, Inc."
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/mvx",
+      "code" : "ALP",
+      "display" : "Alpha Therapeutic Corporation"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/mvx",
+      "code" : "AR",
+      "display" : "Armour"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/mvx",
+      "code" : "AVB",
+      "display" : "Aventis Behring L.L.C."
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/mvx",
+      "code" : "AVI",
+      "display" : "Aviron"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/mvx",
+      "code" : "BA",
+      "display" : "Baxter Healthcare Corporation-inactive"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/mvx",
+      "code" : "BAH",
+      "display" : "Baxter Healthcare Corporation"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/mvx",
+      "code" : "BAY",
+      "display" : "Bayer Corporation"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/mvx",
+      "code" : "BP",
+      "display" : "Berna Products"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/mvx",
+      "code" : "BPC",
+      "display" : "Berna Products Corporation"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/mvx",
+      "code" : "BTP",
+      "display" : "Biotest Pharmaceuticals Corporation"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/mvx",
+      "code" : "MIP",
+      "display" : "Emergent BioSolutions"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/mvx",
+      "code" : "CSL",
+      "display" : "bioCSL"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/mvx",
+      "code" : "CNJ",
+      "display" : "Cangene Corporation"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/mvx",
+      "code" : "CMP",
+      "display" : "Celltech Medeva Pharmaceuticals"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/mvx",
+      "code" : "CEN",
+      "display" : "Centeon L.L.C."
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/mvx",
+      "code" : "CHI",
+      "display" : "Chiron Corporation"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/mvx",
+      "code" : "CON",
+      "display" : "Connaught"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/mvx",
+      "code" : "DVC",
+      "display" : "DynPort Vaccine Company, LLC"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/mvx",
+      "code" : "EVN",
+      "display" : "Evans Medical Limited"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/mvx",
+      "code" : "GEO",
+      "display" : "GeoVax Labs, Inc."
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/mvx",
+      "code" : "SKB",
+      "display" : "GlaxoSmithKline"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/mvx",
+      "code" : "GRE",
+      "display" : "Greer Laboratories, Inc."
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/mvx",
+      "code" : "IAG",
+      "display" : "Immuno International AG"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/mvx",
+      "code" : "IUS",
+      "display" : "Immuno-U.S., Inc."
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/mvx",
+      "code" : "INT",
+      "display" : "Intercell Biomedical"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/mvx",
+      "code" : "KGC",
+      "display" : "Korea Green Cross Corporation"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/mvx",
+      "code" : "LED",
+      "display" : "Lederle"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/mvx",
+      "code" : "MBL",
+      "display" : "Massachusetts Biologic Laboratories"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/mvx",
+      "code" : "MA",
+      "display" : "Massachusetts Public Health Biologic Laboratories"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/mvx",
+      "code" : "MED",
+      "display" : "MedImmune, Inc. (AstraZeneca)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/mvx",
+      "code" : "MSD",
+      "display" : "Merck and Co., Inc."
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/mvx",
+      "code" : "IM",
+      "display" : "Merieux"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/mvx",
+      "code" : "MIL",
+      "display" : "Miles"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/mvx",
+      "code" : "NAB",
+      "display" : "NABI"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/mvx",
+      "code" : "NYB",
+      "display" : "New York Blood Center"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/mvx",
+      "code" : "NAV",
+      "display" : "North American Vaccine, Inc."
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/mvx",
+      "code" : "NOV",
+      "display" : "Novartis Pharmaceutical Corporation"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/mvx",
+      "code" : "NVX",
+      "display" : "Novavax, Inc."
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/mvx",
+      "code" : "OTC",
+      "display" : "Organon Teknika Corporation"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/mvx",
+      "code" : "ORT",
+      "display" : "Ortho-clinical Diagnostics"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/mvx",
+      "code" : "PD",
+      "display" : "Parkedale Pharmaceuticals"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/mvx",
+      "code" : "PWJ",
+      "display" : "PowderJect Pharmaceuticals"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/mvx",
+      "code" : "PRX",
+      "display" : "Praxis Biologics"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/mvx",
+      "code" : "JPN",
+      "display" : "The Research Foundation for Microbial Diseases of Osaka University (BIKEN)"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/mvx",
+      "code" : "PMC",
+      "display" : "Sanofi Pasteur"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/mvx",
+      "code" : "SCL",
+      "display" : "Sclavo, Inc."
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/mvx",
+      "code" : "SOL",
+      "display" : "Solvay Pharmaceuticals"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/mvx",
+      "code" : "SI",
+      "display" : "Swiss Serum and Vaccine Inst."
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/mvx",
+      "code" : "TAL",
+      "display" : "Talecris Biotherapeutics"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/mvx",
+      "code" : "USA",
+      "display" : "United States Army Medical Research and Material Command"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/mvx",
+      "code" : "VXG",
+      "display" : "VaxGen"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/mvx",
+      "code" : "WA",
+      "display" : "Wyeth-Ayerst"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/mvx",
+      "code" : "WAL",
+      "display" : "Wyeth"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/mvx",
+      "code" : "ZLB",
+      "display" : "ZLB Behring"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/mvx",
+      "code" : "OTH",
+      "display" : "Other manufacturer"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/mvx",
+      "code" : "UNK",
+      "display" : "Unknown manufacturer"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/mvx",
+      "code" : "AKR",
+      "display" : "Akorn, Inc"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/mvx",
+      "code" : "PFR",
+      "display" : "Pfizer, Inc"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/mvx",
+      "code" : "BRR",
+      "display" : "Barr Laboratories"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/mvx",
+      "code" : "JNJ",
+      "display" : "Johnson and Johnson"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/mvx",
+      "code" : "PSC",
+      "display" : "Protein Sciences"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/mvx",
+      "code" : "IDB",
+      "display" : "ID Biomedical"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/mvx",
+      "code" : "GRF",
+      "display" : "Grifols"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/mvx",
+      "code" : "CRU",
+      "display" : "Crucell"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/mvx",
+      "code" : "KED",
+      "display" : "Kedrion Biopharma"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/mvx",
+      "code" : "PAX",
+      "display" : "PaxVax"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/mvx",
+      "code" : "MCM",
+      "display" : "MCM Vaccine Company"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/mvx",
+      "code" : "SEQ",
+      "display" : "Seqirus"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/mvx",
+      "code" : "VAL",
+      "display" : "Valneva"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/mvx",
+      "code" : "DYN",
+      "display" : "Dynaport"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/mvx",
+      "code" : "DVX",
+      "display" : "Dynavax, Inc."
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/mvx",
+      "code" : "DSI",
+      "display" : "Dispensing Solutions"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/mvx",
+      "code" : "REB",
+      "display" : "Rebel Distributors"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/mvx",
+      "code" : "VET",
+      "display" : "Vetter Pharma Fertigung GmbH & Co. KG"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/mvx",
+      "code" : "TVA",
+      "display" : "TEVA Pharmaceuticals USA"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/mvx",
+      "code" : "BN",
+      "display" : "Bavarian Nordic A/S"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/mvx",
+      "code" : "MOD",
+      "display" : "Moderna US, Inc."
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/mvx",
+      "code" : "ASZ",
+      "display" : "AstraZeneca"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/mvx",
+      "code" : "JSN",
+      "display" : "Janssen"
+    }]
+  }
+},
+  "error" : ""
+}
+-------------------------------------------------------------------------------------

@@ -1,0 +1,151 @@
+{
+  "codeSystems" : [
+    {
+      "url" : "http://fhirfli.dev/fhir/ig/cicada/ValueSet/VaccineCodesCvxMvx",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "VaccineCodesCvxMvx",
+      "title" : null,
+      "description" : null,
+      "systems" : ["http://hl7.org/fhir/sid/mvx", "http://hl7.org/fhir/sid/cvx"],
+      "uses" : {
+      },
+      "StructureDefinition-vax-dose.html" : "Dose of a Vaccine",
+      "StructureDefinition-MedicationRequestProfile.html" : "Medication Request Profile with Vaccine Codes",
+      "StructureDefinition-MedicationDispenseProfile.html" : "Medication Dispense Profile with Vaccine Codes",
+      "StructureDefinition-MedicationStatementProfile.html" : "Medication Statement Profile with Vaccine Codes",
+      "StructureDefinition-ReactionProfile.html" : "Allergy Intolerance Profile with Vaccine Codes",
+      "StructureDefinition-MedicationAdministrationProfile.html" : "Medication Administration Profile with Vaccine Codes"
+    },
+    {
+      "url" : "http://fhirfli.dev/fhir/ig/cicada/ValueSet/eval-reason",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "EvalReasonVS",
+      "title" : "Evaluation Reason",
+      "description" : "The reason for the evaluation.",
+      "systems" : ["http://fhirfli.dev/fhir/ig/cicada/CodeSystem/EvalReason"],
+      "uses" : {
+      },
+      "StructureDefinition-vax-dose.html" : "Dose of a Vaccine"
+    },
+    {
+      "url" : "http://fhirfli.dev/fhir/ig/cicada/ValueSet/eval-status",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "EvalStatusVS",
+      "title" : "Evaluation Status Value Set",
+      "description" : "Value Set for the status of the result of an evaluation.",
+      "systems" : ["http://fhirfli.dev/fhir/ig/cicada/CodeSystem/EvalStatus"],
+      "uses" : {
+      },
+      "StructureDefinition-vax-dose.html" : "Dose of a Vaccine"
+    },
+    {
+      "url" : "http://fhirfli.dev/fhir/ig/cicada/ValueSet/interval-reason",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "IntervalReasonVS",
+      "title" : "Interval Reason",
+      "description" : "This value set includes codes for the reason an interval is considered to be invalid.",
+      "systems" : [
+        "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/IntervalReason"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-preferred-interval-reason.html" : "Preferred Interval Reason",
+      "StructureDefinition-allowed-interval-reason.html" : "Allowed Interval Reason"
+    },
+    {
+      "url" : "http://fhirfli.dev/fhir/ig/cicada/ValueSet/preferred-allowed-reason",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "PreferredAllowedReasonVS",
+      "title" : "Reasons why certain doses are Preferred or Allowed doses",
+      "description" : "Reasons why certain doses are Preferred or Allowed doses",
+      "systems" : [
+        "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/PreferredAllowedReason"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-allowed-vaccine-reason.html" : "Allowed Vaccine Reason",
+      "StructureDefinition-preferred-vaccine-reason.html" : "Preferred Vaccine Reason"
+    },
+    {
+      "url" : "http://fhirfli.dev/fhir/ig/cicada/ValueSet/procedures",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "ImmunizationProceduresSnomed",
+      "title" : "Procedures",
+      "description" : "Comprehensive Value Set for medical procedures based on SNOMED CT codes.",
+      "systems" : ["http://snomed.info/sct"],
+      "uses" : {
+      },
+      "StructureDefinition-ProcedureProfile.html" : "Immunization Procedures Profile"
+    },
+    {
+      "url" : "http://fhirfli.dev/fhir/ig/cicada/ValueSet/vaccine-condition-codes-snomed",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "VaccineConditionCodesSnomed",
+      "title" : "Vaccine Condition Codes",
+      "description" : "Value set for conditions based on SNOMED CT, that may impact immunization.",
+      "systems" : ["http://snomed.info/sct"],
+      "uses" : {
+      },
+      "StructureDefinition-VaccineConditionFhir.html" : "Condition Profile with Vaccine Condition Codes",
+      "StructureDefinition-VaccineObservationFhir.html" : "Condition Profile with Vaccine Condition Codes"
+    },
+    {
+      "url" : "http://fhirfli.dev/fhir/ig/cicada/ValueSet/vaccine-gender",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "VaccineGenderVS",
+      "title" : "Vaccine Gender",
+      "description" : "Value set for gender categories relevant to vaccination data.",
+      "systems" : ["http://fhirfli.dev/fhir/ig/cicada/CodeSystem/VaccineGender"],
+      "uses" : {
+      },
+      "StructureDefinition-vax-patient.html" : "Vaccination Patient"
+    },
+    {
+      "url" : "http://fhirfli.dev/fhir/ig/cicada/ValueSet/vaccine-medication-codes-snomed",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "VaccineMedicationCodesSnomed",
+      "title" : "Medications",
+      "description" : "Value set for medications and substances based on SNOMED CT, including both active ingredients and marketed products.",
+      "systems" : ["http://snomed.info/sct"]
+    },
+    {
+      "url" : "http://fhirfli.dev/fhir/ig/cicada/ValueSet/valid-age-reason",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "ValidAgeReasonVS",
+      "title" : "Valid Age Reason",
+      "description" : "Value set for reasons why a patient's age is considered valid/invalid for a vaccine.",
+      "systems" : [
+        "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/ValidAgeReason"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-valid-age-reason.html" : "Valid Age Reason"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/immunization-subpotent-reason",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "ImmunizationSubpotentReason",
+      "title" : "Immunization Subpotent Reason",
+      "description" : "The value set to instantiate this attribute should be drawn from a terminologically robust code system that consists of or contains concepts to support describing the reason why a dose is considered to be subpotent. This value set is provided as a suggestive example.",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/immunization-subpotent-reason"
+      ],
+      "oids" : ["2.16.840.1.113883.4.642.3.993"],
+      "sources" : ["2.16.840.1.113883.4.642.3.993"],
+      "uses" : {
+      },
+      "StructureDefinition-vax-dose.html" : "Dose of a Vaccine"
+    }
+  ]
+}

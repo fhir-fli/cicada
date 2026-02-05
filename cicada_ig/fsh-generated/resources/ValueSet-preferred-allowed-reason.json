@@ -1,0 +1,42 @@
+{
+  "resourceType": "ValueSet",
+  "status": "draft",
+  "name": "PreferredAllowedReasonVS",
+  "id": "preferred-allowed-reason",
+  "title": "Reasons why certain doses are Preferred or Allowed doses",
+  "description": "Reasons why certain doses are Preferred or Allowed doses",
+  "url": "http://fhirfli.dev/fhir/ig/cicada/ValueSet/preferred-allowed-reason",
+  "compose": {
+    "include": [
+      {
+        "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/PreferredAllowedReason",
+        "concept": [
+          {
+            "code": "notAPreferableOrAllowableVaccine",
+            "display": "Not a preferable or allowable vaccine"
+          },
+          {
+            "code": "wrongTradeName",
+            "display": "Wrong trade name"
+          },
+          {
+            "code": "lessThanRecommendedVolume",
+            "display": "Less than recommended volume"
+          },
+          {
+            "code": "administeredOutsideOfPreferredAgeRange",
+            "display": "Administered outside of preferred age range"
+          },
+          {
+            "code": "noPreferredTypes",
+            "display": "No preferred types"
+          },
+          {
+            "code": "noAllowedTypes",
+            "display": "No allowed types"
+          }
+        ]
+      }
+    ]
+  }
+}

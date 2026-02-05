@@ -1,0 +1,813 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>MapVaccineCodes - The Cicada Vaccine Forecasting Engine and Guide v0.1.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+
+    <style type="text/css">h2{--heading-prefix:"7.47"}
+    h3,h4,h5,h6{--heading-prefix:"7.47"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+        <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">The Cicada Vaccine Forecasting Engine and Guide</span>
+            <br/>
+            <span style="display:inline-block;">0.1.0 - ci-build
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifacts</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>MapVaccineCodes</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">The Cicada Vaccine Forecasting Engine and Guide - Local Development build (v0.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href="http://fhirfli.dev/fhir/ig/cicada/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  
+
+
+
+
+
+
+
+
+<ul class="nav nav-tabs">
+
+  <li class="active">
+    <a href="#">Narrative Content</a>
+  </li>
+
+
+
+  
+    <li>
+      <a href="StructureMap-MapVaccineCodes.xml.html">XML</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="StructureMap-MapVaccineCodes.json.html">JSON</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="StructureMap-MapVaccineCodes.ttl.html">TTL</a>
+    </li>
+  
+
+
+
+</ul>
+
+  <a name="root"> </a>
+
+  <h2 id="root">StructureMap: MapVaccineCodes
+
+  </h2>
+
+  <table class="colsd">
+
+    <tr>
+      <td colspan="4"><i>Official URL</i>: <span class="copy-text">http://fhirfli.dev/fhir/ig/cicada/StructureMap/map-vaccine-codes<button title="Click to copy URL" class="btn-copy" data-clipboard-text="http://fhirfli.dev/fhir/ig/cicada/StructureMap/map-vaccine-codes"/></span>
+      </td>
+      <td><i>Version</i>:
+      <span class="copy-text">0.1.0<button title="Click to copy versioned URL" class="btn-copy" data-clipboard-text="http://fhirfli.dev/fhir/ig/cicada/StructureMap/map-vaccine-codes|0.1.0"/></span>
+      </td>
+    </tr>
+
+    <tr>
+
+
+
+
+
+
+
+      <td colspan="4">
+        
+          Draft
+          
+            as of 2024-05-06
+          
+        
+      </td>
+
+
+
+      <td><i>Computable Name</i>: <span style="font-family: monospace;">MapVaccineCodes</span></td>
+    </tr>
+
+
+
+
+  </table>
+
+
+<p>
+<p>Define the usage of FHIR resource types with specific aliases</p>
+
+</p>
+
+
+  <!-- insert intro if present -->
+  
+
+
+
+<!--  <p>
+  Formats: <a href="StructureMap-MapVaccineCodes.xml.html">XML</a>, <a href="StructureMap-MapVaccineCodes.json.html">JSON</a>, <a href="StructureMap-MapVaccineCodes.ttl.html">Turtle</a>
+  </p>-->
+
+  
+
+
+  <div xmlns="http://www.w3.org/1999/xhtml"><pre>/// url = &quot;http://fhirfli.dev/fhir/ig/cicada/StructureMap/map-vaccine-codes&quot;
+/// name = &quot;MapVaccineCodes&quot;
+/// title = &quot;null&quot;
+/// status = &quot;draft&quot;
+
+// Define the usage of FHIR resource types with specific aliases
+
+uses &quot;http://hl7.org/fhir/StructureDefinition/Observation&quot; alias sourceObservation as source
+uses &quot;http://hl7.org/fhir/StructureDefinition/Condition&quot; alias sourceCondition as source
+uses &quot;http://hl7.org/fhir/StructureDefinition/Procedure&quot; alias sourceProcedure as source
+uses &quot;http://hl7.org/fhir/StructureDefinition/Immunization&quot; alias sourceImmunization as source
+uses &quot;http://hl7.org/fhir/StructureDefinition/Medication&quot; alias sourceMedication as source
+uses &quot;http://hl7.org/fhir/StructureDefinition/MedicationStatement&quot; alias sourceMedicationStatement as source
+uses &quot;http://hl7.org/fhir/StructureDefinition/MedicationRequest&quot; alias sourceMedicationRequest as source
+uses &quot;http://hl7.org/fhir/StructureDefinition/MedicationAdministration&quot; alias sourceMedicationAdministration as source
+uses &quot;http://hl7.org/fhir/StructureDefinition/MedicationDispense&quot; alias sourceMedicationDispense as source
+uses &quot;http://hl7.org/fhir/StructureDefinition/Condition&quot; alias targetCondition as target
+
+group MapToVaccineConditionObservation(source src : any, target tgt : targetCondition) {
+  src as sourceObservation where (src is Observation) -&gt; tgt then MapFromObservation(src, tgt) &quot;SourceObservationToTarget&quot;;
+  src as sourceCondition where (src is Condition) -&gt; tgt then MapFromCondition(src, tgt) &quot;SourceConditionToTarget&quot;;
+  src as sourceProcedure where (src is Procedure) -&gt; tgt then MapFromProcedure(src, tgt) &quot;SourceProcedureToTarget&quot;;
+  src as sourceImmunization where (src is Immunization) -&gt; tgt then MapFromImmunization(src, tgt) &quot;SourceImmunizationToTarget&quot;;
+  src as sourceMedication where (src is Medication) -&gt; tgt then MapFromMedication(src, tgt) &quot;SourceMedicationToTarget&quot;;
+  src as sourceMedicationStatement where (src is MedicationStatement) -&gt; tgt then MapFromMedicationStatement(src, tgt) &quot;SourceMedStatementToTarget&quot;;
+  src as sourceMedicationRequest where (src is MedicationRequest) -&gt; tgt then MapFromMedicationRequest(src, tgt) &quot;SourceMedRequestToTarget&quot;;
+  src as sourceMedicationAdministration where (src is MedicationAdministration) -&gt; tgt then MapFromMedicationAdministration(src, tgt) &quot;SourceMedAdminToTarget&quot;;
+  src as sourceMedicationDispense where (src is MedicationDispense) -&gt; tgt then MapFromMedicationDispense(src, tgt) &quot;SourceMedDispenseToTarget&quot;;
+}
+
+group MapFromObservation(source src : sourceObservation, target tgt : targetCondition) {
+  src -&gt; tgt.status = 'active' &quot;SetObservationStatus&quot;;
+  src.code as code -&gt; code.coding as coding then ApplyCommonMappings(coding, tgt) &quot;ApplyObsMappings&quot;;
+  src -&gt; tgt.onsetDateTime = src.effectiveDateTime &quot;SetObsOnsetDateTime&quot;;
+  src -&gt; tgt.onsetPeriod = src.effectivePeriod &quot;SetObsOnsetPeriod&quot;;
+  src -&gt; tgt.onsetDateTime = src.effectiveInstant &quot;SetObsOnsetInstant&quot;;
+}
+
+group MapFromCondition(source src : sourceCondition, target tgt : targetCondition) {
+  src -&gt; tgt.status = 'active' &quot;SetConditionStatus&quot;;
+  src.code as code -&gt; code.coding as coding then ApplyCommonMappings(coding, tgt) &quot;ApplyCondMappings&quot;;
+  src -&gt; tgt.onsetDateTime = src.onsetDateTime &quot;SetCondOnsetDateTime&quot;;
+  src -&gt; tgt.onsetAge = src.onsetAge &quot;SetCondOnsetAge&quot;;
+  src -&gt; tgt.onsetPeriod = src.onsetPeriod &quot;SetCondOnsetPeriod&quot;;
+  src -&gt; tgt.onsetRange = src.onsetRange &quot;SetCondOnsetRange&quot;;
+  src -&gt; tgt.onsetString = src.onsetString &quot;SetCondOnsetString&quot;;
+  src -&gt; tgt.abatementDateTime = src.abatementDateTime &quot;SetCondAbatementDateTime&quot;;
+  src -&gt; tgt.abatementAge = src.abatementAge &quot;SetCondAbatementAge&quot;;
+  src -&gt; tgt.abatementPeriod = src.abatementPeriod &quot;SetCondAbatementPeriod&quot;;
+  src -&gt; tgt.abatementRange = src.abatementRange &quot;SetCondAbatementRange&quot;;
+  src -&gt; tgt.abatementString = src.abatementString &quot;SetCondAbatementString&quot;;
+}
+
+group MapFromProcedure(source src : sourceProcedure, target tgt : targetCondition) {
+  src -&gt; tgt.status = 'active' &quot;SetProcedureStatus&quot;;
+  src.code as code -&gt; code.coding as coding then ApplyCommonMappings(coding, tgt) &quot;ApplyProcedureMappings&quot;;
+  src -&gt; tgt.onsetDateTime = src.performedDateTime &quot;SetProcedureOnsetDateTime&quot;;
+  src -&gt; tgt.onsetAge = src.performedAge &quot;SetProcedureOnsetAge&quot;;
+  src -&gt; tgt.onsetPeriod = src.performedPeriod &quot;SetProcedureOnsetPeriod&quot;;
+  src -&gt; tgt.onsetRange = src.performedRange &quot;SetProcedureOnsetRange&quot;;
+  src -&gt; tgt.onsetString = src.performedString &quot;SetProcedureOnsetString&quot;;
+}
+
+group MapFromImmunization(source src : sourceImmunization, target tgt : targetCondition) {
+  src -&gt; tgt.status = 'active' &quot;SetImmunizationStatus&quot;;
+  src.vaccineCode as code -&gt; code.coding as coding then ApplyCommonMappings(coding, tgt) &quot;ApplyImmunizationMappings&quot;;
+  src -&gt; tgt.onsetDateTime = src.occurrenceDateTime &quot;SetImmunizationOnsetDateTime&quot;;
+  src -&gt; tgt.onsetString = src.occurrenceString &quot;SetImmunizationOnsetString&quot;;
+}
+
+group MapFromMedication(source src : sourceMedication, target tgt : targetCondition) {
+  src -&gt; tgt.status = 'active' &quot;SetMedicationStatus&quot;;
+  src.code as code -&gt; code.coding as coding then ApplyCommonMappings(coding, tgt) &quot;ApplyMedicationMappings&quot;;
+}
+
+// TODO(Dokotela): what about medicationReference?
+group MapFromMedicationStatement(source src : sourceMedicationStatement, target tgt : targetCondition) {
+  src -&gt; tgt.status = 'active' &quot;SetMedStatementStatus&quot;;
+  src.medicationCodeableConcept as code -&gt; code.coding as coding then ApplyCommonMappings(coding, tgt) &quot;ApplyMedStatementMappings&quot;;
+}
+
+group MapFromMedicationRequest(source src : sourceMedicationRequest, target tgt : targetCondition) {
+  src -&gt; tgt.status = 'active' &quot;SetMedRequestStatus&quot;;
+  src.medicationCodeableConcept as code -&gt; code.coding as coding then ApplyCommonMappings(coding, tgt) &quot;ApplyMedRequestMappings&quot;;
+  src -&gt; tgt.onsetDateTime = src.authoredOn &quot;SetMedRequestOnsetDateTime&quot;;
+}
+
+group MapFromMedicationAdministration(source src : sourceMedicationAdministration, target tgt : targetCondition) {
+  src -&gt; tgt.status = 'active' &quot;SetMedAdminStatus&quot;;
+  src.medicationCodeableConcept as code -&gt; code.coding as coding then ApplyCommonMappings(coding, tgt) &quot;ApplyMedAdminMappings&quot;;
+  src -&gt; tgt.onsetDateTime = src.effectiveDateTime &quot;SetMedAdminOnsetDateTime&quot;;
+  src -&gt; tgt.onsetPeriod = src.effectivePeriod &quot;SetMedAdminOnsetPeriod&quot;;
+}
+
+group MapFromMedicationDispense(source src : sourceMedicationDispense, target tgt : targetCondition) {
+  src -&gt; tgt.status = 'active' &quot;SetMedDispenseStatus&quot;;
+  src.medicationCodeableConcept as code -&gt; code.coding as coding then ApplyCommonMappings(coding, tgt) &quot;ApplyMedDispenseMappings&quot;;
+  src -&gt; tgt.onsetDateTime = src.whenHandedOver &quot;SetMedDispenseOnsetDateTime&quot;;
+}
+
+group ApplyCommonMappings(source src : Coding, target tgt : targetCondition) {
+  src.system as systemValue where systemValue = 'http://snomed.info/sct' -&gt; tgt.code = create('CodeableConcept') as newCC then {
+    src -&gt; newCC.coding = create('Coding') as newCoding then {
+      src.code as codeValue where codeValue = '370388006' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '003',  newCoding.display = 'Patient Immunocompromised' &quot;SetSNOMEDCode370388006&quot;;
+      src.code as codeValue where codeValue = '234336002' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '004',  newCoding.display = 'Hemopoietic stem cell transplant [procedure]' &quot;SetSNOMEDCode234336002&quot;;
+      src.code as codeValue where codeValue = '50711007' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '005',  newCoding.display = 'Viral hepatitis type C [disorder]' &quot;SetSNOMEDCode50711007&quot;;
+      src.code as codeValue where codeValue = '77386006' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '007',  newCoding.display = 'Patient currently pregnant [finding]' &quot;SetSNOMEDCode77386006&quot;;
+      src.code as codeValue where codeValue = '102874004' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '007',  newCoding.display = 'Possible pregnancy [finding]' &quot;SetSNOMEDCode102874004&quot;;
+      src.code as codeValue where codeValue = '255409004' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '007',  newCoding.display = 'Pregnant woman [person]' &quot;SetSNOMEDCode255409004&quot;;
+      src.code as codeValue where codeValue = '413712001' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '009',  newCoding.display = 'Breastfeeding [mother] [observable entity]' &quot;SetSNOMEDCode413712001&quot;;
+      src.code as codeValue where codeValue = '230744007' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '010',  newCoding.display = 'Cerebrospinal fluid leak [disorder]' &quot;SetSNOMEDCode230744007&quot;;
+      src.code as codeValue where codeValue = '449840001' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '011',  newCoding.display = 'Cochlear prosthesis in situ [finding]' &quot;SetSNOMEDCode449840001&quot;;
+      src.code as codeValue where codeValue = '43252007' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '011',  newCoding.display = 'Cochlear prosthesis, device [physical object]' &quot;SetSNOMEDCode43252007&quot;;
+      src.code as codeValue where codeValue = '359612003' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '011',  newCoding.display = 'Implantation of cochlear prosthetic device [procedure]' &quot;SetSNOMEDCode359612003&quot;;
+      src.code as codeValue where codeValue = '31323000' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '013',  newCoding.display = 'Severe combined immunodeficiency disease [disorder]' &quot;SetSNOMEDCode31323000&quot;;
+      src.code as codeValue where codeValue = '73211009' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '014',  newCoding.display = 'Diabetes mellitus [disorder]' &quot;SetSNOMEDCode73211009&quot;;
+      src.code as codeValue where codeValue = '328383001' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '015',  newCoding.display = 'Chronic liver disease [disorder]' &quot;SetSNOMEDCode328383001&quot;;
+      src.code as codeValue where codeValue = '19943007' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '015',  newCoding.display = 'Cirrhosis of liver [disorder]' &quot;SetSNOMEDCode19943007&quot;;
+      src.code as codeValue where codeValue = '128238001' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '016',  newCoding.display = 'Chronic heart disease [disorder]' &quot;SetSNOMEDCode128238001&quot;;
+      src.code as codeValue where codeValue = '42343007' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '016',  newCoding.display = 'Congestive heart failure [disorder]' &quot;SetSNOMEDCode42343007&quot;;
+      src.code as codeValue where codeValue = '57809008' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '016',  newCoding.display = 'Myocardial disease [disorder]' &quot;SetSNOMEDCode57809008&quot;;
+      src.code as codeValue where codeValue = '12770006' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '016',  newCoding.display = 'Cyanotic congenital heart disease [disorder]' &quot;SetSNOMEDCode12770006&quot;;
+      src.code as codeValue where codeValue = '413839001' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '017',  newCoding.display = 'Chronic lung disease [disorder]' &quot;SetSNOMEDCode413839001&quot;;
+      src.code as codeValue where codeValue = '13645005' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '017',  newCoding.display = 'Chronic obstructive lung disease [disorder]' &quot;SetSNOMEDCode13645005&quot;;
+      src.code as codeValue where codeValue = '87433001' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '017',  newCoding.display = 'Pulmonary emphysema [disorder]' &quot;SetSNOMEDCode87433001&quot;;
+      src.code as codeValue where codeValue = '278971009' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '018',  newCoding.display = 'Hepatitis A Immune [Finding]' &quot;SetSNOMEDCode278971009&quot;;
+      src.code as codeValue where codeValue = '271511000' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '019',  newCoding.display = 'Hepatitis B Immune [Finding]' &quot;SetSNOMEDCode271511000&quot;;
+      src.code as codeValue where codeValue = '371111005' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '020',  newCoding.display = 'Measles Immune [finding]' &quot;SetSNOMEDCode371111005&quot;;
+      src.code as codeValue where codeValue = '371112003' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '021',  newCoding.display = 'Mumps Immune [finding]' &quot;SetSNOMEDCode371112003&quot;;
+      src.code as codeValue where codeValue = '278968001' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '022',  newCoding.display = 'Rubella Immune [finding]' &quot;SetSNOMEDCode278968001&quot;;
+      src.code as codeValue where codeValue = '371113008' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '023',  newCoding.display = 'Varicella Immune' &quot;SetSNOMEDCode371113008&quot;;
+      src.code as codeValue where codeValue = '38907003' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '024',  newCoding.display = 'Varicella [Disorder]' &quot;SetSNOMEDCode38907003&quot;;
+      src.code as codeValue where codeValue = '4740000' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '025',  newCoding.display = 'Herpes Zoster [Disorder]' &quot;SetSNOMEDCode4740000&quot;;
+      src.code as codeValue where codeValue = '86406008' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '026',  newCoding.display = 'Human immunodeficiency virus infection [disorder]' &quot;SetSNOMEDCode86406008&quot;;
+      src.code as codeValue where codeValue = '427314002' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '026',  newCoding.display = 'Antiviral therapy [procedure]' &quot;SetSNOMEDCode427314002&quot;;
+      src.code as codeValue where codeValue = '390798007' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '027',  newCoding.display = 'Asthma finding [finding]' &quot;SetSNOMEDCode390798007&quot;;
+      src.code as codeValue where codeValue = '195967001' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '027',  newCoding.display = 'Asthma [disorder]' &quot;SetSNOMEDCode195967001&quot;;
+      src.code as codeValue where codeValue = '35327006' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '028',  newCoding.display = 'Intussusception [morphologic abnormality]' &quot;SetSNOMEDCode35327006&quot;;
+      src.code as codeValue where codeValue = '49723003' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '028',  newCoding.display = 'Intussusception of intestine [disorder]' &quot;SetSNOMEDCode49723003&quot;;
+      src.code as codeValue where codeValue = '69776003' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '029',  newCoding.display = 'Acute gastroenteritis [disorder]' &quot;SetSNOMEDCode69776003&quot;;
+      src.code as codeValue where codeValue = '56717001' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '031',  newCoding.display = 'Tuberculosis [disorder]' &quot;SetSNOMEDCode56717001&quot;;
+      src.code as codeValue where codeValue = '372763006' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '033',  newCoding.display = 'Amantadine [substance]' &quot;SetSNOMEDCode372763006&quot;;
+      src.code as codeValue where codeValue = '51361008' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '033',  newCoding.display = 'Amantadine [product]' &quot;SetSNOMEDCode51361008&quot;;
+      src.code as codeValue where codeValue = '372532009' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '033',  newCoding.display = 'Rimantadine [substance]' &quot;SetSNOMEDCode372532009&quot;;
+      src.code as codeValue where codeValue = '108712009' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '033',  newCoding.display = 'Rimantadine [product]' &quot;SetSNOMEDCode108712009&quot;;
+      src.code as codeValue where codeValue = '387010007' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '033',  newCoding.display = 'Zanamivir [substance]' &quot;SetSNOMEDCode387010007&quot;;
+      src.code as codeValue where codeValue = '116100000' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '033',  newCoding.display = 'Zanamivir [product]' &quot;SetSNOMEDCode116100000&quot;;
+      src.code as codeValue where codeValue = '412261005' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '033',  newCoding.display = 'Oseltamivir [substance]' &quot;SetSNOMEDCode412261005&quot;;
+      src.code as codeValue where codeValue = '386142008' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '033',  newCoding.display = 'Oseltamivir [product]' &quot;SetSNOMEDCode386142008&quot;;
+      src.code as codeValue where codeValue = '405742008' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '034',  newCoding.display = 'Aspirin therapy finding [finding]' &quot;SetSNOMEDCode405742008&quot;;
+      src.code as codeValue where codeValue = '76102007' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '036',  newCoding.display = 'Male homosexual [finding]' &quot;SetSNOMEDCode76102007&quot;;
+      src.code as codeValue where codeValue = '225531006' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '036',  newCoding.display = 'Homosexual behavior [finding]' &quot;SetSNOMEDCode225531006&quot;;
+      src.code as codeValue where codeValue = '225516002' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '037',  newCoding.display = 'Multiple sexual contacts [finding]' &quot;SetSNOMEDCode225516002&quot;;
+      src.code as codeValue where codeValue = '228460004' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '037',  newCoding.display = 'Multiple current sexual partners [finding]' &quot;SetSNOMEDCode228460004&quot;;
+      src.code as codeValue where codeValue = '228466005' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '037',  newCoding.display = 'Commitment to sexual relationship [observable entity]' &quot;SetSNOMEDCode228466005&quot;;
+      src.code as codeValue where codeValue = '225517006' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '038',  newCoding.display = 'Sexual partners [observable entity]' &quot;SetSNOMEDCode225517006&quot;;
+      src.code as codeValue where codeValue = '11723008' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '038',  newCoding.display = 'Contact with [contextual qualifier] [qualifier value]' &quot;SetSNOMEDCode11723008&quot;;
+      src.code as codeValue where codeValue = '165806002' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '038',  newCoding.display = 'Hepatitis B surface antigen positive [finding]' &quot;SetSNOMEDCode165806002&quot;;
+      src.code as codeValue where codeValue = '305489005' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '039',  newCoding.display = 'Under care of genitourinary medicine physician [finding]' &quot;SetSNOMEDCode305489005&quot;;
+      src.code as codeValue where codeValue = '305679000' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '039',  newCoding.display = 'Seen by genitourinary medicine physician [finding]' &quot;SetSNOMEDCode305679000&quot;;
+      src.code as codeValue where codeValue = '8098009' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '039',  newCoding.display = 'Sexually transmitted infectious disease [disorder]' &quot;SetSNOMEDCode8098009&quot;;
+      src.code as codeValue where codeValue = '307052004' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '040',  newCoding.display = 'Illicit drug use [finding]' &quot;SetSNOMEDCode307052004&quot;;
+      src.code as codeValue where codeValue = '228366006' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '040',  newCoding.display = 'Finding relating to drug misuse behavior [finding]' &quot;SetSNOMEDCode228366006&quot;;
+      src.code as codeValue where codeValue = '226034001' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '041',  newCoding.display = 'Injecting drug user [finding]' &quot;SetSNOMEDCode226034001&quot;;
+      src.code as codeValue where codeValue = '228388006' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '041',  newCoding.display = 'Intravenous drug user  [finding]' &quot;SetSNOMEDCode228388006&quot;;
+      src.code as codeValue where codeValue = '145101000119102' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '041',  newCoding.display = 'Intravenous cocaine abuse [disorder]' &quot;SetSNOMEDCode145101000119102&quot;;
+      src.code as codeValue where codeValue = '403746009' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '041',  newCoding.display = 'Skin lesion due to intravenous drug abuse [disorder]' &quot;SetSNOMEDCode403746009&quot;;
+      src.code as codeValue where codeValue = '860699005' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '041',  newCoding.display = 'Deep vein thrombosis of lower extremity due to intravenous drug use [disorder]' &quot;SetSNOMEDCode860699005&quot;;
+      src.code as codeValue where codeValue = '77176002' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '042',  newCoding.display = 'Smoker [finding]' &quot;SetSNOMEDCode77176002&quot;;
+      src.code as codeValue where codeValue = '228281002' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '043',  newCoding.display = 'Problem drinker [finding]' &quot;SetSNOMEDCode228281002&quot;;
+      src.code as codeValue where codeValue = '7200002' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '043',  newCoding.display = 'Alcoholism [disorder]' &quot;SetSNOMEDCode7200002&quot;;
+      src.code as codeValue where codeValue = '159138004' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '050',  newCoding.display = 'Microbiologist [occupation]' &quot;SetSNOMEDCode159138004&quot;;
+      src.code as codeValue where codeValue = '14698002' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '050',  newCoding.display = 'Medical microbiologist [occupation]' &quot;SetSNOMEDCode14698002&quot;;
+      src.code as codeValue where codeValue = '24932003' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '050',  newCoding.display = 'Exposure to [contextual qualifier] [qualifier value]' &quot;SetSNOMEDCode24932003&quot;;
+      src.code as codeValue where codeValue = '17872004' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '050',  newCoding.display = 'Neisseria meningitidis [organism]' &quot;SetSNOMEDCode17872004&quot;;
+      src.code as codeValue where codeValue = '159138004' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '051',  newCoding.display = 'Microbiologist [occupation]' &quot;SetSNOMEDCode159138004&quot;;
+      src.code as codeValue where codeValue = '14698002' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '051',  newCoding.display = 'Medical microbiologist [occupation]' &quot;SetSNOMEDCode14698002&quot;;
+      src.code as codeValue where codeValue = '159282002' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '051',  newCoding.display = 'Laboratory technician [occupation]' &quot;SetSNOMEDCode159282002&quot;;
+      src.code as codeValue where codeValue = '24932003' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '051',  newCoding.display = 'Exposure to [contextual qualifier] [qualifier value]' &quot;SetSNOMEDCode24932003&quot;;
+      src.code as codeValue where codeValue = '5595000' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '051',  newCoding.display = 'Salmonella Typhi [organism]' &quot;SetSNOMEDCode5595000&quot;;
+      src.code as codeValue where codeValue = '159282002' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '052',  newCoding.display = 'Laboratory technician [occupation]' &quot;SetSNOMEDCode159282002&quot;;
+      src.code as codeValue where codeValue = '24932003' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '052',  newCoding.display = 'Exposure to [contextual qualifier] [qualifier value]' &quot;SetSNOMEDCode24932003&quot;;
+      src.code as codeValue where codeValue = '26630006' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '052',  newCoding.display = 'Yellow fever virus [organism]' &quot;SetSNOMEDCode26630006&quot;;
+      src.code as codeValue where codeValue = '159282002' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '053',  newCoding.display = 'Laboratory technician [occupation]' &quot;SetSNOMEDCode159282002&quot;;
+      src.code as codeValue where codeValue = '24932003' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '053',  newCoding.display = 'Exposure to [contextual qualifier] [qualifier value]' &quot;SetSNOMEDCode24932003&quot;;
+      src.code as codeValue where codeValue = '59881000' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '053',  newCoding.display = 'Rabies virus [organism]' &quot;SetSNOMEDCode59881000&quot;;
+      src.code as codeValue where codeValue = '159282002' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '054',  newCoding.display = 'Laboratory technician [occupation]' &quot;SetSNOMEDCode159282002&quot;;
+      src.code as codeValue where codeValue = '24932003' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '054',  newCoding.display = 'Exposure to [contextual qualifier] [qualifier value]' &quot;SetSNOMEDCode24932003&quot;;
+      src.code as codeValue where codeValue = '44172002' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '054',  newCoding.display = 'Human poliovirus [organism]' &quot;SetSNOMEDCode44172002&quot;;
+      src.code as codeValue where codeValue = '223366009' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '055',  newCoding.display = 'Healthcare professional [occupation]' &quot;SetSNOMEDCode223366009&quot;;
+      src.code as codeValue where codeValue = '223366009' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '056',  newCoding.display = 'Healthcare professional [occupation]' &quot;SetSNOMEDCode223366009&quot;;
+      src.code as codeValue where codeValue = '24932003' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '056',  newCoding.display = 'Exposure to [contextual qualifier] [qualifier value]' &quot;SetSNOMEDCode24932003&quot;;
+      src.code as codeValue where codeValue = '44172002' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '056',  newCoding.display = 'Human poliovirus [organism]' &quot;SetSNOMEDCode44172002&quot;;
+      src.code as codeValue where codeValue = '26369006' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '057',  newCoding.display = 'Public health nurse [occupation]' &quot;SetSNOMEDCode26369006&quot;;
+      src.code as codeValue where codeValue = '68867008' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '057',  newCoding.display = 'Public health dentist [occupation]' &quot;SetSNOMEDCode68867008&quot;;
+      src.code as codeValue where codeValue = '307969004' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '057',  newCoding.display = 'Public health officer [occupation]' &quot;SetSNOMEDCode307969004&quot;;
+      src.code as codeValue where codeValue = '56466003' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '057',  newCoding.display = 'Public health physician [occupation]' &quot;SetSNOMEDCode56466003&quot;;
+      src.code as codeValue where codeValue = '56079002' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '057',  newCoding.display = 'Public health veterinarian [occupation]' &quot;SetSNOMEDCode56079002&quot;;
+      src.code as codeValue where codeValue = '60008001' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '057',  newCoding.display = 'Public health nutritionist [occupation]' &quot;SetSNOMEDCode60008001&quot;;
+      src.code as codeValue where codeValue = '24932003' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '057',  newCoding.display = 'Exposure to [contextual qualifier] [qualifier value]' &quot;SetSNOMEDCode24932003&quot;;
+      src.code as codeValue where codeValue = '87612001' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '057',  newCoding.display = 'Blood [substance]' &quot;SetSNOMEDCode87612001&quot;;
+      src.code as codeValue where codeValue = '32457005' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '057',  newCoding.display = 'Body fluid [substance]' &quot;SetSNOMEDCode32457005&quot;;
+      src.code as codeValue where codeValue = '223366009' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '059',  newCoding.display = 'Healthcare professional [occupation]' &quot;SetSNOMEDCode223366009&quot;;
+      src.code as codeValue where codeValue = '158942005' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '059',  newCoding.display = 'Residential child care worker [occupation]' &quot;SetSNOMEDCode158942005&quot;;
+      src.code as codeValue where codeValue = '158939004' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '059',  newCoding.display = 'Child care officer [occupation]' &quot;SetSNOMEDCode158939004&quot;;
+      src.code as codeValue where codeValue = '73851001' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '059',  newCoding.display = 'Plumber [general] [occupation]' &quot;SetSNOMEDCode73851001&quot;;
+      src.code as codeValue where codeValue = '160157004' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '059',  newCoding.display = 'Sewerman [occupation]' &quot;SetSNOMEDCode160157004&quot;;
+      src.code as codeValue where codeValue = '266006009' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '059',  newCoding.display = 'Food/drink processor [occupation]' &quot;SetSNOMEDCode266006009&quot;;
+      src.code as codeValue where codeValue = '274272004' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '059',  newCoding.display = 'Catering services occupation [occupation]' &quot;SetSNOMEDCode274272004&quot;;
+      src.code as codeValue where codeValue = '160133004' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '059',  newCoding.display = 'Packer - food/garden produce [occupation]' &quot;SetSNOMEDCode160133004&quot;;
+      src.code as codeValue where codeValue = '265940000' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '060',  newCoding.display = 'Animal health occupation [occupation]' &quot;SetSNOMEDCode265940000&quot;;
+      src.code as codeValue where codeValue = '159091009' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '061',  newCoding.display = 'Trainer - performing animals [occupation]' &quot;SetSNOMEDCode159091009&quot;;
+      src.code as codeValue where codeValue = '24932003' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '062',  newCoding.display = 'Exposure to [contextual qualifier] [qualifier value]' &quot;SetSNOMEDCode24932003&quot;;
+      src.code as codeValue where codeValue = '59881000' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '062',  newCoding.display = 'Rabies virus [organism]' &quot;SetSNOMEDCode59881000&quot;;
+      src.code as codeValue where codeValue = '65853000' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '063',  newCoding.display = 'Student [occupation]' &quot;SetSNOMEDCode65853000&quot;;
+      src.code as codeValue where codeValue = '257561002' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '063',  newCoding.display = 'Further education establishment [environment]' &quot;SetSNOMEDCode257561002&quot;;
+      src.code as codeValue where codeValue = '90688005' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '066',  newCoding.display = 'Chronic renal failure syndrome [disorder]' &quot;SetSNOMEDCode90688005&quot;;
+      src.code as codeValue where codeValue = '20078004' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '068',  newCoding.display = 'Substance abuse treatment center [environment]' &quot;SetSNOMEDCode20078004&quot;;
+      src.code as codeValue where codeValue = '257656006' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '069',  newCoding.display = 'Penal institution [environment]' &quot;SetSNOMEDCode257656006&quot;;
+      src.code as codeValue where codeValue = '410519009' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '070',  newCoding.display = 'At risk context [qualifier value]' &quot;SetSNOMEDCode410519009&quot;;
+      src.code as codeValue where codeValue = '443684005' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '070',  newCoding.display = 'Disease outbreak [event]' &quot;SetSNOMEDCode443684005&quot;;
+      src.code as codeValue where codeValue = '11723008' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '071',  newCoding.display = 'Contact with [contextual qualifier] [qualifier value]' &quot;SetSNOMEDCode11723008&quot;;
+      src.code as codeValue where codeValue = '165806002' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '071',  newCoding.display = 'Hepatitis B surface antigen positive [finding]' &quot;SetSNOMEDCode165806002&quot;;
+      src.code as codeValue where codeValue = '170484009' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '072',  newCoding.display = 'Typhoid carrier [finding]' &quot;SetSNOMEDCode170484009&quot;;
+      src.code as codeValue where codeValue = '12271241000119109' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '075',  newCoding.display = 'Transgender identify [finding]' &quot;SetSNOMEDCode12271241000119109&quot;;
+      src.code as codeValue where codeValue = '84757009' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '076',  newCoding.display = 'Epilepsy [disorder]' &quot;SetSNOMEDCode84757009&quot;;
+      src.code as codeValue where codeValue = '192711008' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '079',  newCoding.display = 'Post diphtheria vaccination encephalitis [disorder]' &quot;SetSNOMEDCode192711008&quot;;
+      src.code as codeValue where codeValue = '192710009' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '079',  newCoding.display = 'Post tetanus vaccination encephalitis [disorder]' &quot;SetSNOMEDCode192710009&quot;;
+      src.code as codeValue where codeValue = '192712001' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '079',  newCoding.display = 'Post pertussis vaccination encephalitis [disorder]' &quot;SetSNOMEDCode192712001&quot;;
+      src.code as codeValue where codeValue = '293104008' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '080',  newCoding.display = 'Vaccines adverse reaction [disorder]' &quot;SetSNOMEDCode293104008&quot;;
+      src.code as codeValue where codeValue = '293117006' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '081',  newCoding.display = 'Poliomyelitis vaccine adverse reaction [disorder]' &quot;SetSNOMEDCode293117006&quot;;
+      src.code as codeValue where codeValue = '451301000124103' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '082',  newCoding.display = 'Adverse reaction caused by Japanese encephalitis virus vaccine [disorder]' &quot;SetSNOMEDCode451301000124103&quot;;
+      src.code as codeValue where codeValue = '429301000124101' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '083',  newCoding.display = 'Adverse reaction to rotavirus vaccine [disorder]' &quot;SetSNOMEDCode429301000124101&quot;;
+      src.code as codeValue where codeValue = '293122006' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '084',  newCoding.display = 'Typhoid vaccine adverse reaction [disorder]' &quot;SetSNOMEDCode293122006&quot;;
+      src.code as codeValue where codeValue = '420113004' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '085',  newCoding.display = 'Influenza virus vaccine adverse reaction [disorder]' &quot;SetSNOMEDCode420113004&quot;;
+      src.code as codeValue where codeValue = '293115003' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '086',  newCoding.display = 'Pertussis vaccine adverse reaction [disorder]' &quot;SetSNOMEDCode293115003&quot;;
+      src.code as codeValue where codeValue = '219085007' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '087',  newCoding.display = 'Adverse reaction to diphtheria vaccine [disorder]' &quot;SetSNOMEDCode219085007&quot;;
+      src.code as codeValue where codeValue = '219084006' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '088',  newCoding.display = 'Adverse reaction to tetanus vaccine [disorder]' &quot;SetSNOMEDCode219084006&quot;;
+      src.code as codeValue where codeValue = '451331000124106' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '089',  newCoding.display = 'Adverse reaction caused by varicella virus live vaccine [disorder]' &quot;SetSNOMEDCode451331000124106&quot;;
+      src.code as codeValue where codeValue = '429311000124103' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '090',  newCoding.display = 'Adverse reaction to human papillomavirus vaccine [disorder]' &quot;SetSNOMEDCode429311000124103&quot;;
+      src.code as codeValue where codeValue = '219096004' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '091',  newCoding.display = 'Adverse reaction to measles vaccine [disorder]' &quot;SetSNOMEDCode219096004&quot;;
+      src.code as codeValue where codeValue = '293114004' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '092',  newCoding.display = 'Mumps vaccine adverse reaction [disorder]' &quot;SetSNOMEDCode293114004&quot;;
+      src.code as codeValue where codeValue = '293119009' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '093',  newCoding.display = 'Rubella vaccine adverse reaction [disorder]' &quot;SetSNOMEDCode293119009&quot;;
+      src.code as codeValue where codeValue = '293116002' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '094',  newCoding.display = 'Pneumococcal vaccine adverse reaction [disorder]' &quot;SetSNOMEDCode293116002&quot;;
+      src.code as codeValue where codeValue = '2219088009' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '095',  newCoding.display = 'Adverse reaction to meningococcal vaccine [disorder]' &quot;SetSNOMEDCode2219088009&quot;;
+      src.code as codeValue where codeValue = '451111000124103' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '095',  newCoding.display = 'Adverse reaction caused by meningococcal conjugate vaccine [disorder]' &quot;SetSNOMEDCode451111000124103&quot;;
+      src.code as codeValue where codeValue = '293126009' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '096',  newCoding.display = 'Hepatitis A vaccine adverse reaction [disorder]' &quot;SetSNOMEDCode293126009&quot;;
+      src.code as codeValue where codeValue = '293110008' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '097',  newCoding.display = 'Hepatitis B vaccine adverse reaction [disorder]' &quot;SetSNOMEDCode293110008&quot;;
+      src.code as codeValue where codeValue = '293127000' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '098',  newCoding.display = 'Haemophilus influenzae Type B vaccine adverse reaction [disorder]' &quot;SetSNOMEDCode293127000&quot;;
+      src.code as codeValue where codeValue = '219095000' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '099',  newCoding.display = 'Adverse reaction to yellow fever vaccine [disorder]' &quot;SetSNOMEDCode219095000&quot;;
+      src.code as codeValue where codeValue = '451291000124104' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '100',  newCoding.display = 'Adverse reaction caused by zoster vaccine [disorder]' &quot;SetSNOMEDCode451291000124104&quot;;
+      src.code as codeValue where codeValue = '213020009' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '101',  newCoding.display = 'Egg protein allergy [disorder]' &quot;SetSNOMEDCode213020009&quot;;
+      src.code as codeValue where codeValue = '91930004' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '101',  newCoding.display = 'Allergy to eggs [disorder]' &quot;SetSNOMEDCode91930004&quot;;
+      src.code as codeValue where codeValue = '293309006' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '102',  newCoding.display = 'Gelatin adverse reaction [disorder]' &quot;SetSNOMEDCode293309006&quot;;
+      src.code as codeValue where codeValue = '294847001' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '102',  newCoding.display = 'Gelatin allergy [disorder]' &quot;SetSNOMEDCode294847001&quot;;
+      src.code as codeValue where codeValue = '300916003' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '104',  newCoding.display = 'Latex allergy [disorder]' &quot;SetSNOMEDCode300916003&quot;;
+      src.code as codeValue where codeValue = '441593005' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '104',  newCoding.display = 'Anaphylaxis due to latex [disorder]' &quot;SetSNOMEDCode441593005&quot;;
+      src.code as codeValue where codeValue = '419522004' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '106',  newCoding.display = 'Gentamycin sensitivity [disorder]' &quot;SetSNOMEDCode419522004&quot;;
+      src.code as codeValue where codeValue = '420094007' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '106',  newCoding.display = 'Gentamicin adverse reaction [disorder]' &quot;SetSNOMEDCode420094007&quot;;
+      src.code as codeValue where codeValue = '294469003' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '106',  newCoding.display = 'Gentamicin allergy [disorder]' &quot;SetSNOMEDCode294469003&quot;;
+      src.code as codeValue where codeValue = '294468006' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '107',  newCoding.display = 'Neomycin allergy [disorder]' &quot;SetSNOMEDCode294468006&quot;;
+      src.code as codeValue where codeValue = '292927007' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '107',  newCoding.display = 'Neomycin adverse reaction [disorder]' &quot;SetSNOMEDCode292927007&quot;;
+      src.code as codeValue where codeValue = '294466005' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '108',  newCoding.display = 'Streptomycin allergy [disorder]' &quot;SetSNOMEDCode294466005&quot;;
+      src.code as codeValue where codeValue = '292925004' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '108',  newCoding.display = 'Streptomycin adverse reaction [disorder]' &quot;SetSNOMEDCode292925004&quot;;
+      src.code as codeValue where codeValue = '294530006' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '109',  newCoding.display = 'Polymyxin B allergy [disorder]' &quot;SetSNOMEDCode294530006&quot;;
+      src.code as codeValue where codeValue = '292992006' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '109',  newCoding.display = 'Polymyxin B adverse reaction [disorder]' &quot;SetSNOMEDCode292992006&quot;;
+      src.code as codeValue where codeValue = '703936006' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '110',  newCoding.display = 'Allergy to yeast [disorder]' &quot;SetSNOMEDCode703936006&quot;;
+      src.code as codeValue where codeValue = '293118001' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '113',  newCoding.display = 'Rabies vaccine adverse reaction [disorder]' &quot;SetSNOMEDCode293118001&quot;;
+      src.code as codeValue where codeValue = '46177005' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '114',  newCoding.display = 'End stage renal disease [disorder]' &quot;SetSNOMEDCode46177005&quot;;
+      src.code as codeValue where codeValue = '64520006' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '115',  newCoding.display = 'Protamine sulfate [substance]' &quot;SetSNOMEDCode64520006&quot;;
+      src.code as codeValue where codeValue = '294278007' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '115',  newCoding.display = 'Protamine allergy [disorder]' &quot;SetSNOMEDCode294278007&quot;;
+      src.code as codeValue where codeValue = '451281000124102' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '116',  newCoding.display = 'Adverse reaction caused by meningococcal group B vaccine [disorder]' &quot;SetSNOMEDCode451281000124102&quot;;
+      src.code as codeValue where codeValue = '219082005' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '119',  newCoding.display = 'Adverse reaction caused by cholera vaccine [disorder]' &quot;SetSNOMEDCode219082005&quot;;
+      src.code as codeValue where codeValue = '32911000' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '121',  newCoding.display = 'Homeless [finding]' &quot;SetSNOMEDCode32911000&quot;;
+      src.code as codeValue where codeValue = '116859006' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '132',  newCoding.display = 'Transfusion of blood product [procedure]' &quot;SetSNOMEDCode116859006&quot;;
+      src.code as codeValue where codeValue = '116859006' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '133',  newCoding.display = 'Transfusion of blood product [procedure]' &quot;SetSNOMEDCode116859006&quot;;
+      src.code as codeValue where codeValue = '116859006' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '134',  newCoding.display = 'Transfusion of blood product [procedure]' &quot;SetSNOMEDCode116859006&quot;;
+      src.code as codeValue where codeValue = '13569004' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '135',  newCoding.display = 'Transfusion of plasma [procedure]' &quot;SetSNOMEDCode13569004&quot;;
+      src.code as codeValue where codeValue = '12719002' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '135',  newCoding.display = 'Platelet transfusion [procedure]' &quot;SetSNOMEDCode12719002&quot;;
+      src.code as codeValue where codeValue = '65880007' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '145',  newCoding.display = 'X-linked agammaglobulinemia [disorder]' &quot;SetSNOMEDCode65880007&quot;;
+      src.code as codeValue where codeValue = '23238000' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '145',  newCoding.display = 'Common variable agammaglobulinemia [disorder]' &quot;SetSNOMEDCode23238000&quot;;
+      src.code as codeValue where codeValue = '190979003' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '146',  newCoding.display = 'Selective immunoglobulin A deficiency [disorder]' &quot;SetSNOMEDCode190979003&quot;;
+      src.code as codeValue where codeValue = '123785006' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '146',  newCoding.display = 'Immunoglobulin G subclass deficiency [finding]' &quot;SetSNOMEDCode123785006&quot;;
+      src.code as codeValue where codeValue = '31323000' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '147',  newCoding.display = 'Severe combined immunodeficiency disease [disorder]' &quot;SetSNOMEDCode31323000&quot;;
+      src.code as codeValue where codeValue = '77128003' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '147',  newCoding.display = 'DiGeorge sequence [disorder]' &quot;SetSNOMEDCode77128003&quot;;
+      src.code as codeValue where codeValue = '77128003' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '148',  newCoding.display = 'DiGeorge sequence [disorder]' &quot;SetSNOMEDCode77128003&quot;;
+      src.code as codeValue where codeValue = '36070007' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '148',  newCoding.display = 'Wiskott-Aldrich syndrome [disorder]' &quot;SetSNOMEDCode36070007&quot;;
+      src.code as codeValue where codeValue = '68504005' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '148',  newCoding.display = 'Ataxia-telangiectasia syndrome [disorder]' &quot;SetSNOMEDCode68504005&quot;;
+      src.code as codeValue where codeValue = '24743004' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '150',  newCoding.display = 'Complement deficiency disease [disorder]' &quot;SetSNOMEDCode24743004&quot;;
+      src.code as codeValue where codeValue = '24743004' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '151',  newCoding.display = 'Complement deficiency disease [disorder]' &quot;SetSNOMEDCode24743004&quot;;
+      src.code as codeValue where codeValue = '81166004' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '151',  newCoding.display = 'Properdin deficiency disease [disorder]' &quot;SetSNOMEDCode81166004&quot;;
+      src.code as codeValue where codeValue = '234605000' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '151',  newCoding.display = 'Factor B deficiency [disorder]' &quot;SetSNOMEDCode234605000&quot;;
+      src.code as codeValue where codeValue = '387759001' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '152',  newCoding.display = 'Chronic granulomatous disease [disorder]' &quot;SetSNOMEDCode387759001&quot;;
+      src.code as codeValue where codeValue = '77358003' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '153',  newCoding.display = 'Congenital leukocyte adherence deficiency [disorder]' &quot;SetSNOMEDCode77358003&quot;;
+      src.code as codeValue where codeValue = '234433009' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '153',  newCoding.display = 'Myeloperoxidase deficiency [disorder]' &quot;SetSNOMEDCode234433009&quot;;
+      src.code as codeValue where codeValue = '62479008' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '154',  newCoding.display = 'Acquired immune deficiency syndrome [disorder]' &quot;SetSNOMEDCode62479008&quot;;
+      src.code as codeValue where codeValue = '62479008' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '155',  newCoding.display = 'Acquired immune deficiency syndrome [disorder]' &quot;SetSNOMEDCode62479008&quot;;
+      src.code as codeValue where codeValue = '77465005' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '157',  newCoding.display = 'Transplantation [procedure]' &quot;SetSNOMEDCode77465005&quot;;
+      src.code as codeValue where codeValue = '313039003' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '157',  newCoding.display = 'Solid organ transplant [procedure]' &quot;SetSNOMEDCode313039003&quot;;
+      src.code as codeValue where codeValue = '86553008' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '158',  newCoding.display = 'Immunosuppressive therapy [procedure]' &quot;SetSNOMEDCode86553008&quot;;
+      src.code as codeValue where codeValue = '53438000' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '159',  newCoding.display = 'Radiation therapy procedure or service [procedure]' &quot;SetSNOMEDCode53438000&quot;;
+      src.code as codeValue where codeValue = '707147002' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '160',  newCoding.display = 'Asplenia [disorder]' &quot;SetSNOMEDCode707147002&quot;;
+      src.code as codeValue where codeValue = '709044004' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '161',  newCoding.display = 'Chronic kidney disease [disorder]' &quot;SetSNOMEDCode709044004&quot;;
+      src.code as codeValue where codeValue = '52254009' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '167',  newCoding.display = 'Nephrotic syndrome [disorder]' &quot;SetSNOMEDCode52254009&quot;;
+      src.code as codeValue where codeValue = '367336001' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '168',  newCoding.display = 'Chemotherapy [procedure]' &quot;SetSNOMEDCode367336001&quot;;
+      src.code as codeValue where codeValue = '213017001' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '169',  newCoding.display = 'Sexual abuse [event]' &quot;SetSNOMEDCode213017001&quot;;
+      src.code as codeValue where codeValue = '422608009' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '169',  newCoding.display = 'Sexual assault [finding' &quot;SetSNOMEDCode422608009&quot;;
+      src.code as codeValue where codeValue = '248110007' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '169',  newCoding.display = 'Sexual assault [event]' &quot;SetSNOMEDCode248110007&quot;;
+      src.code as codeValue where codeValue = '248986005' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '170',  newCoding.display = 'Estimated date of conception [observable entity]' &quot;SetSNOMEDCode248986005&quot;;
+      src.code as codeValue where codeValue = '451291000124104' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '172',  newCoding.display = 'Adverse reaction caused by zoster vaccine [disorder]' &quot;SetSNOMEDCode451291000124104&quot;;
+      src.code as codeValue where codeValue = '93143009' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '178',  newCoding.display = 'Leukemia, disease [disorder]' &quot;SetSNOMEDCode93143009&quot;;
+      src.code as codeValue where codeValue = '399600009' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '179',  newCoding.display = 'Lymphoma [finding]' &quot;SetSNOMEDCode399600009&quot;;
+      src.code as codeValue where codeValue = '118599009' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '180',  newCoding.display = 'Hodgkin's disease [disorder]' &quot;SetSNOMEDCode118599009&quot;;
+      src.code as codeValue where codeValue = '109989006' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '181',  newCoding.display = 'Multiple myeloma [disorder]' &quot;SetSNOMEDCode109989006&quot;;
+      src.code as codeValue where codeValue = '86406008' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '186',  newCoding.display = 'Human immunodeficiency virus infection [disorder]' &quot;SetSNOMEDCode86406008&quot;;
+      src.code as codeValue where codeValue = '1156961008' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '191',  newCoding.display = 'Chimeric antigen receptor T-cell immunotherapy [procedure]' &quot;SetSNOMEDCode1156961008&quot;;
+      src.code as codeValue where codeValue = '363346000' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '198',  newCoding.display = 'Malignant neoplastic disease [disorder]' &quot;SetSNOMEDCode363346000&quot;;
+      src.code as codeValue where codeValue = '233703007' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '199',  newCoding.display = 'Interstitial lung disease [disorder]' &quot;SetSNOMEDCode233703007&quot;;
+      src.code as codeValue where codeValue = '190905008' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '200',  newCoding.display = 'cystic fibrosis [disorder]' &quot;SetSNOMEDCode190905008&quot;;
+      src.code as codeValue where codeValue = '70995007' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '201',  newCoding.display = 'Pulmonary hypertension [disorder]' &quot;SetSNOMEDCode70995007&quot;;
+      src.code as codeValue where codeValue = '52448006' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '202',  newCoding.display = 'Dimensia [disorder]' &quot;SetSNOMEDCode52448006&quot;;
+      src.code as codeValue where codeValue = '41040004' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '203',  newCoding.display = 'Complete trisomy 21 syndrome [disorder]' &quot;SetSNOMEDCode41040004&quot;;
+      src.code as codeValue where codeValue = '40108008' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '205',  newCoding.display = 'Thalassemia [disorder]' &quot;SetSNOMEDCode40108008&quot;;
+      src.code as codeValue where codeValue = '62914000' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '206',  newCoding.display = 'Cerebrovascular disease [disorder]' &quot;SetSNOMEDCode62914000&quot;;
+      src.code as codeValue where codeValue = '13645005' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '214',  newCoding.display = 'Chronic obstructive lung disease [disorder]' &quot;SetSNOMEDCode13645005&quot;;
+      src.code as codeValue where codeValue = '87433001' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '215',  newCoding.display = 'Pulmonary emphysema [disorder]' &quot;SetSNOMEDCode87433001&quot;;
+      src.code as codeValue where codeValue = '413490006' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '245',  newCoding.display = 'American Indian or Alaska Native [racial group]' &quot;SetSNOMEDCode413490006&quot;;
+    } &quot;HandleIndividualSNOMEDCoding&quot;;
+  } &quot;ApplySNOMEDMappings&quot;;
+  src.system as systemValue where systemValue = 'http://hl7.org/fhir/sid/cvx' -&gt; tgt.code = create('CodeableConcept') as newCC then {
+    src -&gt; newCC.coding = create('Coding') as newCoding then {
+      src.code as codeValue where codeValue = '02' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '081',  newCoding.display = 'OPV' &quot;SetCVXCode02&quot;;
+      src.code as codeValue where codeValue = '10' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '081',  newCoding.display = 'IPV' &quot;SetCVXCode10&quot;;
+      src.code as codeValue where codeValue = '89' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '081',  newCoding.display = 'Polio, unspecified formulation' &quot;SetCVXCode89&quot;;
+      src.code as codeValue where codeValue = '110' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '081',  newCoding.display = 'DTaP-HepB-IPV' &quot;SetCVXCode110&quot;;
+      src.code as codeValue where codeValue = '120' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '081',  newCoding.display = 'DTaP-Hib-IPV' &quot;SetCVXCode120&quot;;
+      src.code as codeValue where codeValue = '130' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '081',  newCoding.display = 'DTaP-IPV' &quot;SetCVXCode130&quot;;
+      src.code as codeValue where codeValue = '132' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '081',  newCoding.display = 'DTaP-IPV-Hib-HepB, Historical' &quot;SetCVXCode132&quot;;
+      src.code as codeValue where codeValue = '146' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '081',  newCoding.display = 'DTaP-IPV-Hib-HepB' &quot;SetCVXCode146&quot;;
+      src.code as codeValue where codeValue = '39' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '082',  newCoding.display = 'Japanese Encephalitis, MB' &quot;SetCVXCode39&quot;;
+      src.code as codeValue where codeValue = '134' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '082',  newCoding.display = 'Japanese Encephalitis, VC' &quot;SetCVXCode134&quot;;
+      src.code as codeValue where codeValue = '129' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '082',  newCoding.display = 'Japanese Encephalitis, unspecified' &quot;SetCVXCode129&quot;;
+      src.code as codeValue where codeValue = '116' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '083',  newCoding.display = 'Rotavirus, pentavalent' &quot;SetCVXCode116&quot;;
+      src.code as codeValue where codeValue = '122' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '083',  newCoding.display = 'Rotavirus, unspecified formulation' &quot;SetCVXCode122&quot;;
+      src.code as codeValue where codeValue = '74' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '083',  newCoding.display = 'Rotavirus, tetravalent' &quot;SetCVXCode74&quot;;
+      src.code as codeValue where codeValue = '119' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '083',  newCoding.display = 'Rotavirus, monovalent' &quot;SetCVXCode119&quot;;
+      src.code as codeValue where codeValue = '101' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '084',  newCoding.display = 'Typhoid capsular polysaccharide' &quot;SetCVXCode101&quot;;
+      src.code as codeValue where codeValue = '25' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '084',  newCoding.display = 'Typhoid oral, live, attenuated' &quot;SetCVXCode25&quot;;
+      src.code as codeValue where codeValue = '41' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '084',  newCoding.display = 'Typhoid, parenteral' &quot;SetCVXCode41&quot;;
+      src.code as codeValue where codeValue = '53' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '084',  newCoding.display = 'Typhoid, parenteral, AKD [U.S. military]' &quot;SetCVXCode53&quot;;
+      src.code as codeValue where codeValue = '91' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '084',  newCoding.display = 'Typhoid, unspecified formulation' &quot;SetCVXCode91&quot;;
+      src.code as codeValue where codeValue = '15' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '085',  newCoding.display = 'Influenza, split incl. purified surface antigen' &quot;SetCVXCode15&quot;;
+      src.code as codeValue where codeValue = '16' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '085',  newCoding.display = 'Influenza, whole' &quot;SetCVXCode16&quot;;
+      src.code as codeValue where codeValue = '88' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '085',  newCoding.display = 'Influenza, Unspecified' &quot;SetCVXCode88&quot;;
+      src.code as codeValue where codeValue = '111' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '085',  newCoding.display = 'Influenza, live, intranasal' &quot;SetCVXCode111&quot;;
+      src.code as codeValue where codeValue = '135' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '085',  newCoding.display = 'Influenza, high dose seasonal' &quot;SetCVXCode135&quot;;
+      src.code as codeValue where codeValue = '140' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '085',  newCoding.display = 'Influenza, injectable preservative free' &quot;SetCVXCode140&quot;;
+      src.code as codeValue where codeValue = '141' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '085',  newCoding.display = 'Influenza, injectable' &quot;SetCVXCode141&quot;;
+      src.code as codeValue where codeValue = '144' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '085',  newCoding.display = 'Influenza, intradermal, preservative free' &quot;SetCVXCode144&quot;;
+      src.code as codeValue where codeValue = '149' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '085',  newCoding.display = 'influenza, live, intranasal, quadrivalent' &quot;SetCVXCode149&quot;;
+      src.code as codeValue where codeValue = '150' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '085',  newCoding.display = 'influenza, injectable, quadrivalent, preservative free' &quot;SetCVXCode150&quot;;
+      src.code as codeValue where codeValue = '151' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '085',  newCoding.display = 'influenza nasal, unspecified formulation' &quot;SetCVXCode151&quot;;
+      src.code as codeValue where codeValue = '153' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '085',  newCoding.display = 'Influenza, injectable, MDCK, preservative free' &quot;SetCVXCode153&quot;;
+      src.code as codeValue where codeValue = '155' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '085',  newCoding.display = 'influenza, recombinant, injectable, preservative free' &quot;SetCVXCode155&quot;;
+      src.code as codeValue where codeValue = '158' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '085',  newCoding.display = 'Influenza, injectable, quadrivalent' &quot;SetCVXCode158&quot;;
+      src.code as codeValue where codeValue = '161' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '085',  newCoding.display = 'Influenza, injectable, quadrivalent, preservative free, peds' &quot;SetCVXCode161&quot;;
+      src.code as codeValue where codeValue = '166' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '085',  newCoding.display = 'Influenza, intradermal, quadrivalent, preservative free' &quot;SetCVXCode166&quot;;
+      src.code as codeValue where codeValue = '01' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '086',  newCoding.display = 'DTP' &quot;SetCVXCode01&quot;;
+      src.code as codeValue where codeValue = '20' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '086',  newCoding.display = 'DTaP' &quot;SetCVXCode20&quot;;
+      src.code as codeValue where codeValue = '22' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '086',  newCoding.display = 'DTP-Hib' &quot;SetCVXCode22&quot;;
+      src.code as codeValue where codeValue = '50' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '086',  newCoding.display = 'DTaP-Hib' &quot;SetCVXCode50&quot;;
+      src.code as codeValue where codeValue = '102' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '086',  newCoding.display = 'DTP-Hib-HepB' &quot;SetCVXCode102&quot;;
+      src.code as codeValue where codeValue = '106' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '086',  newCoding.display = 'DTaP, 5 pertussis antigens' &quot;SetCVXCode106&quot;;
+      src.code as codeValue where codeValue = '107' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '086',  newCoding.display = 'DTaP, Unspecified Formulation' &quot;SetCVXCode107&quot;;
+      src.code as codeValue where codeValue = '110' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '086',  newCoding.display = 'DTaP-HepB-IPV' &quot;SetCVXCode110&quot;;
+      src.code as codeValue where codeValue = '115' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '086',  newCoding.display = 'Tdap' &quot;SetCVXCode115&quot;;
+      src.code as codeValue where codeValue = '120' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '086',  newCoding.display = 'DTaP-Hib-IPV' &quot;SetCVXCode120&quot;;
+      src.code as codeValue where codeValue = '130' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '086',  newCoding.display = 'DTaP-IPV' &quot;SetCVXCode130&quot;;
+      src.code as codeValue where codeValue = '132' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '086',  newCoding.display = 'DTaP-IPV-Hib-HepB,historical' &quot;SetCVXCode132&quot;;
+      src.code as codeValue where codeValue = '146' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '086',  newCoding.display = 'DTaP-IPV-Hib-HepB' &quot;SetCVXCode146&quot;;
+      src.code as codeValue where codeValue = '01' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '087',  newCoding.display = 'DTP' &quot;SetCVXCode01&quot;;
+      src.code as codeValue where codeValue = '09' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '087',  newCoding.display = 'Td - Adult Adsorbed' &quot;SetCVXCode09&quot;;
+      src.code as codeValue where codeValue = '20' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '087',  newCoding.display = 'DTaP' &quot;SetCVXCode20&quot;;
+      src.code as codeValue where codeValue = '22' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '087',  newCoding.display = 'DTP-Hib' &quot;SetCVXCode22&quot;;
+      src.code as codeValue where codeValue = '28' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '087',  newCoding.display = 'DT - Pediatric' &quot;SetCVXCode28&quot;;
+      src.code as codeValue where codeValue = '50' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '087',  newCoding.display = 'DTaP-Hib' &quot;SetCVXCode50&quot;;
+      src.code as codeValue where codeValue = '102' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '087',  newCoding.display = 'DTP-Hib-HepB' &quot;SetCVXCode102&quot;;
+      src.code as codeValue where codeValue = '106' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '087',  newCoding.display = 'DTaP, 5 pertussis antigens' &quot;SetCVXCode106&quot;;
+      src.code as codeValue where codeValue = '107' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '087',  newCoding.display = 'DTaP, Unspecified Formulation' &quot;SetCVXCode107&quot;;
+      src.code as codeValue where codeValue = '110' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '087',  newCoding.display = 'DTaP-HepB-IPV' &quot;SetCVXCode110&quot;;
+      src.code as codeValue where codeValue = '113' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '087',  newCoding.display = 'Td p-free' &quot;SetCVXCode113&quot;;
+      src.code as codeValue where codeValue = '115' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '087',  newCoding.display = 'Tdap' &quot;SetCVXCode115&quot;;
+      src.code as codeValue where codeValue = '120' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '087',  newCoding.display = 'DTaP-Hib-IPV' &quot;SetCVXCode120&quot;;
+      src.code as codeValue where codeValue = '130' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '087',  newCoding.display = 'DTaP-IPV' &quot;SetCVXCode130&quot;;
+      src.code as codeValue where codeValue = '132' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '087',  newCoding.display = 'DTaP-IPV-Hib-HepB,historical' &quot;SetCVXCode132&quot;;
+      src.code as codeValue where codeValue = '138' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '087',  newCoding.display = 'Td - Adult' &quot;SetCVXCode138&quot;;
+      src.code as codeValue where codeValue = '139' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '087',  newCoding.display = 'Td - Adult Unspecified Formulation' &quot;SetCVXCode139&quot;;
+      src.code as codeValue where codeValue = '146' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '087',  newCoding.display = 'DTaP-IPV-Hib-HepB' &quot;SetCVXCode146&quot;;
+      src.code as codeValue where codeValue = '01' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '088',  newCoding.display = 'DTP' &quot;SetCVXCode01&quot;;
+      src.code as codeValue where codeValue = '09' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '088',  newCoding.display = 'Td - Adult Adsorbed' &quot;SetCVXCode09&quot;;
+      src.code as codeValue where codeValue = '20' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '088',  newCoding.display = 'DTaP' &quot;SetCVXCode20&quot;;
+      src.code as codeValue where codeValue = '22' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '088',  newCoding.display = 'DTP-Hib' &quot;SetCVXCode22&quot;;
+      src.code as codeValue where codeValue = '28' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '088',  newCoding.display = 'DT - Pediatric' &quot;SetCVXCode28&quot;;
+      src.code as codeValue where codeValue = '35' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '088',  newCoding.display = 'TT' &quot;SetCVXCode35&quot;;
+      src.code as codeValue where codeValue = '50' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '088',  newCoding.display = 'DTaP-Hib' &quot;SetCVXCode50&quot;;
+      src.code as codeValue where codeValue = '102' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '088',  newCoding.display = 'DTP-Hib-HepB' &quot;SetCVXCode102&quot;;
+      src.code as codeValue where codeValue = '106' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '088',  newCoding.display = 'DTaP, 5 pertussis antigens' &quot;SetCVXCode106&quot;;
+      src.code as codeValue where codeValue = '107' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '088',  newCoding.display = 'DTaP, Unspecified Formulation' &quot;SetCVXCode107&quot;;
+      src.code as codeValue where codeValue = '110' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '088',  newCoding.display = 'DTaP-HepB-IPV' &quot;SetCVXCode110&quot;;
+      src.code as codeValue where codeValue = '113' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '088',  newCoding.display = 'Td p-free' &quot;SetCVXCode113&quot;;
+      src.code as codeValue where codeValue = '115' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '088',  newCoding.display = 'Tdap' &quot;SetCVXCode115&quot;;
+      src.code as codeValue where codeValue = '120' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '088',  newCoding.display = 'DTaP-Hib-IPV' &quot;SetCVXCode120&quot;;
+      src.code as codeValue where codeValue = '130' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '088',  newCoding.display = 'DTaP-IPV' &quot;SetCVXCode130&quot;;
+      src.code as codeValue where codeValue = '132' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '088',  newCoding.display = 'DTaP-IPV-Hib-HepB,historical' &quot;SetCVXCode132&quot;;
+      src.code as codeValue where codeValue = '138' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '088',  newCoding.display = 'Td - Adult' &quot;SetCVXCode138&quot;;
+      src.code as codeValue where codeValue = '139' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '088',  newCoding.display = 'Td - Adult Unspecified Formulation' &quot;SetCVXCode139&quot;;
+      src.code as codeValue where codeValue = '146' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '088',  newCoding.display = 'DTaP-IPV-Hib-HepB' &quot;SetCVXCode146&quot;;
+      src.code as codeValue where codeValue = '21' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '089',  newCoding.display = 'Varicella' &quot;SetCVXCode21&quot;;
+      src.code as codeValue where codeValue = '94' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '089',  newCoding.display = 'MMRV' &quot;SetCVXCode94&quot;;
+      src.code as codeValue where codeValue = '121' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '089',  newCoding.display = 'Zoster' &quot;SetCVXCode121&quot;;
+      src.code as codeValue where codeValue = '62' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '090',  newCoding.display = '4vHPV' &quot;SetCVXCode62&quot;;
+      src.code as codeValue where codeValue = '118' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '090',  newCoding.display = '2vHPV' &quot;SetCVXCode118&quot;;
+      src.code as codeValue where codeValue = '137' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '090',  newCoding.display = 'HPV Unspecified' &quot;SetCVXCode137&quot;;
+      src.code as codeValue where codeValue = '165' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '090',  newCoding.display = '9vHPV' &quot;SetCVXCode165&quot;;
+      src.code as codeValue where codeValue = '03' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '091',  newCoding.display = 'MMR' &quot;SetCVXCode03&quot;;
+      src.code as codeValue where codeValue = '04' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '091',  newCoding.display = 'Measles/Rubella' &quot;SetCVXCode04&quot;;
+      src.code as codeValue where codeValue = '05' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '091',  newCoding.display = 'Measles' &quot;SetCVXCode05&quot;;
+      src.code as codeValue where codeValue = '94' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '091',  newCoding.display = 'MMRV' &quot;SetCVXCode94&quot;;
+      src.code as codeValue where codeValue = '03' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '092',  newCoding.display = 'MMR' &quot;SetCVXCode03&quot;;
+      src.code as codeValue where codeValue = '07' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '092',  newCoding.display = 'Mumps' &quot;SetCVXCode07&quot;;
+      src.code as codeValue where codeValue = '38' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '092',  newCoding.display = 'Rubella/Mumps' &quot;SetCVXCode38&quot;;
+      src.code as codeValue where codeValue = '94' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '092',  newCoding.display = 'MMRV' &quot;SetCVXCode94&quot;;
+      src.code as codeValue where codeValue = '03' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '093',  newCoding.display = 'MMR' &quot;SetCVXCode03&quot;;
+      src.code as codeValue where codeValue = '04' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '093',  newCoding.display = 'Measles/Rubella' &quot;SetCVXCode04&quot;;
+      src.code as codeValue where codeValue = '06' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '093',  newCoding.display = 'Rubella' &quot;SetCVXCode06&quot;;
+      src.code as codeValue where codeValue = '38' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '093',  newCoding.display = 'Rubella/Mumps' &quot;SetCVXCode38&quot;;
+      src.code as codeValue where codeValue = '94' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '093',  newCoding.display = 'MMRV' &quot;SetCVXCode94&quot;;
+      src.code as codeValue where codeValue = '133' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '094',  newCoding.display = 'PCV13' &quot;SetCVXCode133&quot;;
+      src.code as codeValue where codeValue = '100' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '094',  newCoding.display = 'PCV7' &quot;SetCVXCode100&quot;;
+      src.code as codeValue where codeValue = '33' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '094',  newCoding.display = 'PPSV23' &quot;SetCVXCode33&quot;;
+      src.code as codeValue where codeValue = '109' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '094',  newCoding.display = 'Pneumococcal, unspecified formulation' &quot;SetCVXCode109&quot;;
+      src.code as codeValue where codeValue = '152' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '094',  newCoding.display = 'Pneumococcal Conjugate, unspecified formulation' &quot;SetCVXCode152&quot;;
+      src.code as codeValue where codeValue = '32' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '095',  newCoding.display = 'Meningococcal, MPSV4' &quot;SetCVXCode32&quot;;
+      src.code as codeValue where codeValue = '108' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '095',  newCoding.display = 'Meningococcal ACWY, unspecified' &quot;SetCVXCode108&quot;;
+      src.code as codeValue where codeValue = '114' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '095',  newCoding.display = 'Meningococcal, MCV4P' &quot;SetCVXCode114&quot;;
+      src.code as codeValue where codeValue = '136' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '095',  newCoding.display = 'Meningococcal, MCV4O' &quot;SetCVXCode136&quot;;
+      src.code as codeValue where codeValue = '147' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '095',  newCoding.display = 'MCV4, unspecified' &quot;SetCVXCode147&quot;;
+      src.code as codeValue where codeValue = '148' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '095',  newCoding.display = 'Meningococcal C/Y-HIB PRP' &quot;SetCVXCode148&quot;;
+      src.code as codeValue where codeValue = '167' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '095',  newCoding.display = 'Meningococcal, unknown serogroups' &quot;SetCVXCode167&quot;;
+      src.code as codeValue where codeValue = '52' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '096',  newCoding.display = 'Hep A, adult' &quot;SetCVXCode52&quot;;
+      src.code as codeValue where codeValue = '83' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '096',  newCoding.display = 'Hep A, ped/adol, 2 dose' &quot;SetCVXCode83&quot;;
+      src.code as codeValue where codeValue = '84' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '096',  newCoding.display = 'Hep A, ped/adol, 3 dose' &quot;SetCVXCode84&quot;;
+      src.code as codeValue where codeValue = '85' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '096',  newCoding.display = 'Hep A, Unspecified' &quot;SetCVXCode85&quot;;
+      src.code as codeValue where codeValue = '104' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '096',  newCoding.display = 'HepA-HepB' &quot;SetCVXCode104&quot;;
+      src.code as codeValue where codeValue = '08' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '097',  newCoding.display = 'Hep B, Adol/peds' &quot;SetCVXCode08&quot;;
+      src.code as codeValue where codeValue = '42' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '097',  newCoding.display = 'Hep B, Adol/high risk infant' &quot;SetCVXCode42&quot;;
+      src.code as codeValue where codeValue = '43' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '097',  newCoding.display = 'Hep B, Adult' &quot;SetCVXCode43&quot;;
+      src.code as codeValue where codeValue = '44' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '097',  newCoding.display = 'Hep B, Dialysis' &quot;SetCVXCode44&quot;;
+      src.code as codeValue where codeValue = '45' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '097',  newCoding.display = 'Hep B, Unspecified Formulation' &quot;SetCVXCode45&quot;;
+      src.code as codeValue where codeValue = '51' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '097',  newCoding.display = 'Hib-HepB' &quot;SetCVXCode51&quot;;
+      src.code as codeValue where codeValue = '102' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '097',  newCoding.display = 'DTaP-Hib-HepB' &quot;SetCVXCode102&quot;;
+      src.code as codeValue where codeValue = '104' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '097',  newCoding.display = 'HepA-HepB' &quot;SetCVXCode104&quot;;
+      src.code as codeValue where codeValue = '110' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '097',  newCoding.display = 'DTaP-HepB-IPV' &quot;SetCVXCode110&quot;;
+      src.code as codeValue where codeValue = '132' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '097',  newCoding.display = 'DTaP-IPV-Hib-HepB, historical' &quot;SetCVXCode132&quot;;
+      src.code as codeValue where codeValue = '146' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '097',  newCoding.display = 'DTaP-IPV-Hib-HepB' &quot;SetCVXCode146&quot;;
+      src.code as codeValue where codeValue = '17' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '098',  newCoding.display = 'Hib unspecified formulation' &quot;SetCVXCode17&quot;;
+      src.code as codeValue where codeValue = '22' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '098',  newCoding.display = 'DTP-Hib' &quot;SetCVXCode22&quot;;
+      src.code as codeValue where codeValue = '46' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '098',  newCoding.display = 'PRP-D' &quot;SetCVXCode46&quot;;
+      src.code as codeValue where codeValue = '47' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '098',  newCoding.display = 'HbOC' &quot;SetCVXCode47&quot;;
+      src.code as codeValue where codeValue = '48' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '098',  newCoding.display = 'PRP-T' &quot;SetCVXCode48&quot;;
+      src.code as codeValue where codeValue = '49' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '098',  newCoding.display = 'PRP-OMP' &quot;SetCVXCode49&quot;;
+      src.code as codeValue where codeValue = '50' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '098',  newCoding.display = 'DTaP/Hib' &quot;SetCVXCode50&quot;;
+      src.code as codeValue where codeValue = '51' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '098',  newCoding.display = 'Hib-HepB' &quot;SetCVXCode51&quot;;
+      src.code as codeValue where codeValue = '102' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '098',  newCoding.display = 'DTP-Hib-HepB' &quot;SetCVXCode102&quot;;
+      src.code as codeValue where codeValue = '120' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '098',  newCoding.display = 'DTaP-IPV/Hib' &quot;SetCVXCode120&quot;;
+      src.code as codeValue where codeValue = '132' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '098',  newCoding.display = 'DTaP-IPV-Hib-HepB,historical' &quot;SetCVXCode132&quot;;
+      src.code as codeValue where codeValue = '146' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '098',  newCoding.display = 'DTaP-IPV-Hib-HepB' &quot;SetCVXCode146&quot;;
+      src.code as codeValue where codeValue = '148' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '098',  newCoding.display = 'Hib-MenCY-TT' &quot;SetCVXCode148&quot;;
+      src.code as codeValue where codeValue = '25' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '099',  newCoding.display = 'Yellow Fever' &quot;SetCVXCode25&quot;;
+      src.code as codeValue where codeValue = '121' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '100',  newCoding.display = 'Zoster live' &quot;SetCVXCode121&quot;;
+      src.code as codeValue where codeValue = '18' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '113',  newCoding.display = 'Rabies, intramuscular injection' &quot;SetCVXCode18&quot;;
+      src.code as codeValue where codeValue = '40' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '113',  newCoding.display = 'Rabies, intradermal injection' &quot;SetCVXCode40&quot;;
+      src.code as codeValue where codeValue = '90' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '113',  newCoding.display = 'Rabies, unspecified formulation' &quot;SetCVXCode90&quot;;
+      src.code as codeValue where codeValue = '162' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '116',  newCoding.display = 'Meningococcal B, recombinant' &quot;SetCVXCode162&quot;;
+      src.code as codeValue where codeValue = '163' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '116',  newCoding.display = 'Meningococcal B, OMV' &quot;SetCVXCode163&quot;;
+      src.code as codeValue where codeValue = '164' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '116',  newCoding.display = 'Meningococcal B, unspecified' &quot;SetCVXCode164&quot;;
+      src.code as codeValue where codeValue = '26' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '119',  newCoding.display = 'cholera, unspecified formulation' &quot;SetCVXCode26&quot;;
+      src.code as codeValue where codeValue = '172' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '119',  newCoding.display = 'cholera, WC-rBS' &quot;SetCVXCode172&quot;;
+      src.code as codeValue where codeValue = '173' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '119',  newCoding.display = 'cholera, BivWC' &quot;SetCVXCode173&quot;;
+      src.code as codeValue where codeValue = '174' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '119',  newCoding.display = 'cholera, live attenuated' &quot;SetCVXCode174&quot;;
+      src.code as codeValue where codeValue = '208' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '122',  newCoding.display = 'COVID-19, mRNA, LNP-S, PF, 30 mcg/0.3 mL dose' &quot;SetCVXCode208&quot;;
+      src.code as codeValue where codeValue = '13' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '125',  newCoding.display = 'Tetanus immune globulin' &quot;SetCVXCode13&quot;;
+      src.code as codeValue where codeValue = '154' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '126',  newCoding.display = 'Hepatitis A immune globulin' &quot;SetCVXCode154&quot;;
+      src.code as codeValue where codeValue = '30' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '127',  newCoding.display = 'Hepatitis B immune globulin' &quot;SetCVXCode30&quot;;
+      src.code as codeValue where codeValue = '34' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '128',  newCoding.display = 'Rabies immune globulin' &quot;SetCVXCode34&quot;;
+      src.code as codeValue where codeValue = '36' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '129',  newCoding.display = 'Varicella zoster immune globulin' &quot;SetCVXCode36&quot;;
+      src.code as codeValue where codeValue = '187' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '172',  newCoding.display = 'Zoster subunit' &quot;SetCVXCode187&quot;;
+      src.code as codeValue where codeValue = 'non-US' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '252',  newCoding.display = 'Tick-borne encephalitis vaccine' &quot;SetCVXCodenonUS&quot;;
+      src.code as codeValue where codeValue = '222' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '252',  newCoding.display = 'Tick-borne encephalitis, unspecified' &quot;SetCVXCode222&quot;;
+      src.code as codeValue where codeValue = '223' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '252',  newCoding.display = 'Tick-borne encephalitis, inactivated, PF, 0.25mL' &quot;SetCVXCode223&quot;;
+      src.code as codeValue where codeValue = '224' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '252',  newCoding.display = 'Tick-borne encephalitis, inactivated, PF, 0.5mL' &quot;SetCVXCode224&quot;;
+    } &quot;HandleIndividualCVXCoding&quot;;
+  } &quot;ApplyCVXMappings&quot;;
+  src.system as systemValue where systemValue = 'http://phinvads.cdc.gov' -&gt; tgt.code = create('CodeableConcept') as newCC then {
+    src -&gt; newCC.coding = create('Coding') as newCoding then {
+      src.code as codeValue where codeValue = 'VXC27' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '003',  newCoding.display = 'Immunodeficiency due to any cause' &quot;SetCDCPHINVSCodeVXC27&quot;;
+      src.code as codeValue where codeValue = 'VXC21' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '028',  newCoding.display = 'Previous history of intussusception' &quot;SetCDCPHINVSCodeVXC21&quot;;
+      src.code as codeValue where codeValue = 'VXC22' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '079',  newCoding.display = 'Encephalopathy within 7 days of previous dose of DTP or DTaP' &quot;SetCDCPHINVSCodeVXC22&quot;;
+      src.code as codeValue where codeValue = 'VXC20' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '080',  newCoding.display = 'Allergy to previous dose of this vaccine or to any of its unlisted vaccine components [anaphylactic]' &quot;SetCDCPHINVSCodeVXC20&quot;;
+      src.code as codeValue where codeValue = 'VXC20' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '081',  newCoding.display = 'Allergy to previous dose of this vaccine or to any of its unlisted vaccine components [anaphylactic]' &quot;SetCDCPHINVSCodeVXC20&quot;;
+      src.code as codeValue where codeValue = 'VXC20' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '082',  newCoding.display = 'Allergy to previous dose of this vaccine or to any of its unlisted vaccine components [anaphylactic]' &quot;SetCDCPHINVSCodeVXC20&quot;;
+      src.code as codeValue where codeValue = 'VXC20' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '083',  newCoding.display = 'Allergy to previous dose of this vaccine or to any of its unlisted vaccine components [anaphylactic]' &quot;SetCDCPHINVSCodeVXC20&quot;;
+      src.code as codeValue where codeValue = 'VXC20' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '084',  newCoding.display = 'Allergy to previous dose of this vaccine or to any of its unlisted vaccine components [anaphylactic]' &quot;SetCDCPHINVSCodeVXC20&quot;;
+      src.code as codeValue where codeValue = 'VXC20' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '085',  newCoding.display = 'Allergy to previous dose of this vaccine or to any of its unlisted vaccine components [anaphylactic]' &quot;SetCDCPHINVSCodeVXC20&quot;;
+      src.code as codeValue where codeValue = 'VXC20' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '086',  newCoding.display = 'Allergy to previous dose of this vaccine or to any of its unlisted vaccine components [anaphylactic]' &quot;SetCDCPHINVSCodeVXC20&quot;;
+      src.code as codeValue where codeValue = 'VXC20' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '087',  newCoding.display = 'Allergy to previous dose of this vaccine or to any of its unlisted vaccine components [anaphylactic]' &quot;SetCDCPHINVSCodeVXC20&quot;;
+      src.code as codeValue where codeValue = 'VXC20' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '088',  newCoding.display = 'Allergy to previous dose of this vaccine or to any of its unlisted vaccine components [anaphylactic]' &quot;SetCDCPHINVSCodeVXC20&quot;;
+      src.code as codeValue where codeValue = 'VXC20' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '089',  newCoding.display = 'Allergy to previous dose of this vaccine or to any of its unlisted vaccine components [anaphylactic]' &quot;SetCDCPHINVSCodeVXC20&quot;;
+      src.code as codeValue where codeValue = 'VXC20' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '090',  newCoding.display = 'Allergy to previous dose of this vaccine or to any of its unlisted vaccine components [anaphylactic]' &quot;SetCDCPHINVSCodeVXC20&quot;;
+      src.code as codeValue where codeValue = 'VXC20' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '091',  newCoding.display = 'Allergy to previous dose of this vaccine or to any of its unlisted vaccine components [anaphylactic]' &quot;SetCDCPHINVSCodeVXC20&quot;;
+      src.code as codeValue where codeValue = 'VXC20' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '092',  newCoding.display = 'Allergy to previous dose of this vaccine or to any of its unlisted vaccine components [anaphylactic]' &quot;SetCDCPHINVSCodeVXC20&quot;;
+      src.code as codeValue where codeValue = 'VXC20' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '093',  newCoding.display = 'Allergy to previous dose of this vaccine or to any of its unlisted vaccine components [anaphylactic]' &quot;SetCDCPHINVSCodeVXC20&quot;;
+      src.code as codeValue where codeValue = 'VXC20' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '094',  newCoding.display = 'Allergy to previous dose of this vaccine or to any of its unlisted vaccine components [anaphylactic]' &quot;SetCDCPHINVSCodeVXC20&quot;;
+      src.code as codeValue where codeValue = 'VXC20' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '095',  newCoding.display = 'Allergy to previous dose of this vaccine or to any of its unlisted vaccine components [anaphylactic]' &quot;SetCDCPHINVSCodeVXC20&quot;;
+      src.code as codeValue where codeValue = 'VXC20' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '096',  newCoding.display = 'Allergy to previous dose of this vaccine or to any of its unlisted vaccine components [anaphylactic]' &quot;SetCDCPHINVSCodeVXC20&quot;;
+      src.code as codeValue where codeValue = 'VXC20' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '097',  newCoding.display = 'Allergy to previous dose of this vaccine or to any of its unlisted vaccine components [anaphylactic]' &quot;SetCDCPHINVSCodeVXC20&quot;;
+      src.code as codeValue where codeValue = 'VXC20' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '098',  newCoding.display = 'Allergy to previous dose of this vaccine or to any of its unlisted vaccine components [anaphylactic]' &quot;SetCDCPHINVSCodeVXC20&quot;;
+      src.code as codeValue where codeValue = 'VXC20' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '099',  newCoding.display = 'Allergy to previous dose of this vaccine or to any of its unlisted vaccine components [anaphylactic]' &quot;SetCDCPHINVSCodeVXC20&quot;;
+      src.code as codeValue where codeValue = 'VXC20' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '100',  newCoding.display = 'Allergy to previous dose of this vaccine or to any of its unlisted vaccine components [anaphylactic]' &quot;SetCDCPHINVSCodeVXC20&quot;;
+      src.code as codeValue where codeValue = 'VXC18' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '110',  newCoding.display = 'Allergy to baker's yeast [anaphylactic]' &quot;SetCDCPHINVSCodeVXC18&quot;;
+      src.code as codeValue where codeValue = 'VXC17' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '111',  newCoding.display = 'Allergy [anaphylactic] to 2-phenoxyethanol' &quot;SetCDCPHINVSCodeVXC17&quot;;
+      src.code as codeValue where codeValue = 'VXC20' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '113',  newCoding.display = 'Allergy to previous dose of this vaccine or to any of its unlisted vaccine components [anaphylactic]' &quot;SetCDCPHINVSCodeVXC20&quot;;
+      src.code as codeValue where codeValue = 'VXC20' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '116',  newCoding.display = 'Allergy to previous dose of this vaccine or to any of its unlisted vaccine components [anaphylactic]' &quot;SetCDCPHINVSCodeVXC20&quot;;
+      src.code as codeValue where codeValue = 'VXC20' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '119',  newCoding.display = 'Allergy to previous dose of this vaccine or to any of its unlisted vaccine components [anaphylactic]' &quot;SetCDCPHINVSCodeVXC20&quot;;
+      src.code as codeValue where codeValue = 'VXC20' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '122',  newCoding.display = 'Allergy to previous dose of this vaccine or to any of its unlisted vaccine components [anaphylactic]' &quot;SetCDCPHINVSCodeVXC20&quot;;
+      src.code as codeValue where codeValue = 'VXC20' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '172',  newCoding.display = 'Allergy to previous dose of this vaccine or to any of its unlisted vaccine components [anaphylactic]' &quot;SetCDCPHINVSCodeVXC20&quot;;
+      src.code as codeValue where codeValue = 'VXC20' -&gt;  newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',  newCoding.code = '252',  newCoding.display = 'Allergy to previous dose of this vaccine or to any of its unlisted vaccine components [anaphylactic]' &quot;SetCDCPHINVSCodeVXC20&quot;;
+    } &quot;HandleIndividualCDCPHINVSCoding&quot;;
+  } &quot;ApplyCDCPHINVSMappings&quot;;
+}
+
+</pre></div>
+
+  <!-- insert notes if present -->
+  
+
+
+
+  
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://fhirfli.dev">FHIR-FLI</a>.  Package cicada.ig#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, May 6, 2024 15:25-0400">2024-05-06</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+  
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

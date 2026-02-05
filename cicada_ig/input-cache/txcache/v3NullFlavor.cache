@@ -1,0 +1,45 @@
+-------------------------------------------------------------------------------------
+{"hierarchical" : false, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "inactive" : false,
+    "include" : [{
+      "system" : "http://hl7.org/fhir/v3/NullFlavor",
+      "concept" : [{
+        "code" : "OTH",
+        "display" : "Other"
+      },
+      {
+        "code" : "UNK",
+        "display" : "Other"
+      }]
+    }]
+  }
+}}####
+e: {
+  "from-server" : true,
+  "error" : "Error from http://tx.fhir.org/r4: Unable to provide support for code system http://hl7.org/fhir/v3/NullFlavor"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : false, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "inactive" : true,
+    "include" : [{
+      "system" : "http://hl7.org/fhir/v3/NullFlavor",
+      "concept" : [{
+        "code" : "OTH",
+        "display" : "Other"
+      },
+      {
+        "code" : "UNK",
+        "display" : "Other"
+      }]
+    }]
+  }
+}}####
+e: {
+  "from-server" : true,
+  "error" : "Error from http://tx.fhir.org/r4: Unable to provide support for code system http://hl7.org/fhir/v3/NullFlavor"
+}
+-------------------------------------------------------------------------------------

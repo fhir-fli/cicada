@@ -1,0 +1,59 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhirfli.dev/fhir/ig/cicada/CodeSystem/PreferredAllowedReason> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "PreferredAllowedReason"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This  code system <code>http://fhirfli.dev/fhir/ig/cicada/CodeSystem/PreferredAllowedReason</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">notAPreferableOrAllowableVaccine<a name=\"PreferredAllowedReason-notAPreferableOrAllowableVaccine\"> </a></td><td>Not a preferable or allowable vaccine</td><td>Not a preferable or allowable vaccine</td></tr><tr><td style=\"white-space:nowrap\">wrongTradeName<a name=\"PreferredAllowedReason-wrongTradeName\"> </a></td><td>Wrong trade name</td><td>Wrong trade name</td></tr><tr><td style=\"white-space:nowrap\">lessThanRecommendedVolume<a name=\"PreferredAllowedReason-lessThanRecommendedVolume\"> </a></td><td>Less than recommended volume</td><td>Less than recommended volume</td></tr><tr><td style=\"white-space:nowrap\">administeredOutsideOfPreferredAgeRange<a name=\"PreferredAllowedReason-administeredOutsideOfPreferredAgeRange\"> </a></td><td>Administered outside of preferred age range</td><td>Administered outside of preferred age range</td></tr><tr><td style=\"white-space:nowrap\">noPreferredTypes<a name=\"PreferredAllowedReason-noPreferredTypes\"> </a></td><td>No preferred types</td><td>No preferred types</td></tr><tr><td style=\"white-space:nowrap\">noAllowedTypes<a name=\"PreferredAllowedReason-noAllowedTypes\"> </a></td><td>No allowed types</td><td>No allowed types</td></tr></table></div>"
+  ] ; # 
+  fhir:url [ fhir:v "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/PreferredAllowedReason"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "PreferredAllowedReasonCS"] ; # 
+  fhir:title [ fhir:v "Reasons why certain doses are Preferred or Allowed doses"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:date [ fhir:v "2024-05-06T15:25:10-04:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "FHIR-FLI"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "FHIR-FLI" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://fhirfli.dev" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Reasons why certain doses are Preferred or Allowed doses"] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:count [ fhir:v "6"^^xsd:nonNegativeInteger] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "notAPreferableOrAllowableVaccine" ] ;
+     fhir:display [ fhir:v "Not a preferable or allowable vaccine" ] ;
+     fhir:definition [ fhir:v "Not a preferable or allowable vaccine" ]
+  ] [
+     fhir:code [ fhir:v "wrongTradeName" ] ;
+     fhir:display [ fhir:v "Wrong trade name" ] ;
+     fhir:definition [ fhir:v "Wrong trade name" ]
+  ] [
+     fhir:code [ fhir:v "lessThanRecommendedVolume" ] ;
+     fhir:display [ fhir:v "Less than recommended volume" ] ;
+     fhir:definition [ fhir:v "Less than recommended volume" ]
+  ] [
+     fhir:code [ fhir:v "administeredOutsideOfPreferredAgeRange" ] ;
+     fhir:display [ fhir:v "Administered outside of preferred age range" ] ;
+     fhir:definition [ fhir:v "Administered outside of preferred age range" ]
+  ] [
+     fhir:code [ fhir:v "noPreferredTypes" ] ;
+     fhir:display [ fhir:v "No preferred types" ] ;
+     fhir:definition [ fhir:v "No preferred types" ]
+  ] [
+     fhir:code [ fhir:v "noAllowedTypes" ] ;
+     fhir:display [ fhir:v "No allowed types" ] ;
+     fhir:definition [ fhir:v "No allowed types" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

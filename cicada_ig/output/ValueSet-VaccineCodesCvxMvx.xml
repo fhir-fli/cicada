@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="VaccineCodesCvxMvx"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p>This value set includes codes based on the following rules:</p><ul><li>Include all codes defined in <a href="http://terminology.hl7.org/5.5.0/CodeSystem-CVX.html"><code>http://hl7.org/fhir/sid/cvx</code></a></li><li>Include all codes defined in <a href="http://terminology.hl7.org/5.5.0/CodeSystem-MVX.html"><code>http://hl7.org/fhir/sid/mvx</code></a></li></ul></div>
+  </text>
+  <url value="http://fhirfli.dev/fhir/ig/cicada/ValueSet/VaccineCodesCvxMvx"/>
+  <version value="0.1.0"/>
+  <name value="VaccineCodesCvxMvx"/>
+  <status value="draft"/>
+  <date value="2024-05-06T15:25:10-04:00"/>
+  <publisher value="FHIR-FLI"/>
+  <contact>
+    <name value="FHIR-FLI"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://fhirfli.dev"/>
+    </telecom>
+  </contact>
+  <compose>
+    <include>
+      <system value="http://hl7.org/fhir/sid/cvx"/>
+    </include>
+    <include>
+      <system value="http://hl7.org/fhir/sid/mvx"/>
+    </include>
+  </compose>
+</ValueSet>

@@ -1,0 +1,27 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "VaccineConditionFhir",
+  "url": "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/VaccineConditionFhir",
+  "name": "VaccineConditionFhir",
+  "title": "Condition Profile with Vaccine Condition Codes",
+  "status": "draft",
+  "description": "Profile for conditions where the code must be from the Vaccine Condition Codes value set.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Condition",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Condition",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Condition.code",
+        "path": "Condition.code",
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://fhirfli.dev/fhir/ig/cicada/ValueSet/vaccine-condition-codes-snomed"
+        }
+      }
+    ]
+  }
+}

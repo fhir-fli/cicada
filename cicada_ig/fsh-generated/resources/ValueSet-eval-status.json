@@ -1,0 +1,34 @@
+{
+  "resourceType": "ValueSet",
+  "status": "draft",
+  "name": "EvalStatusVS",
+  "id": "eval-status",
+  "title": "Evaluation Status Value Set",
+  "description": "Value Set for the status of the result of an evaluation.",
+  "url": "http://fhirfli.dev/fhir/ig/cicada/ValueSet/eval-status",
+  "compose": {
+    "include": [
+      {
+        "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/EvalStatus",
+        "concept": [
+          {
+            "code": "valid",
+            "display": "Valid"
+          },
+          {
+            "code": "not_valid",
+            "display": "Not Valid"
+          },
+          {
+            "code": "extraneous",
+            "display": "Extraneous"
+          },
+          {
+            "code": "sub_standard",
+            "display": "Substandard"
+          }
+        ]
+      }
+    ]
+  }
+}

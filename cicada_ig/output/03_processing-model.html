@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Processing Model - The Cicada Vaccine Forecasting Engine and Guide v0.1.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+
+    <style type="text/css">h2{--heading-prefix:"4"}
+    h3,h4,h5,h6{--heading-prefix:"4"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+        <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">The Cicada Vaccine Forecasting Engine and Guide</span>
+            <br/>
+            <span style="display:inline-block;">0.1.0 - ci-build
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifacts</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Processing Model</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">The Cicada Vaccine Forecasting Engine and Guide - Local Development build (v0.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href="http://fhirfli.dev/fhir/ig/cicada/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Processing Model</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#a-quick-overview-of-the-basic-logic-because-i-think-it-helps-makes-more-sense-of-what-is-to-come" id="markdown-toc-a-quick-overview-of-the-basic-logic-because-i-think-it-helps-makes-more-sense-of-what-is-to-come">A quick overview of the basic logic because I think it helps makes more sense of what is to come</a></li>
+  <li><a href="#gathering-necessary-data" id="markdown-toc-gathering-necessary-data">Gathering Necessary Data</a></li>
+  <li><a href="#organize-immunization-history" id="markdown-toc-organize-immunization-history">Organize Immunization History</a></li>
+  <li><a href="#this-is-pretty-self-explanatory-after-obtaining-all-of-the-immunizations-a-patient-has-received-break-them-down-into-their-antigenic-components" id="markdown-toc-this-is-pretty-self-explanatory-after-obtaining-all-of-the-immunizations-a-patient-has-received-break-them-down-into-their-antigenic-components">This is pretty self explanatory. After obtaining all of the immunizations a patient has received, break them down into their antigenic components</a></li>
+  <li><a href="#create-relevant-patient-series" id="markdown-toc-create-relevant-patient-series">Create Relevant Patient Series</a></li>
+  <li><a href="#evaluate-and-forecast-all-patient-series" id="markdown-toc-evaluate-and-forecast-all-patient-series">Evaluate and Forecast all Patient Series</a></li>
+  <li><a href="#select-patient-series" id="markdown-toc-select-patient-series">Select Patient Series</a></li>
+  <li><a href="#identify-and-evaluate-vaccine-group" id="markdown-toc-identify-and-evaluate-vaccine-group">Identify and Evaluate Vaccine Group</a></li>
+</ul>
+
+</div>
+<h3 id="a-quick-overview-of-the-basic-logic-because-i-think-it-helps-makes-more-sense-of-what-is-to-come">A quick overview of the basic logic because I think it helps makes more sense of what is to come</h3>
+
+<ul>
+  <li>Most of the logic is at the level of the antigen, and most vaccines are broken down into their antigenic components and the logic is applied using them</li>
+  <li>The basic gist of immunization logic runs like this:</li>
+  <li>Create list of antigens that the patient should be immunized against</li>
+  <li>Multiple options exist for immunity, some through infection (e.g. varicella), others through completing a vaccine series</li>
+  <li>There are multiple series that are valid for inducing immunity, and may be appropriate given certain conditions, allergies, age, etc</li>
+  <li>Each dose that has already been received is compared against the doses in every series, to see if they match required ages, intervals, etc</li>
+  <li>When a vaccine that has previously been administered (historical vaccine) satisies a dose in a series, that dose is considered satsifed, and the next recommended dose for each series is calculated</li>
+  <li>After all historical vaccines are applied to each series, the series are scored according to factors such as how many valid doses they contain, how quickly they can be completed, or if they are the default series</li>
+  <li>These scores are used to determine the preferred series for that particular antigen</li>
+  <li>The series are then grouped together in Vaccine groups (MMR, DTAP, etc) to provide final recommendations for vaccines</li>
+  <li>While not supplied in the official logic, these Vaccine groups should then be combined to actual Vaccines, with CVX/MVX codes and names, although this is somewhat more challenging as it usually has to do with which vaccines are available, rather than true preferences or recommendations</li>
+</ul>
+
+<h3 id="gathering-necessary-data">Gathering Necessary Data</h3>
+
+<p>Many of the diagrams from the CDC manual I didn’t think made sense when I first when through them, and are still not terribly helpful to understanding the process, at least for me, so I’m going to leave them out. Although this one isn’t bad:</p>
+
+<p>TODO - add figure</p>
+
+<h3 id="organize-immunization-history">Organize Immunization History</h3>
+
+<h3 id="this-is-pretty-self-explanatory-after-obtaining-all-of-the-immunizations-a-patient-has-received-break-them-down-into-their-antigenic-components">This is pretty self explanatory. After obtaining all of the immunizations a patient has received, break them down into their <a href="https://github.com/Dokotela/cicada/blob/main/cicada/lib/generated_files/schedule_supporting_data.dart#L5711">antigenic components</a></h3>
+
+<h3 id="create-relevant-patient-series">Create Relevant Patient Series</h3>
+
+<p>This is a bit confusing at first. Later on in the logic it makes a bit more sense. At this stage there are just a couple of things to remember:</p>
+
+<ol>
+  <li>There are multiple ways to get appropriate immunity for an antigen</li>
+  <li>ANY of them are equally valid (for immunity purposes), and so we have to test each of them (as long as they are appropriate for the patient)</li>
+  <li>Standard Series: appropriate for anyone of the correct gender</li>
+</ol>
+
+<ul>
+  <li>Correct gender, for the purposes of vaccine logic, patients are grouped into male, female, transgender or unknown. We use this value to determine if a series is appropriate for a patient.</li>
+</ul>
+
+<h4 id="gender---note-that-in-this-logic-gender-and-sex-are-used-synonymously-for-consistency-in-the-logic-for-these-purposes-only-they-refer-to-the-same-thing-and-that-is-the-genetic-sex-at-birth-if-you-dont-understand-why-there-are-differences-in-sex-and-gender-and-gender-identity-please-consider-reading-any-of-the-following-articles-by-the-ama-stanford-or-planned-parenthood">Gender - Note that in this logic gender and sex are used synonymously for consistency in the logic. FOR THESE PURPOSES ONLY they refer to the same thing, and that is the genetic sex at birth. If you don’t understand why there are differences in sex and gender (and gender identity), please consider reading any of the following articles by the <a href="https://journalofethics.ama-assn.org/article/sex-gender-and-why-differences-matter/2008-07">AMA</a>, <a href="https://stanmed.stanford.edu/2017spring/how-sex-and-gender-which-are-not-the-same-thing-influence-our-health.html">Stanford</a>, or <a href="https://www.plannedparenthood.org/learn/gender-identity/sex-gender-identity">Planned Parenthood</a></h4>
+
+<ol>
+  <li>Risk Series: Series can be ‘Standard’, ‘Evaluation Only’, or ‘Risk’. Each ‘Risk’ series has a list of indications that come from a list of ‘Observations’ (note, these are NOT the same as FHIR Observations). In some cases they are Conditions or Observations, but in some cases, they are Procedures, Immunizations, or just circumstances (like being a healthcare worker, or travel to endemic areas, etc.) that imparts a higher risk for certain diseases, and therefore the series will apply. If a Risk series cannot be definitely applied to a patient, then it is not used in the forecast (but a notification should be sent to the clinician alerting them to this fact).</li>
+</ol>
+
+<h3 id="evaluate-and-forecast-all-patient-series">Evaluate and Forecast all Patient Series</h3>
+
+<ol>
+  <li>For each antigen, we evaluate all of the relevant series.</li>
+  <li>For each series, we evaluate each required dose, the dose IN THE SERIES that we’re trying to satisfy is called the target dose</li>
+  <li>We compare, in chronological order, all of the injections the patient has received that could possibly satisfy the target dose</li>
+  <li>If the patient has received no antigens for this series, we are finished with that series for now</li>
+  <li>There are multiple requirements that have to be met to satisfy a target dose (was the vaccine given at the correct age, was the interval between the last dose and this dose appropriate, etc)</li>
+  <li>If all of those requirements are met, then that target dose is said to be satisfied</li>
+  <li>If not, and the patient has received more injections, we repeat this process with each subsequent injection until the target dose has been satisfied or there are no more injections to evaluate.</li>
+  <li>If we have evaluated all of the patient’s injections against the series, or the series has no more target doses (meaning we have successfully completed it), then we are done and can move onto the next series</li>
+  <li>The one exception is for recurring series (such as Flu or Tetanus). For these, anytime a target dose is met, a new target dose, identical to the original is created, and then compared against the previous vaccines.</li>
+</ol>
+
+<h3 id="select-patient-series">Select Patient Series</h3>
+
+<p>We’re going to look through all of the series we just evaluated and find the one (or occasionally more than one) that is the best recommendation to get the patient fully immunized.</p>
+
+<h3 id="identify-and-evaluate-vaccine-group">Identify and Evaluate Vaccine Group</h3>
+
+<p>The above series are for individual antigens, not vaccines. There are vaccine groups that go together (notably MMR and DTaP/Tdap/Td) and generally you don’t give one without the others. Because of this, we have to join the individual antigens together and evaluate them as a group. It’s similar to the process for individual antigens, but we’ll get to that towards the end.</p>
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://fhirfli.dev">FHIR-FLI</a>.  Package cicada.ig#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, May 6, 2024 15:25-0400">2024-05-06</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+  
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

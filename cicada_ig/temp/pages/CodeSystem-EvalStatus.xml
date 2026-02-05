@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="EvalStatus"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p>This  code system <code>http://fhirfli.dev/fhir/ig/cicada/CodeSystem/EvalStatus</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap">valid<a name="EvalStatus-valid"> </a></td><td>Valid</td><td>Valid</td></tr><tr><td style="white-space:nowrap">not_valid<a name="EvalStatus-not_valid"> </a></td><td>Not Valid</td><td>Not Valid</td></tr><tr><td style="white-space:nowrap">extraneous<a name="EvalStatus-extraneous"> </a></td><td>Extraneous</td><td>Extraneous</td></tr><tr><td style="white-space:nowrap">sub_standard<a name="EvalStatus-sub_standard"> </a></td><td>Substandard</td><td>Substandard</td></tr></table></div>
+  </text>
+  <url value="http://fhirfli.dev/fhir/ig/cicada/CodeSystem/EvalStatus"/>
+  <version value="0.1.0"/>
+  <name value="EvalStatusCS"/>
+  <title value="Evaluation Status"/>
+  <status value="draft"/>
+  <date value="2024-05-06T15:25:10-04:00"/>
+  <publisher value="FHIR-FLI"/>
+  <contact>
+    <name value="FHIR-FLI"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://fhirfli.dev"/>
+    </telecom>
+  </contact>
+  <description value="The status of the result of an evaluation."/>
+  <content value="complete"/>
+  <count value="4"/>
+  <concept>
+    <code value="valid"/>
+    <display value="Valid"/>
+    <definition value="Valid"/>
+  </concept>
+  <concept>
+    <code value="not_valid"/>
+    <display value="Not Valid"/>
+    <definition value="Not Valid"/>
+  </concept>
+  <concept>
+    <code value="extraneous"/>
+    <display value="Extraneous"/>
+    <definition value="Extraneous"/>
+  </concept>
+  <concept>
+    <code value="sub_standard"/>
+    <display value="Substandard"/>
+    <definition value="Substandard"/>
+  </concept>
+</CodeSystem>

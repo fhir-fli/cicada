@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="VaccineGender"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p>This  code system <code>http://fhirfli.dev/fhir/ig/cicada/CodeSystem/VaccineGender</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap">female<a name="VaccineGender-female"> </a></td><td>Female</td><td>Female</td></tr><tr><td style="white-space:nowrap">transgender<a name="VaccineGender-transgender"> </a></td><td>Transgender</td><td>Transgender</td></tr><tr><td style="white-space:nowrap">unknown<a name="VaccineGender-unknown"> </a></td><td>Unknown</td><td>Unknown</td></tr><tr><td style="white-space:nowrap">male<a name="VaccineGender-male"> </a></td><td>Male</td><td>Male</td></tr></table></div>
+  </text>
+  <url value="http://fhirfli.dev/fhir/ig/cicada/CodeSystem/VaccineGender"/>
+  <version value="0.1.0"/>
+  <name value="VaccineGenderCS"/>
+  <title value="Vaccine Gender"/>
+  <status value="draft"/>
+  <date value="2024-05-06T15:25:10-04:00"/>
+  <publisher value="FHIR-FLI"/>
+  <contact>
+    <name value="FHIR-FLI"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://fhirfli.dev"/>
+    </telecom>
+  </contact>
+  <description value="Value set for gender categories relevant to vaccination data."/>
+  <content value="complete"/>
+  <count value="4"/>
+  <concept>
+    <code value="female"/>
+    <display value="Female"/>
+    <definition value="Female"/>
+  </concept>
+  <concept>
+    <code value="transgender"/>
+    <display value="Transgender"/>
+    <definition value="Transgender"/>
+  </concept>
+  <concept>
+    <code value="unknown"/>
+    <display value="Unknown"/>
+    <definition value="Unknown"/>
+  </concept>
+  <concept>
+    <code value="male"/>
+    <display value="Male"/>
+    <definition value="Male"/>
+  </concept>
+</CodeSystem>

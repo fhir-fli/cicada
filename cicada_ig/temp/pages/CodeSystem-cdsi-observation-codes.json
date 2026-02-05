@@ -1,0 +1,1280 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "cdsi-observation-codes",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This  code system <code>http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">001<a name=\"cdsi-observation-codes-001\"> </a></td><td>Patient seeks protection</td></tr><tr><td style=\"white-space:nowrap\">002<a name=\"cdsi-observation-codes-002\"> </a></td><td>Undergoing elective splenectomy</td></tr><tr><td style=\"white-space:nowrap\">003<a name=\"cdsi-observation-codes-003\"> </a></td><td>Immunocompromised</td></tr><tr><td style=\"white-space:nowrap\">004<a name=\"cdsi-observation-codes-004\"> </a></td><td>Recipient of a hematopoietic stem cell transplant</td></tr><tr><td style=\"white-space:nowrap\">005<a name=\"cdsi-observation-codes-005\"> </a></td><td>Hepatitis C virus infection</td></tr><tr><td style=\"white-space:nowrap\">006<a name=\"cdsi-observation-codes-006\"> </a></td><td>Receives clotting factor concentrates</td></tr><tr><td style=\"white-space:nowrap\">007<a name=\"cdsi-observation-codes-007\"> </a></td><td>Pregnant</td></tr><tr><td style=\"white-space:nowrap\">008<a name=\"cdsi-observation-codes-008\"> </a></td><td>Travel to an area of active cholera transmission</td></tr><tr><td style=\"white-space:nowrap\">009<a name=\"cdsi-observation-codes-009\"> </a></td><td>Breastfeeding</td></tr><tr><td style=\"white-space:nowrap\">010<a name=\"cdsi-observation-codes-010\"> </a></td><td>Cerebrospinal fluid leaks</td></tr><tr><td style=\"white-space:nowrap\">011<a name=\"cdsi-observation-codes-011\"> </a></td><td>Cochlear implants</td></tr><tr><td style=\"white-space:nowrap\">012<a name=\"cdsi-observation-codes-012\"> </a></td><td>Family history of altered immunocompetence</td></tr><tr><td style=\"white-space:nowrap\">013<a name=\"cdsi-observation-codes-013\"> </a></td><td>Severe Combined Immunodeficiency [SCID]</td></tr><tr><td style=\"white-space:nowrap\">014<a name=\"cdsi-observation-codes-014\"> </a></td><td>Diabetes</td></tr><tr><td style=\"white-space:nowrap\">015<a name=\"cdsi-observation-codes-015\"> </a></td><td>Chronic liver disease</td></tr><tr><td style=\"white-space:nowrap\">016<a name=\"cdsi-observation-codes-016\"> </a></td><td>Chronic heart disease</td></tr><tr><td style=\"white-space:nowrap\">017<a name=\"cdsi-observation-codes-017\"> </a></td><td>Chronic lung disease</td></tr><tr><td style=\"white-space:nowrap\">018<a name=\"cdsi-observation-codes-018\"> </a></td><td>Laboratory Evidence of Immunity or confirmation of Hepatitis A disease</td></tr><tr><td style=\"white-space:nowrap\">019<a name=\"cdsi-observation-codes-019\"> </a></td><td>Laboratory Evidence of Immunity or confirmation of Hepatitis B disease</td></tr><tr><td style=\"white-space:nowrap\">020<a name=\"cdsi-observation-codes-020\"> </a></td><td>Laboratory Evidence of Immunity for Measles</td></tr><tr><td style=\"white-space:nowrap\">021<a name=\"cdsi-observation-codes-021\"> </a></td><td>Laboratory Evidence of Immunity for Mumps</td></tr><tr><td style=\"white-space:nowrap\">022<a name=\"cdsi-observation-codes-022\"> </a></td><td>Laboratory Evidence of Immunity for Rubella</td></tr><tr><td style=\"white-space:nowrap\">023<a name=\"cdsi-observation-codes-023\"> </a></td><td>Laboratory Evidence of Immunity or confirmation of Varicella disease</td></tr><tr><td style=\"white-space:nowrap\">024<a name=\"cdsi-observation-codes-024\"> </a></td><td>Healthcare provider verified history of or diagnosis of Varicella</td></tr><tr><td style=\"white-space:nowrap\">025<a name=\"cdsi-observation-codes-025\"> </a></td><td>Healthcare provider verified history or diagnosis of Herpes Zoster</td></tr><tr><td style=\"white-space:nowrap\">026<a name=\"cdsi-observation-codes-026\"> </a></td><td>Persons with perinatal HIV infection who do not have evidence of severe immunosuppression and who were vaccinated with MMR before establishment of antiviral therapy [ART]</td></tr><tr><td style=\"white-space:nowrap\">027<a name=\"cdsi-observation-codes-027\"> </a></td><td>Asthma</td></tr><tr><td style=\"white-space:nowrap\">028<a name=\"cdsi-observation-codes-028\"> </a></td><td>Intussusception</td></tr><tr><td style=\"white-space:nowrap\">029<a name=\"cdsi-observation-codes-029\"> </a></td><td>Acute gastroenteritis</td></tr><tr><td style=\"white-space:nowrap\">030<a name=\"cdsi-observation-codes-030\"> </a></td><td>Acute febrile illness</td></tr><tr><td style=\"white-space:nowrap\">031<a name=\"cdsi-observation-codes-031\"> </a></td><td>Tuberculosis</td></tr><tr><td style=\"white-space:nowrap\">032<a name=\"cdsi-observation-codes-032\"> </a></td><td>Dialysis patient</td></tr><tr><td style=\"white-space:nowrap\">033<a name=\"cdsi-observation-codes-033\"> </a></td><td>Taken influenza antiviral medications within the previous 48 hours</td></tr><tr><td style=\"white-space:nowrap\">034<a name=\"cdsi-observation-codes-034\"> </a></td><td>Receiving long-term aspirin therapy</td></tr><tr><td style=\"white-space:nowrap\">035<a name=\"cdsi-observation-codes-035\"> </a></td><td>Antimicrobial or antimalarial taken within 72 hours</td></tr><tr><td style=\"white-space:nowrap\">036<a name=\"cdsi-observation-codes-036\"> </a></td><td>Men who have sex with men</td></tr><tr><td style=\"white-space:nowrap\">037<a name=\"cdsi-observation-codes-037\"> </a></td><td>Not in a long-term, mutually monogamous relationship</td></tr><tr><td style=\"white-space:nowrap\">038<a name=\"cdsi-observation-codes-038\"> </a></td><td>Sex partner of Hepatitis B surface antigen-positive persons</td></tr><tr><td style=\"white-space:nowrap\">039<a name=\"cdsi-observation-codes-039\"> </a></td><td>Receives treatment for STD</td></tr><tr><td style=\"white-space:nowrap\">040<a name=\"cdsi-observation-codes-040\"> </a></td><td>Illicit drug use</td></tr><tr><td style=\"white-space:nowrap\">041<a name=\"cdsi-observation-codes-041\"> </a></td><td>Illicit injection drug use</td></tr><tr><td style=\"white-space:nowrap\">042<a name=\"cdsi-observation-codes-042\"> </a></td><td>Smoke cigarettes</td></tr><tr><td style=\"white-space:nowrap\">043<a name=\"cdsi-observation-codes-043\"> </a></td><td>Alcoholism</td></tr><tr><td style=\"white-space:nowrap\">044<a name=\"cdsi-observation-codes-044\"> </a></td><td>Anticipate close personal contact with international adoptee</td></tr><tr><td style=\"white-space:nowrap\">045<a name=\"cdsi-observation-codes-045\"> </a></td><td>Travel to country with a Yellow Fever vaccination entry requirement</td></tr><tr><td style=\"white-space:nowrap\">046<a name=\"cdsi-observation-codes-046\"> </a></td><td>College students living in residence halls</td></tr><tr><td style=\"white-space:nowrap\">047<a name=\"cdsi-observation-codes-047\"> </a></td><td>Resident of area at risk for exposure to the disease</td></tr><tr><td style=\"white-space:nowrap\">048<a name=\"cdsi-observation-codes-048\"> </a></td><td>Travelling Internationally</td></tr><tr><td style=\"white-space:nowrap\">049<a name=\"cdsi-observation-codes-049\"> </a></td><td>Working with Hepatitis A virus in research setting</td></tr><tr><td style=\"white-space:nowrap\">050<a name=\"cdsi-observation-codes-050\"> </a></td><td>Microbiologists routinely exposed to Neisseria meningitidis</td></tr><tr><td style=\"white-space:nowrap\">051<a name=\"cdsi-observation-codes-051\"> </a></td><td>Microbiology laboratorians who work frequently with S. typhi</td></tr><tr><td style=\"white-space:nowrap\">052<a name=\"cdsi-observation-codes-052\"> </a></td><td>Laboratory personnel who might be exposed to YFV</td></tr><tr><td style=\"white-space:nowrap\">053<a name=\"cdsi-observation-codes-053\"> </a></td><td>Rabies researchers</td></tr><tr><td style=\"white-space:nowrap\">054<a name=\"cdsi-observation-codes-054\"> </a></td><td>Laboratory workers who handle specimens that might contain polioviruses</td></tr><tr><td style=\"white-space:nowrap\">055<a name=\"cdsi-observation-codes-055\"> </a></td><td>Health care personnel</td></tr><tr><td style=\"white-space:nowrap\">056<a name=\"cdsi-observation-codes-056\"> </a></td><td>Health-care workers who have close contact with patients who might be excreting wild polioviruses</td></tr><tr><td style=\"white-space:nowrap\">057<a name=\"cdsi-observation-codes-057\"> </a></td><td>Public safety worker exposed to blood or infection body fluids</td></tr><tr><td style=\"white-space:nowrap\">058<a name=\"cdsi-observation-codes-058\"> </a></td><td>Staff of institution for persons with developmental disabilities</td></tr><tr><td style=\"white-space:nowrap\">059<a name=\"cdsi-observation-codes-059\"> </a></td><td>Occupational exposure for Hepatitis A</td></tr><tr><td style=\"white-space:nowrap\">060<a name=\"cdsi-observation-codes-060\"> </a></td><td>Veterinarians and their staff</td></tr><tr><td style=\"white-space:nowrap\">061<a name=\"cdsi-observation-codes-061\"> </a></td><td>Animal handlers</td></tr><tr><td style=\"white-space:nowrap\">062<a name=\"cdsi-observation-codes-062\"> </a></td><td>Persons whose activities bring them into frequent contact with rabies virus or potentially rabid animals</td></tr><tr><td style=\"white-space:nowrap\">063<a name=\"cdsi-observation-codes-063\"> </a></td><td>Post secondary student</td></tr><tr><td style=\"white-space:nowrap\">064<a name=\"cdsi-observation-codes-064\"> </a></td><td>Military recruits</td></tr><tr><td style=\"white-space:nowrap\">065<a name=\"cdsi-observation-codes-065\"> </a></td><td>Client of institution for persons with developmental disabilities</td></tr><tr><td style=\"white-space:nowrap\">066<a name=\"cdsi-observation-codes-066\"> </a></td><td>Chronic renal failure</td></tr><tr><td style=\"white-space:nowrap\">068<a name=\"cdsi-observation-codes-068\"> </a></td><td>In drug abuse treatment and prevention facility</td></tr><tr><td style=\"white-space:nowrap\">069<a name=\"cdsi-observation-codes-069\"> </a></td><td>In correctional facility</td></tr><tr><td style=\"white-space:nowrap\">070<a name=\"cdsi-observation-codes-070\"> </a></td><td>Persons at risk during an outbreak</td></tr><tr><td style=\"white-space:nowrap\">071<a name=\"cdsi-observation-codes-071\"> </a></td><td>Household contact with hepatitis B surface antigen-positive persons</td></tr><tr><td style=\"white-space:nowrap\">072<a name=\"cdsi-observation-codes-072\"> </a></td><td>Intimate exposure to a documented S. typhi carrier</td></tr><tr><td style=\"white-space:nowrap\">073<a name=\"cdsi-observation-codes-073\"> </a></td><td>Household and close contacts of immunocompromised persons</td></tr><tr><td style=\"white-space:nowrap\">074<a name=\"cdsi-observation-codes-074\"> </a></td><td>Negative serological screening for varicella</td></tr><tr><td style=\"white-space:nowrap\">075<a name=\"cdsi-observation-codes-075\"> </a></td><td>Transgender person</td></tr><tr><td style=\"white-space:nowrap\">076<a name=\"cdsi-observation-codes-076\"> </a></td><td>Progressive neurologic disorder</td></tr><tr><td style=\"white-space:nowrap\">077<a name=\"cdsi-observation-codes-077\"> </a></td><td>Received inactivated or unknown measles vaccine between 1963-1967</td></tr><tr><td style=\"white-space:nowrap\">078<a name=\"cdsi-observation-codes-078\"> </a></td><td>Received killed or unknown Mumps vaccine before 1979</td></tr><tr><td style=\"white-space:nowrap\">079<a name=\"cdsi-observation-codes-079\"> </a></td><td>Encephalopathy not attributable to another identifiable cause within 7 days of administration of a previous dose of Tdap, DTP, or DTaP vaccine</td></tr><tr><td style=\"white-space:nowrap\">080<a name=\"cdsi-observation-codes-080\"> </a></td><td>Adverse reaction to vaccine component</td></tr><tr><td style=\"white-space:nowrap\">081<a name=\"cdsi-observation-codes-081\"> </a></td><td>Severe allergic reaction after previous dose of Polio</td></tr><tr><td style=\"white-space:nowrap\">082<a name=\"cdsi-observation-codes-082\"> </a></td><td>Severe allergic reaction after previous dose of Japanese Encephalitis</td></tr><tr><td style=\"white-space:nowrap\">083<a name=\"cdsi-observation-codes-083\"> </a></td><td>Severe allergic reaction after previous dose of Rotavirus</td></tr><tr><td style=\"white-space:nowrap\">084<a name=\"cdsi-observation-codes-084\"> </a></td><td>Severe allergic reaction after previous dose of Typhoid</td></tr><tr><td style=\"white-space:nowrap\">085<a name=\"cdsi-observation-codes-085\"> </a></td><td>Severe allergic reaction after previous dose of Influenza</td></tr><tr><td style=\"white-space:nowrap\">086<a name=\"cdsi-observation-codes-086\"> </a></td><td>Severe allergic reaction after previous dose of Pertussis</td></tr><tr><td style=\"white-space:nowrap\">087<a name=\"cdsi-observation-codes-087\"> </a></td><td>Severe allergic reaction after previous dose of Diphtheria</td></tr><tr><td style=\"white-space:nowrap\">088<a name=\"cdsi-observation-codes-088\"> </a></td><td>Severe allergic reaction after previous dose of Tetanus</td></tr><tr><td style=\"white-space:nowrap\">089<a name=\"cdsi-observation-codes-089\"> </a></td><td>Severe allergic reaction after previous dose of Varicella</td></tr><tr><td style=\"white-space:nowrap\">090<a name=\"cdsi-observation-codes-090\"> </a></td><td>Severe allergic reaction after previous dose of HPV</td></tr><tr><td style=\"white-space:nowrap\">091<a name=\"cdsi-observation-codes-091\"> </a></td><td>Severe allergic reaction after previous dose of Measles</td></tr><tr><td style=\"white-space:nowrap\">092<a name=\"cdsi-observation-codes-092\"> </a></td><td>Severe allergic reaction after previous dose of Mumps</td></tr><tr><td style=\"white-space:nowrap\">093<a name=\"cdsi-observation-codes-093\"> </a></td><td>Severe allergic reaction after previous dose of Rubella</td></tr><tr><td style=\"white-space:nowrap\">094<a name=\"cdsi-observation-codes-094\"> </a></td><td>Severe allergic reaction after previous dose of Pneumococcal</td></tr><tr><td style=\"white-space:nowrap\">095<a name=\"cdsi-observation-codes-095\"> </a></td><td>Severe allergic reaction after previous dose of Meningococcal</td></tr><tr><td style=\"white-space:nowrap\">096<a name=\"cdsi-observation-codes-096\"> </a></td><td>Severe allergic reaction after previous dose of Hepatitis A</td></tr><tr><td style=\"white-space:nowrap\">097<a name=\"cdsi-observation-codes-097\"> </a></td><td>Severe allergic reaction after previous dose of Hepatitis B</td></tr><tr><td style=\"white-space:nowrap\">098<a name=\"cdsi-observation-codes-098\"> </a></td><td>Severe allergic reaction after previous dose of Hib</td></tr><tr><td style=\"white-space:nowrap\">099<a name=\"cdsi-observation-codes-099\"> </a></td><td>Severe allergic reaction after previous dose of Yellow Fever</td></tr><tr><td style=\"white-space:nowrap\">100<a name=\"cdsi-observation-codes-100\"> </a></td><td>Severe allergic reaction after previous dose of live zoster</td></tr><tr><td style=\"white-space:nowrap\">101<a name=\"cdsi-observation-codes-101\"> </a></td><td>Allergic reaction to egg protein</td></tr><tr><td style=\"white-space:nowrap\">102<a name=\"cdsi-observation-codes-102\"> </a></td><td>Severe allergic reaction to gelatin</td></tr><tr><td style=\"white-space:nowrap\">103<a name=\"cdsi-observation-codes-103\"> </a></td><td>Severe allergic reaction to arginine</td></tr><tr><td style=\"white-space:nowrap\">104<a name=\"cdsi-observation-codes-104\"> </a></td><td>Allergic reaction to latex</td></tr><tr><td style=\"white-space:nowrap\">105<a name=\"cdsi-observation-codes-105\"> </a></td><td>Severe allergic reaction to chicken protein</td></tr><tr><td style=\"white-space:nowrap\">106<a name=\"cdsi-observation-codes-106\"> </a></td><td>Severe allergic reaction to gentamicin</td></tr><tr><td style=\"white-space:nowrap\">107<a name=\"cdsi-observation-codes-107\"> </a></td><td>Severe allergic reaction to neomycin</td></tr><tr><td style=\"white-space:nowrap\">108<a name=\"cdsi-observation-codes-108\"> </a></td><td>Severe allergic reaction to streptomycin</td></tr><tr><td style=\"white-space:nowrap\">109<a name=\"cdsi-observation-codes-109\"> </a></td><td>Severe allergic reaction to polymyxin B</td></tr><tr><td style=\"white-space:nowrap\">110<a name=\"cdsi-observation-codes-110\"> </a></td><td>Hypersensitivity to yeast</td></tr><tr><td style=\"white-space:nowrap\">111<a name=\"cdsi-observation-codes-111\"> </a></td><td>Hypersensitivity to the preservative 2-phenoxyethanol</td></tr><tr><td style=\"white-space:nowrap\">112<a name=\"cdsi-observation-codes-112\"> </a></td><td>Hypersensitivity to alum</td></tr><tr><td style=\"white-space:nowrap\">113<a name=\"cdsi-observation-codes-113\"> </a></td><td>Severe allergic reaction after previous dose of Rabies</td></tr><tr><td style=\"white-space:nowrap\">114<a name=\"cdsi-observation-codes-114\"> </a></td><td>End stage renal disease</td></tr><tr><td style=\"white-space:nowrap\">115<a name=\"cdsi-observation-codes-115\"> </a></td><td>Severe allergic reaction to protamine sulfate</td></tr><tr><td style=\"white-space:nowrap\">116<a name=\"cdsi-observation-codes-116\"> </a></td><td>Severe allergic reaction after previous dose of Meningococcal B</td></tr><tr><td style=\"white-space:nowrap\">117<a name=\"cdsi-observation-codes-117\"> </a></td><td>Severe allergic reaction to diphtheria toxoid</td></tr><tr><td style=\"white-space:nowrap\">118<a name=\"cdsi-observation-codes-118\"> </a></td><td>Severe allergic reaction to tetanus toxoid</td></tr><tr><td style=\"white-space:nowrap\">119<a name=\"cdsi-observation-codes-119\"> </a></td><td>Severe allergic reaction after previous dose of cholera</td></tr><tr><td style=\"white-space:nowrap\">120<a name=\"cdsi-observation-codes-120\"> </a></td><td>Begin Date of antiviral therapy [ART]</td></tr><tr><td style=\"white-space:nowrap\">121<a name=\"cdsi-observation-codes-121\"> </a></td><td>Homelessness</td></tr><tr><td style=\"white-space:nowrap\">122<a name=\"cdsi-observation-codes-122\"> </a></td><td>Severe allergic reaction after previous dose of COVID-19</td></tr><tr><td style=\"white-space:nowrap\">123<a name=\"cdsi-observation-codes-123\"> </a></td><td>Severe allergic reaction after previous dose of Ebola</td></tr><tr><td style=\"white-space:nowrap\">124<a name=\"cdsi-observation-codes-124\"> </a></td><td>Severe allergic reaction to rice protein </td></tr><tr><td style=\"white-space:nowrap\">125<a name=\"cdsi-observation-codes-125\"> </a></td><td>Tetanus IG administration</td></tr><tr><td style=\"white-space:nowrap\">126<a name=\"cdsi-observation-codes-126\"> </a></td><td>Hep A IG administration</td></tr><tr><td style=\"white-space:nowrap\">127<a name=\"cdsi-observation-codes-127\"> </a></td><td>Hep B IG administration</td></tr><tr><td style=\"white-space:nowrap\">128<a name=\"cdsi-observation-codes-128\"> </a></td><td>Rabies IG administration</td></tr><tr><td style=\"white-space:nowrap\">129<a name=\"cdsi-observation-codes-129\"> </a></td><td>Varicella IG administration</td></tr><tr><td style=\"white-space:nowrap\">130<a name=\"cdsi-observation-codes-130\"> </a></td><td>Measles prophylaxis IG administration - Standard</td></tr><tr><td style=\"white-space:nowrap\">131<a name=\"cdsi-observation-codes-131\"> </a></td><td>Measles prophylaxis IG administration - Immunocompromised Contact</td></tr><tr><td style=\"white-space:nowrap\">132<a name=\"cdsi-observation-codes-132\"> </a></td><td>RBC [adenine-saline added] blood transfusion</td></tr><tr><td style=\"white-space:nowrap\">133<a name=\"cdsi-observation-codes-133\"> </a></td><td>Packed RBC blood transfusion</td></tr><tr><td style=\"white-space:nowrap\">134<a name=\"cdsi-observation-codes-134\"> </a></td><td>Whole blood transfusion</td></tr><tr><td style=\"white-space:nowrap\">135<a name=\"cdsi-observation-codes-135\"> </a></td><td>Plasma/platelet products blood transfusion</td></tr><tr><td style=\"white-space:nowrap\">136<a name=\"cdsi-observation-codes-136\"> </a></td><td>Cytomegalovirus IGIV</td></tr><tr><td style=\"white-space:nowrap\">137<a name=\"cdsi-observation-codes-137\"> </a></td><td>IGIV - Replacement therapy for immune deficiencies</td></tr><tr><td style=\"white-space:nowrap\">138<a name=\"cdsi-observation-codes-138\"> </a></td><td>IGIV - Immune thrombocytopenic purpura treatment</td></tr><tr><td style=\"white-space:nowrap\">139<a name=\"cdsi-observation-codes-139\"> </a></td><td>IGIV - Postexposure varicella prophylaxis</td></tr><tr><td style=\"white-space:nowrap\">140<a name=\"cdsi-observation-codes-140\"> </a></td><td>IGIV - Immune thrombocytopenic purpura treatment</td></tr><tr><td style=\"white-space:nowrap\">141<a name=\"cdsi-observation-codes-141\"> </a></td><td>IGIV - Kawasaki disease</td></tr><tr><td style=\"white-space:nowrap\">142<a name=\"cdsi-observation-codes-142\"> </a></td><td>Travel to or working in countries that have high or intermediate endemicity of Hepatitis A</td></tr><tr><td style=\"white-space:nowrap\">143<a name=\"cdsi-observation-codes-143\"> </a></td><td>Travel to areas or countries where polio is epidemic or endemic</td></tr><tr><td style=\"white-space:nowrap\">144<a name=\"cdsi-observation-codes-144\"> </a></td><td>International travel with possible contact with animals in areas where rabies is enzootic and immediate access to appropriate medical care might be limited</td></tr><tr><td style=\"white-space:nowrap\">145<a name=\"cdsi-observation-codes-145\"> </a></td><td>B-lymphocyte [humoral] - Severe antibody deficiencies</td></tr><tr><td style=\"white-space:nowrap\">146<a name=\"cdsi-observation-codes-146\"> </a></td><td>B-lymphocyte [humoral] - Less severe antibody deficiencies</td></tr><tr><td style=\"white-space:nowrap\">147<a name=\"cdsi-observation-codes-147\"> </a></td><td>T-lymphocyte [cell-mediated and humoral] - Complete defects</td></tr><tr><td style=\"white-space:nowrap\">148<a name=\"cdsi-observation-codes-148\"> </a></td><td>T-lymphocyte [cell-mediated and humoral] - Partial defects</td></tr><tr><td style=\"white-space:nowrap\">149<a name=\"cdsi-observation-codes-149\"> </a></td><td>T-lymphocyte [cell-mediated and humoral] - interferon-gamma/Interleukin 12 axis deficiencies</td></tr><tr><td style=\"white-space:nowrap\">150<a name=\"cdsi-observation-codes-150\"> </a></td><td>T-lymphocyte [cell-mediated and humoral] - interferon-gamma or interferon-alpha</td></tr><tr><td style=\"white-space:nowrap\">151<a name=\"cdsi-observation-codes-151\"> </a></td><td>Persistent complement, properdin, or factor B deficiency</td></tr><tr><td style=\"white-space:nowrap\">152<a name=\"cdsi-observation-codes-152\"> </a></td><td>Phagocytic function - Chronic granulomatous disease</td></tr><tr><td style=\"white-space:nowrap\">153<a name=\"cdsi-observation-codes-153\"> </a></td><td>Phagocytic function - Leukocyte adhesion defect, and myeloperoxidase deficiency</td></tr><tr><td style=\"white-space:nowrap\">154<a name=\"cdsi-observation-codes-154\"> </a></td><td>HIV/AIDS - severely immunocompromised</td></tr><tr><td style=\"white-space:nowrap\">155<a name=\"cdsi-observation-codes-155\"> </a></td><td>HIV/AIDS - not severely immunocompromised</td></tr><tr><td style=\"white-space:nowrap\">156<a name=\"cdsi-observation-codes-156\"> </a></td><td>Generalized malignant neoplasm</td></tr><tr><td style=\"white-space:nowrap\">157<a name=\"cdsi-observation-codes-157\"> </a></td><td>Transplantation</td></tr><tr><td style=\"white-space:nowrap\">158<a name=\"cdsi-observation-codes-158\"> </a></td><td>Immunosuppressive therapy</td></tr><tr><td style=\"white-space:nowrap\">159<a name=\"cdsi-observation-codes-159\"> </a></td><td>Radiation therapy</td></tr><tr><td style=\"white-space:nowrap\">160<a name=\"cdsi-observation-codes-160\"> </a></td><td>Anatomical or functional asplenia</td></tr><tr><td style=\"white-space:nowrap\">161<a name=\"cdsi-observation-codes-161\"> </a></td><td>Chronic kidney disease</td></tr><tr><td style=\"white-space:nowrap\">162<a name=\"cdsi-observation-codes-162\"> </a></td><td>Travel to areas at risk for Yellow Fever transmission</td></tr><tr><td style=\"white-space:nowrap\">163<a name=\"cdsi-observation-codes-163\"> </a></td><td>Travel to areas in which there is a recognized risk of exposure to S. typhi</td></tr><tr><td style=\"white-space:nowrap\">164<a name=\"cdsi-observation-codes-164\"> </a></td><td>Travel to or are residents of countries in which meningococcal disease is hyperendemic or epidemic</td></tr><tr><td style=\"white-space:nowrap\">165<a name=\"cdsi-observation-codes-165\"> </a></td><td>Longer-term (e.g., 1 month or more) travel to a JE-endemic area</td></tr><tr><td style=\"white-space:nowrap\">166<a name=\"cdsi-observation-codes-166\"> </a></td><td>Travel to countries with high or intermediate prevalence of chronic HBV infection</td></tr><tr><td style=\"white-space:nowrap\">167<a name=\"cdsi-observation-codes-167\"> </a></td><td>Nephrotic Syndrome</td></tr><tr><td style=\"white-space:nowrap\">168<a name=\"cdsi-observation-codes-168\"> </a></td><td>Chemotherapy</td></tr><tr><td style=\"white-space:nowrap\">169<a name=\"cdsi-observation-codes-169\"> </a></td><td>History of sexual abuse or assault</td></tr><tr><td style=\"white-space:nowrap\">170<a name=\"cdsi-observation-codes-170\"> </a></td><td>Onset of pregnancy</td></tr><tr><td style=\"white-space:nowrap\">171<a name=\"cdsi-observation-codes-171\"> </a></td><td>Date of hematopoietic stem cell transplant</td></tr><tr><td style=\"white-space:nowrap\">172<a name=\"cdsi-observation-codes-172\"> </a></td><td>Severe allergic reaction after previous dose of recombinant zoster</td></tr><tr><td style=\"white-space:nowrap\">173<a name=\"cdsi-observation-codes-173\"> </a></td><td>Moving to JE-endemic country to take up residence</td></tr><tr><td style=\"white-space:nowrap\">174<a name=\"cdsi-observation-codes-174\"> </a></td><td>Frequent travel to JE-endemic areas</td></tr><tr><td style=\"white-space:nowrap\">175<a name=\"cdsi-observation-codes-175\"> </a></td><td>Patient seeks Hepatitis A protection</td></tr><tr><td style=\"white-space:nowrap\">176<a name=\"cdsi-observation-codes-176\"> </a></td><td>Patient seeks Hepatitis B protection</td></tr><tr><td style=\"white-space:nowrap\">177<a name=\"cdsi-observation-codes-177\"> </a></td><td>Patient seeks Meningococcal B protection</td></tr><tr><td style=\"white-space:nowrap\">178<a name=\"cdsi-observation-codes-178\"> </a></td><td>Leukemia</td></tr><tr><td style=\"white-space:nowrap\">179<a name=\"cdsi-observation-codes-179\"> </a></td><td>Lymphoma</td></tr><tr><td style=\"white-space:nowrap\">180<a name=\"cdsi-observation-codes-180\"> </a></td><td>Hodgkin's disease</td></tr><tr><td style=\"white-space:nowrap\">181<a name=\"cdsi-observation-codes-181\"> </a></td><td>Multiple myeloma</td></tr><tr><td style=\"white-space:nowrap\">182<a name=\"cdsi-observation-codes-182\"> </a></td><td>Ebola virus outbreak response</td></tr><tr><td style=\"white-space:nowrap\">183<a name=\"cdsi-observation-codes-183\"> </a></td><td>Health care personnel at federally designated Ebola treatment center in U.S.</td></tr><tr><td style=\"white-space:nowrap\">184<a name=\"cdsi-observation-codes-184\"> </a></td><td>Laboratorians or other staff at biosafety level 4 facilities in U.S.</td></tr><tr><td style=\"white-space:nowrap\">185<a name=\"cdsi-observation-codes-185\"> </a></td><td>Persons in settings that provide services to adults with high proportion of those persons have risk factors for HAV infection</td></tr><tr><td style=\"white-space:nowrap\">186<a name=\"cdsi-observation-codes-186\"> </a></td><td>HIV Infection</td></tr><tr><td style=\"white-space:nowrap\">187<a name=\"cdsi-observation-codes-187\"> </a></td><td>Allergic reaction to polysorbate 80</td></tr><tr><td style=\"white-space:nowrap\">188<a name=\"cdsi-observation-codes-188\"> </a></td><td>Known allergy to Polyethylene glycol [PEG]</td></tr><tr><td style=\"white-space:nowrap\">189<a name=\"cdsi-observation-codes-189\"> </a></td><td>Active treatment for solid tumors</td></tr><tr><td style=\"white-space:nowrap\">190<a name=\"cdsi-observation-codes-190\"> </a></td><td>Active treatment for hematologic malignancies</td></tr><tr><td style=\"white-space:nowrap\">191<a name=\"cdsi-observation-codes-191\"> </a></td><td>Receipt of CAR-T-cell therapy</td></tr><tr><td style=\"white-space:nowrap\">192<a name=\"cdsi-observation-codes-192\"> </a></td><td>Severe allergic reaction after previous dose of any egg-based IIV or LAIV influenza vaccine</td></tr><tr><td style=\"white-space:nowrap\">193<a name=\"cdsi-observation-codes-193\"> </a></td><td>Severe allergic reaction after previous dose of any ccIIV influenza vaccine</td></tr><tr><td style=\"white-space:nowrap\">194<a name=\"cdsi-observation-codes-194\"> </a></td><td>Severe allergic reaction after previous dose of any RIV influenza vaccine</td></tr><tr><td style=\"white-space:nowrap\">195<a name=\"cdsi-observation-codes-195\"> </a></td><td>Occupations at increased risk for COVID-19 exposure and transmission</td></tr><tr><td style=\"white-space:nowrap\">196<a name=\"cdsi-observation-codes-196\"> </a></td><td>Residing in an institutional setting at increased risk for COVID-19 exposure and transmission</td></tr><tr><td style=\"white-space:nowrap\">197<a name=\"cdsi-observation-codes-197\"> </a></td><td>Resident of a long term care facility</td></tr><tr><td style=\"white-space:nowrap\">198<a name=\"cdsi-observation-codes-198\"> </a></td><td>Cancer</td></tr><tr><td style=\"white-space:nowrap\">199<a name=\"cdsi-observation-codes-199\"> </a></td><td>Interstitial lung disease</td></tr><tr><td style=\"white-space:nowrap\">200<a name=\"cdsi-observation-codes-200\"> </a></td><td>Cystic fibrosis</td></tr><tr><td style=\"white-space:nowrap\">201<a name=\"cdsi-observation-codes-201\"> </a></td><td>Pulmonary hypertension</td></tr><tr><td style=\"white-space:nowrap\">202<a name=\"cdsi-observation-codes-202\"> </a></td><td>Dementia</td></tr><tr><td style=\"white-space:nowrap\">203<a name=\"cdsi-observation-codes-203\"> </a></td><td>Down syndrome</td></tr><tr><td style=\"white-space:nowrap\">204<a name=\"cdsi-observation-codes-204\"> </a></td><td>Obesity</td></tr><tr><td style=\"white-space:nowrap\">205<a name=\"cdsi-observation-codes-205\"> </a></td><td>Thalassemia</td></tr><tr><td style=\"white-space:nowrap\">206<a name=\"cdsi-observation-codes-206\"> </a></td><td>Cerebrovascular disease</td></tr><tr><td style=\"white-space:nowrap\">207<a name=\"cdsi-observation-codes-207\"> </a></td><td>Substance use disorder</td></tr><tr><td style=\"white-space:nowrap\">208<a name=\"cdsi-observation-codes-208\"> </a></td><td>Mental Health conditions</td></tr><tr><td style=\"white-space:nowrap\">209<a name=\"cdsi-observation-codes-209\"> </a></td><td>History of thrombosis with thrombocytopenia following the Janssen COVID-19 Vaccine or any other adenovirus-vectored COVID-19 vaccines</td></tr><tr><td style=\"white-space:nowrap\">210<a name=\"cdsi-observation-codes-210\"> </a></td><td>Severe allergic reaction after previous dose of Dengue vaccine</td></tr><tr><td style=\"white-space:nowrap\">211<a name=\"cdsi-observation-codes-211\"> </a></td><td>Evidence of previous dengue infection and living in areas where dengue is endemic</td></tr><tr><td style=\"white-space:nowrap\">212<a name=\"cdsi-observation-codes-212\"> </a></td><td>Health care personnel involved in the care and transport of patients with suspected or confirmed Ebola virus disease at Special Pathogen Treatment Centers</td></tr><tr><td style=\"white-space:nowrap\">213<a name=\"cdsi-observation-codes-213\"> </a></td><td>Laboratorians and support staff members at Laboratory Response Network (LRN) facilities that handle specimens that might contain replication-competent Ebola virus in the United States</td></tr><tr><td style=\"white-space:nowrap\">214<a name=\"cdsi-observation-codes-214\"> </a></td><td>Chronic obstructive pulmonary disease</td></tr><tr><td style=\"white-space:nowrap\">215<a name=\"cdsi-observation-codes-215\"> </a></td><td>Emphysema</td></tr><tr><td style=\"white-space:nowrap\">216<a name=\"cdsi-observation-codes-216\"> </a></td><td>Iatrogenic Immunosuppression</td></tr><tr><td style=\"white-space:nowrap\">217<a name=\"cdsi-observation-codes-217\"> </a></td><td>Persons working in rabies vaccine production facilities</td></tr><tr><td style=\"white-space:nowrap\">218<a name=\"cdsi-observation-codes-218\"> </a></td><td>Persons performing testing for rabies in diagnostic laboratories</td></tr><tr><td style=\"white-space:nowrap\">219<a name=\"cdsi-observation-codes-219\"> </a></td><td>Persons who frequently handle bats</td></tr><tr><td style=\"white-space:nowrap\">220<a name=\"cdsi-observation-codes-220\"> </a></td><td>Persons who frequently have contact with bats</td></tr><tr><td style=\"white-space:nowrap\">221<a name=\"cdsi-observation-codes-221\"> </a></td><td>Persons who frequently enter high-density bat environments</td></tr><tr><td style=\"white-space:nowrap\">222<a name=\"cdsi-observation-codes-222\"> </a></td><td>Persons who frequently perform animal necropsies</td></tr><tr><td style=\"white-space:nowrap\">223<a name=\"cdsi-observation-codes-223\"> </a></td><td>Severe allergic reaction after previous dose of orthopoxvirus vaccine</td></tr><tr><td style=\"white-space:nowrap\">224<a name=\"cdsi-observation-codes-224\"> </a></td><td>History or presence of atopic dermatitis</td></tr><tr><td style=\"white-space:nowrap\">225<a name=\"cdsi-observation-codes-225\"> </a></td><td>Household contact with history or presence of atopic dermatitis</td></tr><tr><td style=\"white-space:nowrap\">226<a name=\"cdsi-observation-codes-226\"> </a></td><td>Active exfoliative skin conditions</td></tr><tr><td style=\"white-space:nowrap\">227<a name=\"cdsi-observation-codes-227\"> </a></td><td>Household contact with active exfoliative skin conditions</td></tr><tr><td style=\"white-space:nowrap\">228<a name=\"cdsi-observation-codes-228\"> </a></td><td>Household contact is pregnant</td></tr><tr><td style=\"white-space:nowrap\">229<a name=\"cdsi-observation-codes-229\"> </a></td><td>Age is less than 1 year</td></tr><tr><td style=\"white-space:nowrap\">230<a name=\"cdsi-observation-codes-230\"> </a></td><td>Household contact who is less than 1 year of age</td></tr><tr><td style=\"white-space:nowrap\">231<a name=\"cdsi-observation-codes-231\"> </a></td><td>3 or more known major cardiac risk factors</td></tr><tr><td style=\"white-space:nowrap\">232<a name=\"cdsi-observation-codes-232\"> </a></td><td>Research laboratory personnel working with more virulent orthopoxviruses (e.g., Variola virus or mpox virus)</td></tr><tr><td style=\"white-space:nowrap\">233<a name=\"cdsi-observation-codes-233\"> </a></td><td>Clinical laboratory personnel performing diagnostic testing for more virulent orthopoxviruses (e.g., Variola virus or mpox virus)</td></tr><tr><td style=\"white-space:nowrap\">234<a name=\"cdsi-observation-codes-234\"> </a></td><td>Designated response team members working with more virulent orthopoxviruses (e.g., Variola virus or mpox virus)</td></tr><tr><td style=\"white-space:nowrap\">235<a name=\"cdsi-observation-codes-235\"> </a></td><td>Healthcare personnel who care for patients infected with more virulent orthopoxviruses (e.g., Variola virus or mpox virus)</td></tr><tr><td style=\"white-space:nowrap\">236<a name=\"cdsi-observation-codes-236\"> </a></td><td>Research laboratory personnel working with less virulent orthopoxviruses (e.g., Vaccinia virus or Cowpox virus)</td></tr><tr><td style=\"white-space:nowrap\">237<a name=\"cdsi-observation-codes-237\"> </a></td><td>Clinical laboratory personnel performing diagnostic testing for less virulent orthopoxviruses (e.g., Vaccinia virus or Cowpox virus)</td></tr><tr><td style=\"white-space:nowrap\">238<a name=\"cdsi-observation-codes-238\"> </a></td><td>Designated response team members working with less virulent orthopoxviruses (e.g., Vaccinia virus or Cowpox virus)</td></tr><tr><td style=\"white-space:nowrap\">239<a name=\"cdsi-observation-codes-239\"> </a></td><td>Healthcare personnel who administer ACAM2000</td></tr><tr><td style=\"white-space:nowrap\">240<a name=\"cdsi-observation-codes-240\"> </a></td><td>Healthcare personnel who care for patients infected with less virulent orthopoxviruses (e.g., Vaccinia virus or Cowpox virus)</td></tr><tr><td style=\"white-space:nowrap\">241<a name=\"cdsi-observation-codes-241\"> </a></td><td>Known exposure to mpox</td></tr><tr><td style=\"white-space:nowrap\">242<a name=\"cdsi-observation-codes-242\"> </a></td><td>Presumed exposure to mpox</td></tr><tr><td style=\"white-space:nowrap\">243<a name=\"cdsi-observation-codes-243\"> </a></td><td>Lack of laboratory confirmation of a previous Dengue infection</td></tr><tr><td style=\"white-space:nowrap\">244<a name=\"cdsi-observation-codes-244\"> </a></td><td>Severe allergic reaction after previous dose of RSV vaccine</td></tr><tr><td style=\"white-space:nowrap\">245<a name=\"cdsi-observation-codes-245\"> </a></td><td>American Indian or Alaskan Native</td></tr><tr><td style=\"white-space:nowrap\">246<a name=\"cdsi-observation-codes-246\"> </a></td><td>Severe immunocompromise</td></tr><tr><td style=\"white-space:nowrap\">247<a name=\"cdsi-observation-codes-247\"> </a></td><td>Gay, bisexual, and other men who have sex with men, transgender or nonbinary peope who in the past 6 months have had one of the following:  1) A new diagnosis of ≥ 1 sexually transmitted disease 2)  More than one sex partner 3)  Sex at a commercial sex venue 4)   Sex in association with a large public event in a geographic area where mpox transmission is occurring</td></tr><tr><td style=\"white-space:nowrap\">248<a name=\"cdsi-observation-codes-248\"> </a></td><td>Sexual partners of gay, bisexual, and other men who have sex with men, transgender or nonbinary peope who in the past 6 months have had one of the following:  1) A new diagnosis of ≥ 1 sexually transmitted disease 2)  More than one sex partner 3)  Sex at a commercial sex venue 4)   Sex in association with a large public event in a geographic area where mpox transmission is occurring</td></tr><tr><td style=\"white-space:nowrap\">249<a name=\"cdsi-observation-codes-249\"> </a></td><td>Moving or traveling to an area where TBE is endemic and will have extensive exposure to ticks because of their planned outdoor activities and itinerary</td></tr><tr><td style=\"white-space:nowrap\">250<a name=\"cdsi-observation-codes-250\"> </a></td><td>Moving or traveling to an area where TBE is endemic who might engage in outdoor activities in areas where ticks are likely to be found</td></tr><tr><td style=\"white-space:nowrap\">251<a name=\"cdsi-observation-codes-251\"> </a></td><td>Laboratory workers with a potential for exposure to TBE virus</td></tr><tr><td style=\"white-space:nowrap\">252<a name=\"cdsi-observation-codes-252\"> </a></td><td>Severe allergic reaction after previous dose of Tick-borne Encephalitis vaccine</td></tr></table></div>"
+  },
+  "url" : "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes",
+  "version" : "0.1.0",
+  "name" : "CdsiObservationCodes",
+  "title" : "CDSI Observation Codes",
+  "status" : "draft",
+  "date" : "2024-05-06T15:25:10-04:00",
+  "publisher" : "FHIR-FLI",
+  "contact" : [{
+    "name" : "FHIR-FLI",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://fhirfli.dev"
+    }]
+  }],
+  "description" : "Observations and Conditions that are important to indications or contraindications in vaccine forecasting",
+  "content" : "complete",
+  "count" : 251,
+  "concept" : [{
+    "code" : "001",
+    "display" : "001",
+    "definition" : "Patient seeks protection"
+  },
+  {
+    "code" : "002",
+    "display" : "002",
+    "definition" : "Undergoing elective splenectomy"
+  },
+  {
+    "code" : "003",
+    "display" : "003",
+    "definition" : "Immunocompromised"
+  },
+  {
+    "code" : "004",
+    "display" : "004",
+    "definition" : "Recipient of a hematopoietic stem cell transplant"
+  },
+  {
+    "code" : "005",
+    "display" : "005",
+    "definition" : "Hepatitis C virus infection"
+  },
+  {
+    "code" : "006",
+    "display" : "006",
+    "definition" : "Receives clotting factor concentrates"
+  },
+  {
+    "code" : "007",
+    "display" : "007",
+    "definition" : "Pregnant"
+  },
+  {
+    "code" : "008",
+    "display" : "008",
+    "definition" : "Travel to an area of active cholera transmission"
+  },
+  {
+    "code" : "009",
+    "display" : "009",
+    "definition" : "Breastfeeding"
+  },
+  {
+    "code" : "010",
+    "display" : "010",
+    "definition" : "Cerebrospinal fluid leaks"
+  },
+  {
+    "code" : "011",
+    "display" : "011",
+    "definition" : "Cochlear implants"
+  },
+  {
+    "code" : "012",
+    "display" : "012",
+    "definition" : "Family history of altered immunocompetence"
+  },
+  {
+    "code" : "013",
+    "display" : "013",
+    "definition" : "Severe Combined Immunodeficiency [SCID]"
+  },
+  {
+    "code" : "014",
+    "display" : "014",
+    "definition" : "Diabetes"
+  },
+  {
+    "code" : "015",
+    "display" : "015",
+    "definition" : "Chronic liver disease"
+  },
+  {
+    "code" : "016",
+    "display" : "016",
+    "definition" : "Chronic heart disease"
+  },
+  {
+    "code" : "017",
+    "display" : "017",
+    "definition" : "Chronic lung disease"
+  },
+  {
+    "code" : "018",
+    "display" : "018",
+    "definition" : "Laboratory Evidence of Immunity or confirmation of Hepatitis A disease"
+  },
+  {
+    "code" : "019",
+    "display" : "019",
+    "definition" : "Laboratory Evidence of Immunity or confirmation of Hepatitis B disease"
+  },
+  {
+    "code" : "020",
+    "display" : "020",
+    "definition" : "Laboratory Evidence of Immunity for Measles"
+  },
+  {
+    "code" : "021",
+    "display" : "021",
+    "definition" : "Laboratory Evidence of Immunity for Mumps"
+  },
+  {
+    "code" : "022",
+    "display" : "022",
+    "definition" : "Laboratory Evidence of Immunity for Rubella"
+  },
+  {
+    "code" : "023",
+    "display" : "023",
+    "definition" : "Laboratory Evidence of Immunity or confirmation of Varicella disease"
+  },
+  {
+    "code" : "024",
+    "display" : "024",
+    "definition" : "Healthcare provider verified history of or diagnosis of Varicella"
+  },
+  {
+    "code" : "025",
+    "display" : "025",
+    "definition" : "Healthcare provider verified history or diagnosis of Herpes Zoster"
+  },
+  {
+    "code" : "026",
+    "display" : "026",
+    "definition" : "Persons with perinatal HIV infection who do not have evidence of severe immunosuppression and who were vaccinated with MMR before establishment of antiviral therapy [ART]"
+  },
+  {
+    "code" : "027",
+    "display" : "027",
+    "definition" : "Asthma"
+  },
+  {
+    "code" : "028",
+    "display" : "028",
+    "definition" : "Intussusception"
+  },
+  {
+    "code" : "029",
+    "display" : "029",
+    "definition" : "Acute gastroenteritis"
+  },
+  {
+    "code" : "030",
+    "display" : "030",
+    "definition" : "Acute febrile illness"
+  },
+  {
+    "code" : "031",
+    "display" : "031",
+    "definition" : "Tuberculosis"
+  },
+  {
+    "code" : "032",
+    "display" : "032",
+    "definition" : "Dialysis patient"
+  },
+  {
+    "code" : "033",
+    "display" : "033",
+    "definition" : "Taken influenza antiviral medications within the previous 48 hours"
+  },
+  {
+    "code" : "034",
+    "display" : "034",
+    "definition" : "Receiving long-term aspirin therapy"
+  },
+  {
+    "code" : "035",
+    "display" : "035",
+    "definition" : "Antimicrobial or antimalarial taken within 72 hours"
+  },
+  {
+    "code" : "036",
+    "display" : "036",
+    "definition" : "Men who have sex with men"
+  },
+  {
+    "code" : "037",
+    "display" : "037",
+    "definition" : "Not in a long-term, mutually monogamous relationship"
+  },
+  {
+    "code" : "038",
+    "display" : "038",
+    "definition" : "Sex partner of Hepatitis B surface antigen-positive persons"
+  },
+  {
+    "code" : "039",
+    "display" : "039",
+    "definition" : "Receives treatment for STD"
+  },
+  {
+    "code" : "040",
+    "display" : "040",
+    "definition" : "Illicit drug use"
+  },
+  {
+    "code" : "041",
+    "display" : "041",
+    "definition" : "Illicit injection drug use"
+  },
+  {
+    "code" : "042",
+    "display" : "042",
+    "definition" : "Smoke cigarettes"
+  },
+  {
+    "code" : "043",
+    "display" : "043",
+    "definition" : "Alcoholism"
+  },
+  {
+    "code" : "044",
+    "display" : "044",
+    "definition" : "Anticipate close personal contact with international adoptee"
+  },
+  {
+    "code" : "045",
+    "display" : "045",
+    "definition" : "Travel to country with a Yellow Fever vaccination entry requirement"
+  },
+  {
+    "code" : "046",
+    "display" : "046",
+    "definition" : "College students living in residence halls"
+  },
+  {
+    "code" : "047",
+    "display" : "047",
+    "definition" : "Resident of area at risk for exposure to the disease"
+  },
+  {
+    "code" : "048",
+    "display" : "048",
+    "definition" : "Travelling Internationally"
+  },
+  {
+    "code" : "049",
+    "display" : "049",
+    "definition" : "Working with Hepatitis A virus in research setting"
+  },
+  {
+    "code" : "050",
+    "display" : "050",
+    "definition" : "Microbiologists routinely exposed to Neisseria meningitidis"
+  },
+  {
+    "code" : "051",
+    "display" : "051",
+    "definition" : "Microbiology laboratorians who work frequently with S. typhi"
+  },
+  {
+    "code" : "052",
+    "display" : "052",
+    "definition" : "Laboratory personnel who might be exposed to YFV"
+  },
+  {
+    "code" : "053",
+    "display" : "053",
+    "definition" : "Rabies researchers"
+  },
+  {
+    "code" : "054",
+    "display" : "054",
+    "definition" : "Laboratory workers who handle specimens that might contain polioviruses"
+  },
+  {
+    "code" : "055",
+    "display" : "055",
+    "definition" : "Health care personnel"
+  },
+  {
+    "code" : "056",
+    "display" : "056",
+    "definition" : "Health-care workers who have close contact with patients who might be excreting wild polioviruses"
+  },
+  {
+    "code" : "057",
+    "display" : "057",
+    "definition" : "Public safety worker exposed to blood or infection body fluids"
+  },
+  {
+    "code" : "058",
+    "display" : "058",
+    "definition" : "Staff of institution for persons with developmental disabilities"
+  },
+  {
+    "code" : "059",
+    "display" : "059",
+    "definition" : "Occupational exposure for Hepatitis A"
+  },
+  {
+    "code" : "060",
+    "display" : "060",
+    "definition" : "Veterinarians and their staff"
+  },
+  {
+    "code" : "061",
+    "display" : "061",
+    "definition" : "Animal handlers"
+  },
+  {
+    "code" : "062",
+    "display" : "062",
+    "definition" : "Persons whose activities bring them into frequent contact with rabies virus or potentially rabid animals"
+  },
+  {
+    "code" : "063",
+    "display" : "063",
+    "definition" : "Post secondary student"
+  },
+  {
+    "code" : "064",
+    "display" : "064",
+    "definition" : "Military recruits"
+  },
+  {
+    "code" : "065",
+    "display" : "065",
+    "definition" : "Client of institution for persons with developmental disabilities"
+  },
+  {
+    "code" : "066",
+    "display" : "066",
+    "definition" : "Chronic renal failure"
+  },
+  {
+    "code" : "068",
+    "display" : "068",
+    "definition" : "In drug abuse treatment and prevention facility"
+  },
+  {
+    "code" : "069",
+    "display" : "069",
+    "definition" : "In correctional facility"
+  },
+  {
+    "code" : "070",
+    "display" : "070",
+    "definition" : "Persons at risk during an outbreak"
+  },
+  {
+    "code" : "071",
+    "display" : "071",
+    "definition" : "Household contact with hepatitis B surface antigen-positive persons"
+  },
+  {
+    "code" : "072",
+    "display" : "072",
+    "definition" : "Intimate exposure to a documented S. typhi carrier"
+  },
+  {
+    "code" : "073",
+    "display" : "073",
+    "definition" : "Household and close contacts of immunocompromised persons"
+  },
+  {
+    "code" : "074",
+    "display" : "074",
+    "definition" : "Negative serological screening for varicella"
+  },
+  {
+    "code" : "075",
+    "display" : "075",
+    "definition" : "Transgender person"
+  },
+  {
+    "code" : "076",
+    "display" : "076",
+    "definition" : "Progressive neurologic disorder"
+  },
+  {
+    "code" : "077",
+    "display" : "077",
+    "definition" : "Received inactivated or unknown measles vaccine between 1963-1967"
+  },
+  {
+    "code" : "078",
+    "display" : "078",
+    "definition" : "Received killed or unknown Mumps vaccine before 1979"
+  },
+  {
+    "code" : "079",
+    "display" : "079",
+    "definition" : "Encephalopathy not attributable to another identifiable cause within 7 days of administration of a previous dose of Tdap, DTP, or DTaP vaccine"
+  },
+  {
+    "code" : "080",
+    "display" : "080",
+    "definition" : "Adverse reaction to vaccine component"
+  },
+  {
+    "code" : "081",
+    "display" : "081",
+    "definition" : "Severe allergic reaction after previous dose of Polio"
+  },
+  {
+    "code" : "082",
+    "display" : "082",
+    "definition" : "Severe allergic reaction after previous dose of Japanese Encephalitis"
+  },
+  {
+    "code" : "083",
+    "display" : "083",
+    "definition" : "Severe allergic reaction after previous dose of Rotavirus"
+  },
+  {
+    "code" : "084",
+    "display" : "084",
+    "definition" : "Severe allergic reaction after previous dose of Typhoid"
+  },
+  {
+    "code" : "085",
+    "display" : "085",
+    "definition" : "Severe allergic reaction after previous dose of Influenza"
+  },
+  {
+    "code" : "086",
+    "display" : "086",
+    "definition" : "Severe allergic reaction after previous dose of Pertussis"
+  },
+  {
+    "code" : "087",
+    "display" : "087",
+    "definition" : "Severe allergic reaction after previous dose of Diphtheria"
+  },
+  {
+    "code" : "088",
+    "display" : "088",
+    "definition" : "Severe allergic reaction after previous dose of Tetanus"
+  },
+  {
+    "code" : "089",
+    "display" : "089",
+    "definition" : "Severe allergic reaction after previous dose of Varicella"
+  },
+  {
+    "code" : "090",
+    "display" : "090",
+    "definition" : "Severe allergic reaction after previous dose of HPV"
+  },
+  {
+    "code" : "091",
+    "display" : "091",
+    "definition" : "Severe allergic reaction after previous dose of Measles"
+  },
+  {
+    "code" : "092",
+    "display" : "092",
+    "definition" : "Severe allergic reaction after previous dose of Mumps"
+  },
+  {
+    "code" : "093",
+    "display" : "093",
+    "definition" : "Severe allergic reaction after previous dose of Rubella"
+  },
+  {
+    "code" : "094",
+    "display" : "094",
+    "definition" : "Severe allergic reaction after previous dose of Pneumococcal"
+  },
+  {
+    "code" : "095",
+    "display" : "095",
+    "definition" : "Severe allergic reaction after previous dose of Meningococcal"
+  },
+  {
+    "code" : "096",
+    "display" : "096",
+    "definition" : "Severe allergic reaction after previous dose of Hepatitis A"
+  },
+  {
+    "code" : "097",
+    "display" : "097",
+    "definition" : "Severe allergic reaction after previous dose of Hepatitis B"
+  },
+  {
+    "code" : "098",
+    "display" : "098",
+    "definition" : "Severe allergic reaction after previous dose of Hib"
+  },
+  {
+    "code" : "099",
+    "display" : "099",
+    "definition" : "Severe allergic reaction after previous dose of Yellow Fever"
+  },
+  {
+    "code" : "100",
+    "display" : "100",
+    "definition" : "Severe allergic reaction after previous dose of live zoster"
+  },
+  {
+    "code" : "101",
+    "display" : "101",
+    "definition" : "Allergic reaction to egg protein"
+  },
+  {
+    "code" : "102",
+    "display" : "102",
+    "definition" : "Severe allergic reaction to gelatin"
+  },
+  {
+    "code" : "103",
+    "display" : "103",
+    "definition" : "Severe allergic reaction to arginine"
+  },
+  {
+    "code" : "104",
+    "display" : "104",
+    "definition" : "Allergic reaction to latex"
+  },
+  {
+    "code" : "105",
+    "display" : "105",
+    "definition" : "Severe allergic reaction to chicken protein"
+  },
+  {
+    "code" : "106",
+    "display" : "106",
+    "definition" : "Severe allergic reaction to gentamicin"
+  },
+  {
+    "code" : "107",
+    "display" : "107",
+    "definition" : "Severe allergic reaction to neomycin"
+  },
+  {
+    "code" : "108",
+    "display" : "108",
+    "definition" : "Severe allergic reaction to streptomycin"
+  },
+  {
+    "code" : "109",
+    "display" : "109",
+    "definition" : "Severe allergic reaction to polymyxin B"
+  },
+  {
+    "code" : "110",
+    "display" : "110",
+    "definition" : "Hypersensitivity to yeast"
+  },
+  {
+    "code" : "111",
+    "display" : "111",
+    "definition" : "Hypersensitivity to the preservative 2-phenoxyethanol"
+  },
+  {
+    "code" : "112",
+    "display" : "112",
+    "definition" : "Hypersensitivity to alum"
+  },
+  {
+    "code" : "113",
+    "display" : "113",
+    "definition" : "Severe allergic reaction after previous dose of Rabies"
+  },
+  {
+    "code" : "114",
+    "display" : "114",
+    "definition" : "End stage renal disease"
+  },
+  {
+    "code" : "115",
+    "display" : "115",
+    "definition" : "Severe allergic reaction to protamine sulfate"
+  },
+  {
+    "code" : "116",
+    "display" : "116",
+    "definition" : "Severe allergic reaction after previous dose of Meningococcal B"
+  },
+  {
+    "code" : "117",
+    "display" : "117",
+    "definition" : "Severe allergic reaction to diphtheria toxoid"
+  },
+  {
+    "code" : "118",
+    "display" : "118",
+    "definition" : "Severe allergic reaction to tetanus toxoid"
+  },
+  {
+    "code" : "119",
+    "display" : "119",
+    "definition" : "Severe allergic reaction after previous dose of cholera"
+  },
+  {
+    "code" : "120",
+    "display" : "120",
+    "definition" : "Begin Date of antiviral therapy [ART]"
+  },
+  {
+    "code" : "121",
+    "display" : "121",
+    "definition" : "Homelessness"
+  },
+  {
+    "code" : "122",
+    "display" : "122",
+    "definition" : "Severe allergic reaction after previous dose of COVID-19"
+  },
+  {
+    "code" : "123",
+    "display" : "123",
+    "definition" : "Severe allergic reaction after previous dose of Ebola"
+  },
+  {
+    "code" : "124",
+    "display" : "124",
+    "definition" : "Severe allergic reaction to rice protein "
+  },
+  {
+    "code" : "125",
+    "display" : "125",
+    "definition" : "Tetanus IG administration"
+  },
+  {
+    "code" : "126",
+    "display" : "126",
+    "definition" : "Hep A IG administration"
+  },
+  {
+    "code" : "127",
+    "display" : "127",
+    "definition" : "Hep B IG administration"
+  },
+  {
+    "code" : "128",
+    "display" : "128",
+    "definition" : "Rabies IG administration"
+  },
+  {
+    "code" : "129",
+    "display" : "129",
+    "definition" : "Varicella IG administration"
+  },
+  {
+    "code" : "130",
+    "display" : "130",
+    "definition" : "Measles prophylaxis IG administration - Standard"
+  },
+  {
+    "code" : "131",
+    "display" : "131",
+    "definition" : "Measles prophylaxis IG administration - Immunocompromised Contact"
+  },
+  {
+    "code" : "132",
+    "display" : "132",
+    "definition" : "RBC [adenine-saline added] blood transfusion"
+  },
+  {
+    "code" : "133",
+    "display" : "133",
+    "definition" : "Packed RBC blood transfusion"
+  },
+  {
+    "code" : "134",
+    "display" : "134",
+    "definition" : "Whole blood transfusion"
+  },
+  {
+    "code" : "135",
+    "display" : "135",
+    "definition" : "Plasma/platelet products blood transfusion"
+  },
+  {
+    "code" : "136",
+    "display" : "136",
+    "definition" : "Cytomegalovirus IGIV"
+  },
+  {
+    "code" : "137",
+    "display" : "137",
+    "definition" : "IGIV - Replacement therapy for immune deficiencies"
+  },
+  {
+    "code" : "138",
+    "display" : "138",
+    "definition" : "IGIV - Immune thrombocytopenic purpura treatment"
+  },
+  {
+    "code" : "139",
+    "display" : "139",
+    "definition" : "IGIV - Postexposure varicella prophylaxis"
+  },
+  {
+    "code" : "140",
+    "display" : "140",
+    "definition" : "IGIV - Immune thrombocytopenic purpura treatment"
+  },
+  {
+    "code" : "141",
+    "display" : "141",
+    "definition" : "IGIV - Kawasaki disease"
+  },
+  {
+    "code" : "142",
+    "display" : "142",
+    "definition" : "Travel to or working in countries that have high or intermediate endemicity of Hepatitis A"
+  },
+  {
+    "code" : "143",
+    "display" : "143",
+    "definition" : "Travel to areas or countries where polio is epidemic or endemic"
+  },
+  {
+    "code" : "144",
+    "display" : "144",
+    "definition" : "International travel with possible contact with animals in areas where rabies is enzootic and immediate access to appropriate medical care might be limited"
+  },
+  {
+    "code" : "145",
+    "display" : "145",
+    "definition" : "B-lymphocyte [humoral] - Severe antibody deficiencies"
+  },
+  {
+    "code" : "146",
+    "display" : "146",
+    "definition" : "B-lymphocyte [humoral] - Less severe antibody deficiencies"
+  },
+  {
+    "code" : "147",
+    "display" : "147",
+    "definition" : "T-lymphocyte [cell-mediated and humoral] - Complete defects"
+  },
+  {
+    "code" : "148",
+    "display" : "148",
+    "definition" : "T-lymphocyte [cell-mediated and humoral] - Partial defects"
+  },
+  {
+    "code" : "149",
+    "display" : "149",
+    "definition" : "T-lymphocyte [cell-mediated and humoral] - interferon-gamma/Interleukin 12 axis deficiencies"
+  },
+  {
+    "code" : "150",
+    "display" : "150",
+    "definition" : "T-lymphocyte [cell-mediated and humoral] - interferon-gamma or interferon-alpha"
+  },
+  {
+    "code" : "151",
+    "display" : "151",
+    "definition" : "Persistent complement, properdin, or factor B deficiency"
+  },
+  {
+    "code" : "152",
+    "display" : "152",
+    "definition" : "Phagocytic function - Chronic granulomatous disease"
+  },
+  {
+    "code" : "153",
+    "display" : "153",
+    "definition" : "Phagocytic function - Leukocyte adhesion defect, and myeloperoxidase deficiency"
+  },
+  {
+    "code" : "154",
+    "display" : "154",
+    "definition" : "HIV/AIDS - severely immunocompromised"
+  },
+  {
+    "code" : "155",
+    "display" : "155",
+    "definition" : "HIV/AIDS - not severely immunocompromised"
+  },
+  {
+    "code" : "156",
+    "display" : "156",
+    "definition" : "Generalized malignant neoplasm"
+  },
+  {
+    "code" : "157",
+    "display" : "157",
+    "definition" : "Transplantation"
+  },
+  {
+    "code" : "158",
+    "display" : "158",
+    "definition" : "Immunosuppressive therapy"
+  },
+  {
+    "code" : "159",
+    "display" : "159",
+    "definition" : "Radiation therapy"
+  },
+  {
+    "code" : "160",
+    "display" : "160",
+    "definition" : "Anatomical or functional asplenia"
+  },
+  {
+    "code" : "161",
+    "display" : "161",
+    "definition" : "Chronic kidney disease"
+  },
+  {
+    "code" : "162",
+    "display" : "162",
+    "definition" : "Travel to areas at risk for Yellow Fever transmission"
+  },
+  {
+    "code" : "163",
+    "display" : "163",
+    "definition" : "Travel to areas in which there is a recognized risk of exposure to S. typhi"
+  },
+  {
+    "code" : "164",
+    "display" : "164",
+    "definition" : "Travel to or are residents of countries in which meningococcal disease is hyperendemic or epidemic"
+  },
+  {
+    "code" : "165",
+    "display" : "165",
+    "definition" : "Longer-term (e.g., 1 month or more) travel to a JE-endemic area"
+  },
+  {
+    "code" : "166",
+    "display" : "166",
+    "definition" : "Travel to countries with high or intermediate prevalence of chronic HBV infection"
+  },
+  {
+    "code" : "167",
+    "display" : "167",
+    "definition" : "Nephrotic Syndrome"
+  },
+  {
+    "code" : "168",
+    "display" : "168",
+    "definition" : "Chemotherapy"
+  },
+  {
+    "code" : "169",
+    "display" : "169",
+    "definition" : "History of sexual abuse or assault"
+  },
+  {
+    "code" : "170",
+    "display" : "170",
+    "definition" : "Onset of pregnancy"
+  },
+  {
+    "code" : "171",
+    "display" : "171",
+    "definition" : "Date of hematopoietic stem cell transplant"
+  },
+  {
+    "code" : "172",
+    "display" : "172",
+    "definition" : "Severe allergic reaction after previous dose of recombinant zoster"
+  },
+  {
+    "code" : "173",
+    "display" : "173",
+    "definition" : "Moving to JE-endemic country to take up residence"
+  },
+  {
+    "code" : "174",
+    "display" : "174",
+    "definition" : "Frequent travel to JE-endemic areas"
+  },
+  {
+    "code" : "175",
+    "display" : "175",
+    "definition" : "Patient seeks Hepatitis A protection"
+  },
+  {
+    "code" : "176",
+    "display" : "176",
+    "definition" : "Patient seeks Hepatitis B protection"
+  },
+  {
+    "code" : "177",
+    "display" : "177",
+    "definition" : "Patient seeks Meningococcal B protection"
+  },
+  {
+    "code" : "178",
+    "display" : "178",
+    "definition" : "Leukemia"
+  },
+  {
+    "code" : "179",
+    "display" : "179",
+    "definition" : "Lymphoma"
+  },
+  {
+    "code" : "180",
+    "display" : "180",
+    "definition" : "Hodgkin's disease"
+  },
+  {
+    "code" : "181",
+    "display" : "181",
+    "definition" : "Multiple myeloma"
+  },
+  {
+    "code" : "182",
+    "display" : "182",
+    "definition" : "Ebola virus outbreak response"
+  },
+  {
+    "code" : "183",
+    "display" : "183",
+    "definition" : "Health care personnel at federally designated Ebola treatment center in U.S."
+  },
+  {
+    "code" : "184",
+    "display" : "184",
+    "definition" : "Laboratorians or other staff at biosafety level 4 facilities in U.S."
+  },
+  {
+    "code" : "185",
+    "display" : "185",
+    "definition" : "Persons in settings that provide services to adults with high proportion of those persons have risk factors for HAV infection"
+  },
+  {
+    "code" : "186",
+    "display" : "186",
+    "definition" : "HIV Infection"
+  },
+  {
+    "code" : "187",
+    "display" : "187",
+    "definition" : "Allergic reaction to polysorbate 80"
+  },
+  {
+    "code" : "188",
+    "display" : "188",
+    "definition" : "Known allergy to Polyethylene glycol [PEG]"
+  },
+  {
+    "code" : "189",
+    "display" : "189",
+    "definition" : "Active treatment for solid tumors"
+  },
+  {
+    "code" : "190",
+    "display" : "190",
+    "definition" : "Active treatment for hematologic malignancies"
+  },
+  {
+    "code" : "191",
+    "display" : "191",
+    "definition" : "Receipt of CAR-T-cell therapy"
+  },
+  {
+    "code" : "192",
+    "display" : "192",
+    "definition" : "Severe allergic reaction after previous dose of any egg-based IIV or LAIV influenza vaccine"
+  },
+  {
+    "code" : "193",
+    "display" : "193",
+    "definition" : "Severe allergic reaction after previous dose of any ccIIV influenza vaccine"
+  },
+  {
+    "code" : "194",
+    "display" : "194",
+    "definition" : "Severe allergic reaction after previous dose of any RIV influenza vaccine"
+  },
+  {
+    "code" : "195",
+    "display" : "195",
+    "definition" : "Occupations at increased risk for COVID-19 exposure and transmission"
+  },
+  {
+    "code" : "196",
+    "display" : "196",
+    "definition" : "Residing in an institutional setting at increased risk for COVID-19 exposure and transmission"
+  },
+  {
+    "code" : "197",
+    "display" : "197",
+    "definition" : "Resident of a long term care facility"
+  },
+  {
+    "code" : "198",
+    "display" : "198",
+    "definition" : "Cancer"
+  },
+  {
+    "code" : "199",
+    "display" : "199",
+    "definition" : "Interstitial lung disease"
+  },
+  {
+    "code" : "200",
+    "display" : "200",
+    "definition" : "Cystic fibrosis"
+  },
+  {
+    "code" : "201",
+    "display" : "201",
+    "definition" : "Pulmonary hypertension"
+  },
+  {
+    "code" : "202",
+    "display" : "202",
+    "definition" : "Dementia"
+  },
+  {
+    "code" : "203",
+    "display" : "203",
+    "definition" : "Down syndrome"
+  },
+  {
+    "code" : "204",
+    "display" : "204",
+    "definition" : "Obesity"
+  },
+  {
+    "code" : "205",
+    "display" : "205",
+    "definition" : "Thalassemia"
+  },
+  {
+    "code" : "206",
+    "display" : "206",
+    "definition" : "Cerebrovascular disease"
+  },
+  {
+    "code" : "207",
+    "display" : "207",
+    "definition" : "Substance use disorder"
+  },
+  {
+    "code" : "208",
+    "display" : "208",
+    "definition" : "Mental Health conditions"
+  },
+  {
+    "code" : "209",
+    "display" : "209",
+    "definition" : "History of thrombosis with thrombocytopenia following the Janssen COVID-19 Vaccine or any other adenovirus-vectored COVID-19 vaccines"
+  },
+  {
+    "code" : "210",
+    "display" : "210",
+    "definition" : "Severe allergic reaction after previous dose of Dengue vaccine"
+  },
+  {
+    "code" : "211",
+    "display" : "211",
+    "definition" : "Evidence of previous dengue infection and living in areas where dengue is endemic"
+  },
+  {
+    "code" : "212",
+    "display" : "212",
+    "definition" : "Health care personnel involved in the care and transport of patients with suspected or confirmed Ebola virus disease at Special Pathogen Treatment Centers"
+  },
+  {
+    "code" : "213",
+    "display" : "213",
+    "definition" : "Laboratorians and support staff members at Laboratory Response Network (LRN) facilities that handle specimens that might contain replication-competent Ebola virus in the United States"
+  },
+  {
+    "code" : "214",
+    "display" : "214",
+    "definition" : "Chronic obstructive pulmonary disease"
+  },
+  {
+    "code" : "215",
+    "display" : "215",
+    "definition" : "Emphysema"
+  },
+  {
+    "code" : "216",
+    "display" : "216",
+    "definition" : "Iatrogenic Immunosuppression"
+  },
+  {
+    "code" : "217",
+    "display" : "217",
+    "definition" : "Persons working in rabies vaccine production facilities"
+  },
+  {
+    "code" : "218",
+    "display" : "218",
+    "definition" : "Persons performing testing for rabies in diagnostic laboratories"
+  },
+  {
+    "code" : "219",
+    "display" : "219",
+    "definition" : "Persons who frequently handle bats"
+  },
+  {
+    "code" : "220",
+    "display" : "220",
+    "definition" : "Persons who frequently have contact with bats"
+  },
+  {
+    "code" : "221",
+    "display" : "221",
+    "definition" : "Persons who frequently enter high-density bat environments"
+  },
+  {
+    "code" : "222",
+    "display" : "222",
+    "definition" : "Persons who frequently perform animal necropsies"
+  },
+  {
+    "code" : "223",
+    "display" : "223",
+    "definition" : "Severe allergic reaction after previous dose of orthopoxvirus vaccine"
+  },
+  {
+    "code" : "224",
+    "display" : "224",
+    "definition" : "History or presence of atopic dermatitis"
+  },
+  {
+    "code" : "225",
+    "display" : "225",
+    "definition" : "Household contact with history or presence of atopic dermatitis"
+  },
+  {
+    "code" : "226",
+    "display" : "226",
+    "definition" : "Active exfoliative skin conditions"
+  },
+  {
+    "code" : "227",
+    "display" : "227",
+    "definition" : "Household contact with active exfoliative skin conditions"
+  },
+  {
+    "code" : "228",
+    "display" : "228",
+    "definition" : "Household contact is pregnant"
+  },
+  {
+    "code" : "229",
+    "display" : "229",
+    "definition" : "Age is less than 1 year"
+  },
+  {
+    "code" : "230",
+    "display" : "230",
+    "definition" : "Household contact who is less than 1 year of age"
+  },
+  {
+    "code" : "231",
+    "display" : "231",
+    "definition" : "3 or more known major cardiac risk factors"
+  },
+  {
+    "code" : "232",
+    "display" : "232",
+    "definition" : "Research laboratory personnel working with more virulent orthopoxviruses (e.g., Variola virus or mpox virus)"
+  },
+  {
+    "code" : "233",
+    "display" : "233",
+    "definition" : "Clinical laboratory personnel performing diagnostic testing for more virulent orthopoxviruses (e.g., Variola virus or mpox virus)"
+  },
+  {
+    "code" : "234",
+    "display" : "234",
+    "definition" : "Designated response team members working with more virulent orthopoxviruses (e.g., Variola virus or mpox virus)"
+  },
+  {
+    "code" : "235",
+    "display" : "235",
+    "definition" : "Healthcare personnel who care for patients infected with more virulent orthopoxviruses (e.g., Variola virus or mpox virus)"
+  },
+  {
+    "code" : "236",
+    "display" : "236",
+    "definition" : "Research laboratory personnel working with less virulent orthopoxviruses (e.g., Vaccinia virus or Cowpox virus)"
+  },
+  {
+    "code" : "237",
+    "display" : "237",
+    "definition" : "Clinical laboratory personnel performing diagnostic testing for less virulent orthopoxviruses (e.g., Vaccinia virus or Cowpox virus)"
+  },
+  {
+    "code" : "238",
+    "display" : "238",
+    "definition" : "Designated response team members working with less virulent orthopoxviruses (e.g., Vaccinia virus or Cowpox virus)"
+  },
+  {
+    "code" : "239",
+    "display" : "239",
+    "definition" : "Healthcare personnel who administer ACAM2000"
+  },
+  {
+    "code" : "240",
+    "display" : "240",
+    "definition" : "Healthcare personnel who care for patients infected with less virulent orthopoxviruses (e.g., Vaccinia virus or Cowpox virus)"
+  },
+  {
+    "code" : "241",
+    "display" : "241",
+    "definition" : "Known exposure to mpox"
+  },
+  {
+    "code" : "242",
+    "display" : "242",
+    "definition" : "Presumed exposure to mpox"
+  },
+  {
+    "code" : "243",
+    "display" : "243",
+    "definition" : "Lack of laboratory confirmation of a previous Dengue infection"
+  },
+  {
+    "code" : "244",
+    "display" : "244",
+    "definition" : "Severe allergic reaction after previous dose of RSV vaccine"
+  },
+  {
+    "code" : "245",
+    "display" : "245",
+    "definition" : "American Indian or Alaskan Native"
+  },
+  {
+    "code" : "246",
+    "display" : "246",
+    "definition" : "Severe immunocompromise"
+  },
+  {
+    "code" : "247",
+    "display" : "247",
+    "definition" : "Gay, bisexual, and other men who have sex with men, transgender or nonbinary peope who in the past 6 months have had one of the following:  1) A new diagnosis of ≥ 1 sexually transmitted disease 2)  More than one sex partner 3)  Sex at a commercial sex venue 4)   Sex in association with a large public event in a geographic area where mpox transmission is occurring"
+  },
+  {
+    "code" : "248",
+    "display" : "248",
+    "definition" : "Sexual partners of gay, bisexual, and other men who have sex with men, transgender or nonbinary peope who in the past 6 months have had one of the following:  1) A new diagnosis of ≥ 1 sexually transmitted disease 2)  More than one sex partner 3)  Sex at a commercial sex venue 4)   Sex in association with a large public event in a geographic area where mpox transmission is occurring"
+  },
+  {
+    "code" : "249",
+    "display" : "249",
+    "definition" : "Moving or traveling to an area where TBE is endemic and will have extensive exposure to ticks because of their planned outdoor activities and itinerary"
+  },
+  {
+    "code" : "250",
+    "display" : "250",
+    "definition" : "Moving or traveling to an area where TBE is endemic who might engage in outdoor activities in areas where ticks are likely to be found"
+  },
+  {
+    "code" : "251",
+    "display" : "251",
+    "definition" : "Laboratory workers with a potential for exposure to TBE virus"
+  },
+  {
+    "code" : "252",
+    "display" : "252",
+    "definition" : "Severe allergic reaction after previous dose of Tick-borne Encephalitis vaccine"
+  }]
+}

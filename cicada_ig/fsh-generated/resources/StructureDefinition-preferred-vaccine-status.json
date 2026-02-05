@@ -1,0 +1,50 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "preferred-vaccine-status",
+  "url": "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/preferred-vaccine-status",
+  "name": "PreferredVaccineStatus",
+  "title": "Preferred Vaccine Status",
+  "status": "draft",
+  "description": "Indicates if the vaccine administered is the preferred vaccine.",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "Element"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "Preferred Vaccine Status",
+        "definition": "Indicates if the vaccine administered is the preferred vaccine."
+      },
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/preferred-vaccine-status"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ]
+      }
+    ]
+  }
+}

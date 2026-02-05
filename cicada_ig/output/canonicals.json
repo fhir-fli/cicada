@@ -1,0 +1,338 @@
+[
+  {
+    "id" : "Vaccine",
+    "type" : "StructureDefinition",
+    "url" : "http://example.org/fhir/StructureDefinition/Vaccine",
+    "version" : "0.1.0",
+    "name" : "Vaccine"
+  },
+  {
+    "id" : "vax-dose",
+    "type" : "StructureDefinition",
+    "url" : "http://example.org/fhir/StructureDefinition/vax-dose",
+    "version" : "0.1.0",
+    "name" : "VaxDose"
+  },
+  {
+    "id" : "EvalReason",
+    "type" : "CodeSystem",
+    "url" : "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/EvalReason",
+    "version" : "0.1.0",
+    "name" : "EvalReasonCS"
+  },
+  {
+    "id" : "EvalStatus",
+    "type" : "CodeSystem",
+    "url" : "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/EvalStatus",
+    "version" : "0.1.0",
+    "name" : "EvalStatusCS"
+  },
+  {
+    "id" : "IntervalReason",
+    "type" : "CodeSystem",
+    "url" : "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/IntervalReason",
+    "version" : "0.1.0",
+    "name" : "IntervalReasonCS"
+  },
+  {
+    "id" : "PreferredAllowedReason",
+    "type" : "CodeSystem",
+    "url" : "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/PreferredAllowedReason",
+    "version" : "0.1.0",
+    "name" : "PreferredAllowedReasonCS"
+  },
+  {
+    "id" : "VaccineGender",
+    "type" : "CodeSystem",
+    "url" : "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/VaccineGender",
+    "version" : "0.1.0",
+    "name" : "VaccineGenderCS"
+  },
+  {
+    "id" : "ValidAgeReason",
+    "type" : "CodeSystem",
+    "url" : "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/ValidAgeReason",
+    "version" : "0.1.0",
+    "name" : "ValidAgeReasonCS"
+  },
+  {
+    "id" : "cdsi-observation-codes",
+    "type" : "CodeSystem",
+    "url" : "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes",
+    "version" : "0.1.0",
+    "name" : "CdsiObservationCodes"
+  },
+  {
+    "id" : "cicada.ig",
+    "type" : "ImplementationGuide",
+    "url" : "http://fhirfli.dev/fhir/ig/cicada/ImplementationGuide/cicada.ig",
+    "version" : "0.1.0",
+    "name" : "CicadaIG"
+  },
+  {
+    "id" : "MedicationAdministrationProfile",
+    "type" : "StructureDefinition",
+    "url" : "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/MedicationAdministrationProfile",
+    "version" : "0.1.0",
+    "name" : "MedicationAdministrationProfile"
+  },
+  {
+    "id" : "MedicationDispenseProfile",
+    "type" : "StructureDefinition",
+    "url" : "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/MedicationDispenseProfile",
+    "version" : "0.1.0",
+    "name" : "MedicationDispenseProfile"
+  },
+  {
+    "id" : "MedicationRequestProfile",
+    "type" : "StructureDefinition",
+    "url" : "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/MedicationRequestProfile",
+    "version" : "0.1.0",
+    "name" : "MedicationRequestProfile"
+  },
+  {
+    "id" : "MedicationStatementProfile",
+    "type" : "StructureDefinition",
+    "url" : "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/MedicationStatementProfile",
+    "version" : "0.1.0",
+    "name" : "MedicationStatementProfile"
+  },
+  {
+    "id" : "ProcedureProfile",
+    "type" : "StructureDefinition",
+    "url" : "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/ProcedureProfile",
+    "version" : "0.1.0",
+    "name" : "ProcedureProfile"
+  },
+  {
+    "id" : "ReactionProfile",
+    "type" : "StructureDefinition",
+    "url" : "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/ReactionProfile",
+    "version" : "0.1.0",
+    "name" : "ReactionProfile"
+  },
+  {
+    "id" : "VaccineConditionFhir",
+    "type" : "StructureDefinition",
+    "url" : "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/VaccineConditionFhir",
+    "version" : "0.1.0",
+    "name" : "VaccineConditionFhir"
+  },
+  {
+    "id" : "VaccineObservationFhir",
+    "type" : "StructureDefinition",
+    "url" : "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/VaccineObservationFhir",
+    "version" : "0.1.0",
+    "name" : "VaccineObservationFhir"
+  },
+  {
+    "id" : "allowed-interval-reason",
+    "type" : "StructureDefinition",
+    "url" : "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/allowed-interval-reason",
+    "version" : "0.1.0",
+    "name" : "AllowedIntervalReason"
+  },
+  {
+    "id" : "allowed-interval-status",
+    "type" : "StructureDefinition",
+    "url" : "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/allowed-interval-status",
+    "version" : "0.1.0",
+    "name" : "AllowedIntervalStatus"
+  },
+  {
+    "id" : "allowed-vaccine-reason",
+    "type" : "StructureDefinition",
+    "url" : "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/allowed-vaccine-reason",
+    "version" : "0.1.0",
+    "name" : "AllowedVaccineReason"
+  },
+  {
+    "id" : "allowed-vaccine-status",
+    "type" : "StructureDefinition",
+    "url" : "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/allowed-vaccine-status",
+    "version" : "0.1.0",
+    "name" : "AllowedVaccineStatus"
+  },
+  {
+    "id" : "antigen-supporting-data",
+    "type" : "StructureDefinition",
+    "url" : "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/antigen-supporting-data",
+    "version" : "0.1.0",
+    "name" : "AntigenSupportingData"
+  },
+  {
+    "id" : "assessment-date",
+    "type" : "StructureDefinition",
+    "url" : "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/assessment-date",
+    "version" : "0.1.0",
+    "name" : "AssessmentDate"
+  },
+  {
+    "id" : "begin-age",
+    "type" : "StructureDefinition",
+    "url" : "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/begin-age",
+    "version" : "0.1.0",
+    "name" : "BeginAge"
+  },
+  {
+    "id" : "end-age",
+    "type" : "StructureDefinition",
+    "url" : "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/end-age",
+    "version" : "0.1.0",
+    "name" : "EndAge"
+  },
+  {
+    "id" : "inadvertent-administration-status",
+    "type" : "StructureDefinition",
+    "url" : "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/inadvertent-administration-status",
+    "version" : "0.1.0",
+    "name" : "InadvertentAdministrationStatus"
+  },
+  {
+    "id" : "preferred-interval-reason",
+    "type" : "StructureDefinition",
+    "url" : "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/preferred-interval-reason",
+    "version" : "0.1.0",
+    "name" : "PreferredIntervalReason"
+  },
+  {
+    "id" : "preferred-interval-status",
+    "type" : "StructureDefinition",
+    "url" : "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/preferred-interval-status",
+    "version" : "0.1.0",
+    "name" : "PreferredIntervalStatus"
+  },
+  {
+    "id" : "preferred-vaccine-reason",
+    "type" : "StructureDefinition",
+    "url" : "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/preferred-vaccine-reason",
+    "version" : "0.1.0",
+    "name" : "PreferredVaccineReason"
+  },
+  {
+    "id" : "preferred-vaccine-status",
+    "type" : "StructureDefinition",
+    "url" : "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/preferred-vaccine-status",
+    "version" : "0.1.0",
+    "name" : "PreferredVaccineStatus"
+  },
+  {
+    "id" : "schedule-supporting-data",
+    "type" : "StructureDefinition",
+    "url" : "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/schedule-supporting-data",
+    "version" : "0.1.0",
+    "name" : "ScheduleSupportingData"
+  },
+  {
+    "id" : "vaccination-conflict",
+    "type" : "StructureDefinition",
+    "url" : "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/vaccination-conflict",
+    "version" : "0.1.0",
+    "name" : "VaccinationConflict"
+  },
+  {
+    "id" : "vaccine-type",
+    "type" : "StructureDefinition",
+    "url" : "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/vaccine-type",
+    "version" : "0.1.0",
+    "name" : "VaccineType"
+  },
+  {
+    "id" : "valid-age-reason",
+    "type" : "StructureDefinition",
+    "url" : "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/valid-age-reason",
+    "version" : "0.1.0",
+    "name" : "ValidAgeReason"
+  },
+  {
+    "id" : "valid-age-status",
+    "type" : "StructureDefinition",
+    "url" : "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/valid-age-status",
+    "version" : "0.1.0",
+    "name" : "ValidAgeStatus"
+  },
+  {
+    "id" : "vax-patient",
+    "type" : "StructureDefinition",
+    "url" : "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/vax-patient",
+    "version" : "0.1.0",
+    "name" : "VaxPatient"
+  },
+  {
+    "id" : "MapVaccineCodes",
+    "type" : "StructureMap",
+    "url" : "http://fhirfli.dev/fhir/ig/cicada/StructureMap/map-vaccine-codes",
+    "version" : "0.1.0",
+    "name" : "MapVaccineCodes"
+  },
+  {
+    "id" : "VaccineCodesCvxMvx",
+    "type" : "ValueSet",
+    "url" : "http://fhirfli.dev/fhir/ig/cicada/ValueSet/VaccineCodesCvxMvx",
+    "version" : "0.1.0",
+    "name" : "VaccineCodesCvxMvx"
+  },
+  {
+    "id" : "eval-reason",
+    "type" : "ValueSet",
+    "url" : "http://fhirfli.dev/fhir/ig/cicada/ValueSet/eval-reason",
+    "version" : "0.1.0",
+    "name" : "EvalReasonVS"
+  },
+  {
+    "id" : "eval-status",
+    "type" : "ValueSet",
+    "url" : "http://fhirfli.dev/fhir/ig/cicada/ValueSet/eval-status",
+    "version" : "0.1.0",
+    "name" : "EvalStatusVS"
+  },
+  {
+    "id" : "interval-reason",
+    "type" : "ValueSet",
+    "url" : "http://fhirfli.dev/fhir/ig/cicada/ValueSet/interval-reason",
+    "version" : "0.1.0",
+    "name" : "IntervalReasonVS"
+  },
+  {
+    "id" : "preferred-allowed-reason",
+    "type" : "ValueSet",
+    "url" : "http://fhirfli.dev/fhir/ig/cicada/ValueSet/preferred-allowed-reason",
+    "version" : "0.1.0",
+    "name" : "PreferredAllowedReasonVS"
+  },
+  {
+    "id" : "procedures",
+    "type" : "ValueSet",
+    "url" : "http://fhirfli.dev/fhir/ig/cicada/ValueSet/procedures",
+    "version" : "0.1.0",
+    "name" : "ImmunizationProceduresSnomed"
+  },
+  {
+    "id" : "vaccine-condition-codes-snomed",
+    "type" : "ValueSet",
+    "url" : "http://fhirfli.dev/fhir/ig/cicada/ValueSet/vaccine-condition-codes-snomed",
+    "version" : "0.1.0",
+    "name" : "VaccineConditionCodesSnomed"
+  },
+  {
+    "id" : "vaccine-gender",
+    "type" : "ValueSet",
+    "url" : "http://fhirfli.dev/fhir/ig/cicada/ValueSet/vaccine-gender",
+    "version" : "0.1.0",
+    "name" : "VaccineGenderVS"
+  },
+  {
+    "id" : "vaccine-medication-codes-snomed",
+    "type" : "ValueSet",
+    "url" : "http://fhirfli.dev/fhir/ig/cicada/ValueSet/vaccine-medication-codes-snomed",
+    "version" : "0.1.0",
+    "name" : "VaccineMedicationCodesSnomed"
+  },
+  {
+    "id" : "valid-age-reason",
+    "type" : "ValueSet",
+    "url" : "http://fhirfli.dev/fhir/ig/cicada/ValueSet/valid-age-reason",
+    "version" : "0.1.0",
+    "name" : "ValidAgeReasonVS"
+  }
+]

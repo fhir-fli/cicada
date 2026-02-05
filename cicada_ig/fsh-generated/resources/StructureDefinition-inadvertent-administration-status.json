@@ -1,0 +1,50 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "inadvertent-administration-status",
+  "url": "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/inadvertent-administration-status",
+  "name": "InadvertentAdministrationStatus",
+  "title": "Inadvertent Administration Status",
+  "status": "draft",
+  "description": "Indicates if the vaccine was administered inadvertently.",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "Element"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "Inadvertent Administration Status",
+        "definition": "Indicates if the vaccine was administered inadvertently."
+      },
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/inadvertent-administration-status"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ]
+      }
+    ]
+  }
+}

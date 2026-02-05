@@ -1,0 +1,51 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhirfli.dev/fhir/ig/cicada/CodeSystem/EvalStatus> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "EvalStatus"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This  code system <code>http://fhirfli.dev/fhir/ig/cicada/CodeSystem/EvalStatus</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">valid<a name=\"EvalStatus-valid\"> </a></td><td>Valid</td><td>Valid</td></tr><tr><td style=\"white-space:nowrap\">not_valid<a name=\"EvalStatus-not_valid\"> </a></td><td>Not Valid</td><td>Not Valid</td></tr><tr><td style=\"white-space:nowrap\">extraneous<a name=\"EvalStatus-extraneous\"> </a></td><td>Extraneous</td><td>Extraneous</td></tr><tr><td style=\"white-space:nowrap\">sub_standard<a name=\"EvalStatus-sub_standard\"> </a></td><td>Substandard</td><td>Substandard</td></tr></table></div>"
+  ] ; # 
+  fhir:url [ fhir:v "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/EvalStatus"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "EvalStatusCS"] ; # 
+  fhir:title [ fhir:v "Evaluation Status"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:date [ fhir:v "2024-05-06T15:25:10-04:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "FHIR-FLI"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "FHIR-FLI" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://fhirfli.dev" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "The status of the result of an evaluation."] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:count [ fhir:v "4"^^xsd:nonNegativeInteger] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "valid" ] ;
+     fhir:display [ fhir:v "Valid" ] ;
+     fhir:definition [ fhir:v "Valid" ]
+  ] [
+     fhir:code [ fhir:v "not_valid" ] ;
+     fhir:display [ fhir:v "Not Valid" ] ;
+     fhir:definition [ fhir:v "Not Valid" ]
+  ] [
+     fhir:code [ fhir:v "extraneous" ] ;
+     fhir:display [ fhir:v "Extraneous" ] ;
+     fhir:definition [ fhir:v "Extraneous" ]
+  ] [
+     fhir:code [ fhir:v "sub_standard" ] ;
+     fhir:display [ fhir:v "Substandard" ] ;
+     fhir:definition [ fhir:v "Substandard" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+
