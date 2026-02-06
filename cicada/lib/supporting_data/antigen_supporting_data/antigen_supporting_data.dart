@@ -36,7 +36,7 @@ class AntigenSupportingData {
   final List<Series>? series;
 
   factory AntigenSupportingData.fromJson(Map<String, dynamic> oldJson) {
-    final json = oldJson['antigenSupportingData'];
+    final json = oldJson['antigenSupportingData'] ?? oldJson;
     return AntigenSupportingData(
       targetDisease: json['targetDisease'] as String?,
       vaccineGroup: json['vaccineGroup'] as String?,

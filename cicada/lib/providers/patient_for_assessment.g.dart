@@ -6,174 +6,100 @@ part of 'patient_for_assessment.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$patientForAssessmentHash() =>
-    r'e351ed00f681c56f5fc4de85f1caf4e68f013a10';
+// GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint, type=warning
 
-/// Copied from Dart SDK
-class _SystemHash {
-  _SystemHash._();
-
-  static int combine(int hash, int value) {
-    // ignore: parameter_assignments
-    hash = 0x1fffffff & (hash + value);
-    // ignore: parameter_assignments
-    hash = 0x1fffffff & (hash + ((0x0007ffff & hash) << 10));
-    return hash ^ (hash >> 6);
-  }
-
-  static int finish(int hash) {
-    // ignore: parameter_assignments
-    hash = 0x1fffffff & (hash + ((0x03ffffff & hash) << 3));
-    // ignore: parameter_assignments
-    hash = hash ^ (hash >> 11);
-    return 0x1fffffff & (hash + ((0x00003fff & hash) << 15));
-  }
-}
-
-abstract class _$PatientForAssessment
-    extends BuildlessAutoDisposeNotifier<VaxPatient> {
-  late final Parameters parameters;
-
-  VaxPatient build(
-    Parameters parameters,
-  );
-}
-
-/// See also [PatientForAssessment].
 @ProviderFor(PatientForAssessment)
-const patientForAssessmentProvider = PatientForAssessmentFamily();
+final patientForAssessmentProvider = PatientForAssessmentFamily._();
 
-/// See also [PatientForAssessment].
-class PatientForAssessmentFamily extends Family<VaxPatient> {
-  /// See also [PatientForAssessment].
-  const PatientForAssessmentFamily();
-
-  /// See also [PatientForAssessment].
-  PatientForAssessmentProvider call(
-    Parameters parameters,
-  ) {
-    return PatientForAssessmentProvider(
-      parameters,
-    );
-  }
-
-  @override
-  PatientForAssessmentProvider getProviderOverride(
-    covariant PatientForAssessmentProvider provider,
-  ) {
-    return call(
-      provider.parameters,
-    );
-  }
-
-  static const Iterable<ProviderOrFamily>? _dependencies = null;
-
-  @override
-  Iterable<ProviderOrFamily>? get dependencies => _dependencies;
-
-  static const Iterable<ProviderOrFamily>? _allTransitiveDependencies = null;
-
-  @override
-  Iterable<ProviderOrFamily>? get allTransitiveDependencies =>
-      _allTransitiveDependencies;
-
-  @override
-  String? get name => r'patientForAssessmentProvider';
-}
-
-/// See also [PatientForAssessment].
-class PatientForAssessmentProvider
-    extends AutoDisposeNotifierProviderImpl<PatientForAssessment, VaxPatient> {
-  /// See also [PatientForAssessment].
-  PatientForAssessmentProvider(
-    Parameters parameters,
-  ) : this._internal(
-          () => PatientForAssessment()..parameters = parameters,
-          from: patientForAssessmentProvider,
+final class PatientForAssessmentProvider
+    extends $NotifierProvider<PatientForAssessment, VaxPatient> {
+  PatientForAssessmentProvider._(
+      {required PatientForAssessmentFamily super.from,
+      required Parameters super.argument})
+      : super(
+          retry: null,
           name: r'patientForAssessmentProvider',
-          debugGetCreateSourceHash:
-              const bool.fromEnvironment('dart.vm.product')
-                  ? null
-                  : _$patientForAssessmentHash,
-          dependencies: PatientForAssessmentFamily._dependencies,
-          allTransitiveDependencies:
-              PatientForAssessmentFamily._allTransitiveDependencies,
-          parameters: parameters,
+          isAutoDispose: true,
+          dependencies: null,
+          $allTransitiveDependencies: null,
         );
 
-  PatientForAssessmentProvider._internal(
-    super._createNotifier, {
-    required super.name,
-    required super.dependencies,
-    required super.allTransitiveDependencies,
-    required super.debugGetCreateSourceHash,
-    required super.from,
-    required this.parameters,
-  }) : super.internal();
-
-  final Parameters parameters;
+  @override
+  String debugGetCreateSourceHash() => _$patientForAssessmentHash();
 
   @override
-  VaxPatient runNotifierBuild(
-    covariant PatientForAssessment notifier,
-  ) {
-    return notifier.build(
-      parameters,
-    );
+  String toString() {
+    return r'patientForAssessmentProvider'
+        ''
+        '($argument)';
   }
 
+  @$internal
   @override
-  Override overrideWith(PatientForAssessment Function() create) {
-    return ProviderOverride(
+  PatientForAssessment create() => PatientForAssessment();
+
+  /// {@macro riverpod.override_with_value}
+  Override overrideWithValue(VaxPatient value) {
+    return $ProviderOverride(
       origin: this,
-      override: PatientForAssessmentProvider._internal(
-        () => create()..parameters = parameters,
-        from: from,
-        name: null,
-        dependencies: null,
-        allTransitiveDependencies: null,
-        debugGetCreateSourceHash: null,
-        parameters: parameters,
-      ),
+      providerOverride: $SyncValueProvider<VaxPatient>(value),
     );
-  }
-
-  @override
-  AutoDisposeNotifierProviderElement<PatientForAssessment, VaxPatient>
-      createElement() {
-    return _PatientForAssessmentProviderElement(this);
   }
 
   @override
   bool operator ==(Object other) {
-    return other is PatientForAssessmentProvider &&
-        other.parameters == parameters;
+    return other is PatientForAssessmentProvider && other.argument == argument;
   }
 
   @override
   int get hashCode {
-    var hash = _SystemHash.combine(0, runtimeType.hashCode);
-    hash = _SystemHash.combine(hash, parameters.hashCode);
-
-    return _SystemHash.finish(hash);
+    return argument.hashCode;
   }
 }
 
-@Deprecated('Will be removed in 3.0. Use Ref instead')
-// ignore: unused_element
-mixin PatientForAssessmentRef on AutoDisposeNotifierProviderRef<VaxPatient> {
-  /// The parameter `parameters` of this provider.
-  Parameters get parameters;
-}
+String _$patientForAssessmentHash() =>
+    r'e351ed00f681c56f5fc4de85f1caf4e68f013a10';
 
-class _PatientForAssessmentProviderElement
-    extends AutoDisposeNotifierProviderElement<PatientForAssessment, VaxPatient>
-    with PatientForAssessmentRef {
-  _PatientForAssessmentProviderElement(super.provider);
+final class PatientForAssessmentFamily extends $Family
+    with
+        $ClassFamilyOverride<PatientForAssessment, VaxPatient, VaxPatient,
+            VaxPatient, Parameters> {
+  PatientForAssessmentFamily._()
+      : super(
+          retry: null,
+          name: r'patientForAssessmentProvider',
+          dependencies: null,
+          $allTransitiveDependencies: null,
+          isAutoDispose: true,
+        );
+
+  PatientForAssessmentProvider call(
+    Parameters parameters,
+  ) =>
+      PatientForAssessmentProvider._(argument: parameters, from: this);
 
   @override
-  Parameters get parameters =>
-      (origin as PatientForAssessmentProvider).parameters;
+  String toString() => r'patientForAssessmentProvider';
 }
-// ignore_for_file: type=lint
-// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member, deprecated_member_use_from_same_package
+
+abstract class _$PatientForAssessment extends $Notifier<VaxPatient> {
+  late final _$args = ref.$arg as Parameters;
+  Parameters get parameters => _$args;
+
+  VaxPatient build(
+    Parameters parameters,
+  );
+  @$mustCallSuper
+  @override
+  void runBuild() {
+    final ref = this.ref as $Ref<VaxPatient, VaxPatient>;
+    final element = ref.element as $ClassProviderElement<
+        AnyNotifier<VaxPatient, VaxPatient>, VaxPatient, Object?, Object?>;
+    element.handleCreate(
+        ref,
+        () => build(
+              _$args,
+            ));
+  }
+}

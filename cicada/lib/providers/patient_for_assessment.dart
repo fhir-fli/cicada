@@ -64,6 +64,19 @@ class PatientForAssessment extends _$PatientForAssessment {
       }
     });
 
+    // Fallback: test data encodes assessment date as the parameter name itself
+    if (assessmentDate == null) {
+      for (final parameter in parameters.parameter ?? []) {
+        if (parameter.resource == null && parameter.name != null) {
+          final parsed = DateTime.tryParse(parameter.name.toString());
+          if (parsed != null) {
+            assessmentDate = parsed;
+            break;
+          }
+        }
+      }
+    }
+
     if (patient == null) {
       ref
           .read(operationOutcomesProvider.notifier)
