@@ -31,7 +31,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
           "contraindicationText":
               "Do not vaccinate if the patient has had a severe allergic reaction to diphtheria toxoid.",
           "contraindicatedVaccine": [
-            {"vaccineType": "PCV13", "cvx": "133"},
             {"vaccineType": "PCV15", "cvx": "215"},
             {"vaccineType": "PCV20", "cvx": "216"},
             {"vaccineType": "PCV21", "cvx": "327"}
@@ -45,9 +44,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
       "seriesName": "Pneumococcal 4-dose series",
       "targetDisease": "Pneumococcal",
       "vaccineGroup": "Pneumococcal",
-      "seriesAdminGuidance": [
-        "If only PCV13 is available when the child is scheduled to receive a PCV, PCV13 may be given as previously recommended."
-      ],
       "seriesType": "Standard",
       "equivalentSeriesGroups": "2",
       "selectSeries": {
@@ -72,13 +68,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
             }
           ],
           "preferableVaccine": [
-            {
-              "vaccineType": "PCV13",
-              "cvx": "133",
-              "beginAge": "6 weeks",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
-            },
             {
               "vaccineType": "PCV15",
               "cvx": "215",
@@ -157,13 +146,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
             }
           ],
           "preferableVaccine": [
-            {
-              "vaccineType": "PCV13",
-              "cvx": "133",
-              "beginAge": "6 weeks",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
-            },
             {
               "vaccineType": "PCV15",
               "cvx": "215",
@@ -280,13 +262,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
             }
           ],
           "preferableVaccine": [
-            {
-              "vaccineType": "PCV13",
-              "cvx": "133",
-              "beginAge": "6 weeks",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
-            },
             {
               "vaccineType": "PCV15",
               "cvx": "215",
@@ -422,13 +397,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
           ],
           "preferableVaccine": [
             {
-              "vaccineType": "PCV13",
-              "cvx": "133",
-              "beginAge": "6 weeks",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
-            },
-            {
               "vaccineType": "PCV15",
               "cvx": "215",
               "beginAge": "6 weeks",
@@ -501,13 +469,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
           ],
           "preferableVaccine": [
             {
-              "vaccineType": "PCV13",
-              "cvx": "133",
-              "beginAge": "6 weeks",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
-            },
-            {
               "vaccineType": "PCV15",
               "cvx": "215",
               "beginAge": "6 weeks",
@@ -574,9 +535,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
       "seriesName": "Pneumococcal dose 2 at 7 months series",
       "targetDisease": "Pneumococcal",
       "vaccineGroup": "Pneumococcal",
-      "seriesAdminGuidance": [
-        "If only PCV13 is available when the child is scheduled to receive a PCV, PCV13 may be given as previously recommended."
-      ],
       "seriesType": "Standard",
       "equivalentSeriesGroups": "2",
       "selectSeries": {
@@ -601,13 +559,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
             }
           ],
           "preferableVaccine": [
-            {
-              "vaccineType": "PCV13",
-              "cvx": "133",
-              "beginAge": "6 weeks",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
-            },
             {
               "vaccineType": "PCV15",
               "cvx": "215",
@@ -686,13 +637,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
             }
           ],
           "preferableVaccine": [
-            {
-              "vaccineType": "PCV13",
-              "cvx": "133",
-              "beginAge": "6 weeks",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
-            },
             {
               "vaccineType": "PCV15",
               "cvx": "215",
@@ -792,13 +736,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
           ],
           "preferableVaccine": [
             {
-              "vaccineType": "PCV13",
-              "cvx": "133",
-              "beginAge": "6 weeks",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
-            },
-            {
               "vaccineType": "PCV15",
               "cvx": "215",
               "beginAge": "6 weeks",
@@ -877,13 +814,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
           ],
           "preferableVaccine": [
             {
-              "vaccineType": "PCV13",
-              "cvx": "133",
-              "beginAge": "6 weeks",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
-            },
-            {
               "vaccineType": "PCV15",
               "cvx": "215",
               "beginAge": "6 weeks",
@@ -956,13 +886,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
           ],
           "preferableVaccine": [
             {
-              "vaccineType": "PCV13",
-              "cvx": "133",
-              "beginAge": "6 weeks",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
-            },
-            {
               "vaccineType": "PCV15",
               "cvx": "215",
               "beginAge": "6 weeks",
@@ -1029,9 +952,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
       "seriesName": "Pneumococcal start at 12 months series",
       "targetDisease": "Pneumococcal",
       "vaccineGroup": "Pneumococcal",
-      "seriesAdminGuidance": [
-        "If only PCV13 is available when the child is scheduled to receive a PCV, PCV13 may be given as previously recommended."
-      ],
       "seriesType": "Standard",
       "equivalentSeriesGroups": "2",
       "selectSeries": {
@@ -1065,13 +985,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
             }
           ],
           "preferableVaccine": [
-            {
-              "vaccineType": "PCV13",
-              "cvx": "133",
-              "beginAge": "6 weeks",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
-            },
             {
               "vaccineType": "PCV15",
               "cvx": "215",
@@ -1144,13 +1057,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
             }
           ],
           "preferableVaccine": [
-            {
-              "vaccineType": "PCV13",
-              "cvx": "133",
-              "beginAge": "6 weeks",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
-            },
             {
               "vaccineType": "PCV15",
               "cvx": "215",
@@ -1224,13 +1130,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
           ],
           "preferableVaccine": [
             {
-              "vaccineType": "PCV13",
-              "cvx": "133",
-              "beginAge": "6 weeks",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
-            },
-            {
               "vaccineType": "PCV15",
               "cvx": "215",
               "beginAge": "6 weeks",
@@ -1297,9 +1196,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
       "seriesName": "Pneumococcal start at 24 months series",
       "targetDisease": "Pneumococcal",
       "vaccineGroup": "Pneumococcal",
-      "seriesAdminGuidance": [
-        "If only PCV13 is available when the child is scheduled to receive a PCV, PCV13 may be given as previously recommended."
-      ],
       "seriesType": "Standard",
       "equivalentSeriesGroups": "2",
       "selectSeries": {
@@ -1330,13 +1226,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
             }
           ],
           "preferableVaccine": [
-            {
-              "vaccineType": "PCV13",
-              "cvx": "133",
-              "beginAge": "6 weeks",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
-            },
             {
               "vaccineType": "PCV15",
               "cvx": "215",
@@ -1410,13 +1299,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
           ],
           "preferableVaccine": [
             {
-              "vaccineType": "PCV13",
-              "cvx": "133",
-              "beginAge": "6 weeks",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
-            },
-            {
               "vaccineType": "PCV15",
               "cvx": "215",
               "beginAge": "6 weeks",
@@ -1484,9 +1366,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
           "Pneumococcal risk 2-5 years Chronic Medical Conditions PCV-PCV-PPSV series",
       "targetDisease": "Pneumococcal",
       "vaccineGroup": "Pneumococcal",
-      "seriesAdminGuidance": [
-        "If only PCV13 is available when the child is scheduled to receive a PCV, PCV13 may be given as previously recommended."
-      ],
       "seriesType": "Risk",
       "selectSeries": {
         "defaultSeries": "No",
@@ -1599,13 +1478,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
           ],
           "preferableVaccine": [
             {
-              "vaccineType": "PCV13",
-              "cvx": "133",
-              "beginAge": "6 weeks",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
-            },
-            {
               "vaccineType": "PCV15",
               "cvx": "215",
               "beginAge": "6 weeks",
@@ -1714,13 +1586,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
             }
           ],
           "preferableVaccine": [
-            {
-              "vaccineType": "PCV13",
-              "cvx": "133",
-              "beginAge": "6 weeks",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
-            },
             {
               "vaccineType": "PCV15",
               "cvx": "215",
@@ -1890,9 +1755,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
           "Pneumococcal risk 2-5 years Chronic Medical Conditions PCV-PPSV-PCV series",
       "targetDisease": "Pneumococcal",
       "vaccineGroup": "Pneumococcal",
-      "seriesAdminGuidance": [
-        "If only PCV13 is available when the child is scheduled to receive a PCV, PCV13 may be given as previously recommended."
-      ],
       "seriesType": "Risk",
       "selectSeries": {
         "defaultSeries": "No",
@@ -2004,13 +1866,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
             }
           ],
           "preferableVaccine": [
-            {
-              "vaccineType": "PCV13",
-              "cvx": "133",
-              "beginAge": "6 weeks",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
-            },
             {
               "vaccineType": "PCV15",
               "cvx": "215",
@@ -2149,13 +2004,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
           ],
           "preferableVaccine": [
             {
-              "vaccineType": "PCV13",
-              "cvx": "133",
-              "beginAge": "6 weeks",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
-            },
-            {
               "vaccineType": "PCV15",
               "cvx": "215",
               "beginAge": "6 weeks",
@@ -2260,9 +2108,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
           "Pneumococcal risk 2-5 years Chronic Medical Conditions PPSV-PCV-PCV series",
       "targetDisease": "Pneumococcal",
       "vaccineGroup": "Pneumococcal",
-      "seriesAdminGuidance": [
-        "If only PCV13 is available when the child is scheduled to receive a PCV, PCV13 may be given as previously recommended."
-      ],
       "seriesType": "Risk",
       "selectSeries": {
         "defaultSeries": "No",
@@ -2402,13 +2247,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
           ],
           "preferableVaccine": [
             {
-              "vaccineType": "PCV13",
-              "cvx": "133",
-              "beginAge": "6 weeks",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
-            },
-            {
               "vaccineType": "PCV15",
               "cvx": "215",
               "beginAge": "6 weeks",
@@ -2518,13 +2356,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
           ],
           "preferableVaccine": [
             {
-              "vaccineType": "PCV13",
-              "cvx": "133",
-              "beginAge": "6 weeks",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
-            },
-            {
               "vaccineType": "PCV15",
               "cvx": "215",
               "beginAge": "6 weeks",
@@ -2628,9 +2459,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
       "seriesName": "Pneumococcal risk 2-5 years 4-dose series",
       "targetDisease": "Pneumococcal",
       "vaccineGroup": "Pneumococcal",
-      "seriesAdminGuidance": [
-        "If only PCV13 is available when the child is scheduled to receive a PCV, PCV13 may be given as previously recommended."
-      ],
       "seriesType": "Risk",
       "selectSeries": {
         "defaultSeries": "No",
@@ -2711,6 +2539,26 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
           },
           "description":
               "Administer to persons who have a phagocytic function defect (e.g. leukocyte adhesion defect and myeloperoxidase deficiency).",
+          "beginAge": "2 years",
+          "endAge": "6 years"
+        },
+        {
+          "observationCode": {
+            "text": "HIV/AIDS - severely immunocompromised",
+            "code": "154"
+          },
+          "description":
+              "Administer to persons who have HIV/AIDS and are severely immunocompromised [See the CDC general recommendations for a definition of \"severely immunocompromised\"].",
+          "beginAge": "2 years",
+          "endAge": "6 years"
+        },
+        {
+          "observationCode": {
+            "text": "HIV/AIDS - not severely immunocompromised",
+            "code": "155"
+          },
+          "description":
+              "Administer to persons who have HIV/AIDS and are not severely immunocompromised [See the CDC general recommendations for a definition of \"severely immunocompromised\"].",
           "beginAge": "2 years",
           "endAge": "6 years"
         },
@@ -2799,13 +2647,30 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
         },
         {
           "observationCode": {
-            "text": "Iatrogenic immunosupression",
+            "text": "Iatrogenic immunosuppression",
             "code": "216"
           },
           "description":
-              "Administer to persons with iatrogenic Immunosupression",
+              "Administer to persons with iatrogenic Immunosuppression",
           "beginAge": "2 years",
           "endAge": "6 years"
+        },
+        {
+          "observationCode": {"text": "Sickle cell disease", "code": "259"},
+          "description": "Administer to persons with sickle cell disease",
+          "beginAge": "2 years",
+          "endAge": "6 years"
+        },
+        {
+          "observationCode": {
+            "text": "Hemoglobinopathy disorder",
+            "code": "279"
+          },
+          "description":
+              "Administer to persons with a hemoglobinopathy disorder",
+          "beginAge": "2 years",
+          "endAge": "6 years",
+          "guidance": "Excludes persons with Beta thalassemia minor"
         }
       ],
       "seriesDose": [
@@ -2828,13 +2693,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
             }
           ],
           "preferableVaccine": [
-            {
-              "vaccineType": "PCV13",
-              "cvx": "133",
-              "beginAge": "6 weeks",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
-            },
             {
               "vaccineType": "PCV15",
               "cvx": "215",
@@ -2944,13 +2802,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
             }
           ],
           "preferableVaccine": [
-            {
-              "vaccineType": "PCV13",
-              "cvx": "133",
-              "beginAge": "6 weeks",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
-            },
             {
               "vaccineType": "PCV15",
               "cvx": "215",
@@ -3193,9 +3044,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
       "seriesName": "Pneumococcal risk 6-18 years 2-dose PCV-PPSV series",
       "targetDisease": "Pneumococcal",
       "vaccineGroup": "Pneumococcal",
-      "seriesAdminGuidance": [
-        "If only PCV13 is available when the child is scheduled to receive a PCV, PCV13 may be given as previously recommended."
-      ],
       "seriesType": "Risk",
       "selectSeries": {
         "defaultSeries": "No",
@@ -3311,13 +3159,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
           ],
           "preferableVaccine": [
             {
-              "vaccineType": "PCV13",
-              "cvx": "133",
-              "beginAge": "6 weeks",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
-            },
-            {
               "vaccineType": "PCV15",
               "cvx": "215",
               "beginAge": "6 weeks",
@@ -3390,11 +3231,18 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
           ],
           "preferableVaccine": [
             {
+              "vaccineType": "PCV20",
+              "cvx": "216",
+              "beginAge": "6 weeks",
+              "volume": "0.5",
+              "forecastVaccineType": "Y"
+            },
+            {
               "vaccineType": "PPSV23",
               "cvx": "33",
               "beginAge": "2 years",
               "volume": "0.5",
-              "forecastVaccineType": "N"
+              "forecastVaccineType": "Y"
             }
           ],
           "allowableVaccine": [
@@ -3441,9 +3289,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
       "seriesName": "Pneumococcal risk 6-18 years 2-dose PPSV-PCV series",
       "targetDisease": "Pneumococcal",
       "vaccineGroup": "Pneumococcal",
-      "seriesAdminGuidance": [
-        "If only PCV13 is available when the child is scheduled to receive a PCV, PCV13 may be given as previously recommended."
-      ],
       "seriesType": "Risk",
       "selectSeries": {
         "defaultSeries": "No",
@@ -3575,13 +3420,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
           ],
           "preferableVaccine": [
             {
-              "vaccineType": "PCV13",
-              "cvx": "133",
-              "beginAge": "6 weeks",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
-            },
-            {
               "vaccineType": "PCV15",
               "cvx": "215",
               "beginAge": "6 weeks",
@@ -3646,9 +3484,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
           "Pneumococcal risk 6-18 yrs immunocompromised PCV-PPSV-PPSV",
       "targetDisease": "Pneumococcal",
       "vaccineGroup": "Pneumococcal",
-      "seriesAdminGuidance": [
-        "If only PCV13 is available when the child is scheduled to receive a PCV, PCV13 may be given as previously recommended."
-      ],
       "seriesType": "Risk",
       "selectSeries": {
         "defaultSeries": "No",
@@ -3729,6 +3564,26 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
           },
           "description":
               "Administer to persons who have a phagocytic function defect (e.g. leukocyte adhesion defect and myeloperoxidase deficiency).",
+          "beginAge": "6 years",
+          "endAge": "19 years"
+        },
+        {
+          "observationCode": {
+            "text": "HIV/AIDS - severely immunocompromised",
+            "code": "154"
+          },
+          "description":
+              "Administer to persons who have HIV/AIDS and are severely immunocompromised [See the CDC general recommendations for a definition of \"severely immunocompromised\"].",
+          "beginAge": "6 years",
+          "endAge": "19 years"
+        },
+        {
+          "observationCode": {
+            "text": "HIV/AIDS - not severely immunocompromised",
+            "code": "155"
+          },
+          "description":
+              "Administer to persons who have HIV/AIDS and are not severely immunocompromised [See the CDC general recommendations for a definition of \"severely immunocompromised\"].",
           "beginAge": "6 years",
           "endAge": "19 years"
         },
@@ -3823,13 +3678,30 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
         },
         {
           "observationCode": {
-            "text": "Iatrogenic immunosupression",
+            "text": "Iatrogenic immunosuppression",
             "code": "216"
           },
           "description":
-              "Administer to persons with iatrogenic Immunosupression",
+              "Administer to persons with iatrogenic Immunosuppression",
           "beginAge": "6 years",
           "endAge": "19 years"
+        },
+        {
+          "observationCode": {"text": "Sickle cell disease", "code": "259"},
+          "description": "Administer to persons with sickle cell disease",
+          "beginAge": "6 years",
+          "endAge": "19 years"
+        },
+        {
+          "observationCode": {
+            "text": "Hemoglobinopathy disorder",
+            "code": "279"
+          },
+          "description":
+              "Administer to persons with a hemoglobinopathy disorder",
+          "beginAge": "6 years",
+          "endAge": "19 years",
+          "guidance": "Excludes persons with Beta thalassemia minor"
         }
       ],
       "seriesDose": [
@@ -3843,13 +3715,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
             }
           ],
           "preferableVaccine": [
-            {
-              "vaccineType": "PCV13",
-              "cvx": "133",
-              "beginAge": "6 weeks",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
-            },
             {
               "vaccineType": "PCV15",
               "cvx": "215",
@@ -3920,11 +3785,18 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
           ],
           "preferableVaccine": [
             {
+              "vaccineType": "PCV20",
+              "cvx": "216",
+              "beginAge": "6 weeks",
+              "volume": "0.5",
+              "forecastVaccineType": "Y"
+            },
+            {
               "vaccineType": "PPSV23",
               "cvx": "33",
               "beginAge": "2 years",
               "volume": "0.5",
-              "forecastVaccineType": "N"
+              "forecastVaccineType": "Y"
             }
           ],
           "allowableVaccine": [
@@ -4036,9 +3908,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
           "Pneumococcal risk 6-18 years immunocompromised PPSV-PCV-PPSV series",
       "targetDisease": "Pneumococcal",
       "vaccineGroup": "Pneumococcal",
-      "seriesAdminGuidance": [
-        "If only PCV13 is available when the child is scheduled to receive a PCV, PCV13 may be given as previously recommended."
-      ],
       "seriesType": "Risk",
       "selectSeries": {
         "defaultSeries": "No",
@@ -4119,6 +3988,26 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
           },
           "description":
               "Administer to persons who have a phagocytic function defect (e.g. leukocyte adhesion defect and myeloperoxidase deficiency).",
+          "beginAge": "6 years",
+          "endAge": "19 years"
+        },
+        {
+          "observationCode": {
+            "text": "HIV/AIDS - severely immunocompromised",
+            "code": "154"
+          },
+          "description":
+              "Administer to persons who have HIV/AIDS and are severely immunocompromised [See the CDC general recommendations for a definition of \"severely immunocompromised\"].",
+          "beginAge": "6 years",
+          "endAge": "19 years"
+        },
+        {
+          "observationCode": {
+            "text": "HIV/AIDS - not severely immunocompromised",
+            "code": "155"
+          },
+          "description":
+              "Administer to persons who have HIV/AIDS and are not severely immunocompromised [See the CDC general recommendations for a definition of \"severely immunocompromised\"].",
           "beginAge": "6 years",
           "endAge": "19 years"
         },
@@ -4213,13 +4102,30 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
         },
         {
           "observationCode": {
-            "text": "Iatrogenic immunosupression",
+            "text": "Iatrogenic immunosuppression",
             "code": "216"
           },
           "description":
-              "Administer to persons with iatrogenic Immunosupression",
+              "Administer to persons with iatrogenic Immunosuppression",
           "beginAge": "6 years",
           "endAge": "19 years"
+        },
+        {
+          "observationCode": {"text": "Sickle cell disease", "code": "259"},
+          "description": "Administer to persons with sickle cell disease",
+          "beginAge": "6 years",
+          "endAge": "19 years"
+        },
+        {
+          "observationCode": {
+            "text": "Hemoglobinopathy disorder",
+            "code": "279"
+          },
+          "description":
+              "Administer to persons with a hemoglobinopathy disorder",
+          "beginAge": "6 years",
+          "endAge": "19 years",
+          "guidance": "Excludes persons with Beta thalassemia minor"
         }
       ],
       "seriesDose": [
@@ -4261,13 +4167,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
             }
           ],
           "preferableVaccine": [
-            {
-              "vaccineType": "PCV13",
-              "cvx": "133",
-              "beginAge": "6 weeks",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
-            },
             {
               "vaccineType": "PCV15",
               "cvx": "215",
@@ -4404,9 +4303,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
           "Pneumococcal risk 6-18 years immunocompromised PPSV-PPSV-PCV series",
       "targetDisease": "Pneumococcal",
       "vaccineGroup": "Pneumococcal",
-      "seriesAdminGuidance": [
-        "If only PCV13 is available when the child is scheduled to receive a PCV, PCV13 may be given as previously recommended."
-      ],
       "seriesType": "Risk",
       "selectSeries": {
         "defaultSeries": "No",
@@ -4487,6 +4383,26 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
           },
           "description":
               "Administer to persons who have a phagocytic function defect (e.g. leukocyte adhesion defect and myeloperoxidase deficiency).",
+          "beginAge": "6 years",
+          "endAge": "19 years"
+        },
+        {
+          "observationCode": {
+            "text": "HIV/AIDS - severely immunocompromised",
+            "code": "154"
+          },
+          "description":
+              "Administer to persons who have HIV/AIDS and are severely immunocompromised [See the CDC general recommendations for a definition of \"severely immunocompromised\"].",
+          "beginAge": "6 years",
+          "endAge": "19 years"
+        },
+        {
+          "observationCode": {
+            "text": "HIV/AIDS - not severely immunocompromised",
+            "code": "155"
+          },
+          "description":
+              "Administer to persons who have HIV/AIDS and are not severely immunocompromised [See the CDC general recommendations for a definition of \"severely immunocompromised\"].",
           "beginAge": "6 years",
           "endAge": "19 years"
         },
@@ -4581,13 +4497,30 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
         },
         {
           "observationCode": {
-            "text": "Iatrogenic immunosupression",
+            "text": "Iatrogenic immunosuppression",
             "code": "216"
           },
           "description":
-              "Administer to persons with iatrogenic Immunosupression",
+              "Administer to persons with iatrogenic Immunosuppression",
           "beginAge": "6 years",
           "endAge": "19 years"
+        },
+        {
+          "observationCode": {"text": "Sickle cell disease", "code": "259"},
+          "description": "Administer to persons with sickle cell disease",
+          "beginAge": "6 years",
+          "endAge": "19 years"
+        },
+        {
+          "observationCode": {
+            "text": "Hemoglobinopathy disorder",
+            "code": "279"
+          },
+          "description":
+              "Administer to persons with a hemoglobinopathy disorder",
+          "beginAge": "6 years",
+          "endAge": "19 years",
+          "guidance": "Excludes persons with Beta thalassemia minor"
         }
       ],
       "seriesDose": [
@@ -4657,13 +4590,6 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
             }
           ],
           "preferableVaccine": [
-            {
-              "vaccineType": "PCV13",
-              "cvx": "133",
-              "beginAge": "6 weeks",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
-            },
             {
               "vaccineType": "PCV15",
               "cvx": "215",
@@ -4881,19 +4807,11 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
         {
           "doseNumber": "Dose 2",
           "age": [
-            {"absMinAge": "2 years - 4 days", "minAge": "6 years"}
+            {"absMinAge": "2 years - 4 days", "minAge": "19 years"}
           ],
           "interval": [
             {
-              "fromPrevious": "N",
-              "fromMostRecent": "133",
-              "absMinInt": "0 days",
-              "minInt": "8 weeks",
-              "earliestRecInt": "8 weeks"
-            },
-            {
-              "fromPrevious": "N",
-              "fromMostRecent": "215",
+              "fromPrevious": "Y",
               "absMinInt": "0 days",
               "minInt": "1 year",
               "earliestRecInt": "1 year"
@@ -5197,7 +5115,7 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
     },
     {
       "seriesName":
-          "Pneumococcal risk 19+ years Chonic Medical Conditions PPSV-PCV series",
+          "Pneumococcal risk 19+ years Chronic Medical Conditions PPSV-PCV series",
       "targetDisease": "Pneumococcal",
       "vaccineGroup": "Pneumococcal",
       "seriesAdminGuidance": [
@@ -5297,6 +5215,9 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
         },
         {
           "doseNumber": "Dose 2",
+          "age": [
+            {"absMinAge": "2 years - 4 days", "minAge": "19 years"}
+          ],
           "interval": [
             {
               "fromPrevious": "Y",
@@ -6106,6 +6027,9 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
         },
         {
           "doseNumber": "Dose 2",
+          "age": [
+            {"absMinAge": "2 years - 4 days", "minAge": "19 years"}
+          ],
           "interval": [
             {
               "fromPrevious": "Y",
@@ -6499,6 +6423,24 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
         },
         {
           "observationCode": {
+            "text": "HIV/AIDS - severely immunocompromised",
+            "code": "154"
+          },
+          "description":
+              "Administer to persons who have HIV/AIDS and are severely immunocompromised [See the CDC general recommendations for a definition of \"severely immunocompromised\"].",
+          "beginAge": "19 years"
+        },
+        {
+          "observationCode": {
+            "text": "HIV/AIDS - not severely immunocompromised",
+            "code": "155"
+          },
+          "description":
+              "Administer to persons who have HIV/AIDS and are not severely immunocompromised [See the CDC general recommendations for a definition of \"severely immunocompromised\"].",
+          "beginAge": "19 years"
+        },
+        {
+          "observationCode": {
             "text": "Generalized malignant neoplasm",
             "code": "156"
           },
@@ -6577,12 +6519,27 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
         },
         {
           "observationCode": {
-            "text": "Iatrogenic immunosupression",
+            "text": "Iatrogenic immunosuppression",
             "code": "216"
           },
           "description":
-              "Administer to persons with iatrogenic Immunosupression",
+              "Administer to persons with iatrogenic Immunosuppression",
           "beginAge": "19 years"
+        },
+        {
+          "observationCode": {"text": "Sickle cell disease", "code": "259"},
+          "description": "Administer to persons with sickle cell disease",
+          "beginAge": "19 years"
+        },
+        {
+          "observationCode": {
+            "text": "Hemoglobinopathy disorder",
+            "code": "279"
+          },
+          "description":
+              "Administer to persons with a hemoglobinopathy disorder",
+          "beginAge": "19 years",
+          "guidance": "Excludes persons with Beta thalassemia minor"
         }
       ],
       "seriesDose": [
@@ -6668,6 +6625,9 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
         },
         {
           "doseNumber": "Dose 2",
+          "age": [
+            {"absMinAge": "2 years - 4 days", "minAge": "19 years"}
+          ],
           "interval": [
             {
               "fromPrevious": "N",
@@ -6768,6 +6728,9 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
         },
         {
           "doseNumber": "Dose 3",
+          "age": [
+            {"absMinAge": "2 years - 4 days", "minAge": "19 years"}
+          ],
           "interval": [
             {
               "fromPrevious": "Y",
@@ -7180,6 +7143,24 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
         },
         {
           "observationCode": {
+            "text": "HIV/AIDS - severely immunocompromised",
+            "code": "154"
+          },
+          "description":
+              "Administer to persons who have HIV/AIDS and are severely immunocompromised [See the CDC general recommendations for a definition of \"severely immunocompromised\"].",
+          "beginAge": "19 years"
+        },
+        {
+          "observationCode": {
+            "text": "HIV/AIDS - not severely immunocompromised",
+            "code": "155"
+          },
+          "description":
+              "Administer to persons who have HIV/AIDS and are not severely immunocompromised [See the CDC general recommendations for a definition of \"severely immunocompromised\"].",
+          "beginAge": "19 years"
+        },
+        {
+          "observationCode": {
             "text": "Generalized malignant neoplasm",
             "code": "156"
           },
@@ -7258,12 +7239,27 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
         },
         {
           "observationCode": {
-            "text": "Iatrogenic immunosupression",
+            "text": "Iatrogenic immunosuppression",
             "code": "216"
           },
           "description":
-              "Administer to persons with iatrogenic Immunosupression",
+              "Administer to persons with iatrogenic Immunosuppression",
           "beginAge": "19 years"
+        },
+        {
+          "observationCode": {"text": "Sickle cell disease", "code": "259"},
+          "description": "Administer to persons with sickle cell disease",
+          "beginAge": "19 years"
+        },
+        {
+          "observationCode": {
+            "text": "Hemoglobinopathy disorder",
+            "code": "279"
+          },
+          "description":
+              "Administer to persons with a hemoglobinopathy disorder",
+          "beginAge": "19 years",
+          "guidance": "Excludes persons with Beta thalassemia minor"
         }
       ],
       "seriesDose": [
@@ -7296,6 +7292,9 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
         },
         {
           "doseNumber": "Dose 2",
+          "age": [
+            {"absMinAge": "2 years - 4 days", "minAge": "19 years"}
+          ],
           "interval": [
             {
               "fromPrevious": "Y",
@@ -7377,6 +7376,9 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
         },
         {
           "doseNumber": "Dose 3",
+          "age": [
+            {"absMinAge": "2 years - 4 days", "minAge": "19 years"}
+          ],
           "interval": [
             {
               "fromPrevious": "N",
@@ -7795,6 +7797,24 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
         },
         {
           "observationCode": {
+            "text": "HIV/AIDS - severely immunocompromised",
+            "code": "154"
+          },
+          "description":
+              "Administer to persons who have HIV/AIDS and are severely immunocompromised [See the CDC general recommendations for a definition of \"severely immunocompromised\"].",
+          "beginAge": "19 years"
+        },
+        {
+          "observationCode": {
+            "text": "HIV/AIDS - not severely immunocompromised",
+            "code": "155"
+          },
+          "description":
+              "Administer to persons who have HIV/AIDS and are not severely immunocompromised [See the CDC general recommendations for a definition of \"severely immunocompromised\"].",
+          "beginAge": "19 years"
+        },
+        {
+          "observationCode": {
             "text": "Generalized malignant neoplasm",
             "code": "156"
           },
@@ -7873,12 +7893,27 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
         },
         {
           "observationCode": {
-            "text": "Iatrogenic immunosupression",
+            "text": "Iatrogenic immunosuppression",
             "code": "216"
           },
           "description":
-              "Administer to persons with iatrogenic Immunosupression",
+              "Administer to persons with iatrogenic Immunosuppression",
           "beginAge": "19 years"
+        },
+        {
+          "observationCode": {"text": "Sickle cell disease", "code": "259"},
+          "description": "Administer to persons with sickle cell disease",
+          "beginAge": "19 years"
+        },
+        {
+          "observationCode": {
+            "text": "Hemoglobinopathy disorder",
+            "code": "279"
+          },
+          "description":
+              "Administer to persons with a hemoglobinopathy disorder",
+          "beginAge": "19 years",
+          "guidance": "Excludes persons with Beta thalassemia minor"
         }
       ],
       "seriesDose": [
@@ -7911,6 +7946,9 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
         },
         {
           "doseNumber": "Dose 2",
+          "age": [
+            {"absMinAge": "2 years - 4 days", "minAge": "19 years"}
+          ],
           "interval": [
             {
               "fromPrevious": "Y",
@@ -7939,6 +7977,9 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
         },
         {
           "doseNumber": "Dose 3",
+          "age": [
+            {"absMinAge": "2 years - 4 days", "minAge": "19 years"}
+          ],
           "interval": [
             {
               "fromPrevious": "Y",
@@ -8405,12 +8446,12 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
       "vaccineGroup": "Pneumococcal",
       "seriesAdminGuidance": [
         "Adults who have received PCV13 please consult the following for PCV20, PCV21 or PPSV23 options: https://www.cdc.gov/pneumococcal/downloads/Vaccine-Timing-Adults-JobAid.pdf",
-        "Based on shared clinical decision-making, 1 dose of PCV20 or PCV21 may be administered at least 5 years after the last pneumococcal vaccine dose provided the patient previously received both PCV13 and PPSV23 with at least one dose of PPSV23 received on or after 65 years of age."
+        "Based on shared clinical decision-making, 1 dose of PCV20 or PCV21 may be administered at least 5 years after the last pneumococcal vaccine dose provided the patient previously received both PCV13 and PPSV23 with at least one dose of PPSV23 received on or after 65 years of age. More guidance can be found here: \r https://www.cdc.gov/vaccines/hcp/admin/downloads/job-aid-SCDM-pneumococcal-508.pdf"
       ],
       "seriesType": "Standard",
       "equivalentSeriesGroups": "2",
       "selectSeries": {
-        "defaultSeries": "Yes",
+        "defaultSeries": "No",
         "productPath": "No",
         "seriesGroupName": "Standard 50+",
         "seriesGroup": "3",
@@ -8711,7 +8752,7 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
       "vaccineGroup": "Pneumococcal",
       "seriesAdminGuidance": [
         "Adults who have received PCV13 please consult the following for PCV20, PCV21 or PPSV23 options: https://www.cdc.gov/pneumococcal/downloads/Vaccine-Timing-Adults-JobAid.pdf",
-        "Based on shared clinical decision-making, 1 dose of PCV20 or PCV21 may be administered at least 5 years after the last pneumococcal vaccine dose provided the patient previously received both PCV13 and PPSV23 with at least one dose of PPSV23 received on or after 65 years of age."
+        "Based on shared clinical decision-making, 1 dose of PCV20 or PCV21 may be administered at least 5 years after the last pneumococcal vaccine dose provided the patient previously received both PCV13 and PPSV23 with at least one dose of PPSV23 received on or after 65 years of age. More guidance can be found here: \r https://www.cdc.gov/vaccines/hcp/admin/downloads/job-aid-SCDM-pneumococcal-508.pdf"
       ],
       "seriesType": "Standard",
       "equivalentSeriesGroups": "2",

@@ -11,8 +11,8 @@
                 },
                 {
                     "observationCode": "123",
-                    "observationTitle": "Severe allergic reaction after previous dose of ebola",
-                    "contraindicationText": "Do not vaccinate if the patient has had a severe allergic reaction after a previous dose of ebola vaccine."
+                    "observationTitle": "Severe allergic reaction after previous dose of Ebola",
+                    "contraindicationText": "Do not vaccinate if the patient has had a severe allergic reaction after a previous dose of Ebola vaccine."
                 },
                 {
                     "observationCode": "124",
@@ -48,10 +48,10 @@
                 },
                 {
                     "observationCode": {
-                        "text": "Health care personnel at federally designated Ebola treatement center in U.S.",
+                        "text": "Health care personnel at federally designated Ebola treatment center in U.S.",
                         "code": "183"
                     },
-                    "description": "Administer to persons working as health care personnel at federally designated Ebola treatement centers in the Unied States",
+                    "description": "Administer to persons working as health care personnel at federally designated Ebola treatment centers in the United States",
                     "beginAge": "18 years"
                 },
                 {

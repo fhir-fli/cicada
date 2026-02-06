@@ -239,7 +239,6 @@ class VaxDose {
 
   bool isValidByAge(
     List<VaxAge>? vaxAge,
-    VaxDose? previousDose,
     int targetDose,
   ) {
     if (vaxAge == null || vaxAge.isEmpty) {
@@ -253,16 +252,21 @@ class VaxDose {
     }
 
     final VaxAge age = vaxAge[ageIndex];
+
+    // Column 1: before absMinAge → Not Valid "Too young"
     if (!isDoseGivenAtValidAge(age)) {
-      setAgeReason(ValidAgeReason.tooYoung, EvalStatus.not_valid);
+      setAgeReason(
+          ValidAgeReason.tooYoung, EvalStatus.not_valid, EvalReason.ageTooYoung);
       return false;
     }
 
-    if (isDoseWithinMinimumAge(age) &&
-        isFirstOrPreviousInvalid(targetDose, previousDose)) {
+    // Column 2: grace period zone → unconditionally Valid per Table 6-15
+    if (isDoseWithinMinimumAge(age)) {
+      setAgeReason(ValidAgeReason.gracePeriod);
       return true;
     }
 
+    // Columns 3-4: check max age
     return isDoseGivenWithinMaximumAge(age);
   }
 
@@ -286,24 +290,6 @@ class VaxDose {
     final VaxDate minimumAgeDate =
         age.minAge == null ? VaxDate(1900, 01, 01) : dob.change(age.minAge!);
     return dateGiven < minimumAgeDate;
-  }
-
-  bool isFirstOrPreviousInvalid(int targetDose, VaxDose? previousDose) {
-    if (targetDose == 0 || previousDose == null) {
-      setAgeReason(ValidAgeReason.gracePeriod);
-      return true;
-    }
-    if (previousDose.evalStatus == EvalStatus.not_valid &&
-        (previousDose.validAgeReason == ValidAgeReason.tooYoung ||
-            previousDose.validAgeReason == ValidAgeReason.tooOld ||
-            previousDose.allowedIntervalReason != null) &&
-        previousDose.dateGiven.change('1 year') > dateGiven) {
-      setAgeReason(ValidAgeReason.tooYoung, EvalStatus.not_valid,
-          EvalReason.ageTooYoung);
-      return false;
-    }
-    setAgeReason(ValidAgeReason.gracePeriod);
-    return true;
   }
 
   bool isDoseGivenWithinMaximumAge(VaxAge age) {

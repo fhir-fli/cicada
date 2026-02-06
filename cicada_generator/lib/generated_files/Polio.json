@@ -44,6 +44,18 @@
                     "contraindicationText": "Do not vaccinate if the patient has progressive neurologic disorder until a treatment regimen has been\r established and the condition has stabilized.",
                     "contraindicatedVaccine": [
                         {
+                            "vaccineType": "DTaP-HepB-IPV",
+                            "cvx": "110"
+                        },
+                        {
+                            "vaccineType": "DTaP-Hib-IPV",
+                            "cvx": "120"
+                        },
+                        {
+                            "vaccineType": "DTaP-IPV",
+                            "cvx": "130"
+                        },
+                        {
                             "vaccineType": "DTaP-IPV-Hib-HepB",
                             "cvx": "146"
                         }
@@ -54,6 +66,132 @@
                     "observationTitle": "Encephalopathy not attributable to another identifiable cause within 7 days of administration of a previous dose of Tdap, DTP, or DTaP vaccine",
                     "contraindicationText": "Do not vaccinate if the patient has had encephalopathy not attributable to another identifiable cause within 7 days of administration of a previous dose of Tdap, DTP, or DTaP vaccine.",
                     "contraindicatedVaccine": [
+                        {
+                            "vaccineType": "DTaP-HepB-IPV",
+                            "cvx": "110"
+                        },
+                        {
+                            "vaccineType": "DTaP-Hib-IPV",
+                            "cvx": "120"
+                        },
+                        {
+                            "vaccineType": "DTaP-IPV",
+                            "cvx": "130"
+                        },
+                        {
+                            "vaccineType": "DTaP-IPV-Hib-HepB",
+                            "cvx": "146"
+                        }
+                    ]
+                },
+                {
+                    "observationCode": "086",
+                    "observationTitle": "Severe allergic reaction after previous dose of Pertussis",
+                    "contraindicationText": "Do not vaccinate if the patient has had a severe allergic reaction after a previous dose of Pertussis vaccine.",
+                    "contraindicatedVaccine": [
+                        {
+                            "vaccineType": "DTaP-HepB-IPV",
+                            "cvx": "110"
+                        },
+                        {
+                            "vaccineType": "DTaP-Hib-IPV",
+                            "cvx": "120"
+                        },
+                        {
+                            "vaccineType": "DTaP-IPV",
+                            "cvx": "130"
+                        },
+                        {
+                            "vaccineType": "DTaP-IPV-Hib-HepB",
+                            "cvx": "146"
+                        }
+                    ]
+                },
+                {
+                    "observationCode": "087",
+                    "observationTitle": "Severe allergic reaction after previous dose of Diphtheria",
+                    "contraindicationText": "Do not vaccinate if the patient has had a severe allergic reaction after a previous dose of Diphtheria vaccine.",
+                    "contraindicatedVaccine": [
+                        {
+                            "vaccineType": "DTaP-HepB-IPV",
+                            "cvx": "110"
+                        },
+                        {
+                            "vaccineType": "DTaP-Hib-IPV",
+                            "cvx": "120"
+                        },
+                        {
+                            "vaccineType": "DTaP-IPV",
+                            "cvx": "130"
+                        },
+                        {
+                            "vaccineType": "DTaP-IPV-Hib-HepB",
+                            "cvx": "146"
+                        }
+                    ]
+                },
+                {
+                    "observationCode": "088",
+                    "observationTitle": "Severe allergic reaction after previous dose of Tetanus",
+                    "contraindicationText": "Do not vaccinate if the patient has had a severe allergic reaction after a previous dose of Tetanus vaccine.",
+                    "contraindicatedVaccine": [
+                        {
+                            "vaccineType": "DTaP-HepB-IPV",
+                            "cvx": "110"
+                        },
+                        {
+                            "vaccineType": "DTaP-Hib-IPV",
+                            "cvx": "120"
+                        },
+                        {
+                            "vaccineType": "DTaP-IPV",
+                            "cvx": "130"
+                        },
+                        {
+                            "vaccineType": "DTaP-IPV-Hib-HepB",
+                            "cvx": "146"
+                        }
+                    ]
+                },
+                {
+                    "observationCode": "097",
+                    "observationTitle": "Severe allergic reaction after previous dose of Hepatitis B",
+                    "contraindicationText": "Do not vaccinate if the patient has had a severe allergic reaction after a previous dose of Hepatitis B vaccine.",
+                    "contraindicatedVaccine": [
+                        {
+                            "vaccineType": "DTaP-HepB-IPV",
+                            "cvx": "110"
+                        },
+                        {
+                            "vaccineType": "DTaP-IPV-Hib-HepB",
+                            "cvx": "146"
+                        }
+                    ]
+                },
+                {
+                    "observationCode": "098",
+                    "observationTitle": "Severe allergic reaction after previous dose of Hib",
+                    "contraindicationText": "Do not vaccinate if the patient has had a severe allergic reaction after a previous dose of Hib vaccine.",
+                    "contraindicatedVaccine": [
+                        {
+                            "vaccineType": "DTaP-Hib-IPV",
+                            "cvx": "120"
+                        },
+                        {
+                            "vaccineType": "DTaP-IPV-Hib-HepB",
+                            "cvx": "146"
+                        }
+                    ]
+                },
+                {
+                    "observationCode": "110",
+                    "observationTitle": "Hypersensitivity to yeast",
+                    "contraindicationText": "Do not vaccinate if the patient has a hypersensitivity to yeast.",
+                    "contraindicatedVaccine": [
+                        {
+                            "vaccineType": "DTaP-HepB-IPV",
+                            "cvx": "110"
+                        },
                         {
                             "vaccineType": "DTaP-IPV-Hib-HepB",
                             "cvx": "146"

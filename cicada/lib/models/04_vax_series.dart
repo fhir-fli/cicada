@@ -108,8 +108,7 @@ class VaxSeries {
     final bool inadvertent = dose.isInadvertent(seriesDose);
     if (inadvertent) {
       return false;
-    } else if (!dose.isValidByAge(seriesDose.age,
-        evaluatedDoses.isEmpty ? null : evaluatedDoses.last, targetDose)) {
+    } else if (!dose.isValidByAge(seriesDose.age, targetDose)) {
       return false;
     }
 

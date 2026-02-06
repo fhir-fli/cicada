@@ -47,6 +47,16 @@ final AntigenSupportingData hepa = AntigenSupportingData.fromJson({
     "vaccine": {
       "contraindication": [
         {
+          "observationCode": "097",
+          "observationTitle":
+              "Severe allergic reaction after previous dose of Hepatitis B",
+          "contraindicationText":
+              "Do not vaccinate if the patient has had a severe allergic reaction after a previous dose of Hepatitis B vaccine.",
+          "contraindicatedVaccine": [
+            {"vaccineType": "HepA-HepB", "cvx": "104"}
+          ]
+        },
+        {
           "observationCode": "110",
           "observationTitle": "Hypersensitivity to yeast",
           "contraindicationText":
@@ -308,6 +318,24 @@ final AntigenSupportingData hepa = AntigenSupportingData.fromJson({
         },
         {
           "observationCode": {
+            "text": "HIV/AIDS - severely immunocompromised",
+            "code": "154"
+          },
+          "description":
+              "Administer to persons who have HIV/AIDS and are severely immunocompromised [See the CDC general recommendations for a definition of \"severely immunocompromised\"].",
+          "beginAge": "19 years"
+        },
+        {
+          "observationCode": {
+            "text": "HIV/AIDS - not severely immunocompromised",
+            "code": "155"
+          },
+          "description":
+              "Administer to persons who have HIV/AIDS and are not severely immunocompromised [See the CDC general recommendations for a definition of \"severely immunocompromised\"].",
+          "beginAge": "19 years"
+        },
+        {
+          "observationCode": {
             "text": "Patient seeks Hepatitis A  protection",
             "code": "175"
           },
@@ -537,6 +565,24 @@ final AntigenSupportingData hepa = AntigenSupportingData.fromJson({
         },
         {
           "observationCode": {
+            "text": "HIV/AIDS - severely immunocompromised",
+            "code": "154"
+          },
+          "description":
+              "Administer to persons who have HIV/AIDS and are severely immunocompromised [See the CDC general recommendations for a definition of \"severely immunocompromised\"].",
+          "beginAge": "19 years"
+        },
+        {
+          "observationCode": {
+            "text": "HIV/AIDS - not severely immunocompromised",
+            "code": "155"
+          },
+          "description":
+              "Administer to persons who have HIV/AIDS and are not severely immunocompromised [See the CDC general recommendations for a definition of \"severely immunocompromised\"].",
+          "beginAge": "19 years"
+        },
+        {
+          "observationCode": {
             "text": "Patient seeks Hepatitis A  protection",
             "code": "175"
           },
@@ -729,7 +775,7 @@ final AntigenSupportingData hepa = AntigenSupportingData.fromJson({
               "Administer to persons who have chronic liver disease.",
           "beginAge": "19 years",
           "guidance":
-              "includes, but is not limited to persons with hepatitis B virus (HBV) infection, hepatitis C virus (HCV) infection, cirrhosis, fatty liver disease, alcoholic liver disease, autoimmune hepatitis, or an alanine aminotransferase (ALT) or aspartate aminotransferase (AST) level persistently greater than twice the upper limit of normal"
+              "Includes, but is not limited to persons with hepatitis B virus (HBV) infection, hepatitis C virus (HCV) infection, cirrhosis, fatty liver disease, alcoholic liver disease, autoimmune hepatitis, or an alanine aminotransferase (ALT) or aspartate aminotransferase (AST) level persistently greater than twice the upper limit of normal"
         },
         {
           "observationCode": {
@@ -798,6 +844,24 @@ final AntigenSupportingData hepa = AntigenSupportingData.fromJson({
         },
         {
           "observationCode": {
+            "text": "HIV/AIDS - severely immunocompromised",
+            "code": "154"
+          },
+          "description":
+              "Administer to persons who have HIV/AIDS and are severely immunocompromised [See the CDC general recommendations for a definition of \"severely immunocompromised\"].",
+          "beginAge": "19 years"
+        },
+        {
+          "observationCode": {
+            "text": "HIV/AIDS - not severely immunocompromised",
+            "code": "155"
+          },
+          "description":
+              "Administer to persons who have HIV/AIDS and are not severely immunocompromised [See the CDC general recommendations for a definition of \"severely immunocompromised\"].",
+          "beginAge": "19 years"
+        },
+        {
+          "observationCode": {
             "text": "Patient seeks Hepatitis A  protection",
             "code": "175"
           },
@@ -828,7 +892,7 @@ final AntigenSupportingData hepa = AntigenSupportingData.fromJson({
           "doseNumber": "Dose 1",
           "age": [
             {
-              "absMinAge": "18 years - 4 days",
+              "absMinAge": "12 months - 4 days",
               "minAge": "19 years",
               "earliestRecAge": "19 years"
             }
@@ -1182,6 +1246,24 @@ final AntigenSupportingData hepa = AntigenSupportingData.fromJson({
         },
         {
           "observationCode": {
+            "text": "HIV/AIDS - severely immunocompromised",
+            "code": "154"
+          },
+          "description":
+              "Administer to persons who have HIV/AIDS and are severely immunocompromised [See the CDC general recommendations for a definition of \"severely immunocompromised\"].",
+          "beginAge": "19 years"
+        },
+        {
+          "observationCode": {
+            "text": "HIV/AIDS - not severely immunocompromised",
+            "code": "155"
+          },
+          "description":
+              "Administer to persons who have HIV/AIDS and are not severely immunocompromised [See the CDC general recommendations for a definition of \"severely immunocompromised\"].",
+          "beginAge": "19 years"
+        },
+        {
+          "observationCode": {
             "text": "Patient seeks Hepatitis A  protection",
             "code": "175"
           },
@@ -1388,7 +1470,7 @@ final AntigenSupportingData hepa = AntigenSupportingData.fromJson({
             {
               "vaccineType": "Hep A, ped/adol, 2 dose",
               "cvx": "83",
-              "beginAge": "12 months",
+              "beginAge": "6 months",
               "endAge": "19 years",
               "volume": "0.5",
               "forecastVaccineType": "N"

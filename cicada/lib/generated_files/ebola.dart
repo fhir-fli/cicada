@@ -17,9 +17,9 @@ final AntigenSupportingData ebola = AntigenSupportingData.fromJson({
         {
           "observationCode": "123",
           "observationTitle":
-              "Severe allergic reaction after previous dose of ebola",
+              "Severe allergic reaction after previous dose of Ebola",
           "contraindicationText":
-              "Do not vaccinate if the patient has had a severe allergic reaction after a previous dose of ebola vaccine."
+              "Do not vaccinate if the patient has had a severe allergic reaction after a previous dose of Ebola vaccine."
         },
         {
           "observationCode": "124",
@@ -58,11 +58,11 @@ final AntigenSupportingData ebola = AntigenSupportingData.fromJson({
         {
           "observationCode": {
             "text":
-                "Health care personnel at federally designated Ebola treatement center in U.S.",
+                "Health care personnel at federally designated Ebola treatment center in U.S.",
             "code": "183"
           },
           "description":
-              "Administer to persons working as health care personnel at federally designated Ebola treatement centers in the Unied States",
+              "Administer to persons working as health care personnel at federally designated Ebola treatment centers in the United States",
           "beginAge": "18 years"
         },
         {

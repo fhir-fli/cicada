@@ -38,8 +38,9 @@ final AntigenSupportingData influenza = AntigenSupportingData.fromJson({
               "cvx": "111"
             },
             {
-              "vaccineType": "Influenza, live, quadrivalent, intranasal",
-              "cvx": "149"
+              "vaccineType":
+                  "Influenza, live, trivalent, intranasal, self/caregiver admin, PF",
+              "cvx": "333"
             }
           ]
         },
@@ -54,8 +55,9 @@ final AntigenSupportingData influenza = AntigenSupportingData.fromJson({
               "cvx": "111"
             },
             {
-              "vaccineType": "Influenza, live, quadrivalent, intranasal",
-              "cvx": "149"
+              "vaccineType":
+                  "Influenza, live, trivalent, intranasal, self/caregiver admin, PF",
+              "cvx": "333"
             }
           ]
         },
@@ -70,8 +72,9 @@ final AntigenSupportingData influenza = AntigenSupportingData.fromJson({
               "cvx": "111"
             },
             {
-              "vaccineType": "Influenza, live, quadrivalent, intranasal",
-              "cvx": "149"
+              "vaccineType":
+                  "Influenza, live, trivalent, intranasal, self/caregiver admin, PF",
+              "cvx": "333"
             }
           ]
         },
@@ -86,8 +89,9 @@ final AntigenSupportingData influenza = AntigenSupportingData.fromJson({
               "cvx": "111"
             },
             {
-              "vaccineType": "Influenza, live, quadrivalent, intranasal",
-              "cvx": "149"
+              "vaccineType":
+                  "Influenza, live, trivalent, intranasal, self/caregiver admin, PF",
+              "cvx": "333"
             }
           ]
         },
@@ -104,8 +108,9 @@ final AntigenSupportingData influenza = AntigenSupportingData.fromJson({
               "endAge": "4 years"
             },
             {
-              "vaccineType": "Influenza, live, quadrivalent, intranasal",
-              "cvx": "149",
+              "vaccineType":
+                  "Influenza, live, trivalent, intranasal, self/caregiver admin, PF",
+              "cvx": "333",
               "beginAge": "2 years",
               "endAge": "4 years"
             }
@@ -123,8 +128,9 @@ final AntigenSupportingData influenza = AntigenSupportingData.fromJson({
               "cvx": "111"
             },
             {
-              "vaccineType": "Influenza, live, quadrivalent, intranasal",
-              "cvx": "149"
+              "vaccineType":
+                  "Influenza, live, trivalent, intranasal, self/caregiver admin, PF",
+              "cvx": "333"
             }
           ]
         },
@@ -141,8 +147,9 @@ final AntigenSupportingData influenza = AntigenSupportingData.fromJson({
               "endAge": "17 years"
             },
             {
-              "vaccineType": "Influenza, live, quadrivalent, intranasal",
-              "cvx": "149",
+              "vaccineType":
+                  "Influenza, live, trivalent, intranasal, self/caregiver admin, PF",
+              "cvx": "333",
               "beginAge": "2 years",
               "endAge": "17 years"
             }
@@ -159,8 +166,9 @@ final AntigenSupportingData influenza = AntigenSupportingData.fromJson({
               "cvx": "111"
             },
             {
-              "vaccineType": "Influenza, live, quadrivalent, intranasal",
-              "cvx": "149"
+              "vaccineType":
+                  "Influenza, live, trivalent, intranasal, self/caregiver admin, PF",
+              "cvx": "333"
             }
           ]
         },
@@ -175,8 +183,9 @@ final AntigenSupportingData influenza = AntigenSupportingData.fromJson({
               "cvx": "111"
             },
             {
-              "vaccineType": "Influenza, live, quadrivalent, intranasal",
-              "cvx": "149"
+              "vaccineType":
+                  "Influenza, live, trivalent, intranasal, self/caregiver admin, PF",
+              "cvx": "333"
             }
           ]
         },
@@ -191,8 +200,9 @@ final AntigenSupportingData influenza = AntigenSupportingData.fromJson({
               "cvx": "111"
             },
             {
-              "vaccineType": "Influenza, live, quadrivalent, intranasal",
-              "cvx": "149"
+              "vaccineType":
+                  "Influenza, live, trivalent, intranasal, self/caregiver admin, PF",
+              "cvx": "333"
             }
           ]
         },
@@ -208,8 +218,9 @@ final AntigenSupportingData influenza = AntigenSupportingData.fromJson({
               "cvx": "111"
             },
             {
-              "vaccineType": "Influenza, live, quadrivalent, intranasal",
-              "cvx": "149"
+              "vaccineType":
+                  "Influenza, live, trivalent, intranasal, self/caregiver admin, PF",
+              "cvx": "333"
             }
           ]
         },
@@ -225,8 +236,9 @@ final AntigenSupportingData influenza = AntigenSupportingData.fromJson({
               "cvx": "111"
             },
             {
-              "vaccineType": "Influenza, live, quadrivalent, intranasal",
-              "cvx": "149"
+              "vaccineType":
+                  "Influenza, live, trivalent, intranasal, self/caregiver admin, PF",
+              "cvx": "333"
             }
           ]
         },
@@ -242,8 +254,9 @@ final AntigenSupportingData influenza = AntigenSupportingData.fromJson({
               "cvx": "111"
             },
             {
-              "vaccineType": "Influenza, live, quadrivalent, intranasal",
-              "cvx": "149"
+              "vaccineType":
+                  "Influenza, live, trivalent, intranasal, self/caregiver admin, PF",
+              "cvx": "333"
             }
           ]
         },
@@ -259,8 +272,9 @@ final AntigenSupportingData influenza = AntigenSupportingData.fromJson({
               "cvx": "111"
             },
             {
-              "vaccineType": "Influenza, live, quadrivalent, intranasal",
-              "cvx": "149"
+              "vaccineType":
+                  "Influenza, live, trivalent, intranasal, self/caregiver admin, PF",
+              "cvx": "333"
             }
           ]
         },
@@ -276,8 +290,9 @@ final AntigenSupportingData influenza = AntigenSupportingData.fromJson({
               "cvx": "111"
             },
             {
-              "vaccineType": "Influenza, live, quadrivalent, intranasal",
-              "cvx": "149"
+              "vaccineType":
+                  "Influenza, live, trivalent, intranasal, self/caregiver admin, PF",
+              "cvx": "333"
             }
           ]
         },
@@ -292,8 +307,9 @@ final AntigenSupportingData influenza = AntigenSupportingData.fromJson({
               "cvx": "111"
             },
             {
-              "vaccineType": "Influenza, live, quadrivalent, intranasal",
-              "cvx": "149"
+              "vaccineType":
+                  "Influenza, live, trivalent, intranasal, self/caregiver admin, PF",
+              "cvx": "333"
             }
           ]
         },
@@ -308,8 +324,9 @@ final AntigenSupportingData influenza = AntigenSupportingData.fromJson({
               "cvx": "111"
             },
             {
-              "vaccineType": "Influenza, live, quadrivalent, intranasal",
-              "cvx": "149"
+              "vaccineType":
+                  "Influenza, live, trivalent, intranasal, self/caregiver admin, PF",
+              "cvx": "333"
             }
           ]
         },
@@ -324,8 +341,9 @@ final AntigenSupportingData influenza = AntigenSupportingData.fromJson({
               "cvx": "111"
             },
             {
-              "vaccineType": "Influenza, live, quadrivalent, intranasal",
-              "cvx": "149"
+              "vaccineType":
+                  "Influenza, live, trivalent, intranasal, self/caregiver admin, PF",
+              "cvx": "333"
             }
           ]
         },
@@ -342,8 +360,9 @@ final AntigenSupportingData influenza = AntigenSupportingData.fromJson({
               "cvx": "111"
             },
             {
-              "vaccineType": "Influenza, live, quadrivalent, intranasal",
-              "cvx": "149"
+              "vaccineType":
+                  "Influenza, live, trivalent, intranasal, self/caregiver admin, PF",
+              "cvx": "333"
             }
           ]
         },
@@ -358,8 +377,9 @@ final AntigenSupportingData influenza = AntigenSupportingData.fromJson({
               "cvx": "111"
             },
             {
-              "vaccineType": "Influenza, live, quadrivalent, intranasal",
-              "cvx": "149"
+              "vaccineType":
+                  "Influenza, live, trivalent, intranasal, self/caregiver admin, PF",
+              "cvx": "333"
             }
           ]
         },
@@ -374,8 +394,9 @@ final AntigenSupportingData influenza = AntigenSupportingData.fromJson({
               "cvx": "111"
             },
             {
-              "vaccineType": "Influenza, live, quadrivalent, intranasal",
-              "cvx": "149"
+              "vaccineType":
+                  "Influenza, live, trivalent, intranasal, self/caregiver admin, PF",
+              "cvx": "333"
             }
           ]
         },
@@ -390,8 +411,9 @@ final AntigenSupportingData influenza = AntigenSupportingData.fromJson({
               "cvx": "111"
             },
             {
-              "vaccineType": "Influenza, live, quadrivalent, intranasal",
-              "cvx": "149"
+              "vaccineType":
+                  "Influenza, live, trivalent, intranasal, self/caregiver admin, PF",
+              "cvx": "333"
             }
           ]
         },
@@ -406,8 +428,26 @@ final AntigenSupportingData influenza = AntigenSupportingData.fromJson({
               "cvx": "111"
             },
             {
-              "vaccineType": "Influenza, live, quadrivalent, intranasal",
-              "cvx": "149"
+              "vaccineType":
+                  "Influenza, live, trivalent, intranasal, self/caregiver admin, PF",
+              "cvx": "333"
+            }
+          ]
+        },
+        {
+          "observationCode": "186",
+          "observationTitle": "HIV Infection",
+          "contraindicationText":
+              "Do not vaccinate if the patient has an HIV Infection.",
+          "contraindicatedVaccine": [
+            {
+              "vaccineType": "influenza, live, trivalent, intranasal",
+              "cvx": "111"
+            },
+            {
+              "vaccineType":
+                  "Influenza, live, trivalent, intranasal, self/caregiver admin, PF",
+              "cvx": "333"
             }
           ]
         },
@@ -435,34 +475,13 @@ final AntigenSupportingData influenza = AntigenSupportingData.fromJson({
               "cvx": "141"
             },
             {
-              "vaccineType": "Influenza, live, quadrivalent, intranasal",
-              "cvx": "149"
-            },
-            {
-              "vaccineType": "Influenza, split virus, quadrivalent, PF",
-              "cvx": "150"
-            },
-            {
-              "vaccineType":
-                  "Influenza, split virus, quadrivalent, preservative",
-              "cvx": "158"
-            },
-            {
-              "vaccineType":
-                  "Influenza, injectable, quadrivalent, preservative free, peds",
-              "cvx": "161"
-            },
-            {
               "vaccineType": "Influenza, adjuvanted, trivalent, PF",
               "cvx": "168"
             },
             {
-              "vaccineType": "Influenza, high-dose, quadrivalent, PF",
-              "cvx": "197"
-            },
-            {
-              "vaccineType": "Influenza, adjuvanted, quadrivalent, PF",
-              "cvx": "205"
+              "vaccineType":
+                  "Influenza, live, trivalent, intranasal, self/caregiver admin, PF",
+              "cvx": "333"
             }
           ]
         },
@@ -489,45 +508,19 @@ final AntigenSupportingData influenza = AntigenSupportingData.fromJson({
               "vaccineType": "Influenza, split virus, trivalent, preservative",
               "cvx": "141"
             },
-            {
-              "vaccineType": "Influenza, live, quadrivalent, intranasal",
-              "cvx": "149"
-            },
-            {
-              "vaccineType": "Influenza, split virus, quadrivalent, PF",
-              "cvx": "150"
-            },
             {"vaccineType": "Influenza, MDCK, trivalent, PF", "cvx": "153"},
-            {
-              "vaccineType":
-                  "Influenza, split virus, quadrivalent, preservative",
-              "cvx": "158"
-            },
-            {
-              "vaccineType":
-                  "Influenza, injectable, quadrivalent, preservative free, peds",
-              "cvx": "161"
-            },
             {
               "vaccineType": "Influenza, adjuvanted, trivalent, PF",
               "cvx": "168"
             },
-            {"vaccineType": "Influenza, MDCK, quadrivalent, PF", "cvx": "171"},
-            {
-              "vaccineType": "Influenza, MDCK, quadrivalent, preservative",
-              "cvx": "186"
-            },
-            {
-              "vaccineType": "Influenza, high-dose, quadrivalent, PF",
-              "cvx": "197"
-            },
-            {
-              "vaccineType": "Influenza, adjuvanted, quadrivalent, PF",
-              "cvx": "205"
-            },
             {
               "vaccineType": "Influenza, MDCK, trivalent, preservative",
               "cvx": "320"
+            },
+            {
+              "vaccineType":
+                  "Influenza, live, trivalent, intranasal, self/caregiver admin, PF",
+              "cvx": "333"
             }
           ]
         },
@@ -549,6 +542,11 @@ final AntigenSupportingData influenza = AntigenSupportingData.fromJson({
             {
               "vaccineType": "Influenza, split virus, trivalent, PF",
               "cvx": "140"
+            },
+            {
+              "vaccineType":
+                  "Influenza, live, trivalent, intranasal, self/caregiver admin, PF",
+              "cvx": "333"
             }
           ]
         }
@@ -631,44 +629,6 @@ final AntigenSupportingData influenza = AntigenSupportingData.fromJson({
               "forecastVaccineType": "N"
             },
             {
-              "vaccineType": "Influenza, split virus, trivalent, preservative",
-              "cvx": "141",
-              "beginAge": "6 months",
-              "tradeName": "Fluzone trivalent, with preservative",
-              "mvx": "PMC",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
-            },
-            {
-              "vaccineType": "Influenza, split virus, trivalent, preservative",
-              "cvx": "141",
-              "beginAge": "6 months",
-              "endAge": "3 years",
-              "tradeName": "Fluzone trivalent, with preservative",
-              "mvx": "PMC",
-              "volume": "0.25",
-              "forecastVaccineType": "N"
-            },
-            {
-              "vaccineType": "Influenza, split virus, trivalent, preservative",
-              "cvx": "141",
-              "beginAge": "3 years",
-              "tradeName": "Afluria trivalent, with preservative",
-              "mvx": "SEQ",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
-            },
-            {
-              "vaccineType": "Influenza, split virus, trivalent, preservative",
-              "cvx": "141",
-              "beginAge": "6 months",
-              "endAge": "3 years",
-              "tradeName": "Afluria trivalent, with preservative",
-              "mvx": "SEQ",
-              "volume": "0.25",
-              "forecastVaccineType": "N"
-            },
-            {
               "vaccineType": "Influenza, MDCK, trivalent, PF",
               "cvx": "153",
               "beginAge": "6 months",
@@ -676,10 +636,12 @@ final AntigenSupportingData influenza = AntigenSupportingData.fromJson({
               "forecastVaccineType": "N"
             },
             {
-              "vaccineType": "Influenza, MDCK, trivalent, preservative",
-              "cvx": "320",
-              "beginAge": "6 months",
-              "volume": "0.5",
+              "vaccineType":
+                  "Influenza, live, trivalent, intranasal, self/caregiver admin, PF",
+              "cvx": "333",
+              "beginAge": "2 years",
+              "endAge": "50 years",
+              "volume": "0.2",
               "forecastVaccineType": "N"
             }
           ],
@@ -793,6 +755,13 @@ final AntigenSupportingData influenza = AntigenSupportingData.fromJson({
               "vaccineType": "Influenza, MDCK, trivalent, preservative",
               "cvx": "320",
               "beginAge": "6 months - 4 days"
+            },
+            {
+              "vaccineType":
+                  "Influenza, live, trivalent, intranasal, self/caregiver admin, PF",
+              "cvx": "333",
+              "beginAge": "6 months - 4 days",
+              "endAge": "50 years"
             }
           ],
           "conditionalSkip": [
@@ -817,8 +786,8 @@ final AntigenSupportingData influenza = AntigenSupportingData.fromJson({
           ],
           "recurringDose": "No",
           "seasonalRecommendation": {
-            "startDate": "2024-07-01",
-            "endDate": "2025-06-30"
+            "startDate": "2025-07-01",
+            "endDate": "2026-06-30"
           }
         },
         {
@@ -884,44 +853,6 @@ final AntigenSupportingData influenza = AntigenSupportingData.fromJson({
               "forecastVaccineType": "N"
             },
             {
-              "vaccineType": "Influenza, split virus, trivalent, preservative",
-              "cvx": "141",
-              "beginAge": "6 months",
-              "tradeName": "Fluzone trivalent, with preservative",
-              "mvx": "PMC",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
-            },
-            {
-              "vaccineType": "Influenza, split virus, trivalent, preservative",
-              "cvx": "141",
-              "beginAge": "6 months",
-              "endAge": "3 years",
-              "tradeName": "Fluzone trivalent, with preservative",
-              "mvx": "PMC",
-              "volume": "0.25",
-              "forecastVaccineType": "N"
-            },
-            {
-              "vaccineType": "Influenza, split virus, trivalent, preservative",
-              "cvx": "141",
-              "beginAge": "3 years",
-              "tradeName": "Afluria trivalent, with preservative",
-              "mvx": "SEQ",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
-            },
-            {
-              "vaccineType": "Influenza, split virus, trivalent, preservative",
-              "cvx": "141",
-              "beginAge": "6 months",
-              "endAge": "3 years",
-              "tradeName": "Afluria trivalent, with preservative",
-              "mvx": "SEQ",
-              "volume": "0.25",
-              "forecastVaccineType": "N"
-            },
-            {
               "vaccineType": "Influenza, MDCK, trivalent, PF",
               "cvx": "153",
               "beginAge": "6 months",
@@ -931,7 +862,7 @@ final AntigenSupportingData influenza = AntigenSupportingData.fromJson({
             {
               "vaccineType": "Influenza, recombinant, trivalent, PF",
               "cvx": "155",
-              "beginAge": "18 years",
+              "beginAge": "9 years",
               "volume": "0.5",
               "forecastVaccineType": "N"
             },
@@ -943,10 +874,12 @@ final AntigenSupportingData influenza = AntigenSupportingData.fromJson({
               "forecastVaccineType": "N"
             },
             {
-              "vaccineType": "Influenza, MDCK, trivalent, preservative",
-              "cvx": "320",
-              "beginAge": "6 months",
-              "volume": "0.5",
+              "vaccineType":
+                  "Influenza, live, trivalent, intranasal, self/caregiver admin, PF",
+              "cvx": "333",
+              "beginAge": "2 years",
+              "endAge": "50 years",
+              "volume": "0.2",
               "forecastVaccineType": "N"
             }
           ],
@@ -1073,6 +1006,13 @@ final AntigenSupportingData influenza = AntigenSupportingData.fromJson({
               "vaccineType": "Influenza, MDCK, trivalent, preservative",
               "cvx": "320",
               "beginAge": "6 months - 4 days"
+            },
+            {
+              "vaccineType":
+                  "Influenza, live, trivalent, intranasal, self/caregiver admin, PF",
+              "cvx": "333",
+              "beginAge": "6 months - 4 days",
+              "endAge": "50 years"
             }
           ],
           "conditionalSkip": [
@@ -1088,13 +1028,13 @@ final AntigenSupportingData influenza = AntigenSupportingData.fromJson({
                     {
                       "conditionID": "1",
                       "conditionType": "Vaccine Count by Date",
-                      "startDate": "2024-07-01",
-                      "endDate": "2025-06-30",
+                      "startDate": "2025-07-01",
+                      "endDate": "2026-06-30",
                       "doseCount": "1",
                       "doseType": "Valid",
                       "doseCountLogic": "greater than",
                       "vaccineTypes":
-                          "15; 16; 88; 111; 135; 140; 141; 144; 149; 150; 151; 153; 155; 158; 161; 166; 168; 171; 185; 186; 197; 205; 320"
+                          "15; 16; 88; 111; 135; 140; 141; 144; 149; 150; 151; 153; 155; 158; 161; 166; 168; 171; 185; 186; 197; 205; 320; 333"
                     }
                   ]
                 },
@@ -1107,13 +1047,13 @@ final AntigenSupportingData influenza = AntigenSupportingData.fromJson({
                     {
                       "conditionID": "1",
                       "conditionType": "Vaccine Count by Date",
-                      "startDate": "2024-07-01",
-                      "endDate": "2025-06-30",
+                      "startDate": "2025-07-01",
+                      "endDate": "2026-06-30",
                       "doseCount": "0",
                       "doseType": "Valid",
                       "doseCountLogic": "greater than",
                       "vaccineTypes":
-                          "15; 16; 88; 111; 135; 140; 141; 144; 149; 150; 151; 153; 155; 158; 161; 166; 168; 171; 185; 186; 197; 205; 320"
+                          "15; 16; 88; 111; 135; 140; 141; 144; 149; 150; 151; 153; 155; 158; 161; 166; 168; 171; 185; 186; 197; 205; 320; 333"
                     },
                     {
                       "conditionID": "2",
@@ -1123,36 +1063,36 @@ final AntigenSupportingData influenza = AntigenSupportingData.fromJson({
                       "doseType": "Total",
                       "doseCountLogic": "greater than",
                       "vaccineTypes":
-                          "15; 16; 88; 111; 135; 140; 141; 144; 149; 150; 151; 153; 155; 158; 161; 166; 168; 171; 185; 186; 197; 205; 320"
+                          "15; 16; 88; 111; 135; 140; 141; 144; 149; 150; 151; 153; 155; 158; 161; 166; 168; 171; 185; 186; 197; 205; 320; 333"
                     }
                   ]
                 },
                 {
                   "setID": "3",
                   "setDescription":
-                      "Dose is not required if the patient has received 1 or more doses during the current season AND patient has received 2 or more doses before July 1, 2024.",
+                      "Dose is not required if the patient has received 1 or more doses during the current season AND patient has received 2 or more doses before July 1, 2025.",
                   "conditionLogic": "AND",
                   "condition": [
                     {
                       "conditionID": "1",
                       "conditionType": "Vaccine Count by Date",
-                      "startDate": "2024-07-01",
-                      "endDate": "2025-06-30",
+                      "startDate": "2025-07-01",
+                      "endDate": "2026-06-30",
                       "doseCount": "0",
                       "doseType": "Valid",
                       "doseCountLogic": "greater than",
                       "vaccineTypes":
-                          "15; 16; 88; 111; 135; 140; 141; 144; 149; 150; 151; 153; 155; 158; 161; 166; 168; 171; 185; 186; 197; 205; 320"
+                          "15; 16; 88; 111; 135; 140; 141; 144; 149; 150; 151; 153; 155; 158; 161; 166; 168; 171; 185; 186; 197; 205; 320; 333"
                     },
                     {
                       "conditionID": "2",
                       "conditionType": "Vaccine Count by Date",
-                      "endDate": "2024-07-01",
+                      "endDate": "2025-07-01",
                       "doseCount": "1",
                       "doseType": "Valid",
                       "doseCountLogic": "greater than",
                       "vaccineTypes":
-                          "15; 16; 88; 111; 135; 140; 141; 144; 149; 150; 151; 153; 155; 158; 161; 166; 168; 171; 185; 186; 197; 205; 320"
+                          "15; 16; 88; 111; 135; 140; 141; 144; 149; 150; 151; 153; 155; 158; 161; 166; 168; 171; 185; 186; 197; 205; 320; 333"
                     }
                   ]
                 }
@@ -1161,8 +1101,8 @@ final AntigenSupportingData influenza = AntigenSupportingData.fromJson({
           ],
           "recurringDose": "Yes",
           "seasonalRecommendation": {
-            "startDate": "2024-07-01",
-            "endDate": "2025-06-30"
+            "startDate": "2025-07-01",
+            "endDate": "2026-06-30"
           }
         }
       ]

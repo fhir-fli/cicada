@@ -193,7 +193,7 @@ final AntigenSupportingData japaneseEncephalitis =
       ]
     },
     {
-      "seriesName": "Japanese Encephalitis risk 2-dose series 18-64 years",
+      "seriesName": "Japanese Encephalitis risk 2-dose series 18-65 years",
       "targetDisease": "Japanese Encephalitis",
       "vaccineGroup": "Japanese Encephalitis",
       "seriesAdminGuidance": [
@@ -211,7 +211,7 @@ final AntigenSupportingData japaneseEncephalitis =
         "seriesPriority": "A",
         "seriesPreference": "1",
         "minAgeToStart": "18 years",
-        "maxAgeToStart": "65 years"
+        "maxAgeToStart": "66 years"
       },
       "indication": [
         {
@@ -223,7 +223,7 @@ final AntigenSupportingData japaneseEncephalitis =
           "description":
               "Administer to persons who plan for longer-term (e.g., ≥ 1 month) travel to JE-endemic areas.",
           "beginAge": "18 years",
-          "endAge": "65 years"
+          "endAge": "66 years"
         },
         {
           "observationCode": {
@@ -233,7 +233,7 @@ final AntigenSupportingData japaneseEncephalitis =
           "description":
               "Administer to persons who plan to move to JE-endemic countries to take up residence.",
           "beginAge": "18 years",
-          "endAge": "65 years"
+          "endAge": "66 years"
         },
         {
           "observationCode": {
@@ -243,7 +243,7 @@ final AntigenSupportingData japaneseEncephalitis =
           "description":
               "Administer to persons who frequently travel to JE-endemic areas.",
           "beginAge": "18 years",
-          "endAge": "65 years"
+          "endAge": "66 years"
         }
       ],
       "seriesDose": [
@@ -277,7 +277,7 @@ final AntigenSupportingData japaneseEncephalitis =
         {
           "doseNumber": "Dose 2",
           "age": [
-            {"maxAge": "65 years"}
+            {"maxAge": "66 years"}
           ],
           "interval": [
             {

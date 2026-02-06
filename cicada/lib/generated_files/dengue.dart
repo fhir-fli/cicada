@@ -164,6 +164,11 @@ final AntigenSupportingData dengue = AntigenSupportingData.fromJson({
               "vaccineType": "Dengue Fever",
               "cvx": "56",
               "beginAge": "9 years - 4 days"
+            },
+            {
+              "vaccineType": "Dengue Fever, Unspecified",
+              "cvx": "330",
+              "beginAge": "9 years - 4 days"
             }
           ],
           "recurringDose": "No"
@@ -193,6 +198,11 @@ final AntigenSupportingData dengue = AntigenSupportingData.fromJson({
               "vaccineType": "Dengue Fever",
               "cvx": "56",
               "beginAge": "9 years - 4 days"
+            },
+            {
+              "vaccineType": "Dengue Fever, Unspecified",
+              "cvx": "330",
+              "beginAge": "9 years - 4 days"
             }
           ],
           "recurringDose": "No"
@@ -221,6 +231,11 @@ final AntigenSupportingData dengue = AntigenSupportingData.fromJson({
             {
               "vaccineType": "Dengue Fever",
               "cvx": "56",
+              "beginAge": "9 years - 4 days"
+            },
+            {
+              "vaccineType": "Dengue Fever, Unspecified",
+              "cvx": "330",
               "beginAge": "9 years - 4 days"
             }
           ],

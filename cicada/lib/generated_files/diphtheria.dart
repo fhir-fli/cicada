@@ -9,6 +9,12 @@ final AntigenSupportingData diphtheria = AntigenSupportingData.fromJson({
     "vaccineGroup": {
       "contraindication": [
         {
+          "observationCode": "080",
+          "observationTitle": "Adverse reaction to vaccine component",
+          "contraindicationText":
+              "Do not vaccinate if the patient has had an adverse reaction to a vaccine component."
+        },
+        {
           "observationCode": "087",
           "observationTitle":
               "Severe allergic reaction after previous dose of Diphtheria",
@@ -16,10 +22,23 @@ final AntigenSupportingData diphtheria = AntigenSupportingData.fromJson({
               "Do not vaccinate if the patient has had a severe allergic reaction after a previous dose of Diphtheria vaccine."
         },
         {
-          "observationCode": "080",
-          "observationTitle": "Adverse reaction to vaccine component",
+          "observationCode": "088",
+          "observationTitle":
+              "Severe allergic reaction after previous dose of Tetanus",
           "contraindicationText":
-              "Do not vaccinate if the patient has had an adverse reaction to a vaccine component."
+              "Do not vaccinate if the patient has had a severe allergic reaction after a previous dose of Tetanus vaccine."
+        },
+        {
+          "observationCode": "117",
+          "observationTitle": "Severe allergic reaction to diphtheria toxoid",
+          "contraindicationText":
+              "Do not vaccinate if the patient has had a severe allergic reaction to diphtheria toxoid."
+        },
+        {
+          "observationCode": "118",
+          "observationTitle": "Severe allergic reaction to tetanus toxoid",
+          "contraindicationText":
+              "Do not vaccinate if the patient has had a severe allergic reaction to tetanus toxoid."
         }
       ]
     },
@@ -31,20 +50,13 @@ final AntigenSupportingData diphtheria = AntigenSupportingData.fromJson({
           "contraindicationText":
               "Do not vaccinate if the patient has progressive neurologic disorder until a treatment regimen has been\r established and the condition has stabilized.",
           "contraindicatedVaccine": [
-            {"vaccineType": "DTP", "cvx": "01"},
             {"vaccineType": "DTaP", "cvx": "20"},
-            {"vaccineType": "DTP-Hib", "cvx": "22"},
-            {"vaccineType": "DTaP-Hib", "cvx": "50"},
-            {"vaccineType": "DTP-Hib-HepB", "cvx": "102"},
             {"vaccineType": "DTaP, 5 pertussis antigens", "cvx": "106"},
-            {"vaccineType": "DTaP, Unspecified Formulation", "cvx": "107"},
             {"vaccineType": "DTaP-HepB-IPV", "cvx": "110"},
             {"vaccineType": "Tdap", "cvx": "115"},
             {"vaccineType": "DTaP-Hib-IPV", "cvx": "120"},
             {"vaccineType": "DTaP-IPV", "cvx": "130"},
-            {"vaccineType": "DTaP-IPV-Hib-HepB,historical", "cvx": "132"},
-            {"vaccineType": "DTaP-IPV-Hib-HepB", "cvx": "146"},
-            {"vaccineType": "DTP-hepB-Hib Pentavalent Non-US", "cvx": "198"}
+            {"vaccineType": "DTaP-IPV-Hib-HepB", "cvx": "146"}
           ]
         },
         {
@@ -54,20 +66,122 @@ final AntigenSupportingData diphtheria = AntigenSupportingData.fromJson({
           "contraindicationText":
               "Do not vaccinate if the patient has had encephalopathy not attributable to another identifiable cause within 7 days of administration of a previous dose of Tdap, DTP, or DTaP vaccine.",
           "contraindicatedVaccine": [
-            {"vaccineType": "DTP", "cvx": "01"},
             {"vaccineType": "DTaP", "cvx": "20"},
-            {"vaccineType": "DTP-Hib", "cvx": "22"},
-            {"vaccineType": "DTaP-Hib", "cvx": "50"},
-            {"vaccineType": "DTP-Hib-HepB", "cvx": "102"},
             {"vaccineType": "DTaP, 5 pertussis antigens", "cvx": "106"},
-            {"vaccineType": "DTaP, Unspecified Formulation", "cvx": "107"},
             {"vaccineType": "DTaP-HepB-IPV", "cvx": "110"},
             {"vaccineType": "Tdap", "cvx": "115"},
             {"vaccineType": "DTaP-Hib-IPV", "cvx": "120"},
             {"vaccineType": "DTaP-IPV", "cvx": "130"},
-            {"vaccineType": "DTaP-IPV-Hib-HepB,historical", "cvx": "132"},
-            {"vaccineType": "DTaP-IPV-Hib-HepB", "cvx": "146"},
-            {"vaccineType": "DTP-hepB-Hib Pentavalent Non-US", "cvx": "198"}
+            {"vaccineType": "DTaP-IPV-Hib-HepB", "cvx": "146"}
+          ]
+        },
+        {
+          "observationCode": "081",
+          "observationTitle":
+              "Severe allergic reaction after previous dose of Polio",
+          "contraindicationText":
+              "Do not vaccinate if the patient has had a severe allergic reaction after a previous dose of Polio vaccine.",
+          "contraindicatedVaccine": [
+            {"vaccineType": "DTaP-HepB-IPV", "cvx": "110"},
+            {"vaccineType": "DTaP-Hib-IPV", "cvx": "120"},
+            {"vaccineType": "DTaP-IPV", "cvx": "130"},
+            {"vaccineType": "DTaP-IPV-Hib-HepB", "cvx": "146"}
+          ]
+        },
+        {
+          "observationCode": "086",
+          "observationTitle":
+              "Severe allergic reaction after previous dose of Pertussis",
+          "contraindicationText":
+              "Do not vaccinate if the patient has had a severe allergic reaction after a previous dose of Pertussis vaccine.",
+          "contraindicatedVaccine": [
+            {"vaccineType": "DTaP", "cvx": "20"},
+            {"vaccineType": "DTaP, 5 pertussis antigens", "cvx": "106"},
+            {"vaccineType": "DTaP-HepB-IPV", "cvx": "110"},
+            {"vaccineType": "Tdap", "cvx": "115"},
+            {"vaccineType": "DTaP-Hib-IPV", "cvx": "120"},
+            {"vaccineType": "DTaP-IPV", "cvx": "130"},
+            {"vaccineType": "DTaP-IPV-Hib-HepB", "cvx": "146"}
+          ]
+        },
+        {
+          "observationCode": "097",
+          "observationTitle":
+              "Severe allergic reaction after previous dose of Hepatitis B",
+          "contraindicationText":
+              "Do not vaccinate if the patient has had a severe allergic reaction after a previous dose of Hepatitis B vaccine.",
+          "contraindicatedVaccine": [
+            {"vaccineType": "DTaP-HepB-IPV", "cvx": "110"},
+            {"vaccineType": "DTaP-IPV-Hib-HepB", "cvx": "146"}
+          ]
+        },
+        {
+          "observationCode": "098",
+          "observationTitle":
+              "Severe allergic reaction after previous dose of Hib",
+          "contraindicationText":
+              "Do not vaccinate if the patient has had a severe allergic reaction after a previous dose of Hib vaccine.",
+          "contraindicatedVaccine": [
+            {"vaccineType": "DTaP-IPV-Hib-HepB", "cvx": "146"}
+          ]
+        },
+        {
+          "observationCode": "107",
+          "observationTitle": "Severe allergic reaction to neomycin",
+          "contraindicationText":
+              "Do not vaccinate if the patient has had a severe allergic reaction to neomycin.",
+          "contraindicatedVaccine": [
+            {"vaccineType": "DTaP-HepB-IPV", "cvx": "110"},
+            {"vaccineType": "DTaP-Hib-IPV", "cvx": "120"},
+            {"vaccineType": "DTaP-IPV", "cvx": "130"},
+            {"vaccineType": "DTaP-IPV-Hib-HepB", "cvx": "146"}
+          ]
+        },
+        {
+          "observationCode": "108",
+          "observationTitle": "Severe allergic reaction to streptomycin",
+          "contraindicationText":
+              "Do not vaccinate if the patient has had a severe allergic reaction to streptomycin.",
+          "contraindicatedVaccine": [
+            {"vaccineType": "DTaP-HepB-IPV", "cvx": "110"},
+            {"vaccineType": "DTaP-Hib-IPV", "cvx": "120"},
+            {"vaccineType": "DTaP-IPV", "cvx": "130"},
+            {"vaccineType": "DTaP-IPV-Hib-HepB", "cvx": "146"}
+          ]
+        },
+        {
+          "observationCode": "109",
+          "observationTitle": "Severe allergic reaction to polymyxin B",
+          "contraindicationText":
+              "Do not vaccinate if the patient has had a severe allergic reaction to polymyxin B.",
+          "contraindicatedVaccine": [
+            {"vaccineType": "DTaP-HepB-IPV", "cvx": "110"},
+            {"vaccineType": "DTaP-Hib-IPV", "cvx": "120"},
+            {"vaccineType": "DTaP-IPV", "cvx": "130"},
+            {"vaccineType": "DTaP-IPV-Hib-HepB", "cvx": "146"}
+          ]
+        },
+        {
+          "observationCode": "110",
+          "observationTitle": "Hypersensitivity to yeast",
+          "contraindicationText":
+              "Do not vaccinate if the patient has a hypersensitivity to yeast.",
+          "contraindicatedVaccine": [
+            {"vaccineType": "DTaP-HepB-IPV", "cvx": "110"},
+            {"vaccineType": "DTaP-IPV-Hib-HepB", "cvx": "146"}
+          ]
+        },
+        {
+          "observationCode": "111",
+          "observationTitle":
+              "Hypersensitivity to the preservative 2-phenoxyethanol",
+          "contraindicationText":
+              "Do not vaccinate if the patient has a hypersensitivity to the preservative 2-phenoxyethanol.",
+          "contraindicatedVaccine": [
+            {"vaccineType": "DTaP-HepB-IPV", "cvx": "110"},
+            {"vaccineType": "DTaP-Hib-IPV", "cvx": "120"},
+            {"vaccineType": "DTaP-IPV", "cvx": "130"},
+            {"vaccineType": "DTaP-IPV-Hib-HepB", "cvx": "146"}
           ]
         }
       ]
@@ -194,7 +308,7 @@ final AntigenSupportingData diphtheria = AntigenSupportingData.fromJson({
               "beginAge": "6 weeks - 4 days"
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB,historical",
+              "vaccineType": "DTaP-IPV-Hib-HepB, historical",
               "cvx": "132",
               "beginAge": "6 weeks - 4 days"
             },
@@ -209,12 +323,12 @@ final AntigenSupportingData diphtheria = AntigenSupportingData.fromJson({
               "beginAge": "6 weeks - 4 days"
             },
             {
-              "vaccineType": "DT, IPV adsorved",
+              "vaccineType": "DT, IPV adsorbed",
               "cvx": "195",
               "beginAge": "6 years - 4 days"
             },
             {
-              "vaccineType": "DTP-hepB-Hib Pentavalent Non-US",
+              "vaccineType": "DTP-HepB-Hib Pentavalent Non-US",
               "cvx": "198",
               "beginAge": "6 weeks - 4 days"
             }
@@ -400,7 +514,7 @@ final AntigenSupportingData diphtheria = AntigenSupportingData.fromJson({
               "beginAge": "6 weeks - 4 days"
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB,historical",
+              "vaccineType": "DTaP-IPV-Hib-HepB, historical",
               "cvx": "132",
               "beginAge": "6 weeks - 4 days"
             },
@@ -415,12 +529,12 @@ final AntigenSupportingData diphtheria = AntigenSupportingData.fromJson({
               "beginAge": "6 weeks - 4 days"
             },
             {
-              "vaccineType": "DT, IPV adsorved",
+              "vaccineType": "DT, IPV adsorbed",
               "cvx": "195",
               "beginAge": "6 years - 4 days"
             },
             {
-              "vaccineType": "DTP-hepB-Hib Pentavalent Non-US",
+              "vaccineType": "DTP-HepB-Hib Pentavalent Non-US",
               "cvx": "198",
               "beginAge": "6 weeks - 4 days"
             }
@@ -606,7 +720,7 @@ final AntigenSupportingData diphtheria = AntigenSupportingData.fromJson({
               "beginAge": "6 weeks - 4 days"
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB,historical",
+              "vaccineType": "DTaP-IPV-Hib-HepB, historical",
               "cvx": "132",
               "beginAge": "6 weeks - 4 days"
             },
@@ -621,12 +735,12 @@ final AntigenSupportingData diphtheria = AntigenSupportingData.fromJson({
               "beginAge": "6 weeks - 4 days"
             },
             {
-              "vaccineType": "DT, IPV adsorved",
+              "vaccineType": "DT, IPV adsorbed",
               "cvx": "195",
               "beginAge": "6 years - 4 days"
             },
             {
-              "vaccineType": "DTP-hepB-Hib Pentavalent Non-US",
+              "vaccineType": "DTP-HepB-Hib Pentavalent Non-US",
               "cvx": "198",
               "beginAge": "6 weeks - 4 days"
             }
@@ -815,7 +929,7 @@ final AntigenSupportingData diphtheria = AntigenSupportingData.fromJson({
               "beginAge": "6 weeks - 4 days"
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB,historical",
+              "vaccineType": "DTaP-IPV-Hib-HepB, historical",
               "cvx": "132",
               "beginAge": "6 weeks - 4 days"
             },
@@ -840,7 +954,7 @@ final AntigenSupportingData diphtheria = AntigenSupportingData.fromJson({
               "beginAge": "6 weeks - 4 days"
             },
             {
-              "vaccineType": "DT, IPV adsorved",
+              "vaccineType": "DT, IPV adsorbed",
               "cvx": "195",
               "beginAge": "6 years - 4 days"
             },
@@ -850,7 +964,7 @@ final AntigenSupportingData diphtheria = AntigenSupportingData.fromJson({
               "beginAge": "12 months - 4 days"
             },
             {
-              "vaccineType": "DTP-hepB-Hib Pentavalent Non-US",
+              "vaccineType": "DTP-HepB-Hib Pentavalent Non-US",
               "cvx": "198",
               "beginAge": "6 weeks - 4 days"
             }
@@ -1024,7 +1138,7 @@ final AntigenSupportingData diphtheria = AntigenSupportingData.fromJson({
               "beginAge": "6 weeks - 4 days"
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB,historical",
+              "vaccineType": "DTaP-IPV-Hib-HepB, historical",
               "cvx": "132",
               "beginAge": "6 weeks - 4 days"
             },
@@ -1049,7 +1163,7 @@ final AntigenSupportingData diphtheria = AntigenSupportingData.fromJson({
               "beginAge": "6 weeks - 4 days"
             },
             {
-              "vaccineType": "DT, IPV adsorved",
+              "vaccineType": "DT, IPV adsorbed",
               "cvx": "195",
               "beginAge": "6 years - 4 days"
             },
@@ -1059,7 +1173,7 @@ final AntigenSupportingData diphtheria = AntigenSupportingData.fromJson({
               "beginAge": "12 months - 4 days"
             },
             {
-              "vaccineType": "DTP-hepB-Hib Pentavalent Non-US",
+              "vaccineType": "DTP-HepB-Hib Pentavalent Non-US",
               "cvx": "198",
               "beginAge": "6 weeks - 4 days"
             }
@@ -1233,7 +1347,7 @@ final AntigenSupportingData diphtheria = AntigenSupportingData.fromJson({
               "beginAge": "6 weeks - 4 days"
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB,historical",
+              "vaccineType": "DTaP-IPV-Hib-HepB, historical",
               "cvx": "132",
               "beginAge": "6 weeks - 4 days"
             },
@@ -1258,7 +1372,7 @@ final AntigenSupportingData diphtheria = AntigenSupportingData.fromJson({
               "beginAge": "6 weeks - 4 days"
             },
             {
-              "vaccineType": "DT, IPV adsorved",
+              "vaccineType": "DT, IPV adsorbed",
               "cvx": "195",
               "beginAge": "6 years - 4 days"
             },
@@ -1268,7 +1382,7 @@ final AntigenSupportingData diphtheria = AntigenSupportingData.fromJson({
               "beginAge": "12 months - 4 days"
             },
             {
-              "vaccineType": "DTP-hepB-Hib Pentavalent Non-US",
+              "vaccineType": "DTP-HepB-Hib Pentavalent Non-US",
               "cvx": "198",
               "beginAge": "6 weeks - 4 days"
             }
@@ -1437,7 +1551,7 @@ final AntigenSupportingData diphtheria = AntigenSupportingData.fromJson({
               "beginAge": "6 weeks - 4 days"
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB,historical",
+              "vaccineType": "DTaP-IPV-Hib-HepB, historical",
               "cvx": "132",
               "beginAge": "6 weeks - 4 days"
             },
@@ -1462,7 +1576,7 @@ final AntigenSupportingData diphtheria = AntigenSupportingData.fromJson({
               "beginAge": "6 weeks - 4 days"
             },
             {
-              "vaccineType": "DT, IPV adsorved",
+              "vaccineType": "DT, IPV adsorbed",
               "cvx": "195",
               "beginAge": "6 years - 4 days"
             },
@@ -1472,7 +1586,7 @@ final AntigenSupportingData diphtheria = AntigenSupportingData.fromJson({
               "beginAge": "12 months - 4 days"
             },
             {
-              "vaccineType": "DTP-hepB-Hib Pentavalent Non-US",
+              "vaccineType": "DTP-HepB-Hib Pentavalent Non-US",
               "cvx": "198",
               "beginAge": "6 weeks - 4 days"
             }
@@ -1665,7 +1779,7 @@ final AntigenSupportingData diphtheria = AntigenSupportingData.fromJson({
               "beginAge": "6 weeks - 4 days"
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB,historical",
+              "vaccineType": "DTaP-IPV-Hib-HepB, historical",
               "cvx": "132",
               "beginAge": "6 weeks - 4 days"
             },
@@ -1690,7 +1804,7 @@ final AntigenSupportingData diphtheria = AntigenSupportingData.fromJson({
               "beginAge": "6 weeks - 4 days"
             },
             {
-              "vaccineType": "DT, IPV adsorved",
+              "vaccineType": "DT, IPV adsorbed",
               "cvx": "195",
               "beginAge": "6 years - 4 days"
             },
@@ -1700,7 +1814,7 @@ final AntigenSupportingData diphtheria = AntigenSupportingData.fromJson({
               "beginAge": "12 months - 4 days"
             },
             {
-              "vaccineType": "DTP-hepB-Hib Pentavalent Non-US",
+              "vaccineType": "DTP-HepB-Hib Pentavalent Non-US",
               "cvx": "198",
               "beginAge": "6 weeks - 4 days"
             }
@@ -1840,7 +1954,7 @@ final AntigenSupportingData diphtheria = AntigenSupportingData.fromJson({
               "beginAge": "6 weeks - 4 days"
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB,historical",
+              "vaccineType": "DTaP-IPV-Hib-HepB, historical",
               "cvx": "132",
               "beginAge": "6 weeks - 4 days"
             },
@@ -1865,7 +1979,7 @@ final AntigenSupportingData diphtheria = AntigenSupportingData.fromJson({
               "beginAge": "6 weeks - 4 days"
             },
             {
-              "vaccineType": "DT, IPV adsorved",
+              "vaccineType": "DT, IPV adsorbed",
               "cvx": "195",
               "beginAge": "6 years - 4 days"
             },
@@ -1875,7 +1989,7 @@ final AntigenSupportingData diphtheria = AntigenSupportingData.fromJson({
               "beginAge": "12 months - 4 days"
             },
             {
-              "vaccineType": "DTP-hepB-Hib Pentavalent Non-US",
+              "vaccineType": "DTP-HepB-Hib Pentavalent Non-US",
               "cvx": "198",
               "beginAge": "6 weeks - 4 days"
             }
@@ -2005,7 +2119,7 @@ final AntigenSupportingData diphtheria = AntigenSupportingData.fromJson({
               "beginAge": "6 weeks - 4 days"
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB,historical",
+              "vaccineType": "DTaP-IPV-Hib-HepB, historical",
               "cvx": "132",
               "beginAge": "6 weeks - 4 days"
             },
@@ -2030,7 +2144,7 @@ final AntigenSupportingData diphtheria = AntigenSupportingData.fromJson({
               "beginAge": "6 weeks - 4 days"
             },
             {
-              "vaccineType": "DT, IPV adsorved",
+              "vaccineType": "DT, IPV adsorbed",
               "cvx": "195",
               "beginAge": "6 years - 4 days"
             },
@@ -2040,7 +2154,7 @@ final AntigenSupportingData diphtheria = AntigenSupportingData.fromJson({
               "beginAge": "12 months - 4 days"
             },
             {
-              "vaccineType": "DTP-hepB-Hib Pentavalent Non-US",
+              "vaccineType": "DTP-HepB-Hib Pentavalent Non-US",
               "cvx": "198",
               "beginAge": "6 weeks - 4 days"
             }
@@ -2172,7 +2286,7 @@ final AntigenSupportingData diphtheria = AntigenSupportingData.fromJson({
               "beginAge": "6 weeks - 4 days"
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB,historical",
+              "vaccineType": "DTaP-IPV-Hib-HepB, historical",
               "cvx": "132",
               "beginAge": "6 weeks - 4 days"
             },
@@ -2207,7 +2321,7 @@ final AntigenSupportingData diphtheria = AntigenSupportingData.fromJson({
               "beginAge": "12 months - 4 days"
             },
             {
-              "vaccineType": "DTP-hepB-Hib Pentavalent Non-US",
+              "vaccineType": "DTP-HepB-Hib Pentavalent Non-US",
               "cvx": "198",
               "beginAge": "6 weeks - 4 days"
             }
@@ -2330,7 +2444,7 @@ final AntigenSupportingData diphtheria = AntigenSupportingData.fromJson({
               "beginAge": "6 weeks - 4 days"
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB,historical",
+              "vaccineType": "DTaP-IPV-Hib-HepB, historical",
               "cvx": "132",
               "beginAge": "6 weeks - 4 days"
             },
@@ -2345,12 +2459,12 @@ final AntigenSupportingData diphtheria = AntigenSupportingData.fromJson({
               "beginAge": "6 weeks - 4 days"
             },
             {
-              "vaccineType": "DT, IPV adsorved",
+              "vaccineType": "DT, IPV adsorbed",
               "cvx": "195",
               "beginAge": "6 years - 4 days"
             },
             {
-              "vaccineType": "DTP-hepB-Hib Pentavalent Non-US",
+              "vaccineType": "DTP-HepB-Hib Pentavalent Non-US",
               "cvx": "198",
               "beginAge": "6 weeks - 4 days"
             }
@@ -2528,7 +2642,7 @@ final AntigenSupportingData diphtheria = AntigenSupportingData.fromJson({
               "beginAge": "6 weeks - 4 days"
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB,historical",
+              "vaccineType": "DTaP-IPV-Hib-HepB, historical",
               "cvx": "132",
               "beginAge": "6 weeks - 4 days"
             },
@@ -2543,12 +2657,12 @@ final AntigenSupportingData diphtheria = AntigenSupportingData.fromJson({
               "beginAge": "6 weeks - 4 days"
             },
             {
-              "vaccineType": "DT, IPV adsorved",
+              "vaccineType": "DT, IPV adsorbed",
               "cvx": "195",
               "beginAge": "6 years - 4 days"
             },
             {
-              "vaccineType": "DTP-hepB-Hib Pentavalent Non-US",
+              "vaccineType": "DTP-HepB-Hib Pentavalent Non-US",
               "cvx": "198",
               "beginAge": "6 weeks - 4 days"
             }
@@ -2726,7 +2840,7 @@ final AntigenSupportingData diphtheria = AntigenSupportingData.fromJson({
               "beginAge": "6 weeks - 4 days"
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB,historical",
+              "vaccineType": "DTaP-IPV-Hib-HepB, historical",
               "cvx": "132",
               "beginAge": "6 weeks - 4 days"
             },
@@ -2741,12 +2855,12 @@ final AntigenSupportingData diphtheria = AntigenSupportingData.fromJson({
               "beginAge": "6 weeks - 4 days"
             },
             {
-              "vaccineType": "DT, IPV adsorved",
+              "vaccineType": "DT, IPV adsorbed",
               "cvx": "195",
               "beginAge": "6 years - 4 days"
             },
             {
-              "vaccineType": "DTP-hepB-Hib Pentavalent Non-US",
+              "vaccineType": "DTP-HepB-Hib Pentavalent Non-US",
               "cvx": "198",
               "beginAge": "6 weeks - 4 days"
             }
@@ -2935,7 +3049,7 @@ final AntigenSupportingData diphtheria = AntigenSupportingData.fromJson({
               "beginAge": "6 weeks - 4 days"
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB,historical",
+              "vaccineType": "DTaP-IPV-Hib-HepB, historical",
               "cvx": "132",
               "beginAge": "6 weeks - 4 days"
             },
@@ -2960,7 +3074,7 @@ final AntigenSupportingData diphtheria = AntigenSupportingData.fromJson({
               "beginAge": "6 weeks - 4 days"
             },
             {
-              "vaccineType": "DT, IPV adsorved",
+              "vaccineType": "DT, IPV adsorbed",
               "cvx": "195",
               "beginAge": "6 years - 4 days"
             },
@@ -2970,7 +3084,7 @@ final AntigenSupportingData diphtheria = AntigenSupportingData.fromJson({
               "beginAge": "12 months - 4 days"
             },
             {
-              "vaccineType": "DTP-hepB-Hib Pentavalent Non-US",
+              "vaccineType": "DTP-HepB-Hib Pentavalent Non-US",
               "cvx": "198",
               "beginAge": "6 weeks - 4 days"
             }
@@ -3144,7 +3258,7 @@ final AntigenSupportingData diphtheria = AntigenSupportingData.fromJson({
               "beginAge": "6 weeks - 4 days"
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB,historical",
+              "vaccineType": "DTaP-IPV-Hib-HepB, historical",
               "cvx": "132",
               "beginAge": "6 weeks - 4 days"
             },
@@ -3169,7 +3283,7 @@ final AntigenSupportingData diphtheria = AntigenSupportingData.fromJson({
               "beginAge": "6 weeks - 4 days"
             },
             {
-              "vaccineType": "DT, IPV adsorved",
+              "vaccineType": "DT, IPV adsorbed",
               "cvx": "195",
               "beginAge": "6 years - 4 days"
             },
@@ -3179,7 +3293,7 @@ final AntigenSupportingData diphtheria = AntigenSupportingData.fromJson({
               "beginAge": "12 months - 4 days"
             },
             {
-              "vaccineType": "DTP-hepB-Hib Pentavalent Non-US",
+              "vaccineType": "DTP-HepB-Hib Pentavalent Non-US",
               "cvx": "198",
               "beginAge": "6 weeks - 4 days"
             }
@@ -3353,7 +3467,7 @@ final AntigenSupportingData diphtheria = AntigenSupportingData.fromJson({
               "beginAge": "6 weeks - 4 days"
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB,historical",
+              "vaccineType": "DTaP-IPV-Hib-HepB, historical",
               "cvx": "132",
               "beginAge": "6 weeks - 4 days"
             },
@@ -3378,7 +3492,7 @@ final AntigenSupportingData diphtheria = AntigenSupportingData.fromJson({
               "beginAge": "6 weeks - 4 days"
             },
             {
-              "vaccineType": "DT, IPV adsorved",
+              "vaccineType": "DT, IPV adsorbed",
               "cvx": "195",
               "beginAge": "6 years - 4 days"
             },
@@ -3388,7 +3502,7 @@ final AntigenSupportingData diphtheria = AntigenSupportingData.fromJson({
               "beginAge": "12 months - 4 days"
             },
             {
-              "vaccineType": "DTP-hepB-Hib Pentavalent Non-US",
+              "vaccineType": "DTP-HepB-Hib Pentavalent Non-US",
               "cvx": "198",
               "beginAge": "6 weeks - 4 days"
             }
@@ -3557,7 +3671,7 @@ final AntigenSupportingData diphtheria = AntigenSupportingData.fromJson({
               "beginAge": "6 weeks - 4 days"
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB,historical",
+              "vaccineType": "DTaP-IPV-Hib-HepB, historical",
               "cvx": "132",
               "beginAge": "6 weeks - 4 days"
             },
@@ -3582,7 +3696,7 @@ final AntigenSupportingData diphtheria = AntigenSupportingData.fromJson({
               "beginAge": "6 weeks - 4 days"
             },
             {
-              "vaccineType": "DT, IPV adsorved",
+              "vaccineType": "DT, IPV adsorbed",
               "cvx": "195",
               "beginAge": "6 years - 4 days"
             },
@@ -3592,7 +3706,7 @@ final AntigenSupportingData diphtheria = AntigenSupportingData.fromJson({
               "beginAge": "12 months - 4 days"
             },
             {
-              "vaccineType": "DTP-hepB-Hib Pentavalent Non-US",
+              "vaccineType": "DTP-HepB-Hib Pentavalent Non-US",
               "cvx": "198",
               "beginAge": "6 weeks - 4 days"
             }
@@ -3651,7 +3765,7 @@ final AntigenSupportingData diphtheria = AntigenSupportingData.fromJson({
                 {
                   "setID": "3",
                   "setDescription":
-                      "Dose is not required if the patient has recevied 3 doses with 1 dose of Tdap on or after 7 years and no doses prior to 12 months",
+                      "Dose is not required if the patient has received 3 doses with 1 dose of Tdap on or after 7 years and no doses prior to 12 months",
                   "conditionLogic": "AND",
                   "condition": [
                     {
@@ -3853,7 +3967,7 @@ final AntigenSupportingData diphtheria = AntigenSupportingData.fromJson({
               "beginAge": "6 weeks - 4 days"
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB,historical",
+              "vaccineType": "DTaP-IPV-Hib-HepB, historical",
               "cvx": "132",
               "beginAge": "6 weeks - 4 days"
             },
@@ -3878,7 +3992,7 @@ final AntigenSupportingData diphtheria = AntigenSupportingData.fromJson({
               "beginAge": "6 weeks - 4 days"
             },
             {
-              "vaccineType": "DT, IPV adsorved",
+              "vaccineType": "DT, IPV adsorbed",
               "cvx": "195",
               "beginAge": "6 years - 4 days"
             },
@@ -3888,7 +4002,7 @@ final AntigenSupportingData diphtheria = AntigenSupportingData.fromJson({
               "beginAge": "12 months - 4 days"
             },
             {
-              "vaccineType": "DTP-hepB-Hib Pentavalent Non-US",
+              "vaccineType": "DTP-HepB-Hib Pentavalent Non-US",
               "cvx": "198",
               "beginAge": "6 weeks - 4 days"
             }
@@ -4028,7 +4142,7 @@ final AntigenSupportingData diphtheria = AntigenSupportingData.fromJson({
               "beginAge": "6 weeks - 4 days"
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB,historical",
+              "vaccineType": "DTaP-IPV-Hib-HepB, historical",
               "cvx": "132",
               "beginAge": "6 weeks - 4 days"
             },
@@ -4053,7 +4167,7 @@ final AntigenSupportingData diphtheria = AntigenSupportingData.fromJson({
               "beginAge": "6 weeks - 4 days"
             },
             {
-              "vaccineType": "DT, IPV adsorved",
+              "vaccineType": "DT, IPV adsorbed",
               "cvx": "195",
               "beginAge": "6 years - 4 days"
             },
@@ -4063,7 +4177,7 @@ final AntigenSupportingData diphtheria = AntigenSupportingData.fromJson({
               "beginAge": "12 months - 4 days"
             },
             {
-              "vaccineType": "DTP-hepB-Hib Pentavalent Non-US",
+              "vaccineType": "DTP-HepB-Hib Pentavalent Non-US",
               "cvx": "198",
               "beginAge": "6 weeks - 4 days"
             }
@@ -4193,7 +4307,7 @@ final AntigenSupportingData diphtheria = AntigenSupportingData.fromJson({
               "beginAge": "6 weeks - 4 days"
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB,historical",
+              "vaccineType": "DTaP-IPV-Hib-HepB, historical",
               "cvx": "132",
               "beginAge": "6 weeks - 4 days"
             },
@@ -4218,7 +4332,7 @@ final AntigenSupportingData diphtheria = AntigenSupportingData.fromJson({
               "beginAge": "6 weeks - 4 days"
             },
             {
-              "vaccineType": "DT, IPV adsorved",
+              "vaccineType": "DT, IPV adsorbed",
               "cvx": "195",
               "beginAge": "6 years - 4 days"
             },
@@ -4228,7 +4342,7 @@ final AntigenSupportingData diphtheria = AntigenSupportingData.fromJson({
               "beginAge": "12 months - 4 days"
             },
             {
-              "vaccineType": "DTP-hepB-Hib Pentavalent Non-US",
+              "vaccineType": "DTP-HepB-Hib Pentavalent Non-US",
               "cvx": "198",
               "beginAge": "6 weeks - 4 days"
             }
@@ -4360,7 +4474,7 @@ final AntigenSupportingData diphtheria = AntigenSupportingData.fromJson({
               "beginAge": "6 weeks - 4 days"
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB,historical",
+              "vaccineType": "DTaP-IPV-Hib-HepB, historical",
               "cvx": "132",
               "beginAge": "6 weeks - 4 days"
             },
@@ -4395,7 +4509,7 @@ final AntigenSupportingData diphtheria = AntigenSupportingData.fromJson({
               "beginAge": "12 months - 4 days"
             },
             {
-              "vaccineType": "DTP-hepB-Hib Pentavalent Non-US",
+              "vaccineType": "DTP-HepB-Hib Pentavalent Non-US",
               "cvx": "198",
               "beginAge": "6 weeks - 4 days"
             }

@@ -114,25 +114,6 @@ final AntigenSupportingData yellowFever = AntigenSupportingData.fromJson({
               "Do not vaccinate if the patient is undergoing radiation therapy."
         }
       ]
-    },
-    "vaccine": {
-      "contraindication": [
-        {
-          "observationCode": "009",
-          "observationTitle": "Breastfeeding",
-          "contraindicationText":
-              "Do not vaccinate if the patient is breastfeeding.",
-          "contraindicationGuidance":
-              "Vaccination with Stamaril may occur if the patient is able to suspend breastfeeding for 14 days after administration.",
-          "contraindicatedVaccine": [
-            {
-              "vaccineType": "Yellow fever vaccine - alt",
-              "cvx": "183",
-              "beginAge": "9 months"
-            }
-          ]
-        }
-      ]
     }
   },
   "series": [

@@ -46,7 +46,7 @@ final AntigenSupportingData hpv = AntigenSupportingData.fromJson({
       ],
       "seriesType": "Standard",
       "equivalentSeriesGroups": "2",
-      "requiredGender": ["Female", "Transgender", "Unknown"],
+      "requiredGender": ["Female", "Unknown"],
       "selectSeries": {
         "defaultSeries": "Yes",
         "productPath": "No",
@@ -268,7 +268,7 @@ final AntigenSupportingData hpv = AntigenSupportingData.fromJson({
       ],
       "seriesType": "Standard",
       "equivalentSeriesGroups": "2",
-      "requiredGender": ["Female", "Transgender", "Unknown"],
+      "requiredGender": ["Female", "Unknown"],
       "selectSeries": {
         "defaultSeries": "No",
         "productPath": "No",
@@ -858,7 +858,7 @@ final AntigenSupportingData hpv = AntigenSupportingData.fromJson({
       "vaccineGroup": "HPV",
       "seriesType": "Risk",
       "equivalentSeriesGroups": "1",
-      "requiredGender": ["Female", "Transgender", "Unknown"],
+      "requiredGender": ["Female", "Unknown"],
       "selectSeries": {
         "defaultSeries": "No",
         "productPath": "No",
@@ -1313,10 +1313,11 @@ final AntigenSupportingData hpv = AntigenSupportingData.fromJson({
       "targetDisease": "HPV",
       "vaccineGroup": "HPV",
       "seriesAdminGuidance": [
-        "At the provider's discretion, the recommendation for a 3-dose schedule does not apply to children aged less than 15 years with asplenia, asthma, chronic granulomatous disease, chronic liver disease, chronic lung disease, chronic renal disease, CNS anatomic barrier defines (e.g., cochlear implant), complement deficiency, diabetes, heart disease, or sickle cell disease."
+        "At the provider's discretion, the recommendation for a 3-dose schedule does not apply to children aged less than 15 years with asplenia, asthma, chronic granulomatous disease, chronic liver disease, chronic lung disease, chronic renal disease, CNS anatomic barrier defines (e.g., cochlear implant), complement deficiency, diabetes, heart disease, or sickle cell disease.",
+        "Shared clinical decision-making (SCDM) is recommended regarding Human papillomavirus (HPV) vaccination for persons 27-45 years of age. Shared clinical decision-making recommendations are intended to be flexible and should be informed by the characteristics, values, and preferences of the individual patient and the clinical discretion of the healthcare provider. More guidance can be found here: https://www.cdc.gov/vaccines/hcp/admin/downloads/ISD-job-aid-SCDM-HPV-shared-clinical-decision-making-HPV.pdf"
       ],
       "seriesType": "Risk",
-      "requiredGender": ["Female", "Transgender", "Unknown"],
+      "requiredGender": ["Female", "Unknown"],
       "selectSeries": {
         "defaultSeries": "No",
         "productPath": "No",
@@ -1325,7 +1326,7 @@ final AntigenSupportingData hpv = AntigenSupportingData.fromJson({
         "seriesPriority": "A",
         "seriesPreference": "1",
         "minAgeToStart": "9 years",
-        "maxAgeToStart": "27 years"
+        "maxAgeToStart": "46 years"
       },
       "indication": [
         {
@@ -1399,6 +1400,24 @@ final AntigenSupportingData hpv = AntigenSupportingData.fromJson({
         },
         {
           "observationCode": {
+            "text": "HIV/AIDS - severely immunocompromised",
+            "code": "154"
+          },
+          "description":
+              "Administer to persons who have HIV/AIDS and are severely immunocompromised [See the CDC general recommendations for a definition of \"severely immunocompromised\"].",
+          "beginAge": "9 years"
+        },
+        {
+          "observationCode": {
+            "text": "HIV/AIDS - not severely immunocompromised",
+            "code": "155"
+          },
+          "description":
+              "Administer to persons who have HIV/AIDS and are not severely immunocompromised [See the CDC general recommendations for a definition of \"severely immunocompromised\"].",
+          "beginAge": "9 years"
+        },
+        {
+          "observationCode": {
             "text": "Generalized malignant neoplasm",
             "code": "156"
           },
@@ -1442,7 +1461,7 @@ final AntigenSupportingData hpv = AntigenSupportingData.fromJson({
               "minAge": "9 years",
               "earliestRecAge": "11 years",
               "latestRecAge": "13 years + 4 weeks",
-              "maxAge": "27 years"
+              "maxAge": "46 years"
             }
           ],
           "preferableVaccine": [
@@ -1594,7 +1613,8 @@ final AntigenSupportingData hpv = AntigenSupportingData.fromJson({
       "targetDisease": "HPV",
       "vaccineGroup": "HPV",
       "seriesAdminGuidance": [
-        "At the provider's discretion, the recommendation for a 3-dose schedule does not apply to children aged less than 15 years with asplenia, asthma, chronic granulomatous disease, chronic liver disease, chronic lung disease, chronic renal disease, CNS anatomic barrier defines (e.g., cochlear implant), complement deficiency, diabetes, heart disease, or sickle cell disease."
+        "At the provider's discretion, the recommendation for a 3-dose schedule does not apply to children aged less than 15 years with asplenia, asthma, chronic granulomatous disease, chronic liver disease, chronic lung disease, chronic renal disease, CNS anatomic barrier defines (e.g., cochlear implant), complement deficiency, diabetes, heart disease, or sickle cell disease.",
+        "Shared clinical decision-making (SCDM) is recommended regarding Human papillomavirus (HPV) vaccination for persons 27-45 years of age. Shared clinical decision-making recommendations are intended to be flexible and should be informed by the characteristics, values, and preferences of the individual patient and the clinical discretion of the healthcare provider. More guidance can be found here: https://www.cdc.gov/vaccines/hcp/admin/downloads/ISD-job-aid-SCDM-HPV-shared-clinical-decision-making-HPV.pdf"
       ],
       "seriesType": "Risk",
       "requiredGender": ["Male"],
@@ -1606,7 +1626,7 @@ final AntigenSupportingData hpv = AntigenSupportingData.fromJson({
         "seriesPriority": "A",
         "seriesPreference": "1",
         "minAgeToStart": "9 years",
-        "maxAgeToStart": "27 years"
+        "maxAgeToStart": "46 years"
       },
       "indication": [
         {
@@ -1680,6 +1700,24 @@ final AntigenSupportingData hpv = AntigenSupportingData.fromJson({
         },
         {
           "observationCode": {
+            "text": "HIV/AIDS - severely immunocompromised",
+            "code": "154"
+          },
+          "description":
+              "Administer to persons who have HIV/AIDS and are severely immunocompromised [See the CDC general recommendations for a definition of \"severely immunocompromised\"].",
+          "beginAge": "9 years"
+        },
+        {
+          "observationCode": {
+            "text": "HIV/AIDS - not severely immunocompromised",
+            "code": "155"
+          },
+          "description":
+              "Administer to persons who have HIV/AIDS and are not severely immunocompromised [See the CDC general recommendations for a definition of \"severely immunocompromised\"].",
+          "beginAge": "9 years"
+        },
+        {
+          "observationCode": {
             "text": "Generalized malignant neoplasm",
             "code": "156"
           },
@@ -1723,7 +1761,7 @@ final AntigenSupportingData hpv = AntigenSupportingData.fromJson({
               "minAge": "9 years",
               "earliestRecAge": "11 years",
               "latestRecAge": "13 years + 4 weeks",
-              "maxAge": "27 years"
+              "maxAge": "46 years"
             }
           ],
           "preferableVaccine": [

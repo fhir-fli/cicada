@@ -170,6 +170,17 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
       {
         "previous": {"vaccineType": "MMR", "cvx": "03"},
         "current": {
+          "vaccineType":
+              "Influenza, live, trivalent, intranasal, self/caregiver admin, PF",
+          "cvx": "333"
+        },
+        "conflictBeginInterval": "1 day",
+        "minConflictEndInterval": "28 days",
+        "conflictEndInterval": "28 days"
+      },
+      {
+        "previous": {"vaccineType": "MMR", "cvx": "03"},
+        "current": {
           "vaccineType": "COVID-19 LAV Non-US Vaccine  - COVIVAC",
           "cvx": "503"
         },
@@ -344,6 +355,17 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
       {
         "previous": {"vaccineType": "Measles-Rubella", "cvx": "04"},
         "current": {
+          "vaccineType":
+              "Influenza, live, trivalent, intranasal, self/caregiver admin, PF",
+          "cvx": "333"
+        },
+        "conflictBeginInterval": "1 day",
+        "minConflictEndInterval": "28 days",
+        "conflictEndInterval": "28 days"
+      },
+      {
+        "previous": {"vaccineType": "Measles-Rubella", "cvx": "04"},
+        "current": {
           "vaccineType": "COVID-19 LAV Non-US Vaccine  - COVIVAC",
           "cvx": "503"
         },
@@ -518,6 +540,17 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
       {
         "previous": {"vaccineType": "Measles", "cvx": "05"},
         "current": {
+          "vaccineType":
+              "Influenza, live, trivalent, intranasal, self/caregiver admin, PF",
+          "cvx": "333"
+        },
+        "conflictBeginInterval": "1 day",
+        "minConflictEndInterval": "28 days",
+        "conflictEndInterval": "28 days"
+      },
+      {
+        "previous": {"vaccineType": "Measles", "cvx": "05"},
+        "current": {
           "vaccineType": "COVID-19 LAV Non-US Vaccine  - COVIVAC",
           "cvx": "503"
         },
@@ -692,6 +725,17 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
       {
         "previous": {"vaccineType": "Rubella", "cvx": "06"},
         "current": {
+          "vaccineType":
+              "Influenza, live, trivalent, intranasal, self/caregiver admin, PF",
+          "cvx": "333"
+        },
+        "conflictBeginInterval": "1 day",
+        "minConflictEndInterval": "28 days",
+        "conflictEndInterval": "28 days"
+      },
+      {
+        "previous": {"vaccineType": "Rubella", "cvx": "06"},
+        "current": {
           "vaccineType": "COVID-19 LAV Non-US Vaccine  - COVIVAC",
           "cvx": "503"
         },
@@ -858,6 +902,17 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
         "current": {
           "vaccineType": "Chikungunya live attenuated vaccine, 0.5 mL, PF",
           "cvx": "317"
+        },
+        "conflictBeginInterval": "1 day",
+        "minConflictEndInterval": "28 days",
+        "conflictEndInterval": "28 days"
+      },
+      {
+        "previous": {"vaccineType": "Mumps", "cvx": "07"},
+        "current": {
+          "vaccineType":
+              "Influenza, live, trivalent, intranasal, self/caregiver admin, PF",
+          "cvx": "333"
         },
         "conflictBeginInterval": "1 day",
         "minConflictEndInterval": "28 days",
@@ -1040,6 +1095,17 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
       {
         "previous": {"vaccineType": "BCG", "cvx": "19"},
         "current": {
+          "vaccineType":
+              "Influenza, live, trivalent, intranasal, self/caregiver admin, PF",
+          "cvx": "333"
+        },
+        "conflictBeginInterval": "1 day",
+        "minConflictEndInterval": "30 days",
+        "conflictEndInterval": "30 days"
+      },
+      {
+        "previous": {"vaccineType": "BCG", "cvx": "19"},
+        "current": {
           "vaccineType": "COVID-19 LAV Non-US Vaccine  - COVIVAC",
           "cvx": "503"
         },
@@ -1214,6 +1280,17 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
       {
         "previous": {"vaccineType": "Varicella", "cvx": "21"},
         "current": {
+          "vaccineType":
+              "Influenza, live, trivalent, intranasal, self/caregiver admin, PF",
+          "cvx": "333"
+        },
+        "conflictBeginInterval": "1 day",
+        "minConflictEndInterval": "28 days",
+        "conflictEndInterval": "28 days"
+      },
+      {
+        "previous": {"vaccineType": "Varicella", "cvx": "21"},
+        "current": {
           "vaccineType": "COVID-19 LAV Non-US Vaccine  - COVIVAC",
           "cvx": "503"
         },
@@ -1388,6 +1465,17 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
       {
         "previous": {"vaccineType": "Yellow Fever", "cvx": "37"},
         "current": {
+          "vaccineType":
+              "Influenza, live, trivalent, intranasal, self/caregiver admin, PF",
+          "cvx": "333"
+        },
+        "conflictBeginInterval": "1 day",
+        "minConflictEndInterval": "28 days",
+        "conflictEndInterval": "30 days"
+      },
+      {
+        "previous": {"vaccineType": "Yellow Fever", "cvx": "37"},
+        "current": {
           "vaccineType": "COVID-19 LAV Non-US Vaccine  - COVIVAC",
           "cvx": "503"
         },
@@ -1562,6 +1650,17 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
       {
         "previous": {"vaccineType": "Rubella-Mumps", "cvx": "38"},
         "current": {
+          "vaccineType":
+              "Influenza, live, trivalent, intranasal, self/caregiver admin, PF",
+          "cvx": "333"
+        },
+        "conflictBeginInterval": "1 day",
+        "minConflictEndInterval": "28 days",
+        "conflictEndInterval": "28 days"
+      },
+      {
+        "previous": {"vaccineType": "Rubella-Mumps", "cvx": "38"},
+        "current": {
           "vaccineType": "COVID-19 LAV Non-US Vaccine  - COVIVAC",
           "cvx": "503"
         },
@@ -1736,6 +1835,17 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
       {
         "previous": {"vaccineType": "Dengue Fever", "cvx": "56"},
         "current": {
+          "vaccineType":
+              "Influenza, live, trivalent, intranasal, self/caregiver admin, PF",
+          "cvx": "333"
+        },
+        "conflictBeginInterval": "1 day",
+        "minConflictEndInterval": "28 days",
+        "conflictEndInterval": "28 days"
+      },
+      {
+        "previous": {"vaccineType": "Dengue Fever", "cvx": "56"},
+        "current": {
           "vaccineType": "COVID-19 LAV Non-US Vaccine  - COVIVAC",
           "cvx": "503"
         },
@@ -1910,6 +2020,17 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
       {
         "previous": {"vaccineType": "Vaccinia - smallpox", "cvx": "75"},
         "current": {
+          "vaccineType":
+              "Influenza, live, trivalent, intranasal, self/caregiver admin, PF",
+          "cvx": "333"
+        },
+        "conflictBeginInterval": "1 day",
+        "minConflictEndInterval": "28 days",
+        "conflictEndInterval": "28 days"
+      },
+      {
+        "previous": {"vaccineType": "Vaccinia - smallpox", "cvx": "75"},
+        "current": {
           "vaccineType": "COVID-19 LAV Non-US Vaccine  - COVIVAC",
           "cvx": "503"
         },
@@ -2084,6 +2205,17 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
       {
         "previous": {"vaccineType": "MMRV", "cvx": "94"},
         "current": {
+          "vaccineType":
+              "Influenza, live, trivalent, intranasal, self/caregiver admin, PF",
+          "cvx": "333"
+        },
+        "conflictBeginInterval": "1 day",
+        "minConflictEndInterval": "28 days",
+        "conflictEndInterval": "28 days"
+      },
+      {
+        "previous": {"vaccineType": "MMRV", "cvx": "94"},
+        "current": {
           "vaccineType": "COVID-19 LAV Non-US Vaccine  - COVIVAC",
           "cvx": "503"
         },
@@ -2325,6 +2457,17 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
         "conflictEndInterval": "28 days"
       },
       {
+        "previous": {"vaccineType": "MMRV", "cvx": "94"},
+        "current": {
+          "vaccineType":
+              "Influenza, live, trivalent, intranasal, self/caregiver admin, PF",
+          "cvx": "333"
+        },
+        "conflictBeginInterval": "1 day",
+        "minConflictEndInterval": "28 days",
+        "conflictEndInterval": "28 days"
+      },
+      {
         "previous": {
           "vaccineType": "Vaccinia - smallpox diluted",
           "cvx": "105"
@@ -2504,6 +2647,17 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
       {
         "previous": {"vaccineType": "Influenza LAIV", "cvx": "111"},
         "current": {
+          "vaccineType":
+              "Influenza, live, trivalent, intranasal, self/caregiver admin, PF",
+          "cvx": "333"
+        },
+        "conflictBeginInterval": "1 day",
+        "minConflictEndInterval": "24 days",
+        "conflictEndInterval": "28 days"
+      },
+      {
+        "previous": {"vaccineType": "Influenza LAIV", "cvx": "111"},
+        "current": {
           "vaccineType": "COVID-19 LAV Non-US Vaccine  - COVIVAC",
           "cvx": "503"
         },
@@ -2678,6 +2832,17 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
       {
         "previous": {"vaccineType": "Zoster live", "cvx": "121"},
         "current": {
+          "vaccineType":
+              "Influenza, live, trivalent, intranasal, self/caregiver admin, PF",
+          "cvx": "333"
+        },
+        "conflictBeginInterval": "1 day",
+        "minConflictEndInterval": "28 days",
+        "conflictEndInterval": "28 days"
+      },
+      {
+        "previous": {"vaccineType": "Zoster live", "cvx": "121"},
+        "current": {
           "vaccineType": "COVID-19 LAV Non-US Vaccine  - COVIVAC",
           "cvx": "503"
         },
@@ -2852,6 +3017,17 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
       {
         "previous": {"vaccineType": "H1N1 LAIV", "cvx": "125"},
         "current": {
+          "vaccineType":
+              "Influenza, live, trivalent, intranasal, self/caregiver admin, PF",
+          "cvx": "333"
+        },
+        "conflictBeginInterval": "1 day",
+        "minConflictEndInterval": "28 days",
+        "conflictEndInterval": "28 days"
+      },
+      {
+        "previous": {"vaccineType": "H1N1 LAIV", "cvx": "125"},
+        "current": {
           "vaccineType": "COVID-19 LAV Non-US Vaccine  - COVIVAC",
           "cvx": "503"
         },
@@ -3026,6 +3202,17 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
       {
         "previous": {"vaccineType": "Influenza LAIV4", "cvx": "149"},
         "current": {
+          "vaccineType":
+              "Influenza, live, trivalent, intranasal, self/caregiver admin, PF",
+          "cvx": "333"
+        },
+        "conflictBeginInterval": "1 day",
+        "minConflictEndInterval": "24 days",
+        "conflictEndInterval": "28 days"
+      },
+      {
+        "previous": {"vaccineType": "Influenza LAIV4", "cvx": "149"},
+        "current": {
           "vaccineType": "COVID-19 LAV Non-US Vaccine  - COVIVAC",
           "cvx": "503"
         },
@@ -3200,6 +3387,17 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
       {
         "previous": {"vaccineType": "Influenza LAIV Unspecified", "cvx": "151"},
         "current": {
+          "vaccineType":
+              "Influenza, live, trivalent, intranasal, self/caregiver admin, PF",
+          "cvx": "333"
+        },
+        "conflictBeginInterval": "1 day",
+        "minConflictEndInterval": "24 days",
+        "conflictEndInterval": "28 days"
+      },
+      {
+        "previous": {"vaccineType": "Influenza LAIV Unspecified", "cvx": "151"},
+        "current": {
           "vaccineType": "COVID-19 LAV Non-US Vaccine  - COVIVAC",
           "cvx": "503"
         },
@@ -3374,6 +3572,17 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
       {
         "previous": {"vaccineType": "Hep A, live attenuated", "cvx": "169"},
         "current": {
+          "vaccineType":
+              "Influenza, live, trivalent, intranasal, self/caregiver admin, PF",
+          "cvx": "333"
+        },
+        "conflictBeginInterval": "1 day",
+        "minConflictEndInterval": "28 days",
+        "conflictEndInterval": "28 days"
+      },
+      {
+        "previous": {"vaccineType": "Hep A, live attenuated", "cvx": "169"},
+        "current": {
           "vaccineType": "COVID-19 LAV Non-US Vaccine  - COVIVAC",
           "cvx": "503"
         },
@@ -3548,6 +3757,17 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
       {
         "previous": {"vaccineType": "Yellow Fever vaccine - alt", "cvx": "183"},
         "current": {
+          "vaccineType":
+              "Influenza, live, trivalent, intranasal, self/caregiver admin, PF",
+          "cvx": "333"
+        },
+        "conflictBeginInterval": "1 day",
+        "minConflictEndInterval": "28 days",
+        "conflictEndInterval": "30 days"
+      },
+      {
+        "previous": {"vaccineType": "Yellow Fever vaccine - alt", "cvx": "183"},
+        "current": {
           "vaccineType": "COVID-19 LAV Non-US Vaccine  - COVIVAC",
           "cvx": "503"
         },
@@ -3722,6 +3942,17 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
       {
         "previous": {"vaccineType": "Yellow Fever, unspecified", "cvx": "184"},
         "current": {
+          "vaccineType":
+              "Influenza, live, trivalent, intranasal, self/caregiver admin, PF",
+          "cvx": "333"
+        },
+        "conflictBeginInterval": "1 day",
+        "minConflictEndInterval": "28 days",
+        "conflictEndInterval": "30 days"
+      },
+      {
+        "previous": {"vaccineType": "Yellow Fever, unspecified", "cvx": "184"},
+        "current": {
           "vaccineType": "COVID-19 LAV Non-US Vaccine  - COVIVAC",
           "cvx": "503"
         },
@@ -3896,6 +4127,17 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
       {
         "previous": {"vaccineType": "Ebola Zaire Vaccine, Live", "cvx": "204"},
         "current": {
+          "vaccineType":
+              "Influenza, live, trivalent, intranasal, self/caregiver admin, PF",
+          "cvx": "333"
+        },
+        "conflictBeginInterval": "1 day",
+        "minConflictEndInterval": "28 days",
+        "conflictEndInterval": "28 days"
+      },
+      {
+        "previous": {"vaccineType": "Ebola Zaire Vaccine, Live", "cvx": "204"},
+        "current": {
           "vaccineType": "COVID-19 LAV Non-US Vaccine  - COVIVAC",
           "cvx": "503"
         },
@@ -4142,6 +4384,305 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
           "cvx": "317"
         },
         "current": {
+          "vaccineType":
+              "Influenza, live, trivalent, intranasal, self/caregiver admin, PF",
+          "cvx": "333"
+        },
+        "conflictBeginInterval": "1 day",
+        "minConflictEndInterval": "28 days",
+        "conflictEndInterval": "28 days"
+      },
+      {
+        "previous": {
+          "vaccineType": "Chikungunya live attenuated vaccine, 0.5 mL, PF",
+          "cvx": "317"
+        },
+        "current": {
+          "vaccineType": "COVID-19 LAV Non-US Vaccine  - COVIVAC",
+          "cvx": "503"
+        },
+        "conflictBeginInterval": "1 day",
+        "minConflictEndInterval": "28 days",
+        "conflictEndInterval": "28 days"
+      },
+      {
+        "previous": {
+          "vaccineType":
+              "Influenza, live, trivalent, intranasal, self/caregiver admin, PF",
+          "cvx": "333"
+        },
+        "current": {"vaccineType": "MMR", "cvx": "03"},
+        "conflictBeginInterval": "1 day",
+        "minConflictEndInterval": "28 days",
+        "conflictEndInterval": "28 days"
+      },
+      {
+        "previous": {
+          "vaccineType":
+              "Influenza, live, trivalent, intranasal, self/caregiver admin, PF",
+          "cvx": "333"
+        },
+        "current": {"vaccineType": "Measles- Rubella", "cvx": "04"},
+        "conflictBeginInterval": "1 day",
+        "minConflictEndInterval": "28 days",
+        "conflictEndInterval": "28 days"
+      },
+      {
+        "previous": {
+          "vaccineType":
+              "Influenza, live, trivalent, intranasal, self/caregiver admin, PF",
+          "cvx": "333"
+        },
+        "current": {"vaccineType": "Measles", "cvx": "05"},
+        "conflictBeginInterval": "1 day",
+        "minConflictEndInterval": "28 days",
+        "conflictEndInterval": "28 days"
+      },
+      {
+        "previous": {
+          "vaccineType":
+              "Influenza, live, trivalent, intranasal, self/caregiver admin, PF",
+          "cvx": "333"
+        },
+        "current": {"vaccineType": "Rubella", "cvx": "06"},
+        "conflictBeginInterval": "1 day",
+        "minConflictEndInterval": "28 days",
+        "conflictEndInterval": "28 days"
+      },
+      {
+        "previous": {
+          "vaccineType":
+              "Influenza, live, trivalent, intranasal, self/caregiver admin, PF",
+          "cvx": "333"
+        },
+        "current": {"vaccineType": "Mumps", "cvx": "07"},
+        "conflictBeginInterval": "1 day",
+        "minConflictEndInterval": "28 days",
+        "conflictEndInterval": "28 days"
+      },
+      {
+        "previous": {
+          "vaccineType":
+              "Influenza, live, trivalent, intranasal, self/caregiver admin, PF",
+          "cvx": "333"
+        },
+        "current": {"vaccineType": "BCG", "cvx": "19"},
+        "conflictBeginInterval": "1 day",
+        "minConflictEndInterval": "30 days",
+        "conflictEndInterval": "30 days"
+      },
+      {
+        "previous": {
+          "vaccineType":
+              "Influenza, live, trivalent, intranasal, self/caregiver admin, PF",
+          "cvx": "333"
+        },
+        "current": {"vaccineType": "Varicella", "cvx": "21"},
+        "conflictBeginInterval": "1 day",
+        "minConflictEndInterval": "28 days",
+        "conflictEndInterval": "28 days"
+      },
+      {
+        "previous": {
+          "vaccineType":
+              "Influenza, live, trivalent, intranasal, self/caregiver admin, PF",
+          "cvx": "333"
+        },
+        "current": {"vaccineType": "Yellow Fever", "cvx": "37"},
+        "conflictBeginInterval": "1 day",
+        "minConflictEndInterval": "28 days",
+        "conflictEndInterval": "30 days"
+      },
+      {
+        "previous": {
+          "vaccineType":
+              "Influenza, live, trivalent, intranasal, self/caregiver admin, PF",
+          "cvx": "333"
+        },
+        "current": {"vaccineType": "Rubella-Mumps", "cvx": "38"},
+        "conflictBeginInterval": "1 day",
+        "minConflictEndInterval": "28 days",
+        "conflictEndInterval": "28 days"
+      },
+      {
+        "previous": {
+          "vaccineType":
+              "Influenza, live, trivalent, intranasal, self/caregiver admin, PF",
+          "cvx": "333"
+        },
+        "current": {"vaccineType": "Dengue Fever", "cvx": "56"},
+        "conflictBeginInterval": "1 day",
+        "minConflictEndInterval": "28 days",
+        "conflictEndInterval": "28 days"
+      },
+      {
+        "previous": {
+          "vaccineType":
+              "Influenza, live, trivalent, intranasal, self/caregiver admin, PF",
+          "cvx": "333"
+        },
+        "current": {"vaccineType": "Vaccinia - smallpox", "cvx": "75"},
+        "conflictBeginInterval": "1 day",
+        "minConflictEndInterval": "28 days",
+        "conflictEndInterval": "28 days"
+      },
+      {
+        "previous": {
+          "vaccineType":
+              "Influenza, live, trivalent, intranasal, self/caregiver admin, PF",
+          "cvx": "333"
+        },
+        "current": {"vaccineType": "MMRV", "cvx": "94"},
+        "conflictBeginInterval": "1 day",
+        "minConflictEndInterval": "28 days",
+        "conflictEndInterval": "28 days"
+      },
+      {
+        "previous": {
+          "vaccineType":
+              "Influenza, live, trivalent, intranasal, self/caregiver admin, PF",
+          "cvx": "333"
+        },
+        "current": {"vaccineType": "Vaccinia - smallpox diluted", "cvx": "105"},
+        "conflictBeginInterval": "1 day",
+        "minConflictEndInterval": "28 days",
+        "conflictEndInterval": "28 days"
+      },
+      {
+        "previous": {
+          "vaccineType":
+              "Influenza, live, trivalent, intranasal, self/caregiver admin, PF",
+          "cvx": "333"
+        },
+        "current": {"vaccineType": "Influenza LAIV", "cvx": "111"},
+        "conflictBeginInterval": "1 day",
+        "minConflictEndInterval": "24 days",
+        "conflictEndInterval": "28 days"
+      },
+      {
+        "previous": {
+          "vaccineType":
+              "Influenza, live, trivalent, intranasal, self/caregiver admin, PF",
+          "cvx": "333"
+        },
+        "current": {"vaccineType": "Zoster live", "cvx": "121"},
+        "conflictBeginInterval": "1 day",
+        "minConflictEndInterval": "28 days",
+        "conflictEndInterval": "28 days"
+      },
+      {
+        "previous": {
+          "vaccineType":
+              "Influenza, live, trivalent, intranasal, self/caregiver admin, PF",
+          "cvx": "333"
+        },
+        "current": {"vaccineType": "H1N1 LAIV", "cvx": "125"},
+        "conflictBeginInterval": "1 day",
+        "minConflictEndInterval": "28 days",
+        "conflictEndInterval": "28 days"
+      },
+      {
+        "previous": {
+          "vaccineType":
+              "Influenza, live, trivalent, intranasal, self/caregiver admin, PF",
+          "cvx": "333"
+        },
+        "current": {"vaccineType": "Influenza LAIV4", "cvx": "149"},
+        "conflictBeginInterval": "1 day",
+        "minConflictEndInterval": "24 days",
+        "conflictEndInterval": "28 days"
+      },
+      {
+        "previous": {
+          "vaccineType":
+              "Influenza, live, trivalent, intranasal, self/caregiver admin, PF",
+          "cvx": "333"
+        },
+        "current": {"vaccineType": "Influenza LAIV Unspecified", "cvx": "151"},
+        "conflictBeginInterval": "1 day",
+        "minConflictEndInterval": "24 days",
+        "conflictEndInterval": "28 days"
+      },
+      {
+        "previous": {
+          "vaccineType":
+              "Influenza, live, trivalent, intranasal, self/caregiver admin, PF",
+          "cvx": "333"
+        },
+        "current": {"vaccineType": "Hep A, live attenuated", "cvx": "169"},
+        "conflictBeginInterval": "1 day",
+        "minConflictEndInterval": "28 days",
+        "conflictEndInterval": "28 days"
+      },
+      {
+        "previous": {
+          "vaccineType":
+              "Influenza, live, trivalent, intranasal, self/caregiver admin, PF",
+          "cvx": "333"
+        },
+        "current": {"vaccineType": "Yellow Fever vaccine - alt", "cvx": "183"},
+        "conflictBeginInterval": "1 day",
+        "minConflictEndInterval": "28 days",
+        "conflictEndInterval": "30 days"
+      },
+      {
+        "previous": {
+          "vaccineType":
+              "Influenza, live, trivalent, intranasal, self/caregiver admin, PF",
+          "cvx": "333"
+        },
+        "current": {"vaccineType": "Yellow Fever, unspecified", "cvx": "184"},
+        "conflictBeginInterval": "1 day",
+        "minConflictEndInterval": "28 days",
+        "conflictEndInterval": "30 days"
+      },
+      {
+        "previous": {
+          "vaccineType":
+              "Influenza, live, trivalent, intranasal, self/caregiver admin, PF",
+          "cvx": "333"
+        },
+        "current": {"vaccineType": "Ebola Zaire Vaccine, Live", "cvx": "204"},
+        "conflictBeginInterval": "1 day",
+        "minConflictEndInterval": "28 days",
+        "conflictEndInterval": "28 days"
+      },
+      {
+        "previous": {
+          "vaccineType":
+              "Influenza, live, trivalent, intranasal, self/caregiver admin, PF",
+          "cvx": "333"
+        },
+        "current": {
+          "vaccineType": "Chikungunya live attenuated vaccine, 0.5 mL, PF",
+          "cvx": "317"
+        },
+        "conflictBeginInterval": "1 day",
+        "minConflictEndInterval": "28 days",
+        "conflictEndInterval": "28 days"
+      },
+      {
+        "previous": {
+          "vaccineType":
+              "Influenza, live, trivalent, intranasal, self/caregiver admin, PF",
+          "cvx": "333"
+        },
+        "current": {
+          "vaccineType":
+              "Influenza, live, trivalent, intranasal, self/caregiver admin, PF",
+          "cvx": "333"
+        },
+        "conflictBeginInterval": "1 day",
+        "minConflictEndInterval": "24 days",
+        "conflictEndInterval": "28 days"
+      },
+      {
+        "previous": {
+          "vaccineType":
+              "Influenza, live, trivalent, intranasal, self/caregiver admin, PF",
+          "cvx": "333"
+        },
+        "current": {
           "vaccineType": "COVID-19 LAV Non-US Vaccine  - COVIVAC",
           "cvx": "503"
         },
@@ -4377,6 +4918,20 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
         "current": {
           "vaccineType": "Chikungunya live attenuated vaccine, 0.5 mL, PF",
           "cvx": "317"
+        },
+        "conflictBeginInterval": "1 day",
+        "minConflictEndInterval": "28 days",
+        "conflictEndInterval": "28 days"
+      },
+      {
+        "previous": {
+          "vaccineType": "COVID-19 LAV Non-US Vaccine  - COVIVAC",
+          "cvx": "503"
+        },
+        "current": {
+          "vaccineType":
+              "Influenza, live, trivalent, intranasal, self/caregiver admin, PF",
+          "cvx": "333"
         },
         "conflictBeginInterval": "1 day",
         "minConflictEndInterval": "28 days",
@@ -5232,7 +5787,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
       },
       {
         "cvx": "146",
-        "shortDescription": "DTaP,IPV,Hib,HepB",
+        "shortDescription": "DTaP, IPV, Hib, HepB",
         "association": [
           {"antigen": "Diphtheria"},
           {"antigen": "Tetanus"},
@@ -5567,7 +6122,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
       },
       {
         "cvx": "198",
-        "shortDescription": "DTP-hepB-Hib Pentavalent Non-US",
+        "shortDescription": "DTP-HepB-Hib Pentavalent Non-US",
         "association": [
           {"antigen": "Diphtheria"},
           {"antigen": "Tetanus"},
@@ -5950,6 +6505,13 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
         ]
       },
       {
+        "cvx": "325",
+        "shortDescription": "Vaccinia (smallpox, mpox), unspecified",
+        "association": [
+          {"antigen": "Orthopoxvirus"}
+        ]
+      },
+      {
         "cvx": "326",
         "shortDescription": "RSV, mRNA, injectable, PF",
         "association": [
@@ -5961,6 +6523,59 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
         "shortDescription": "Pneumococcal conjugate PCV 21",
         "association": [
           {"antigen": "Pneumococcal"}
+        ]
+      },
+      {
+        "cvx": "328",
+        "shortDescription":
+            "Meningococcal oligosaccharide (MenACWY), (MenB), PF",
+        "association": [
+          {"antigen": "Meningococcal"},
+          {"antigen": "Meningococcal B"}
+        ]
+      },
+      {
+        "cvx": "329",
+        "shortDescription": "Chikungunya, VLP, recombinant, 0.8 mL, PF",
+        "association": [
+          {"antigen": "Chikungunya"}
+        ]
+      },
+      {
+        "cvx": "330",
+        "shortDescription": "Dengue Fever, Unspecified",
+        "association": [
+          {"antigen": "Dengue"}
+        ]
+      },
+      {
+        "cvx": "331",
+        "shortDescription": "Influenza, Southern Hemisphere, trivalent, PF",
+        "association": [
+          {"antigen": "Influenza"}
+        ]
+      },
+      {
+        "cvx": "332",
+        "shortDescription":
+            "RSV, mAb, clesrovimab-cfor, 0.7 mL, neonate and infant, PF",
+        "association": [
+          {"antigen": "RSV"}
+        ]
+      },
+      {
+        "cvx": "333",
+        "shortDescription":
+            "Influenza, live, trivalent, intranasal, self/caregiver admin, PF",
+        "association": [
+          {"antigen": "Influenza"}
+        ]
+      },
+      {
+        "cvx": "334",
+        "shortDescription": "COVID-19, mRNA, LNP-S, PF, 10 mcg/0.2 mL",
+        "association": [
+          {"antigen": "COVID-19"}
         ]
       },
       {
@@ -7871,7 +8486,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
             {
               "code": "132",
               "codeSystem": "CVX",
-              "text": "DTaP-IPV-Hib-HepB,historical"
+              "text": "DTaP-IPV-Hib-HepB, historical"
             },
             {"code": "146", "codeSystem": "CVX", "text": "DTaP-IPV-Hib-HepB"},
             {
@@ -7921,7 +8536,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
             {
               "code": "132",
               "codeSystem": "CVX",
-              "text": "DTaP-IPV-Hib-HepB,historical"
+              "text": "DTaP-IPV-Hib-HepB, historical"
             },
             {"code": "138", "codeSystem": "CVX", "text": "Td - Adult"},
             {
@@ -7978,7 +8593,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
             {
               "code": "132",
               "codeSystem": "CVX",
-              "text": "DTaP-IPV-Hib-HepB,historical"
+              "text": "DTaP-IPV-Hib-HepB, historical"
             },
             {"code": "138", "codeSystem": "CVX", "text": "Td - Adult"},
             {
@@ -8329,7 +8944,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
             {
               "code": "132",
               "codeSystem": "CVX",
-              "text": "DTaP-IPV-Hib-HepB,historical"
+              "text": "DTaP-IPV-Hib-HepB, historical"
             },
             {"code": "146", "codeSystem": "CVX", "text": "DTaP-IPV-Hib-HepB"},
             {"code": "148", "codeSystem": "CVX", "text": "Hib-MenCY-TT"},
@@ -8828,7 +9443,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
         "observationCode": "126",
         "observationTitle": "Hep A IG administration",
         "contraindicationText":
-            "Do not vaccinate if the patient has had Hepatitis A IG administered in the previous 3 months.",
+            "Do not vaccinate if the patient has had Hepatitis A IG administered in the previous 6 months.",
         "codedValues": {
           "codedValue": [
             {
@@ -9321,7 +9936,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
         "contraindicationText":
             "Do not vaccinate if the patient has anatomical or functional asplenia.",
         "clarifyingText":
-            "e.g. Sickle cell disease and other hemoglobinopathies, congenital or acquired asplenia, splenic dysfunction, and splenectomy",
+            "e.g. Sickle cell disease, congenital or acquired asplenia, splenic dysfunction, and splenectomy",
         "codedValues": {
           "codedValue": [
             {
@@ -10149,18 +10764,18 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
       {
         "observationCode": "247",
         "observationTitle":
-            "Gay, bisexual, and other men who have sex with men, transgender or nonbinary people who in the past 6 months have had one of the following: \r 1) A new diagnosis of ≥ 1 sexually transmitted disease\r 2)  More than one sex partner\r 3)  Sex at a commercial sex venue\r 4)   Sex in association with a large public event in a geographic area where mpox transmission is occurring",
+            "Gay, bisexual, or other man who has sex with men (MSM), or a person who has sex with gay, bisexual, or other MSM who in the past 6 months have had one of the following: \r 1) A new diagnosis of ≥ 1 sexually transmitted disease\r 2)  More than one sex partner\r 3)  Sex at a commercial sex venue\r 4)  Sex in association with a large public event in a geographic area where mpox transmission is occurring",
         "indicationText":
-            "Administer to gay, bisexual, and other men who have sex with men, transgender or nonbinary people who in the past 6 months have had one of the following: \r 1) A new diagnosis of ≥ 1 sexually transmitted disease\r 2)  More than one sex partner\r 3)  Sex at a commercial sex venue\r 4)   Sex in association with a large public event in a geographic area where mpox transmission is occurring",
+            "Administer to gay, bisexual, or other man who has sex with men (MSM), or a person who has sex with gay, bisexual, or other MSM who in the past 6 months have had one of the following: \r 1) A new diagnosis of ≥ 1 sexually transmitted disease\r 2)  More than one sex partner\r 3)  Sex at a commercial sex venue\r 4)  Sex in association with a large public event in a geographic area where mpox transmission is occurring.",
         "clarifyingText":
             "Includes persons who anticipate experiencing any of the risk factors."
       },
       {
         "observationCode": "248",
         "observationTitle":
-            "Sexual partners of gay, bisexual, and other men who have sex with men, transgender or nonbinary people who in the past 6 months have had one of the following: \r 1) A new diagnosis of ≥ 1 sexually transmitted disease\r 2)  More than one sex partner\r 3)  Sex at a commercial sex venue\r 4)   Sex in association with a large public event in a geographic area where mpox transmission is occurring",
+            "Sexual partners of gay, bisexual, or other man who has sex with men (MSM), or a person who has sex with gay, bisexual, or other MSM who in the past 6 months have had one of the following: \r 1) A new diagnosis of ≥ 1 sexually transmitted disease\r 2)  More than one sex partner\r 3)  Sex at a commercial sex venue\r 4)  Sex in association with a large public event in a geographic area where mpox transmission is occurring",
         "indicationText":
-            "Administer to sexual partners of gay, bisexual, and other men who have sex with men, transgender or nonbinary people who in the past 6 months have had one of the following: \r 1) A new diagnosis of ≥ 1 sexually transmitted disease\r 2)  More than one sex partner\r 3)  Sex at a commercial sex venue\r 4)   Sex in association with a large public event in a geographic area where mpox transmission is occurring",
+            "Administer to sexual partners of gay, bisexual, or other man who has sex with men (MSM), or a person who has sex with gay, bisexual, or other MSM who in the past 6 months have had one of the following: \r 1) A new diagnosis of ≥ 1 sexually transmitted disease\r 2)  More than one sex partner\r 3)  Sex at a commercial sex venue\r 4)  Sex in association with a large public event in a geographic area where mpox transmission is occurring.",
         "clarifyingText":
             "Includes persons who anticipate experiencing any of the risk factors."
       },
@@ -10598,9 +11213,9 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
       {
         "observationCode": "272",
         "observationTitle":
-            "Traveling to a country or territory without an outbreak but with evidence of chikungunya virus transmission among humans within the last 5 years",
+            "Traveling or moving to a country or territory without an outbreak but with elevated chikungunya risk for U.S. travelers if planning to stay for an extended period of time [e.g., 6 months or more]",
         "indicationText":
-            "Persons traveling to a country or territory without an outbreak but with evidence of chikungunya virus transmission among humans within the last 5 years may consider vaccination"
+            "Persons traveling or moving to a country or territory without an outbreak but with elevated chikungunya risk for U.S. travelers if planning to stay for an extended period of time [e.g., 6 months or more] may consider vaccination"
       },
       {
         "observationCode": "273",
@@ -10622,6 +11237,51 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
         "observationTitle": "Early component complement inhibitor use",
         "indicationText":
             "Administer to persons using an early component complement inhibitor"
+      },
+      {
+        "observationCode": "275",
+        "observationTitle": "Persons at risk during a measles outbreak",
+        "indicationText":
+            "Administer to persons identified as at increased risk during a community measles outbreak."
+      },
+      {
+        "observationCode": "276",
+        "observationTitle": "Age is 60 years or older",
+        "contraindicationText":
+            "Do not vaccinate if the patient age is 60 years or older."
+      },
+      {
+        "observationCode": "277",
+        "observationTitle":
+            "Laboratory worker with potential for exposure to chikungunya virus",
+        "indicationText":
+            "Administer to laboratory workers with potential for exposure to chikungunya virus"
+      },
+      {
+        "observationCode": "278",
+        "observationTitle":
+            "Birth mother received RSV vaccine during pregnancy",
+        "contraindicationText":
+            "Do not vaccinate if the birth mother received RSV vaccine during pregnancy",
+        "clarifyingText":
+            "The infant should not receive nirsevimab younger than 8 months unless the pregnant mother received an RSV vaccine and encountered one of the following issues. The dose was administered in the incorrect route/site, was of lower than recommended volume, was administered before 24 weeks gestation, was administered less than 14 days before birth, was not the Pfizer/Abrysvo or Moderna/Mresvia product, had preparation errors prior to administration, or had storage issues."
+      },
+      {
+        "observationCode": "279",
+        "observationTitle": "Hemoglobinopathy disorder",
+        "indicationText":
+            "Administer to persons with a hemoglobinopathy disorder",
+        "contraindicationText":
+            "Do not vaccinate if the patient has a hemoglobinopathy disorder.",
+        "codedValues": {
+          "codedValue": [
+            {
+              "code": "80141007",
+              "codeSystem": "SNOMED",
+              "text": "hemoglobinopathy [disorder]"
+            }
+          ]
+        }
       }
     ]
   }

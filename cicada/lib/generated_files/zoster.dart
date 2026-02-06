@@ -13,20 +13,13 @@ final AntigenSupportingData zoster = AntigenSupportingData.fromJson({
           "observationTitle": "Adverse reaction to vaccine component",
           "contraindicationText":
               "Do not vaccinate if the patient has had an adverse reaction to a vaccine component."
-        }
-      ]
-    },
-    "vaccine": {
-      "contraindication": [
+        },
         {
           "observationCode": "172",
           "observationTitle":
               "Severe allergic reaction after previous dose of recombinant zoster",
           "contraindicationText":
-              "Do not vaccinate if the patient has had a severe allergic reaction after a previous dose of recombinant zoster vaccine.",
-          "contraindicatedVaccine": [
-            {"vaccineType": "Zoster recombinant", "cvx": "187"}
-          ]
+              "Do not vaccinate if the patient has had a severe allergic reaction after a previous dose of recombinant zoster vaccine."
         }
       ]
     }
@@ -284,6 +277,24 @@ final AntigenSupportingData zoster = AntigenSupportingData.fromJson({
           },
           "description":
               "Administer to persons who have a phagocytic function defect (e.g. leukocyte adhesion defect and myeloperoxidase deficiency).",
+          "beginAge": "19 years"
+        },
+        {
+          "observationCode": {
+            "text": "HIV/AIDS - severely immunocompromised",
+            "code": "154"
+          },
+          "description":
+              "Administer to persons who have HIV/AIDS and are severely immunocompromised [See the CDC general recommendations for a definition of \"severely immunocompromised\"].",
+          "beginAge": "19 years"
+        },
+        {
+          "observationCode": {
+            "text": "HIV/AIDS - not severely immunocompromised",
+            "code": "155"
+          },
+          "description":
+              "Administer to persons who have HIV/AIDS and are not severely immunocompromised [See the CDC general recommendations for a definition of \"severely immunocompromised\"].",
           "beginAge": "19 years"
         },
         {

@@ -103,7 +103,7 @@ final AntigenSupportingData orthopoxvirus = AntigenSupportingData.fromJson({
           "observationCode": "228",
           "observationTitle": "Household contact is pregnant",
           "contraindicationText":
-              "Do not vaccinate if the potential vaccinee has a household contacct who is pregnant. Household contacts include persons with prolonged intimate contact with the potential vaccinee (e.g., sexual contacts) and others who might have direct contact with the vaccination site or with potentially contaminated materials (e.g., dressings or clothing).",
+              "Do not vaccinate if the potential vaccinee has a household contact who is pregnant. Household contacts include persons with prolonged intimate contact with the potential vaccinee (e.g., sexual contacts) and others who might have direct contact with the vaccination site or with potentially contaminated materials (e.g., dressings or clothing).",
           "contraindicatedVaccine": [
             {"vaccineType": "vaccinia smallpox", "cvx": "75"}
           ]
@@ -256,6 +256,11 @@ final AntigenSupportingData orthopoxvirus = AntigenSupportingData.fromJson({
               "vaccineType": "vaccinia - smallpox mpox vaccine live, PF",
               "cvx": "206",
               "beginAge": "1 year - 4 days"
+            },
+            {
+              "vaccineType": "Vaccinia (smallpox, mpox), unspecified",
+              "cvx": "325",
+              "beginAge": "1 year - 4 days"
             }
           ],
           "recurringDose": "No"
@@ -293,6 +298,11 @@ final AntigenSupportingData orthopoxvirus = AntigenSupportingData.fromJson({
             {
               "vaccineType": "vaccinia - smallpox mpox vaccine live, PF",
               "cvx": "206",
+              "beginAge": "1 year - 4 days"
+            },
+            {
+              "vaccineType": "Vaccinia (smallpox, mpox), unspecified",
+              "cvx": "325",
               "beginAge": "1 year - 4 days"
             }
           ],
@@ -363,6 +373,11 @@ final AntigenSupportingData orthopoxvirus = AntigenSupportingData.fromJson({
             {
               "vaccineType": "vaccinia - smallpox mpox vaccine live, PF",
               "cvx": "206",
+              "beginAge": "1 year - 4 days"
+            },
+            {
+              "vaccineType": "Vaccinia (smallpox, mpox), unspecified",
+              "cvx": "325",
               "beginAge": "1 year - 4 days"
             }
           ],
@@ -472,6 +487,11 @@ final AntigenSupportingData orthopoxvirus = AntigenSupportingData.fromJson({
               "vaccineType": "vaccinia - smallpox mpox vaccine live, PF",
               "cvx": "206",
               "beginAge": "1 year - 4 days"
+            },
+            {
+              "vaccineType": "Vaccinia (smallpox, mpox), unspecified",
+              "cvx": "325",
+              "beginAge": "1 year - 4 days"
             }
           ],
           "recurringDose": "No"
@@ -509,6 +529,11 @@ final AntigenSupportingData orthopoxvirus = AntigenSupportingData.fromJson({
             {
               "vaccineType": "vaccinia - smallpox mpox vaccine live, PF",
               "cvx": "206",
+              "beginAge": "1 year - 4 days"
+            },
+            {
+              "vaccineType": "Vaccinia (smallpox, mpox), unspecified",
+              "cvx": "325",
               "beginAge": "1 year - 4 days"
             }
           ],
@@ -579,6 +604,11 @@ final AntigenSupportingData orthopoxvirus = AntigenSupportingData.fromJson({
               "vaccineType": "vaccinia - smallpox mpox vaccine live, PF",
               "cvx": "206",
               "beginAge": "1 year - 4 days"
+            },
+            {
+              "vaccineType": "Vaccinia (smallpox, mpox), unspecified",
+              "cvx": "325",
+              "beginAge": "1 year - 4 days"
             }
           ],
           "recurringDose": "Yes"
@@ -606,11 +636,11 @@ final AntigenSupportingData orthopoxvirus = AntigenSupportingData.fromJson({
         {
           "observationCode": {
             "text":
-                "Gay, bisexual, and other men who have sex with men, transgender or nonbinary people who in the past 6 months have had one of the following: \r 1) A new diagnosis of ≥ 1 sexually transmitted disease\r 2)  More than one sex partner\r 3)  Sex at a commercial sex venue\r 4)  Sex in association with a large public event in a geographic area where mpox transmission is occurring",
+                "Gay, bisexual, or other man who has sex with men (MSM), or a person who has sex with gay, bisexual, or other MSM who in the past 6 months have had one of the following: \r 1) A new diagnosis of ≥ 1 sexually transmitted disease\r 2)  More than one sex partner\r 3)  Sex at a commercial sex venue\r 4)  Sex in association with a large public event in a geographic area where mpox transmission is occurring",
             "code": "247"
           },
           "description":
-              "Administer to gay, bisexual, and other men who have sex with men, transgender or nonbinary people who in the past 6 months have had one of the following: \r 1) A new diagnosis of ≥ 1 sexually transmitted disease\r 2)  More than one sex partner\r 3)  Sex at a commercial sex venue\r 4)  Sex in association with a large public event in a geographic area where mpox transmission is occurring.",
+              "Administer to gay, bisexual, or other man who has sex with men (MSM), or a person who has sex with gay, bisexual, or other MSM who in the past 6 months have had one of the following: \r 1) A new diagnosis of ≥ 1 sexually transmitted disease\r 2)  More than one sex partner\r 3)  Sex at a commercial sex venue\r 4)  Sex in association with a large public event in a geographic area where mpox transmission is occurring.",
           "beginAge": "18 years",
           "guidance":
               "Includes persons who anticipate experiencing any of the risk factors."
@@ -618,11 +648,11 @@ final AntigenSupportingData orthopoxvirus = AntigenSupportingData.fromJson({
         {
           "observationCode": {
             "text":
-                "Sexual partners of gay, bisexual, and other men who have sex with men, transgender or nonbinary people who in the past 6 months have had one of the following: \r 1) A new diagnosis of ≥ 1 sexually transmitted disease\r 2)  More than one sex partner\r 3)  Sex at a commercial sex venue\r 4)  Sex in association with a large public event in a geographic area where mpox transmission is occurring",
+                "Sexual partners of gay, bisexual, or other man who has sex with men (MSM), or a person who has sex with gay, bisexual, or other MSM who in the past 6 months have had one of the following: \r 1) A new diagnosis of ≥ 1 sexually transmitted disease\r 2)  More than one sex partner\r 3)  Sex at a commercial sex venue\r 4)  Sex in association with a large public event in a geographic area where mpox transmission is occurring",
             "code": "248"
           },
           "description":
-              "Administer to sexual partners of gay, bisexual, and other men who have sex with men, transgender or nonbinary people who in the past 6 months have had one of the following: \r 1) A new diagnosis of ≥ 1 sexually transmitted disease\r 2)  More than one sex partner\r 3)  Sex at a commercial sex venue\r 4)  Sex in association with a large public event in a geographic area where mpox transmission is occurring.",
+              "Administer to sexual partners of gay, bisexual, or other man who has sex with men (MSM), or a person who has sex with gay, bisexual, or other MSM who in the past 6 months have had one of the following: \r 1) A new diagnosis of ≥ 1 sexually transmitted disease\r 2)  More than one sex partner\r 3)  Sex at a commercial sex venue\r 4)  Sex in association with a large public event in a geographic area where mpox transmission is occurring.",
           "beginAge": "18 years",
           "guidance":
               "Includes persons who anticipate experiencing any of the risk factors."
@@ -661,7 +691,12 @@ final AntigenSupportingData orthopoxvirus = AntigenSupportingData.fromJson({
             {
               "vaccineType": "vaccinia - smallpox mpox vaccine live, PF",
               "cvx": "206",
-              "beginAge": "0 days"
+              "beginAge": "1 year - 4 days"
+            },
+            {
+              "vaccineType": "Vaccinia (smallpox, mpox), unspecified",
+              "cvx": "325",
+              "beginAge": "1 year - 4 days"
             }
           ],
           "recurringDose": "No"
@@ -699,7 +734,12 @@ final AntigenSupportingData orthopoxvirus = AntigenSupportingData.fromJson({
             {
               "vaccineType": "vaccinia - smallpox mpox vaccine live, PF",
               "cvx": "206",
-              "beginAge": "0 days"
+              "beginAge": "1 year - 4 days"
+            },
+            {
+              "vaccineType": "Vaccinia (smallpox, mpox), unspecified",
+              "cvx": "325",
+              "beginAge": "1 year - 4 days"
             }
           ],
           "conditionalSkip": [
@@ -820,6 +860,11 @@ final AntigenSupportingData orthopoxvirus = AntigenSupportingData.fromJson({
               "vaccineType": "vaccinia - smallpox mpox vaccine live, PF",
               "cvx": "206",
               "beginAge": "0 days"
+            },
+            {
+              "vaccineType": "Vaccinia (smallpox, mpox), unspecified",
+              "cvx": "325",
+              "beginAge": "0 days"
             }
           ],
           "recurringDose": "No"
@@ -864,6 +909,11 @@ final AntigenSupportingData orthopoxvirus = AntigenSupportingData.fromJson({
             {
               "vaccineType": "vaccinia - smallpox mpox vaccine live, PF",
               "cvx": "206",
+              "beginAge": "0 days"
+            },
+            {
+              "vaccineType": "Vaccinia (smallpox, mpox), unspecified",
+              "cvx": "325",
               "beginAge": "0 days"
             }
           ],

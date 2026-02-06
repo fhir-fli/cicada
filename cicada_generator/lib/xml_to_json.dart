@@ -3,9 +3,9 @@ import 'dart:io';
 import 'package:xml2json/xml2json.dart';
 
 void main() {
-  final supportDir = 'cicada_generator/lib/Version_4.61-508/XML';
+  final supportDir = _findVersionSubdir('XML');
   final xmlDir = Directory(supportDir);
-  Directory(supportDir.replaceAll('XML', 'JSON')).createSync();
+  Directory(supportDir.replaceAll('XML', 'JSON')).createSync(recursive: true);
   final xmlFiles = xmlDir.listSync().where(
     (file) => file.path.endsWith('.xml'),
   );
@@ -113,6 +113,26 @@ dynamic removeNulls(dynamic data, bool isScheduleData) {
     }
   }
   return data;
+}
+
+/// Auto-detect the Version_* directory containing [subdir] (e.g. 'XML').
+String _findVersionSubdir(String subdir) {
+  final baseDir = Directory('cicada_generator/lib');
+  final matches = baseDir
+      .listSync()
+      .whereType<Directory>()
+      .where((d) =>
+          d.path.split('/').last.startsWith('Version_') &&
+          Directory('${d.path}/$subdir').existsSync())
+      .toList();
+  if (matches.isEmpty) {
+    throw StateError('No Version_* directory with $subdir/ found');
+  }
+  if (matches.length > 1) {
+    throw StateError(
+        'Multiple Version_* directories with $subdir/ found: ${matches.map((d) => d.path).join(', ')}');
+  }
+  return '${matches.first.path}/$subdir';
 }
 
 /// Recursively ensures that any keys specified in [keysToAlwaysList]

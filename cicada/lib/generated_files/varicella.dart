@@ -88,7 +88,7 @@ final AntigenSupportingData varicella = AntigenSupportingData.fromJson({
           "observationCode": "126",
           "observationTitle": "Hep A IG administration",
           "contraindicationText":
-              "Do not vaccinate if the patient has had Hepatitis A IG administered in the previous 3 months."
+              "Do not vaccinate if the patient has had Hepatitis A IG administered in the previous 6 months."
         },
         {
           "observationCode": "127",
@@ -262,6 +262,45 @@ final AntigenSupportingData varicella = AntigenSupportingData.fromJson({
     "vaccine": {
       "contraindication": [
         {
+          "observationCode": "091",
+          "observationTitle":
+              "Severe allergic reaction after previous dose of Measles",
+          "contraindicationText":
+              "Do not vaccinate if the patient has had a severe allergic reaction after a previous dose of Measles vaccine.",
+          "contraindicatedVaccine": [
+            {"vaccineType": "MMRV", "cvx": "94"}
+          ]
+        },
+        {
+          "observationCode": "092",
+          "observationTitle":
+              "Severe allergic reaction after previous dose of Mumps",
+          "contraindicationText":
+              "Do not vaccinate if the patient has had a severe allergic reaction after a previous dose of Mumps vaccine.",
+          "contraindicatedVaccine": [
+            {"vaccineType": "MMRV", "cvx": "94"}
+          ]
+        },
+        {
+          "observationCode": "093",
+          "observationTitle":
+              "Severe allergic reaction after previous dose of Rubella",
+          "contraindicationText":
+              "Do not vaccinate if the patient has had a severe allergic reaction after a previous dose of Rubella vaccine.",
+          "contraindicatedVaccine": [
+            {"vaccineType": "MMRV", "cvx": "94"}
+          ]
+        },
+        {
+          "observationCode": "155",
+          "observationTitle": "HIV/AIDS - not severely immunocompromised",
+          "contraindicationText":
+              "Do not vaccinate if the patient has HIV/AIDS but are not severely immunocompromised (See the CDC general recommendations for a definition of \"severely immunocompromised\").",
+          "contraindicatedVaccine": [
+            {"vaccineType": "MMRV", "cvx": "94"}
+          ]
+        },
+        {
           "observationCode": "186",
           "observationTitle": "HIV Infection",
           "contraindicationText":
@@ -313,7 +352,7 @@ final AntigenSupportingData varicella = AntigenSupportingData.fromJson({
             {
               "vaccineType": "MMRV",
               "cvx": "94",
-              "beginAge": "12 months",
+              "beginAge": "4 years",
               "endAge": "13 years",
               "volume": "0.5",
               "forecastVaccineType": "N"
@@ -370,7 +409,7 @@ final AntigenSupportingData varicella = AntigenSupportingData.fromJson({
             {
               "vaccineType": "MMRV",
               "cvx": "94",
-              "beginAge": "12 months",
+              "beginAge": "4 years",
               "endAge": "13 years",
               "volume": "0.5",
               "forecastVaccineType": "N"

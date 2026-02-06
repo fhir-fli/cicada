@@ -6,10 +6,29 @@ import 'package:fhir_r4/fhir_r4.dart';
 import 'package:cicada/cicada.dart';
 
 Future<void> main() async {
-  await createPatients(
-    'cicada_generator/lib/test_cases/cdsi-healthy-childhood-and-adult-test-cases-v4.42.xlsx',
-    scheduleSupportingData,
-  );
+  final excelPath = _findTestCaseExcel();
+  print('Using test case file: $excelPath');
+  await createPatients(excelPath, scheduleSupportingData);
+}
+
+/// Auto-detect the healthy test cases Excel file.
+String _findTestCaseExcel() {
+  final dir = Directory('cicada_generator/lib/test_cases');
+  final matches = dir
+      .listSync()
+      .whereType<File>()
+      .where((f) =>
+          f.path.contains('cdsi-healthy-childhood-and-adult-test-cases') &&
+          f.path.endsWith('.xlsx'))
+      .toList();
+  if (matches.isEmpty) {
+    throw StateError('No cdsi-healthy-childhood-and-adult-test-cases-*.xlsx found');
+  }
+  if (matches.length > 1) {
+    throw StateError(
+        'Multiple test case files found: ${matches.map((f) => f.path).join(', ')}');
+  }
+  return matches.first.path;
 }
 
 /// Reads the "FITS Exported TestCases" sheet directly from an Excel file,
@@ -193,7 +212,96 @@ Future<void> createPatients(
   await File(
     'cicada_generator/lib/test_cases/test_cases.ndjson',
   ).writeAsString(ndjson);
+
+  // Write NDJSON to test directory
+  await File('cicada/test/healthyTestCases.ndjson').writeAsString(ndjson);
+  print('Wrote cicada/test/healthyTestCases.ndjson '
+      '(${parametersList.length} cases)');
+
+  // Generate test_doses.dart
+  _writeTestDosesDart(testDoses);
+  print('Wrote cicada/lib/generated_files/test_doses.dart '
+      '(${testDoses.length} patients)');
 }
+
+/// Writes the testDoses map as a Dart file matching the existing format.
+void _writeTestDosesDart(Map<String, List<Map<String, dynamic>>> testDoses) {
+  final sb = StringBuffer();
+  sb.writeln('final Map<String, List<Map<String, Object>>> testDoses =');
+  sb.writeln('    <String, List<Map<String, Object>>>{');
+
+  final patientIds = testDoses.keys.toList()..sort();
+  for (final patientId in patientIds) {
+    final doses = testDoses[patientId]!;
+    if (doses.isEmpty) {
+      sb.writeln("  '$patientId': <Map<String, Object>>[],");
+      continue;
+    }
+    sb.writeln("  '$patientId': <Map<String, Object>>[");
+    for (final dose in doses) {
+      sb.writeln('    <String, Object>{');
+      _writeDoseEntry(sb, dose);
+      sb.writeln('    },');
+    }
+    sb.writeln('  ],');
+  }
+  sb.writeln('};');
+
+  File('cicada/lib/generated_files/test_doses.dart')
+      .writeAsStringSync(sb.toString());
+}
+
+void _writeDoseEntry(StringBuffer sb, Map<String, dynamic> dose) {
+  // Write fields in a stable order matching the existing format
+  final orderedKeys = [
+    'doseId',
+    'volume',
+    'dateGiven',
+    'cvx',
+    'mvx',
+    'antigens',
+    'dob',
+    'targetDisease',
+    'targetDoseSatisfied',
+    'index',
+    'inadvertent',
+    'validAgeReason',
+    'preferredInterval',
+    'preferredIntervalReason',
+    'allowedInterval',
+    'allowedIntervalReason',
+    'conflict',
+    'conflictReason',
+    'preferredVaccine',
+    'preferredVaccineReason',
+    'allowedVaccine',
+    'allowedVaccineReason',
+    'evalStatus',
+    'evalReason',
+  ];
+  for (final key in orderedKeys) {
+    if (!dose.containsKey(key) || dose[key] == null) continue;
+    final value = dose[key];
+    sb.write("      '$key': ");
+    sb.writeln('${_dartLiteral(value)},');
+  }
+}
+
+String _dartLiteral(dynamic value) {
+  if (value is String) return "'${_escapeString(value)}'";
+  if (value is int) return '$value';
+  if (value is bool) return '$value';
+  if (value is List) {
+    if (value.every((e) => e is String)) {
+      final items = value.map((e) => "'${_escapeString(e as String)}'").join(', ');
+      return '<String>[$items]';
+    }
+    return '$value';
+  }
+  return "'$value'";
+}
+
+String _escapeString(String s) => s.replaceAll("'", "\\'");
 
 /// Helper to build a Patient from a row map
 Patient _buildPatient(Map<String, dynamic> row) {

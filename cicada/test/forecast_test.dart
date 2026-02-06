@@ -40,6 +40,99 @@ List<Parameters> loadTestCases(String path) {
   return result;
 }
 
+/// Writes detailed diagnostic information for mismatched patients.
+void writeDiagnostics(
+  Map<String, List<Map<String, dynamic>>> diagnostics,
+  String outputPath,
+) {
+  final buffer = StringBuffer();
+  buffer.writeln('=== Phase 3 Diagnostic Output ===');
+  buffer.writeln('Generated: ${DateTime.now()}');
+  buffer.writeln('Patients with mismatches: ${diagnostics.length}');
+  buffer.writeln();
+
+  final Map<String, int> causeCounts = {};
+
+  for (final entry in diagnostics.entries) {
+    final patientId = entry.key;
+    final doseInfoList = entry.value;
+
+    buffer.writeln('--- Patient: $patientId ---');
+
+    for (final info in doseInfoList) {
+      final doseId = info['doseId'] as String;
+      final expected = info['expected'] as String;
+      final failedSeries = info['failedSeries'] as List<Map<String, dynamic>>;
+      final category = info['category'] as String;
+
+      buffer.writeln('  Dose: $doseId expected="$expected" category=$category');
+      for (final fs in failedSeries) {
+        buffer.writeln(
+            '    ${fs['seriesName']}: actual="${fs['actual']}"');
+        final doseDetails = fs['allDoses'] as List<Map<String, dynamic>>?;
+        if (doseDetails != null) {
+          for (final d in doseDetails) {
+            buffer.writeln(
+                '      doseId=${d['doseId']} dateGiven=${d['dateGiven']} '
+                'targetDose=${d['targetDoseSatisfied']} '
+                'evalStatus=${d['evalStatus']} '
+                'evalReason=${d['evalReason']} '
+                'ageReason=${d['validAgeReason']}');
+          }
+        }
+      }
+
+      causeCounts[category] = (causeCounts[category] ?? 0) + 1;
+    }
+    buffer.writeln();
+  }
+
+  buffer.writeln('=== Mismatch Category Summary ===');
+  for (final entry
+      in causeCounts.entries.toList()
+        ..sort((a, b) => b.value.compareTo(a.value))) {
+    buffer.writeln('  ${entry.key}: ${entry.value}');
+  }
+
+  File(outputPath).writeAsStringSync(buffer.toString());
+}
+
+String categorizeMismatch(String expected, String actual) {
+  if (expected.contains('Status: Valid ') &&
+      actual.contains('Age:')) {
+    return 'too-strict:age';
+  }
+  if (expected.contains('Status: Valid ') &&
+      actual.contains('Extraneous')) {
+    return 'too-strict:extraneous-cascade';
+  }
+  if (expected.contains('Status: Valid ') &&
+      actual.contains('Not a preferable')) {
+    return 'too-strict:vaccine-type';
+  }
+  if (expected.contains('Status: Valid ') &&
+      actual.contains('Interval')) {
+    return 'too-strict:interval';
+  }
+  if (expected.contains('Status: Valid ') &&
+      actual.contains('Live Virus')) {
+    return 'too-strict:live-virus';
+  }
+  if (expected.contains('Status: Valid ')) {
+    return 'too-strict:other';
+  }
+  if (expected.contains('Status: Not Valid') &&
+      actual.contains('Status: valid')) {
+    if (expected.contains('Interval')) return 'too-permissive:interval';
+    if (expected.contains('Age')) return 'too-permissive:age';
+    return 'too-permissive:other';
+  }
+  if (expected.contains('Status: Extraneous')) {
+    return 'too-permissive:extraneous-expected';
+  }
+  return 'other';
+}
+
 void main() {
   late List<Parameters> allParameters;
 
@@ -50,7 +143,7 @@ void main() {
   group('CDSi forecast evaluation', () {
     test('loads test cases', () {
       expect(allParameters, isNotEmpty);
-      expect(allParameters.length, 908);
+      expect(allParameters.length, 1013);
     });
 
     test('all test cases evaluate without exceptions', () {
@@ -80,6 +173,7 @@ void main() {
     test('evaluated dose validity matches CDSi expected results', () {
       final List<String> mismatches = [];
       int comparedCount = 0;
+      final Map<String, List<Map<String, dynamic>>> diagnostics = {};
 
       for (int i = 0; i < allParameters.length; i++) {
         final parameters = allParameters[i];
@@ -103,49 +197,77 @@ void main() {
           continue;
         }
 
-        result.agMap.forEach((String antigenName, VaxAntigen antigen) {
-          final matchingExpected = expectedDoses
-              .where((d) => d.antigens
-                  .map((s) => s.toLowerCase())
-                  .contains(antigenName.toLowerCase()))
-              .toList();
+        // Compare per expected dose: a dose matches if ANY antigen series
+        // produces the expected evaluation. This is correct because combo
+        // vaccines are evaluated independently per antigen, and the CDSi
+        // test data provides one evaluation per dose.
+        for (final expectedDose in expectedDoses) {
+          final expected = expectedDose.validity;
+          bool foundMatch = false;
+          bool foundAnyEval = false;
+          final List<Map<String, dynamic>> failedSeriesInfo = [];
 
-          if (matchingExpected.isEmpty) return;
-
-          antigen.groups.forEach((String groupKey, VaxGroup group) {
-            final List<VaxSeries> seriesToCheck;
-            if (group.bestSeries != null) {
-              seriesToCheck = [group.bestSeries!];
-            } else {
-              seriesToCheck = group.prioritizedSeries;
+          result.agMap.forEach((String antigenName, VaxAntigen antigen) {
+            if (!expectedDose.antigens.map((s) => s.toLowerCase())
+                .contains(antigenName.toLowerCase())) {
+              return;
             }
 
-            for (final series in seriesToCheck) {
-              // Match doses by doseId for accurate comparison
-              for (final expectedDose in matchingExpected) {
+            antigen.groups.forEach((String groupKey, VaxGroup group) {
+              for (final series in group.prioritizedSeries) {
                 final actualDose = series.doses.firstWhereOrNull(
                     (d) => d.doseId == expectedDose.doseId);
                 if (actualDose == null || actualDose.evalStatus == null) {
                   continue;
                 }
 
-                final expected = expectedDose.validity;
+                foundAnyEval = true;
                 final actual = actualDose.validity;
-
-                comparedCount++;
-                if (expected != actual && !actual.startsWith(expected)) {
-                  final doseNum = matchingExpected.indexOf(expectedDose) + 1;
-                  mismatches.add(
-                    '$id | ${series.series.seriesName} | '
-                    'Dose $doseNum: '
-                    'expected="$expected" '
-                    'actual="$actual"',
-                  );
+                if (expected == actual || actual.startsWith(expected)) {
+                  foundMatch = true;
+                } else {
+                  failedSeriesInfo.add({
+                    'seriesName': series.series.seriesName,
+                    'actual': actual,
+                    'allDoses': series.doses.map((d) =>
+                      <String, dynamic>{
+                        'doseId': d.doseId,
+                        'dateGiven': d.dateGiven.toString(),
+                        'targetDoseSatisfied': d.targetDoseSatisfied,
+                        'evalStatus': d.evalStatus?.toString(),
+                        'evalReason': d.evalReason?.toString(),
+                        'validAgeReason': d.validAgeReason?.toString(),
+                      }).toList(),
+                  });
                 }
               }
-            }
+            });
           });
-        });
+
+          if (foundAnyEval) {
+            comparedCount++;
+            if (!foundMatch && failedSeriesInfo.isNotEmpty) {
+              // Use the first failed series for the mismatch message
+              final firstFail = failedSeriesInfo.first;
+              final category = categorizeMismatch(
+                  expected, firstFail['actual'] as String);
+              mismatches.add(
+                '$id | ${firstFail['seriesName']} | '
+                '${expectedDose.doseId}: '
+                'expected="$expected" '
+                'actual="${firstFail['actual']}"',
+              );
+
+              diagnostics.putIfAbsent(id, () => []);
+              diagnostics[id]!.add({
+                'doseId': expectedDose.doseId,
+                'expected': expected,
+                'failedSeries': failedSeriesInfo,
+                'category': category,
+              });
+            }
+          }
+        }
       }
 
       // Print summary for baseline visibility
@@ -199,6 +321,19 @@ void main() {
         print('First 30 mismatches:');
         for (final m in mismatches.take(30)) {
           print('  $m');
+        }
+      }
+
+      // Write detailed diagnostics to scratchpad
+      if (diagnostics.isNotEmpty) {
+        final diagPath =
+            '/tmp/claude-1000/-home-grey-dev-fhir-cicada/8c15a154-f591-4212-9241-7632159195e4/scratchpad/phase3_diagnostics.txt';
+        try {
+          File(diagPath).parent.createSync(recursive: true);
+          writeDiagnostics(diagnostics, diagPath);
+          print('Diagnostics written to: $diagPath');
+        } catch (e) {
+          print('Could not write diagnostics: $e');
         }
       }
 

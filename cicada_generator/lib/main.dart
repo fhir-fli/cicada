@@ -5,16 +5,20 @@ import 'package:cicada_generator/antigen_sheet_parser.dart';
 import 'package:cicada_generator/schedule_sheet_parser.dart';
 
 void main(List<String> args) {
-  // 1) Identify your source directory
-  final sourceDir = Directory('cicada_generator/lib/Version_4.61-508/Excel');
+  // 1) Auto-detect source directory
+  final sourceDir = Directory(_findVersionSubdir('Excel'));
   if (!sourceDir.existsSync()) {
     print("Directory not found: ${sourceDir.path}");
     return;
   }
 
-  // 2) Create output directory if desired
+  // 2) Create output directory, clearing old JSON to avoid stale data
   final outputDir = Directory('cicada_generator/lib/generated_files');
-  if (!outputDir.existsSync()) {
+  if (outputDir.existsSync()) {
+    for (final f in outputDir.listSync()) {
+      if (f is File && f.path.endsWith('.json')) f.deleteSync();
+    }
+  } else {
     outputDir.createSync(recursive: true);
   }
 
@@ -31,21 +35,61 @@ void main(List<String> args) {
       final filePath = fileEntity.path;
       print('Processing file: $filePath');
 
-      if (filePath.contains('AntigenSupportingData')) {
-        // Parse as an antigen
-        final antigenData = antigenParser.parseFile(filePath);
-        allAntigenData.add(antigenData);
+      try {
+        if (filePath.contains('AntigenSupportingData')) {
+          // Parse as an antigen
+          final antigenData = antigenParser.parseFile(filePath);
+          allAntigenData.add(antigenData);
 
-        // Write JSON
-        final jsonPath = '${outputDir.path}/${antigenData.targetDisease}.json';
-        File(jsonPath).writeAsStringSync(jsonPrettyPrint(antigenData.toJson()));
-        print('Wrote $jsonPath');
-      } else if (filePath.contains('ScheduleSupportingData')) {
-        // Parse as schedule
-        scheduleData = scheduleParser.parseFile(filePath, scheduleData);
-      } else {
-        // Possibly a test-cases file or something else
-        print('Unrecognized file (not Antigen nor Schedule): $filePath');
+          // Write JSON
+          final jsonPath =
+              '${outputDir.path}/${antigenData.targetDisease}.json';
+          File(jsonPath)
+              .writeAsStringSync(jsonPrettyPrint(antigenData.toJson()));
+          print('Wrote $jsonPath');
+        } else if (filePath.contains('ScheduleSupportingData')) {
+          // Parse as schedule
+          scheduleData = scheduleParser.parseFile(filePath, scheduleData);
+        } else {
+          // Possibly a test-cases file or something else
+          print('Unrecognized file (not Antigen nor Schedule): $filePath');
+        }
+      } catch (e) {
+        print('ERROR processing $filePath: $e');
+        if (filePath.contains('AntigenSupportingData')) {
+          // Fall back to XML-derived JSON
+          final jsonDir = _findVersionSubdir('JSON');
+          final jsonFileName = filePath
+              .split('/')
+              .last
+              .replaceAll('.xlsx', '.json');
+          final jsonFile = File('$jsonDir/$jsonFileName');
+          if (jsonFile.existsSync()) {
+            print('Falling back to XML-derived JSON: ${jsonFile.path}');
+            final jsonData =
+                json.decode(jsonFile.readAsStringSync()) as Map<String, dynamic>;
+            var antigenData = AntigenSupportingData.fromJson(jsonData);
+            // XML format may not set targetDisease at top level; extract from series
+            if (antigenData.targetDisease == null &&
+                antigenData.series != null &&
+                antigenData.series!.isNotEmpty) {
+              antigenData = antigenData.copyWith(
+                targetDisease: antigenData.series!.first.targetDisease,
+                vaccineGroup: antigenData.series!.first.vaccineGroup,
+              );
+            }
+            allAntigenData.add(antigenData);
+            final outPath =
+                '${outputDir.path}/${antigenData.targetDisease}.json';
+            File(outPath)
+                .writeAsStringSync(jsonPrettyPrint(antigenData.toJson()));
+            print('Wrote $outPath (from XML fallback)');
+          } else {
+            print('No XML fallback found, skipping.');
+          }
+        } else {
+          print('Skipping this file.');
+        }
       }
     }
   }
@@ -168,4 +212,24 @@ class AntigenClass {
   final String diseaseName;
   final String fileName;
   final String className;
+}
+
+/// Auto-detect the Version_* directory containing [subdir] (e.g. 'Excel').
+String _findVersionSubdir(String subdir) {
+  final baseDir = Directory('cicada_generator/lib');
+  final matches = baseDir
+      .listSync()
+      .whereType<Directory>()
+      .where((d) =>
+          d.path.split('/').last.startsWith('Version_') &&
+          Directory('${d.path}/$subdir').existsSync())
+      .toList();
+  if (matches.isEmpty) {
+    throw StateError('No Version_* directory with $subdir/ found');
+  }
+  if (matches.length > 1) {
+    throw StateError(
+        'Multiple Version_* directories with $subdir/ found: ${matches.map((d) => d.path).join(', ')}');
+  }
+  return '${matches.first.path}/$subdir';
 }

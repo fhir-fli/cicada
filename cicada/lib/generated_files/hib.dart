@@ -20,22 +20,6 @@ final AntigenSupportingData hib = AntigenSupportingData.fromJson({
               "Severe allergic reaction after previous dose of Hib",
           "contraindicationText":
               "Do not vaccinate if the patient has had a severe allergic reaction after a previous dose of Hib vaccine."
-        },
-        {
-          "observationCode": "159",
-          "observationTitle": "Radiation therapy",
-          "contraindicationText":
-              "Do not vaccinate if the patient is undergoing radiation therapy, including 14 days before the start of therapy and 3 months after the completion of therapy.",
-          "beginAge": "6 weeks",
-          "endAge": "5 years"
-        },
-        {
-          "observationCode": "168",
-          "observationTitle": "Chemotherapy",
-          "contraindicationText":
-              "Do not vaccinate if the patient is undergoing chemotherapy, including 14 days before the start of therapy and 3 months after the completion of therapy.",
-          "beginAge": "6 weeks",
-          "endAge": "5 years"
         }
       ]
     },
@@ -45,10 +29,10 @@ final AntigenSupportingData hib = AntigenSupportingData.fromJson({
           "observationCode": "076",
           "observationTitle": "Progressive neurologic disorder",
           "contraindicationText":
-              "Do not vaccinate if the patient has progressive neurologic disorder until a treatment regimen has been established and the condition has stabilized.",
+              "Do not vaccinate if the patient has progressive neurologic disorder until a treatment regimen has been\r established and the condition has stabilized.",
           "contraindicatedVaccine": [
             {"vaccineType": "DTaP-IPV-Hib-HepB", "cvx": "146"},
-            {"vaccineType": "DTP-hepB-Hib Pentavalent Non-US", "cvx": "198"}
+            {"vaccineType": "DTaP-Hib-IPV", "cvx": "120"}
           ]
         },
         {
@@ -59,7 +43,91 @@ final AntigenSupportingData hib = AntigenSupportingData.fromJson({
               "Do not vaccinate if the patient has had encephalopathy not attributable to another identifiable cause within 7 days of administration of a previous dose of Tdap, DTP, or DTaP vaccine.",
           "contraindicatedVaccine": [
             {"vaccineType": "DTaP-IPV-Hib-HepB", "cvx": "146"},
-            {"vaccineType": "DTP-hepB-Hib Pentavalent Non-US", "cvx": "198"}
+            {"vaccineType": "DTaP-Hib-IPV", "cvx": "120"}
+          ]
+        },
+        {
+          "observationCode": "081",
+          "observationTitle":
+              "Severe allergic reaction after previous dose of Polio",
+          "contraindicationText":
+              "Do not vaccinate if the patient has had a severe allergic reaction after a previous dose of Polio vaccine.",
+          "contraindicatedVaccine": [
+            {"vaccineType": "DTaP-Hib-IPV", "cvx": "120"},
+            {"vaccineType": "DTaP-IPV-Hib-HepB", "cvx": "146"}
+          ]
+        },
+        {
+          "observationCode": "086",
+          "observationTitle":
+              "Severe allergic reaction after previous dose of Pertussis",
+          "contraindicationText":
+              "Do not vaccinate if the patient has had a severe allergic reaction after a previous dose of Pertussis vaccine.",
+          "contraindicatedVaccine": [
+            {"vaccineType": "DTaP-Hib-IPV", "cvx": "120"},
+            {"vaccineType": "DTaP-IPV-Hib-HepB", "cvx": "146"}
+          ]
+        },
+        {
+          "observationCode": "087",
+          "observationTitle":
+              "Severe allergic reaction after previous dose of Diphtheria",
+          "contraindicationText":
+              "Do not vaccinate if the patient has had a severe allergic reaction after a previous dose of Diphtheria vaccine.",
+          "contraindicatedVaccine": [
+            {"vaccineType": "DTaP-Hib-IPV", "cvx": "120"},
+            {"vaccineType": "DTaP-IPV-Hib-HepB", "cvx": "146"}
+          ]
+        },
+        {
+          "observationCode": "088",
+          "observationTitle":
+              "Severe allergic reaction after previous dose of Tetanus",
+          "contraindicationText":
+              "Do not vaccinate if the patient has had a severe allergic reaction after a previous dose of Tetanus vaccine.",
+          "contraindicatedVaccine": [
+            {"vaccineType": "DTaP-Hib-IPV", "cvx": "120"},
+            {"vaccineType": "DTaP-IPV-Hib-HepB", "cvx": "146"}
+          ]
+        },
+        {
+          "observationCode": "097",
+          "observationTitle":
+              "Severe allergic reaction after previous dose of Hepatitis B",
+          "contraindicationText":
+              "Do not vaccinate if the patient has had a severe allergic reaction after a previous dose of Hepatitis B vaccine.",
+          "contraindicatedVaccine": [
+            {"vaccineType": "DTaP-IPV-Hib-HepB", "cvx": "146"}
+          ]
+        },
+        {
+          "observationCode": "107",
+          "observationTitle": "Severe allergic reaction to neomycin",
+          "contraindicationText":
+              "Do not vaccinate if the patient has had a severe allergic reaction to neomycin.",
+          "contraindicatedVaccine": [
+            {"vaccineType": "DTaP-Hib-IPV", "cvx": "120"},
+            {"vaccineType": "DTaP-IPV-Hib-HepB", "cvx": "146"}
+          ]
+        },
+        {
+          "observationCode": "108",
+          "observationTitle": "Severe allergic reaction to streptomycin",
+          "contraindicationText":
+              "Do not vaccinate if the patient has had a severe allergic reaction to streptomycin.",
+          "contraindicatedVaccine": [
+            {"vaccineType": "DTaP-Hib-IPV", "cvx": "120"},
+            {"vaccineType": "DTaP-IPV-Hib-HepB", "cvx": "146"}
+          ]
+        },
+        {
+          "observationCode": "109",
+          "observationTitle": "Severe allergic reaction to polymyxin B",
+          "contraindicationText":
+              "Do not vaccinate if the patient has had a severe allergic reaction to polymyxin B.",
+          "contraindicatedVaccine": [
+            {"vaccineType": "DTaP-Hib-IPV", "cvx": "120"},
+            {"vaccineType": "DTaP-IPV-Hib-HepB", "cvx": "146"}
           ]
         },
         {
@@ -68,7 +136,18 @@ final AntigenSupportingData hib = AntigenSupportingData.fromJson({
           "contraindicationText":
               "Do not vaccinate if the patient has a hypersensitivity to yeast.",
           "contraindicatedVaccine": [
-            {"vaccineType": "Hib-Hep B", "cvx": "51"}
+            {"vaccineType": "DTaP-IPV-Hib-HepB", "cvx": "146"}
+          ]
+        },
+        {
+          "observationCode": "111",
+          "observationTitle":
+              "Hypersensitivity to the preservative 2-phenoxyethanol",
+          "contraindicationText":
+              "Do not vaccinate if the patient has a hypersensitivity to the preservative 2-phenoxyethanol.",
+          "contraindicatedVaccine": [
+            {"vaccineType": "DTaP-Hib-IPV", "cvx": "120"},
+            {"vaccineType": "DTaP-IPV-Hib-HepB", "cvx": "146"}
           ]
         }
       ]
@@ -186,7 +265,7 @@ final AntigenSupportingData hib = AntigenSupportingData.fromJson({
               "beginAge": "6 weeks - 4 days"
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-Hep B,historical",
+              "vaccineType": "DTaP-IPV-Hib-Hep B, historical",
               "cvx": "132",
               "beginAge": "6 weeks - 4 days"
             },
@@ -207,7 +286,7 @@ final AntigenSupportingData hib = AntigenSupportingData.fromJson({
               "beginAge": "6 weeks - 4 days"
             },
             {
-              "vaccineType": "DTP-hepB-Hib Pentavalent Non-US",
+              "vaccineType": "DTP-HepB-Hib Pentavalent Non-US",
               "cvx": "198",
               "beginAge": "6 weeks - 4 days"
             }
@@ -315,7 +394,7 @@ final AntigenSupportingData hib = AntigenSupportingData.fromJson({
               "beginAge": "6 weeks - 4 days"
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-Hep B,historical",
+              "vaccineType": "DTaP-IPV-Hib-Hep B, historical",
               "cvx": "132",
               "beginAge": "6 weeks - 4 days"
             },
@@ -336,7 +415,7 @@ final AntigenSupportingData hib = AntigenSupportingData.fromJson({
               "beginAge": "6 weeks - 4 days"
             },
             {
-              "vaccineType": "DTP-hepB-Hib Pentavalent Non-US",
+              "vaccineType": "DTP-HepB-Hib Pentavalent Non-US",
               "cvx": "198",
               "beginAge": "6 weeks - 4 days"
             }
@@ -487,7 +566,7 @@ final AntigenSupportingData hib = AntigenSupportingData.fromJson({
               "beginAge": "6 weeks - 4 days"
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-Hep B,historical",
+              "vaccineType": "DTaP-IPV-Hib-Hep B, historical",
               "cvx": "132",
               "beginAge": "6 weeks - 4 days"
             },
@@ -508,7 +587,7 @@ final AntigenSupportingData hib = AntigenSupportingData.fromJson({
               "beginAge": "6 weeks - 4 days"
             },
             {
-              "vaccineType": "DTP-hepB-Hib Pentavalent Non-US",
+              "vaccineType": "DTP-HepB-Hib Pentavalent Non-US",
               "cvx": "198",
               "beginAge": "6 weeks - 4 days"
             }
@@ -669,7 +748,7 @@ final AntigenSupportingData hib = AntigenSupportingData.fromJson({
               "beginAge": "6 weeks - 4 days"
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-Hep B,historical",
+              "vaccineType": "DTaP-IPV-Hib-Hep B, historical",
               "cvx": "132",
               "beginAge": "6 weeks - 4 days"
             },
@@ -690,7 +769,7 @@ final AntigenSupportingData hib = AntigenSupportingData.fromJson({
               "beginAge": "6 weeks - 4 days"
             },
             {
-              "vaccineType": "DTP-hepB-Hib Pentavalent Non-US",
+              "vaccineType": "DTP-HepB-Hib Pentavalent Non-US",
               "cvx": "198",
               "beginAge": "6 weeks - 4 days"
             }
@@ -815,7 +894,7 @@ final AntigenSupportingData hib = AntigenSupportingData.fromJson({
               "beginAge": "6 weeks - 4 days"
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-Hep B,historical",
+              "vaccineType": "DTaP-IPV-Hib-Hep B, historical",
               "cvx": "132",
               "beginAge": "6 weeks - 4 days"
             },
@@ -836,7 +915,7 @@ final AntigenSupportingData hib = AntigenSupportingData.fromJson({
               "beginAge": "6 weeks - 4 days"
             },
             {
-              "vaccineType": "DTP-hepB-Hib Pentavalent Non-US",
+              "vaccineType": "DTP-HepB-Hib Pentavalent Non-US",
               "cvx": "198",
               "beginAge": "6 weeks - 4 days"
             }
@@ -943,7 +1022,7 @@ final AntigenSupportingData hib = AntigenSupportingData.fromJson({
               "beginAge": "6 weeks - 4 days"
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-Hep B,historical",
+              "vaccineType": "DTaP-IPV-Hib-Hep B, historical",
               "cvx": "132",
               "beginAge": "6 weeks - 4 days"
             },
@@ -964,7 +1043,7 @@ final AntigenSupportingData hib = AntigenSupportingData.fromJson({
               "beginAge": "6 weeks - 4 days"
             },
             {
-              "vaccineType": "DTP-hepB-Hib Pentavalent Non-US",
+              "vaccineType": "DTP-HepB-Hib Pentavalent Non-US",
               "cvx": "198",
               "beginAge": "6 weeks - 4 days"
             }
@@ -1125,7 +1204,7 @@ final AntigenSupportingData hib = AntigenSupportingData.fromJson({
               "beginAge": "6 weeks - 4 days"
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-Hep B,historical",
+              "vaccineType": "DTaP-IPV-Hib-Hep B, historical",
               "cvx": "132",
               "beginAge": "6 weeks - 4 days"
             },
@@ -1146,7 +1225,7 @@ final AntigenSupportingData hib = AntigenSupportingData.fromJson({
               "beginAge": "6 weeks - 4 days"
             },
             {
-              "vaccineType": "DTP-hepB-Hib Pentavalent Non-US",
+              "vaccineType": "DTP-HepB-Hib Pentavalent Non-US",
               "cvx": "198",
               "beginAge": "6 weeks - 4 days"
             }
@@ -1276,7 +1355,7 @@ final AntigenSupportingData hib = AntigenSupportingData.fromJson({
               "beginAge": "6 weeks - 4 days"
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-Hep B,historical",
+              "vaccineType": "DTaP-IPV-Hib-Hep B, historical",
               "cvx": "132",
               "beginAge": "6 weeks - 4 days"
             },
@@ -1297,7 +1376,7 @@ final AntigenSupportingData hib = AntigenSupportingData.fromJson({
               "beginAge": "6 weeks - 4 days"
             },
             {
-              "vaccineType": "DTP-hepB-Hib Pentavalent Non-US",
+              "vaccineType": "DTP-HepB-Hib Pentavalent Non-US",
               "cvx": "198",
               "beginAge": "6 weeks - 4 days"
             }
@@ -1396,7 +1475,7 @@ final AntigenSupportingData hib = AntigenSupportingData.fromJson({
               "beginAge": "6 weeks - 4 days"
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-Hep B,historical",
+              "vaccineType": "DTaP-IPV-Hib-Hep B, historical",
               "cvx": "132",
               "beginAge": "6 weeks - 4 days"
             },
@@ -1417,7 +1496,7 @@ final AntigenSupportingData hib = AntigenSupportingData.fromJson({
               "beginAge": "6 weeks - 4 days"
             },
             {
-              "vaccineType": "DTP-hepB-Hib Pentavalent Non-US",
+              "vaccineType": "DTP-HepB-Hib Pentavalent Non-US",
               "cvx": "198",
               "beginAge": "6 weeks - 4 days"
             }
@@ -1538,7 +1617,7 @@ final AntigenSupportingData hib = AntigenSupportingData.fromJson({
               "beginAge": "6 weeks - 4 days"
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-Hep B,historical",
+              "vaccineType": "DTaP-IPV-Hib-Hep B, historical",
               "cvx": "132",
               "beginAge": "6 weeks - 4 days"
             },
@@ -1559,7 +1638,7 @@ final AntigenSupportingData hib = AntigenSupportingData.fromJson({
               "beginAge": "6 weeks - 4 days"
             },
             {
-              "vaccineType": "DTP-hepB-Hib Pentavalent Non-US",
+              "vaccineType": "DTP-HepB-Hib Pentavalent Non-US",
               "cvx": "198",
               "beginAge": "6 weeks - 4 days"
             }
@@ -1761,7 +1840,7 @@ final AntigenSupportingData hib = AntigenSupportingData.fromJson({
               "beginAge": "6 weeks - 4 days"
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-Hep B,historical",
+              "vaccineType": "DTaP-IPV-Hib-Hep B, historical",
               "cvx": "132",
               "beginAge": "6 weeks - 4 days"
             },
@@ -1782,7 +1861,7 @@ final AntigenSupportingData hib = AntigenSupportingData.fromJson({
               "beginAge": "6 weeks - 4 days"
             },
             {
-              "vaccineType": "DTP-hepB-Hib Pentavalent Non-US",
+              "vaccineType": "DTP-HepB-Hib Pentavalent Non-US",
               "cvx": "198",
               "beginAge": "6 weeks - 4 days"
             }
@@ -1832,11 +1911,33 @@ final AntigenSupportingData hib = AntigenSupportingData.fromJson({
           "endAge": "5 years"
         },
         {
+          "observationCode": {
+            "text": "HIV/AIDS - severely immunocompromised",
+            "code": "154"
+          },
+          "description":
+              "Administer to persons who have HIV/AIDS and are severely immunocompromised [See the CDC general recommendations for a definition of \"severely immunocompromised\"].",
+          "beginAge": "12 months",
+          "endAge": "5 years"
+        },
+        {
+          "observationCode": {
+            "text": "HIV/AIDS - not severely immunocompromised",
+            "code": "155"
+          },
+          "description":
+              "Administer to persons who have HIV/AIDS and are not severely immunocompromised [See the CDC general recommendations for a definition of \"severely immunocompromised\"].",
+          "beginAge": "12 months",
+          "endAge": "5 years"
+        },
+        {
           "observationCode": {"text": "Radiation therapy", "code": "159"},
           "description":
               "Administer to persons who are undergoing radiation therapy.",
           "beginAge": "12 months",
-          "endAge": "5 years"
+          "endAge": "5 years",
+          "guidance":
+              "Do not vaccinate if the patient is undergoing radiation therapy, including 14 days before the start of therapy and 3 months after the completion of therapy."
         },
         {
           "observationCode": {
@@ -1853,11 +1954,19 @@ final AntigenSupportingData hib = AntigenSupportingData.fromJson({
           "description":
               "Administer to persons who are undergoing chemotherapy.",
           "beginAge": "12 months",
-          "endAge": "5 years"
+          "endAge": "5 years",
+          "guidance":
+              "Do not vaccinate if the patient is undergoing chemotherapy, including 14 days before the start of therapy and 3 months after the completion of therapy."
         },
         {
           "observationCode": {"text": "HIV Infection", "code": "186"},
           "description": "Administer to persons with HIV Infection",
+          "beginAge": "12 months",
+          "endAge": "5 years"
+        },
+        {
+          "observationCode": {"text": "Sickle cell disease", "code": "259"},
+          "description": "Administer to persons with sickle cell disease",
           "beginAge": "12 months",
           "endAge": "5 years"
         },
@@ -1974,7 +2083,7 @@ final AntigenSupportingData hib = AntigenSupportingData.fromJson({
               "beginAge": "6 weeks - 4 days"
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-Hep B,historical",
+              "vaccineType": "DTaP-IPV-Hib-Hep B, historical",
               "cvx": "132",
               "beginAge": "6 weeks - 4 days"
             },
@@ -1989,7 +2098,7 @@ final AntigenSupportingData hib = AntigenSupportingData.fromJson({
               "beginAge": "6 weeks - 4 days"
             },
             {
-              "vaccineType": "DTP-hepB-Hib Pentavalent Non-US",
+              "vaccineType": "DTP-HepB-Hib Pentavalent Non-US",
               "cvx": "198",
               "beginAge": "6 weeks - 4 days"
             }
@@ -2108,7 +2217,7 @@ final AntigenSupportingData hib = AntigenSupportingData.fromJson({
               "beginAge": "6 weeks - 4 days"
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-Hep B,historical",
+              "vaccineType": "DTaP-IPV-Hib-Hep B, historical",
               "cvx": "132",
               "beginAge": "6 weeks - 4 days"
             },
@@ -2123,7 +2232,7 @@ final AntigenSupportingData hib = AntigenSupportingData.fromJson({
               "beginAge": "6 weeks - 4 days"
             },
             {
-              "vaccineType": "DTP-hepB-Hib Pentavalent Non-US",
+              "vaccineType": "DTP-HepB-Hib Pentavalent Non-US",
               "cvx": "198",
               "beginAge": "6 weeks - 4 days"
             }
@@ -2164,6 +2273,26 @@ final AntigenSupportingData hib = AntigenSupportingData.fromJson({
         },
         {
           "observationCode": {
+            "text": "HIV/AIDS - severely immunocompromised",
+            "code": "154"
+          },
+          "description":
+              "Administer to persons who have HIV/AIDS and are severely immunocompromised [See the CDC general recommendations for a definition of \"severely immunocompromised\"].",
+          "beginAge": "5 years",
+          "endAge": "19 years"
+        },
+        {
+          "observationCode": {
+            "text": "HIV/AIDS - not severely immunocompromised",
+            "code": "155"
+          },
+          "description":
+              "Administer to persons who have HIV/AIDS and are not severely immunocompromised [See the CDC general recommendations for a definition of \"severely immunocompromised\"].",
+          "beginAge": "5 years",
+          "endAge": "19 years"
+        },
+        {
+          "observationCode": {
             "text": "Anatomical or functional asplenia",
             "code": "160"
           },
@@ -2176,6 +2305,11 @@ final AntigenSupportingData hib = AntigenSupportingData.fromJson({
           "description": "Administer to persons with HIV Infection",
           "beginAge": "5 years",
           "endAge": "19 years"
+        },
+        {
+          "observationCode": {"text": "Sickle cell disease", "code": "259"},
+          "description": "Administer to persons with sickle cell disease",
+          "beginAge": "5 years"
         }
       ],
       "seriesDose": [
@@ -2256,7 +2390,7 @@ final AntigenSupportingData hib = AntigenSupportingData.fromJson({
               "beginAge": "6 weeks - 4 days"
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-Hep B,historical",
+              "vaccineType": "DTaP-IPV-Hib-Hep B, historical",
               "cvx": "132",
               "beginAge": "6 weeks - 4 days"
             },
@@ -2271,7 +2405,7 @@ final AntigenSupportingData hib = AntigenSupportingData.fromJson({
               "beginAge": "6 weeks - 4 days"
             },
             {
-              "vaccineType": "DTP-hepB-Hib Pentavalent Non-US",
+              "vaccineType": "DTP-HepB-Hib Pentavalent Non-US",
               "cvx": "198",
               "beginAge": "6 weeks - 4 days"
             }
