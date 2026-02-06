@@ -447,10 +447,15 @@ class VaxDose {
     return referenceDate;
   }
 
-  /// Find the most recent dose of specified vaccine types, not inadvertent.
+  /// Find the most recent dose of specified vaccine types, not inadvertent,
+  /// given before the current dose (by index).
   VaxDate? getMostRecentDoseDate(List<int> vaccineTypes, List<VaxDose> doses) {
-    final VaxDose? dose = doses.lastWhereOrNull((VaxDose dose) =>
-        vaccineTypes.contains(dose.cvxAsInt) && !dose.inadvertent);
+    if (index == null) return null;
+    final VaxDose? dose = doses.lastWhereOrNull((VaxDose d) =>
+        vaccineTypes.contains(d.cvxAsInt) &&
+        !d.inadvertent &&
+        d.index != null &&
+        d.index! < index!);
     return dose?.dateGiven;
   }
 
