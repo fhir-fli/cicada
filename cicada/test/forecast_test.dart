@@ -214,7 +214,7 @@ void main() {
             }
 
             antigen.groups.forEach((String groupKey, VaxGroup group) {
-              for (final series in group.prioritizedSeries) {
+              for (final series in group.series) {
                 final actualDose = series.doses.firstWhereOrNull(
                     (d) => d.doseId == expectedDose.doseId);
                 if (actualDose == null || actualDose.evalStatus == null) {

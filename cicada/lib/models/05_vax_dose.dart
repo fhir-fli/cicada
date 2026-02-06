@@ -299,7 +299,7 @@ class VaxDose {
       setAgeReason(ValidAgeReason.gracePeriod);
       return true;
     }
-    setAgeReason(ValidAgeReason.tooOld, EvalStatus.extraneous);
+    setAgeReason(ValidAgeReason.tooOld, EvalStatus.extraneous, EvalReason.ageTooOld);
     return false;
   }
 
@@ -594,26 +594,29 @@ class VaxDose {
         evalReason = EvalReason.notPreferableOrAllowable;
         return false;
       } else {
-        final Vaccine allowedVax = allowedList.first;
-        final VaxDate allowableVaccineTypeBeginAgeDate =
-            allowedVax.beginAge == null
-                ? VaxDate.min()
-                : birthdate.changeNullable(allowedVax.beginAge, false)!;
-        final VaxDate allowableVaccineTypeEndAgeDate = allowedVax.endAge == null
-            ? VaxDate.max()
-            : birthdate.changeNullable(allowedVax.endAge, true)!;
-        if (allowableVaccineTypeBeginAgeDate <= dateGiven &&
-            dateGiven < allowableVaccineTypeEndAgeDate) {
-          allowedVaccine = true;
-          return true;
-        } else {
-          allowedVaccine = false;
-          allowedVaccineReason =
-              PreferredAllowedReason.notAPreferableOrAllowableVaccine;
-          evalStatus = EvalStatus.not_valid;
-          evalReason = EvalReason.notPreferableOrAllowable;
-          return false;
+        // Check ALL matching entries — same CVX can appear multiple times
+        // with different age ranges.
+        for (final Vaccine allowedVax in allowedList) {
+          final VaxDate allowableVaccineTypeBeginAgeDate =
+              allowedVax.beginAge == null
+                  ? VaxDate.min()
+                  : birthdate.changeNullable(allowedVax.beginAge, false)!;
+          final VaxDate allowableVaccineTypeEndAgeDate =
+              allowedVax.endAge == null
+                  ? VaxDate.max()
+                  : birthdate.changeNullable(allowedVax.endAge, true)!;
+          if (allowableVaccineTypeBeginAgeDate <= dateGiven &&
+              dateGiven < allowableVaccineTypeEndAgeDate) {
+            allowedVaccine = true;
+            return true;
+          }
         }
+        allowedVaccine = false;
+        allowedVaccineReason =
+            PreferredAllowedReason.notAPreferableOrAllowableVaccine;
+        evalStatus = EvalStatus.not_valid;
+        evalReason = EvalReason.notPreferableOrAllowable;
+        return false;
       }
     }
   }

@@ -64,6 +64,16 @@ class VaxSeries {
         break;
       } else {
         evaluateNextDose(seriesDose);
+        // For recurring doses (e.g., Influenza), keep matching additional
+        // doses against the same target dose instead of moving on.
+        if (seriesDose.recurringDose == Binary.yes) {
+          int prev = -1;
+          while (prev != evaluatedDoses.length &&
+              evaluatedDoses.length < doses.length) {
+            prev = evaluatedDoses.length;
+            evaluateNextDose(seriesDose);
+          }
+        }
       }
     }
   }
