@@ -27,6 +27,15 @@ ForecastResult evaluateForForecast(Parameters parameters) {
   /// we pass in a list of all past vaccines, the patient's gender
   final Map<String, VaxAntigen> agMap = antigenMap(patient);
 
+  /// Set allPatientDoses on all series for cross-antigen live virus checks
+  agMap.forEach((String k, VaxAntigen v) {
+    v.groups.forEach((String key, VaxGroup group) {
+      for (final VaxSeries series in group.series) {
+        series.allPatientDoses = patient.pastDoses;
+      }
+    });
+  });
+
   /// Sort into groups
   agMap.forEach((String k, VaxAntigen v) {
     v.groups.forEach((String key, VaxGroup value) {

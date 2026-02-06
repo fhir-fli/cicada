@@ -106,6 +106,7 @@ class VaxSeries {
   }
 
   bool canSkipDose(SeriesDose seriesDose, VaxDose dose) {
+    if (seriesDose.recurringDose == Binary.yes) return false;
     return canSkip(seriesDose, SkipContext.evaluation, dose.dateGiven);
   }
 
@@ -142,7 +143,7 @@ class VaxSeries {
       return false;
     }
 
-    if (dose.isLiveVirusConflict(doses)) {
+    if (dose.isLiveVirusConflict(doses, allPatientDoses: allPatientDoses)) {
       return false;
     } else {
       return dose.isAllowedType(seriesDose.allowableVaccine, dob);
@@ -687,6 +688,7 @@ class VaxSeries {
   int targetDose = 0;
   Series series;
   List<VaxDose> doses = <VaxDose>[];
+  List<VaxDose> allPatientDoses = <VaxDose>[];
   List<VaxDose> evaluatedDoses = <VaxDose>[];
   Map<int, TargetDoseStatus> evaluatedTargetDose = <int, TargetDoseStatus>{};
   VaxDate assessmentDate;

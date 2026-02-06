@@ -315,13 +315,16 @@ class VaxDose {
 
   /// Per Section 6.5: Evaluate preferable intervals.
   /// If no preferable intervals defined → considered "valid" (return true).
-  /// ALL preferable intervals must pass for the result to be true.
+  /// Uses OR logic: any passing interval = overall pass.
   bool evaluatePreferableInterval(
       List<Interval>? intervals, List<VaxDose> doses, int targetDose) {
     if (intervals == null || intervals.isEmpty) {
       updatePreferredInterval(valid: true);
       return true;
     }
+
+    bool anyPassed = false;
+    bool anyEvaluated = false;
 
     for (final Interval interval in intervals) {
       final VaxDate? referenceDate =
@@ -336,21 +339,37 @@ class VaxDose {
         continue;
       }
 
+      anyEvaluated = true;
+
       final VaxDate absoluteMinimum =
           referenceDate.changeNullable(interval.absMinInt, false)!;
       final VaxDate minimumDate =
           referenceDate.changeNullable(interval.minInt, false)!;
 
       if (dateGiven < absoluteMinimum) {
-        updatePreferredInterval(valid: false, reason: IntervalReason.tooShort);
-        return false;
+        // This interval fails, but continue checking others (OR logic)
+        continue;
       }
 
+      // This interval passes
+      anyPassed = true;
       if (dateGiven < minimumDate) {
         updatePreferredInterval(valid: true, reason: IntervalReason.gracePeriod);
       } else {
         updatePreferredInterval(valid: true);
       }
+      break; // One pass is sufficient
+    }
+
+    if (!anyEvaluated) {
+      // No intervals could be evaluated (all had null reference dates)
+      updatePreferredInterval(valid: true);
+      return true;
+    }
+
+    if (!anyPassed) {
+      updatePreferredInterval(valid: false, reason: IntervalReason.tooShort);
+      return false;
     }
 
     return true;
@@ -451,14 +470,9 @@ class VaxDose {
   }
 
   bool isLiveVirusConflict(
-    List<VaxDose> doses,
-  ) {
-    /// If there are no previous doses to look at, there can be no conflicts
-    if (doses.isEmpty || index == 0) {
-      conflict = false;
-      return false;
-    }
-
+    List<VaxDose> doses, {
+    List<VaxDose> allPatientDoses = const <VaxDose>[],
+  }) {
     /// Look to see if the current cvx type is one of the conflict types listed
     /// in the supporting data
     final List<LiveVirusConflict>? liveVirusConflicts = scheduleSupportingData
@@ -473,9 +487,18 @@ class VaxDose {
       return false;
     }
 
+    /// Use allPatientDoses for cross-antigen conflict checking.
+    /// Fall back to series-local doses if allPatientDoses is empty.
+    final List<VaxDose> dosesToCheck =
+        allPatientDoses.isNotEmpty ? allPatientDoses : doses;
+
     /// Per Figure 6-16: loop "For each previous vaccine dose administered"
-    for (int i = 0; i < index!; i++) {
-      final VaxDose previousDose = doses[i];
+    /// Check ALL previous doses by date (cross-antigen), not just series-local
+    for (final VaxDose previousDose in dosesToCheck) {
+      // Only check doses given before this one
+      if (previousDose.dateGiven >= dateGiven) continue;
+      // Skip self
+      if (previousDose.doseId == doseId) continue;
 
       for (final LiveVirusConflict lvc in liveVirusConflicts!) {
         if (lvc.previous?.cvxAsInt != previousDose.cvxAsInt) continue;
