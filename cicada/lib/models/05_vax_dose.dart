@@ -315,7 +315,11 @@ class VaxDose {
 
   /// Per Section 6.5: Evaluate preferable intervals.
   /// If no preferable intervals defined → considered "valid" (return true).
-  /// Uses OR logic: any passing interval = overall pass.
+  /// Per the spec: "if multiple intervals are specified, then all intervals
+  /// must be satisfied in order for the dose to satisfy the interval
+  /// requirements." (AND logic)
+  /// Intervals with effectiveDate/cessationDate are filtered by the dose date
+  /// first — only applicable intervals are evaluated.
   bool evaluatePreferableInterval(
       List<Interval>? intervals, List<VaxDose> doses, int targetDose) {
     if (intervals == null || intervals.isEmpty) {
@@ -323,10 +327,17 @@ class VaxDose {
       return true;
     }
 
-    bool anyPassed = false;
-    bool anyEvaluated = false;
-
     for (final Interval interval in intervals) {
+      // Filter by effectiveDate/cessationDate — only evaluate intervals
+      // whose date range covers the dose administration date.
+      final VaxDate effective =
+          VaxDate.fromNullableString(interval.effectiveDate);
+      final VaxDate cessation =
+          VaxDate.fromNullableString(interval.cessationDate, true);
+      if (!(effective <= dateGiven && dateGiven <= cessation)) {
+        continue;
+      }
+
       final VaxDate? referenceDate =
           getReferenceDate(interval, targetDose, doses);
 
@@ -339,37 +350,21 @@ class VaxDose {
         continue;
       }
 
-      anyEvaluated = true;
-
       final VaxDate absoluteMinimum =
           referenceDate.changeNullable(interval.absMinInt, false)!;
       final VaxDate minimumDate =
           referenceDate.changeNullable(interval.minInt, false)!;
 
       if (dateGiven < absoluteMinimum) {
-        // This interval fails, but continue checking others (OR logic)
-        continue;
+        updatePreferredInterval(valid: false, reason: IntervalReason.tooShort);
+        return false;
       }
 
-      // This interval passes
-      anyPassed = true;
       if (dateGiven < minimumDate) {
         updatePreferredInterval(valid: true, reason: IntervalReason.gracePeriod);
       } else {
         updatePreferredInterval(valid: true);
       }
-      break; // One pass is sufficient
-    }
-
-    if (!anyEvaluated) {
-      // No intervals could be evaluated (all had null reference dates)
-      updatePreferredInterval(valid: true);
-      return true;
-    }
-
-    if (!anyPassed) {
-      updatePreferredInterval(valid: false, reason: IntervalReason.tooShort);
-      return false;
     }
 
     return true;
