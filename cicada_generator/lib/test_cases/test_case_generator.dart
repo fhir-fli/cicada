@@ -50,6 +50,7 @@ Future<void> createPatients(
 
   // Containers for output
   final Map<String, List<Map<String, dynamic>>> testDoses = {};
+  final Map<String, List<Map<String, String>>> testForecasts = {};
   final List<Parameters> parametersList = [];
 
   // Process each data row
@@ -175,6 +176,27 @@ Future<void> createPatients(
     // Store test doses JSON
     testDoses[patient.id.toString()] = vaxDoses.map((d) => d.toJson()).toList();
 
+    // Extract forecast data
+    final patientId = patient.id.toString();
+    final vaccineGroup = rowMap['Vaccine_Group']?.toString() ?? '';
+    final seriesStatus = rowMap['Series_Status']?.toString() ?? '';
+    final forecastNum = rowMap['Forecast_#']?.toString() ?? '';
+    final earliestDate = _extractDate(rowMap['Earliest_Date']);
+    final recommendedDate = _extractDate(rowMap['Recommended_Date']);
+    final pastDueDate = _extractDate(rowMap['Past_Due_Date']);
+
+    if (vaccineGroup.isNotEmpty) {
+      testForecasts.putIfAbsent(patientId, () => []);
+      testForecasts[patientId]!.add(<String, String>{
+        'vaccineGroup': vaccineGroup,
+        'seriesStatus': seriesStatus,
+        'forecastNum': forecastNum,
+        if (earliestDate.isNotEmpty) 'earliestDate': earliestDate,
+        if (recommendedDate.isNotEmpty) 'recommendedDate': recommendedDate,
+        if (pastDueDate.isNotEmpty) 'pastDueDate': pastDueDate,
+      });
+    }
+
     // Build Parameters bundle
     parametersList.add(
       Parameters(
@@ -222,6 +244,13 @@ Future<void> createPatients(
   _writeTestDosesDart(testDoses);
   print('Wrote cicada/lib/generated_files/test_doses.dart '
       '(${testDoses.length} patients)');
+
+  // Generate test_forecasts.dart
+  _writeTestForecastsDart(testForecasts);
+  final totalForecasts =
+      testForecasts.values.fold<int>(0, (sum, list) => sum + list.length);
+  print('Wrote cicada/lib/generated_files/test_forecasts.dart '
+      '(${testForecasts.length} patients, $totalForecasts forecasts)');
 }
 
 /// Writes the testDoses map as a Dart file matching the existing format.
@@ -302,6 +331,49 @@ String _dartLiteral(dynamic value) {
 }
 
 String _escapeString(String s) => s.replaceAll("'", "\\'");
+
+/// Extracts a date string in yyyy/MM/dd format from a cell value.
+String _extractDate(dynamic value) {
+  if (value == null) return '';
+  final s = value.toString();
+  if (s.isEmpty) return '';
+  // DateCellValue renders as "2025-12-22T00:00:00.000Z" or similar ISO format
+  final dateStr = s.length >= 10 ? s.substring(0, 10) : s;
+  // Convert from yyyy-MM-dd to yyyy/MM/dd for consistency with VaxDate.toString()
+  return dateStr.replaceAll('-', '/');
+}
+
+/// Writes the testForecasts map as a Dart file.
+void _writeTestForecastsDart(
+    Map<String, List<Map<String, String>>> testForecasts) {
+  final sb = StringBuffer();
+  sb.writeln(
+      'final Map<String, List<Map<String, String>>> testForecasts =');
+  sb.writeln('    <String, List<Map<String, String>>>{');
+
+  final patientIds = testForecasts.keys.toList()..sort();
+  for (final patientId in patientIds) {
+    final forecasts = testForecasts[patientId]!;
+    if (forecasts.isEmpty) {
+      sb.writeln("  '$patientId': <Map<String, String>>[],");
+      continue;
+    }
+    sb.writeln("  '$patientId': <Map<String, String>>[");
+    for (final forecast in forecasts) {
+      sb.writeln('    <String, String>{');
+      for (final entry in forecast.entries) {
+        sb.writeln(
+            "      '${entry.key}': '${_escapeString(entry.value)}',");
+      }
+      sb.writeln('    },');
+    }
+    sb.writeln('  ],');
+  }
+  sb.writeln('};');
+
+  File('cicada/lib/generated_files/test_forecasts.dart')
+      .writeAsStringSync(sb.toString());
+}
 
 /// Helper to build a Patient from a row map
 Patient _buildPatient(Map<String, dynamic> row) {

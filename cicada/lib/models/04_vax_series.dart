@@ -466,17 +466,20 @@ class VaxSeries {
 
             /// • Latest of all minimum interval dates
             final List<Interval>? orderedIntervals =
-                seriesDose?.preferableInterval?.sortedByCompare(
-                    (Interval element) => element.minInt,
-                    (String? a, String? b) => evaluatedDoses.last.dateGiven
-                        .changeNullableOrElse(a, evaluatedDoses.last.dateGiven)
-                        .compareTo(evaluatedDoses.last.dateGiven
+                evaluatedDoses.isEmpty
+                    ? null
+                    : seriesDose?.preferableInterval?.sortedByCompare(
+                        (Interval element) => element.minInt,
+                        (String? a, String? b) => evaluatedDoses.last.dateGiven
                             .changeNullableOrElse(
-                                b, evaluatedDoses.last.dateGiven)));
+                                a, evaluatedDoses.last.dateGiven)
+                            .compareTo(evaluatedDoses.last.dateGiven
+                                .changeNullableOrElse(
+                                    b, evaluatedDoses.last.dateGiven)));
             final String? latestInterval = (orderedIntervals?.isEmpty ?? true)
                 ? null
                 : orderedIntervals!.first.minInt;
-            if (latestInterval != null) {
+            if (latestInterval != null && evaluatedDoses.isNotEmpty) {
               final VaxDate latestIntervalDate =
                   evaluatedDoses.last.dateGiven.change(latestInterval);
               candidateEarliestDate =
@@ -562,6 +565,17 @@ class VaxSeries {
 
               /// If the candidateEarliestDate is after or the same as the
               /// maximum age date
+              if (candidateEarliestDate! >= maximumAgeDate) {
+                shouldRecieveAnotherDose = false;
+                seriesStatus = SeriesStatus.agedOut;
+                forecastReason = ForecastReason
+                    .patientIsUnableToFinishTheSeriesPriorToTheMaximumAge;
+              } else {
+                shouldRecieveAnotherDose = true;
+                seriesStatus = SeriesStatus.notComplete;
+              }
+            } else {
+              /// No interval data or no evaluated doses — use age-based check
               if (candidateEarliestDate! >= maximumAgeDate) {
                 shouldRecieveAnotherDose = false;
                 seriesStatus = SeriesStatus.agedOut;

@@ -3,9 +3,9 @@ import 'dart:io';
 
 import 'package:collection/collection.dart';
 import 'package:fhir_r4/fhir_r4.dart';
-import 'package:cicada/forecast/forecast.dart';
+import 'package:cicada/cicada.dart';
 import 'package:cicada/generated_files/test_doses.dart';
-import 'package:cicada/models/models.dart';
+import 'package:cicada/generated_files/test_forecasts.dart';
 import 'package:test/test.dart';
 
 /// Loads NDJSON test cases, fixing up missing required fields that the test
@@ -339,6 +339,248 @@ void main() {
 
       // For now, just report — don't fail, so we can establish baseline
       // Once bugs are fixed, tighten this to: expect(mismatches, isEmpty);
+    });
+
+    test('forecast dates and series status match CDSi expected results', () {
+      // Map from Excel vaccine group abbreviations to engine vaccineGroupName
+      const excelToEngine = <String, String>{
+        'DTAP': 'DTaP/Tdap/Td',
+        'FLU': 'Influenza',
+        'HIB': 'Hib',
+        'HPV': 'HPV',
+        'HepA': 'HepA',
+        'HepB': 'HepB',
+        'MCV': 'Meningococcal',
+        'MENB': 'Meningococcal B',
+        'MMR': 'MMR',
+        'PCV': 'Pneumococcal',
+        'POL': 'Polio',
+        'ROTA': 'Rotavirus',
+        'RSV': 'RSV',
+        'VAR': 'Varicella',
+        'ZOSTER': 'Zoster',
+        'COVID-19': 'COVID-19',
+      };
+
+      int comparedCount = 0;
+      int statusMatches = 0;
+      int statusMismatches = 0;
+      int earliestMatches = 0;
+      int earliestMismatches = 0;
+      int recommendedMatches = 0;
+      int recommendedMismatches = 0;
+      int pastDueMatches = 0;
+      int pastDueMismatches = 0;
+      int missingForecasts = 0;
+
+      final Map<String, int> statusMismatchCategories = {};
+      final Map<String, int> vgMismatchCounts = {};
+      final List<String> statusMismatchDetails = [];
+      final List<String> dateMismatchDetails = [];
+
+      for (int i = 0; i < allParameters.length; i++) {
+        final parameters = allParameters[i];
+        final Patient? patient = parameters.parameter
+            ?.firstWhereOrNull(
+                (ParametersParameter e) => e.resource is Patient)
+            ?.resource as Patient?;
+        final id = patient?.id?.toString() ?? 'unknown-$i';
+
+        final expectedForecasts = testForecasts[id];
+        if (expectedForecasts == null || expectedForecasts.isEmpty) continue;
+
+        ForecastResult result;
+        try {
+          result = evaluateForForecast(parameters);
+        } catch (e) {
+          missingForecasts += expectedForecasts.length;
+          continue;
+        }
+
+        for (final expected in expectedForecasts) {
+          final excelVg = expected['vaccineGroup']!;
+          final engineVg = excelToEngine[excelVg];
+          if (engineVg == null) {
+            missingForecasts++;
+            continue;
+          }
+
+          comparedCount++;
+
+          // Find ALL matching antigens for this vaccine group, then pick
+          // the best series to represent the group's forecast.
+          // For multi-antigen groups (e.g., DTaP has Diphtheria, Tetanus,
+          // Pertussis), the CDSi forecast is driven by the antigen that
+          // still needs doses (least complete).
+          final List<VaxSeries> candidateSeries = [];
+          for (final antigen in result.agMap.values) {
+            if (antigen.vaccineGroupName != engineVg) continue;
+            for (final group in antigen.groups.values) {
+              if (group.prioritizedSeries.isNotEmpty) {
+                candidateSeries.add(group.prioritizedSeries.first);
+              } else if (group.bestSeries != null) {
+                candidateSeries.add(group.bestSeries!);
+              } else if (group.series.isNotEmpty) {
+                candidateSeries.add(group.series.first);
+              }
+            }
+          }
+
+          // Select the representative series: prefer notComplete over
+          // other statuses, since the group forecast is driven by the
+          // antigen that still needs doses.
+          VaxSeries? bestSeries;
+          if (candidateSeries.isNotEmpty) {
+            final notComplete = candidateSeries.where(
+                (s) => s.seriesStatus == SeriesStatus.notComplete).toList();
+            if (notComplete.isNotEmpty) {
+              bestSeries = notComplete.first;
+            } else {
+              bestSeries = candidateSeries.first;
+            }
+          }
+
+          if (bestSeries == null) {
+            missingForecasts++;
+            continue;
+          }
+
+          // Compare series status (case-insensitive)
+          final expectedStatus =
+              expected['seriesStatus']!.toLowerCase();
+          final actualStatus =
+              bestSeries.seriesStatus.toString().toLowerCase();
+          if (expectedStatus == actualStatus) {
+            statusMatches++;
+          } else {
+            statusMismatches++;
+            final category = '$expectedStatus→$actualStatus';
+            statusMismatchCategories[category] =
+                (statusMismatchCategories[category] ?? 0) + 1;
+            vgMismatchCounts[excelVg] =
+                (vgMismatchCounts[excelVg] ?? 0) + 1;
+            if (statusMismatchDetails.length < 50) {
+              statusMismatchDetails.add(
+                '$id [$excelVg]: '
+                'expected="$expectedStatus" '
+                'actual="$actualStatus"',
+              );
+            }
+          }
+
+          // Compare dates (only when expected has them)
+          final expectedEarliest = expected['earliestDate'] ?? '';
+          final expectedRecommended = expected['recommendedDate'] ?? '';
+          final expectedPastDue = expected['pastDueDate'] ?? '';
+
+          final actualEarliest =
+              bestSeries.candidateEarliestDate?.toString() ?? '';
+          final actualRecommended =
+              bestSeries.adjustedRecommendedDate?.toString() ?? '';
+          final actualPastDue =
+              bestSeries.adjustedPastDueDate?.toString() ?? '';
+
+          if (expectedEarliest.isNotEmpty) {
+            if (expectedEarliest == actualEarliest) {
+              earliestMatches++;
+            } else {
+              earliestMismatches++;
+              if (dateMismatchDetails.length < 100) {
+                dateMismatchDetails.add(
+                  '$id [$excelVg] earliest: '
+                  'expected="$expectedEarliest" '
+                  'actual="$actualEarliest"',
+                );
+              }
+            }
+          }
+
+          if (expectedRecommended.isNotEmpty) {
+            if (expectedRecommended == actualRecommended) {
+              recommendedMatches++;
+            } else {
+              recommendedMismatches++;
+              if (dateMismatchDetails.length < 100) {
+                dateMismatchDetails.add(
+                  '$id [$excelVg] recommended: '
+                  'expected="$expectedRecommended" '
+                  'actual="$actualRecommended"',
+                );
+              }
+            }
+          }
+
+          if (expectedPastDue.isNotEmpty) {
+            if (expectedPastDue == actualPastDue) {
+              pastDueMatches++;
+            } else {
+              pastDueMismatches++;
+              if (dateMismatchDetails.length < 100) {
+                dateMismatchDetails.add(
+                  '$id [$excelVg] pastDue: '
+                  'expected="$expectedPastDue" '
+                  'actual="$actualPastDue"',
+                );
+              }
+            }
+          }
+        }
+      }
+
+      // Print summary
+      print('\n=== FORECAST VALIDATION SUMMARY ===');
+      print('Total comparisons: $comparedCount');
+      print('Missing/unmapped forecasts: $missingForecasts');
+      print('');
+      print('Series Status:');
+      print('  Matches: $statusMatches');
+      print('  Mismatches: $statusMismatches');
+      print('');
+      print('Earliest Date:');
+      print('  Matches: $earliestMatches');
+      print('  Mismatches: $earliestMismatches');
+      print('');
+      print('Recommended Date:');
+      print('  Matches: $recommendedMatches');
+      print('  Mismatches: $recommendedMismatches');
+      print('');
+      print('Past Due Date:');
+      print('  Matches: $pastDueMatches');
+      print('  Mismatches: $pastDueMismatches');
+
+      if (statusMismatchCategories.isNotEmpty) {
+        print('\nStatus mismatch categories:');
+        final sorted = statusMismatchCategories.entries.toList()
+          ..sort((a, b) => b.value.compareTo(a.value));
+        for (final entry in sorted) {
+          print('  ${entry.key}: ${entry.value}');
+        }
+      }
+
+      if (vgMismatchCounts.isNotEmpty) {
+        print('\nStatus mismatches by vaccine group:');
+        final sorted = vgMismatchCounts.entries.toList()
+          ..sort((a, b) => b.value.compareTo(a.value));
+        for (final entry in sorted) {
+          print('  ${entry.key}: ${entry.value}');
+        }
+      }
+
+      if (statusMismatchDetails.isNotEmpty) {
+        print('\nFirst ${statusMismatchDetails.length} status mismatches:');
+        for (final m in statusMismatchDetails) {
+          print('  $m');
+        }
+      }
+
+      if (dateMismatchDetails.isNotEmpty) {
+        print('\nFirst ${dateMismatchDetails.length} date mismatches:');
+        for (final m in dateMismatchDetails) {
+          print('  $m');
+        }
+      }
+
+      // For now, just report — don't fail, so we can establish baseline
     });
   });
 }

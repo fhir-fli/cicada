@@ -1,5 +1,3 @@
-import 'package:riverpod/riverpod.dart';
-
 import '../cicada.dart';
 
 class VaxAntigen {
@@ -8,6 +6,7 @@ class VaxAntigen {
     required this.vaccineGroupName,
     required this.groups,
     required this.dob,
+    required this.observations,
     required this.groupContraindications,
     required this.vaccineContraindications,
     required this.assessmentDate,
@@ -42,6 +41,7 @@ class VaxAntigen {
           series.first.vaccineGroup ?? series.first.targetDisease!,
       groups: groups,
       dob: patient.birthdate,
+      observations: patient.observations,
       groupContraindications: groupContraindications,
       vaccineContraindications: vaccineContraindications,
       assessmentDate: patient.assessmentDate,
@@ -89,8 +89,7 @@ class VaxAntigen {
   }
 
   void immunity() {
-    final ProviderContainer container = ProviderContainer();
-    final List<int>? obsInts = container.read(observationsProvider).codesAsInt;
+    final List<int>? obsInts = observations.codesAsInt;
     final AntigenSupportingData? ag = antigenSupportingDataMap[targetDisease];
 
     /// We check to see if the patient has any listed conditions that could
@@ -116,7 +115,7 @@ class VaxAntigen {
           ag?.immunity?.dateOfBirth?.immunityBirthDate;
       if (dob <
           (immunityBirthdate == null
-              ? VaxDate.max()
+              ? VaxDate.min()
               : VaxDate.fromNullableString(
                   ag!.immunity!.dateOfBirth!.immunityBirthDate, true))) {
         /// If it does, then we have to check and see if they have
@@ -148,6 +147,7 @@ class VaxAntigen {
   String vaccineGroupName;
   Map<String, VaxGroup> groups;
   VaxDate dob;
+  VaxObservations observations;
   bool evidenceOfImmunity = false;
   List<GroupContraindication> groupContraindications;
   List<VaccineContraindication> vaccineContraindications;
