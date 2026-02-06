@@ -1,6 +1,6 @@
 ### Evaluate Conditional Skip
 
-We've already gone through this. There's a couple of rule changes, like the context is Forecast instead of Evaluation, and we use a different reference date. Otherwise, it's the same logic we used during the Evaluation process.
+We've already gone through this. There are a couple of rule changes: the context is "Forecast" instead of "Evaluation", and we use a different reference date. During forecasting, the reference date is the later of: the assessment date, and the earliest date the next dose in the series can be given. Otherwise, it's the same logic we used during the Evaluation process.
 
 ### Determine Evidence of Immunity
 
@@ -58,7 +58,15 @@ I think there are two things to note about this logic (please let me know if you
 
 ### Determine Contraindications
 
-This one actually isn't too bad either. There are just a few things to note. The first is that contraindications come in Groups or Vaccines. If a patient has a contraindication at the group level, that means any vaccine that pertains to that Antigen is contraindicated. Contraindications at the vaccine level only apply to a single Vaccine, so just because one is contraindicated doesn't mean taht they all are. Also, for the logic is slightly out of order compared to the CDC booklet, and I don't calculate any vaccine contraindications if there's already a group/antigen level contraindication.
+Contraindications come in two flavors: **group-level** and **vaccine-level**.
+
+- **Group-level contraindications** apply to the entire antigen. If the patient has a condition (mapped via the observation crosswalk to a CDSi observation code) that matches a group contraindication for the antigen, then the entire antigen is contraindicated. No more vaccines for that antigen should be given.
+
+- **Vaccine-level contraindications** apply only to a specific vaccine type (CVX). If the patient has a matching condition, only that specific vaccine is contraindicated, but other vaccines for the same antigen may still be given.
+
+The logic is: for each contraindication in the supporting data, check if the patient has a matching observation code. If so, check if the assessment date falls within the contraindication's begin and end age dates (DOB + begin age, DOB + end age). If both are true, the contraindication applies.
+
+If there's already a group-level contraindication, there's no need to check individual vaccine-level contraindications for that antigen.
 
 ### Determine Forecast Need
 
@@ -69,7 +77,7 @@ This is summarizing the information we have up to this point about each of the s
     <th colspan="7">Rules</th>
   </tr>
   <tr>
-    <td>Has the patient completed all doses in the series? <br> Is there at least one target dose 'not satisfied'?</td>
+    <td>Has the patient completed all doses in the series? <br/> Is there at least one target dose 'not satisfied'?</td>
     <td>Yes</td>
     <td>No</td>
     <td>No</td>
@@ -126,7 +134,7 @@ This is summarizing the information we have up to this point about each of the s
     <td>-</td>
     <td>-</td>
     <td>-</td>
-    <td>-</td>
+    <td>No</td>
   </tr>
   <tr>
     <td>Needs another dose?</td>
@@ -164,7 +172,7 @@ Most of these are straight forward except the final one. Also, I chose to do my 
 
 ### Generate Forecast Dates and Recommended Vaccines
 
-There are some of these that have been defined I'm not convinced are actually needed. That probably means I haven't figured it out completely yet.
+This is where we determine when the next dose, if any, for that particular antigen/series is needed and when it is due. So far we've been through each antigen that could be applicable to the patient. Within each antigen we've evaluated all of the possible series that exist, and decided which of those were appropriate for the patient. We evaluated each of the doses given to the patient against each series to see how many doses are valid within the constraints of that series. Just above we decided if the patient needs another dose in that series. If they do, we create a recommended dose for that series.
 
 <table border="1">
   <tr>
@@ -228,3 +236,28 @@ There are some of these that have been defined I'm not convinced are actually ne
     <td>N</td>
   </tr>
 </table>
+
+From these calculated dates, the key forecast dates are derived:
+
+- **Earliest Date**: the **latest** of: minimum age date, latest minimum interval date, latest conflict end interval date, seasonal recommendation start date, and latest inadvertent administration date. This is the soonest the next dose can possibly be given.
+
+- **Unadjusted Recommended Date**: the earliest recommended age date. If null, use the latest of all earliest recommended interval dates. If still null, use the earliest date.
+
+- **Unadjusted Past Due Date**: the latest recommended age date minus 1 day. If null, use the latest of all latest recommended interval dates minus 1 day. If still null, this date is null.
+
+- **Latest Date**: if maximum age date is null, this is null. Otherwise, maximum age date minus 1 day.
+
+- **Adjusted Recommended Date**: whichever comes later between the earliest date and the unadjusted recommended date.
+
+- **Adjusted Past Due Date**: if the unadjusted past due date is not present, this is null. Otherwise, whichever comes later between the earliest date and the unadjusted past due date.
+
+### Validate Recommendation
+
+Once the forecast dates are generated, they need to be validated.
+
+**Can the target dose be skipped?** If the conditional skip logic (using the "Forecast" context and the forecast reference date) says the dose can be skipped, then we skip to the next target dose and generate forecast dates for that one instead.
+
+**Is the patient aged out?** If the earliest date is later than or equal to the latest date in the series, it means the patient will not be able to receive the dose before aging out. In this case:
+- Patient series status is 'aged out'
+- Forecast reason is 'patient is unable to finish the series prior to the maximum age'
+- All forecast dates (earliest, adjusted recommended, adjusted past due, latest) are cleared

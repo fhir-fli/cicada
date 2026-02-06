@@ -1,4 +1,4 @@
-There are a number of concepts that are involved in the evaluation and prediction of immunizations. Some of these terms make logical sense, but others do not. Here's a description of some of them. Again, this was all taken from the [Clinical Decision Support for Immunization (CDSi)](https://www.cdc.gov/vaccines/programs/iis/cdsi.html).
+There are a number of concepts that are involved in the evaluation and prediction of immunizations. Some of these terms make logical sense, but others do not. Here's a description of some of them. Again, this was all taken from the [Clinical Decision Support for Immunization (CDSi)](https://www.cdc.gov/iis/cdsi/).
 
 ## Target Dose
 
@@ -6,7 +6,9 @@ There are a number of concepts that are involved in the evaluation and predictio
 
 How a Vaccine Dose Administered Satisfies a Target Dose - TODO (add image) ![Satisfy a Target Dose](dose_satisfies_target.png)
 
-- Target dose - this is a term that makes some intrinsic sense, and then has been used in confusing ways, at least I thought so. The target dose is the next recommended dose in a series. When we evaluate past vaccines, we check to see if a particular vaccine that was given meets the requirements of the target dose. If it is, that target dose is considered complete, and we move onto the next target dose.
+- Target dose - this is a term that makes some intrinsic sense, and then has been used in confusing ways, at least I thought so. The target dose is the next recommended dose in a series. When we evaluate past vaccines, we check to see if a particular vaccine that was given meets the requirements of the target dose. If it does, that target dose is considered satisfied, and we move onto the next target dose.
+
+A patient series is considered complete when the TargetDose index is >= the total number of doses in the series.
 
 #### *As a side note, anytime you see the term 'Vaccine Dose Administered' replace it with 'Dose Given', and it makes much more sense
 
@@ -41,7 +43,7 @@ How a Vaccine Dose Administered Satisfies a Target Dose - TODO (add image) ![Sat
 
 <div xmlns="http://www.w3.org/1999/xhtml">
     <table border="1">
-        <caption>TABLE DOSE STATUSES: recorded for each dose within each series.</caption>
+        <caption>TABLE TARGET DOSE STATUSES: recorded for each dose within each series.</caption>
         <tr>
             <th>Status</th>
             <th>Meaning</th>
@@ -99,6 +101,8 @@ How a Vaccine Dose Administered Satisfies a Target Dose - TODO (add image) ![Sat
 
 ### Selecting Supporting Data
 
+Much of the CDSi supporting data includes effective dates and cessation dates. These are used to determine whether a particular rule or component is relevant at the time of evaluation. This is critical: before evaluating any rule (age, interval, vaccine type, etc.), you must first check whether it is relevant based on these dates.
+
 <div xmlns="http://www.w3.org/1999/xhtml">
     <table border="1">
         <caption>TABLE Is the Logical Component Relevant?</caption>
@@ -108,15 +112,16 @@ How a Vaccine Dose Administered Satisfies a Target Dose - TODO (add image) ![Sat
         </tr>
         <tr>
             <td>RELEVANT-1</td>
-            <td>A component applies to a previously given vaccination if there is no Effective Date or Cessation Date, they are both "n/a", or the date given is between the two</td>
+            <td>A component applies to a previously given vaccination if there is no Effective Date or Cessation Date, they are both "n/a", or the date given is between the two. Default effective date: 01/01/1900. Default cessation date: 12/31/2999.</td>
         </tr>
         <tr>
             <td>RELEVANT-2</td>
-            <td>A component applies to forecasting a vaccination if there is no Effective Date or Cessation Date, they are both "n/a", or the assessment date is between the two</td>
+            <td>A component applies to forecasting a vaccination if there is no Effective Date or Cessation Date, they are both "n/a", or the assessment date is between the two. Default effective date: 01/01/1900. Default cessation date: 12/31/2999.</td>
         </tr>
     </table>
 </div>
 
+These rules apply broadly: intervals, vaccine types, conditional skip conditions, and other supporting data components all have effective/cessation dates that must be checked before using them.
 
 ### Date Calculations
 
@@ -130,38 +135,38 @@ As anyone who has worked with dates can tell you, they're a huge pain in the ass
             <th>Example</th>
         </tr>
         <tr>
-            <td>When adding only years, <br> month and days stay constant</td>
+            <td>When adding only years, <br/> month and days stay constant</td>
             <td>01/01/2000 + 3 years = 01/01/2003</td>
         </tr>
         <tr>
-            <td>When adding months, <br> day must stay constant</td>
-            <td>01/01/2000 + 6 months = 07/01/2000 <br> 11/01/2000 + 6 months = 05/01/2001</td>
+            <td>When adding months, <br/> day must stay constant</td>
+            <td>01/01/2000 + 6 months = 07/01/2000 <br/> 11/01/2000 + 6 months = 05/01/2001</td>
         </tr>
         <tr>
-            <td>When adding weeks or days, <br> add that total number of days <br> to the existing date</td>
-            <td>01/01/2000 + 3 days = 01/04/2000 <br> 01/01/2000 + 3 weeks = 01/22/2000 <br> 02/01/2000 + 5 weeks = 03/07/2000 (leap year) <br> 02/01/2001 + 5 weeks = 03/08/2001 (not a leap year)</td>
+            <td>When adding weeks or days, <br/> add that total number of days <br/> to the existing date</td>
+            <td>01/01/2000 + 3 days = 01/04/2000 <br/> 01/01/2000 + 3 weeks = 01/22/2000 <br/> 02/01/2000 + 5 weeks = 03/07/2000 (leap year) <br/> 02/01/2001 + 5 weeks = 03/08/2001 (not a leap year)</td>
         </tr>
         <tr>
-            <td>Subtracting days is just subtracting <br> days from the date I've implemented <br> it as just negative addition</td>
-            <td>01/15/2000 – 4 days = 01/11/2000</td>
+            <td>Subtracting days is just subtracting <br/> days from the date (negative addition)</td>
+            <td>01/15/2000 - 4 days = 01/11/2000</td>
         </tr>
         <tr>
-            <td>If the calculated date isn't a real date, <br> it is moved to the first of the next month</td>
-            <td>03/31/2000 + 6 months = 10/01/2000 (September 31 does not exist) <br> 08/31/2000 + 6 months = 03/01/2001 (February 31 does not exist)</td>
+            <td>If the calculated date isn't a real date, <br/> it is moved to the first of the next month</td>
+            <td>03/31/2000 + 6 months = 10/01/2000 (September 31 does not exist) <br/> 08/31/2000 + 6 months = 03/01/2001 (February 31 does not exist)</td>
         </tr>
         <tr>
-            <td>Date must be calculated by first years, <br> then months, then weeks/days <br> (ToDo: not sure I completely did this)</td>
-            <td>01/31/2000 + 6 months – 4 days = 07/27/2000</td>
+            <td>Dates must be calculated by first adding years, <br/> then months, then weeks/days</td>
+            <td>01/31/2000 + 6 months - 4 days = 07/27/2000</td>
         </tr>
     </table>
 </div>
 
 
-It's important to note, and it took me a while to catch onto their wording, there are ages and age dates. They are what they say they are, but I struggled with them at first. An age (or an interval) is a string description of a period of time ('4 years', '19 years - 4 days', etc) these are supposed to be added (or subtracted) to a date (usually the DOB, although sometimes the date given of the previous dose). Also, these terms probably won't all make as much sense until you work through it some more.
+It's important to note, and it took me a while to catch onto their wording, there are ages and age dates. They are what they say they are, but I struggled with them at first. An age (or an interval) is a string description of a period of time ('4 years', '19 years - 4 days', etc). These are supposed to be added (or subtracted) to a date (usually the DOB, although sometimes the date given of the previous dose). Also, these terms probably won't all make as much sense until you work through it some more.
 
 <div xmlns="http://www.w3.org/1999/xhtml">
     <table border="1">
-        <caption>TABLE DATE RULES</caption>
+        <caption>TABLE LOGICAL COMPONENT DATE RULES</caption>
         <tr>
             <th>Business Rule</th>
             <th>Calculation</th>
@@ -211,20 +216,19 @@ It's important to note, and it took me a while to catch onto their wording, ther
             <td>DOB + indication end age</td>
         </tr>
         <tr>
-            <td colspan="2">Reference dose date: when evaluating intervals, sometimes this is from the previous dose, sometimes from another dose in the series (usually the first).</td>
+            <td colspan="2"><strong>Reference dose date</strong>: when evaluating intervals, sometimes this is from the previous dose, sometimes from another dose in the series (usually the first).</td>
         </tr>
         <tr>
-            <td colspan="2">Reference Dose Date: doses will have an interval entry/recommendation, this is calculated from the immediate previous dose if: <br> - an interval entry with "FromPrevious" dose is "Y" <br> - the dose being evaluated has status of 'Valid' or 'Not Valid' <br> - (ToDo: current?) vaccine dose is not an inadvertent administration. <br> "interval": [{"fromPrevious": "Y", "fromTargetDose": null, "minInt": "4 weeks"}]</td>
+            <td colspan="2"><strong>From Previous Dose</strong>: The reference date is calculated from the immediate previous dose if: <br/> - the interval entry's "fromPrevious" is "Y" <br/> - the previous dose has status of 'Valid' or 'Not Valid' <br/> - the current dose is not an inadvertent administration. <br/> Example: <code>"interval": [{"fromPrevious": "Y", "fromTargetDose": null, "minInt": "4 weeks"}]</code></td>
         </tr>
         <tr>
-            <td colspan="2">Reference dose date is calculated from a different dose in the series (and the interval is therefore calculated from the date of that dose) if the following are true: <br> - the interval entry states immediate previous dose administered is 'N'<br> - the interval entry target dose number is not null. <br> "interval": [{"fromPrevious": "N", "fromTargetDose": "1","minInt": "6 months"}]</td>
+            <td colspan="2"><strong>From Target Dose</strong>: The reference date is calculated from a specific dose in the series if: <br/> - "fromPrevious" is "N" <br/> - "fromTargetDose" is not null. <br/> Example: <code>"interval": [{"fromPrevious": "N", "fromTargetDose": "1", "minInt": "6 months"}]</code></td>
         </tr>
         <tr>
-            <td colspan="2">Reference dose date is calculated from the most recent dose of the same vaccine type if the following are true: <br> - the "FromPrevious" is "N" <br> - "fromMostRecent" is not null <br> - the current dose is not an inadvertent administration. <br> "interval": [{"fromPrevious": "N", "fromTargetDose": null, "fromMostRecent": "21; 94; 121", "absMinInt": "0 days", "minInt": "8 weeks"}]</td>
+            <td colspan="2"><strong>From Most Recent</strong>: The reference date is calculated from the most recent dose of the same vaccine type if: <br/> - "fromPrevious" is "N" <br/> - "fromMostRecent" is not null <br/> - the current dose is not an inadvertent administration. <br/> Example: <code>"interval": [{"fromPrevious": "N", "fromTargetDose": null, "fromMostRecent": "21; 94; 121", "absMinInt": "0 days", "minInt": "8 weeks"}]</code></td>
         </tr>
         <tr>
-            <td colspan="2">Reference dose date is calculated from an observation if:<br>
-            - "fromPrevious" is "N" <br> - "fromRelevantObs" is not null. <br> - "interval": [{"fromPrevious": "N", "fromTargetDose": null, "fromMostRecent": null, "fromRelevantObs": {"text": "Date of hematopoietic stem cell transplant", "code": "171"}, "earliestRecInt": "6 months", "latestRecInt": "12 months"}]</td>
+            <td colspan="2"><strong>From Relevant Observation</strong>: The reference date is calculated from an observation date if: <br/> - "fromPrevious" is "N" <br/> - "fromRelevantObs" is not null. <br/> Example: <code>"interval": [{"fromPrevious": "N", "fromTargetDose": null, "fromMostRecent": null, "fromRelevantObs": {"text": "Date of hematopoietic stem cell transplant", "code": "171"}, "earliestRecInt": "6 months", "latestRecInt": "12 months"}]</code></td>
         </tr>
         <tr>
             <td>Absolute minimum interval date</td>
@@ -260,7 +264,7 @@ It's important to note, and it took me a while to catch onto their wording, ther
         </tr>
         <tr>
             <td>Latest conflict end interval date</td>
-            <td>If there is more than one interval specified (such as from previous and from an observation), whichever comes later.</td>
+            <td>If there is more than one conflict interval calculated (such as from multiple previous live virus doses), whichever comes later.</td>
         </tr>
         <tr>
             <td>Preferable vaccine type begin age date</td>

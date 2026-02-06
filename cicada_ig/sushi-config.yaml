@@ -43,21 +43,21 @@ publisher:
 # with supported extensions (e.g., .md/.xml) will be treated as
 # sub-pages.
 #
-# pages:
-#   index.md:
-#     title: CDSI IG Home
-#     preparation.md:
-#       title: Preparation
-    # decision-support-wg.md:
-    #   title: Decision Support WG
-    # logical.md:
-    #   title: Logical
-  
-#   implementation.xml:
-#   examples.xml:
-#     title: Examples Overview
-#     simpleExamples.xml:
-#     complexExamples.xml:
+pages:
+  index.md:
+    title: Cicada IG Home
+  01_preparation.md:
+    title: Preparation
+  02_logical-specification-concepts.md:
+    title: Logical Specification Concepts
+  03_processing-model.md:
+    title: Processing Model
+  04_evaluate-vaccine-dose-administered.md:
+    title: Evaluate Vaccine Dose Administered
+  05_forecast-dates-and-reasons.md:
+    title: Forecast Dates and Reasons
+  06_select-patient-series.md:
+    title: Select Patient Series
 #
 #
 # The parameters property represents IG.definition.parameter. Rather
@@ -83,6 +83,13 @@ publisher:
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 menu:
   Home: index.html
+  Guide:
+    Preparation: 01_preparation.html
+    Logical Specification Concepts: 02_logical-specification-concepts.html
+    Processing Model: 03_processing-model.html
+    Evaluate Vaccine Dose Administered: 04_evaluate-vaccine-dose-administered.html
+    Forecast Dates and Reasons: 05_forecast-dates-and-reasons.html
+    Select Patient Series: 06_select-patient-series.html
   Artifacts: artifacts.html
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
