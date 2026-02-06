@@ -29,6 +29,7 @@ import 'meningococcal_b.dart';
 import 'rotavirus.dart';
 import 'orthopoxvirus.dart';
 
+
 final antigenSupportingData = [
   typhoid,
   dengue,
@@ -94,3 +95,4 @@ final antigenSupportingDataMap = {
   'Rotavirus': rotavirus,
   'Orthopoxvirus': orthopoxvirus,
 };
+

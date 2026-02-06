@@ -10572,7 +10572,36 @@
                 "observationCode": "002",
                 "observationTitle": "Undergoing elective splenectomy",
                 "indicationText": "Administer to persons who are undergoing elective splenectomy if they have not previously received the vaccine.",
-                "clarifyingText": "Vaccination 14 or more days before splenectomy is suggested"
+                "clarifyingText": "Vaccination 14 or more days before splenectomy is suggested",
+                "codedValues": {
+                    "codedValue": [
+                        {
+                            "code": "38100",
+                            "codeSystem": "CPT",
+                            "text": "Splenectomy; total (separate procedure)"
+                        },
+                        {
+                            "code": "38101",
+                            "codeSystem": "CPT",
+                            "text": "Splenectomy; total, en bloc"
+                        },
+                        {
+                            "code": "38102",
+                            "codeSystem": "CPT",
+                            "text": "Splenectomy; total, en bloc with other organs"
+                        },
+                        {
+                            "code": "38115",
+                            "codeSystem": "CPT",
+                            "text": "Repair of ruptured spleen with splenorrhaphy"
+                        },
+                        {
+                            "code": "38120",
+                            "codeSystem": "CPT",
+                            "text": "Laparoscopy, surgical, splenectomy"
+                        }
+                    ]
+                }
             },
             {
                 "observationCode": "003",
@@ -10589,6 +10618,31 @@
                             "code": "VXC27",
                             "codeSystem": "CDCPHINVS",
                             "text": "Immunodeficiency due to any cause"
+                        },
+                        {
+                            "code": "D84.9",
+                            "codeSystem": "ICD10CM",
+                            "text": "Immunodeficiency, unspecified"
+                        },
+                        {
+                            "code": "D83.9",
+                            "codeSystem": "ICD10CM",
+                            "text": "Common variable immunodeficiency, unspecified"
+                        },
+                        {
+                            "code": "D80.9",
+                            "codeSystem": "ICD10CM",
+                            "text": "Immunodeficiency with predominantly antibody defects, unspecified"
+                        },
+                        {
+                            "code": "D89.9",
+                            "codeSystem": "ICD10CM",
+                            "text": "Disorder involving immune mechanism, unspecified"
+                        },
+                        {
+                            "code": "D84.8",
+                            "codeSystem": "ICD10CM",
+                            "text": "Other specified immunodeficiency disorders"
                         }
                     ]
                 }
@@ -10608,6 +10662,21 @@
                             "code": "23719005",
                             "codeSystem": "SNOMED",
                             "text": "Transplantation of bone marrow [procedure]"
+                        },
+                        {
+                            "code": "Z94.84",
+                            "codeSystem": "ICD10CM",
+                            "text": "Bone marrow transplant status"
+                        },
+                        {
+                            "code": "T86.00",
+                            "codeSystem": "ICD10CM",
+                            "text": "Unspecified complication of bone marrow transplant"
+                        },
+                        {
+                            "code": "T86.09",
+                            "codeSystem": "ICD10CM",
+                            "text": "Other complications of bone marrow transplant"
                         }
                     ]
                 }
@@ -10622,6 +10691,26 @@
                             "code": "50711007",
                             "codeSystem": "SNOMED",
                             "text": "Viral hepatitis type C [disorder]"
+                        },
+                        {
+                            "code": "B18.2",
+                            "codeSystem": "ICD10CM",
+                            "text": "Chronic viral hepatitis C"
+                        },
+                        {
+                            "code": "B17.10",
+                            "codeSystem": "ICD10CM",
+                            "text": "Acute hepatitis C without hepatic coma"
+                        },
+                        {
+                            "code": "B17.11",
+                            "codeSystem": "ICD10CM",
+                            "text": "Acute hepatitis C with hepatic coma"
+                        },
+                        {
+                            "code": "B19.20",
+                            "codeSystem": "ICD10CM",
+                            "text": "Unspecified viral hepatitis C without hepatic coma"
                         }
                     ]
                 }
@@ -10629,7 +10718,26 @@
             {
                 "observationCode": "006",
                 "observationTitle": "Receives clotting factor concentrates",
-                "indicationText": "Administer to persons who receive clotting factor concentrates."
+                "indicationText": "Administer to persons who receive clotting factor concentrates.",
+                "codedValues": {
+                    "codedValue": [
+                        {
+                            "code": "D66",
+                            "codeSystem": "ICD10CM",
+                            "text": "Hereditary factor VIII deficiency"
+                        },
+                        {
+                            "code": "D67",
+                            "codeSystem": "ICD10CM",
+                            "text": "Hereditary factor IX deficiency"
+                        },
+                        {
+                            "code": "D68.2",
+                            "codeSystem": "ICD10CM",
+                            "text": "Hereditary deficiency of other clotting factors"
+                        }
+                    ]
+                }
             },
             {
                 "observationCode": "007",
@@ -10652,6 +10760,26 @@
                             "code": "255409004",
                             "codeSystem": "SNOMED",
                             "text": "Pregnant woman [person]"
+                        },
+                        {
+                            "code": "Z33.1",
+                            "codeSystem": "ICD10CM",
+                            "text": "Pregnant state, incidental"
+                        },
+                        {
+                            "code": "O09.90",
+                            "codeSystem": "ICD10CM",
+                            "text": "Supervision of high risk pregnancy, unspecified trimester"
+                        },
+                        {
+                            "code": "Z34.00",
+                            "codeSystem": "ICD10CM",
+                            "text": "Encounter for supervision of normal first pregnancy, unspecified trimester"
+                        },
+                        {
+                            "code": "Z34.80",
+                            "codeSystem": "ICD10CM",
+                            "text": "Encounter for supervision of other normal pregnancy, unspecified trimester"
                         }
                     ]
                 }
@@ -10672,6 +10800,11 @@
                             "code": "413712001",
                             "codeSystem": "SNOMED",
                             "text": "Breastfeeding [mother] [observable entity]"
+                        },
+                        {
+                            "code": "Z39.1",
+                            "codeSystem": "ICD10CM",
+                            "text": "Encounter for care and examination of lactating mother"
                         }
                     ]
                 }
@@ -10687,6 +10820,31 @@
                             "code": "230744007",
                             "codeSystem": "SNOMED",
                             "text": "Cerebrospinal fluid leak [disorder]"
+                        },
+                        {
+                            "code": "G96.00",
+                            "codeSystem": "ICD10CM",
+                            "text": "Cerebrospinal fluid leak, unspecified"
+                        },
+                        {
+                            "code": "G96.01",
+                            "codeSystem": "ICD10CM",
+                            "text": "Cranial cerebrospinal fluid leak, spontaneous"
+                        },
+                        {
+                            "code": "G96.02",
+                            "codeSystem": "ICD10CM",
+                            "text": "Spinal cerebrospinal fluid leak, spontaneous"
+                        },
+                        {
+                            "code": "G96.08",
+                            "codeSystem": "ICD10CM",
+                            "text": "Other cranial cerebrospinal fluid leak"
+                        },
+                        {
+                            "code": "G96.09",
+                            "codeSystem": "ICD10CM",
+                            "text": "Other spinal cerebrospinal fluid leak"
                         }
                     ]
                 }
@@ -10712,6 +10870,16 @@
                             "code": "359612003",
                             "codeSystem": "SNOMED",
                             "text": "Implantation of cochlear prosthetic device [procedure]"
+                        },
+                        {
+                            "code": "Z96.21",
+                            "codeSystem": "ICD10CM",
+                            "text": "Cochlear implant status"
+                        },
+                        {
+                            "code": "69930",
+                            "codeSystem": "CPT",
+                            "text": "Cochlear device implantation"
                         }
                     ]
                 }
@@ -10720,7 +10888,16 @@
                 "observationCode": "012",
                 "observationTitle": "Family history of altered immunocompetence",
                 "contraindicationText": "Do not vaccinate if the patient has a family history of altered immunocompetence",
-                "clarifyingText": "Harmonizes with the vaccine-specific statements in accommodating infants and toddlers with occult heritable congenital immunodeficiencies."
+                "clarifyingText": "Harmonizes with the vaccine-specific statements in accommodating infants and toddlers with occult heritable congenital immunodeficiencies.",
+                "codedValues": {
+                    "codedValue": [
+                        {
+                            "code": "Z83.2",
+                            "codeSystem": "ICD10CM",
+                            "text": "Family history of diseases of the blood and blood-forming organs and certain disorders involving the immune mechanism"
+                        }
+                    ]
+                }
             },
             {
                 "observationCode": "013",
@@ -10732,6 +10909,46 @@
                             "code": "31323000",
                             "codeSystem": "SNOMED",
                             "text": "Severe combined immunodeficiency disease [disorder]"
+                        },
+                        {
+                            "code": "D81.9",
+                            "codeSystem": "ICD10CM",
+                            "text": "Combined immunodeficiency, unspecified"
+                        },
+                        {
+                            "code": "D81.0",
+                            "codeSystem": "ICD10CM",
+                            "text": "SCID with reticular dysgenesis"
+                        },
+                        {
+                            "code": "D81.1",
+                            "codeSystem": "ICD10CM",
+                            "text": "SCID with low T- and B-cell numbers"
+                        },
+                        {
+                            "code": "D81.2",
+                            "codeSystem": "ICD10CM",
+                            "text": "SCID with low or normal B-cell numbers"
+                        },
+                        {
+                            "code": "D81.3",
+                            "codeSystem": "ICD10CM",
+                            "text": "Adenosine deaminase deficiency"
+                        },
+                        {
+                            "code": "D81.5",
+                            "codeSystem": "ICD10CM",
+                            "text": "Purine nucleoside phosphorylase deficiency"
+                        },
+                        {
+                            "code": "D81.6",
+                            "codeSystem": "ICD10CM",
+                            "text": "Major histocompatibility complex class I deficiency"
+                        },
+                        {
+                            "code": "D81.7",
+                            "codeSystem": "ICD10CM",
+                            "text": "Major histocompatibility complex class II deficiency"
                         }
                     ]
                 }
@@ -10746,6 +10963,41 @@
                             "code": "73211009",
                             "codeSystem": "SNOMED",
                             "text": "Diabetes mellitus [disorder]"
+                        },
+                        {
+                            "code": "E10.9",
+                            "codeSystem": "ICD10CM",
+                            "text": "Type 1 diabetes mellitus without complications"
+                        },
+                        {
+                            "code": "E10.65",
+                            "codeSystem": "ICD10CM",
+                            "text": "Type 1 diabetes mellitus with hyperglycemia"
+                        },
+                        {
+                            "code": "E11.9",
+                            "codeSystem": "ICD10CM",
+                            "text": "Type 2 diabetes mellitus without complications"
+                        },
+                        {
+                            "code": "E11.65",
+                            "codeSystem": "ICD10CM",
+                            "text": "Type 2 diabetes mellitus with hyperglycemia"
+                        },
+                        {
+                            "code": "E13.9",
+                            "codeSystem": "ICD10CM",
+                            "text": "Other specified diabetes mellitus without complications"
+                        },
+                        {
+                            "code": "E08.9",
+                            "codeSystem": "ICD10CM",
+                            "text": "Diabetes mellitus due to underlying condition without complications"
+                        },
+                        {
+                            "code": "E09.9",
+                            "codeSystem": "ICD10CM",
+                            "text": "Drug or chemical induced diabetes mellitus without complications"
                         }
                     ]
                 }
@@ -10766,6 +11018,46 @@
                             "code": "19943007",
                             "codeSystem": "SNOMED",
                             "text": "Cirrhosis of liver [disorder]"
+                        },
+                        {
+                            "code": "K70.30",
+                            "codeSystem": "ICD10CM",
+                            "text": "Alcoholic cirrhosis of liver without ascites"
+                        },
+                        {
+                            "code": "K70.31",
+                            "codeSystem": "ICD10CM",
+                            "text": "Alcoholic cirrhosis of liver with ascites"
+                        },
+                        {
+                            "code": "K73.9",
+                            "codeSystem": "ICD10CM",
+                            "text": "Chronic hepatitis, unspecified"
+                        },
+                        {
+                            "code": "K74.0",
+                            "codeSystem": "ICD10CM",
+                            "text": "Hepatic fibrosis"
+                        },
+                        {
+                            "code": "K74.60",
+                            "codeSystem": "ICD10CM",
+                            "text": "Unspecified cirrhosis of liver"
+                        },
+                        {
+                            "code": "K74.69",
+                            "codeSystem": "ICD10CM",
+                            "text": "Other cirrhosis of liver"
+                        },
+                        {
+                            "code": "K76.0",
+                            "codeSystem": "ICD10CM",
+                            "text": "Fatty liver, not elsewhere classified"
+                        },
+                        {
+                            "code": "K76.9",
+                            "codeSystem": "ICD10CM",
+                            "text": "Liver disease, unspecified"
                         }
                     ]
                 }
@@ -10812,6 +11104,46 @@
                             "code": "698247007",
                             "codeSystem": "SNOMED",
                             "text": "Cardiac arrhythmia [disorder]"
+                        },
+                        {
+                            "code": "I25.10",
+                            "codeSystem": "ICD10CM",
+                            "text": "Atherosclerotic heart disease of native coronary artery without angina pectoris"
+                        },
+                        {
+                            "code": "I25.9",
+                            "codeSystem": "ICD10CM",
+                            "text": "Chronic ischemic heart disease, unspecified"
+                        },
+                        {
+                            "code": "I50.9",
+                            "codeSystem": "ICD10CM",
+                            "text": "Heart failure, unspecified"
+                        },
+                        {
+                            "code": "I50.20",
+                            "codeSystem": "ICD10CM",
+                            "text": "Unspecified systolic (congestive) heart failure"
+                        },
+                        {
+                            "code": "I50.30",
+                            "codeSystem": "ICD10CM",
+                            "text": "Unspecified diastolic (congestive) heart failure"
+                        },
+                        {
+                            "code": "I42.9",
+                            "codeSystem": "ICD10CM",
+                            "text": "Cardiomyopathy, unspecified"
+                        },
+                        {
+                            "code": "I42.0",
+                            "codeSystem": "ICD10CM",
+                            "text": "Dilated cardiomyopathy"
+                        },
+                        {
+                            "code": "Q24.9",
+                            "codeSystem": "ICD10CM",
+                            "text": "Congenital malformation of heart, unspecified"
                         }
                     ]
                 }
@@ -10852,6 +11184,41 @@
                             "code": "17097001",
                             "codeSystem": "SNOMED",
                             "text": "Chronic disease of respiratory system [disorder]"
+                        },
+                        {
+                            "code": "J44.9",
+                            "codeSystem": "ICD10CM",
+                            "text": "Chronic obstructive pulmonary disease, unspecified"
+                        },
+                        {
+                            "code": "J44.1",
+                            "codeSystem": "ICD10CM",
+                            "text": "Chronic obstructive pulmonary disease with acute exacerbation"
+                        },
+                        {
+                            "code": "J43.9",
+                            "codeSystem": "ICD10CM",
+                            "text": "Emphysema, unspecified"
+                        },
+                        {
+                            "code": "J84.9",
+                            "codeSystem": "ICD10CM",
+                            "text": "Interstitial pulmonary disease, unspecified"
+                        },
+                        {
+                            "code": "J84.10",
+                            "codeSystem": "ICD10CM",
+                            "text": "Pulmonary fibrosis, unspecified"
+                        },
+                        {
+                            "code": "J47.9",
+                            "codeSystem": "ICD10CM",
+                            "text": "Bronchiectasis, uncomplicated"
+                        },
+                        {
+                            "code": "P27.1",
+                            "codeSystem": "ICD10CM",
+                            "text": "Bronchopulmonary dysplasia originating in the perinatal period"
                         }
                     ]
                 }
@@ -10865,6 +11232,26 @@
                             "code": "278971009",
                             "codeSystem": "SNOMED",
                             "text": "Hepatitis A Immune [Finding]"
+                        },
+                        {
+                            "code": "D73.0",
+                            "codeSystem": "ICD10CM",
+                            "text": "Hyposplenism"
+                        },
+                        {
+                            "code": "Q89.01",
+                            "codeSystem": "ICD10CM",
+                            "text": "Asplenia (congenital)"
+                        },
+                        {
+                            "code": "D73.89",
+                            "codeSystem": "ICD10CM",
+                            "text": "Other diseases of spleen"
+                        },
+                        {
+                            "code": "Z90.81",
+                            "codeSystem": "ICD10CM",
+                            "text": "Acquired absence of spleen"
                         }
                     ]
                 }
@@ -10878,6 +11265,46 @@
                             "code": "271511000",
                             "codeSystem": "SNOMED",
                             "text": "Hepatitis B Immune [Finding]"
+                        },
+                        {
+                            "code": "N18.1",
+                            "codeSystem": "ICD10CM",
+                            "text": "Chronic kidney disease, stage 1"
+                        },
+                        {
+                            "code": "N18.2",
+                            "codeSystem": "ICD10CM",
+                            "text": "Chronic kidney disease, stage 2"
+                        },
+                        {
+                            "code": "N18.30",
+                            "codeSystem": "ICD10CM",
+                            "text": "Chronic kidney disease, stage 3 unspecified"
+                        },
+                        {
+                            "code": "N18.4",
+                            "codeSystem": "ICD10CM",
+                            "text": "Chronic kidney disease, stage 4"
+                        },
+                        {
+                            "code": "N18.5",
+                            "codeSystem": "ICD10CM",
+                            "text": "Chronic kidney disease, stage 5"
+                        },
+                        {
+                            "code": "N18.6",
+                            "codeSystem": "ICD10CM",
+                            "text": "End stage renal disease"
+                        },
+                        {
+                            "code": "N18.9",
+                            "codeSystem": "ICD10CM",
+                            "text": "Chronic kidney disease, unspecified"
+                        },
+                        {
+                            "code": "Z99.2",
+                            "codeSystem": "ICD10CM",
+                            "text": "Dependence on renal dialysis"
                         }
                     ]
                 }
@@ -10891,6 +11318,21 @@
                             "code": "371111005",
                             "codeSystem": "SNOMED",
                             "text": "Measles Immune [finding]"
+                        },
+                        {
+                            "code": "21500-4",
+                            "codeSystem": "LOINC",
+                            "text": "Measles virus IgG Ab [Units/volume] in Serum"
+                        },
+                        {
+                            "code": "35275-7",
+                            "codeSystem": "LOINC",
+                            "text": "Measles virus IgG Ab [Presence] in Serum"
+                        },
+                        {
+                            "code": "20479-2",
+                            "codeSystem": "LOINC",
+                            "text": "Measles virus Ab [Presence] in Serum"
                         }
                     ]
                 }
@@ -10904,6 +11346,21 @@
                             "code": "371112003",
                             "codeSystem": "SNOMED",
                             "text": "Mumps Immune [finding]"
+                        },
+                        {
+                            "code": "6476-3",
+                            "codeSystem": "LOINC",
+                            "text": "Mumps virus IgG Ab [Units/volume] in Serum"
+                        },
+                        {
+                            "code": "39012-0",
+                            "codeSystem": "LOINC",
+                            "text": "Mumps virus IgG Ab [Presence] in Serum"
+                        },
+                        {
+                            "code": "22416-2",
+                            "codeSystem": "LOINC",
+                            "text": "Mumps virus Ab [Presence] in Serum"
                         }
                     ]
                 }
@@ -10917,6 +11374,21 @@
                             "code": "278968001",
                             "codeSystem": "SNOMED",
                             "text": "Rubella Immune [finding]"
+                        },
+                        {
+                            "code": "8014-3",
+                            "codeSystem": "LOINC",
+                            "text": "Rubella virus IgG Ab [Units/volume] in Serum"
+                        },
+                        {
+                            "code": "25514-1",
+                            "codeSystem": "LOINC",
+                            "text": "Rubella virus IgG Ab [Presence] in Serum"
+                        },
+                        {
+                            "code": "20458-6",
+                            "codeSystem": "LOINC",
+                            "text": "Rubella virus Ab [Presence] in Serum"
                         }
                     ]
                 }
@@ -10930,6 +11402,21 @@
                             "code": "371113008",
                             "codeSystem": "SNOMED",
                             "text": "Varicella Immune"
+                        },
+                        {
+                            "code": "19162-7",
+                            "codeSystem": "LOINC",
+                            "text": "Varicella zoster virus IgG Ab [Units/volume] in Serum"
+                        },
+                        {
+                            "code": "17763-4",
+                            "codeSystem": "LOINC",
+                            "text": "Varicella zoster virus IgG Ab [Presence] in Serum"
+                        },
+                        {
+                            "code": "5403-8",
+                            "codeSystem": "LOINC",
+                            "text": "Varicella zoster virus Ab [Presence] in Serum"
                         }
                     ]
                 }
@@ -10943,6 +11430,21 @@
                             "code": "38907003",
                             "codeSystem": "SNOMED",
                             "text": "Varicella [Disorder]"
+                        },
+                        {
+                            "code": "16935-9",
+                            "codeSystem": "LOINC",
+                            "text": "Hepatitis B virus surface Ab [Units/volume] in Serum"
+                        },
+                        {
+                            "code": "22322-2",
+                            "codeSystem": "LOINC",
+                            "text": "Hepatitis B virus surface Ab [Presence] in Serum"
+                        },
+                        {
+                            "code": "10900-9",
+                            "codeSystem": "LOINC",
+                            "text": "Hepatitis B virus surface Ab [Units/volume] in Serum by Immunoassay"
                         }
                     ]
                 }
@@ -10956,6 +11458,21 @@
                             "code": "4740000",
                             "codeSystem": "SNOMED",
                             "text": "Herpes Zoster [Disorder]"
+                        },
+                        {
+                            "code": "32018-4",
+                            "codeSystem": "LOINC",
+                            "text": "Hepatitis A virus Ab [Presence] in Serum"
+                        },
+                        {
+                            "code": "40724-7",
+                            "codeSystem": "LOINC",
+                            "text": "Hepatitis A virus IgG Ab [Presence] in Serum"
+                        },
+                        {
+                            "code": "13950-1",
+                            "codeSystem": "LOINC",
+                            "text": "Hepatitis A virus Ab [Units/volume] in Serum"
                         }
                     ]
                 }
@@ -10975,6 +11492,16 @@
                             "code": "427314002",
                             "codeSystem": "SNOMED",
                             "text": "Antiviral therapy [procedure]"
+                        },
+                        {
+                            "code": "B20",
+                            "codeSystem": "ICD10CM",
+                            "text": "Human immunodeficiency virus [HIV] disease"
+                        },
+                        {
+                            "code": "Z21",
+                            "codeSystem": "ICD10CM",
+                            "text": "Asymptomatic human immunodeficiency virus [HIV] infection status"
                         }
                     ]
                 }
@@ -10995,6 +11522,36 @@
                             "code": "195967001",
                             "codeSystem": "SNOMED",
                             "text": "Asthma [disorder]"
+                        },
+                        {
+                            "code": "J45.20",
+                            "codeSystem": "ICD10CM",
+                            "text": "Mild intermittent asthma, uncomplicated"
+                        },
+                        {
+                            "code": "J45.30",
+                            "codeSystem": "ICD10CM",
+                            "text": "Mild persistent asthma, uncomplicated"
+                        },
+                        {
+                            "code": "J45.40",
+                            "codeSystem": "ICD10CM",
+                            "text": "Moderate persistent asthma, uncomplicated"
+                        },
+                        {
+                            "code": "J45.50",
+                            "codeSystem": "ICD10CM",
+                            "text": "Severe persistent asthma, uncomplicated"
+                        },
+                        {
+                            "code": "J45.909",
+                            "codeSystem": "ICD10CM",
+                            "text": "Unspecified asthma, uncomplicated"
+                        },
+                        {
+                            "code": "J45.998",
+                            "codeSystem": "ICD10CM",
+                            "text": "Other asthma"
                         }
                     ]
                 }
@@ -11020,6 +11577,11 @@
                             "code": "VXC21",
                             "codeSystem": "CDCPHINVS",
                             "text": "Previous history of intussusception"
+                        },
+                        {
+                            "code": "K56.1",
+                            "codeSystem": "ICD10CM",
+                            "text": "Intussusception"
                         }
                     ]
                 }
@@ -11034,6 +11596,26 @@
                             "code": "69776003",
                             "codeSystem": "SNOMED",
                             "text": "Acute gastroenteritis [disorder]"
+                        },
+                        {
+                            "code": "K52.9",
+                            "codeSystem": "ICD10CM",
+                            "text": "Noninfective gastroenteritis and colitis, unspecified"
+                        },
+                        {
+                            "code": "A09",
+                            "codeSystem": "ICD10CM",
+                            "text": "Infectious gastroenteritis and colitis, unspecified"
+                        },
+                        {
+                            "code": "A08.0",
+                            "codeSystem": "ICD10CM",
+                            "text": "Rotaviral enteritis"
+                        },
+                        {
+                            "code": "A08.39",
+                            "codeSystem": "ICD10CM",
+                            "text": "Other viral enteritis"
                         }
                     ]
                 }
@@ -11041,7 +11623,16 @@
             {
                 "observationCode": "030",
                 "observationTitle": "Acute febrile illness",
-                "contraindicationText": "Do not vaccinate if the patient has acute febrile illness."
+                "contraindicationText": "Do not vaccinate if the patient has acute febrile illness.",
+                "codedValues": {
+                    "codedValue": [
+                        {
+                            "code": "R50.9",
+                            "codeSystem": "ICD10CM",
+                            "text": "Fever, unspecified"
+                        }
+                    ]
+                }
             },
             {
                 "observationCode": "031",
@@ -11054,6 +11645,36 @@
                             "code": "56717001",
                             "codeSystem": "SNOMED",
                             "text": "Tuberculosis [disorder]"
+                        },
+                        {
+                            "code": "A15.0",
+                            "codeSystem": "ICD10CM",
+                            "text": "Tuberculosis of lung"
+                        },
+                        {
+                            "code": "A15.9",
+                            "codeSystem": "ICD10CM",
+                            "text": "Respiratory tuberculosis unspecified"
+                        },
+                        {
+                            "code": "A18.9",
+                            "codeSystem": "ICD10CM",
+                            "text": "Tuberculosis of other organs"
+                        },
+                        {
+                            "code": "A19.9",
+                            "codeSystem": "ICD10CM",
+                            "text": "Miliary tuberculosis, unspecified"
+                        },
+                        {
+                            "code": "R76.11",
+                            "codeSystem": "ICD10CM",
+                            "text": "Nonspecific reaction to tuberculin skin test without active tuberculosis"
+                        },
+                        {
+                            "code": "Z86.11",
+                            "codeSystem": "ICD10CM",
+                            "text": "Personal history of tuberculosis"
                         }
                     ]
                 }
@@ -11061,7 +11682,16 @@
             {
                 "observationCode": "032",
                 "observationTitle": "Dialysis patient",
-                "indicationText": "Administer to hemodialysis patients and predialysis, peritoneal dialysis, and home dialysis patients"
+                "indicationText": "Administer to hemodialysis patients and predialysis, peritoneal dialysis, and home dialysis patients",
+                "codedValues": {
+                    "codedValue": [
+                        {
+                            "code": "Z99.2",
+                            "codeSystem": "ICD10CM",
+                            "text": "Dependence on renal dialysis"
+                        }
+                    ]
+                }
             },
             {
                 "observationCode": "033",
@@ -11109,6 +11739,21 @@
                             "code": "386142008",
                             "codeSystem": "SNOMED",
                             "text": "Oseltamivir [product]"
+                        },
+                        {
+                            "code": "281",
+                            "codeSystem": "RXNORM",
+                            "text": "Acyclovir"
+                        },
+                        {
+                            "code": "24811",
+                            "codeSystem": "RXNORM",
+                            "text": "Famciclovir"
+                        },
+                        {
+                            "code": "39786",
+                            "codeSystem": "RXNORM",
+                            "text": "Valacyclovir"
                         }
                     ]
                 }
@@ -11123,6 +11768,16 @@
                             "code": "405742008",
                             "codeSystem": "SNOMED",
                             "text": "Aspirin therapy finding [finding]"
+                        },
+                        {
+                            "code": "Z79.82",
+                            "codeSystem": "ICD10CM",
+                            "text": "Long term (current) use of aspirin"
+                        },
+                        {
+                            "code": "1191",
+                            "codeSystem": "RXNORM",
+                            "text": "Aspirin"
                         }
                     ]
                 }
@@ -11221,6 +11876,21 @@
                             "code": "8098009",
                             "codeSystem": "SNOMED",
                             "text": "Sexually transmitted infectious disease [disorder]"
+                        },
+                        {
+                            "code": "Z11.3",
+                            "codeSystem": "ICD10CM",
+                            "text": "Encounter for screening for infections with a predominantly sexual mode of transmission"
+                        },
+                        {
+                            "code": "Z11.4",
+                            "codeSystem": "ICD10CM",
+                            "text": "Encounter for screening for human immunodeficiency virus [HIV]"
+                        },
+                        {
+                            "code": "Z20.2",
+                            "codeSystem": "ICD10CM",
+                            "text": "Contact with and exposure to infections with a predominantly sexual mode of transmission"
                         }
                     ]
                 }
@@ -11241,6 +11911,26 @@
                             "code": "228366006",
                             "codeSystem": "SNOMED",
                             "text": "Finding relating to drug misuse behavior [finding]"
+                        },
+                        {
+                            "code": "F19.10",
+                            "codeSystem": "ICD10CM",
+                            "text": "Other psychoactive substance abuse, uncomplicated"
+                        },
+                        {
+                            "code": "F14.10",
+                            "codeSystem": "ICD10CM",
+                            "text": "Cocaine abuse, uncomplicated"
+                        },
+                        {
+                            "code": "F11.10",
+                            "codeSystem": "ICD10CM",
+                            "text": "Opioid abuse, uncomplicated"
+                        },
+                        {
+                            "code": "F16.10",
+                            "codeSystem": "ICD10CM",
+                            "text": "Hallucinogen abuse, uncomplicated"
                         }
                     ]
                 }
@@ -11275,6 +11965,16 @@
                             "code": "860699005",
                             "codeSystem": "SNOMED",
                             "text": "Deep vein thrombosis of lower extremity due to intravenous drug use [disorder]"
+                        },
+                        {
+                            "code": "F11.10",
+                            "codeSystem": "ICD10CM",
+                            "text": "Opioid abuse, uncomplicated"
+                        },
+                        {
+                            "code": "F19.10",
+                            "codeSystem": "ICD10CM",
+                            "text": "Other psychoactive substance abuse, uncomplicated"
                         }
                     ]
                 }
@@ -11289,6 +11989,16 @@
                             "code": "77176002",
                             "codeSystem": "SNOMED",
                             "text": "Smoker [finding]"
+                        },
+                        {
+                            "code": "F17.210",
+                            "codeSystem": "ICD10CM",
+                            "text": "Nicotine dependence, cigarettes, uncomplicated"
+                        },
+                        {
+                            "code": "Z72.0",
+                            "codeSystem": "ICD10CM",
+                            "text": "Tobacco use"
                         }
                     ]
                 }
@@ -11308,6 +12018,16 @@
                             "code": "7200002",
                             "codeSystem": "SNOMED",
                             "text": "Alcoholism [disorder]"
+                        },
+                        {
+                            "code": "F10.20",
+                            "codeSystem": "ICD10CM",
+                            "text": "Alcohol dependence, uncomplicated"
+                        },
+                        {
+                            "code": "F10.10",
+                            "codeSystem": "ICD10CM",
+                            "text": "Alcohol abuse, uncomplicated"
                         }
                     ]
                 }
@@ -11703,7 +12423,26 @@
             {
                 "observationCode": "065",
                 "observationTitle": "Client of institution for persons with developmental disabilities",
-                "indicationText": "Administer to persons who are a client of institution for persons with developmental disabilities."
+                "indicationText": "Administer to persons who are a client of institution for persons with developmental disabilities.",
+                "codedValues": {
+                    "codedValue": [
+                        {
+                            "code": "N18.6",
+                            "codeSystem": "ICD10CM",
+                            "text": "End stage renal disease"
+                        },
+                        {
+                            "code": "N18.5",
+                            "codeSystem": "ICD10CM",
+                            "text": "Chronic kidney disease, stage 5"
+                        },
+                        {
+                            "code": "N18.9",
+                            "codeSystem": "ICD10CM",
+                            "text": "Chronic kidney disease, unspecified"
+                        }
+                    ]
+                }
             },
             {
                 "observationCode": "066",
@@ -11782,6 +12521,11 @@
                             "code": "165806002",
                             "codeSystem": "SNOMED",
                             "text": "Hepatitis B surface antigen positive [finding]"
+                        },
+                        {
+                            "code": "Z11.59",
+                            "codeSystem": "ICD10CM",
+                            "text": "Encounter for screening for other viral diseases"
                         }
                     ]
                 }
@@ -11837,6 +12581,11 @@
                             "code": "84757009",
                             "codeSystem": "SNOMED",
                             "text": "Epilepsy [disorder]"
+                        },
+                        {
+                            "code": "G31.9",
+                            "codeSystem": "ICD10CM",
+                            "text": "Degenerative disease of nervous system, unspecified"
                         }
                     ]
                 }
@@ -11844,7 +12593,21 @@
             {
                 "observationCode": "077",
                 "observationTitle": "Received inactivated or unknown measles vaccine between 1963-1967",
-                "indicationText": "Administer to persons who received inactivated or unknown measles vaccine between 1963-1967."
+                "indicationText": "Administer to persons who received inactivated or unknown measles vaccine between 1963-1967.",
+                "codedValues": {
+                    "codedValue": [
+                        {
+                            "code": "T50.B95A",
+                            "codeSystem": "ICD10CM",
+                            "text": "Adverse effect of other viral vaccines, initial encounter"
+                        },
+                        {
+                            "code": "Z88.9",
+                            "codeSystem": "ICD10CM",
+                            "text": "Allergy status to unspecified drugs, medicaments and biological substances"
+                        }
+                    ]
+                }
             },
             {
                 "observationCode": "078",
@@ -11954,6 +12717,16 @@
                             "code": "VXC20",
                             "codeSystem": "CDCPHINVS",
                             "text": "Allergy to previous dose of this vaccine or to any of its unlisted vaccine components [anaphylactic]"
+                        },
+                        {
+                            "code": "T50.B95A",
+                            "codeSystem": "ICD10CM",
+                            "text": "Adverse effect of other viral vaccines, initial encounter"
+                        },
+                        {
+                            "code": "Z91.012",
+                            "codeSystem": "ICD10CM",
+                            "text": "Allergy to eggs"
                         }
                     ]
                 }
@@ -11988,6 +12761,11 @@
                             "code": "VXC20",
                             "codeSystem": "CDCPHINVS",
                             "text": "Allergy to previous dose of this vaccine or to any of its unlisted vaccine components [anaphylactic]"
+                        },
+                        {
+                            "code": "T50.B95A",
+                            "codeSystem": "ICD10CM",
+                            "text": "Adverse effect of other viral vaccines, initial encounter"
                         }
                     ]
                 }
@@ -12027,6 +12805,11 @@
                             "code": "VXC20",
                             "codeSystem": "CDCPHINVS",
                             "text": "Allergy to previous dose of this vaccine or to any of its unlisted vaccine components [anaphylactic]"
+                        },
+                        {
+                            "code": "T50.B95A",
+                            "codeSystem": "ICD10CM",
+                            "text": "Adverse effect of other viral vaccines, initial encounter"
                         }
                     ]
                 }
@@ -12071,6 +12854,11 @@
                             "code": "VXC20",
                             "codeSystem": "CDCPHINVS",
                             "text": "Allergy to previous dose of this vaccine or to any of its unlisted vaccine components [anaphylactic]"
+                        },
+                        {
+                            "code": "T50.B95A",
+                            "codeSystem": "ICD10CM",
+                            "text": "Adverse effect of other viral vaccines, initial encounter"
                         }
                     ]
                 }
@@ -12170,6 +12958,11 @@
                             "code": "VXC20",
                             "codeSystem": "CDCPHINVS",
                             "text": "Allergy to previous dose of this vaccine or to any of its unlisted vaccine components [anaphylactic]"
+                        },
+                        {
+                            "code": "T50.B95A",
+                            "codeSystem": "ICD10CM",
+                            "text": "Adverse effect of other viral vaccines, initial encounter"
                         }
                     ]
                 }
@@ -12254,6 +13047,16 @@
                             "code": "VXC20",
                             "codeSystem": "CDCPHINVS",
                             "text": "Allergy to previous dose of this vaccine or to any of its unlisted vaccine components [anaphylactic]"
+                        },
+                        {
+                            "code": "T50.A95A",
+                            "codeSystem": "ICD10CM",
+                            "text": "Adverse effect of pertussis vaccine, including combinations with a pertussis component, initial encounter"
+                        },
+                        {
+                            "code": "T50.B95A",
+                            "codeSystem": "ICD10CM",
+                            "text": "Adverse effect of other viral vaccines, initial encounter"
                         }
                     ]
                 }
@@ -12363,6 +13166,16 @@
                             "code": "VXC20",
                             "codeSystem": "CDCPHINVS",
                             "text": "Allergy to previous dose of this vaccine or to any of its unlisted vaccine components [anaphylactic]"
+                        },
+                        {
+                            "code": "T50.A95A",
+                            "codeSystem": "ICD10CM",
+                            "text": "Adverse effect of pertussis vaccine, including combinations with a pertussis component, initial encounter"
+                        },
+                        {
+                            "code": "T50.B95A",
+                            "codeSystem": "ICD10CM",
+                            "text": "Adverse effect of other viral vaccines, initial encounter"
                         }
                     ]
                 }
@@ -12477,6 +13290,16 @@
                             "code": "VXC20",
                             "codeSystem": "CDCPHINVS",
                             "text": "Allergy to previous dose of this vaccine or to any of its unlisted vaccine components [anaphylactic]"
+                        },
+                        {
+                            "code": "T50.A95A",
+                            "codeSystem": "ICD10CM",
+                            "text": "Adverse effect of pertussis vaccine, including combinations with a pertussis component, initial encounter"
+                        },
+                        {
+                            "code": "T50.B95A",
+                            "codeSystem": "ICD10CM",
+                            "text": "Adverse effect of other viral vaccines, initial encounter"
                         }
                     ]
                 }
@@ -12511,6 +13334,11 @@
                             "code": "VXC20",
                             "codeSystem": "CDCPHINVS",
                             "text": "Allergy to previous dose of this vaccine or to any of its unlisted vaccine components [anaphylactic]"
+                        },
+                        {
+                            "code": "T50.B95A",
+                            "codeSystem": "ICD10CM",
+                            "text": "Adverse effect of other viral vaccines, initial encounter"
                         }
                     ]
                 }
@@ -12550,6 +13378,11 @@
                             "code": "VXC20",
                             "codeSystem": "CDCPHINVS",
                             "text": "Allergy to previous dose of this vaccine or to any of its unlisted vaccine components [anaphylactic]"
+                        },
+                        {
+                            "code": "T50.B95A",
+                            "codeSystem": "ICD10CM",
+                            "text": "Adverse effect of other viral vaccines, initial encounter"
                         }
                     ]
                 }
@@ -12589,6 +13422,11 @@
                             "code": "VXC20",
                             "codeSystem": "CDCPHINVS",
                             "text": "Allergy to previous dose of this vaccine or to any of its unlisted vaccine components [anaphylactic]"
+                        },
+                        {
+                            "code": "T50.B95A",
+                            "codeSystem": "ICD10CM",
+                            "text": "Adverse effect of other viral vaccines, initial encounter"
                         }
                     ]
                 }
@@ -12628,6 +13466,11 @@
                             "code": "VXC20",
                             "codeSystem": "CDCPHINVS",
                             "text": "Allergy to previous dose of this vaccine or to any of its unlisted vaccine components [anaphylactic]"
+                        },
+                        {
+                            "code": "T50.B95A",
+                            "codeSystem": "ICD10CM",
+                            "text": "Adverse effect of other viral vaccines, initial encounter"
                         }
                     ]
                 }
@@ -12672,6 +13515,11 @@
                             "code": "VXC20",
                             "codeSystem": "CDCPHINVS",
                             "text": "Allergy to previous dose of this vaccine or to any of its unlisted vaccine components [anaphylactic]"
+                        },
+                        {
+                            "code": "T50.B95A",
+                            "codeSystem": "ICD10CM",
+                            "text": "Adverse effect of other viral vaccines, initial encounter"
                         }
                     ]
                 }
@@ -12716,6 +13564,11 @@
                             "code": "VXC20",
                             "codeSystem": "CDCPHINVS",
                             "text": "Allergy to previous dose of this vaccine or to any of its unlisted vaccine components [anaphylactic]"
+                        },
+                        {
+                            "code": "T50.B95A",
+                            "codeSystem": "ICD10CM",
+                            "text": "Adverse effect of other viral vaccines, initial encounter"
                         }
                     ]
                 }
@@ -12775,6 +13628,11 @@
                             "code": "VXC20",
                             "codeSystem": "CDCPHINVS",
                             "text": "Allergy to previous dose of this vaccine or to any of its unlisted vaccine components [anaphylactic]"
+                        },
+                        {
+                            "code": "T50.B95A",
+                            "codeSystem": "ICD10CM",
+                            "text": "Adverse effect of other viral vaccines, initial encounter"
                         }
                     ]
                 }
@@ -12819,6 +13677,11 @@
                             "code": "VXC20",
                             "codeSystem": "CDCPHINVS",
                             "text": "Allergy to previous dose of this vaccine or to any of its unlisted vaccine components [anaphylactic]"
+                        },
+                        {
+                            "code": "T50.B95A",
+                            "codeSystem": "ICD10CM",
+                            "text": "Adverse effect of other viral vaccines, initial encounter"
                         }
                     ]
                 }
@@ -12893,6 +13756,11 @@
                             "code": "VXC20",
                             "codeSystem": "CDCPHINVS",
                             "text": "Allergy to previous dose of this vaccine or to any of its unlisted vaccine components [anaphylactic]"
+                        },
+                        {
+                            "code": "T50.B95A",
+                            "codeSystem": "ICD10CM",
+                            "text": "Adverse effect of other viral vaccines, initial encounter"
                         }
                     ]
                 }
@@ -12977,6 +13845,11 @@
                             "code": "VXC20",
                             "codeSystem": "CDCPHINVS",
                             "text": "Allergy to previous dose of this vaccine or to any of its unlisted vaccine components [anaphylactic]"
+                        },
+                        {
+                            "code": "T50.B95A",
+                            "codeSystem": "ICD10CM",
+                            "text": "Adverse effect of other viral vaccines, initial encounter"
                         }
                     ]
                 }
@@ -13001,6 +13874,11 @@
                             "code": "VXC20",
                             "codeSystem": "CDCPHINVS",
                             "text": "Allergy to previous dose of this vaccine or to any of its unlisted vaccine components [anaphylactic]"
+                        },
+                        {
+                            "code": "T50.B95A",
+                            "codeSystem": "ICD10CM",
+                            "text": "Adverse effect of other viral vaccines, initial encounter"
                         }
                     ]
                 }
@@ -13025,6 +13903,11 @@
                             "code": "VXC20",
                             "codeSystem": "CDCPHINVS",
                             "text": "Allergy to previous dose of this vaccine or to any of its unlisted vaccine components [anaphylactic]"
+                        },
+                        {
+                            "code": "T50.B95A",
+                            "codeSystem": "ICD10CM",
+                            "text": "Adverse effect of other viral vaccines, initial encounter"
                         }
                     ]
                 }
@@ -13044,6 +13927,16 @@
                             "code": "91930004",
                             "codeSystem": "SNOMED",
                             "text": "Allergy to eggs [disorder]"
+                        },
+                        {
+                            "code": "Z91.012",
+                            "codeSystem": "ICD10CM",
+                            "text": "Allergy to eggs"
+                        },
+                        {
+                            "code": "T78.1XXA",
+                            "codeSystem": "ICD10CM",
+                            "text": "Other adverse food reactions, not elsewhere classified, initial encounter"
                         }
                     ]
                 }
@@ -13063,6 +13956,16 @@
                             "code": "294847001",
                             "codeSystem": "SNOMED",
                             "text": "Gelatin allergy [disorder]"
+                        },
+                        {
+                            "code": "T78.1XXA",
+                            "codeSystem": "ICD10CM",
+                            "text": "Other adverse food reactions, not elsewhere classified, initial encounter"
+                        },
+                        {
+                            "code": "Z91.018",
+                            "codeSystem": "ICD10CM",
+                            "text": "Allergy to other foods"
                         }
                     ]
                 }
@@ -13070,7 +13973,16 @@
             {
                 "observationCode": "103",
                 "observationTitle": "Severe allergic reaction to arginine",
-                "contraindicationText": "Do not vaccinate if the patient has had a severe allergic reaction to arginine."
+                "contraindicationText": "Do not vaccinate if the patient has had a severe allergic reaction to arginine.",
+                "codedValues": {
+                    "codedValue": [
+                        {
+                            "code": "T78.1XXA",
+                            "codeSystem": "ICD10CM",
+                            "text": "Other adverse food reactions, not elsewhere classified, initial encounter"
+                        }
+                    ]
+                }
             },
             {
                 "observationCode": "104",
@@ -13087,6 +13999,11 @@
                             "code": "441593005",
                             "codeSystem": "SNOMED",
                             "text": "Anaphylaxis due to latex [disorder]"
+                        },
+                        {
+                            "code": "Z91.040",
+                            "codeSystem": "ICD10CM",
+                            "text": "Latex allergy status"
                         }
                     ]
                 }
@@ -13094,7 +14011,21 @@
             {
                 "observationCode": "105",
                 "observationTitle": "Severe allergic reaction to chicken protein",
-                "contraindicationText": "Do not vaccinate if the patient has had a severe allergic reaction to chicken protein."
+                "contraindicationText": "Do not vaccinate if the patient has had a severe allergic reaction to chicken protein.",
+                "codedValues": {
+                    "codedValue": [
+                        {
+                            "code": "T78.1XXA",
+                            "codeSystem": "ICD10CM",
+                            "text": "Other adverse food reactions, not elsewhere classified, initial encounter"
+                        },
+                        {
+                            "code": "Z91.018",
+                            "codeSystem": "ICD10CM",
+                            "text": "Allergy to other foods"
+                        }
+                    ]
+                }
             },
             {
                 "observationCode": "106",
@@ -13116,6 +14047,16 @@
                             "code": "294469003",
                             "codeSystem": "SNOMED",
                             "text": "Gentamicin allergy [disorder]"
+                        },
+                        {
+                            "code": "Z88.1",
+                            "codeSystem": "ICD10CM",
+                            "text": "Allergy status to other antibiotic agents"
+                        },
+                        {
+                            "code": "T36.5X5A",
+                            "codeSystem": "ICD10CM",
+                            "text": "Adverse effect of aminoglycosides, initial encounter"
                         }
                     ]
                 }
@@ -13135,6 +14076,16 @@
                             "code": "292927007",
                             "codeSystem": "SNOMED",
                             "text": "Neomycin adverse reaction [disorder]"
+                        },
+                        {
+                            "code": "Z88.1",
+                            "codeSystem": "ICD10CM",
+                            "text": "Allergy status to other antibiotic agents"
+                        },
+                        {
+                            "code": "T36.5X5A",
+                            "codeSystem": "ICD10CM",
+                            "text": "Adverse effect of aminoglycosides, initial encounter"
                         }
                     ]
                 }
@@ -13154,6 +14105,16 @@
                             "code": "292925004",
                             "codeSystem": "SNOMED",
                             "text": "Streptomycin adverse reaction [disorder]"
+                        },
+                        {
+                            "code": "Z88.1",
+                            "codeSystem": "ICD10CM",
+                            "text": "Allergy status to other antibiotic agents"
+                        },
+                        {
+                            "code": "T36.5X5A",
+                            "codeSystem": "ICD10CM",
+                            "text": "Adverse effect of aminoglycosides, initial encounter"
                         }
                     ]
                 }
@@ -13173,6 +14134,16 @@
                             "code": "292992006",
                             "codeSystem": "SNOMED",
                             "text": "Polymyxin B adverse reaction [disorder]"
+                        },
+                        {
+                            "code": "Z88.1",
+                            "codeSystem": "ICD10CM",
+                            "text": "Allergy status to other antibiotic agents"
+                        },
+                        {
+                            "code": "T36.8X5A",
+                            "codeSystem": "ICD10CM",
+                            "text": "Adverse effect of other systemic antibiotics, initial encounter"
                         }
                     ]
                 }
@@ -13192,6 +14163,16 @@
                             "code": "VXC18",
                             "codeSystem": "CDCPHINVS",
                             "text": "Allergy to baker's yeast [anaphylactic]"
+                        },
+                        {
+                            "code": "Z91.018",
+                            "codeSystem": "ICD10CM",
+                            "text": "Allergy to other foods"
+                        },
+                        {
+                            "code": "T78.1XXA",
+                            "codeSystem": "ICD10CM",
+                            "text": "Other adverse food reactions, not elsewhere classified, initial encounter"
                         }
                     ]
                 }
@@ -13206,6 +14187,11 @@
                             "code": "VXC17",
                             "codeSystem": "CDCPHINVS",
                             "text": "Allergy [anaphylactic] to 2-phenoxyethanol"
+                        },
+                        {
+                            "code": "T78.49XA",
+                            "codeSystem": "ICD10CM",
+                            "text": "Other allergy, initial encounter"
                         }
                     ]
                 }
@@ -13246,6 +14232,11 @@
                             "code": "VXC20",
                             "codeSystem": "CDCPHINVS",
                             "text": "Allergy to previous dose of this vaccine or to any of its unlisted vaccine components [anaphylactic]"
+                        },
+                        {
+                            "code": "N18.6",
+                            "codeSystem": "ICD10CM",
+                            "text": "End stage renal disease"
                         }
                     ]
                 }
@@ -13290,6 +14281,16 @@
                             "code": "294278007",
                             "codeSystem": "SNOMED",
                             "text": "Protamine allergy [disorder]"
+                        },
+                        {
+                            "code": "T45.7X5A",
+                            "codeSystem": "ICD10CM",
+                            "text": "Adverse effect of anticoagulants, initial encounter"
+                        },
+                        {
+                            "code": "Z88.8",
+                            "codeSystem": "ICD10CM",
+                            "text": "Allergy status to other drugs, medicaments and biological substances"
                         }
                     ]
                 }
@@ -13324,6 +14325,16 @@
                             "code": "VXC20",
                             "codeSystem": "CDCPHINVS",
                             "text": "Allergy to previous dose of this vaccine or to any of its unlisted vaccine components [anaphylactic]"
+                        },
+                        {
+                            "code": "T50.A95A",
+                            "codeSystem": "ICD10CM",
+                            "text": "Adverse effect of pertussis vaccine, including combinations with a pertussis component, initial encounter"
+                        },
+                        {
+                            "code": "Z88.8",
+                            "codeSystem": "ICD10CM",
+                            "text": "Allergy status to other drugs, medicaments and biological substances"
                         }
                     ]
                 }
@@ -13336,7 +14347,21 @@
             {
                 "observationCode": "118",
                 "observationTitle": "Severe allergic reaction to tetanus toxoid",
-                "contraindicationText": "Do not vaccinate if the patient has had a severe allergic reaction to tetanus toxoid."
+                "contraindicationText": "Do not vaccinate if the patient has had a severe allergic reaction to tetanus toxoid.",
+                "codedValues": {
+                    "codedValue": [
+                        {
+                            "code": "T50.A95A",
+                            "codeSystem": "ICD10CM",
+                            "text": "Adverse effect of pertussis vaccine, including combinations with a pertussis component, initial encounter"
+                        },
+                        {
+                            "code": "Z88.8",
+                            "codeSystem": "ICD10CM",
+                            "text": "Allergy status to other drugs, medicaments and biological substances"
+                        }
+                    ]
+                }
             },
             {
                 "observationCode": "119",
@@ -13391,6 +14416,11 @@
                             "code": "32911000",
                             "codeSystem": "SNOMED",
                             "text": "Homeless [finding]"
+                        },
+                        {
+                            "code": "Z59.00",
+                            "codeSystem": "ICD10CM",
+                            "text": "Homelessness, unspecified"
                         }
                     ]
                 }
@@ -13410,6 +14440,16 @@
                             "code": "VXC20",
                             "codeSystem": "CDCPHINVS",
                             "text": "Allergy to previous dose of this vaccine or to any of its unlisted vaccine components [anaphylactic]"
+                        },
+                        {
+                            "code": "Z91.018",
+                            "codeSystem": "ICD10CM",
+                            "text": "Allergy to other foods"
+                        },
+                        {
+                            "code": "T78.1XXA",
+                            "codeSystem": "ICD10CM",
+                            "text": "Other adverse food reactions, not elsewhere classified, initial encounter"
                         }
                     ]
                 }
@@ -13600,7 +14640,31 @@
             {
                 "observationCode": "142",
                 "observationTitle": "Travel to or working in countries that have high or intermediate endemicity of Hepatitis A",
-                "indicationText": "Administer to persons traveling to or working in countries that have high or intermediate endemicity of Hepatitis A."
+                "indicationText": "Administer to persons traveling to or working in countries that have high or intermediate endemicity of Hepatitis A.",
+                "codedValues": {
+                    "codedValue": [
+                        {
+                            "code": "B20",
+                            "codeSystem": "ICD10CM",
+                            "text": "Human immunodeficiency virus [HIV] disease"
+                        },
+                        {
+                            "code": "Z21",
+                            "codeSystem": "ICD10CM",
+                            "text": "Asymptomatic human immunodeficiency virus [HIV] infection status"
+                        },
+                        {
+                            "code": "D84.821",
+                            "codeSystem": "ICD10CM",
+                            "text": "Immunodeficiency due to drugs"
+                        },
+                        {
+                            "code": "D84.9",
+                            "codeSystem": "ICD10CM",
+                            "text": "Immunodeficiency, unspecified"
+                        }
+                    ]
+                }
             },
             {
                 "observationCode": "143",
@@ -13801,6 +14865,16 @@
                             "code": "62479008",
                             "codeSystem": "SNOMED",
                             "text": "Acquired immune deficiency syndrome [disorder]"
+                        },
+                        {
+                            "code": "B20",
+                            "codeSystem": "ICD10CM",
+                            "text": "Human immunodeficiency virus [HIV] disease"
+                        },
+                        {
+                            "code": "Z21",
+                            "codeSystem": "ICD10CM",
+                            "text": "Asymptomatic human immunodeficiency virus [HIV] infection status"
                         }
                     ]
                 }
@@ -13809,7 +14883,21 @@
                 "observationCode": "156",
                 "observationTitle": "Generalized malignant neoplasm",
                 "indicationText": "Administer to persons who have generalized malignant neoplasm.",
-                "contraindicationText": "Do not vaccinate if the patient has generalized malignant neoplasm."
+                "contraindicationText": "Do not vaccinate if the patient has generalized malignant neoplasm.",
+                "codedValues": {
+                    "codedValue": [
+                        {
+                            "code": "C80.0",
+                            "codeSystem": "ICD10CM",
+                            "text": "Disseminated malignant neoplasm, unspecified"
+                        },
+                        {
+                            "code": "C80.1",
+                            "codeSystem": "ICD10CM",
+                            "text": "Malignant (primary) neoplasm, unspecified"
+                        }
+                    ]
+                }
             },
             {
                 "observationCode": "157",
@@ -13822,6 +14910,31 @@
                             "code": "313039003",
                             "codeSystem": "SNOMED",
                             "text": "Solid organ transplant [procedure]"
+                        },
+                        {
+                            "code": "Z94.0",
+                            "codeSystem": "ICD10CM",
+                            "text": "Kidney transplant status"
+                        },
+                        {
+                            "code": "Z94.1",
+                            "codeSystem": "ICD10CM",
+                            "text": "Heart transplant status"
+                        },
+                        {
+                            "code": "Z94.2",
+                            "codeSystem": "ICD10CM",
+                            "text": "Lung transplant status"
+                        },
+                        {
+                            "code": "Z94.4",
+                            "codeSystem": "ICD10CM",
+                            "text": "Liver transplant status"
+                        },
+                        {
+                            "code": "Z94.9",
+                            "codeSystem": "ICD10CM",
+                            "text": "Transplanted organ and tissue status, unspecified"
                         }
                     ]
                 }
@@ -13838,6 +14951,21 @@
                             "code": "86553008",
                             "codeSystem": "SNOMED",
                             "text": "Immunosuppressive therapy [procedure]"
+                        },
+                        {
+                            "code": "Z79.52",
+                            "codeSystem": "ICD10CM",
+                            "text": "Long term (current) use of systemic steroids"
+                        },
+                        {
+                            "code": "Z79.899",
+                            "codeSystem": "ICD10CM",
+                            "text": "Other long term (current) drug therapy"
+                        },
+                        {
+                            "code": "D84.821",
+                            "codeSystem": "ICD10CM",
+                            "text": "Immunodeficiency due to drugs"
                         }
                     ]
                 }
@@ -13853,6 +14981,11 @@
                             "code": "53438000",
                             "codeSystem": "SNOMED",
                             "text": "Radiation therapy procedure or service [procedure]"
+                        },
+                        {
+                            "code": "Z51.0",
+                            "codeSystem": "ICD10CM",
+                            "text": "Encounter for antineoplastic radiation therapy"
                         }
                     ]
                 }
@@ -13869,6 +15002,21 @@
                             "code": "707147002",
                             "codeSystem": "SNOMED",
                             "text": "Asplenia [disorder]"
+                        },
+                        {
+                            "code": "D73.0",
+                            "codeSystem": "ICD10CM",
+                            "text": "Hyposplenism"
+                        },
+                        {
+                            "code": "Q89.01",
+                            "codeSystem": "ICD10CM",
+                            "text": "Asplenia (congenital)"
+                        },
+                        {
+                            "code": "Z90.81",
+                            "codeSystem": "ICD10CM",
+                            "text": "Acquired absence of spleen"
                         }
                     ]
                 }
@@ -13884,6 +15032,36 @@
                             "code": "709044004",
                             "codeSystem": "SNOMED",
                             "text": "Chronic kidney disease [disorder]"
+                        },
+                        {
+                            "code": "N18.1",
+                            "codeSystem": "ICD10CM",
+                            "text": "Chronic kidney disease, stage 1"
+                        },
+                        {
+                            "code": "N18.2",
+                            "codeSystem": "ICD10CM",
+                            "text": "Chronic kidney disease, stage 2 (mild)"
+                        },
+                        {
+                            "code": "N18.3",
+                            "codeSystem": "ICD10CM",
+                            "text": "Chronic kidney disease, stage 3 (moderate)"
+                        },
+                        {
+                            "code": "N18.4",
+                            "codeSystem": "ICD10CM",
+                            "text": "Chronic kidney disease, stage 4 (severe)"
+                        },
+                        {
+                            "code": "N18.5",
+                            "codeSystem": "ICD10CM",
+                            "text": "Chronic kidney disease, stage 5"
+                        },
+                        {
+                            "code": "N18.9",
+                            "codeSystem": "ICD10CM",
+                            "text": "Chronic kidney disease, unspecified"
                         }
                     ]
                 }
@@ -13892,7 +15070,16 @@
                 "observationCode": "162",
                 "observationTitle": "Travel to areas at risk for Yellow Fever transmission",
                 "indicationText": "Administer to persons who travel to areas at risk for Yellow Fever transmission.",
-                "clarifyingText": "Given that changes in the designation of endemic regions can occur, travelers and health-care providers should obtain updated information from CDC, available at https://wwwnc.cdc.gov/travel/yellowbook/2024/infections-diseases/yellow-fever"
+                "clarifyingText": "Given that changes in the designation of endemic regions can occur, travelers and health-care providers should obtain updated information from CDC, available at https://wwwnc.cdc.gov/travel/yellowbook/2024/infections-diseases/yellow-fever",
+                "codedValues": {
+                    "codedValue": [
+                        {
+                            "code": "N04.9",
+                            "codeSystem": "ICD10CM",
+                            "text": "Nephrotic syndrome with unspecified morphologic changes"
+                        }
+                    ]
+                }
             },
             {
                 "observationCode": "163",
@@ -13940,6 +15127,16 @@
                             "code": "367336001",
                             "codeSystem": "SNOMED",
                             "text": "Chemotherapy [procedure]"
+                        },
+                        {
+                            "code": "Z51.11",
+                            "codeSystem": "ICD10CM",
+                            "text": "Encounter for antineoplastic chemotherapy"
+                        },
+                        {
+                            "code": "Z51.12",
+                            "codeSystem": "ICD10CM",
+                            "text": "Encounter for antineoplastic immunotherapy"
                         }
                     ]
                 }
@@ -13965,6 +15162,21 @@
                             "code": "248110007",
                             "codeSystem": "SNOMED",
                             "text": "Sexual assault [event]"
+                        },
+                        {
+                            "code": "Z04.81",
+                            "codeSystem": "ICD10CM",
+                            "text": "Encounter for examination and observation of victim following forced sexual exploitation"
+                        },
+                        {
+                            "code": "T74.21XA",
+                            "codeSystem": "ICD10CM",
+                            "text": "Adult sexual abuse, confirmed, initial encounter"
+                        },
+                        {
+                            "code": "T74.22XA",
+                            "codeSystem": "ICD10CM",
+                            "text": "Child sexual abuse, confirmed, initial encounter"
                         }
                     ]
                 }
@@ -13978,6 +15190,16 @@
                             "code": "248986005",
                             "codeSystem": "SNOMED",
                             "text": "Estimated date of conception [observable entity]"
+                        },
+                        {
+                            "code": "Z33.1",
+                            "codeSystem": "ICD10CM",
+                            "text": "Pregnant state, incidental"
+                        },
+                        {
+                            "code": "Z34.90",
+                            "codeSystem": "ICD10CM",
+                            "text": "Encounter for supervision of normal pregnancy, unspecified, unspecified trimester"
                         }
                     ]
                 }
@@ -14047,6 +15269,21 @@
                             "code": "93143009",
                             "codeSystem": "SNOMED",
                             "text": "Leukemia, disease [disorder]"
+                        },
+                        {
+                            "code": "C95.90",
+                            "codeSystem": "ICD10CM",
+                            "text": "Leukemia, unspecified not having achieved remission"
+                        },
+                        {
+                            "code": "C91.00",
+                            "codeSystem": "ICD10CM",
+                            "text": "Acute lymphoblastic leukemia not having achieved remission"
+                        },
+                        {
+                            "code": "C92.00",
+                            "codeSystem": "ICD10CM",
+                            "text": "Acute myeloblastic leukemia, not having achieved remission"
                         }
                     ]
                 }
@@ -14061,6 +15298,16 @@
                             "code": "399600009",
                             "codeSystem": "SNOMED",
                             "text": "Lymphoma [finding]"
+                        },
+                        {
+                            "code": "C85.90",
+                            "codeSystem": "ICD10CM",
+                            "text": "Non-Hodgkin lymphoma, unspecified, unspecified site"
+                        },
+                        {
+                            "code": "C84.40",
+                            "codeSystem": "ICD10CM",
+                            "text": "Peripheral T-cell lymphoma, not elsewhere classified, unspecified site"
                         }
                     ]
                 }
@@ -14075,6 +15322,11 @@
                             "code": "118599009",
                             "codeSystem": "SNOMED",
                             "text": "Hodgkin's disease [disorder]"
+                        },
+                        {
+                            "code": "C81.90",
+                            "codeSystem": "ICD10CM",
+                            "text": "Hodgkin lymphoma, unspecified, unspecified site"
                         }
                     ]
                 }
@@ -14089,6 +15341,11 @@
                             "code": "109989006",
                             "codeSystem": "SNOMED",
                             "text": "Multiple myeloma [disorder]"
+                        },
+                        {
+                            "code": "C90.00",
+                            "codeSystem": "ICD10CM",
+                            "text": "Multiple myeloma not having achieved remission"
                         }
                     ]
                 }
@@ -14101,7 +15358,21 @@
             {
                 "observationCode": "183",
                 "observationTitle": "Health care personnel at federally designated Ebola treatment center in U.S.",
-                "indicationText": "Administer to persons working as health care personnel at federally designated Ebola treatment centers in the United States"
+                "indicationText": "Administer to persons working as health care personnel at federally designated Ebola treatment centers in the United States",
+                "codedValues": {
+                    "codedValue": [
+                        {
+                            "code": "B20",
+                            "codeSystem": "ICD10CM",
+                            "text": "Human immunodeficiency virus [HIV] disease"
+                        },
+                        {
+                            "code": "Z21",
+                            "codeSystem": "ICD10CM",
+                            "text": "Asymptomatic human immunodeficiency virus [HIV] infection status"
+                        }
+                    ]
+                }
             },
             {
                 "observationCode": "184",
@@ -14131,22 +15402,78 @@
             {
                 "observationCode": "187",
                 "observationTitle": "Allergic reaction to polysorbate 80",
-                "contraindicationText": "Do not vaccinate if the patient has had an immediate allergic reaction of any severity to polysorbate 80."
+                "contraindicationText": "Do not vaccinate if the patient has had an immediate allergic reaction of any severity to polysorbate 80.",
+                "codedValues": {
+                    "codedValue": [
+                        {
+                            "code": "Z88.8",
+                            "codeSystem": "ICD10CM",
+                            "text": "Allergy status to other drugs, medicaments and biological substances"
+                        },
+                        {
+                            "code": "T78.49XA",
+                            "codeSystem": "ICD10CM",
+                            "text": "Other allergy, initial encounter"
+                        }
+                    ]
+                }
             },
             {
                 "observationCode": "188",
                 "observationTitle": "Known allergy to Polyethylene glycol [PEG]",
-                "contraindicationText": "Do not vaccinate if the patient has known allergy to Polyethylene glycol [PEG]."
+                "contraindicationText": "Do not vaccinate if the patient has known allergy to Polyethylene glycol [PEG].",
+                "codedValues": {
+                    "codedValue": [
+                        {
+                            "code": "Z88.8",
+                            "codeSystem": "ICD10CM",
+                            "text": "Allergy status to other drugs, medicaments and biological substances"
+                        },
+                        {
+                            "code": "T78.49XA",
+                            "codeSystem": "ICD10CM",
+                            "text": "Other allergy, initial encounter"
+                        }
+                    ]
+                }
             },
             {
                 "observationCode": "189",
                 "observationTitle": "Active treatment for solid tumors",
-                "indicationText": "Administer to persons receiving active treatment for solid tumors"
+                "indicationText": "Administer to persons receiving active treatment for solid tumors",
+                "codedValues": {
+                    "codedValue": [
+                        {
+                            "code": "Z51.11",
+                            "codeSystem": "ICD10CM",
+                            "text": "Encounter for antineoplastic chemotherapy"
+                        },
+                        {
+                            "code": "C80.1",
+                            "codeSystem": "ICD10CM",
+                            "text": "Malignant (primary) neoplasm, unspecified"
+                        }
+                    ]
+                }
             },
             {
                 "observationCode": "190",
                 "observationTitle": "Active treatment for hematologic malignancies",
-                "indicationText": "Administer to persons receiving active treatment for hematologic malignancies"
+                "indicationText": "Administer to persons receiving active treatment for hematologic malignancies",
+                "codedValues": {
+                    "codedValue": [
+                        {
+                            "code": "Z51.11",
+                            "codeSystem": "ICD10CM",
+                            "text": "Encounter for antineoplastic chemotherapy"
+                        },
+                        {
+                            "code": "C96.9",
+                            "codeSystem": "ICD10CM",
+                            "text": "Malignant neoplasm of lymphoid, hematopoietic and related tissue, unspecified"
+                        }
+                    ]
+                }
             },
             {
                 "observationCode": "191",
@@ -14158,6 +15485,11 @@
                             "code": "1156961008",
                             "codeSystem": "SNOMED",
                             "text": "Chimeric antigen receptor T-cell immunotherapy [procedure]"
+                        },
+                        {
+                            "code": "Z94.84",
+                            "codeSystem": "ICD10CM",
+                            "text": "Stem cells transplant status"
                         }
                     ]
                 }
@@ -14165,7 +15497,16 @@
             {
                 "observationCode": "192",
                 "observationTitle": "Severe allergic reaction after previous dose of any egg-based IIV or LAIV influenza vaccine",
-                "contraindicationText": "Do not vaccinate with any egg-based IIV or LAIV influenza vaccine if the patient has had a severe allergic reaction after a previous dose of an egg-based IIV or LAIV influenza vaccine."
+                "contraindicationText": "Do not vaccinate with any egg-based IIV or LAIV influenza vaccine if the patient has had a severe allergic reaction after a previous dose of an egg-based IIV or LAIV influenza vaccine.",
+                "codedValues": {
+                    "codedValue": [
+                        {
+                            "code": "Z59.3",
+                            "codeSystem": "ICD10CM",
+                            "text": "Problems related to living in residential institution"
+                        }
+                    ]
+                }
             },
             {
                 "observationCode": "193",
@@ -14204,6 +15545,11 @@
                             "code": "363346000",
                             "codeSystem": "SNOMED",
                             "text": "Malignant neoplastic disease [disorder]"
+                        },
+                        {
+                            "code": "C80.1",
+                            "codeSystem": "ICD10CM",
+                            "text": "Malignant (primary) neoplasm, unspecified"
                         }
                     ]
                 }
@@ -14219,6 +15565,21 @@
                             "code": "233703007",
                             "codeSystem": "SNOMED",
                             "text": "Interstitial lung disease [disorder]"
+                        },
+                        {
+                            "code": "J84.9",
+                            "codeSystem": "ICD10CM",
+                            "text": "Interstitial pulmonary disease, unspecified"
+                        },
+                        {
+                            "code": "J84.10",
+                            "codeSystem": "ICD10CM",
+                            "text": "Pulmonary fibrosis, unspecified"
+                        },
+                        {
+                            "code": "J84.89",
+                            "codeSystem": "ICD10CM",
+                            "text": "Other specified interstitial pulmonary diseases"
                         }
                     ]
                 }
@@ -14233,6 +15594,16 @@
                             "code": "190905008",
                             "codeSystem": "SNOMED",
                             "text": "cystic fibrosis [disorder]"
+                        },
+                        {
+                            "code": "E84.0",
+                            "codeSystem": "ICD10CM",
+                            "text": "Cystic fibrosis with pulmonary manifestations"
+                        },
+                        {
+                            "code": "E84.9",
+                            "codeSystem": "ICD10CM",
+                            "text": "Cystic fibrosis, unspecified"
                         }
                     ]
                 }
@@ -14247,6 +15618,21 @@
                             "code": "70995007",
                             "codeSystem": "SNOMED",
                             "text": "Pulmonary hypertension [disorder]"
+                        },
+                        {
+                            "code": "I27.0",
+                            "codeSystem": "ICD10CM",
+                            "text": "Primary pulmonary hypertension"
+                        },
+                        {
+                            "code": "I27.20",
+                            "codeSystem": "ICD10CM",
+                            "text": "Pulmonary hypertension, unspecified"
+                        },
+                        {
+                            "code": "I27.9",
+                            "codeSystem": "ICD10CM",
+                            "text": "Pulmonary heart disease, unspecified"
                         }
                     ]
                 }
@@ -14261,6 +15647,16 @@
                             "code": "52448006",
                             "codeSystem": "SNOMED",
                             "text": "Dimensia [disorder]"
+                        },
+                        {
+                            "code": "F03.90",
+                            "codeSystem": "ICD10CM",
+                            "text": "Unspecified dementia without behavioral disturbance"
+                        },
+                        {
+                            "code": "G30.9",
+                            "codeSystem": "ICD10CM",
+                            "text": "Alzheimer disease, unspecified"
                         }
                     ]
                 }
@@ -14275,6 +15671,11 @@
                             "code": "41040004",
                             "codeSystem": "SNOMED",
                             "text": "Complete trisomy 21 syndrome [disorder]"
+                        },
+                        {
+                            "code": "Q90.9",
+                            "codeSystem": "ICD10CM",
+                            "text": "Down syndrome, unspecified"
                         }
                     ]
                 }
@@ -14300,6 +15701,16 @@
                             "code": "83911000119104",
                             "codeSystem": "SNOMED",
                             "text": "Severe obesity [disorder]"
+                        },
+                        {
+                            "code": "E66.9",
+                            "codeSystem": "ICD10CM",
+                            "text": "Obesity, unspecified"
+                        },
+                        {
+                            "code": "E66.01",
+                            "codeSystem": "ICD10CM",
+                            "text": "Morbid (severe) obesity due to excess calories"
                         }
                     ]
                 }
@@ -14314,6 +15725,21 @@
                             "code": "40108008",
                             "codeSystem": "SNOMED",
                             "text": "Thalassemia [disorder]"
+                        },
+                        {
+                            "code": "D56.9",
+                            "codeSystem": "ICD10CM",
+                            "text": "Thalassemia, unspecified"
+                        },
+                        {
+                            "code": "D56.0",
+                            "codeSystem": "ICD10CM",
+                            "text": "Alpha thalassemia"
+                        },
+                        {
+                            "code": "D56.1",
+                            "codeSystem": "ICD10CM",
+                            "text": "Beta thalassemia"
                         }
                     ]
                 }
@@ -14328,6 +15754,16 @@
                             "code": "62914000",
                             "codeSystem": "SNOMED",
                             "text": "Cerebrovascular disease [disorder]"
+                        },
+                        {
+                            "code": "I67.9",
+                            "codeSystem": "ICD10CM",
+                            "text": "Cerebrovascular disease, unspecified"
+                        },
+                        {
+                            "code": "I63.9",
+                            "codeSystem": "ICD10CM",
+                            "text": "Cerebral infarction, unspecified"
                         }
                     ]
                 }
@@ -14335,18 +15771,55 @@
             {
                 "observationCode": "207",
                 "observationTitle": "Substance use disorder",
-                "indicationText": "Administer to persons with substance use disorders (e.g., alcohol, opioid, cocaine)"
+                "indicationText": "Administer to persons with substance use disorders (e.g., alcohol, opioid, cocaine)",
+                "codedValues": {
+                    "codedValue": [
+                        {
+                            "code": "F19.20",
+                            "codeSystem": "ICD10CM",
+                            "text": "Other psychoactive substance dependence, uncomplicated"
+                        },
+                        {
+                            "code": "F19.10",
+                            "codeSystem": "ICD10CM",
+                            "text": "Other psychoactive substance abuse, uncomplicated"
+                        }
+                    ]
+                }
             },
             {
                 "observationCode": "208",
                 "observationTitle": "Mental Health conditions",
                 "indicationText": "Administer to persons with mental health conditions",
-                "clarifyingText": "Includes mood disorders, depression, and schizophrenia spectrum disorders."
+                "clarifyingText": "Includes mood disorders, depression, and schizophrenia spectrum disorders.",
+                "codedValues": {
+                    "codedValue": [
+                        {
+                            "code": "F99",
+                            "codeSystem": "ICD10CM",
+                            "text": "Mental disorder, not otherwise specified"
+                        }
+                    ]
+                }
             },
             {
                 "observationCode": "209",
                 "observationTitle": "History of thrombosis with thrombocytopenia following the Janssen COVID-19 Vaccine or any other adenovirus-vectored COVID-19 vaccines",
-                "contraindicationText": "Do not administer the Janssen COVID-19 vaccine to individuals with a history of thrombosis with thrombocytopenia following the Janssen COVID-19 vaccine or any other adenovirus-vectored COVID-19 vaccines (e.g., AstraZeneca's COVID-19 vaccine which is not authorized or approved in the United States)"
+                "contraindicationText": "Do not administer the Janssen COVID-19 vaccine to individuals with a history of thrombosis with thrombocytopenia following the Janssen COVID-19 vaccine or any other adenovirus-vectored COVID-19 vaccines (e.g., AstraZeneca's COVID-19 vaccine which is not authorized or approved in the United States)",
+                "codedValues": {
+                    "codedValue": [
+                        {
+                            "code": "J44.1",
+                            "codeSystem": "ICD10CM",
+                            "text": "Chronic obstructive pulmonary disease with (acute) exacerbation"
+                        },
+                        {
+                            "code": "J44.9",
+                            "codeSystem": "ICD10CM",
+                            "text": "Chronic obstructive pulmonary disease, unspecified"
+                        }
+                    ]
+                }
             },
             {
                 "observationCode": "210",
@@ -14392,6 +15865,11 @@
                             "code": "87433001",
                             "codeSystem": "SNOMED",
                             "text": "Pulmonary emphysema [disorder]"
+                        },
+                        {
+                            "code": "J43.9",
+                            "codeSystem": "ICD10CM",
+                            "text": "Emphysema, unspecified"
                         }
                     ]
                 }
@@ -14400,7 +15878,21 @@
                 "observationCode": "216",
                 "observationTitle": "Iatrogenic Immunosuppression",
                 "indicationText": "Administer to persons with iatrogenic Immunosuppression",
-                "clarifyingText": "Diseases requiring treatment with immunosuppressive drugs, including long-term systemic corticosteroids and radiation therapy"
+                "clarifyingText": "Diseases requiring treatment with immunosuppressive drugs, including long-term systemic corticosteroids and radiation therapy",
+                "codedValues": {
+                    "codedValue": [
+                        {
+                            "code": "D84.821",
+                            "codeSystem": "ICD10CM",
+                            "text": "Immunodeficiency due to drugs"
+                        },
+                        {
+                            "code": "D89.9",
+                            "codeSystem": "ICD10CM",
+                            "text": "Disorder involving the immune mechanism, unspecified"
+                        }
+                    ]
+                }
             },
             {
                 "observationCode": "217",
@@ -14436,7 +15928,21 @@
             {
                 "observationCode": "223",
                 "observationTitle": "Severe allergic reaction after previous dose of orthopoxvirus vaccine",
-                "contraindicationText": "Do not vaccinate if the patient has had a severe allergic reaction after a previous dose of vaccinia vaccine."
+                "contraindicationText": "Do not vaccinate if the patient has had a severe allergic reaction after a previous dose of vaccinia vaccine.",
+                "codedValues": {
+                    "codedValue": [
+                        {
+                            "code": "L20.9",
+                            "codeSystem": "ICD10CM",
+                            "text": "Atopic dermatitis, unspecified"
+                        },
+                        {
+                            "code": "L20.89",
+                            "codeSystem": "ICD10CM",
+                            "text": "Other atopic dermatitis"
+                        }
+                    ]
+                }
             },
             {
                 "observationCode": "224",
@@ -14446,7 +15952,21 @@
             {
                 "observationCode": "225",
                 "observationTitle": "Household contact with history or presence of atopic dermatitis",
-                "contraindicationText": "Do not vaccinate if potential vaccinee has a household contact with history or presence of atopic dermatitis. Household contacts include persons with prolonged intimate contact with the potential vaccinee (e.g., sexual contacts) and others who might have direct contact with the vaccination site or with potentially contaminated materials (e.g., dressings or clothing)."
+                "contraindicationText": "Do not vaccinate if potential vaccinee has a household contact with history or presence of atopic dermatitis. Household contacts include persons with prolonged intimate contact with the potential vaccinee (e.g., sexual contacts) and others who might have direct contact with the vaccination site or with potentially contaminated materials (e.g., dressings or clothing).",
+                "codedValues": {
+                    "codedValue": [
+                        {
+                            "code": "L26",
+                            "codeSystem": "ICD10CM",
+                            "text": "Exfoliative dermatitis"
+                        },
+                        {
+                            "code": "L10.9",
+                            "codeSystem": "ICD10CM",
+                            "text": "Pemphigus, unspecified"
+                        }
+                    ]
+                }
             },
             {
                 "observationCode": "226",
@@ -14524,7 +16044,16 @@
             {
                 "observationCode": "240",
                 "observationTitle": "Healthcare personnel who care for patients infected with less virulent orthopoxviruses (e.g., Vaccinia virus or Cowpox virus)",
-                "indicationText": "Administer to healthcare personnel who care for patients infected with less virulent orthopoxviruses (e.g., Vaccinia virus or Cowpox virus)"
+                "indicationText": "Administer to healthcare personnel who care for patients infected with less virulent orthopoxviruses (e.g., Vaccinia virus or Cowpox virus)",
+                "codedValues": {
+                    "codedValue": [
+                        {
+                            "code": "Z20.828",
+                            "codeSystem": "ICD10CM",
+                            "text": "Contact with and (suspected) exposure to other viral communicable diseases"
+                        }
+                    ]
+                }
             },
             {
                 "observationCode": "241",
@@ -14536,7 +16065,16 @@
                 "observationCode": "242",
                 "observationTitle": "Presumed exposure to mpox",
                 "indicationText": "Administer to persons who have presumed exposure to mpox",
-                "clarifyingText": "People who are aware that a recent sex partner within the  past 14 days was diagnosed with mpox. Certain gay, bisexual, or other men who have sex with men, or transgender people who have had any of following within the past 14 days: sex with multiple partners (or group sex); sex at a commercial sex venue; or sex in association with an event, venue, or defined geographic area where mpox transmission is occurring."
+                "clarifyingText": "People who are aware that a recent sex partner within the  past 14 days was diagnosed with mpox. Certain gay, bisexual, or other men who have sex with men, or transgender people who have had any of following within the past 14 days: sex with multiple partners (or group sex); sex at a commercial sex venue; or sex in association with an event, venue, or defined geographic area where mpox transmission is occurring.",
+                "codedValues": {
+                    "codedValue": [
+                        {
+                            "code": "Z20.828",
+                            "codeSystem": "ICD10CM",
+                            "text": "Contact with and (suspected) exposure to other viral communicable diseases"
+                        }
+                    ]
+                }
             },
             {
                 "observationCode": "243",
@@ -14566,13 +16104,46 @@
                 "observationCode": "246",
                 "observationTitle": "Severe immunocompromise",
                 "indicationText": "Administer to persons with severe immunocompromise.",
-                "contraindicationText": "Do not vaccinate persons with severe immunocompromise."
+                "contraindicationText": "Do not vaccinate persons with severe immunocompromise.",
+                "codedValues": {
+                    "codedValue": [
+                        {
+                            "code": "D84.9",
+                            "codeSystem": "ICD10CM",
+                            "text": "Immunodeficiency, unspecified"
+                        },
+                        {
+                            "code": "D84.821",
+                            "codeSystem": "ICD10CM",
+                            "text": "Immunodeficiency due to drugs"
+                        },
+                        {
+                            "code": "D83.9",
+                            "codeSystem": "ICD10CM",
+                            "text": "Common variable immunodeficiency, unspecified"
+                        }
+                    ]
+                }
             },
             {
                 "observationCode": "247",
                 "observationTitle": "Gay, bisexual, or other man who has sex with men (MSM), or a person who has sex with gay, bisexual, or other MSM who in the past 6 months have had one of the following: \r 1) A new diagnosis of ≥ 1 sexually transmitted disease\r 2)  More than one sex partner\r 3)  Sex at a commercial sex venue\r 4)  Sex in association with a large public event in a geographic area where mpox transmission is occurring",
                 "indicationText": "Administer to gay, bisexual, or other man who has sex with men (MSM), or a person who has sex with gay, bisexual, or other MSM who in the past 6 months have had one of the following: \r 1) A new diagnosis of ≥ 1 sexually transmitted disease\r 2)  More than one sex partner\r 3)  Sex at a commercial sex venue\r 4)  Sex in association with a large public event in a geographic area where mpox transmission is occurring.",
-                "clarifyingText": "Includes persons who anticipate experiencing any of the risk factors."
+                "clarifyingText": "Includes persons who anticipate experiencing any of the risk factors.",
+                "codedValues": {
+                    "codedValue": [
+                        {
+                            "code": "J45.40",
+                            "codeSystem": "ICD10CM",
+                            "text": "Moderate persistent asthma, uncomplicated"
+                        },
+                        {
+                            "code": "J45.50",
+                            "codeSystem": "ICD10CM",
+                            "text": "Severe persistent asthma, uncomplicated"
+                        }
+                    ]
+                }
             },
             {
                 "observationCode": "248",
@@ -14756,6 +16327,21 @@
                             "code": "1303726005",
                             "codeSystem": "SNOMED",
                             "text": "Dissection of infrarenal aorta [disorder]"
+                        },
+                        {
+                            "code": "I25.10",
+                            "codeSystem": "ICD10CM",
+                            "text": "Atherosclerotic heart disease of native coronary artery without angina pectoris"
+                        },
+                        {
+                            "code": "I51.9",
+                            "codeSystem": "ICD10CM",
+                            "text": "Heart disease, unspecified"
+                        },
+                        {
+                            "code": "I42.9",
+                            "codeSystem": "ICD10CM",
+                            "text": "Cardiomyopathy, unspecified"
                         }
                     ]
                 }
@@ -14770,6 +16356,16 @@
                             "code": "127013003",
                             "codeSystem": "SNOMED",
                             "text": "Disorder of kidney due to diabetes mellitus [disorder]"
+                        },
+                        {
+                            "code": "E66.01",
+                            "codeSystem": "ICD10CM",
+                            "text": "Morbid (severe) obesity due to excess calories"
+                        },
+                        {
+                            "code": "E66.2",
+                            "codeSystem": "ICD10CM",
+                            "text": "Morbid (severe) obesity with alveolar hypoventilation"
                         }
                     ]
                 }
@@ -14814,6 +16410,11 @@
                             "code": "40108008",
                             "codeSystem": "SNOMED",
                             "text": "Thalassemia [disorder]"
+                        },
+                        {
+                            "code": "D75.9",
+                            "codeSystem": "ICD10CM",
+                            "text": "Disease of blood and blood-forming organs, unspecified"
                         }
                     ]
                 }
@@ -14828,6 +16429,16 @@
                             "code": "417357006",
                             "codeSystem": "SNOMED",
                             "text": "Sickling disorder due to hemoglobin S [disorder]"
+                        },
+                        {
+                            "code": "D57.1",
+                            "codeSystem": "ICD10CM",
+                            "text": "Sickle-cell disease without crisis"
+                        },
+                        {
+                            "code": "D57.00",
+                            "codeSystem": "ICD10CM",
+                            "text": "Hb-SS disease with crisis, unspecified"
                         }
                     ]
                 }
@@ -14848,6 +16459,11 @@
                             "code": "67750007",
                             "codeSystem": "SNOMED",
                             "text": "Ineffective airway clearance [finding]"
+                        },
+                        {
+                            "code": "Z59.3",
+                            "codeSystem": "ICD10CM",
+                            "text": "Problems related to living in residential institution"
                         }
                     ]
                 }
@@ -14876,6 +16492,11 @@
                             "code": "248279007",
                             "codeSystem": "SNOMED",
                             "text": "Frailty [finding]"
+                        },
+                        {
+                            "code": "R54",
+                            "codeSystem": "ICD10CM",
+                            "text": "Age-related physical debility (frailty)"
                         }
                     ]
                 }
@@ -14890,6 +16511,21 @@
                             "code": "230572002",
                             "codeSystem": "SNOMED",
                             "text": "Neuropathy due to diabetes mellitus [disorder]"
+                        },
+                        {
+                            "code": "E11.40",
+                            "codeSystem": "ICD10CM",
+                            "text": "Type 2 diabetes mellitus with diabetic neuropathy, unspecified"
+                        },
+                        {
+                            "code": "E10.40",
+                            "codeSystem": "ICD10CM",
+                            "text": "Type 1 diabetes mellitus with diabetic neuropathy, unspecified"
+                        },
+                        {
+                            "code": "E13.40",
+                            "codeSystem": "ICD10CM",
+                            "text": "Other specified diabetes mellitus with diabetic neuropathy, unspecified"
                         }
                     ]
                 }
@@ -14904,6 +16540,16 @@
                             "code": "4855003",
                             "codeSystem": "SNOMED",
                             "text": "Retinopathy due to diabetes mellitus [disorder]"
+                        },
+                        {
+                            "code": "E11.319",
+                            "codeSystem": "ICD10CM",
+                            "text": "Type 2 diabetes mellitus with unspecified diabetic retinopathy without macular edema"
+                        },
+                        {
+                            "code": "E10.319",
+                            "codeSystem": "ICD10CM",
+                            "text": "Type 1 diabetes mellitus with unspecified diabetic retinopathy without macular edema"
                         }
                     ]
                 }
@@ -14911,7 +16557,31 @@
             {
                 "observationCode": "265",
                 "observationTitle": "Diabetes mellitus complicated by end-organ damage",
-                "indicationText": "Administer to persons with diabetes mellitus complicated by end-organ damage"
+                "indicationText": "Administer to persons with diabetes mellitus complicated by end-organ damage",
+                "codedValues": {
+                    "codedValue": [
+                        {
+                            "code": "E11.65",
+                            "codeSystem": "ICD10CM",
+                            "text": "Type 2 diabetes mellitus with hyperglycemia"
+                        },
+                        {
+                            "code": "E11.69",
+                            "codeSystem": "ICD10CM",
+                            "text": "Type 2 diabetes mellitus with other specified complication"
+                        },
+                        {
+                            "code": "E10.69",
+                            "codeSystem": "ICD10CM",
+                            "text": "Type 1 diabetes mellitus with other specified complication"
+                        },
+                        {
+                            "code": "E13.69",
+                            "codeSystem": "ICD10CM",
+                            "text": "Other specified diabetes mellitus with other specified complication"
+                        }
+                    ]
+                }
             },
             {
                 "observationCode": "266",
@@ -14923,6 +16593,21 @@
                             "code": "170747006",
                             "codeSystem": "SNOMED",
                             "text": "Diabetic on insulin [finding]"
+                        },
+                        {
+                            "code": "Z79.4",
+                            "codeSystem": "ICD10CM",
+                            "text": "Long term (current) use of insulin"
+                        },
+                        {
+                            "code": "E10.9",
+                            "codeSystem": "ICD10CM",
+                            "text": "Type 1 diabetes mellitus without complications"
+                        },
+                        {
+                            "code": "E11.9",
+                            "codeSystem": "ICD10CM",
+                            "text": "Type 2 diabetes mellitus without complications"
                         }
                     ]
                 }
@@ -14930,7 +16615,16 @@
             {
                 "observationCode": "267",
                 "observationTitle": "Diabetes requiring treatment with sodium-glucose cotransporter-2 (SGLT2) inhibitor",
-                "indicationText": "Administer to persons with diabetes requiring treatment with sodium-glucose cotransporter-2 (SGLT2) inhibitor"
+                "indicationText": "Administer to persons with diabetes requiring treatment with sodium-glucose cotransporter-2 (SGLT2) inhibitor",
+                "codedValues": {
+                    "codedValue": [
+                        {
+                            "code": "Z94.83",
+                            "codeSystem": "ICD10CM",
+                            "text": "Pancreas transplant status"
+                        }
+                    ]
+                }
             },
             {
                 "observationCode": "268",
@@ -14956,6 +16650,11 @@
                             "code": "77465005",
                             "codeSystem": "SNOMED",
                             "text": "Transplantation [procedure]"
+                        },
+                        {
+                            "code": "Z94.9",
+                            "codeSystem": "ICD10CM",
+                            "text": "Transplanted organ and tissue status, unspecified"
                         }
                     ]
                 }
@@ -14970,6 +16669,21 @@
                             "code": "317",
                             "codeSystem": "CVX",
                             "text": "Chikungunya live attenuated vaccine, 0.5 mL, PF"
+                        },
+                        {
+                            "code": "D80.9",
+                            "codeSystem": "ICD10CM",
+                            "text": "Immunodeficiency with predominantly antibody defects, unspecified"
+                        },
+                        {
+                            "code": "D80.1",
+                            "codeSystem": "ICD10CM",
+                            "text": "Nonfamilial hypogammaglobulinemia"
+                        },
+                        {
+                            "code": "D80.0",
+                            "codeSystem": "ICD10CM",
+                            "text": "Hereditary hypogammaglobulinemia"
                         }
                     ]
                 }
@@ -15001,7 +16715,21 @@
             {
                 "observationCode": "274",
                 "observationTitle": "Early component complement inhibitor use",
-                "indicationText": "Administer to persons using an early component complement inhibitor"
+                "indicationText": "Administer to persons using an early component complement inhibitor",
+                "codedValues": {
+                    "codedValue": [
+                        {
+                            "code": "D84.1",
+                            "codeSystem": "ICD10CM",
+                            "text": "Defects in the complement system"
+                        },
+                        {
+                            "code": "Z79.899",
+                            "codeSystem": "ICD10CM",
+                            "text": "Other long term (current) drug therapy"
+                        }
+                    ]
+                }
             },
             {
                 "observationCode": "275",
@@ -15016,7 +16744,26 @@
             {
                 "observationCode": "277",
                 "observationTitle": "Laboratory worker with potential for exposure to chikungunya virus",
-                "indicationText": "Administer to laboratory workers with potential for exposure to chikungunya virus"
+                "indicationText": "Administer to laboratory workers with potential for exposure to chikungunya virus",
+                "codedValues": {
+                    "codedValue": [
+                        {
+                            "code": "D58.2",
+                            "codeSystem": "ICD10CM",
+                            "text": "Other hemoglobinopathies"
+                        },
+                        {
+                            "code": "D56.9",
+                            "codeSystem": "ICD10CM",
+                            "text": "Thalassemia, unspecified"
+                        },
+                        {
+                            "code": "D57.3",
+                            "codeSystem": "ICD10CM",
+                            "text": "Sickle-cell trait"
+                        }
+                    ]
+                }
             },
             {
                 "observationCode": "278",

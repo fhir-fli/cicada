@@ -2,450 +2,434 @@
 
 import '../cicada.dart';
 
-final AntigenSupportingData tbe = AntigenSupportingData.fromJson({
-  "targetDisease": "TBE",
-  "vaccineGroup": "TBE",
-  "contraindications": {
-    "vaccineGroup": {
-      "contraindication": [
-        {
-          "observationCode": "080",
-          "observationTitle": "Adverse reaction to vaccine component",
-          "contraindicationText":
-              "Do not vaccinate if the patient has had an adverse reaction to a vaccine component."
-        },
-        {
-          "observationCode": "252",
-          "observationTitle":
-              "Severe allergic reaction after previous dose of Tick-borne Encephalitis vaccine",
-          "contraindicationText":
-              "Do not vaccinate if the patient has had a severe allergic reaction after a previous dose of Tick-borne Encephalitis vaccine."
+final AntigenSupportingData tbe = AntigenSupportingData.fromJson(
+{
+    "targetDisease": "TBE",
+    "vaccineGroup": "TBE",
+    "contraindications": {
+        "vaccineGroup": {
+            "contraindication": [
+                {
+                    "observationCode": "080",
+                    "observationTitle": "Adverse reaction to vaccine component",
+                    "contraindicationText": "Do not vaccinate if the patient has had an adverse reaction to a vaccine component."
+                },
+                {
+                    "observationCode": "252",
+                    "observationTitle": "Severe allergic reaction after previous dose of Tick-borne Encephalitis vaccine",
+                    "contraindicationText": "Do not vaccinate if the patient has had a severe allergic reaction after a previous dose of Tick-borne Encephalitis vaccine."
+                }
+            ]
         }
-      ]
-    }
-  },
-  "series": [
-    {
-      "seriesName": "Risk 1-15 years 3-dose",
-      "targetDisease": "TBE",
-      "vaccineGroup": "TBE",
-      "seriesAdminGuidance": [
-        "Endemic Area and transmission season is determined by country.  Refer to the yellow book for a definition of the transmission season: https://wwwnc.cdc.gov/travel/yellowbook/2024/infections-diseases/tick-borne-encephalitis"
-      ],
-      "seriesType": "Risk",
-      "selectSeries": {
-        "defaultSeries": "No",
-        "productPath": "No",
-        "seriesGroupName": "Increased Risk",
-        "seriesGroup": "1",
-        "seriesPriority": "A",
-        "seriesPreference": "1",
-        "minAgeToStart": "1 year"
-      },
-      "indication": [
-        {
-          "observationCode": {
-            "text":
-                "Moving or traveling to an area where TBE is endemic and will have extensive exposure to ticks because of their planned outdoor activities and itinerary",
-            "code": "249"
-          },
-          "description":
-              "Administer to persons moving or traveling to an area where TBE is endemic and will have extensive exposure to ticks because of their planned outdoor activities and itinerary",
-          "beginAge": "1 year",
-          "endAge": "16 years",
-          "guidance":
-              "Endemic Area and transmission season is determined by country.  Refer to the yellow book for a definition of the transmission season: https://wwwnc.cdc.gov/travel/yellowbook/2024/infections-diseases/tick-borne-encephalitis"
-        },
-        {
-          "observationCode": {
-            "text":
-                "Moving or traveling to an area where TBE is endemic who might engage in outdoor activities in areas where ticks are likely to be found",
-            "code": "250"
-          },
-          "description":
-              "TBE vaccine may be considered for persons moving or traveling to an area where TBE is endemic who might engage in outdoor activities in areas where ticks are likely to be found",
-          "beginAge": "1 year",
-          "endAge": "16 years",
-          "guidance":
-              "Endemic Area and transmission season is determined by country.  Refer to the yellow book for a definition of the transmission season: https://wwwnc.cdc.gov/travel/yellowbook/2024/infections-diseases/tick-borne-encephalitis"
-        }
-      ],
-      "seriesDose": [
-        {
-          "doseNumber": "Dose 1",
-          "age": [
-            {
-              "absMinAge": "1 years - 4 days",
-              "minAge": "1 year",
-              "earliestRecAge": "1 year"
-            }
-          ],
-          "preferableVaccine": [
-            {
-              "vaccineType": "Tick-borne encephalitis, inactivated, PF, 0.25mL",
-              "cvx": "223",
-              "beginAge": "1 year",
-              "endAge": "16 years",
-              "volume": "0.25",
-              "forecastVaccineType": "N"
-            }
-          ],
-          "allowableVaccine": [
-            {
-              "vaccineType": "Tick-borne encephalitis, unspecified",
-              "cvx": "222",
-              "beginAge": "1 years - 4 days"
-            },
-            {
-              "vaccineType": "Tick-borne encephalitis, inactivated, PF, 0.25mL",
-              "cvx": "223",
-              "beginAge": "1 years - 4 days",
-              "endAge": "16 years"
-            },
-            {
-              "vaccineType": "Tick-borne encephalitis, inactivated, PF, 0.5mL",
-              "cvx": "224",
-              "beginAge": "1 years - 4 days"
-            }
-          ],
-          "recurringDose": "No"
-        },
-        {
-          "doseNumber": "Dose 2",
-          "interval": [
-            {
-              "fromPrevious": "Y",
-              "absMinInt": "4 weeks - 4 days",
-              "minInt": "4 weeks",
-              "earliestRecInt": "4 weeks",
-              "latestRecInt": "12 weeks"
-            }
-          ],
-          "preferableVaccine": [
-            {
-              "vaccineType": "Tick-borne encephalitis, inactivated, PF, 0.25mL",
-              "cvx": "223",
-              "beginAge": "1 year",
-              "endAge": "16 years",
-              "volume": "0.25",
-              "forecastVaccineType": "N"
-            }
-          ],
-          "allowableVaccine": [
-            {
-              "vaccineType": "Tick-borne encephalitis, unspecified",
-              "cvx": "222",
-              "beginAge": "1 years - 4 days"
-            },
-            {
-              "vaccineType": "Tick-borne encephalitis, inactivated, PF, 0.25mL",
-              "cvx": "223",
-              "beginAge": "1 years - 4 days",
-              "endAge": "16 years"
-            },
-            {
-              "vaccineType": "Tick-borne encephalitis, inactivated, PF, 0.5mL",
-              "cvx": "224",
-              "beginAge": "1 years - 4 days"
-            }
-          ],
-          "recurringDose": "No"
-        },
-        {
-          "doseNumber": "Dose 3",
-          "interval": [
-            {
-              "fromPrevious": "Y",
-              "absMinInt": "5 months - 4 days",
-              "minInt": "5 months",
-              "earliestRecInt": "5 months",
-              "latestRecInt": "12 months"
-            }
-          ],
-          "preferableVaccine": [
-            {
-              "vaccineType": "Tick-borne encephalitis, inactivated, PF, 0.25mL",
-              "cvx": "223",
-              "beginAge": "1 year",
-              "endAge": "16 years",
-              "volume": "0.25",
-              "forecastVaccineType": "N"
-            }
-          ],
-          "allowableVaccine": [
-            {
-              "vaccineType": "Tick-borne encephalitis, unspecified",
-              "cvx": "222",
-              "beginAge": "1 years - 4 days"
-            },
-            {
-              "vaccineType": "Tick-borne encephalitis, inactivated, PF, 0.25mL",
-              "cvx": "223",
-              "beginAge": "1 years - 4 days",
-              "endAge": "16 years"
-            },
-            {
-              "vaccineType": "Tick-borne encephalitis, inactivated, PF, 0.5mL",
-              "cvx": "224",
-              "beginAge": "1 years - 4 days"
-            }
-          ],
-          "recurringDose": "No"
-        },
-        {
-          "doseNumber": "Dose 4",
-          "interval": [
-            {
-              "fromPrevious": "Y",
-              "absMinInt": "3 years - 4 days",
-              "minInt": "3 years",
-              "earliestRecInt": "3 years"
-            }
-          ],
-          "preferableVaccine": [
-            {
-              "vaccineType": "Tick-borne encephalitis, inactivated, PF, 0.25mL",
-              "cvx": "223",
-              "beginAge": "1 year",
-              "endAge": "16 years",
-              "volume": "0.25",
-              "forecastVaccineType": "N"
-            }
-          ],
-          "allowableVaccine": [
-            {
-              "vaccineType": "Tick-borne encephalitis, unspecified",
-              "cvx": "222",
-              "beginAge": "1 years - 4 days"
-            },
-            {
-              "vaccineType": "Tick-borne encephalitis, inactivated, PF, 0.25mL",
-              "cvx": "223",
-              "beginAge": "1 years - 4 days",
-              "endAge": "16 years"
-            },
-            {
-              "vaccineType": "Tick-borne encephalitis, inactivated, PF, 0.5mL",
-              "cvx": "224",
-              "beginAge": "1 years - 4 days"
-            }
-          ],
-          "recurringDose": "No"
-        }
-      ]
     },
-    {
-      "seriesName": "Risk 16 years+ 3-dose",
-      "targetDisease": "TBE",
-      "vaccineGroup": "TBE",
-      "seriesAdminGuidance": [
-        "Endemic Area and transmission season is determined by country.  Refer to the yellow book for a definition of the transmission season: https://wwwnc.cdc.gov/travel/yellowbook/2024/infections-diseases/tick-borne-encephalitis"
-      ],
-      "seriesType": "Risk",
-      "selectSeries": {
-        "defaultSeries": "No",
-        "productPath": "No",
-        "seriesGroupName": "Increased Risk",
-        "seriesGroup": "1",
-        "seriesPriority": "A",
-        "seriesPreference": "1",
-        "minAgeToStart": "16 years"
-      },
-      "indication": [
+    "series": [
         {
-          "observationCode": {
-            "text":
-                "Moving or traveling to an area where TBE is endemic and will have extensive exposure to ticks because of their planned outdoor activities and itinerary",
-            "code": "249"
-          },
-          "description":
-              "Administer to persons moving or traveling to an area where TBE is endemic and will have extensive exposure to ticks because of their planned outdoor activities and itinerary",
-          "beginAge": "16 years",
-          "guidance":
-              "Endemic Area and transmission season is determined by country.  Refer to the yellow book for a definition of the transmission season: https://wwwnc.cdc.gov/travel/yellowbook/2024/infections-diseases/tick-borne-encephalitis"
+            "seriesName": "Risk 1-15 years 3-dose",
+            "targetDisease": "TBE",
+            "vaccineGroup": "TBE",
+            "seriesAdminGuidance": [
+                "Endemic Area and transmission season is determined by country.  Refer to the yellow book for a definition of the transmission season: https://wwwnc.cdc.gov/travel/yellowbook/2024/infections-diseases/tick-borne-encephalitis"
+            ],
+            "seriesType": "Risk",
+            "selectSeries": {
+                "defaultSeries": "No",
+                "productPath": "No",
+                "seriesGroupName": "Increased Risk",
+                "seriesGroup": "1",
+                "seriesPriority": "A",
+                "seriesPreference": "1",
+                "minAgeToStart": "1 year"
+            },
+            "indication": [
+                {
+                    "observationCode": {
+                        "text": "Moving or traveling to an area where TBE is endemic and will have extensive exposure to ticks because of their planned outdoor activities and itinerary",
+                        "code": "249"
+                    },
+                    "description": "Administer to persons moving or traveling to an area where TBE is endemic and will have extensive exposure to ticks because of their planned outdoor activities and itinerary",
+                    "beginAge": "1 year",
+                    "endAge": "16 years",
+                    "guidance": "Endemic Area and transmission season is determined by country.  Refer to the yellow book for a definition of the transmission season: https://wwwnc.cdc.gov/travel/yellowbook/2024/infections-diseases/tick-borne-encephalitis"
+                },
+                {
+                    "observationCode": {
+                        "text": "Moving or traveling to an area where TBE is endemic who might engage in outdoor activities in areas where ticks are likely to be found",
+                        "code": "250"
+                    },
+                    "description": "TBE vaccine may be considered for persons moving or traveling to an area where TBE is endemic who might engage in outdoor activities in areas where ticks are likely to be found",
+                    "beginAge": "1 year",
+                    "endAge": "16 years",
+                    "guidance": "Endemic Area and transmission season is determined by country.  Refer to the yellow book for a definition of the transmission season: https://wwwnc.cdc.gov/travel/yellowbook/2024/infections-diseases/tick-borne-encephalitis"
+                }
+            ],
+            "seriesDose": [
+                {
+                    "doseNumber": "Dose 1",
+                    "age": [
+                        {
+                            "absMinAge": "1 years - 4 days",
+                            "minAge": "1 year",
+                            "earliestRecAge": "1 year"
+                        }
+                    ],
+                    "preferableVaccine": [
+                        {
+                            "vaccineType": "Tick-borne encephalitis, inactivated, PF, 0.25mL",
+                            "cvx": "223",
+                            "beginAge": "1 year",
+                            "endAge": "16 years",
+                            "volume": "0.25",
+                            "forecastVaccineType": "N"
+                        }
+                    ],
+                    "allowableVaccine": [
+                        {
+                            "vaccineType": "Tick-borne encephalitis, unspecified",
+                            "cvx": "222",
+                            "beginAge": "1 years - 4 days"
+                        },
+                        {
+                            "vaccineType": "Tick-borne encephalitis, inactivated, PF, 0.25mL",
+                            "cvx": "223",
+                            "beginAge": "1 years - 4 days",
+                            "endAge": "16 years"
+                        },
+                        {
+                            "vaccineType": "Tick-borne encephalitis, inactivated, PF, 0.5mL",
+                            "cvx": "224",
+                            "beginAge": "1 years - 4 days"
+                        }
+                    ],
+                    "recurringDose": "No"
+                },
+                {
+                    "doseNumber": "Dose 2",
+                    "interval": [
+                        {
+                            "fromPrevious": "Y",
+                            "absMinInt": "4 weeks - 4 days",
+                            "minInt": "4 weeks",
+                            "earliestRecInt": "4 weeks",
+                            "latestRecInt": "12 weeks"
+                        }
+                    ],
+                    "preferableVaccine": [
+                        {
+                            "vaccineType": "Tick-borne encephalitis, inactivated, PF, 0.25mL",
+                            "cvx": "223",
+                            "beginAge": "1 year",
+                            "endAge": "16 years",
+                            "volume": "0.25",
+                            "forecastVaccineType": "N"
+                        }
+                    ],
+                    "allowableVaccine": [
+                        {
+                            "vaccineType": "Tick-borne encephalitis, unspecified",
+                            "cvx": "222",
+                            "beginAge": "1 years - 4 days"
+                        },
+                        {
+                            "vaccineType": "Tick-borne encephalitis, inactivated, PF, 0.25mL",
+                            "cvx": "223",
+                            "beginAge": "1 years - 4 days",
+                            "endAge": "16 years"
+                        },
+                        {
+                            "vaccineType": "Tick-borne encephalitis, inactivated, PF, 0.5mL",
+                            "cvx": "224",
+                            "beginAge": "1 years - 4 days"
+                        }
+                    ],
+                    "recurringDose": "No"
+                },
+                {
+                    "doseNumber": "Dose 3",
+                    "interval": [
+                        {
+                            "fromPrevious": "Y",
+                            "absMinInt": "5 months - 4 days",
+                            "minInt": "5 months",
+                            "earliestRecInt": "5 months",
+                            "latestRecInt": "12 months"
+                        }
+                    ],
+                    "preferableVaccine": [
+                        {
+                            "vaccineType": "Tick-borne encephalitis, inactivated, PF, 0.25mL",
+                            "cvx": "223",
+                            "beginAge": "1 year",
+                            "endAge": "16 years",
+                            "volume": "0.25",
+                            "forecastVaccineType": "N"
+                        }
+                    ],
+                    "allowableVaccine": [
+                        {
+                            "vaccineType": "Tick-borne encephalitis, unspecified",
+                            "cvx": "222",
+                            "beginAge": "1 years - 4 days"
+                        },
+                        {
+                            "vaccineType": "Tick-borne encephalitis, inactivated, PF, 0.25mL",
+                            "cvx": "223",
+                            "beginAge": "1 years - 4 days",
+                            "endAge": "16 years"
+                        },
+                        {
+                            "vaccineType": "Tick-borne encephalitis, inactivated, PF, 0.5mL",
+                            "cvx": "224",
+                            "beginAge": "1 years - 4 days"
+                        }
+                    ],
+                    "recurringDose": "No"
+                },
+                {
+                    "doseNumber": "Dose 4",
+                    "interval": [
+                        {
+                            "fromPrevious": "Y",
+                            "absMinInt": "3 years - 4 days",
+                            "minInt": "3 years",
+                            "earliestRecInt": "3 years"
+                        }
+                    ],
+                    "preferableVaccine": [
+                        {
+                            "vaccineType": "Tick-borne encephalitis, inactivated, PF, 0.25mL",
+                            "cvx": "223",
+                            "beginAge": "1 year",
+                            "endAge": "16 years",
+                            "volume": "0.25",
+                            "forecastVaccineType": "N"
+                        }
+                    ],
+                    "allowableVaccine": [
+                        {
+                            "vaccineType": "Tick-borne encephalitis, unspecified",
+                            "cvx": "222",
+                            "beginAge": "1 years - 4 days"
+                        },
+                        {
+                            "vaccineType": "Tick-borne encephalitis, inactivated, PF, 0.25mL",
+                            "cvx": "223",
+                            "beginAge": "1 years - 4 days",
+                            "endAge": "16 years"
+                        },
+                        {
+                            "vaccineType": "Tick-borne encephalitis, inactivated, PF, 0.5mL",
+                            "cvx": "224",
+                            "beginAge": "1 years - 4 days"
+                        }
+                    ],
+                    "recurringDose": "No"
+                }
+            ]
         },
         {
-          "observationCode": {
-            "text":
-                "Moving or traveling to an area where TBE is endemic who might engage in outdoor activities in areas where ticks are likely to be found",
-            "code": "250"
-          },
-          "description":
-              "TBE vaccine may be considered for persons moving or traveling to an area where TBE is endemic who might engage in outdoor activities in areas where ticks are likely to be found",
-          "beginAge": "16 years",
-          "guidance":
-              "Endemic Area and transmission season is determined by country.  Refer to the yellow book for a definition of the transmission season: https://wwwnc.cdc.gov/travel/yellowbook/2024/infections-diseases/tick-borne-encephalitis"
-        },
-        {
-          "observationCode": {
-            "text":
-                "Laboratory workers with a potential for exposure to TBE virus",
-            "code": "251"
-          },
-          "description":
-              "Administer to laboratory workers with a potential for exposure to TBE virus",
-          "beginAge": "16 years"
+            "seriesName": "Risk 16 years+ 3-dose",
+            "targetDisease": "TBE",
+            "vaccineGroup": "TBE",
+            "seriesAdminGuidance": [
+                "Endemic Area and transmission season is determined by country.  Refer to the yellow book for a definition of the transmission season: https://wwwnc.cdc.gov/travel/yellowbook/2024/infections-diseases/tick-borne-encephalitis"
+            ],
+            "seriesType": "Risk",
+            "selectSeries": {
+                "defaultSeries": "No",
+                "productPath": "No",
+                "seriesGroupName": "Increased Risk",
+                "seriesGroup": "1",
+                "seriesPriority": "A",
+                "seriesPreference": "1",
+                "minAgeToStart": "16 years"
+            },
+            "indication": [
+                {
+                    "observationCode": {
+                        "text": "Moving or traveling to an area where TBE is endemic and will have extensive exposure to ticks because of their planned outdoor activities and itinerary",
+                        "code": "249"
+                    },
+                    "description": "Administer to persons moving or traveling to an area where TBE is endemic and will have extensive exposure to ticks because of their planned outdoor activities and itinerary",
+                    "beginAge": "16 years",
+                    "guidance": "Endemic Area and transmission season is determined by country.  Refer to the yellow book for a definition of the transmission season: https://wwwnc.cdc.gov/travel/yellowbook/2024/infections-diseases/tick-borne-encephalitis"
+                },
+                {
+                    "observationCode": {
+                        "text": "Moving or traveling to an area where TBE is endemic who might engage in outdoor activities in areas where ticks are likely to be found",
+                        "code": "250"
+                    },
+                    "description": "TBE vaccine may be considered for persons moving or traveling to an area where TBE is endemic who might engage in outdoor activities in areas where ticks are likely to be found",
+                    "beginAge": "16 years",
+                    "guidance": "Endemic Area and transmission season is determined by country.  Refer to the yellow book for a definition of the transmission season: https://wwwnc.cdc.gov/travel/yellowbook/2024/infections-diseases/tick-borne-encephalitis"
+                },
+                {
+                    "observationCode": {
+                        "text": "Laboratory workers with a potential for exposure to TBE virus",
+                        "code": "251"
+                    },
+                    "description": "Administer to laboratory workers with a potential for exposure to TBE virus",
+                    "beginAge": "16 years"
+                }
+            ],
+            "seriesDose": [
+                {
+                    "doseNumber": "Dose 1",
+                    "age": [
+                        {
+                            "absMinAge": "1 year - 4 days",
+                            "minAge": "16 years",
+                            "earliestRecAge": "16 years"
+                        }
+                    ],
+                    "preferableVaccine": [
+                        {
+                            "vaccineType": "Tick-borne encephalitis, inactivated, PF, 0.5mL",
+                            "cvx": "224",
+                            "beginAge": "16 years",
+                            "volume": "0.5",
+                            "forecastVaccineType": "N"
+                        }
+                    ],
+                    "allowableVaccine": [
+                        {
+                            "vaccineType": "Tick-borne encephalitis, unspecified",
+                            "cvx": "222",
+                            "beginAge": "1 years - 4 days"
+                        },
+                        {
+                            "vaccineType": "Tick-borne encephalitis, inactivated, PF, 0.25mL",
+                            "cvx": "223",
+                            "beginAge": "1 years - 4 days",
+                            "endAge": "16 years"
+                        },
+                        {
+                            "vaccineType": "Tick-borne encephalitis, inactivated, PF, 0.5mL",
+                            "cvx": "224",
+                            "beginAge": "1 years - 4 days"
+                        }
+                    ],
+                    "recurringDose": "No"
+                },
+                {
+                    "doseNumber": "Dose 2",
+                    "interval": [
+                        {
+                            "fromPrevious": "Y",
+                            "absMinInt": "10 days",
+                            "minInt": "14 days",
+                            "earliestRecInt": "14 days",
+                            "latestRecInt": "3 months"
+                        }
+                    ],
+                    "preferableVaccine": [
+                        {
+                            "vaccineType": "Tick-borne encephalitis, inactivated, PF, 0.5mL",
+                            "cvx": "224",
+                            "beginAge": "16 years",
+                            "volume": "0.5",
+                            "forecastVaccineType": "N"
+                        }
+                    ],
+                    "allowableVaccine": [
+                        {
+                            "vaccineType": "Tick-borne encephalitis, unspecified",
+                            "cvx": "222",
+                            "beginAge": "1 years - 4 days"
+                        },
+                        {
+                            "vaccineType": "Tick-borne encephalitis, inactivated, PF, 0.25mL",
+                            "cvx": "223",
+                            "beginAge": "1 years - 4 days",
+                            "endAge": "16 years"
+                        },
+                        {
+                            "vaccineType": "Tick-borne encephalitis, inactivated, PF, 0.5mL",
+                            "cvx": "224",
+                            "beginAge": "1 years - 4 days"
+                        }
+                    ],
+                    "recurringDose": "No"
+                },
+                {
+                    "doseNumber": "Dose 3",
+                    "interval": [
+                        {
+                            "fromPrevious": "Y",
+                            "absMinInt": "5 months - 4 days",
+                            "minInt": "5 months",
+                            "earliestRecInt": "5 months",
+                            "latestRecInt": "12 months"
+                        }
+                    ],
+                    "preferableVaccine": [
+                        {
+                            "vaccineType": "Tick-borne encephalitis, inactivated, PF, 0.5mL",
+                            "cvx": "224",
+                            "beginAge": "16 years",
+                            "volume": "0.5",
+                            "forecastVaccineType": "N"
+                        }
+                    ],
+                    "allowableVaccine": [
+                        {
+                            "vaccineType": "Tick-borne encephalitis, unspecified",
+                            "cvx": "222",
+                            "beginAge": "1 years - 4 days"
+                        },
+                        {
+                            "vaccineType": "Tick-borne encephalitis, inactivated, PF, 0.25mL",
+                            "cvx": "223",
+                            "beginAge": "1 years - 4 days",
+                            "endAge": "16 years"
+                        },
+                        {
+                            "vaccineType": "Tick-borne encephalitis, inactivated, PF, 0.5mL",
+                            "cvx": "224",
+                            "beginAge": "1 years - 4 days"
+                        }
+                    ],
+                    "recurringDose": "No"
+                },
+                {
+                    "doseNumber": "Dose 4",
+                    "interval": [
+                        {
+                            "fromPrevious": "Y",
+                            "absMinInt": "3 years - 4 days",
+                            "minInt": "3 years",
+                            "earliestRecInt": "3 years"
+                        }
+                    ],
+                    "preferableVaccine": [
+                        {
+                            "vaccineType": "Tick-borne encephalitis, inactivated, PF, 0.5mL",
+                            "cvx": "224",
+                            "beginAge": "16 years",
+                            "volume": "0.5",
+                            "forecastVaccineType": "N"
+                        }
+                    ],
+                    "allowableVaccine": [
+                        {
+                            "vaccineType": "Tick-borne encephalitis, unspecified",
+                            "cvx": "222",
+                            "beginAge": "1 years - 4 days"
+                        },
+                        {
+                            "vaccineType": "Tick-borne encephalitis, inactivated, PF, 0.25mL",
+                            "cvx": "223",
+                            "beginAge": "1 years - 4 days",
+                            "endAge": "16 years"
+                        },
+                        {
+                            "vaccineType": "Tick-borne encephalitis, inactivated, PF, 0.5mL",
+                            "cvx": "224",
+                            "beginAge": "1 years - 4 days"
+                        }
+                    ],
+                    "recurringDose": "No"
+                }
+            ]
         }
-      ],
-      "seriesDose": [
-        {
-          "doseNumber": "Dose 1",
-          "age": [
-            {
-              "absMinAge": "1 year - 4 days",
-              "minAge": "16 years",
-              "earliestRecAge": "16 years"
-            }
-          ],
-          "preferableVaccine": [
-            {
-              "vaccineType": "Tick-borne encephalitis, inactivated, PF, 0.5mL",
-              "cvx": "224",
-              "beginAge": "16 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
-            }
-          ],
-          "allowableVaccine": [
-            {
-              "vaccineType": "Tick-borne encephalitis, unspecified",
-              "cvx": "222",
-              "beginAge": "1 years - 4 days"
-            },
-            {
-              "vaccineType": "Tick-borne encephalitis, inactivated, PF, 0.25mL",
-              "cvx": "223",
-              "beginAge": "1 years - 4 days",
-              "endAge": "16 years"
-            },
-            {
-              "vaccineType": "Tick-borne encephalitis, inactivated, PF, 0.5mL",
-              "cvx": "224",
-              "beginAge": "1 years - 4 days"
-            }
-          ],
-          "recurringDose": "No"
-        },
-        {
-          "doseNumber": "Dose 2",
-          "interval": [
-            {
-              "fromPrevious": "Y",
-              "absMinInt": "10 days",
-              "minInt": "14 days",
-              "earliestRecInt": "14 days",
-              "latestRecInt": "3 months"
-            }
-          ],
-          "preferableVaccine": [
-            {
-              "vaccineType": "Tick-borne encephalitis, inactivated, PF, 0.5mL",
-              "cvx": "224",
-              "beginAge": "16 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
-            }
-          ],
-          "allowableVaccine": [
-            {
-              "vaccineType": "Tick-borne encephalitis, unspecified",
-              "cvx": "222",
-              "beginAge": "1 years - 4 days"
-            },
-            {
-              "vaccineType": "Tick-borne encephalitis, inactivated, PF, 0.25mL",
-              "cvx": "223",
-              "beginAge": "1 years - 4 days",
-              "endAge": "16 years"
-            },
-            {
-              "vaccineType": "Tick-borne encephalitis, inactivated, PF, 0.5mL",
-              "cvx": "224",
-              "beginAge": "1 years - 4 days"
-            }
-          ],
-          "recurringDose": "No"
-        },
-        {
-          "doseNumber": "Dose 3",
-          "interval": [
-            {
-              "fromPrevious": "Y",
-              "absMinInt": "5 months - 4 days",
-              "minInt": "5 months",
-              "earliestRecInt": "5 months",
-              "latestRecInt": "12 months"
-            }
-          ],
-          "preferableVaccine": [
-            {
-              "vaccineType": "Tick-borne encephalitis, inactivated, PF, 0.5mL",
-              "cvx": "224",
-              "beginAge": "16 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
-            }
-          ],
-          "allowableVaccine": [
-            {
-              "vaccineType": "Tick-borne encephalitis, unspecified",
-              "cvx": "222",
-              "beginAge": "1 years - 4 days"
-            },
-            {
-              "vaccineType": "Tick-borne encephalitis, inactivated, PF, 0.25mL",
-              "cvx": "223",
-              "beginAge": "1 years - 4 days",
-              "endAge": "16 years"
-            },
-            {
-              "vaccineType": "Tick-borne encephalitis, inactivated, PF, 0.5mL",
-              "cvx": "224",
-              "beginAge": "1 years - 4 days"
-            }
-          ],
-          "recurringDose": "No"
-        },
-        {
-          "doseNumber": "Dose 4",
-          "interval": [
-            {
-              "fromPrevious": "Y",
-              "absMinInt": "3 years - 4 days",
-              "minInt": "3 years",
-              "earliestRecInt": "3 years"
-            }
-          ],
-          "preferableVaccine": [
-            {
-              "vaccineType": "Tick-borne encephalitis, inactivated, PF, 0.5mL",
-              "cvx": "224",
-              "beginAge": "16 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
-            }
-          ],
-          "allowableVaccine": [
-            {
-              "vaccineType": "Tick-borne encephalitis, unspecified",
-              "cvx": "222",
-              "beginAge": "1 years - 4 days"
-            },
-            {
-              "vaccineType": "Tick-borne encephalitis, inactivated, PF, 0.25mL",
-              "cvx": "223",
-              "beginAge": "1 years - 4 days",
-              "endAge": "16 years"
-            },
-            {
-              "vaccineType": "Tick-borne encephalitis, inactivated, PF, 0.5mL",
-              "cvx": "224",
-              "beginAge": "1 years - 4 days"
-            }
-          ],
-          "recurringDose": "No"
-        }
-      ]
-    }
-  ]
+    ]
 });
