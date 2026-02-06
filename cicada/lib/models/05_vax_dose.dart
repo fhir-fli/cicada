@@ -327,12 +327,13 @@ class VaxDose {
     allowedIntervalReason = reason ?? allowedIntervalReason;
   }
 
-  bool isAllowedInterval(
+  /// Per Section 6.5: Evaluate preferable intervals.
+  /// If no preferable intervals defined → considered "valid" (return true).
+  /// ALL preferable intervals must pass for the result to be true.
+  bool evaluatePreferableInterval(
       List<Interval>? intervals, List<VaxDose> doses, int targetDose) {
-    // Update interval status based on whether intervals are defined or not
     if (intervals == null || intervals.isEmpty) {
       updatePreferredInterval(valid: true);
-      updateAllowedInterval(valid: true);
       return true;
     }
 
@@ -340,28 +341,71 @@ class VaxDose {
       final VaxDate? referenceDate =
           getReferenceDate(interval, targetDose, doses);
 
-      // If no reference date could be determined, the interval is invalid
+      // If the reference date cannot be determined, the interval cannot be
+      // evaluated — skip it (it doesn't apply). This covers:
+      // - fromPrevious=Y but no qualifying previous dose (e.g. first dose)
+      // - fromTargetDose where that target dose was never satisfied
+      // - fromMostRecent with no matching doses
       if (referenceDate == null) {
-        updatePreferredInterval(valid: false);
+        continue;
+      }
+
+      final VaxDate absoluteMinimum =
+          referenceDate.changeNullable(interval.absMinInt, false)!;
+      final VaxDate minimumDate =
+          referenceDate.changeNullable(interval.minInt, false)!;
+
+      if (dateGiven < absoluteMinimum) {
+        updatePreferredInterval(valid: false, reason: IntervalReason.tooShort);
         return false;
       }
 
-      // Evaluate the calculated dates against the interval requirements
-      if (!evaluateIntervalDates(referenceDate, interval)) {
-        return false;
+      if (dateGiven < minimumDate) {
+        updatePreferredInterval(valid: true, reason: IntervalReason.gracePeriod);
+      } else {
+        updatePreferredInterval(valid: true);
       }
     }
 
-    updatePreferredInterval(valid: true);
+    return true;
+  }
+
+  /// Per Section 6.6: Evaluate allowable interval.
+  /// If no allowable interval defined → considered "not valid" (return false).
+  /// Uses absMinInt only (no grace period concept).
+  bool evaluateAllowableInterval(
+      Interval? interval, List<VaxDose> doses, int targetDose) {
+    if (interval == null) {
+      updateAllowedInterval(valid: false);
+      return false;
+    }
+
+    final VaxDate? referenceDate =
+        getReferenceDate(interval, targetDose, doses);
+
+    if (referenceDate == null) {
+      updateAllowedInterval(valid: false);
+      return false;
+    }
+
+    final VaxDate absoluteMinimum =
+        referenceDate.changeNullable(interval.absMinInt, false)!;
+
+    if (dateGiven < absoluteMinimum) {
+      updateAllowedInterval(valid: false, reason: IntervalReason.tooShort);
+      evalStatus = EvalStatus.not_valid;
+      evalReason = EvalReason.intervalTooShort;
+      return false;
+    }
+
     updateAllowedInterval(valid: true);
     return true;
   }
 
   VaxDate? getReferenceDate(
       Interval interval, int targetDose, List<VaxDose> doses) {
-    /// Determine the reference date from various possible sources
     if (interval.fromPrevious == 'Y') {
-      return getPreviousDoseDate(targetDose, doses);
+      return getPreviousDoseDate(doses);
     } else if (interval.fromTargetDose != null) {
       return getTargetDoseDate(interval.fromTargetDose!, doses);
     } else if (interval.fromMostRecent != null) {
@@ -372,89 +416,52 @@ class VaxDose {
     return null;
   }
 
-  /// If, we are supposed to get it from the most recent, AND the previous
-  /// dose given was "Valid" or "Not Valid" (NOT "Substandard") AND the
-  /// previous dose was not inadvertent, then we use the previous dose's
-  /// dateGiven as the reference date.
-  VaxDate? getPreviousDoseDate(int targetDose, List<VaxDose> doses) {
-    // Get the date of the immediate previous dose if valid and not inadvertent
-    if (targetDose > 0 &&
-        targetDose - 1 < doses.length &&
-        doses[targetDose - 1].evalStatus != EvalStatus.sub_standard &&
-        !doses[targetDose - 1].inadvertent) {
-      return doses[targetDose - 1].dateGiven;
+  /// Per CALCDTINT-1: Find the most immediate previous dose administered
+  /// that has eval status Valid or Not Valid, and is not inadvertent.
+  /// Scans backward from the current dose's index.
+  VaxDate? getPreviousDoseDate(List<VaxDose> doses) {
+    if (index == null || index == 0) return null;
+    for (int i = index! - 1; i >= 0; i--) {
+      final VaxDose prev = doses[i];
+      if (!prev.inadvertent &&
+          (prev.evalStatus == EvalStatus.valid ||
+              prev.evalStatus == EvalStatus.not_valid)) {
+        return prev.dateGiven;
+      }
     }
-    updatePreferredInterval(valid: false);
     return null;
   }
 
-  /// If the from previous is not no (should be N but just in case we
-  /// check for anything containing an N), and the fromTargetDose is
-  /// not null and it's less than the current targetDose (which shouldn't
-  /// be possible, but just covering edge cases)
+  /// Per CALCDTINT-2: Find the date of the dose satisfying the specified
+  /// target dose number.
   VaxDate? getTargetDoseDate(int targetDoseNumber, List<VaxDose> doses) {
-    // Find the date of a specific target dose in the series
     final VaxDate? referenceDate = doses
         .firstWhereOrNull(
             (VaxDose dose) => dose.targetDoseSatisfied == targetDoseNumber - 1)
         ?.dateGiven;
-    if (referenceDate == null) {
-      updatePreferredInterval(valid: false);
-    }
     return referenceDate;
   }
 
-  /// If it's not from the immediate previous dose, and fromMostRecent
-  /// does not equal null ("n/a" on the spreadsheets) and it's not an
-  /// inadvertent vaccine
+  /// Find the most recent dose of specified vaccine types, not inadvertent.
   VaxDate? getMostRecentDoseDate(List<int> vaccineTypes, List<VaxDose> doses) {
-    // Get the date of the most recent dose of a specified vaccine type, if not inadvertent
     final VaxDose? dose = doses.lastWhereOrNull((VaxDose dose) =>
         vaccineTypes.contains(dose.cvxAsInt) && !dose.inadvertent);
     return dose?.dateGiven;
   }
 
   VaxDate? getObservationDate(ObservationCode? relevantObs) {
-    /// For this one we have to review the list of conditions, which we
-    /// stored in a Provider
     final ProviderContainer container = ProviderContainer();
-    // Get the date of the most recent relevant observation
     final VaxObservations observations = container.read(observationsProvider);
-    final int? index = observations.codesAsInt
+    final int? obsIndex = observations.codesAsInt
         ?.indexWhere((int element) => element == relevantObs?.codeAsInt);
-    if (index == null || index == -1) {
-      updatePreferredInterval(valid: false);
+    if (obsIndex == null || obsIndex == -1) {
       return null;
     } else {
-      /// Otherwise, the reference date is the most recent active date of
-      /// the appropriate observation
-      final VaxObservation obs = observations.observation![index];
+      final VaxObservation obs = observations.observation![obsIndex];
       return obs.period?.end == null || obs.period!.end!.valueDateTime == null
           ? VaxDate.now()
           : VaxDate.fromDateTime(obs.period!.end!.valueDateTime!);
     }
-  }
-
-  bool evaluateIntervalDates(VaxDate referenceDate, Interval interval) {
-    // Calculate absolute minimum and minimum interval dates
-    final VaxDate absoluteMinimum =
-        referenceDate.changeNullable(interval.absMinInt, false)!;
-    final VaxDate minimumDate =
-        referenceDate.changeNullable(interval.minInt, false)!;
-
-    // Check if the given dose is administered before the absolute minimum date
-    if (dateGiven < absoluteMinimum) {
-      updatePreferredInterval(valid: false, reason: IntervalReason.tooShort);
-      updateAllowedInterval(valid: false, reason: IntervalReason.tooShort);
-      evalStatus = EvalStatus.not_valid;
-      evalReason = EvalReason.intervalTooShort;
-      return false;
-    }
-    // Check if it is within the grace period
-    if (dateGiven < minimumDate) {
-      updatePreferredInterval(valid: true, reason: IntervalReason.gracePeriod);
-    }
-    return true;
   }
 
   bool isLiveVirusConflict(
@@ -478,40 +485,41 @@ class VaxDose {
     if (liveVirusConflicts?.isEmpty ?? true) {
       conflict = false;
       return false;
-    } else {
-      /// We evaluate the previous dose, and we look to see if one of the
-      /// live virus conflicts for the current dose has a previous type that
-      /// matches the type of the previous dose that was actually given
-      final VaxDose previousDose = doses[index! - 1];
-      final int previousIndex = liveVirusConflicts!.indexWhere(
-          (LiveVirusConflict element) =>
-              element.previous?.cvxAsInt == previousDose.cvxAsInt);
+    }
 
-      /// If not, no conflict, we return false
-      if (previousIndex == -1) {
-        conflict = false;
-        return false;
-      } else {
-        final VaxDate conflictBeginIntervalDate = previousDose.dateGiven
-            .changeNullable(
-                liveVirusConflicts[previousIndex].conflictBeginInterval,
-                false)!;
-        final VaxDate conflictEndIntervalDate = previousDose.dateGiven
-            .changeNullable(
-                liveVirusConflicts[previousIndex].conflictEndInterval, true)!;
-        if (conflictBeginIntervalDate <= dateGiven &&
-            dateGiven < conflictEndIntervalDate) {
+    /// Per Figure 6-16: loop "For each previous vaccine dose administered"
+    for (int i = 0; i < index!; i++) {
+      final VaxDose previousDose = doses[i];
+
+      for (final LiveVirusConflict lvc in liveVirusConflicts!) {
+        if (lvc.previous?.cvxAsInt != previousDose.cvxAsInt) continue;
+
+        final VaxDate conflictBeginDate = previousDose.dateGiven
+            .changeNullable(lvc.conflictBeginInterval, false)!;
+
+        /// Per CALCDTCONFLICT-2: use minConflictEndInterval when previous
+        /// is Valid or has no eval status; use conflictEndInterval otherwise
+        final String? endInterval =
+            (previousDose.evalStatus == null ||
+                    previousDose.evalStatus == EvalStatus.valid)
+                ? lvc.minConflictEndInterval
+                : lvc.conflictEndInterval;
+
+        final VaxDate conflictEndDate =
+            previousDose.dateGiven.changeNullable(endInterval, true)!;
+
+        if (conflictBeginDate <= dateGiven && dateGiven < conflictEndDate) {
           conflict = true;
           conflictReason = 'Live Virus Conflict';
           evalStatus = EvalStatus.not_valid;
           evalReason = EvalReason.liveVirusConflict;
           return true;
-        } else {
-          conflict = false;
-          return false;
         }
       }
     }
+
+    conflict = false;
+    return false;
   }
 
   bool isPreferredType(

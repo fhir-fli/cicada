@@ -151,6 +151,50 @@ void main() {
       // Print summary for baseline visibility
       print('Compared $comparedCount dose evaluations');
       print('Mismatches: ${mismatches.length}');
+
+      // Categorize mismatches
+      final tooPermissive = mismatches.where((m) =>
+          m.contains('expected="Status: Not Valid') ||
+          m.contains('expected="Status: Extraneous')).length;
+      final tooStrict = mismatches.where((m) =>
+          m.contains('expected="Status: Valid ')).length;
+      final otherMismatch = mismatches.length - tooPermissive - tooStrict;
+      print('  Too permissive (Cicada Valid, CDSi Not Valid): $tooPermissive');
+      print('  Too strict (Cicada Not Valid, CDSi Valid): $tooStrict');
+      print('  Other: $otherMismatch');
+
+      // Sub-categorize too-permissive
+      if (tooPermissive > 0) {
+        final intervalIssues = mismatches.where((m) =>
+            m.contains('expected="Status: Not Valid Reason: Interval')).length;
+        final extraneousExpected = mismatches.where((m) =>
+            m.contains('expected="Status: Extraneous')).length;
+        print('  Too permissive breakdown:');
+        print('    Interval: $intervalIssues');
+        print('    Extraneous expected: $extraneousExpected');
+      }
+
+      // Sub-categorize too-strict
+      if (tooStrict > 0) {
+        final ageIssues = mismatches.where((m) =>
+            m.contains('expected="Status: Valid ') &&
+            m.contains('Age:')).length;
+        final vaccineTypeIssues = mismatches.where((m) =>
+            m.contains('expected="Status: Valid ') &&
+            m.contains('Not a preferable')).length;
+        final extraneousActual = mismatches.where((m) =>
+            m.contains('expected="Status: Valid ') &&
+            m.contains('actual="Status: Extraneous')).length;
+        final liveVirusIssues = mismatches.where((m) =>
+            m.contains('expected="Status: Valid ') &&
+            m.contains('Live Virus')).length;
+        print('  Too strict breakdown:');
+        print('    Age: $ageIssues');
+        print('    Vaccine type: $vaccineTypeIssues');
+        print('    Extraneous (actual): $extraneousActual');
+        print('    Live virus: $liveVirusIssues');
+      }
+
       if (mismatches.isNotEmpty) {
         print('First 30 mismatches:');
         for (final m in mismatches.take(30)) {

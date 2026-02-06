@@ -31,6 +31,18 @@ class VaxSeries {
       setUnsatisfiedDoses();
       indexDoses();
       evaluateSeriesDoses();
+      markExtraneousDoses();
+    }
+  }
+
+  /// Per Figure 4-6 / Step 6b: any dose that was never matched to a target
+  /// dose should be marked extraneous.
+  void markExtraneousDoses() {
+    for (final VaxDose dose in doses) {
+      if (dose.evalStatus == null) {
+        dose.evalStatus = EvalStatus.extraneous;
+        dose.evalReason = EvalReason.seriesAlreadyCompleted;
+      }
     }
   }
 
@@ -99,14 +111,29 @@ class VaxSeries {
     } else if (!dose.isValidByAge(seriesDose.age,
         evaluatedDoses.isEmpty ? null : evaluatedDoses.last, targetDose)) {
       return false;
-    } else if (!dose.isAllowedInterval(
-        seriesDose.allowableInterval == null
-            ? null
-            : <Interval>[seriesDose.allowableInterval!],
-        doses,
-        targetDose)) {
+    }
+
+    // Per Figure 6-1: Evaluate Preferable Interval (6.5) first
+    // Per Section 6.5: no preferable intervals → considered "valid"
+    final bool preferableOk = dose.evaluatePreferableInterval(
+        seriesDose.preferableInterval, doses, targetDose);
+
+    // Per Figure 6-1: if preferable fails, try Allowable Interval (6.6)
+    // Per Section 6.6: no allowable intervals → considered "not valid"
+    final bool allowableOk = preferableOk
+        ? true
+        : dose.evaluateAllowableInterval(
+            seriesDose.allowableInterval, doses, targetDose);
+
+    // Per Table 6-31: satisfied if preferable OR allowable passed
+    if (!preferableOk && !allowableOk) {
+      // Ensure evalStatus is set when both interval checks fail
+      dose.evalStatus ??= EvalStatus.not_valid;
+      dose.evalReason ??= EvalReason.intervalTooShort;
       return false;
-    } else if (dose.isLiveVirusConflict(doses)) {
+    }
+
+    if (dose.isLiveVirusConflict(doses)) {
       return false;
     } else {
       return dose.isAllowedType(seriesDose.allowableVaccine, dob);
