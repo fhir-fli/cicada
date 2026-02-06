@@ -94,6 +94,9 @@ void main(List<String> args) {
     }
   }
 
+  // Merge supplementary crosswalk coded values into observations
+  scheduleData = _mergeCrosswalk(scheduleData);
+
   // Write JSON
   final jsonPath = '${outputDir.path}/schedule_supporting_data.json';
   File(jsonPath).writeAsStringSync(jsonPrettyPrint(scheduleData.toJson()));
@@ -205,6 +208,63 @@ String snakeCaseToCamelCase(String snakeCaseString) {
     );
   }
   return camelCaseString.toString();
+}
+
+/// Merges supplementary crosswalk data (ICD-10-CM, LOINC, RxNorm, CPT) into
+/// the observation coded values parsed from the CDC Excel.
+ScheduleSupportingData _mergeCrosswalk(ScheduleSupportingData data) {
+  final crosswalkFile =
+      File('cicada_generator/lib/crosswalk/observation_crosswalk.json');
+  if (!crosswalkFile.existsSync()) {
+    print('No crosswalk file found, skipping merge.');
+    return data;
+  }
+
+  final crosswalk = json.decode(crosswalkFile.readAsStringSync())
+      as Map<String, dynamic>;
+  final observations = data.observations?.observation;
+  if (observations == null || observations.isEmpty) return data;
+
+  final updatedObs = <VaxObservation>[];
+  for (final obs in observations) {
+    final obsCode = obs.observationCode;
+    final crosswalkEntry = obsCode != null
+        ? crosswalk[obsCode] as Map<String, dynamic>?
+        : null;
+    if (crosswalkEntry == null) {
+      updatedObs.add(obs);
+      continue;
+    }
+
+    final existingCoded =
+        List<CodedValue>.from(obs.codedValues?.codedValue ?? []);
+
+    for (final entry in crosswalkEntry.entries) {
+      final codeSystem = entry.key;
+      if (codeSystem.startsWith('_')) continue; // skip _comment etc.
+      final codes = entry.value as List<dynamic>;
+      for (final codeEntry in codes) {
+        final codeMap = codeEntry as Map<String, dynamic>;
+        existingCoded.add(CodedValue(
+          code: codeMap['code'] as String?,
+          codeSystem: codeSystem,
+          text: codeMap['text'] as String?,
+        ));
+      }
+    }
+
+    updatedObs.add(obs.copyWith(
+      codedValues: CodedValues(codedValue: existingCoded),
+    ));
+  }
+
+  return ScheduleSupportingData(
+    liveVirusConflicts: data.liveVirusConflicts,
+    vaccineGroups: data.vaccineGroups,
+    vaccineGroupToAntigenMap: data.vaccineGroupToAntigenMap,
+    cvxToAntigenMap: data.cvxToAntigenMap,
+    observations: VaxObservations(observation: updatedObs),
+  );
 }
 
 class AntigenClass {

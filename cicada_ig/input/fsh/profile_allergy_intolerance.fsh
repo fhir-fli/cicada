@@ -1,9 +1,7 @@
 Profile: ReactionProfile
 Parent: AllergyIntolerance
-Title: "Allergy Intolerance Profile with Vaccine Codes"
-Description: "Profile for allergy intolerances where the offending agent must have a CVX or MVX code."
+Title: "Allergy Intolerance Profile for Immunization Decision Support"
+Description: "Profile for allergy intolerances relevant to immunization. The code (allergen/substance) may use SNOMED CT or ICD-10-CM. Reaction substances may use CVX, MVX, SNOMED CT, or RxNorm."
 
-* reaction.exists()  // Ensures that the reaction element exists
-* reaction.substance.exists()  // Ensures that the substance within the reaction exists
-* reaction.substance.coding.exists()  // Ensures that the coding for the substance exists
-* reaction.substance.coding from VaccineCodesCvxMvx  // Binds the coding system to the VaccineCodesCvxMvx ValueSet
+* code from VaccineConditionCodesSnomed (extensible)
+* reaction.substance from VaccineCodesCvxMvx (extensible)

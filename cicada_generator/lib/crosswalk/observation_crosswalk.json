@@ -1,0 +1,874 @@
+{
+  "_comment": "Supplementary code mappings for CDSi observations. Merged with CDC-provided SNOMED/CVX/CDCPHINVS at generation time.",
+  "002": {
+    "CPT": [
+      {"code": "38100", "text": "Splenectomy; total (separate procedure)"},
+      {"code": "38101", "text": "Splenectomy; total, en bloc"},
+      {"code": "38102", "text": "Splenectomy; total, en bloc with other organs"},
+      {"code": "38115", "text": "Repair of ruptured spleen with splenorrhaphy"},
+      {"code": "38120", "text": "Laparoscopy, surgical, splenectomy"}
+    ]
+  },
+  "003": {
+    "ICD10CM": [
+      {"code": "D84.9", "text": "Immunodeficiency, unspecified"},
+      {"code": "D83.9", "text": "Common variable immunodeficiency, unspecified"},
+      {"code": "D80.9", "text": "Immunodeficiency with predominantly antibody defects, unspecified"},
+      {"code": "D89.9", "text": "Disorder involving immune mechanism, unspecified"},
+      {"code": "D84.8", "text": "Other specified immunodeficiency disorders"}
+    ]
+  },
+  "004": {
+    "ICD10CM": [
+      {"code": "Z94.84", "text": "Bone marrow transplant status"},
+      {"code": "T86.00", "text": "Unspecified complication of bone marrow transplant"},
+      {"code": "T86.09", "text": "Other complications of bone marrow transplant"}
+    ]
+  },
+  "005": {
+    "ICD10CM": [
+      {"code": "B18.2", "text": "Chronic viral hepatitis C"},
+      {"code": "B17.10", "text": "Acute hepatitis C without hepatic coma"},
+      {"code": "B17.11", "text": "Acute hepatitis C with hepatic coma"},
+      {"code": "B19.20", "text": "Unspecified viral hepatitis C without hepatic coma"}
+    ]
+  },
+  "006": {
+    "ICD10CM": [
+      {"code": "D66", "text": "Hereditary factor VIII deficiency"},
+      {"code": "D67", "text": "Hereditary factor IX deficiency"},
+      {"code": "D68.2", "text": "Hereditary deficiency of other clotting factors"}
+    ]
+  },
+  "007": {
+    "ICD10CM": [
+      {"code": "Z33.1", "text": "Pregnant state, incidental"},
+      {"code": "O09.90", "text": "Supervision of high risk pregnancy, unspecified trimester"},
+      {"code": "Z34.00", "text": "Encounter for supervision of normal first pregnancy, unspecified trimester"},
+      {"code": "Z34.80", "text": "Encounter for supervision of other normal pregnancy, unspecified trimester"}
+    ]
+  },
+  "009": {
+    "ICD10CM": [
+      {"code": "Z39.1", "text": "Encounter for care and examination of lactating mother"}
+    ]
+  },
+  "010": {
+    "ICD10CM": [
+      {"code": "G96.00", "text": "Cerebrospinal fluid leak, unspecified"},
+      {"code": "G96.01", "text": "Cranial cerebrospinal fluid leak, spontaneous"},
+      {"code": "G96.02", "text": "Spinal cerebrospinal fluid leak, spontaneous"},
+      {"code": "G96.08", "text": "Other cranial cerebrospinal fluid leak"},
+      {"code": "G96.09", "text": "Other spinal cerebrospinal fluid leak"}
+    ]
+  },
+  "011": {
+    "ICD10CM": [
+      {"code": "Z96.21", "text": "Cochlear implant status"}
+    ],
+    "CPT": [
+      {"code": "69930", "text": "Cochlear device implantation"}
+    ]
+  },
+  "012": {
+    "ICD10CM": [
+      {"code": "Z83.2", "text": "Family history of diseases of the blood and blood-forming organs and certain disorders involving the immune mechanism"}
+    ]
+  },
+  "013": {
+    "ICD10CM": [
+      {"code": "D81.9", "text": "Combined immunodeficiency, unspecified"},
+      {"code": "D81.0", "text": "SCID with reticular dysgenesis"},
+      {"code": "D81.1", "text": "SCID with low T- and B-cell numbers"},
+      {"code": "D81.2", "text": "SCID with low or normal B-cell numbers"},
+      {"code": "D81.3", "text": "Adenosine deaminase deficiency"},
+      {"code": "D81.5", "text": "Purine nucleoside phosphorylase deficiency"},
+      {"code": "D81.6", "text": "Major histocompatibility complex class I deficiency"},
+      {"code": "D81.7", "text": "Major histocompatibility complex class II deficiency"}
+    ]
+  },
+  "014": {
+    "ICD10CM": [
+      {"code": "E10.9", "text": "Type 1 diabetes mellitus without complications"},
+      {"code": "E10.65", "text": "Type 1 diabetes mellitus with hyperglycemia"},
+      {"code": "E11.9", "text": "Type 2 diabetes mellitus without complications"},
+      {"code": "E11.65", "text": "Type 2 diabetes mellitus with hyperglycemia"},
+      {"code": "E13.9", "text": "Other specified diabetes mellitus without complications"},
+      {"code": "E08.9", "text": "Diabetes mellitus due to underlying condition without complications"},
+      {"code": "E09.9", "text": "Drug or chemical induced diabetes mellitus without complications"}
+    ]
+  },
+  "015": {
+    "ICD10CM": [
+      {"code": "K70.30", "text": "Alcoholic cirrhosis of liver without ascites"},
+      {"code": "K70.31", "text": "Alcoholic cirrhosis of liver with ascites"},
+      {"code": "K73.9", "text": "Chronic hepatitis, unspecified"},
+      {"code": "K74.0", "text": "Hepatic fibrosis"},
+      {"code": "K74.60", "text": "Unspecified cirrhosis of liver"},
+      {"code": "K74.69", "text": "Other cirrhosis of liver"},
+      {"code": "K76.0", "text": "Fatty liver, not elsewhere classified"},
+      {"code": "K76.9", "text": "Liver disease, unspecified"}
+    ]
+  },
+  "016": {
+    "ICD10CM": [
+      {"code": "I25.10", "text": "Atherosclerotic heart disease of native coronary artery without angina pectoris"},
+      {"code": "I25.9", "text": "Chronic ischemic heart disease, unspecified"},
+      {"code": "I50.9", "text": "Heart failure, unspecified"},
+      {"code": "I50.20", "text": "Unspecified systolic (congestive) heart failure"},
+      {"code": "I50.30", "text": "Unspecified diastolic (congestive) heart failure"},
+      {"code": "I42.9", "text": "Cardiomyopathy, unspecified"},
+      {"code": "I42.0", "text": "Dilated cardiomyopathy"},
+      {"code": "Q24.9", "text": "Congenital malformation of heart, unspecified"}
+    ]
+  },
+  "017": {
+    "ICD10CM": [
+      {"code": "J44.9", "text": "Chronic obstructive pulmonary disease, unspecified"},
+      {"code": "J44.1", "text": "Chronic obstructive pulmonary disease with acute exacerbation"},
+      {"code": "J43.9", "text": "Emphysema, unspecified"},
+      {"code": "J84.9", "text": "Interstitial pulmonary disease, unspecified"},
+      {"code": "J84.10", "text": "Pulmonary fibrosis, unspecified"},
+      {"code": "J47.9", "text": "Bronchiectasis, uncomplicated"},
+      {"code": "P27.1", "text": "Bronchopulmonary dysplasia originating in the perinatal period"}
+    ]
+  },
+  "018": {
+    "ICD10CM": [
+      {"code": "D73.0", "text": "Hyposplenism"},
+      {"code": "Q89.01", "text": "Asplenia (congenital)"},
+      {"code": "D73.89", "text": "Other diseases of spleen"},
+      {"code": "Z90.81", "text": "Acquired absence of spleen"}
+    ]
+  },
+  "019": {
+    "ICD10CM": [
+      {"code": "N18.1", "text": "Chronic kidney disease, stage 1"},
+      {"code": "N18.2", "text": "Chronic kidney disease, stage 2"},
+      {"code": "N18.30", "text": "Chronic kidney disease, stage 3 unspecified"},
+      {"code": "N18.4", "text": "Chronic kidney disease, stage 4"},
+      {"code": "N18.5", "text": "Chronic kidney disease, stage 5"},
+      {"code": "N18.6", "text": "End stage renal disease"},
+      {"code": "N18.9", "text": "Chronic kidney disease, unspecified"},
+      {"code": "Z99.2", "text": "Dependence on renal dialysis"}
+    ]
+  },
+  "020": {
+    "LOINC": [
+      {"code": "21500-4", "text": "Measles virus IgG Ab [Units/volume] in Serum"},
+      {"code": "35275-7", "text": "Measles virus IgG Ab [Presence] in Serum"},
+      {"code": "20479-2", "text": "Measles virus Ab [Presence] in Serum"}
+    ]
+  },
+  "021": {
+    "LOINC": [
+      {"code": "6476-3", "text": "Mumps virus IgG Ab [Units/volume] in Serum"},
+      {"code": "39012-0", "text": "Mumps virus IgG Ab [Presence] in Serum"},
+      {"code": "22416-2", "text": "Mumps virus Ab [Presence] in Serum"}
+    ]
+  },
+  "022": {
+    "LOINC": [
+      {"code": "8014-3", "text": "Rubella virus IgG Ab [Units/volume] in Serum"},
+      {"code": "25514-1", "text": "Rubella virus IgG Ab [Presence] in Serum"},
+      {"code": "20458-6", "text": "Rubella virus Ab [Presence] in Serum"}
+    ]
+  },
+  "023": {
+    "LOINC": [
+      {"code": "19162-7", "text": "Varicella zoster virus IgG Ab [Units/volume] in Serum"},
+      {"code": "17763-4", "text": "Varicella zoster virus IgG Ab [Presence] in Serum"},
+      {"code": "5403-8", "text": "Varicella zoster virus Ab [Presence] in Serum"}
+    ]
+  },
+  "024": {
+    "LOINC": [
+      {"code": "16935-9", "text": "Hepatitis B virus surface Ab [Units/volume] in Serum"},
+      {"code": "22322-2", "text": "Hepatitis B virus surface Ab [Presence] in Serum"},
+      {"code": "10900-9", "text": "Hepatitis B virus surface Ab [Units/volume] in Serum by Immunoassay"}
+    ]
+  },
+  "025": {
+    "LOINC": [
+      {"code": "32018-4", "text": "Hepatitis A virus Ab [Presence] in Serum"},
+      {"code": "40724-7", "text": "Hepatitis A virus IgG Ab [Presence] in Serum"},
+      {"code": "13950-1", "text": "Hepatitis A virus Ab [Units/volume] in Serum"}
+    ]
+  },
+  "026": {
+    "ICD10CM": [
+      {"code": "B20", "text": "Human immunodeficiency virus [HIV] disease"},
+      {"code": "Z21", "text": "Asymptomatic human immunodeficiency virus [HIV] infection status"}
+    ]
+  },
+  "027": {
+    "ICD10CM": [
+      {"code": "J45.20", "text": "Mild intermittent asthma, uncomplicated"},
+      {"code": "J45.30", "text": "Mild persistent asthma, uncomplicated"},
+      {"code": "J45.40", "text": "Moderate persistent asthma, uncomplicated"},
+      {"code": "J45.50", "text": "Severe persistent asthma, uncomplicated"},
+      {"code": "J45.909", "text": "Unspecified asthma, uncomplicated"},
+      {"code": "J45.998", "text": "Other asthma"}
+    ]
+  },
+  "028": {
+    "ICD10CM": [
+      {"code": "K56.1", "text": "Intussusception"}
+    ]
+  },
+  "029": {
+    "ICD10CM": [
+      {"code": "K52.9", "text": "Noninfective gastroenteritis and colitis, unspecified"},
+      {"code": "A09", "text": "Infectious gastroenteritis and colitis, unspecified"},
+      {"code": "A08.0", "text": "Rotaviral enteritis"},
+      {"code": "A08.39", "text": "Other viral enteritis"}
+    ]
+  },
+  "030": {
+    "ICD10CM": [
+      {"code": "R50.9", "text": "Fever, unspecified"}
+    ]
+  },
+  "031": {
+    "ICD10CM": [
+      {"code": "A15.0", "text": "Tuberculosis of lung"},
+      {"code": "A15.9", "text": "Respiratory tuberculosis unspecified"},
+      {"code": "A18.9", "text": "Tuberculosis of other organs"},
+      {"code": "A19.9", "text": "Miliary tuberculosis, unspecified"},
+      {"code": "R76.11", "text": "Nonspecific reaction to tuberculin skin test without active tuberculosis"},
+      {"code": "Z86.11", "text": "Personal history of tuberculosis"}
+    ]
+  },
+  "032": {
+    "ICD10CM": [
+      {"code": "Z99.2", "text": "Dependence on renal dialysis"}
+    ]
+  },
+  "033": {
+    "RXNORM": [
+      {"code": "281", "text": "Acyclovir"},
+      {"code": "24811", "text": "Famciclovir"},
+      {"code": "39786", "text": "Valacyclovir"}
+    ]
+  },
+  "034": {
+    "ICD10CM": [
+      {"code": "Z79.82", "text": "Long term (current) use of aspirin"}
+    ],
+    "RXNORM": [
+      {"code": "1191", "text": "Aspirin"}
+    ]
+  },
+  "039": {
+    "ICD10CM": [
+      {"code": "Z11.3", "text": "Encounter for screening for infections with a predominantly sexual mode of transmission"},
+      {"code": "Z11.4", "text": "Encounter for screening for human immunodeficiency virus [HIV]"},
+      {"code": "Z20.2", "text": "Contact with and exposure to infections with a predominantly sexual mode of transmission"}
+    ]
+  },
+  "040": {
+    "ICD10CM": [
+      {"code": "F19.10", "text": "Other psychoactive substance abuse, uncomplicated"},
+      {"code": "F14.10", "text": "Cocaine abuse, uncomplicated"},
+      {"code": "F11.10", "text": "Opioid abuse, uncomplicated"},
+      {"code": "F16.10", "text": "Hallucinogen abuse, uncomplicated"}
+    ]
+  },
+  "041": {
+    "ICD10CM": [
+      {"code": "F11.10", "text": "Opioid abuse, uncomplicated"},
+      {"code": "F19.10", "text": "Other psychoactive substance abuse, uncomplicated"}
+    ]
+  },
+  "042": {
+    "ICD10CM": [
+      {"code": "F17.210", "text": "Nicotine dependence, cigarettes, uncomplicated"},
+      {"code": "Z72.0", "text": "Tobacco use"}
+    ]
+  },
+  "043": {
+    "ICD10CM": [
+      {"code": "F10.20", "text": "Alcohol dependence, uncomplicated"},
+      {"code": "F10.10", "text": "Alcohol abuse, uncomplicated"}
+    ]
+  },
+  "065": {
+    "ICD10CM": [
+      {"code": "N18.6", "text": "End stage renal disease"},
+      {"code": "N18.5", "text": "Chronic kidney disease, stage 5"},
+      {"code": "N18.9", "text": "Chronic kidney disease, unspecified"}
+    ]
+  },
+  "071": {
+    "ICD10CM": [
+      {"code": "Z11.59", "text": "Encounter for screening for other viral diseases"}
+    ]
+  },
+  "076": {
+    "ICD10CM": [
+      {"code": "G31.9", "text": "Degenerative disease of nervous system, unspecified"}
+    ]
+  },
+  "077": {
+    "ICD10CM": [
+      {"code": "T50.B95A", "text": "Adverse effect of other viral vaccines, initial encounter"},
+      {"code": "Z88.9", "text": "Allergy status to unspecified drugs, medicaments and biological substances"}
+    ]
+  },
+  "081": {
+    "ICD10CM": [
+      {"code": "T50.B95A", "text": "Adverse effect of other viral vaccines, initial encounter"},
+      {"code": "Z91.012", "text": "Allergy to eggs"}
+    ]
+  },
+  "082": {
+    "ICD10CM": [
+      {"code": "T50.B95A", "text": "Adverse effect of other viral vaccines, initial encounter"}
+    ]
+  },
+  "083": {
+    "ICD10CM": [
+      {"code": "T50.B95A", "text": "Adverse effect of other viral vaccines, initial encounter"}
+    ]
+  },
+  "084": {
+    "ICD10CM": [
+      {"code": "T50.B95A", "text": "Adverse effect of other viral vaccines, initial encounter"}
+    ]
+  },
+  "085": {
+    "ICD10CM": [
+      {"code": "T50.B95A", "text": "Adverse effect of other viral vaccines, initial encounter"}
+    ]
+  },
+  "086": {
+    "ICD10CM": [
+      {"code": "T50.A95A", "text": "Adverse effect of pertussis vaccine, including combinations with a pertussis component, initial encounter"},
+      {"code": "T50.B95A", "text": "Adverse effect of other viral vaccines, initial encounter"}
+    ]
+  },
+  "087": {
+    "ICD10CM": [
+      {"code": "T50.A95A", "text": "Adverse effect of pertussis vaccine, including combinations with a pertussis component, initial encounter"},
+      {"code": "T50.B95A", "text": "Adverse effect of other viral vaccines, initial encounter"}
+    ]
+  },
+  "088": {
+    "ICD10CM": [
+      {"code": "T50.A95A", "text": "Adverse effect of pertussis vaccine, including combinations with a pertussis component, initial encounter"},
+      {"code": "T50.B95A", "text": "Adverse effect of other viral vaccines, initial encounter"}
+    ]
+  },
+  "089": {
+    "ICD10CM": [
+      {"code": "T50.B95A", "text": "Adverse effect of other viral vaccines, initial encounter"}
+    ]
+  },
+  "090": {
+    "ICD10CM": [
+      {"code": "T50.B95A", "text": "Adverse effect of other viral vaccines, initial encounter"}
+    ]
+  },
+  "091": {
+    "ICD10CM": [
+      {"code": "T50.B95A", "text": "Adverse effect of other viral vaccines, initial encounter"}
+    ]
+  },
+  "092": {
+    "ICD10CM": [
+      {"code": "T50.B95A", "text": "Adverse effect of other viral vaccines, initial encounter"}
+    ]
+  },
+  "093": {
+    "ICD10CM": [
+      {"code": "T50.B95A", "text": "Adverse effect of other viral vaccines, initial encounter"}
+    ]
+  },
+  "094": {
+    "ICD10CM": [
+      {"code": "T50.B95A", "text": "Adverse effect of other viral vaccines, initial encounter"}
+    ]
+  },
+  "095": {
+    "ICD10CM": [
+      {"code": "T50.B95A", "text": "Adverse effect of other viral vaccines, initial encounter"}
+    ]
+  },
+  "096": {
+    "ICD10CM": [
+      {"code": "T50.B95A", "text": "Adverse effect of other viral vaccines, initial encounter"}
+    ]
+  },
+  "097": {
+    "ICD10CM": [
+      {"code": "T50.B95A", "text": "Adverse effect of other viral vaccines, initial encounter"}
+    ]
+  },
+  "098": {
+    "ICD10CM": [
+      {"code": "T50.B95A", "text": "Adverse effect of other viral vaccines, initial encounter"}
+    ]
+  },
+  "099": {
+    "ICD10CM": [
+      {"code": "T50.B95A", "text": "Adverse effect of other viral vaccines, initial encounter"}
+    ]
+  },
+  "100": {
+    "ICD10CM": [
+      {"code": "T50.B95A", "text": "Adverse effect of other viral vaccines, initial encounter"}
+    ]
+  },
+  "101": {
+    "ICD10CM": [
+      {"code": "Z91.012", "text": "Allergy to eggs"},
+      {"code": "T78.1XXA", "text": "Other adverse food reactions, not elsewhere classified, initial encounter"}
+    ]
+  },
+  "102": {
+    "ICD10CM": [
+      {"code": "T78.1XXA", "text": "Other adverse food reactions, not elsewhere classified, initial encounter"},
+      {"code": "Z91.018", "text": "Allergy to other foods"}
+    ]
+  },
+  "103": {
+    "ICD10CM": [
+      {"code": "T78.1XXA", "text": "Other adverse food reactions, not elsewhere classified, initial encounter"}
+    ]
+  },
+  "104": {
+    "ICD10CM": [
+      {"code": "Z91.040", "text": "Latex allergy status"}
+    ]
+  },
+  "105": {
+    "ICD10CM": [
+      {"code": "T78.1XXA", "text": "Other adverse food reactions, not elsewhere classified, initial encounter"},
+      {"code": "Z91.018", "text": "Allergy to other foods"}
+    ]
+  },
+  "106": {
+    "ICD10CM": [
+      {"code": "Z88.1", "text": "Allergy status to other antibiotic agents"},
+      {"code": "T36.5X5A", "text": "Adverse effect of aminoglycosides, initial encounter"}
+    ]
+  },
+  "107": {
+    "ICD10CM": [
+      {"code": "Z88.1", "text": "Allergy status to other antibiotic agents"},
+      {"code": "T36.5X5A", "text": "Adverse effect of aminoglycosides, initial encounter"}
+    ]
+  },
+  "108": {
+    "ICD10CM": [
+      {"code": "Z88.1", "text": "Allergy status to other antibiotic agents"},
+      {"code": "T36.5X5A", "text": "Adverse effect of aminoglycosides, initial encounter"}
+    ]
+  },
+  "109": {
+    "ICD10CM": [
+      {"code": "Z88.1", "text": "Allergy status to other antibiotic agents"},
+      {"code": "T36.8X5A", "text": "Adverse effect of other systemic antibiotics, initial encounter"}
+    ]
+  },
+  "110": {
+    "ICD10CM": [
+      {"code": "Z91.018", "text": "Allergy to other foods"},
+      {"code": "T78.1XXA", "text": "Other adverse food reactions, not elsewhere classified, initial encounter"}
+    ]
+  },
+  "111": {
+    "ICD10CM": [
+      {"code": "T78.49XA", "text": "Other allergy, initial encounter"}
+    ]
+  },
+  "113": {
+    "ICD10CM": [
+      {"code": "N18.6", "text": "End stage renal disease"}
+    ]
+  },
+  "115": {
+    "ICD10CM": [
+      {"code": "T45.7X5A", "text": "Adverse effect of anticoagulants, initial encounter"},
+      {"code": "Z88.8", "text": "Allergy status to other drugs, medicaments and biological substances"}
+    ]
+  },
+  "116": {
+    "ICD10CM": [
+      {"code": "T50.A95A", "text": "Adverse effect of pertussis vaccine, including combinations with a pertussis component, initial encounter"},
+      {"code": "Z88.8", "text": "Allergy status to other drugs, medicaments and biological substances"}
+    ]
+  },
+  "118": {
+    "ICD10CM": [
+      {"code": "T50.A95A", "text": "Adverse effect of pertussis vaccine, including combinations with a pertussis component, initial encounter"},
+      {"code": "Z88.8", "text": "Allergy status to other drugs, medicaments and biological substances"}
+    ]
+  },
+  "121": {
+    "ICD10CM": [
+      {"code": "Z59.00", "text": "Homelessness, unspecified"}
+    ]
+  },
+  "122": {
+    "ICD10CM": [
+      {"code": "Z91.018", "text": "Allergy to other foods"},
+      {"code": "T78.1XXA", "text": "Other adverse food reactions, not elsewhere classified, initial encounter"}
+    ]
+  },
+  "142": {
+    "ICD10CM": [
+      {"code": "B20", "text": "Human immunodeficiency virus [HIV] disease"},
+      {"code": "Z21", "text": "Asymptomatic human immunodeficiency virus [HIV] infection status"},
+      {"code": "D84.821", "text": "Immunodeficiency due to drugs"},
+      {"code": "D84.9", "text": "Immunodeficiency, unspecified"}
+    ]
+  },
+  "155": {
+    "ICD10CM": [
+      {"code": "B20", "text": "Human immunodeficiency virus [HIV] disease"},
+      {"code": "Z21", "text": "Asymptomatic human immunodeficiency virus [HIV] infection status"}
+    ]
+  },
+  "156": {
+    "ICD10CM": [
+      {"code": "C80.0", "text": "Disseminated malignant neoplasm, unspecified"},
+      {"code": "C80.1", "text": "Malignant (primary) neoplasm, unspecified"}
+    ]
+  },
+  "157": {
+    "ICD10CM": [
+      {"code": "Z94.0", "text": "Kidney transplant status"},
+      {"code": "Z94.1", "text": "Heart transplant status"},
+      {"code": "Z94.2", "text": "Lung transplant status"},
+      {"code": "Z94.4", "text": "Liver transplant status"},
+      {"code": "Z94.9", "text": "Transplanted organ and tissue status, unspecified"}
+    ]
+  },
+  "158": {
+    "ICD10CM": [
+      {"code": "Z79.52", "text": "Long term (current) use of systemic steroids"},
+      {"code": "Z79.899", "text": "Other long term (current) drug therapy"},
+      {"code": "D84.821", "text": "Immunodeficiency due to drugs"}
+    ]
+  },
+  "159": {
+    "ICD10CM": [
+      {"code": "Z51.0", "text": "Encounter for antineoplastic radiation therapy"}
+    ]
+  },
+  "160": {
+    "ICD10CM": [
+      {"code": "D73.0", "text": "Hyposplenism"},
+      {"code": "Q89.01", "text": "Asplenia (congenital)"},
+      {"code": "Z90.81", "text": "Acquired absence of spleen"}
+    ]
+  },
+  "161": {
+    "ICD10CM": [
+      {"code": "N18.1", "text": "Chronic kidney disease, stage 1"},
+      {"code": "N18.2", "text": "Chronic kidney disease, stage 2 (mild)"},
+      {"code": "N18.3", "text": "Chronic kidney disease, stage 3 (moderate)"},
+      {"code": "N18.4", "text": "Chronic kidney disease, stage 4 (severe)"},
+      {"code": "N18.5", "text": "Chronic kidney disease, stage 5"},
+      {"code": "N18.9", "text": "Chronic kidney disease, unspecified"}
+    ]
+  },
+  "162": {
+    "ICD10CM": [
+      {"code": "N04.9", "text": "Nephrotic syndrome with unspecified morphologic changes"}
+    ]
+  },
+  "168": {
+    "ICD10CM": [
+      {"code": "Z51.11", "text": "Encounter for antineoplastic chemotherapy"},
+      {"code": "Z51.12", "text": "Encounter for antineoplastic immunotherapy"}
+    ]
+  },
+  "169": {
+    "ICD10CM": [
+      {"code": "Z04.81", "text": "Encounter for examination and observation of victim following forced sexual exploitation"},
+      {"code": "T74.21XA", "text": "Adult sexual abuse, confirmed, initial encounter"},
+      {"code": "T74.22XA", "text": "Child sexual abuse, confirmed, initial encounter"}
+    ]
+  },
+  "170": {
+    "ICD10CM": [
+      {"code": "Z33.1", "text": "Pregnant state, incidental"},
+      {"code": "Z34.90", "text": "Encounter for supervision of normal pregnancy, unspecified, unspecified trimester"}
+    ]
+  },
+  "178": {
+    "ICD10CM": [
+      {"code": "C95.90", "text": "Leukemia, unspecified not having achieved remission"},
+      {"code": "C91.00", "text": "Acute lymphoblastic leukemia not having achieved remission"},
+      {"code": "C92.00", "text": "Acute myeloblastic leukemia, not having achieved remission"}
+    ]
+  },
+  "179": {
+    "ICD10CM": [
+      {"code": "C85.90", "text": "Non-Hodgkin lymphoma, unspecified, unspecified site"},
+      {"code": "C84.40", "text": "Peripheral T-cell lymphoma, not elsewhere classified, unspecified site"}
+    ]
+  },
+  "180": {
+    "ICD10CM": [
+      {"code": "C81.90", "text": "Hodgkin lymphoma, unspecified, unspecified site"}
+    ]
+  },
+  "181": {
+    "ICD10CM": [
+      {"code": "C90.00", "text": "Multiple myeloma not having achieved remission"}
+    ]
+  },
+  "183": {
+    "ICD10CM": [
+      {"code": "B20", "text": "Human immunodeficiency virus [HIV] disease"},
+      {"code": "Z21", "text": "Asymptomatic human immunodeficiency virus [HIV] infection status"}
+    ]
+  },
+  "187": {
+    "ICD10CM": [
+      {"code": "Z88.8", "text": "Allergy status to other drugs, medicaments and biological substances"},
+      {"code": "T78.49XA", "text": "Other allergy, initial encounter"}
+    ]
+  },
+  "188": {
+    "ICD10CM": [
+      {"code": "Z88.8", "text": "Allergy status to other drugs, medicaments and biological substances"},
+      {"code": "T78.49XA", "text": "Other allergy, initial encounter"}
+    ]
+  },
+  "189": {
+    "ICD10CM": [
+      {"code": "Z51.11", "text": "Encounter for antineoplastic chemotherapy"},
+      {"code": "C80.1", "text": "Malignant (primary) neoplasm, unspecified"}
+    ]
+  },
+  "190": {
+    "ICD10CM": [
+      {"code": "Z51.11", "text": "Encounter for antineoplastic chemotherapy"},
+      {"code": "C96.9", "text": "Malignant neoplasm of lymphoid, hematopoietic and related tissue, unspecified"}
+    ]
+  },
+  "191": {
+    "ICD10CM": [
+      {"code": "Z94.84", "text": "Stem cells transplant status"}
+    ]
+  },
+  "192": {
+    "ICD10CM": [
+      {"code": "Z59.3", "text": "Problems related to living in residential institution"}
+    ]
+  },
+  "198": {
+    "ICD10CM": [
+      {"code": "C80.1", "text": "Malignant (primary) neoplasm, unspecified"}
+    ]
+  },
+  "199": {
+    "ICD10CM": [
+      {"code": "J84.9", "text": "Interstitial pulmonary disease, unspecified"},
+      {"code": "J84.10", "text": "Pulmonary fibrosis, unspecified"},
+      {"code": "J84.89", "text": "Other specified interstitial pulmonary diseases"}
+    ]
+  },
+  "200": {
+    "ICD10CM": [
+      {"code": "E84.0", "text": "Cystic fibrosis with pulmonary manifestations"},
+      {"code": "E84.9", "text": "Cystic fibrosis, unspecified"}
+    ]
+  },
+  "201": {
+    "ICD10CM": [
+      {"code": "I27.0", "text": "Primary pulmonary hypertension"},
+      {"code": "I27.20", "text": "Pulmonary hypertension, unspecified"},
+      {"code": "I27.9", "text": "Pulmonary heart disease, unspecified"}
+    ]
+  },
+  "202": {
+    "ICD10CM": [
+      {"code": "F03.90", "text": "Unspecified dementia without behavioral disturbance"},
+      {"code": "G30.9", "text": "Alzheimer disease, unspecified"}
+    ]
+  },
+  "203": {
+    "ICD10CM": [
+      {"code": "Q90.9", "text": "Down syndrome, unspecified"}
+    ]
+  },
+  "204": {
+    "ICD10CM": [
+      {"code": "E66.9", "text": "Obesity, unspecified"},
+      {"code": "E66.01", "text": "Morbid (severe) obesity due to excess calories"}
+    ]
+  },
+  "205": {
+    "ICD10CM": [
+      {"code": "D56.9", "text": "Thalassemia, unspecified"},
+      {"code": "D56.0", "text": "Alpha thalassemia"},
+      {"code": "D56.1", "text": "Beta thalassemia"}
+    ]
+  },
+  "206": {
+    "ICD10CM": [
+      {"code": "I67.9", "text": "Cerebrovascular disease, unspecified"},
+      {"code": "I63.9", "text": "Cerebral infarction, unspecified"}
+    ]
+  },
+  "207": {
+    "ICD10CM": [
+      {"code": "F19.20", "text": "Other psychoactive substance dependence, uncomplicated"},
+      {"code": "F19.10", "text": "Other psychoactive substance abuse, uncomplicated"}
+    ]
+  },
+  "208": {
+    "ICD10CM": [
+      {"code": "F99", "text": "Mental disorder, not otherwise specified"}
+    ]
+  },
+  "209": {
+    "ICD10CM": [
+      {"code": "J44.1", "text": "Chronic obstructive pulmonary disease with (acute) exacerbation"},
+      {"code": "J44.9", "text": "Chronic obstructive pulmonary disease, unspecified"}
+    ]
+  },
+  "215": {
+    "ICD10CM": [
+      {"code": "J43.9", "text": "Emphysema, unspecified"}
+    ]
+  },
+  "216": {
+    "ICD10CM": [
+      {"code": "D84.821", "text": "Immunodeficiency due to drugs"},
+      {"code": "D89.9", "text": "Disorder involving the immune mechanism, unspecified"}
+    ]
+  },
+  "223": {
+    "ICD10CM": [
+      {"code": "L20.9", "text": "Atopic dermatitis, unspecified"},
+      {"code": "L20.89", "text": "Other atopic dermatitis"}
+    ]
+  },
+  "225": {
+    "ICD10CM": [
+      {"code": "L26", "text": "Exfoliative dermatitis"},
+      {"code": "L10.9", "text": "Pemphigus, unspecified"}
+    ]
+  },
+  "240": {
+    "ICD10CM": [
+      {"code": "Z20.828", "text": "Contact with and (suspected) exposure to other viral communicable diseases"}
+    ]
+  },
+  "242": {
+    "ICD10CM": [
+      {"code": "Z20.828", "text": "Contact with and (suspected) exposure to other viral communicable diseases"}
+    ]
+  },
+  "246": {
+    "ICD10CM": [
+      {"code": "D84.9", "text": "Immunodeficiency, unspecified"},
+      {"code": "D84.821", "text": "Immunodeficiency due to drugs"},
+      {"code": "D83.9", "text": "Common variable immunodeficiency, unspecified"}
+    ]
+  },
+  "247": {
+    "ICD10CM": [
+      {"code": "J45.40", "text": "Moderate persistent asthma, uncomplicated"},
+      {"code": "J45.50", "text": "Severe persistent asthma, uncomplicated"}
+    ]
+  },
+  "254": {
+    "ICD10CM": [
+      {"code": "I25.10", "text": "Atherosclerotic heart disease of native coronary artery without angina pectoris"},
+      {"code": "I51.9", "text": "Heart disease, unspecified"},
+      {"code": "I42.9", "text": "Cardiomyopathy, unspecified"}
+    ]
+  },
+  "256": {
+    "ICD10CM": [
+      {"code": "E66.01", "text": "Morbid (severe) obesity due to excess calories"},
+      {"code": "E66.2", "text": "Morbid (severe) obesity with alveolar hypoventilation"}
+    ]
+  },
+  "258": {
+    "ICD10CM": [
+      {"code": "D75.9", "text": "Disease of blood and blood-forming organs, unspecified"}
+    ]
+  },
+  "259": {
+    "ICD10CM": [
+      {"code": "D57.1", "text": "Sickle-cell disease without crisis"},
+      {"code": "D57.00", "text": "Hb-SS disease with crisis, unspecified"}
+    ]
+  },
+  "260": {
+    "ICD10CM": [
+      {"code": "Z59.3", "text": "Problems related to living in residential institution"}
+    ]
+  },
+  "262": {
+    "ICD10CM": [
+      {"code": "R54", "text": "Age-related physical debility (frailty)"}
+    ]
+  },
+  "263": {
+    "ICD10CM": [
+      {"code": "E11.40", "text": "Type 2 diabetes mellitus with diabetic neuropathy, unspecified"},
+      {"code": "E10.40", "text": "Type 1 diabetes mellitus with diabetic neuropathy, unspecified"},
+      {"code": "E13.40", "text": "Other specified diabetes mellitus with diabetic neuropathy, unspecified"}
+    ]
+  },
+  "264": {
+    "ICD10CM": [
+      {"code": "E11.319", "text": "Type 2 diabetes mellitus with unspecified diabetic retinopathy without macular edema"},
+      {"code": "E10.319", "text": "Type 1 diabetes mellitus with unspecified diabetic retinopathy without macular edema"}
+    ]
+  },
+  "265": {
+    "ICD10CM": [
+      {"code": "E11.65", "text": "Type 2 diabetes mellitus with hyperglycemia"},
+      {"code": "E11.69", "text": "Type 2 diabetes mellitus with other specified complication"},
+      {"code": "E10.69", "text": "Type 1 diabetes mellitus with other specified complication"},
+      {"code": "E13.69", "text": "Other specified diabetes mellitus with other specified complication"}
+    ]
+  },
+  "266": {
+    "ICD10CM": [
+      {"code": "Z79.4", "text": "Long term (current) use of insulin"},
+      {"code": "E10.9", "text": "Type 1 diabetes mellitus without complications"},
+      {"code": "E11.9", "text": "Type 2 diabetes mellitus without complications"}
+    ]
+  },
+  "267": {
+    "ICD10CM": [
+      {"code": "Z94.83", "text": "Pancreas transplant status"}
+    ]
+  },
+  "269": {
+    "ICD10CM": [
+      {"code": "Z94.9", "text": "Transplanted organ and tissue status, unspecified"}
+    ]
+  },
+  "270": {
+    "ICD10CM": [
+      {"code": "D80.9", "text": "Immunodeficiency with predominantly antibody defects, unspecified"},
+      {"code": "D80.1", "text": "Nonfamilial hypogammaglobulinemia"},
+      {"code": "D80.0", "text": "Hereditary hypogammaglobulinemia"}
+    ]
+  },
+  "274": {
+    "ICD10CM": [
+      {"code": "D84.1", "text": "Defects in the complement system"},
+      {"code": "Z79.899", "text": "Other long term (current) drug therapy"}
+    ]
+  },
+  "277": {
+    "ICD10CM": [
+      {"code": "D58.2", "text": "Other hemoglobinopathies"},
+      {"code": "D56.9", "text": "Thalassemia, unspecified"},
+      {"code": "D57.3", "text": "Sickle-cell trait"}
+    ]
+  }
+}

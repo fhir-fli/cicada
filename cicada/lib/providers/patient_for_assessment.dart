@@ -24,6 +24,7 @@ class PatientForAssessment extends _$PatientForAssessment {
     final List<Condition> conditions = <Condition>[];
     final List<AllergyIntolerance> allergies = <AllergyIntolerance>[];
     final List<VaxDose> pastDoses = <VaxDose>[];
+    final List<CodeableConcept> otherResourceCodes = <CodeableConcept>[];
 
     parameters.parameter?.forEach((ParametersParameter parameter) {
       if (parameter.name == 'assessmentDate' &&
@@ -58,6 +59,41 @@ class PatientForAssessment extends _$PatientForAssessment {
                   immunization, birthdate ?? VaxDate(1900, 1, 1)));
               break;
             }
+          case Observation _:
+            {
+              final code =
+                  (parameter.resource! as Observation).code;
+              if (code != null) otherResourceCodes.add(code);
+              break;
+            }
+          case Procedure _:
+            {
+              final code =
+                  (parameter.resource! as Procedure).code;
+              if (code != null) otherResourceCodes.add(code);
+              break;
+            }
+          case MedicationStatement _:
+            {
+              final code = (parameter.resource! as MedicationStatement)
+                  .medicationCodeableConcept;
+              if (code != null) otherResourceCodes.add(code);
+              break;
+            }
+          case MedicationRequest _:
+            {
+              final code = (parameter.resource! as MedicationRequest)
+                  .medicationCodeableConcept;
+              if (code != null) otherResourceCodes.add(code);
+              break;
+            }
+          case MedicationAdministration _:
+            {
+              final code = (parameter.resource! as MedicationAdministration)
+                  .medicationCodeableConcept;
+              if (code != null) otherResourceCodes.add(code);
+              break;
+            }
           default:
             break;
         }
@@ -84,7 +120,7 @@ class PatientForAssessment extends _$PatientForAssessment {
       return null;
     } else {
       return _createVaxPatient(patient!, assessmentDate, birthdate, conditions,
-          immunizations, allergies, pastDoses);
+          immunizations, allergies, pastDoses, otherResourceCodes);
     }
   }
 
@@ -95,9 +131,18 @@ class PatientForAssessment extends _$PatientForAssessment {
       List<Condition> conditions,
       List<Immunization> immunizations,
       List<AllergyIntolerance> allergies,
-      List<VaxDose> pastDoses) {
+      List<VaxDose> pastDoses,
+      List<CodeableConcept> otherResourceCodes) {
+    final bd = birthdate ?? VaxDate(1900, 01, 01);
     final List<VaxObservation> observations = observationsFromConditions(
-        conditions, birthdate ?? VaxDate(1900, 01, 01));
+        conditions, bd);
+    // Add observations from AllergyIntolerance resources
+    observations.addAll(observationsFromAllergies(allergies));
+    // Add observations from Observation, Procedure, Medication* resources
+    for (final CodeableConcept code in otherResourceCodes) {
+      final obs = observationFromCodeableConcept(code);
+      if (obs != null) observations.add(obs);
+    }
     return VaxPatient(
       assessmentDate: assessmentDate == null
           ? VaxDate.now()

@@ -3,7 +3,7 @@ export 'antigens_from_cvx.dart';
 export 'codes_from_immunization.dart';
 export 'gender_from_patient.dart';
 export 'is_substandard.dart';
-export 'observations_from_conditions.dart';
+export 'observations_from_resources.dart';
 export 'period_of_condition.dart';
 export 'relevant_series.dart';
 export 'string_to_list.dart';
