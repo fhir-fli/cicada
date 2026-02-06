@@ -303,11 +303,9 @@ class VaxSeries {
       DoseType? doseType) {
     return evaluatedDoses
         .where((VaxDose dose) =>
-            types.contains(dose.cvxAsInt) &&
-            startDate != null &&
-            startDate > dose.dateGiven &&
-            endDate != null &&
-            dose.dateGiven >= endDate &&
+            (types.isEmpty || types.contains(dose.cvxAsInt)) &&
+            (startDate == null || dose.dateGiven >= startDate) &&
+            (endDate == null || dose.dateGiven <= endDate) &&
             (doseType == DoseType.total ||
                 (doseType == DoseType.valid &&
                     dose.evalStatus == EvalStatus.valid)))
@@ -321,11 +319,11 @@ class VaxSeries {
       case 'greater':
         return actualCount > requiredCount;
       case 'greater than':
-        return actualCount >= requiredCount;
+        return actualCount > requiredCount;
       case 'less':
         return actualCount < requiredCount;
       case 'less than':
-        return actualCount <= requiredCount;
+        return actualCount < requiredCount;
       case 'equal':
       case 'equal to':
         return actualCount == requiredCount;
