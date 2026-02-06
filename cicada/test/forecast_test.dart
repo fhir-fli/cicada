@@ -104,13 +104,13 @@ void main() {
         }
 
         result.agMap.forEach((String antigenName, VaxAntigen antigen) {
-          final matchingDoses = expectedDoses
+          final matchingExpected = expectedDoses
               .where((d) => d.antigens
                   .map((s) => s.toLowerCase())
                   .contains(antigenName.toLowerCase()))
               .toList();
 
-          if (matchingDoses.isEmpty) return;
+          if (matchingExpected.isEmpty) return;
 
           antigen.groups.forEach((String groupKey, VaxGroup group) {
             final List<VaxSeries> seriesToCheck;
@@ -121,17 +121,23 @@ void main() {
             }
 
             for (final series in seriesToCheck) {
-              for (int d = 0; d < series.evaluatedDoses.length; d++) {
-                if (d >= matchingDoses.length) break;
+              // Match doses by doseId for accurate comparison
+              for (final expectedDose in matchingExpected) {
+                final actualDose = series.doses.firstWhereOrNull(
+                    (d) => d.doseId == expectedDose.doseId);
+                if (actualDose == null || actualDose.evalStatus == null) {
+                  continue;
+                }
 
-                final expected = matchingDoses[d].validity;
-                final actual = series.evaluatedDoses[d].validity;
+                final expected = expectedDose.validity;
+                final actual = actualDose.validity;
 
                 comparedCount++;
                 if (expected != actual && !actual.startsWith(expected)) {
+                  final doseNum = matchingExpected.indexOf(expectedDose) + 1;
                   mismatches.add(
                     '$id | ${series.series.seriesName} | '
-                    'Dose ${d + 1}: '
+                    'Dose $doseNum: '
                     'expected="$expected" '
                     'actual="$actual"',
                   );

@@ -379,6 +379,7 @@ class VaxDose {
   VaxDate? getPreviousDoseDate(int targetDose, List<VaxDose> doses) {
     // Get the date of the immediate previous dose if valid and not inadvertent
     if (targetDose > 0 &&
+        targetDose - 1 < doses.length &&
         doses[targetDose - 1].evalStatus != EvalStatus.sub_standard &&
         !doses[targetDose - 1].inadvertent) {
       return doses[targetDose - 1].dateGiven;
@@ -442,7 +443,7 @@ class VaxDose {
         referenceDate.changeNullable(interval.minInt, false)!;
 
     // Check if the given dose is administered before the absolute minimum date
-    if (VaxDate.now() < absoluteMinimum) {
+    if (dateGiven < absoluteMinimum) {
       updatePreferredInterval(valid: false, reason: IntervalReason.tooShort);
       updateAllowedInterval(valid: false, reason: IntervalReason.tooShort);
       evalStatus = EvalStatus.not_valid;
@@ -450,7 +451,7 @@ class VaxDose {
       return false;
     }
     // Check if it is within the grace period
-    if (VaxDate.now() < minimumDate) {
+    if (dateGiven < minimumDate) {
       updatePreferredInterval(valid: true, reason: IntervalReason.gracePeriod);
     }
     return true;

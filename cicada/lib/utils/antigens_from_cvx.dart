@@ -14,8 +14,6 @@ List<String> antigensFromCvx(String? cvx) {
             int.tryParse(element.cvx!) == int.tryParse(cvx) &&
             int.tryParse(cvx) != null);
 
-    print('cvxIndex: $cvxIndex');
-
     /// If we find an index for that code in the supporting data
     if (cvxIndex != null && cvxIndex != -1) {
       /// Select the appropriate entry
