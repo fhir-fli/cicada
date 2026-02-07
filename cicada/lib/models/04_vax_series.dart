@@ -181,6 +181,14 @@ class VaxSeries {
     for (int i = targetDose; i < (series.seriesDose?.length ?? 0); i++) {
       final SeriesDose seriesDose = series.seriesDose![i];
 
+      // Don't overwrite already satisfied doses — advance past them
+      if (evaluatedTargetDose[targetDose] == TargetDoseStatus.satisfied) {
+        if (seriesDose.recurringDose != Binary.yes) {
+          targetDose++;
+        }
+        continue;
+      }
+
       /// Normal skip check, except this time for forecast
       if (canSkip(seriesDose, SkipContext.forecast, assessmentDate)) {
         evaluatedTargetDose[targetDose] = TargetDoseStatus.skipped;

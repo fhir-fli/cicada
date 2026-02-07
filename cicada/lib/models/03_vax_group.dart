@@ -510,6 +510,10 @@ class VaxGroup {
             .toList()));
       }
     }
+
+    if (scoredSeries.isNotEmpty) {
+      prioritizedScoredSeries(scoredSeries);
+    }
   }
 
   void prioritizedScoredSeries(List<VaxSeries> scoredSeries) {

@@ -409,33 +409,40 @@ void main() {
 
           // Find ALL matching antigens for this vaccine group.
           // For each antigen, pick the best series across its groups
-          // (prefer complete bestSeries, then any bestSeries, then
-          // prioritized, then fallback). Then among antigen
+          // (prefer complete/immune from prioritizedSeries or bestSeries,
+          // then non-complete, then fallback). Then among antigen
           // representatives, pick least complete for multi-antigen
           // groups (e.g., DTaP has Diphtheria, Tetanus, Pertussis).
           final Map<String, VaxSeries> antigenRepresentatives = {};
           for (final antigen in result.agMap.values) {
             if (antigen.vaccineGroupName != engineVg) continue;
-            VaxSeries? completeBest;
-            VaxSeries? anyBest;
-            VaxSeries? anyPrioritized;
+            VaxSeries? completeSeries;
+            VaxSeries? otherSeries;
             VaxSeries? fallback;
             for (final group in antigen.groups.values) {
-              if (group.bestSeries != null) {
-                if (group.bestSeries!.seriesStatus == SeriesStatus.complete) {
-                  completeBest ??= group.bestSeries;
+              // Check prioritizedSeries first (engine's primary output)
+              for (final ps in group.prioritizedSeries) {
+                if (ps.seriesStatus == SeriesStatus.complete ||
+                    ps.seriesStatus == SeriesStatus.immune) {
+                  completeSeries ??= ps;
                 } else {
-                  anyBest ??= group.bestSeries;
+                  otherSeries ??= ps;
                 }
               }
-              if (group.prioritizedSeries.isNotEmpty) {
-                anyPrioritized ??= group.prioritizedSeries.first;
+              // Also check bestSeries (secondary, only set in edge cases)
+              if (group.bestSeries != null) {
+                if (group.bestSeries!.seriesStatus == SeriesStatus.complete ||
+                    group.bestSeries!.seriesStatus == SeriesStatus.immune) {
+                  completeSeries ??= group.bestSeries;
+                } else {
+                  otherSeries ??= group.bestSeries;
+                }
               }
               if (group.series.isNotEmpty) {
                 fallback ??= group.series.first;
               }
             }
-            final best = completeBest ?? anyBest ?? anyPrioritized ?? fallback;
+            final best = completeSeries ?? otherSeries ?? fallback;
             if (best != null) {
               antigenRepresentatives[antigen.targetDisease] = best;
             }
