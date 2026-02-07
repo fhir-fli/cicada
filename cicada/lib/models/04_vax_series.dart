@@ -244,17 +244,19 @@ class VaxSeries {
 
   bool evaluateCondition(
       VaxCondition condition, VaxDate evalDate, VaxSet set_) {
-    switch (condition.conditionType) {
-      case 'Age':
+    switch (condition.conditionType?.toLowerCase()) {
+      case 'age':
         return skipByAge(condition, evalDate);
-      case 'Completed Series':
+      case 'completed series':
         return skipByCompletedSeries(condition);
-      case 'Interval':
+      case 'interval':
         return skipByInterval(condition, evalDate);
-      case 'Vaccine Count by Age':
+      case 'vaccine count by age':
         return skipByCount(condition, dob, true);
-      case 'Vaccine Count by Date':
+      case 'vaccine count by date':
         return skipByCount(condition, evalDate, false);
+      case 'vaccine count by date and age':
+        return skipByCountDateAndAge(condition);
       default:
         return false;
     }
@@ -287,6 +289,39 @@ class VaxSeries {
           lastCompleted!.dateGiven.changeNullable(condition.interval, true)!;
       return evalDate >= conditionalSkipIntervalDate;
     }
+  }
+
+  bool skipByCountDateAndAge(VaxCondition condition) {
+    final VaxDate? startDate = condition.startDate == null
+        ? dob.changeNullable(condition.beginAge, false)
+        : VaxDate.fromString(condition.startDate!, true);
+    final VaxDate? endDate = condition.endDate == null
+        ? dob.changeNullable(condition.endAge, true)
+        : VaxDate.fromString(condition.endDate!);
+    final VaxDate? ageEndDate = dob.changeNullable(condition.endAge, true);
+    final List<int> types = parseTypes(condition.vaccineTypes);
+    final int totalCount =
+        countVaccinesDateAndAge(types, startDate, endDate, ageEndDate, condition.doseType);
+    return evaluateCountLogic(
+        totalCount, condition.doseCountLogic, condition.doseCount);
+  }
+
+  int countVaccinesDateAndAge(List<int> types, VaxDate? startDate,
+      VaxDate? endDate, VaxDate? ageEndDate, DoseType? doseType) {
+    final List<VaxDose> source =
+        doseType == DoseType.total && _forecastMode && allPatientDoses.isNotEmpty
+            ? allPatientDoses
+            : evaluatedDoses;
+    return source
+        .where((VaxDose dose) =>
+            (types.isEmpty || types.contains(dose.cvxAsInt)) &&
+            (startDate == null || dose.dateGiven >= startDate) &&
+            (endDate == null || dose.dateGiven <= endDate) &&
+            (ageEndDate == null || dose.dateGiven < ageEndDate) &&
+            (doseType == DoseType.total ||
+                (doseType == DoseType.valid &&
+                    dose.evalStatus == EvalStatus.valid)))
+        .length;
   }
 
   bool skipByCount(VaxCondition condition, VaxDate refDate, bool byAge) {
