@@ -178,27 +178,36 @@ class VaxSeries {
 
   void evaluateConditionalSkip({VaxDate? assessmentDate}) {
     assessmentDate ??= VaxDate.now();
-    for (int i = targetDose; i < (series.seriesDose?.length ?? 0); i++) {
-      final SeriesDose seriesDose = series.seriesDose![i];
+    _forecastMode = true;
+    while (targetDose < (series.seriesDose?.length ?? 0)) {
+      final SeriesDose seriesDose = series.seriesDose![targetDose];
 
       // Don't overwrite already satisfied doses — advance past them
       if (evaluatedTargetDose[targetDose] == TargetDoseStatus.satisfied) {
-        if (seriesDose.recurringDose != Binary.yes) {
-          targetDose++;
+        // For recurring doses, check the conditional skip to determine
+        // if the patient is done for this period (e.g., has a seasonal dose).
+        // If the skip doesn't fire, the patient still needs another dose.
+        if (seriesDose.recurringDose == Binary.yes) {
+          if (canSkip(seriesDose, SkipContext.forecast, assessmentDate)) {
+            targetDose++;
+            continue;
+          } else {
+            break;
+          }
         }
+        targetDose++;
         continue;
       }
 
       /// Normal skip check, except this time for forecast
       if (canSkip(seriesDose, SkipContext.forecast, assessmentDate)) {
         evaluatedTargetDose[targetDose] = TargetDoseStatus.skipped;
-        if (seriesDose.recurringDose != Binary.yes) {
-          targetDose++;
-        }
+        targetDose++;
       } else {
         break;
       }
     }
+    _forecastMode = false;
   }
 
   bool canSkip(
@@ -309,7 +318,14 @@ class VaxSeries {
 
   int countVaccines(List<int> types, VaxDate? startDate, VaxDate? endDate,
       DoseType? doseType) {
-    return evaluatedDoses
+    // During forecast, use all patient doses for "Total" counts (CDSi counts
+    // all administered doses, not just those evaluated in this series).
+    // During evaluation, use evaluatedDoses to avoid counting future doses.
+    final List<VaxDose> source =
+        doseType == DoseType.total && _forecastMode && allPatientDoses.isNotEmpty
+            ? allPatientDoses
+            : evaluatedDoses;
+    return source
         .where((VaxDose dose) =>
             (types.isEmpty || types.contains(dose.cvxAsInt)) &&
             (startDate == null || dose.dateGiven >= startDate) &&
@@ -709,6 +725,7 @@ class VaxSeries {
   Series series;
   List<VaxDose> doses = <VaxDose>[];
   List<VaxDose> allPatientDoses = <VaxDose>[];
+  bool _forecastMode = false;
   List<VaxDose> evaluatedDoses = <VaxDose>[];
   Map<int, TargetDoseStatus> evaluatedTargetDose = <int, TargetDoseStatus>{};
   VaxDate assessmentDate;
