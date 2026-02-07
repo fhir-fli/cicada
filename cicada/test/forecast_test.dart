@@ -417,7 +417,8 @@ void main() {
           for (final antigen in result.agMap.values) {
             if (antigen.vaccineGroupName != engineVg) continue;
             VaxSeries? completeSeries;
-            VaxSeries? otherSeries;
+            VaxSeries? activeSeries;
+            VaxSeries? agedOutSeries;
             VaxSeries? fallback;
             for (final group in antigen.groups.values) {
               // Check prioritizedSeries first (engine's primary output)
@@ -425,8 +426,10 @@ void main() {
                 if (ps.seriesStatus == SeriesStatus.complete ||
                     ps.seriesStatus == SeriesStatus.immune) {
                   completeSeries ??= ps;
+                } else if (ps.seriesStatus == SeriesStatus.agedOut) {
+                  agedOutSeries ??= ps;
                 } else {
-                  otherSeries ??= ps;
+                  activeSeries ??= ps;
                 }
               }
               // Also check bestSeries (secondary, only set in edge cases)
@@ -434,15 +437,19 @@ void main() {
                 if (group.bestSeries!.seriesStatus == SeriesStatus.complete ||
                     group.bestSeries!.seriesStatus == SeriesStatus.immune) {
                   completeSeries ??= group.bestSeries;
+                } else if (group.bestSeries!.seriesStatus ==
+                    SeriesStatus.agedOut) {
+                  agedOutSeries ??= group.bestSeries;
                 } else {
-                  otherSeries ??= group.bestSeries;
+                  activeSeries ??= group.bestSeries;
                 }
               }
               if (group.series.isNotEmpty) {
                 fallback ??= group.series.first;
               }
             }
-            final best = completeSeries ?? otherSeries ?? fallback;
+            final best =
+                completeSeries ?? activeSeries ?? agedOutSeries ?? fallback;
             if (best != null) {
               antigenRepresentatives[antigen.targetDisease] = best;
             }

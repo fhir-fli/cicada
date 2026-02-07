@@ -256,10 +256,10 @@ class VaxSeries {
         dob.changeNullable(condition.beginAge, false)!;
 
     final VaxDate conditionalSkipEndAgeDate =
-        dob.changeNullable(condition.beginAge, true)!;
+        dob.changeNullable(condition.endAge, true)!;
 
-    return evalDate >= conditionalSkipEndAgeDate &&
-        evalDate >= conditionalSkipBeginAgeDate;
+    return evalDate >= conditionalSkipBeginAgeDate &&
+        evalDate < conditionalSkipEndAgeDate;
   }
 
   bool skipByCompletedSeries(VaxCondition condition) {
