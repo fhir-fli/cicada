@@ -19,11 +19,15 @@ class VaxDate extends DateTime {
 
   // Constructors for creating VaxDate with maximum or minimum values based on a string input
   VaxDate.fromString(String date, [bool useMax = false])
-      : super(
-          DateTime.tryParse(date)?.year ?? (useMax ? 2999 : 1900),
-          DateTime.tryParse(date)?.month ?? (useMax ? 12 : 1),
-          DateTime.tryParse(date)?.day ?? (useMax ? 31 : 1),
-        );
+      : this._fromParsed(_parseDate(date, useMax));
+
+  VaxDate._fromParsed(VaxDate parsed) : super(parsed.year, parsed.month, parsed.day);
+
+  static VaxDate _parseDate(String date, bool useMax) {
+    final dt = DateTime.tryParse(date);
+    if (dt != null) return VaxDate(dt.year, dt.month, dt.day);
+    return fromYYYYMMDD(date, useMax);
+  }
 
   // JSON constructor with format validation and error handling
   VaxDate.fromJson(String date)
@@ -34,30 +38,34 @@ class VaxDate extends DateTime {
       : this.fromString(date ?? (useMax ? '2999-12-31' : '1900-01-01'), useMax);
 
   static VaxDate fromYYYYMMDD(String date, [bool useMax = false]) {
-    List<String> dateList = date.split('/');
-    if (dateList.length != 3) {
-      dateList = date.split('-');
+    List<String> parts = date.split('/');
+    if (parts.length != 3) {
+      parts = date.split('-');
     }
-    if (dateList.isNotEmpty) {
-      final int year =
-          int.tryParse(date.substring(0, 4)) ?? (useMax ? 2999 : 1900);
-      if (dateList.length >= 2) {
-        final int month =
-            int.tryParse(date.substring(4, 6)) ?? (useMax ? 12 : 1);
-        if (dateList.length == 3) {
-          final int day =
-              int.tryParse(date.substring(6, 8)) ?? (useMax ? 31 : 1);
-          return VaxDate(year, month, day);
-        } else {
-          return VaxDate(year, month, (useMax ? 31 : 1));
-        }
+    if (parts.length == 3) {
+      // Detect MM/DD/YYYY vs YYYY/MM/DD by first part length
+      if (parts[0].length <= 2) {
+        // MM/DD/YYYY format
+        final int month = int.tryParse(parts[0]) ?? (useMax ? 12 : 1);
+        final int day = int.tryParse(parts[1]) ?? (useMax ? 31 : 1);
+        final int year = int.tryParse(parts[2]) ?? (useMax ? 2999 : 1900);
+        return VaxDate(year, month, day);
       } else {
-        return VaxDate(year, (useMax ? 12 : 1), (useMax ? 31 : 1));
+        // YYYY/MM/DD format
+        final int year = int.tryParse(parts[0]) ?? (useMax ? 2999 : 1900);
+        final int month = int.tryParse(parts[1]) ?? (useMax ? 12 : 1);
+        final int day = int.tryParse(parts[2]) ?? (useMax ? 31 : 1);
+        return VaxDate(year, month, day);
       }
-    } else if (useMax) {
-      return VaxDate.max();
+    } else if (parts.length == 2) {
+      final int year = int.tryParse(parts[0]) ?? (useMax ? 2999 : 1900);
+      final int month = int.tryParse(parts[1]) ?? (useMax ? 12 : 1);
+      return VaxDate(year, month, useMax ? 31 : 1);
+    } else if (parts.length == 1 && parts[0].isNotEmpty) {
+      final int year = int.tryParse(parts[0]) ?? (useMax ? 2999 : 1900);
+      return VaxDate(year, useMax ? 12 : 1, useMax ? 31 : 1);
     } else {
-      return VaxDate.min();
+      return useMax ? VaxDate.max() : VaxDate.min();
     }
   }
 

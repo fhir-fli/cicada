@@ -27,8 +27,8 @@ class VaxSeries {
   }
 
   void evaluate() {
+    setUnsatisfiedDoses();
     if (doses.isNotEmpty) {
-      setUnsatisfiedDoses();
       indexDoses();
       evaluateSeriesDoses();
       markExtraneousDoses();

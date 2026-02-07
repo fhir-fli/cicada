@@ -407,37 +407,50 @@ void main() {
 
           comparedCount++;
 
-          // Find ALL matching antigens for this vaccine group, then pick
-          // the best series to represent the group's forecast.
-          // For multi-antigen groups (e.g., DTaP has Diphtheria, Tetanus,
-          // Pertussis), the CDSi forecast is driven by the antigen that
-          // still needs doses (least complete).
-          final List<VaxSeries> candidateSeries = [];
+          // Find ALL matching antigens for this vaccine group.
+          // For each antigen, pick the best series across its groups
+          // (prefer complete bestSeries, then any bestSeries, then
+          // prioritized, then fallback). Then among antigen
+          // representatives, pick least complete for multi-antigen
+          // groups (e.g., DTaP has Diphtheria, Tetanus, Pertussis).
+          final Map<String, VaxSeries> antigenRepresentatives = {};
           for (final antigen in result.agMap.values) {
             if (antigen.vaccineGroupName != engineVg) continue;
+            VaxSeries? completeBest;
+            VaxSeries? anyBest;
+            VaxSeries? anyPrioritized;
+            VaxSeries? fallback;
             for (final group in antigen.groups.values) {
-              if (group.prioritizedSeries.isNotEmpty) {
-                candidateSeries.add(group.prioritizedSeries.first);
-              } else if (group.bestSeries != null) {
-                candidateSeries.add(group.bestSeries!);
-              } else if (group.series.isNotEmpty) {
-                candidateSeries.add(group.series.first);
+              if (group.bestSeries != null) {
+                if (group.bestSeries!.seriesStatus == SeriesStatus.complete) {
+                  completeBest ??= group.bestSeries;
+                } else {
+                  anyBest ??= group.bestSeries;
+                }
               }
+              if (group.prioritizedSeries.isNotEmpty) {
+                anyPrioritized ??= group.prioritizedSeries.first;
+              }
+              if (group.series.isNotEmpty) {
+                fallback ??= group.series.first;
+              }
+            }
+            final best = completeBest ?? anyBest ?? anyPrioritized ?? fallback;
+            if (best != null) {
+              antigenRepresentatives[antigen.targetDisease] = best;
             }
           }
 
-          // Select the representative series: prefer notComplete over
-          // other statuses, since the group forecast is driven by the
-          // antigen that still needs doses.
+          // Among antigen representatives, pick least complete
+          // (multi-antigen groups like DTaP need all antigens complete)
           VaxSeries? bestSeries;
-          if (candidateSeries.isNotEmpty) {
-            final notComplete = candidateSeries.where(
-                (s) => s.seriesStatus == SeriesStatus.notComplete).toList();
-            if (notComplete.isNotEmpty) {
-              bestSeries = notComplete.first;
-            } else {
-              bestSeries = candidateSeries.first;
-            }
+          if (antigenRepresentatives.isNotEmpty) {
+            final notComplete = antigenRepresentatives.values
+                .where((s) => s.seriesStatus != SeriesStatus.complete
+                    && s.seriesStatus != SeriesStatus.immune).toList();
+            bestSeries = notComplete.isNotEmpty
+                ? notComplete.first
+                : antigenRepresentatives.values.first;
           }
 
           if (bestSeries == null) {
