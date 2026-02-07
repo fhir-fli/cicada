@@ -378,6 +378,11 @@ void main() {
       final List<String> statusMismatchDetails = [];
       final List<String> dateMismatchDetails = [];
 
+      // Per-vaccine-group date mismatch counters
+      final Map<String, int> earliestByVg = {};
+      final Map<String, int> recommendedByVg = {};
+      final Map<String, int> pastDueByVg = {};
+
       for (int i = 0; i < allParameters.length; i++) {
         final parameters = allParameters[i];
         final Patient? patient = parameters.parameter
@@ -512,6 +517,7 @@ void main() {
               earliestMatches++;
             } else {
               earliestMismatches++;
+              earliestByVg[excelVg] = (earliestByVg[excelVg] ?? 0) + 1;
               if (dateMismatchDetails.length < 100) {
                 dateMismatchDetails.add(
                   '$id [$excelVg] earliest: '
@@ -527,6 +533,8 @@ void main() {
               recommendedMatches++;
             } else {
               recommendedMismatches++;
+              recommendedByVg[excelVg] =
+                  (recommendedByVg[excelVg] ?? 0) + 1;
               if (dateMismatchDetails.length < 100) {
                 dateMismatchDetails.add(
                   '$id [$excelVg] recommended: '
@@ -542,6 +550,7 @@ void main() {
               pastDueMatches++;
             } else {
               pastDueMismatches++;
+              pastDueByVg[excelVg] = (pastDueByVg[excelVg] ?? 0) + 1;
               if (dateMismatchDetails.length < 100) {
                 dateMismatchDetails.add(
                   '$id [$excelVg] pastDue: '
@@ -597,6 +606,23 @@ void main() {
         print('\nFirst ${statusMismatchDetails.length} status mismatches:');
         for (final m in statusMismatchDetails) {
           print('  $m');
+        }
+      }
+
+      // Per-vaccine-group date mismatch breakdown
+      if (earliestByVg.isNotEmpty || recommendedByVg.isNotEmpty ||
+          pastDueByVg.isNotEmpty) {
+        print('\nDate mismatches by vaccine group:');
+        final allVgs = <String>{
+          ...earliestByVg.keys,
+          ...recommendedByVg.keys,
+          ...pastDueByVg.keys,
+        }.toList()..sort();
+        for (final vg in allVgs) {
+          final e = earliestByVg[vg] ?? 0;
+          final r = recommendedByVg[vg] ?? 0;
+          final p = pastDueByVg[vg] ?? 0;
+          print('  $vg: earliest=$e recommended=$r pastDue=$p');
         }
       }
 

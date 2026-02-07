@@ -88,16 +88,16 @@ class VaxDate extends DateTime {
   bool isEqualTo(VaxDate other) =>
       toDateTime().isAtSameMomentAs(other.toDateTime());
 
-  // Method for modifying date with textual descriptions of changes
-  VaxDate change(String description) {
+  /// Parse a CDSi date offset string into (years, months, days) components.
+  static ({int years, int months, int days}) _parseOffset(String description) {
     int years = 0, months = 0, days = 0;
-    int sign = 1; // Positive by default
+    int sign = 1;
     final List<String> parts = description.split(' ');
 
     for (int i = 0; i < parts.length; i++) {
       if (parts[i] == '-' || parts[i] == '+') {
         sign = (parts[i] == '-') ? -1 : 1;
-        continue; // Adjust sign and skip to next part
+        continue;
       }
 
       if (i < parts.length - 1 && int.tryParse(parts[i]) != null) {
@@ -113,19 +113,44 @@ class VaxDate extends DateTime {
           days += value * multiplier;
         }
 
-        i++; // Move past the unit
+        i++;
       }
     }
+    return (years: years, months: months, days: days);
+  }
 
-    // Apply the changes in the specified order: years, months, then days
-    DateTime newDate = DateTime(year + years, month + months, day);
-    // Correct for day overflow (e.g., September 31 -> October 1)
-    newDate = DateTime(
-        newDate.year,
-        newDate.month + (newDate.day < day ? 1 : 0),
-        newDate.day < day ? 1 : newDate.day + days);
+  /// Apply a date offset per CDSi CALCDT-5 and CALCDT-6:
+  /// 1. Add years and months
+  /// 2. If the resulting date doesn't exist, move to the first day of the
+  ///    next month (CALCDT-5)
+  /// 3. Add weeks/days (CALCDT-3)
+  VaxDate _applyOffset(int years, int months, int days) {
+    // Step 1: add years and months (use day=1 to let Dart normalize month)
+    final DateTime target = DateTime(year + years, month + months, 1);
+    final int daysInTargetMonth =
+        DateTime(target.year, target.month + 1, 0).day;
+
+    // Step 2: CALCDT-5 — if the original day exceeds the target month's
+    // length, the date doesn't exist; move to first day of next month
+    DateTime newDate;
+    if (day > daysInTargetMonth) {
+      newDate = DateTime(target.year, target.month + 1, 1);
+    } else {
+      newDate = DateTime(target.year, target.month, day);
+    }
+
+    // Step 3: CALCDT-3 — add days
+    if (days != 0) {
+      newDate = DateTime(newDate.year, newDate.month, newDate.day + days);
+    }
 
     return VaxDate.fromDateTime(newDate);
+  }
+
+  // Method for modifying date with textual descriptions of changes
+  VaxDate change(String description) {
+    final o = _parseOffset(description);
+    return _applyOffset(o.years, o.months, o.days);
   }
 
   VaxDate changeNullableOrElse(String? description, VaxDate orElse) {
@@ -142,43 +167,8 @@ class VaxDate extends DateTime {
           ? VaxDate.max()
           : (useMax == false ? VaxDate.min() : null);
     }
-
-    int years = 0, months = 0, days = 0;
-    int sign = 1; // Positive by default
-    final List<String> parts = description.split(' ');
-
-    for (int i = 0; i < parts.length; i++) {
-      if (parts[i] == '-' || parts[i] == '+') {
-        sign = (parts[i] == '-') ? -1 : 1;
-        continue; // Adjust sign and skip to next part
-      }
-
-      if (i < parts.length - 1 && int.tryParse(parts[i]) != null) {
-        final int value = int.parse(parts[i]) * sign;
-        final String unit = parts[i + 1].toLowerCase();
-
-        if (unit.contains('year')) {
-          years += value;
-        } else if (unit.contains('month')) {
-          months += value;
-        } else if (unit.contains('day') || unit.contains('week')) {
-          final int multiplier = unit.contains('week') ? 7 : 1;
-          days += value * multiplier;
-        }
-
-        i++; // Move past the unit
-      }
-    }
-
-    // Apply the changes in the specified order: years, months, then days
-    DateTime newDate = DateTime(year + years, month + months, day);
-    // Correct for day overflow (e.g., September 31 -> October 1)
-    newDate = DateTime(
-        newDate.year,
-        newDate.month + (newDate.day < day ? 1 : 0),
-        newDate.day < day ? 1 : newDate.day + days);
-
-    return VaxDate.fromDateTime(newDate);
+    final o = _parseOffset(description);
+    return _applyOffset(o.years, o.months, o.days);
   }
 }
 

@@ -138,17 +138,17 @@ class VaxGroup {
           .where((VaxSeries element) =>
               element.seriesStatus == SeriesStatus.complete)
           .toList();
-      if (completeSeries.isNotEmpty) {
+      if (completeSeries.length == 1) {
         return completeSeries.first;
-      } else {
+      } else if (completeSeries.isEmpty) {
         final Iterable<VaxSeries> inProcessSeries = scorableSeries.where(
             (VaxSeries element) =>
                 element.evaluatedTargetDose.values
                     .contains(TargetDoseStatus.satisfied) &&
                 element.seriesStatus == SeriesStatus.notComplete);
-        if (inProcessSeries.isNotEmpty) {
+        if (inProcessSeries.length == 1) {
           return inProcessSeries.first;
-        } else {
+        } else if (inProcessSeries.isEmpty) {
           final List<VaxSeries> defaultSeries = scorableSeries
               .where((VaxSeries element) =>
                   element.series.selectSeries?.defaultSeries == Binary.yes)
