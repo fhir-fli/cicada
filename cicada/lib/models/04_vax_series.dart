@@ -391,6 +391,75 @@ class VaxSeries {
     }
   }
 
+  /// Filter ages by effectiveDate/cessationDate range.
+  /// Returns only ages whose date range covers [date].
+  List<VaxAge> _filterAges(List<VaxAge>? ages, VaxDate date) {
+    if (ages == null || ages.isEmpty) return <VaxAge>[];
+    final List<VaxAge> filtered = ages
+        .where((VaxAge a) =>
+            VaxDate.fromNullableString(a.effectiveDate) <= date &&
+            date <= VaxDate.fromNullableString(a.cessationDate, true))
+        .toList();
+    // If only one age entry and no effectiveDate/cessationDate, it always
+    // applies (common case: most antigens have a single age entry).
+    if (filtered.isEmpty && ages.length == 1) return ages;
+    return filtered;
+  }
+
+  /// Filter intervals by effectiveDate/cessationDate range.
+  /// Returns only intervals whose date range covers [date].
+  List<Interval> _filterIntervals(List<Interval>? intervals, VaxDate date) {
+    if (intervals == null || intervals.isEmpty) return <Interval>[];
+    final List<Interval> filtered = intervals
+        .where((Interval i) =>
+            VaxDate.fromNullableString(i.effectiveDate) <= date &&
+            date <= VaxDate.fromNullableString(i.cessationDate, true))
+        .toList();
+    // If only one interval entry with no effectiveDate/cessationDate,
+    // it always applies.
+    if (filtered.isEmpty && intervals.length == 1) return intervals;
+    return filtered;
+  }
+
+  /// Get the last dose with evalStatus Valid or Not Valid (not inadvertent).
+  /// This is the correct reference dose per CALCDTINT-1.
+  VaxDose? _getLastValidOrNotValidDose() {
+    for (int i = doses.length - 1; i >= 0; i--) {
+      final VaxDose d = doses[i];
+      if (!d.inadvertent &&
+          (d.evalStatus == EvalStatus.valid ||
+              d.evalStatus == EvalStatus.not_valid)) {
+        return d;
+      }
+    }
+    return null;
+  }
+
+  /// Get reference dose date for a forecast interval.
+  /// Mirrors VaxDose.getReferenceDate() but operates at series level for
+  /// forecast context (includes not_valid doses per CALCDTINT-1).
+  VaxDate? _getReferenceDateForForecast(Interval interval) {
+    if (interval.fromPrevious == 'Y') {
+      // Last dose with evalStatus Valid or Not Valid, not inadvertent
+      return _getLastValidOrNotValidDose()?.dateGiven;
+    } else if (interval.fromTargetDose != null) {
+      return doses
+          .firstWhereOrNull((VaxDose d) =>
+              d.targetDoseSatisfied == interval.fromTargetDose! - 1)
+          ?.dateGiven;
+    } else if (interval.fromMostRecent != null) {
+      final List<int> types = interval.mostRecent ?? <int>[];
+      return doses
+          .lastWhereOrNull((VaxDose d) =>
+              types.contains(d.cvxAsInt) &&
+              !d.inadvertent &&
+              (d.evalStatus == EvalStatus.valid ||
+                  d.evalStatus == EvalStatus.not_valid))
+          ?.dateGiven;
+    }
+    return null;
+  }
+
   void determineContraindications({
     VaxDate? assessmentDate,
     required List<VaccineContraindication> vaccineContraindications,
@@ -507,10 +576,14 @@ class VaxSeries {
           seriesStatus = SeriesStatus.notRecommended;
           forecastReason = ForecastReason.pastSeasonalRecommendationEndDate;
         } else {
+          // Filter ages by effectiveDate/cessationDate (Bug 2 fix)
+          final List<VaxAge> filteredAges =
+              _filterAges(seriesDose?.age, assessmentDate);
+
           final VaxDate maximumAgeDate =
-              seriesDose?.age?.firstOrNull?.maxAge == null
+              filteredAges.firstOrNull?.maxAge == null
                   ? VaxDate.max()
-                  : dob.change(seriesDose!.age!.first.maxAge!);
+                  : dob.change(filteredAges.first.maxAge!);
 
           /// if the assessment date is after or the same as the maximum age date
           if (assessmentDate >= maximumAgeDate) {
@@ -519,37 +592,38 @@ class VaxSeries {
             forecastReason = ForecastReason.patientHasExceededTheMaximumAge;
           } else {
             /// The candidate earliest date must the latest of the following dates
-            candidateEarliestDate = seriesDose?.age?.firstOrNull?.minAge == null
-                ? dob
-                : dob.change(seriesDose!.age!.first.minAge!);
+            /// • Minimum age date
+            candidateEarliestDate =
+                filteredAges.firstOrNull?.minAge == null
+                    ? dob
+                    : dob.change(filteredAges.first.minAge!);
+
+            // Filter intervals by effectiveDate/cessationDate (Bug 2 fix)
+            final List<Interval> filteredIntervals =
+                _filterIntervals(seriesDose?.preferableInterval, assessmentDate);
 
             /// • Latest of all minimum interval dates
-            final List<Interval>? orderedIntervals =
-                evaluatedDoses.isEmpty
-                    ? null
-                    : seriesDose?.preferableInterval?.sortedByCompare(
-                        (Interval element) => element.minInt,
-                        (String? a, String? b) => evaluatedDoses.last.dateGiven
-                            .changeNullableOrElse(
-                                a, evaluatedDoses.last.dateGiven)
-                            .compareTo(evaluatedDoses.last.dateGiven
-                                .changeNullableOrElse(
-                                    b, evaluatedDoses.last.dateGiven)));
-            final String? latestInterval = (orderedIntervals?.isEmpty ?? true)
-                ? null
-                : orderedIntervals!.first.minInt;
-            if (latestInterval != null && evaluatedDoses.isNotEmpty) {
-              final VaxDate latestIntervalDate =
-                  evaluatedDoses.last.dateGiven.change(latestInterval);
-              candidateEarliestDate =
-                  candidateEarliestDate! > latestIntervalDate
-                      ? candidateEarliestDate
-                      : latestIntervalDate;
+            /// Per CALCDTINT-1: reference dose includes Valid or Not Valid
+            /// (not inadvertent). Each interval resolves its own reference
+            /// via fromPrevious/fromTargetDose/fromMostRecent (Bug 1 & 4 fix).
+            for (final Interval interval in filteredIntervals) {
+              final VaxDate? refDate = _getReferenceDateForForecast(interval);
+              if (refDate != null && interval.minInt != null) {
+                final VaxDate intervalDate = refDate.change(interval.minInt!);
+                candidateEarliestDate =
+                    candidateEarliestDate! > intervalDate
+                        ? candidateEarliestDate
+                        : intervalDate;
+              }
+            }
 
-              /// • Latest of all forecast conflict end dates
-              final VaxDose lastDoseAdministered = evaluatedDoses.last;
+            /// The following components are independent of interval data
+            /// (de-nested from the old interval-specific block).
 
-              /// Find if the last dose given has any conflicts
+            /// • Latest of all forecast conflict end dates
+            final VaxDose? lastDoseAdministered =
+                _getLastValidOrNotValidDose();
+            if (lastDoseAdministered != null) {
               final List<LiveVirusConflict>? liveVirusConflicts =
                   scheduleSupportingData.liveVirusConflicts?.liveVirusConflict
                       ?.where((LiveVirusConflict element) =>
@@ -558,8 +632,6 @@ class VaxSeries {
                       .toList();
               if (liveVirusConflicts?.isNotEmpty ?? false) {
                 for (final LiveVirusConflict conflict in liveVirusConflicts!) {
-                  /// Check if this seriesDose has a preferable vaccine that is
-                  /// impacted by the conflict with the previous vaccine
                   final Vaccine? preferredConflict = seriesDose
                       ?.preferableVaccine
                       ?.firstWhereOrNull((Vaccine element) =>
@@ -569,7 +641,6 @@ class VaxSeries {
                     final VaxDate forecastConflictEndDate = lastDoseAdministered
                         .dateGiven
                         .change(conflict.conflictEndInterval!);
-
                     candidateEarliestDate =
                         candidateEarliestDate! > forecastConflictEndDate
                             ? candidateEarliestDate
@@ -577,73 +648,55 @@ class VaxSeries {
                   }
                 }
               }
+            }
 
-              /// • Seasonal recommendation start date
-              final VaxDate seasonalRecommendationStartDate =
-                  VaxDate.fromNullableString(
-                      seriesDose?.seasonalRecommendation?.startDate);
-              candidateEarliestDate =
-                  candidateEarliestDate! > seasonalRecommendationStartDate
-                      ? candidateEarliestDate
-                      : seasonalRecommendationStartDate;
+            /// • Seasonal recommendation start date
+            final VaxDate seasonalRecommendationStartDate =
+                VaxDate.fromNullableString(
+                    seriesDose?.seasonalRecommendation?.startDate);
+            candidateEarliestDate =
+                candidateEarliestDate! > seasonalRecommendationStartDate
+                    ? candidateEarliestDate
+                    : seasonalRecommendationStartDate;
 
-              /// • Latest of all dates administered of any inadvertent
-              ///   administration being evaluated against a target dose that is
-              ///   part of a patient series that is the basis of the patient
-              ///   series forecast
-              // TODO(Dokotela): - unclear logic
-              final VaxDate lastDateInadvertentAdministered = evaluatedDoses
-                      .lastWhereOrNull((VaxDose element) =>
-                          element.evalReason == EvalReason.inadvertentVaccine)
-                      ?.dateGiven ??
-                  VaxDate.min();
+            /// • Latest of all dates administered of any inadvertent
+            ///   administration
+            final VaxDate lastDateInadvertentAdministered = doses
+                    .lastWhereOrNull((VaxDose element) =>
+                        element.evalReason == EvalReason.inadvertentVaccine)
+                    ?.dateGiven ??
+                VaxDate.min();
+            candidateEarliestDate =
+                candidateEarliestDate! > lastDateInadvertentAdministered
+                    ? candidateEarliestDate
+                    : lastDateInadvertentAdministered;
 
-              candidateEarliestDate =
-                  candidateEarliestDate! > lastDateInadvertentAdministered
-                      ? candidateEarliestDate
-                      : lastDateInadvertentAdministered;
+            /// • Date administered of the most recent vaccine dose
+            ///   administered (Valid or Not Valid, not inadvertent)
+            final VaxDate lastDateAdministered =
+                _getLastValidOrNotValidDose()?.dateGiven ?? VaxDate.min();
+            candidateEarliestDate =
+                candidateEarliestDate! > lastDateAdministered
+                    ? candidateEarliestDate
+                    : lastDateAdministered;
 
-              /// • Date administered of the most recent vaccine dose
-              ///   administered being evaluated against a target dose that is
-              ///   part of a patient series that is the basis of the patient
-              ///   series forecast.
-              // TODO(Dokotela): - unclear logic
-              final VaxDate lastDateAdministered =
-                  evaluatedDoses.last.dateGiven;
-              candidateEarliestDate =
-                  candidateEarliestDate! > lastDateAdministered
-                      ? candidateEarliestDate
-                      : lastDateAdministered;
+            /// • Minimum age date (using filtered ages)
+            final VaxDate minimumAgeDate = dob.changeNullable(
+                filteredAges.firstOrNull?.minAge, false)!;
+            candidateEarliestDate = candidateEarliestDate! > minimumAgeDate
+                ? candidateEarliestDate
+                : minimumAgeDate;
 
-              /// • Minimum age date
-              final VaxDate minimumAgeDate = dob.changeNullable(
-                  seriesDose?.age?.firstOrNull?.minAge, false)!;
-              candidateEarliestDate = candidateEarliestDate! > minimumAgeDate
-                  ? candidateEarliestDate
-                  : minimumAgeDate;
-
-              /// If the candidateEarliestDate is after or the same as the
-              /// maximum age date
-              if (candidateEarliestDate! >= maximumAgeDate) {
-                shouldRecieveAnotherDose = false;
-                seriesStatus = SeriesStatus.agedOut;
-                forecastReason = ForecastReason
-                    .patientIsUnableToFinishTheSeriesPriorToTheMaximumAge;
-              } else {
-                shouldRecieveAnotherDose = true;
-                seriesStatus = SeriesStatus.notComplete;
-              }
+            /// If the candidateEarliestDate is after or the same as the
+            /// maximum age date
+            if (candidateEarliestDate! >= maximumAgeDate) {
+              shouldRecieveAnotherDose = false;
+              seriesStatus = SeriesStatus.agedOut;
+              forecastReason = ForecastReason
+                  .patientIsUnableToFinishTheSeriesPriorToTheMaximumAge;
             } else {
-              /// No interval data or no evaluated doses — use age-based check
-              if (candidateEarliestDate! >= maximumAgeDate) {
-                shouldRecieveAnotherDose = false;
-                seriesStatus = SeriesStatus.agedOut;
-                forecastReason = ForecastReason
-                    .patientIsUnableToFinishTheSeriesPriorToTheMaximumAge;
-              } else {
-                shouldRecieveAnotherDose = true;
-                seriesStatus = SeriesStatus.notComplete;
-              }
+              shouldRecieveAnotherDose = true;
+              seriesStatus = SeriesStatus.notComplete;
             }
           }
         }
@@ -662,29 +715,30 @@ class VaxSeries {
       earliestRecommendedAgeDate = dob.changeNullable(age?.earliestRecAge);
       latestRecommendedAgeDate = dob.changeNullable(age?.latestRecAge);
       maximumAgeDate = dob.changeNullable(age?.maxAge);
-      final List<VaxDate>? earliestRecommendedIntervalDates = seriesDose
-          .preferableInterval
-          ?.map((Interval e) => dob.changeNullable(e.earliestRecInt))
-          .whereType<VaxDate>()
-          .toList()
-          .sortedByCompare((VaxDate element) => element,
-              (VaxDate a, VaxDate b) => a.compareTo(b));
+
+      // Filter intervals by effectiveDate/cessationDate (Bug 2 fix)
+      final List<Interval> filteredIntervals =
+          _filterIntervals(seriesDose.preferableInterval, assessmentDate);
+
+      // Compute interval dates from reference dose, not dob (Bug 3 fix)
+      // For each interval, resolve reference dose per-interval (Bug 4 fix)
+      final List<VaxDate> earliestRecIntDates = <VaxDate>[];
+      final List<VaxDate> latestRecIntDates = <VaxDate>[];
+      for (final Interval interval in filteredIntervals) {
+        final VaxDate? refDate = _getReferenceDateForForecast(interval);
+        if (refDate != null) {
+          final VaxDate? earliest = refDate.changeNullable(interval.earliestRecInt);
+          if (earliest != null) earliestRecIntDates.add(earliest);
+          final VaxDate? latest = refDate.changeNullable(interval.latestRecInt);
+          if (latest != null) latestRecIntDates.add(latest);
+        }
+      }
+      earliestRecIntDates.sort();
+      latestRecIntDates.sort((VaxDate a, VaxDate b) => b.compareTo(a));
       earliestRecommendedIntervalDate =
-          earliestRecommendedIntervalDates == null ||
-                  earliestRecommendedIntervalDates.isEmpty
-              ? null
-              : earliestRecommendedIntervalDates.first;
-      final List<VaxDate>? latestRecommendedIntervalDates = seriesDose
-          .preferableInterval
-          ?.map((Interval e) => dob.changeNullable(e.latestRecInt))
-          .whereType<VaxDate>()
-          .toList()
-          .sortedByCompare((VaxDate element) => element,
-              (VaxDate a, VaxDate b) => b.compareTo(a));
-      latestRecommendedIntervalDate = latestRecommendedIntervalDates == null ||
-              latestRecommendedIntervalDates.isEmpty
-          ? null
-          : latestRecommendedIntervalDates.first;
+          earliestRecIntDates.isEmpty ? null : earliestRecIntDates.first;
+      latestRecommendedIntervalDate =
+          latestRecIntDates.isEmpty ? null : latestRecIntDates.first;
       // TODO(Dokotela): Latest Conflict End Interval Date
       seasonalRecommendationStartDate = VaxDate.fromNullableString(
           seriesDose.seasonalRecommendation?.startDate);
