@@ -3,7 +3,223 @@ import 'package:riverpod/riverpod.dart';
 
 import '../cicada.dart';
 
-typedef ForecastResult = ({VaxPatient patient, Map<String, VaxAntigen> agMap});
+typedef ForecastResult = ({
+  VaxPatient patient,
+  Map<String, VaxAntigen> agMap,
+  Map<String, VaccineGroupForecast> vaccineGroupForecasts,
+});
+
+class VaccineGroupForecast {
+  VaccineGroupForecast({
+    required this.vaccineGroupName,
+    required this.status,
+    this.earliestDate,
+    this.recommendedDate,
+    this.pastDueDate,
+    this.latestDate,
+    required this.antigenNames,
+  });
+
+  final String vaccineGroupName;
+  final SeriesStatus status;
+  final VaxDate? earliestDate;
+  final VaxDate? recommendedDate;
+  final VaxDate? pastDueDate;
+  final VaxDate? latestDate;
+  final List<String> antigenNames;
+}
+
+/// Multi-antigen vaccine groups per CDSi spec Chapter 9
+const _multiAntigenGroups = <String, List<String>>{
+  'DTaP/Tdap/Td': ['Diphtheria', 'Tetanus', 'Pertussis'],
+  'MMR': ['Measles', 'Mumps', 'Rubella'],
+};
+
+/// Get the best series for an antigen (same logic as VaxGroup.forecast uses)
+VaxSeries? _getBestSeriesForAntigen(VaxAntigen antigen) {
+  VaxSeries? completeSeries;
+  VaxSeries? activeSeries;
+  VaxSeries? agedOutSeries;
+  VaxSeries? fallback;
+  for (final group in antigen.groups.values) {
+    for (final ps in group.prioritizedSeries) {
+      if (ps.seriesStatus == SeriesStatus.complete ||
+          ps.seriesStatus == SeriesStatus.immune) {
+        completeSeries ??= ps;
+      } else if (ps.seriesStatus == SeriesStatus.agedOut) {
+        agedOutSeries ??= ps;
+      } else {
+        activeSeries ??= ps;
+      }
+    }
+    if (group.bestSeries != null) {
+      if (group.bestSeries!.seriesStatus == SeriesStatus.complete ||
+          group.bestSeries!.seriesStatus == SeriesStatus.immune) {
+        completeSeries ??= group.bestSeries;
+      } else if (group.bestSeries!.seriesStatus == SeriesStatus.agedOut) {
+        agedOutSeries ??= group.bestSeries;
+      } else {
+        activeSeries ??= group.bestSeries;
+      }
+    }
+    if (group.series.isNotEmpty) {
+      fallback ??= group.series.first;
+    }
+  }
+  return completeSeries ?? activeSeries ?? agedOutSeries ?? fallback;
+}
+
+/// FORECASTVG-1: Determine vaccine group status from antigen statuses
+SeriesStatus _aggregateStatus(List<SeriesStatus> statuses) {
+  // Contraindicated if any
+  if (statuses.any((s) => s == SeriesStatus.contraindicated)) {
+    return SeriesStatus.contraindicated;
+  }
+  // Aged out if any
+  if (statuses.any((s) => s == SeriesStatus.agedOut)) {
+    return SeriesStatus.agedOut;
+  }
+  // Not recommended if any
+  if (statuses.any((s) => s == SeriesStatus.notRecommended)) {
+    return SeriesStatus.notRecommended;
+  }
+  // Not complete if any
+  if (statuses.any((s) => s == SeriesStatus.notComplete)) {
+    return SeriesStatus.notComplete;
+  }
+  // Immune if all immune
+  if (statuses.every((s) => s == SeriesStatus.immune)) {
+    return SeriesStatus.immune;
+  }
+  // Complete if all complete or immune
+  if (statuses.every(
+      (s) => s == SeriesStatus.complete || s == SeriesStatus.immune)) {
+    return SeriesStatus.complete;
+  }
+  return SeriesStatus.notComplete;
+}
+
+/// Build vaccine group forecasts from per-antigen results
+Map<String, VaccineGroupForecast> _aggregateVaccineGroupForecasts(
+    Map<String, VaxAntigen> agMap) {
+  // Group antigens by vaccineGroupName
+  final Map<String, List<VaxAntigen>> byGroup = {};
+  for (final antigen in agMap.values) {
+    byGroup.putIfAbsent(antigen.vaccineGroupName, () => []).add(antigen);
+  }
+
+  final Map<String, VaccineGroupForecast> result = {};
+
+  for (final entry in byGroup.entries) {
+    final groupName = entry.key;
+    final antigens = entry.value;
+    final isMultiAntigen = _multiAntigenGroups.containsKey(groupName);
+
+    if (!isMultiAntigen || antigens.length <= 1) {
+      // Single-antigen group: pass through best series data
+      final antigen = antigens.first;
+      final best = _getBestSeriesForAntigen(antigen);
+      if (best != null) {
+        result[groupName] = VaccineGroupForecast(
+          vaccineGroupName: groupName,
+          status: best.seriesStatus,
+          earliestDate: best.candidateEarliestDate,
+          recommendedDate: best.adjustedRecommendedDate,
+          pastDueDate: best.adjustedPastDueDate,
+          latestDate: best.latestDate,
+          antigenNames: [antigen.targetDisease],
+        );
+      }
+      continue;
+    }
+
+    // Multi-antigen group: aggregate per CDSi Chapter 9
+    final List<SeriesStatus> statuses = [];
+    final List<VaxDate> earliestDates = [];
+    final List<VaxDate> recommendedDates = [];
+    final List<VaxDate> pastDueDates = [];
+    final List<VaxDate> latestDates = [];
+    final List<String> antigenNames = [];
+
+    for (final antigen in antigens) {
+      final best = _getBestSeriesForAntigen(antigen);
+      if (best == null) continue;
+      antigenNames.add(antigen.targetDisease);
+      statuses.add(best.seriesStatus);
+      if (best.candidateEarliestDate != null) {
+        earliestDates.add(best.candidateEarliestDate!);
+      }
+      if (best.adjustedRecommendedDate != null) {
+        recommendedDates.add(best.adjustedRecommendedDate!);
+      }
+      if (best.adjustedPastDueDate != null) {
+        pastDueDates.add(best.adjustedPastDueDate!);
+      }
+      if (best.latestDate != null) {
+        latestDates.add(best.latestDate!);
+      }
+    }
+
+    if (statuses.isEmpty) continue;
+
+    // FORECASTVG-1: status
+    final vgStatus = _aggregateStatus(statuses);
+
+    // MULTIANTVG-1: earliest date
+    // Use min of all antigen earliests (the "with priority" branch logic)
+    // bounded by assessment date floor. This gives the nearest actionable date.
+    VaxDate? vgEarliest;
+    if (earliestDates.isNotEmpty) {
+      vgEarliest = earliestDates.reduce(
+          (a, b) => a < b ? a : b);
+    }
+
+    // FORECASTVG-2: recommended = max(min(all recommendeds), vgEarliest)
+    VaxDate? vgRecommended;
+    if (recommendedDates.isNotEmpty) {
+      final minRecommended = recommendedDates.reduce(
+          (a, b) => a < b ? a : b);
+      if (vgEarliest != null) {
+        vgRecommended = vgEarliest > minRecommended
+            ? vgEarliest
+            : minRecommended;
+      } else {
+        vgRecommended = minRecommended;
+      }
+    }
+
+    // FORECASTVG-3: past due = max(min(all past dues), vgEarliest)
+    VaxDate? vgPastDue;
+    if (pastDueDates.isNotEmpty) {
+      final minPastDue = pastDueDates.reduce(
+          (a, b) => a < b ? a : b);
+      if (vgEarliest != null) {
+        vgPastDue = vgEarliest > minPastDue ? vgEarliest : minPastDue;
+      } else {
+        vgPastDue = minPastDue;
+      }
+    }
+
+    // FORECASTVG-4: latest = min(all latest dates)
+    VaxDate? vgLatest;
+    if (latestDates.isNotEmpty) {
+      vgLatest = latestDates.reduce(
+          (a, b) => a < b ? a : b);
+    }
+
+    result[groupName] = VaccineGroupForecast(
+      vaccineGroupName: groupName,
+      status: vgStatus,
+      earliestDate: vgEarliest,
+      recommendedDate: vgRecommended,
+      pastDueDate: vgPastDue,
+      latestDate: vgLatest,
+      antigenNames: antigenNames,
+    );
+  }
+
+  return result;
+}
 
 Bundle forecastFromMap(Map<String, dynamic> parameters) {
   if (parameters['resourceType'] == 'Parameters') {
@@ -51,7 +267,14 @@ ForecastResult evaluateForForecast(Parameters parameters) {
   /// Forecast
   agMap.forEach((String k, VaxAntigen v) => v.forecast());
 
-  return (patient: patient, agMap: agMap);
+  /// Aggregate vaccine group forecasts (Chapter 9)
+  final vaccineGroupForecasts = _aggregateVaccineGroupForecasts(agMap);
+
+  return (
+    patient: patient,
+    agMap: agMap,
+    vaccineGroupForecasts: vaccineGroupForecasts,
+  );
 }
 
 Bundle forecastFromParameters(Parameters parameters) {

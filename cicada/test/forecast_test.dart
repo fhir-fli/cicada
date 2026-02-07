@@ -412,67 +412,9 @@ void main() {
 
           comparedCount++;
 
-          // Find ALL matching antigens for this vaccine group.
-          // For each antigen, pick the best series across its groups
-          // (prefer complete/immune from prioritizedSeries or bestSeries,
-          // then non-complete, then fallback). Then among antigen
-          // representatives, pick least complete for multi-antigen
-          // groups (e.g., DTaP has Diphtheria, Tetanus, Pertussis).
-          final Map<String, VaxSeries> antigenRepresentatives = {};
-          for (final antigen in result.agMap.values) {
-            if (antigen.vaccineGroupName != engineVg) continue;
-            VaxSeries? completeSeries;
-            VaxSeries? activeSeries;
-            VaxSeries? agedOutSeries;
-            VaxSeries? fallback;
-            for (final group in antigen.groups.values) {
-              // Check prioritizedSeries first (engine's primary output)
-              for (final ps in group.prioritizedSeries) {
-                if (ps.seriesStatus == SeriesStatus.complete ||
-                    ps.seriesStatus == SeriesStatus.immune) {
-                  completeSeries ??= ps;
-                } else if (ps.seriesStatus == SeriesStatus.agedOut) {
-                  agedOutSeries ??= ps;
-                } else {
-                  activeSeries ??= ps;
-                }
-              }
-              // Also check bestSeries (secondary, only set in edge cases)
-              if (group.bestSeries != null) {
-                if (group.bestSeries!.seriesStatus == SeriesStatus.complete ||
-                    group.bestSeries!.seriesStatus == SeriesStatus.immune) {
-                  completeSeries ??= group.bestSeries;
-                } else if (group.bestSeries!.seriesStatus ==
-                    SeriesStatus.agedOut) {
-                  agedOutSeries ??= group.bestSeries;
-                } else {
-                  activeSeries ??= group.bestSeries;
-                }
-              }
-              if (group.series.isNotEmpty) {
-                fallback ??= group.series.first;
-              }
-            }
-            final best =
-                completeSeries ?? activeSeries ?? agedOutSeries ?? fallback;
-            if (best != null) {
-              antigenRepresentatives[antigen.targetDisease] = best;
-            }
-          }
-
-          // Among antigen representatives, pick least complete
-          // (multi-antigen groups like DTaP need all antigens complete)
-          VaxSeries? bestSeries;
-          if (antigenRepresentatives.isNotEmpty) {
-            final notComplete = antigenRepresentatives.values
-                .where((s) => s.seriesStatus != SeriesStatus.complete
-                    && s.seriesStatus != SeriesStatus.immune).toList();
-            bestSeries = notComplete.isNotEmpty
-                ? notComplete.first
-                : antigenRepresentatives.values.first;
-          }
-
-          if (bestSeries == null) {
+          // Look up the vaccine group forecast (aggregated per Chapter 9)
+          final vgForecast = result.vaccineGroupForecasts[engineVg];
+          if (vgForecast == null) {
             missingForecasts++;
             continue;
           }
@@ -481,7 +423,7 @@ void main() {
           final expectedStatus =
               expected['seriesStatus']!.toLowerCase();
           final actualStatus =
-              bestSeries.seriesStatus.toString().toLowerCase();
+              vgForecast.status.toString().toLowerCase();
           if (expectedStatus == actualStatus) {
             statusMatches++;
           } else {
@@ -506,11 +448,11 @@ void main() {
           final expectedPastDue = expected['pastDueDate'] ?? '';
 
           final actualEarliest =
-              bestSeries.candidateEarliestDate?.toString() ?? '';
+              vgForecast.earliestDate?.toString() ?? '';
           final actualRecommended =
-              bestSeries.adjustedRecommendedDate?.toString() ?? '';
+              vgForecast.recommendedDate?.toString() ?? '';
           final actualPastDue =
-              bestSeries.adjustedPastDueDate?.toString() ?? '';
+              vgForecast.pastDueDate?.toString() ?? '';
 
           if (expectedEarliest.isNotEmpty) {
             if (expectedEarliest == actualEarliest) {
