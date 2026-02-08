@@ -706,10 +706,23 @@ class VaxSeries {
         }
 
         ///If there are, then this is considered a completed series
+        /// — unless the current target dose is a recurring dose that was
+        /// already satisfied (e.g., the decennial Td/Tdap booster). A
+        /// recurring dose being satisfied means one occurrence was given,
+        /// but the patient still needs the next future occurrence.
         else {
-          shouldRecieveAnotherDose = false;
-          seriesStatus = SeriesStatus.complete;
-          forecastReason = ForecastReason.patientSeriesIsComplete;
+          final SeriesDose? currentSeriesDose =
+              targetDose < (series.seriesDose?.length ?? 0)
+                  ? series.seriesDose![targetDose]
+                  : null;
+          if (currentSeriesDose?.recurringDose == Binary.yes &&
+              evaluatedTargetDose[targetDose] == TargetDoseStatus.satisfied) {
+            _computeCandidateEarliestDate();
+          } else {
+            shouldRecieveAnotherDose = false;
+            seriesStatus = SeriesStatus.complete;
+            forecastReason = ForecastReason.patientSeriesIsComplete;
+          }
         }
       }
 

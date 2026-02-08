@@ -166,12 +166,32 @@ Map<String, VaccineGroupForecast> _aggregateVaccineGroupForecasts(
     final vgStatus = _aggregateStatus(statuses);
 
     // MULTIANTVG-1: earliest date
-    // Use min of all antigen earliests (the "with priority" branch logic)
-    // bounded by assessment date floor. This gives the nearest actionable date.
+    // Use min of all antigen earliests, floored at the latest dose date
+    // across the vaccine group. Cross-antigen doses (e.g., Td covers
+    // Diphtheria/Tetanus but not Pertussis) can leave one antigen's
+    // earliest in the past while others are far in the future. The floor
+    // at the latest dose date ensures we account for minimum intervals
+    // from the most recent dose in the group.
+    VaxDate? latestDoseDate;
+    for (final antigen in antigens) {
+      for (final group in antigen.groups.values) {
+        for (final s in group.series) {
+          for (final dose in s.doses) {
+            if (latestDoseDate == null || dose.dateGiven > latestDoseDate) {
+              latestDoseDate = dose.dateGiven;
+            }
+          }
+        }
+      }
+    }
+
     VaxDate? vgEarliest;
     if (earliestDates.isNotEmpty) {
       vgEarliest = earliestDates.reduce(
           (a, b) => a < b ? a : b);
+      if (latestDoseDate != null && vgEarliest < latestDoseDate) {
+        vgEarliest = latestDoseDate;
+      }
     }
 
     // FORECASTVG-2: recommended = max(min(all recommendeds), vgEarliest)
