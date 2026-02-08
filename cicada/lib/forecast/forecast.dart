@@ -69,6 +69,21 @@ VaxSeries? _getBestSeriesForAntigen(VaxAntigen antigen) {
   return completeSeries ?? activeSeries ?? agedOutSeries ?? fallback;
 }
 
+/// FORECASTPRIORITY-1: A patient series forecast is a priority forecast if
+/// the target dose includes at least one preferable interval and each
+/// preferable interval has an interval priority flag of 'Y'.
+/// Note: CDSi v4.64 supporting data uses "override" instead of "Y" for all
+/// interval priorities, so we treat both values as satisfying the condition.
+bool _isPriorityForecast(VaxSeries series) {
+  final int td = series.targetDose;
+  if (td >= (series.series.seriesDose?.length ?? 0)) return false;
+  final SeriesDose seriesDose = series.series.seriesDose![td];
+  final List<Interval>? prefIntervals = seriesDose.preferableInterval;
+  if (prefIntervals == null || prefIntervals.isEmpty) return false;
+  return prefIntervals.every((Interval i) =>
+      i.intervalPriority == 'Y' || i.intervalPriority == 'override');
+}
+
 /// FORECASTVG-1: Determine vaccine group status from antigen statuses
 SeriesStatus _aggregateStatus(List<SeriesStatus> statuses) {
   // Contraindicated if any
@@ -165,32 +180,51 @@ Map<String, VaccineGroupForecast> _aggregateVaccineGroupForecasts(
     // FORECASTVG-1: status
     final vgStatus = _aggregateStatus(statuses);
 
-    // MULTIANTVG-1: earliest date
-    // Use min of all antigen earliests, floored at the latest dose date
-    // across the vaccine group. Cross-antigen doses (e.g., Td covers
-    // Diphtheria/Tetanus but not Pertussis) can leave one antigen's
-    // earliest in the past while others are far in the future. The floor
-    // at the latest dose date ensures we account for minimum intervals
-    // from the most recent dose in the group.
-    VaxDate? latestDoseDate;
+    // MULTIANTVG-1: earliest date per CDSi Table 9-5.
+    // Two branches depending on whether any forecast is a "priority
+    // patient series forecast" (FORECASTPRIORITY-1).
+    //
+    // Branch 1 (any priority): the later of
+    //   (a) the earliest date of all patient series forecasts, and
+    //   (b) the latest dose date administered for a vaccine in this group.
+    //
+    // Branch 2 (no priority): the latest earliest date of all patient
+    //   series forecasts (i.e., max of per-antigen earliest dates).
+    bool anyPriority = false;
     for (final antigen in antigens) {
-      for (final group in antigen.groups.values) {
-        for (final s in group.series) {
-          for (final dose in s.doses) {
-            if (latestDoseDate == null || dose.dateGiven > latestDoseDate) {
-              latestDoseDate = dose.dateGiven;
-            }
-          }
-        }
+      final VaxSeries? best = _getBestSeriesForAntigen(antigen);
+      if (best != null && _isPriorityForecast(best)) {
+        anyPriority = true;
+        break;
       }
     }
 
     VaxDate? vgEarliest;
     if (earliestDates.isNotEmpty) {
-      vgEarliest = earliestDates.reduce(
-          (a, b) => a < b ? a : b);
-      if (latestDoseDate != null && vgEarliest < latestDoseDate) {
-        vgEarliest = latestDoseDate;
+      if (anyPriority) {
+        // Branch 1: min of all earliests, floored at latest dose date
+        vgEarliest = earliestDates.reduce((VaxDate a, VaxDate b) =>
+            a < b ? a : b);
+        VaxDate? latestDoseDate;
+        for (final antigen in antigens) {
+          for (final group in antigen.groups.values) {
+            for (final s in group.series) {
+              for (final dose in s.doses) {
+                if (latestDoseDate == null ||
+                    dose.dateGiven > latestDoseDate) {
+                  latestDoseDate = dose.dateGiven;
+                }
+              }
+            }
+          }
+        }
+        if (latestDoseDate != null && vgEarliest < latestDoseDate) {
+          vgEarliest = latestDoseDate;
+        }
+      } else {
+        // Branch 2: max of all earliests (latest earliest date)
+        vgEarliest = earliestDates.reduce((VaxDate a, VaxDate b) =>
+            a > b ? a : b);
       }
     }
 

@@ -4,8 +4,11 @@ import '../cicada.dart';
 String? cvxFromImmunization(Immunization immunization) =>
     codeFromImmunization(immunization, FhirUri('http://hl7.org/fhir/sid/cvx'));
 
-String? mvxFromImmunization(Immunization immunization) => codeFromImmunization(
-    immunization, FhirUri('http://terminology.hl7.org/NamingSystem/MVX'));
+String? mvxFromImmunization(Immunization immunization) =>
+    codeFromImmunization(
+        immunization, FhirUri('http://hl7.org/fhir/sid/mvx')) ??
+    codeFromImmunization(
+        immunization, FhirUri('http://terminology.hl7.org/NamingSystem/MVX'));
 
 String? codeFromImmunization(Immunization immunization, FhirUri url) {
   final int? index = immunization.vaccineCode.coding?.indexWhere(
