@@ -224,8 +224,18 @@ class VaxGroup {
       /// valid doses.
       /// A patient series must be considered a product patient series if the
       /// product path flag is 'Y' for the select patient series.
+      /// "All valid doses" means every dose evaluated in the series (valid
+      /// or not_valid) received a Valid status. We check against doses (all
+      /// administered doses distributed to the series), not evaluatedDoses
+      /// (which only contains valid doses by construction).
+      final int totalEvaluatedDoses = series.doses
+          .where((VaxDose d) =>
+              d.evalStatus == EvalStatus.valid ||
+              d.evalStatus == EvalStatus.not_valid)
+          .length;
       if (series.series.selectSeries?.productPath == Binary.yes &&
-          numberOfValidDosesForSeries == series.evaluatedDoses.length) {
+          totalEvaluatedDoses > 0 &&
+          numberOfValidDosesForSeries == totalEvaluatedDoses) {
         numberOfProductSeriesWithAllValidDoses++;
       }
 
@@ -291,8 +301,14 @@ class VaxGroup {
           .length;
 
       /// A scorable patient series is a product patient series and has all valid doses.
+      final int totalEvalDoses = series.doses
+          .where((VaxDose d) =>
+              d.evalStatus == EvalStatus.valid ||
+              d.evalStatus == EvalStatus.not_valid)
+          .length;
       if (series.series.selectSeries?.productPath == Binary.yes &&
-          numberOfValidDosesForSeries == series.evaluatedDoses.length) {
+          totalEvalDoses > 0 &&
+          numberOfValidDosesForSeries == totalEvalDoses) {
         if (numberOfProductSeriesWithAllValidDoses == 1) {
           series.score += 2;
         }

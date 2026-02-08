@@ -145,9 +145,14 @@ class VaxSeries {
 
     if (dose.isLiveVirusConflict(doses, allPatientDoses: allPatientDoses)) {
       return false;
-    } else {
-      return dose.isAllowedType(seriesDose.allowableVaccine, dob);
     }
+
+    // Per CDSi Figure 6-1: check preferable vaccine type first (→Valid),
+    // then allowable vaccine type (→Valid with sub-standard note).
+    if (dose.isPreferredType(seriesDose.preferableVaccine, dob)) {
+      return true;
+    }
+    return dose.isAllowedType(seriesDose.allowableVaccine, dob);
   }
 
   void markDoseValid(SeriesDose seriesDose, VaxDose dose) {
