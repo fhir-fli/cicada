@@ -35,49 +35,141 @@ const _multiAntigenGroups = <String, List<String>>{
   'MMR': ['Measles', 'Mumps', 'Rubella'],
 };
 
-/// Get the best series for an antigen (same logic as VaxGroup.forecast uses)
-/// Prefers risk series over standard when a patient has relevant indications.
-VaxSeries? _getBestSeriesForAntigen(VaxAntigen antigen) {
-  VaxSeries? riskComplete;
-  VaxSeries? stdComplete;
-  VaxSeries? riskActive;
-  VaxSeries? stdActive;
-  VaxSeries? agedOutSeries;
-  VaxSeries? fallback;
+/// CDSi Section 8.8 — Determine Best Patient Series (Table 8-14).
+///
+/// For each series group that has a prioritized patient series (from steps
+/// 8.1–8.7), determines whether that prioritized series qualifies as a
+/// "best patient series." Returns ALL best patient series for the antigen.
+///
+/// Multiple best series can coexist when they come from non-equivalent
+/// series groups (e.g., a completed standard series and a not-complete risk
+/// series). Table 8-14 rules:
+///   Rule 1: Complete → best.
+///   Rule 2: Not complete, not Evaluation Only, series type Risk → best.
+///   Rule 3: Not complete, not Evaluation Only, not Risk, and no Risk
+///           prioritized series in an equivalent series group → best.
+///   Default: No best patient series for the series group.
+List<VaxSeries> _determineBestPatientSeries(VaxAntigen antigen) {
+  // Collect ONE prioritized series per series group.
+  // prioritizedSeries is populated by VaxGroup.forecast() (steps 8.1–8.7).
+  // If a group has no prioritized series, it means scoring could not
+  // identify a representative — skip it (Table 8-14 only applies to groups
+  // with a prioritized series). Exception: contraindicated antigens where
+  // forecast() was not called — fall back to the first series to preserve
+  // the contraindicated status.
+  final Map<String, VaxSeries> prioritizedByGroup = {};
+  for (final entry in antigen.groups.entries) {
+    final group = entry.value;
+    final VaxSeries? pri = group.prioritizedSeries.isNotEmpty
+        ? group.prioritizedSeries.first
+        : (antigen.contraindication && group.series.isNotEmpty
+            ? group.series.first
+            : null);
+    if (pri != null) {
+      prioritizedByGroup[entry.key] = pri;
+    }
+  }
 
-  void _classify(VaxSeries s) {
-    final isRisk = s.series.seriesType == SeriesType.risk;
-    if (s.seriesStatus == SeriesStatus.complete ||
-        s.seriesStatus == SeriesStatus.immune) {
-      if (isRisk) {
-        riskComplete ??= s;
-      } else {
-        stdComplete ??= s;
-      }
-    } else if (s.seriesStatus == SeriesStatus.agedOut) {
-      agedOutSeries ??= s;
-    } else {
-      if (isRisk) {
-        riskActive ??= s;
-      } else {
-        stdActive ??= s;
+  // Build mapping: groupKey → equivalentSeriesGroups value.
+  // All series in a group should share the same value; use the first
+  // non-null, non-none value.
+  final Map<String, EquivalentSeriesGroups> groupToEquiv = {};
+  for (final entry in antigen.groups.entries) {
+    for (final s in entry.value.series) {
+      final esg = s.series.equivalentSeriesGroups;
+      if (esg != null && esg != EquivalentSeriesGroups.none) {
+        groupToEquiv[entry.key] = esg;
+        break;
       }
     }
   }
 
-  for (final group in antigen.groups.values) {
-    for (final ps in group.prioritizedSeries) {
-      _classify(ps);
+  // Apply Table 8-14 to each prioritized series.
+  final List<VaxSeries> bestSeries = [];
+
+  for (final entry in prioritizedByGroup.entries) {
+    final groupKey = entry.key;
+    final pri = entry.value;
+
+    // Rule 1: Is the prioritized patient series a complete patient series?
+    if (pri.seriesStatus == SeriesStatus.complete ||
+        pri.seriesStatus == SeriesStatus.immune) {
+      bestSeries.add(pri);
+      continue;
     }
-    if (group.bestSeries != null) {
-      _classify(group.bestSeries!);
+
+    // Find equivalent group keys: other groups with the same
+    // equivalentSeriesGroups value as this group.
+    final myEquiv = groupToEquiv[groupKey];
+    final Set<String> equivalentGroupKeys = {};
+    if (myEquiv != null) {
+      for (final e in groupToEquiv.entries) {
+        if (e.key != groupKey && e.value == myEquiv) {
+          equivalentGroupKeys.add(e.key);
+        }
+      }
     }
-    if (group.series.isNotEmpty) {
-      fallback ??= group.series.first;
+
+    // Is there a prioritized patient series that is a complete patient
+    // series in an equivalent series group?
+    bool completeInEquivalent = false;
+    for (final eqKey in equivalentGroupKeys) {
+      final eqPri = prioritizedByGroup[eqKey];
+      if (eqPri != null &&
+          (eqPri.seriesStatus == SeriesStatus.complete ||
+              eqPri.seriesStatus == SeriesStatus.immune)) {
+        completeInEquivalent = true;
+        break;
+      }
     }
+
+    if (completeInEquivalent) {
+      // Default: no best (equivalent group already complete).
+      continue;
+    }
+
+    // Is the series type 'Evaluation Only'?
+    if (pri.series.seriesType == SeriesType.evaluationOnly) {
+      // Default: no best.
+      continue;
+    }
+
+    // Series that are Aged Out or Not Recommended are not active — they
+    // represent dismissed series (patient outside age range or conditions
+    // not met) and should not propagate to the vaccine group level.
+    if (pri.seriesStatus == SeriesStatus.agedOut ||
+        pri.seriesStatus == SeriesStatus.notRecommended) {
+      continue;
+    }
+
+    // Rule 2: Is the series type 'Risk'?
+    if (pri.series.seriesType == SeriesType.risk) {
+      bestSeries.add(pri);
+      continue;
+    }
+
+    // Rule 3: Is there a prioritized patient series with a series type
+    // of 'Risk' in an equivalent series group?
+    bool riskInEquivalent = false;
+    for (final eqKey in equivalentGroupKeys) {
+      final eqPri = prioritizedByGroup[eqKey];
+      if (eqPri != null && eqPri.series.seriesType == SeriesType.risk) {
+        riskInEquivalent = true;
+        break;
+      }
+    }
+
+    if (!riskInEquivalent) {
+      // Rule 3: No risk in equivalent → this is a best series.
+      bestSeries.add(pri);
+      continue;
+    }
+
+    // Default: no best (a risk series in an equivalent group takes
+    // precedence over this non-complete standard series).
   }
-  return riskComplete ?? stdComplete ?? riskActive ?? stdActive ??
-      agedOutSeries ?? fallback;
+
+  return bestSeries;
 }
 
 /// FORECASTPRIORITY-1: A patient series forecast is a priority forecast if
@@ -142,10 +234,42 @@ Map<String, VaccineGroupForecast> _aggregateVaccineGroupForecasts(
     final isMultiAntigen = _multiAntigenGroups.containsKey(groupName);
 
     if (!isMultiAntigen || antigens.length <= 1) {
-      // Single-antigen group: pass through best series data
+      // Single-antigen group: collect all best patient series (Table 8-14).
+      // Multiple best series can exist from non-equivalent groups.
       final antigen = antigens.first;
-      final best = _getBestSeriesForAntigen(antigen);
-      if (best != null) {
+      var bestList = _determineBestPatientSeries(antigen);
+      if (bestList.isEmpty) continue;
+
+      // CDSi Chapter 9 intro: "For antigens which contain non-equivalent
+      // series groups (e.g., multiple best patient series), it is important
+      // to only blend best patient series of the same series type (e.g.,
+      // risk with risk and standard with standard). Patients in this
+      // situation may end up with more than 1 vaccine group forecast."
+      //
+      // When multiple best series exist from non-equivalent groups of
+      // different types, separate by series type and use the risk forecast
+      // as the primary VG forecast (the patient has conditions that
+      // activated a risk series, so the risk pathway is determinative).
+      if (bestList.length > 1) {
+        final riskBest = bestList
+            .where((s) => s.series.seriesType == SeriesType.risk)
+            .toList();
+        if (riskBest.isNotEmpty) {
+          // Risk series exist — use risk series for the VG forecast.
+          bestList = riskBest;
+        } else {
+          // No risk series. Exclude aged-out series from standard-only
+          // aggregation unless ALL are aged out.
+          final nonAgedOut = bestList
+              .where((s) => s.seriesStatus != SeriesStatus.agedOut)
+              .toList();
+          if (nonAgedOut.isNotEmpty) bestList = nonAgedOut;
+        }
+      }
+
+      if (bestList.length == 1) {
+        // SINGLEANTVG-1: single best → use its status and dates directly.
+        final best = bestList.first;
         result[groupName] = VaccineGroupForecast(
           vaccineGroupName: groupName,
           status: best.seriesStatus,
@@ -153,6 +277,45 @@ Map<String, VaccineGroupForecast> _aggregateVaccineGroupForecasts(
           recommendedDate: best.adjustedRecommendedDate,
           pastDueDate: best.adjustedPastDueDate,
           latestDate: best.latestDate,
+          antigenNames: [antigen.targetDisease],
+        );
+      } else {
+        // Multiple best series of the same type from non-equivalent
+        // groups. Aggregate status per Table 9-4, dates per SINGLEANTVG-2.
+        final statuses = bestList.map((s) => s.seriesStatus).toList();
+        final status = _aggregateStatus(statuses);
+
+        VaxDate? earliest;
+        VaxDate? recommended;
+        VaxDate? pastDue;
+        VaxDate? latest;
+        for (final s in bestList) {
+          if (s.candidateEarliestDate != null &&
+              (earliest == null || s.candidateEarliestDate! < earliest)) {
+            earliest = s.candidateEarliestDate;
+          }
+          if (s.adjustedRecommendedDate != null &&
+              (recommended == null ||
+                  s.adjustedRecommendedDate! < recommended)) {
+            recommended = s.adjustedRecommendedDate;
+          }
+          if (s.adjustedPastDueDate != null &&
+              (pastDue == null || s.adjustedPastDueDate! < pastDue)) {
+            pastDue = s.adjustedPastDueDate;
+          }
+          if (s.latestDate != null &&
+              (latest == null || s.latestDate! < latest)) {
+            latest = s.latestDate;
+          }
+        }
+
+        result[groupName] = VaccineGroupForecast(
+          vaccineGroupName: groupName,
+          status: status,
+          earliestDate: earliest,
+          recommendedDate: recommended,
+          pastDueDate: pastDue,
+          latestDate: latest,
           antigenNames: [antigen.targetDisease],
         );
       }
@@ -167,22 +330,31 @@ Map<String, VaccineGroupForecast> _aggregateVaccineGroupForecasts(
     final List<VaxDate> latestDates = [];
     final List<String> antigenNames = [];
 
+    // Cache best series per antigen for reuse in priority check.
+    final Map<String, List<VaxSeries>> bestByAntigen = {};
     for (final antigen in antigens) {
-      final best = _getBestSeriesForAntigen(antigen);
-      if (best == null) continue;
+      bestByAntigen[antigen.targetDisease] =
+          _determineBestPatientSeries(antigen);
+    }
+
+    for (final antigen in antigens) {
+      final bestList = bestByAntigen[antigen.targetDisease]!;
+      if (bestList.isEmpty) continue;
       antigenNames.add(antigen.targetDisease);
-      statuses.add(best.seriesStatus);
-      if (best.candidateEarliestDate != null) {
-        earliestDates.add(best.candidateEarliestDate!);
-      }
-      if (best.adjustedRecommendedDate != null) {
-        recommendedDates.add(best.adjustedRecommendedDate!);
-      }
-      if (best.adjustedPastDueDate != null) {
-        pastDueDates.add(best.adjustedPastDueDate!);
-      }
-      if (best.latestDate != null) {
-        latestDates.add(best.latestDate!);
+      for (final best in bestList) {
+        statuses.add(best.seriesStatus);
+        if (best.candidateEarliestDate != null) {
+          earliestDates.add(best.candidateEarliestDate!);
+        }
+        if (best.adjustedRecommendedDate != null) {
+          recommendedDates.add(best.adjustedRecommendedDate!);
+        }
+        if (best.adjustedPastDueDate != null) {
+          pastDueDates.add(best.adjustedPastDueDate!);
+        }
+        if (best.latestDate != null) {
+          latestDates.add(best.latestDate!);
+        }
       }
     }
 
@@ -203,11 +375,13 @@ Map<String, VaccineGroupForecast> _aggregateVaccineGroupForecasts(
     //   series forecasts (i.e., max of per-antigen earliest dates).
     bool anyPriority = false;
     for (final antigen in antigens) {
-      final VaxSeries? best = _getBestSeriesForAntigen(antigen);
-      if (best != null && _isPriorityForecast(best)) {
-        anyPriority = true;
-        break;
+      for (final best in bestByAntigen[antigen.targetDisease]!) {
+        if (_isPriorityForecast(best)) {
+          anyPriority = true;
+          break;
+        }
       }
+      if (anyPriority) break;
     }
 
     VaxDate? vgEarliest;
