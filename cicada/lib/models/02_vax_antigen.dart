@@ -69,6 +69,13 @@ class VaxAntigen {
       for (final String key in groups.keys) {
         groups[key]!.forecast(evidenceOfImmunity, vaccineContraindications);
       }
+    } else {
+      // Propagate contraindicated status to all series
+      for (final String key in groups.keys) {
+        for (final VaxSeries s in groups[key]!.series) {
+          s.seriesStatus = SeriesStatus.contraindicated;
+        }
+      }
     }
   }
 

@@ -36,37 +36,48 @@ const _multiAntigenGroups = <String, List<String>>{
 };
 
 /// Get the best series for an antigen (same logic as VaxGroup.forecast uses)
+/// Prefers risk series over standard when a patient has relevant indications.
 VaxSeries? _getBestSeriesForAntigen(VaxAntigen antigen) {
-  VaxSeries? completeSeries;
-  VaxSeries? activeSeries;
+  VaxSeries? riskComplete;
+  VaxSeries? stdComplete;
+  VaxSeries? riskActive;
+  VaxSeries? stdActive;
   VaxSeries? agedOutSeries;
   VaxSeries? fallback;
-  for (final group in antigen.groups.values) {
-    for (final ps in group.prioritizedSeries) {
-      if (ps.seriesStatus == SeriesStatus.complete ||
-          ps.seriesStatus == SeriesStatus.immune) {
-        completeSeries ??= ps;
-      } else if (ps.seriesStatus == SeriesStatus.agedOut) {
-        agedOutSeries ??= ps;
+
+  void _classify(VaxSeries s) {
+    final isRisk = s.series.seriesType == SeriesType.risk;
+    if (s.seriesStatus == SeriesStatus.complete ||
+        s.seriesStatus == SeriesStatus.immune) {
+      if (isRisk) {
+        riskComplete ??= s;
       } else {
-        activeSeries ??= ps;
+        stdComplete ??= s;
+      }
+    } else if (s.seriesStatus == SeriesStatus.agedOut) {
+      agedOutSeries ??= s;
+    } else {
+      if (isRisk) {
+        riskActive ??= s;
+      } else {
+        stdActive ??= s;
       }
     }
+  }
+
+  for (final group in antigen.groups.values) {
+    for (final ps in group.prioritizedSeries) {
+      _classify(ps);
+    }
     if (group.bestSeries != null) {
-      if (group.bestSeries!.seriesStatus == SeriesStatus.complete ||
-          group.bestSeries!.seriesStatus == SeriesStatus.immune) {
-        completeSeries ??= group.bestSeries;
-      } else if (group.bestSeries!.seriesStatus == SeriesStatus.agedOut) {
-        agedOutSeries ??= group.bestSeries;
-      } else {
-        activeSeries ??= group.bestSeries;
-      }
+      _classify(group.bestSeries!);
     }
     if (group.series.isNotEmpty) {
       fallback ??= group.series.first;
     }
   }
-  return completeSeries ?? activeSeries ?? agedOutSeries ?? fallback;
+  return riskComplete ?? stdComplete ?? riskActive ?? stdActive ??
+      agedOutSeries ?? fallback;
 }
 
 /// FORECASTPRIORITY-1: A patient series forecast is a priority forecast if

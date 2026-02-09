@@ -2,6 +2,9 @@ import 'package:fhir_r4/fhir_r4.dart';
 
 import '../cicada.dart';
 
+/// CDSi observation code system URI used in condition test cases.
+const _cdsiSystemUri = 'https://www.cdc.gov/vaccines/programs/iis/cdsi.html';
+
 /// Maps FHIR coding system URIs to CDSi codeSystem identifiers.
 const Map<String, String> _fhirSystemToCdsi = {
   'http://snomed.info/sct': 'SNOMED',
@@ -81,6 +84,19 @@ VaxObservation? _matchCodingsToObservation(List<Coding>? codings) {
   final allObservations =
       scheduleSupportingData.observations?.observation;
   if (allObservations == null || allObservations.isEmpty) return null;
+
+  // Check for direct CDSi observation code (bypasses crosswalk)
+  for (final Coding coding in codings) {
+    final String? systemUri = coding.system?.toString();
+    final String? code = coding.code?.toString();
+    if (systemUri == _cdsiSystemUri && code != null) {
+      for (int i = 0; i < allObservations.length; i++) {
+        if (allObservations[i].observationCode == code) {
+          return allObservations[i];
+        }
+      }
+    }
+  }
 
   for (final Coding coding in codings) {
     final String? systemUri = coding.system?.toString();
