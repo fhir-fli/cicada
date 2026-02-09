@@ -1,4 +1,6 @@
 enum VaccineGroup {
+  chikungunya,
+
   cholera,
 
   covid19,
@@ -51,6 +53,8 @@ enum VaccineGroup {
 
   static VaccineGroup? fromString(String string) {
     switch (string) {
+      case 'Chikungunya':
+        return VaccineGroup.chikungunya;
       case 'Cholera':
         return VaccineGroup.cholera;
       case 'COVID-19':
@@ -116,6 +120,8 @@ enum VaccineGroup {
   @override
   String toString() {
     switch (this) {
+      case VaccineGroup.chikungunya:
+        return 'Chikungunya';
       case VaccineGroup.cholera:
         return 'Cholera';
       case VaccineGroup.covid19:

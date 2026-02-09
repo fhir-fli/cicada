@@ -5,43 +5,115 @@ import 'package:excel/excel.dart';
 import 'package:fhir_r4/fhir_r4.dart';
 import 'package:cicada/cicada.dart';
 
-Future<void> main() async {
-  final excelPath = _findTestCaseExcel();
-  print('Using test case file: $excelPath');
-  await createPatients(excelPath, scheduleSupportingData);
+/// Which observation column style the Excel uses.
+enum ObservationStyle {
+  /// Healthy file: Med_History_Text / Med_History_Code (single pair)
+  medHistory,
+
+  /// Conditions file: Observation_Code_1/2/3, Observation_Text_1/2/3,
+  /// Observation_Date_1/2/3
+  observationCode,
 }
 
-/// Auto-detect the healthy test cases Excel file.
-String _findTestCaseExcel() {
+/// Configuration for generating test case output from a specific Excel file.
+class TestCaseConfig {
+  const TestCaseConfig({
+    required this.excelPath,
+    required this.sheetName,
+    required this.observationStyle,
+    required this.ndjsonPath,
+    required this.testNdjsonPath,
+    required this.dosesDartPath,
+    required this.forecastsDartPath,
+    required this.dosesJsonPath,
+    required this.label,
+  });
+
+  final String excelPath;
+  final String sheetName;
+  final ObservationStyle observationStyle;
+  final String ndjsonPath;
+  final String testNdjsonPath;
+  final String dosesDartPath;
+  final String forecastsDartPath;
+  final String dosesJsonPath;
+  final String label;
+}
+
+Future<void> main() async {
+  // Healthy test cases
+  final healthyPath = _findExcel('cdsi-healthy-childhood-and-adult-test-cases');
+  if (healthyPath == null) {
+    throw StateError(
+        'No cdsi-healthy-childhood-and-adult-test-cases-*.xlsx found');
+  }
+  print('Using healthy test case file: $healthyPath');
+  await _generateTestCases(TestCaseConfig(
+    excelPath: healthyPath,
+    sheetName: 'FITS Exported TestCases',
+    observationStyle: ObservationStyle.medHistory,
+    ndjsonPath: 'cicada_generator/lib/test_cases/test_cases.ndjson',
+    testNdjsonPath: 'cicada/test/healthyTestCases.ndjson',
+    dosesDartPath: 'cicada/lib/generated_files/test_doses.dart',
+    forecastsDartPath: 'cicada/lib/generated_files/test_forecasts.dart',
+    dosesJsonPath: 'cicada_generator/lib/test_cases/test_doses.json',
+    label: 'healthy',
+  ));
+
+  // Underlying conditions test cases
+  final conditionPath = _findExcel('CDSi-underlying-conditions-test-cases',
+      caseSensitive: false);
+  if (conditionPath != null) {
+    print('\nUsing condition test case file: $conditionPath');
+    await _generateTestCases(TestCaseConfig(
+      excelPath: conditionPath,
+      sheetName: 'Underlying Condition Test Cases',
+      observationStyle: ObservationStyle.observationCode,
+      ndjsonPath:
+          'cicada_generator/lib/test_cases/condition_test_cases.ndjson',
+      testNdjsonPath: 'cicada/test/conditionTestCases.ndjson',
+      dosesDartPath: 'cicada/lib/generated_files/test_condition_doses.dart',
+      forecastsDartPath:
+          'cicada/lib/generated_files/test_condition_forecasts.dart',
+      dosesJsonPath:
+          'cicada_generator/lib/test_cases/condition_test_doses.json',
+      label: 'condition',
+    ));
+  } else {
+    print('\nNo underlying conditions test case Excel found — skipping.');
+  }
+}
+
+/// Auto-detect an Excel file by partial name in the test_cases directory.
+/// Returns null if [required] is false and nothing found.
+String? _findExcel(String nameFragment, {bool caseSensitive = true}) {
   final dir = Directory('cicada_generator/lib/test_cases');
   final matches = dir
       .listSync()
       .whereType<File>()
-      .where((f) =>
-          f.path.contains('cdsi-healthy-childhood-and-adult-test-cases') &&
-          f.path.endsWith('.xlsx'))
+      .where((f) {
+        final name = f.path.split('/').last;
+        if (caseSensitive) {
+          return name.contains(nameFragment) && name.endsWith('.xlsx');
+        }
+        return name.toLowerCase().contains(nameFragment.toLowerCase()) &&
+            name.endsWith('.xlsx');
+      })
       .toList();
-  if (matches.isEmpty) {
-    throw StateError('No cdsi-healthy-childhood-and-adult-test-cases-*.xlsx found');
-  }
+  if (matches.isEmpty) return null;
   if (matches.length > 1) {
     throw StateError(
-        'Multiple test case files found: ${matches.map((f) => f.path).join(', ')}');
+        'Multiple "$nameFragment" files found: '
+        '${matches.map((f) => f.path).join(', ')}');
   }
   return matches.first.path;
 }
 
-/// Reads the "FITS Exported TestCases" sheet directly from an Excel file,
-/// parses patients, immunizations, and conditions, and writes out
-/// both an NDJSON of Parameters bundles and a JSON of test doses.
-Future<void> createPatients(
-  String excelPath,
-  ScheduleSupportingData scheduleSupportingData,
-) async {
-  // Load workbook and select sheet
-  final bytes = File(excelPath).readAsBytesSync();
+/// Main generation logic for a single Excel file.
+Future<void> _generateTestCases(TestCaseConfig config) async {
+  final bytes = File(config.excelPath).readAsBytesSync();
   final excel = Excel.decodeBytes(bytes);
-  final sheet = excel['FITS Exported TestCases'];
+  final sheet = excel[config.sheetName];
 
   // Read headers
   final headers = sheet.rows.first
@@ -78,7 +150,7 @@ Future<void> createPatients(
       final idx = i + 1;
       final dateVal = rowMap['Date_Administered_$idx'];
       if (dateVal != null && dateVal.toString().isNotEmpty) {
-        final adminDate = dateVal.toString().substring(0, 10);
+        final adminDate = _extractDateStr(dateVal);
         final vaccineName = rowMap['Vaccine_Name_$idx']?.toString() ?? '';
         final cvx = rowMap['CVX_$idx']?.toString() ?? '';
         final mvx = rowMap['MVX_$idx']?.toString();
@@ -109,76 +181,38 @@ Future<void> createPatients(
         );
         immunizations.add(imm);
 
-        // Evaluate with Cicada
+        // Build VaxDose with expected evaluation
         final dose = VaxDose.fromImmunization(
           imm,
           VaxDate.fromDateTime(patient.birthDate!.valueDateTime!),
         );
-        if (evalStatus != null)
+        if (evalStatus != null) {
           dose.evalStatus = EvalStatus.fromJson(evalStatus);
-        if (evalReason != null)
+        }
+        if (evalReason != null) {
           dose.evalReason = EvalReason.fromJson(evalReason);
+        }
 
         vaxDoses.add(dose);
       }
     }
 
-    // Dynamically find observation columns
-    final obsTextCols = headers.where((h) => h == 'Med_History_Text');
-    for (var textCol in obsTextCols) {
-      final textVal = rowMap[textCol]?.toString() ?? '';
-      final codeVal = rowMap['Med_History_Code']?.toString() ?? '';
-      if (textVal.isNotEmpty) {
-        final obsCode = codeVal.padLeft(3, '0');
-        final obsList = scheduleSupportingData.observations?.observation ?? [];
-        final match = obsList.firstWhere(
-          (o) => o.observationCode == obsCode,
-          orElse: () => throw Exception('Obs code $obsCode not found'),
-        );
-        conditions.add(
-          Condition(
-            clinicalStatus: CodeableConcept(
-              coding: [
-                Coding(
-                  system: FhirUri(
-                    'http://terminology.hl7.org/CodeSystem/condition-clinical',
-                  ),
-                  code: FhirCode('active'),
-                ),
-              ],
-            ),
-            subject: patient.thisReference,
-            code: CodeableConcept(
-              coding: [
-                Coding(
-                  system: FhirUri(
-                    'https://www.cdc.gov/vaccines/programs/iis/cdsi.html',
-                  ),
-                  code: FhirCode(obsCode),
-                  display: textVal.toFhirString,
-                ),
-                ...?match.codedValues?.codedValue
-                    ?.where((cv) => cv.codeSystem == 'SNOMED')
-                    .map(
-                      (cv) => Coding(
-                        system: FhirUri('http://snomed.info/sct'),
-                        code: FhirCode(cv.code!),
-                        display: cv.text?.toFhirString,
-                      ),
-                    ),
-              ],
-            ),
-          ),
-        );
-      }
+    // Parse observations/conditions based on style
+    switch (config.observationStyle) {
+      case ObservationStyle.medHistory:
+        _parseMedHistoryObservations(rowMap, headers, conditions, patient);
+      case ObservationStyle.observationCode:
+        _parseObservationCodeColumns(rowMap, conditions, patient);
     }
 
     // Store test doses JSON
-    testDoses[patient.id.toString()] = vaxDoses.map((d) => d.toJson()).toList();
+    testDoses[patient.id.toString()] =
+        vaxDoses.map((d) => d.toJson()).toList();
 
-    // Extract forecast data
+    // Extract forecast data — trim whitespace from vaccine group
     final patientId = patient.id.toString();
-    final vaccineGroup = rowMap['Vaccine_Group']?.toString() ?? '';
+    final vaccineGroup =
+        (rowMap['Vaccine_Group']?.toString() ?? '').trim();
     final seriesStatus = rowMap['Series_Status']?.toString() ?? '';
     final forecastNum = rowMap['Forecast_#']?.toString() ?? '';
     final earliestDate = _extractDate(rowMap['Earliest_Date']);
@@ -203,12 +237,10 @@ Future<void> createPatients(
         id: 'parameters-${patient.id}'.toFhirString,
         parameter: [
           ParametersParameter(
-            name: rowMap['Assessment_Date']
-                .toString()
-                .substring(0, 10)
-                .toFhirString,
+            name: _extractDateStr(rowMap['Assessment_Date']).toFhirString,
           ),
-          ParametersParameter(name: 'Patient'.toFhirString, resource: patient),
+          ParametersParameter(
+              name: 'Patient'.toFhirString, resource: patient),
           ...immunizations.map(
             (i) => ParametersParameter(
               name: 'immunization'.toFhirString,
@@ -227,36 +259,138 @@ Future<void> createPatients(
   }
 
   // Write outputs
-  await File(
-    'cicada_generator/lib/test_cases/test_doses.json',
-  ).writeAsString(jsonEncode(testDoses));
-  final ndjson = parametersList.map((p) => jsonEncode(p.toJson())).join('\n');
-  await File(
-    'cicada_generator/lib/test_cases/test_cases.ndjson',
-  ).writeAsString(ndjson);
+  await File(config.dosesJsonPath).writeAsString(jsonEncode(testDoses));
+  final ndjson =
+      parametersList.map((p) => jsonEncode(p.toJson())).join('\n');
+  await File(config.ndjsonPath).writeAsString(ndjson);
 
   // Write NDJSON to test directory
-  await File('cicada/test/healthyTestCases.ndjson').writeAsString(ndjson);
-  print('Wrote cicada/test/healthyTestCases.ndjson '
+  await File(config.testNdjsonPath).writeAsString(ndjson);
+  print('Wrote ${config.testNdjsonPath} '
       '(${parametersList.length} cases)');
 
   // Generate test_doses.dart
-  _writeTestDosesDart(testDoses);
-  print('Wrote cicada/lib/generated_files/test_doses.dart '
+  _writeTestDosesDart(testDoses, config.dosesDartPath, config.label);
+  print('Wrote ${config.dosesDartPath} '
       '(${testDoses.length} patients)');
 
   // Generate test_forecasts.dart
-  _writeTestForecastsDart(testForecasts);
+  _writeTestForecastsDart(
+      testForecasts, config.forecastsDartPath, config.label);
   final totalForecasts =
       testForecasts.values.fold<int>(0, (sum, list) => sum + list.length);
-  print('Wrote cicada/lib/generated_files/test_forecasts.dart '
+  print('Wrote ${config.forecastsDartPath} '
       '(${testForecasts.length} patients, $totalForecasts forecasts)');
 }
 
-/// Writes the testDoses map as a Dart file matching the existing format.
-void _writeTestDosesDart(Map<String, List<Map<String, dynamic>>> testDoses) {
+/// Parse Med_History_Text / Med_History_Code columns (healthy Excel style).
+void _parseMedHistoryObservations(
+  Map<String, dynamic> rowMap,
+  List<String> headers,
+  List<Condition> conditions,
+  Patient patient,
+) {
+  final obsTextCols = headers.where((h) => h == 'Med_History_Text');
+  for (var textCol in obsTextCols) {
+    final textVal = rowMap[textCol]?.toString() ?? '';
+    final codeVal = rowMap['Med_History_Code']?.toString() ?? '';
+    if (textVal.isNotEmpty) {
+      conditions.add(_buildConditionFromObsCode(
+        codeVal,
+        textVal,
+        null,
+        patient,
+      ));
+    }
+  }
+}
+
+/// Parse Observation_Code_1/2/3 columns (conditions Excel style).
+void _parseObservationCodeColumns(
+  Map<String, dynamic> rowMap,
+  List<Condition> conditions,
+  Patient patient,
+) {
+  for (var idx = 1; idx <= 3; idx++) {
+    final codeVal = rowMap['Observation_Code_$idx']?.toString() ?? '';
+    final textVal = rowMap['Observation_Text_$idx']?.toString() ?? '';
+    if (codeVal.isEmpty && textVal.isEmpty) continue;
+
+    final dateVal = rowMap['Observation_Date_$idx'];
+    final dateStr = dateVal != null && dateVal.toString().isNotEmpty
+        ? dateVal.toString().substring(0, 10)
+        : null;
+
+    conditions.add(_buildConditionFromObsCode(
+      codeVal,
+      textVal,
+      dateStr,
+      patient,
+    ));
+  }
+}
+
+/// Build a FHIR Condition from a CDSi observation code, with crosswalk codings.
+Condition _buildConditionFromObsCode(
+  String rawCode,
+  String displayText,
+  String? onsetDate,
+  Patient patient,
+) {
+  final obsCode = rawCode.padLeft(3, '0');
+  final obsList =
+      scheduleSupportingData.observations?.observation ?? [];
+  final match = obsList.firstWhere(
+    (o) => o.observationCode == obsCode,
+    orElse: () => throw Exception('Obs code $obsCode not found'),
+  );
+
+  return Condition(
+    clinicalStatus: CodeableConcept(
+      coding: [
+        Coding(
+          system: FhirUri(
+            'http://terminology.hl7.org/CodeSystem/condition-clinical',
+          ),
+          code: FhirCode('active'),
+        ),
+      ],
+    ),
+    subject: patient.thisReference,
+    code: CodeableConcept(
+      coding: [
+        Coding(
+          system: FhirUri(
+            'https://www.cdc.gov/vaccines/programs/iis/cdsi.html',
+          ),
+          code: FhirCode(obsCode),
+          display: displayText.toFhirString,
+        ),
+        ...?match.codedValues?.codedValue
+            ?.where((cv) => cv.codeSystem == 'SNOMED')
+            .map(
+              (cv) => Coding(
+                system: FhirUri('http://snomed.info/sct'),
+                code: FhirCode(cv.code!),
+                display: cv.text?.toFhirString,
+              ),
+            ),
+      ],
+    ),
+    onsetX: onsetDate != null ? FhirDateTime.fromString(onsetDate) : null,
+  );
+}
+
+/// Writes the testDoses map as a Dart file.
+void _writeTestDosesDart(
+  Map<String, List<Map<String, dynamic>>> testDoses,
+  String outputPath,
+  String label,
+) {
+  final varName = label == 'healthy' ? 'testDoses' : 'testConditionDoses';
   final sb = StringBuffer();
-  sb.writeln('final Map<String, List<Map<String, Object>>> testDoses =');
+  sb.writeln(
+      'final Map<String, List<Map<String, Object>>> $varName =');
   sb.writeln('    <String, List<Map<String, Object>>>{');
 
   final patientIds = testDoses.keys.toList()..sort();
@@ -276,12 +410,10 @@ void _writeTestDosesDart(Map<String, List<Map<String, dynamic>>> testDoses) {
   }
   sb.writeln('};');
 
-  File('cicada/lib/generated_files/test_doses.dart')
-      .writeAsStringSync(sb.toString());
+  File(outputPath).writeAsStringSync(sb.toString());
 }
 
 void _writeDoseEntry(StringBuffer sb, Map<String, dynamic> dose) {
-  // Write fields in a stable order matching the existing format
   final orderedKeys = [
     'doseId',
     'volume',
@@ -322,7 +454,8 @@ String _dartLiteral(dynamic value) {
   if (value is bool) return '$value';
   if (value is List) {
     if (value.every((e) => e is String)) {
-      final items = value.map((e) => "'${_escapeString(e as String)}'").join(', ');
+      final items =
+          value.map((e) => "'${_escapeString(e as String)}'").join(', ');
       return '<String>[$items]';
     }
     return '$value';
@@ -332,23 +465,33 @@ String _dartLiteral(dynamic value) {
 
 String _escapeString(String s) => s.replaceAll("'", "\\'");
 
+/// Extracts a date string in yyyy-MM-dd format from a cell value.
+String _extractDateStr(dynamic value) {
+  if (value == null) return '';
+  final s = value.toString();
+  return s.length >= 10 ? s.substring(0, 10) : s;
+}
+
 /// Extracts a date string in yyyy/MM/dd format from a cell value.
 String _extractDate(dynamic value) {
   if (value == null) return '';
   final s = value.toString();
   if (s.isEmpty) return '';
-  // DateCellValue renders as "2025-12-22T00:00:00.000Z" or similar ISO format
   final dateStr = s.length >= 10 ? s.substring(0, 10) : s;
-  // Convert from yyyy-MM-dd to yyyy/MM/dd for consistency with VaxDate.toString()
   return dateStr.replaceAll('-', '/');
 }
 
 /// Writes the testForecasts map as a Dart file.
 void _writeTestForecastsDart(
-    Map<String, List<Map<String, String>>> testForecasts) {
+  Map<String, List<Map<String, String>>> testForecasts,
+  String outputPath,
+  String label,
+) {
+  final varName =
+      label == 'healthy' ? 'testForecasts' : 'testConditionForecasts';
   final sb = StringBuffer();
   sb.writeln(
-      'final Map<String, List<Map<String, String>>> testForecasts =');
+      'final Map<String, List<Map<String, String>>> $varName =');
   sb.writeln('    <String, List<Map<String, String>>>{');
 
   final patientIds = testForecasts.keys.toList()..sort();
@@ -371,22 +514,26 @@ void _writeTestForecastsDart(
   }
   sb.writeln('};');
 
-  File('cicada/lib/generated_files/test_forecasts.dart')
-      .writeAsStringSync(sb.toString());
+  File(outputPath).writeAsStringSync(sb.toString());
 }
 
-/// Helper to build a Patient from a row map
+/// Helper to build a Patient from a row map.
+/// Handles both 'gender' (healthy) and 'Gender' (conditions) column names.
 Patient _buildPatient(Map<String, dynamic> row) {
+  final genderVal =
+      row['gender']?.toString() ?? row['Gender']?.toString() ?? '';
+  final dobStr = row['DOB']?.toString() ?? '';
+  final dob = dobStr.length >= 10 ? dobStr.substring(0, 10) : dobStr;
   return Patient(
     id: row['CDC_Test_ID'].toString().toFhirString,
     name: [HumanName(family: row['Test_Case_Name']?.toString().toFhirString)],
-    birthDate: FhirDate.fromString(row['DOB'].toString().substring(0, 10)),
-    gender: (row['gender']?.toString().toLowerCase().contains('f') ?? false)
+    birthDate: dob.isNotEmpty ? FhirDate.fromString(dob) : null,
+    gender: genderVal.toLowerCase().contains('f')
         ? AdministrativeGender.female
-        : (row['gender']?.toString().toLowerCase().contains('t') ?? false)
-        ? AdministrativeGender('transgender')
-        : (row['gender']?.toString().toLowerCase().contains('m') ?? false)
-        ? AdministrativeGender.male
-        : AdministrativeGender.unknown,
+        : genderVal.toLowerCase().contains('t')
+            ? AdministrativeGender('transgender')
+            : genderVal.toLowerCase().contains('m')
+                ? AdministrativeGender.male
+                : AdministrativeGender.unknown,
   );
 }

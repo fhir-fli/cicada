@@ -46,18 +46,19 @@ List<Series> relevantSeries(
         /// one of the indications for this series
         else {
           final int obsIndex = indicationList.indexWhere((String obsCode) {
-            final int indicationIndex = patient.observations.codeIndex(obsCode);
-            if (indicationIndex == -1) {
+            if (patient.observations.codeIndex(obsCode) == -1) {
               return false;
-            } else {
-              return patient.birthdate.changeNullable(
-                          series.indication![indicationIndex].beginAge,
-                          false)! <=
-                      patient.assessmentDate &&
-                  patient.assessmentDate <
-                      patient.birthdate.changeNullable(
-                          series.indication![indicationIndex].endAge, true)!;
             }
+            // Find the matching indication in this series (by obsCode)
+            final ind = series.indication!.firstWhere(
+              (i) => i.observationCode?.code == obsCode,
+            );
+            return patient.birthdate
+                        .changeNullable(ind.beginAge, false)! <=
+                    patient.assessmentDate &&
+                patient.assessmentDate <
+                    patient.birthdate
+                        .changeNullable(ind.endAge, true)!;
           });
           return obsIndex != -1;
         }
