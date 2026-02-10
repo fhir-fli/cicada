@@ -468,6 +468,28 @@ class VaxSeries {
               (d.evalStatus == EvalStatus.valid ||
                   d.evalStatus == EvalStatus.not_valid))
           ?.dateGiven;
+    } else if (interval.fromRelevantObs != null) {
+      // CALCDTINT-9: Use observation date of the most recent active patient
+      // observation matching the fromRelevantObs code.
+      return _getObservationDateForForecast(interval.fromRelevantObs);
+    }
+    return null;
+  }
+
+  /// Per CALCDTINT-9: Get the observation date from the most recent active
+  /// patient observation matching the given observation code.
+  VaxDate? _getObservationDateForForecast(ObservationCode? relevantObs) {
+    if (relevantObs == null) return null;
+    final int? obsIndex = observations.codesAsInt
+        ?.indexWhere((int element) => element == relevantObs.codeAsInt);
+    if (obsIndex == null || obsIndex == -1) return null;
+    final VaxObservation obs = observations.observation![obsIndex];
+    // Use period.start (the date the observation occurred), fallback to end
+    if (obs.period?.start != null && obs.period!.start!.valueDateTime != null) {
+      return VaxDate.fromDateTime(obs.period!.start!.valueDateTime!);
+    }
+    if (obs.period?.end != null && obs.period!.end!.valueDateTime != null) {
+      return VaxDate.fromDateTime(obs.period!.end!.valueDateTime!);
     }
     return null;
   }
@@ -861,6 +883,7 @@ class VaxSeries {
   Series series;
   List<VaxDose> doses = <VaxDose>[];
   List<VaxDose> allPatientDoses = <VaxDose>[];
+  VaxObservations observations = VaxObservations();
   bool _forecastMode = false;
   List<VaxDose> evaluatedDoses = <VaxDose>[];
   Map<int, TargetDoseStatus> evaluatedTargetDose = <int, TargetDoseStatus>{};

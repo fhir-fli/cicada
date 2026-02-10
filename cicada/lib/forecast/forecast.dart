@@ -487,6 +487,7 @@ ForecastResult evaluateForForecast(Parameters parameters) {
     v.groups.forEach((String key, VaxGroup group) {
       for (final VaxSeries series in group.series) {
         series.allPatientDoses = patient.pastDoses;
+        series.observations = patient.observations;
       }
     });
   });

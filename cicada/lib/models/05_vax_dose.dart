@@ -463,6 +463,12 @@ class VaxDose {
       return null;
     } else {
       final VaxObservation obs = observations.observation![obsIndex];
+      // CALCDTINT-9: Use period.start (the date the observation occurred),
+      // fallback to period.end, then VaxDate.now()
+      if (obs.period?.start != null &&
+          obs.period!.start!.valueDateTime != null) {
+        return VaxDate.fromDateTime(obs.period!.start!.valueDateTime!);
+      }
       return obs.period?.end == null || obs.period!.end!.valueDateTime == null
           ? VaxDate.now()
           : VaxDate.fromDateTime(obs.period!.end!.valueDateTime!);
