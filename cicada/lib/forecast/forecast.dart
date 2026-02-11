@@ -2,6 +2,7 @@ import 'package:fhir_r4/fhir_r4.dart';
 import 'package:riverpod/riverpod.dart';
 
 import '../cicada.dart';
+import 'immds_response.dart';
 
 typedef ForecastResult = ({
   VaxPatient patient,
@@ -460,12 +461,12 @@ Map<String, VaccineGroupForecast> _aggregateVaccineGroupForecasts(
   return result;
 }
 
-Bundle forecastFromMap(Map<String, dynamic> parameters) {
+Parameters forecastFromMap(Map<String, dynamic> parameters) {
   if (parameters['resourceType'] == 'Parameters') {
     final Parameters newParameters = Parameters.fromJson(parameters);
     return forecastFromParameters(newParameters);
   }
-  return const Bundle(type: BundleType.transaction);
+  return const Parameters();
 }
 
 ForecastResult evaluateForForecast(Parameters parameters) {
@@ -517,7 +518,7 @@ ForecastResult evaluateForForecast(Parameters parameters) {
   );
 }
 
-Bundle forecastFromParameters(Parameters parameters) {
-  evaluateForForecast(parameters);
-  return Bundle(type: BundleType.transaction);
+Parameters forecastFromParameters(Parameters parameters) {
+  final result = evaluateForForecast(parameters);
+  return buildImmdsResponse(result);
 }
