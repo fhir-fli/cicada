@@ -3,22 +3,22 @@
   "id": "VaccineObservationFhir",
   "url": "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/VaccineObservationFhir",
   "name": "VaccineObservationFhir",
-  "title": "Condition Profile with Vaccine Condition Codes",
+  "title": "Observation Profile for Immunization Decision Support",
   "status": "draft",
-  "description": "Profile for conditions where the code must be from the Vaccine Condition Codes value set.",
+  "description": "Profile for Observation resources carrying lab evidence of immunity or other findings relevant to immunization decisions. Codes may be from SNOMED CT, ICD-10-CM, or LOINC.",
   "fhirVersion": "4.0.1",
   "kind": "resource",
   "abstract": false,
-  "type": "Condition",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Condition",
+  "type": "Observation",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Observation",
   "derivation": "constraint",
   "differential": {
     "element": [
       {
-        "id": "Condition.code",
-        "path": "Condition.code",
+        "id": "Observation.code",
+        "path": "Observation.code",
         "binding": {
-          "strength": "required",
+          "strength": "extensible",
           "valueSet": "http://fhirfli.dev/fhir/ig/cicada/ValueSet/vaccine-condition-codes-snomed"
         }
       }

@@ -1,16 +1,19 @@
 <html>
 <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
   <title>StructureDefinition-Vaccine-validation</title>
   <link rel="stylesheet" href="fhir.css"/>
 </head>
 <body>
-<table class="grid">
+<table class="grid" data-fhir="generated-heirarchy">
 <tr><td><b>Level</b></td><td><b>Type</b></td><td><b>Location</b></td><td><b>Message</b></td></tr>
-<tr><td>error</td><td>invalid</td><td>StructureDefinition.where(url = 'http://example.org/fhir/StructureDefinition/Vaccine')</td><td>Conformance resource /home/grey/dev/cicada/cicada_ig/fsh-generated/resources/StructureDefinition-Vaccine.json - the canonical URL (http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/Vaccine) does not match the URL (http://example.org/fhir/StructureDefinition/Vaccine)</td><td></td></tr>
+<tr><td>error</td><td>invalid</td><td>StructureDefinition.where(url = 'http://example.org/fhir/StructureDefinition/Vaccine')</td><td>Conformance resource /home/grey/dev/fhir/cicada/cicada_ig/fsh-generated/resources/StructureDefinition-Vaccine.json - the canonical URL (http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/Vaccine) does not match the URL (http://example.org/fhir/StructureDefinition/Vaccine). Use the special-url parameter if you really mean for it not to match</td><td></td></tr>
 <tr><td>warning</td><td>invalid</td><td>StructureDefinition/Vaccine: StructureDefinition.snapshot.element[17].pattern.ofType(CodeableConcept).coding[0]</td><td>Coding has no system. A code with no system has no defined meaning, and it cannot be validated. A system should be provided</td><td></td></tr>
 <tr><td>warning</td><td>invalid</td><td>StructureDefinition/Vaccine: StructureDefinition.differential.element[7].pattern.ofType(CodeableConcept).coding[0]</td><td>Coding has no system. A code with no system has no defined meaning, and it cannot be validated. A system should be provided</td><td></td></tr>
 <tr><td>warning</td><td>business-rule</td><td>StructureDefinition.where(url = 'http://example.org/fhir/StructureDefinition/Vaccine')</td><td>The Implementation Guide contains no examples for this profile</td><td></td></tr>
 <tr><td>information</td><td>informational</td><td>StructureDefinition/Vaccine: StructureDefinition</td><td>Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition|4.0.1</td><td></td></tr>
+<tr><td>information</td><td>business-rule</td><td>StructureDefinition/Vaccine: StructureDefinition.differential.element[5].slicing.discriminator[0]</td><td>The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)</td><td></td></tr>
+<tr><td>information</td><td>business-rule</td><td>StructureDefinition/Vaccine: StructureDefinition.snapshot.element[12].slicing.discriminator[0]</td><td>The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)</td><td></td></tr>
 </table>
 </body>
 </html>

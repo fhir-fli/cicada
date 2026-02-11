@@ -407,17 +407,19 @@
     "AllergyIntolerance": [
       {
         "url": "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/ReactionProfile",
-        "title": "Allergy Intolerance Profile with Vaccine Codes"
+        "title": "Allergy Intolerance Profile for Immunization Decision Support"
       }
     ],
     "Condition": [
       {
         "url": "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/VaccineConditionFhir",
         "title": "Condition Profile with Vaccine Condition Codes"
-      },
+      }
+    ],
+    "Observation": [
       {
         "url": "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/VaccineObservationFhir",
-        "title": "Condition Profile with Vaccine Condition Codes"
+        "title": "Observation Profile for Immunization Decision Support"
       }
     ],
     "antigen-supporting-data": [
@@ -501,7 +503,7 @@
     "http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet": [
       "StructureDefinition.snapshot.element.binding"
     ],
-    "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable": [
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-display-hint": [
       "StructureDefinition.snapshot.element"
     ],
     "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type": [
@@ -525,6 +527,9 @@
     ],
     "http://hl7.org/fhir/tools/StructureDefinition/resource-information": [
       "ImplementationGuide.definition.resource"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/snapshot-base-version": [
+      "StructureDefinition.snapshot"
     ]
   }
 }

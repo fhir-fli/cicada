@@ -3,14 +3,14 @@
   "id" : "valid-age-reason",
   "text" : {
     "status" : "extensions",
-    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>Include these codes as defined in <a href=\"CodeSystem-ValidAgeReason.html\"><code>http://fhirfli.dev/fhir/ig/cicada/CodeSystem/ValidAgeReason</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td><a href=\"CodeSystem-ValidAgeReason.html#ValidAgeReason-gracePeriod\">gracePeriod</a></td><td>Age: Grace Period</td><td>Age: Grace Period</td></tr><tr><td><a href=\"CodeSystem-ValidAgeReason.html#ValidAgeReason-tooYoung\">tooYoung</a></td><td>Age: Too Young</td><td>Age: Too Young</td></tr><tr><td><a href=\"CodeSystem-ValidAgeReason.html#ValidAgeReason-tooOld\">tooOld</a></td><td>Age: Too Old</td><td>Age: Too Old</td></tr></table></li></ul></div>"
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet valid-age-reason</b></p><a name=\"valid-age-reason\"> </a><a name=\"hcvalid-age-reason\"> </a><ul><li>Include these codes as defined in <a href=\"CodeSystem-ValidAgeReason.html\"><code>http://fhirfli.dev/fhir/ig/cicada/CodeSystem/ValidAgeReason</code></a><span title=\"Version is not explicitly stated, which means it is fixed to the version provided in this specification\"> version &#x1F4E6;0.1.0</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td><a href=\"CodeSystem-ValidAgeReason.html#ValidAgeReason-gracePeriod\">gracePeriod</a></td><td>Age: Grace Period</td><td>Age: Grace Period</td></tr><tr><td><a href=\"CodeSystem-ValidAgeReason.html#ValidAgeReason-tooYoung\">tooYoung</a></td><td>Age: Too Young</td><td>Age: Too Young</td></tr><tr><td><a href=\"CodeSystem-ValidAgeReason.html#ValidAgeReason-tooOld\">tooOld</a></td><td>Age: Too Old</td><td>Age: Too Old</td></tr></table></li></ul></div>"
   },
   "url" : "http://fhirfli.dev/fhir/ig/cicada/ValueSet/valid-age-reason",
   "version" : "0.1.0",
   "name" : "ValidAgeReasonVS",
   "title" : "Valid Age Reason",
   "status" : "draft",
-  "date" : "2024-05-06T15:25:10-04:00",
+  "date" : "2026-02-11T14:37:07-05:00",
   "publisher" : "FHIR-FLI",
   "contact" : [{
     "name" : "FHIR-FLI",

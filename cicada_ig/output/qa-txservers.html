@@ -3,6 +3,7 @@
 <head>
   <title>CicadaIG : Terminology Server Report</title>
   <link href="fhir.css" rel="stylesheet"/>
+  <meta charset="utf-8"/>
   <style>
     span.flip  { background-color: #4CAF50; color: white; border: solid 1px #a6d8a8; padding: 2px }
     span.toggle  { background-color: #e6f2ff; color: black; border: solid 1px #0056b3; padding: 2px; font-size: 10px }
@@ -11,7 +12,7 @@
 </head>
 <body style="margin: 20px; background-color: #ffffff">
  <h1>Terminology Server Report for CicadaIG</h1>
- <p>Generated Mon May 06 15:26:34 EDT 2024, FHIR version 4.0.1 for cicada.ig#0.1.0 (canonical = <a href="http://fhirfli.dev/fhir/ig/cicada">http://fhirfli.dev/fhir/ig/cicada</a> (<a href="http://fhirfli.dev/fhir/ig/cicada/history.html">history</a>))</p>
+ <p>Generated Wed Feb 11 14:45:42 EST 2026, FHIR version 4.0.1 for cicada.ig#0.1.0 (canonical = <a href="http://fhirfli.dev/fhir/ig/cicada">http://fhirfli.dev/fhir/ig/cicada</a> (<a href="http://fhirfli.dev/fhir/ig/cicada/history.html">history</a>))</p>
 <p>This page provides a report on which terminology servers were used while publishing this IG. Note that terminology caching reduces the server hit count - this page only reports content that wasn't cached</p>
 <h2>Terminology Parameters</h2>
 <ul>
@@ -19,13 +20,72 @@
     <b>x-system-cache-id</b>
 :     <code>dc8fd4bc-091a-424a-8a3b-6198ef146891</code>
   </li>
+  <li>
+    <b>defaultDisplayLanguage</b>
+:     <code>en-US</code>
+  </li>
 </ul>
-<h2>Tx Manager report for 'http://tx.fhir.org/tx-reg'</h2>
-<ul>
-  <li>(No Errors/Reports - all good)</li>
-</ul>
-<h2>Primary Server: http://tx.fhir.org/r4</h2>
-<p>Use Count: 516. Code Systems used: </p>
+<h2>Tx Manager report for 'https://tx.fhir.org/tx-reg'</h2>
+<p>
+  <b>Decisions</b>
+</p>
+<table class="grid">
+  <tr>
+    <td>
+      <b>Message</b>
+    </td>
+    <td>
+      <b>Server</b>
+    </td>
+    <td>
+      <b>ValueSet</b>
+    </td>
+    <td>
+      <b>Systems</b>
+    </td>
+    <td>
+      <b>Choices</b>
+    </td>
+  </tr>
+  <tr>
+    <td>Found candidate server http://tx.fhir.org/r4</td>
+    <td>http://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>http://www.ama-assn.org/go/cpt</td>
+    <td>auth = , candidates=http://tx.fhir.org/r4|https://tx-nordics.fhir.org/fhir/r4</td>
+  </tr>
+  <tr>
+    <td>Found candidate server http://tx.fhir.org/r4</td>
+    <td>http://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>http://snomed.info/sct</td>
+    <td>auth = , candidates=http://tx.fhir.org/r4|https://tx.ontoserver.csiro.au/fhir</td>
+  </tr>
+  <tr>
+    <td>Found authoritative server http://tx.fhir.org/r4</td>
+    <td>http://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>http://hl7.org/fhir/sid/icd-10-cm</td>
+    <td>auth = http://tx.fhir.org/r4, candidates=http://tx.hl7europe.eu/r4|https://tx.hl7chile.cl/r4|https://tx-nordics.fhir.org/fhir/r4</td>
+  </tr>
+  <tr>
+    <td>Found candidate server http://tx.fhir.org/r4</td>
+    <td>http://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>http://loinc.org</td>
+    <td>auth = , candidates=http://tx.fhir.org/r4|https://tx.ontoserver.csiro.au/fhir</td>
+  </tr>
+  <tr>
+    <td>Found candidate server http://tx.fhir.org/r4</td>
+    <td>http://tx.fhir.org/r4</td>
+    <td>null</td>
+    <td>http://www.nlm.nih.gov/research/umls/rxnorm</td>
+    <td>auth = , candidates=http://tx.fhir.org/r4|https://tx-nordics.fhir.org/fhir/r4</td>
+  </tr>
+</table>
+<h2>Primary Server: https://tx.fhir.org/r4</h2>
+<a href="https://tx.fhir.org/r4"></a>
+<p>Use Count: 0. Code Systems used: </p>
 <table class="grid">
   <tr>
     <th>
@@ -42,28 +102,36 @@
     </th>
   </tr>
   <tr>
-    <td>http://hl7.org/fhir/sid/cvx</td>
-    <td>1</td>
+    <td>http://hl7.org/fhir/sid/icd-10-cm</td>
     <td>0</td>
-    <td>
-      <a href="http://terminology.hl7.org/5.5.0/CodeSystem-CVX.html">Vaccine Administered Code Set (CVX)</a>
-    </td>
+    <td>1</td>
+    <td></td>
   </tr>
   <tr>
-    <td>http://hl7.org/fhir/sid/mvx</td>
-    <td>1</td>
+    <td>http://loinc.org</td>
     <td>0</td>
-    <td>
-      <a href="http://terminology.hl7.org/5.5.0/CodeSystem-MVX.html">Manufacturers of Vaccines (MVX)</a>
-    </td>
+    <td>1</td>
+    <td></td>
   </tr>
   <tr>
     <td>http://snomed.info/sct</td>
-    <td>122</td>
-    <td>392</td>
+    <td>0</td>
+    <td>1</td>
     <td>
       <a href="http://hl7.org/fhir/R4/codesystem-snomedct.html">SNOMED CT (all versions)</a>
     </td>
+  </tr>
+  <tr>
+    <td>http://www.ama-assn.org/go/cpt</td>
+    <td>0</td>
+    <td>1</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>http://www.nlm.nih.gov/research/umls/rxnorm</td>
+    <td>0</td>
+    <td>1</td>
+    <td></td>
   </tr>
 </table>
 </body>

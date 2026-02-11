@@ -1,0 +1,34 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "VaccineMedicationCodesRxnorm",
+  "id": "vaccine-medication-codes-rxnorm",
+  "title": "Immunization-Relevant Medications (RxNorm)",
+  "description": "RxNorm codes for medications relevant to immunization decision support, including antivirals and aspirin.",
+  "url": "http://fhirfli.dev/fhir/ig/cicada/ValueSet/vaccine-medication-codes-rxnorm",
+  "compose": {
+    "include": [
+      {
+        "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+        "concept": [
+          {
+            "code": "281",
+            "display": "Acyclovir"
+          },
+          {
+            "code": "24811",
+            "display": "Famciclovir"
+          },
+          {
+            "code": "39786",
+            "display": "Valacyclovir"
+          },
+          {
+            "code": "1191",
+            "display": "Aspirin"
+          }
+        ]
+      }
+    ]
+  }
+}

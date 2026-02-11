@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="vaccine-condition-codes-icd10"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ValueSet vaccine-condition-codes-icd10</b></p><a name="vaccine-condition-codes-icd10"> </a><a name="hcvaccine-condition-codes-icd10"> </a><ul><li>Include these codes as defined in <code>http://hl7.org/fhir/sid/icd-10-cm</code><span title="Version is not explicitly stated. No matching Code System found"> version Not Stated (use latest from terminology server)</span><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td>D84.9</td><td>Immunodeficiency, unspecified</td></tr><tr><td>D83.9</td><td>Common variable immunodeficiency, unspecified</td></tr><tr><td>D80.9</td><td>Immunodeficiency with predominantly antibody defects, unspecified</td></tr><tr><td>D89.9</td><td>Disorder involving immune mechanism, unspecified</td></tr><tr><td>D84.8</td><td>Other specified immunodeficiency disorders</td></tr><tr><td>Z94.84</td><td>Bone marrow transplant status</td></tr><tr><td>T86.00</td><td>Unspecified complication of bone marrow transplant</td></tr><tr><td>T86.09</td><td>Other complications of bone marrow transplant</td></tr><tr><td>B18.2</td><td>Chronic viral hepatitis C</td></tr><tr><td>B17.10</td><td>Acute hepatitis C without hepatic coma</td></tr><tr><td>B17.11</td><td>Acute hepatitis C with hepatic coma</td></tr><tr><td>B19.20</td><td>Unspecified viral hepatitis C without hepatic coma</td></tr><tr><td>Z33.1</td><td>Pregnant state, incidental</td></tr><tr><td>O09.90</td><td>Supervision of high risk pregnancy, unspecified trimester</td></tr><tr><td>Z34.00</td><td>Encounter for supervision of normal first pregnancy, unspecified trimester</td></tr><tr><td>Z34.80</td><td>Encounter for supervision of other normal pregnancy, unspecified trimester</td></tr><tr><td>Z39.1</td><td>Encounter for care and examination of lactating mother</td></tr><tr><td>G96.00</td><td>Cerebrospinal fluid leak, unspecified</td></tr><tr><td>G96.01</td><td>Cranial cerebrospinal fluid leak, spontaneous</td></tr><tr><td>G96.02</td><td>Spinal cerebrospinal fluid leak, spontaneous</td></tr><tr><td>G96.08</td><td>Other cranial cerebrospinal fluid leak</td></tr><tr><td>G96.09</td><td>Other spinal cerebrospinal fluid leak</td></tr><tr><td>Z96.21</td><td>Cochlear implant status</td></tr><tr><td>D81.9</td><td>Combined immunodeficiency, unspecified</td></tr><tr><td>D81.0</td><td>SCID with reticular dysgenesis</td></tr><tr><td>D81.1</td><td>SCID with low T- and B-cell numbers</td></tr><tr><td>D81.2</td><td>SCID with low or normal B-cell numbers</td></tr><tr><td>D81.3</td><td>Adenosine deaminase deficiency</td></tr><tr><td>D81.5</td><td>Purine nucleoside phosphorylase deficiency</td></tr><tr><td>D81.6</td><td>Major histocompatibility complex class I deficiency</td></tr><tr><td>D81.7</td><td>Major histocompatibility complex class II deficiency</td></tr><tr><td>E10.9</td><td>Type 1 diabetes mellitus without complications</td></tr><tr><td>E10.65</td><td>Type 1 diabetes mellitus with hyperglycemia</td></tr><tr><td>E11.9</td><td>Type 2 diabetes mellitus without complications</td></tr><tr><td>E11.65</td><td>Type 2 diabetes mellitus with hyperglycemia</td></tr><tr><td>E13.9</td><td>Other specified diabetes mellitus without complications</td></tr><tr><td>E08.9</td><td>Diabetes mellitus due to underlying condition without complications</td></tr><tr><td>E09.9</td><td>Drug or chemical induced diabetes mellitus without complications</td></tr><tr><td>K70.30</td><td>Alcoholic cirrhosis of liver without ascites</td></tr><tr><td>K70.31</td><td>Alcoholic cirrhosis of liver with ascites</td></tr><tr><td>K73.9</td><td>Chronic hepatitis, unspecified</td></tr><tr><td>K74.0</td><td>Hepatic fibrosis</td></tr><tr><td>K74.60</td><td>Unspecified cirrhosis of liver</td></tr><tr><td>K74.69</td><td>Other cirrhosis of liver</td></tr><tr><td>K76.0</td><td>Fatty liver, not elsewhere classified</td></tr><tr><td>K76.9</td><td>Liver disease, unspecified</td></tr><tr><td>I25.10</td><td>Atherosclerotic heart disease of native coronary artery without angina pectoris</td></tr><tr><td>I25.9</td><td>Chronic ischemic heart disease, unspecified</td></tr><tr><td>I50.9</td><td>Heart failure, unspecified</td></tr><tr><td>I50.20</td><td>Unspecified systolic (congestive) heart failure</td></tr><tr><td>I50.30</td><td>Unspecified diastolic (congestive) heart failure</td></tr><tr><td>I42.9</td><td>Cardiomyopathy, unspecified</td></tr><tr><td>I42.0</td><td>Dilated cardiomyopathy</td></tr><tr><td>Q24.9</td><td>Congenital malformation of heart, unspecified</td></tr><tr><td>J44.9</td><td>Chronic obstructive pulmonary disease, unspecified</td></tr><tr><td>J44.1</td><td>Chronic obstructive pulmonary disease with acute exacerbation</td></tr><tr><td>J43.9</td><td>Emphysema, unspecified</td></tr><tr><td>J84.9</td><td>Interstitial pulmonary disease, unspecified</td></tr><tr><td>J84.10</td><td>Pulmonary fibrosis, unspecified</td></tr><tr><td>J47.9</td><td>Bronchiectasis, uncomplicated</td></tr><tr><td>P27.1</td><td>Bronchopulmonary dysplasia originating in the perinatal period</td></tr><tr><td>D73.0</td><td>Hyposplenism</td></tr><tr><td>Q89.01</td><td>Asplenia (congenital)</td></tr><tr><td>D73.89</td><td>Other diseases of spleen</td></tr><tr><td>Z90.81</td><td>Acquired absence of spleen</td></tr><tr><td>N18.1</td><td>Chronic kidney disease, stage 1</td></tr><tr><td>N18.2</td><td>Chronic kidney disease, stage 2</td></tr><tr><td>N18.30</td><td>Chronic kidney disease, stage 3 unspecified</td></tr><tr><td>N18.4</td><td>Chronic kidney disease, stage 4</td></tr><tr><td>N18.5</td><td>Chronic kidney disease, stage 5</td></tr><tr><td>N18.6</td><td>End stage renal disease</td></tr><tr><td>N18.9</td><td>Chronic kidney disease, unspecified</td></tr><tr><td>Z99.2</td><td>Dependence on renal dialysis</td></tr><tr><td>B20</td><td>Human immunodeficiency virus [HIV] disease</td></tr><tr><td>Z21</td><td>Asymptomatic human immunodeficiency virus [HIV] infection status</td></tr><tr><td>J45.20</td><td>Mild intermittent asthma, uncomplicated</td></tr><tr><td>J45.30</td><td>Mild persistent asthma, uncomplicated</td></tr><tr><td>J45.40</td><td>Moderate persistent asthma, uncomplicated</td></tr><tr><td>J45.50</td><td>Severe persistent asthma, uncomplicated</td></tr><tr><td>J45.909</td><td>Unspecified asthma, uncomplicated</td></tr><tr><td>J45.998</td><td>Other asthma</td></tr><tr><td>K56.1</td><td>Intussusception</td></tr><tr><td>K52.9</td><td>Noninfective gastroenteritis and colitis, unspecified</td></tr><tr><td>A09</td><td>Infectious gastroenteritis and colitis, unspecified</td></tr><tr><td>A08.0</td><td>Rotaviral enteritis</td></tr><tr><td>A08.39</td><td>Other viral enteritis</td></tr><tr><td>A15.0</td><td>Tuberculosis of lung</td></tr><tr><td>A15.9</td><td>Respiratory tuberculosis unspecified</td></tr><tr><td>A18.9</td><td>Tuberculosis of other organs</td></tr><tr><td>A19.9</td><td>Miliary tuberculosis, unspecified</td></tr><tr><td>R76.11</td><td>Nonspecific reaction to tuberculin skin test without active tuberculosis</td></tr><tr><td>Z86.11</td><td>Personal history of tuberculosis</td></tr><tr><td>Z79.82</td><td>Long term (current) use of aspirin</td></tr><tr><td>Z11.3</td><td>Encounter for screening for infections with a predominantly sexual mode of transmission</td></tr><tr><td>Z11.4</td><td>Encounter for screening for human immunodeficiency virus [HIV]</td></tr><tr><td>Z20.2</td><td>Contact with and exposure to infections with a predominantly sexual mode of transmission</td></tr></table></li></ul></div>
+  </text>
+  <url value="http://fhirfli.dev/fhir/ig/cicada/ValueSet/vaccine-condition-codes-icd10"/>
+  <version value="0.1.0"/>
+  <name value="VaccineConditionCodesIcd10"/>
+  <title value="Vaccine Condition Codes (ICD-10-CM)"/>
+  <status value="active"/>
+  <date value="2026-02-11T14:37:07-05:00"/>
+  <publisher value="FHIR-FLI"/>
+  <contact>
+    <name value="FHIR-FLI"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://fhirfli.dev"/>
+    </telecom>
+  </contact>
+  <description value="Value set for conditions based on ICD-10-CM that may impact immunization decisions, mapped to CDSi observation codes."/>
+  <compose>
+    <include>
+      <system value="http://hl7.org/fhir/sid/icd-10-cm"/>
+      <concept>
+        <code value="D84.9"/>
+        <display value="Immunodeficiency, unspecified"/>
+      </concept>
+      <concept>
+        <code value="D83.9"/>
+        <display value="Common variable immunodeficiency, unspecified"/>
+      </concept>
+      <concept>
+        <code value="D80.9"/>
+        <display value="Immunodeficiency with predominantly antibody defects, unspecified"/>
+      </concept>
+      <concept>
+        <code value="D89.9"/>
+        <display value="Disorder involving immune mechanism, unspecified"/>
+      </concept>
+      <concept>
+        <code value="D84.8"/>
+        <display value="Other specified immunodeficiency disorders"/>
+      </concept>
+      <concept>
+        <code value="Z94.84"/>
+        <display value="Bone marrow transplant status"/>
+      </concept>
+      <concept>
+        <code value="T86.00"/>
+        <display value="Unspecified complication of bone marrow transplant"/>
+      </concept>
+      <concept>
+        <code value="T86.09"/>
+        <display value="Other complications of bone marrow transplant"/>
+      </concept>
+      <concept>
+        <code value="B18.2"/>
+        <display value="Chronic viral hepatitis C"/>
+      </concept>
+      <concept>
+        <code value="B17.10"/>
+        <display value="Acute hepatitis C without hepatic coma"/>
+      </concept>
+      <concept>
+        <code value="B17.11"/>
+        <display value="Acute hepatitis C with hepatic coma"/>
+      </concept>
+      <concept>
+        <code value="B19.20"/>
+        <display value="Unspecified viral hepatitis C without hepatic coma"/>
+      </concept>
+      <concept>
+        <code value="Z33.1"/>
+        <display value="Pregnant state, incidental"/>
+      </concept>
+      <concept>
+        <code value="O09.90"/>
+        <display value="Supervision of high risk pregnancy, unspecified trimester"/>
+      </concept>
+      <concept>
+        <code value="Z34.00"/>
+        <display value="Encounter for supervision of normal first pregnancy, unspecified trimester"/>
+      </concept>
+      <concept>
+        <code value="Z34.80"/>
+        <display value="Encounter for supervision of other normal pregnancy, unspecified trimester"/>
+      </concept>
+      <concept>
+        <code value="Z39.1"/>
+        <display value="Encounter for care and examination of lactating mother"/>
+      </concept>
+      <concept>
+        <code value="G96.00"/>
+        <display value="Cerebrospinal fluid leak, unspecified"/>
+      </concept>
+      <concept>
+        <code value="G96.01"/>
+        <display value="Cranial cerebrospinal fluid leak, spontaneous"/>
+      </concept>
+      <concept>
+        <code value="G96.02"/>
+        <display value="Spinal cerebrospinal fluid leak, spontaneous"/>
+      </concept>
+      <concept>
+        <code value="G96.08"/>
+        <display value="Other cranial cerebrospinal fluid leak"/>
+      </concept>
+      <concept>
+        <code value="G96.09"/>
+        <display value="Other spinal cerebrospinal fluid leak"/>
+      </concept>
+      <concept>
+        <code value="Z96.21"/>
+        <display value="Cochlear implant status"/>
+      </concept>
+      <concept>
+        <code value="D81.9"/>
+        <display value="Combined immunodeficiency, unspecified"/>
+      </concept>
+      <concept>
+        <code value="D81.0"/>
+        <display value="SCID with reticular dysgenesis"/>
+      </concept>
+      <concept>
+        <code value="D81.1"/>
+        <display value="SCID with low T- and B-cell numbers"/>
+      </concept>
+      <concept>
+        <code value="D81.2"/>
+        <display value="SCID with low or normal B-cell numbers"/>
+      </concept>
+      <concept>
+        <code value="D81.3"/>
+        <display value="Adenosine deaminase deficiency"/>
+      </concept>
+      <concept>
+        <code value="D81.5"/>
+        <display value="Purine nucleoside phosphorylase deficiency"/>
+      </concept>
+      <concept>
+        <code value="D81.6"/>
+        <display value="Major histocompatibility complex class I deficiency"/>
+      </concept>
+      <concept>
+        <code value="D81.7"/>
+        <display value="Major histocompatibility complex class II deficiency"/>
+      </concept>
+      <concept>
+        <code value="E10.9"/>
+        <display value="Type 1 diabetes mellitus without complications"/>
+      </concept>
+      <concept>
+        <code value="E10.65"/>
+        <display value="Type 1 diabetes mellitus with hyperglycemia"/>
+      </concept>
+      <concept>
+        <code value="E11.9"/>
+        <display value="Type 2 diabetes mellitus without complications"/>
+      </concept>
+      <concept>
+        <code value="E11.65"/>
+        <display value="Type 2 diabetes mellitus with hyperglycemia"/>
+      </concept>
+      <concept>
+        <code value="E13.9"/>
+        <display value="Other specified diabetes mellitus without complications"/>
+      </concept>
+      <concept>
+        <code value="E08.9"/>
+        <display value="Diabetes mellitus due to underlying condition without complications"/>
+      </concept>
+      <concept>
+        <code value="E09.9"/>
+        <display value="Drug or chemical induced diabetes mellitus without complications"/>
+      </concept>
+      <concept>
+        <code value="K70.30"/>
+        <display value="Alcoholic cirrhosis of liver without ascites"/>
+      </concept>
+      <concept>
+        <code value="K70.31"/>
+        <display value="Alcoholic cirrhosis of liver with ascites"/>
+      </concept>
+      <concept>
+        <code value="K73.9"/>
+        <display value="Chronic hepatitis, unspecified"/>
+      </concept>
+      <concept>
+        <code value="K74.0"/>
+        <display value="Hepatic fibrosis"/>
+      </concept>
+      <concept>
+        <code value="K74.60"/>
+        <display value="Unspecified cirrhosis of liver"/>
+      </concept>
+      <concept>
+        <code value="K74.69"/>
+        <display value="Other cirrhosis of liver"/>
+      </concept>
+      <concept>
+        <code value="K76.0"/>
+        <display value="Fatty liver, not elsewhere classified"/>
+      </concept>
+      <concept>
+        <code value="K76.9"/>
+        <display value="Liver disease, unspecified"/>
+      </concept>
+      <concept>
+        <code value="I25.10"/>
+        <display value="Atherosclerotic heart disease of native coronary artery without angina pectoris"/>
+      </concept>
+      <concept>
+        <code value="I25.9"/>
+        <display value="Chronic ischemic heart disease, unspecified"/>
+      </concept>
+      <concept>
+        <code value="I50.9"/>
+        <display value="Heart failure, unspecified"/>
+      </concept>
+      <concept>
+        <code value="I50.20"/>
+        <display value="Unspecified systolic (congestive) heart failure"/>
+      </concept>
+      <concept>
+        <code value="I50.30"/>
+        <display value="Unspecified diastolic (congestive) heart failure"/>
+      </concept>
+      <concept>
+        <code value="I42.9"/>
+        <display value="Cardiomyopathy, unspecified"/>
+      </concept>
+      <concept>
+        <code value="I42.0"/>
+        <display value="Dilated cardiomyopathy"/>
+      </concept>
+      <concept>
+        <code value="Q24.9"/>
+        <display value="Congenital malformation of heart, unspecified"/>
+      </concept>
+      <concept>
+        <code value="J44.9"/>
+        <display value="Chronic obstructive pulmonary disease, unspecified"/>
+      </concept>
+      <concept>
+        <code value="J44.1"/>
+        <display value="Chronic obstructive pulmonary disease with acute exacerbation"/>
+      </concept>
+      <concept>
+        <code value="J43.9"/>
+        <display value="Emphysema, unspecified"/>
+      </concept>
+      <concept>
+        <code value="J84.9"/>
+        <display value="Interstitial pulmonary disease, unspecified"/>
+      </concept>
+      <concept>
+        <code value="J84.10"/>
+        <display value="Pulmonary fibrosis, unspecified"/>
+      </concept>
+      <concept>
+        <code value="J47.9"/>
+        <display value="Bronchiectasis, uncomplicated"/>
+      </concept>
+      <concept>
+        <code value="P27.1"/>
+        <display value="Bronchopulmonary dysplasia originating in the perinatal period"/>
+      </concept>
+      <concept>
+        <code value="D73.0"/>
+        <display value="Hyposplenism"/>
+      </concept>
+      <concept>
+        <code value="Q89.01"/>
+        <display value="Asplenia (congenital)"/>
+      </concept>
+      <concept>
+        <code value="D73.89"/>
+        <display value="Other diseases of spleen"/>
+      </concept>
+      <concept>
+        <code value="Z90.81"/>
+        <display value="Acquired absence of spleen"/>
+      </concept>
+      <concept>
+        <code value="N18.1"/>
+        <display value="Chronic kidney disease, stage 1"/>
+      </concept>
+      <concept>
+        <code value="N18.2"/>
+        <display value="Chronic kidney disease, stage 2"/>
+      </concept>
+      <concept>
+        <code value="N18.30"/>
+        <display value="Chronic kidney disease, stage 3 unspecified"/>
+      </concept>
+      <concept>
+        <code value="N18.4"/>
+        <display value="Chronic kidney disease, stage 4"/>
+      </concept>
+      <concept>
+        <code value="N18.5"/>
+        <display value="Chronic kidney disease, stage 5"/>
+      </concept>
+      <concept>
+        <code value="N18.6"/>
+        <display value="End stage renal disease"/>
+      </concept>
+      <concept>
+        <code value="N18.9"/>
+        <display value="Chronic kidney disease, unspecified"/>
+      </concept>
+      <concept>
+        <code value="Z99.2"/>
+        <display value="Dependence on renal dialysis"/>
+      </concept>
+      <concept>
+        <code value="B20"/>
+        <display value="Human immunodeficiency virus [HIV] disease"/>
+      </concept>
+      <concept>
+        <code value="Z21"/>
+        <display value="Asymptomatic human immunodeficiency virus [HIV] infection status"/>
+      </concept>
+      <concept>
+        <code value="J45.20"/>
+        <display value="Mild intermittent asthma, uncomplicated"/>
+      </concept>
+      <concept>
+        <code value="J45.30"/>
+        <display value="Mild persistent asthma, uncomplicated"/>
+      </concept>
+      <concept>
+        <code value="J45.40"/>
+        <display value="Moderate persistent asthma, uncomplicated"/>
+      </concept>
+      <concept>
+        <code value="J45.50"/>
+        <display value="Severe persistent asthma, uncomplicated"/>
+      </concept>
+      <concept>
+        <code value="J45.909"/>
+        <display value="Unspecified asthma, uncomplicated"/>
+      </concept>
+      <concept>
+        <code value="J45.998"/>
+        <display value="Other asthma"/>
+      </concept>
+      <concept>
+        <code value="K56.1"/>
+        <display value="Intussusception"/>
+      </concept>
+      <concept>
+        <code value="K52.9"/>
+        <display value="Noninfective gastroenteritis and colitis, unspecified"/>
+      </concept>
+      <concept>
+        <code value="A09"/>
+        <display value="Infectious gastroenteritis and colitis, unspecified"/>
+      </concept>
+      <concept>
+        <code value="A08.0"/>
+        <display value="Rotaviral enteritis"/>
+      </concept>
+      <concept>
+        <code value="A08.39"/>
+        <display value="Other viral enteritis"/>
+      </concept>
+      <concept>
+        <code value="A15.0"/>
+        <display value="Tuberculosis of lung"/>
+      </concept>
+      <concept>
+        <code value="A15.9"/>
+        <display value="Respiratory tuberculosis unspecified"/>
+      </concept>
+      <concept>
+        <code value="A18.9"/>
+        <display value="Tuberculosis of other organs"/>
+      </concept>
+      <concept>
+        <code value="A19.9"/>
+        <display value="Miliary tuberculosis, unspecified"/>
+      </concept>
+      <concept>
+        <code value="R76.11"/>
+        <display value="Nonspecific reaction to tuberculin skin test without active tuberculosis"/>
+      </concept>
+      <concept>
+        <code value="Z86.11"/>
+        <display value="Personal history of tuberculosis"/>
+      </concept>
+      <concept>
+        <code value="Z79.82"/>
+        <display value="Long term (current) use of aspirin"/>
+      </concept>
+      <concept>
+        <code value="Z11.3"/>
+        <display value="Encounter for screening for infections with a predominantly sexual mode of transmission"/>
+      </concept>
+      <concept>
+        <code value="Z11.4"/>
+        <display value="Encounter for screening for human immunodeficiency virus [HIV]"/>
+      </concept>
+      <concept>
+        <code value="Z20.2"/>
+        <display value="Contact with and exposure to infections with a predominantly sexual mode of transmission"/>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

@@ -3,13 +3,13 @@
 <ValueSet xmlns="http://hl7.org/fhir">
   <id value="VaccineCodesCvxMvx"/>
   <text>
-    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p>This value set includes codes based on the following rules:</p><ul><li>Include all codes defined in <a href="http://terminology.hl7.org/5.5.0/CodeSystem-CVX.html"><code>http://hl7.org/fhir/sid/cvx</code></a></li><li>Include all codes defined in <a href="http://terminology.hl7.org/5.5.0/CodeSystem-MVX.html"><code>http://hl7.org/fhir/sid/mvx</code></a></li></ul></div>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ValueSet VaccineCodesCvxMvx</b></p><a name="VaccineCodesCvxMvx"> </a><a name="hcVaccineCodesCvxMvx"> </a><p>This value set includes codes based on the following rules:</p><ul><li>Include all codes defined in <a href="http://tx.fhir.org/r4"><code>http://hl7.org/fhir/sid/cvx</code></a><span style="opacity: 0.5" title="Version is not explicitly stated. When building this specification, the most recent version 20250715 has been used"> version ⏿20250715</span></li><li>Include all codes defined in <a href="http://tx.fhir.org/r4"><code>http://hl7.org/fhir/sid/mvx</code></a><span style="opacity: 0.5" title="Version is not explicitly stated. When building this specification, the most recent version 20201030 has been used"> version ⏿20201030</span></li></ul></div>
   </text>
   <url value="http://fhirfli.dev/fhir/ig/cicada/ValueSet/VaccineCodesCvxMvx"/>
   <version value="0.1.0"/>
   <name value="VaccineCodesCvxMvx"/>
   <status value="draft"/>
-  <date value="2024-05-06T15:25:10-04:00"/>
+  <date value="2026-02-11T14:37:07-05:00"/>
   <publisher value="FHIR-FLI"/>
   <contact>
     <name value="FHIR-FLI"/>

@@ -29,8 +29,8 @@
         "reference": {
           "reference": "StructureDefinition/ReactionProfile"
         },
-        "name": "Allergy Intolerance Profile with Vaccine Codes",
-        "description": "Profile for allergy intolerances where the offending agent must have a CVX or MVX code.",
+        "name": "Allergy Intolerance Profile for Immunization Decision Support",
+        "description": "Profile for allergy intolerances relevant to immunization. The code (allergen/substance) may use SNOMED CT or ICD-10-CM. Reaction substances may use CVX, MVX, SNOMED CT, or RxNorm.",
         "exampleBoolean": false
       },
       {
@@ -94,15 +94,7 @@
           "reference": "StructureDefinition/VaccineConditionFhir"
         },
         "name": "Condition Profile with Vaccine Condition Codes",
-        "description": "Profile for conditions where the code must be from the Vaccine Condition Codes value set.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/VaccineObservationFhir"
-        },
-        "name": "Condition Profile with Vaccine Condition Codes",
-        "description": "Profile for conditions where the code must be from the Vaccine Condition Codes value set.",
+        "description": "Profile for conditions where the code must be from the Vaccine Condition Codes value set. Accepts SNOMED CT and ICD-10-CM coded conditions.",
         "exampleBoolean": false
       },
       {
@@ -155,10 +147,34 @@
       },
       {
         "reference": {
+          "reference": "ConceptMap/Icd10ToCdsiObservation"
+        },
+        "name": "ICD-10-CM to CDSi Observation Code Map",
+        "description": "Maps ICD-10-CM diagnosis codes to CDSi observation codes used in immunization decision support.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/ProcedureProfile"
         },
         "name": "Immunization Procedures Profile",
-        "description": "Profile for medical procedures related to immunization based on SNOMED CT codes.",
+        "description": "Profile for medical procedures related to immunization based on SNOMED CT or CPT codes.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/vaccine-medication-codes-rxnorm"
+        },
+        "name": "Immunization-Relevant Medications (RxNorm)",
+        "description": "RxNorm codes for medications relevant to immunization decision support, including antivirals and aspirin.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/immunization-procedures-cpt"
+        },
+        "name": "Immunization-Relevant Procedures (CPT)",
+        "description": "CPT codes for procedures relevant to immunization decision support, including splenectomy and cochlear implant.",
         "exampleBoolean": false
       },
       {
@@ -183,6 +199,14 @@
         },
         "name": "Interval Reason",
         "description": "This value set includes codes for the reason an interval is considered to be invalid.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/vaccine-lab-evidence-of-immunity-loinc"
+        },
+        "name": "Lab Evidence of Immunity (LOINC)",
+        "description": "LOINC codes for laboratory tests that provide evidence of immunity, mapped to CDSi observation codes for immunization decision support.",
         "exampleBoolean": false
       },
       {
@@ -231,6 +255,14 @@
         },
         "name": "Medications",
         "description": "Value set for medications and substances based on SNOMED CT, including both active ingredients and marketed products.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/VaccineObservationFhir"
+        },
+        "name": "Observation Profile for Immunization Decision Support",
+        "description": "Profile for Observation resources carrying lab evidence of immunity or other findings relevant to immunization decisions. Codes may be from SNOMED CT, ICD-10-CM, or LOINC.",
         "exampleBoolean": false
       },
       {
@@ -291,6 +323,14 @@
       },
       {
         "reference": {
+          "reference": "ConceptMap/SnomedToCdsiObservation"
+        },
+        "name": "SNOMED CT to CDSi Observation Code Map",
+        "description": "Maps SNOMED CT codes to CDSi observation codes used in immunization decision support.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/vaccination-conflict"
         },
         "name": "Vaccination Conflict",
@@ -319,6 +359,14 @@
         },
         "name": "Vaccine Condition Codes",
         "description": "Value set for conditions based on SNOMED CT, that may impact immunization.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/vaccine-condition-codes-icd10"
+        },
+        "name": "Vaccine Condition Codes (ICD-10-CM)",
+        "description": "Value set for conditions based on ICD-10-CM that may impact immunization decisions, mapped to CDSi observation codes.",
         "exampleBoolean": false
       },
       {
@@ -392,7 +440,7 @@
       "page": [
         {
           "nameUrl": "index.html",
-          "title": "Home",
+          "title": "Cicada IG Home",
           "generation": "markdown"
         },
         {
@@ -418,6 +466,11 @@
         {
           "nameUrl": "05_forecast-dates-and-reasons.html",
           "title": "Forecast Dates and Reasons",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "06_select-patient-series.html",
+          "title": "Select Patient Series",
           "generation": "markdown"
         }
       ]

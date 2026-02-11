@@ -3,14 +3,14 @@
 <ValueSet xmlns="http://hl7.org/fhir">
   <id value="eval-status"/>
   <text>
-    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><ul><li>Include these codes as defined in <a href="CodeSystem-EvalStatus.html"><code>http://fhirfli.dev/fhir/ig/cicada/CodeSystem/EvalStatus</code></a><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td><a href="CodeSystem-EvalStatus.html#EvalStatus-valid">valid</a></td><td>Valid</td><td>Valid</td></tr><tr><td><a href="CodeSystem-EvalStatus.html#EvalStatus-not_valid">not_valid</a></td><td>Not Valid</td><td>Not Valid</td></tr><tr><td><a href="CodeSystem-EvalStatus.html#EvalStatus-extraneous">extraneous</a></td><td>Extraneous</td><td>Extraneous</td></tr><tr><td><a href="CodeSystem-EvalStatus.html#EvalStatus-sub_standard">sub_standard</a></td><td>Substandard</td><td>Substandard</td></tr></table></li></ul></div>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ValueSet eval-status</b></p><a name="eval-status"> </a><a name="hceval-status"> </a><ul><li>Include these codes as defined in <a href="CodeSystem-EvalStatus.html"><code>http://fhirfli.dev/fhir/ig/cicada/CodeSystem/EvalStatus</code></a><span title="Version is not explicitly stated, which means it is fixed to the version provided in this specification"> version &#x1F4E6;0.1.0</span><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td><a href="CodeSystem-EvalStatus.html#EvalStatus-valid">valid</a></td><td>Valid</td><td>Valid</td></tr><tr><td><a href="CodeSystem-EvalStatus.html#EvalStatus-not_valid">not_valid</a></td><td>Not Valid</td><td>Not Valid</td></tr><tr><td><a href="CodeSystem-EvalStatus.html#EvalStatus-extraneous">extraneous</a></td><td>Extraneous</td><td>Extraneous</td></tr><tr><td><a href="CodeSystem-EvalStatus.html#EvalStatus-sub_standard">sub_standard</a></td><td>Substandard</td><td>Substandard</td></tr></table></li></ul></div>
   </text>
   <url value="http://fhirfli.dev/fhir/ig/cicada/ValueSet/eval-status"/>
   <version value="0.1.0"/>
   <name value="EvalStatusVS"/>
   <title value="Evaluation Status Value Set"/>
   <status value="draft"/>
-  <date value="2024-05-06T15:25:10-04:00"/>
+  <date value="2026-02-11T14:37:07-05:00"/>
   <publisher value="FHIR-FLI"/>
   <contact>
     <name value="FHIR-FLI"/>

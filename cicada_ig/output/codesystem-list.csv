@@ -1,8 +1,8 @@
-URL,Version,Status,OIDs,Name,Title,Descriptino,Used
-http://fhirfli.dev/fhir/ig/pythia/CodeSystem/EvalReason,0.1.0,draft,,EvalReasonCS,Evaluation Reason,"The reason for the evaluation.",
-http://fhirfli.dev/fhir/ig/pythia/CodeSystem/EvalStatus,0.1.0,draft,,EvalStatusCS,Evaluation Status,"The status of the result of an evaluation.",
-http://fhirfli.dev/fhir/ig/pythia/CodeSystem/IntervalReason,0.1.0,draft,,IntervalReasonCS,Interval Reason,"This value set includes codes for the reason an interval is considered to be invalid.",
-http://fhirfli.dev/fhir/ig/pythia/CodeSystem/PreferredAllowedReason,0.1.0,draft,,PreferredAllowedReasonCS,Reasons why certain doses are Preferred or Allowed doses,"Reasons why certain doses are Preferred or Allowed doses",
-http://fhirfli.dev/fhir/ig/pythia/CodeSystem/VaccineGender,0.1.0,draft,,VaccineGenderCS,Vaccine Gender,"Value set for gender categories relevant to vaccination data.",
-http://fhirfli.dev/fhir/ig/pythia/CodeSystem/ValidAgeReason,0.1.0,draft,,ValidAgeReasonCS,Valid Age Reason,"Value set for reasons why a patient's age is considered valid/invalid for a vaccine.",
-http://fhirfli.dev/fhir/ig/pythia/CodeSystem/cdsi-observation-codes,0.1.0,draft,,CdsiObservationCodes,CDSI Observation Codes,"Observations and Conditions that are important to indications or contraindications in vaccine forecasting",
+URL,Version,Status,OIDs,Name,Title,Description,Used
+http://fhirfli.dev/fhir/ig/cicada/CodeSystem/EvalReason,0.1.0,draft,,EvalReasonCS,Evaluation Reason,"The reason for the evaluation.",
+http://fhirfli.dev/fhir/ig/cicada/CodeSystem/EvalStatus,0.1.0,draft,,EvalStatusCS,Evaluation Status,"The status of the result of an evaluation.",
+http://fhirfli.dev/fhir/ig/cicada/CodeSystem/IntervalReason,0.1.0,draft,,IntervalReasonCS,Interval Reason,"This value set includes codes for the reason an interval is considered to be invalid.",
+http://fhirfli.dev/fhir/ig/cicada/CodeSystem/PreferredAllowedReason,0.1.0,draft,,PreferredAllowedReasonCS,Reasons why certain doses are Preferred or Allowed doses,"Reasons why certain doses are Preferred or Allowed doses",
+http://fhirfli.dev/fhir/ig/cicada/CodeSystem/VaccineGender,0.1.0,draft,,VaccineGenderCS,Vaccine Gender,"Value set for gender categories relevant to vaccination data.",
+http://fhirfli.dev/fhir/ig/cicada/CodeSystem/ValidAgeReason,0.1.0,draft,,ValidAgeReasonCS,Valid Age Reason,"Value set for reasons why a patient's age is considered valid/invalid for a vaccine.",
+http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes,0.1.0,draft,,CdsiObservationCodes,CDSI Observation Codes,"Observations and Conditions that are important to indications or contraindications in vaccine forecasting",

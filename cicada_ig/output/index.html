@@ -3,7 +3,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>Home - The Cicada Vaccine Forecasting Engine and Guide v0.1.0</title>
+    <title>Cicada IG Home - The Cicada Vaccine Forecasting Engine and Guide v0.1.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -18,6 +18,7 @@
     <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
     <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
   	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
     <!-- Placeholder for child template CSS declarations -->
 
     <script type="text/javascript" src="fhir-table-scripts.js"> </script>
@@ -29,20 +30,22 @@
     <![endif]-->
 
     <!-- Favicons -->
-    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
-    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
-    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
-    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/icon-fhir-57.png"/>
     <link rel="shortcut icon" href="assets/ico/favicon.png"/>
   </head>
   <body onload="document.body.style.opacity='1'">
 
 	  <script src="assets/js/prism.js"></script>
-
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
     <style type="text/css">h2{--heading-prefix:"1"}
     h3,h4,h5,h6{--heading-prefix:"1"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
+
         <!-- Placeholder for child template header declarations -->
 
 
@@ -79,6 +82,31 @@
   <li>
     <a href="index.html">Home</a>
   </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Guide
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="01_preparation.html">Preparation</a>
+      </li>
+      <li>
+        <a href="02_logical-specification-concepts.html">Logical Specification Concepts</a>
+      </li>
+      <li>
+        <a href="03_processing-model.html">Processing Model</a>
+      </li>
+      <li>
+        <a href="04_evaluate-vaccine-dose-administered.html">Evaluate Vaccine Dose Administered</a>
+      </li>
+      <li>
+        <a href="05_forecast-dates-and-reasons.html">Forecast Dates and Reasons</a>
+      </li>
+      <li>
+        <a href="06_select-patient-series.html">Select Patient Series</a>
+      </li>
+    </ul>
+  </li>
   <li>
     <a href="artifacts.html">Artifacts</a>
   </li>
@@ -94,7 +122,7 @@
     <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
       <div class="container">  <!-- container -->
         <ul class="breadcrumb">
-          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Home</b></li>
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Cicada IG Home</b></li>
 
         </ul>
       </div>  <!-- /container -->
@@ -114,8 +142,8 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">The Cicada Vaccine Forecasting Engine and Guide - Local Development build (v0.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href="http://fhirfli.dev/fhir/ig/cicada/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
-  <h2>Home</h2>
+  <!--ReleaseHeader--><p id="publish-box">The Cicada Vaccine Forecasting Engine and Guide - Local Development build (v0.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://fhirfli.dev/fhir/ig/cicada/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Cicada IG Home</h2>
   
 
 
@@ -145,7 +173,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
         
           Draft
           
-            as of 2024-05-06
+            as of 2026-02-11
           
         
       </td>
@@ -179,6 +207,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
           <li><a href="#processing-model" id="markdown-toc-processing-model">Processing Model</a></li>
           <li><a href="#evaluate-vaccine-dose-administered" id="markdown-toc-evaluate-vaccine-dose-administered">Evaluate Vaccine Dose Administered</a></li>
           <li><a href="#forecast-dates-and-reasons" id="markdown-toc-forecast-dates-and-reasons">Forecast Dates and Reasons</a></li>
+          <li><a href="#select-patient-series" id="markdown-toc-select-patient-series">Select Patient Series</a></li>
         </ul>
       </li>
     </ul>
@@ -188,18 +217,18 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </div>
 <h1 id="cicada-ig">Cicada IG</h1>
 
-<h2 id="100-credit-goes-to-the-cdc-and-their-clinical-decision-support-for-immunization-cdsi">100% Credit goes to the CDC and their <a href="https://www.cdc.gov/vaccines/programs/iis/cdsi.html">Clinical Decision Support for Immunization (CDSi)</a></h2>
+<h2 id="100-credit-goes-to-the-cdc-and-their-clinical-decision-support-for-immunization-cdsi">100% Credit goes to the CDC and their <a href="https://www.cdc.gov/iis/cdsi/">Clinical Decision Support for Immunization (CDSi)</a></h2>
 
-<p>All I’ve done is take all of their hard work, guidance and expertise and make it computable (well, perhaps it’s already computable, I made a computer actually do it).</p>
+<p>All I've done is take all of their hard work, guidance and expertise and make it computable (well, perhaps it's already computable, I made a computer actually do it).</p>
 
-<p>The CDC manual can be found <a href="https://www.cdc.gov/vaccines/programs/iis/interop-proj/downloads/logic-spec-acip-rec-4.5.pdf">here</a></p>
+<p>The CDSi Logic Specification can be found on the <a href="https://www.cdc.gov/iis/cdsi/">CDC CDSi page</a>. The current supporting data version implemented is <strong>4.61-508</strong>.</p>
 
 <p>First, a warning:
-This is not completely FHIR compliant. As part of this was to help myself get more familiar with <a href="https://build.fhir.org/ig/HL7/fhir-shorthand/">FHIR Shorthand (commonly known as FSH)</a>, there are some “Resources” I’ve defined (e.g. <a href="StructureDefinition-antigen-supporting-data.html">Antigen Supporting Data</a> and <a href="StructureDefinition-schedule-supporting-data.html">Schedule Supporting Data</a>), that are certainly NOT FHIR. However, they are an accurate representation (at least in JSON) for the data used in the CDC’s “CLINICAL DECISION SUPPORT FOR IMMUNIZATION (CDSI): LOGIC SPECIFICATION FOR ACIP RECOMMENDATIONS”.</p>
+This is not completely FHIR compliant. As part of this was to help myself get more familiar with <a href="https://build.fhir.org/ig/HL7/fhir-shorthand/">FHIR Shorthand (commonly known as FSH)</a>, there are some "Resources" I've defined (e.g. <a href="StructureDefinition-antigen-supporting-data.html">Antigen Supporting Data</a> and <a href="StructureDefinition-schedule-supporting-data.html">Schedule Supporting Data</a>), that are certainly NOT FHIR. However, they are an accurate representation (at least in JSON) for the data used in the CDC's "CLINICAL DECISION SUPPORT FOR IMMUNIZATION (CDSI): LOGIC SPECIFICATION FOR ACIP RECOMMENDATIONS".</p>
 
 <h3 id="preparation"><a href="01_preparation.html">Preparation</a></h3>
 <ul>
-  <li>This is some technical background in case anyone is interested on working on this themselves.</li>
+  <li>Technical background on the code generator and build pipeline for anyone interested in working on this themselves.</li>
 </ul>
 
 <h3 id="immunization-decision-support-forecast-working-group"><a href="http://hl7.org/fhir/us/immds/">Immunization Decision Support Forecast Working Group</a></h3>
@@ -210,22 +239,27 @@ This is not completely FHIR compliant. As part of this was to help myself get mo
 
 <h3 id="logical-specification-concepts"><a href="02_logical-specification-concepts.html">Logical Specification Concepts</a></h3>
 <ul>
-  <li>There are a number of concepts that are involved in the evaluation and prediction of immunizations. Some of these terms make logical sense, but others do not. Here’s a description of some of them. Again, this was all taken from the <a href="https://www.cdc.gov/vaccines/programs/iis/cdsi.html">Clinical Decision Support for Immunization (CDSi)</a>.</li>
+  <li>There are a number of concepts that are involved in the evaluation and prediction of immunizations. Some of these terms make logical sense, but others do not. Here's a description of some of them. Again, this was all taken from the <a href="https://www.cdc.gov/iis/cdsi/">Clinical Decision Support for Immunization (CDSi)</a>.</li>
 </ul>
 
 <h3 id="processing-model"><a href="03_processing-model.html">Processing Model</a></h3>
 <ul>
-  <li>Brief overview of the analysis and forecasting process prior to a detailed discussion</li>
+  <li>Brief overview of the analysis and forecasting process prior to a detailed discussion.</li>
 </ul>
 
 <h3 id="evaluate-vaccine-dose-administered"><a href="04_evaluate-vaccine-dose-administered.html">Evaluate Vaccine Dose Administered</a></h3>
 <ul>
-  <li>Summarizes the steps to evaluate every vaccine within every series to which it applies</li>
+  <li>Summarizes the steps to evaluate every vaccine within every series to which it applies.</li>
 </ul>
 
 <h3 id="forecast-dates-and-reasons"><a href="05_forecast-dates-and-reasons.html">Forecast Dates and Reasons</a></h3>
 <ul>
   <li>Made it through the evaluation process. Next up, creating the forecast.</li>
+</ul>
+
+<h3 id="select-patient-series"><a href="06_select-patient-series.html">Select Patient Series</a></h3>
+<ul>
+  <li>After evaluating and forecasting, we need to pick the best series for each antigen. This covers pre-filtering, prioritization, scoring, and final selection.</li>
 </ul>
 
 
@@ -246,7 +280,7 @@ This is not completely FHIR compliant. As part of this was to help myself get mo
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://fhirfli.dev">FHIR-FLI</a>.  Package cicada.ig#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, May 6, 2024 15:25-0400">2024-05-06</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://fhirfli.dev">FHIR-FLI</a>.  Package cicada.ig#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Feb 11, 2026 14:37-0500">2026-02-11</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
@@ -263,7 +297,7 @@ This is not completely FHIR compliant. As part of this was to help myself get mo
     <div class="container">  <!-- container -->
     </div>  <!-- /container -->
   </div>  <!-- /segment-post-footer -->
-  
+
   <!-- JS and analytics only. -->
   <!-- Bootstrap core JavaScript
   ================================================== -->
@@ -274,7 +308,6 @@ This is not completely FHIR compliant. As part of this was to help myself get mo
   <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
   <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
   <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
-  
   <!-- Analytics Below
   ================================================== -->
   </body>

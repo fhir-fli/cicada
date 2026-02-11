@@ -4,190 +4,300 @@
     "url" : "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/MedicationAdministrationProfile",
     "name" : "MedicationAdministrationProfile",
     "title" : "Medication Administration Profile with Vaccine Codes",
+    "uml" : false,
+    "titlelang" : {
+    },
     "path" : "StructureDefinition-MedicationAdministrationProfile.html",
     "kind" : "resource",
     "type" : "MedicationAdministration",
     "base" : "http://hl7.org/fhir/StructureDefinition/MedicationAdministration",
     "basename" : "MedicationAdministration",
     "basepath" : "http://hl7.org/fhir/R4/medicationadministration.html",
+    "adl" : false,
     "status" : "draft",
-    "date" : "Mon May 06 15:25:10 EDT 2024",
+    "date" : "Wed Feb 11 14:37:07 EST 2026",
     "abstract" : false,
     "derivation" : "constraint",
     "publisher" : "FHIR-FLI",
+    "publisherlang" : {
+    },
     "copyright" : null,
-    "description" : "Profile for medication administrations with vaccine codes from CVX or MVX."
+    "copyrightlang" : {
+    },
+    "description" : "Profile for medication administrations with vaccine codes from CVX or MVX.",
+    "descriptionlang" : {
+    },
+    "obligations" : false
   },
   "MedicationDispenseProfile" : {
     "index" : 1,
     "url" : "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/MedicationDispenseProfile",
     "name" : "MedicationDispenseProfile",
     "title" : "Medication Dispense Profile with Vaccine Codes",
+    "uml" : false,
+    "titlelang" : {
+    },
     "path" : "StructureDefinition-MedicationDispenseProfile.html",
     "kind" : "resource",
     "type" : "MedicationDispense",
     "base" : "http://hl7.org/fhir/StructureDefinition/MedicationDispense",
     "basename" : "MedicationDispense",
     "basepath" : "http://hl7.org/fhir/R4/medicationdispense.html",
+    "adl" : false,
     "status" : "draft",
-    "date" : "Mon May 06 15:25:10 EDT 2024",
+    "date" : "Wed Feb 11 14:37:07 EST 2026",
     "abstract" : false,
     "derivation" : "constraint",
     "publisher" : "FHIR-FLI",
+    "publisherlang" : {
+    },
     "copyright" : null,
-    "description" : "Profile for medication dispenses with vaccine codes from CVX or MVX."
+    "copyrightlang" : {
+    },
+    "description" : "Profile for medication dispenses with vaccine codes from CVX or MVX.",
+    "descriptionlang" : {
+    },
+    "obligations" : false
   },
   "MedicationRequestProfile" : {
     "index" : 2,
     "url" : "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/MedicationRequestProfile",
     "name" : "MedicationRequestProfile",
     "title" : "Medication Request Profile with Vaccine Codes",
+    "uml" : false,
+    "titlelang" : {
+    },
     "path" : "StructureDefinition-MedicationRequestProfile.html",
     "kind" : "resource",
     "type" : "MedicationRequest",
     "base" : "http://hl7.org/fhir/StructureDefinition/MedicationRequest",
     "basename" : "MedicationRequest",
     "basepath" : "http://hl7.org/fhir/R4/medicationrequest.html",
+    "adl" : false,
     "status" : "draft",
-    "date" : "Mon May 06 15:25:10 EDT 2024",
+    "date" : "Wed Feb 11 14:37:07 EST 2026",
     "abstract" : false,
     "derivation" : "constraint",
     "publisher" : "FHIR-FLI",
+    "publisherlang" : {
+    },
     "copyright" : null,
-    "description" : "Profile for medication requests with vaccine codes from CVX or MVX."
+    "copyrightlang" : {
+    },
+    "description" : "Profile for medication requests with vaccine codes from CVX or MVX.",
+    "descriptionlang" : {
+    },
+    "obligations" : false
   },
   "MedicationStatementProfile" : {
     "index" : 3,
     "url" : "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/MedicationStatementProfile",
     "name" : "MedicationStatementProfile",
     "title" : "Medication Statement Profile with Vaccine Codes",
+    "uml" : false,
+    "titlelang" : {
+    },
     "path" : "StructureDefinition-MedicationStatementProfile.html",
     "kind" : "resource",
     "type" : "MedicationStatement",
     "base" : "http://hl7.org/fhir/StructureDefinition/MedicationStatement",
     "basename" : "MedicationStatement",
     "basepath" : "http://hl7.org/fhir/R4/medicationstatement.html",
+    "adl" : false,
     "status" : "draft",
-    "date" : "Mon May 06 15:25:10 EDT 2024",
+    "date" : "Wed Feb 11 14:37:07 EST 2026",
     "abstract" : false,
     "derivation" : "constraint",
     "publisher" : "FHIR-FLI",
+    "publisherlang" : {
+    },
     "copyright" : null,
-    "description" : "Profile for medication statements with vaccine codes from CVX or MVX."
+    "copyrightlang" : {
+    },
+    "description" : "Profile for medication statements with vaccine codes from CVX or MVX.",
+    "descriptionlang" : {
+    },
+    "obligations" : false
   },
   "ProcedureProfile" : {
     "index" : 4,
     "url" : "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/ProcedureProfile",
     "name" : "ProcedureProfile",
     "title" : "Immunization Procedures Profile",
+    "uml" : false,
+    "titlelang" : {
+    },
     "path" : "StructureDefinition-ProcedureProfile.html",
     "kind" : "resource",
     "type" : "Procedure",
     "base" : "http://hl7.org/fhir/StructureDefinition/Procedure",
     "basename" : "Procedure",
     "basepath" : "http://hl7.org/fhir/R4/procedure.html",
+    "adl" : false,
     "status" : "draft",
-    "date" : "Mon May 06 15:25:10 EDT 2024",
+    "date" : "Wed Feb 11 14:37:07 EST 2026",
     "abstract" : false,
     "derivation" : "constraint",
     "publisher" : "FHIR-FLI",
+    "publisherlang" : {
+    },
     "copyright" : null,
-    "description" : "Profile for medical procedures related to immunization based on SNOMED CT codes."
+    "copyrightlang" : {
+    },
+    "description" : "Profile for medical procedures related to immunization based on SNOMED CT or CPT codes.",
+    "descriptionlang" : {
+    },
+    "obligations" : false
   },
   "ReactionProfile" : {
     "index" : 5,
     "url" : "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/ReactionProfile",
     "name" : "ReactionProfile",
-    "title" : "Allergy Intolerance Profile with Vaccine Codes",
+    "title" : "Allergy Intolerance Profile for Immunization Decision Support",
+    "uml" : false,
+    "titlelang" : {
+    },
     "path" : "StructureDefinition-ReactionProfile.html",
     "kind" : "resource",
     "type" : "AllergyIntolerance",
     "base" : "http://hl7.org/fhir/StructureDefinition/AllergyIntolerance",
     "basename" : "AllergyIntolerance",
     "basepath" : "http://hl7.org/fhir/R4/allergyintolerance.html",
+    "adl" : false,
     "status" : "draft",
-    "date" : "Mon May 06 15:25:10 EDT 2024",
+    "date" : "Wed Feb 11 14:37:07 EST 2026",
     "abstract" : false,
     "derivation" : "constraint",
     "publisher" : "FHIR-FLI",
+    "publisherlang" : {
+    },
     "copyright" : null,
-    "description" : "Profile for allergy intolerances where the offending agent must have a CVX or MVX code."
+    "copyrightlang" : {
+    },
+    "description" : "Profile for allergy intolerances relevant to immunization. The code (allergen/substance) may use SNOMED CT or ICD-10-CM. Reaction substances may use CVX, MVX, SNOMED CT, or RxNorm.",
+    "descriptionlang" : {
+    },
+    "obligations" : false
   },
   "Vaccine" : {
     "index" : 6,
     "url" : "http://example.org/fhir/StructureDefinition/Vaccine",
     "name" : "Vaccine",
     "title" : "Vaccine",
+    "uml" : false,
+    "titlelang" : {
+    },
     "path" : "StructureDefinition-Vaccine.html",
     "kind" : "resource",
     "type" : "Medication",
     "base" : "http://hl7.org/fhir/StructureDefinition/Medication",
     "basename" : "Medication",
     "basepath" : "http://hl7.org/fhir/R4/medication.html",
+    "adl" : false,
     "status" : "draft",
-    "date" : "Mon May 06 15:25:10 EDT 2024",
+    "date" : "Wed Feb 11 14:37:07 EST 2026",
     "abstract" : false,
     "derivation" : "constraint",
     "publisher" : "FHIR-FLI",
+    "publisherlang" : {
+    },
     "copyright" : null,
-    "description" : "Simple vaccine to easily obtain needed information for forecasting"
+    "copyrightlang" : {
+    },
+    "description" : "Simple vaccine to easily obtain needed information for forecasting",
+    "descriptionlang" : {
+    },
+    "obligations" : false
   },
   "VaccineConditionFhir" : {
     "index" : 7,
     "url" : "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/VaccineConditionFhir",
     "name" : "VaccineConditionFhir",
     "title" : "Condition Profile with Vaccine Condition Codes",
+    "uml" : false,
+    "titlelang" : {
+    },
     "path" : "StructureDefinition-VaccineConditionFhir.html",
     "kind" : "resource",
     "type" : "Condition",
     "base" : "http://hl7.org/fhir/StructureDefinition/Condition",
     "basename" : "Condition",
     "basepath" : "http://hl7.org/fhir/R4/condition.html",
+    "adl" : false,
     "status" : "draft",
-    "date" : "Mon May 06 15:25:10 EDT 2024",
+    "date" : "Wed Feb 11 14:37:07 EST 2026",
     "abstract" : false,
     "derivation" : "constraint",
     "publisher" : "FHIR-FLI",
+    "publisherlang" : {
+    },
     "copyright" : null,
-    "description" : "Profile for conditions where the code must be from the Vaccine Condition Codes value set."
+    "copyrightlang" : {
+    },
+    "description" : "Profile for conditions where the code must be from the Vaccine Condition Codes value set. Accepts SNOMED CT and ICD-10-CM coded conditions.",
+    "descriptionlang" : {
+    },
+    "obligations" : false
   },
   "VaccineObservationFhir" : {
     "index" : 8,
     "url" : "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/VaccineObservationFhir",
     "name" : "VaccineObservationFhir",
-    "title" : "Condition Profile with Vaccine Condition Codes",
+    "title" : "Observation Profile for Immunization Decision Support",
+    "uml" : false,
+    "titlelang" : {
+    },
     "path" : "StructureDefinition-VaccineObservationFhir.html",
     "kind" : "resource",
-    "type" : "Condition",
-    "base" : "http://hl7.org/fhir/StructureDefinition/Condition",
-    "basename" : "Condition",
-    "basepath" : "http://hl7.org/fhir/R4/condition.html",
+    "type" : "Observation",
+    "base" : "http://hl7.org/fhir/StructureDefinition/Observation",
+    "basename" : "Observation",
+    "basepath" : "http://hl7.org/fhir/R4/observation.html",
+    "adl" : false,
     "status" : "draft",
-    "date" : "Mon May 06 15:25:10 EDT 2024",
+    "date" : "Wed Feb 11 14:37:07 EST 2026",
     "abstract" : false,
     "derivation" : "constraint",
     "publisher" : "FHIR-FLI",
+    "publisherlang" : {
+    },
     "copyright" : null,
-    "description" : "Profile for conditions where the code must be from the Vaccine Condition Codes value set."
+    "copyrightlang" : {
+    },
+    "description" : "Profile for Observation resources carrying lab evidence of immunity or other findings relevant to immunization decisions. Codes may be from SNOMED CT, ICD-10-CM, or LOINC.",
+    "descriptionlang" : {
+    },
+    "obligations" : false
   },
   "allowed-interval-reason" : {
     "index" : 9,
     "url" : "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/allowed-interval-reason",
     "name" : "AllowedIntervalReason",
     "title" : "Allowed Interval Reason",
+    "uml" : false,
+    "titlelang" : {
+    },
     "path" : "StructureDefinition-allowed-interval-reason.html",
     "kind" : "complex-type",
     "type" : "Extension",
     "base" : "http://hl7.org/fhir/StructureDefinition/Extension",
     "basename" : "Extension",
     "basepath" : "http://hl7.org/fhir/R4/extensibility.html#Extension",
+    "adl" : false,
     "status" : "draft",
-    "date" : "Mon May 06 15:25:10 EDT 2024",
+    "date" : "Wed Feb 11 14:37:07 EST 2026",
     "abstract" : false,
     "derivation" : "constraint",
     "publisher" : "FHIR-FLI",
+    "publisherlang" : {
+    },
     "copyright" : null,
+    "copyrightlang" : {
+    },
     "description" : "Captures the reason for the allowed interval between vaccine doses.",
+    "descriptionlang" : {
+    },
+    "obligations" : false,
     "contexts" : [
       {
         "type" : "Element ID",
@@ -201,19 +311,30 @@
     "url" : "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/allowed-interval-status",
     "name" : "AllowedIntervalStatus",
     "title" : "Allowed Interval Status",
+    "uml" : false,
+    "titlelang" : {
+    },
     "path" : "StructureDefinition-allowed-interval-status.html",
     "kind" : "complex-type",
     "type" : "Extension",
     "base" : "http://hl7.org/fhir/StructureDefinition/Extension",
     "basename" : "Extension",
     "basepath" : "http://hl7.org/fhir/R4/extensibility.html#Extension",
+    "adl" : false,
     "status" : "draft",
-    "date" : "Mon May 06 15:25:10 EDT 2024",
+    "date" : "Wed Feb 11 14:37:07 EST 2026",
     "abstract" : false,
     "derivation" : "constraint",
     "publisher" : "FHIR-FLI",
+    "publisherlang" : {
+    },
     "copyright" : null,
+    "copyrightlang" : {
+    },
     "description" : "Captures the status of the allowed interval for vaccination.",
+    "descriptionlang" : {
+    },
+    "obligations" : false,
     "contexts" : [
       {
         "type" : "Element ID",
@@ -227,19 +348,30 @@
     "url" : "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/allowed-vaccine-reason",
     "name" : "AllowedVaccineReason",
     "title" : "Allowed Vaccine Reason",
+    "uml" : false,
+    "titlelang" : {
+    },
     "path" : "StructureDefinition-allowed-vaccine-reason.html",
     "kind" : "complex-type",
     "type" : "Extension",
     "base" : "http://hl7.org/fhir/StructureDefinition/Extension",
     "basename" : "Extension",
     "basepath" : "http://hl7.org/fhir/R4/extensibility.html#Extension",
+    "adl" : false,
     "status" : "draft",
-    "date" : "Mon May 06 15:25:10 EDT 2024",
+    "date" : "Wed Feb 11 14:37:07 EST 2026",
     "abstract" : false,
     "derivation" : "constraint",
     "publisher" : "FHIR-FLI",
+    "publisherlang" : {
+    },
     "copyright" : null,
+    "copyrightlang" : {
+    },
     "description" : "Captures the reason why a particular vaccine is allowed.",
+    "descriptionlang" : {
+    },
+    "obligations" : false,
     "contexts" : [
       {
         "type" : "Element ID",
@@ -253,19 +385,30 @@
     "url" : "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/allowed-vaccine-status",
     "name" : "AllowedVaccineStatus",
     "title" : "Allowed Vaccine Status",
+    "uml" : false,
+    "titlelang" : {
+    },
     "path" : "StructureDefinition-allowed-vaccine-status.html",
     "kind" : "complex-type",
     "type" : "Extension",
     "base" : "http://hl7.org/fhir/StructureDefinition/Extension",
     "basename" : "Extension",
     "basepath" : "http://hl7.org/fhir/R4/extensibility.html#Extension",
+    "adl" : false,
     "status" : "draft",
-    "date" : "Mon May 06 15:25:10 EDT 2024",
+    "date" : "Wed Feb 11 14:37:07 EST 2026",
     "abstract" : false,
     "derivation" : "constraint",
     "publisher" : "FHIR-FLI",
+    "publisherlang" : {
+    },
     "copyright" : null,
+    "copyrightlang" : {
+    },
     "description" : "Indicates if the vaccine administered is allowed under certain conditions.",
+    "descriptionlang" : {
+    },
+    "obligations" : false,
     "contexts" : [
       {
         "type" : "Element ID",
@@ -279,38 +422,60 @@
     "url" : "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/antigen-supporting-data",
     "name" : "AntigenSupportingData",
     "title" : "Antigen Supporting Data",
+    "uml" : false,
+    "titlelang" : {
+    },
     "path" : "StructureDefinition-antigen-supporting-data.html",
     "kind" : "resource",
     "type" : "antigen-supporting-data",
     "base" : "http://hl7.org/fhir/StructureDefinition/Element",
     "basename" : "Element",
     "basepath" : "http://hl7.org/fhir/R4/datatypes.html#Element",
+    "adl" : false,
     "status" : "draft",
-    "date" : "Mon May 06 15:25:10 EDT 2024",
+    "date" : "Wed Feb 11 14:37:07 EST 2026",
     "abstract" : false,
     "derivation" : "specialization",
     "publisher" : "FHIR-FLI",
+    "publisherlang" : {
+    },
     "copyright" : null,
-    "description" : "A resource to store supporting data for antigens including target disease, vaccine groups, immunity criteria, contraindications, and vaccination series."
+    "copyrightlang" : {
+    },
+    "description" : "A resource to store supporting data for antigens including target disease, vaccine groups, immunity criteria, contraindications, and vaccination series.",
+    "descriptionlang" : {
+    },
+    "obligations" : false
   },
   "assessment-date" : {
     "index" : 14,
     "url" : "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/assessment-date",
     "name" : "AssessmentDate",
     "title" : "AssessmentDate",
+    "uml" : false,
+    "titlelang" : {
+    },
     "path" : "StructureDefinition-assessment-date.html",
     "kind" : "complex-type",
     "type" : "Extension",
     "base" : "http://hl7.org/fhir/StructureDefinition/Extension",
     "basename" : "Extension",
     "basepath" : "http://hl7.org/fhir/R4/extensibility.html#Extension",
+    "adl" : false,
     "status" : "draft",
-    "date" : "Mon May 06 15:25:10 EDT 2024",
+    "date" : "Wed Feb 11 14:37:07 EST 2026",
     "abstract" : false,
     "derivation" : "constraint",
     "publisher" : "FHIR-FLI",
+    "publisherlang" : {
+    },
     "copyright" : null,
+    "copyrightlang" : {
+    },
     "description" : "The date on which the vaccination assessment was made.",
+    "descriptionlang" : {
+    },
+    "obligations" : false,
     "contexts" : [
       {
         "type" : "Element ID",
@@ -324,19 +489,30 @@
     "url" : "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/begin-age",
     "name" : "BeginAge",
     "title" : "Begin Age",
+    "uml" : false,
+    "titlelang" : {
+    },
     "path" : "StructureDefinition-begin-age.html",
     "kind" : "complex-type",
     "type" : "Extension",
     "base" : "http://hl7.org/fhir/StructureDefinition/Extension",
     "basename" : "Extension",
     "basepath" : "http://hl7.org/fhir/R4/extensibility.html#Extension",
+    "adl" : false,
     "status" : "draft",
-    "date" : "Mon May 06 15:25:10 EDT 2024",
+    "date" : "Wed Feb 11 14:37:07 EST 2026",
     "abstract" : false,
     "derivation" : "constraint",
     "publisher" : "FHIR-FLI",
+    "publisherlang" : {
+    },
     "copyright" : null,
+    "copyrightlang" : {
+    },
     "description" : "The age at which the vaccine becomes applicable.",
+    "descriptionlang" : {
+    },
+    "obligations" : false,
     "contexts" : [
       {
         "type" : "Element ID",
@@ -350,19 +526,30 @@
     "url" : "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/end-age",
     "name" : "EndAge",
     "title" : "End Age",
+    "uml" : false,
+    "titlelang" : {
+    },
     "path" : "StructureDefinition-end-age.html",
     "kind" : "complex-type",
     "type" : "Extension",
     "base" : "http://hl7.org/fhir/StructureDefinition/Extension",
     "basename" : "Extension",
     "basepath" : "http://hl7.org/fhir/R4/extensibility.html#Extension",
+    "adl" : false,
     "status" : "draft",
-    "date" : "Mon May 06 15:25:10 EDT 2024",
+    "date" : "Wed Feb 11 14:37:07 EST 2026",
     "abstract" : false,
     "derivation" : "constraint",
     "publisher" : "FHIR-FLI",
+    "publisherlang" : {
+    },
     "copyright" : null,
+    "copyrightlang" : {
+    },
     "description" : "The age at which the vaccine is no longer applicable.",
+    "descriptionlang" : {
+    },
+    "obligations" : false,
     "contexts" : [
       {
         "type" : "Element ID",
@@ -376,19 +563,30 @@
     "url" : "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/inadvertent-administration-status",
     "name" : "InadvertentAdministrationStatus",
     "title" : "Inadvertent Administration Status",
+    "uml" : false,
+    "titlelang" : {
+    },
     "path" : "StructureDefinition-inadvertent-administration-status.html",
     "kind" : "complex-type",
     "type" : "Extension",
     "base" : "http://hl7.org/fhir/StructureDefinition/Extension",
     "basename" : "Extension",
     "basepath" : "http://hl7.org/fhir/R4/extensibility.html#Extension",
+    "adl" : false,
     "status" : "draft",
-    "date" : "Mon May 06 15:25:10 EDT 2024",
+    "date" : "Wed Feb 11 14:37:07 EST 2026",
     "abstract" : false,
     "derivation" : "constraint",
     "publisher" : "FHIR-FLI",
+    "publisherlang" : {
+    },
     "copyright" : null,
+    "copyrightlang" : {
+    },
     "description" : "Indicates if the vaccine was administered inadvertently.",
+    "descriptionlang" : {
+    },
+    "obligations" : false,
     "contexts" : [
       {
         "type" : "Element ID",
@@ -402,19 +600,30 @@
     "url" : "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/preferred-interval-reason",
     "name" : "PreferredIntervalReason",
     "title" : "Preferred Interval Reason",
+    "uml" : false,
+    "titlelang" : {
+    },
     "path" : "StructureDefinition-preferred-interval-reason.html",
     "kind" : "complex-type",
     "type" : "Extension",
     "base" : "http://hl7.org/fhir/StructureDefinition/Extension",
     "basename" : "Extension",
     "basepath" : "http://hl7.org/fhir/R4/extensibility.html#Extension",
+    "adl" : false,
     "status" : "draft",
-    "date" : "Mon May 06 15:25:10 EDT 2024",
+    "date" : "Wed Feb 11 14:37:07 EST 2026",
     "abstract" : false,
     "derivation" : "constraint",
     "publisher" : "FHIR-FLI",
+    "publisherlang" : {
+    },
     "copyright" : null,
+    "copyrightlang" : {
+    },
     "description" : "Captures the reason for the preferred interval between vaccine doses.",
+    "descriptionlang" : {
+    },
+    "obligations" : false,
     "contexts" : [
       {
         "type" : "Element ID",
@@ -428,19 +637,30 @@
     "url" : "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/preferred-interval-status",
     "name" : "PreferredIntervalStatus",
     "title" : "Preferred Interval Status",
+    "uml" : false,
+    "titlelang" : {
+    },
     "path" : "StructureDefinition-preferred-interval-status.html",
     "kind" : "complex-type",
     "type" : "Extension",
     "base" : "http://hl7.org/fhir/StructureDefinition/Extension",
     "basename" : "Extension",
     "basepath" : "http://hl7.org/fhir/R4/extensibility.html#Extension",
+    "adl" : false,
     "status" : "draft",
-    "date" : "Mon May 06 15:25:10 EDT 2024",
+    "date" : "Wed Feb 11 14:37:07 EST 2026",
     "abstract" : false,
     "derivation" : "constraint",
     "publisher" : "FHIR-FLI",
+    "publisherlang" : {
+    },
     "copyright" : null,
+    "copyrightlang" : {
+    },
     "description" : "Indicates if the vaccine was administered at the preferred interval.",
+    "descriptionlang" : {
+    },
+    "obligations" : false,
     "contexts" : [
       {
         "type" : "Element ID",
@@ -454,19 +674,30 @@
     "url" : "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/preferred-vaccine-reason",
     "name" : "PreferredVaccineReason",
     "title" : "Preferred Vaccine Reason",
+    "uml" : false,
+    "titlelang" : {
+    },
     "path" : "StructureDefinition-preferred-vaccine-reason.html",
     "kind" : "complex-type",
     "type" : "Extension",
     "base" : "http://hl7.org/fhir/StructureDefinition/Extension",
     "basename" : "Extension",
     "basepath" : "http://hl7.org/fhir/R4/extensibility.html#Extension",
+    "adl" : false,
     "status" : "draft",
-    "date" : "Mon May 06 15:25:10 EDT 2024",
+    "date" : "Wed Feb 11 14:37:07 EST 2026",
     "abstract" : false,
     "derivation" : "constraint",
     "publisher" : "FHIR-FLI",
+    "publisherlang" : {
+    },
     "copyright" : null,
+    "copyrightlang" : {
+    },
     "description" : "Captures the reason why a particular vaccine is preferred.",
+    "descriptionlang" : {
+    },
+    "obligations" : false,
     "contexts" : [
       {
         "type" : "Element ID",
@@ -480,19 +711,30 @@
     "url" : "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/preferred-vaccine-status",
     "name" : "PreferredVaccineStatus",
     "title" : "Preferred Vaccine Status",
+    "uml" : false,
+    "titlelang" : {
+    },
     "path" : "StructureDefinition-preferred-vaccine-status.html",
     "kind" : "complex-type",
     "type" : "Extension",
     "base" : "http://hl7.org/fhir/StructureDefinition/Extension",
     "basename" : "Extension",
     "basepath" : "http://hl7.org/fhir/R4/extensibility.html#Extension",
+    "adl" : false,
     "status" : "draft",
-    "date" : "Mon May 06 15:25:10 EDT 2024",
+    "date" : "Wed Feb 11 14:37:07 EST 2026",
     "abstract" : false,
     "derivation" : "constraint",
     "publisher" : "FHIR-FLI",
+    "publisherlang" : {
+    },
     "copyright" : null,
+    "copyrightlang" : {
+    },
     "description" : "Indicates if the vaccine administered is the preferred vaccine.",
+    "descriptionlang" : {
+    },
+    "obligations" : false,
     "contexts" : [
       {
         "type" : "Element ID",
@@ -506,38 +748,60 @@
     "url" : "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/schedule-supporting-data",
     "name" : "ScheduleSupportingData",
     "title" : "Schedule Supporting Data",
+    "uml" : false,
+    "titlelang" : {
+    },
     "path" : "StructureDefinition-schedule-supporting-data.html",
     "kind" : "resource",
     "type" : "schedule-supporting-data",
     "base" : "http://hl7.org/fhir/StructureDefinition/Element",
     "basename" : "Element",
     "basepath" : "http://hl7.org/fhir/R4/datatypes.html#Element",
+    "adl" : false,
     "status" : "draft",
-    "date" : "Mon May 06 15:25:10 EDT 2024",
+    "date" : "Wed Feb 11 14:37:07 EST 2026",
     "abstract" : false,
     "derivation" : "specialization",
     "publisher" : "FHIR-FLI",
+    "publisherlang" : {
+    },
     "copyright" : null,
-    "description" : "This resource consolidates various mapping and conflict information related to vaccine scheduling to support decision-making processes."
+    "copyrightlang" : {
+    },
+    "description" : "This resource consolidates various mapping and conflict information related to vaccine scheduling to support decision-making processes.",
+    "descriptionlang" : {
+    },
+    "obligations" : false
   },
   "vaccination-conflict" : {
     "index" : 23,
     "url" : "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/vaccination-conflict",
     "name" : "VaccinationConflict",
     "title" : "Vaccination Conflict",
+    "uml" : false,
+    "titlelang" : {
+    },
     "path" : "StructureDefinition-vaccination-conflict.html",
     "kind" : "complex-type",
     "type" : "Extension",
     "base" : "http://hl7.org/fhir/StructureDefinition/Extension",
     "basename" : "Extension",
     "basepath" : "http://hl7.org/fhir/R4/extensibility.html#Extension",
+    "adl" : false,
     "status" : "draft",
-    "date" : "Mon May 06 15:25:10 EDT 2024",
+    "date" : "Wed Feb 11 14:37:07 EST 2026",
     "abstract" : false,
     "derivation" : "constraint",
     "publisher" : "FHIR-FLI",
+    "publisherlang" : {
+    },
     "copyright" : null,
+    "copyrightlang" : {
+    },
     "description" : "Indicates any conflicts with other vaccinations.",
+    "descriptionlang" : {
+    },
+    "obligations" : false,
     "contexts" : [
       {
         "type" : "Element ID",
@@ -551,19 +815,30 @@
     "url" : "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/vaccine-type",
     "name" : "VaccineType",
     "title" : "Vaccine Type",
+    "uml" : false,
+    "titlelang" : {
+    },
     "path" : "StructureDefinition-vaccine-type.html",
     "kind" : "complex-type",
     "type" : "Extension",
     "base" : "http://hl7.org/fhir/StructureDefinition/Extension",
     "basename" : "Extension",
     "basepath" : "http://hl7.org/fhir/R4/extensibility.html#Extension",
+    "adl" : false,
     "status" : "draft",
-    "date" : "Mon May 06 15:25:10 EDT 2024",
+    "date" : "Wed Feb 11 14:37:07 EST 2026",
     "abstract" : false,
     "derivation" : "constraint",
     "publisher" : "FHIR-FLI",
+    "publisherlang" : {
+    },
     "copyright" : null,
+    "copyrightlang" : {
+    },
     "description" : "Type of the vaccine.",
+    "descriptionlang" : {
+    },
+    "obligations" : false,
     "contexts" : [
       {
         "type" : "Element ID",
@@ -577,19 +852,30 @@
     "url" : "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/valid-age-reason",
     "name" : "ValidAgeReason",
     "title" : "Valid Age Reason",
+    "uml" : false,
+    "titlelang" : {
+    },
     "path" : "StructureDefinition-valid-age-reason.html",
     "kind" : "complex-type",
     "type" : "Extension",
     "base" : "http://hl7.org/fhir/StructureDefinition/Extension",
     "basename" : "Extension",
     "basepath" : "http://hl7.org/fhir/R4/extensibility.html#Extension",
+    "adl" : false,
     "status" : "draft",
-    "date" : "Mon May 06 15:25:10 EDT 2024",
+    "date" : "Wed Feb 11 14:37:07 EST 2026",
     "abstract" : false,
     "derivation" : "constraint",
     "publisher" : "FHIR-FLI",
+    "publisherlang" : {
+    },
     "copyright" : null,
+    "copyrightlang" : {
+    },
     "description" : "Captures the reason why the vaccine was administered at a particular age.",
+    "descriptionlang" : {
+    },
+    "obligations" : false,
     "contexts" : [
       {
         "type" : "Element ID",
@@ -603,19 +889,30 @@
     "url" : "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/valid-age-status",
     "name" : "ValidAgeStatus",
     "title" : "Valid Age Status",
+    "uml" : false,
+    "titlelang" : {
+    },
     "path" : "StructureDefinition-valid-age-status.html",
     "kind" : "complex-type",
     "type" : "Extension",
     "base" : "http://hl7.org/fhir/StructureDefinition/Extension",
     "basename" : "Extension",
     "basepath" : "http://hl7.org/fhir/R4/extensibility.html#Extension",
+    "adl" : false,
     "status" : "draft",
-    "date" : "Mon May 06 15:25:10 EDT 2024",
+    "date" : "Wed Feb 11 14:37:07 EST 2026",
     "abstract" : false,
     "derivation" : "constraint",
     "publisher" : "FHIR-FLI",
+    "publisherlang" : {
+    },
     "copyright" : null,
+    "copyrightlang" : {
+    },
     "description" : "Indicates if the vaccine was administered at the correct age.",
+    "descriptionlang" : {
+    },
+    "obligations" : false,
     "contexts" : [
       {
         "type" : "Element ID",
@@ -629,37 +926,59 @@
     "url" : "http://example.org/fhir/StructureDefinition/vax-dose",
     "name" : "VaxDose",
     "title" : "Dose of a Vaccine",
+    "uml" : false,
+    "titlelang" : {
+    },
     "path" : "StructureDefinition-vax-dose.html",
     "kind" : "resource",
     "type" : "Immunization",
     "base" : "http://hl7.org/fhir/StructureDefinition/Immunization",
     "basename" : "Immunization",
     "basepath" : "http://hl7.org/fhir/R4/immunization.html",
+    "adl" : false,
     "status" : "draft",
-    "date" : "Mon May 06 15:25:10 EDT 2024",
+    "date" : "Wed Feb 11 14:37:07 EST 2026",
     "abstract" : false,
     "derivation" : "constraint",
     "publisher" : "FHIR-FLI",
+    "publisherlang" : {
+    },
     "copyright" : null,
-    "description" : "Detailed information about each vaccination dose."
+    "copyrightlang" : {
+    },
+    "description" : "Detailed information about each vaccination dose.",
+    "descriptionlang" : {
+    },
+    "obligations" : false
   },
   "vax-patient" : {
     "index" : 28,
     "url" : "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/vax-patient",
     "name" : "VaxPatient",
     "title" : "Vaccination Patient",
+    "uml" : false,
+    "titlelang" : {
+    },
     "path" : "StructureDefinition-vax-patient.html",
     "kind" : "resource",
     "type" : "Patient",
     "base" : "http://hl7.org/fhir/StructureDefinition/Patient",
     "basename" : "Patient",
     "basepath" : "http://hl7.org/fhir/R4/patient.html",
+    "adl" : false,
     "status" : "draft",
-    "date" : "Mon May 06 15:25:10 EDT 2024",
+    "date" : "Wed Feb 11 14:37:07 EST 2026",
     "abstract" : false,
     "derivation" : "constraint",
     "publisher" : "FHIR-FLI",
+    "publisherlang" : {
+    },
     "copyright" : null,
-    "description" : "A profile that extends the base FHIR Patient resource to include detailed vaccination-related information."
+    "copyrightlang" : {
+    },
+    "description" : "A profile that extends the base FHIR Patient resource to include detailed vaccination-related information.",
+    "descriptionlang" : {
+    },
+    "obligations" : false
   }
 }

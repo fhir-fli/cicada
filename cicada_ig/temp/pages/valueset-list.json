@@ -6,7 +6,7 @@
       "status" : "draft",
       "name" : "VaccineCodesCvxMvx",
       "title" : null,
-      "description" : null,
+      "description" : "",
       "systems" : ["http://hl7.org/fhir/sid/mvx", "http://hl7.org/fhir/sid/cvx"]
     },
     {
@@ -26,6 +26,15 @@
       "title" : "Evaluation Status Value Set",
       "description" : "Value Set for the status of the result of an evaluation.",
       "systems" : ["http://fhirfli.dev/fhir/ig/cicada/CodeSystem/EvalStatus"]
+    },
+    {
+      "url" : "http://fhirfli.dev/fhir/ig/cicada/ValueSet/immunization-procedures-cpt",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "ImmunizationProceduresCpt",
+      "title" : "Immunization-Relevant Procedures (CPT)",
+      "description" : "CPT codes for procedures relevant to immunization decision support, including splenectomy and cochlear implant.",
+      "systems" : ["http://www.ama-assn.org/go/cpt"]
     },
     {
       "url" : "http://fhirfli.dev/fhir/ig/cicada/ValueSet/interval-reason",
@@ -59,6 +68,15 @@
       "systems" : ["http://snomed.info/sct"]
     },
     {
+      "url" : "http://fhirfli.dev/fhir/ig/cicada/ValueSet/vaccine-condition-codes-icd10",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "VaccineConditionCodesIcd10",
+      "title" : "Vaccine Condition Codes (ICD-10-CM)",
+      "description" : "Value set for conditions based on ICD-10-CM that may impact immunization decisions, mapped to CDSi observation codes.",
+      "systems" : ["http://hl7.org/fhir/sid/icd-10-cm"]
+    },
+    {
       "url" : "http://fhirfli.dev/fhir/ig/cicada/ValueSet/vaccine-condition-codes-snomed",
       "version" : "0.1.0",
       "status" : "draft",
@@ -75,6 +93,24 @@
       "title" : "Vaccine Gender",
       "description" : "Value set for gender categories relevant to vaccination data.",
       "systems" : ["http://fhirfli.dev/fhir/ig/cicada/CodeSystem/VaccineGender"]
+    },
+    {
+      "url" : "http://fhirfli.dev/fhir/ig/cicada/ValueSet/vaccine-lab-evidence-of-immunity-loinc",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "VaccineLabEvidenceOfImmunityLoinc",
+      "title" : "Lab Evidence of Immunity (LOINC)",
+      "description" : "LOINC codes for laboratory tests that provide evidence of immunity, mapped to CDSi observation codes for immunization decision support.",
+      "systems" : ["http://loinc.org"]
+    },
+    {
+      "url" : "http://fhirfli.dev/fhir/ig/cicada/ValueSet/vaccine-medication-codes-rxnorm",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "VaccineMedicationCodesRxnorm",
+      "title" : "Immunization-Relevant Medications (RxNorm)",
+      "description" : "RxNorm codes for medications relevant to immunization decision support, including antivirals and aspirin.",
+      "systems" : ["http://www.nlm.nih.gov/research/umls/rxnorm"]
     },
     {
       "url" : "http://fhirfli.dev/fhir/ig/cicada/ValueSet/vaccine-medication-codes-snomed",

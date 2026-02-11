@@ -1,12 +1,10 @@
-{% raw %} <li><a href="StructureDefinition-ReactionProfile.html">Allergy Intolerance Profile with Vaccine Codes</a> <p>Profile for allergy intolerances where the offending agent must have a CVX or MVX code.</p>
+{% raw %} <li><a href="StructureDefinition-ReactionProfile.html">Allergy Intolerance Profile for Immunization Decision Support</a> <p>Profile for allergy intolerances relevant to immunization. The code (allergen/substance) may use SNOMED CT or ICD-10-CM. Reaction substances may use CVX, MVX, SNOMED CT, or RxNorm.</p>
 </li>
- <li><a href="StructureDefinition-VaccineConditionFhir.html">Condition Profile with Vaccine Condition Codes</a> <p>Profile for conditions where the code must be from the Vaccine Condition Codes value set.</p>
-</li>
- <li><a href="StructureDefinition-VaccineObservationFhir.html">Condition Profile with Vaccine Condition Codes</a> <p>Profile for conditions where the code must be from the Vaccine Condition Codes value set.</p>
+ <li><a href="StructureDefinition-VaccineConditionFhir.html">Condition Profile with Vaccine Condition Codes</a> <p>Profile for conditions where the code must be from the Vaccine Condition Codes value set. Accepts SNOMED CT and ICD-10-CM coded conditions.</p>
 </li>
  <li><a href="StructureDefinition-vax-dose.html">Dose of a Vaccine</a> <p>Detailed information about each vaccination dose.</p>
 </li>
- <li><a href="StructureDefinition-ProcedureProfile.html">Immunization Procedures Profile</a> <p>Profile for medical procedures related to immunization based on SNOMED CT codes.</p>
+ <li><a href="StructureDefinition-ProcedureProfile.html">Immunization Procedures Profile</a> <p>Profile for medical procedures related to immunization based on SNOMED CT or CPT codes.</p>
 </li>
  <li><a href="StructureDefinition-MedicationAdministrationProfile.html">Medication Administration Profile with Vaccine Codes</a> <p>Profile for medication administrations with vaccine codes from CVX or MVX.</p>
 </li>
@@ -15,6 +13,8 @@
  <li><a href="StructureDefinition-MedicationRequestProfile.html">Medication Request Profile with Vaccine Codes</a> <p>Profile for medication requests with vaccine codes from CVX or MVX.</p>
 </li>
  <li><a href="StructureDefinition-MedicationStatementProfile.html">Medication Statement Profile with Vaccine Codes</a> <p>Profile for medication statements with vaccine codes from CVX or MVX.</p>
+</li>
+ <li><a href="StructureDefinition-VaccineObservationFhir.html">Observation Profile for Immunization Decision Support</a> <p>Profile for Observation resources carrying lab evidence of immunity or other findings relevant to immunization decisions. Codes may be from SNOMED CT, ICD-10-CM, or LOINC.</p>
 </li>
  <li><a href="StructureDefinition-vax-patient.html">Vaccination Patient</a> <p>A profile that extends the base FHIR Patient resource to include detailed vaccination-related information.</p>
 </li>

@@ -1,0 +1,427 @@
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "inactive" : false,
+    "include" : [{
+      "system" : "http://www.ama-assn.org/go/cpt",
+      "concept" : [{
+        "code" : "38100",
+        "display" : "Splenectomy; total (separate procedure)"
+      },
+      {
+        "code" : "38101",
+        "display" : "Splenectomy; total, en bloc"
+      },
+      {
+        "code" : "38102",
+        "display" : "Splenectomy; total, en bloc with other organs"
+      },
+      {
+        "code" : "38115",
+        "display" : "Repair of ruptured spleen with splenorrhaphy"
+      },
+      {
+        "code" : "38120",
+        "display" : "Laparoscopy, surgical, splenectomy"
+      },
+      {
+        "code" : "69930",
+        "display" : "Cochlear device implantation"
+      }]
+    }]
+  }
+}}####
+e: {
+  "source" : tx.fhir.org,
+  "valueSet" : {
+  "resourceType" : "ValueSet",
+  "status" : "active",
+  "expansion" : {
+    "identifier" : "urn:uuid:5c09cf6d-5092-4c61-9dda-7e563a735ee6",
+    "timestamp" : "2026-02-11T18:59:05.132Z",
+    "total" : 6,
+    "offset" : 0,
+    "parameter" : [{
+      "name" : "excludeNested",
+      "valueBoolean" : false
+    },
+    {
+      "name" : "offset",
+      "valueInteger" : 0
+    },
+    {
+      "name" : "count",
+      "valueInteger" : 1000
+    },
+    {
+      "name" : "used-codesystem",
+      "valueUri" : "http://www.ama-assn.org/go/cpt|2023"
+    }],
+    "contains" : [{
+      "system" : "http://www.ama-assn.org/go/cpt",
+      "code" : "38100",
+      "display" : "Splenectomy; total (separate procedure)"
+    },
+    {
+      "system" : "http://www.ama-assn.org/go/cpt",
+      "code" : "38101",
+      "display" : "Splenectomy; partial (separate procedure)"
+    },
+    {
+      "system" : "http://www.ama-assn.org/go/cpt",
+      "code" : "38102",
+      "display" : "Splenectomy; total, en bloc for extensive disease, in conjunction with other procedure (List in addition to code for primary procedure)"
+    },
+    {
+      "system" : "http://www.ama-assn.org/go/cpt",
+      "code" : "38115",
+      "display" : "Repair of ruptured spleen (splenorrhaphy) with or without partial splenectomy"
+    },
+    {
+      "system" : "http://www.ama-assn.org/go/cpt",
+      "code" : "38120",
+      "display" : "Laparoscopy, surgical, splenectomy"
+    },
+    {
+      "system" : "http://www.ama-assn.org/go/cpt",
+      "code" : "69930",
+      "display" : "Cochlear device implantation, with or without mastoidectomy"
+    }]
+  }
+},
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://www.ama-assn.org/go/cpt",
+  "code" : "38100",
+  "display" : "Splenectomy; total (separate procedure)"
+}, "valueSet" :null, "langs":"en, en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "exampleOK":"true", "membershipOnly":"false", "displayWarningMode":"true", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "x-system-cache-id",
+    "valueString" : "dc8fd4bc-091a-424a-8a3b-6198ef146891"
+  },
+  {
+    "name" : "defaultDisplayLanguage",
+    "valueCode" : "en-US"
+  }]
+}}####
+v: {
+  "display" : "Splenectomy; total (separate procedure)",
+  "code" : "38100",
+  "system" : "http://www.ama-assn.org/go/cpt",
+  "version" : "2023",
+  "server" : "https://tx.fhir.org/r4",
+  "diagnostics" : "0 0 : start\r\n0 0     : 0ms  : Analysing http://hl7.org/fhir/ValueSet/@all for validation purposes\r\n0 0     : 0ms  : Parameters: disp-lang=en, en-US, default-to-latest, display-warning\r\n0 0     : 0ms  : Prepare include: \"()\"\r\n0 0     : 0ms  : Validate \"[http://www.ama-assn.org/go/cpt#38100 (\"Splenectomy; total (separate procedure)\")]\"\r\n0 0     : 0ms  : Check \"http://www.ama-assn.org/go/cpt#38100\"\r\n0 0     : 0ms  : Using CodeSystem \"http://www.ama-assn.org/go/cpt|2023\" (content = complete)\r\n",
+  "unknown-systems" : "",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://www.ama-assn.org/go/cpt",
+  "code" : "38101",
+  "display" : "Splenectomy; total, en bloc"
+}, "valueSet" :null, "langs":"en, en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "exampleOK":"true", "membershipOnly":"false", "displayWarningMode":"true", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "x-system-cache-id",
+    "valueString" : "dc8fd4bc-091a-424a-8a3b-6198ef146891"
+  },
+  {
+    "name" : "defaultDisplayLanguage",
+    "valueCode" : "en-US"
+  }]
+}}####
+v: {
+  "display" : "Splenectomy; partial (separate procedure)",
+  "code" : "38101",
+  "system" : "http://www.ama-assn.org/go/cpt",
+  "version" : "2023",
+  "severity" : "warning",
+  "error" : "Wrong Display Name 'Splenectomy; total, en bloc' for http://www.ama-assn.org/go/cpt#38101. Valid display is one of 6 choices: 'Splenectomy; partial (separate procedure)' (en), 'SPLENECTOMY; PARTIAL (SEPARATE PROCEDURE)' (en), 'SPLENECTOMY PARTIAL SEPARATE PROCEDURE' (en), 'REMOVAL OF SPLEEN PARTIAL' (en), 'Partial removal of spleen' (en) or 'Partial splenectomy' (en) (for the language(s) 'en, en-US')",
+  "server" : "https://tx.fhir.org/r4",
+  "unknown-systems" : "",
+  "issues" : {
+  "resourceType" : "OperationOutcome",
+  "issue" : [{
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString" : "Display_Name_for__should_be_one_of__instead_of"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-server",
+      "valueUrl" : "https://tx.fhir.org/r4"
+    }],
+    "severity" : "warning",
+    "code" : "invalid",
+    "details" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+        "code" : "invalid-display"
+      }],
+      "text" : "Wrong Display Name 'Splenectomy; total, en bloc' for http://www.ama-assn.org/go/cpt#38101. Valid display is one of 6 choices: 'Splenectomy; partial (separate procedure)' (en), 'SPLENECTOMY; PARTIAL (SEPARATE PROCEDURE)' (en), 'SPLENECTOMY PARTIAL SEPARATE PROCEDURE' (en), 'REMOVAL OF SPLEEN PARTIAL' (en), 'Partial removal of spleen' (en) or 'Partial splenectomy' (en) (for the language(s) 'en, en-US')"
+    },
+    "location" : ["Coding.display"],
+    "expression" : ["Coding.display"]
+  }]
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://www.ama-assn.org/go/cpt",
+  "code" : "38102",
+  "display" : "Splenectomy; total, en bloc with other organs"
+}, "valueSet" :null, "langs":"en, en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "exampleOK":"true", "membershipOnly":"false", "displayWarningMode":"true", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "x-system-cache-id",
+    "valueString" : "dc8fd4bc-091a-424a-8a3b-6198ef146891"
+  },
+  {
+    "name" : "defaultDisplayLanguage",
+    "valueCode" : "en-US"
+  }]
+}}####
+v: {
+  "display" : "Splenectomy; total, en bloc for extensive disease, in conjunction with other procedure (List in addition to code for primary procedure)",
+  "code" : "38102",
+  "system" : "http://www.ama-assn.org/go/cpt",
+  "version" : "2023",
+  "severity" : "warning",
+  "error" : "Wrong Display Name 'Splenectomy; total, en bloc with other organs' for http://www.ama-assn.org/go/cpt#38102. Valid display is one of 6 choices: 'Splenectomy; total, en bloc for extensive disease, in conjunction with other procedure (List in addition to code for primary procedure)' (en), 'SPLENECTOMY; TOTAL, EN BLOC FOR EXTENSIVE DISEASE, IN CONJUNCTION WITH OTHER PROCEDURE (LIST IN ADDITION TO CODE FOR PRIMARY PROCEDURE)' (en), 'SPLENC TOT EN BLOC EXTNSV DS CONJUNCT W/OTH PX' (en), 'REMOVAL OF SPLEEN TOTAL' (en), 'Removal of spleen during other surgical procedure' (en) or 'Total en bloc splenectomy for extensive disease' (en) (for the language(s) 'en, en-US')",
+  "server" : "https://tx.fhir.org/r4",
+  "unknown-systems" : "",
+  "issues" : {
+  "resourceType" : "OperationOutcome",
+  "issue" : [{
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString" : "Display_Name_for__should_be_one_of__instead_of"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-server",
+      "valueUrl" : "https://tx.fhir.org/r4"
+    }],
+    "severity" : "warning",
+    "code" : "invalid",
+    "details" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+        "code" : "invalid-display"
+      }],
+      "text" : "Wrong Display Name 'Splenectomy; total, en bloc with other organs' for http://www.ama-assn.org/go/cpt#38102. Valid display is one of 6 choices: 'Splenectomy; total, en bloc for extensive disease, in conjunction with other procedure (List in addition to code for primary procedure)' (en), 'SPLENECTOMY; TOTAL, EN BLOC FOR EXTENSIVE DISEASE, IN CONJUNCTION WITH OTHER PROCEDURE (LIST IN ADDITION TO CODE FOR PRIMARY PROCEDURE)' (en), 'SPLENC TOT EN BLOC EXTNSV DS CONJUNCT W/OTH PX' (en), 'REMOVAL OF SPLEEN TOTAL' (en), 'Removal of spleen during other surgical procedure' (en) or 'Total en bloc splenectomy for extensive disease' (en) (for the language(s) 'en, en-US')"
+    },
+    "location" : ["Coding.display"],
+    "expression" : ["Coding.display"]
+  }]
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://www.ama-assn.org/go/cpt",
+  "code" : "38115",
+  "display" : "Repair of ruptured spleen with splenorrhaphy"
+}, "valueSet" :null, "langs":"en, en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "exampleOK":"true", "membershipOnly":"false", "displayWarningMode":"true", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "x-system-cache-id",
+    "valueString" : "dc8fd4bc-091a-424a-8a3b-6198ef146891"
+  },
+  {
+    "name" : "defaultDisplayLanguage",
+    "valueCode" : "en-US"
+  }]
+}}####
+v: {
+  "display" : "Repair of ruptured spleen (splenorrhaphy) with or without partial splenectomy",
+  "code" : "38115",
+  "system" : "http://www.ama-assn.org/go/cpt",
+  "version" : "2023",
+  "severity" : "warning",
+  "error" : "Wrong Display Name 'Repair of ruptured spleen with splenorrhaphy' for http://www.ama-assn.org/go/cpt#38115. Valid display is one of 7 choices: 'Repair of ruptured spleen (splenorrhaphy) with or without partial splenectomy' (en), 'REPAIR OF RUPTURED SPLEEN (SPLENORRHAPHY) WITH OR WITHOUT PARTIAL SPLENECTOMY' (en), 'RPR RPTD SPLEEN SPLENORRHAPHY W/WO PRTL SPLENECT' (en), 'REPAIR OF RUPTURED SPLEEN' (en), 'Repair of ruptured spleen' (en), 'Repair of ruptured spleen with partial splenectomy' (en) or 'Repair of ruptured spleen' (en) (for the language(s) 'en, en-US')",
+  "server" : "https://tx.fhir.org/r4",
+  "unknown-systems" : "",
+  "issues" : {
+  "resourceType" : "OperationOutcome",
+  "issue" : [{
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString" : "Display_Name_for__should_be_one_of__instead_of"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-server",
+      "valueUrl" : "https://tx.fhir.org/r4"
+    }],
+    "severity" : "warning",
+    "code" : "invalid",
+    "details" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+        "code" : "invalid-display"
+      }],
+      "text" : "Wrong Display Name 'Repair of ruptured spleen with splenorrhaphy' for http://www.ama-assn.org/go/cpt#38115. Valid display is one of 7 choices: 'Repair of ruptured spleen (splenorrhaphy) with or without partial splenectomy' (en), 'REPAIR OF RUPTURED SPLEEN (SPLENORRHAPHY) WITH OR WITHOUT PARTIAL SPLENECTOMY' (en), 'RPR RPTD SPLEEN SPLENORRHAPHY W/WO PRTL SPLENECT' (en), 'REPAIR OF RUPTURED SPLEEN' (en), 'Repair of ruptured spleen' (en), 'Repair of ruptured spleen with partial splenectomy' (en) or 'Repair of ruptured spleen' (en) (for the language(s) 'en, en-US')"
+    },
+    "location" : ["Coding.display"],
+    "expression" : ["Coding.display"]
+  }]
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://www.ama-assn.org/go/cpt",
+  "code" : "38120",
+  "display" : "Laparoscopy, surgical, splenectomy"
+}, "valueSet" :null, "langs":"en, en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "exampleOK":"true", "membershipOnly":"false", "displayWarningMode":"true", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "x-system-cache-id",
+    "valueString" : "dc8fd4bc-091a-424a-8a3b-6198ef146891"
+  },
+  {
+    "name" : "defaultDisplayLanguage",
+    "valueCode" : "en-US"
+  }]
+}}####
+v: {
+  "display" : "Laparoscopy, surgical, splenectomy",
+  "code" : "38120",
+  "system" : "http://www.ama-assn.org/go/cpt",
+  "version" : "2023",
+  "server" : "https://tx.fhir.org/r4",
+  "unknown-systems" : "",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://www.ama-assn.org/go/cpt",
+  "code" : "69930",
+  "display" : "Cochlear device implantation"
+}, "valueSet" :null, "langs":"en, en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "exampleOK":"true", "membershipOnly":"false", "displayWarningMode":"true", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "x-system-cache-id",
+    "valueString" : "dc8fd4bc-091a-424a-8a3b-6198ef146891"
+  },
+  {
+    "name" : "defaultDisplayLanguage",
+    "valueCode" : "en-US"
+  }]
+}}####
+v: {
+  "display" : "Cochlear device implantation, with or without mastoidectomy",
+  "code" : "69930",
+  "system" : "http://www.ama-assn.org/go/cpt",
+  "version" : "2023",
+  "server" : "https://tx.fhir.org/r4",
+  "unknown-systems" : "",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "inactive" : true,
+    "include" : [{
+      "system" : "http://www.ama-assn.org/go/cpt",
+      "concept" : [{
+        "code" : "38100",
+        "display" : "Splenectomy; total (separate procedure)"
+      },
+      {
+        "code" : "38101",
+        "display" : "Splenectomy; total, en bloc"
+      },
+      {
+        "code" : "38102",
+        "display" : "Splenectomy; total, en bloc with other organs"
+      },
+      {
+        "code" : "38115",
+        "display" : "Repair of ruptured spleen with splenorrhaphy"
+      },
+      {
+        "code" : "38120",
+        "display" : "Laparoscopy, surgical, splenectomy"
+      },
+      {
+        "code" : "69930",
+        "display" : "Cochlear device implantation"
+      }]
+    }]
+  }
+}}####
+e: {
+  "source" : tx.fhir.org,
+  "valueSet" : {
+  "resourceType" : "ValueSet",
+  "status" : "active",
+  "expansion" : {
+    "identifier" : "urn:uuid:4bc0d7b2-7cc1-41a1-8e43-c93860089abc",
+    "timestamp" : "2026-02-11T19:06:07.912Z",
+    "total" : 6,
+    "offset" : 0,
+    "parameter" : [{
+      "name" : "excludeNested",
+      "valueBoolean" : false
+    },
+    {
+      "name" : "offset",
+      "valueInteger" : 0
+    },
+    {
+      "name" : "count",
+      "valueInteger" : 1000
+    },
+    {
+      "name" : "used-codesystem",
+      "valueUri" : "http://www.ama-assn.org/go/cpt|2023"
+    }],
+    "contains" : [{
+      "system" : "http://www.ama-assn.org/go/cpt",
+      "code" : "38100",
+      "display" : "Splenectomy; total (separate procedure)"
+    },
+    {
+      "system" : "http://www.ama-assn.org/go/cpt",
+      "code" : "38101",
+      "display" : "Splenectomy; partial (separate procedure)"
+    },
+    {
+      "system" : "http://www.ama-assn.org/go/cpt",
+      "code" : "38102",
+      "display" : "Splenectomy; total, en bloc for extensive disease, in conjunction with other procedure (List in addition to code for primary procedure)"
+    },
+    {
+      "system" : "http://www.ama-assn.org/go/cpt",
+      "code" : "38115",
+      "display" : "Repair of ruptured spleen (splenorrhaphy) with or without partial splenectomy"
+    },
+    {
+      "system" : "http://www.ama-assn.org/go/cpt",
+      "code" : "38120",
+      "display" : "Laparoscopy, surgical, splenectomy"
+    },
+    {
+      "system" : "http://www.ama-assn.org/go/cpt",
+      "code" : "69930",
+      "display" : "Cochlear device implantation, with or without mastoidectomy"
+    }]
+  }
+},
+  "error" : ""
+}
+-------------------------------------------------------------------------------------

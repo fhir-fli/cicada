@@ -5,7 +5,7 @@
   "name": "ProcedureProfile",
   "title": "Immunization Procedures Profile",
   "status": "draft",
-  "description": "Profile for medical procedures related to immunization based on SNOMED CT codes.",
+  "description": "Profile for medical procedures related to immunization based on SNOMED CT or CPT codes.",
   "fhirVersion": "4.0.1",
   "kind": "resource",
   "abstract": false,
@@ -18,7 +18,7 @@
         "id": "Procedure.code",
         "path": "Procedure.code",
         "binding": {
-          "strength": "required",
+          "strength": "extensible",
           "valueSet": "http://fhirfli.dev/fhir/ig/cicada/ValueSet/procedures"
         }
       }

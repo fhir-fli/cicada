@@ -1,0 +1,44 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "vaccine-medication-codes-rxnorm",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet vaccine-medication-codes-rxnorm</b></p><a name=\"vaccine-medication-codes-rxnorm\"> </a><a name=\"hcvaccine-medication-codes-rxnorm\"> </a><ul><li>Include these codes as defined in <a href=\"http://www.nlm.nih.gov/research/umls/rxnorm\"><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></a><span title=\"Version is not explicitly stated. No matching Code System found\"> version Not Stated (use latest from terminology server)</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td>281</td><td>Acyclovir</td></tr><tr><td>24811</td><td>Famciclovir</td></tr><tr><td>39786</td><td>Valacyclovir</td></tr><tr><td>1191</td><td>Aspirin</td></tr></table></li></ul></div>"
+  },
+  "url" : "http://fhirfli.dev/fhir/ig/cicada/ValueSet/vaccine-medication-codes-rxnorm",
+  "version" : "0.1.0",
+  "name" : "VaccineMedicationCodesRxnorm",
+  "title" : "Immunization-Relevant Medications (RxNorm)",
+  "status" : "active",
+  "date" : "2026-02-11T14:37:07-05:00",
+  "publisher" : "FHIR-FLI",
+  "contact" : [{
+    "name" : "FHIR-FLI",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://fhirfli.dev"
+    }]
+  }],
+  "description" : "RxNorm codes for medications relevant to immunization decision support, including antivirals and aspirin.",
+  "compose" : {
+    "include" : [{
+      "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+      "concept" : [{
+        "code" : "281",
+        "display" : "Acyclovir"
+      },
+      {
+        "code" : "24811",
+        "display" : "Famciclovir"
+      },
+      {
+        "code" : "39786",
+        "display" : "Valacyclovir"
+      },
+      {
+        "code" : "1191",
+        "display" : "Aspirin"
+      }]
+    }]
+  }
+}

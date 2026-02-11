@@ -1,0 +1,144 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhirfli.dev/fhir/ig/cicada/ConceptMap/SnomedToCdsiObservation> a fhir:ConceptMap ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "SnomedToCdsiObservation"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ConceptMap SnomedToCdsiObservation</b></p><a name=\"SnomedToCdsiObservation\"> </a><a name=\"hcSnomedToCdsiObservation\"> </a><p>Mapping from <a href=\"http://hl7.org/fhir/R4/codesystem-snomedct.html\">http://snomed.info/sct</a> to https://www.cdc.gov/vaccines/programs/iis/cdsi</p><br/><p><b>Group 1 </b>Mapping from <a href=\"http://hl7.org/fhir/R4/codesystem-snomedct.html\">SNOMED CT (all versions)</a> to <code>https://www.cdc.gov/vaccines/programs/iis/cdsi</code></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>370388006 (Patient immunocompromised)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>003 (Immunocompromised)</td></tr><tr><td>50711007 (Viral hepatitis type C)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>005 (Hepatitis C virus infection)</td></tr><tr><td>77386006 (Patient currently pregnant)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>007 (Pregnant)</td></tr><tr><td>31323000 (Severe combined immunodeficiency disease)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>013 (Severe Combined Immunodeficiency [SCID])</td></tr><tr><td>73211009 (Diabetes mellitus)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>014 (Diabetes)</td></tr><tr><td>371111005 (Measles immune)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>020 (Laboratory Evidence of Immunity for Measles)</td></tr><tr><td>371112003 (Mumps immune)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>021 (Laboratory Evidence of Immunity for Mumps)</td></tr><tr><td>278968001 (Rubella immune)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>022 (Laboratory Evidence of Immunity for Rubella)</td></tr><tr><td>86406008 (Human immunodeficiency virus infection)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>026 (HIV/AIDS - immunocompromised)</td></tr><tr><td>195967001 (Asthma)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>027 (Asthma)</td></tr><tr><td>56717001 (Tuberculosis)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>031 (Tuberculosis)</td></tr></table></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:url [
+     fhir:v "http://fhirfli.dev/fhir/ig/cicada/ConceptMap/SnomedToCdsiObservation"^^xsd:anyURI ;
+     fhir:l <http://fhirfli.dev/fhir/ig/cicada/ConceptMap/SnomedToCdsiObservation>
+  ] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:title [ fhir:v "SNOMED CT to CDSi Observation Code Map"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:date [ fhir:v "2026-02-11T14:37:07-05:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "FHIR-FLI"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "FHIR-FLI" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://fhirfli.dev" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Maps SNOMED CT codes to CDSi observation codes used in immunization decision support."] ; # 
+  fhir:source [
+     a fhir:Uri ;
+     fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+     fhir:l <http://snomed.info/sct>
+  ] ; # 
+  fhir:target [
+     a fhir:Uri ;
+     fhir:v "https://www.cdc.gov/vaccines/programs/iis/cdsi"^^xsd:anyURI ;
+     fhir:l <https://www.cdc.gov/vaccines/programs/iis/cdsi>
+  ] ; # 
+  fhir:group ( [
+     fhir:source [
+       fhir:v "http://snomed.info/sct"^^xsd:anyURI ;
+       fhir:l <http://snomed.info/sct>
+     ] ;
+     fhir:target [
+       fhir:v "https://www.cdc.gov/vaccines/programs/iis/cdsi"^^xsd:anyURI ;
+       fhir:l <https://www.cdc.gov/vaccines/programs/iis/cdsi>
+     ] ;
+     fhir:element ( [
+       fhir:code [ fhir:v "370388006" ] ;
+       fhir:display [ fhir:v "Patient immunocompromised" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "003" ] ;
+         fhir:display [ fhir:v "Immunocompromised" ] ;
+         fhir:equivalence [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "50711007" ] ;
+       fhir:display [ fhir:v "Viral hepatitis type C" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "005" ] ;
+         fhir:display [ fhir:v "Hepatitis C virus infection" ] ;
+         fhir:equivalence [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "77386006" ] ;
+       fhir:display [ fhir:v "Patient currently pregnant" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "007" ] ;
+         fhir:display [ fhir:v "Pregnant" ] ;
+         fhir:equivalence [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "31323000" ] ;
+       fhir:display [ fhir:v "Severe combined immunodeficiency disease" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "013" ] ;
+         fhir:display [ fhir:v "Severe Combined Immunodeficiency [SCID]" ] ;
+         fhir:equivalence [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "73211009" ] ;
+       fhir:display [ fhir:v "Diabetes mellitus" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "014" ] ;
+         fhir:display [ fhir:v "Diabetes" ] ;
+         fhir:equivalence [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "371111005" ] ;
+       fhir:display [ fhir:v "Measles immune" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "020" ] ;
+         fhir:display [ fhir:v "Laboratory Evidence of Immunity for Measles" ] ;
+         fhir:equivalence [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "371112003" ] ;
+       fhir:display [ fhir:v "Mumps immune" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "021" ] ;
+         fhir:display [ fhir:v "Laboratory Evidence of Immunity for Mumps" ] ;
+         fhir:equivalence [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "278968001" ] ;
+       fhir:display [ fhir:v "Rubella immune" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "022" ] ;
+         fhir:display [ fhir:v "Laboratory Evidence of Immunity for Rubella" ] ;
+         fhir:equivalence [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "86406008" ] ;
+       fhir:display [ fhir:v "Human immunodeficiency virus infection" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "026" ] ;
+         fhir:display [ fhir:v "HIV/AIDS - immunocompromised" ] ;
+         fhir:equivalence [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "195967001" ] ;
+       fhir:display [ fhir:v "Asthma" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "027" ] ;
+         fhir:display [ fhir:v "Asthma" ] ;
+         fhir:equivalence [ fhir:v "equivalent" ]
+       ] )
+     ] [
+       fhir:code [ fhir:v "56717001" ] ;
+       fhir:display [ fhir:v "Tuberculosis" ] ;
+       fhir:target ( [
+         fhir:code [ fhir:v "031" ] ;
+         fhir:display [ fhir:v "Tuberculosis" ] ;
+         fhir:equivalence [ fhir:v "equivalent" ]
+       ] )
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

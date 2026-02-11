@@ -1,15 +1,19 @@
 <html>
 <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
   <title>StructureDefinition-vax-dose-validation</title>
   <link rel="stylesheet" href="fhir.css"/>
 </head>
 <body>
-<table class="grid">
+<table class="grid" data-fhir="generated-heirarchy">
 <tr><td><b>Level</b></td><td><b>Type</b></td><td><b>Location</b></td><td><b>Message</b></td></tr>
-<tr><td>error</td><td>invalid</td><td>StructureDefinition.where(url = 'http://example.org/fhir/StructureDefinition/vax-dose')</td><td>Conformance resource /home/grey/dev/cicada/cicada_ig/fsh-generated/resources/StructureDefinition-vax-dose.json - the canonical URL (http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/vax-dose) does not match the URL (http://example.org/fhir/StructureDefinition/vax-dose)</td><td></td></tr>
-<tr><td>error</td><td>business-rule</td><td>Dose of a Vaccine.Immunization.status</td><td>Binding http://fhirfli.dev/fhir/ig/cicada/ValueSet/eval-status is not a subset of binding http://hl7.org/fhir/ValueSet/immunization-status|4.0.1</td><td></td></tr>
+<tr><td>error</td><td>invalid</td><td>StructureDefinition.where(url = 'http://example.org/fhir/StructureDefinition/vax-dose')</td><td>Conformance resource /home/grey/dev/fhir/cicada/cicada_ig/fsh-generated/resources/StructureDefinition-vax-dose.json - the canonical URL (http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/vax-dose) does not match the URL (http://example.org/fhir/StructureDefinition/vax-dose). Use the special-url parameter if you really mean for it not to match</td><td></td></tr>
+<tr><td>error</td><td>business-rule</td><td>Dose of a Vaccine.Immunization.status</td><td>Binding http://fhirfli.dev/fhir/ig/cicada/ValueSet/eval-status is not a subset of binding http://hl7.org/fhir/ValueSet/immunization-status|4.0.1 because The codes 'valid,not_valid,extraneous,sub_standard' are not in the base valueset</td><td></td></tr>
+<tr><td>error</td><td>invalid</td><td>StructureDefinition/vax-dose: StructureDefinition.snapshot.element[68].slicing.discriminator[0]</td><td>The discriminator path 'doseNumberPositiveInt' does not appear to be valid for the element that is being sliced 'Immunization.protocolApplied'</td><td></td></tr>
 <tr><td>warning</td><td>business-rule</td><td>StructureDefinition.where(url = 'http://example.org/fhir/StructureDefinition/vax-dose')</td><td>The Implementation Guide contains no examples for this profile</td><td></td></tr>
 <tr><td>information</td><td>informational</td><td>StructureDefinition/vax-dose: StructureDefinition</td><td>Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition|4.0.1</td><td></td></tr>
+<tr><td>information</td><td>business-rule</td><td>StructureDefinition/vax-dose: StructureDefinition.differential.element[21].slicing.discriminator[0]</td><td>The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)</td><td></td></tr>
+<tr><td>information</td><td>business-rule</td><td>StructureDefinition/vax-dose: StructureDefinition.snapshot.element[68].slicing.discriminator[0]</td><td>The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)</td><td></td></tr>
 </table>
 </body>
 </html>

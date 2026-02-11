@@ -1,0 +1,19 @@
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>ConceptMap-SnomedToCdsiObservation-validation</title>
+  <link rel="stylesheet" href="fhir.css"/>
+</head>
+<body>
+<table class="grid" data-fhir="generated-heirarchy">
+<tr><td><b>Level</b></td><td><b>Type</b></td><td><b>Location</b></td><td><b>Message</b></td></tr>
+<tr><td>error</td><td>invalid</td><td>ConceptMap/SnomedToCdsiObservation: ConceptMap.source</td><td>Reference must be to a ValueSet, but found a CodeSystem instead</td><td></td></tr>
+<tr><td>warning</td><td>invalid</td><td>ConceptMap/SnomedToCdsiObservation: ConceptMap.target.ofType(uri)</td><td>No definition could be found for URL value 'https://www.cdc.gov/vaccines/programs/iis/cdsi'</td><td></td></tr>
+<tr><td>warning</td><td>invalid</td><td>ConceptMap/SnomedToCdsiObservation: ConceptMap.group[0].target</td><td>No definition could be found for URL value 'https://www.cdc.gov/vaccines/programs/iis/cdsi'</td><td></td></tr>
+<tr><td>warning</td><td>required</td><td>ConceptMap/SnomedToCdsiObservation: ConceptMap</td><td>Published concept maps SHOULD conform to the ShareableConceptMap profile, which says that the element ConceptMap.name should be present, but it is not</td><td></td></tr>
+<tr><td>warning</td><td>required</td><td>ConceptMap/SnomedToCdsiObservation: ConceptMap</td><td>Published concept maps SHOULD conform to the ShareableConceptMap profile, which says that the element ConceptMap.experimental is mandatory, but it is not present</td><td></td></tr>
+<tr><td>information</td><td>informational</td><td>ConceptMap/SnomedToCdsiObservation: ConceptMap</td><td>Validate resource against profile http://hl7.org/fhir/StructureDefinition/ConceptMap|4.0.1</td><td></td></tr>
+<tr><td>information</td><td>business-rule</td><td>ConceptMap/SnomedToCdsiObservation: ConceptMap.group[0].source</td><td>Source Code System http://snomed.info/sct is only supported on the terminology server, so the source codes are not validated for performance reasons</td><td></td></tr>
+</table>
+</body>
+</html>

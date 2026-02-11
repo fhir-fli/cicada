@@ -1,0 +1,181 @@
+{
+  "resourceType" : "ConceptMap",
+  "id" : "Icd10ToCdsiObservation",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ConceptMap Icd10ToCdsiObservation</b></p><a name=\"Icd10ToCdsiObservation\"> </a><a name=\"hcIcd10ToCdsiObservation\"> </a><p>Mapping from http://hl7.org/fhir/sid/icd-10-cm to https://www.cdc.gov/vaccines/programs/iis/cdsi</p><br/><p><b>Group 1 </b>Mapping from <code>http://hl7.org/fhir/sid/icd-10-cm</code> (International Classification of Diseases, 10th Revision, Clinical Modification (ICD-10-CM)) to <code>https://www.cdc.gov/vaccines/programs/iis/cdsi</code></p><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>D84.9 (Immunodeficiency, unspecified)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#wider\" title=\"wider\">maps to wider concept</a></td><td>003 (Immunocompromised)</td></tr><tr><td>B18.2 (Chronic viral hepatitis C)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>005 (Hepatitis C virus infection)</td></tr><tr><td>Z33.1 (Pregnant state, incidental)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>007 (Pregnant)</td></tr><tr><td>D81.9 (Combined immunodeficiency, unspecified)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#wider\" title=\"wider\">maps to wider concept</a></td><td>013 (Severe Combined Immunodeficiency [SCID])</td></tr><tr><td>E11.9 (Type 2 diabetes mellitus without complications)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#wider\" title=\"wider\">maps to wider concept</a></td><td>014 (Diabetes)</td></tr><tr><td>K74.60 (Unspecified cirrhosis of liver)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#wider\" title=\"wider\">maps to wider concept</a></td><td>015 (Chronic liver disease)</td></tr><tr><td>I50.9 (Heart failure, unspecified)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#wider\" title=\"wider\">maps to wider concept</a></td><td>016 (Chronic heart disease)</td></tr><tr><td>J44.9 (Chronic obstructive pulmonary disease, unspecified)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#wider\" title=\"wider\">maps to wider concept</a></td><td>017 (Chronic lung disease)</td></tr><tr><td>D73.0 (Hyposplenism)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>018 (Asplenia)</td></tr><tr><td>Z90.81 (Acquired absence of spleen)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>018 (Asplenia)</td></tr><tr><td>N18.6 (End stage renal disease)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#wider\" title=\"wider\">maps to wider concept</a></td><td>019 (Chronic renal failure)</td></tr><tr><td>B20 (Human immunodeficiency virus [HIV] disease)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>026 (HIV/AIDS - immunocompromised)</td></tr><tr><td>Z21 (Asymptomatic human immunodeficiency virus [HIV] infection status)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#wider\" title=\"wider\">maps to wider concept</a></td><td>026 (HIV/AIDS - immunocompromised)</td></tr><tr><td>J45.909 (Unspecified asthma, uncomplicated)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#wider\" title=\"wider\">maps to wider concept</a></td><td>027 (Asthma)</td></tr><tr><td>K56.1 (Intussusception)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>028 (Intussusception)</td></tr><tr><td>A15.0 (Tuberculosis of lung)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#wider\" title=\"wider\">maps to wider concept</a></td><td>031 (Tuberculosis)</td></tr><tr><td>Z79.82 (Long term (current) use of aspirin)</td><td><a href=\"http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent\" title=\"equivalent\">is equivalent to</a></td><td>034 (Receiving long-term aspirin therapy)</td></tr></table></div>"
+  },
+  "url" : "http://fhirfli.dev/fhir/ig/cicada/ConceptMap/Icd10ToCdsiObservation",
+  "version" : "0.1.0",
+  "title" : "ICD-10-CM to CDSi Observation Code Map",
+  "status" : "active",
+  "date" : "2026-02-11T14:37:07-05:00",
+  "publisher" : "FHIR-FLI",
+  "contact" : [{
+    "name" : "FHIR-FLI",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://fhirfli.dev"
+    }]
+  }],
+  "description" : "Maps ICD-10-CM diagnosis codes to CDSi observation codes used in immunization decision support.",
+  "sourceUri" : "http://hl7.org/fhir/sid/icd-10-cm",
+  "targetUri" : "https://www.cdc.gov/vaccines/programs/iis/cdsi",
+  "group" : [{
+    "source" : "http://hl7.org/fhir/sid/icd-10-cm",
+    "target" : "https://www.cdc.gov/vaccines/programs/iis/cdsi",
+    "element" : [{
+      "code" : "D84.9",
+      "display" : "Immunodeficiency, unspecified",
+      "target" : [{
+        "code" : "003",
+        "display" : "Immunocompromised",
+        "equivalence" : "wider"
+      }]
+    },
+    {
+      "code" : "B18.2",
+      "display" : "Chronic viral hepatitis C",
+      "target" : [{
+        "code" : "005",
+        "display" : "Hepatitis C virus infection",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "Z33.1",
+      "display" : "Pregnant state, incidental",
+      "target" : [{
+        "code" : "007",
+        "display" : "Pregnant",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "D81.9",
+      "display" : "Combined immunodeficiency, unspecified",
+      "target" : [{
+        "code" : "013",
+        "display" : "Severe Combined Immunodeficiency [SCID]",
+        "equivalence" : "wider"
+      }]
+    },
+    {
+      "code" : "E11.9",
+      "display" : "Type 2 diabetes mellitus without complications",
+      "target" : [{
+        "code" : "014",
+        "display" : "Diabetes",
+        "equivalence" : "wider"
+      }]
+    },
+    {
+      "code" : "K74.60",
+      "display" : "Unspecified cirrhosis of liver",
+      "target" : [{
+        "code" : "015",
+        "display" : "Chronic liver disease",
+        "equivalence" : "wider"
+      }]
+    },
+    {
+      "code" : "I50.9",
+      "display" : "Heart failure, unspecified",
+      "target" : [{
+        "code" : "016",
+        "display" : "Chronic heart disease",
+        "equivalence" : "wider"
+      }]
+    },
+    {
+      "code" : "J44.9",
+      "display" : "Chronic obstructive pulmonary disease, unspecified",
+      "target" : [{
+        "code" : "017",
+        "display" : "Chronic lung disease",
+        "equivalence" : "wider"
+      }]
+    },
+    {
+      "code" : "D73.0",
+      "display" : "Hyposplenism",
+      "target" : [{
+        "code" : "018",
+        "display" : "Asplenia",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "Z90.81",
+      "display" : "Acquired absence of spleen",
+      "target" : [{
+        "code" : "018",
+        "display" : "Asplenia",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "N18.6",
+      "display" : "End stage renal disease",
+      "target" : [{
+        "code" : "019",
+        "display" : "Chronic renal failure",
+        "equivalence" : "wider"
+      }]
+    },
+    {
+      "code" : "B20",
+      "display" : "Human immunodeficiency virus [HIV] disease",
+      "target" : [{
+        "code" : "026",
+        "display" : "HIV/AIDS - immunocompromised",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "Z21",
+      "display" : "Asymptomatic human immunodeficiency virus [HIV] infection status",
+      "target" : [{
+        "code" : "026",
+        "display" : "HIV/AIDS - immunocompromised",
+        "equivalence" : "wider"
+      }]
+    },
+    {
+      "code" : "J45.909",
+      "display" : "Unspecified asthma, uncomplicated",
+      "target" : [{
+        "code" : "027",
+        "display" : "Asthma",
+        "equivalence" : "wider"
+      }]
+    },
+    {
+      "code" : "K56.1",
+      "display" : "Intussusception",
+      "target" : [{
+        "code" : "028",
+        "display" : "Intussusception",
+        "equivalence" : "equivalent"
+      }]
+    },
+    {
+      "code" : "A15.0",
+      "display" : "Tuberculosis of lung",
+      "target" : [{
+        "code" : "031",
+        "display" : "Tuberculosis",
+        "equivalence" : "wider"
+      }]
+    },
+    {
+      "code" : "Z79.82",
+      "display" : "Long term (current) use of aspirin",
+      "target" : [{
+        "code" : "034",
+        "display" : "Receiving long-term aspirin therapy",
+        "equivalence" : "equivalent"
+      }]
+    }]
+  }]
+}

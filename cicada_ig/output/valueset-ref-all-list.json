@@ -6,15 +6,15 @@
       "status" : "draft",
       "name" : "VaccineCodesCvxMvx",
       "title" : null,
-      "description" : null,
+      "description" : "",
       "systems" : ["http://hl7.org/fhir/sid/mvx", "http://hl7.org/fhir/sid/cvx"],
       "uses" : {
       },
       "StructureDefinition-vax-dose.html" : "Dose of a Vaccine",
-      "StructureDefinition-MedicationRequestProfile.html" : "Medication Request Profile with Vaccine Codes",
+      "StructureDefinition-ReactionProfile.html" : "Allergy Intolerance Profile for Immunization Decision Support",
       "StructureDefinition-MedicationDispenseProfile.html" : "Medication Dispense Profile with Vaccine Codes",
+      "StructureDefinition-MedicationRequestProfile.html" : "Medication Request Profile with Vaccine Codes",
       "StructureDefinition-MedicationStatementProfile.html" : "Medication Statement Profile with Vaccine Codes",
-      "StructureDefinition-ReactionProfile.html" : "Allergy Intolerance Profile with Vaccine Codes",
       "StructureDefinition-MedicationAdministrationProfile.html" : "Medication Administration Profile with Vaccine Codes"
     },
     {
@@ -42,6 +42,15 @@
       "StructureDefinition-vax-dose.html" : "Dose of a Vaccine"
     },
     {
+      "url" : "http://fhirfli.dev/fhir/ig/cicada/ValueSet/immunization-procedures-cpt",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "ImmunizationProceduresCpt",
+      "title" : "Immunization-Relevant Procedures (CPT)",
+      "description" : "CPT codes for procedures relevant to immunization decision support, including splenectomy and cochlear implant.",
+      "systems" : ["http://www.ama-assn.org/go/cpt"]
+    },
+    {
       "url" : "http://fhirfli.dev/fhir/ig/cicada/ValueSet/interval-reason",
       "version" : "0.1.0",
       "status" : "draft",
@@ -53,8 +62,8 @@
       ],
       "uses" : {
       },
-      "StructureDefinition-preferred-interval-reason.html" : "Preferred Interval Reason",
-      "StructureDefinition-allowed-interval-reason.html" : "Allowed Interval Reason"
+      "StructureDefinition-allowed-interval-reason.html" : "Allowed Interval Reason",
+      "StructureDefinition-preferred-interval-reason.html" : "Preferred Interval Reason"
     },
     {
       "url" : "http://fhirfli.dev/fhir/ig/cicada/ValueSet/preferred-allowed-reason",
@@ -68,8 +77,8 @@
       ],
       "uses" : {
       },
-      "StructureDefinition-allowed-vaccine-reason.html" : "Allowed Vaccine Reason",
-      "StructureDefinition-preferred-vaccine-reason.html" : "Preferred Vaccine Reason"
+      "StructureDefinition-preferred-vaccine-reason.html" : "Preferred Vaccine Reason",
+      "StructureDefinition-allowed-vaccine-reason.html" : "Allowed Vaccine Reason"
     },
     {
       "url" : "http://fhirfli.dev/fhir/ig/cicada/ValueSet/procedures",
@@ -84,6 +93,15 @@
       "StructureDefinition-ProcedureProfile.html" : "Immunization Procedures Profile"
     },
     {
+      "url" : "http://fhirfli.dev/fhir/ig/cicada/ValueSet/vaccine-condition-codes-icd10",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "VaccineConditionCodesIcd10",
+      "title" : "Vaccine Condition Codes (ICD-10-CM)",
+      "description" : "Value set for conditions based on ICD-10-CM that may impact immunization decisions, mapped to CDSi observation codes.",
+      "systems" : ["http://hl7.org/fhir/sid/icd-10-cm"]
+    },
+    {
       "url" : "http://fhirfli.dev/fhir/ig/cicada/ValueSet/vaccine-condition-codes-snomed",
       "version" : "0.1.0",
       "status" : "draft",
@@ -93,8 +111,9 @@
       "systems" : ["http://snomed.info/sct"],
       "uses" : {
       },
-      "StructureDefinition-VaccineConditionFhir.html" : "Condition Profile with Vaccine Condition Codes",
-      "StructureDefinition-VaccineObservationFhir.html" : "Condition Profile with Vaccine Condition Codes"
+      "StructureDefinition-ReactionProfile.html" : "Allergy Intolerance Profile for Immunization Decision Support",
+      "StructureDefinition-VaccineObservationFhir.html" : "Observation Profile for Immunization Decision Support",
+      "StructureDefinition-VaccineConditionFhir.html" : "Condition Profile with Vaccine Condition Codes"
     },
     {
       "url" : "http://fhirfli.dev/fhir/ig/cicada/ValueSet/vaccine-gender",
@@ -107,6 +126,24 @@
       "uses" : {
       },
       "StructureDefinition-vax-patient.html" : "Vaccination Patient"
+    },
+    {
+      "url" : "http://fhirfli.dev/fhir/ig/cicada/ValueSet/vaccine-lab-evidence-of-immunity-loinc",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "VaccineLabEvidenceOfImmunityLoinc",
+      "title" : "Lab Evidence of Immunity (LOINC)",
+      "description" : "LOINC codes for laboratory tests that provide evidence of immunity, mapped to CDSi observation codes for immunization decision support.",
+      "systems" : ["http://loinc.org"]
+    },
+    {
+      "url" : "http://fhirfli.dev/fhir/ig/cicada/ValueSet/vaccine-medication-codes-rxnorm",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "VaccineMedicationCodesRxnorm",
+      "title" : "Immunization-Relevant Medications (RxNorm)",
+      "description" : "RxNorm codes for medications relevant to immunization decision support, including antivirals and aspirin.",
+      "systems" : ["http://www.nlm.nih.gov/research/umls/rxnorm"]
     },
     {
       "url" : "http://fhirfli.dev/fhir/ig/cicada/ValueSet/vaccine-medication-codes-snomed",
@@ -171,7 +208,7 @@
       "sources" : ["2.16.840.1.113883.4.642.3.133"],
       "uses" : {
       },
-      "StructureDefinition-ReactionProfile.html" : "Allergy Intolerance Profile with Vaccine Codes"
+      "StructureDefinition-ReactionProfile.html" : "Allergy Intolerance Profile for Immunization Decision Support"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/allergy-intolerance-criticality",
@@ -185,7 +222,7 @@
       "sources" : ["2.16.840.1.113883.4.642.3.129"],
       "uses" : {
       },
-      "StructureDefinition-ReactionProfile.html" : "Allergy Intolerance Profile with Vaccine Codes"
+      "StructureDefinition-ReactionProfile.html" : "Allergy Intolerance Profile for Immunization Decision Support"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/allergy-intolerance-type",
@@ -199,7 +236,7 @@
       "sources" : ["2.16.840.1.113883.4.642.3.131"],
       "uses" : {
       },
-      "StructureDefinition-ReactionProfile.html" : "Allergy Intolerance Profile with Vaccine Codes"
+      "StructureDefinition-ReactionProfile.html" : "Allergy Intolerance Profile for Immunization Decision Support"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/allergyintolerance-clinical",
@@ -215,21 +252,7 @@
       "sources" : ["2.16.840.1.113883.4.642.3.1372"],
       "uses" : {
       },
-      "StructureDefinition-ReactionProfile.html" : "Allergy Intolerance Profile with Vaccine Codes"
-    },
-    {
-      "url" : "http://hl7.org/fhir/ValueSet/allergyintolerance-code",
-      "version" : "4.0.1",
-      "status" : "draft",
-      "name" : "AllergyIntoleranceSubstance/Product,ConditionAndNegationCodes",
-      "title" : "AllergyIntolerance Substance/Product, Condition and Negation Codes",
-      "description" : "This value set includes concept codes for specific substances/pharmaceutical products, allergy or intolerance conditions, and negation/exclusion codes to specify the absence of specific types of allergies or intolerances.",
-      "systems" : ["http://snomed.info/sct"],
-      "oids" : ["2.16.840.1.113883.4.642.3.137"],
-      "sources" : ["2.16.840.1.113883.4.642.3.137"],
-      "uses" : {
-      },
-      "StructureDefinition-ReactionProfile.html" : "Allergy Intolerance Profile with Vaccine Codes"
+      "StructureDefinition-ReactionProfile.html" : "Allergy Intolerance Profile for Immunization Decision Support"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/allergyintolerance-verification",
@@ -245,7 +268,7 @@
       "sources" : ["2.16.840.1.113883.4.642.3.1370"],
       "uses" : {
       },
-      "StructureDefinition-ReactionProfile.html" : "Allergy Intolerance Profile with Vaccine Codes"
+      "StructureDefinition-ReactionProfile.html" : "Allergy Intolerance Profile for Immunization Decision Support"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/approach-site-codes",
@@ -273,9 +296,9 @@
       "sources" : ["2.16.840.1.113883.4.642.3.141"],
       "uses" : {
       },
-      "StructureDefinition-VaccineConditionFhir.html" : "Condition Profile with Vaccine Condition Codes",
-      "StructureDefinition-VaccineObservationFhir.html" : "Condition Profile with Vaccine Condition Codes",
-      "StructureDefinition-ProcedureProfile.html" : "Immunization Procedures Profile"
+      "StructureDefinition-VaccineObservationFhir.html" : "Observation Profile for Immunization Decision Support",
+      "StructureDefinition-ProcedureProfile.html" : "Immunization Procedures Profile",
+      "StructureDefinition-VaccineConditionFhir.html" : "Condition Profile with Vaccine Condition Codes"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/clinical-findings",
@@ -289,7 +312,7 @@
       "sources" : ["2.16.840.1.113883.4.642.3.232"],
       "uses" : {
       },
-      "StructureDefinition-ReactionProfile.html" : "Allergy Intolerance Profile with Vaccine Codes"
+      "StructureDefinition-ReactionProfile.html" : "Allergy Intolerance Profile for Immunization Decision Support"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/condition-category",
@@ -303,8 +326,7 @@
       "sources" : ["2.16.840.1.113883.4.642.3.162"],
       "uses" : {
       },
-      "StructureDefinition-VaccineConditionFhir.html" : "Condition Profile with Vaccine Condition Codes",
-      "StructureDefinition-VaccineObservationFhir.html" : "Condition Profile with Vaccine Condition Codes"
+      "StructureDefinition-VaccineConditionFhir.html" : "Condition Profile with Vaccine Condition Codes"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/condition-clinical",
@@ -318,8 +340,7 @@
       "sources" : ["2.16.840.1.113883.4.642.3.164"],
       "uses" : {
       },
-      "StructureDefinition-VaccineConditionFhir.html" : "Condition Profile with Vaccine Condition Codes",
-      "StructureDefinition-VaccineObservationFhir.html" : "Condition Profile with Vaccine Condition Codes"
+      "StructureDefinition-VaccineConditionFhir.html" : "Condition Profile with Vaccine Condition Codes"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/condition-code",
@@ -349,8 +370,7 @@
       "sources" : ["2.16.840.1.113883.4.642.3.168"],
       "uses" : {
       },
-      "StructureDefinition-VaccineConditionFhir.html" : "Condition Profile with Vaccine Condition Codes",
-      "StructureDefinition-VaccineObservationFhir.html" : "Condition Profile with Vaccine Condition Codes"
+      "StructureDefinition-VaccineConditionFhir.html" : "Condition Profile with Vaccine Condition Codes"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/condition-stage",
@@ -364,8 +384,7 @@
       "sources" : ["2.16.840.1.113883.4.642.3.170"],
       "uses" : {
       },
-      "StructureDefinition-VaccineConditionFhir.html" : "Condition Profile with Vaccine Condition Codes",
-      "StructureDefinition-VaccineObservationFhir.html" : "Condition Profile with Vaccine Condition Codes"
+      "StructureDefinition-VaccineConditionFhir.html" : "Condition Profile with Vaccine Condition Codes"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/condition-stage-type",
@@ -379,8 +398,7 @@
       "sources" : ["2.16.840.1.113883.4.642.3.171"],
       "uses" : {
       },
-      "StructureDefinition-VaccineConditionFhir.html" : "Condition Profile with Vaccine Condition Codes",
-      "StructureDefinition-VaccineObservationFhir.html" : "Condition Profile with Vaccine Condition Codes"
+      "StructureDefinition-VaccineConditionFhir.html" : "Condition Profile with Vaccine Condition Codes"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/condition-ver-status",
@@ -394,8 +412,21 @@
       "sources" : ["2.16.840.1.113883.4.642.3.166"],
       "uses" : {
       },
-      "StructureDefinition-VaccineConditionFhir.html" : "Condition Profile with Vaccine Condition Codes",
-      "StructureDefinition-VaccineObservationFhir.html" : "Condition Profile with Vaccine Condition Codes"
+      "StructureDefinition-VaccineConditionFhir.html" : "Condition Profile with Vaccine Condition Codes"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/data-absent-reason",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "DataAbsentReason",
+      "title" : "DataAbsentReason",
+      "description" : "Used to specify why the normally expected content of the data element is missing.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/data-absent-reason"],
+      "oids" : ["2.16.840.1.113883.4.642.3.5"],
+      "sources" : ["2.16.840.1.113883.4.642.3.5"],
+      "uses" : {
+      },
+      "StructureDefinition-VaccineObservationFhir.html" : "Observation Profile for Immunization Decision Support"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/device-action",
@@ -600,16 +631,16 @@
       "uses" : {
       },
       "StructureDefinition-vax-dose.html" : "Dose of a Vaccine",
-      "StructureDefinition-MedicationRequestProfile.html" : "Medication Request Profile with Vaccine Codes",
-      "StructureDefinition-vax-patient.html" : "Vaccination Patient",
-      "StructureDefinition-VaccineConditionFhir.html" : "Condition Profile with Vaccine Condition Codes",
-      "StructureDefinition-MedicationDispenseProfile.html" : "Medication Dispense Profile with Vaccine Codes",
-      "StructureDefinition-VaccineObservationFhir.html" : "Condition Profile with Vaccine Condition Codes",
-      "StructureDefinition-MedicationStatementProfile.html" : "Medication Statement Profile with Vaccine Codes",
-      "StructureDefinition-ReactionProfile.html" : "Allergy Intolerance Profile with Vaccine Codes",
+      "StructureDefinition-ReactionProfile.html" : "Allergy Intolerance Profile for Immunization Decision Support",
       "StructureDefinition-Vaccine.html" : "Vaccine",
+      "StructureDefinition-MedicationDispenseProfile.html" : "Medication Dispense Profile with Vaccine Codes",
+      "StructureDefinition-vax-patient.html" : "Vaccination Patient",
+      "StructureDefinition-MedicationRequestProfile.html" : "Medication Request Profile with Vaccine Codes",
+      "StructureDefinition-MedicationStatementProfile.html" : "Medication Statement Profile with Vaccine Codes",
+      "StructureDefinition-VaccineObservationFhir.html" : "Observation Profile for Immunization Decision Support",
       "StructureDefinition-MedicationAdministrationProfile.html" : "Medication Administration Profile with Vaccine Codes",
-      "StructureDefinition-ProcedureProfile.html" : "Immunization Procedures Profile"
+      "StructureDefinition-ProcedureProfile.html" : "Immunization Procedures Profile",
+      "StructureDefinition-VaccineConditionFhir.html" : "Condition Profile with Vaccine Condition Codes"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/link-type",
@@ -637,8 +668,7 @@
       "sources" : ["2.16.840.1.113883.4.642.3.169"],
       "uses" : {
       },
-      "StructureDefinition-VaccineConditionFhir.html" : "Condition Profile with Vaccine Condition Codes",
-      "StructureDefinition-VaccineObservationFhir.html" : "Condition Profile with Vaccine Condition Codes"
+      "StructureDefinition-VaccineConditionFhir.html" : "Condition Profile with Vaccine Condition Codes"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/marital-status",
@@ -717,10 +747,10 @@
       "sources" : ["2.16.840.1.113883.4.642.3.375"],
       "uses" : {
       },
-      "StructureDefinition-MedicationRequestProfile.html" : "Medication Request Profile with Vaccine Codes",
-      "StructureDefinition-MedicationDispenseProfile.html" : "Medication Dispense Profile with Vaccine Codes",
-      "StructureDefinition-MedicationStatementProfile.html" : "Medication Statement Profile with Vaccine Codes",
       "StructureDefinition-Vaccine.html" : "Vaccine",
+      "StructureDefinition-MedicationDispenseProfile.html" : "Medication Dispense Profile with Vaccine Codes",
+      "StructureDefinition-MedicationRequestProfile.html" : "Medication Request Profile with Vaccine Codes",
+      "StructureDefinition-MedicationStatementProfile.html" : "Medication Statement Profile with Vaccine Codes",
       "StructureDefinition-MedicationAdministrationProfile.html" : "Medication Administration Profile with Vaccine Codes"
     },
     {
@@ -922,6 +952,78 @@
       "StructureDefinition-MedicationRequestProfile.html" : "Medication Request Profile with Vaccine Codes"
     },
     {
+      "url" : "http://hl7.org/fhir/ValueSet/observation-category",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "ObservationCategoryCodes",
+      "title" : "Observation Category Codes",
+      "description" : "Observation Category codes.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/observation-category"],
+      "oids" : ["2.16.840.1.113883.4.642.3.403"],
+      "sources" : ["2.16.840.1.113883.4.642.3.403"],
+      "uses" : {
+      },
+      "StructureDefinition-VaccineObservationFhir.html" : "Observation Profile for Immunization Decision Support"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/observation-codes",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "LOINCCodes",
+      "title" : "LOINC Codes",
+      "description" : "This value set includes all LOINC codes",
+      "systems" : ["http://loinc.org"],
+      "oids" : ["2.16.840.1.113883.4.642.3.396"],
+      "sources" : ["2.16.840.1.113883.4.642.3.396"],
+      "uses" : {
+      },
+      "StructureDefinition-VaccineObservationFhir.html" : "Observation Profile for Immunization Decision Support"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/observation-interpretation",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "ObservationInterpretationCodes",
+      "title" : "Observation Interpretation Codes",
+      "description" : "A categorical assessment, providing a rough qualitative interpretation of the observation value,    such as “normal”/ “abnormal”,”low” / “high”, “better” / “worse”, “susceptible” / “resistant”, “expected”/ “not expected”.    The value set is intended to be for ANY use where coded representation of an interpretation is needed.   \r\n   \r\n   Notes:\r\n   \r\n   This is being communicated in v2.x in OBX-8 (Observation Interpretation), in v3 in ObservationInterpretation (CWE) in R1 (Representative Realm) and in FHIR in    Observation.interpretation. Historically these values come from the laboratory domain, and these codes are extensively    used. The value set binding is extensible, so codes outside the value set that are needed for interpretation concepts    (i.e. particular meanings) that are not included in the value set can be used, and these new codes may also be added to    the value set and published in a future version.",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"
+      ],
+      "oids" : ["2.16.840.1.113883.4.642.3.399"],
+      "sources" : ["2.16.840.1.113883.4.642.3.399"],
+      "uses" : {
+      },
+      "StructureDefinition-VaccineObservationFhir.html" : "Observation Profile for Immunization Decision Support"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/observation-methods",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "ObservationMethods",
+      "title" : "Observation Methods",
+      "description" : "Observation Method codes from [SNOMED CT](http://snomed.info/sct) where concept is-a 272394005 (Technique (qualifier value)) or is-a 129264002 (Action (qualifier value)) or is-a 386053000 (Evaluation procedure(procedure))",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["2.16.840.1.113883.4.642.3.395"],
+      "sources" : ["2.16.840.1.113883.4.642.3.395"],
+      "uses" : {
+      },
+      "StructureDefinition-VaccineObservationFhir.html" : "Observation Profile for Immunization Decision Support"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/observation-status",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "ObservationStatus",
+      "title" : "ObservationStatus",
+      "description" : "Codes providing the status of an observation.",
+      "systems" : ["http://hl7.org/fhir/observation-status"],
+      "oids" : ["2.16.840.1.113883.4.642.3.400"],
+      "sources" : ["2.16.840.1.113883.4.642.3.400"],
+      "uses" : {
+      },
+      "StructureDefinition-VaccineObservationFhir.html" : "Observation Profile for Immunization Decision Support"
+    },
+    {
       "url" : "http://hl7.org/fhir/ValueSet/patient-contactrelationship",
       "version" : "4.0.1",
       "status" : "active",
@@ -1032,7 +1134,7 @@
       "sources" : ["2.16.840.1.113883.4.642.3.135"],
       "uses" : {
       },
-      "StructureDefinition-ReactionProfile.html" : "Allergy Intolerance Profile with Vaccine Codes"
+      "StructureDefinition-ReactionProfile.html" : "Allergy Intolerance Profile for Immunization Decision Support"
     },
     {
       "url" : "http://hl7.org/fhir/ValueSet/reason-medication-given-codes",
@@ -1079,6 +1181,39 @@
       "StructureDefinition-MedicationStatementProfile.html" : "Medication Statement Profile with Vaccine Codes"
     },
     {
+      "url" : "http://hl7.org/fhir/ValueSet/referencerange-appliesto",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "ObservationReferenceRangeAppliesToCodes",
+      "title" : "Observation Reference Range Applies To Codes",
+      "description" : "This value set defines a set of codes that can be used to indicate the particular target population the reference range applies to.",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/v3-Race",
+        "http://snomed.info/sct"
+      ],
+      "oids" : ["2.16.840.1.113883.4.642.3.407"],
+      "sources" : ["2.16.840.1.113883.4.642.3.407"],
+      "uses" : {
+      },
+      "StructureDefinition-VaccineObservationFhir.html" : "Observation Profile for Immunization Decision Support"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/referencerange-meaning",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "ObservationReferenceRangeMeaningCodes",
+      "title" : "Observation Reference Range Meaning Codes",
+      "description" : "This value set defines a set of codes that can be used to indicate the meaning/use of a reference range for a particular target population.",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/referencerange-meaning"
+      ],
+      "oids" : ["2.16.840.1.113883.4.642.3.397"],
+      "sources" : ["2.16.840.1.113883.4.642.3.397"],
+      "uses" : {
+      },
+      "StructureDefinition-VaccineObservationFhir.html" : "Observation Profile for Immunization Decision Support"
+    },
+    {
       "url" : "http://hl7.org/fhir/ValueSet/request-priority",
       "version" : "4.0.1",
       "status" : "draft",
@@ -1104,22 +1239,8 @@
       "sources" : ["2.16.840.1.113883.4.642.3.98"],
       "uses" : {
       },
-      "StructureDefinition-ReactionProfile.html" : "Allergy Intolerance Profile with Vaccine Codes",
+      "StructureDefinition-ReactionProfile.html" : "Allergy Intolerance Profile for Immunization Decision Support",
       "StructureDefinition-MedicationAdministrationProfile.html" : "Medication Administration Profile with Vaccine Codes"
-    },
-    {
-      "url" : "http://hl7.org/fhir/ValueSet/substance-code",
-      "version" : "4.0.1",
-      "status" : "draft",
-      "name" : "SubstanceCode",
-      "title" : "Substance Code",
-      "description" : "This value set contains concept codes for specific substances. It includes codes from [SNOMED](http://snomed.info/sct) where concept is-a 105590001 (Substance (substance)) and where concept is-a 373873005 (Pharmaceutical / biologic product (product))",
-      "systems" : ["http://snomed.info/sct"],
-      "oids" : ["2.16.840.1.113883.4.642.3.473"],
-      "sources" : ["2.16.840.1.113883.4.642.3.473"],
-      "uses" : {
-      },
-      "StructureDefinition-ReactionProfile.html" : "Allergy Intolerance Profile with Vaccine Codes"
     },
     {
       "url" : "http://terminology.hl7.org/ValueSet/v3-ActPharmacySupplyType",
@@ -1149,8 +1270,8 @@
       "sources" : ["2.16.840.1.113883.1.11.16621"],
       "uses" : {
       },
-      "StructureDefinition-MedicationRequestProfile.html" : "Medication Request Profile with Vaccine Codes",
-      "StructureDefinition-MedicationDispenseProfile.html" : "Medication Dispense Profile with Vaccine Codes"
+      "StructureDefinition-MedicationDispenseProfile.html" : "Medication Dispense Profile with Vaccine Codes",
+      "StructureDefinition-MedicationRequestProfile.html" : "Medication Request Profile with Vaccine Codes"
     },
     {
       "url" : "http://terminology.hl7.org/ValueSet/v3-SubstanceAdminSubstitutionReason",
@@ -1164,8 +1285,8 @@
       "sources" : ["2.16.840.1.113883.1.11.19377"],
       "uses" : {
       },
-      "StructureDefinition-MedicationRequestProfile.html" : "Medication Request Profile with Vaccine Codes",
-      "StructureDefinition-MedicationDispenseProfile.html" : "Medication Dispense Profile with Vaccine Codes"
+      "StructureDefinition-MedicationDispenseProfile.html" : "Medication Dispense Profile with Vaccine Codes",
+      "StructureDefinition-MedicationRequestProfile.html" : "Medication Request Profile with Vaccine Codes"
     }
   ]
 }

@@ -199,6 +199,18 @@
       "http://hl7.org/fhir/R4/valueset-link-type.html" : "LinkType"
     },
     {
+      "url" : "http://hl7.org/fhir/observation-status",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "ObservationStatus",
+      "title" : "ObservationStatus",
+      "description" : "Codes providing the status of an observation.",
+      "oids" : ["2.16.840.1.113883.4.642.4.401"],
+      "uses" : {
+      },
+      "http://hl7.org/fhir/R4/valueset-observation-status.html" : "ObservationStatus"
+    },
+    {
       "url" : "http://hl7.org/fhir/reaction-event-severity",
       "version" : "4.0.1",
       "status" : "draft",
@@ -224,24 +236,22 @@
     },
     {
       "url" : "http://hl7.org/fhir/sid/cvx",
-      "version" : "4.0.0",
+      "version" : "20250715",
       "status" : "active",
       "name" : "CVX",
-      "title" : "Vaccine Administered Code Set (CVX)",
-      "description" : "The CDC's National Center of Immunization and Respiratory Diseases (NCIRD - see [https://www.cdc.gov/ncird/](https://www.cdc.gov/ncird/)) developed and maintains the CVX (vaccine administered) code set. It includes both active and inactive vaccines available in the US. CVX codes for inactive vaccines allow transmission of historical immunization records. When a MVX (manufacturer) code is paired with a CVX (vaccine administered) code, the specific trade named vaccine may be indicated. These codes should be used for immunization messages using either HL7 Version 2.3.1 or HL7 Version 2.5.1. CVX is the underlying Master Code System for V2 table 0292 (Vaccines Administered). The machine readable name for CVX in PHIN VADS is PH_VaccinesAdministeredCVX_CDC_NIP. The version of the CVX code set for certification can be found on the archive page:[https://www2a.cdc.gov/vaccines/iis/iisstandards/mu3versioned_codes.asp](https://www2a.cdc.gov/vaccines/iis/iisstandards/mu3versioned_codes.asp) \r\n\r\nThe Status column indicates if the vaccine is currently available in the United States.\r\n\r\n*  Active: A currently available administrable vaccine \r\n\r\n*  Inactive: An administrable vaccine formulation that is no longer available for patient administration, but can be found in historical patient records OR A historical record of a vaccine administered where the exact formulation is unknown \r\n\r\n*  Pending: A vaccine that is expected to become active in the future \r\n\r\n*  Non-US: A vaccine that available outside the US only \r\n\r\n*  Never Active: A vaccine that was never available and is not in the pipeline of new vaccines \r\n\r\nThe Last Updated column indicates the last time this particular vaccine code was updated in this table.\r\n\r\nQuestions regarding this table should be directed to the IIS Technical Assistance Team via iisinfo@cdc.gov (or use mailing address via [https://www2a.cdc.gov/vaccines/iis/iisstandards/vaccines.asp?rpt=cvx#addr](https://www2a.cdc.gov/vaccines/iis/iisstandards/vaccines.asp?rpt=cvx#addr)) \r\n\r\nHL7 Implementers should note that 'Status' IS NOT CONCEPT STATUS as all codes are ACTIVE in this code system.\r\n\r\nThe current code system is available via [https://www2a.cdc.gov/vaccines/iis/iisstandards/vaccines.asp?rpt=cvx](https://www2a.cdc.gov/vaccines/iis/iisstandards/vaccines.asp?rpt=cvx)",
-      "oids" : ["2.16.840.1.113883.12.292"],
+      "title" : "CVX - US Vaccine Codes",
+      "description" : "CVX Codes for vaccines",
       "uses" : {
       },
       "ValueSet-VaccineCodesCvxMvx.html" : "VaccineCodesCvxMvx"
     },
     {
       "url" : "http://hl7.org/fhir/sid/mvx",
-      "version" : "3.0.0",
+      "version" : "20201030",
       "status" : "active",
       "name" : "MVX",
-      "title" : "Manufacturers of Vaccines (MVX)",
-      "description" : "\"The CDC's National Center for Immunization and Respiratory Diseases ([NCIRD](https://www.cdc.gov/ncird/)) developed and maintains HL7 Table 0227, Manufacturers of Vaccines (MVX). It includes both active and inactive manufacturers of vaccines in the US. Inactive MVX codes allow transmission of historical immunization records. When MVX code is paired with a CVX (vaccine administered) code, the specific trade named vaccine may be indicated. MVX is the underlying Master Code System for V2 table 0227 (Manufacturers Of Vaccines (code=MVX)). The machine readable name for MVX in PHIN VADS is PH_VaccinesAdministeredCVX_CDC_NIP.\r\n\r\nStatus indicates if the manufacturer is currently making vaccine for distribution in the United States.\r\n\r\nLast Updated indicates the last time this particular manufacturer code was updated in this table.\r\n\r\nQuestions regarding MVX should be directed to the [IIS Technical Assistance Team](mailto:iisinfo@cdc.gov)(or use [mailing address](https://www2.cdc.gov/vaccines/iis/iisstandards/vaccines.asp?rpt=mvx#addr)).\"\r\n\r\nFor more information, please see [here](https://www2.cdc.gov/vaccines/iis/iisstandards/vaccines.asp?rpt=mvx).",
-      "oids" : ["2.16.840.1.113883.12.227"],
+      "title" : "MVX - Manufacturers of Vaccines",
+      "description" : "MVX Codes for manufacturers of vaccines",
       "uses" : {
       },
       "ValueSet-VaccineCodesCvxMvx.html" : "VaccineCodesCvxMvx"
@@ -256,39 +266,40 @@
       "oids" : ["2.16.840.1.113883.6.96"],
       "uses" : {
       },
-      "ValueSet-procedures.html" : "Procedures",
-      "http://hl7.org/fhir/R4/valueset-medication-codes.html" : "SNOMED CT Medication Codes",
-      "http://hl7.org/fhir/R4/valueset-procedure-reason.html" : "Procedure Reason Codes",
-      "ValueSet-vaccine-condition-codes-snomed.html" : "Vaccine Condition Codes",
-      "http://hl7.org/fhir/R4/valueset-procedure-followup.html" : "Procedure Follow up Codes (SNOMED CT)",
-      "http://hl7.org/fhir/R4/valueset-device-action.html" : "Procedure Device Action Codes",
       "http://hl7.org/fhir/R4/valueset-approach-site-codes.html" : "SNOMED CT Anatomical Structure for Administration Site Codes",
-      "http://hl7.org/fhir/R4/valueset-immunization-reason.html" : "Immunization Reason Codes",
-      "ValueSet-vaccine-medication-codes-snomed.html" : "Medications",
-      "http://hl7.org/fhir/R4/valueset-reason-medication-not-given-codes.html" : "SNOMED CT Reason Medication Not Given Codes",
-      "http://hl7.org/fhir/R4/valueset-performer-role.html" : "Procedure Performer Role Codes",
-      "http://hl7.org/fhir/R4/valueset-device-kind.html" : "FHIR Device Types",
-      "http://hl7.org/fhir/R4/valueset-administration-method-codes.html" : "SNOMED CT Administration Method Codes",
-      "http://hl7.org/fhir/R4/valueset-condition-code.html" : "Condition/Problem/Diagnosis Codes",
-      "http://hl7.org/fhir/R4/valueset-clinical-findings.html" : "SNOMED CT Clinical Findings",
+      "http://hl7.org/fhir/R4/valueset-route-codes.html" : "SNOMED CT Route Codes",
+      "http://hl7.org/fhir/R4/valueset-procedure-category.html" : "Procedure Category Codes (SNOMED CT)",
+      "http://hl7.org/fhir/R4/valueset-procedure-followup.html" : "Procedure Follow up Codes (SNOMED CT)",
+      "http://hl7.org/fhir/R4/valueset-referencerange-appliesto.html" : "Observation Reference Range Applies To Codes",
+      "ValueSet-vaccine-condition-codes-snomed.html" : "Vaccine Condition Codes",
       "http://hl7.org/fhir/R4/valueset-body-site.html" : "SNOMED CT Body Structures",
       "http://hl7.org/fhir/R4/valueset-condition-stage.html" : "Condition Stage",
+      "ValueSet-procedures.html" : "Procedures",
       "http://hl7.org/fhir/R4/valueset-procedure-not-performed-reason.html" : "Procedure Not Performed Reason (SNOMED-CT)",
-      "http://hl7.org/fhir/R4/valueset-procedure-category.html" : "Procedure Category Codes (SNOMED CT)",
-      "http://hl7.org/fhir/R4/valueset-substance-code.html" : "Substance Code",
-      "http://hl7.org/fhir/R4/valueset-reason-medication-status-codes.html" : "SNOMED CT Drug Therapy Status codes ",
-      "http://hl7.org/fhir/R4/valueset-allergyintolerance-code.html" : "AllergyIntolerance Substance/Product, Condition and Negation Codes",
-      "http://hl7.org/fhir/R4/valueset-condition-severity.html" : "Condition/Diagnosis Severity",
-      "http://hl7.org/fhir/R4/valueset-route-codes.html" : "SNOMED CT Route Codes",
-      "http://hl7.org/fhir/R4/valueset-medication-form-codes.html" : "SNOMED CT Form Codes",
-      "http://hl7.org/fhir/R4/valueset-manifestation-or-symptom.html" : "Manifestation and Symptom Codes",
+      "http://hl7.org/fhir/R4/valueset-clinical-findings.html" : "SNOMED CT Clinical Findings",
       "http://hl7.org/fhir/R4/valueset-condition-stage-type.html" : "Condition Stage Type",
+      "ValueSet-vaccine-medication-codes-snomed.html" : "Medications",
+      "http://hl7.org/fhir/R4/valueset-device-action.html" : "Procedure Device Action Codes",
+      "http://hl7.org/fhir/R4/valueset-reason-medication-status-codes.html" : "SNOMED CT Drug Therapy Status codes ",
+      "http://hl7.org/fhir/R4/valueset-procedure-reason.html" : "Procedure Reason Codes",
+      "http://hl7.org/fhir/R4/valueset-immunization-reason.html" : "Immunization Reason Codes",
+      "http://hl7.org/fhir/R4/valueset-medication-form-codes.html" : "SNOMED CT Form Codes",
+      "http://hl7.org/fhir/R4/valueset-observation-methods.html" : "Observation Methods",
+      "http://hl7.org/fhir/R4/valueset-reason-medication-not-given-codes.html" : "SNOMED CT Reason Medication Not Given Codes",
+      "ConceptMap-SnomedToCdsiObservation.html" : "SNOMED CT to CDSi Observation Code Map",
+      "http://hl7.org/fhir/R4/valueset-performer-role.html" : "Procedure Performer Role Codes",
+      "http://hl7.org/fhir/R4/valueset-device-kind.html" : "FHIR Device Types",
+      "http://hl7.org/fhir/R4/valueset-condition-code.html" : "Condition/Problem/Diagnosis Codes",
+      "http://hl7.org/fhir/R4/valueset-manifestation-or-symptom.html" : "Manifestation and Symptom Codes",
+      "http://hl7.org/fhir/R4/valueset-medication-codes.html" : "SNOMED CT Medication Codes",
+      "http://hl7.org/fhir/R4/valueset-administration-method-codes.html" : "SNOMED CT Administration Method Codes",
+      "http://hl7.org/fhir/R4/valueset-condition-severity.html" : "Condition/Diagnosis Severity",
       "http://hl7.org/fhir/R4/valueset-procedure-outcome.html" : "Procedure Outcome Codes (SNOMED CT)"
     },
     {
       "url" : "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
-      "version" : "1.0.0",
-      "status" : "draft",
+      "version" : "1.0.1",
+      "status" : "active",
       "name" : "AllergyIntoleranceClinicalStatusCodes",
       "title" : "AllergyIntolerance Clinical Status Codes",
       "description" : "Preferred value set for AllergyIntolerance Clinical Status.",
@@ -299,8 +310,8 @@
     },
     {
       "url" : "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
-      "version" : "1.0.0",
-      "status" : "draft",
+      "version" : "1.0.1",
+      "status" : "active",
       "name" : "AllergyIntoleranceVerificationStatus",
       "title" : "AllergyIntolerance Verification Status",
       "description" : "The verification status to support or decline the clinical status of the allergy or intolerance.",
@@ -311,8 +322,8 @@
     },
     {
       "url" : "http://terminology.hl7.org/CodeSystem/condition-category",
-      "version" : "1.0.0",
-      "status" : "draft",
+      "version" : "2.0.0",
+      "status" : "active",
       "name" : "ConditionCategoryCodes",
       "title" : "Condition Category Codes",
       "description" : "Preferred value set for Condition Categories.",
@@ -335,8 +346,8 @@
     },
     {
       "url" : "http://terminology.hl7.org/CodeSystem/condition-ver-status",
-      "version" : "2.0.0",
-      "status" : "draft",
+      "version" : "2.0.1",
+      "status" : "active",
       "name" : "ConditionVerificationStatus",
       "title" : "ConditionVerificationStatus",
       "description" : "The verification status to support or decline the clinical status of the condition or diagnosis.",
@@ -346,9 +357,21 @@
       "http://hl7.org/fhir/R4/valueset-condition-ver-status.html" : "ConditionVerificationStatus"
     },
     {
-      "url" : "http://terminology.hl7.org/CodeSystem/immunization-funding-source",
+      "url" : "http://terminology.hl7.org/CodeSystem/data-absent-reason",
       "version" : "1.0.0",
-      "status" : "draft",
+      "status" : "active",
+      "name" : "DataAbsentReason",
+      "title" : "DataAbsentReason",
+      "description" : "Used to specify why the normally expected content of the data element is missing.",
+      "oids" : ["2.16.840.1.113883.4.642.4.1048"],
+      "uses" : {
+      },
+      "http://hl7.org/fhir/R4/valueset-data-absent-reason.html" : "DataAbsentReason"
+    },
+    {
+      "url" : "http://terminology.hl7.org/CodeSystem/immunization-funding-source",
+      "version" : "1.0.1",
+      "status" : "active",
       "name" : "ImmunizationFundingSource",
       "title" : "Immunization Funding Source",
       "description" : "The value set to instantiate this attribute should be drawn from a terminologically robust code system that consists of or contains concepts to support describing the source of the vaccine administered. This value set is provided as a suggestive example.",
@@ -359,8 +382,8 @@
     },
     {
       "url" : "http://terminology.hl7.org/CodeSystem/immunization-origin",
-      "version" : "1.0.0",
-      "status" : "draft",
+      "version" : "1.0.1",
+      "status" : "active",
       "name" : "ImmunizationOriginCodes",
       "title" : "Immunization Origin Codes",
       "description" : "The value set to instantiate this attribute should be drawn from a terminologically robust code system that consists of or contains concepts to support describing the source of the data when the report of the immunization event is not based on information from the person, entity or organization who administered the vaccine. This value set is provided as a suggestive example.",
@@ -371,8 +394,8 @@
     },
     {
       "url" : "http://terminology.hl7.org/CodeSystem/immunization-program-eligibility",
-      "version" : "1.0.0",
-      "status" : "draft",
+      "version" : "1.0.1",
+      "status" : "active",
       "name" : "ImmunizationProgramEligibility",
       "title" : "Immunization Program Eligibility",
       "description" : "The value set to instantiate this attribute should be drawn from a terminologically robust code system that consists of or contains concepts to support describing the patient's eligibility for a vaccination program. This value set is provided as a suggestive example.",
@@ -383,8 +406,8 @@
     },
     {
       "url" : "http://terminology.hl7.org/CodeSystem/immunization-subpotent-reason",
-      "version" : "1.0.0",
-      "status" : "draft",
+      "version" : "1.0.1",
+      "status" : "active",
       "name" : "ImmunizationSubpotentReason",
       "title" : "Immunization Subpotent Reason",
       "description" : "The value set to instantiate this attribute should be drawn from a terminologically robust code system that consists of or contains concepts to support describing the reason why a dose is considered to be subpotent. This value set is provided as a suggestive example.",
@@ -395,8 +418,8 @@
     },
     {
       "url" : "http://terminology.hl7.org/CodeSystem/med-admin-perform-function",
-      "version" : "1.0.0",
-      "status" : "draft",
+      "version" : "1.0.1",
+      "status" : "active",
       "name" : "MedicationAdministrationPerformerFunctionCodes",
       "title" : "MedicationAdministration Performer Function Codes",
       "description" : "MedicationAdministration Performer Function Codes",
@@ -443,8 +466,8 @@
     },
     {
       "url" : "http://terminology.hl7.org/CodeSystem/medicationdispense-performer-function",
-      "version" : "1.0.0",
-      "status" : "draft",
+      "version" : "1.0.1",
+      "status" : "active",
       "name" : "MedicationDispensePerformerFunctionCodes",
       "title" : "MedicationDispense Performer Function Codes",
       "description" : "MedicationDispense Performer Function Codes",
@@ -479,8 +502,8 @@
     },
     {
       "url" : "http://terminology.hl7.org/CodeSystem/medicationrequest-course-of-therapy",
-      "version" : "1.0.0",
-      "status" : "draft",
+      "version" : "1.0.1",
+      "status" : "active",
       "name" : "MedicationRequestCourseOfTherapyCodes",
       "title" : "MedicationRequest Course of Therapy Codes",
       "description" : "MedicationRequest Course of Therapy Codes",
@@ -491,8 +514,8 @@
     },
     {
       "url" : "http://terminology.hl7.org/CodeSystem/medicationrequest-status-reason",
-      "version" : "1.0.0",
-      "status" : "draft",
+      "version" : "1.0.1",
+      "status" : "active",
       "name" : "MedicationRequestStatusReasonCodes",
       "title" : "MedicationRequest Status Reason Codes",
       "description" : "MedicationRequest Status Reason Codes",
@@ -502,9 +525,21 @@
       "http://hl7.org/fhir/R4/valueset-medicationrequest-status-reason.html" : "Medication request  status  reason  codes"
     },
     {
+      "url" : "http://terminology.hl7.org/CodeSystem/observation-category",
+      "version" : "2.0.0",
+      "status" : "active",
+      "name" : "ObservationCategoryCodes",
+      "title" : "Observation Category Codes",
+      "description" : "Observation Category codes.",
+      "oids" : ["2.16.840.1.113883.4.642.1.1125"],
+      "uses" : {
+      },
+      "http://hl7.org/fhir/R4/valueset-observation-category.html" : "Observation Category Codes"
+    },
+    {
       "url" : "http://terminology.hl7.org/CodeSystem/reason-medication-given",
-      "version" : "1.0.0",
-      "status" : "draft",
+      "version" : "1.0.1",
+      "status" : "active",
       "name" : "ReasonMedicationGivenCodes",
       "title" : "Reason Medication Given Codes",
       "description" : "This value set is provided as an example. The value set to instantiate this attribute should be drawn from a robust terminology code system that consists of or contains concepts to support the medication process.",
@@ -514,8 +549,20 @@
       "http://hl7.org/fhir/R4/valueset-reason-medication-given-codes.html" : "Reason Medication Given Codes"
     },
     {
+      "url" : "http://terminology.hl7.org/CodeSystem/referencerange-meaning",
+      "version" : "1.0.1",
+      "status" : "active",
+      "name" : "ObservationReferenceRangeMeaningCodes",
+      "title" : "Observation Reference Range Meaning Codes",
+      "description" : "This value set defines a set of codes that can be used to indicate the meaning/use of a reference range for a particular target population.",
+      "oids" : ["2.16.840.1.113883.4.642.1.1124"],
+      "uses" : {
+      },
+      "http://hl7.org/fhir/R4/valueset-referencerange-meaning.html" : "Observation Reference Range Meaning Codes"
+    },
+    {
       "url" : "http://terminology.hl7.org/CodeSystem/v2-0131",
-      "version" : "2.0.0",
+      "version" : "3.0.0",
       "status" : "active",
       "name" : "ContactRole2",
       "title" : "contactRole2",
@@ -527,7 +574,7 @@
     },
     {
       "url" : "http://terminology.hl7.org/CodeSystem/v2-0203",
-      "version" : "4.0.0",
+      "version" : "5.0.0",
       "status" : "active",
       "name" : "IdentifierType",
       "title" : "identifierType",
@@ -539,7 +586,7 @@
     },
     {
       "url" : "http://terminology.hl7.org/CodeSystem/v2-0443",
-      "version" : "2.0.0",
+      "version" : "3.0.0",
       "status" : "active",
       "name" : "ProviderRole",
       "title" : "providerRole",
@@ -559,11 +606,11 @@
       "oids" : ["2.16.840.1.113883.5.4"],
       "uses" : {
       },
-      "http://terminology.hl7.org/5.5.0/ValueSet-v3-ActPharmacySupplyType.html" : "ActPharmacySupplyType"
+      "http://terminology.hl7.org/7.0.1/ValueSet-v3-ActPharmacySupplyType.html" : "ActPharmacySupplyType"
     },
     {
       "url" : "http://terminology.hl7.org/CodeSystem/v3-ActReason",
-      "version" : "3.0.0",
+      "version" : "3.1.0",
       "status" : "active",
       "name" : "ActReason",
       "title" : "ActReason",
@@ -571,7 +618,7 @@
       "oids" : ["2.16.840.1.113883.5.8"],
       "uses" : {
       },
-      "http://terminology.hl7.org/5.5.0/ValueSet-v3-SubstanceAdminSubstitutionReason.html" : "SubstanceAdminSubstitutionReason"
+      "http://terminology.hl7.org/7.0.1/ValueSet-v3-SubstanceAdminSubstitutionReason.html" : "SubstanceAdminSubstitutionReason"
     },
     {
       "url" : "http://terminology.hl7.org/CodeSystem/v3-ActSite",
@@ -610,6 +657,18 @@
       "http://hl7.org/fhir/R4/valueset-marital-status.html" : "MaritalStatus"
     },
     {
+      "url" : "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+      "version" : "3.0.0",
+      "status" : "active",
+      "name" : "ObservationInterpretation",
+      "title" : "ObservationInterpretation",
+      "description" : "One or more codes providing a rough qualitative interpretation of the observation, such as \"normal\" / \"abnormal\", \"low\" / \"high\", \"better\" / \"worse\", \"resistant\" / \"susceptible\", \"expected\" / \"not expected\". The value set is intended to be for ANY use where coded representation of an interpretation is needed.",
+      "oids" : ["2.16.840.1.113883.5.83"],
+      "uses" : {
+      },
+      "http://hl7.org/fhir/R4/valueset-observation-interpretation.html" : "Observation Interpretation Codes"
+    },
+    {
       "url" : "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
       "version" : "3.0.0",
       "status" : "active",
@@ -631,7 +690,7 @@
       "oids" : ["2.16.840.1.113883.5.1070"],
       "uses" : {
       },
-      "http://terminology.hl7.org/5.5.0/ValueSet-v3-ActSubstanceAdminSubstitutionCode.html" : "ActSubstanceAdminSubstitutionCode"
+      "http://terminology.hl7.org/7.0.1/ValueSet-v3-ActSubstanceAdminSubstitutionCode.html" : "ActSubstanceAdminSubstitutionCode"
     },
     {
       "url" : "http://terminology.hl7.org/fhir/CodeSystem/medicationdispense-category",
@@ -656,18 +715,6 @@
       "uses" : {
       },
       "http://hl7.org/fhir/R4/valueset-medicationdispense-status-reason.html" : "Medication dispense  status  reason  codes"
-    },
-    {
-      "url" : "urn:ietf:bcp:47",
-      "version" : "2.0.1",
-      "status" : "active",
-      "name" : "Ietf3066",
-      "title" : "Tags for the Identification of Languages",
-      "description" : "Older value from OID registry.  Superceded; see recommendations in BCP-47.",
-      "oids" : ["2.16.840.1.113883.6.121"],
-      "uses" : {
-      },
-      "http://hl7.org/fhir/R4/valueset-languages.html" : "Common Languages"
     }
   ]
 }

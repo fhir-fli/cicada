@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ConceptMap xmlns="http://hl7.org/fhir">
+  <id value="SnomedToCdsiObservation"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ConceptMap SnomedToCdsiObservation</b></p><a name="SnomedToCdsiObservation"> </a><a name="hcSnomedToCdsiObservation"> </a><p>Mapping from <a href="http://hl7.org/fhir/R4/codesystem-snomedct.html">http://snomed.info/sct</a> to https://www.cdc.gov/vaccines/programs/iis/cdsi</p><br/><p><b>Group 1 </b>Mapping from <a href="http://hl7.org/fhir/R4/codesystem-snomedct.html">SNOMED CT (all versions)</a> to <code>https://www.cdc.gov/vaccines/programs/iis/cdsi</code></p><table class="grid"><tr><td><b>Source Code</b></td><td><b>Relationship</b></td><td><b>Target Code</b></td></tr><tr><td>370388006 (Patient immunocompromised)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>003 (Immunocompromised)</td></tr><tr><td>50711007 (Viral hepatitis type C)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>005 (Hepatitis C virus infection)</td></tr><tr><td>77386006 (Patient currently pregnant)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>007 (Pregnant)</td></tr><tr><td>31323000 (Severe combined immunodeficiency disease)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>013 (Severe Combined Immunodeficiency [SCID])</td></tr><tr><td>73211009 (Diabetes mellitus)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>014 (Diabetes)</td></tr><tr><td>371111005 (Measles immune)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>020 (Laboratory Evidence of Immunity for Measles)</td></tr><tr><td>371112003 (Mumps immune)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>021 (Laboratory Evidence of Immunity for Mumps)</td></tr><tr><td>278968001 (Rubella immune)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>022 (Laboratory Evidence of Immunity for Rubella)</td></tr><tr><td>86406008 (Human immunodeficiency virus infection)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>026 (HIV/AIDS - immunocompromised)</td></tr><tr><td>195967001 (Asthma)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>027 (Asthma)</td></tr><tr><td>56717001 (Tuberculosis)</td><td><a href="http://hl7.org/fhir/R5/codesystem-concept-map-relationship.html#equivalent" title="equivalent">is equivalent to</a></td><td>031 (Tuberculosis)</td></tr></table></div>
+  </text>
+  <url value="http://fhirfli.dev/fhir/ig/cicada/ConceptMap/SnomedToCdsiObservation"/>
+  <version value="0.1.0"/>
+  <title value="SNOMED CT to CDSi Observation Code Map"/>
+  <status value="active"/>
+  <date value="2026-02-11T14:37:07-05:00"/>
+  <publisher value="FHIR-FLI"/>
+  <contact>
+    <name value="FHIR-FLI"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://fhirfli.dev"/>
+    </telecom>
+  </contact>
+  <description value="Maps SNOMED CT codes to CDSi observation codes used in immunization decision support."/>
+  <sourceUri value="http://snomed.info/sct"/>
+  <targetUri value="https://www.cdc.gov/vaccines/programs/iis/cdsi"/>
+  <group>
+    <source value="http://snomed.info/sct"/>
+    <target value="https://www.cdc.gov/vaccines/programs/iis/cdsi"/>
+    <element>
+      <code value="370388006"/>
+      <display value="Patient immunocompromised"/>
+      <target>
+        <code value="003"/>
+        <display value="Immunocompromised"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="50711007"/>
+      <display value="Viral hepatitis type C"/>
+      <target>
+        <code value="005"/>
+        <display value="Hepatitis C virus infection"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="77386006"/>
+      <display value="Patient currently pregnant"/>
+      <target>
+        <code value="007"/>
+        <display value="Pregnant"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="31323000"/>
+      <display value="Severe combined immunodeficiency disease"/>
+      <target>
+        <code value="013"/>
+        <display value="Severe Combined Immunodeficiency [SCID]"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="73211009"/>
+      <display value="Diabetes mellitus"/>
+      <target>
+        <code value="014"/>
+        <display value="Diabetes"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="371111005"/>
+      <display value="Measles immune"/>
+      <target>
+        <code value="020"/>
+        <display value="Laboratory Evidence of Immunity for Measles"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="371112003"/>
+      <display value="Mumps immune"/>
+      <target>
+        <code value="021"/>
+        <display value="Laboratory Evidence of Immunity for Mumps"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="278968001"/>
+      <display value="Rubella immune"/>
+      <target>
+        <code value="022"/>
+        <display value="Laboratory Evidence of Immunity for Rubella"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="86406008"/>
+      <display value="Human immunodeficiency virus infection"/>
+      <target>
+        <code value="026"/>
+        <display value="HIV/AIDS - immunocompromised"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="195967001"/>
+      <display value="Asthma"/>
+      <target>
+        <code value="027"/>
+        <display value="Asthma"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+    <element>
+      <code value="56717001"/>
+      <display value="Tuberculosis"/>
+      <target>
+        <code value="031"/>
+        <display value="Tuberculosis"/>
+        <equivalence value="equivalent"/>
+      </target>
+    </element>
+  </group>
+</ConceptMap>

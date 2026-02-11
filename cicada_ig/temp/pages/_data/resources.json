@@ -4,15 +4,19 @@
     "testplan" : false,
     "testscript" : false,
     "index" : 0,
-    "source" : "/home/grey/dev/cicada/cicada_ig/fsh-generated/resources/ImplementationGuide-cicada.ig.json",
+    "source" : "/home/grey/dev/fhir/cicada/cicada_ig/fsh-generated/resources/ImplementationGuide-cicada.ig.json",
     "sourceTail" : "ImplementationGuide-cicada.ig.json",
     "path" : "index.html",
     "url" : "http://fhirfli.dev/fhir/ig/cicada/ImplementationGuide/cicada.ig",
     "version" : "0.1.0",
     "name" : "CicadaIG",
     "title" : "The Cicada Vaccine Forecasting Engine and Guide",
-    "date" : "2024-05-06T15:25:10-04:00",
+    "titlelang" : {
+    },
+    "date" : "2026-02-11T14:37:07-05:00",
     "description" : "Example Implementation Guide for using the CDC's Clinical Decision Support for Immunization",
+    "descriptionlang" : {
+    },
     "status" : {
       "class" : "colsd",
       "owner" : "FHIR-FLI",
@@ -27,13 +31,18 @@
     "index" : 1,
     "source" : "fsh-generated/resources/CodeSystem-EvalReason.json",
     "sourceTail" : "CodeSystem-EvalReason.json",
+    "content" : "complete",
     "path" : "CodeSystem-EvalReason.html",
     "url" : "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/EvalReason",
     "version" : "0.1.0",
     "name" : "EvalReasonCS",
     "title" : "Evaluation Reason",
-    "date" : "2024-05-06T15:25:10-04:00",
+    "titlelang" : {
+    },
+    "date" : "2026-02-11T14:37:07-05:00",
     "description" : "The reason for the evaluation.",
+    "descriptionlang" : {
+    },
     "status" : {
       "class" : "colsd",
       "owner" : "FHIR-FLI",
@@ -48,13 +57,18 @@
     "index" : 2,
     "source" : "fsh-generated/resources/CodeSystem-EvalStatus.json",
     "sourceTail" : "CodeSystem-EvalStatus.json",
+    "content" : "complete",
     "path" : "CodeSystem-EvalStatus.html",
     "url" : "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/EvalStatus",
     "version" : "0.1.0",
     "name" : "EvalStatusCS",
     "title" : "Evaluation Status",
-    "date" : "2024-05-06T15:25:10-04:00",
+    "titlelang" : {
+    },
+    "date" : "2026-02-11T14:37:07-05:00",
     "description" : "The status of the result of an evaluation.",
+    "descriptionlang" : {
+    },
     "status" : {
       "class" : "colsd",
       "owner" : "FHIR-FLI",
@@ -69,13 +83,18 @@
     "index" : 3,
     "source" : "fsh-generated/resources/CodeSystem-IntervalReason.json",
     "sourceTail" : "CodeSystem-IntervalReason.json",
+    "content" : "complete",
     "path" : "CodeSystem-IntervalReason.html",
     "url" : "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/IntervalReason",
     "version" : "0.1.0",
     "name" : "IntervalReasonCS",
     "title" : "Interval Reason",
-    "date" : "2024-05-06T15:25:10-04:00",
+    "titlelang" : {
+    },
+    "date" : "2026-02-11T14:37:07-05:00",
     "description" : "This value set includes codes for the reason an interval is considered to be invalid.",
+    "descriptionlang" : {
+    },
     "status" : {
       "class" : "colsd",
       "owner" : "FHIR-FLI",
@@ -90,13 +109,18 @@
     "index" : 4,
     "source" : "fsh-generated/resources/CodeSystem-PreferredAllowedReason.json",
     "sourceTail" : "CodeSystem-PreferredAllowedReason.json",
+    "content" : "complete",
     "path" : "CodeSystem-PreferredAllowedReason.html",
     "url" : "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/PreferredAllowedReason",
     "version" : "0.1.0",
     "name" : "PreferredAllowedReasonCS",
     "title" : "Reasons why certain doses are Preferred or Allowed doses",
-    "date" : "2024-05-06T15:25:10-04:00",
+    "titlelang" : {
+    },
+    "date" : "2026-02-11T14:37:07-05:00",
     "description" : "Reasons why certain doses are Preferred or Allowed doses",
+    "descriptionlang" : {
+    },
     "status" : {
       "class" : "colsd",
       "owner" : "FHIR-FLI",
@@ -111,13 +135,18 @@
     "index" : 5,
     "source" : "fsh-generated/resources/CodeSystem-VaccineGender.json",
     "sourceTail" : "CodeSystem-VaccineGender.json",
+    "content" : "complete",
     "path" : "CodeSystem-VaccineGender.html",
     "url" : "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/VaccineGender",
     "version" : "0.1.0",
     "name" : "VaccineGenderCS",
     "title" : "Vaccine Gender",
-    "date" : "2024-05-06T15:25:10-04:00",
+    "titlelang" : {
+    },
+    "date" : "2026-02-11T14:37:07-05:00",
     "description" : "Value set for gender categories relevant to vaccination data.",
+    "descriptionlang" : {
+    },
     "status" : {
       "class" : "colsd",
       "owner" : "FHIR-FLI",
@@ -132,13 +161,18 @@
     "index" : 6,
     "source" : "fsh-generated/resources/CodeSystem-ValidAgeReason.json",
     "sourceTail" : "CodeSystem-ValidAgeReason.json",
+    "content" : "complete",
     "path" : "CodeSystem-ValidAgeReason.html",
     "url" : "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/ValidAgeReason",
     "version" : "0.1.0",
     "name" : "ValidAgeReasonCS",
     "title" : "Valid Age Reason",
-    "date" : "2024-05-06T15:25:10-04:00",
+    "titlelang" : {
+    },
+    "date" : "2026-02-11T14:37:07-05:00",
     "description" : "Value set for reasons why a patient's age is considered valid/invalid for a vaccine.",
+    "descriptionlang" : {
+    },
     "status" : {
       "class" : "colsd",
       "owner" : "FHIR-FLI",
@@ -153,13 +187,18 @@
     "index" : 7,
     "source" : "fsh-generated/resources/CodeSystem-cdsi-observation-codes.json",
     "sourceTail" : "CodeSystem-cdsi-observation-codes.json",
+    "content" : "complete",
     "path" : "CodeSystem-cdsi-observation-codes.html",
     "url" : "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes",
     "version" : "0.1.0",
     "name" : "CdsiObservationCodes",
     "title" : "CDSI Observation Codes",
-    "date" : "2024-05-06T15:25:10-04:00",
+    "titlelang" : {
+    },
+    "date" : "2026-02-11T14:37:07-05:00",
     "description" : "Observations and Conditions that are important to indications or contraindications in vaccine forecasting",
+    "descriptionlang" : {
+    },
     "status" : {
       "class" : "colsd",
       "owner" : "FHIR-FLI",
@@ -167,11 +206,59 @@
       "status" : "Draft"
     }
   },
-  "StructureDefinition/MedicationAdministrationProfile" : {
+  "ConceptMap/Icd10ToCdsiObservation" : {
     "history" : false,
     "testplan" : false,
     "testscript" : false,
     "index" : 8,
+    "source" : "fsh-generated/resources/ConceptMap-Icd10ToCdsiObservation.json",
+    "sourceTail" : "ConceptMap-Icd10ToCdsiObservation.json",
+    "path" : "ConceptMap-Icd10ToCdsiObservation.html",
+    "url" : "http://fhirfli.dev/fhir/ig/cicada/ConceptMap/Icd10ToCdsiObservation",
+    "version" : "0.1.0",
+    "title" : "ICD-10-CM to CDSi Observation Code Map",
+    "titlelang" : {
+    },
+    "date" : "2026-02-11T14:37:07-05:00",
+    "description" : "Maps ICD-10-CM diagnosis codes to CDSi observation codes used in immunization decision support.",
+    "descriptionlang" : {
+    },
+    "status" : {
+      "class" : "colsi",
+      "owner" : "FHIR-FLI",
+      "link" : "http://fhirfli.dev",
+      "status" : "Active"
+    }
+  },
+  "ConceptMap/SnomedToCdsiObservation" : {
+    "history" : false,
+    "testplan" : false,
+    "testscript" : false,
+    "index" : 9,
+    "source" : "fsh-generated/resources/ConceptMap-SnomedToCdsiObservation.json",
+    "sourceTail" : "ConceptMap-SnomedToCdsiObservation.json",
+    "path" : "ConceptMap-SnomedToCdsiObservation.html",
+    "url" : "http://fhirfli.dev/fhir/ig/cicada/ConceptMap/SnomedToCdsiObservation",
+    "version" : "0.1.0",
+    "title" : "SNOMED CT to CDSi Observation Code Map",
+    "titlelang" : {
+    },
+    "date" : "2026-02-11T14:37:07-05:00",
+    "description" : "Maps SNOMED CT codes to CDSi observation codes used in immunization decision support.",
+    "descriptionlang" : {
+    },
+    "status" : {
+      "class" : "colsi",
+      "owner" : "FHIR-FLI",
+      "link" : "http://fhirfli.dev",
+      "status" : "Active"
+    }
+  },
+  "StructureDefinition/MedicationAdministrationProfile" : {
+    "history" : false,
+    "testplan" : false,
+    "testscript" : false,
+    "index" : 10,
     "source" : "fsh-generated/resources/StructureDefinition-MedicationAdministrationProfile.json",
     "sourceTail" : "StructureDefinition-MedicationAdministrationProfile.json",
     "path" : "StructureDefinition-MedicationAdministrationProfile.html",
@@ -179,8 +266,12 @@
     "version" : "0.1.0",
     "name" : "MedicationAdministrationProfile",
     "title" : "Medication Administration Profile with Vaccine Codes",
-    "date" : "2024-05-06T15:25:10-04:00",
+    "titlelang" : {
+    },
+    "date" : "2026-02-11T14:37:07-05:00",
     "description" : "Profile for medication administrations with vaccine codes from CVX or MVX.",
+    "descriptionlang" : {
+    },
     "status" : {
       "class" : "colsd",
       "owner" : "FHIR-FLI",
@@ -192,7 +283,7 @@
     "history" : false,
     "testplan" : false,
     "testscript" : false,
-    "index" : 9,
+    "index" : 11,
     "source" : "fsh-generated/resources/StructureDefinition-MedicationDispenseProfile.json",
     "sourceTail" : "StructureDefinition-MedicationDispenseProfile.json",
     "path" : "StructureDefinition-MedicationDispenseProfile.html",
@@ -200,8 +291,12 @@
     "version" : "0.1.0",
     "name" : "MedicationDispenseProfile",
     "title" : "Medication Dispense Profile with Vaccine Codes",
-    "date" : "2024-05-06T15:25:10-04:00",
+    "titlelang" : {
+    },
+    "date" : "2026-02-11T14:37:07-05:00",
     "description" : "Profile for medication dispenses with vaccine codes from CVX or MVX.",
+    "descriptionlang" : {
+    },
     "status" : {
       "class" : "colsd",
       "owner" : "FHIR-FLI",
@@ -213,7 +308,7 @@
     "history" : false,
     "testplan" : false,
     "testscript" : false,
-    "index" : 10,
+    "index" : 12,
     "source" : "fsh-generated/resources/StructureDefinition-MedicationRequestProfile.json",
     "sourceTail" : "StructureDefinition-MedicationRequestProfile.json",
     "path" : "StructureDefinition-MedicationRequestProfile.html",
@@ -221,8 +316,12 @@
     "version" : "0.1.0",
     "name" : "MedicationRequestProfile",
     "title" : "Medication Request Profile with Vaccine Codes",
-    "date" : "2024-05-06T15:25:10-04:00",
+    "titlelang" : {
+    },
+    "date" : "2026-02-11T14:37:07-05:00",
     "description" : "Profile for medication requests with vaccine codes from CVX or MVX.",
+    "descriptionlang" : {
+    },
     "status" : {
       "class" : "colsd",
       "owner" : "FHIR-FLI",
@@ -234,7 +333,7 @@
     "history" : false,
     "testplan" : false,
     "testscript" : false,
-    "index" : 11,
+    "index" : 13,
     "source" : "fsh-generated/resources/StructureDefinition-MedicationStatementProfile.json",
     "sourceTail" : "StructureDefinition-MedicationStatementProfile.json",
     "path" : "StructureDefinition-MedicationStatementProfile.html",
@@ -242,8 +341,12 @@
     "version" : "0.1.0",
     "name" : "MedicationStatementProfile",
     "title" : "Medication Statement Profile with Vaccine Codes",
-    "date" : "2024-05-06T15:25:10-04:00",
+    "titlelang" : {
+    },
+    "date" : "2026-02-11T14:37:07-05:00",
     "description" : "Profile for medication statements with vaccine codes from CVX or MVX.",
+    "descriptionlang" : {
+    },
     "status" : {
       "class" : "colsd",
       "owner" : "FHIR-FLI",
@@ -255,7 +358,7 @@
     "history" : false,
     "testplan" : false,
     "testscript" : false,
-    "index" : 12,
+    "index" : 14,
     "source" : "fsh-generated/resources/StructureDefinition-ProcedureProfile.json",
     "sourceTail" : "StructureDefinition-ProcedureProfile.json",
     "path" : "StructureDefinition-ProcedureProfile.html",
@@ -263,8 +366,12 @@
     "version" : "0.1.0",
     "name" : "ProcedureProfile",
     "title" : "Immunization Procedures Profile",
-    "date" : "2024-05-06T15:25:10-04:00",
-    "description" : "Profile for medical procedures related to immunization based on SNOMED CT codes.",
+    "titlelang" : {
+    },
+    "date" : "2026-02-11T14:37:07-05:00",
+    "description" : "Profile for medical procedures related to immunization based on SNOMED CT or CPT codes.",
+    "descriptionlang" : {
+    },
     "status" : {
       "class" : "colsd",
       "owner" : "FHIR-FLI",
@@ -276,16 +383,20 @@
     "history" : false,
     "testplan" : false,
     "testscript" : false,
-    "index" : 13,
+    "index" : 15,
     "source" : "fsh-generated/resources/StructureDefinition-ReactionProfile.json",
     "sourceTail" : "StructureDefinition-ReactionProfile.json",
     "path" : "StructureDefinition-ReactionProfile.html",
     "url" : "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/ReactionProfile",
     "version" : "0.1.0",
     "name" : "ReactionProfile",
-    "title" : "Allergy Intolerance Profile with Vaccine Codes",
-    "date" : "2024-05-06T15:25:10-04:00",
-    "description" : "Profile for allergy intolerances where the offending agent must have a CVX or MVX code.",
+    "title" : "Allergy Intolerance Profile for Immunization Decision Support",
+    "titlelang" : {
+    },
+    "date" : "2026-02-11T14:37:07-05:00",
+    "description" : "Profile for allergy intolerances relevant to immunization. The code (allergen/substance) may use SNOMED CT or ICD-10-CM. Reaction substances may use CVX, MVX, SNOMED CT, or RxNorm.",
+    "descriptionlang" : {
+    },
     "status" : {
       "class" : "colsd",
       "owner" : "FHIR-FLI",
@@ -297,7 +408,7 @@
     "history" : false,
     "testplan" : false,
     "testscript" : false,
-    "index" : 14,
+    "index" : 16,
     "source" : "fsh-generated/resources/StructureDefinition-Vaccine.json",
     "sourceTail" : "StructureDefinition-Vaccine.json",
     "path" : "StructureDefinition-Vaccine.html",
@@ -305,8 +416,12 @@
     "version" : "0.1.0",
     "name" : "Vaccine",
     "title" : "Vaccine",
-    "date" : "2024-05-06T15:25:10-04:00",
+    "titlelang" : {
+    },
+    "date" : "2026-02-11T14:37:07-05:00",
     "description" : "Simple vaccine to easily obtain needed information for forecasting",
+    "descriptionlang" : {
+    },
     "status" : {
       "class" : "colsd",
       "owner" : "FHIR-FLI",
@@ -318,7 +433,7 @@
     "history" : false,
     "testplan" : false,
     "testscript" : false,
-    "index" : 15,
+    "index" : 17,
     "source" : "fsh-generated/resources/StructureDefinition-VaccineConditionFhir.json",
     "sourceTail" : "StructureDefinition-VaccineConditionFhir.json",
     "path" : "StructureDefinition-VaccineConditionFhir.html",
@@ -326,8 +441,12 @@
     "version" : "0.1.0",
     "name" : "VaccineConditionFhir",
     "title" : "Condition Profile with Vaccine Condition Codes",
-    "date" : "2024-05-06T15:25:10-04:00",
-    "description" : "Profile for conditions where the code must be from the Vaccine Condition Codes value set.",
+    "titlelang" : {
+    },
+    "date" : "2026-02-11T14:37:07-05:00",
+    "description" : "Profile for conditions where the code must be from the Vaccine Condition Codes value set. Accepts SNOMED CT and ICD-10-CM coded conditions.",
+    "descriptionlang" : {
+    },
     "status" : {
       "class" : "colsd",
       "owner" : "FHIR-FLI",
@@ -339,16 +458,20 @@
     "history" : false,
     "testplan" : false,
     "testscript" : false,
-    "index" : 16,
+    "index" : 18,
     "source" : "fsh-generated/resources/StructureDefinition-VaccineObservationFhir.json",
     "sourceTail" : "StructureDefinition-VaccineObservationFhir.json",
     "path" : "StructureDefinition-VaccineObservationFhir.html",
     "url" : "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/VaccineObservationFhir",
     "version" : "0.1.0",
     "name" : "VaccineObservationFhir",
-    "title" : "Condition Profile with Vaccine Condition Codes",
-    "date" : "2024-05-06T15:25:10-04:00",
-    "description" : "Profile for conditions where the code must be from the Vaccine Condition Codes value set.",
+    "title" : "Observation Profile for Immunization Decision Support",
+    "titlelang" : {
+    },
+    "date" : "2026-02-11T14:37:07-05:00",
+    "description" : "Profile for Observation resources carrying lab evidence of immunity or other findings relevant to immunization decisions. Codes may be from SNOMED CT, ICD-10-CM, or LOINC.",
+    "descriptionlang" : {
+    },
     "status" : {
       "class" : "colsd",
       "owner" : "FHIR-FLI",
@@ -360,7 +483,7 @@
     "history" : false,
     "testplan" : false,
     "testscript" : false,
-    "index" : 17,
+    "index" : 19,
     "source" : "fsh-generated/resources/StructureDefinition-allowed-interval-reason.json",
     "sourceTail" : "StructureDefinition-allowed-interval-reason.json",
     "path" : "StructureDefinition-allowed-interval-reason.html",
@@ -368,8 +491,12 @@
     "version" : "0.1.0",
     "name" : "AllowedIntervalReason",
     "title" : "Allowed Interval Reason",
-    "date" : "2024-05-06T15:25:10-04:00",
+    "titlelang" : {
+    },
+    "date" : "2026-02-11T14:37:07-05:00",
     "description" : "Captures the reason for the allowed interval between vaccine doses.",
+    "descriptionlang" : {
+    },
     "status" : {
       "class" : "colsd",
       "owner" : "FHIR-FLI",
@@ -381,7 +508,7 @@
     "history" : false,
     "testplan" : false,
     "testscript" : false,
-    "index" : 18,
+    "index" : 20,
     "source" : "fsh-generated/resources/StructureDefinition-allowed-interval-status.json",
     "sourceTail" : "StructureDefinition-allowed-interval-status.json",
     "path" : "StructureDefinition-allowed-interval-status.html",
@@ -389,8 +516,12 @@
     "version" : "0.1.0",
     "name" : "AllowedIntervalStatus",
     "title" : "Allowed Interval Status",
-    "date" : "2024-05-06T15:25:10-04:00",
+    "titlelang" : {
+    },
+    "date" : "2026-02-11T14:37:07-05:00",
     "description" : "Captures the status of the allowed interval for vaccination.",
+    "descriptionlang" : {
+    },
     "status" : {
       "class" : "colsd",
       "owner" : "FHIR-FLI",
@@ -402,7 +533,7 @@
     "history" : false,
     "testplan" : false,
     "testscript" : false,
-    "index" : 19,
+    "index" : 21,
     "source" : "fsh-generated/resources/StructureDefinition-allowed-vaccine-reason.json",
     "sourceTail" : "StructureDefinition-allowed-vaccine-reason.json",
     "path" : "StructureDefinition-allowed-vaccine-reason.html",
@@ -410,8 +541,12 @@
     "version" : "0.1.0",
     "name" : "AllowedVaccineReason",
     "title" : "Allowed Vaccine Reason",
-    "date" : "2024-05-06T15:25:10-04:00",
+    "titlelang" : {
+    },
+    "date" : "2026-02-11T14:37:07-05:00",
     "description" : "Captures the reason why a particular vaccine is allowed.",
+    "descriptionlang" : {
+    },
     "status" : {
       "class" : "colsd",
       "owner" : "FHIR-FLI",
@@ -423,7 +558,7 @@
     "history" : false,
     "testplan" : false,
     "testscript" : false,
-    "index" : 20,
+    "index" : 22,
     "source" : "fsh-generated/resources/StructureDefinition-allowed-vaccine-status.json",
     "sourceTail" : "StructureDefinition-allowed-vaccine-status.json",
     "path" : "StructureDefinition-allowed-vaccine-status.html",
@@ -431,8 +566,12 @@
     "version" : "0.1.0",
     "name" : "AllowedVaccineStatus",
     "title" : "Allowed Vaccine Status",
-    "date" : "2024-05-06T15:25:10-04:00",
+    "titlelang" : {
+    },
+    "date" : "2026-02-11T14:37:07-05:00",
     "description" : "Indicates if the vaccine administered is allowed under certain conditions.",
+    "descriptionlang" : {
+    },
     "status" : {
       "class" : "colsd",
       "owner" : "FHIR-FLI",
@@ -444,7 +583,7 @@
     "history" : false,
     "testplan" : false,
     "testscript" : false,
-    "index" : 21,
+    "index" : 23,
     "source" : "fsh-generated/resources/StructureDefinition-antigen-supporting-data.json",
     "sourceTail" : "StructureDefinition-antigen-supporting-data.json",
     "path" : "StructureDefinition-antigen-supporting-data.html",
@@ -452,8 +591,12 @@
     "version" : "0.1.0",
     "name" : "AntigenSupportingData",
     "title" : "Antigen Supporting Data",
-    "date" : "2024-05-06T15:25:10-04:00",
+    "titlelang" : {
+    },
+    "date" : "2026-02-11T14:37:07-05:00",
     "description" : "A resource to store supporting data for antigens including target disease, vaccine groups, immunity criteria, contraindications, and vaccination series.",
+    "descriptionlang" : {
+    },
     "status" : {
       "class" : "colsd",
       "owner" : "FHIR-FLI",
@@ -465,15 +608,17 @@
     "history" : false,
     "testplan" : false,
     "testscript" : false,
-    "index" : 22,
+    "index" : 24,
     "source" : "fsh-generated/resources/StructureDefinition-assessment-date.json",
     "sourceTail" : "StructureDefinition-assessment-date.json",
     "path" : "StructureDefinition-assessment-date.html",
     "url" : "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/assessment-date",
     "version" : "0.1.0",
     "name" : "AssessmentDate",
-    "date" : "2024-05-06T15:25:10-04:00",
+    "date" : "2026-02-11T14:37:07-05:00",
     "description" : "The date on which the vaccination assessment was made.",
+    "descriptionlang" : {
+    },
     "status" : {
       "class" : "colsd",
       "owner" : "FHIR-FLI",
@@ -485,7 +630,7 @@
     "history" : false,
     "testplan" : false,
     "testscript" : false,
-    "index" : 23,
+    "index" : 25,
     "source" : "fsh-generated/resources/StructureDefinition-begin-age.json",
     "sourceTail" : "StructureDefinition-begin-age.json",
     "path" : "StructureDefinition-begin-age.html",
@@ -493,8 +638,12 @@
     "version" : "0.1.0",
     "name" : "BeginAge",
     "title" : "Begin Age",
-    "date" : "2024-05-06T15:25:10-04:00",
+    "titlelang" : {
+    },
+    "date" : "2026-02-11T14:37:07-05:00",
     "description" : "The age at which the vaccine becomes applicable.",
+    "descriptionlang" : {
+    },
     "status" : {
       "class" : "colsd",
       "owner" : "FHIR-FLI",
@@ -506,7 +655,7 @@
     "history" : false,
     "testplan" : false,
     "testscript" : false,
-    "index" : 24,
+    "index" : 26,
     "source" : "fsh-generated/resources/StructureDefinition-end-age.json",
     "sourceTail" : "StructureDefinition-end-age.json",
     "path" : "StructureDefinition-end-age.html",
@@ -514,8 +663,12 @@
     "version" : "0.1.0",
     "name" : "EndAge",
     "title" : "End Age",
-    "date" : "2024-05-06T15:25:10-04:00",
+    "titlelang" : {
+    },
+    "date" : "2026-02-11T14:37:07-05:00",
     "description" : "The age at which the vaccine is no longer applicable.",
+    "descriptionlang" : {
+    },
     "status" : {
       "class" : "colsd",
       "owner" : "FHIR-FLI",
@@ -527,7 +680,7 @@
     "history" : false,
     "testplan" : false,
     "testscript" : false,
-    "index" : 25,
+    "index" : 27,
     "source" : "fsh-generated/resources/StructureDefinition-inadvertent-administration-status.json",
     "sourceTail" : "StructureDefinition-inadvertent-administration-status.json",
     "path" : "StructureDefinition-inadvertent-administration-status.html",
@@ -535,8 +688,12 @@
     "version" : "0.1.0",
     "name" : "InadvertentAdministrationStatus",
     "title" : "Inadvertent Administration Status",
-    "date" : "2024-05-06T15:25:10-04:00",
+    "titlelang" : {
+    },
+    "date" : "2026-02-11T14:37:07-05:00",
     "description" : "Indicates if the vaccine was administered inadvertently.",
+    "descriptionlang" : {
+    },
     "status" : {
       "class" : "colsd",
       "owner" : "FHIR-FLI",
@@ -548,7 +705,7 @@
     "history" : false,
     "testplan" : false,
     "testscript" : false,
-    "index" : 26,
+    "index" : 28,
     "source" : "fsh-generated/resources/StructureDefinition-preferred-interval-reason.json",
     "sourceTail" : "StructureDefinition-preferred-interval-reason.json",
     "path" : "StructureDefinition-preferred-interval-reason.html",
@@ -556,8 +713,12 @@
     "version" : "0.1.0",
     "name" : "PreferredIntervalReason",
     "title" : "Preferred Interval Reason",
-    "date" : "2024-05-06T15:25:10-04:00",
+    "titlelang" : {
+    },
+    "date" : "2026-02-11T14:37:07-05:00",
     "description" : "Captures the reason for the preferred interval between vaccine doses.",
+    "descriptionlang" : {
+    },
     "status" : {
       "class" : "colsd",
       "owner" : "FHIR-FLI",
@@ -569,7 +730,7 @@
     "history" : false,
     "testplan" : false,
     "testscript" : false,
-    "index" : 27,
+    "index" : 29,
     "source" : "fsh-generated/resources/StructureDefinition-preferred-interval-status.json",
     "sourceTail" : "StructureDefinition-preferred-interval-status.json",
     "path" : "StructureDefinition-preferred-interval-status.html",
@@ -577,8 +738,12 @@
     "version" : "0.1.0",
     "name" : "PreferredIntervalStatus",
     "title" : "Preferred Interval Status",
-    "date" : "2024-05-06T15:25:10-04:00",
+    "titlelang" : {
+    },
+    "date" : "2026-02-11T14:37:07-05:00",
     "description" : "Indicates if the vaccine was administered at the preferred interval.",
+    "descriptionlang" : {
+    },
     "status" : {
       "class" : "colsd",
       "owner" : "FHIR-FLI",
@@ -590,7 +755,7 @@
     "history" : false,
     "testplan" : false,
     "testscript" : false,
-    "index" : 28,
+    "index" : 30,
     "source" : "fsh-generated/resources/StructureDefinition-preferred-vaccine-reason.json",
     "sourceTail" : "StructureDefinition-preferred-vaccine-reason.json",
     "path" : "StructureDefinition-preferred-vaccine-reason.html",
@@ -598,8 +763,12 @@
     "version" : "0.1.0",
     "name" : "PreferredVaccineReason",
     "title" : "Preferred Vaccine Reason",
-    "date" : "2024-05-06T15:25:10-04:00",
+    "titlelang" : {
+    },
+    "date" : "2026-02-11T14:37:07-05:00",
     "description" : "Captures the reason why a particular vaccine is preferred.",
+    "descriptionlang" : {
+    },
     "status" : {
       "class" : "colsd",
       "owner" : "FHIR-FLI",
@@ -611,7 +780,7 @@
     "history" : false,
     "testplan" : false,
     "testscript" : false,
-    "index" : 29,
+    "index" : 31,
     "source" : "fsh-generated/resources/StructureDefinition-preferred-vaccine-status.json",
     "sourceTail" : "StructureDefinition-preferred-vaccine-status.json",
     "path" : "StructureDefinition-preferred-vaccine-status.html",
@@ -619,8 +788,12 @@
     "version" : "0.1.0",
     "name" : "PreferredVaccineStatus",
     "title" : "Preferred Vaccine Status",
-    "date" : "2024-05-06T15:25:10-04:00",
+    "titlelang" : {
+    },
+    "date" : "2026-02-11T14:37:07-05:00",
     "description" : "Indicates if the vaccine administered is the preferred vaccine.",
+    "descriptionlang" : {
+    },
     "status" : {
       "class" : "colsd",
       "owner" : "FHIR-FLI",
@@ -632,7 +805,7 @@
     "history" : false,
     "testplan" : false,
     "testscript" : false,
-    "index" : 30,
+    "index" : 32,
     "source" : "fsh-generated/resources/StructureDefinition-schedule-supporting-data.json",
     "sourceTail" : "StructureDefinition-schedule-supporting-data.json",
     "path" : "StructureDefinition-schedule-supporting-data.html",
@@ -640,8 +813,12 @@
     "version" : "0.1.0",
     "name" : "ScheduleSupportingData",
     "title" : "Schedule Supporting Data",
-    "date" : "2024-05-06T15:25:10-04:00",
+    "titlelang" : {
+    },
+    "date" : "2026-02-11T14:37:07-05:00",
     "description" : "This resource consolidates various mapping and conflict information related to vaccine scheduling to support decision-making processes.",
+    "descriptionlang" : {
+    },
     "status" : {
       "class" : "colsd",
       "owner" : "FHIR-FLI",
@@ -653,7 +830,7 @@
     "history" : false,
     "testplan" : false,
     "testscript" : false,
-    "index" : 31,
+    "index" : 33,
     "source" : "fsh-generated/resources/StructureDefinition-vaccination-conflict.json",
     "sourceTail" : "StructureDefinition-vaccination-conflict.json",
     "path" : "StructureDefinition-vaccination-conflict.html",
@@ -661,8 +838,12 @@
     "version" : "0.1.0",
     "name" : "VaccinationConflict",
     "title" : "Vaccination Conflict",
-    "date" : "2024-05-06T15:25:10-04:00",
+    "titlelang" : {
+    },
+    "date" : "2026-02-11T14:37:07-05:00",
     "description" : "Indicates any conflicts with other vaccinations.",
+    "descriptionlang" : {
+    },
     "status" : {
       "class" : "colsd",
       "owner" : "FHIR-FLI",
@@ -674,7 +855,7 @@
     "history" : false,
     "testplan" : false,
     "testscript" : false,
-    "index" : 32,
+    "index" : 34,
     "source" : "fsh-generated/resources/StructureDefinition-vaccine-type.json",
     "sourceTail" : "StructureDefinition-vaccine-type.json",
     "path" : "StructureDefinition-vaccine-type.html",
@@ -682,8 +863,12 @@
     "version" : "0.1.0",
     "name" : "VaccineType",
     "title" : "Vaccine Type",
-    "date" : "2024-05-06T15:25:10-04:00",
+    "titlelang" : {
+    },
+    "date" : "2026-02-11T14:37:07-05:00",
     "description" : "Type of the vaccine.",
+    "descriptionlang" : {
+    },
     "status" : {
       "class" : "colsd",
       "owner" : "FHIR-FLI",
@@ -695,7 +880,7 @@
     "history" : false,
     "testplan" : false,
     "testscript" : false,
-    "index" : 33,
+    "index" : 35,
     "source" : "fsh-generated/resources/StructureDefinition-valid-age-reason.json",
     "sourceTail" : "StructureDefinition-valid-age-reason.json",
     "path" : "StructureDefinition-valid-age-reason.html",
@@ -703,8 +888,12 @@
     "version" : "0.1.0",
     "name" : "ValidAgeReason",
     "title" : "Valid Age Reason",
-    "date" : "2024-05-06T15:25:10-04:00",
+    "titlelang" : {
+    },
+    "date" : "2026-02-11T14:37:07-05:00",
     "description" : "Captures the reason why the vaccine was administered at a particular age.",
+    "descriptionlang" : {
+    },
     "status" : {
       "class" : "colsd",
       "owner" : "FHIR-FLI",
@@ -716,7 +905,7 @@
     "history" : false,
     "testplan" : false,
     "testscript" : false,
-    "index" : 34,
+    "index" : 36,
     "source" : "fsh-generated/resources/StructureDefinition-valid-age-status.json",
     "sourceTail" : "StructureDefinition-valid-age-status.json",
     "path" : "StructureDefinition-valid-age-status.html",
@@ -724,8 +913,12 @@
     "version" : "0.1.0",
     "name" : "ValidAgeStatus",
     "title" : "Valid Age Status",
-    "date" : "2024-05-06T15:25:10-04:00",
+    "titlelang" : {
+    },
+    "date" : "2026-02-11T14:37:07-05:00",
     "description" : "Indicates if the vaccine was administered at the correct age.",
+    "descriptionlang" : {
+    },
     "status" : {
       "class" : "colsd",
       "owner" : "FHIR-FLI",
@@ -737,7 +930,7 @@
     "history" : false,
     "testplan" : false,
     "testscript" : false,
-    "index" : 35,
+    "index" : 37,
     "source" : "fsh-generated/resources/StructureDefinition-vax-dose.json",
     "sourceTail" : "StructureDefinition-vax-dose.json",
     "path" : "StructureDefinition-vax-dose.html",
@@ -745,8 +938,12 @@
     "version" : "0.1.0",
     "name" : "VaxDose",
     "title" : "Dose of a Vaccine",
-    "date" : "2024-05-06T15:25:10-04:00",
+    "titlelang" : {
+    },
+    "date" : "2026-02-11T14:37:07-05:00",
     "description" : "Detailed information about each vaccination dose.",
+    "descriptionlang" : {
+    },
     "status" : {
       "class" : "colsd",
       "owner" : "FHIR-FLI",
@@ -758,7 +955,7 @@
     "history" : false,
     "testplan" : false,
     "testscript" : false,
-    "index" : 36,
+    "index" : 38,
     "source" : "fsh-generated/resources/StructureDefinition-vax-patient.json",
     "sourceTail" : "StructureDefinition-vax-patient.json",
     "path" : "StructureDefinition-vax-patient.html",
@@ -766,8 +963,12 @@
     "version" : "0.1.0",
     "name" : "VaxPatient",
     "title" : "Vaccination Patient",
-    "date" : "2024-05-06T15:25:10-04:00",
+    "titlelang" : {
+    },
+    "date" : "2026-02-11T14:37:07-05:00",
     "description" : "A profile that extends the base FHIR Patient resource to include detailed vaccination-related information.",
+    "descriptionlang" : {
+    },
     "status" : {
       "class" : "colsd",
       "owner" : "FHIR-FLI",
@@ -779,14 +980,14 @@
     "history" : false,
     "testplan" : false,
     "testscript" : false,
-    "index" : 37,
+    "index" : 39,
     "source" : "fsh-generated/resources/ValueSet-VaccineCodesCvxMvx.json",
     "sourceTail" : "ValueSet-VaccineCodesCvxMvx.json",
     "path" : "ValueSet-VaccineCodesCvxMvx.html",
     "url" : "http://fhirfli.dev/fhir/ig/cicada/ValueSet/VaccineCodesCvxMvx",
     "version" : "0.1.0",
     "name" : "VaccineCodesCvxMvx",
-    "date" : "2024-05-06T15:25:10-04:00",
+    "date" : "2026-02-11T14:37:07-05:00",
     "status" : {
       "class" : "colsd",
       "owner" : "FHIR-FLI",
@@ -798,7 +999,7 @@
     "history" : false,
     "testplan" : false,
     "testscript" : false,
-    "index" : 38,
+    "index" : 40,
     "source" : "fsh-generated/resources/ValueSet-eval-reason.json",
     "sourceTail" : "ValueSet-eval-reason.json",
     "path" : "ValueSet-eval-reason.html",
@@ -806,8 +1007,12 @@
     "version" : "0.1.0",
     "name" : "EvalReasonVS",
     "title" : "Evaluation Reason",
-    "date" : "2024-05-06T15:25:10-04:00",
+    "titlelang" : {
+    },
+    "date" : "2026-02-11T14:37:07-05:00",
     "description" : "The reason for the evaluation.",
+    "descriptionlang" : {
+    },
     "status" : {
       "class" : "colsd",
       "owner" : "FHIR-FLI",
@@ -819,7 +1024,7 @@
     "history" : false,
     "testplan" : false,
     "testscript" : false,
-    "index" : 39,
+    "index" : 41,
     "source" : "fsh-generated/resources/ValueSet-eval-status.json",
     "sourceTail" : "ValueSet-eval-status.json",
     "path" : "ValueSet-eval-status.html",
@@ -827,8 +1032,12 @@
     "version" : "0.1.0",
     "name" : "EvalStatusVS",
     "title" : "Evaluation Status Value Set",
-    "date" : "2024-05-06T15:25:10-04:00",
+    "titlelang" : {
+    },
+    "date" : "2026-02-11T14:37:07-05:00",
     "description" : "Value Set for the status of the result of an evaluation.",
+    "descriptionlang" : {
+    },
     "status" : {
       "class" : "colsd",
       "owner" : "FHIR-FLI",
@@ -836,11 +1045,36 @@
       "status" : "Draft"
     }
   },
+  "ValueSet/immunization-procedures-cpt" : {
+    "history" : false,
+    "testplan" : false,
+    "testscript" : false,
+    "index" : 42,
+    "source" : "fsh-generated/resources/ValueSet-immunization-procedures-cpt.json",
+    "sourceTail" : "ValueSet-immunization-procedures-cpt.json",
+    "path" : "ValueSet-immunization-procedures-cpt.html",
+    "url" : "http://fhirfli.dev/fhir/ig/cicada/ValueSet/immunization-procedures-cpt",
+    "version" : "0.1.0",
+    "name" : "ImmunizationProceduresCpt",
+    "title" : "Immunization-Relevant Procedures (CPT)",
+    "titlelang" : {
+    },
+    "date" : "2026-02-11T14:37:07-05:00",
+    "description" : "CPT codes for procedures relevant to immunization decision support, including splenectomy and cochlear implant.",
+    "descriptionlang" : {
+    },
+    "status" : {
+      "class" : "colsi",
+      "owner" : "FHIR-FLI",
+      "link" : "http://fhirfli.dev",
+      "status" : "Active"
+    }
+  },
   "ValueSet/interval-reason" : {
     "history" : false,
     "testplan" : false,
     "testscript" : false,
-    "index" : 40,
+    "index" : 43,
     "source" : "fsh-generated/resources/ValueSet-interval-reason.json",
     "sourceTail" : "ValueSet-interval-reason.json",
     "path" : "ValueSet-interval-reason.html",
@@ -848,8 +1082,12 @@
     "version" : "0.1.0",
     "name" : "IntervalReasonVS",
     "title" : "Interval Reason",
-    "date" : "2024-05-06T15:25:10-04:00",
+    "titlelang" : {
+    },
+    "date" : "2026-02-11T14:37:07-05:00",
     "description" : "This value set includes codes for the reason an interval is considered to be invalid.",
+    "descriptionlang" : {
+    },
     "status" : {
       "class" : "colsd",
       "owner" : "FHIR-FLI",
@@ -861,7 +1099,7 @@
     "history" : false,
     "testplan" : false,
     "testscript" : false,
-    "index" : 41,
+    "index" : 44,
     "source" : "fsh-generated/resources/ValueSet-preferred-allowed-reason.json",
     "sourceTail" : "ValueSet-preferred-allowed-reason.json",
     "path" : "ValueSet-preferred-allowed-reason.html",
@@ -869,8 +1107,12 @@
     "version" : "0.1.0",
     "name" : "PreferredAllowedReasonVS",
     "title" : "Reasons why certain doses are Preferred or Allowed doses",
-    "date" : "2024-05-06T15:25:10-04:00",
+    "titlelang" : {
+    },
+    "date" : "2026-02-11T14:37:07-05:00",
     "description" : "Reasons why certain doses are Preferred or Allowed doses",
+    "descriptionlang" : {
+    },
     "status" : {
       "class" : "colsd",
       "owner" : "FHIR-FLI",
@@ -882,7 +1124,7 @@
     "history" : false,
     "testplan" : false,
     "testscript" : false,
-    "index" : 42,
+    "index" : 45,
     "source" : "fsh-generated/resources/ValueSet-procedures.json",
     "sourceTail" : "ValueSet-procedures.json",
     "path" : "ValueSet-procedures.html",
@@ -890,8 +1132,12 @@
     "version" : "0.1.0",
     "name" : "ImmunizationProceduresSnomed",
     "title" : "Procedures",
-    "date" : "2024-05-06T15:25:10-04:00",
+    "titlelang" : {
+    },
+    "date" : "2026-02-11T14:37:07-05:00",
     "description" : "Comprehensive Value Set for medical procedures based on SNOMED CT codes.",
+    "descriptionlang" : {
+    },
     "status" : {
       "class" : "colsd",
       "owner" : "FHIR-FLI",
@@ -899,11 +1145,36 @@
       "status" : "Draft"
     }
   },
+  "ValueSet/vaccine-condition-codes-icd10" : {
+    "history" : false,
+    "testplan" : false,
+    "testscript" : false,
+    "index" : 46,
+    "source" : "fsh-generated/resources/ValueSet-vaccine-condition-codes-icd10.json",
+    "sourceTail" : "ValueSet-vaccine-condition-codes-icd10.json",
+    "path" : "ValueSet-vaccine-condition-codes-icd10.html",
+    "url" : "http://fhirfli.dev/fhir/ig/cicada/ValueSet/vaccine-condition-codes-icd10",
+    "version" : "0.1.0",
+    "name" : "VaccineConditionCodesIcd10",
+    "title" : "Vaccine Condition Codes (ICD-10-CM)",
+    "titlelang" : {
+    },
+    "date" : "2026-02-11T14:37:07-05:00",
+    "description" : "Value set for conditions based on ICD-10-CM that may impact immunization decisions, mapped to CDSi observation codes.",
+    "descriptionlang" : {
+    },
+    "status" : {
+      "class" : "colsi",
+      "owner" : "FHIR-FLI",
+      "link" : "http://fhirfli.dev",
+      "status" : "Active"
+    }
+  },
   "ValueSet/vaccine-condition-codes-snomed" : {
     "history" : false,
     "testplan" : false,
     "testscript" : false,
-    "index" : 43,
+    "index" : 47,
     "source" : "fsh-generated/resources/ValueSet-vaccine-condition-codes-snomed.json",
     "sourceTail" : "ValueSet-vaccine-condition-codes-snomed.json",
     "path" : "ValueSet-vaccine-condition-codes-snomed.html",
@@ -911,8 +1182,12 @@
     "version" : "0.1.0",
     "name" : "VaccineConditionCodesSnomed",
     "title" : "Vaccine Condition Codes",
-    "date" : "2024-05-06T15:25:10-04:00",
+    "titlelang" : {
+    },
+    "date" : "2026-02-11T14:37:07-05:00",
     "description" : "Value set for conditions based on SNOMED CT, that may impact immunization.",
+    "descriptionlang" : {
+    },
     "status" : {
       "class" : "colsd",
       "owner" : "FHIR-FLI",
@@ -924,7 +1199,7 @@
     "history" : false,
     "testplan" : false,
     "testscript" : false,
-    "index" : 44,
+    "index" : 48,
     "source" : "fsh-generated/resources/ValueSet-vaccine-gender.json",
     "sourceTail" : "ValueSet-vaccine-gender.json",
     "path" : "ValueSet-vaccine-gender.html",
@@ -932,8 +1207,12 @@
     "version" : "0.1.0",
     "name" : "VaccineGenderVS",
     "title" : "Vaccine Gender",
-    "date" : "2024-05-06T15:25:10-04:00",
+    "titlelang" : {
+    },
+    "date" : "2026-02-11T14:37:07-05:00",
     "description" : "Value set for gender categories relevant to vaccination data.",
+    "descriptionlang" : {
+    },
     "status" : {
       "class" : "colsd",
       "owner" : "FHIR-FLI",
@@ -941,11 +1220,61 @@
       "status" : "Draft"
     }
   },
+  "ValueSet/vaccine-lab-evidence-of-immunity-loinc" : {
+    "history" : false,
+    "testplan" : false,
+    "testscript" : false,
+    "index" : 49,
+    "source" : "fsh-generated/resources/ValueSet-vaccine-lab-evidence-of-immunity-loinc.json",
+    "sourceTail" : "ValueSet-vaccine-lab-evidence-of-immunity-loinc.json",
+    "path" : "ValueSet-vaccine-lab-evidence-of-immunity-loinc.html",
+    "url" : "http://fhirfli.dev/fhir/ig/cicada/ValueSet/vaccine-lab-evidence-of-immunity-loinc",
+    "version" : "0.1.0",
+    "name" : "VaccineLabEvidenceOfImmunityLoinc",
+    "title" : "Lab Evidence of Immunity (LOINC)",
+    "titlelang" : {
+    },
+    "date" : "2026-02-11T14:37:07-05:00",
+    "description" : "LOINC codes for laboratory tests that provide evidence of immunity, mapped to CDSi observation codes for immunization decision support.",
+    "descriptionlang" : {
+    },
+    "status" : {
+      "class" : "colsi",
+      "owner" : "FHIR-FLI",
+      "link" : "http://fhirfli.dev",
+      "status" : "Active"
+    }
+  },
+  "ValueSet/vaccine-medication-codes-rxnorm" : {
+    "history" : false,
+    "testplan" : false,
+    "testscript" : false,
+    "index" : 50,
+    "source" : "fsh-generated/resources/ValueSet-vaccine-medication-codes-rxnorm.json",
+    "sourceTail" : "ValueSet-vaccine-medication-codes-rxnorm.json",
+    "path" : "ValueSet-vaccine-medication-codes-rxnorm.html",
+    "url" : "http://fhirfli.dev/fhir/ig/cicada/ValueSet/vaccine-medication-codes-rxnorm",
+    "version" : "0.1.0",
+    "name" : "VaccineMedicationCodesRxnorm",
+    "title" : "Immunization-Relevant Medications (RxNorm)",
+    "titlelang" : {
+    },
+    "date" : "2026-02-11T14:37:07-05:00",
+    "description" : "RxNorm codes for medications relevant to immunization decision support, including antivirals and aspirin.",
+    "descriptionlang" : {
+    },
+    "status" : {
+      "class" : "colsi",
+      "owner" : "FHIR-FLI",
+      "link" : "http://fhirfli.dev",
+      "status" : "Active"
+    }
+  },
   "ValueSet/vaccine-medication-codes-snomed" : {
     "history" : false,
     "testplan" : false,
     "testscript" : false,
-    "index" : 45,
+    "index" : 51,
     "source" : "fsh-generated/resources/ValueSet-vaccine-medication-codes-snomed.json",
     "sourceTail" : "ValueSet-vaccine-medication-codes-snomed.json",
     "path" : "ValueSet-vaccine-medication-codes-snomed.html",
@@ -953,8 +1282,12 @@
     "version" : "0.1.0",
     "name" : "VaccineMedicationCodesSnomed",
     "title" : "Medications",
-    "date" : "2024-05-06T15:25:10-04:00",
+    "titlelang" : {
+    },
+    "date" : "2026-02-11T14:37:07-05:00",
     "description" : "Value set for medications and substances based on SNOMED CT, including both active ingredients and marketed products.",
+    "descriptionlang" : {
+    },
     "status" : {
       "class" : "colsd",
       "owner" : "FHIR-FLI",
@@ -966,7 +1299,7 @@
     "history" : false,
     "testplan" : false,
     "testscript" : false,
-    "index" : 46,
+    "index" : 52,
     "source" : "fsh-generated/resources/ValueSet-valid-age-reason.json",
     "sourceTail" : "ValueSet-valid-age-reason.json",
     "path" : "ValueSet-valid-age-reason.html",
@@ -974,8 +1307,12 @@
     "version" : "0.1.0",
     "name" : "ValidAgeReasonVS",
     "title" : "Valid Age Reason",
-    "date" : "2024-05-06T15:25:10-04:00",
+    "titlelang" : {
+    },
+    "date" : "2026-02-11T14:37:07-05:00",
     "description" : "Value set for reasons why a patient's age is considered valid/invalid for a vaccine.",
+    "descriptionlang" : {
+    },
     "status" : {
       "class" : "colsd",
       "owner" : "FHIR-FLI",
@@ -987,15 +1324,17 @@
     "history" : false,
     "testplan" : false,
     "testscript" : false,
-    "index" : 47,
+    "index" : 53,
     "source" : "input/resources/map_vaccine_codes.json",
     "sourceTail" : "map_vaccine_codes.json",
     "path" : "StructureMap-MapVaccineCodes.html",
     "url" : "http://fhirfli.dev/fhir/ig/cicada/StructureMap/map-vaccine-codes",
     "version" : "0.1.0",
     "name" : "MapVaccineCodes",
-    "date" : "2024-05-06T15:25:10-04:00",
+    "date" : "2026-02-11T14:37:07-05:00",
     "description" : "Define the usage of FHIR resource types with specific aliases",
+    "descriptionlang" : {
+    },
     "status" : {
       "class" : "colsd",
       "owner" : "FHIR-FLI",

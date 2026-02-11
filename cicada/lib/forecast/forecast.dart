@@ -19,6 +19,9 @@ class VaccineGroupForecast {
     this.pastDueDate,
     this.latestDate,
     required this.antigenNames,
+    this.forecastCvxCodes = const [],
+    this.forecastVaccineDescriptions = const [],
+    this.doseNumber,
   });
 
   final String vaccineGroupName;
@@ -28,6 +31,15 @@ class VaccineGroupForecast {
   final VaxDate? pastDueDate;
   final VaxDate? latestDate;
   final List<String> antigenNames;
+
+  /// CVX codes from preferableVaccine where forecastVaccineType == 'Y'
+  final List<String> forecastCvxCodes;
+
+  /// Corresponding vaccineType descriptions for each CVX code
+  final List<String> forecastVaccineDescriptions;
+
+  /// Target dose number (1-indexed)
+  final int? doseNumber;
 }
 
 /// Multi-antigen vaccine groups per CDSi spec Chapter 9
@@ -218,6 +230,28 @@ SeriesStatus _aggregateStatus(List<SeriesStatus> statuses) {
   return SeriesStatus.notComplete;
 }
 
+/// Extracts forecast CVX codes, descriptions, and dose number from a series.
+({List<String> cvx, List<String> desc, int? doseNum}) _extractForecastVaccineInfo(
+    VaxSeries series) {
+  final int td = series.targetDose;
+  final seriesDoses = series.series.seriesDose;
+  if (seriesDoses == null || td >= seriesDoses.length) {
+    return (cvx: <String>[], desc: <String>[], doseNum: null);
+  }
+  final prefVaccines = seriesDoses[td].preferableVaccine;
+  final List<String> cvxCodes = [];
+  final List<String> descriptions = [];
+  if (prefVaccines != null) {
+    for (final v in prefVaccines) {
+      if (v.forecastVaccineType == 'Y' && v.cvx != null) {
+        cvxCodes.add(v.cvx!);
+        descriptions.add(v.vaccineType ?? '');
+      }
+    }
+  }
+  return (cvx: cvxCodes, desc: descriptions, doseNum: td + 1);
+}
+
 /// Build vaccine group forecasts from per-antigen results
 Map<String, VaccineGroupForecast> _aggregateVaccineGroupForecasts(
     Map<String, VaxAntigen> agMap) {
@@ -271,6 +305,7 @@ Map<String, VaccineGroupForecast> _aggregateVaccineGroupForecasts(
       if (bestList.length == 1) {
         // SINGLEANTVG-1: single best → use its status and dates directly.
         final best = bestList.first;
+        final vaxInfo = _extractForecastVaccineInfo(best);
         result[groupName] = VaccineGroupForecast(
           vaccineGroupName: groupName,
           status: best.seriesStatus,
@@ -279,6 +314,9 @@ Map<String, VaccineGroupForecast> _aggregateVaccineGroupForecasts(
           pastDueDate: best.adjustedPastDueDate,
           latestDate: best.latestDate,
           antigenNames: [antigen.targetDisease],
+          forecastCvxCodes: vaxInfo.cvx,
+          forecastVaccineDescriptions: vaxInfo.desc,
+          doseNumber: vaxInfo.doseNum,
         );
       } else {
         // Multiple best series of the same type from non-equivalent
@@ -310,6 +348,7 @@ Map<String, VaccineGroupForecast> _aggregateVaccineGroupForecasts(
           }
         }
 
+        final vaxInfo = _extractForecastVaccineInfo(bestList.first);
         result[groupName] = VaccineGroupForecast(
           vaccineGroupName: groupName,
           status: status,
@@ -318,6 +357,9 @@ Map<String, VaccineGroupForecast> _aggregateVaccineGroupForecasts(
           pastDueDate: pastDue,
           latestDate: latest,
           antigenNames: [antigen.targetDisease],
+          forecastCvxCodes: vaxInfo.cvx,
+          forecastVaccineDescriptions: vaxInfo.desc,
+          doseNumber: vaxInfo.doseNum,
         );
       }
       continue;
@@ -447,6 +489,21 @@ Map<String, VaccineGroupForecast> _aggregateVaccineGroupForecasts(
           (a, b) => a < b ? a : b);
     }
 
+    // For multi-antigen groups, use the first non-empty best series for
+    // vaccine info (all antigens share vaccine codes at the group level).
+    var multiVaxInfo =
+        (cvx: <String>[], desc: <String>[], doseNum: null as int?);
+    for (final antigen in antigens) {
+      final bestList = bestByAntigen[antigen.targetDisease]!;
+      if (bestList.isNotEmpty) {
+        final info = _extractForecastVaccineInfo(bestList.first);
+        if (info.cvx.isNotEmpty) {
+          multiVaxInfo = info;
+          break;
+        }
+      }
+    }
+
     result[groupName] = VaccineGroupForecast(
       vaccineGroupName: groupName,
       status: vgStatus,
@@ -455,6 +512,9 @@ Map<String, VaccineGroupForecast> _aggregateVaccineGroupForecasts(
       pastDueDate: vgPastDue,
       latestDate: vgLatest,
       antigenNames: antigenNames,
+      forecastCvxCodes: multiVaxInfo.cvx,
+      forecastVaccineDescriptions: multiVaxInfo.desc,
+      doseNumber: multiVaxInfo.doseNum,
     );
   }
 

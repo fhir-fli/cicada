@@ -3,14 +3,14 @@
   "id" : "EvalStatus",
   "text" : {
     "status" : "generated",
-    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This  code system <code>http://fhirfli.dev/fhir/ig/cicada/CodeSystem/EvalStatus</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">valid<a name=\"EvalStatus-valid\"> </a></td><td>Valid</td><td>Valid</td></tr><tr><td style=\"white-space:nowrap\">not_valid<a name=\"EvalStatus-not_valid\"> </a></td><td>Not Valid</td><td>Not Valid</td></tr><tr><td style=\"white-space:nowrap\">extraneous<a name=\"EvalStatus-extraneous\"> </a></td><td>Extraneous</td><td>Extraneous</td></tr><tr><td style=\"white-space:nowrap\">sub_standard<a name=\"EvalStatus-sub_standard\"> </a></td><td>Substandard</td><td>Substandard</td></tr></table></div>"
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem EvalStatus</b></p><a name=\"EvalStatus\"> </a><a name=\"hcEvalStatus\"> </a><p>This  code system <code>http://fhirfli.dev/fhir/ig/cicada/CodeSystem/EvalStatus</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">valid<a name=\"EvalStatus-valid\"> </a></td><td>Valid</td><td>Valid</td></tr><tr><td style=\"white-space:nowrap\">not_valid<a name=\"EvalStatus-not_valid\"> </a></td><td>Not Valid</td><td>Not Valid</td></tr><tr><td style=\"white-space:nowrap\">extraneous<a name=\"EvalStatus-extraneous\"> </a></td><td>Extraneous</td><td>Extraneous</td></tr><tr><td style=\"white-space:nowrap\">sub_standard<a name=\"EvalStatus-sub_standard\"> </a></td><td>Substandard</td><td>Substandard</td></tr></table></div>"
   },
   "url" : "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/EvalStatus",
   "version" : "0.1.0",
   "name" : "EvalStatusCS",
   "title" : "Evaluation Status",
   "status" : "draft",
-  "date" : "2024-05-06T15:25:10-04:00",
+  "date" : "2026-02-11T14:37:07-05:00",
   "publisher" : "FHIR-FLI",
   "contact" : [{
     "name" : "FHIR-FLI",

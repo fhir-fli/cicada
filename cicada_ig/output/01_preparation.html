@@ -18,6 +18,7 @@
     <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
     <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
   	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
     <!-- Placeholder for child template CSS declarations -->
 
     <script type="text/javascript" src="fhir-table-scripts.js"> </script>
@@ -29,20 +30,22 @@
     <![endif]-->
 
     <!-- Favicons -->
-    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
-    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
-    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
-    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/icon-fhir-57.png"/>
     <link rel="shortcut icon" href="assets/ico/favicon.png"/>
   </head>
   <body onload="document.body.style.opacity='1'">
 
 	  <script src="assets/js/prism.js"></script>
-
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
     <style type="text/css">h2{--heading-prefix:"2"}
     h3,h4,h5,h6{--heading-prefix:"2"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
+
         <!-- Placeholder for child template header declarations -->
 
 
@@ -79,6 +82,31 @@
   <li>
     <a href="index.html">Home</a>
   </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Guide
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="01_preparation.html">Preparation</a>
+      </li>
+      <li>
+        <a href="02_logical-specification-concepts.html">Logical Specification Concepts</a>
+      </li>
+      <li>
+        <a href="03_processing-model.html">Processing Model</a>
+      </li>
+      <li>
+        <a href="04_evaluate-vaccine-dose-administered.html">Evaluate Vaccine Dose Administered</a>
+      </li>
+      <li>
+        <a href="05_forecast-dates-and-reasons.html">Forecast Dates and Reasons</a>
+      </li>
+      <li>
+        <a href="06_select-patient-series.html">Select Patient Series</a>
+      </li>
+    </ul>
+  </li>
   <li>
     <a href="artifacts.html">Artifacts</a>
   </li>
@@ -114,7 +142,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">The Cicada Vaccine Forecasting Engine and Guide - Local Development build (v0.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href="http://fhirfli.dev/fhir/ig/cicada/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">The Cicada Vaccine Forecasting Engine and Guide - Local Development build (v0.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://fhirfli.dev/fhir/ig/cicada/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
   <h2>Preparation</h2>
   
 
@@ -130,22 +158,62 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 
     <p><!-- white space is critical inside of capture --></p>
-<div>
-<!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown.-->
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#this-is-only-if-youre-interested-in-the-actual-code-behind-this-process" id="markdown-toc-this-is-only-if-youre-interested-in-the-actual-code-behind-this-process">This is only if you're interested in the actual code behind this process</a></li>
+  <li><a href="#build-pipeline" id="markdown-toc-build-pipeline">Build Pipeline</a></li>
+  <li><a href="#running-the-generator" id="markdown-toc-running-the-generator">Running the Generator</a></li>
+  <li><a href="#running-the-tests" id="markdown-toc-running-the-tests">Running the Tests</a></li>
+  <li><a href="#architecture-notes" id="markdown-toc-architecture-notes">Architecture Notes</a></li>
+</ul>
+
 </div>
-<h3 id="this-is-only-if-youre-interested-in-the-actual-code-ive-written-behind-this-process">This is only if you’re interested in the actual code I’ve written behind this process</h3>
+<h3 id="this-is-only-if-youre-interested-in-the-actual-code-behind-this-process">This is only if you're interested in the actual code behind this process</h3>
 
 <ul>
   <li>The full <a href="https://github.com/Dokotela/cicada">Github Repo is here</a></li>
-  <li>The generator is designed to turn the <a href="https://www.cdc.gov/vaccines/programs/iis/downloads/supporting-data-4.53-508.zip">Supporting Data</a> from <a href="https://www.cdc.gov/vaccines/programs/iis/cdsi.html">Clinical Decision Support for Immunization (CDSi)</a> into JSON and Dart Classes.</li>
-  <li>You’ll notice in those downloaded files, they include both XML and XLSX files. Unfortunately (at least for me) I don’t like either of these formats.</li>
-  <li>All of the XLSX files I’ve transferred into Gsheets, <a href="https://drive.google.com/drive/folders/1NL3xJH2Yl98-IvrWMp-Jf2kxMMiYzehj">the link can be found here</a></li>
-  <li>After converting them all to Gsheets format, I then went through and did a regex replace (<code class="language-plaintext highlighter-rouge">" "</code> for <code class="language-plaintext highlighter-rouge">"\n"</code>)</li>
-  <li>This is due because the carriage return (<code class="language-plaintext highlighter-rouge">"\n"</code> in Regex) screw up the Gsheets TSV parser in Dart</li>
-  <li>The <code class="language-plaintext highlighter-rouge">api.dart</code> file are credentials for a service account (let me know if you’d like help to do this on your own)</li>
-  <li>You can then run the cicada generator (root directory of the project, and run <code class="language-plaintext highlighter-rouge">./generate.sh</code>)</li>
-  <li>There is a time limit about how often you can request data from spreadsheets, so sometimes you do have to edit the sleep time in <a href="https://github.com/Dokotela/cicada/blob/main/cicada_generator/lib/utils/download_sheets.dart#L16">download_sheets</a></li>
-  <li>This generator also creates two sets of test cases. One with conditions, observations, etc. and one without</li>
+  <li>The CDSi <a href="https://www.cdc.gov/iis/cdsi/">Supporting Data</a> is published by the CDC as XML and Excel files. The generator converts these into JSON and Dart classes that the engine uses at runtime.</li>
+</ul>
+
+<h3 id="build-pipeline">Build Pipeline</h3>
+
+<p>The generator pipeline has four steps, all orchestrated by <code class="language-plaintext highlighter-rouge">generate.sh</code> in the project root:</p>
+
+<ol>
+  <li>
+    <p><strong>XML to JSON</strong> (<code class="language-plaintext highlighter-rouge">cicada_generator/lib/xml_to_json.dart</code>): Converts the CDSi XML files (one per antigen) into JSON. The script auto-detects the <code class="language-plaintext highlighter-rouge">Version_*</code> directory.</p>
+  </li>
+  <li>
+    <p><strong>Main Generator</strong> (<code class="language-plaintext highlighter-rouge">cicada_generator/lib/main.dart</code>): Reads the Excel schedule supporting data and the per-antigen JSON files, then generates Dart source files in <code class="language-plaintext highlighter-rouge">cicada/lib/generated_files/</code>. This step also merges a supplementary observation crosswalk (<code class="language-plaintext highlighter-rouge">cicada_generator/lib/crosswalk/observation_crosswalk.json</code>) that maps ICD-10-CM, LOINC, RxNorm, and CPT codes to CDSi observation codes. The CDC's native supporting data only includes SNOMED, CVX, and CDCPHINVS codes for observations.</p>
+  </li>
+  <li>
+    <p><strong>Test Case Generator</strong> (<code class="language-plaintext highlighter-rouge">cicada_generator/lib/test_cases/test_case_generator.dart</code>): Reads the CDC-provided test case Excel files, generates expected results as a Dart map (<code class="language-plaintext highlighter-rouge">test_doses.dart</code>), and copies the NDJSON test data to the test directory.</p>
+  </li>
+  <li>
+    <p><strong>Format</strong> (<code class="language-plaintext highlighter-rouge">dart format cicada</code>): Formats all generated Dart files.</p>
+  </li>
+</ol>
+
+<h3 id="running-the-generator">Running the Generator</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd cicada &amp;&amp; ./generate.sh
+</code></pre></div></div>
+
+<p>This will regenerate all supporting data files from the current CDSi source files. The generated files should not be hand-edited since they will be overwritten on the next run.</p>
+
+<h3 id="running-the-tests">Running the Tests</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd cicada &amp;&amp; dart test
+</code></pre></div></div>
+
+<p>The test suite reads <code class="language-plaintext highlighter-rouge">healthyTestCases.ndjson</code> (currently 1013 test cases from CDSi v4.45 test data), runs each through the forecasting engine, and compares the dose evaluation results against the CDC's expected outcomes.</p>
+
+<h3 id="architecture-notes">Architecture Notes</h3>
+
+<ul>
+  <li>All CDSi supporting data is generated code in <code class="language-plaintext highlighter-rouge">cicada/lib/generated_files/</code>. Each antigen has its own file (e.g., <code class="language-plaintext highlighter-rouge">measles.dart</code>, <code class="language-plaintext highlighter-rouge">hepb.dart</code>) containing an <code class="language-plaintext highlighter-rouge">AntigenSupportingData</code> instance. The <code class="language-plaintext highlighter-rouge">antigenSupportingDataMap</code> global provides disease-name-keyed lookup. <code class="language-plaintext highlighter-rouge">schedule_supporting_data.dart</code> contains global data including live virus conflicts, vaccine groups, CVX-to-antigen mappings, and observations.</li>
+  <li>The engine accepts a FHIR R4 <code class="language-plaintext highlighter-rouge">Parameters</code> resource containing the patient's demographics, immunization history, conditions, allergies, observations, procedures, and medications. It returns an <code class="language-plaintext highlighter-rouge">ImmunizationRecommendation</code> resource.</li>
+  <li>Observations (conditions, allergies, etc.) are matched against CDSi observation codes via a crosswalk that supports 7 code systems: SNOMED CT, CVX, CDCPHINVS, ICD-10-CM, LOINC, RxNorm, and CPT.</li>
 </ul>
 
 
@@ -167,7 +235,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://fhirfli.dev">FHIR-FLI</a>.  Package cicada.ig#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, May 6, 2024 15:25-0400">2024-05-06</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://fhirfli.dev">FHIR-FLI</a>.  Package cicada.ig#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Feb 11, 2026 14:37-0500">2026-02-11</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
@@ -184,7 +252,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <div class="container">  <!-- container -->
     </div>  <!-- /container -->
   </div>  <!-- /segment-post-footer -->
-  
+
   <!-- JS and analytics only. -->
   <!-- Bootstrap core JavaScript
   ================================================== -->
@@ -195,7 +263,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
   <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
   <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
-  
   <!-- Analytics Below
   ================================================== -->
   </body>

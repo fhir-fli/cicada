@@ -1,8 +1,13 @@
 <ImplementationGuide xmlns="http://hl7.org/fhir">
    <id value="cicada.ig"/>
    <text>
-      <status value="extensions"/>
+      <status value="generated"/>
       <div xmlns="http://www.w3.org/1999/xhtml">
+         <p class="res-header-id">
+            <b>Generated Narrative: ImplementationGuide cicada.ig</b>
+         </p>
+         <a name="cicada.ig"> </a>
+         <a name="hccicada.ig"> </a>
          <h2>CicadaIG</h2>
          <p>The official URL for this implementation guide is: </p>
          <pre>http://fhirfli.dev/fhir/ig/cicada/ImplementationGuide/cicada.ig</pre>
@@ -16,7 +21,7 @@
    <name value="CicadaIG"/>
    <title value="The Cicada Vaccine Forecasting Engine and Guide"/>
    <status value="draft"/>
-   <date value="2024-05-06T15:25:10-04:00"/>
+   <date value="2026-02-11T14:37:07-05:00"/>
    <publisher value="FHIR-FLI"/>
    <contact>
       <name value="FHIR-FLI"/>
@@ -35,7 +40,7 @@
       </extension>
       <uri value="http://terminology.hl7.org/ImplementationGuide/hl7.terminology"/>
       <packageId value="hl7.terminology.r4"/>
-      <version value="5.5.0"/>
+      <version value="7.0.1"/>
    </dependsOn>
    <dependsOn id="hl7ext">
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment">
@@ -43,7 +48,7 @@
       </extension>
       <uri value="http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions"/>
       <packageId value="hl7.fhir.uv.extensions.r4"/>
-      <version value="5.1.0"/>
+      <version value="5.2.0"/>
    </dependsOn>
    <definition>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
@@ -255,27 +260,12 @@
          </extension>
       </extension>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency">
-         <valueCode value="hl7.fhir.uv.tools#0.1.0"/>
+         <valueCode value="hl7.fhir.uv.tools.r4#0.9.0"/>
       </extension>
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
       <grouping id="-str-profile">
          <name value="Structures: Resource Profiles"/>
          <description value="These define constraints on FHIR resources for systems conforming to this implementation guide."/>
       </grouping>
-      
       <grouping id="-str-extension">
          <name value="Structures: Extension Definitions"/>
          <description value="These define constraints on FHIR data types for systems conforming to this implementation guide."/>
@@ -288,107 +278,18 @@
          <name value="Terminology: Code Systems"/>
          <description value="These define new code systems used by systems conforming to this implementation guide."/>
       </grouping>
-      
       <grouping id="-map-structuremap">
          <name value="Terminology: Structure Maps"/>
          <description value="These define transformations to convert between data structures used by systems conforming to this implementation guide."/>
       </grouping>
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
+      <grouping id="-map-conceptmap">
+         <name value="Terminology: Concept Maps"/>
+         <description value="These define transformations to convert between codes by systems conforming with this implementation guide."/>
+      </grouping>
+      <grouping id="-other">
+         <name value="Other"/>
+         <description value="These are resources that are used within this implementation guide that do not fit into one of the other categories."/>
+      </grouping>
       <resource>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
             <valueInteger value="999999999"/>
@@ -402,26 +303,9 @@
          <reference>
             <reference value="StructureDefinition/ReactionProfile"/>
          </reference>
-         <name value="Allergy Intolerance Profile with Vaccine Codes"/>
-         <description value="Profile for allergy intolerances where the offending agent must have a CVX or MVX code."/>
+         <name value="Allergy Intolerance Profile for Immunization Decision Support"/>
+         <description value="Profile for allergy intolerances relevant to immunization. The code (allergen/substance) may use SNOMED CT or ICD-10-CM. Reaction substances may use CVX, MVX, SNOMED CT, or RxNorm."/>
          <exampleBoolean value="false"/>
-         <groupingId value="-str-profile"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
-            <valueInteger value="999999999"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="StructureDefinition:resource"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="StructureDefinition-antigen-supporting-data.html"/>
-         </extension>
-         <reference>
-            <reference value="StructureDefinition/antigen-supporting-data"/>
-         </reference>
-         <name value="Antigen Supporting Data"/>
-         <description value="A resource to store supporting data for antigens including target disease, vaccine groups, immunity criteria, contraindications, and vaccination series."/>
          <groupingId value="-str-profile"/>
       </resource>
       <resource>
@@ -438,25 +322,7 @@
             <reference value="StructureDefinition/VaccineConditionFhir"/>
          </reference>
          <name value="Condition Profile with Vaccine Condition Codes"/>
-         <description value="Profile for conditions where the code must be from the Vaccine Condition Codes value set."/>
-         <exampleBoolean value="false"/>
-         <groupingId value="-str-profile"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
-            <valueInteger value="999999999"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="StructureDefinition:resource"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="StructureDefinition-VaccineObservationFhir.html"/>
-         </extension>
-         <reference>
-            <reference value="StructureDefinition/VaccineObservationFhir"/>
-         </reference>
-         <name value="Condition Profile with Vaccine Condition Codes"/>
-         <description value="Profile for conditions where the code must be from the Vaccine Condition Codes value set."/>
+         <description value="Profile for conditions where the code must be from the Vaccine Condition Codes value set. Accepts SNOMED CT and ICD-10-CM coded conditions."/>
          <exampleBoolean value="false"/>
          <groupingId value="-str-profile"/>
       </resource>
@@ -492,7 +358,7 @@
             <reference value="StructureDefinition/ProcedureProfile"/>
          </reference>
          <name value="Immunization Procedures Profile"/>
-         <description value="Profile for medical procedures related to immunization based on SNOMED CT codes."/>
+         <description value="Profile for medical procedures related to immunization based on SNOMED CT or CPT codes."/>
          <exampleBoolean value="false"/>
          <groupingId value="-str-profile"/>
       </resource>
@@ -576,13 +442,14 @@
             <valueString value="StructureDefinition:resource"/>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="StructureDefinition-schedule-supporting-data.html"/>
+            <valueUri value="StructureDefinition-VaccineObservationFhir.html"/>
          </extension>
          <reference>
-            <reference value="StructureDefinition/schedule-supporting-data"/>
+            <reference value="StructureDefinition/VaccineObservationFhir"/>
          </reference>
-         <name value="Schedule Supporting Data"/>
-         <description value="This resource consolidates various mapping and conflict information related to vaccine scheduling to support decision-making processes."/>
+         <name value="Observation Profile for Immunization Decision Support"/>
+         <description value="Profile for Observation resources carrying lab evidence of immunity or other findings relevant to immunization decisions. Codes may be from SNOMED CT, ICD-10-CM, or LOINC."/>
+         <exampleBoolean value="false"/>
          <groupingId value="-str-profile"/>
       </resource>
       <resource>
@@ -953,6 +820,42 @@
             <valueString value="ValueSet"/>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="ValueSet-vaccine-medication-codes-rxnorm.html"/>
+         </extension>
+         <reference>
+            <reference value="ValueSet/vaccine-medication-codes-rxnorm"/>
+         </reference>
+         <name value="Immunization-Relevant Medications (RxNorm)"/>
+         <description value="RxNorm codes for medications relevant to immunization decision support, including antivirals and aspirin."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-valueset"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="ValueSet"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="ValueSet-immunization-procedures-cpt.html"/>
+         </extension>
+         <reference>
+            <reference value="ValueSet/immunization-procedures-cpt"/>
+         </reference>
+         <name value="Immunization-Relevant Procedures (CPT)"/>
+         <description value="CPT codes for procedures relevant to immunization decision support, including splenectomy and cochlear implant."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-valueset"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="ValueSet"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
             <valueUri value="ValueSet-interval-reason.html"/>
          </extension>
          <reference>
@@ -960,6 +863,24 @@
          </reference>
          <name value="Interval Reason"/>
          <description value="This value set includes codes for the reason an interval is considered to be invalid."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-valueset"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="ValueSet"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="ValueSet-vaccine-lab-evidence-of-immunity-loinc.html"/>
+         </extension>
+         <reference>
+            <reference value="ValueSet/vaccine-lab-evidence-of-immunity-loinc"/>
+         </reference>
+         <name value="Lab Evidence of Immunity (LOINC)"/>
+         <description value="LOINC codes for laboratory tests that provide evidence of immunity, mapped to CDSi observation codes for immunization decision support."/>
          <exampleBoolean value="false"/>
          <groupingId value="-term-valueset"/>
       </resource>
@@ -1032,6 +953,24 @@
          </reference>
          <name value="Vaccine Condition Codes"/>
          <description value="Value set for conditions based on SNOMED CT, that may impact immunization."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-valueset"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="ValueSet"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="ValueSet-vaccine-condition-codes-icd10.html"/>
+         </extension>
+         <reference>
+            <reference value="ValueSet/vaccine-condition-codes-icd10"/>
+         </reference>
+         <name value="Vaccine Condition Codes (ICD-10-CM)"/>
+         <description value="Value set for conditions based on ICD-10-CM that may impact immunization decisions, mapped to CDSi observation codes."/>
          <exampleBoolean value="false"/>
          <groupingId value="-term-valueset"/>
       </resource>
@@ -1232,6 +1171,76 @@
          <exampleBoolean value="false"/>
          <groupingId value="-map-structuremap"/>
       </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="ConceptMap"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="ConceptMap-Icd10ToCdsiObservation.html"/>
+         </extension>
+         <reference>
+            <reference value="ConceptMap/Icd10ToCdsiObservation"/>
+         </reference>
+         <name value="ICD-10-CM to CDSi Observation Code Map"/>
+         <description value="Maps ICD-10-CM diagnosis codes to CDSi observation codes used in immunization decision support."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-map-conceptmap"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="ConceptMap"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="ConceptMap-SnomedToCdsiObservation.html"/>
+         </extension>
+         <reference>
+            <reference value="ConceptMap/SnomedToCdsiObservation"/>
+         </reference>
+         <name value="SNOMED CT to CDSi Observation Code Map"/>
+         <description value="Maps SNOMED CT codes to CDSi observation codes used in immunization decision support."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-map-conceptmap"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:resourcedefn"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-antigen-supporting-data.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/antigen-supporting-data"/>
+         </reference>
+         <name value="Antigen Supporting Data"/>
+         <description value="A resource to store supporting data for antigens including target disease, vaccine groups, immunity criteria, contraindications, and vaccination series."/>
+         <groupingId value="-other"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
+            <valueInteger value="999999999"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:resourcedefn"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-schedule-supporting-data.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/schedule-supporting-data"/>
+         </reference>
+         <name value="Schedule Supporting Data"/>
+         <description value="This resource consolidates various mapping and conflict information related to vaccine scheduling to support decision-making processes."/>
+         <groupingId value="-other"/>
+      </resource>
       <page>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
             <valueUrl value="toc.html"/>
@@ -1244,7 +1253,7 @@
                <valueUrl value="index.html"/>
             </extension>
             <nameUrl value="index.html"/>
-            <title value="Home"/>
+            <title value="Cicada IG Home"/>
             <generation value="markdown"/>
          </page>
          <page>
@@ -1288,21 +1297,24 @@
             <generation value="markdown"/>
          </page>
          <page>
+            <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+               <valueUrl value="06_select-patient-series.html"/>
+            </extension>
+            <nameUrl value="06_select-patient-series.html"/>
+            <title value="Select Patient Series"/>
+            <generation value="markdown"/>
+         </page>
+         <page>
             <nameUrl value="artifacts.html"/>
             <title value="Artifacts Summary"/>
             <generation value="html"/>
             <page>
                <nameUrl value="StructureDefinition-ReactionProfile.html"/>
-               <title value="Allergy Intolerance Profile with Vaccine Codes"/>
+               <title value="Allergy Intolerance Profile for Immunization Decision Support"/>
                <generation value="generated"/>
             </page>
             <page>
                <nameUrl value="StructureDefinition-VaccineConditionFhir.html"/>
-               <title value="Condition Profile with Vaccine Condition Codes"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="StructureDefinition-VaccineObservationFhir.html"/>
                <title value="Condition Profile with Vaccine Condition Codes"/>
                <generation value="generated"/>
             </page>
@@ -1337,6 +1349,11 @@
                <generation value="generated"/>
             </page>
             <page>
+               <nameUrl value="StructureDefinition-VaccineObservationFhir.html"/>
+               <title value="Observation Profile for Immunization Decision Support"/>
+               <generation value="generated"/>
+            </page>
+            <page>
                <nameUrl value="StructureDefinition-vax-patient.html"/>
                <title value="Vaccination Patient"/>
                <generation value="generated"/>
@@ -1344,16 +1361,6 @@
             <page>
                <nameUrl value="StructureDefinition-Vaccine.html"/>
                <title value="Vaccine"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="StructureDefinition-antigen-supporting-data.html"/>
-               <title value="Antigen Supporting Data"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="StructureDefinition-schedule-supporting-data.html"/>
-               <title value="Schedule Supporting Data"/>
                <generation value="generated"/>
             </page>
             <page>
@@ -1447,8 +1454,23 @@
                <generation value="generated"/>
             </page>
             <page>
+               <nameUrl value="ValueSet-vaccine-medication-codes-rxnorm.html"/>
+               <title value="Immunization-Relevant Medications (RxNorm)"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="ValueSet-immunization-procedures-cpt.html"/>
+               <title value="Immunization-Relevant Procedures (CPT)"/>
+               <generation value="generated"/>
+            </page>
+            <page>
                <nameUrl value="ValueSet-interval-reason.html"/>
                <title value="Interval Reason"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="ValueSet-vaccine-lab-evidence-of-immunity-loinc.html"/>
+               <title value="Lab Evidence of Immunity (LOINC)"/>
                <generation value="generated"/>
             </page>
             <page>
@@ -1469,6 +1491,11 @@
             <page>
                <nameUrl value="ValueSet-vaccine-condition-codes-snomed.html"/>
                <title value="Vaccine Condition Codes"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="ValueSet-vaccine-condition-codes-icd10.html"/>
+               <title value="Vaccine Condition Codes (ICD-10-CM)"/>
                <generation value="generated"/>
             </page>
             <page>
@@ -1524,6 +1551,26 @@
             <page>
                <nameUrl value="StructureMap-MapVaccineCodes.html"/>
                <title value="MapVaccineCodes"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="ConceptMap-Icd10ToCdsiObservation.html"/>
+               <title value="ICD-10-CM to CDSi Observation Code Map"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="ConceptMap-SnomedToCdsiObservation.html"/>
+               <title value="SNOMED CT to CDSi Observation Code Map"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="StructureDefinition-antigen-supporting-data.html"/>
+               <title value="Antigen Supporting Data"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="StructureDefinition-schedule-supporting-data.html"/>
+               <title value="Schedule Supporting Data"/>
                <generation value="generated"/>
             </page>
          </page>

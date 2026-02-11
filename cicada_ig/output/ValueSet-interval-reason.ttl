@@ -1,5 +1,6 @@
 @prefix fhir: <http://hl7.org/fhir/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
@@ -10,14 +11,17 @@
   fhir:id [ fhir:v "interval-reason"] ; # 
   fhir:text [
      fhir:status [ fhir:v "extensions" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>Include these codes as defined in <a href=\"CodeSystem-IntervalReason.html\"><code>http://fhirfli.dev/fhir/ig/cicada/CodeSystem/IntervalReason</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td><a href=\"CodeSystem-IntervalReason.html#IntervalReason-tooLate\">tooLate</a></td><td>Interval: too late</td><td>Interval: too late</td></tr><tr><td><a href=\"CodeSystem-IntervalReason.html#IntervalReason-tooShort\">tooShort</a></td><td>Interval: too short</td><td>Interval: too short</td></tr><tr><td><a href=\"CodeSystem-IntervalReason.html#IntervalReason-gracePeriod\">gracePeriod</a></td><td>Interval: grace period</td><td>Interval: grace period</td></tr></table></li></ul></div>"
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet interval-reason</b></p><a name=\"interval-reason\"> </a><a name=\"hcinterval-reason\"> </a><ul><li>Include these codes as defined in <a href=\"CodeSystem-IntervalReason.html\"><code>http://fhirfli.dev/fhir/ig/cicada/CodeSystem/IntervalReason</code></a><span title=\"Version is not explicitly stated, which means it is fixed to the version provided in this specification\"> version ?0.1.0</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td><a href=\"CodeSystem-IntervalReason.html#IntervalReason-tooLate\">tooLate</a></td><td>Interval: too late</td><td>Interval: too late</td></tr><tr><td><a href=\"CodeSystem-IntervalReason.html#IntervalReason-tooShort\">tooShort</a></td><td>Interval: too short</td><td>Interval: too short</td></tr><tr><td><a href=\"CodeSystem-IntervalReason.html#IntervalReason-gracePeriod\">gracePeriod</a></td><td>Interval: grace period</td><td>Interval: grace period</td></tr></table></li></ul></div>"^^rdf:XMLLiteral ]
   ] ; # 
-  fhir:url [ fhir:v "http://fhirfli.dev/fhir/ig/cicada/ValueSet/interval-reason"^^xsd:anyURI] ; # 
+  fhir:url [
+     fhir:v "http://fhirfli.dev/fhir/ig/cicada/ValueSet/interval-reason"^^xsd:anyURI ;
+     fhir:l <http://fhirfli.dev/fhir/ig/cicada/ValueSet/interval-reason>
+  ] ; # 
   fhir:version [ fhir:v "0.1.0"] ; # 
   fhir:name [ fhir:v "IntervalReasonVS"] ; # 
   fhir:title [ fhir:v "Interval Reason"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2024-05-06T15:25:10-04:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-02-11T14:37:07-05:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "FHIR-FLI"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "FHIR-FLI" ] ;
@@ -29,7 +33,10 @@
   fhir:description [ fhir:v "This value set includes codes for the reason an interval is considered to be invalid."] ; # 
   fhir:compose [
      fhir:include ( [
-       fhir:system [ fhir:v "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/IntervalReason"^^xsd:anyURI ] ;
+       fhir:system [
+         fhir:v "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/IntervalReason"^^xsd:anyURI ;
+         fhir:l <http://fhirfli.dev/fhir/ig/cicada/CodeSystem/IntervalReason>
+       ] ;
        fhir:concept ( [
          fhir:code [ fhir:v "tooLate" ] ;
          fhir:display [ fhir:v "Interval: too late" ]

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="vaccine-medication-codes-rxnorm"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ValueSet vaccine-medication-codes-rxnorm</b></p><a name="vaccine-medication-codes-rxnorm"> </a><a name="hcvaccine-medication-codes-rxnorm"> </a><ul><li>Include these codes as defined in <a href="http://www.nlm.nih.gov/research/umls/rxnorm"><code>http://www.nlm.nih.gov/research/umls/rxnorm</code></a><span title="Version is not explicitly stated. No matching Code System found"> version Not Stated (use latest from terminology server)</span><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td>281</td><td>Acyclovir</td></tr><tr><td>24811</td><td>Famciclovir</td></tr><tr><td>39786</td><td>Valacyclovir</td></tr><tr><td>1191</td><td>Aspirin</td></tr></table></li></ul></div>
+  </text>
+  <url value="http://fhirfli.dev/fhir/ig/cicada/ValueSet/vaccine-medication-codes-rxnorm"/>
+  <version value="0.1.0"/>
+  <name value="VaccineMedicationCodesRxnorm"/>
+  <title value="Immunization-Relevant Medications (RxNorm)"/>
+  <status value="active"/>
+  <date value="2026-02-11T14:37:07-05:00"/>
+  <publisher value="FHIR-FLI"/>
+  <contact>
+    <name value="FHIR-FLI"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://fhirfli.dev"/>
+    </telecom>
+  </contact>
+  <description value="RxNorm codes for medications relevant to immunization decision support, including antivirals and aspirin."/>
+  <compose>
+    <include>
+      <system value="http://www.nlm.nih.gov/research/umls/rxnorm"/>
+      <concept>
+        <code value="281"/>
+        <display value="Acyclovir"/>
+      </concept>
+      <concept>
+        <code value="24811"/>
+        <display value="Famciclovir"/>
+      </concept>
+      <concept>
+        <code value="39786"/>
+        <display value="Valacyclovir"/>
+      </concept>
+      <concept>
+        <code value="1191"/>
+        <display value="Aspirin"/>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

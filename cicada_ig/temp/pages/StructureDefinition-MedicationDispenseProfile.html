@@ -47,10 +47,10 @@
   <div id="tabs">
     <ul>
       <li>
-        <a href="#tabs-diff">Differential Table</a>
+        <a href="#tabs-key">Key Elements Table</a>
       </li>
       <li>
-        <a href="#tabs-key">Key Elements Table</a>
+        <a href="#tabs-diff">Differential Table</a>
       </li>
       <li>
         <a href="#tabs-snap">Snapshot Table</a>
@@ -77,6 +77,26 @@
         <a href="#tabs-all">All</a>
       </li>
     </ul>
+    <a name="tabs-key"> </a>
+    <div id="tabs-key">
+      <div id="tbl-key">
+        <div id="tbl-key-inner">
+          {%include StructureDefinition-MedicationDispenseProfile-snapshot-by-key.xhtml%}
+          <!--Terminology Bindings heading in the fragment -->
+          {%include StructureDefinition-MedicationDispenseProfile-tx-key.xhtml%}
+        
+          {% capture invariantskey %}
+            {% include StructureDefinition-MedicationDispenseProfile-inv-key.xhtml %}
+          {% endcapture %}
+          <!-- 218 is size of empty table -->
+          {% unless invariantskey.size <= 218 %}
+            <a name="inv-key"> </a>
+            <!--Constraints  heading in the fragment -->
+            {% include StructureDefinition-MedicationDispenseProfile-inv-key.xhtml %}
+          {% endunless%}
+        </div>
+      </div>
+    </div>
     <a name="tabs-diff"> </a>
     <div id="tabs-diff">
       <div id="tbl-diff">
@@ -93,29 +113,9 @@
           {% endcapture %}
           <!-- 218 is size of empty table -->
           {% unless invariantsdiff.size <= 218 %}
-            <a name="inv"> </a>
+            <a name="inv-diff"> </a>
             <!--Constraints  heading in the fragment -->
             {% include StructureDefinition-MedicationDispenseProfile-inv-diff.xhtml %}
-          {% endunless%}
-        </div>
-      </div>
-    </div>
-    <a name="tabs-key"> </a>
-    <div id="tabs-key">
-      <div id="tbl-key">
-        <div id="tbl-key-inner">
-          {%include StructureDefinition-MedicationDispenseProfile-snapshot-by-key.xhtml%}
-          <!--Terminology Bindings heading in the fragment -->
-          {%include StructureDefinition-MedicationDispenseProfile-tx-key.xhtml%}
-        
-          {% capture invariantskey %}
-            {% include StructureDefinition-MedicationDispenseProfile-inv-key.xhtml %}
-          {% endcapture %}
-          <!-- 218 is size of empty table -->
-          {% unless invariantskey.size <= 218 %}
-            <a name="inv"> </a>
-            <!--Constraints  heading in the fragment -->
-            {% include StructureDefinition-MedicationDispenseProfile-inv-key.xhtml %}
           {% endunless%}
         </div>
       </div>
@@ -133,7 +133,7 @@
           {% endcapture %}
           <!-- 218 is size of empty table -->
           {% unless invariants.size <= 218 %}
-            <a name="inv"> </a>
+            <a name="inv-snap"> </a>
             <!--Constraints  heading in the fragment -->
             {% include StructureDefinition-MedicationDispenseProfile-inv.xhtml %}
           {% endunless%}
@@ -183,34 +183,12 @@
     </div>
     <a name="tabs-all"> </a>
     <div id="tabs-all">
-      <div id="all-tbl-diff">
-        <p>
-          <b>Differential View</b>
-        </p>
-        <p>This structure is derived from <a href="{{site.data.structuredefinitions['MedicationDispenseProfile'].basepath}}">{{site.data.structuredefinitions['MedicationDispenseProfile'].basename}}</a>
-        </p>
-        <div id="all-tbl-diff-inner">
-          {%include StructureDefinition-MedicationDispenseProfile-diff.xhtml%}
-          <!--Terminology Bindings heading in the fragment -->
-          {%include StructureDefinition-MedicationDispenseProfile-tx-diff.xhtml%}
-        
-          {% capture invariantsdiff %}
-            {% include StructureDefinition-MedicationDispenseProfile-inv-diff.xhtml %}
-          {% endcapture %}
-          <!-- 218 is size of empty table -->
-          {% unless invariantsdiff.size <= 218 %}
-            <a name="inv"> </a>
-            <!--Constraints  heading in the fragment -->
-            {% include StructureDefinition-MedicationDispenseProfile-inv-diff.xhtml %}
-          {% endunless%}
-        </div>
-      </div>
       <div id="all-tbl-key">
         <p>
           <b>Key Elements View</b>
         </p>
         <div id="all-tbl-key-inner">
-          {%include StructureDefinition-MedicationDispenseProfile-snapshot-by-key.xhtml%}
+          {%include StructureDefinition-MedicationDispenseProfile-snapshot-by-key-all.xhtml%}
           <!--Terminology Bindings heading in the fragment -->
           {%include StructureDefinition-MedicationDispenseProfile-tx-key.xhtml%}
         
@@ -219,9 +197,31 @@
           {% endcapture %}
           <!-- 218 is size of empty table -->
           {% unless invariantskey.size <= 218 %}
-            <a name="inv"> </a>
+            <a name="inv-all-key"> </a>
             <!--Constraints  heading in the fragment -->
             {% include StructureDefinition-MedicationDispenseProfile-inv-key.xhtml %}
+          {% endunless%}
+        </div>
+      </div>
+      <div id="all-tbl-diff">
+        <p>
+          <b>Differential View</b>
+        </p>
+        <p>This structure is derived from <a href="{{site.data.structuredefinitions['MedicationDispenseProfile'].basepath}}">{{site.data.structuredefinitions['MedicationDispenseProfile'].basename}}</a>
+        </p>
+        <div id="all-tbl-diff-inner">
+          {%include StructureDefinition-MedicationDispenseProfile-diff-all.xhtml%}
+          <!--Terminology Bindings heading in the fragment -->
+          {%include StructureDefinition-MedicationDispenseProfile-tx-diff.xhtml%}
+        
+          {% capture invariantsdiff %}
+            {% include StructureDefinition-MedicationDispenseProfile-inv-diff.xhtml %}
+          {% endcapture %}
+          <!-- 218 is size of empty table -->
+          {% unless invariantsdiff.size <= 218 %}
+            <a name="inv-all-diff"> </a>
+            <!--Constraints  heading in the fragment -->
+            {% include StructureDefinition-MedicationDispenseProfile-inv-diff.xhtml %}
           {% endunless%}
         </div>
       </div>
@@ -230,7 +230,7 @@
           <b>Snapshot View</b>
         </p>
         <div id="all-tbl-snap-inner">
-          {%include StructureDefinition-MedicationDispenseProfile-snapshot.xhtml%}
+          {%include StructureDefinition-MedicationDispenseProfile-snapshot-all.xhtml%}
           <!--Terminology Bindings heading in the fragment -->
           {%include StructureDefinition-MedicationDispenseProfile-tx.xhtml%}
         
@@ -239,7 +239,7 @@
           {% endcapture %}
           <!-- 218 is size of empty table -->
           {% unless invariants.size <= 218 %}
-            <a name="inv"> </a>
+            <a name="inv-all-snap"> </a>
             <!--Constraints  heading in the fragment -->
             {% include StructureDefinition-MedicationDispenseProfile-inv.xhtml %}
           {% endunless%}
@@ -279,7 +279,7 @@
         <p>This structure is derived from <a href="{{site.data.structuredefinitions['MedicationDispenseProfile'].basepath}}">{{site.data.structuredefinitions['MedicationDispenseProfile'].basename}}</a>
         </p>
         <div id="all-summ-inner">
-          {%include StructureDefinition-MedicationDispenseProfile-summary.xhtml%}
+          {%include StructureDefinition-MedicationDispenseProfile-summary-all.xhtml%}
         </div>
       </div>
     </div>

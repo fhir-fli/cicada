@@ -5,17 +5,21 @@
   "igName" : "CicadaIG",
   "packageId" : "cicada.ig",
   "igVer" : "0.1.0",
-  "errorCount" : 73,
+  "errorCount" : 79,
   "version" : "4.0.1",
+  "releaseLabel" : "ci-build",
+  "releaseLabellang" : {
+  },
   "revision" : "a53ec6ee1b",
   "versionFull" : "4.0.1-a53ec6ee1b",
   "toolingVersion" : "5.0.0",
   "toolingRevision" : "3",
   "toolingVersionFull" : "5.0.0 (3)",
-  "totalFiles" : 48,
-  "processedFiles" : 66,
-  "genDate" : "Mon, May 6, 2024 15:25-0400",
-  "genDay" : "06/05/2024",
+  "genDate" : "Wed, Feb 11, 2026 14:37-0500",
+  "genDay" : "11/02/2026",
+  "totalFiles" : 68,
+  "processedFiles" : 72,
+  "repoSource" : "https://github.com/fhir-fli/cicada.git",
   "resourceTypes" : [
     "Account",
     "ActivityDefinition",
@@ -237,29 +241,37 @@
     "id" : "cicada.ig",
     "name" : "CicadaIG",
     "title" : "The Cicada Vaccine Forecasting Engine and Guide",
+    "titlelang" : {
+    },
     "url" : "http://fhirfli.dev/fhir/ig/cicada/ImplementationGuide/cicada.ig",
     "version" : "0.1.0",
     "status" : "draft",
     "experimental" : false,
     "publisher" : "FHIR-FLI",
-    "gitstatus" : "main",
+    "publisherlang" : {
+    },
     "contact" : [
       {
         "name" : "FHIR-FLI",
         "telecom" : ["http://fhirfli.dev"]
       }
     ],
-    "date" : "2024-05-06T15:25:10-04:00",
+    "date" : "2026-02-11T14:37:07-05:00",
     "description" : "Example Implementation Guide for using the CDC's Clinical Decision Support for Immunization",
+    "descriptionlang" : {
+    },
+    "tx-server" : "https://tx.fhir.org/r4",
     "copyright" : null,
+    "copyrightlang" : {
+    },
     "fhirVersion" : "4.0.1"
   },
   "basespec" : "http://hl7.org/fhir/R4",
   "ver" : {
     "basespec" : null,
-    "hl7tx" : "http://terminology.hl7.org/5.5.0",
-    "hl7ext" : "http://hl7.org/fhir/extensions/5.1.0",
-    "igtools" : "http://hl7.org/fhir/tools/0.1.0"
+    "hl7tx" : "http://terminology.hl7.org/7.0.1",
+    "hl7ext" : "http://hl7.org/fhir/extensions/5.2.0",
+    "igtools" : "http://hl7.org/fhir/tools/0.9.0"
   },
   "hl7tx" : "http://terminology.hl7.org",
   "hl7ext" : "http://hl7.org/fhir/extensions",

@@ -18,6 +18,7 @@
     <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
     <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
   	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
     <!-- Placeholder for child template CSS declarations -->
 
     <script type="text/javascript" src="fhir-table-scripts.js"> </script>
@@ -29,20 +30,22 @@
     <![endif]-->
 
     <!-- Favicons -->
-    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
-    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
-    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
-    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/icon-fhir-57.png"/>
     <link rel="shortcut icon" href="assets/ico/favicon.png"/>
   </head>
   <body onload="document.body.style.opacity='1'">
 
 	  <script src="assets/js/prism.js"></script>
-
-    <style type="text/css">h2{--heading-prefix:"7.35"}
-    h3,h4,h5,h6{--heading-prefix:"7.35"}</style>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"8.36"}
+    h3,h4,h5,h6{--heading-prefix:"8.36"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
+
         <!-- Placeholder for child template header declarations -->
 
 
@@ -79,6 +82,31 @@
   <li>
     <a href="index.html">Home</a>
   </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Guide
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="01_preparation.html">Preparation</a>
+      </li>
+      <li>
+        <a href="02_logical-specification-concepts.html">Logical Specification Concepts</a>
+      </li>
+      <li>
+        <a href="03_processing-model.html">Processing Model</a>
+      </li>
+      <li>
+        <a href="04_evaluate-vaccine-dose-administered.html">Evaluate Vaccine Dose Administered</a>
+      </li>
+      <li>
+        <a href="05_forecast-dates-and-reasons.html">Forecast Dates and Reasons</a>
+      </li>
+      <li>
+        <a href="06_select-patient-series.html">Select Patient Series</a>
+      </li>
+    </ul>
+  </li>
   <li>
     <a href="artifacts.html">Artifacts</a>
   </li>
@@ -107,7 +135,7 @@
           <div class="inner-wrapper">
 
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">The Cicada Vaccine Forecasting Engine and Guide - Local Development build (v0.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href="http://fhirfli.dev/fhir/ig/cicada/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">The Cicada Vaccine Forecasting Engine and Guide - Local Development build (v0.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://fhirfli.dev/fhir/ig/cicada/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
   
 
 
@@ -175,7 +203,7 @@
         
           Draft
           
-            as of 2024-05-06
+            as of 2026-02-11
           
         
       </td>
@@ -215,19 +243,14 @@
 
 <!-- Content Logical Definition heading in the fragment -->
   <h3>Logical Definition (CLD)</h3>
-<div xmlns="http://www.w3.org/1999/xhtml"><ul><li>Include these codes as defined in <a href="CodeSystem-PreferredAllowedReason.html"><code>http://fhirfli.dev/fhir/ig/cicada/CodeSystem/PreferredAllowedReason</code></a><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td><a href="CodeSystem-PreferredAllowedReason.html#PreferredAllowedReason-notAPreferableOrAllowableVaccine">notAPreferableOrAllowableVaccine</a></td><td>Not a preferable or allowable vaccine</td><td>Not a preferable or allowable vaccine</td></tr><tr><td><a href="CodeSystem-PreferredAllowedReason.html#PreferredAllowedReason-wrongTradeName">wrongTradeName</a></td><td>Wrong trade name</td><td>Wrong trade name</td></tr><tr><td><a href="CodeSystem-PreferredAllowedReason.html#PreferredAllowedReason-lessThanRecommendedVolume">lessThanRecommendedVolume</a></td><td>Less than recommended volume</td><td>Less than recommended volume</td></tr><tr><td><a href="CodeSystem-PreferredAllowedReason.html#PreferredAllowedReason-administeredOutsideOfPreferredAgeRange">administeredOutsideOfPreferredAgeRange</a></td><td>Administered outside of preferred age range</td><td>Administered outside of preferred age range</td></tr><tr><td><a href="CodeSystem-PreferredAllowedReason.html#PreferredAllowedReason-noPreferredTypes">noPreferredTypes</a></td><td>No preferred types</td><td>No preferred types</td></tr><tr><td><a href="CodeSystem-PreferredAllowedReason.html#PreferredAllowedReason-noAllowedTypes">noAllowedTypes</a></td><td>No allowed types</td><td>No allowed types</td></tr></table></li></ul></div>
+<div xmlns="http://www.w3.org/1999/xhtml" data-fhir="generated"><p class="res-header-id"></p><a name="preferred-allowed-reason"> </a><a name="hcpreferred-allowed-reason"> </a>
+<ul><li>Include these codes as defined in <a href="CodeSystem-PreferredAllowedReason.html"><code>http://fhirfli.dev/fhir/ig/cicada/CodeSystem/PreferredAllowedReason</code></a><span title="Version is not explicitly stated, which means it is fixed to the version provided in this specification"> version &#x1F4E6;0.1.0</span><table class="none" data-fhir="generated"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td><a href="CodeSystem-PreferredAllowedReason.html#PreferredAllowedReason-notAPreferableOrAllowableVaccine">notAPreferableOrAllowableVaccine</a></td><td>Not a preferable or allowable vaccine</td><td>Not a preferable or allowable vaccine</td></tr><tr><td><a href="CodeSystem-PreferredAllowedReason.html#PreferredAllowedReason-wrongTradeName">wrongTradeName</a></td><td>Wrong trade name</td><td>Wrong trade name</td></tr><tr><td><a href="CodeSystem-PreferredAllowedReason.html#PreferredAllowedReason-lessThanRecommendedVolume">lessThanRecommendedVolume</a></td><td>Less than recommended volume</td><td>Less than recommended volume</td></tr><tr><td><a href="CodeSystem-PreferredAllowedReason.html#PreferredAllowedReason-administeredOutsideOfPreferredAgeRange">administeredOutsideOfPreferredAgeRange</a></td><td>Administered outside of preferred age range</td><td>Administered outside of preferred age range</td></tr><tr><td><a href="CodeSystem-PreferredAllowedReason.html#PreferredAllowedReason-noPreferredTypes">noPreferredTypes</a></td><td>No preferred types</td><td>No preferred types</td></tr><tr><td><a href="CodeSystem-PreferredAllowedReason.html#PreferredAllowedReason-noAllowedTypes">noAllowedTypes</a></td><td>No allowed types</td><td>No allowed types</td></tr></table></li></ul></div>
 
   <p>&#160;</p>
   <a name="expansion"> </a>
   <h3 id="expansion">Expansion</h3>
 
-  <div xmlns="http://www.w3.org/1999/xhtml"><p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on <a href="CodeSystem-PreferredAllowedReason.html">codesystem Reasons why certain doses are Preferred or Allowed doses v0.1.0 (CodeSystem)</a></p><p>This value set contains 6 concepts.</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>System</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap"><a name="http---fhirfli.dev-fhir-ig-cicada-CodeSystem-PreferredAllowedReason-notAPreferableOrAllowableVaccine"> </a>  <a href="CodeSystem-PreferredAllowedReason.html#PreferredAllowedReason-notAPreferableOrAllowableVaccine">notAPreferableOrAllowableVaccine</a></td><td>http://fhirfli.dev/fhir/ig/cicada/CodeSystem/PreferredAllowedReason</td><td>Not a preferable or allowable vaccine</td><td><div><p>Not a preferable or allowable vaccine</p>
-</div></td></tr><tr><td style="white-space:nowrap"><a name="http---fhirfli.dev-fhir-ig-cicada-CodeSystem-PreferredAllowedReason-wrongTradeName"> </a>  <a href="CodeSystem-PreferredAllowedReason.html#PreferredAllowedReason-wrongTradeName">wrongTradeName</a></td><td>http://fhirfli.dev/fhir/ig/cicada/CodeSystem/PreferredAllowedReason</td><td>Wrong trade name</td><td><div><p>Wrong trade name</p>
-</div></td></tr><tr><td style="white-space:nowrap"><a name="http---fhirfli.dev-fhir-ig-cicada-CodeSystem-PreferredAllowedReason-lessThanRecommendedVolume"> </a>  <a href="CodeSystem-PreferredAllowedReason.html#PreferredAllowedReason-lessThanRecommendedVolume">lessThanRecommendedVolume</a></td><td>http://fhirfli.dev/fhir/ig/cicada/CodeSystem/PreferredAllowedReason</td><td>Less than recommended volume</td><td><div><p>Less than recommended volume</p>
-</div></td></tr><tr><td style="white-space:nowrap"><a name="http---fhirfli.dev-fhir-ig-cicada-CodeSystem-PreferredAllowedReason-administeredOutsideOfPreferredAgeRange"> </a>  <a href="CodeSystem-PreferredAllowedReason.html#PreferredAllowedReason-administeredOutsideOfPreferredAgeRange">administeredOutsideOfPreferredAgeRange</a></td><td>http://fhirfli.dev/fhir/ig/cicada/CodeSystem/PreferredAllowedReason</td><td>Administered outside of preferred age range</td><td><div><p>Administered outside of preferred age range</p>
-</div></td></tr><tr><td style="white-space:nowrap"><a name="http---fhirfli.dev-fhir-ig-cicada-CodeSystem-PreferredAllowedReason-noPreferredTypes"> </a>  <a href="CodeSystem-PreferredAllowedReason.html#PreferredAllowedReason-noPreferredTypes">noPreferredTypes</a></td><td>http://fhirfli.dev/fhir/ig/cicada/CodeSystem/PreferredAllowedReason</td><td>No preferred types</td><td><div><p>No preferred types</p>
-</div></td></tr><tr><td style="white-space:nowrap"><a name="http---fhirfli.dev-fhir-ig-cicada-CodeSystem-PreferredAllowedReason-noAllowedTypes"> </a>  <a href="CodeSystem-PreferredAllowedReason.html#PreferredAllowedReason-noAllowedTypes">noAllowedTypes</a></td><td>http://fhirfli.dev/fhir/ig/cicada/CodeSystem/PreferredAllowedReason</td><td>No allowed types</td><td><div><p>No allowed types</p>
-</div></td></tr></table></div>
+  <div xmlns="http://www.w3.org/1999/xhtml" data-fhir="generated"><p class="res-header-id"/><p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion performed internally based on <a href="CodeSystem-PreferredAllowedReason.html">codesystem Reasons why certain doses are Preferred or Allowed doses v0.1.0 (CodeSystem)</a><span class="copy-text-inline"><button data-clipboard-text="http://fhirfli.dev/fhir/ig/cicada/CodeSystem/PreferredAllowedReason|0.1.0" title="Click to Copy URL" class="btn-copy"> </button></span></p><p>This value set contains 6 concepts</p><table class="codes" data-fhir="generated"><tr><td><b>System</b></td><td style="white-space:nowrap"><b>Code</b></td><td><b>Display (en)</b></td><td><b>Definition</b></td><td><b>JSON</b></td><td><b>XML</b></td></tr><tr><td><a name="x-http://fhirfli.dev/fhir/ig/cicada/CodeSystem/PreferredAllowedReason-notAPreferableOrAllowableVaccine"> </a><code>http://fhirfli.dev/fhir/ig/cicada/CodeSystem/PreferredAllowedReason</code></td><td style="white-space:nowrap">  <a href="CodeSystem-PreferredAllowedReason.html#PreferredAllowedReason-notAPreferableOrAllowableVaccine">notAPreferableOrAllowableVaccine</a></td><td>Not a preferable or allowable vaccine</td><td>Not a preferable or allowable vaccine</td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://fhirfli.dev/fhir/ig/cicada/CodeSystem/PreferredAllowedReason&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;notAPreferableOrAllowableVaccine&quot;, &quot;display&quot;: &quot;Not a preferable or allowable vaccine&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://fhirfli.dev/fhir/ig/cicada/CodeSystem/PreferredAllowedReason&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;notAPreferableOrAllowableVaccine&quot;&gt;&lt;display value=&quot;Not a preferable or allowable vaccine&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-http://fhirfli.dev/fhir/ig/cicada/CodeSystem/PreferredAllowedReason-wrongTradeName"> </a><code>http://fhirfli.dev/fhir/ig/cicada/CodeSystem/PreferredAllowedReason</code></td><td style="white-space:nowrap">  <a href="CodeSystem-PreferredAllowedReason.html#PreferredAllowedReason-wrongTradeName">wrongTradeName</a></td><td>Wrong trade name</td><td>Wrong trade name</td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://fhirfli.dev/fhir/ig/cicada/CodeSystem/PreferredAllowedReason&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;wrongTradeName&quot;, &quot;display&quot;: &quot;Wrong trade name&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://fhirfli.dev/fhir/ig/cicada/CodeSystem/PreferredAllowedReason&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;wrongTradeName&quot;&gt;&lt;display value=&quot;Wrong trade name&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-http://fhirfli.dev/fhir/ig/cicada/CodeSystem/PreferredAllowedReason-lessThanRecommendedVolume"> </a><code>http://fhirfli.dev/fhir/ig/cicada/CodeSystem/PreferredAllowedReason</code></td><td style="white-space:nowrap">  <a href="CodeSystem-PreferredAllowedReason.html#PreferredAllowedReason-lessThanRecommendedVolume">lessThanRecommendedVolume</a></td><td>Less than recommended volume</td><td>Less than recommended volume</td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://fhirfli.dev/fhir/ig/cicada/CodeSystem/PreferredAllowedReason&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;lessThanRecommendedVolume&quot;, &quot;display&quot;: &quot;Less than recommended volume&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://fhirfli.dev/fhir/ig/cicada/CodeSystem/PreferredAllowedReason&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;lessThanRecommendedVolume&quot;&gt;&lt;display value=&quot;Less than recommended volume&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-http://fhirfli.dev/fhir/ig/cicada/CodeSystem/PreferredAllowedReason-administeredOutsideOfPreferredAgeRange"> </a><code>http://fhirfli.dev/fhir/ig/cicada/CodeSystem/PreferredAllowedReason</code></td><td style="white-space:nowrap">  <a href="CodeSystem-PreferredAllowedReason.html#PreferredAllowedReason-administeredOutsideOfPreferredAgeRange">administeredOutsideOfPreferredAgeRange</a></td><td>Administered outside of preferred age range</td><td>Administered outside of preferred age range</td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://fhirfli.dev/fhir/ig/cicada/CodeSystem/PreferredAllowedReason&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;administeredOutsideOfPreferredAgeRange&quot;, &quot;display&quot;: &quot;Administered outside of preferred age range&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://fhirfli.dev/fhir/ig/cicada/CodeSystem/PreferredAllowedReason&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;administeredOutsideOfPreferredAgeRange&quot;&gt;&lt;display value=&quot;Administered outside of preferred age range&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-http://fhirfli.dev/fhir/ig/cicada/CodeSystem/PreferredAllowedReason-noPreferredTypes"> </a><code>http://fhirfli.dev/fhir/ig/cicada/CodeSystem/PreferredAllowedReason</code></td><td style="white-space:nowrap">  <a href="CodeSystem-PreferredAllowedReason.html#PreferredAllowedReason-noPreferredTypes">noPreferredTypes</a></td><td>No preferred types</td><td>No preferred types</td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://fhirfli.dev/fhir/ig/cicada/CodeSystem/PreferredAllowedReason&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;noPreferredTypes&quot;, &quot;display&quot;: &quot;No preferred types&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://fhirfli.dev/fhir/ig/cicada/CodeSystem/PreferredAllowedReason&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;noPreferredTypes&quot;&gt;&lt;display value=&quot;No preferred types&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr><tr><td><a name="x-http://fhirfli.dev/fhir/ig/cicada/CodeSystem/PreferredAllowedReason-noAllowedTypes"> </a><code>http://fhirfli.dev/fhir/ig/cicada/CodeSystem/PreferredAllowedReason</code></td><td style="white-space:nowrap">  <a href="CodeSystem-PreferredAllowedReason.html#PreferredAllowedReason-noAllowedTypes">noAllowedTypes</a></td><td>No allowed types</td><td>No allowed types</td><td><span class="copy-text-inline"><button data-clipboard-text="{&quot;system&quot;: &quot;http://fhirfli.dev/fhir/ig/cicada/CodeSystem/PreferredAllowedReason&quot;, &quot;version&quot;: &quot;0.1.0&quot;, &quot;code&quot;: &quot;noAllowedTypes&quot;, &quot;display&quot;: &quot;No allowed types&quot;}" title="Click to Copy as Coding" class="btn-copy"> </button></span></td><td><span class="copy-text-inline"><button data-clipboard-text="&lt;coding&gt;&lt;system value=&quot;http://fhirfli.dev/fhir/ig/cicada/CodeSystem/PreferredAllowedReason&quot;&gt;&lt;version value=&quot;0.1.0&quot;&gt;&lt;code value=&quot;noAllowedTypes&quot;&gt;&lt;display value=&quot;No allowed types&quot;&gt;&lt;/coding&gt;" title="Click to Copy as Coding" class="btn-copy"> </button></span></td></tr></table></div>
 
   <hr/>
   <p>
@@ -286,7 +309,7 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://fhirfli.dev">FHIR-FLI</a>.  Package cicada.ig#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, May 6, 2024 15:25-0400">2024-05-06</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://fhirfli.dev">FHIR-FLI</a>.  Package cicada.ig#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Feb 11, 2026 14:37-0500">2026-02-11</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
@@ -303,7 +326,7 @@
     <div class="container">  <!-- container -->
     </div>  <!-- /container -->
   </div>  <!-- /segment-post-footer -->
-  
+
   <!-- JS and analytics only. -->
   <!-- Bootstrap core JavaScript
   ================================================== -->
@@ -314,7 +337,6 @@
   <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
   <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
   <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
-  
   <!-- Analytics Below
   ================================================== -->
   </body>

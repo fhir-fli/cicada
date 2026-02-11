@@ -18,6 +18,7 @@
     <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
     <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
   	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
     <!-- Placeholder for child template CSS declarations -->
 
     <script type="text/javascript" src="fhir-table-scripts.js"> </script>
@@ -29,20 +30,22 @@
     <![endif]-->
 
     <!-- Favicons -->
-    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
-    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
-    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
-    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/icon-fhir-57.png"/>
     <link rel="shortcut icon" href="assets/ico/favicon.png"/>
   </head>
   <body onload="document.body.style.opacity='1'">
 
 	  <script src="assets/js/prism.js"></script>
-
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
     <style type="text/css">h2{--heading-prefix:"3"}
     h3,h4,h5,h6{--heading-prefix:"3"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
+
         <!-- Placeholder for child template header declarations -->
 
 
@@ -79,6 +82,31 @@
   <li>
     <a href="index.html">Home</a>
   </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Guide
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="01_preparation.html">Preparation</a>
+      </li>
+      <li>
+        <a href="02_logical-specification-concepts.html">Logical Specification Concepts</a>
+      </li>
+      <li>
+        <a href="03_processing-model.html">Processing Model</a>
+      </li>
+      <li>
+        <a href="04_evaluate-vaccine-dose-administered.html">Evaluate Vaccine Dose Administered</a>
+      </li>
+      <li>
+        <a href="05_forecast-dates-and-reasons.html">Forecast Dates and Reasons</a>
+      </li>
+      <li>
+        <a href="06_select-patient-series.html">Select Patient Series</a>
+      </li>
+    </ul>
+  </li>
   <li>
     <a href="artifacts.html">Artifacts</a>
   </li>
@@ -114,7 +142,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">The Cicada Vaccine Forecasting Engine and Guide - Local Development build (v0.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href="http://fhirfli.dev/fhir/ig/cicada/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">The Cicada Vaccine Forecasting Engine and Guide - Local Development build (v0.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://fhirfli.dev/fhir/ig/cicada/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
   <h2>Logical Specification Concepts</h2>
   
 
@@ -141,19 +169,21 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 </ul>
 
 </div>
-<p>There are a number of concepts that are involved in the evaluation and prediction of immunizations. Some of these terms make logical sense, but others do not. Here’s a description of some of them. Again, this was all taken from the <a href="https://www.cdc.gov/vaccines/programs/iis/cdsi.html">Clinical Decision Support for Immunization (CDSi)</a>.</p>
+<p>There are a number of concepts that are involved in the evaluation and prediction of immunizations. Some of these terms make logical sense, but others do not. Here's a description of some of them. Again, this was all taken from the <a href="https://www.cdc.gov/iis/cdsi/">Clinical Decision Support for Immunization (CDSi)</a>.</p>
 
 <h2 id="target-dose">Target Dose</h2>
 
-<h4 id="a-targetdose-is-said-to-be-unsatisfied-until-a-dose-matches-all-of-its-required-criteria-at-that-time-the-targetdose-is-incremented-by-one-below-is-a-basic-example-from-the-cdc">A TargetDose is said to be ‘unsatisfied’ until a dose matches all of its required criteria. At that time, the TargetDose is incremented by one. Below is a basic example from the CDC</h4>
+<h4 id="a-targetdose-is-said-to-be-unsatisfied-until-a-dose-matches-all-of-its-required-criteria-at-that-time-the-targetdose-is-incremented-by-one-below-is-a-basic-example-from-the-cdc">A TargetDose is said to be 'unsatisfied' until a dose matches all of its required criteria. At that time, the TargetDose is incremented by one. Below is a basic example from the CDC</h4>
 
 <p>How a Vaccine Dose Administered Satisfies a Target Dose - TODO (add image) <img src="dose_satisfies_target.png" alt="Satisfy a Target Dose" /></p>
 
 <ul>
-  <li>Target dose - this is a term that makes some intrinsic sense, and then has been used in confusing ways, at least I thought so. The target dose is the next recommended dose in a series. When we evaluate past vaccines, we check to see if a particular vaccine that was given meets the requirements of the target dose. If it is, that target dose is considered complete, and we move onto the next target dose.</li>
+  <li>Target dose - this is a term that makes some intrinsic sense, and then has been used in confusing ways, at least I thought so. The target dose is the next recommended dose in a series. When we evaluate past vaccines, we check to see if a particular vaccine that was given meets the requirements of the target dose. If it does, that target dose is considered satisfied, and we move onto the next target dose.</li>
 </ul>
 
-<h4 id="as-a-side-note-anytime-you-see-the-term-vaccine-dose-administered-replace-it-with-dose-given-and-it-makes-much-more-sense">*As a side note, anytime you see the term ‘Vaccine Dose Administered’ replace it with ‘Dose Given’, and it makes much more sense</h4>
+<p>A patient series is considered complete when the TargetDose index is &gt;= the total number of doses in the series.</p>
+
+<h4 id="as-a-side-note-anytime-you-see-the-term-vaccine-dose-administered-replace-it-with-dose-given-and-it-makes-much-more-sense">*As a side note, anytime you see the term 'Vaccine Dose Administered' replace it with 'Dose Given', and it makes much more sense</h4>
 
 <h3 id="statuses">Statuses</h3>
 
@@ -185,7 +215,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <div xmlns="http://www.w3.org/1999/xhtml">
     <table border="1">
-        <caption>TABLE DOSE STATUSES: recorded for each dose within each series.</caption>
+        <caption>TABLE TARGET DOSE STATUSES: recorded for each dose within each series.</caption>
         <tr>
             <th>Status</th>
             <th>Meaning</th>
@@ -241,6 +271,8 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h3 id="selecting-supporting-data">Selecting Supporting Data</h3>
 
+<p>Much of the CDSi supporting data includes effective dates and cessation dates. These are used to determine whether a particular rule or component is relevant at the time of evaluation. This is critical: before evaluating any rule (age, interval, vaccine type, etc.), you must first check whether it is relevant based on these dates.</p>
+
 <div xmlns="http://www.w3.org/1999/xhtml">
     <table border="1">
         <caption>TABLE Is the Logical Component Relevant?</caption>
@@ -250,18 +282,20 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
         </tr>
         <tr>
             <td>RELEVANT-1</td>
-            <td>A component applies to a previously given vaccination if there is no Effective Date or Cessation Date, they are both "n/a", or the date given is between the two</td>
+            <td>A component applies to a previously given vaccination if there is no Effective Date or Cessation Date, they are both "n/a", or the date given is between the two. Default effective date: 01/01/1900. Default cessation date: 12/31/2999.</td>
         </tr>
         <tr>
             <td>RELEVANT-2</td>
-            <td>A component applies to forecasting a vaccination if there is no Effective Date or Cessation Date, they are both "n/a", or the assessment date is between the two</td>
+            <td>A component applies to forecasting a vaccination if there is no Effective Date or Cessation Date, they are both "n/a", or the assessment date is between the two. Default effective date: 01/01/1900. Default cessation date: 12/31/2999.</td>
         </tr>
     </table>
 </div>
 
+<p>These rules apply broadly: intervals, vaccine types, conditional skip conditions, and other supporting data components all have effective/cessation dates that must be checked before using them.</p>
+
 <h3 id="date-calculations">Date Calculations</h3>
 
-<p>As anyone who has worked with dates can tell you, they’re a huge pain in the ass. I’ve created a dedicated class for dealing with them called VaxDate. The CDC has stated how they expect for dates to be processed, I’ve reproduced this below.</p>
+<p>As anyone who has worked with dates can tell you, they're a huge pain in the ass. I've created a dedicated class for dealing with them called VaxDate. The CDC has stated how they expect for dates to be processed, I've reproduced this below.</p>
 
 <div xmlns="http://www.w3.org/1999/xhtml">
     <table border="1">
@@ -283,25 +317,25 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             <td>01/01/2000 + 3 days = 01/04/2000 <br /> 01/01/2000 + 3 weeks = 01/22/2000 <br /> 02/01/2000 + 5 weeks = 03/07/2000 (leap year) <br /> 02/01/2001 + 5 weeks = 03/08/2001 (not a leap year)</td>
         </tr>
         <tr>
-            <td>Subtracting days is just subtracting <br /> days from the date I've implemented <br /> it as just negative addition</td>
-            <td>01/15/2000 – 4 days = 01/11/2000</td>
+            <td>Subtracting days is just subtracting <br /> days from the date (negative addition)</td>
+            <td>01/15/2000 - 4 days = 01/11/2000</td>
         </tr>
         <tr>
             <td>If the calculated date isn't a real date, <br /> it is moved to the first of the next month</td>
             <td>03/31/2000 + 6 months = 10/01/2000 (September 31 does not exist) <br /> 08/31/2000 + 6 months = 03/01/2001 (February 31 does not exist)</td>
         </tr>
         <tr>
-            <td>Date must be calculated by first years, <br /> then months, then weeks/days <br /> (ToDo: not sure I completely did this)</td>
-            <td>01/31/2000 + 6 months – 4 days = 07/27/2000</td>
+            <td>Dates must be calculated by first adding years, <br /> then months, then weeks/days</td>
+            <td>01/31/2000 + 6 months - 4 days = 07/27/2000</td>
         </tr>
     </table>
 </div>
 
-<p>It’s important to note, and it took me a while to catch onto their wording, there are ages and age dates. They are what they say they are, but I struggled with them at first. An age (or an interval) is a string description of a period of time (‘4 years’, ‘19 years - 4 days’, etc) these are supposed to be added (or subtracted) to a date (usually the DOB, although sometimes the date given of the previous dose). Also, these terms probably won’t all make as much sense until you work through it some more.</p>
+<p>It's important to note, and it took me a while to catch onto their wording, there are ages and age dates. They are what they say they are, but I struggled with them at first. An age (or an interval) is a string description of a period of time ('4 years', '19 years - 4 days', etc). These are supposed to be added (or subtracted) to a date (usually the DOB, although sometimes the date given of the previous dose). Also, these terms probably won't all make as much sense until you work through it some more.</p>
 
 <div xmlns="http://www.w3.org/1999/xhtml">
     <table border="1">
-        <caption>TABLE DATE RULES</caption>
+        <caption>TABLE LOGICAL COMPONENT DATE RULES</caption>
         <tr>
             <th>Business Rule</th>
             <th>Calculation</th>
@@ -351,20 +385,19 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             <td>DOB + indication end age</td>
         </tr>
         <tr>
-            <td colspan="2">Reference dose date: when evaluating intervals, sometimes this is from the previous dose, sometimes from another dose in the series (usually the first).</td>
+            <td colspan="2"><strong>Reference dose date</strong>: when evaluating intervals, sometimes this is from the previous dose, sometimes from another dose in the series (usually the first).</td>
         </tr>
         <tr>
-            <td colspan="2">Reference Dose Date: doses will have an interval entry/recommendation, this is calculated from the immediate previous dose if: <br /> - an interval entry with "FromPrevious" dose is "Y" <br /> - the dose being evaluated has status of 'Valid' or 'Not Valid' <br /> - (ToDo: current?) vaccine dose is not an inadvertent administration. <br /> "interval": [{"fromPrevious": "Y", "fromTargetDose": null, "minInt": "4 weeks"}]</td>
+            <td colspan="2"><strong>From Previous Dose</strong>: The reference date is calculated from the immediate previous dose if: <br /> - the interval entry's "fromPrevious" is "Y" <br /> - the previous dose has status of 'Valid' or 'Not Valid' <br /> - the current dose is not an inadvertent administration. <br /> Example: <code>"interval": [{"fromPrevious": "Y", "fromTargetDose": null, "minInt": "4 weeks"}]</code></td>
         </tr>
         <tr>
-            <td colspan="2">Reference dose date is calculated from a different dose in the series (and the interval is therefore calculated from the date of that dose) if the following are true: <br /> - the interval entry states immediate previous dose administered is 'N'<br /> - the interval entry target dose number is not null. <br /> "interval": [{"fromPrevious": "N", "fromTargetDose": "1","minInt": "6 months"}]</td>
+            <td colspan="2"><strong>From Target Dose</strong>: The reference date is calculated from a specific dose in the series if: <br /> - "fromPrevious" is "N" <br /> - "fromTargetDose" is not null. <br /> Example: <code>"interval": [{"fromPrevious": "N", "fromTargetDose": "1", "minInt": "6 months"}]</code></td>
         </tr>
         <tr>
-            <td colspan="2">Reference dose date is calculated from the most recent dose of the same vaccine type if the following are true: <br /> - the "FromPrevious" is "N" <br /> - "fromMostRecent" is not null <br /> - the current dose is not an inadvertent administration. <br /> "interval": [{"fromPrevious": "N", "fromTargetDose": null, "fromMostRecent": "21; 94; 121", "absMinInt": "0 days", "minInt": "8 weeks"}]</td>
+            <td colspan="2"><strong>From Most Recent</strong>: The reference date is calculated from the most recent dose of the same vaccine type if: <br /> - "fromPrevious" is "N" <br /> - "fromMostRecent" is not null <br /> - the current dose is not an inadvertent administration. <br /> Example: <code>"interval": [{"fromPrevious": "N", "fromTargetDose": null, "fromMostRecent": "21; 94; 121", "absMinInt": "0 days", "minInt": "8 weeks"}]</code></td>
         </tr>
         <tr>
-            <td colspan="2">Reference dose date is calculated from an observation if:<br />
-            - "fromPrevious" is "N" <br /> - "fromRelevantObs" is not null. <br /> - "interval": [{"fromPrevious": "N", "fromTargetDose": null, "fromMostRecent": null, "fromRelevantObs": {"text": "Date of hematopoietic stem cell transplant", "code": "171"}, "earliestRecInt": "6 months", "latestRecInt": "12 months"}]</td>
+            <td colspan="2"><strong>From Relevant Observation</strong>: The reference date is calculated from an observation date if: <br /> - "fromPrevious" is "N" <br /> - "fromRelevantObs" is not null. <br /> Example: <code>"interval": [{"fromPrevious": "N", "fromTargetDose": null, "fromMostRecent": null, "fromRelevantObs": {"text": "Date of hematopoietic stem cell transplant", "code": "171"}, "earliestRecInt": "6 months", "latestRecInt": "12 months"}]</code></td>
         </tr>
         <tr>
             <td>Absolute minimum interval date</td>
@@ -400,7 +433,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
         </tr>
         <tr>
             <td>Latest conflict end interval date</td>
-            <td>If there is more than one interval specified (such as from previous and from an observation), whichever comes later.</td>
+            <td>If there is more than one conflict interval calculated (such as from multiple previous live virus doses), whichever comes later.</td>
         </tr>
         <tr>
             <td>Preferable vaccine type begin age date</td>
@@ -440,7 +473,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://fhirfli.dev">FHIR-FLI</a>.  Package cicada.ig#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, May 6, 2024 15:25-0400">2024-05-06</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://fhirfli.dev">FHIR-FLI</a>.  Package cicada.ig#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Feb 11, 2026 14:37-0500">2026-02-11</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
@@ -457,7 +490,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <div class="container">  <!-- container -->
     </div>  <!-- /container -->
   </div>  <!-- /segment-post-footer -->
-  
+
   <!-- JS and analytics only. -->
   <!-- Bootstrap core JavaScript
   ================================================== -->
@@ -468,7 +501,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
   <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
   <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
-  
   <!-- Analytics Below
   ================================================== -->
   </body>

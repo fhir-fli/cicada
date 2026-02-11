@@ -63,6 +63,18 @@
     "name" : "CdsiObservationCodes"
   },
   {
+    "id" : "Icd10ToCdsiObservation",
+    "type" : "ConceptMap",
+    "url" : "http://fhirfli.dev/fhir/ig/cicada/ConceptMap/Icd10ToCdsiObservation",
+    "version" : "0.1.0"
+  },
+  {
+    "id" : "SnomedToCdsiObservation",
+    "type" : "ConceptMap",
+    "url" : "http://fhirfli.dev/fhir/ig/cicada/ConceptMap/SnomedToCdsiObservation",
+    "version" : "0.1.0"
+  },
+  {
     "id" : "cicada.ig",
     "type" : "ImplementationGuide",
     "url" : "http://fhirfli.dev/fhir/ig/cicada/ImplementationGuide/cicada.ig",
@@ -287,6 +299,13 @@
     "name" : "EvalStatusVS"
   },
   {
+    "id" : "immunization-procedures-cpt",
+    "type" : "ValueSet",
+    "url" : "http://fhirfli.dev/fhir/ig/cicada/ValueSet/immunization-procedures-cpt",
+    "version" : "0.1.0",
+    "name" : "ImmunizationProceduresCpt"
+  },
+  {
     "id" : "interval-reason",
     "type" : "ValueSet",
     "url" : "http://fhirfli.dev/fhir/ig/cicada/ValueSet/interval-reason",
@@ -308,6 +327,13 @@
     "name" : "ImmunizationProceduresSnomed"
   },
   {
+    "id" : "vaccine-condition-codes-icd10",
+    "type" : "ValueSet",
+    "url" : "http://fhirfli.dev/fhir/ig/cicada/ValueSet/vaccine-condition-codes-icd10",
+    "version" : "0.1.0",
+    "name" : "VaccineConditionCodesIcd10"
+  },
+  {
     "id" : "vaccine-condition-codes-snomed",
     "type" : "ValueSet",
     "url" : "http://fhirfli.dev/fhir/ig/cicada/ValueSet/vaccine-condition-codes-snomed",
@@ -320,6 +346,20 @@
     "url" : "http://fhirfli.dev/fhir/ig/cicada/ValueSet/vaccine-gender",
     "version" : "0.1.0",
     "name" : "VaccineGenderVS"
+  },
+  {
+    "id" : "vaccine-lab-evidence-of-immunity-loinc",
+    "type" : "ValueSet",
+    "url" : "http://fhirfli.dev/fhir/ig/cicada/ValueSet/vaccine-lab-evidence-of-immunity-loinc",
+    "version" : "0.1.0",
+    "name" : "VaccineLabEvidenceOfImmunityLoinc"
+  },
+  {
+    "id" : "vaccine-medication-codes-rxnorm",
+    "type" : "ValueSet",
+    "url" : "http://fhirfli.dev/fhir/ig/cicada/ValueSet/vaccine-medication-codes-rxnorm",
+    "version" : "0.1.0",
+    "name" : "VaccineMedicationCodesRxnorm"
   },
   {
     "id" : "vaccine-medication-codes-snomed",

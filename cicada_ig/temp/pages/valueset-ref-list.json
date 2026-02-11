@@ -6,15 +6,15 @@
       "status" : "draft",
       "name" : "VaccineCodesCvxMvx",
       "title" : null,
-      "description" : null,
+      "description" : "",
       "systems" : ["http://hl7.org/fhir/sid/mvx", "http://hl7.org/fhir/sid/cvx"],
       "uses" : {
       },
       "StructureDefinition-vax-dose.html" : "Dose of a Vaccine",
-      "StructureDefinition-MedicationRequestProfile.html" : "Medication Request Profile with Vaccine Codes",
+      "StructureDefinition-ReactionProfile.html" : "Allergy Intolerance Profile for Immunization Decision Support",
       "StructureDefinition-MedicationDispenseProfile.html" : "Medication Dispense Profile with Vaccine Codes",
+      "StructureDefinition-MedicationRequestProfile.html" : "Medication Request Profile with Vaccine Codes",
       "StructureDefinition-MedicationStatementProfile.html" : "Medication Statement Profile with Vaccine Codes",
-      "StructureDefinition-ReactionProfile.html" : "Allergy Intolerance Profile with Vaccine Codes",
       "StructureDefinition-MedicationAdministrationProfile.html" : "Medication Administration Profile with Vaccine Codes"
     },
     {
@@ -42,6 +42,15 @@
       "StructureDefinition-vax-dose.html" : "Dose of a Vaccine"
     },
     {
+      "url" : "http://fhirfli.dev/fhir/ig/cicada/ValueSet/immunization-procedures-cpt",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "ImmunizationProceduresCpt",
+      "title" : "Immunization-Relevant Procedures (CPT)",
+      "description" : "CPT codes for procedures relevant to immunization decision support, including splenectomy and cochlear implant.",
+      "systems" : ["http://www.ama-assn.org/go/cpt"]
+    },
+    {
       "url" : "http://fhirfli.dev/fhir/ig/cicada/ValueSet/interval-reason",
       "version" : "0.1.0",
       "status" : "draft",
@@ -53,8 +62,8 @@
       ],
       "uses" : {
       },
-      "StructureDefinition-preferred-interval-reason.html" : "Preferred Interval Reason",
-      "StructureDefinition-allowed-interval-reason.html" : "Allowed Interval Reason"
+      "StructureDefinition-allowed-interval-reason.html" : "Allowed Interval Reason",
+      "StructureDefinition-preferred-interval-reason.html" : "Preferred Interval Reason"
     },
     {
       "url" : "http://fhirfli.dev/fhir/ig/cicada/ValueSet/preferred-allowed-reason",
@@ -68,8 +77,8 @@
       ],
       "uses" : {
       },
-      "StructureDefinition-allowed-vaccine-reason.html" : "Allowed Vaccine Reason",
-      "StructureDefinition-preferred-vaccine-reason.html" : "Preferred Vaccine Reason"
+      "StructureDefinition-preferred-vaccine-reason.html" : "Preferred Vaccine Reason",
+      "StructureDefinition-allowed-vaccine-reason.html" : "Allowed Vaccine Reason"
     },
     {
       "url" : "http://fhirfli.dev/fhir/ig/cicada/ValueSet/procedures",
@@ -84,6 +93,15 @@
       "StructureDefinition-ProcedureProfile.html" : "Immunization Procedures Profile"
     },
     {
+      "url" : "http://fhirfli.dev/fhir/ig/cicada/ValueSet/vaccine-condition-codes-icd10",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "VaccineConditionCodesIcd10",
+      "title" : "Vaccine Condition Codes (ICD-10-CM)",
+      "description" : "Value set for conditions based on ICD-10-CM that may impact immunization decisions, mapped to CDSi observation codes.",
+      "systems" : ["http://hl7.org/fhir/sid/icd-10-cm"]
+    },
+    {
       "url" : "http://fhirfli.dev/fhir/ig/cicada/ValueSet/vaccine-condition-codes-snomed",
       "version" : "0.1.0",
       "status" : "draft",
@@ -93,8 +111,9 @@
       "systems" : ["http://snomed.info/sct"],
       "uses" : {
       },
-      "StructureDefinition-VaccineConditionFhir.html" : "Condition Profile with Vaccine Condition Codes",
-      "StructureDefinition-VaccineObservationFhir.html" : "Condition Profile with Vaccine Condition Codes"
+      "StructureDefinition-ReactionProfile.html" : "Allergy Intolerance Profile for Immunization Decision Support",
+      "StructureDefinition-VaccineObservationFhir.html" : "Observation Profile for Immunization Decision Support",
+      "StructureDefinition-VaccineConditionFhir.html" : "Condition Profile with Vaccine Condition Codes"
     },
     {
       "url" : "http://fhirfli.dev/fhir/ig/cicada/ValueSet/vaccine-gender",
@@ -107,6 +126,24 @@
       "uses" : {
       },
       "StructureDefinition-vax-patient.html" : "Vaccination Patient"
+    },
+    {
+      "url" : "http://fhirfli.dev/fhir/ig/cicada/ValueSet/vaccine-lab-evidence-of-immunity-loinc",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "VaccineLabEvidenceOfImmunityLoinc",
+      "title" : "Lab Evidence of Immunity (LOINC)",
+      "description" : "LOINC codes for laboratory tests that provide evidence of immunity, mapped to CDSi observation codes for immunization decision support.",
+      "systems" : ["http://loinc.org"]
+    },
+    {
+      "url" : "http://fhirfli.dev/fhir/ig/cicada/ValueSet/vaccine-medication-codes-rxnorm",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "VaccineMedicationCodesRxnorm",
+      "title" : "Immunization-Relevant Medications (RxNorm)",
+      "description" : "RxNorm codes for medications relevant to immunization decision support, including antivirals and aspirin.",
+      "systems" : ["http://www.nlm.nih.gov/research/umls/rxnorm"]
     },
     {
       "url" : "http://fhirfli.dev/fhir/ig/cicada/ValueSet/vaccine-medication-codes-snomed",

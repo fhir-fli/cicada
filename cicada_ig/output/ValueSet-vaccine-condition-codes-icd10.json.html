@@ -1,0 +1,686 @@
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Vaccine Condition Codes (ICD-10-CM) - JSON Representation - The Cicada Vaccine Forecasting Engine and Guide v0.1.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"8.38"}
+    h3,h4,h5,h6{--heading-prefix:"8.38"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">The Cicada Vaccine Forecasting Engine and Guide</span>
+            <br/>
+            <span style="display:inline-block;">0.1.0 - ci-build
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Guide
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="01_preparation.html">Preparation</a>
+      </li>
+      <li>
+        <a href="02_logical-specification-concepts.html">Logical Specification Concepts</a>
+      </li>
+      <li>
+        <a href="03_processing-model.html">Processing Model</a>
+      </li>
+      <li>
+        <a href="04_evaluate-vaccine-dose-administered.html">Evaluate Vaccine Dose Administered</a>
+      </li>
+      <li>
+        <a href="05_forecast-dates-and-reasons.html">Forecast Dates and Reasons</a>
+      </li>
+      <li>
+        <a href="06_select-patient-series.html">Select Patient Series</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifacts</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>Vaccine Condition Codes (ICD-10-CM)</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<div style="counter-reset: section 8" class="col-12">
+<!--ReleaseHeader--><p id="publish-box">The Cicada Vaccine Forecasting Engine and Guide - Local Development build (v0.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://fhirfli.dev/fhir/ig/cicada/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
+
+
+
+
+
+
+
+
+
+<ul class="nav nav-tabs">
+
+  <li>
+    <a href="ValueSet-vaccine-condition-codes-icd10.html">Narrative Content</a>
+  </li>
+
+
+
+  
+    <li>
+      <a href="ValueSet-vaccine-condition-codes-icd10.xml.html">XML</a>
+    </li>
+  
+
+
+  
+    <li class="active">
+      <a href="#">JSON</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="ValueSet-vaccine-condition-codes-icd10.ttl.html">TTL</a>
+    </li>
+  
+
+
+
+</ul>
+
+
+<a name="root"> </a>
+
+
+<h2 id="root">: Vaccine Condition Codes (ICD-10-CM) - JSON Representation</h2>
+
+  <table class="colsi">
+    <tr>
+
+      <td colspan="2">
+        
+          Active
+          
+            as of 2026-02-11
+          
+        
+      </td>
+
+    </tr>
+  </table>
+
+
+<p><a href="ValueSet-vaccine-condition-codes-icd10.json" no-download="true">Raw json</a> | <a href="ValueSet-vaccine-condition-codes-icd10.json" download>Download</a></p>
+
+  <!-- insert intro if present -->
+  
+
+
+
+  <pre class="json" data-fhir="generated" style="white-space: pre; text-wrap: nowrap; width: auto;"><code style="white-space: pre; text-wrap: nowrap;">{
+  "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet">resourceType</a>" : "ValueSet",
+  "<a href="http://hl7.org/fhir/R4/resource.html#ValueSet.id">id</a>" : "vaccine-condition-codes-icd10",
+  "<a href="http://hl7.org/fhir/R4/domainresource.html#ValueSet.text">text</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p class=\&quot;res-header-id\&quot;&gt;&lt;b&gt;Generated Narrative: ValueSet vaccine-condition-codes-icd10&lt;/b&gt;&lt;/p&gt;&lt;a name=\&quot;vaccine-condition-codes-icd10\&quot;&gt; &lt;/a&gt;&lt;a name=\&quot;hcvaccine-condition-codes-icd10\&quot;&gt; &lt;/a&gt;&lt;ul&gt;&lt;li&gt;Include these codes as defined in &lt;code&gt;http://hl7.org/fhir/sid/icd-10-cm&lt;/code&gt;&lt;span title=\&quot;Version is not explicitly stated. No matching Code System found\&quot;&gt; version Not Stated (use latest from terminology server)&lt;/span&gt;&lt;table class=\&quot;none\&quot;&gt;&lt;tr&gt;&lt;td style=\&quot;white-space:nowrap\&quot;&gt;&lt;b&gt;Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Display&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;D84.9&lt;/td&gt;&lt;td&gt;Immunodeficiency, unspecified&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;D83.9&lt;/td&gt;&lt;td&gt;Common variable immunodeficiency, unspecified&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;D80.9&lt;/td&gt;&lt;td&gt;Immunodeficiency with predominantly antibody defects, unspecified&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;D89.9&lt;/td&gt;&lt;td&gt;Disorder involving immune mechanism, unspecified&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;D84.8&lt;/td&gt;&lt;td&gt;Other specified immunodeficiency disorders&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Z94.84&lt;/td&gt;&lt;td&gt;Bone marrow transplant status&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;T86.00&lt;/td&gt;&lt;td&gt;Unspecified complication of bone marrow transplant&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;T86.09&lt;/td&gt;&lt;td&gt;Other complications of bone marrow transplant&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;B18.2&lt;/td&gt;&lt;td&gt;Chronic viral hepatitis C&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;B17.10&lt;/td&gt;&lt;td&gt;Acute hepatitis C without hepatic coma&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;B17.11&lt;/td&gt;&lt;td&gt;Acute hepatitis C with hepatic coma&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;B19.20&lt;/td&gt;&lt;td&gt;Unspecified viral hepatitis C without hepatic coma&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Z33.1&lt;/td&gt;&lt;td&gt;Pregnant state, incidental&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;O09.90&lt;/td&gt;&lt;td&gt;Supervision of high risk pregnancy, unspecified trimester&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Z34.00&lt;/td&gt;&lt;td&gt;Encounter for supervision of normal first pregnancy, unspecified trimester&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Z34.80&lt;/td&gt;&lt;td&gt;Encounter for supervision of other normal pregnancy, unspecified trimester&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Z39.1&lt;/td&gt;&lt;td&gt;Encounter for care and examination of lactating mother&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;G96.00&lt;/td&gt;&lt;td&gt;Cerebrospinal fluid leak, unspecified&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;G96.01&lt;/td&gt;&lt;td&gt;Cranial cerebrospinal fluid leak, spontaneous&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;G96.02&lt;/td&gt;&lt;td&gt;Spinal cerebrospinal fluid leak, spontaneous&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;G96.08&lt;/td&gt;&lt;td&gt;Other cranial cerebrospinal fluid leak&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;G96.09&lt;/td&gt;&lt;td&gt;Other spinal cerebrospinal fluid leak&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Z96.21&lt;/td&gt;&lt;td&gt;Cochlear implant status&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;D81.9&lt;/td&gt;&lt;td&gt;Combined immunodeficiency, unspecified&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;D81.0&lt;/td&gt;&lt;td&gt;SCID with reticular dysgenesis&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;D81.1&lt;/td&gt;&lt;td&gt;SCID with low T- and B-cell numbers&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;D81.2&lt;/td&gt;&lt;td&gt;SCID with low or normal B-cell numbers&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;D81.3&lt;/td&gt;&lt;td&gt;Adenosine deaminase deficiency&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;D81.5&lt;/td&gt;&lt;td&gt;Purine nucleoside phosphorylase deficiency&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;D81.6&lt;/td&gt;&lt;td&gt;Major histocompatibility complex class I deficiency&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;D81.7&lt;/td&gt;&lt;td&gt;Major histocompatibility complex class II deficiency&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;E10.9&lt;/td&gt;&lt;td&gt;Type 1 diabetes mellitus without complications&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;E10.65&lt;/td&gt;&lt;td&gt;Type 1 diabetes mellitus with hyperglycemia&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;E11.9&lt;/td&gt;&lt;td&gt;Type 2 diabetes mellitus without complications&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;E11.65&lt;/td&gt;&lt;td&gt;Type 2 diabetes mellitus with hyperglycemia&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;E13.9&lt;/td&gt;&lt;td&gt;Other specified diabetes mellitus without complications&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;E08.9&lt;/td&gt;&lt;td&gt;Diabetes mellitus due to underlying condition without complications&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;E09.9&lt;/td&gt;&lt;td&gt;Drug or chemical induced diabetes mellitus without complications&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;K70.30&lt;/td&gt;&lt;td&gt;Alcoholic cirrhosis of liver without ascites&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;K70.31&lt;/td&gt;&lt;td&gt;Alcoholic cirrhosis of liver with ascites&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;K73.9&lt;/td&gt;&lt;td&gt;Chronic hepatitis, unspecified&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;K74.0&lt;/td&gt;&lt;td&gt;Hepatic fibrosis&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;K74.60&lt;/td&gt;&lt;td&gt;Unspecified cirrhosis of liver&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;K74.69&lt;/td&gt;&lt;td&gt;Other cirrhosis of liver&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;K76.0&lt;/td&gt;&lt;td&gt;Fatty liver, not elsewhere classified&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;K76.9&lt;/td&gt;&lt;td&gt;Liver disease, unspecified&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;I25.10&lt;/td&gt;&lt;td&gt;Atherosclerotic heart disease of native coronary artery without angina pectoris&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;I25.9&lt;/td&gt;&lt;td&gt;Chronic ischemic heart disease, unspecified&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;I50.9&lt;/td&gt;&lt;td&gt;Heart failure, unspecified&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;I50.20&lt;/td&gt;&lt;td&gt;Unspecified systolic (congestive) heart failure&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;I50.30&lt;/td&gt;&lt;td&gt;Unspecified diastolic (congestive) heart failure&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;I42.9&lt;/td&gt;&lt;td&gt;Cardiomyopathy, unspecified&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;I42.0&lt;/td&gt;&lt;td&gt;Dilated cardiomyopathy&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Q24.9&lt;/td&gt;&lt;td&gt;Congenital malformation of heart, unspecified&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;J44.9&lt;/td&gt;&lt;td&gt;Chronic obstructive pulmonary disease, unspecified&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;J44.1&lt;/td&gt;&lt;td&gt;Chronic obstructive pulmonary disease with acute exacerbation&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;J43.9&lt;/td&gt;&lt;td&gt;Emphysema, unspecified&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;J84.9&lt;/td&gt;&lt;td&gt;Interstitial pulmonary disease, unspecified&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;J84.10&lt;/td&gt;&lt;td&gt;Pulmonary fibrosis, unspecified&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;J47.9&lt;/td&gt;&lt;td&gt;Bronchiectasis, uncomplicated&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;P27.1&lt;/td&gt;&lt;td&gt;Bronchopulmonary dysplasia originating in the perinatal period&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;D73.0&lt;/td&gt;&lt;td&gt;Hyposplenism&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Q89.01&lt;/td&gt;&lt;td&gt;Asplenia (congenital)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;D73.89&lt;/td&gt;&lt;td&gt;Other diseases of spleen&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Z90.81&lt;/td&gt;&lt;td&gt;Acquired absence of spleen&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;N18.1&lt;/td&gt;&lt;td&gt;Chronic kidney disease, stage 1&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;N18.2&lt;/td&gt;&lt;td&gt;Chronic kidney disease, stage 2&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;N18.30&lt;/td&gt;&lt;td&gt;Chronic kidney disease, stage 3 unspecified&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;N18.4&lt;/td&gt;&lt;td&gt;Chronic kidney disease, stage 4&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;N18.5&lt;/td&gt;&lt;td&gt;Chronic kidney disease, stage 5&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;N18.6&lt;/td&gt;&lt;td&gt;End stage renal disease&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;N18.9&lt;/td&gt;&lt;td&gt;Chronic kidney disease, unspecified&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Z99.2&lt;/td&gt;&lt;td&gt;Dependence on renal dialysis&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;B20&lt;/td&gt;&lt;td&gt;Human immunodeficiency virus [HIV] disease&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Z21&lt;/td&gt;&lt;td&gt;Asymptomatic human immunodeficiency virus [HIV] infection status&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;J45.20&lt;/td&gt;&lt;td&gt;Mild intermittent asthma, uncomplicated&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;J45.30&lt;/td&gt;&lt;td&gt;Mild persistent asthma, uncomplicated&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;J45.40&lt;/td&gt;&lt;td&gt;Moderate persistent asthma, uncomplicated&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;J45.50&lt;/td&gt;&lt;td&gt;Severe persistent asthma, uncomplicated&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;J45.909&lt;/td&gt;&lt;td&gt;Unspecified asthma, uncomplicated&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;J45.998&lt;/td&gt;&lt;td&gt;Other asthma&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;K56.1&lt;/td&gt;&lt;td&gt;Intussusception&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;K52.9&lt;/td&gt;&lt;td&gt;Noninfective gastroenteritis and colitis, unspecified&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;A09&lt;/td&gt;&lt;td&gt;Infectious gastroenteritis and colitis, unspecified&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;A08.0&lt;/td&gt;&lt;td&gt;Rotaviral enteritis&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;A08.39&lt;/td&gt;&lt;td&gt;Other viral enteritis&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;A15.0&lt;/td&gt;&lt;td&gt;Tuberculosis of lung&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;A15.9&lt;/td&gt;&lt;td&gt;Respiratory tuberculosis unspecified&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;A18.9&lt;/td&gt;&lt;td&gt;Tuberculosis of other organs&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;A19.9&lt;/td&gt;&lt;td&gt;Miliary tuberculosis, unspecified&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;R76.11&lt;/td&gt;&lt;td&gt;Nonspecific reaction to tuberculin skin test without active tuberculosis&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Z86.11&lt;/td&gt;&lt;td&gt;Personal history of tuberculosis&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Z79.82&lt;/td&gt;&lt;td&gt;Long term (current) use of aspirin&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Z11.3&lt;/td&gt;&lt;td&gt;Encounter for screening for infections with a predominantly sexual mode of transmission&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Z11.4&lt;/td&gt;&lt;td&gt;Encounter for screening for human immunodeficiency virus [HIV]&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Z20.2&lt;/td&gt;&lt;td&gt;Contact with and exposure to infections with a predominantly sexual mode of transmission&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;"
+  },
+  "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.url">url</a>" : "http://fhirfli.dev/fhir/ig/cicada/ValueSet/vaccine-condition-codes-icd10",
+  "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.version">version</a>" : "0.1.0",
+  "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.name">name</a>" : "VaccineConditionCodesIcd10",
+  "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.title">title</a>" : "Vaccine Condition Codes (ICD-10-CM)",
+  "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.status">status</a>" : "active",
+  "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.date">date</a>" : "2026-02-11T14:37:07-05:00",
+  "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.publisher">publisher</a>" : "FHIR-FLI",
+  "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.contact">contact</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.name">name</a>" : "FHIR-FLI",
+      "<a href="http://hl7.org/fhir/R4/metadatatypes.html#ContactDetail#ContactDetail.telecom">telecom</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">system</a>" : "url",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">value</a>" : "http://fhirfli.dev"
+        }
+      ]
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.description">description</a>" : "Value set for conditions based on ICD-10-CM that may impact immunization decisions, mapped to CDSi observation codes.",
+  "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose">compose</a>" : {
+    "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include">include</a>" : [
+      {
+        "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.system">system</a>" : "http://hl7.org/fhir/sid/icd-10-cm",
+        "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept">concept</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "D84.9",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Immunodeficiency, unspecified"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "D83.9",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Common variable immunodeficiency, unspecified"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "D80.9",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Immunodeficiency with predominantly antibody defects, unspecified"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "D89.9",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Disorder involving immune mechanism, unspecified"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "D84.8",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Other specified immunodeficiency disorders"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "Z94.84",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Bone marrow transplant status"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "T86.00",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Unspecified complication of bone marrow transplant"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "T86.09",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Other complications of bone marrow transplant"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "B18.2",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Chronic viral hepatitis C"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "B17.10",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Acute hepatitis C without hepatic coma"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "B17.11",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Acute hepatitis C with hepatic coma"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "B19.20",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Unspecified viral hepatitis C without hepatic coma"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "Z33.1",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Pregnant state, incidental"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "O09.90",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Supervision of high risk pregnancy, unspecified trimester"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "Z34.00",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Encounter for supervision of normal first pregnancy, unspecified trimester"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "Z34.80",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Encounter for supervision of other normal pregnancy, unspecified trimester"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "Z39.1",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Encounter for care and examination of lactating mother"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "G96.00",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Cerebrospinal fluid leak, unspecified"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "G96.01",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Cranial cerebrospinal fluid leak, spontaneous"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "G96.02",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Spinal cerebrospinal fluid leak, spontaneous"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "G96.08",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Other cranial cerebrospinal fluid leak"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "G96.09",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Other spinal cerebrospinal fluid leak"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "Z96.21",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Cochlear implant status"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "D81.9",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Combined immunodeficiency, unspecified"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "D81.0",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "SCID with reticular dysgenesis"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "D81.1",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "SCID with low T- and B-cell numbers"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "D81.2",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "SCID with low or normal B-cell numbers"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "D81.3",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Adenosine deaminase deficiency"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "D81.5",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Purine nucleoside phosphorylase deficiency"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "D81.6",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Major histocompatibility complex class I deficiency"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "D81.7",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Major histocompatibility complex class II deficiency"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "E10.9",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Type 1 diabetes mellitus without complications"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "E10.65",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Type 1 diabetes mellitus with hyperglycemia"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "E11.9",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Type 2 diabetes mellitus without complications"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "E11.65",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Type 2 diabetes mellitus with hyperglycemia"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "E13.9",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Other specified diabetes mellitus without complications"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "E08.9",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Diabetes mellitus due to underlying condition without complications"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "E09.9",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Drug or chemical induced diabetes mellitus without complications"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "K70.30",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Alcoholic cirrhosis of liver without ascites"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "K70.31",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Alcoholic cirrhosis of liver with ascites"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "K73.9",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Chronic hepatitis, unspecified"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "K74.0",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Hepatic fibrosis"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "K74.60",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Unspecified cirrhosis of liver"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "K74.69",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Other cirrhosis of liver"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "K76.0",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Fatty liver, not elsewhere classified"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "K76.9",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Liver disease, unspecified"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "I25.10",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Atherosclerotic heart disease of native coronary artery without angina pectoris"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "I25.9",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Chronic ischemic heart disease, unspecified"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "I50.9",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Heart failure, unspecified"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "I50.20",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Unspecified systolic (congestive) heart failure"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "I50.30",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Unspecified diastolic (congestive) heart failure"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "I42.9",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Cardiomyopathy, unspecified"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "I42.0",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Dilated cardiomyopathy"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "Q24.9",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Congenital malformation of heart, unspecified"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "J44.9",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Chronic obstructive pulmonary disease, unspecified"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "J44.1",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Chronic obstructive pulmonary disease with acute exacerbation"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "J43.9",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Emphysema, unspecified"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "J84.9",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Interstitial pulmonary disease, unspecified"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "J84.10",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Pulmonary fibrosis, unspecified"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "J47.9",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Bronchiectasis, uncomplicated"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "P27.1",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Bronchopulmonary dysplasia originating in the perinatal period"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "D73.0",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Hyposplenism"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "Q89.01",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Asplenia (congenital)"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "D73.89",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Other diseases of spleen"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "Z90.81",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Acquired absence of spleen"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "N18.1",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Chronic kidney disease, stage 1"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "N18.2",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Chronic kidney disease, stage 2"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "N18.30",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Chronic kidney disease, stage 3 unspecified"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "N18.4",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Chronic kidney disease, stage 4"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "N18.5",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Chronic kidney disease, stage 5"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "N18.6",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "End stage renal disease"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "N18.9",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Chronic kidney disease, unspecified"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "Z99.2",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Dependence on renal dialysis"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "B20",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Human immunodeficiency virus [HIV] disease"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "Z21",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Asymptomatic human immunodeficiency virus [HIV] infection status"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "J45.20",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Mild intermittent asthma, uncomplicated"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "J45.30",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Mild persistent asthma, uncomplicated"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "J45.40",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Moderate persistent asthma, uncomplicated"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "J45.50",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Severe persistent asthma, uncomplicated"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "J45.909",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Unspecified asthma, uncomplicated"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "J45.998",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Other asthma"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "K56.1",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Intussusception"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "K52.9",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Noninfective gastroenteritis and colitis, unspecified"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "A09",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Infectious gastroenteritis and colitis, unspecified"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "A08.0",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Rotaviral enteritis"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "A08.39",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Other viral enteritis"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "A15.0",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Tuberculosis of lung"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "A15.9",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Respiratory tuberculosis unspecified"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "A18.9",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Tuberculosis of other organs"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "A19.9",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Miliary tuberculosis, unspecified"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "R76.11",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Nonspecific reaction to tuberculin skin test without active tuberculosis"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "Z86.11",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Personal history of tuberculosis"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "Z79.82",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Long term (current) use of aspirin"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "Z11.3",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Encounter for screening for infections with a predominantly sexual mode of transmission"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "Z11.4",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Encounter for screening for human immunodeficiency virus [HIV]"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.code">code</a>" : "Z20.2",
+            "<a href="http://hl7.org/fhir/R4/valueset.html#ValueSet.compose.include.concept.display">display</a>" : "Contact with and exposure to infections with a predominantly sexual mode of transmission"
+          }
+        ]
+      }
+    ]
+  }
+}</code></pre>
+
+
+  <!-- insert notes if present -->
+  
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://fhirfli.dev">FHIR-FLI</a>.  Package cicada.ig#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Feb 11, 2026 14:37-0500">2026-02-11</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

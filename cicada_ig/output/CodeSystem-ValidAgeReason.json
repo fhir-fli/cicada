@@ -3,14 +3,14 @@
   "id" : "ValidAgeReason",
   "text" : {
     "status" : "generated",
-    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This  code system <code>http://fhirfli.dev/fhir/ig/cicada/CodeSystem/ValidAgeReason</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">gracePeriod<a name=\"ValidAgeReason-gracePeriod\"> </a></td><td>Age: Grace Period</td><td>Age: Grace Period</td></tr><tr><td style=\"white-space:nowrap\">tooYoung<a name=\"ValidAgeReason-tooYoung\"> </a></td><td>Age: Too Young</td><td>Age: Too Young</td></tr><tr><td style=\"white-space:nowrap\">tooOld<a name=\"ValidAgeReason-tooOld\"> </a></td><td>Age: Too Old</td><td>Age: Too Old</td></tr></table></div>"
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem ValidAgeReason</b></p><a name=\"ValidAgeReason\"> </a><a name=\"hcValidAgeReason\"> </a><p>This  code system <code>http://fhirfli.dev/fhir/ig/cicada/CodeSystem/ValidAgeReason</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">gracePeriod<a name=\"ValidAgeReason-gracePeriod\"> </a></td><td>Age: Grace Period</td><td>Age: Grace Period</td></tr><tr><td style=\"white-space:nowrap\">tooYoung<a name=\"ValidAgeReason-tooYoung\"> </a></td><td>Age: Too Young</td><td>Age: Too Young</td></tr><tr><td style=\"white-space:nowrap\">tooOld<a name=\"ValidAgeReason-tooOld\"> </a></td><td>Age: Too Old</td><td>Age: Too Old</td></tr></table></div>"
   },
   "url" : "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/ValidAgeReason",
   "version" : "0.1.0",
   "name" : "ValidAgeReasonCS",
   "title" : "Valid Age Reason",
   "status" : "draft",
-  "date" : "2024-05-06T15:25:10-04:00",
+  "date" : "2026-02-11T14:37:07-05:00",
   "publisher" : "FHIR-FLI",
   "contact" : [{
     "name" : "FHIR-FLI",

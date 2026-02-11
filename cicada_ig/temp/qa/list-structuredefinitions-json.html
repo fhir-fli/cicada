@@ -1,5 +1,6 @@
 <html>
 <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
   <title>list-structuredefinitions-json</title>
   <link rel="stylesheet" href="fhir.css"/>
 </head>
@@ -12,15 +13,15 @@
 </li>
  <li><a href="StructureDefinition-MedicationStatementProfile.json.html">Medication Statement Profile with Vaccine Codes</a> <p>Profile for medication statements with vaccine codes from CVX or MVX.</p>
 </li>
- <li><a href="StructureDefinition-ProcedureProfile.json.html">Immunization Procedures Profile</a> <p>Profile for medical procedures related to immunization based on SNOMED CT codes.</p>
+ <li><a href="StructureDefinition-ProcedureProfile.json.html">Immunization Procedures Profile</a> <p>Profile for medical procedures related to immunization based on SNOMED CT or CPT codes.</p>
 </li>
- <li><a href="StructureDefinition-ReactionProfile.json.html">Allergy Intolerance Profile with Vaccine Codes</a> <p>Profile for allergy intolerances where the offending agent must have a CVX or MVX code.</p>
+ <li><a href="StructureDefinition-ReactionProfile.json.html">Allergy Intolerance Profile for Immunization Decision Support</a> <p>Profile for allergy intolerances relevant to immunization. The code (allergen/substance) may use SNOMED CT or ICD-10-CM. Reaction substances may use CVX, MVX, SNOMED CT, or RxNorm.</p>
 </li>
  <li><a href="StructureDefinition-Vaccine.json.html">Vaccine</a> <p>Simple vaccine to easily obtain needed information for forecasting</p>
 </li>
- <li><a href="StructureDefinition-VaccineConditionFhir.json.html">Condition Profile with Vaccine Condition Codes</a> <p>Profile for conditions where the code must be from the Vaccine Condition Codes value set.</p>
+ <li><a href="StructureDefinition-VaccineConditionFhir.json.html">Condition Profile with Vaccine Condition Codes</a> <p>Profile for conditions where the code must be from the Vaccine Condition Codes value set. Accepts SNOMED CT and ICD-10-CM coded conditions.</p>
 </li>
- <li><a href="StructureDefinition-VaccineObservationFhir.json.html">Condition Profile with Vaccine Condition Codes</a> <p>Profile for conditions where the code must be from the Vaccine Condition Codes value set.</p>
+ <li><a href="StructureDefinition-VaccineObservationFhir.json.html">Observation Profile for Immunization Decision Support</a> <p>Profile for Observation resources carrying lab evidence of immunity or other findings relevant to immunization decisions. Codes may be from SNOMED CT, ICD-10-CM, or LOINC.</p>
 </li>
  <li><a href="StructureDefinition-allowed-interval-reason.json.html">Allowed Interval Reason</a> <p>Captures the reason for the allowed interval between vaccine doses.</p>
 </li>

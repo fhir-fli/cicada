@@ -1,5 +1,6 @@
 <html>
 <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
   <title>list-name-structuredefinitions</title>
   <link rel="stylesheet" href="fhir.css"/>
 </head>
@@ -38,9 +39,9 @@
 </li>
  <li><a href="StructureDefinition-preferred-vaccine-status.html">Preferred Vaccine Status</a> <p>Indicates if the vaccine administered is the preferred vaccine.</p>
 </li>
- <li><a href="StructureDefinition-ProcedureProfile.html">Immunization Procedures Profile</a> <p>Profile for medical procedures related to immunization based on SNOMED CT codes.</p>
+ <li><a href="StructureDefinition-ProcedureProfile.html">Immunization Procedures Profile</a> <p>Profile for medical procedures related to immunization based on SNOMED CT or CPT codes.</p>
 </li>
- <li><a href="StructureDefinition-ReactionProfile.html">Allergy Intolerance Profile with Vaccine Codes</a> <p>Profile for allergy intolerances where the offending agent must have a CVX or MVX code.</p>
+ <li><a href="StructureDefinition-ReactionProfile.html">Allergy Intolerance Profile for Immunization Decision Support</a> <p>Profile for allergy intolerances relevant to immunization. The code (allergen/substance) may use SNOMED CT or ICD-10-CM. Reaction substances may use CVX, MVX, SNOMED CT, or RxNorm.</p>
 </li>
  <li><a href="StructureDefinition-schedule-supporting-data.html">Schedule Supporting Data</a> <p>This resource consolidates various mapping and conflict information related to vaccine scheduling to support decision-making processes.</p>
 </li>
@@ -48,9 +49,9 @@
 </li>
  <li><a href="StructureDefinition-Vaccine.html">Vaccine</a> <p>Simple vaccine to easily obtain needed information for forecasting</p>
 </li>
- <li><a href="StructureDefinition-VaccineConditionFhir.html">Condition Profile with Vaccine Condition Codes</a> <p>Profile for conditions where the code must be from the Vaccine Condition Codes value set.</p>
+ <li><a href="StructureDefinition-VaccineConditionFhir.html">Condition Profile with Vaccine Condition Codes</a> <p>Profile for conditions where the code must be from the Vaccine Condition Codes value set. Accepts SNOMED CT and ICD-10-CM coded conditions.</p>
 </li>
- <li><a href="StructureDefinition-VaccineObservationFhir.html">Condition Profile with Vaccine Condition Codes</a> <p>Profile for conditions where the code must be from the Vaccine Condition Codes value set.</p>
+ <li><a href="StructureDefinition-VaccineObservationFhir.html">Observation Profile for Immunization Decision Support</a> <p>Profile for Observation resources carrying lab evidence of immunity or other findings relevant to immunization decisions. Codes may be from SNOMED CT, ICD-10-CM, or LOINC.</p>
 </li>
  <li><a href="StructureDefinition-vaccine-type.html">Vaccine Type</a> <p>Type of the vaccine.</p>
 </li>

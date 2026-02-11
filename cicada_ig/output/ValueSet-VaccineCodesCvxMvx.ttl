@@ -1,5 +1,6 @@
 @prefix fhir: <http://hl7.org/fhir/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
@@ -10,13 +11,16 @@
   fhir:id [ fhir:v "VaccineCodesCvxMvx"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set includes codes based on the following rules:</p><ul><li>Include all codes defined in <a href=\"http://terminology.hl7.org/5.5.0/CodeSystem-CVX.html\"><code>http://hl7.org/fhir/sid/cvx</code></a></li><li>Include all codes defined in <a href=\"http://terminology.hl7.org/5.5.0/CodeSystem-MVX.html\"><code>http://hl7.org/fhir/sid/mvx</code></a></li></ul></div>"
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet VaccineCodesCvxMvx</b></p><a name=\"VaccineCodesCvxMvx\"> </a><a name=\"hcVaccineCodesCvxMvx\"> </a><p>This value set includes codes based on the following rules:</p><ul><li>Include all codes defined in <a href=\"http://tx.fhir.org/r4\"><code>http://hl7.org/fhir/sid/cvx</code></a><span style=\"opacity: 0.5\" title=\"Version is not explicitly stated. When building this specification, the most recent version 20250715 has been used\"> version ⏿20250715</span></li><li>Include all codes defined in <a href=\"http://tx.fhir.org/r4\"><code>http://hl7.org/fhir/sid/mvx</code></a><span style=\"opacity: 0.5\" title=\"Version is not explicitly stated. When building this specification, the most recent version 20201030 has been used\"> version ⏿20201030</span></li></ul></div>"^^rdf:XMLLiteral ]
   ] ; # 
-  fhir:url [ fhir:v "http://fhirfli.dev/fhir/ig/cicada/ValueSet/VaccineCodesCvxMvx"^^xsd:anyURI] ; # 
+  fhir:url [
+     fhir:v "http://fhirfli.dev/fhir/ig/cicada/ValueSet/VaccineCodesCvxMvx"^^xsd:anyURI ;
+     fhir:l <http://fhirfli.dev/fhir/ig/cicada/ValueSet/VaccineCodesCvxMvx>
+  ] ; # 
   fhir:version [ fhir:v "0.1.0"] ; # 
   fhir:name [ fhir:v "VaccineCodesCvxMvx"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2024-05-06T15:25:10-04:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-02-11T14:37:07-05:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "FHIR-FLI"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "FHIR-FLI" ] ;
@@ -27,9 +31,15 @@
   ] ) ; # 
   fhir:compose [
      fhir:include ( [
-       fhir:system [ fhir:v "http://hl7.org/fhir/sid/cvx"^^xsd:anyURI ]
+       fhir:system [
+         fhir:v "http://hl7.org/fhir/sid/cvx"^^xsd:anyURI ;
+         fhir:l <http://hl7.org/fhir/sid/cvx>
+       ]
      ] [
-       fhir:system [ fhir:v "http://hl7.org/fhir/sid/mvx"^^xsd:anyURI ]
+       fhir:system [
+         fhir:v "http://hl7.org/fhir/sid/mvx"^^xsd:anyURI ;
+         fhir:l <http://hl7.org/fhir/sid/mvx>
+       ]
      ] )
   ] . # 
 

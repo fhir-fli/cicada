@@ -3,9 +3,9 @@
   "id": "ReactionProfile",
   "url": "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/ReactionProfile",
   "name": "ReactionProfile",
-  "title": "Allergy Intolerance Profile with Vaccine Codes",
+  "title": "Allergy Intolerance Profile for Immunization Decision Support",
   "status": "draft",
-  "description": "Profile for allergy intolerances where the offending agent must have a CVX or MVX code.",
+  "description": "Profile for allergy intolerances relevant to immunization. The code (allergen/substance) may use SNOMED CT or ICD-10-CM. Reaction substances may use CVX, MVX, SNOMED CT, or RxNorm.",
   "fhirVersion": "4.0.1",
   "kind": "resource",
   "abstract": false,
@@ -15,10 +15,18 @@
   "differential": {
     "element": [
       {
-        "id": "AllergyIntolerance.reaction.substance.coding",
-        "path": "AllergyIntolerance.reaction.substance.coding",
+        "id": "AllergyIntolerance.code",
+        "path": "AllergyIntolerance.code",
         "binding": {
-          "strength": "required",
+          "strength": "extensible",
+          "valueSet": "http://fhirfli.dev/fhir/ig/cicada/ValueSet/vaccine-condition-codes-snomed"
+        }
+      },
+      {
+        "id": "AllergyIntolerance.reaction.substance",
+        "path": "AllergyIntolerance.reaction.substance",
+        "binding": {
+          "strength": "extensible",
           "valueSet": "http://fhirfli.dev/fhir/ig/cicada/ValueSet/VaccineCodesCvxMvx"
         }
       }

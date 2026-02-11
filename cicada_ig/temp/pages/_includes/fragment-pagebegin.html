@@ -18,6 +18,7 @@
     <link href="{{site.data.info.assets}}assets/css/pygments-manni.css" rel="stylesheet"/>
     <link href="{{site.data.info.assets}}assets/css/jquery-ui.css" rel="stylesheet"/>
   	<link href="{{site.data.info.assets}}assets/css/prism.css" rel="stylesheet" />
+  	<link href="{{site.data.info.assets}}assets/css/cqf.css" rel="stylesheet" />
     {% include fragment-css.html %}
 
     <script type="text/javascript" src="fhir-table-scripts.js"> </script>
@@ -29,20 +30,28 @@
     <![endif]-->
 
     <!-- Favicons -->
-    <link rel="fhir-logo" sizes="144x144" href="{{site.data.info.assets}}assets/ico/icon-fhir-144.png"/>
-    <link rel="fhir-logo" sizes="114x114" href="{{site.data.info.assets}}assets/ico/icon-fhir-114.png"/>
-    <link rel="fhir-logo" sizes="72x72" href="{{site.data.info.assets}}assets/ico/icon-fhir-72.png"/>
-    <link rel="fhir-logo" href="{{site.data.info.assets}}assets/ico/icon-fhir-57.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{site.data.info.assets}}assets/ico/icon-fhir-144.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{site.data.info.assets}}assets/ico/icon-fhir-114.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{site.data.info.assets}}assets/ico/icon-fhir-72.png"/>
+    <link rel="apple-touch-icon-precomposed" href="{{site.data.info.assets}}assets/ico/icon-fhir-57.png"/>
     <link rel="shortcut icon" href="{{site.data.info.assets}}assets/ico/favicon.png"/>
   </head>
   <body onload="document.body.style.opacity='1'">
 {% assign label = {{site.data.pages[page.path].label}} | split: '.0' %}
 	  <script src="{{site.data.info.assets}}assets/js/prism.js"></script>
-
+    <script type="text/javascript" src="{{site.data.info.assets}}assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="{{site.data.info.assets}}assets/js/mermaid-init.js"></script>
     <style type="text/css">h2{--heading-prefix:"{{site.data.info.headingOffset}}{{label}}"}
     h3,h4,h5,h6{--heading-prefix:"{{site.data.info.headingOffset}}{{site.data.pages[page.path].label}}"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
+{% if site.data.info.fcpspec == 'true' %}
+        <div id="fcp-nav">
+          <a id="fcp-logo" data-no-external="true" href="https://confluence.hl7.org/display/FCP/FCP+Specification+Registry">
+            <img height="60" alt="Visit the FHIR Community Process Specification Registry" src="assets/images/fcp-logo.png"/>
+          </a>
+        </div>
+{% endif %}
         {% include fragment-header.html %}
 {% if site.data.info.releaselabel != '' %}
 {% assign status = site.data.info.releaselabel %}

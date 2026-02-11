@@ -1,12 +1,13 @@
 <html>
 <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
   <title>StructureDefinition-vax-patient-validation</title>
   <link rel="stylesheet" href="fhir.css"/>
 </head>
 <body>
-<table class="grid">
+<table class="grid" data-fhir="generated-heirarchy">
 <tr><td><b>Level</b></td><td><b>Type</b></td><td><b>Location</b></td><td><b>Message</b></td></tr>
-<tr><td>error</td><td>business-rule</td><td>Vaccination Patient.Patient.gender</td><td>Binding http://fhirfli.dev/fhir/ig/cicada/ValueSet/vaccine-gender is not a subset of binding http://hl7.org/fhir/ValueSet/administrative-gender|4.0.1</td><td></td></tr>
+<tr><td>error</td><td>business-rule</td><td>Vaccination Patient.Patient.gender</td><td>Binding http://fhirfli.dev/fhir/ig/cicada/ValueSet/vaccine-gender is not a subset of binding http://hl7.org/fhir/ValueSet/administrative-gender|4.0.1 because The codes 'female,transgender,male,unknown' are not in the base valueset</td><td></td></tr>
 <tr><td>warning</td><td>business-rule</td><td>StructureDefinition.where(url = 'http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/vax-patient')</td><td>The Implementation Guide contains no examples for this profile</td><td></td></tr>
 <tr><td>information</td><td>informational</td><td>StructureDefinition/vax-patient: StructureDefinition</td><td>Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition|4.0.1</td><td></td></tr>
 </table>

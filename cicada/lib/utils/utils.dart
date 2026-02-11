@@ -1,4 +1,6 @@
 export 'antigen_map.dart';
+export 'fhir_json_to_xml.dart';
+export 'fhir_xml_to_json.dart';
 export 'antigens_from_cvx.dart';
 export 'codes_from_immunization.dart';
 export 'gender_from_patient.dart';

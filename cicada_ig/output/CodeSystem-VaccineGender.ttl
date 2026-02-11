@@ -1,5 +1,6 @@
 @prefix fhir: <http://hl7.org/fhir/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
@@ -10,14 +11,17 @@
   fhir:id [ fhir:v "VaccineGender"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This  code system <code>http://fhirfli.dev/fhir/ig/cicada/CodeSystem/VaccineGender</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">female<a name=\"VaccineGender-female\"> </a></td><td>Female</td><td>Female</td></tr><tr><td style=\"white-space:nowrap\">transgender<a name=\"VaccineGender-transgender\"> </a></td><td>Transgender</td><td>Transgender</td></tr><tr><td style=\"white-space:nowrap\">unknown<a name=\"VaccineGender-unknown\"> </a></td><td>Unknown</td><td>Unknown</td></tr><tr><td style=\"white-space:nowrap\">male<a name=\"VaccineGender-male\"> </a></td><td>Male</td><td>Male</td></tr></table></div>"
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem VaccineGender</b></p><a name=\"VaccineGender\"> </a><a name=\"hcVaccineGender\"> </a><p>This  code system <code>http://fhirfli.dev/fhir/ig/cicada/CodeSystem/VaccineGender</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">female<a name=\"VaccineGender-female\"> </a></td><td>Female</td><td>Female</td></tr><tr><td style=\"white-space:nowrap\">transgender<a name=\"VaccineGender-transgender\"> </a></td><td>Transgender</td><td>Transgender</td></tr><tr><td style=\"white-space:nowrap\">unknown<a name=\"VaccineGender-unknown\"> </a></td><td>Unknown</td><td>Unknown</td></tr><tr><td style=\"white-space:nowrap\">male<a name=\"VaccineGender-male\"> </a></td><td>Male</td><td>Male</td></tr></table></div>"^^rdf:XMLLiteral ]
   ] ; # 
-  fhir:url [ fhir:v "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/VaccineGender"^^xsd:anyURI] ; # 
+  fhir:url [
+     fhir:v "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/VaccineGender"^^xsd:anyURI ;
+     fhir:l <http://fhirfli.dev/fhir/ig/cicada/CodeSystem/VaccineGender>
+  ] ; # 
   fhir:version [ fhir:v "0.1.0"] ; # 
   fhir:name [ fhir:v "VaccineGenderCS"] ; # 
   fhir:title [ fhir:v "Vaccine Gender"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2024-05-06T15:25:10-04:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2026-02-11T14:37:07-05:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "FHIR-FLI"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "FHIR-FLI" ] ;

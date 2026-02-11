@@ -1,0 +1,333 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhirfli.dev/fhir/ig/cicada/ValueSet/vaccine-condition-codes-icd10> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "vaccine-condition-codes-icd10"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div [ fhir:v "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet vaccine-condition-codes-icd10</b></p><a name=\"vaccine-condition-codes-icd10\"> </a><a name=\"hcvaccine-condition-codes-icd10\"> </a><ul><li>Include these codes as defined in <code>http://hl7.org/fhir/sid/icd-10-cm</code><span title=\"Version is not explicitly stated. No matching Code System found\"> version Not Stated (use latest from terminology server)</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td>D84.9</td><td>Immunodeficiency, unspecified</td></tr><tr><td>D83.9</td><td>Common variable immunodeficiency, unspecified</td></tr><tr><td>D80.9</td><td>Immunodeficiency with predominantly antibody defects, unspecified</td></tr><tr><td>D89.9</td><td>Disorder involving immune mechanism, unspecified</td></tr><tr><td>D84.8</td><td>Other specified immunodeficiency disorders</td></tr><tr><td>Z94.84</td><td>Bone marrow transplant status</td></tr><tr><td>T86.00</td><td>Unspecified complication of bone marrow transplant</td></tr><tr><td>T86.09</td><td>Other complications of bone marrow transplant</td></tr><tr><td>B18.2</td><td>Chronic viral hepatitis C</td></tr><tr><td>B17.10</td><td>Acute hepatitis C without hepatic coma</td></tr><tr><td>B17.11</td><td>Acute hepatitis C with hepatic coma</td></tr><tr><td>B19.20</td><td>Unspecified viral hepatitis C without hepatic coma</td></tr><tr><td>Z33.1</td><td>Pregnant state, incidental</td></tr><tr><td>O09.90</td><td>Supervision of high risk pregnancy, unspecified trimester</td></tr><tr><td>Z34.00</td><td>Encounter for supervision of normal first pregnancy, unspecified trimester</td></tr><tr><td>Z34.80</td><td>Encounter for supervision of other normal pregnancy, unspecified trimester</td></tr><tr><td>Z39.1</td><td>Encounter for care and examination of lactating mother</td></tr><tr><td>G96.00</td><td>Cerebrospinal fluid leak, unspecified</td></tr><tr><td>G96.01</td><td>Cranial cerebrospinal fluid leak, spontaneous</td></tr><tr><td>G96.02</td><td>Spinal cerebrospinal fluid leak, spontaneous</td></tr><tr><td>G96.08</td><td>Other cranial cerebrospinal fluid leak</td></tr><tr><td>G96.09</td><td>Other spinal cerebrospinal fluid leak</td></tr><tr><td>Z96.21</td><td>Cochlear implant status</td></tr><tr><td>D81.9</td><td>Combined immunodeficiency, unspecified</td></tr><tr><td>D81.0</td><td>SCID with reticular dysgenesis</td></tr><tr><td>D81.1</td><td>SCID with low T- and B-cell numbers</td></tr><tr><td>D81.2</td><td>SCID with low or normal B-cell numbers</td></tr><tr><td>D81.3</td><td>Adenosine deaminase deficiency</td></tr><tr><td>D81.5</td><td>Purine nucleoside phosphorylase deficiency</td></tr><tr><td>D81.6</td><td>Major histocompatibility complex class I deficiency</td></tr><tr><td>D81.7</td><td>Major histocompatibility complex class II deficiency</td></tr><tr><td>E10.9</td><td>Type 1 diabetes mellitus without complications</td></tr><tr><td>E10.65</td><td>Type 1 diabetes mellitus with hyperglycemia</td></tr><tr><td>E11.9</td><td>Type 2 diabetes mellitus without complications</td></tr><tr><td>E11.65</td><td>Type 2 diabetes mellitus with hyperglycemia</td></tr><tr><td>E13.9</td><td>Other specified diabetes mellitus without complications</td></tr><tr><td>E08.9</td><td>Diabetes mellitus due to underlying condition without complications</td></tr><tr><td>E09.9</td><td>Drug or chemical induced diabetes mellitus without complications</td></tr><tr><td>K70.30</td><td>Alcoholic cirrhosis of liver without ascites</td></tr><tr><td>K70.31</td><td>Alcoholic cirrhosis of liver with ascites</td></tr><tr><td>K73.9</td><td>Chronic hepatitis, unspecified</td></tr><tr><td>K74.0</td><td>Hepatic fibrosis</td></tr><tr><td>K74.60</td><td>Unspecified cirrhosis of liver</td></tr><tr><td>K74.69</td><td>Other cirrhosis of liver</td></tr><tr><td>K76.0</td><td>Fatty liver, not elsewhere classified</td></tr><tr><td>K76.9</td><td>Liver disease, unspecified</td></tr><tr><td>I25.10</td><td>Atherosclerotic heart disease of native coronary artery without angina pectoris</td></tr><tr><td>I25.9</td><td>Chronic ischemic heart disease, unspecified</td></tr><tr><td>I50.9</td><td>Heart failure, unspecified</td></tr><tr><td>I50.20</td><td>Unspecified systolic (congestive) heart failure</td></tr><tr><td>I50.30</td><td>Unspecified diastolic (congestive) heart failure</td></tr><tr><td>I42.9</td><td>Cardiomyopathy, unspecified</td></tr><tr><td>I42.0</td><td>Dilated cardiomyopathy</td></tr><tr><td>Q24.9</td><td>Congenital malformation of heart, unspecified</td></tr><tr><td>J44.9</td><td>Chronic obstructive pulmonary disease, unspecified</td></tr><tr><td>J44.1</td><td>Chronic obstructive pulmonary disease with acute exacerbation</td></tr><tr><td>J43.9</td><td>Emphysema, unspecified</td></tr><tr><td>J84.9</td><td>Interstitial pulmonary disease, unspecified</td></tr><tr><td>J84.10</td><td>Pulmonary fibrosis, unspecified</td></tr><tr><td>J47.9</td><td>Bronchiectasis, uncomplicated</td></tr><tr><td>P27.1</td><td>Bronchopulmonary dysplasia originating in the perinatal period</td></tr><tr><td>D73.0</td><td>Hyposplenism</td></tr><tr><td>Q89.01</td><td>Asplenia (congenital)</td></tr><tr><td>D73.89</td><td>Other diseases of spleen</td></tr><tr><td>Z90.81</td><td>Acquired absence of spleen</td></tr><tr><td>N18.1</td><td>Chronic kidney disease, stage 1</td></tr><tr><td>N18.2</td><td>Chronic kidney disease, stage 2</td></tr><tr><td>N18.30</td><td>Chronic kidney disease, stage 3 unspecified</td></tr><tr><td>N18.4</td><td>Chronic kidney disease, stage 4</td></tr><tr><td>N18.5</td><td>Chronic kidney disease, stage 5</td></tr><tr><td>N18.6</td><td>End stage renal disease</td></tr><tr><td>N18.9</td><td>Chronic kidney disease, unspecified</td></tr><tr><td>Z99.2</td><td>Dependence on renal dialysis</td></tr><tr><td>B20</td><td>Human immunodeficiency virus [HIV] disease</td></tr><tr><td>Z21</td><td>Asymptomatic human immunodeficiency virus [HIV] infection status</td></tr><tr><td>J45.20</td><td>Mild intermittent asthma, uncomplicated</td></tr><tr><td>J45.30</td><td>Mild persistent asthma, uncomplicated</td></tr><tr><td>J45.40</td><td>Moderate persistent asthma, uncomplicated</td></tr><tr><td>J45.50</td><td>Severe persistent asthma, uncomplicated</td></tr><tr><td>J45.909</td><td>Unspecified asthma, uncomplicated</td></tr><tr><td>J45.998</td><td>Other asthma</td></tr><tr><td>K56.1</td><td>Intussusception</td></tr><tr><td>K52.9</td><td>Noninfective gastroenteritis and colitis, unspecified</td></tr><tr><td>A09</td><td>Infectious gastroenteritis and colitis, unspecified</td></tr><tr><td>A08.0</td><td>Rotaviral enteritis</td></tr><tr><td>A08.39</td><td>Other viral enteritis</td></tr><tr><td>A15.0</td><td>Tuberculosis of lung</td></tr><tr><td>A15.9</td><td>Respiratory tuberculosis unspecified</td></tr><tr><td>A18.9</td><td>Tuberculosis of other organs</td></tr><tr><td>A19.9</td><td>Miliary tuberculosis, unspecified</td></tr><tr><td>R76.11</td><td>Nonspecific reaction to tuberculin skin test without active tuberculosis</td></tr><tr><td>Z86.11</td><td>Personal history of tuberculosis</td></tr><tr><td>Z79.82</td><td>Long term (current) use of aspirin</td></tr><tr><td>Z11.3</td><td>Encounter for screening for infections with a predominantly sexual mode of transmission</td></tr><tr><td>Z11.4</td><td>Encounter for screening for human immunodeficiency virus [HIV]</td></tr><tr><td>Z20.2</td><td>Contact with and exposure to infections with a predominantly sexual mode of transmission</td></tr></table></li></ul></div>"^^rdf:XMLLiteral ]
+  ] ; # 
+  fhir:url [
+     fhir:v "http://fhirfli.dev/fhir/ig/cicada/ValueSet/vaccine-condition-codes-icd10"^^xsd:anyURI ;
+     fhir:l <http://fhirfli.dev/fhir/ig/cicada/ValueSet/vaccine-condition-codes-icd10>
+  ] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "VaccineConditionCodesIcd10"] ; # 
+  fhir:title [ fhir:v "Vaccine Condition Codes (ICD-10-CM)"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:date [ fhir:v "2026-02-11T14:37:07-05:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "FHIR-FLI"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "FHIR-FLI" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://fhirfli.dev" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Value set for conditions based on ICD-10-CM that may impact immunization decisions, mapped to CDSi observation codes."] ; # 
+  fhir:compose [
+     fhir:include ( [
+       fhir:system [
+         fhir:v "http://hl7.org/fhir/sid/icd-10-cm"^^xsd:anyURI ;
+         fhir:l <http://hl7.org/fhir/sid/icd-10-cm>
+       ] ;
+       fhir:concept ( [
+         fhir:code [ fhir:v "D84.9" ] ;
+         fhir:display [ fhir:v "Immunodeficiency, unspecified" ]
+       ] [
+         fhir:code [ fhir:v "D83.9" ] ;
+         fhir:display [ fhir:v "Common variable immunodeficiency, unspecified" ]
+       ] [
+         fhir:code [ fhir:v "D80.9" ] ;
+         fhir:display [ fhir:v "Immunodeficiency with predominantly antibody defects, unspecified" ]
+       ] [
+         fhir:code [ fhir:v "D89.9" ] ;
+         fhir:display [ fhir:v "Disorder involving immune mechanism, unspecified" ]
+       ] [
+         fhir:code [ fhir:v "D84.8" ] ;
+         fhir:display [ fhir:v "Other specified immunodeficiency disorders" ]
+       ] [
+         fhir:code [ fhir:v "Z94.84" ] ;
+         fhir:display [ fhir:v "Bone marrow transplant status" ]
+       ] [
+         fhir:code [ fhir:v "T86.00" ] ;
+         fhir:display [ fhir:v "Unspecified complication of bone marrow transplant" ]
+       ] [
+         fhir:code [ fhir:v "T86.09" ] ;
+         fhir:display [ fhir:v "Other complications of bone marrow transplant" ]
+       ] [
+         fhir:code [ fhir:v "B18.2" ] ;
+         fhir:display [ fhir:v "Chronic viral hepatitis C" ]
+       ] [
+         fhir:code [ fhir:v "B17.10" ] ;
+         fhir:display [ fhir:v "Acute hepatitis C without hepatic coma" ]
+       ] [
+         fhir:code [ fhir:v "B17.11" ] ;
+         fhir:display [ fhir:v "Acute hepatitis C with hepatic coma" ]
+       ] [
+         fhir:code [ fhir:v "B19.20" ] ;
+         fhir:display [ fhir:v "Unspecified viral hepatitis C without hepatic coma" ]
+       ] [
+         fhir:code [ fhir:v "Z33.1" ] ;
+         fhir:display [ fhir:v "Pregnant state, incidental" ]
+       ] [
+         fhir:code [ fhir:v "O09.90" ] ;
+         fhir:display [ fhir:v "Supervision of high risk pregnancy, unspecified trimester" ]
+       ] [
+         fhir:code [ fhir:v "Z34.00" ] ;
+         fhir:display [ fhir:v "Encounter for supervision of normal first pregnancy, unspecified trimester" ]
+       ] [
+         fhir:code [ fhir:v "Z34.80" ] ;
+         fhir:display [ fhir:v "Encounter for supervision of other normal pregnancy, unspecified trimester" ]
+       ] [
+         fhir:code [ fhir:v "Z39.1" ] ;
+         fhir:display [ fhir:v "Encounter for care and examination of lactating mother" ]
+       ] [
+         fhir:code [ fhir:v "G96.00" ] ;
+         fhir:display [ fhir:v "Cerebrospinal fluid leak, unspecified" ]
+       ] [
+         fhir:code [ fhir:v "G96.01" ] ;
+         fhir:display [ fhir:v "Cranial cerebrospinal fluid leak, spontaneous" ]
+       ] [
+         fhir:code [ fhir:v "G96.02" ] ;
+         fhir:display [ fhir:v "Spinal cerebrospinal fluid leak, spontaneous" ]
+       ] [
+         fhir:code [ fhir:v "G96.08" ] ;
+         fhir:display [ fhir:v "Other cranial cerebrospinal fluid leak" ]
+       ] [
+         fhir:code [ fhir:v "G96.09" ] ;
+         fhir:display [ fhir:v "Other spinal cerebrospinal fluid leak" ]
+       ] [
+         fhir:code [ fhir:v "Z96.21" ] ;
+         fhir:display [ fhir:v "Cochlear implant status" ]
+       ] [
+         fhir:code [ fhir:v "D81.9" ] ;
+         fhir:display [ fhir:v "Combined immunodeficiency, unspecified" ]
+       ] [
+         fhir:code [ fhir:v "D81.0" ] ;
+         fhir:display [ fhir:v "SCID with reticular dysgenesis" ]
+       ] [
+         fhir:code [ fhir:v "D81.1" ] ;
+         fhir:display [ fhir:v "SCID with low T- and B-cell numbers" ]
+       ] [
+         fhir:code [ fhir:v "D81.2" ] ;
+         fhir:display [ fhir:v "SCID with low or normal B-cell numbers" ]
+       ] [
+         fhir:code [ fhir:v "D81.3" ] ;
+         fhir:display [ fhir:v "Adenosine deaminase deficiency" ]
+       ] [
+         fhir:code [ fhir:v "D81.5" ] ;
+         fhir:display [ fhir:v "Purine nucleoside phosphorylase deficiency" ]
+       ] [
+         fhir:code [ fhir:v "D81.6" ] ;
+         fhir:display [ fhir:v "Major histocompatibility complex class I deficiency" ]
+       ] [
+         fhir:code [ fhir:v "D81.7" ] ;
+         fhir:display [ fhir:v "Major histocompatibility complex class II deficiency" ]
+       ] [
+         fhir:code [ fhir:v "E10.9" ] ;
+         fhir:display [ fhir:v "Type 1 diabetes mellitus without complications" ]
+       ] [
+         fhir:code [ fhir:v "E10.65" ] ;
+         fhir:display [ fhir:v "Type 1 diabetes mellitus with hyperglycemia" ]
+       ] [
+         fhir:code [ fhir:v "E11.9" ] ;
+         fhir:display [ fhir:v "Type 2 diabetes mellitus without complications" ]
+       ] [
+         fhir:code [ fhir:v "E11.65" ] ;
+         fhir:display [ fhir:v "Type 2 diabetes mellitus with hyperglycemia" ]
+       ] [
+         fhir:code [ fhir:v "E13.9" ] ;
+         fhir:display [ fhir:v "Other specified diabetes mellitus without complications" ]
+       ] [
+         fhir:code [ fhir:v "E08.9" ] ;
+         fhir:display [ fhir:v "Diabetes mellitus due to underlying condition without complications" ]
+       ] [
+         fhir:code [ fhir:v "E09.9" ] ;
+         fhir:display [ fhir:v "Drug or chemical induced diabetes mellitus without complications" ]
+       ] [
+         fhir:code [ fhir:v "K70.30" ] ;
+         fhir:display [ fhir:v "Alcoholic cirrhosis of liver without ascites" ]
+       ] [
+         fhir:code [ fhir:v "K70.31" ] ;
+         fhir:display [ fhir:v "Alcoholic cirrhosis of liver with ascites" ]
+       ] [
+         fhir:code [ fhir:v "K73.9" ] ;
+         fhir:display [ fhir:v "Chronic hepatitis, unspecified" ]
+       ] [
+         fhir:code [ fhir:v "K74.0" ] ;
+         fhir:display [ fhir:v "Hepatic fibrosis" ]
+       ] [
+         fhir:code [ fhir:v "K74.60" ] ;
+         fhir:display [ fhir:v "Unspecified cirrhosis of liver" ]
+       ] [
+         fhir:code [ fhir:v "K74.69" ] ;
+         fhir:display [ fhir:v "Other cirrhosis of liver" ]
+       ] [
+         fhir:code [ fhir:v "K76.0" ] ;
+         fhir:display [ fhir:v "Fatty liver, not elsewhere classified" ]
+       ] [
+         fhir:code [ fhir:v "K76.9" ] ;
+         fhir:display [ fhir:v "Liver disease, unspecified" ]
+       ] [
+         fhir:code [ fhir:v "I25.10" ] ;
+         fhir:display [ fhir:v "Atherosclerotic heart disease of native coronary artery without angina pectoris" ]
+       ] [
+         fhir:code [ fhir:v "I25.9" ] ;
+         fhir:display [ fhir:v "Chronic ischemic heart disease, unspecified" ]
+       ] [
+         fhir:code [ fhir:v "I50.9" ] ;
+         fhir:display [ fhir:v "Heart failure, unspecified" ]
+       ] [
+         fhir:code [ fhir:v "I50.20" ] ;
+         fhir:display [ fhir:v "Unspecified systolic (congestive) heart failure" ]
+       ] [
+         fhir:code [ fhir:v "I50.30" ] ;
+         fhir:display [ fhir:v "Unspecified diastolic (congestive) heart failure" ]
+       ] [
+         fhir:code [ fhir:v "I42.9" ] ;
+         fhir:display [ fhir:v "Cardiomyopathy, unspecified" ]
+       ] [
+         fhir:code [ fhir:v "I42.0" ] ;
+         fhir:display [ fhir:v "Dilated cardiomyopathy" ]
+       ] [
+         fhir:code [ fhir:v "Q24.9" ] ;
+         fhir:display [ fhir:v "Congenital malformation of heart, unspecified" ]
+       ] [
+         fhir:code [ fhir:v "J44.9" ] ;
+         fhir:display [ fhir:v "Chronic obstructive pulmonary disease, unspecified" ]
+       ] [
+         fhir:code [ fhir:v "J44.1" ] ;
+         fhir:display [ fhir:v "Chronic obstructive pulmonary disease with acute exacerbation" ]
+       ] [
+         fhir:code [ fhir:v "J43.9" ] ;
+         fhir:display [ fhir:v "Emphysema, unspecified" ]
+       ] [
+         fhir:code [ fhir:v "J84.9" ] ;
+         fhir:display [ fhir:v "Interstitial pulmonary disease, unspecified" ]
+       ] [
+         fhir:code [ fhir:v "J84.10" ] ;
+         fhir:display [ fhir:v "Pulmonary fibrosis, unspecified" ]
+       ] [
+         fhir:code [ fhir:v "J47.9" ] ;
+         fhir:display [ fhir:v "Bronchiectasis, uncomplicated" ]
+       ] [
+         fhir:code [ fhir:v "P27.1" ] ;
+         fhir:display [ fhir:v "Bronchopulmonary dysplasia originating in the perinatal period" ]
+       ] [
+         fhir:code [ fhir:v "D73.0" ] ;
+         fhir:display [ fhir:v "Hyposplenism" ]
+       ] [
+         fhir:code [ fhir:v "Q89.01" ] ;
+         fhir:display [ fhir:v "Asplenia (congenital)" ]
+       ] [
+         fhir:code [ fhir:v "D73.89" ] ;
+         fhir:display [ fhir:v "Other diseases of spleen" ]
+       ] [
+         fhir:code [ fhir:v "Z90.81" ] ;
+         fhir:display [ fhir:v "Acquired absence of spleen" ]
+       ] [
+         fhir:code [ fhir:v "N18.1" ] ;
+         fhir:display [ fhir:v "Chronic kidney disease, stage 1" ]
+       ] [
+         fhir:code [ fhir:v "N18.2" ] ;
+         fhir:display [ fhir:v "Chronic kidney disease, stage 2" ]
+       ] [
+         fhir:code [ fhir:v "N18.30" ] ;
+         fhir:display [ fhir:v "Chronic kidney disease, stage 3 unspecified" ]
+       ] [
+         fhir:code [ fhir:v "N18.4" ] ;
+         fhir:display [ fhir:v "Chronic kidney disease, stage 4" ]
+       ] [
+         fhir:code [ fhir:v "N18.5" ] ;
+         fhir:display [ fhir:v "Chronic kidney disease, stage 5" ]
+       ] [
+         fhir:code [ fhir:v "N18.6" ] ;
+         fhir:display [ fhir:v "End stage renal disease" ]
+       ] [
+         fhir:code [ fhir:v "N18.9" ] ;
+         fhir:display [ fhir:v "Chronic kidney disease, unspecified" ]
+       ] [
+         fhir:code [ fhir:v "Z99.2" ] ;
+         fhir:display [ fhir:v "Dependence on renal dialysis" ]
+       ] [
+         fhir:code [ fhir:v "B20" ] ;
+         fhir:display [ fhir:v "Human immunodeficiency virus [HIV] disease" ]
+       ] [
+         fhir:code [ fhir:v "Z21" ] ;
+         fhir:display [ fhir:v "Asymptomatic human immunodeficiency virus [HIV] infection status" ]
+       ] [
+         fhir:code [ fhir:v "J45.20" ] ;
+         fhir:display [ fhir:v "Mild intermittent asthma, uncomplicated" ]
+       ] [
+         fhir:code [ fhir:v "J45.30" ] ;
+         fhir:display [ fhir:v "Mild persistent asthma, uncomplicated" ]
+       ] [
+         fhir:code [ fhir:v "J45.40" ] ;
+         fhir:display [ fhir:v "Moderate persistent asthma, uncomplicated" ]
+       ] [
+         fhir:code [ fhir:v "J45.50" ] ;
+         fhir:display [ fhir:v "Severe persistent asthma, uncomplicated" ]
+       ] [
+         fhir:code [ fhir:v "J45.909" ] ;
+         fhir:display [ fhir:v "Unspecified asthma, uncomplicated" ]
+       ] [
+         fhir:code [ fhir:v "J45.998" ] ;
+         fhir:display [ fhir:v "Other asthma" ]
+       ] [
+         fhir:code [ fhir:v "K56.1" ] ;
+         fhir:display [ fhir:v "Intussusception" ]
+       ] [
+         fhir:code [ fhir:v "K52.9" ] ;
+         fhir:display [ fhir:v "Noninfective gastroenteritis and colitis, unspecified" ]
+       ] [
+         fhir:code [ fhir:v "A09" ] ;
+         fhir:display [ fhir:v "Infectious gastroenteritis and colitis, unspecified" ]
+       ] [
+         fhir:code [ fhir:v "A08.0" ] ;
+         fhir:display [ fhir:v "Rotaviral enteritis" ]
+       ] [
+         fhir:code [ fhir:v "A08.39" ] ;
+         fhir:display [ fhir:v "Other viral enteritis" ]
+       ] [
+         fhir:code [ fhir:v "A15.0" ] ;
+         fhir:display [ fhir:v "Tuberculosis of lung" ]
+       ] [
+         fhir:code [ fhir:v "A15.9" ] ;
+         fhir:display [ fhir:v "Respiratory tuberculosis unspecified" ]
+       ] [
+         fhir:code [ fhir:v "A18.9" ] ;
+         fhir:display [ fhir:v "Tuberculosis of other organs" ]
+       ] [
+         fhir:code [ fhir:v "A19.9" ] ;
+         fhir:display [ fhir:v "Miliary tuberculosis, unspecified" ]
+       ] [
+         fhir:code [ fhir:v "R76.11" ] ;
+         fhir:display [ fhir:v "Nonspecific reaction to tuberculin skin test without active tuberculosis" ]
+       ] [
+         fhir:code [ fhir:v "Z86.11" ] ;
+         fhir:display [ fhir:v "Personal history of tuberculosis" ]
+       ] [
+         fhir:code [ fhir:v "Z79.82" ] ;
+         fhir:display [ fhir:v "Long term (current) use of aspirin" ]
+       ] [
+         fhir:code [ fhir:v "Z11.3" ] ;
+         fhir:display [ fhir:v "Encounter for screening for infections with a predominantly sexual mode of transmission" ]
+       ] [
+         fhir:code [ fhir:v "Z11.4" ] ;
+         fhir:display [ fhir:v "Encounter for screening for human immunodeficiency virus [HIV]" ]
+       ] [
+         fhir:code [ fhir:v "Z20.2" ] ;
+         fhir:display [ fhir:v "Contact with and exposure to infections with a predominantly sexual mode of transmission" ]
+       ] )
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

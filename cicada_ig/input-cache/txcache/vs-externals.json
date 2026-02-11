@@ -1,0 +1,8 @@
+{
+  "http://www.nlm.nih.gov/research/umls/rxnorm" : null,
+  "https://www.cdc.gov/vaccines/programs/iis/cdsi" : null,
+  "http://www.ama-assn.org/go/cpt" : null,
+  "http://hl7.org/fhir/sid/icd-10-cm" : null,
+  "http://loinc.org" : null,
+  "http://snomed.info/sct" : null
+}

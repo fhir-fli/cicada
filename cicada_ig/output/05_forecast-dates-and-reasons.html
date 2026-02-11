@@ -18,6 +18,7 @@
     <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
     <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
   	<link href="assets/css/prism.css" rel="stylesheet" />
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
     <!-- Placeholder for child template CSS declarations -->
 
     <script type="text/javascript" src="fhir-table-scripts.js"> </script>
@@ -29,20 +30,22 @@
     <![endif]-->
 
     <!-- Favicons -->
-    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
-    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
-    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
-    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/icon-fhir-57.png"/>
     <link rel="shortcut icon" href="assets/ico/favicon.png"/>
   </head>
   <body onload="document.body.style.opacity='1'">
 
 	  <script src="assets/js/prism.js"></script>
-
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
     <style type="text/css">h2{--heading-prefix:"6"}
     h3,h4,h5,h6{--heading-prefix:"6"}</style>
     <div id="segment-header" class="segment">  <!-- segment-header -->
       <div class="container">  <!-- container -->
+
         <!-- Placeholder for child template header declarations -->
 
 
@@ -79,6 +82,31 @@
   <li>
     <a href="index.html">Home</a>
   </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Guide
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="01_preparation.html">Preparation</a>
+      </li>
+      <li>
+        <a href="02_logical-specification-concepts.html">Logical Specification Concepts</a>
+      </li>
+      <li>
+        <a href="03_processing-model.html">Processing Model</a>
+      </li>
+      <li>
+        <a href="04_evaluate-vaccine-dose-administered.html">Evaluate Vaccine Dose Administered</a>
+      </li>
+      <li>
+        <a href="05_forecast-dates-and-reasons.html">Forecast Dates and Reasons</a>
+      </li>
+      <li>
+        <a href="06_select-patient-series.html">Select Patient Series</a>
+      </li>
+    </ul>
+  </li>
   <li>
     <a href="artifacts.html">Artifacts</a>
   </li>
@@ -114,7 +142,7 @@ h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) ".
 h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
 </style>
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">The Cicada Vaccine Forecasting Engine and Guide - Local Development build (v0.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href="http://fhirfli.dev/fhir/ig/cicada/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">The Cicada Vaccine Forecasting Engine and Guide - Local Development build (v0.1.0) built by the FHIR (HL7® FHIR® Standard) Build Tools. See the <a href='http://fhirfli.dev/fhir/ig/cicada/history.html'>Directory of published versions</a></p><!--EndReleaseHeader-->
   <h2>Forecast Dates and Reasons</h2>
   
 
@@ -137,16 +165,17 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <li><a href="#determine-contraindications" id="markdown-toc-determine-contraindications">Determine Contraindications</a></li>
   <li><a href="#determine-forecast-need" id="markdown-toc-determine-forecast-need">Determine Forecast Need</a></li>
   <li><a href="#generate-forecast-dates-and-recommended-vaccines" id="markdown-toc-generate-forecast-dates-and-recommended-vaccines">Generate Forecast Dates and Recommended Vaccines</a></li>
+  <li><a href="#validate-recommendation" id="markdown-toc-validate-recommendation">Validate Recommendation</a></li>
 </ul>
 
 </div>
 <h3 id="evaluate-conditional-skip">Evaluate Conditional Skip</h3>
 
-<p>We’ve already gone through this. There’s a couple of rule changes, like the context is Forecast instead of Evaluation, and we use a different reference date. Otherwise, it’s the same logic we used during the Evaluation process.</p>
+<p>We've already gone through this. There are a couple of rule changes: the context is "Forecast" instead of "Evaluation", and we use a different reference date. During forecasting, the reference date is the later of: the assessment date, and the earliest date the next dose in the series can be given. Otherwise, it's the same logic we used during the Evaluation process.</p>
 
 <h3 id="determine-evidence-of-immunity">Determine Evidence of Immunity</h3>
 
-<p>We use this information to determine if the patient has evidence of immunity. It’s important to note, the <em>guidelineCode</em> and <em>exclusionCode</em> are the same as <em>observationCode</em>. Why they decided to give them different names is beyond me. Anyway, we use these codes to see if the patient has any conditions that apply for immunity.</p>
+<p>We use this information to determine if the patient has evidence of immunity. It's important to note, the <em>guidelineCode</em> and <em>exclusionCode</em> are the same as <em>observationCode</em>. Why they decided to give them different names is beyond me. Anyway, we use these codes to see if the patient has any conditions that apply for immunity.</p>
 
 <table border="1">
   <tr>
@@ -199,7 +228,20 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
 <h3 id="determine-contraindications">Determine Contraindications</h3>
 
-<p>This one actually isn’t too bad either. There are just a few things to note. The first is that contraindications come in Groups or Vaccines. If a patient has a contraindication at the group level, that means any vaccine that pertains to that Antigen is contraindicated. Contraindications at the vaccine level only apply to a single Vaccine, so just because one is contraindicated doesn’t mean taht they all are. Also, for the logic is slightly out of order compared to the CDC booklet, and I don’t calculate any vaccine contraindications if there’s already a group/antigen level contraindication.</p>
+<p>Contraindications come in two flavors: <strong>group-level</strong> and <strong>vaccine-level</strong>.</p>
+
+<ul>
+  <li>
+    <p><strong>Group-level contraindications</strong> apply to the entire antigen. If the patient has a condition (mapped via the observation crosswalk to a CDSi observation code) that matches a group contraindication for the antigen, then the entire antigen is contraindicated. No more vaccines for that antigen should be given.</p>
+  </li>
+  <li>
+    <p><strong>Vaccine-level contraindications</strong> apply only to a specific vaccine type (CVX). If the patient has a matching condition, only that specific vaccine is contraindicated, but other vaccines for the same antigen may still be given.</p>
+  </li>
+</ul>
+
+<p>The logic is: for each contraindication in the supporting data, check if the patient has a matching observation code. If so, check if the assessment date falls within the contraindication's begin and end age dates (DOB + begin age, DOB + end age). If both are true, the contraindication applies.</p>
+
+<p>If there's already a group-level contraindication, there's no need to check individual vaccine-level contraindications for that antigen.</p>
 
 <h3 id="determine-forecast-need">Determine Forecast Need</h3>
 
@@ -267,7 +309,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <td>-</td>
     <td>-</td>
     <td>-</td>
-    <td>-</td>
+    <td>No</td>
   </tr>
   <tr>
     <td>Needs another dose?</td>
@@ -301,11 +343,11 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   </tr>
 </table>
 
-<p>Most of these are straight forward except the final one. Also, I chose to do my logic in a slightly different order to the official questions. I start out asking if someone is immune. If they are, nothing else matters, they’re finished that series. After, I look if it’s contraindicated. If it is, they shouldn’t get any more. Then I go through the rest of the branching logic. As I said, it’s only the final one that I have trouble with. Mostly because some of what they’re asking (such as intervals and ages) are lists, and it wasn’t clear to me if I choose the first one in the list, or go through and test it for each entry in the list. I went with the latter.</p>
+<p>Most of these are straight forward except the final one. Also, I chose to do my logic in a slightly different order to the official questions. I start out asking if someone is immune. If they are, nothing else matters, they're finished that series. After, I look if it's contraindicated. If it is, they shouldn't get any more. Then I go through the rest of the branching logic. As I said, it's only the final one that I have trouble with. Mostly because some of what they're asking (such as intervals and ages) are lists, and it wasn't clear to me if I choose the first one in the list, or go through and test it for each entry in the list. I went with the latter.</p>
 
 <h3 id="generate-forecast-dates-and-recommended-vaccines">Generate Forecast Dates and Recommended Vaccines</h3>
 
-<p>There are some of these that have been defined I’m not convinced are actually needed. That probably means I haven’t figured it out completely yet.</p>
+<p>This is where we determine when the next dose, if any, for that particular antigen/series is needed and when it is due. So far we've been through each antigen that could be applicable to the patient. Within each antigen we've evaluated all of the possible series that exist, and decided which of those were appropriate for the patient. We evaluated each of the doses given to the patient against each series to see how many doses are valid within the constraints of that series. Just above we decided if the patient needs another dose in that series. If they do, we create a recommended dose for that series.</p>
 
 <table border="1">
   <tr>
@@ -370,6 +412,42 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   </tr>
 </table>
 
+<p>From these calculated dates, the key forecast dates are derived:</p>
+
+<ul>
+  <li>
+    <p><strong>Earliest Date</strong>: the <strong>latest</strong> of: minimum age date, latest minimum interval date, latest conflict end interval date, seasonal recommendation start date, and latest inadvertent administration date. This is the soonest the next dose can possibly be given.</p>
+  </li>
+  <li>
+    <p><strong>Unadjusted Recommended Date</strong>: the earliest recommended age date. If null, use the latest of all earliest recommended interval dates. If still null, use the earliest date.</p>
+  </li>
+  <li>
+    <p><strong>Unadjusted Past Due Date</strong>: the latest recommended age date minus 1 day. If null, use the latest of all latest recommended interval dates minus 1 day. If still null, this date is null.</p>
+  </li>
+  <li>
+    <p><strong>Latest Date</strong>: if maximum age date is null, this is null. Otherwise, maximum age date minus 1 day.</p>
+  </li>
+  <li>
+    <p><strong>Adjusted Recommended Date</strong>: whichever comes later between the earliest date and the unadjusted recommended date.</p>
+  </li>
+  <li>
+    <p><strong>Adjusted Past Due Date</strong>: if the unadjusted past due date is not present, this is null. Otherwise, whichever comes later between the earliest date and the unadjusted past due date.</p>
+  </li>
+</ul>
+
+<h3 id="validate-recommendation">Validate Recommendation</h3>
+
+<p>Once the forecast dates are generated, they need to be validated.</p>
+
+<p><strong>Can the target dose be skipped?</strong> If the conditional skip logic (using the "Forecast" context and the forecast reference date) says the dose can be skipped, then we skip to the next target dose and generate forecast dates for that one instead.</p>
+
+<p><strong>Is the patient aged out?</strong> If the earliest date is later than or equal to the latest date in the series, it means the patient will not be able to receive the dose before aging out. In this case:</p>
+<ul>
+  <li>Patient series status is 'aged out'</li>
+  <li>Forecast reason is 'patient is unable to finish the series prior to the maximum age'</li>
+  <li>All forecast dates (earliest, adjusted recommended, adjusted past due, latest) are cleared</li>
+</ul>
+
 
 
 
@@ -389,7 +467,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://fhirfli.dev">FHIR-FLI</a>.  Package cicada.ig#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, May 6, 2024 15:25-0400">2024-05-06</span>
+          IG &#169; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="http://fhirfli.dev">FHIR-FLI</a>.  Package cicada.ig#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Feb 11, 2026 14:37-0500">2026-02-11</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
@@ -406,7 +484,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
     <div class="container">  <!-- container -->
     </div>  <!-- /container -->
   </div>  <!-- /segment-post-footer -->
-  
+
   <!-- JS and analytics only. -->
   <!-- Bootstrap core JavaScript
   ================================================== -->
@@ -417,7 +495,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
   <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
   <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
   <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
-  
   <!-- Analytics Below
   ================================================== -->
   </body>

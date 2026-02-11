@@ -3,6 +3,58 @@ import 'package:fhir_r4/fhir_r4.dart';
 import '../cicada.dart';
 import 'forecast.dart';
 
+/// SNOMED CT codes for CDSi target diseases.
+const _diseaseSnomedCodes = <String, String>{
+  'Cholera': '63650001',
+  'COVID-19': '840539006',
+  'Dengue': '38362002',
+  'Diphtheria': '397430003',
+  'Pertussis': '27836007',
+  'Tetanus': '76902006',
+  'Ebola': '37109004',
+  'HepA': '40468003',
+  'HepB': '66071002',
+  'Hib': '709410003',
+  'HPV': '240532009',
+  'Influenza': '6142004',
+  'Japanese Encephalitis': '52947006',
+  'Meningococcal': '23511006',
+  'Meningococcal B': '860805006',
+  'Measles': '14189004',
+  'Mumps': '36989005',
+  'Rubella': '36653000',
+  'Orthopoxvirus': '359814004',
+  'Pneumococcal': '16814004',
+  'Polio': '398102009',
+  'Rabies': '14168008',
+  'Rotavirus': '18624000',
+  'RSV': '55735004',
+  'TBE': '712986001',
+  'Typhoid': '4834000',
+  'Varicella': '38907003',
+  'Yellow Fever': '16541001',
+  'Zoster': '4740000',
+};
+
+/// Returns a [CodeableConcept] with SNOMED CT coding and text display for a
+/// target disease name.
+CodeableConcept _diseaseCodeableConcept(String targetDisease) {
+  final snomedCode = _diseaseSnomedCodes[targetDisease];
+  if (snomedCode != null) {
+    return CodeableConcept(
+      coding: [
+        Coding(
+          system: 'http://snomed.info/sct'.toFhirUri,
+          code: snomedCode.toFhirCode,
+          display: targetDisease.toFhirString,
+        ),
+      ],
+      text: targetDisease.toFhirString,
+    );
+  }
+  return CodeableConcept(text: targetDisease.toFhirString);
+}
+
 /// Converts a [ForecastResult] into a FHIR [Parameters] resource conforming
 /// to the ImmDS IG `$immds-forecast` operation output.
 ///
@@ -54,9 +106,7 @@ List<ImmunizationEvaluation> _buildEvaluations(ForecastResult result) {
           status: ImmunizationEvaluationStatusCodes.completed,
           patient: Reference(reference: patientRef),
           date: result.patient.assessmentDate.toFhirDateTime(),
-          targetDisease: CodeableConcept(
-            text: antigen.targetDisease.toFhirString,
-          ),
+          targetDisease: _diseaseCodeableConcept(antigen.targetDisease),
           immunizationEvent: Reference(
             reference: 'Immunization/${dose.doseId}'.toFhirString,
           ),
@@ -143,12 +193,47 @@ ImmunizationRecommendation _buildRecommendation(ForecastResult result) {
       ));
     }
 
+    // Build targetDisease with SNOMED coding for each antigen in the group
+    final List<Coding> diseaseCodings = [];
+    for (final antigenName in vgf.antigenNames) {
+      final snomedCode = _diseaseSnomedCodes[antigenName];
+      if (snomedCode != null) {
+        diseaseCodings.add(Coding(
+          system: 'http://snomed.info/sct'.toFhirUri,
+          code: snomedCode.toFhirCode,
+          display: antigenName.toFhirString,
+        ));
+      }
+    }
+
+    // Build vaccineCode list from forecast CVX codes
+    final List<CodeableConcept>? vaccineCodeList;
+    if (vgf.forecastCvxCodes.isNotEmpty) {
+      vaccineCodeList = [
+        for (int i = 0; i < vgf.forecastCvxCodes.length; i++)
+          CodeableConcept(coding: [
+            Coding(
+              system: 'http://hl7.org/fhir/sid/cvx'.toFhirUri,
+              code: vgf.forecastCvxCodes[i].toFhirCode,
+              display: i < vgf.forecastVaccineDescriptions.length
+                  ? vgf.forecastVaccineDescriptions[i].toFhirString
+                  : null,
+            ),
+          ]),
+      ];
+    } else {
+      vaccineCodeList = null;
+    }
+
     recommendations.add(ImmunizationRecommendationRecommendation(
       targetDisease: CodeableConcept(
+        coding: diseaseCodings.isNotEmpty ? diseaseCodings : null,
         text: vgf.vaccineGroupName.toFhirString,
       ),
+      vaccineCode: vaccineCodeList,
       forecastStatus: _mapForecastStatus(vgf.status),
       dateCriterion: dateCriteria.isNotEmpty ? dateCriteria : null,
+      doseNumberPositiveInt: vgf.doseNumber?.toFhirPositiveInt,
       description: vgf.antigenNames.length > 1
           ? 'Antigens: ${vgf.antigenNames.join(", ")}'.toFhirString
           : null,

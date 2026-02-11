@@ -5,7 +5,7 @@
   "name": "VaccineConditionFhir",
   "title": "Condition Profile with Vaccine Condition Codes",
   "status": "draft",
-  "description": "Profile for conditions where the code must be from the Vaccine Condition Codes value set.",
+  "description": "Profile for conditions where the code must be from the Vaccine Condition Codes value set. Accepts SNOMED CT and ICD-10-CM coded conditions.",
   "fhirVersion": "4.0.1",
   "kind": "resource",
   "abstract": false,
@@ -18,7 +18,7 @@
         "id": "Condition.code",
         "path": "Condition.code",
         "binding": {
-          "strength": "required",
+          "strength": "extensible",
           "valueSet": "http://fhirfli.dev/fhir/ig/cicada/ValueSet/vaccine-condition-codes-snomed"
         }
       }

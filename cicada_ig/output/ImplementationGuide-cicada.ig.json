@@ -2,15 +2,15 @@
   "resourceType" : "ImplementationGuide",
   "id" : "cicada.ig",
   "text" : {
-    "status" : "extensions",
-    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>CicadaIG</h2><p>The official URL for this implementation guide is: </p><pre>http://fhirfli.dev/fhir/ig/cicada/ImplementationGuide/cicada.ig</pre><div><p>Example Implementation Guide for using the CDC's Clinical Decision Support for Immunization</p>\n</div></div>"
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ImplementationGuide cicada.ig</b></p><a name=\"cicada.ig\"> </a><a name=\"hccicada.ig\"> </a><h2>CicadaIG</h2><p>The official URL for this implementation guide is: </p><pre>http://fhirfli.dev/fhir/ig/cicada/ImplementationGuide/cicada.ig</pre><div><p>Example Implementation Guide for using the CDC's Clinical Decision Support for Immunization</p>\n</div></div>"
   },
   "url" : "http://fhirfli.dev/fhir/ig/cicada/ImplementationGuide/cicada.ig",
   "version" : "0.1.0",
   "name" : "CicadaIG",
   "title" : "The Cicada Vaccine Forecasting Engine and Guide",
   "status" : "draft",
-  "date" : "2024-05-06T15:25:10-04:00",
+  "date" : "2026-02-11T14:37:07-05:00",
   "publisher" : "FHIR-FLI",
   "contact" : [{
     "name" : "FHIR-FLI",
@@ -31,7 +31,7 @@
     }],
     "uri" : "http://terminology.hl7.org/ImplementationGuide/hl7.terminology",
     "packageId" : "hl7.terminology.r4",
-    "version" : "5.5.0"
+    "version" : "7.0.1"
   },
   {
     "id" : "hl7ext",
@@ -41,7 +41,7 @@
     }],
     "uri" : "http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions",
     "packageId" : "hl7.fhir.uv.extensions.r4",
-    "version" : "5.1.0"
+    "version" : "5.2.0"
   }],
   "definition" : {
     "extension" : [{
@@ -332,7 +332,7 @@
     },
     {
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency",
-      "valueCode" : "hl7.fhir.uv.tools#0.1.0"
+      "valueCode" : "hl7.fhir.uv.tools.r4#0.9.0"
     },
     {
       "extension" : [{
@@ -628,8 +628,8 @@
       "reference" : {
         "reference" : "StructureDefinition/ReactionProfile"
       },
-      "name" : "Allergy Intolerance Profile with Vaccine Codes",
-      "description" : "Profile for allergy intolerances where the offending agent must have a CVX or MVX code.",
+      "name" : "Allergy Intolerance Profile for Immunization Decision Support",
+      "description" : "Profile for allergy intolerances relevant to immunization. The code (allergen/substance) may use SNOMED CT or ICD-10-CM. Reaction substances may use CVX, MVX, SNOMED CT, or RxNorm.",
       "exampleBoolean" : false
     },
     {
@@ -725,19 +725,7 @@
         "reference" : "StructureDefinition/VaccineConditionFhir"
       },
       "name" : "Condition Profile with Vaccine Condition Codes",
-      "description" : "Profile for conditions where the code must be from the Vaccine Condition Codes value set.",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:resource"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/VaccineObservationFhir"
-      },
-      "name" : "Condition Profile with Vaccine Condition Codes",
-      "description" : "Profile for conditions where the code must be from the Vaccine Condition Codes value set.",
+      "description" : "Profile for conditions where the code must be from the Vaccine Condition Codes value set. Accepts SNOMED CT and ICD-10-CM coded conditions.",
       "exampleBoolean" : false
     },
     {
@@ -815,13 +803,49 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/Icd10ToCdsiObservation"
+      },
+      "name" : "ICD-10-CM to CDSi Observation Code Map",
+      "description" : "Maps ICD-10-CM diagnosis codes to CDSi observation codes used in immunization decision support.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:resource"
       }],
       "reference" : {
         "reference" : "StructureDefinition/ProcedureProfile"
       },
       "name" : "Immunization Procedures Profile",
-      "description" : "Profile for medical procedures related to immunization based on SNOMED CT codes.",
+      "description" : "Profile for medical procedures related to immunization based on SNOMED CT or CPT codes.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/vaccine-medication-codes-rxnorm"
+      },
+      "name" : "Immunization-Relevant Medications (RxNorm)",
+      "description" : "RxNorm codes for medications relevant to immunization decision support, including antivirals and aspirin.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/immunization-procedures-cpt"
+      },
+      "name" : "Immunization-Relevant Procedures (CPT)",
+      "description" : "CPT codes for procedures relevant to immunization decision support, including splenectomy and cochlear implant.",
       "exampleBoolean" : false
     },
     {
@@ -858,6 +882,18 @@
       },
       "name" : "Interval Reason",
       "description" : "This value set includes codes for the reason an interval is considered to be invalid.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/vaccine-lab-evidence-of-immunity-loinc"
+      },
+      "name" : "Lab Evidence of Immunity (LOINC)",
+      "description" : "LOINC codes for laboratory tests that provide evidence of immunity, mapped to CDSi observation codes for immunization decision support.",
       "exampleBoolean" : false
     },
     {
@@ -930,6 +966,18 @@
       },
       "name" : "Medications",
       "description" : "Value set for medications and substances based on SNOMED CT, including both active ingredients and marketed products.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/VaccineObservationFhir"
+      },
+      "name" : "Observation Profile for Immunization Decision Support",
+      "description" : "Profile for Observation resources carrying lab evidence of immunity or other findings relevant to immunization decisions. Codes may be from SNOMED CT, ICD-10-CM, or LOINC.",
       "exampleBoolean" : false
     },
     {
@@ -1019,6 +1067,18 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ConceptMap"
+      }],
+      "reference" : {
+        "reference" : "ConceptMap/SnomedToCdsiObservation"
+      },
+      "name" : "SNOMED CT to CDSi Observation Code Map",
+      "description" : "Maps SNOMED CT codes to CDSi observation codes used in immunization decision support.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:extension"
       }],
       "reference" : {
@@ -1062,6 +1122,18 @@
       },
       "name" : "Vaccine Condition Codes",
       "description" : "Value set for conditions based on SNOMED CT, that may impact immunization.",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/vaccine-condition-codes-icd10"
+      },
+      "name" : "Vaccine Condition Codes (ICD-10-CM)",
+      "description" : "Value set for conditions based on ICD-10-CM that may impact immunization decisions, mapped to CDSi observation codes.",
       "exampleBoolean" : false
     },
     {
@@ -1162,7 +1234,7 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:resource"
+        "valueString" : "StructureDefinition:resourcedefn"
       }],
       "reference" : {
         "reference" : "StructureDefinition/antigen-supporting-data"
@@ -1173,7 +1245,7 @@
     {
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:resource"
+        "valueString" : "StructureDefinition:resourcedefn"
       }],
       "reference" : {
         "reference" : "StructureDefinition/schedule-supporting-data"
@@ -1195,7 +1267,7 @@
           "valueUrl" : "index.html"
         }],
         "nameUrl" : "index.html",
-        "title" : "Home",
+        "title" : "Cicada IG Home",
         "generation" : "markdown"
       },
       {
@@ -1241,6 +1313,15 @@
         }],
         "nameUrl" : "05_forecast-dates-and-reasons.html",
         "title" : "Forecast Dates and Reasons",
+        "generation" : "markdown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name",
+          "valueUrl" : "06_select-patient-series.html"
+        }],
+        "nameUrl" : "06_select-patient-series.html",
+        "title" : "Select Patient Series",
         "generation" : "markdown"
       }]
     },

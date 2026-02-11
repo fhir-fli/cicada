@@ -1,6 +1,10 @@
-{% raw %}<table class="grid">
+{% raw %}<table class="grid" data-fhir="generated-heirarchy">
 <tr><td><b>Level</b></td><td><b>Type</b></td><td><b>Location</b></td><td><b>Message</b></td></tr>
 <tr><td>warning</td><td>required</td><td>ValueSet/eval-status: ValueSet</td><td>Published value sets SHOULD conform to the ShareableValueSet profile, which says that the element ValueSet.experimental is mandatory, but it is not present</td><td></td></tr>
 <tr><td>information</td><td>informational</td><td>ValueSet/eval-status: ValueSet</td><td>Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet|4.0.1</td><td></td></tr>
+<tr><td>information</td><td>business-rule</td><td>ValueSet/eval-status: ValueSet.compose.include[0].concept[0]</td><td>Reference to draft CodeSystem http://fhirfli.dev/fhir/ig/cicada/CodeSystem/EvalStatus|0.1.0</td><td></td></tr>
+<tr><td>information</td><td>business-rule</td><td>ValueSet/eval-status: ValueSet.compose.include[0].concept[1]</td><td>Reference to draft CodeSystem http://fhirfli.dev/fhir/ig/cicada/CodeSystem/EvalStatus|0.1.0</td><td></td></tr>
+<tr><td>information</td><td>business-rule</td><td>ValueSet/eval-status: ValueSet.compose.include[0].concept[2]</td><td>Reference to draft CodeSystem http://fhirfli.dev/fhir/ig/cicada/CodeSystem/EvalStatus|0.1.0</td><td></td></tr>
+<tr><td>information</td><td>business-rule</td><td>ValueSet/eval-status: ValueSet.compose.include[0].concept[3]</td><td>Reference to draft CodeSystem http://fhirfli.dev/fhir/ig/cicada/CodeSystem/EvalStatus|0.1.0</td><td></td></tr>
 </table>
 {% endraw %}

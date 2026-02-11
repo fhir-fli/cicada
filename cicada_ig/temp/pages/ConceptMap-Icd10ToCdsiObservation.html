@@ -1,0 +1,47 @@
+---
+---
+{% include fragment-pagebegin.html %}
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Publish Box goes here</p><!--EndReleaseHeader-->
+  {% include fragment-base-navtabs.html type='ConceptMap' id='Icd10ToCdsiObservation' active='content' %}
+  <a name="root"> </a>
+
+  <h2 id="root">ConceptMap: {{site.data.pages[page.path].title | escape_once}}
+{% if site.data.resources[resource_].experimental == true %}(Experimental){% endif %}
+  </h2>
+
+{% include fragment-resourceTable.html %}
+
+{%if site.data.resources[resource_].description %}
+<p>
+{{site.data.resources[resource_].description|markdownify}}
+</p>
+{% endif %}
+{%if site.data.resources[resource_].purpose %}
+<p>
+{{site.data.resources[resource_].purpose|markdownify}}
+</p>
+{% endif %}
+  <!-- insert intro if present -->
+  {% include fragment-intro.html type='ConceptMap' id='Icd10ToCdsiObservation' %}
+
+<!--  <p>
+  Formats: <a href="ConceptMap-Icd10ToCdsiObservation.xml.html">XML</a>, <a href="ConceptMap-Icd10ToCdsiObservation.json.html">JSON</a>, <a href="ConceptMap-Icd10ToCdsiObservation.ttl.html">Turtle</a>
+  </p>-->
+{% unless example %}
+  {% if 'ConceptMap' == 'CapabilityStatement' %}
+  <p>
+      <a href="Icd10ToCdsiObservation.openapi.json" no-download="true">Raw OpenAPI-Swagger Definition file</a> | <a href="Icd10ToCdsiObservation.openapi.json" download>Download</a>
+  </p>
+  {% endif %}
+{% endunless %}
+
+  {% include ConceptMap-Icd10ToCdsiObservation-html.xhtml %}
+
+  <!-- insert notes if present -->
+  {% include fragment-notes.html type='ConceptMap' id='Icd10ToCdsiObservation' %}
+
+  {%include ConceptMap-Icd10ToCdsiObservation-history.xhtml%}
+
+</div>
+{% include fragment-pageend.html %}

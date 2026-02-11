@@ -7,6 +7,8 @@ import 'package:shelf/shelf_io.dart' as shelf_io;
 import 'package:shelf_router/shelf_router.dart';
 
 import 'package:cicada/forecast/forecast.dart';
+import 'package:cicada/utils/fhir_json_to_xml.dart';
+import 'package:cicada/utils/fhir_xml_to_json.dart';
 
 void main(List<String> args) async {
   final parser = ArgParser()
@@ -17,34 +19,80 @@ void main(List<String> args) async {
 
   final router = Router()
     ..post(r'/$immds-forecast', _handleForecast)
+    ..post('/', _handleForecast)
+    ..post('/<anything|.*>', _handleForecast)
     ..get('/metadata', _handleMetadata)
     ..get('/', _handleRoot);
 
-  final handler =
-      const Pipeline().addMiddleware(_cors()).addHandler(router.call);
+  final handler = const Pipeline()
+      .addMiddleware(_logRequests())
+      .addMiddleware(_cors())
+      .addHandler(router.call);
 
   final server = await shelf_io.serve(handler, InternetAddress.anyIPv4, port);
   print('Cicada ImmDS server listening on port ${server.port}');
 }
 
-/// POST /$immds-forecast — run the forecasting engine
+/// POST /$immds-forecast — run the forecasting engine.
+/// Accepts JSON or XML input and returns the corresponding format.
 Future<Response> _handleForecast(Request request) async {
   try {
     final body = await request.readAsString();
+    print('  Body length: ${body.length}');
+
     if (body.isEmpty) {
       return _operationOutcome('No request body provided', 400);
     }
 
+    final contentType = request.headers['content-type'] ?? '';
+    final accept = request.headers['accept'] ?? '';
+    final isXmlInput =
+        contentType.contains('xml') || body.trimLeft().startsWith('<');
+    final wantsXml = accept.contains('xml');
+
+    // --- Parse input ---
     final Map<String, dynamic> json;
-    try {
-      json = jsonDecode(body) as Map<String, dynamic>;
-    } catch (e) {
-      return _operationOutcome('Invalid JSON: $e', 400);
+    if (isXmlInput) {
+      try {
+        json = fhirXmlToJson(body);
+        print('  XML→JSON: resourceType=${json['resourceType']}');
+      } catch (e) {
+        return _operationOutcome('XML parse error: $e', 400);
+      }
+    } else {
+      try {
+        json = jsonDecode(body) as Map<String, dynamic>;
+      } catch (e) {
+        return _operationOutcome('Invalid JSON: $e', 400);
+      }
     }
 
+    // --- Run forecast ---
     final output = forecastFromMap(json);
+    final outputJson = output.toJson();
+
+    // --- Format output ---
+    if (wantsXml) {
+      try {
+        final xmlResponse = fhirJsonToXml(outputJson);
+        print('  Response XML length: ${xmlResponse.length}');
+        // Mirror the Accept content type the client sent
+        final xmlContentType = accept.contains('fhir')
+            ? 'application/fhir+xml'
+            : 'application/xml';
+        return Response.ok(
+          xmlResponse,
+          headers: {'content-type': xmlContentType},
+        );
+      } catch (e) {
+        print('  JSON→XML conversion failed: $e, returning JSON');
+      }
+    }
+
+    final jsonResponse = jsonEncode(outputJson);
+    print('  Response JSON length: ${jsonResponse.length}');
     return Response.ok(
-      jsonEncode(output.toJson()),
+      jsonResponse,
       headers: {'content-type': 'application/fhir+json'},
     );
   } catch (e, st) {
@@ -61,7 +109,12 @@ Response _handleMetadata(Request request) {
     'date': DateTime.now().toIso8601String().substring(0, 10),
     'kind': 'instance',
     'fhirVersion': '4.0.1',
-    'format': ['application/fhir+json', 'application/json'],
+    'format': [
+      'application/fhir+json',
+      'application/json',
+      'application/fhir+xml',
+      'application/xml',
+    ],
     'implementation': {
       'description': 'Cicada CDSi Immunization Forecasting Engine',
     },
@@ -99,6 +152,19 @@ Response _handleRoot(Request request) {
     }),
     headers: {'content-type': 'application/json'},
   );
+}
+
+/// Request logging middleware
+Middleware _logRequests() {
+  return (Handler innerHandler) {
+    return (Request request) async {
+      print('${request.method} ${request.requestedUri}');
+      print('  Headers: ${request.headers}');
+      final response = await innerHandler(request);
+      print('  -> ${response.statusCode}');
+      return response;
+    };
+  };
 }
 
 /// CORS middleware

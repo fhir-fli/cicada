@@ -121,7 +121,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -144,7 +143,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -167,7 +165,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -190,7 +187,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -213,7 +209,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -236,7 +231,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -259,7 +253,6 @@ v: {
   "system" : "http://loinc.org",
   "version" : "2.77",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -366,6 +359,1313 @@ e: {
       "system" : "http://loinc.org",
       "code" : "LA20384-6",
       "display" : "Asked but unknown"
+    }]
+  }
+},
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "inactive" : false,
+    "include" : [{
+      "system" : "http://loinc.org",
+      "concept" : [{
+        "code" : "21500-4",
+        "display" : "Measles virus IgG Ab [Units/volume] in Serum"
+      },
+      {
+        "code" : "35275-7",
+        "display" : "Measles virus IgG Ab [Presence] in Serum"
+      },
+      {
+        "code" : "20479-2",
+        "display" : "Measles virus Ab [Presence] in Serum"
+      },
+      {
+        "code" : "6476-3",
+        "display" : "Mumps virus IgG Ab [Units/volume] in Serum"
+      },
+      {
+        "code" : "39012-0",
+        "display" : "Mumps virus IgG Ab [Presence] in Serum"
+      },
+      {
+        "code" : "22416-2",
+        "display" : "Mumps virus Ab [Presence] in Serum"
+      },
+      {
+        "code" : "8014-3",
+        "display" : "Rubella virus IgG Ab [Units/volume] in Serum"
+      },
+      {
+        "code" : "25514-1",
+        "display" : "Rubella virus IgG Ab [Presence] in Serum"
+      },
+      {
+        "code" : "20458-6",
+        "display" : "Rubella virus Ab [Presence] in Serum"
+      },
+      {
+        "code" : "19162-7",
+        "display" : "Varicella zoster virus IgG Ab [Units/volume] in Serum"
+      },
+      {
+        "code" : "17763-4",
+        "display" : "Varicella zoster virus IgG Ab [Presence] in Serum"
+      },
+      {
+        "code" : "5403-8",
+        "display" : "Varicella zoster virus Ab [Presence] in Serum"
+      },
+      {
+        "code" : "16935-9",
+        "display" : "Hepatitis B virus surface Ab [Units/volume] in Serum"
+      },
+      {
+        "code" : "22322-2",
+        "display" : "Hepatitis B virus surface Ab [Presence] in Serum"
+      },
+      {
+        "code" : "10900-9",
+        "display" : "Hepatitis B virus surface Ab [Units/volume] in Serum by Immunoassay"
+      },
+      {
+        "code" : "32018-4",
+        "display" : "Hepatitis A virus Ab [Presence] in Serum"
+      },
+      {
+        "code" : "40724-7",
+        "display" : "Hepatitis A virus IgG Ab [Presence] in Serum"
+      },
+      {
+        "code" : "13950-1",
+        "display" : "Hepatitis A virus Ab [Units/volume] in Serum"
+      }]
+    }]
+  }
+}}####
+e: {
+  "source" : tx.fhir.org,
+  "valueSet" : {
+  "resourceType" : "ValueSet",
+  "status" : "active",
+  "expansion" : {
+    "identifier" : "urn:uuid:fc9e075f-8ec2-49a1-bfb1-26b4f7ca5a1d",
+    "timestamp" : "2026-02-11T19:01:31.476Z",
+    "total" : 16,
+    "offset" : 0,
+    "parameter" : [{
+      "name" : "excludeNested",
+      "valueBoolean" : false
+    },
+    {
+      "name" : "offset",
+      "valueInteger" : 0
+    },
+    {
+      "name" : "count",
+      "valueInteger" : 1000
+    },
+    {
+      "name" : "used-codesystem",
+      "valueUri" : "http://loinc.org|2.81"
+    }],
+    "contains" : [{
+      "system" : "http://loinc.org",
+      "code" : "21500-4",
+      "display" : "Measles virus IgG Ab [Titer] in Cerebral spinal fluid by Immunofluorescence"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "35275-7",
+      "display" : "Measles virus IgG Ab [Presence] in Serum by Immunoassay"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "20479-2",
+      "display" : "Measles virus IgG Ab [Presence] in Serum"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "39012-0",
+      "display" : "Mycoplasma pneumoniae Ab [Presence] in Body fluid"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "22416-2",
+      "display" : "Mumps virus IgG Ab [Titer] in Cerebral spinal fluid"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "8014-3",
+      "display" : "Rubella virus IgG Ab [Units/volume] in Serum"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "25514-1",
+      "display" : "Rubella virus IgG Ab [Presence] in Serum"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "20458-6",
+      "display" : "Rubella virus IgG Ab [Interpretation] in Serum"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19162-7",
+      "display" : "Varicella zoster virus IgG Ab [Presence] in Serum"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "17763-4",
+      "display" : "Varicella zoster virus IgG Ab [Units/volume] in Serum by Immunofluorescence"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "16935-9",
+      "display" : "Hepatitis B virus surface Ab [Units/volume] in Serum"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "22322-2",
+      "display" : "Hepatitis B virus surface Ab [Presence] in Serum"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "10900-9",
+      "display" : "Hepatitis B virus surface Ab [Presence] in Serum by Immunoassay"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "32018-4",
+      "display" : "Hepatitis A virus IgG Ab [Presence] in Serum"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "40724-7",
+      "display" : "Hepatitis A virus IgG Ab [Presence] in Serum by Immunoassay"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "13950-1",
+      "display" : "Hepatitis A virus IgM Ab [Presence] in Serum or Plasma by Immunoassay"
+    }]
+  }
+},
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "6476-3"
+}, "valueSet" :null, "langs":"en, en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "x-system-cache-id",
+    "valueString" : "dc8fd4bc-091a-424a-8a3b-6198ef146891"
+  },
+  {
+    "name" : "defaultDisplayLanguage",
+    "valueCode" : "en-US"
+  }]
+}}####
+v: {
+  "code" : "6476-3",
+  "system" : "http://loinc.org",
+  "severity" : "error",
+  "error" : "Unknown code '6476-3' in the CodeSystem 'http://loinc.org' version '2.81'",
+  "class" : "UNKNOWN",
+  "server" : "https://tx.fhir.org/r4",
+  "unknown-systems" : "",
+  "issues" : {
+  "resourceType" : "OperationOutcome",
+  "issue" : [{
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString" : "Unknown_Code_in_Version"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-server",
+      "valueUrl" : "https://tx.fhir.org/r4"
+    }],
+    "severity" : "error",
+    "code" : "code-invalid",
+    "details" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+        "code" : "invalid-code"
+      }],
+      "text" : "Unknown code '6476-3' in the CodeSystem 'http://loinc.org' version '2.81'"
+    },
+    "location" : ["Coding.code"],
+    "expression" : ["Coding.code"]
+  }]
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "5403-8"
+}, "valueSet" :null, "langs":"en, en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "x-system-cache-id",
+    "valueString" : "dc8fd4bc-091a-424a-8a3b-6198ef146891"
+  },
+  {
+    "name" : "defaultDisplayLanguage",
+    "valueCode" : "en-US"
+  }]
+}}####
+v: {
+  "code" : "5403-8",
+  "system" : "http://loinc.org",
+  "severity" : "error",
+  "error" : "Unknown code '5403-8' in the CodeSystem 'http://loinc.org' version '2.81'",
+  "class" : "UNKNOWN",
+  "server" : "https://tx.fhir.org/r4",
+  "unknown-systems" : "",
+  "issues" : {
+  "resourceType" : "OperationOutcome",
+  "issue" : [{
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString" : "Unknown_Code_in_Version"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-server",
+      "valueUrl" : "https://tx.fhir.org/r4"
+    }],
+    "severity" : "error",
+    "code" : "code-invalid",
+    "details" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+        "code" : "invalid-code"
+      }],
+      "text" : "Unknown code '5403-8' in the CodeSystem 'http://loinc.org' version '2.81'"
+    },
+    "location" : ["Coding.code"],
+    "expression" : ["Coding.code"]
+  }]
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "21500-4",
+  "display" : "Measles virus IgG Ab [Units/volume] in Serum"
+}, "valueSet" :null, "langs":"en, en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "exampleOK":"true", "membershipOnly":"false", "displayWarningMode":"true", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "x-system-cache-id",
+    "valueString" : "dc8fd4bc-091a-424a-8a3b-6198ef146891"
+  },
+  {
+    "name" : "defaultDisplayLanguage",
+    "valueCode" : "en-US"
+  }]
+}}####
+v: {
+  "display" : "Measles virus IgG Ab [Titer] in Cerebral spinal fluid by Immunofluorescence",
+  "code" : "21500-4",
+  "system" : "http://loinc.org",
+  "version" : "2.81",
+  "severity" : "warning",
+  "error" : "Wrong Display Name 'Measles virus IgG Ab [Units/volume] in Serum' for http://loinc.org#21500-4. Valid display is one of 4 choices: 'Measles virus IgG Ab [Titer] in Cerebral spinal fluid by Immunofluorescence' (en-US), 'Measles virus IgG Ab [Titer] in Cerebral spinal fluid by Immunofluorescence' (en-US), 'MeV IgG Titr CSF IF' (en-US) or 'Measles virus IgG antibody, Spinal fluid' (en-US) (for the language(s) 'en, en-US')",
+  "server" : "https://tx.fhir.org/r4",
+  "diagnostics" : "0 0 : start\r\n15 15   : 0ms  : Analysing http://hl7.org/fhir/ValueSet/@all for validation purposes\r\n15 0    : 0ms  : Parameters: disp-lang=en, en-US, default-to-latest, display-warning\r\n15 0    : 0ms  : Prepare include: \"()\"\r\n15 0    : 0ms  : Validate \"[http://loinc.org#21500-4 (\"Measles virus IgG Ab [Units/volume] in Serum\")]\"\r\n15 0    : 0ms  : Check \"http://loinc.org#21500-4\"\r\n15 0    : 0ms  : Using CodeSystem \"http://loinc.org|2.81\" (content = complete)\r\n",
+  "unknown-systems" : "",
+  "issues" : {
+  "resourceType" : "OperationOutcome",
+  "issue" : [{
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString" : "Display_Name_for__should_be_one_of__instead_of"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-server",
+      "valueUrl" : "https://tx.fhir.org/r4"
+    }],
+    "severity" : "warning",
+    "code" : "invalid",
+    "details" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+        "code" : "invalid-display"
+      }],
+      "text" : "Wrong Display Name 'Measles virus IgG Ab [Units/volume] in Serum' for http://loinc.org#21500-4. Valid display is one of 4 choices: 'Measles virus IgG Ab [Titer] in Cerebral spinal fluid by Immunofluorescence' (en-US), 'Measles virus IgG Ab [Titer] in Cerebral spinal fluid by Immunofluorescence' (en-US), 'MeV IgG Titr CSF IF' (en-US) or 'Measles virus IgG antibody, Spinal fluid' (en-US) (for the language(s) 'en, en-US')"
+    },
+    "location" : ["Coding.display"],
+    "expression" : ["Coding.display"]
+  }]
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "35275-7",
+  "display" : "Measles virus IgG Ab [Presence] in Serum"
+}, "valueSet" :null, "langs":"en, en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "exampleOK":"true", "membershipOnly":"false", "displayWarningMode":"true", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "x-system-cache-id",
+    "valueString" : "dc8fd4bc-091a-424a-8a3b-6198ef146891"
+  },
+  {
+    "name" : "defaultDisplayLanguage",
+    "valueCode" : "en-US"
+  }]
+}}####
+v: {
+  "display" : "Measles virus IgG Ab [Presence] in Serum by Immunoassay",
+  "code" : "35275-7",
+  "system" : "http://loinc.org",
+  "version" : "2.81",
+  "severity" : "warning",
+  "error" : "Wrong Display Name 'Measles virus IgG Ab [Presence] in Serum' for http://loinc.org#35275-7. Valid display is one of 4 choices: 'Measles virus IgG Ab [Presence] in Serum by Immunoassay' (en-US), 'Measles virus IgG Ab [Presence] in Serum by Immunoassay' (en-US), 'MeV IgG Ser Ql IA' (en-US) or 'Measles virus IgG antibody, Blood' (en-US) (for the language(s) 'en, en-US')",
+  "server" : "https://tx.fhir.org/r4",
+  "unknown-systems" : "",
+  "issues" : {
+  "resourceType" : "OperationOutcome",
+  "issue" : [{
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString" : "Display_Name_for__should_be_one_of__instead_of"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-server",
+      "valueUrl" : "https://tx.fhir.org/r4"
+    }],
+    "severity" : "warning",
+    "code" : "invalid",
+    "details" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+        "code" : "invalid-display"
+      }],
+      "text" : "Wrong Display Name 'Measles virus IgG Ab [Presence] in Serum' for http://loinc.org#35275-7. Valid display is one of 4 choices: 'Measles virus IgG Ab [Presence] in Serum by Immunoassay' (en-US), 'Measles virus IgG Ab [Presence] in Serum by Immunoassay' (en-US), 'MeV IgG Ser Ql IA' (en-US) or 'Measles virus IgG antibody, Blood' (en-US) (for the language(s) 'en, en-US')"
+    },
+    "location" : ["Coding.display"],
+    "expression" : ["Coding.display"]
+  }]
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "20479-2",
+  "display" : "Measles virus Ab [Presence] in Serum"
+}, "valueSet" :null, "langs":"en, en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "exampleOK":"true", "membershipOnly":"false", "displayWarningMode":"true", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "x-system-cache-id",
+    "valueString" : "dc8fd4bc-091a-424a-8a3b-6198ef146891"
+  },
+  {
+    "name" : "defaultDisplayLanguage",
+    "valueCode" : "en-US"
+  }]
+}}####
+v: {
+  "display" : "Measles virus IgG Ab [Presence] in Serum",
+  "code" : "20479-2",
+  "system" : "http://loinc.org",
+  "version" : "2.81",
+  "severity" : "warning",
+  "error" : "Wrong Display Name 'Measles virus Ab [Presence] in Serum' for http://loinc.org#20479-2. Valid display is one of 4 choices: 'Measles virus IgG Ab [Presence] in Serum' (en-US), 'Measles virus IgG Ab [Presence] in Serum' (en-US), 'MeV IgG Ser Ql' (en-US) or 'Measles virus IgG antibody, Blood' (en-US) (for the language(s) 'en, en-US')",
+  "server" : "https://tx.fhir.org/r4",
+  "unknown-systems" : "",
+  "issues" : {
+  "resourceType" : "OperationOutcome",
+  "issue" : [{
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString" : "Display_Name_for__should_be_one_of__instead_of"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-server",
+      "valueUrl" : "https://tx.fhir.org/r4"
+    }],
+    "severity" : "warning",
+    "code" : "invalid",
+    "details" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+        "code" : "invalid-display"
+      }],
+      "text" : "Wrong Display Name 'Measles virus Ab [Presence] in Serum' for http://loinc.org#20479-2. Valid display is one of 4 choices: 'Measles virus IgG Ab [Presence] in Serum' (en-US), 'Measles virus IgG Ab [Presence] in Serum' (en-US), 'MeV IgG Ser Ql' (en-US) or 'Measles virus IgG antibody, Blood' (en-US) (for the language(s) 'en, en-US')"
+    },
+    "location" : ["Coding.display"],
+    "expression" : ["Coding.display"]
+  }]
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "6476-3",
+  "display" : "Mumps virus IgG Ab [Units/volume] in Serum"
+}, "valueSet" :null, "langs":"en, en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "exampleOK":"true", "membershipOnly":"false", "displayWarningMode":"true", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "x-system-cache-id",
+    "valueString" : "dc8fd4bc-091a-424a-8a3b-6198ef146891"
+  },
+  {
+    "name" : "defaultDisplayLanguage",
+    "valueCode" : "en-US"
+  }]
+}}####
+v: {
+  "code" : "6476-3",
+  "system" : "http://loinc.org",
+  "severity" : "error",
+  "error" : "Unknown code '6476-3' in the CodeSystem 'http://loinc.org' version '2.81'",
+  "class" : "UNKNOWN",
+  "server" : "https://tx.fhir.org/r4",
+  "unknown-systems" : "",
+  "issues" : {
+  "resourceType" : "OperationOutcome",
+  "issue" : [{
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString" : "Unknown_Code_in_Version"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-server",
+      "valueUrl" : "https://tx.fhir.org/r4"
+    }],
+    "severity" : "error",
+    "code" : "code-invalid",
+    "details" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+        "code" : "invalid-code"
+      }],
+      "text" : "Unknown code '6476-3' in the CodeSystem 'http://loinc.org' version '2.81'"
+    },
+    "location" : ["Coding.code"],
+    "expression" : ["Coding.code"]
+  }]
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "39012-0",
+  "display" : "Mumps virus IgG Ab [Presence] in Serum"
+}, "valueSet" :null, "langs":"en, en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "exampleOK":"true", "membershipOnly":"false", "displayWarningMode":"true", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "x-system-cache-id",
+    "valueString" : "dc8fd4bc-091a-424a-8a3b-6198ef146891"
+  },
+  {
+    "name" : "defaultDisplayLanguage",
+    "valueCode" : "en-US"
+  }]
+}}####
+v: {
+  "display" : "Mycoplasma pneumoniae Ab [Presence] in Body fluid",
+  "code" : "39012-0",
+  "system" : "http://loinc.org",
+  "version" : "2.81",
+  "severity" : "warning",
+  "error" : "Wrong Display Name 'Mumps virus IgG Ab [Presence] in Serum' for http://loinc.org#39012-0. Valid display is one of 4 choices: 'Mycoplasma pneumoniae Ab [Presence] in Body fluid' (en-US), 'Mycoplasma pneumoniae Ab [Presence] in Body fluid' (en-US), 'M pneumo Ab Fld Ql' (en-US) or 'Mycoplasma pneumoniae antibody, Body fluid' (en-US) (for the language(s) 'en, en-US')",
+  "server" : "https://tx.fhir.org/r4",
+  "unknown-systems" : "",
+  "issues" : {
+  "resourceType" : "OperationOutcome",
+  "issue" : [{
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString" : "Display_Name_for__should_be_one_of__instead_of"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-server",
+      "valueUrl" : "https://tx.fhir.org/r4"
+    }],
+    "severity" : "warning",
+    "code" : "invalid",
+    "details" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+        "code" : "invalid-display"
+      }],
+      "text" : "Wrong Display Name 'Mumps virus IgG Ab [Presence] in Serum' for http://loinc.org#39012-0. Valid display is one of 4 choices: 'Mycoplasma pneumoniae Ab [Presence] in Body fluid' (en-US), 'Mycoplasma pneumoniae Ab [Presence] in Body fluid' (en-US), 'M pneumo Ab Fld Ql' (en-US) or 'Mycoplasma pneumoniae antibody, Body fluid' (en-US) (for the language(s) 'en, en-US')"
+    },
+    "location" : ["Coding.display"],
+    "expression" : ["Coding.display"]
+  }]
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "22416-2",
+  "display" : "Mumps virus Ab [Presence] in Serum"
+}, "valueSet" :null, "langs":"en, en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "exampleOK":"true", "membershipOnly":"false", "displayWarningMode":"true", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "x-system-cache-id",
+    "valueString" : "dc8fd4bc-091a-424a-8a3b-6198ef146891"
+  },
+  {
+    "name" : "defaultDisplayLanguage",
+    "valueCode" : "en-US"
+  }]
+}}####
+v: {
+  "display" : "Mumps virus IgG Ab [Titer] in Cerebral spinal fluid",
+  "code" : "22416-2",
+  "system" : "http://loinc.org",
+  "version" : "2.81",
+  "severity" : "warning",
+  "error" : "Wrong Display Name 'Mumps virus Ab [Presence] in Serum' for http://loinc.org#22416-2. Valid display is one of 4 choices: 'Mumps virus IgG Ab [Titer] in Cerebral spinal fluid' (en-US), 'Mumps virus IgG Ab [Titer] in Cerebral spinal fluid' (en-US), 'MuV IgG Titr CSF' (en-US) or 'Mumps virus IgG antibody, Spinal fluid' (en-US) (for the language(s) 'en, en-US')",
+  "server" : "https://tx.fhir.org/r4",
+  "unknown-systems" : "",
+  "issues" : {
+  "resourceType" : "OperationOutcome",
+  "issue" : [{
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString" : "Display_Name_for__should_be_one_of__instead_of"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-server",
+      "valueUrl" : "https://tx.fhir.org/r4"
+    }],
+    "severity" : "warning",
+    "code" : "invalid",
+    "details" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+        "code" : "invalid-display"
+      }],
+      "text" : "Wrong Display Name 'Mumps virus Ab [Presence] in Serum' for http://loinc.org#22416-2. Valid display is one of 4 choices: 'Mumps virus IgG Ab [Titer] in Cerebral spinal fluid' (en-US), 'Mumps virus IgG Ab [Titer] in Cerebral spinal fluid' (en-US), 'MuV IgG Titr CSF' (en-US) or 'Mumps virus IgG antibody, Spinal fluid' (en-US) (for the language(s) 'en, en-US')"
+    },
+    "location" : ["Coding.display"],
+    "expression" : ["Coding.display"]
+  }]
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "8014-3",
+  "display" : "Rubella virus IgG Ab [Units/volume] in Serum"
+}, "valueSet" :null, "langs":"en, en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "exampleOK":"true", "membershipOnly":"false", "displayWarningMode":"true", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "x-system-cache-id",
+    "valueString" : "dc8fd4bc-091a-424a-8a3b-6198ef146891"
+  },
+  {
+    "name" : "defaultDisplayLanguage",
+    "valueCode" : "en-US"
+  }]
+}}####
+v: {
+  "display" : "Rubella virus IgG Ab [Units/volume] in Serum",
+  "code" : "8014-3",
+  "system" : "http://loinc.org",
+  "version" : "2.81",
+  "server" : "https://tx.fhir.org/r4",
+  "unknown-systems" : "",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "25514-1",
+  "display" : "Rubella virus IgG Ab [Presence] in Serum"
+}, "valueSet" :null, "langs":"en, en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "exampleOK":"true", "membershipOnly":"false", "displayWarningMode":"true", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "x-system-cache-id",
+    "valueString" : "dc8fd4bc-091a-424a-8a3b-6198ef146891"
+  },
+  {
+    "name" : "defaultDisplayLanguage",
+    "valueCode" : "en-US"
+  }]
+}}####
+v: {
+  "display" : "Rubella virus IgG Ab [Presence] in Serum",
+  "code" : "25514-1",
+  "system" : "http://loinc.org",
+  "version" : "2.81",
+  "server" : "https://tx.fhir.org/r4",
+  "unknown-systems" : "",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "20458-6",
+  "display" : "Rubella virus Ab [Presence] in Serum"
+}, "valueSet" :null, "langs":"en, en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "exampleOK":"true", "membershipOnly":"false", "displayWarningMode":"true", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "x-system-cache-id",
+    "valueString" : "dc8fd4bc-091a-424a-8a3b-6198ef146891"
+  },
+  {
+    "name" : "defaultDisplayLanguage",
+    "valueCode" : "en-US"
+  }]
+}}####
+v: {
+  "display" : "Rubella virus IgG Ab [Interpretation] in Serum",
+  "code" : "20458-6",
+  "system" : "http://loinc.org",
+  "version" : "2.81",
+  "severity" : "warning",
+  "error" : "Wrong Display Name 'Rubella virus Ab [Presence] in Serum' for http://loinc.org#20458-6. Valid display is one of 4 choices: 'Rubella virus IgG Ab [Interpretation] in Serum' (en-US), 'Rubella virus IgG Ab [Interpretation] in Serum' (en-US), 'RUBV IgG Ser-Imp' (en-US) or 'Rubella virus IgG antibody, Blood' (en-US) (for the language(s) 'en, en-US')",
+  "server" : "https://tx.fhir.org/r4",
+  "unknown-systems" : "",
+  "issues" : {
+  "resourceType" : "OperationOutcome",
+  "issue" : [{
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString" : "Display_Name_for__should_be_one_of__instead_of"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-server",
+      "valueUrl" : "https://tx.fhir.org/r4"
+    }],
+    "severity" : "warning",
+    "code" : "invalid",
+    "details" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+        "code" : "invalid-display"
+      }],
+      "text" : "Wrong Display Name 'Rubella virus Ab [Presence] in Serum' for http://loinc.org#20458-6. Valid display is one of 4 choices: 'Rubella virus IgG Ab [Interpretation] in Serum' (en-US), 'Rubella virus IgG Ab [Interpretation] in Serum' (en-US), 'RUBV IgG Ser-Imp' (en-US) or 'Rubella virus IgG antibody, Blood' (en-US) (for the language(s) 'en, en-US')"
+    },
+    "location" : ["Coding.display"],
+    "expression" : ["Coding.display"]
+  }]
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "19162-7",
+  "display" : "Varicella zoster virus IgG Ab [Units/volume] in Serum"
+}, "valueSet" :null, "langs":"en, en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "exampleOK":"true", "membershipOnly":"false", "displayWarningMode":"true", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "x-system-cache-id",
+    "valueString" : "dc8fd4bc-091a-424a-8a3b-6198ef146891"
+  },
+  {
+    "name" : "defaultDisplayLanguage",
+    "valueCode" : "en-US"
+  }]
+}}####
+v: {
+  "display" : "Varicella zoster virus IgG Ab [Presence] in Serum",
+  "code" : "19162-7",
+  "system" : "http://loinc.org",
+  "version" : "2.81",
+  "severity" : "warning",
+  "error" : "Wrong Display Name 'Varicella zoster virus IgG Ab [Units/volume] in Serum' for http://loinc.org#19162-7. Valid display is one of 4 choices: 'Varicella zoster virus IgG Ab [Presence] in Serum' (en-US), 'Varicella zoster virus IgG Ab [Presence] in Serum' (en-US), 'VZV IgG Ser Ql' (en-US) or 'Varicella zoster virus (VZV; Chickenpox) IgG antibody, Blood' (en-US) (for the language(s) 'en, en-US')",
+  "server" : "https://tx.fhir.org/r4",
+  "unknown-systems" : "",
+  "issues" : {
+  "resourceType" : "OperationOutcome",
+  "issue" : [{
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString" : "Display_Name_for__should_be_one_of__instead_of"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-server",
+      "valueUrl" : "https://tx.fhir.org/r4"
+    }],
+    "severity" : "warning",
+    "code" : "invalid",
+    "details" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+        "code" : "invalid-display"
+      }],
+      "text" : "Wrong Display Name 'Varicella zoster virus IgG Ab [Units/volume] in Serum' for http://loinc.org#19162-7. Valid display is one of 4 choices: 'Varicella zoster virus IgG Ab [Presence] in Serum' (en-US), 'Varicella zoster virus IgG Ab [Presence] in Serum' (en-US), 'VZV IgG Ser Ql' (en-US) or 'Varicella zoster virus (VZV; Chickenpox) IgG antibody, Blood' (en-US) (for the language(s) 'en, en-US')"
+    },
+    "location" : ["Coding.display"],
+    "expression" : ["Coding.display"]
+  }]
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "17763-4",
+  "display" : "Varicella zoster virus IgG Ab [Presence] in Serum"
+}, "valueSet" :null, "langs":"en, en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "exampleOK":"true", "membershipOnly":"false", "displayWarningMode":"true", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "x-system-cache-id",
+    "valueString" : "dc8fd4bc-091a-424a-8a3b-6198ef146891"
+  },
+  {
+    "name" : "defaultDisplayLanguage",
+    "valueCode" : "en-US"
+  }]
+}}####
+v: {
+  "display" : "Varicella zoster virus IgG Ab [Units/volume] in Serum by Immunofluorescence",
+  "code" : "17763-4",
+  "system" : "http://loinc.org",
+  "version" : "2.81",
+  "severity" : "warning",
+  "error" : "Wrong Display Name 'Varicella zoster virus IgG Ab [Presence] in Serum' for http://loinc.org#17763-4. Valid display is one of 4 choices: 'Varicella zoster virus IgG Ab [Units/volume] in Serum by Immunofluorescence' (en-US), 'Varicella zoster virus IgG Ab [Units/volume] in Serum by Immunofluorescence' (en-US), 'VZV IgG Ser IF-aCnc' (en-US) or 'Varicella zoster virus (VZV; Chickenpox) IgG antibody, Blood' (en-US) (for the language(s) 'en, en-US')",
+  "server" : "https://tx.fhir.org/r4",
+  "unknown-systems" : "",
+  "issues" : {
+  "resourceType" : "OperationOutcome",
+  "issue" : [{
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString" : "Display_Name_for__should_be_one_of__instead_of"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-server",
+      "valueUrl" : "https://tx.fhir.org/r4"
+    }],
+    "severity" : "warning",
+    "code" : "invalid",
+    "details" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+        "code" : "invalid-display"
+      }],
+      "text" : "Wrong Display Name 'Varicella zoster virus IgG Ab [Presence] in Serum' for http://loinc.org#17763-4. Valid display is one of 4 choices: 'Varicella zoster virus IgG Ab [Units/volume] in Serum by Immunofluorescence' (en-US), 'Varicella zoster virus IgG Ab [Units/volume] in Serum by Immunofluorescence' (en-US), 'VZV IgG Ser IF-aCnc' (en-US) or 'Varicella zoster virus (VZV; Chickenpox) IgG antibody, Blood' (en-US) (for the language(s) 'en, en-US')"
+    },
+    "location" : ["Coding.display"],
+    "expression" : ["Coding.display"]
+  }]
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "5403-8",
+  "display" : "Varicella zoster virus Ab [Presence] in Serum"
+}, "valueSet" :null, "langs":"en, en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "exampleOK":"true", "membershipOnly":"false", "displayWarningMode":"true", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "x-system-cache-id",
+    "valueString" : "dc8fd4bc-091a-424a-8a3b-6198ef146891"
+  },
+  {
+    "name" : "defaultDisplayLanguage",
+    "valueCode" : "en-US"
+  }]
+}}####
+v: {
+  "code" : "5403-8",
+  "system" : "http://loinc.org",
+  "severity" : "error",
+  "error" : "Unknown code '5403-8' in the CodeSystem 'http://loinc.org' version '2.81'",
+  "class" : "UNKNOWN",
+  "server" : "https://tx.fhir.org/r4",
+  "unknown-systems" : "",
+  "issues" : {
+  "resourceType" : "OperationOutcome",
+  "issue" : [{
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString" : "Unknown_Code_in_Version"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-server",
+      "valueUrl" : "https://tx.fhir.org/r4"
+    }],
+    "severity" : "error",
+    "code" : "code-invalid",
+    "details" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+        "code" : "invalid-code"
+      }],
+      "text" : "Unknown code '5403-8' in the CodeSystem 'http://loinc.org' version '2.81'"
+    },
+    "location" : ["Coding.code"],
+    "expression" : ["Coding.code"]
+  }]
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "16935-9",
+  "display" : "Hepatitis B virus surface Ab [Units/volume] in Serum"
+}, "valueSet" :null, "langs":"en, en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "exampleOK":"true", "membershipOnly":"false", "displayWarningMode":"true", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "x-system-cache-id",
+    "valueString" : "dc8fd4bc-091a-424a-8a3b-6198ef146891"
+  },
+  {
+    "name" : "defaultDisplayLanguage",
+    "valueCode" : "en-US"
+  }]
+}}####
+v: {
+  "display" : "Hepatitis B virus surface Ab [Units/volume] in Serum",
+  "code" : "16935-9",
+  "system" : "http://loinc.org",
+  "version" : "2.81",
+  "server" : "https://tx.fhir.org/r4",
+  "unknown-systems" : "",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "22322-2",
+  "display" : "Hepatitis B virus surface Ab [Presence] in Serum"
+}, "valueSet" :null, "langs":"en, en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "exampleOK":"true", "membershipOnly":"false", "displayWarningMode":"true", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "x-system-cache-id",
+    "valueString" : "dc8fd4bc-091a-424a-8a3b-6198ef146891"
+  },
+  {
+    "name" : "defaultDisplayLanguage",
+    "valueCode" : "en-US"
+  }]
+}}####
+v: {
+  "display" : "Hepatitis B virus surface Ab [Presence] in Serum",
+  "code" : "22322-2",
+  "system" : "http://loinc.org",
+  "version" : "2.81",
+  "server" : "https://tx.fhir.org/r4",
+  "unknown-systems" : "",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "10900-9",
+  "display" : "Hepatitis B virus surface Ab [Units/volume] in Serum by Immunoassay"
+}, "valueSet" :null, "langs":"en, en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "exampleOK":"true", "membershipOnly":"false", "displayWarningMode":"true", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "x-system-cache-id",
+    "valueString" : "dc8fd4bc-091a-424a-8a3b-6198ef146891"
+  },
+  {
+    "name" : "defaultDisplayLanguage",
+    "valueCode" : "en-US"
+  }]
+}}####
+v: {
+  "display" : "Hepatitis B virus surface Ab [Presence] in Serum by Immunoassay",
+  "code" : "10900-9",
+  "system" : "http://loinc.org",
+  "version" : "2.81",
+  "severity" : "warning",
+  "error" : "Wrong Display Name 'Hepatitis B virus surface Ab [Units/volume] in Serum by Immunoassay' for http://loinc.org#10900-9. Valid display is one of 4 choices: 'Hepatitis B virus surface Ab [Presence] in Serum by Immunoassay' (en-US), 'Hepatitis B virus surface Ab [Presence] in Serum by Immunoassay' (en-US), 'HBV surface Ab Ser Ql IA' (en-US) or 'Hepatitis B virus (HBV) Surface antibody, Blood' (en-US) (for the language(s) 'en, en-US')",
+  "server" : "https://tx.fhir.org/r4",
+  "unknown-systems" : "",
+  "issues" : {
+  "resourceType" : "OperationOutcome",
+  "issue" : [{
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString" : "Display_Name_for__should_be_one_of__instead_of"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-server",
+      "valueUrl" : "https://tx.fhir.org/r4"
+    }],
+    "severity" : "warning",
+    "code" : "invalid",
+    "details" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+        "code" : "invalid-display"
+      }],
+      "text" : "Wrong Display Name 'Hepatitis B virus surface Ab [Units/volume] in Serum by Immunoassay' for http://loinc.org#10900-9. Valid display is one of 4 choices: 'Hepatitis B virus surface Ab [Presence] in Serum by Immunoassay' (en-US), 'Hepatitis B virus surface Ab [Presence] in Serum by Immunoassay' (en-US), 'HBV surface Ab Ser Ql IA' (en-US) or 'Hepatitis B virus (HBV) Surface antibody, Blood' (en-US) (for the language(s) 'en, en-US')"
+    },
+    "location" : ["Coding.display"],
+    "expression" : ["Coding.display"]
+  }]
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "32018-4",
+  "display" : "Hepatitis A virus Ab [Presence] in Serum"
+}, "valueSet" :null, "langs":"en, en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "exampleOK":"true", "membershipOnly":"false", "displayWarningMode":"true", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "x-system-cache-id",
+    "valueString" : "dc8fd4bc-091a-424a-8a3b-6198ef146891"
+  },
+  {
+    "name" : "defaultDisplayLanguage",
+    "valueCode" : "en-US"
+  }]
+}}####
+v: {
+  "display" : "Hepatitis A virus IgG Ab [Presence] in Serum",
+  "code" : "32018-4",
+  "system" : "http://loinc.org",
+  "version" : "2.81",
+  "severity" : "warning",
+  "error" : "Wrong Display Name 'Hepatitis A virus Ab [Presence] in Serum' for http://loinc.org#32018-4. Valid display is one of 4 choices: 'Hepatitis A virus IgG Ab [Presence] in Serum' (en-US), 'Hepatitis A virus IgG Ab [Presence] in Serum' (en-US), 'HAV IgG Ser Ql' (en-US) or 'Hepatitis A virus (HAV) IgG antibody, Blood' (en-US) (for the language(s) 'en, en-US')",
+  "server" : "https://tx.fhir.org/r4",
+  "unknown-systems" : "",
+  "issues" : {
+  "resourceType" : "OperationOutcome",
+  "issue" : [{
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString" : "Display_Name_for__should_be_one_of__instead_of"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-server",
+      "valueUrl" : "https://tx.fhir.org/r4"
+    }],
+    "severity" : "warning",
+    "code" : "invalid",
+    "details" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+        "code" : "invalid-display"
+      }],
+      "text" : "Wrong Display Name 'Hepatitis A virus Ab [Presence] in Serum' for http://loinc.org#32018-4. Valid display is one of 4 choices: 'Hepatitis A virus IgG Ab [Presence] in Serum' (en-US), 'Hepatitis A virus IgG Ab [Presence] in Serum' (en-US), 'HAV IgG Ser Ql' (en-US) or 'Hepatitis A virus (HAV) IgG antibody, Blood' (en-US) (for the language(s) 'en, en-US')"
+    },
+    "location" : ["Coding.display"],
+    "expression" : ["Coding.display"]
+  }]
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "40724-7",
+  "display" : "Hepatitis A virus IgG Ab [Presence] in Serum"
+}, "valueSet" :null, "langs":"en, en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "exampleOK":"true", "membershipOnly":"false", "displayWarningMode":"true", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "x-system-cache-id",
+    "valueString" : "dc8fd4bc-091a-424a-8a3b-6198ef146891"
+  },
+  {
+    "name" : "defaultDisplayLanguage",
+    "valueCode" : "en-US"
+  }]
+}}####
+v: {
+  "display" : "Hepatitis A virus IgG Ab [Presence] in Serum by Immunoassay",
+  "code" : "40724-7",
+  "system" : "http://loinc.org",
+  "version" : "2.81",
+  "severity" : "warning",
+  "error" : "Wrong Display Name 'Hepatitis A virus IgG Ab [Presence] in Serum' for http://loinc.org#40724-7. Valid display is one of 4 choices: 'Hepatitis A virus IgG Ab [Presence] in Serum by Immunoassay' (en-US), 'Hepatitis A virus IgG Ab [Presence] in Serum by Immunoassay' (en-US), 'HAV IgG Ser Ql IA' (en-US) or 'Hepatitis A virus (HAV) IgG antibody, Blood' (en-US) (for the language(s) 'en, en-US')",
+  "server" : "https://tx.fhir.org/r4",
+  "unknown-systems" : "",
+  "issues" : {
+  "resourceType" : "OperationOutcome",
+  "issue" : [{
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString" : "Display_Name_for__should_be_one_of__instead_of"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-server",
+      "valueUrl" : "https://tx.fhir.org/r4"
+    }],
+    "severity" : "warning",
+    "code" : "invalid",
+    "details" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+        "code" : "invalid-display"
+      }],
+      "text" : "Wrong Display Name 'Hepatitis A virus IgG Ab [Presence] in Serum' for http://loinc.org#40724-7. Valid display is one of 4 choices: 'Hepatitis A virus IgG Ab [Presence] in Serum by Immunoassay' (en-US), 'Hepatitis A virus IgG Ab [Presence] in Serum by Immunoassay' (en-US), 'HAV IgG Ser Ql IA' (en-US) or 'Hepatitis A virus (HAV) IgG antibody, Blood' (en-US) (for the language(s) 'en, en-US')"
+    },
+    "location" : ["Coding.display"],
+    "expression" : ["Coding.display"]
+  }]
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "13950-1",
+  "display" : "Hepatitis A virus Ab [Units/volume] in Serum"
+}, "valueSet" :null, "langs":"en, en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "exampleOK":"true", "membershipOnly":"false", "displayWarningMode":"true", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "x-system-cache-id",
+    "valueString" : "dc8fd4bc-091a-424a-8a3b-6198ef146891"
+  },
+  {
+    "name" : "defaultDisplayLanguage",
+    "valueCode" : "en-US"
+  }]
+}}####
+v: {
+  "display" : "Hepatitis A virus IgM Ab [Presence] in Serum or Plasma by Immunoassay",
+  "code" : "13950-1",
+  "system" : "http://loinc.org",
+  "version" : "2.81",
+  "severity" : "warning",
+  "error" : "Wrong Display Name 'Hepatitis A virus Ab [Units/volume] in Serum' for http://loinc.org#13950-1. Valid display is one of 4 choices: 'Hepatitis A virus IgM Ab [Presence] in Serum or Plasma by Immunoassay' (en-US), 'Hepatitis A virus IgM Ab [Presence] in Serum or Plasma by Immunoassay' (en-US), 'HAV IgM SerPl Ql IA' (en-US) or 'Hepatitis A virus (HAV) IgM antibody, Blood' (en-US) (for the language(s) 'en, en-US')",
+  "server" : "https://tx.fhir.org/r4",
+  "unknown-systems" : "",
+  "issues" : {
+  "resourceType" : "OperationOutcome",
+  "issue" : [{
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString" : "Display_Name_for__should_be_one_of__instead_of"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-server",
+      "valueUrl" : "https://tx.fhir.org/r4"
+    }],
+    "severity" : "warning",
+    "code" : "invalid",
+    "details" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+        "code" : "invalid-display"
+      }],
+      "text" : "Wrong Display Name 'Hepatitis A virus Ab [Units/volume] in Serum' for http://loinc.org#13950-1. Valid display is one of 4 choices: 'Hepatitis A virus IgM Ab [Presence] in Serum or Plasma by Immunoassay' (en-US), 'Hepatitis A virus IgM Ab [Presence] in Serum or Plasma by Immunoassay' (en-US), 'HAV IgM SerPl Ql IA' (en-US) or 'Hepatitis A virus (HAV) IgM antibody, Blood' (en-US) (for the language(s) 'en, en-US')"
+    },
+    "location" : ["Coding.display"],
+    "expression" : ["Coding.display"]
+  }]
+}
+
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "inactive" : true,
+    "include" : [{
+      "system" : "http://loinc.org",
+      "concept" : [{
+        "code" : "21500-4",
+        "display" : "Measles virus IgG Ab [Units/volume] in Serum"
+      },
+      {
+        "code" : "35275-7",
+        "display" : "Measles virus IgG Ab [Presence] in Serum"
+      },
+      {
+        "code" : "20479-2",
+        "display" : "Measles virus Ab [Presence] in Serum"
+      },
+      {
+        "code" : "6476-3",
+        "display" : "Mumps virus IgG Ab [Units/volume] in Serum"
+      },
+      {
+        "code" : "39012-0",
+        "display" : "Mumps virus IgG Ab [Presence] in Serum"
+      },
+      {
+        "code" : "22416-2",
+        "display" : "Mumps virus Ab [Presence] in Serum"
+      },
+      {
+        "code" : "8014-3",
+        "display" : "Rubella virus IgG Ab [Units/volume] in Serum"
+      },
+      {
+        "code" : "25514-1",
+        "display" : "Rubella virus IgG Ab [Presence] in Serum"
+      },
+      {
+        "code" : "20458-6",
+        "display" : "Rubella virus Ab [Presence] in Serum"
+      },
+      {
+        "code" : "19162-7",
+        "display" : "Varicella zoster virus IgG Ab [Units/volume] in Serum"
+      },
+      {
+        "code" : "17763-4",
+        "display" : "Varicella zoster virus IgG Ab [Presence] in Serum"
+      },
+      {
+        "code" : "5403-8",
+        "display" : "Varicella zoster virus Ab [Presence] in Serum"
+      },
+      {
+        "code" : "16935-9",
+        "display" : "Hepatitis B virus surface Ab [Units/volume] in Serum"
+      },
+      {
+        "code" : "22322-2",
+        "display" : "Hepatitis B virus surface Ab [Presence] in Serum"
+      },
+      {
+        "code" : "10900-9",
+        "display" : "Hepatitis B virus surface Ab [Units/volume] in Serum by Immunoassay"
+      },
+      {
+        "code" : "32018-4",
+        "display" : "Hepatitis A virus Ab [Presence] in Serum"
+      },
+      {
+        "code" : "40724-7",
+        "display" : "Hepatitis A virus IgG Ab [Presence] in Serum"
+      },
+      {
+        "code" : "13950-1",
+        "display" : "Hepatitis A virus Ab [Units/volume] in Serum"
+      }]
+    }]
+  }
+}}####
+e: {
+  "source" : tx.fhir.org,
+  "valueSet" : {
+  "resourceType" : "ValueSet",
+  "status" : "active",
+  "expansion" : {
+    "identifier" : "urn:uuid:85604e1e-6765-4357-8eb2-be953fce5b82",
+    "timestamp" : "2026-02-11T19:06:28.303Z",
+    "total" : 16,
+    "offset" : 0,
+    "parameter" : [{
+      "name" : "excludeNested",
+      "valueBoolean" : false
+    },
+    {
+      "name" : "offset",
+      "valueInteger" : 0
+    },
+    {
+      "name" : "count",
+      "valueInteger" : 1000
+    },
+    {
+      "name" : "used-codesystem",
+      "valueUri" : "http://loinc.org|2.81"
+    }],
+    "contains" : [{
+      "system" : "http://loinc.org",
+      "code" : "21500-4",
+      "display" : "Measles virus IgG Ab [Titer] in Cerebral spinal fluid by Immunofluorescence"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "35275-7",
+      "display" : "Measles virus IgG Ab [Presence] in Serum by Immunoassay"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "20479-2",
+      "display" : "Measles virus IgG Ab [Presence] in Serum"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "39012-0",
+      "display" : "Mycoplasma pneumoniae Ab [Presence] in Body fluid"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "22416-2",
+      "display" : "Mumps virus IgG Ab [Titer] in Cerebral spinal fluid"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "8014-3",
+      "display" : "Rubella virus IgG Ab [Units/volume] in Serum"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "25514-1",
+      "display" : "Rubella virus IgG Ab [Presence] in Serum"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "20458-6",
+      "display" : "Rubella virus IgG Ab [Interpretation] in Serum"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "19162-7",
+      "display" : "Varicella zoster virus IgG Ab [Presence] in Serum"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "17763-4",
+      "display" : "Varicella zoster virus IgG Ab [Units/volume] in Serum by Immunofluorescence"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "16935-9",
+      "display" : "Hepatitis B virus surface Ab [Units/volume] in Serum"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "22322-2",
+      "display" : "Hepatitis B virus surface Ab [Presence] in Serum"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "10900-9",
+      "display" : "Hepatitis B virus surface Ab [Presence] in Serum by Immunoassay"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "32018-4",
+      "display" : "Hepatitis A virus IgG Ab [Presence] in Serum"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "40724-7",
+      "display" : "Hepatitis A virus IgG Ab [Presence] in Serum by Immunoassay"
+    },
+    {
+      "system" : "http://loinc.org",
+      "code" : "13950-1",
+      "display" : "Hepatitis A virus IgM Ab [Presence] in Serum or Plasma by Immunoassay"
     }]
   }
 },

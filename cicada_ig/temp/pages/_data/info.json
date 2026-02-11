@@ -7,5 +7,6 @@
   "excludettl":"N",
   "excludelogbinaryformat":"y",
   "excludemap":"N",
+  "fcpspec":"",
   "fmm-definition":"http://hl7.org/fhir/versions.html#maturity"
 }

@@ -1,0 +1,21 @@
+---
+---
+<!-- layouts\layout-changehistory.html -->
+<!-- get modelType -->
+
+
+{% include fragment-pagebegin.html %}
+
+<div style="counter-reset: section 10" class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Publish Box goes here</p><!--EndReleaseHeader-->
+  {% include fragment-base-navtabs.html type='ConceptMap' id='Icd10ToCdsiObservation' active='history' %}
+
+  <a name="root"> </a>
+  <h2 id="root">{{type}}: ConceptMap/Icd10ToCdsiObservation - Change History</h2>
+  <p>History of changes for Icd10ToCdsiObservation {{type | downcase}}.</p>
+
+  {%include ConceptMap-Icd10ToCdsiObservation-history.xhtml%}
+
+</div>
+{% assign includetabscripts = 'true' %}
+{% include fragment-pageend.html %}
