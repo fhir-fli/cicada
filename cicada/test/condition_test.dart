@@ -94,441 +94,177 @@ List<String> checkDoseConsistency(VaxDose dose) {
   return violations;
 }
 
+/// Map from conditions Excel vaccine group names to engine names.
+const conditionExcelToEngine = <String, String>{
+  'DTaP': 'DTaP/Tdap/Td',
+  'Flu': 'Influenza',
+  'IPOL': 'Polio',
+  'Rota': 'Rotavirus',
+  'VAR': 'Varicella',
+};
+
+String _patientId(Parameters parameters, int index) {
+  final Patient? patient = parameters.parameter
+      ?.firstWhereOrNull(
+          (ParametersParameter e) => e.resource is Patient)
+      ?.resource as Patient?;
+  final id = patient?.id?.toString();
+  if (id == null || id == 'null') return 'case-$index';
+  return id;
+}
+
 void main() {
-  late List<Parameters> allParameters;
+  final allParameters =
+      loadConditionTestCases('test/conditionTestCases.ndjson');
 
-  /// Map from conditions Excel vaccine group names to engine names.
-  /// Most match directly (after trimming whitespace). Only these 5 differ:
-  const conditionExcelToEngine = <String, String>{
-    'DTaP': 'DTaP/Tdap/Td',
-    'Flu': 'Influenza',
-    'IPOL': 'Polio',
-    'Rota': 'Rotavirus',
-    'VAR': 'Varicella',
-  };
-
-  setUpAll(() {
-    allParameters = loadConditionTestCases('test/conditionTestCases.ndjson');
-  });
-
-  group('CDSi underlying conditions evaluation', () {
-    test('loads condition test cases', () {
-      expect(allParameters, isNotEmpty);
+  group('CDSi condition test cases', () {
+    test('loaded ${allParameters.length} test cases', () {
       expect(allParameters.length, 776);
     });
 
-    test('all condition test cases evaluate without exceptions', () {
-      final List<String> failures = [];
+    for (int i = 0; i < allParameters.length; i++) {
+      final parameters = allParameters[i];
+      final id = _patientId(parameters, i);
 
-      for (int i = 0; i < allParameters.length; i++) {
-        final parameters = allParameters[i];
-        final Patient? patient = parameters.parameter
-            ?.firstWhereOrNull(
-                (ParametersParameter e) => e.resource is Patient)
-            ?.resource as Patient?;
-        final id = patient?.id?.toString() ?? 'unknown-$i';
+      test(id, () {
+        // --- Evaluate ---
+        final result = evaluateForForecast(parameters);
+        final mismatches = <String>[];
 
-        try {
-          evaluateForForecast(parameters);
-        } catch (e) {
-          failures.add('$id: $e');
-        }
-      }
-
-      if (failures.isNotEmpty) {
-        fail('${failures.length} test cases threw exceptions:\n'
-            '${failures.take(20).join('\n')}');
-      }
-    });
-
-    test('evaluated dose validity matches CDSi expected results', () {
-      final List<String> statusMismatches = [];
-      final List<String> reasonMismatches = [];
-      final List<String> consistencyViolations = [];
-      int comparedCount = 0;
-      int statusMatchCount = 0;
-      int reasonComparedCount = 0;
-      int reasonMatchCount = 0;
-
-      for (int i = 0; i < allParameters.length; i++) {
-        final parameters = allParameters[i];
-        final Patient? patient = parameters.parameter
-            ?.firstWhereOrNull(
-                (ParametersParameter e) => e.resource is Patient)
-            ?.resource as Patient?;
-        final id = patient?.id?.toString() ?? 'unknown-$i';
-
-        final List<VaxDose>? expectedDoses = testConditionDoses[id]
+        // --- Dose evaluation ---
+        final expectedDoses = testConditionDoses[id]
             ?.map((Map<String, Object> e) => VaxDose.fromJson(e))
             .toList();
 
-        if (expectedDoses == null || expectedDoses.isEmpty) continue;
+        if (expectedDoses != null) {
+          for (final expectedDose in expectedDoses) {
+            bool foundStatusMatch = false;
+            bool foundReasonMatch = false;
+            bool foundAnyEval = false;
+            final bool hasExpectedReason = expectedDose.evalReason != null;
 
-        ForecastResult result;
-        try {
-          result = evaluateForForecast(parameters);
-        } catch (e) {
-          statusMismatches.add('$id: threw exception: $e');
-          continue;
-        }
+            result.agMap.forEach((String antigenName, VaxAntigen antigen) {
+              if (!expectedDose.antigens
+                  .map((s) => s.toLowerCase())
+                  .contains(antigenName.toLowerCase())) {
+                return;
+              }
 
-        for (final expectedDose in expectedDoses) {
-          bool foundStatusMatch = false;
-          bool foundReasonMatch = false;
-          bool foundAnyEval = false;
-          final List<String> failedActuals = [];
-          bool hasExpectedReason = expectedDose.evalReason != null;
-
-          result.agMap.forEach((String antigenName, VaxAntigen antigen) {
-            if (!expectedDose.antigens
-                .map((s) => s.toLowerCase())
-                .contains(antigenName.toLowerCase())) {
-              return;
-            }
-
-            antigen.groups.forEach((String groupKey, VaxGroup group) {
-              for (final series in group.series) {
-                final actualDose = series.doses.firstWhereOrNull(
-                    (d) => d.doseId == expectedDose.doseId);
-                if (actualDose == null || actualDose.evalStatus == null) {
-                  continue;
-                }
-
-                foundAnyEval = true;
-
-                // Check internal consistency of sub-step fields
-                final violations = checkDoseConsistency(actualDose);
-                for (final v in violations) {
-                  final msg = '$id | ${series.series.seriesName} | '
-                      '${actualDose.doseId}: $v';
-                  if (!consistencyViolations.contains(msg)) {
-                    consistencyViolations.add(msg);
+              antigen.groups.forEach((String groupKey, VaxGroup group) {
+                for (final series in group.series) {
+                  final actualDose = series.doses.firstWhereOrNull(
+                      (d) => d.doseId == expectedDose.doseId);
+                  if (actualDose == null || actualDose.evalStatus == null) {
+                    continue;
                   }
-                }
 
-                // Exact evalStatus comparison
-                if (actualDose.evalStatus == expectedDose.evalStatus) {
-                  foundStatusMatch = true;
-                  // Exact evalReason comparison (when expected has one)
-                  if (hasExpectedReason) {
-                    if (actualDose.evalReason == expectedDose.evalReason) {
+                  foundAnyEval = true;
+
+                  // Consistency check
+                  final violations = checkDoseConsistency(actualDose);
+                  for (final v in violations) {
+                    mismatches.add(
+                        'consistency: ${actualDose.doseId} $v');
+                  }
+
+                  if (actualDose.evalStatus == expectedDose.evalStatus) {
+                    foundStatusMatch = true;
+                    if (hasExpectedReason &&
+                        actualDose.evalReason == expectedDose.evalReason) {
                       foundReasonMatch = true;
                     }
                   }
-                } else {
-                  failedActuals.add(
-                      '${series.series.seriesName}: '
-                      'actual=${actualDose.evalStatus} '
-                      'reason=${actualDose.evalReason}');
                 }
-              }
+              });
             });
-          });
 
-          if (foundAnyEval) {
-            comparedCount++;
-            if (foundStatusMatch) {
-              statusMatchCount++;
+            if (foundAnyEval && !foundStatusMatch) {
+              mismatches.add(
+                  'dose ${expectedDose.doseId}: '
+                  'evalStatus expected=${expectedDose.evalStatus} '
+                  'reason=${expectedDose.evalReason}');
             }
-            if (hasExpectedReason) {
-              reasonComparedCount++;
-              if (foundReasonMatch) {
-                reasonMatchCount++;
-              } else if (foundStatusMatch) {
-                reasonMismatches.add(
-                  '$id | ${expectedDose.doseId}: '
-                  'expectedReason="${expectedDose.evalReason}" '
-                  'status matched (${expectedDose.evalStatus})',
-                );
-              }
-            }
-            if (!foundStatusMatch && failedActuals.isNotEmpty) {
-              statusMismatches.add(
-                '$id | ${failedActuals.first} | '
-                '${expectedDose.doseId}: '
-                'expected="${expectedDose.evalStatus}"',
-              );
+            if (foundAnyEval && foundStatusMatch && hasExpectedReason &&
+                !foundReasonMatch) {
+              mismatches.add(
+                  'dose ${expectedDose.doseId}: '
+                  'evalReason expected=${expectedDose.evalReason}');
             }
           }
         }
-      }
 
-      // Print summary
-      print('Compared $comparedCount dose evaluations');
-      print('EvalStatus matches: $statusMatchCount / $comparedCount');
-      print('EvalStatus mismatches: ${statusMismatches.length}');
-      print('EvalReason matches: $reasonMatchCount / $reasonComparedCount');
-      print('EvalReason mismatches: ${reasonMismatches.length}');
-      print('Consistency violations: ${consistencyViolations.length}');
-
-      if (statusMismatches.isNotEmpty) {
-        print('\nFirst 30 status mismatches:');
-        for (final m in statusMismatches.take(30)) {
-          print('  $m');
-        }
-      }
-
-      if (reasonMismatches.isNotEmpty) {
-        print('\nFirst 20 reason mismatches (status matched, reason did not):');
-        for (final m in reasonMismatches.take(20)) {
-          print('  $m');
-        }
-      }
-
-      if (consistencyViolations.isNotEmpty) {
-        print('\nFirst 20 consistency violations:');
-        for (final v in consistencyViolations.take(20)) {
-          print('  $v');
-        }
-      }
-
-      // Regression thresholds based on current baseline
-      expect(statusMismatches.length, lessThanOrEqualTo(3),
-          reason: 'evalStatus mismatches regressed (baseline: 3)');
-    });
-
-    test('forecast dates and series status match CDSi expected results', () {
-      int comparedCount = 0;
-      int statusMatches = 0;
-      int statusMismatches = 0;
-      int doseNumMatches = 0;
-      int doseNumMismatches = 0;
-      int earliestMatches = 0;
-      int earliestMismatches = 0;
-      int recommendedMatches = 0;
-      int recommendedMismatches = 0;
-      int pastDueMatches = 0;
-      int pastDueMismatches = 0;
-      int missingForecasts = 0;
-
-      final Map<String, int> statusMismatchCategories = {};
-      final Map<String, int> vgMismatchCounts = {};
-      final List<String> statusMismatchDetails = [];
-      final List<String> dateMismatchDetails = [];
-
-      final Map<String, int> earliestByVg = {};
-      final Map<String, int> recommendedByVg = {};
-      final Map<String, int> pastDueByVg = {};
-
-      for (int i = 0; i < allParameters.length; i++) {
-        final parameters = allParameters[i];
-        final Patient? patient = parameters.parameter
-            ?.firstWhereOrNull(
-                (ParametersParameter e) => e.resource is Patient)
-            ?.resource as Patient?;
-        final id = patient?.id?.toString() ?? 'unknown-$i';
-
+        // --- Forecast ---
         final expectedForecasts = testConditionForecasts[id];
-        if (expectedForecasts == null || expectedForecasts.isEmpty) continue;
 
-        ForecastResult result;
-        try {
-          result = evaluateForForecast(parameters);
-        } catch (e) {
-          missingForecasts += expectedForecasts.length;
-          continue;
-        }
+        if (expectedForecasts != null) {
+          for (final expected in expectedForecasts) {
+            final excelVg = expected['vaccineGroup']!.trim();
+            final engineVg = conditionExcelToEngine[excelVg] ?? excelVg;
 
-        for (final expected in expectedForecasts) {
-          final excelVg = expected['vaccineGroup']!.trim();
-          // Map to engine name: use explicit mapping, else pass through
-          final engineVg = conditionExcelToEngine[excelVg] ?? excelVg;
-
-          comparedCount++;
-
-          final vgForecast = result.vaccineGroupForecasts[engineVg];
-          if (vgForecast == null) {
-            missingForecasts++;
-            continue;
-          }
-
-          // Compare series status (case-insensitive)
-          final expectedStatus =
-              expected['seriesStatus']!.toLowerCase();
-          final actualStatus =
-              vgForecast.status.toString().toLowerCase();
-          if (expectedStatus == actualStatus) {
-            statusMatches++;
-          } else {
-            statusMismatches++;
-            final category = '$expectedStatus→$actualStatus';
-            statusMismatchCategories[category] =
-                (statusMismatchCategories[category] ?? 0) + 1;
-            vgMismatchCounts[excelVg] =
-                (vgMismatchCounts[excelVg] ?? 0) + 1;
-            if (statusMismatchDetails.length < 50) {
-              statusMismatchDetails.add(
-                '$id [$excelVg]: '
-                'expected="$expectedStatus" '
-                'actual="$actualStatus"',
-              );
+            final vgForecast = result.vaccineGroupForecasts[engineVg];
+            if (vgForecast == null) {
+              mismatches.add('[$excelVg] no forecast produced');
+              continue;
             }
-          }
 
-          // Compare dose number
-          final expectedDoseNum = expected['forecastNum'] ?? '';
-          if (expectedDoseNum.isNotEmpty && expectedDoseNum != '-') {
-            final actualDoseNum = vgForecast.doseNumber?.toString() ?? '';
-            if (expectedDoseNum == actualDoseNum) {
-              doseNumMatches++;
-            } else {
-              doseNumMismatches++;
-              if (dateMismatchDetails.length < 100) {
-                dateMismatchDetails.add(
-                  '$id [$excelVg] doseNum: '
-                  'expected="$expectedDoseNum" '
-                  'actual="$actualDoseNum"',
-                );
+            // Series status
+            final expectedStatus = expected['seriesStatus']!.toLowerCase();
+            final actualStatus = vgForecast.status.toString().toLowerCase();
+            if (expectedStatus != actualStatus) {
+              mismatches.add(
+                  '[$excelVg] status: '
+                  'expected=$expectedStatus actual=$actualStatus');
+            }
+
+            // Dose number
+            final expectedDoseNum = expected['forecastNum'] ?? '';
+            if (expectedDoseNum.isNotEmpty && expectedDoseNum != '-') {
+              final actualDoseNum =
+                  vgForecast.doseNumber?.toString() ?? '';
+              if (expectedDoseNum != actualDoseNum) {
+                mismatches.add(
+                    '[$excelVg] doseNum: '
+                    'expected=$expectedDoseNum actual=$actualDoseNum');
               }
             }
-          }
 
-          // Compare dates
-          final expectedEarliest = expected['earliestDate'] ?? '';
-          final expectedRecommended = expected['recommendedDate'] ?? '';
-          final expectedPastDue = expected['pastDueDate'] ?? '';
+            // Dates
+            final expectedEarliest = expected['earliestDate'] ?? '';
+            final expectedRecommended = expected['recommendedDate'] ?? '';
+            final expectedPastDue = expected['pastDueDate'] ?? '';
 
-          final actualEarliest =
-              vgForecast.earliestDate?.toString() ?? '';
-          final actualRecommended =
-              vgForecast.recommendedDate?.toString() ?? '';
-          final actualPastDue =
-              vgForecast.pastDueDate?.toString() ?? '';
+            final actualEarliest =
+                vgForecast.earliestDate?.toString() ?? '';
+            final actualRecommended =
+                vgForecast.recommendedDate?.toString() ?? '';
+            final actualPastDue =
+                vgForecast.pastDueDate?.toString() ?? '';
 
-          if (expectedEarliest.isNotEmpty) {
-            if (expectedEarliest == actualEarliest) {
-              earliestMatches++;
-            } else {
-              earliestMismatches++;
-              earliestByVg[excelVg] = (earliestByVg[excelVg] ?? 0) + 1;
-              if (dateMismatchDetails.length < 100) {
-                dateMismatchDetails.add(
-                  '$id [$excelVg] earliest: '
-                  'expected="$expectedEarliest" '
-                  'actual="$actualEarliest"',
-                );
-              }
+            if (expectedEarliest.isNotEmpty &&
+                expectedEarliest != actualEarliest) {
+              mismatches.add(
+                  '[$excelVg] earliest: '
+                  'expected=$expectedEarliest actual=$actualEarliest');
             }
-          }
-
-          if (expectedRecommended.isNotEmpty) {
-            if (expectedRecommended == actualRecommended) {
-              recommendedMatches++;
-            } else {
-              recommendedMismatches++;
-              recommendedByVg[excelVg] =
-                  (recommendedByVg[excelVg] ?? 0) + 1;
-              if (dateMismatchDetails.length < 100) {
-                dateMismatchDetails.add(
-                  '$id [$excelVg] recommended: '
-                  'expected="$expectedRecommended" '
-                  'actual="$actualRecommended"',
-                );
-              }
+            if (expectedRecommended.isNotEmpty &&
+                expectedRecommended != actualRecommended) {
+              mismatches.add(
+                  '[$excelVg] recommended: '
+                  'expected=$expectedRecommended actual=$actualRecommended');
             }
-          }
-
-          if (expectedPastDue.isNotEmpty) {
-            if (expectedPastDue == actualPastDue) {
-              pastDueMatches++;
-            } else {
-              pastDueMismatches++;
-              pastDueByVg[excelVg] = (pastDueByVg[excelVg] ?? 0) + 1;
-              if (dateMismatchDetails.length < 100) {
-                dateMismatchDetails.add(
-                  '$id [$excelVg] pastDue: '
-                  'expected="$expectedPastDue" '
-                  'actual="$actualPastDue"',
-                );
-              }
+            if (expectedPastDue.isNotEmpty &&
+                expectedPastDue != actualPastDue) {
+              mismatches.add(
+                  '[$excelVg] pastDue: '
+                  'expected=$expectedPastDue actual=$actualPastDue');
             }
           }
         }
-      }
 
-      // Print summary
-      print('\n=== CONDITION FORECAST VALIDATION SUMMARY ===');
-      print('Total comparisons: $comparedCount');
-      print('Missing/unmapped forecasts: $missingForecasts');
-      print('');
-      print('Series Status:');
-      print('  Matches: $statusMatches');
-      print('  Mismatches: $statusMismatches');
-      print('');
-      print('Dose Number:');
-      print('  Matches: $doseNumMatches');
-      print('  Mismatches: $doseNumMismatches');
-      print('');
-      print('Earliest Date:');
-      print('  Matches: $earliestMatches');
-      print('  Mismatches: $earliestMismatches');
-      print('');
-      print('Recommended Date:');
-      print('  Matches: $recommendedMatches');
-      print('  Mismatches: $recommendedMismatches');
-      print('');
-      print('Past Due Date:');
-      print('  Matches: $pastDueMatches');
-      print('  Mismatches: $pastDueMismatches');
-
-      if (statusMismatchCategories.isNotEmpty) {
-        print('\nStatus mismatch categories:');
-        final sorted = statusMismatchCategories.entries.toList()
-          ..sort((a, b) => b.value.compareTo(a.value));
-        for (final entry in sorted) {
-          print('  ${entry.key}: ${entry.value}');
+        if (mismatches.isNotEmpty) {
+          fail('${mismatches.length} mismatches:\n${mismatches.join('\n')}');
         }
-      }
-
-      if (vgMismatchCounts.isNotEmpty) {
-        print('\nStatus mismatches by vaccine group:');
-        final sorted = vgMismatchCounts.entries.toList()
-          ..sort((a, b) => b.value.compareTo(a.value));
-        for (final entry in sorted) {
-          print('  ${entry.key}: ${entry.value}');
-        }
-      }
-
-      if (statusMismatchDetails.isNotEmpty) {
-        print('\nFirst ${statusMismatchDetails.length} status mismatches:');
-        for (final m in statusMismatchDetails) {
-          print('  $m');
-        }
-      }
-
-      if (earliestByVg.isNotEmpty || recommendedByVg.isNotEmpty ||
-          pastDueByVg.isNotEmpty) {
-        print('\nDate mismatches by vaccine group:');
-        final allVgs = <String>{
-          ...earliestByVg.keys,
-          ...recommendedByVg.keys,
-          ...pastDueByVg.keys,
-        }.toList()
-          ..sort();
-        for (final vg in allVgs) {
-          final e = earliestByVg[vg] ?? 0;
-          final r = recommendedByVg[vg] ?? 0;
-          final p = pastDueByVg[vg] ?? 0;
-          print('  $vg: earliest=$e recommended=$r pastDue=$p');
-        }
-      }
-
-      if (dateMismatchDetails.isNotEmpty) {
-        print('\nFirst ${dateMismatchDetails.length} date mismatches:');
-        for (final m in dateMismatchDetails) {
-          print('  $m');
-        }
-      }
-
-      // Regression thresholds based on current baseline
-      expect(statusMismatches, lessThanOrEqualTo(5),
-          reason: 'condition forecast status mismatches regressed (baseline: 5)');
-      expect(earliestMismatches, lessThanOrEqualTo(17),
-          reason: 'condition earliest date mismatches regressed (baseline: 17)');
-      expect(recommendedMismatches, lessThanOrEqualTo(15),
-          reason: 'condition recommended date mismatches regressed (baseline: 15)');
-      expect(pastDueMismatches, lessThanOrEqualTo(5),
-          reason: 'condition past due date mismatches regressed (baseline: 5)');
-    });
+      });
+    }
   });
 }
