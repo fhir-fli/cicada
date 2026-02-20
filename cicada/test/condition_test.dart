@@ -38,6 +38,62 @@ List<Parameters> loadConditionTestCases(String path) {
   return result;
 }
 
+/// Checks internal consistency of dose sub-step fields against evalStatus
+/// and evalReason. Returns a list of violation descriptions (empty = ok).
+List<String> checkDoseConsistency(VaxDose dose) {
+  final violations = <String>[];
+
+  if (dose.evalReason == EvalReason.ageTooYoung &&
+      dose.validAgeReason != ValidAgeReason.tooYoung) {
+    violations.add(
+        'evalReason=ageTooYoung but validAgeReason=${dose.validAgeReason}');
+  }
+
+  if (dose.evalReason == EvalReason.ageTooOld &&
+      dose.validAgeReason != ValidAgeReason.tooOld) {
+    violations.add(
+        'evalReason=ageTooOld but validAgeReason=${dose.validAgeReason}');
+  }
+
+  if (dose.evalReason == EvalReason.intervalTooShort &&
+      dose.allowedIntervalReason != IntervalReason.tooShort &&
+      dose.preferredIntervalReason != IntervalReason.tooShort) {
+    violations.add(
+        'evalReason=intervalTooShort but '
+        'allowedIntervalReason=${dose.allowedIntervalReason}, '
+        'preferredIntervalReason=${dose.preferredIntervalReason}');
+  }
+
+  if (dose.evalReason == EvalReason.liveVirusConflict &&
+      dose.conflict != true) {
+    violations.add(
+        'evalReason=liveVirusConflict but conflict=${dose.conflict}');
+  }
+
+  if (dose.evalReason == EvalReason.notPreferableOrAllowable &&
+      dose.allowedVaccine != false) {
+    violations.add(
+        'evalReason=notPreferableOrAllowable but '
+        'allowedVaccine=${dose.allowedVaccine}');
+  }
+
+  if (dose.evalStatus == EvalStatus.valid) {
+    if (dose.validAgeReason == ValidAgeReason.tooYoung ||
+        dose.validAgeReason == ValidAgeReason.tooOld) {
+      violations.add(
+          'evalStatus=valid but validAgeReason=${dose.validAgeReason}');
+    }
+    if (dose.conflict == true) {
+      violations.add('evalStatus=valid but conflict=true');
+    }
+    if (dose.allowedVaccine == false) {
+      violations.add('evalStatus=valid but allowedVaccine=false');
+    }
+  }
+
+  return violations;
+}
+
 void main() {
   late List<Parameters> allParameters;
 
@@ -86,8 +142,13 @@ void main() {
     });
 
     test('evaluated dose validity matches CDSi expected results', () {
-      final List<String> mismatches = [];
+      final List<String> statusMismatches = [];
+      final List<String> reasonMismatches = [];
+      final List<String> consistencyViolations = [];
       int comparedCount = 0;
+      int statusMatchCount = 0;
+      int reasonComparedCount = 0;
+      int reasonMatchCount = 0;
 
       for (int i = 0; i < allParameters.length; i++) {
         final parameters = allParameters[i];
@@ -107,15 +168,16 @@ void main() {
         try {
           result = evaluateForForecast(parameters);
         } catch (e) {
-          mismatches.add('$id: threw exception: $e');
+          statusMismatches.add('$id: threw exception: $e');
           continue;
         }
 
         for (final expectedDose in expectedDoses) {
-          final expected = expectedDose.validity;
-          bool foundMatch = false;
+          bool foundStatusMatch = false;
+          bool foundReasonMatch = false;
           bool foundAnyEval = false;
           final List<String> failedActuals = [];
+          bool hasExpectedReason = expectedDose.evalReason != null;
 
           result.agMap.forEach((String antigenName, VaxAntigen antigen) {
             if (!expectedDose.antigens
@@ -133,12 +195,31 @@ void main() {
                 }
 
                 foundAnyEval = true;
-                final actual = actualDose.validity;
-                if (expected == actual || actual.startsWith(expected)) {
-                  foundMatch = true;
+
+                // Check internal consistency of sub-step fields
+                final violations = checkDoseConsistency(actualDose);
+                for (final v in violations) {
+                  final msg = '$id | ${series.series.seriesName} | '
+                      '${actualDose.doseId}: $v';
+                  if (!consistencyViolations.contains(msg)) {
+                    consistencyViolations.add(msg);
+                  }
+                }
+
+                // Exact evalStatus comparison
+                if (actualDose.evalStatus == expectedDose.evalStatus) {
+                  foundStatusMatch = true;
+                  // Exact evalReason comparison (when expected has one)
+                  if (hasExpectedReason) {
+                    if (actualDose.evalReason == expectedDose.evalReason) {
+                      foundReasonMatch = true;
+                    }
+                  }
                 } else {
                   failedActuals.add(
-                      '${series.series.seriesName}: "$actual"');
+                      '${series.series.seriesName}: '
+                      'actual=${actualDose.evalStatus} '
+                      'reason=${actualDose.evalReason}');
                 }
               }
             });
@@ -146,32 +227,72 @@ void main() {
 
           if (foundAnyEval) {
             comparedCount++;
-            if (!foundMatch && failedActuals.isNotEmpty) {
-              mismatches.add(
+            if (foundStatusMatch) {
+              statusMatchCount++;
+            }
+            if (hasExpectedReason) {
+              reasonComparedCount++;
+              if (foundReasonMatch) {
+                reasonMatchCount++;
+              } else if (foundStatusMatch) {
+                reasonMismatches.add(
+                  '$id | ${expectedDose.doseId}: '
+                  'expectedReason="${expectedDose.evalReason}" '
+                  'status matched (${expectedDose.evalStatus})',
+                );
+              }
+            }
+            if (!foundStatusMatch && failedActuals.isNotEmpty) {
+              statusMismatches.add(
                 '$id | ${failedActuals.first} | '
                 '${expectedDose.doseId}: '
-                'expected="$expected"',
+                'expected="${expectedDose.evalStatus}"',
               );
             }
           }
         }
       }
 
+      // Print summary
       print('Compared $comparedCount dose evaluations');
-      print('Mismatches: ${mismatches.length}');
+      print('EvalStatus matches: $statusMatchCount / $comparedCount');
+      print('EvalStatus mismatches: ${statusMismatches.length}');
+      print('EvalReason matches: $reasonMatchCount / $reasonComparedCount');
+      print('EvalReason mismatches: ${reasonMismatches.length}');
+      print('Consistency violations: ${consistencyViolations.length}');
 
-      if (mismatches.isNotEmpty) {
-        print('First 30 mismatches:');
-        for (final m in mismatches.take(30)) {
+      if (statusMismatches.isNotEmpty) {
+        print('\nFirst 30 status mismatches:');
+        for (final m in statusMismatches.take(30)) {
           print('  $m');
         }
       }
+
+      if (reasonMismatches.isNotEmpty) {
+        print('\nFirst 20 reason mismatches (status matched, reason did not):');
+        for (final m in reasonMismatches.take(20)) {
+          print('  $m');
+        }
+      }
+
+      if (consistencyViolations.isNotEmpty) {
+        print('\nFirst 20 consistency violations:');
+        for (final v in consistencyViolations.take(20)) {
+          print('  $v');
+        }
+      }
+
+      // Regression thresholds based on current baseline
+      expect(statusMismatches.length, lessThanOrEqualTo(3),
+          reason: 'evalStatus mismatches regressed (baseline: 3)');
     });
 
     test('forecast dates and series status match CDSi expected results', () {
       int comparedCount = 0;
       int statusMatches = 0;
       int statusMismatches = 0;
+      int doseNumMatches = 0;
+      int doseNumMismatches = 0;
       int earliestMatches = 0;
       int earliestMismatches = 0;
       int recommendedMatches = 0;
@@ -241,6 +362,24 @@ void main() {
                 'expected="$expectedStatus" '
                 'actual="$actualStatus"',
               );
+            }
+          }
+
+          // Compare dose number
+          final expectedDoseNum = expected['forecastNum'] ?? '';
+          if (expectedDoseNum.isNotEmpty && expectedDoseNum != '-') {
+            final actualDoseNum = vgForecast.doseNumber?.toString() ?? '';
+            if (expectedDoseNum == actualDoseNum) {
+              doseNumMatches++;
+            } else {
+              doseNumMismatches++;
+              if (dateMismatchDetails.length < 100) {
+                dateMismatchDetails.add(
+                  '$id [$excelVg] doseNum: '
+                  'expected="$expectedDoseNum" '
+                  'actual="$actualDoseNum"',
+                );
+              }
             }
           }
 
@@ -316,6 +455,10 @@ void main() {
       print('  Matches: $statusMatches');
       print('  Mismatches: $statusMismatches');
       print('');
+      print('Dose Number:');
+      print('  Matches: $doseNumMatches');
+      print('  Mismatches: $doseNumMismatches');
+      print('');
       print('Earliest Date:');
       print('  Matches: $earliestMatches');
       print('  Mismatches: $earliestMismatches');
@@ -377,7 +520,15 @@ void main() {
         }
       }
 
-      // Baseline — don't fail, just report
+      // Regression thresholds based on current baseline
+      expect(statusMismatches, lessThanOrEqualTo(5),
+          reason: 'condition forecast status mismatches regressed (baseline: 5)');
+      expect(earliestMismatches, lessThanOrEqualTo(17),
+          reason: 'condition earliest date mismatches regressed (baseline: 17)');
+      expect(recommendedMismatches, lessThanOrEqualTo(15),
+          reason: 'condition recommended date mismatches regressed (baseline: 15)');
+      expect(pastDueMismatches, lessThanOrEqualTo(5),
+          reason: 'condition past due date mismatches regressed (baseline: 5)');
     });
   });
 }
