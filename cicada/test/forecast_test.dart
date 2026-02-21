@@ -187,7 +187,12 @@ void main() {
               });
             });
 
-            if (foundAnyEval && !foundStatusMatch) {
+            if (!foundAnyEval && expectedDose.evalStatus != null) {
+              mismatches.add(
+                  'dose ${expectedDose.doseId}: '
+                  'not found in any evaluated series '
+                  '(expected ${expectedDose.evalStatus})');
+            } else if (foundAnyEval && !foundStatusMatch) {
               mismatches.add(
                   'dose ${expectedDose.doseId}: '
                   'evalStatus expected=${expectedDose.evalStatus} '
