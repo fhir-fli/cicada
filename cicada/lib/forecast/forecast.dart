@@ -600,18 +600,55 @@ Map<String, VaccineGroupForecast> _aggregateVaccineGroupForecasts(
     // For multi-antigen groups, collect vaccine info from each antigen.
     // FORECASTDN-2: use min doseNum when administerFullVaccineGroup='Y',
     // max when 'N'.
+    // When both risk and non-risk best series exist for an antigen, use
+    // unionDoseNum (unique valid doses across ALL best series + 1) so that
+    // prior valid doses from the standard series are counted even when the
+    // risk series can't see them (e.g., ART re-vaccination).
     var multiVaxInfo =
         (cvx: <String>[], desc: <String>[], doseNum: null as int?);
     final List<int> doseNums = [];
     for (final antigen in antigens) {
       final bestList = bestByAntigen[antigen.targetDisease]!;
       if (bestList.isNotEmpty) {
-        final info = _extractForecastVaccineInfo(bestList.first);
+        // Determine which series to use for vaccine info.
+        // Prefer a Not Complete risk series; fall back to any Not Complete
+        // series; last resort is bestList.first (may be Complete → null
+        // doseNum, handled below).
+        final riskBest = bestList
+            .where((s) => s.series.seriesType == SeriesType.risk)
+            .toList();
+        final notCompleteRisk = riskBest.where((s) =>
+            s.seriesStatus != SeriesStatus.complete &&
+            s.seriesStatus != SeriesStatus.immune).toList();
+        final infoSeries = notCompleteRisk.isNotEmpty
+            ? notCompleteRisk.first
+            : bestList.firstWhere(
+                (s) => s.seriesStatus != SeriesStatus.complete &&
+                    s.seriesStatus != SeriesStatus.immune,
+                orElse: () => bestList.first);
+        final info = _extractForecastVaccineInfo(infoSeries);
         if (info.cvx.isNotEmpty && multiVaxInfo.cvx.isEmpty) {
           multiVaxInfo = info;
         }
-        if (info.doseNum != null) {
-          doseNums.add(info.doseNum!);
+        // When mixed risk + non-risk best series and the risk series has
+        // no evaluated doses (e.g., all doses pre-dated the relevant
+        // observation like ART), count unique valid doses across all best
+        // series so that prior valid standard-series doses are reflected.
+        // When the risk series HAS evaluated doses, use its own doseNum
+        // since it properly tracks the re-vaccination schedule.
+        int? antigenDoseNum = info.doseNum;
+        if (riskBest.isNotEmpty && riskBest.length < bestList.length &&
+            riskBest.first.evaluatedDoses.isEmpty) {
+          final Set<String> uniqueValidDoseIds = {};
+          for (final s in bestList) {
+            for (final d in s.evaluatedDoses) {
+              uniqueValidDoseIds.add(d.doseId);
+            }
+          }
+          antigenDoseNum = uniqueValidDoseIds.length + 1;
+        }
+        if (antigenDoseNum != null) {
+          doseNums.add(antigenDoseNum);
         }
       }
     }

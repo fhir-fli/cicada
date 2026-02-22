@@ -1,6 +1,5 @@
 import 'package:collection/collection.dart';
 import 'package:fhir_r4/fhir_r4.dart';
-import 'package:riverpod/riverpod.dart';
 
 import '../cicada.dart';
 
@@ -96,6 +95,7 @@ class VaxDose {
   EvalStatus? evalStatus;
   EvalReason? evalReason;
   int targetDoseSatisfied = -1;
+  VaxObservations? observations;
 
   VaxDose copyWith({
     String? doseId,
@@ -455,24 +455,23 @@ class VaxDose {
   }
 
   VaxDate? getObservationDate(ObservationCode? relevantObs) {
-    final ProviderContainer container = ProviderContainer();
-    final VaxObservations observations = container.read(observationsProvider);
-    final int? obsIndex = observations.codesAsInt
-        ?.indexWhere((int element) => element == relevantObs?.codeAsInt);
+    if (relevantObs == null || observations == null) return null;
+    final int? obsIndex = observations!.codesAsInt
+        ?.indexWhere((int element) => element == relevantObs.codeAsInt);
     if (obsIndex == null || obsIndex == -1) {
       return null;
-    } else {
-      final VaxObservation obs = observations.observation![obsIndex];
-      // CALCDTINT-9: Use period.start (the date the observation occurred),
-      // fallback to period.end, then VaxDate.now()
-      if (obs.period?.start != null &&
-          obs.period!.start!.valueDateTime != null) {
-        return VaxDate.fromDateTime(obs.period!.start!.valueDateTime!);
-      }
-      return obs.period?.end == null || obs.period!.end!.valueDateTime == null
-          ? VaxDate.now()
-          : VaxDate.fromDateTime(obs.period!.end!.valueDateTime!);
     }
+    final VaxObservation obs = observations!.observation![obsIndex];
+    // CALCDTINT-9: Use period.start (the date the observation occurred),
+    // fallback to period.end
+    if (obs.period?.start != null &&
+        obs.period!.start!.valueDateTime != null) {
+      return VaxDate.fromDateTime(obs.period!.start!.valueDateTime!);
+    }
+    if (obs.period?.end != null && obs.period!.end!.valueDateTime != null) {
+      return VaxDate.fromDateTime(obs.period!.end!.valueDateTime!);
+    }
+    return null;
   }
 
   bool isLiveVirusConflict(

@@ -55,6 +55,7 @@ class VaxSeries {
   void indexDoses() {
     for (int i = 0; i < doses.length; i++) {
       doses[i].index = i;
+      doses[i].observations = observations;
     }
   }
 
