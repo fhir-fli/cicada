@@ -206,8 +206,18 @@ Future<void> _generateTestCases(TestCaseConfig config) async {
     }
 
     // Store test doses JSON
-    testDoses[patient.id.toString()] =
-        vaxDoses.map((d) => d.toJson()).toList();
+    final doseJsonList = vaxDoses.map((d) => d.toJson()).toList();
+    // Add Series_Type per dose (condition Excel only)
+    if (config.observationStyle == ObservationStyle.observationCode) {
+      for (var i = 0; i < doseJsonList.length; i++) {
+        final idx = i + 1;
+        final seriesType = rowMap['Series_Type_$idx']?.toString();
+        if (seriesType != null && seriesType.trim().isNotEmpty) {
+          doseJsonList[i]['seriesType'] = seriesType.trim().toLowerCase();
+        }
+      }
+    }
+    testDoses[patient.id.toString()] = doseJsonList;
 
     // Extract forecast data — trim whitespace from vaccine group
     final patientId = patient.id.toString();
@@ -439,6 +449,7 @@ void _writeDoseEntry(StringBuffer sb, Map<String, dynamic> dose) {
     'allowedVaccineReason',
     'evalStatus',
     'evalReason',
+    'seriesType',
   ];
   for (final key in orderedKeys) {
     if (!dose.containsKey(key) || dose[key] == null) continue;

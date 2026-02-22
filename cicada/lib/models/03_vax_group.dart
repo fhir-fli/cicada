@@ -95,7 +95,10 @@ class VaxGroup {
             dob.changeNullable(
                 series.series.selectSeries?.maxAgeToStart, true)!);
         scorableSeries.addAll(validDosesSeries);
-      } else {
+      }
+      // When no valid-dose series survive (either none had valid doses,
+      // or all were filtered out by maxAgeToStart), apply zero-dose logic.
+      if (validDosesSeries.isEmpty) {
         /// o The number of valid doses is 0 for each relevant patient series
         ///   in the series group.
         /// o There is no default patient series for the series group.

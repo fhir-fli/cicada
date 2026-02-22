@@ -151,6 +151,7 @@ void main() {
             bool foundReasonMatch = false;
             bool foundAnyEval = false;
             final bool hasExpectedReason = expectedDose.evalReason != null;
+            final Set<EvalReason?> actualReasons = {};
 
             result.agMap.forEach((String antigenName, VaxAntigen antigen) {
               if (!expectedDose.antigens
@@ -178,6 +179,7 @@ void main() {
 
                   if (actualDose.evalStatus == expectedDose.evalStatus) {
                     foundStatusMatch = true;
+                    actualReasons.add(actualDose.evalReason);
                     if (hasExpectedReason &&
                         actualDose.evalReason == expectedDose.evalReason) {
                       foundReasonMatch = true;
@@ -202,7 +204,8 @@ void main() {
                 !foundReasonMatch) {
               mismatches.add(
                   'dose ${expectedDose.doseId}: '
-                  'evalReason expected=${expectedDose.evalReason}');
+                  'evalReason expected=${expectedDose.evalReason} '
+                  'actual=${actualReasons.join(",")}');
             }
           }
         }

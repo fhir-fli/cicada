@@ -132,16 +132,17 @@ void main() {
         final mismatches = <String>[];
 
         // --- Dose evaluation ---
-        final expectedDoses = testConditionDoses[id]
-            ?.map((Map<String, Object> e) => VaxDose.fromJson(e))
-            .toList();
-
-        if (expectedDoses != null) {
-          for (final expectedDose in expectedDoses) {
+        final expectedDoseMaps = testConditionDoses[id];
+        if (expectedDoseMaps != null) {
+          for (final doseMap in expectedDoseMaps) {
+            final expectedDose = VaxDose.fromJson(doseMap);
+            final expectedSeriesType =
+                doseMap['seriesType'] as String?;
             bool foundStatusMatch = false;
             bool foundReasonMatch = false;
             bool foundAnyEval = false;
             final bool hasExpectedReason = expectedDose.evalReason != null;
+            final Set<EvalReason?> actualReasons = {};
 
             result.agMap.forEach((String antigenName, VaxAntigen antigen) {
               if (!expectedDose.antigens
@@ -152,6 +153,15 @@ void main() {
 
               antigen.groups.forEach((String groupKey, VaxGroup group) {
                 for (final series in group.series) {
+                  // If expected dose has a seriesType, only match
+                  // against series of that type.
+                  if (expectedSeriesType != null &&
+                      series.series.seriesType != null) {
+                    final actualType =
+                        series.series.seriesType.toString().toLowerCase();
+                    if (actualType != expectedSeriesType) continue;
+                  }
+
                   final actualDose = series.doses.firstWhereOrNull(
                       (d) => d.doseId == expectedDose.doseId);
                   if (actualDose == null || actualDose.evalStatus == null) {
@@ -169,6 +179,7 @@ void main() {
 
                   if (actualDose.evalStatus == expectedDose.evalStatus) {
                     foundStatusMatch = true;
+                    actualReasons.add(actualDose.evalReason);
                     if (hasExpectedReason &&
                         actualDose.evalReason == expectedDose.evalReason) {
                       foundReasonMatch = true;
@@ -182,18 +193,21 @@ void main() {
               mismatches.add(
                   'dose ${expectedDose.doseId}: '
                   'not found in any evaluated series '
-                  '(expected ${expectedDose.evalStatus})');
+                  '(expected ${expectedDose.evalStatus}'
+                  '${expectedSeriesType != null ? ', seriesType=$expectedSeriesType' : ''})');
             } else if (foundAnyEval && !foundStatusMatch) {
               mismatches.add(
                   'dose ${expectedDose.doseId}: '
                   'evalStatus expected=${expectedDose.evalStatus} '
-                  'reason=${expectedDose.evalReason}');
+                  'reason=${expectedDose.evalReason}'
+                  '${expectedSeriesType != null ? ' seriesType=$expectedSeriesType' : ''}');
             }
             if (foundAnyEval && foundStatusMatch && hasExpectedReason &&
                 !foundReasonMatch) {
               mismatches.add(
                   'dose ${expectedDose.doseId}: '
-                  'evalReason expected=${expectedDose.evalReason}');
+                  'evalReason expected=${expectedDose.evalReason} '
+                  'actual=${actualReasons.join(",")}');
             }
           }
         }

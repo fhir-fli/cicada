@@ -3,6 +3,40 @@ import 'package:fhir_r4/fhir_r4.dart';
 import '../cicada.dart';
 import 'forecast.dart';
 
+/// "Unspecified formulation" CVX codes for each vaccine group.
+///
+/// FITS (and the ImmDS IG) matches forecast recommendations by vaccineCode.
+/// These group-level CVX codes serve as the primary matching key. Specific
+/// product CVX codes (from preferableVaccine with forecastVaccineType='Y')
+/// are included as additional vaccineCode entries for clinical use.
+const _vaccineGroupCvx = <String, (String cvx, String display)>{
+  'Cholera': ('26', 'cholera, unspecified formulation'),
+  'COVID-19': ('213', 'SARS-COV-2 (COVID-19) vaccine, unspecified'),
+  'Dengue': ('330', 'Dengue Fever, unspecified'),
+  'DTaP/Tdap/Td': ('107', 'DTaP, unspecified formulation'),
+  'Ebola': ('214', 'Ebola, unspecified'),
+  'HepA': ('85', 'Hep A, unspecified formulation'),
+  'HepB': ('45', 'Hep B, unspecified formulation'),
+  'Hib': ('17', 'Hib, unspecified formulation'),
+  'HPV': ('137', 'HPV, unspecified formulation'),
+  'Influenza': ('88', 'influenza, unspecified formulation'),
+  'Japanese Encephalitis': ('129', 'Japanese Encephalitis, unspecified'),
+  'Meningococcal': ('108', 'meningococcal, unspecified formulation'),
+  'Meningococcal B': ('164', 'meningococcal B, unspecified'),
+  'MMR': ('03', 'MMR'),
+  'Orthopoxvirus': ('325', 'vaccinia (smallpox, mpox), unspecified'),
+  'Pneumococcal': ('109', 'pneumococcal, unspecified formulation'),
+  'Polio': ('89', 'polio, unspecified formulation'),
+  'Rabies': ('90', 'rabies, unspecified formulation'),
+  'Rotavirus': ('122', 'rotavirus, unspecified formulation'),
+  'RSV': ('304', 'RSV, unspecified'),
+  'TBE': ('222', 'tick-borne encephalitis, unspecified'),
+  'Typhoid': ('91', 'typhoid, unspecified formulation'),
+  'Varicella': ('21', 'varicella'),
+  'Yellow Fever': ('184', 'yellow fever, unspecified formulation'),
+  'Zoster': ('188', 'zoster, unspecified formulation'),
+};
+
 /// SNOMED CT codes for CDSi target diseases.
 const _diseaseSnomedCodes = <String, String>{
   'Cholera': '63650001',
@@ -206,23 +240,33 @@ ImmunizationRecommendation _buildRecommendation(ForecastResult result) {
       }
     }
 
-    // Build vaccineCode list from forecast CVX codes
-    final List<CodeableConcept>? vaccineCodeList;
-    if (vgf.forecastCvxCodes.isNotEmpty) {
-      vaccineCodeList = [
-        for (int i = 0; i < vgf.forecastCvxCodes.length; i++)
-          CodeableConcept(coding: [
-            Coding(
-              system: 'http://hl7.org/fhir/sid/cvx'.toFhirUri,
-              code: vgf.forecastCvxCodes[i].toFhirCode,
-              display: i < vgf.forecastVaccineDescriptions.length
-                  ? vgf.forecastVaccineDescriptions[i].toFhirString
-                  : null,
-            ),
-          ]),
-      ];
-    } else {
-      vaccineCodeList = null;
+    // Build vaccineCode list: group-level "unspecified" CVX first (for FITS
+    // matching), then specific product CVX codes (for clinical use).
+    final List<CodeableConcept> vaccineCodeList = [];
+    final groupCvx = _vaccineGroupCvx[vgf.vaccineGroupName];
+    if (groupCvx != null) {
+      vaccineCodeList.add(CodeableConcept(coding: [
+        Coding(
+          system: 'http://hl7.org/fhir/sid/cvx'.toFhirUri,
+          code: groupCvx.$1.toFhirCode,
+          display: groupCvx.$2.toFhirString,
+        ),
+      ]));
+    }
+    for (int i = 0; i < vgf.forecastCvxCodes.length; i++) {
+      // Skip if same as the group-level code we already added
+      if (groupCvx != null && vgf.forecastCvxCodes[i] == groupCvx.$1) {
+        continue;
+      }
+      vaccineCodeList.add(CodeableConcept(coding: [
+        Coding(
+          system: 'http://hl7.org/fhir/sid/cvx'.toFhirUri,
+          code: vgf.forecastCvxCodes[i].toFhirCode,
+          display: i < vgf.forecastVaccineDescriptions.length
+              ? vgf.forecastVaccineDescriptions[i].toFhirString
+              : null,
+        ),
+      ]));
     }
 
     recommendations.add(ImmunizationRecommendationRecommendation(
@@ -230,7 +274,7 @@ ImmunizationRecommendation _buildRecommendation(ForecastResult result) {
         coding: diseaseCodings.isNotEmpty ? diseaseCodings : null,
         text: vgf.vaccineGroupName.toFhirString,
       ),
-      vaccineCode: vaccineCodeList,
+      vaccineCode: vaccineCodeList.isNotEmpty ? vaccineCodeList : null,
       forecastStatus: _mapForecastStatus(vgf.status),
       dateCriterion: dateCriteria.isNotEmpty ? dateCriteria : null,
       doseNumberPositiveInt: vgf.doseNumber?.toFhirPositiveInt,
@@ -284,7 +328,7 @@ CodeableConcept _mapDoseStatusReason(EvalReason reason) {
   const system = 'http://hl7.org/fhir/us/immds/CodeSystem/StatusReason';
   final (String code, String display) = switch (reason) {
     EvalReason.expired => ('expired', 'Expired Product'),
-    EvalReason.ageTooOld => ('toold', 'Too Old'),
+    EvalReason.ageTooOld => ('tooold', 'Too Old'),
     EvalReason.ageTooYoung => ('tooyoung', 'Too Young'),
     EvalReason.inadvertentVaccine => ('inappropriate', 'Inappropriate Vaccine'),
     EvalReason.notPreferableOrAllowable => (
@@ -320,7 +364,8 @@ CodeableConcept _mapDoseStatusReason(EvalReason reason) {
 /// Uses the ImmDS CodeSystem:
 /// `http://hl7.org/fhir/us/immds/CodeSystem/ForecastStatus`
 CodeableConcept _mapForecastStatus(SeriesStatus status) {
-  const system = 'http://hl7.org/fhir/us/immds/CodeSystem/ForecastStatus';
+  const system =
+      'http://hl7.org/fhir/us/immds/CodeSystem/ForecastStatus';
   final (String code, String display) = switch (status) {
     SeriesStatus.complete => ('complete', 'Complete'),
     SeriesStatus.notComplete => ('notComplete', 'Not Complete'),

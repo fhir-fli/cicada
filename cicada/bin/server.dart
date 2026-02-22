@@ -76,7 +76,9 @@ Future<Response> _handleForecast(Request request) async {
       try {
         final xmlResponse = fhirJsonToXml(outputJson);
         print('  Response XML length: ${xmlResponse.length}');
-        // Mirror the Accept content type the client sent
+        // Log first request/response pair to files for debugging
+        _logOnce('request', body);
+        _logOnce('response', xmlResponse);
         final xmlContentType = accept.contains('fhir')
             ? 'application/fhir+xml'
             : 'application/xml';
@@ -185,6 +187,16 @@ const _corsHeaders = {
   'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
   'Access-Control-Allow-Headers': 'Content-Type, Accept',
 };
+
+/// Log the first request/response to /tmp for debugging
+bool _logged = false;
+void _logOnce(String label, String content) {
+  if (_logged) return;
+  try {
+    File('/tmp/fits_$label.xml').writeAsStringSync(content);
+    if (label == 'response') _logged = true;
+  } catch (_) {}
+}
 
 /// Return a FHIR OperationOutcome error response
 Response _operationOutcome(String message, int statusCode) {

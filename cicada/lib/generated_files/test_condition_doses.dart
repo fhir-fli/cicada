@@ -11,6 +11,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'standard',
     },
   ],
   '2016-UC-0002': <Map<String, Object>>[
@@ -23,6 +24,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'standard',
     },
   ],
   '2016-UC-0003': <Map<String, Object>>[
@@ -31,17 +33,12 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'dateGiven': '2011/04/02',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2011/02/02',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'standard',
     },
   ],
   '2016-UC-0004': <Map<String, Object>>[
@@ -50,17 +47,12 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'dateGiven': '2010/12/15',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2010/10/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'standard',
     },
   ],
   '2016-UC-0005': <Map<String, Object>>[
@@ -69,17 +61,12 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'dateGiven': '2010/08/02',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2010/06/06',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'standard',
     },
   ],
   '2016-UC-0006': <Map<String, Object>>[
@@ -92,6 +79,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'standard',
     },
   ],
   '2016-UC-0007': <Map<String, Object>>[
@@ -104,6 +92,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'standard',
     },
   ],
   '2016-UC-0008': <Map<String, Object>>[
@@ -117,6 +106,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'standard',
     },
   ],
   '2016-UC-0009': <Map<String, Object>>[
@@ -125,17 +115,12 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'dateGiven': '2010/08/02',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2010/06/06',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'standard',
     },
   ],
   '2016-UC-0010': <Map<String, Object>>[
@@ -148,6 +133,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'standard',
     },
   ],
   '2016-UC-0011': <Map<String, Object>>[
@@ -160,6 +146,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'standard',
     },
   ],
   '2016-UC-0012': <Map<String, Object>>[
@@ -173,6 +160,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'standard',
     },
   ],
   '2016-UC-0013': <Map<String, Object>>[],
@@ -186,6 +174,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'standard',
     },
   ],
   '2016-UC-0015': <Map<String, Object>>[
@@ -199,6 +188,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'standard',
     },
   ],
   '2016-UC-0016': <Map<String, Object>>[],
@@ -213,6 +203,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'standard',
     },
   ],
   '2016-UC-0018': <Map<String, Object>>[
@@ -226,6 +217,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'standard',
     },
     <String, Object>{
       'doseId': '2016-UC-0018_dose2',
@@ -237,6 +229,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'standard',
     },
   ],
   '2016-UC-0019': <Map<String, Object>>[],
@@ -252,6 +245,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'standard',
     },
   ],
   '2016-UC-0022': <Map<String, Object>>[
@@ -265,6 +259,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'standard',
     },
   ],
   '2016-UC-0023': <Map<String, Object>>[],
@@ -282,6 +277,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'standard',
     },
   ],
   '2016-UC-0028': <Map<String, Object>>[
@@ -295,6 +291,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'standard',
     },
     <String, Object>{
       'doseId': '2016-UC-0028_dose2',
@@ -306,6 +303,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'standard',
     },
   ],
   '2016-UC-0029': <Map<String, Object>>[],
@@ -321,6 +319,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'standard',
     },
   ],
   '2016-UC-0033': <Map<String, Object>>[],
@@ -335,6 +334,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2016-UC-0035': <Map<String, Object>>[
@@ -348,6 +348,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2016-UC-0035_dose2',
@@ -359,6 +360,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2016-UC-0036': <Map<String, Object>>[],
@@ -373,6 +375,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2016-UC-0038': <Map<String, Object>>[
@@ -386,6 +389,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2016-UC-0038_dose2',
@@ -397,6 +401,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2016-UC-0039': <Map<String, Object>>[
@@ -410,6 +415,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2016-UC-0039_dose2',
@@ -421,6 +427,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2016-UC-0039_dose3',
@@ -432,6 +439,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2016-UC-0040': <Map<String, Object>>[],
@@ -446,6 +454,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2016-UC-0042_dose2',
@@ -457,6 +466,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2016-UC-0043': <Map<String, Object>>[
@@ -470,6 +480,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2016-UC-0043_dose2',
@@ -481,6 +492,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2016-UC-0043_dose3',
@@ -492,6 +504,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2016-UC-0044': <Map<String, Object>>[
@@ -505,6 +518,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2016-UC-0044_dose2',
@@ -516,6 +530,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2016-UC-0044_dose3',
@@ -527,6 +542,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2016-UC-0044_dose4',
@@ -538,6 +554,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2016-UC-0045': <Map<String, Object>>[],
@@ -552,6 +569,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2016-UC-0047': <Map<String, Object>>[
@@ -565,6 +583,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2016-UC-0047_dose2',
@@ -576,6 +595,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2016-UC-0048': <Map<String, Object>>[
@@ -589,6 +609,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2016-UC-0048_dose2',
@@ -600,6 +621,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2016-UC-0048_dose3',
@@ -611,6 +633,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2016-UC-0050': <Map<String, Object>>[
@@ -624,6 +647,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2016-UC-0051': <Map<String, Object>>[
@@ -637,6 +661,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2016-UC-0051_dose2',
@@ -648,6 +673,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2016-UC-0052': <Map<String, Object>>[
@@ -661,6 +687,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2016-UC-0052_dose2',
@@ -672,6 +699,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2016-UC-0052_dose3',
@@ -683,6 +711,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2016-UC-0053': <Map<String, Object>>[
@@ -696,6 +725,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2016-UC-0053_dose2',
@@ -707,6 +737,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2016-UC-0053_dose3',
@@ -718,6 +749,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2016-UC-0053_dose4',
@@ -729,6 +761,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2016-UC-0054': <Map<String, Object>>[],
@@ -743,6 +776,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'standard',
     },
   ],
   '2016-UC-0056': <Map<String, Object>>[
@@ -756,6 +790,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'standard',
     },
     <String, Object>{
       'doseId': '2016-UC-0056_dose2',
@@ -767,6 +802,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2016-UC-0057': <Map<String, Object>>[
@@ -780,6 +816,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'standard',
     },
   ],
   '2016-UC-0058': <Map<String, Object>>[
@@ -793,6 +830,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'standard',
     },
     <String, Object>{
       'doseId': '2016-UC-0058_dose2',
@@ -804,6 +842,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2016-UC-0059': <Map<String, Object>>[
@@ -817,6 +856,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'standard',
     },
     <String, Object>{
       'doseId': '2016-UC-0059_dose2',
@@ -828,6 +868,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2016-UC-0059_dose3',
@@ -839,6 +880,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2016-UC-0060': <Map<String, Object>>[
@@ -852,6 +894,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'standard',
     },
     <String, Object>{
       'doseId': '2016-UC-0060_dose2',
@@ -863,6 +906,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'standard',
     },
   ],
   '2016-UC-0061': <Map<String, Object>>[
@@ -876,6 +920,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'standard',
     },
     <String, Object>{
       'doseId': '2016-UC-0061_dose2',
@@ -887,6 +932,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'standard',
     },
     <String, Object>{
       'doseId': '2016-UC-0061_dose3',
@@ -898,6 +944,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2016-UC-0062': <Map<String, Object>>[],
@@ -912,6 +959,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2016-UC-0064': <Map<String, Object>>[],
@@ -926,6 +974,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2016-UC-0066': <Map<String, Object>>[],
@@ -940,6 +989,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2016-UC-0068': <Map<String, Object>>[],
@@ -954,6 +1004,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2016-UC-0070': <Map<String, Object>>[
@@ -967,6 +1018,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2016-UC-0070_dose2',
@@ -978,6 +1030,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2016-UC-0071': <Map<String, Object>>[
@@ -991,6 +1044,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2016-UC-0071_dose2',
@@ -1002,6 +1056,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2016-UC-0071_dose3',
@@ -1013,6 +1068,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2016-UC-0072': <Map<String, Object>>[],
@@ -1027,6 +1083,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2016-UC-0074': <Map<String, Object>>[
@@ -1040,6 +1097,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2016-UC-0074_dose2',
@@ -1051,6 +1109,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2016-UC-0075': <Map<String, Object>>[
@@ -1064,6 +1123,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2016-UC-0075_dose2',
@@ -1075,6 +1135,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2016-UC-0075_dose3',
@@ -1086,6 +1147,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2016-UC-0076': <Map<String, Object>>[],
@@ -1100,6 +1162,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'standard',
     },
   ],
   '2016-UC-0078': <Map<String, Object>>[
@@ -1113,6 +1176,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'standard',
     },
     <String, Object>{
       'doseId': '2016-UC-0078_dose2',
@@ -1124,6 +1188,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2016-UC-0079': <Map<String, Object>>[
@@ -1137,6 +1202,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'standard',
     },
     <String, Object>{
       'doseId': '2016-UC-0079_dose2',
@@ -1148,6 +1214,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2016-UC-0080': <Map<String, Object>>[],
@@ -1162,6 +1229,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'standard',
     },
     <String, Object>{
       'doseId': '2016-UC-0083_dose2',
@@ -1173,6 +1241,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2016-UC-0083_dose3',
@@ -1184,6 +1253,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2016-UC-0084': <Map<String, Object>>[
@@ -1197,6 +1267,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'standard',
     },
     <String, Object>{
       'doseId': '2016-UC-0084_dose2',
@@ -1208,6 +1279,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2016-UC-0085': <Map<String, Object>>[],
@@ -1222,6 +1294,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'standard',
     },
   ],
   '2016-UC-0087': <Map<String, Object>>[
@@ -1235,6 +1308,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'standard',
     },
     <String, Object>{
       'doseId': '2016-UC-0087_dose2',
@@ -1246,6 +1320,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2016-UC-0088': <Map<String, Object>>[
@@ -1259,6 +1334,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'standard',
     },
     <String, Object>{
       'doseId': '2016-UC-0088_dose2',
@@ -1270,6 +1346,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2016-UC-0088_dose3',
@@ -1281,6 +1358,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2016-UC-0089': <Map<String, Object>>[],
@@ -1295,6 +1373,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2016-UC-0091': <Map<String, Object>>[
@@ -1308,6 +1387,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2016-UC-0091_dose2',
@@ -1319,6 +1399,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2016-UC-0092': <Map<String, Object>>[],
@@ -1333,6 +1414,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2016-UC-0094': <Map<String, Object>>[
@@ -1346,6 +1428,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'standard',
     },
     <String, Object>{
       'doseId': '2016-UC-0094_dose2',
@@ -1357,6 +1440,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'standard',
     },
   ],
   '2016-UC-0095': <Map<String, Object>>[
@@ -1370,6 +1454,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'standard',
     },
     <String, Object>{
       'doseId': '2016-UC-0095_dose2',
@@ -1381,6 +1466,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'standard',
     },
     <String, Object>{
       'doseId': '2016-UC-0095_dose3',
@@ -1392,6 +1478,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2016-UC-0096': <Map<String, Object>>[
@@ -1405,6 +1492,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'standard',
     },
     <String, Object>{
       'doseId': '2016-UC-0096_dose2',
@@ -1416,6 +1504,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'standard',
     },
     <String, Object>{
       'doseId': '2016-UC-0096_dose3',
@@ -1427,6 +1516,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2016-UC-0096_dose4',
@@ -1438,6 +1528,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2016-UC-0100': <Map<String, Object>>[],
@@ -1452,6 +1543,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2016-UC-0102': <Map<String, Object>>[
@@ -1465,6 +1557,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2016-UC-0102_dose2',
@@ -1476,6 +1569,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2016-UC-0103': <Map<String, Object>>[],
@@ -1490,6 +1584,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2016-UC-0105': <Map<String, Object>>[
@@ -1503,6 +1598,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2016-UC-0105_dose2',
@@ -1514,6 +1610,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2016-UC-0106': <Map<String, Object>>[
@@ -1527,6 +1624,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2016-UC-0106_dose2',
@@ -1538,6 +1636,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2016-UC-0106_dose3',
@@ -1549,6 +1648,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2016-UC-0107': <Map<String, Object>>[],
@@ -1563,6 +1663,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2016-UC-0109': <Map<String, Object>>[
@@ -1576,6 +1677,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2016-UC-0109_dose2',
@@ -1587,6 +1689,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2016-UC-0110 ': <Map<String, Object>>[
@@ -1600,6 +1703,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2016-UC-0110 _dose2',
@@ -1611,6 +1715,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2016-UC-0110 _dose3',
@@ -1622,6 +1727,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2016-UC-0111': <Map<String, Object>>[
@@ -1635,6 +1741,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2016-UC-0111_dose2',
@@ -1646,6 +1753,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2016-UC-0111_dose3',
@@ -1657,6 +1765,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2016-UC-0111_dose4',
@@ -1668,6 +1777,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2016-UC-0112': <Map<String, Object>>[
@@ -1681,6 +1791,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2016-UC-0112_dose2',
@@ -1692,6 +1803,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2016-UC-0112_dose3',
@@ -1703,6 +1815,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2016-UC-0112_dose4',
@@ -1714,6 +1827,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2016-UC-0112_dose5',
@@ -1725,6 +1839,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2016-UC-0114': <Map<String, Object>>[],
@@ -1739,6 +1854,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2016-UC-0116': <Map<String, Object>>[
@@ -1752,6 +1868,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2016-UC-0116_dose2',
@@ -1763,6 +1880,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2016-UC-0117': <Map<String, Object>>[],
@@ -1778,6 +1896,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2016-UC-0125': <Map<String, Object>>[
@@ -1791,6 +1910,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2016-UC-0125_dose2',
@@ -1802,6 +1922,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2016-UC-0128': <Map<String, Object>>[],
@@ -1816,6 +1937,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2016-UC-0130': <Map<String, Object>>[],
@@ -1830,6 +1952,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2016-UC-0132': <Map<String, Object>>[
@@ -1843,6 +1966,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'standard',
     },
     <String, Object>{
       'doseId': '2016-UC-0132_dose2',
@@ -1854,6 +1978,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'standard',
     },
     <String, Object>{
       'doseId': '2016-UC-0132_dose3',
@@ -1865,6 +1990,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'standard',
     },
     <String, Object>{
       'doseId': '2016-UC-0132_dose4',
@@ -1876,6 +2002,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'standard',
     },
   ],
   '2016-UC-0133': <Map<String, Object>>[
@@ -1889,6 +2016,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'standard',
     },
     <String, Object>{
       'doseId': '2016-UC-0133_dose2',
@@ -1900,6 +2028,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'standard',
     },
     <String, Object>{
       'doseId': '2016-UC-0133_dose3',
@@ -1911,6 +2040,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'standard',
     },
     <String, Object>{
       'doseId': '2016-UC-0133_dose4',
@@ -1922,6 +2052,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'standard',
     },
     <String, Object>{
       'doseId': '2016-UC-0133_dose5',
@@ -1933,6 +2064,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'standard',
     },
   ],
   '2016-UC-0134': <Map<String, Object>>[],
@@ -1947,6 +2079,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2016-UC-0136': <Map<String, Object>>[
@@ -1960,6 +2093,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2016-UC-0136_dose2',
@@ -1971,6 +2105,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2016-UC-0137': <Map<String, Object>>[
@@ -1984,6 +2119,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2016-UC-0137_dose2',
@@ -1995,6 +2131,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2016-UC-0137_dose3',
@@ -2006,6 +2143,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2016-UC-0138': <Map<String, Object>>[
@@ -2019,6 +2157,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2016-UC-0138_dose2',
@@ -2030,6 +2169,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2016-UC-0138_dose3',
@@ -2041,6 +2181,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2016-UC-0139': <Map<String, Object>>[
@@ -2054,6 +2195,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2016-UC-0139_dose2',
@@ -2065,6 +2207,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2016-UC-0139_dose3',
@@ -2076,6 +2219,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2016-UC-0139_dose4',
@@ -2087,6 +2231,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2016-UC-0140': <Map<String, Object>>[],
@@ -2101,6 +2246,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2016-UC-0142': <Map<String, Object>>[
@@ -2114,6 +2260,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2016-UC-0142_dose2',
@@ -2125,6 +2272,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2016-UC-0143': <Map<String, Object>>[
@@ -2138,6 +2286,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2016-UC-0143_dose2',
@@ -2149,6 +2298,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2016-UC-0143_dose3',
@@ -2160,6 +2310,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2016-UC-0144': <Map<String, Object>>[
@@ -2173,6 +2324,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2016-UC-0144_dose2',
@@ -2184,6 +2336,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2016-UC-0144_dose3',
@@ -2195,6 +2348,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2016-UC-0145': <Map<String, Object>>[
@@ -2208,6 +2362,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2016-UC-0145_dose2',
@@ -2219,6 +2374,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2016-UC-0145_dose3',
@@ -2230,6 +2386,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2016-UC-0145_dose4',
@@ -2241,6 +2398,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2016-UC-0146': <Map<String, Object>>[],
@@ -2255,6 +2413,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2016-UC-0148': <Map<String, Object>>[
@@ -2268,6 +2427,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2016-UC-0148_dose2',
@@ -2279,6 +2439,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2016-UC-0149': <Map<String, Object>>[],
@@ -2293,6 +2454,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2016-UC-0151': <Map<String, Object>>[],
@@ -2307,6 +2469,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2016-UC-0153': <Map<String, Object>>[
@@ -2320,6 +2483,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'standard',
     },
   ],
   '2016-UC-0157': <Map<String, Object>>[],
@@ -2334,6 +2498,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2016-UC-0159': <Map<String, Object>>[],
@@ -2348,6 +2513,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2016-UC-0161': <Map<String, Object>>[
@@ -2361,6 +2527,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2016-UC-0161_dose2',
@@ -2372,6 +2539,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2016-UC-0162': <Map<String, Object>>[
@@ -2385,6 +2553,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2016-UC-0163': <Map<String, Object>>[
@@ -2398,6 +2567,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2016-UC-0163_dose2',
@@ -2409,6 +2579,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2016-UC-0164': <Map<String, Object>>[
@@ -2422,6 +2593,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2016-UC-0165': <Map<String, Object>>[
@@ -2435,6 +2607,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2016-UC-0165_dose2',
@@ -2446,6 +2619,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2016-UC-0166': <Map<String, Object>>[
@@ -2459,6 +2633,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'standard',
     },
     <String, Object>{
       'doseId': '2016-UC-0166_dose2',
@@ -2470,6 +2645,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'standard',
     },
     <String, Object>{
       'doseId': '2016-UC-0166_dose3',
@@ -2481,6 +2657,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'standard',
     },
     <String, Object>{
       'doseId': '2016-UC-0166_dose4',
@@ -2492,6 +2669,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'standard',
     },
   ],
   '2016-UC-0167': <Map<String, Object>>[
@@ -2505,6 +2683,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'standard',
     },
     <String, Object>{
       'doseId': '2016-UC-0167_dose2',
@@ -2516,6 +2695,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'standard',
     },
     <String, Object>{
       'doseId': '2016-UC-0167_dose3',
@@ -2527,6 +2707,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'standard',
     },
     <String, Object>{
       'doseId': '2016-UC-0167_dose4',
@@ -2538,6 +2719,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'standard',
     },
     <String, Object>{
       'doseId': '2016-UC-0167_dose5',
@@ -2549,6 +2731,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2016-UC-0168': <Map<String, Object>>[
@@ -2562,6 +2745,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'standard',
     },
     <String, Object>{
       'doseId': '2016-UC-0168_dose2',
@@ -2573,6 +2757,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'standard',
     },
     <String, Object>{
       'doseId': '2016-UC-0168_dose3',
@@ -2584,6 +2769,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'standard',
     },
     <String, Object>{
       'doseId': '2016-UC-0168_dose4',
@@ -2595,6 +2781,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'standard',
     },
     <String, Object>{
       'doseId': '2016-UC-0168_dose5',
@@ -2606,6 +2793,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2016-UC-0168_dose6',
@@ -2617,6 +2805,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2016-UC-0169': <Map<String, Object>>[
@@ -2630,6 +2819,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2016-UC-0170': <Map<String, Object>>[
@@ -2643,6 +2833,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2016-UC-0170_dose2',
@@ -2654,6 +2845,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2016-UC-0171': <Map<String, Object>>[
@@ -2667,6 +2859,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2016-UC-0171_dose2',
@@ -2678,6 +2871,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2016-UC-0171_dose3',
@@ -2689,6 +2883,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2016-UC-0172': <Map<String, Object>>[
@@ -2702,6 +2897,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2016-UC-0173': <Map<String, Object>>[
@@ -2715,6 +2911,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2016-UC-0173_dose2',
@@ -2726,6 +2923,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2016-UC-0174': <Map<String, Object>>[
@@ -2739,6 +2937,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2016-UC-0174_dose2',
@@ -2750,6 +2949,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2016-UC-0174_dose3',
@@ -2761,6 +2961,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2016-UC-0175': <Map<String, Object>>[
@@ -2774,6 +2975,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2016-UC-0175_dose2',
@@ -2785,6 +2987,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2016-UC-0176': <Map<String, Object>>[
@@ -2798,6 +3001,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2016-UC-0176_dose2',
@@ -2809,6 +3013,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2016-UC-0176_dose3',
@@ -2820,6 +3025,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2016-UC-0177': <Map<String, Object>>[
@@ -2833,6 +3039,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2016-UC-0177_dose2',
@@ -2844,6 +3051,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2016-UC-0178': <Map<String, Object>>[
@@ -2857,6 +3065,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2016-UC-0178_dose2',
@@ -2868,6 +3077,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2016-UC-0178_dose3',
@@ -2879,6 +3089,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2016-UC-0179': <Map<String, Object>>[
@@ -2892,6 +3103,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2016-UC-0180': <Map<String, Object>>[
@@ -2905,6 +3117,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2016-UC-0181': <Map<String, Object>>[],
@@ -2919,6 +3132,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2016-UC-0183': <Map<String, Object>>[
@@ -2932,6 +3146,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2016-UC-0183_dose2',
@@ -2943,6 +3158,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2016-UC-0184': <Map<String, Object>>[
@@ -2956,6 +3172,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2016-UC-0184_dose2',
@@ -2967,6 +3184,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2016-UC-0184_dose3',
@@ -2978,6 +3196,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2016-UC-0186': <Map<String, Object>>[
@@ -2991,6 +3210,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2016-UC-0187': <Map<String, Object>>[],
@@ -3005,6 +3225,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2016-UC-0188_dose2',
@@ -3016,6 +3237,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2016-UC-0189': <Map<String, Object>>[
@@ -3029,6 +3251,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2016-UC-0190': <Map<String, Object>>[],
@@ -3043,6 +3266,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2016-UC-0192': <Map<String, Object>>[],
@@ -3057,6 +3281,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2016-UC-0194': <Map<String, Object>>[],
@@ -3071,6 +3296,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2016-UC-0196': <Map<String, Object>>[
@@ -3084,6 +3310,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2016-UC-0196_dose2',
@@ -3095,6 +3322,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2016-UC-0197': <Map<String, Object>>[
@@ -3108,6 +3336,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2016-UC-0197_dose2',
@@ -3119,6 +3348,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2016-UC-0197_dose3',
@@ -3130,6 +3360,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2016-UC-0198': <Map<String, Object>>[],
@@ -3144,6 +3375,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2016-UC-0201': <Map<String, Object>>[
@@ -3157,6 +3389,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2016-UC-0201_dose2',
@@ -3168,6 +3401,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2016-UC-0201_dose3',
@@ -3179,6 +3413,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2016-UC-0201_dose4',
@@ -3190,6 +3425,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2016-UC-0202': <Map<String, Object>>[],
@@ -3204,6 +3440,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2017-UC-0001': <Map<String, Object>>[
@@ -3217,6 +3454,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2017-UC-0001_dose2',
@@ -3228,6 +3466,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2017-UC-0002': <Map<String, Object>>[],
@@ -3242,6 +3481,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2017-UC-0004': <Map<String, Object>>[
@@ -3255,6 +3495,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2017-UC-0004_dose2',
@@ -3266,6 +3507,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2017-UC-0005': <Map<String, Object>>[
@@ -3279,6 +3521,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2017-UC-0005_dose2',
@@ -3290,6 +3533,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2017-UC-0005_dose3',
@@ -3301,6 +3545,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2017-UC-0007': <Map<String, Object>>[],
@@ -3315,6 +3560,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2017-UC-0009': <Map<String, Object>>[
@@ -3328,6 +3574,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2017-UC-0009_dose2',
@@ -3339,6 +3586,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2017-UC-0010': <Map<String, Object>>[
@@ -3352,6 +3600,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2017-UC-0010_dose2',
@@ -3363,6 +3612,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2017-UC-0010_dose3',
@@ -3374,6 +3624,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2017-UC-0011': <Map<String, Object>>[],
@@ -3388,6 +3639,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2017-UC-0013': <Map<String, Object>>[
@@ -3401,6 +3653,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2017-UC-0013_dose2',
@@ -3412,6 +3665,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2017-UC-0014': <Map<String, Object>>[
@@ -3425,6 +3679,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2017-UC-0014_dose2',
@@ -3436,6 +3691,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2017-UC-0015': <Map<String, Object>>[],
@@ -3450,6 +3706,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2017-UC-0017': <Map<String, Object>>[],
@@ -3464,6 +3721,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2018-UC-0001_dose2',
@@ -3475,6 +3733,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2018-UC-0002': <Map<String, Object>>[
@@ -3488,6 +3747,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2018-UC-0002_dose2',
@@ -3499,6 +3759,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2018-UC-0004': <Map<String, Object>>[],
@@ -3513,6 +3774,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2018-UC-0006': <Map<String, Object>>[
@@ -3526,6 +3788,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2018-UC-0006_dose2',
@@ -3537,6 +3800,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2019-UC-0001': <Map<String, Object>>[
@@ -3550,6 +3814,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2019-UC-0001_dose2',
@@ -3561,6 +3826,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2019-UC-0001_dose3',
@@ -3572,6 +3838,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2019-UC-0004': <Map<String, Object>>[
@@ -3584,6 +3851,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2019-UC-0004_dose2',
@@ -3595,6 +3863,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2019-UC-0005': <Map<String, Object>>[
@@ -3607,6 +3876,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2019-UC-0005_dose2',
@@ -3618,6 +3888,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2019-UC-0005_dose3',
@@ -3629,6 +3900,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2019-UC-0007': <Map<String, Object>>[
@@ -3642,6 +3914,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2019-UC-0007_dose2',
@@ -3653,6 +3926,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2019-UC-0007_dose3',
@@ -3664,6 +3938,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2019-UC-0008': <Map<String, Object>>[],
@@ -3678,6 +3953,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2019-UC-0010': <Map<String, Object>>[
@@ -3691,6 +3967,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2019-UC-0010_dose2',
@@ -3702,6 +3979,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2019-UC-0011': <Map<String, Object>>[],
@@ -3716,6 +3994,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2019-UC-0013': <Map<String, Object>>[
@@ -3729,6 +4008,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2019-UC-0013_dose2',
@@ -3740,6 +4020,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2019-UC-0014': <Map<String, Object>>[
@@ -3753,6 +4034,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2019-UC-0014_dose2',
@@ -3764,6 +4046,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2019-UC-0014_dose3',
@@ -3775,6 +4058,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2019-UC-0015': <Map<String, Object>>[
@@ -3788,6 +4072,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2019-UC-0015_dose2',
@@ -3799,6 +4084,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2019-UC-0015_dose3',
@@ -3810,6 +4096,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2019-UC-0015_dose4',
@@ -3821,6 +4108,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2020-UC-0001': <Map<String, Object>>[
@@ -3834,6 +4122,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2020-UC-0001_dose2',
@@ -3845,6 +4134,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2020-UC-0001_dose3',
@@ -3856,6 +4146,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2020-UC-0002': <Map<String, Object>>[
@@ -3869,6 +4160,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2020-UC-0002_dose2',
@@ -3880,6 +4172,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2020-UC-0002_dose3',
@@ -3891,6 +4184,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2020-UC-0003': <Map<String, Object>>[
@@ -3904,6 +4198,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2020-UC-0003_dose2',
@@ -3915,6 +4210,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Not Valid',
+      'seriesType': 'risk',
     },
   ],
   '2020-UC-0004': <Map<String, Object>>[
@@ -3928,6 +4224,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2020-UC-0004_dose2',
@@ -3939,6 +4236,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2020-UC-0004_dose3',
@@ -3950,6 +4248,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2021-UC-0001': <Map<String, Object>>[],
@@ -3964,6 +4263,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2022-UC-0001': <Map<String, Object>>[],
@@ -3978,6 +4278,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2022-UC-0003': <Map<String, Object>>[
@@ -3991,6 +4292,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2022-UC-0003_dose2',
@@ -4002,6 +4304,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2022-UC-0004': <Map<String, Object>>[
@@ -4015,6 +4318,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2022-UC-0004_dose2',
@@ -4026,6 +4330,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2022-UC-0004_dose3',
@@ -4037,6 +4342,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2022-UC-0005': <Map<String, Object>>[],
@@ -4052,6 +4358,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2022-UC-0008': <Map<String, Object>>[
@@ -4065,6 +4372,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2022-UC-0008_dose2',
@@ -4076,6 +4384,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2022-UC-0015': <Map<String, Object>>[
@@ -4089,6 +4398,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2022-UC-0015_dose2',
@@ -4100,6 +4410,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2022-UC-0015_dose3',
@@ -4111,6 +4422,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2022-UC-0016': <Map<String, Object>>[
@@ -4124,6 +4436,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2022-UC-0016_dose2',
@@ -4135,6 +4448,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2022-UC-0016_dose3',
@@ -4146,6 +4460,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2022-UC-0017': <Map<String, Object>>[
@@ -4159,6 +4474,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2022-UC-0018': <Map<String, Object>>[
@@ -4172,6 +4488,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2022-UC-0018_dose2',
@@ -4183,6 +4500,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2022-UC-0019': <Map<String, Object>>[
@@ -4196,6 +4514,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2022-UC-0019_dose2',
@@ -4207,6 +4526,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2022-UC-0020': <Map<String, Object>>[
@@ -4220,6 +4540,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2022-UC-0021': <Map<String, Object>>[],
@@ -4234,6 +4555,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2022-UC-0023': <Map<String, Object>>[
@@ -4247,6 +4569,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2022-UC-0023_dose2',
@@ -4258,6 +4581,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2022-UC-0024': <Map<String, Object>>[
@@ -4271,6 +4595,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2022-UC-0024_dose2',
@@ -4282,6 +4607,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2022-UC-0024_dose3',
@@ -4293,6 +4619,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2022-UC-0025': <Map<String, Object>>[],
@@ -4307,6 +4634,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2022-UC-0027': <Map<String, Object>>[],
@@ -4321,6 +4649,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2022-UC-0029': <Map<String, Object>>[
@@ -4334,6 +4663,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2022-UC-0029_dose2',
@@ -4345,6 +4675,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2022-UC-0030': <Map<String, Object>>[
@@ -4358,6 +4689,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2022-UC-0031': <Map<String, Object>>[
@@ -4371,6 +4703,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2022-UC-0031_dose2',
@@ -4382,6 +4715,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2022-UC-0032': <Map<String, Object>>[
@@ -4395,6 +4729,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2022-UC-0033': <Map<String, Object>>[
@@ -4408,6 +4743,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2022-UC-0034': <Map<String, Object>>[
@@ -4421,6 +4757,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2022-UC-0034_dose2',
@@ -4432,6 +4769,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2022-UC-0035': <Map<String, Object>>[
@@ -4445,6 +4783,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2022-UC-0035_dose2',
@@ -4456,6 +4795,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2022-UC-0043': <Map<String, Object>>[],
@@ -4470,6 +4810,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2022-UC-0045': <Map<String, Object>>[
@@ -4483,6 +4824,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2022-UC-0045_dose2',
@@ -4494,6 +4836,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2022-UC-0046': <Map<String, Object>>[],
@@ -4508,6 +4851,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2022-UC-0048': <Map<String, Object>>[
@@ -4521,6 +4865,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2022-UC-0048_dose2',
@@ -4532,6 +4877,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2022-UC-0049': <Map<String, Object>>[
@@ -4545,6 +4891,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2022-UC-0049_dose2',
@@ -4556,6 +4903,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2022-UC-0049_dose3',
@@ -4567,6 +4915,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2023-UC-0019': <Map<String, Object>>[
@@ -4580,6 +4929,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2023-UC-0019_dose2',
@@ -4591,6 +4941,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2023-UC-0020': <Map<String, Object>>[
@@ -4604,6 +4955,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2023-UC-0020_dose2',
@@ -4615,6 +4967,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2023-UC-0020_dose3',
@@ -4626,6 +4979,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2023-UC-0021': <Map<String, Object>>[
@@ -4639,6 +4993,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2023-UC-0021_dose2',
@@ -4650,6 +5005,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2023-UC-0021_dose3',
@@ -4661,6 +5017,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2023-UC-0021_dose4',
@@ -4672,6 +5029,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2023-UC-0022': <Map<String, Object>>[
@@ -4685,6 +5043,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2023-UC-0022_dose2',
@@ -4696,6 +5055,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2023-UC-0022_dose3',
@@ -4707,6 +5067,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2023-UC-0022_dose4',
@@ -4718,6 +5079,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2023-UC-0023': <Map<String, Object>>[
@@ -4731,6 +5093,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2023-UC-0023_dose2',
@@ -4742,6 +5105,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2023-UC-0023_dose3',
@@ -4753,6 +5117,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2023-UC-0023_dose4',
@@ -4764,6 +5129,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2023-UC-0023_dose5',
@@ -4775,6 +5141,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2023-UC-0024': <Map<String, Object>>[
@@ -4788,6 +5155,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2023-UC-0024_dose2',
@@ -4799,6 +5167,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2023-UC-0028': <Map<String, Object>>[
@@ -4812,6 +5181,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2023-UC-0029': <Map<String, Object>>[
@@ -4825,6 +5195,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2023-UC-0029_dose2',
@@ -4836,6 +5207,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2023-UC-0029_dose3',
@@ -4847,6 +5219,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2023-UC-0030': <Map<String, Object>>[
@@ -4860,6 +5233,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2023-UC-0030_dose2',
@@ -4871,6 +5245,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2023-UC-0030_dose3',
@@ -4882,6 +5257,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2023-UC-0031': <Map<String, Object>>[
@@ -4895,6 +5271,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2023-UC-0031_dose2',
@@ -4906,6 +5283,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2023-UC-0032': <Map<String, Object>>[
@@ -4919,6 +5297,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2023-UC-0032_dose2',
@@ -4930,6 +5309,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2023-UC-0032_dose3',
@@ -4941,6 +5321,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2023-UC-0033': <Map<String, Object>>[
@@ -4954,6 +5335,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2023-UC-0033_dose2',
@@ -4965,6 +5347,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2023-UC-0033_dose3',
@@ -4976,6 +5359,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2023-UC-0034': <Map<String, Object>>[
@@ -4989,6 +5373,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2023-UC-0034_dose2',
@@ -5000,6 +5385,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2023-UC-0035': <Map<String, Object>>[
@@ -5013,6 +5399,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2023-UC-0036': <Map<String, Object>>[
@@ -5026,6 +5413,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2023-UC-0036_dose2',
@@ -5037,6 +5425,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2023-UC-0037': <Map<String, Object>>[
@@ -5050,6 +5439,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2023-UC-0037_dose2',
@@ -5061,6 +5451,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2023-UC-0037_dose3',
@@ -5072,6 +5463,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2023-UC-0038': <Map<String, Object>>[
@@ -5085,6 +5477,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2023-UC-0038_dose2',
@@ -5096,6 +5489,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2023-UC-0039': <Map<String, Object>>[
@@ -5109,6 +5503,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2023-UC-0040': <Map<String, Object>>[
@@ -5122,6 +5517,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2023-UC-0040_dose2',
@@ -5133,6 +5529,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2023-UC-0040_dose3',
@@ -5144,6 +5541,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2023-UC-0041': <Map<String, Object>>[
@@ -5157,6 +5555,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2023-UC-0042': <Map<String, Object>>[],
@@ -5171,6 +5570,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2023-UC-0044': <Map<String, Object>>[
@@ -5184,6 +5584,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2023-UC-0044_dose2',
@@ -5195,6 +5596,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2023-UC-0045': <Map<String, Object>>[
@@ -5208,6 +5610,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2023-UC-0045_dose2',
@@ -5219,6 +5622,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2023-UC-0045_dose3',
@@ -5230,6 +5634,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2023-UC-0046': <Map<String, Object>>[
@@ -5243,6 +5648,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2023-UC-0046_dose2',
@@ -5254,6 +5660,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2023-UC-0046_dose3',
@@ -5265,6 +5672,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2023-UC-0047': <Map<String, Object>>[],
@@ -5280,6 +5688,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2023-UC-0050': <Map<String, Object>>[
@@ -5293,6 +5702,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2023-UC-0051': <Map<String, Object>>[],
@@ -5307,6 +5717,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2023-UC-0053': <Map<String, Object>>[],
@@ -5321,6 +5732,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2023-UC-0055': <Map<String, Object>>[
@@ -5334,6 +5746,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2023-UC-0055_dose2',
@@ -5345,6 +5758,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2023-UC-0056': <Map<String, Object>>[],
@@ -5359,6 +5773,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2023-UC-0058': <Map<String, Object>>[
@@ -5372,6 +5787,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2023-UC-0058_dose2',
@@ -5383,6 +5799,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2023-UC-0059': <Map<String, Object>>[
@@ -5396,6 +5813,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2023-UC-0059_dose2',
@@ -5407,6 +5825,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2023-UC-0059_dose3',
@@ -5418,6 +5837,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2023-UC-0060': <Map<String, Object>>[],
@@ -5432,6 +5852,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2023-UC-0062': <Map<String, Object>>[
@@ -5445,6 +5866,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2023-UC-0062_dose2',
@@ -5456,6 +5878,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2023-UC-0063': <Map<String, Object>>[
@@ -5469,6 +5892,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2023-UC-0063_dose2',
@@ -5480,6 +5904,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2023-UC-0063_dose3',
@@ -5491,6 +5916,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2024-UC-0001': <Map<String, Object>>[
@@ -5504,6 +5930,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2024-UC-0002': <Map<String, Object>>[
@@ -5517,6 +5944,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2024-UC-0003': <Map<String, Object>>[
@@ -5530,6 +5958,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2024-UC-0003_dose2',
@@ -5541,6 +5970,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2024-UC-0003_dose3',
@@ -5552,6 +5982,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2024-UC-0005': <Map<String, Object>>[
@@ -5565,6 +5996,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2024-UC-0005_dose2',
@@ -5576,6 +6008,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2024-UC-0006': <Map<String, Object>>[
@@ -5589,6 +6022,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2024-UC-0006_dose2',
@@ -5600,6 +6034,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2024-UC-0006_dose3',
@@ -5611,6 +6046,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2024-UC-0008': <Map<String, Object>>[
@@ -5624,6 +6060,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2024-UC-0008_dose2',
@@ -5635,6 +6072,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2024-UC-0009': <Map<String, Object>>[
@@ -5648,6 +6086,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2024-UC-0009_dose2',
@@ -5659,6 +6098,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2024-UC-0009_dose3',
@@ -5670,6 +6110,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2024-UC-0010': <Map<String, Object>>[
@@ -5683,6 +6124,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2024-UC-0010_dose2',
@@ -5694,6 +6136,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2024-UC-0010_dose3',
@@ -5705,6 +6148,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2024-UC-0010_dose4',
@@ -5716,6 +6160,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2024-UC-0011': <Map<String, Object>>[],
@@ -5730,6 +6175,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2024-UC-0013': <Map<String, Object>>[
@@ -5743,6 +6189,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2024-UC-0013_dose2',
@@ -5754,6 +6201,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2024-UC-0013_dose3',
@@ -5765,6 +6213,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2024-UC-0014': <Map<String, Object>>[],
@@ -5779,6 +6228,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2024-UC-0016': <Map<String, Object>>[],
@@ -5793,6 +6243,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2024-UC-0018': <Map<String, Object>>[
@@ -5806,6 +6257,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2024-UC-0018_dose2',
@@ -5817,6 +6269,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2024-UC-0018_dose3',
@@ -5828,6 +6281,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2024-UC-0019': <Map<String, Object>>[
@@ -5841,6 +6295,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2024-UC-0019_dose2',
@@ -5852,6 +6307,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2024-UC-0019_dose3',
@@ -5863,6 +6319,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2024-UC-0019_dose4',
@@ -5874,6 +6331,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2024-UC-0020': <Map<String, Object>>[
@@ -5887,6 +6345,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2025-UC-0001': <Map<String, Object>>[
@@ -5900,6 +6359,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2025-UC-0002': <Map<String, Object>>[
@@ -5913,6 +6373,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2025-UC-0002_dose2',
@@ -5924,6 +6385,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2025-UC-0003': <Map<String, Object>>[],
@@ -5938,6 +6400,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2025-UC-0004_dose2',
@@ -5949,6 +6412,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2025-UC-0005': <Map<String, Object>>[
@@ -5962,6 +6426,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2025-UC-0005_dose2',
@@ -5973,6 +6438,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2025-UC-0005_dose3',
@@ -5984,6 +6450,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2025-UC-0007': <Map<String, Object>>[],
@@ -5998,6 +6465,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2025-UC-0009': <Map<String, Object>>[
@@ -6011,6 +6479,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2025-UC-0010': <Map<String, Object>>[
@@ -6024,6 +6493,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2025-UC-0011': <Map<String, Object>>[
@@ -6037,6 +6507,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2025-UC-0012': <Map<String, Object>>[
@@ -6050,6 +6521,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2025-UC-0012_dose2',
@@ -6061,6 +6533,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2025-UC-0013': <Map<String, Object>>[
@@ -6074,6 +6547,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2025-UC-0013_dose2',
@@ -6085,6 +6559,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2025-UC-0013_dose3',
@@ -6096,6 +6571,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2025-UC-0014': <Map<String, Object>>[
@@ -6109,6 +6585,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2025-UC-0015': <Map<String, Object>>[
@@ -6122,6 +6599,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2025-UC-0015_dose2',
@@ -6133,6 +6611,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2025-UC-0016': <Map<String, Object>>[
@@ -6146,6 +6625,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2025-UC-0016_dose2',
@@ -6157,6 +6637,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2025-UC-0016_dose3',
@@ -6168,6 +6649,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2025-UC-0017': <Map<String, Object>>[
@@ -6181,6 +6663,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2025-UC-0018': <Map<String, Object>>[
@@ -6194,6 +6677,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2025-UC-0018_dose2',
@@ -6205,6 +6689,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
     <String, Object>{
       'doseId': '2025-UC-0018_dose3',
@@ -6216,6 +6701,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2025-UC-0019': <Map<String, Object>>[
@@ -6229,6 +6715,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   '2025-UC-0021': <Map<String, Object>>[],
@@ -6243,6 +6730,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Valid',
+      'seriesType': 'risk',
     },
   ],
   'null': <Map<String, Object>>[],

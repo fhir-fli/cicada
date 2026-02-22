@@ -56,8 +56,10 @@ enum EvalReason {
       case 'Adverse Storage':
         return EvalReason.adverseStorage;
       case 'Interval: too short':
+      case 'Interval: too Soon':
         return EvalReason.intervalTooShort;
       case 'Series Already Completed':
+      case 'Series Already Complete':
         return EvalReason.seriesAlreadyCompleted;
       case 'Live Virus Conflict':
         return EvalReason.liveVirusConflict;

@@ -426,6 +426,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Not Valid',
+      'evalReason': 'Interval: too short',
     },
   ],
   '2013-0021': <Map<String, Object>>[
@@ -1079,6 +1080,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Not Valid',
+      'evalReason': 'Interval: too short',
     },
     <String, Object>{
       'doseId': '2013-0037_dose3',
@@ -1271,6 +1273,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Not Valid',
+      'evalReason': 'Interval: too short',
     },
   ],
   '2013-0042': <Map<String, Object>>[
@@ -1359,6 +1362,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Not Valid',
+      'evalReason': 'Interval: too short',
     },
   ],
   '2013-0046': <Map<String, Object>>[
@@ -1571,6 +1575,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Not Valid',
+      'evalReason': 'Interval: too short',
     },
     <String, Object>{
       'doseId': '2013-0053_dose3',
@@ -1623,6 +1628,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Not Valid',
+      'evalReason': 'Interval: too short',
     },
     <String, Object>{
       'doseId': '2013-0054_dose4',
@@ -1687,6 +1693,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Not Valid',
+      'evalReason': 'Interval: too short',
     },
   ],
   '2013-0057': <Map<String, Object>>[
@@ -1739,6 +1746,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Not Valid',
+      'evalReason': 'Interval: too short',
     },
     <String, Object>{
       'doseId': '2013-0057_dose6',
@@ -2457,13 +2465,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2006/11/29',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2006/10/08',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -2474,13 +2476,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2007/01/29',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2006/10/08',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -2491,13 +2487,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2007/03/29',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2006/10/08',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -2508,13 +2498,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2008/02/02',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2006/10/08',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -2537,13 +2521,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'doseId': '2013-0081_dose1',
       'dateGiven': '2025/01/01',
       'cvx': '170',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Polio',
-        'Hib'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Polio', 'Hib'],
       'dob': '2024/09/01',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -2553,13 +2531,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'doseId': '2013-0081_dose2',
       'dateGiven': '2025/03/01',
       'cvx': '170',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Polio',
-        'Hib'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Polio', 'Hib'],
       'dob': '2024/09/01',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -2569,13 +2541,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'doseId': '2013-0081_dose3',
       'dateGiven': '2025/05/01',
       'cvx': '170',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Polio',
-        'Hib'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Polio', 'Hib'],
       'dob': '2024/09/01',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -2585,13 +2551,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'doseId': '2013-0081_dose4',
       'dateGiven': '2025/11/10',
       'cvx': '170',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Polio',
-        'Hib'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Polio', 'Hib'],
       'dob': '2024/09/01',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -2716,13 +2676,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2022/01/12',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2021/11/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -2733,13 +2687,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2022/03/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2021/11/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -2750,13 +2698,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2022/05/12',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2021/11/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -2767,13 +2709,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2022/11/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2021/11/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -2797,13 +2733,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2022/01/07',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2021/11/15',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -2814,13 +2744,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2022/03/04',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2021/11/15',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -2831,13 +2755,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2022/07/12',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2021/11/15',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -2848,13 +2766,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2023/03/27',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2021/11/15',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -2891,13 +2803,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2022/01/02',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2021/11/14',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -2908,13 +2814,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2022/03/03',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2021/11/14',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -2925,13 +2825,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2022/05/01',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2021/11/14',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -2942,13 +2836,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2023/01/23',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2021/11/14',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -2973,13 +2861,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2021/11/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2018/11/26',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -2990,13 +2872,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2018/11/26',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -3009,13 +2885,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2019/02/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2018/11/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -3026,13 +2896,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2018/11/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -3045,13 +2909,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2019/12/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2018/11/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -3062,13 +2920,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2018/11/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -3081,13 +2933,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/10/13',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2018/10/13',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -3098,13 +2944,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2018/10/13',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -3117,13 +2957,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/09/16',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2025/08/09',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -3134,13 +2968,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/10/14',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2025/08/09',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -3151,13 +2979,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2025/08/09',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -3171,13 +2993,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/09/17',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2025/08/08',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -3188,13 +3004,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/10/15',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2025/08/08',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -3205,13 +3015,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2025/08/08',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -3224,13 +3028,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/07/12',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2025/05/31',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -3241,13 +3039,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/09/11',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2025/05/31',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -3258,13 +3050,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2025/05/31',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -3277,13 +3063,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2021/09/20',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2018/11/23',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -3294,13 +3074,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2022/12/24',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2018/11/23',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -3311,13 +3085,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2018/11/23',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -3330,13 +3098,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/01/15',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2024/11/15',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -3347,13 +3109,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/03/15',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2024/11/15',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -3364,13 +3120,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/05/21',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2024/11/15',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -3381,13 +3131,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2024/11/15',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -3401,13 +3145,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2025/10/04',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -3421,13 +3159,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/01/14',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2024/11/14',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -3438,13 +3170,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/04/14',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2024/11/14',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -3455,13 +3181,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/06/28',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2024/11/14',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -3472,13 +3192,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2024/11/14',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -3491,13 +3205,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2022/01/27',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2021/11/27',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -3508,13 +3216,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2022/04/27',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2021/11/27',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -3525,13 +3227,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2022/07/27',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2021/11/27',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -3542,13 +3238,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2021/11/27',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -3561,13 +3251,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2022/03/13',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2021/11/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -3578,13 +3262,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2022/09/04',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2021/11/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -3595,13 +3273,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2024/01/14',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2021/11/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -3612,13 +3284,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2021/11/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -3631,13 +3297,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2022/01/15',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2021/11/15',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -3648,13 +3308,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2022/02/15',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2021/11/15',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -3665,13 +3319,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2022/06/16',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2021/11/15',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -3682,13 +3330,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2023/02/24',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2021/11/15',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -3699,13 +3341,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2021/11/15',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -3719,13 +3355,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2022/01/14',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2021/11/14',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -3736,13 +3366,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2022/02/14',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2021/11/14',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -3753,13 +3377,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2022/06/15',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2021/11/14',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -3770,13 +3388,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2023/02/23',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2021/11/14',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -3787,13 +3399,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2021/11/14',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -3806,13 +3412,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2019/01/27',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2018/11/27',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -3823,13 +3423,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2019/03/27',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2018/11/27',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -3840,13 +3434,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2019/05/27',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2018/11/27',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -3857,13 +3445,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2019/12/27',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2018/11/27',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -3874,13 +3456,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2018/11/27',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -3893,13 +3469,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2019/02/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2018/11/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -3910,13 +3480,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2019/05/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2018/11/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -3927,13 +3491,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2019/08/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2018/11/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -3944,13 +3502,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2020/05/25',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2018/11/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -3961,13 +3513,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2018/11/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -3980,13 +3526,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/09/16',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2025/08/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -3998,13 +3538,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2025/08/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -4017,13 +3551,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/06/17',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2025/05/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -4034,13 +3562,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/07/13',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2025/05/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -4052,13 +3574,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2025/05/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -4071,13 +3587,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2024/12/24',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2024/11/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -4088,13 +3598,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/01/19',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2024/11/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -4105,30 +3609,19 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/02/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2024/11/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Not Valid',
+      'evalReason': 'Interval: too short',
     },
     <String, Object>{
       'doseId': '2013-0111_dose4',
       'dateGiven': '2025/11/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2024/11/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -4141,13 +3634,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2025/10/03',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -4160,13 +3647,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/10/18',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2025/08/16',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -4177,17 +3658,12 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2025/08/16',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Not Valid',
+      'evalReason': 'Interval: too short',
     },
   ],
   '2013-0114': <Map<String, Object>>[
@@ -4196,13 +3672,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/10/17',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2025/08/19',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -4213,13 +3683,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2025/08/19',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -4232,13 +3696,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/08/18',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2025/06/18',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -4249,13 +3707,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/10/18',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2025/06/18',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -4266,17 +3718,12 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2025/06/18',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Not Valid',
+      'evalReason': 'Interval: too short',
     },
   ],
   '2013-0116': <Map<String, Object>>[
@@ -4285,13 +3732,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/08/17',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2025/06/17',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -4302,13 +3743,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/10/17',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2025/06/17',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -4319,13 +3754,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2025/06/17',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -4338,13 +3767,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2024/11/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2024/09/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -4355,13 +3778,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/01/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2024/09/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -4372,13 +3789,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/05/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2024/09/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -4389,13 +3800,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/05',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2024/09/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -4408,13 +3813,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2024/11/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2024/09/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -4425,13 +3824,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/01/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2024/09/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -4442,13 +3835,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/05/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2024/09/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -4459,13 +3846,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/06',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2024/09/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -4478,13 +3859,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2024/11/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2024/09/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -4495,13 +3870,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/01/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2024/09/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -4512,13 +3881,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/07/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2024/09/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -4529,13 +3892,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2024/09/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -4548,13 +3905,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/09/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2025/07/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -4565,30 +3916,19 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/09/29',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2025/07/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Not Valid',
+      'evalReason': 'Interval: too short',
     },
     <String, Object>{
       'doseId': '2013-0121_dose3',
       'dateGiven': '2025/11/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2025/07/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -4601,13 +3941,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/01/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2024/11/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -4618,13 +3952,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/03/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2024/11/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -4635,30 +3963,19 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/04/02',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2024/11/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Not Valid',
+      'evalReason': 'Interval: too short',
     },
     <String, Object>{
       'doseId': '2013-0122_dose4',
       'dateGiven': '2025/11/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2024/11/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -4671,13 +3988,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2025/09/29',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -4690,13 +4001,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2022/01/08',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2021/11/08',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -4707,13 +4012,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2022/03/08',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2021/11/08',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -4724,13 +4023,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2022/10/03',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2021/11/08',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -4741,30 +4034,19 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2023/01/29',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2021/11/08',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Not Valid',
+      'evalReason': 'Interval: too short',
     },
     <String, Object>{
       'doseId': '2013-0124_dose5',
       'dateGiven': '2025/11/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2021/11/08',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -4777,13 +4059,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2018/11/26',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -4796,13 +4072,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2018/11/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -4815,13 +4085,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/10/14',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2025/09/06',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -4832,13 +4096,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2025/09/06',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -4852,13 +4110,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/10/17',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2025/09/05',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -4869,13 +4121,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2025/09/05',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -4888,13 +4134,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/10/13',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2025/09/01',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -4905,13 +4145,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2025/09/01',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -4925,13 +4159,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2021/07/31',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2018/11/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -4942,13 +4170,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/10/24',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2018/11/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -4972,13 +4194,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2018/11/06',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -4991,13 +4207,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2020/01/09',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2018/11/06',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -5008,13 +4218,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2018/11/06',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -5027,13 +4231,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/09/16',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2025/08/09',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -5044,13 +4242,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/10/14',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2025/08/09',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -5061,13 +4253,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2025/08/09',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -5081,13 +4267,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/09/15',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2025/08/08',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -5098,13 +4278,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/10/13',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2025/08/08',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -5115,13 +4289,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2025/08/08',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -5133,13 +4301,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'doseId': '2013-0138_dose1',
       'dateGiven': '2019/01/21',
       'cvx': '120',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2018/11/26',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -5149,13 +4311,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'doseId': '2013-0138_dose2',
       'dateGiven': '2022/04/26',
       'cvx': '120',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2018/11/26',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -5166,13 +4322,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2018/11/26',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -5185,13 +4335,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/01/15',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2024/11/15',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -5202,13 +4346,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/03/15',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2024/11/15',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -5219,13 +4357,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/05/15',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2024/11/15',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -5236,13 +4368,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2024/11/15',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -5256,13 +4382,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/01/14',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2024/11/14',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -5273,13 +4393,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/03/14',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2024/11/14',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -5290,13 +4404,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/05/14',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2024/11/14',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -5307,13 +4415,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2024/11/14',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -5326,13 +4428,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/01/10',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2024/11/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -5343,13 +4439,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/03/10',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2024/11/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -5360,13 +4450,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/05/10',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2024/11/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -5377,13 +4461,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2024/11/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -5396,13 +4474,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2022/03/19',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2021/11/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -5413,13 +4485,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2022/11/01',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2021/11/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -5430,13 +4496,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/05/07',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2021/11/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -5447,13 +4507,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2021/11/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -5466,13 +4520,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2022/09/19',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2021/10/19',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -5483,13 +4531,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2022/12/19',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2021/10/19',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -5500,13 +4542,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2023/03/19',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2021/10/19',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -5517,13 +4553,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2023/08/20',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2021/10/19',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -5534,13 +4564,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2021/10/19',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -5553,13 +4577,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2021/03/10',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2020/11/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -5570,13 +4588,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2021/09/06',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2020/11/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -5587,13 +4599,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2021/11/08',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2020/11/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -5604,13 +4610,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2020/11/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -5623,13 +4623,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2024/12/16',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2024/11/08',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -5640,13 +4634,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/01/12',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2024/11/08',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -5658,13 +4646,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/03/28',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2024/11/08',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -5675,13 +4657,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2024/11/08',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -5694,13 +4670,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2024/11/11',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2024/10/04',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -5711,13 +4681,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2024/12/09',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2024/10/04',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -5728,13 +4692,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/01/05',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2024/10/04',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -5746,13 +4704,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2024/10/04',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -5765,13 +4717,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/10/18',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2025/08/24',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -5782,17 +4728,12 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2025/08/24',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Not Valid',
+      'evalReason': 'Interval: too short',
     },
   ],
   '2013-0148': <Map<String, Object>>[
@@ -5801,13 +4742,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/10/17',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2025/08/15',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -5818,13 +4753,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2025/08/15',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -5837,13 +4766,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/08/15',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2025/06/15',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -5854,13 +4777,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/10/15',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2025/06/15',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -5871,17 +4788,12 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/07',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2025/06/15',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Not Valid',
+      'evalReason': 'Interval: too short',
     },
   ],
   '2013-0150': <Map<String, Object>>[
@@ -5890,13 +4802,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/08/14',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2025/06/14',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -5907,13 +4813,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/10/14',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2025/06/14',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -5924,13 +4824,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/07',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2025/06/14',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -5943,13 +4837,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2025/10/03',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -5962,13 +4850,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2024/11/13',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2024/09/13',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -5979,13 +4861,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/03/13',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2024/09/13',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -5996,13 +4872,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/05/13',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2024/09/13',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -6013,13 +4883,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/09',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2024/09/13',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -6032,13 +4896,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2024/12/07',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2024/10/07',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -6049,13 +4907,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/04/07',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2024/10/07',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -6066,13 +4918,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/07/07',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2024/10/07',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -6083,13 +4929,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/07',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2024/10/07',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -6102,13 +4942,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/07/20',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2025/05/20',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -6119,30 +4953,19 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/08/12',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2025/05/20',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Not Valid',
+      'evalReason': 'Interval: too short',
     },
     <String, Object>{
       'doseId': '2013-0156_dose3',
       'dateGiven': '2025/11/10',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2025/05/20',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -6155,13 +4978,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/01/07',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2024/11/07',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -6172,13 +4989,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/03/07',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2024/11/07',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -6189,30 +5000,19 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/03/28',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2024/11/07',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Not Valid',
+      'evalReason': 'Interval: too short',
     },
     <String, Object>{
       'doseId': '2013-0157_dose4',
       'dateGiven': '2025/11/10',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2024/11/07',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -6225,13 +5025,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2025/09/29',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -6244,13 +5038,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2018/11/23',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -6263,13 +5051,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2018/11/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -6282,13 +5064,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/10/14',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2025/09/06',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -6299,13 +5075,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2025/09/06',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -6319,13 +5089,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/10/13',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2025/09/05',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -6336,13 +5100,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2025/09/05',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -6355,13 +5113,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2020/11/10',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2019/11/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -6372,13 +5124,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2019/11/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -6513,6 +5259,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Not Valid',
+      'evalReason': 'Interval: too short',
     },
   ],
   '2013-0184': <Map<String, Object>>[
@@ -6630,6 +5377,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Not Valid',
+      'evalReason': 'Interval: too short',
     },
   ],
   '2013-0193': <Map<String, Object>>[
@@ -6696,6 +5444,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Not Valid',
+      'evalReason': 'Interval: too short',
     },
   ],
   '2013-0197': <Map<String, Object>>[
@@ -6743,6 +5492,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Not Valid',
+      'evalReason': 'Interval: too short',
     },
   ],
   '2013-0200': <Map<String, Object>>[
@@ -7555,13 +6305,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2021/11/11',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2018/11/27',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -7572,13 +6316,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2018/11/27',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -7591,13 +6329,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2019/02/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2018/11/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -7608,13 +6340,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2018/11/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -7627,13 +6353,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2019/12/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2018/11/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -7644,13 +6364,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2018/11/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -7663,13 +6377,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/10/13',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2018/10/13',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -7680,13 +6388,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2018/10/13',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -7699,13 +6401,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/09/16',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2025/08/09',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -7716,13 +6412,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/10/14',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2025/08/09',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -7733,13 +6423,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2025/08/09',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -7752,13 +6436,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/09/17',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2025/08/08',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -7769,13 +6447,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/10/15',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2025/08/08',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -7786,13 +6458,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2025/08/08',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -7825,13 +6491,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2025/05/30',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -7844,13 +6504,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2025/10/04',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -7863,13 +6517,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2019/02/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2018/11/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -7880,13 +6528,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2019/05/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2018/11/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -7897,13 +6539,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2019/08/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2018/11/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -7914,13 +6550,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2020/05/25',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2018/11/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -7931,17 +6561,12 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2018/11/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Extraneous',
+      'evalReason': 'Series Already Completed',
     },
   ],
   '2013-0255': <Map<String, Object>>[
@@ -7950,13 +6575,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2025/10/03',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -7969,13 +6588,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/10/18',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2025/08/18',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -7986,17 +6599,12 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2025/08/18',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Not Valid',
+      'evalReason': 'Interval: too short',
     },
   ],
   '2013-0257': <Map<String, Object>>[
@@ -8005,13 +6613,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/10/17',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2025/08/17',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -8022,13 +6624,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2025/08/17',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -8041,13 +6637,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/07/19',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2025/05/26',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -8058,13 +6648,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/09/20',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2025/05/26',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -8075,13 +6659,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2025/05/26',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -8094,13 +6672,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/07/20',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2025/05/26',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -8111,13 +6683,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/09/19',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2025/05/26',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -8128,13 +6694,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2025/05/26',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -8147,13 +6707,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2024/11/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2024/09/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -8164,13 +6718,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/01/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2024/09/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -8181,13 +6729,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/07/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2024/09/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -8198,13 +6740,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/09',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2024/09/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -8217,13 +6753,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/09/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2025/07/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -8234,30 +6764,19 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/09/29',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2025/07/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Not Valid',
+      'evalReason': 'Interval: too short',
     },
     <String, Object>{
       'doseId': '2013-0264_dose3',
       'dateGiven': '2025/11/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2025/07/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -8270,13 +6789,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2025/09/29',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -8289,13 +6802,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2018/11/26',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -8308,13 +6815,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2018/11/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -8327,13 +6828,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/10/14',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2025/09/06',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -8344,13 +6839,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2025/09/06',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -8363,13 +6852,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/10/05',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2025/09/05',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -8380,13 +6863,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2025/09/05',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -8399,13 +6876,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/10/01',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2025/09/01',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -8416,13 +6887,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2025/09/01',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -8853,6 +7318,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Not Valid',
+      'evalReason': 'Interval: too short',
     },
   ],
   '2013-0297': <Map<String, Object>>[
@@ -9007,6 +7473,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Not Valid',
+      'evalReason': 'Interval: too short',
     },
   ],
   '2013-0302': <Map<String, Object>>[
@@ -9308,6 +7775,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Not Valid',
+      'evalReason': 'Interval: too short',
     },
   ],
   '2013-0309': <Map<String, Object>>[
@@ -9949,6 +8417,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Not Valid',
+      'evalReason': 'Interval: too short',
     },
   ],
   '2013-0335': <Map<String, Object>>[
@@ -10233,6 +8702,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Not Valid',
+      'evalReason': 'Interval: too short',
     },
   ],
   '2013-0344': <Map<String, Object>>[
@@ -10318,6 +8788,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Not Valid',
+      'evalReason': 'Interval: too short',
     },
   ],
   '2013-0349': <Map<String, Object>>[
@@ -10400,6 +8871,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Extraneous',
+      'evalReason': 'Series Already Completed',
     },
   ],
   '2013-0352': <Map<String, Object>>[
@@ -10450,6 +8922,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Extraneous',
+      'evalReason': 'Series Already Completed',
     },
   ],
   '2013-0355': <Map<String, Object>>[
@@ -10482,13 +8955,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2021/08/17',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2018/11/27',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -10499,17 +8966,12 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2018/11/27',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Extraneous',
+      'evalReason': 'Series Already Completed',
     },
   ],
   '2013-0357': <Map<String, Object>>[
@@ -10518,13 +8980,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/09/16',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2025/08/09',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -10535,13 +8991,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/10/14',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2025/08/09',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -10552,13 +9002,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2025/08/09',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -10572,13 +9016,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/06/14',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2025/05/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -10590,13 +9028,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/09/10',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2025/05/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -10607,13 +9039,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2025/05/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -10626,13 +9052,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/10/17',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2025/08/15',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -10643,13 +9063,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2025/08/15',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -10662,13 +9076,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/08/16',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2025/06/16',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -10679,13 +9087,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/10/16',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2025/06/16',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -10696,17 +9098,12 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/08',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2025/06/16',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Not Valid',
+      'evalReason': 'Interval: too short',
     },
   ],
   '2013-0365': <Map<String, Object>>[
@@ -10715,13 +9112,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2025/09/29',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -10734,13 +9125,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2025/10/03',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -10753,13 +9138,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2025/10/04',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -10773,13 +9152,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/10/13',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2025/09/05',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -10790,13 +9163,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2025/09/05',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -10809,13 +9176,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/10/14',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2025/09/06',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -10826,13 +9187,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2025/09/06',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -10846,13 +9201,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/09/15',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2025/08/08',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -10863,13 +9212,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/10/13',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2025/08/08',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -10880,13 +9223,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2025/08/08',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -10899,13 +9236,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/01/10',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2024/11/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -10916,13 +9247,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/03/10',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2024/11/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -10933,13 +9258,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/05/10',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2024/11/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -10950,13 +9269,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2024/11/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -10969,13 +9282,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/01/14',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2024/11/14',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -10986,13 +9293,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/03/14',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2024/11/14',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -11003,13 +9304,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/05/14',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2024/11/14',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -11020,13 +9315,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2024/11/14',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -11039,13 +9328,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/01/15',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2024/11/15',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -11056,13 +9339,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/03/15',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2024/11/15',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -11073,13 +9350,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/04/26',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2024/11/15',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -11090,13 +9361,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2024/11/15',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -11110,13 +9375,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2022/03/15',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2021/11/06',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -11127,13 +9386,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2022/10/28',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2021/11/06',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -11144,13 +9397,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/06/12',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2021/11/06',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -11161,17 +9408,12 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2021/11/06',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Extraneous',
+      'evalReason': 'Series Already Completed',
     },
   ],
   '2013-0375': <Map<String, Object>>[
@@ -11180,13 +9422,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2021/03/10',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2020/11/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -11197,13 +9433,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2021/09/06',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2020/11/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -11214,13 +9444,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2021/11/05',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2020/11/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -11231,13 +9455,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2020/11/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -11251,13 +9469,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2022/09/19',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2021/10/19',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -11268,13 +9480,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2022/12/19',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2021/10/19',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -11285,13 +9491,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2023/03/19',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2021/10/19',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -11302,34 +9502,24 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2023/08/20',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2021/10/19',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Extraneous',
+      'evalReason': 'Series Already Completed',
     },
     <String, Object>{
       'doseId': '2013-0376_dose5',
       'dateGiven': '2025/11/10',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2021/10/19',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Extraneous',
+      'evalReason': 'Series Already Completed',
     },
   ],
   '2013-0378': <Map<String, Object>>[
@@ -11338,13 +9528,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/10/18',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2025/08/24',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -11355,17 +9539,12 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2025/08/24',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Not Valid',
+      'evalReason': 'Interval: too short',
     },
   ],
   '2013-0379': <Map<String, Object>>[
@@ -11374,13 +9553,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/08/15',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2025/06/15',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -11391,13 +9564,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/10/15',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2025/06/15',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -11408,13 +9575,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/08',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2025/06/15',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -11427,13 +9588,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2024/12/16',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2024/11/08',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -11444,13 +9599,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/01/12',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2024/11/08',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -11462,13 +9611,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/03/28',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2024/11/08',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -11479,13 +9622,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2024/11/08',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -11498,13 +9635,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2024/11/11',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2024/10/04',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -11515,13 +9646,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2024/12/09',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2024/10/04',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -11532,13 +9657,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/01/05',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2024/10/04',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -11550,13 +9669,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2024/10/04',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -11569,13 +9682,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/07/20',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2025/05/20',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -11586,30 +9693,19 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/08/12',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2025/05/20',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Not Valid',
+      'evalReason': 'Interval: too short',
     },
     <String, Object>{
       'doseId': '2013-0382_dose3',
       'dateGiven': '2025/11/10',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2025/05/20',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -11623,13 +9719,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2020/04/19',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2019/11/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -11640,13 +9730,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2019/11/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -11834,6 +9918,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Not Valid',
+      'evalReason': 'Interval: too short',
     },
   ],
   '2013-0406': <Map<String, Object>>[
@@ -12506,6 +10591,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Not Valid',
+      'evalReason': 'Interval: too short',
     },
   ],
   '2013-0443': <Map<String, Object>>[
@@ -12624,6 +10710,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Not Valid',
+      'evalReason': 'Interval: too short',
     },
   ],
   '2013-0447': <Map<String, Object>>[
@@ -12789,6 +10876,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Not Valid',
+      'evalReason': 'Interval: too short',
     },
   ],
   '2013-0454': <Map<String, Object>>[
@@ -13131,6 +11219,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Not Valid',
+      'evalReason': 'Interval: too short',
     },
   ],
   '2013-0469': <Map<String, Object>>[
@@ -13186,6 +11275,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Not Valid',
+      'evalReason': 'Interval: too short',
     },
   ],
   '2013-0472': <Map<String, Object>>[
@@ -13282,6 +11372,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Not Valid',
+      'evalReason': 'Interval: too short',
     },
   ],
   '2013-0475': <Map<String, Object>>[
@@ -13401,6 +11492,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Not Valid',
+      'evalReason': 'Interval: too short',
     },
     <String, Object>{
       'doseId': '2013-0478_dose3',
@@ -13700,6 +11792,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Not Valid',
+      'evalReason': 'Interval: too short',
     },
   ],
   '2013-0504': <Map<String, Object>>[
@@ -14055,6 +12148,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Extraneous',
+      'evalReason': 'Series Already Completed',
     },
     <String, Object>{
       'doseId': '2013-0535_dose7',
@@ -14762,6 +12856,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Not Valid',
+      'evalReason': 'Interval: too short',
     },
   ],
   '2013-0574': <Map<String, Object>>[
@@ -14971,6 +13066,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Not Valid',
+      'evalReason': 'Interval: too short',
     },
   ],
   '2013-0585': <Map<String, Object>>[
@@ -15305,6 +13401,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Not Valid',
+      'evalReason': 'Interval: too short',
     },
   ],
   '2013-0598': <Map<String, Object>>[
@@ -15633,6 +13730,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Not Valid',
+      'evalReason': 'Interval: too short',
     },
   ],
   '2013-0606': <Map<String, Object>>[
@@ -15729,6 +13827,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Not Valid',
+      'evalReason': 'Interval: too short',
     },
   ],
   '2013-0610': <Map<String, Object>>[
@@ -15845,6 +13944,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Not Valid',
+      'evalReason': 'Interval: too short',
     },
   ],
   '2013-0613': <Map<String, Object>>[
@@ -15961,6 +14061,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Not Valid',
+      'evalReason': 'Interval: too short',
     },
     <String, Object>{
       'doseId': '2013-0615_dose3',
@@ -16018,6 +14119,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Not Valid',
+      'evalReason': 'Interval: too short',
     },
     <String, Object>{
       'doseId': '2013-0616_dose4',
@@ -16074,6 +14176,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Not Valid',
+      'evalReason': 'Interval: too short',
     },
     <String, Object>{
       'doseId': '2013-0617_dose5',
@@ -16631,6 +14734,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Not Valid',
+      'evalReason': 'Interval: too short',
     },
   ],
   '2013-0641': <Map<String, Object>>[
@@ -16993,6 +15097,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Not Valid',
+      'evalReason': 'Interval: too short',
     },
   ],
   '2013-0650': <Map<String, Object>>[
@@ -17076,6 +15181,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Not Valid',
+      'evalReason': 'Interval: too short',
     },
   ],
   '2013-0653': <Map<String, Object>>[
@@ -17192,6 +15298,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Not Valid',
+      'evalReason': 'Interval: too short',
     },
   ],
   '2013-0656': <Map<String, Object>>[
@@ -17322,6 +15429,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Not Valid',
+      'evalReason': 'Interval: too short',
     },
     <String, Object>{
       'doseId': '2013-0659_dose3',
@@ -17368,6 +15476,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Not Valid',
+      'evalReason': 'Interval: too short',
     },
     <String, Object>{
       'doseId': '2013-0660_dose4',
@@ -17582,13 +15691,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2022/01/12',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2021/11/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -17599,13 +15702,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2022/03/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2021/11/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -17616,13 +15713,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2022/05/12',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2021/11/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -17659,13 +15750,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2022/01/08',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2021/11/15',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -17676,13 +15761,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2022/03/04',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2021/11/15',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -17693,13 +15772,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2022/07/14',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2021/11/15',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -17723,13 +15796,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2022/01/03',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2021/11/14',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -17740,13 +15807,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2022/03/03',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2021/11/14',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -17757,13 +15818,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2022/05/03',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2021/11/14',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -17863,13 +15918,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2021/11/11',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2018/11/27',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -17880,13 +15929,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2018/11/27',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -17899,13 +15942,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2019/02/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2018/11/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -17916,13 +15953,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2018/11/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -17935,13 +15966,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2019/12/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2018/11/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -17952,13 +15977,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2018/11/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -17971,13 +15990,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/10/13',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2018/10/13',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -17988,13 +16001,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2018/10/13',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -18007,13 +16014,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/09/16',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2025/08/09',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -18024,13 +16025,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/10/14',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2025/08/09',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -18041,13 +16036,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2025/08/09',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -18061,13 +16050,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/09/17',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2025/08/08',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -18078,13 +16061,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/10/15',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2025/08/08',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -18095,13 +16072,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2025/08/08',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -18114,13 +16085,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/07/12',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2025/05/31',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -18131,13 +16096,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/09/11',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2025/05/31',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -18148,13 +16107,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2025/05/31',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -18167,13 +16120,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/07/11',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2025/05/30',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -18184,13 +16131,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/09/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2025/05/30',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -18201,13 +16142,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2025/05/30',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -18220,13 +16155,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2021/09/20',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2018/11/23',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -18237,13 +16166,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2022/12/23',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2018/11/23',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -18254,13 +16177,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2018/11/23',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -18273,13 +16190,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/01/15',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2024/11/15',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -18290,13 +16201,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/03/15',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2024/11/15',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -18307,13 +16212,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/05/21',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2024/11/15',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -18324,13 +16223,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2024/11/15',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -18343,13 +16236,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2025/10/04',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -18363,13 +16250,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/01/14',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2024/11/14',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -18380,13 +16261,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/04/14',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2024/11/14',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -18397,13 +16272,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/06/28',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2024/11/14',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -18414,13 +16283,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2024/11/14',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -18433,13 +16296,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2022/01/27',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2021/11/27',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -18450,13 +16307,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2022/04/27',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2021/11/27',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -18467,13 +16318,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2022/07/27',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2021/11/27',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -18484,13 +16329,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2021/11/27',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -18503,13 +16342,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2022/03/13',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2021/11/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -18520,13 +16353,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2022/09/05',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2021/11/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -18537,13 +16364,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2024/01/12',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2021/11/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -18554,13 +16375,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2021/11/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -18573,13 +16388,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2022/01/15',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2021/11/15',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -18590,13 +16399,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2022/02/15',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2021/11/15',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -18607,13 +16410,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2022/06/16',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2021/11/15',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -18624,13 +16421,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2023/02/24',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2021/11/15',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -18641,13 +16432,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2021/11/15',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -18661,13 +16446,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2022/01/14',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2021/11/14',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -18678,13 +16457,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2022/02/14',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2021/11/14',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -18695,13 +16468,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2022/06/15',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2021/11/14',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -18712,13 +16479,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2023/02/23',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2021/11/14',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -18729,13 +16490,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2021/11/14',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -18748,13 +16503,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2019/01/27',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2018/11/27',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -18765,13 +16514,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2019/03/27',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2018/11/27',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -18782,13 +16525,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2019/05/27',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2018/11/27',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -18799,13 +16536,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2019/12/27',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2018/11/27',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -18816,13 +16547,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2018/11/27',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -18835,13 +16560,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2019/02/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2018/11/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -18852,13 +16571,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2019/05/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2018/11/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -18869,13 +16582,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2019/08/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2018/11/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -18886,13 +16593,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2020/05/25',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2018/11/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -18903,13 +16604,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2018/11/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -18922,13 +16617,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/09/15',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2025/08/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -18940,13 +16629,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2025/08/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -18959,13 +16642,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/06/17',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2025/05/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -18976,13 +16653,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/07/13',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2025/05/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -18994,13 +16665,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2025/05/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -19013,13 +16678,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2024/12/24',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2024/11/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -19030,13 +16689,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/01/19',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2024/11/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -19047,13 +16700,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/02/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2024/11/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -19065,13 +16712,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2024/11/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -19084,13 +16725,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2025/10/03',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -19103,13 +16738,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/10/18',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2025/08/16',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -19120,17 +16749,12 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2025/08/16',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Not Valid',
+      'evalReason': 'Interval: too short',
     },
   ],
   '2013-0700': <Map<String, Object>>[
@@ -19139,13 +16763,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/10/17',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2025/08/17',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -19156,13 +16774,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2025/08/17',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -19175,13 +16787,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/08/16',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2025/06/16',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -19192,13 +16798,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/10/16',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2025/06/16',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -19209,17 +16809,12 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/08',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2025/06/16',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Not Valid',
+      'evalReason': 'Interval: too short',
     },
   ],
   '2013-0702': <Map<String, Object>>[
@@ -19228,13 +16823,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/08/15',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2025/06/15',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -19245,13 +16834,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/10/15',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2025/06/15',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -19262,13 +16845,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/08',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2025/06/15',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -19281,13 +16858,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2024/11/13',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2024/09/13',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -19298,13 +16869,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/01/13',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2024/09/13',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -19315,13 +16880,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/05/13',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2024/09/13',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -19332,13 +16891,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/09',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2024/09/13',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -19351,13 +16904,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/09/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2025/07/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -19368,30 +16915,19 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/09/29',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2025/07/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Not Valid',
+      'evalReason': 'Interval: too short',
     },
     <String, Object>{
       'doseId': '2013-0707_dose3',
       'dateGiven': '2025/11/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2025/07/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -19404,13 +16940,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/01/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2024/11/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -19421,13 +16951,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/03/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2024/11/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -19438,30 +16962,19 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/04/02',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2024/11/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Not Valid',
+      'evalReason': 'Interval: too short',
     },
     <String, Object>{
       'doseId': '2013-0708_dose4',
       'dateGiven': '2025/11/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2024/11/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -19474,13 +16987,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2025/09/29',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -19493,13 +17000,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2018/11/26',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -19512,13 +17013,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2018/11/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -19531,13 +17026,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/10/14',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2025/09/06',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -19548,13 +17037,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2025/09/06',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -19568,13 +17051,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/10/15',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2025/09/05',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -19585,13 +17062,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2025/09/05',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -19604,13 +17075,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/10/11',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2025/09/01',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -19621,13 +17086,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2025/09/01',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -19641,13 +17100,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2021/08/17',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2018/11/27',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -19658,13 +17111,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2018/11/27',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -19688,13 +17135,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2018/11/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -19718,13 +17159,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2018/11/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -19737,13 +17172,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/09/16',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2025/08/09',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -19754,13 +17183,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/10/14',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2025/08/09',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -19771,13 +17194,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2025/08/09',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -19791,13 +17208,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/09/15',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2025/08/08',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -19808,13 +17219,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/10/13',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2025/08/08',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -19825,13 +17230,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2025/08/08',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -19866,13 +17265,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2018/11/26',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -19885,13 +17278,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/01/15',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2024/11/15',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -19902,13 +17289,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/03/15',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2024/11/15',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -19919,13 +17300,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/05/15',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2024/11/15',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -19936,13 +17311,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2024/11/15',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -19955,13 +17324,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/01/14',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2024/11/14',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -19972,13 +17335,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/03/14',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2024/11/14',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -19989,13 +17346,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/05/14',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2024/11/14',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -20006,13 +17357,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2024/11/14',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -20025,13 +17370,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/01/10',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2024/11/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -20042,13 +17381,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/03/10',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2024/11/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -20059,13 +17392,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/05/10',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2024/11/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -20076,13 +17403,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2024/11/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -20095,13 +17416,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2022/03/19',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2021/11/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -20112,13 +17427,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2022/11/01',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2021/11/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -20129,13 +17438,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/05/10',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2021/11/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -20146,13 +17449,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2021/11/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -20165,13 +17462,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2025/10/04',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -20185,13 +17476,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2022/09/20',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2021/10/20',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -20202,13 +17487,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2022/12/20',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2021/10/20',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -20219,13 +17498,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2023/03/20',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2021/10/20',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -20236,13 +17509,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2023/08/21',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2021/10/20',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -20253,13 +17520,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2021/10/20',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -20272,13 +17533,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2021/03/08',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2020/11/08',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -20289,13 +17544,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2021/09/04',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2020/11/08',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -20306,13 +17555,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2021/11/06',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2020/11/08',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -20323,13 +17566,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2020/11/08',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -20342,13 +17579,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/06/14',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2025/05/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -20360,13 +17591,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/09/10',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2025/05/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -20377,13 +17602,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2025/05/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -20396,13 +17615,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2024/12/16',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2024/11/08',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -20413,13 +17626,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/01/12',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2024/11/08',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -20431,13 +17638,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/03/29',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2024/11/08',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -20448,13 +17649,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2024/11/08',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -20467,13 +17662,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2024/11/11',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2024/10/04',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -20484,13 +17673,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2024/12/09',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2024/10/04',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -20501,13 +17684,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/01/05',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2024/10/04',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -20519,13 +17696,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2024/10/04',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -20538,13 +17709,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/10/18',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2025/08/24',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -20555,17 +17720,12 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2025/08/24',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Not Valid',
+      'evalReason': 'Interval: too short',
     },
   ],
   '2013-0735': <Map<String, Object>>[
@@ -20574,13 +17734,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/10/17',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2025/08/15',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -20591,13 +17745,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2025/08/15',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -20610,13 +17758,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/08/18',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2025/06/18',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -20627,13 +17769,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/10/18',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2025/06/18',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -20644,17 +17780,12 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2025/06/18',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Not Valid',
+      'evalReason': 'Interval: too short',
     },
   ],
   '2013-0737': <Map<String, Object>>[
@@ -20663,13 +17794,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/08/17',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2025/06/17',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -20680,13 +17805,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/10/17',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2025/06/17',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -20697,13 +17816,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2025/06/17',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -20716,13 +17829,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2025/10/03',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -20735,13 +17842,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2024/11/13',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2024/09/13',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -20752,13 +17853,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/03/13',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2024/09/13',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -20769,13 +17864,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/05/13',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2024/09/13',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -20786,13 +17875,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/09',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2024/09/13',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -20805,13 +17888,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/07/20',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2025/05/20',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -20822,30 +17899,19 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/08/12',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2025/05/20',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Not Valid',
+      'evalReason': 'Interval: too short',
     },
     <String, Object>{
       'doseId': '2013-0743_dose3',
       'dateGiven': '2025/11/10',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2025/05/20',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -20858,13 +17924,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/01/07',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2024/11/07',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -20875,13 +17935,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/03/07',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2024/11/07',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -20892,30 +17946,19 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/03/28',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2024/11/07',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Not Valid',
+      'evalReason': 'Interval: too short',
     },
     <String, Object>{
       'doseId': '2013-0744_dose4',
       'dateGiven': '2025/11/10',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2024/11/07',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -20928,13 +17971,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2025/09/29',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -20947,13 +17984,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2018/11/23',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -20966,13 +17997,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2018/11/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -20985,13 +18010,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/10/14',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2025/09/06',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -21002,13 +18021,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2025/09/06',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -21022,13 +18035,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/10/13',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2025/09/05',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -21039,13 +18046,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2025/09/05',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -21058,13 +18059,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2020/11/10',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2019/11/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -21075,13 +18070,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '120',
       'mvx': 'PMC',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'Hib',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'Hib', 'Polio'],
       'dob': '2019/11/10',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -21181,6 +18170,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Not Valid',
+      'evalReason': 'Interval: too short',
     },
   ],
   '2013-0757': <Map<String, Object>>[
@@ -21264,6 +18254,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Not Valid',
+      'evalReason': 'Interval: too short',
     },
   ],
   '2013-0760': <Map<String, Object>>[
@@ -21485,6 +18476,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Not Valid',
+      'evalReason': 'Interval: too short',
     },
   ],
   '2013-0770': <Map<String, Object>>[
@@ -21903,6 +18895,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Not Valid',
+      'evalReason': 'Interval: too short',
     },
   ],
   '2013-0809': <Map<String, Object>>[
@@ -21951,6 +18944,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Not Valid',
+      'evalReason': 'Interval: too short',
     },
   ],
   '2013-0811': <Map<String, Object>>[
@@ -23239,13 +20233,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/05/28',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2025/02/28',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -23256,13 +20244,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/07/28',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2025/02/28',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -23273,13 +20255,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/09/15',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2025/02/28',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -23290,13 +20266,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'dateGiven': '2025/11/10',
       'cvx': '110',
       'mvx': 'SKB',
-      'antigens': <String>[
-        'Diphtheria',
-        'Tetanus',
-        'Pertussis',
-        'HepB',
-        'Polio'
-      ],
+      'antigens': <String>['Diphtheria', 'Tetanus', 'Pertussis', 'HepB', 'Polio'],
       'dob': '2025/02/28',
       'targetDoseSatisfied': -1,
       'inadvertent': false,
@@ -23385,6 +20355,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Not Valid',
+      'evalReason': 'Interval: too short',
     },
   ],
   '2018-0001': <Map<String, Object>>[
@@ -23714,6 +20685,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Not Valid',
+      'evalReason': 'Interval: too short',
     },
   ],
   '2018-0018': <Map<String, Object>>[
@@ -23911,6 +20883,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Not Valid',
+      'evalReason': 'Interval: too short',
     },
   ],
   '2019-0002': <Map<String, Object>>[
@@ -24078,6 +21051,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Not Valid',
+      'evalReason': 'Interval: too short',
     },
   ],
   '2019-0015': <Map<String, Object>>[],
@@ -24150,6 +21124,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Not Valid',
+      'evalReason': 'Interval: too short',
     },
   ],
   '2019-0022': <Map<String, Object>>[
@@ -24239,6 +21214,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Not Valid',
+      'evalReason': 'Interval: too short',
     },
   ],
   '2020-0001': <Map<String, Object>>[
@@ -24261,6 +21237,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Not Valid',
+      'evalReason': 'Interval: too short',
     },
     <String, Object>{
       'doseId': '2020-0001_dose3',
@@ -24422,6 +21399,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Not Valid',
+      'evalReason': 'Interval: too short',
     },
   ],
   '2020-0008': <Map<String, Object>>[
@@ -24518,6 +21496,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Not Valid',
+      'evalReason': 'Interval: too short',
     },
   ],
   '2022-0001': <Map<String, Object>>[
@@ -25213,6 +22192,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Extraneous',
+      'evalReason': 'Series Already Completed',
     },
   ],
   '2023-0107': <Map<String, Object>>[
@@ -25486,6 +22466,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Not Valid',
+      'evalReason': 'Interval: too short',
     },
   ],
   '2024-0022': <Map<String, Object>>[
@@ -25571,6 +22552,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Not Valid',
+      'evalReason': 'Interval: too short',
     },
   ],
   '2024-0026': <Map<String, Object>>[
@@ -25676,6 +22658,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Not Valid',
+      'evalReason': 'Interval: too short',
     },
   ],
   '2024-0029': <Map<String, Object>>[],
@@ -25765,6 +22748,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Not Valid',
+      'evalReason': 'Interval: too short',
     },
   ],
   '2024-0037': <Map<String, Object>>[
@@ -27144,6 +24128,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Not Valid',
+      'evalReason': 'Interval: too short',
     },
   ],
   '2025-0017': <Map<String, Object>>[
@@ -27884,6 +24869,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Not Valid',
+      'evalReason': 'Interval: too short',
     },
   ],
   '2025-0054': <Map<String, Object>>[
@@ -28550,6 +25536,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Not Valid',
+      'evalReason': 'Interval: too short',
     },
   ],
   '2025-0080': <Map<String, Object>>[
@@ -28648,6 +25635,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Not Valid',
+      'evalReason': 'Interval: too short',
     },
   ],
   '2025-0085': <Map<String, Object>>[
@@ -28672,6 +25660,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Not Valid',
+      'evalReason': 'Interval: too short',
     },
   ],
   '2025-0086': <Map<String, Object>>[
@@ -29374,6 +26363,7 @@ final Map<String, List<Map<String, Object>>> testDoses =
       'targetDoseSatisfied': -1,
       'inadvertent': false,
       'evalStatus': 'Not Valid',
+      'evalReason': 'Interval: too short',
     },
   ],
   '2025-0115': <Map<String, Object>>[

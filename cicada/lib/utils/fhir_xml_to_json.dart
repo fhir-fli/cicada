@@ -1,13 +1,12 @@
+import 'package:fhir_r4/fhir_r4.dart' show fhirFieldMap;
 import 'package:xml/xml.dart';
 
 /// Converts a FHIR R4 XML string to a FHIR JSON [Map].
 ///
-/// Implements the FHIR XML-to-JSON mapping rules:
-/// - Root element name → `resourceType`
-/// - `value` attributes → primitive values
-/// - `<resource>` / `<contained>` wrappers → unwrapped with `resourceType`
-/// - Context-aware array detection (parent.child lookup)
-/// - `url` attribute on extensions → `url` property
+/// Uses [fhirFieldMap] from the fhir_r4 package for type-aware conversion:
+/// - Knows which fields are lists vs scalars via `FhirField.isList`
+/// - Knows the FHIR type of each field for recursive child conversion
+/// - Properly unwraps `<resource>` / `<contained>` wrappers
 /// - `<div>` → serialized XHTML string
 Map<String, dynamic> fhirXmlToJson(String xmlString) {
   final document = XmlDocument.parse(xmlString);
@@ -20,10 +19,12 @@ Map<String, dynamic> fhirXmlToJson(String xmlString) {
   return result;
 }
 
-/// Group child elements by name and convert, using [parentName] for array
-/// detection context.
+/// Group child elements by name and convert, using [fhirTypeName] to look up
+/// field definitions in [fhirFieldMap] for array detection and child types.
 void _convertChildren(
-    XmlElement parent, Map<String, dynamic> result, String parentName) {
+    XmlElement parent, Map<String, dynamic> result, String fhirTypeName) {
+  final typeFields = fhirFieldMap[fhirTypeName];
+
   final groups = <String, List<XmlElement>>{};
   for (final child in parent.childElements) {
     groups.putIfAbsent(child.name.local, () => []).add(child);
@@ -32,18 +33,28 @@ void _convertChildren(
   for (final entry in groups.entries) {
     final name = entry.key;
     final elements = entry.value;
-    final isArray = elements.length > 1 || _isArray(parentName, name);
+    final fieldDef = typeFields?[name];
+
+    // Use fhirFieldMap if available, fall back to hardcoded sets.
+    final isArray = elements.length > 1 ||
+        (fieldDef != null ? fieldDef.isList : _isArrayFallback(name));
+
+    // Get the FHIR type for recursing into children.
+    final childType = fieldDef?.type;
 
     if (isArray) {
-      result[name] = elements.map((e) => _convertElement(e, name)).toList();
+      result[name] =
+          elements.map((e) => _convertElement(e, name, childType)).toList();
     } else {
-      result[name] = _convertElement(elements.first, name);
+      result[name] = _convertElement(elements.first, name, childType);
     }
   }
 }
 
 /// Convert a single XML element to its JSON representation.
-dynamic _convertElement(XmlElement element, String elementName) {
+/// [fhirTypeName] is the FHIR type of this element (from parent's field def).
+dynamic _convertElement(
+    XmlElement element, String elementName, String? fhirTypeName) {
   final name = element.name.local;
 
   // <div> (XHTML narrative) — serialize the entire element as a string.
@@ -91,16 +102,14 @@ dynamic _convertElement(XmlElement element, String elementName) {
     result['value'] = valueAttr;
   }
 
-  _convertChildren(element, result, elementName);
+  _convertChildren(element, result, fhirTypeName ?? elementName);
   return result;
 }
 
-/// Whether [childName] should be a JSON array when nested under [parentName].
-bool _isArray(String parentName, String childName) {
-  // Always-array elements regardless of context.
-  if (_globalArrayElements.contains(childName)) return true;
-  // Context-specific: "Parent.child".
-  return _contextArrayElements.contains('$parentName.$childName');
+/// Fallback array detection for elements not found in [fhirFieldMap].
+/// Only used when the parent type or child field is unknown to fhirFieldMap.
+bool _isArrayFallback(String childName) {
+  return _globalArrayElements.contains(childName);
 }
 
 /// Elements that are ALWAYS arrays regardless of parent context.
@@ -109,117 +118,4 @@ const _globalArrayElements = <String>{
   'modifierExtension',
   'contained',
   'coding',
-};
-
-/// Context-specific array elements keyed as "parentElement.childElement".
-const _contextArrayElements = <String>{
-  // Parameters
-  'Parameters.parameter',
-  'parameter.part',
-
-  // Patient
-  'Patient.identifier',
-  'Patient.name',
-  'Patient.telecom',
-  'Patient.address',
-  'Patient.contact',
-  'Patient.communication',
-  'Patient.link',
-  'Patient.generalPractitioner',
-
-  // HumanName
-  'name.given',
-  'name.prefix',
-  'name.suffix',
-
-  // Address
-  'address.line',
-
-  // Identifier
-  'identifier.type', // CodeableConcept is single, but type.coding is global
-
-  // Immunization
-  'Immunization.identifier',
-  'Immunization.performer',
-  'Immunization.note',
-  'Immunization.reasonCode',
-  'Immunization.reasonReference',
-  'Immunization.reaction',
-  'Immunization.protocolApplied',
-  'Immunization.education',
-  'Immunization.programEligibility',
-  'Immunization.subpotentReason',
-
-  // ImmunizationEvaluation
-  'ImmunizationEvaluation.identifier',
-  'ImmunizationEvaluation.doseStatusReason',
-
-  // ImmunizationRecommendation
-  'ImmunizationRecommendation.identifier',
-  'ImmunizationRecommendation.recommendation',
-  'recommendation.vaccineCode',
-  'recommendation.dateCriterion',
-  'recommendation.forecastReason',
-  'recommendation.contraindicatedVaccineCode',
-
-  // Meta
-  'meta.profile',
-  'meta.tag',
-  'meta.security',
-
-  // Bundle
-  'Bundle.entry',
-  'Bundle.link',
-  'entry.link',
-
-  // CapabilityStatement
-  'CapabilityStatement.format',
-  'CapabilityStatement.rest',
-  'rest.resource',
-  'rest.operation',
-  'rest.interaction',
-  'rest.searchParam',
-  'resource.interaction',
-  'resource.searchParam',
-
-  // OperationOutcome
-  'OperationOutcome.issue',
-  'issue.location',
-  'issue.expression',
-
-  // Observation (for condition tests)
-  'Observation.identifier',
-  'Observation.category',
-  'Observation.component',
-  'Observation.interpretation',
-  'Observation.referenceRange',
-
-  // Condition
-  'Condition.identifier',
-  'Condition.category',
-  'Condition.bodySite',
-  'Condition.evidence',
-  'evidence.code',
-  'evidence.detail',
-
-  // AllergyIntolerance
-  'AllergyIntolerance.identifier',
-  'AllergyIntolerance.category',
-  'AllergyIntolerance.reaction',
-  'reaction.manifestation',
-
-  // Procedure
-  'Procedure.identifier',
-  'Procedure.reasonCode',
-  'Procedure.reasonReference',
-  'Procedure.performer',
-  'Procedure.note',
-
-  // MedicationStatement / MedicationRequest / MedicationAdministration
-  'MedicationStatement.identifier',
-  'MedicationStatement.reasonCode',
-  'MedicationRequest.identifier',
-  'MedicationRequest.reasonCode',
-  'MedicationAdministration.identifier',
-  'MedicationAdministration.reasonCode',
 };

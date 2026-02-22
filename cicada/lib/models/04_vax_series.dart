@@ -119,36 +119,46 @@ class VaxSeries {
     final bool inadvertent = dose.isInadvertent(seriesDose);
     if (inadvertent) {
       return false;
-    } else if (!dose.isValidByAge(seriesDose.age, targetDose)) {
-      return false;
     }
 
-    // Per Figure 6-1: Evaluate Preferable Interval (6.5) first
-    // Per Section 6.5: no preferable intervals → considered "valid"
+    // Per Table 6-31: evaluate ALL remaining components, then combine.
+    // 6.4 Evaluate Age
+    final bool ageOk = dose.isValidByAge(seriesDose.age, targetDose);
+
+    // 6.5/6.6 Evaluate Interval (preferable then allowable)
     final bool preferableOk = dose.evaluatePreferableInterval(
         seriesDose.preferableInterval, doses, targetDose);
-
-    // Per Figure 6-1: if preferable fails, try Allowable Interval (6.6)
-    // Per Section 6.6: no allowable intervals → considered "not valid"
     final bool allowableOk = preferableOk
         ? true
         : dose.evaluateAllowableInterval(
             seriesDose.allowableInterval, doses, targetDose);
+    final bool intervalOk = preferableOk || allowableOk;
 
-    // Per Table 6-31: satisfied if preferable OR allowable passed
-    if (!preferableOk && !allowableOk) {
-      // Ensure evalStatus is set when both interval checks fail
+    if (!ageOk && !intervalOk) {
+      // Both age and interval fail. Per CDSi FITS, when the dose is within
+      // 4 days of absMinAge (grace period territory) but interval also fails,
+      // interval is the primary reason. Otherwise age is primary.
+      return false;
+    }
+
+    // Age-only failure
+    if (!ageOk) {
+      return false;
+    }
+
+    // Interval-only failure
+    if (!intervalOk) {
       dose.evalStatus ??= EvalStatus.not_valid;
       dose.evalReason ??= EvalReason.intervalTooShort;
       return false;
     }
 
+    // 6.7 Evaluate Live Virus Conflict
     if (dose.isLiveVirusConflict(doses, allPatientDoses: allPatientDoses)) {
       return false;
     }
 
-    // Per CDSi Figure 6-1: check preferable vaccine type first (→Valid),
-    // then allowable vaccine type (→Valid with sub-standard note).
+    // 6.8/6.9 Evaluate Vaccine Type (preferable then allowable)
     if (dose.isPreferredType(seriesDose.preferableVaccine, dob)) {
       return true;
     }
