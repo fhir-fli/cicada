@@ -631,15 +631,18 @@ Map<String, VaccineGroupForecast> _aggregateVaccineGroupForecasts(
         if (info.cvx.isNotEmpty && multiVaxInfo.cvx.isEmpty) {
           multiVaxInfo = info;
         }
-        // When mixed risk + non-risk best series and the risk series has
-        // no evaluated doses (e.g., all doses pre-dated the relevant
-        // observation like ART), count unique valid doses across all best
-        // series so that prior valid standard-series doses are reflected.
-        // When the risk series HAS evaluated doses, use its own doseNum
-        // since it properly tracks the re-vaccination schedule.
+        // When mixed risk + non-risk best series exist, count unique valid
+        // doses across ALL best series so prior valid doses are reflected
+        // regardless of which series evaluated them. Two specific cases:
+        // 1. Risk series has no evaluated doses (ART re-vaccination: prior
+        //    standard doses count toward the risk forecast).
+        // 2. Risk series is Complete (e.g., 1-dose travel series finished;
+        //    its valid doses should count toward the standard forecast).
         int? antigenDoseNum = info.doseNum;
         if (riskBest.isNotEmpty && riskBest.length < bestList.length &&
-            riskBest.first.evaluatedDoses.isEmpty) {
+            (riskBest.first.evaluatedDoses.isEmpty ||
+             riskBest.first.seriesStatus == SeriesStatus.complete ||
+             riskBest.first.seriesStatus == SeriesStatus.immune)) {
           final Set<String> uniqueValidDoseIds = {};
           for (final s in bestList) {
             for (final d in s.evaluatedDoses) {
