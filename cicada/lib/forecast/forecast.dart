@@ -67,8 +67,9 @@ List<VaxSeries> _determineBestPatientSeries(VaxAntigen antigen) {
   // If a group has no prioritized series, it means scoring could not
   // identify a representative — skip it (Table 8-14 only applies to groups
   // with a prioritized series). Exception: contraindicated antigens where
-  // forecast() was not called — fall back to the first series to preserve
-  // the contraindicated status.
+  // If no prioritized series exists (e.g., the antigen is contraindicated
+  // and forecast() was never called), fall back to the first series to
+  // preserve the contraindicated status at the VG level.
   final Map<String, VaxSeries> prioritizedByGroup = {};
   for (final entry in antigen.groups.entries) {
     final group = entry.value;
@@ -707,22 +708,19 @@ ForecastResult evaluateForForecast(Parameters parameters) {
   /// we pass in a list of all past vaccines, the patient's gender
   final Map<String, VaxAntigen> agMap = antigenMap(patient);
 
-  /// Set allPatientDoses on all series for cross-antigen live virus checks
+  /// Build shared series group completion map and set up per-series state
+  final Map<String, Map<String, bool>> seriesGroupCompletion =
+      <String, Map<String, bool>>{};
   agMap.forEach((String k, VaxAntigen v) {
+    seriesGroupCompletion[k] = <String, bool>{};
     v.groups.forEach((String key, VaxGroup group) {
+      seriesGroupCompletion[k]![key] = false;
       for (final VaxSeries series in group.series) {
         series.allPatientDoses = patient.pastDoses;
         series.observations = patient.observations;
+        series.seriesGroupKey = key;
+        series.seriesGroupCompletion = seriesGroupCompletion;
       }
-    });
-  });
-
-  /// Sort into groups
-  agMap.forEach((String k, VaxAntigen v) {
-    v.groups.forEach((String key, VaxGroup value) {
-      container
-          .read(seriesGroupCompleteProvider.notifier)
-          .newSeriesGroup(k, key);
     });
   });
 

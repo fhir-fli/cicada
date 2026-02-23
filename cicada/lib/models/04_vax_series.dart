@@ -1,5 +1,4 @@
 import 'package:collection/collection.dart';
-import 'package:riverpod/riverpod.dart';
 
 import '../cicada.dart';
 
@@ -297,9 +296,7 @@ class VaxSeries {
   }
 
   bool skipByCompletedSeries(VaxCondition condition) {
-    final ProviderContainer container = ProviderContainer();
-
-    return container.read(seriesGroupCompleteProvider)[targetDisease]
+    return seriesGroupCompletion[targetDisease]
             ?[condition.seriesGroups] ??
         false;
   }
@@ -654,15 +651,18 @@ class VaxSeries {
   }) {
     if (targetDose != series.seriesDose?.length) {
       assessmentDate ??= VaxDate.now();
+      // Work on copies so we don't mutate the original supporting data.
       final List<Vaccine> preferableVaccines =
-          series.seriesDose?[targetDose].preferableVaccine ?? <Vaccine>[];
+          series.seriesDose?[targetDose].preferableVaccine?.toList() ??
+              <Vaccine>[];
+      final List<Vaccine> allowableVaccines =
+          series.seriesDose?[targetDose].allowableVaccine?.toList() ??
+              <Vaccine>[];
 
       /// Check each of the contraindications (we already ensured they apply
       /// to the patient in a previous step)
-      final ProviderContainer container = ProviderContainer();
       final List<VaxObservation> currentObservations =
-          container.read(observationsProvider).observation?.toList() ??
-              <VaxObservation>[];
+          observations.observation?.toList() ?? <VaxObservation>[];
       // TODO(Dokotela): if there's no date associated with an observation, do
       // we assume it's active and apply it? Currently, we do.
       /// We check and see which of the patient's observations are applicable for
@@ -700,7 +700,11 @@ class VaxSeries {
                 dob.changeNullable(vaccineContraindication.endAge, true)!) {
           preferableVaccines.removeWhere((Vaccine element) =>
               element.cvxAsInt == vaccineContraindication.cvxAsInt);
-          if (preferableVaccines.isEmpty) {
+          allowableVaccines.removeWhere((Vaccine element) =>
+              element.cvxAsInt == vaccineContraindication.cvxAsInt);
+          // Series is only contraindicated when ALL usable vaccines
+          // (preferable + allowable) are removed.
+          if (preferableVaccines.isEmpty && allowableVaccines.isEmpty) {
             isContraindicated = true;
             break;
           }
@@ -760,6 +764,7 @@ class VaxSeries {
             shouldRecieveAnotherDose = false;
             seriesStatus = SeriesStatus.complete;
             forecastReason = ForecastReason.patientSeriesIsComplete;
+            seriesGroupCompletion[targetDisease]?[seriesGroupKey] = true;
           }
         }
       }
@@ -895,6 +900,9 @@ class VaxSeries {
   List<VaxDose> doses = <VaxDose>[];
   List<VaxDose> allPatientDoses = <VaxDose>[];
   VaxObservations observations = VaxObservations();
+  String seriesGroupKey = 'none';
+  Map<String, Map<String, bool>> seriesGroupCompletion =
+      <String, Map<String, bool>>{};
   bool _forecastMode = false;
   List<VaxDose> evaluatedDoses = <VaxDose>[];
   Map<int, TargetDoseStatus> evaluatedTargetDose = <int, TargetDoseStatus>{};
