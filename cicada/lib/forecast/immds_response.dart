@@ -3,12 +3,11 @@ import 'package:fhir_r4/fhir_r4.dart';
 import '../cicada.dart';
 import 'forecast.dart';
 
-/// "Unspecified formulation" CVX codes for each vaccine group.
+/// CDC official vaccine group CVX codes.
 ///
-/// FITS (and the ImmDS IG) matches forecast recommendations by vaccineCode.
-/// These group-level CVX codes serve as the primary matching key. Specific
-/// product CVX codes (from preferableVaccine with forecastVaccineType='Y')
-/// are included as additional vaccineCode entries for clinical use.
+/// Source: https://www2a.cdc.gov/vaccines/iis/iisstandards/vaccines.asp?rpt=vg
+/// These are the "CVX for Vaccine Group" codes used in HL7 messages to identify
+/// the vaccine group a forecast recommendation applies to.
 const _vaccineGroupCvx = <String, (String cvx, String display)>{
   'Cholera': ('26', 'cholera, unspecified formulation'),
   'COVID-19': ('213', 'SARS-COV-2 (COVID-19) vaccine, unspecified'),
@@ -25,7 +24,7 @@ const _vaccineGroupCvx = <String, (String cvx, String display)>{
   'Meningococcal B': ('164', 'meningococcal B, unspecified'),
   'MMR': ('03', 'MMR'),
   'Orthopoxvirus': ('325', 'vaccinia (smallpox, mpox), unspecified'),
-  'Pneumococcal': ('109', 'pneumococcal, unspecified formulation'),
+  'Pneumococcal': ('152', 'Pneumococcal Conjugate, unspecified formulation'),
   'Polio': ('89', 'polio, unspecified formulation'),
   'Rabies': ('90', 'rabies, unspecified formulation'),
   'Rotavirus': ('122', 'rotavirus, unspecified formulation'),
@@ -119,10 +118,15 @@ Parameters buildImmdsResponse(ForecastResult result) {
 
 /// Builds [ImmunizationEvaluation] resources from all evaluated doses across
 /// all antigens and series.
+///
+/// De-duplicates by (dateGiven, vaccineGroupCvx) to produce one evaluation per
+/// administered dose per vaccine group (multi-antigen groups like MMR would
+/// otherwise produce duplicate evaluations for Measles, Mumps, Rubella).
 List<ImmunizationEvaluation> _buildEvaluations(ForecastResult result) {
   final List<ImmunizationEvaluation> evaluations = [];
   final patientRef =
       'Patient/${result.patient.patient.id ?? 'unknown'}'.toFhirString;
+  final seen = <String>{};
 
   for (final antigen in result.agMap.values) {
     for (final group in antigen.groups.values) {
@@ -132,15 +136,23 @@ List<ImmunizationEvaluation> _buildEvaluations(ForecastResult result) {
           : (group.series.isNotEmpty ? group.series.first : null);
       if (series == null) continue;
 
+      final groupCvx = _vaccineGroupCvx[group.vaccineGroupName];
+
       for (final dose in series.doses) {
         // Only include doses that were actually evaluated
         if (dose.evalStatus == null) continue;
 
+        // De-duplicate: one evaluation per (dose date, vaccine group)
+        final key = '${dose.dateGiven}_${groupCvx?.$1 ?? group.vaccineGroupName}';
+        if (seen.contains(key)) continue;
+        seen.add(key);
+
         evaluations.add(ImmunizationEvaluation(
           status: ImmunizationEvaluationStatusCodes.completed,
           patient: Reference(reference: patientRef),
-          date: result.patient.assessmentDate.toFhirDateTime(),
-          targetDisease: _diseaseCodeableConcept(antigen.targetDisease),
+          date: dose.dateGiven.toFhirDateTime(),
+          targetDisease: _evalTargetDisease(
+              antigen.targetDisease, groupCvx),
           immunizationEvent: Reference(
             reference: 'Immunization/${dose.doseId}'.toFhirString,
           ),
@@ -149,8 +161,9 @@ List<ImmunizationEvaluation> _buildEvaluations(ForecastResult result) {
               ? [_mapDoseStatusReason(dose.evalReason!)]
               : null,
           series: series.series.seriesName?.toFhirString,
-          doseNumberString:
-              '${dose.targetDoseSatisfied + 1}'.toFhirString,
+          doseNumberPositiveInt: dose.targetDoseSatisfied >= 0
+              ? (dose.targetDoseSatisfied + 1).toFhirPositiveInt
+              : null,
           seriesDosesString:
               '${series.series.seriesDose?.length ?? 0}'.toFhirString,
         ));
@@ -161,11 +174,41 @@ List<ImmunizationEvaluation> _buildEvaluations(ForecastResult result) {
   return evaluations;
 }
 
+/// Returns a [CodeableConcept] for evaluation targetDisease.
+///
+/// FITS reads `targetDisease.getCoding().get(0).getCode()` as a CVX code,
+/// so the vaccine group CVX is placed first. SNOMED disease coding follows
+/// for spec-correctness.
+CodeableConcept _evalTargetDisease(
+    String targetDisease, (String cvx, String display)? groupCvx) {
+  final List<Coding> codings = [];
+  if (groupCvx != null) {
+    codings.add(Coding(
+      system: 'http://hl7.org/fhir/sid/cvx'.toFhirUri,
+      code: groupCvx.$1.toFhirCode,
+      display: groupCvx.$2.toFhirString,
+    ));
+  }
+  final snomedCode = _diseaseSnomedCodes[targetDisease];
+  if (snomedCode != null) {
+    codings.add(Coding(
+      system: 'http://snomed.info/sct'.toFhirUri,
+      code: snomedCode.toFhirCode,
+      display: targetDisease.toFhirString,
+    ));
+  }
+  return CodeableConcept(
+    coding: codings.isNotEmpty ? codings : null,
+    text: targetDisease.toFhirString,
+  );
+}
+
 /// Builds the [ImmunizationRecommendation] resource from vaccine group
 /// forecasts.
 ImmunizationRecommendation _buildRecommendation(ForecastResult result) {
   final patientRef =
       'Patient/${result.patient.patient.id ?? 'unknown'}'.toFhirString;
+  final assessmentDate = result.patient.assessmentDate;
   final List<ImmunizationRecommendationRecommendation> recommendations = [];
 
   for (final vgf in result.vaccineGroupForecasts.values) {
@@ -240,8 +283,7 @@ ImmunizationRecommendation _buildRecommendation(ForecastResult result) {
       }
     }
 
-    // Build vaccineCode list: group-level "unspecified" CVX first (for FITS
-    // matching), then specific product CVX codes (for clinical use).
+    // vaccineCode: single group-level CVX per CDC vaccine group mapping
     final List<CodeableConcept> vaccineCodeList = [];
     final groupCvx = _vaccineGroupCvx[vgf.vaccineGroupName];
     if (groupCvx != null) {
@@ -253,21 +295,12 @@ ImmunizationRecommendation _buildRecommendation(ForecastResult result) {
         ),
       ]));
     }
-    for (int i = 0; i < vgf.forecastCvxCodes.length; i++) {
-      // Skip if same as the group-level code we already added
-      if (groupCvx != null && vgf.forecastCvxCodes[i] == groupCvx.$1) {
-        continue;
-      }
-      vaccineCodeList.add(CodeableConcept(coding: [
-        Coding(
-          system: 'http://hl7.org/fhir/sid/cvx'.toFhirUri,
-          code: vgf.forecastCvxCodes[i].toFhirCode,
-          display: i < vgf.forecastVaccineDescriptions.length
-              ? vgf.forecastVaccineDescriptions[i].toFhirString
-              : null,
-        ),
-      ]));
-    }
+
+    // Determine due vs overdue for Not Complete status
+    final isOverdue = vgf.status == SeriesStatus.notComplete &&
+        vgf.pastDueDate != null &&
+        !_isSentinel(vgf.pastDueDate!) &&
+        assessmentDate.isAfter(vgf.pastDueDate!);
 
     recommendations.add(ImmunizationRecommendationRecommendation(
       targetDisease: CodeableConcept(
@@ -275,9 +308,11 @@ ImmunizationRecommendation _buildRecommendation(ForecastResult result) {
         text: vgf.vaccineGroupName.toFhirString,
       ),
       vaccineCode: vaccineCodeList.isNotEmpty ? vaccineCodeList : null,
-      forecastStatus: _mapForecastStatus(vgf.status),
+      forecastStatus: _mapForecastStatus(vgf.status, isOverdue: isOverdue),
       dateCriterion: dateCriteria.isNotEmpty ? dateCriteria : null,
-      doseNumberPositiveInt: vgf.doseNumber?.toFhirPositiveInt,
+      doseNumberString: vgf.status == SeriesStatus.notComplete
+          ? vgf.doseNumber?.toString().toFhirString
+          : null,
       description: vgf.antigenNames.length > 1
           ? 'Antigens: ${vgf.antigenNames.join(", ")}'.toFhirString
           : null,
@@ -286,38 +321,44 @@ ImmunizationRecommendation _buildRecommendation(ForecastResult result) {
 
   return ImmunizationRecommendation(
     patient: Reference(reference: patientRef),
-    date: result.patient.assessmentDate.toFhirDateTime(),
+    date: assessmentDate.toFhirDateTime(),
     recommendation: recommendations,
   );
 }
 
 /// Maps [EvalStatus] to the FHIR dose status CodeableConcept.
 ///
-/// Uses the HL7 terminology CodeSystem:
-/// `http://terminology.hl7.org/CodeSystem/immunization-evaluation-dose-status`
+/// Uses two coding layers:
+/// 1. CDSi-compatible display text (read first by FITS/testing tools)
+/// 2. HL7 standard: `http://terminology.hl7.org/CodeSystem/immunization-evaluation-dose-status`
+///    Codes: valid, notvalid
 CodeableConcept _mapDoseStatus(EvalStatus status) {
-  const system =
+  const cdsiSystem =
+      'http://hl7.org/fhir/us/immds/CodeSystem/EvaluationStatus';
+  const hl7System =
       'http://terminology.hl7.org/CodeSystem/immunization-evaluation-dose-status';
-  switch (status) {
-    case EvalStatus.valid:
-      return CodeableConcept(coding: [
-        Coding(
-          system: system.toFhirUri,
-          code: 'valid'.toFhirCode,
-          display: 'Valid'.toFhirString,
-        ),
-      ]);
-    case EvalStatus.not_valid:
-    case EvalStatus.extraneous:
-    case EvalStatus.sub_standard:
-      return CodeableConcept(coding: [
-        Coding(
-          system: system.toFhirUri,
-          code: 'notvalid'.toFhirCode,
-          display: 'Not Valid'.toFhirString,
-        ),
-      ]);
-  }
+
+  final String cdsiCode = switch (status) {
+    EvalStatus.valid => 'Valid',
+    EvalStatus.not_valid => 'Not Valid',
+    EvalStatus.extraneous => 'Extraneous',
+    EvalStatus.sub_standard => 'Sub standard',
+  };
+  final String hl7Code = status == EvalStatus.valid ? 'valid' : 'notvalid';
+  final String hl7Display = status == EvalStatus.valid ? 'Valid' : 'Not Valid';
+
+  return CodeableConcept(coding: [
+    Coding(
+      system: cdsiSystem.toFhirUri,
+      code: cdsiCode.toFhirCode,
+      display: cdsiCode.toFhirString,
+    ),
+    Coding(
+      system: hl7System.toFhirUri,
+      code: hl7Code.toFhirCode,
+      display: hl7Display.toFhirString,
+    ),
+  ]);
 }
 
 /// Maps [EvalReason] to a FHIR dose status reason CodeableConcept.
@@ -359,29 +400,84 @@ CodeableConcept _mapDoseStatusReason(EvalReason reason) {
   ]);
 }
 
-/// Maps [SeriesStatus] to the ImmDS forecast status CodeableConcept.
+/// Maps [SeriesStatus] to a forecast status [CodeableConcept].
 ///
-/// Uses the ImmDS CodeSystem:
-/// `http://hl7.org/fhir/us/immds/CodeSystem/ForecastStatus`
-CodeableConcept _mapForecastStatus(SeriesStatus status) {
-  const system =
+/// Uses three coding layers:
+/// 1. CDSi status text via ImmDS IG CodeSystem — read first by testing tools
+///    (FITS parses `getCoding().get(0).getCode()` case-insensitively)
+/// 2. HL7 standard: `http://terminology.hl7.org/CodeSystem/immunization-recommendation-status`
+///    Codes: due, overdue, immune, contraindicated, complete, agedout
+/// 3. LOINC answer list LL940-8 for LOINC 59783-1 "Status in immunization series"
+///
+/// For [SeriesStatus.notComplete], pass [isOverdue] = true when the assessment
+/// date is past the past due date to distinguish `due` from `overdue`.
+CodeableConcept _mapForecastStatus(SeriesStatus status,
+    {bool isOverdue = false}) {
+  const cdsiSystem =
       'http://hl7.org/fhir/us/immds/CodeSystem/ForecastStatus';
-  final (String code, String display) = switch (status) {
-    SeriesStatus.complete => ('complete', 'Complete'),
-    SeriesStatus.notComplete => ('notComplete', 'Not Complete'),
-    SeriesStatus.immune => ('immune', 'Immune'),
-    SeriesStatus.contraindicated => ('contraindicated', 'Contraindicated'),
-    SeriesStatus.notRecommended => ('notRecommended', 'Not Recommended'),
-    SeriesStatus.agedOut => ('agedOut', 'Aged Out'),
-  };
+  const hl7System =
+      'http://terminology.hl7.org/CodeSystem/immunization-recommendation-status';
+  const loincSystem = 'http://loinc.org';
 
-  return CodeableConcept(coding: [
-    Coding(
-      system: system.toFhirUri,
-      code: code.toFhirCode,
-      display: display.toFhirString,
-    ),
-  ]);
+  final List<Coding> codings = [];
+
+  // Primary: CDSi-compatible status text (parsed by FITS/testing tools)
+  final String cdsiCode = switch (status) {
+    SeriesStatus.complete => 'Complete',
+    SeriesStatus.notComplete => 'Not Complete',
+    SeriesStatus.immune => 'Immune',
+    SeriesStatus.contraindicated => 'Contraindicated',
+    SeriesStatus.agedOut => 'Aged Out',
+    SeriesStatus.notRecommended => 'Not Recommended',
+  };
+  codings.add(Coding(
+    system: cdsiSystem.toFhirUri,
+    code: cdsiCode.toFhirCode,
+    display: cdsiCode.toFhirString,
+  ));
+
+  // Secondary: HL7 standard code (where a standard code exists)
+  switch (status) {
+    case SeriesStatus.complete:
+      codings.add(Coding(system: hl7System.toFhirUri,
+          code: 'complete'.toFhirCode, display: 'Complete'.toFhirString));
+    case SeriesStatus.immune:
+      codings.add(Coding(system: hl7System.toFhirUri,
+          code: 'immune'.toFhirCode, display: 'Immune'.toFhirString));
+    case SeriesStatus.contraindicated:
+      codings.add(Coding(system: hl7System.toFhirUri,
+          code: 'contraindicated'.toFhirCode,
+          display: 'Contraindicated'.toFhirString));
+    case SeriesStatus.notComplete:
+      codings.add(Coding(
+        system: hl7System.toFhirUri,
+        code: isOverdue ? 'overdue'.toFhirCode : 'due'.toFhirCode,
+        display: isOverdue ? 'Overdue'.toFhirString : 'Due'.toFhirString,
+      ));
+    case SeriesStatus.agedOut:
+      codings.add(Coding(system: hl7System.toFhirUri,
+          code: 'agedout'.toFhirCode, display: 'Aged Out'.toFhirString));
+    case SeriesStatus.notRecommended:
+      break; // No HL7 standard code exists
+  }
+
+  // Tertiary: LOINC answer list LL940-8 (LOINC 59783-1)
+  final (String laCode, String laDisplay) = switch (status) {
+    SeriesStatus.complete => ('LA13421-5', 'Complete'),
+    SeriesStatus.notComplete =>
+      isOverdue ? ('LA13423-1', 'Overdue') : ('LA13422-3', 'On schedule'),
+    SeriesStatus.immune => ('LA27183-5', 'Immune'),
+    SeriesStatus.contraindicated => ('LA4216-3', 'Contraindicated'),
+    SeriesStatus.notRecommended => ('LA4695-8', 'Not Recommended'),
+    SeriesStatus.agedOut => ('LA13424-9', 'Too old'),
+  };
+  codings.add(Coding(
+    system: loincSystem.toFhirUri,
+    code: laCode.toFhirCode,
+    display: laDisplay.toFhirString,
+  ));
+
+  return CodeableConcept(coding: codings);
 }
 
 /// Returns true if the date is a VaxDate sentinel (min or max boundary).

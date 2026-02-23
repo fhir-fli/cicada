@@ -146,33 +146,33 @@ void main() {
       }
     });
 
-    test('recommendations with notComplete status have dateCriteria', () {
+    test('Not Complete recommendations have dateCriteria', () {
       final rec = noDoseResponse.parameter!
           .firstWhere((p) => p.name.valueString == 'recommendation')
           .resource as ImmunizationRecommendation;
 
       for (final r in rec.recommendation) {
         final statusCode = codeStr(r.forecastStatus.coding?.first.code);
-        if (statusCode == 'notComplete') {
+        if (statusCode == 'Not Complete') {
           expect(r.dateCriterion, isNotNull,
-              reason: 'notComplete recommendation should have dateCriteria');
+              reason:
+                  'Not Complete recommendation should have dateCriteria');
           expect(r.dateCriterion, isNotEmpty);
         }
       }
     });
 
-    test('doseNumberPositiveInt is present for notComplete recommendations',
-        () {
+    test('doseNumberString is present for Not Complete recommendations', () {
       final rec = noDoseResponse.parameter!
           .firstWhere((p) => p.name.valueString == 'recommendation')
           .resource as ImmunizationRecommendation;
 
       for (final r in rec.recommendation) {
         final statusCode = codeStr(r.forecastStatus.coding?.first.code);
-        if (statusCode == 'notComplete') {
-          expect(r.doseNumberPositiveInt, isNotNull,
+        if (statusCode == 'Not Complete') {
+          expect(r.doseNumberString, isNotNull,
               reason:
-                  'notComplete recommendation should have doseNumberPositiveInt');
+                  'Not Complete recommendation should have doseNumberString');
         }
       }
     });
@@ -197,8 +197,12 @@ void main() {
             contains('Immunization/'),
             reason: 'immunizationEvent should reference an Immunization');
         expect(eval.doseStatus.coding, isNotNull);
-        expect(uriStr(eval.doseStatus.coding!.first.system),
+        // First coding is CDSi-compatible, second is HL7 standard
+        final hl7DoseStatus = eval.doseStatus.coding!.where((c) =>
+            uriStr(c.system) ==
             'http://terminology.hl7.org/CodeSystem/immunization-evaluation-dose-status');
+        expect(hl7DoseStatus, isNotEmpty,
+            reason: 'doseStatus should have HL7 standard coding');
       }
     });
 
@@ -210,7 +214,9 @@ void main() {
       for (final ep in evalParams) {
         final eval = ep.resource as ImmunizationEvaluation;
         final statusCode = codeStr(eval.doseStatus.coding?.first.code);
-        if (statusCode == 'notvalid') {
+        if (statusCode == 'Not Valid' ||
+            statusCode == 'Extraneous' ||
+            statusCode == 'Sub standard') {
           expect(eval.doseStatusReason, isNotNull,
               reason: 'notvalid evaluation should have doseStatusReason');
           expect(eval.doseStatusReason, isNotEmpty);
@@ -223,28 +229,69 @@ void main() {
   });
 
   group('Code system mappings', () {
-    test('forecastStatus uses ImmDS ForecastStatus system', () {
+    test('forecastStatus has CDSi, HL7, and LOINC codings', () {
       final rec = noDoseResponse.parameter!
           .firstWhere((p) => p.name.valueString == 'recommendation')
           .resource as ImmunizationRecommendation;
 
-      const expectedSystem =
+      const cdsiSystem =
           'http://hl7.org/fhir/us/immds/CodeSystem/ForecastStatus';
-      final validCodes = {
-        'complete',
-        'notComplete',
+      const hl7System =
+          'http://terminology.hl7.org/CodeSystem/immunization-recommendation-status';
+      final cdsiCodes = {
+        'Not Complete',
+        'Complete',
+        'Immune',
+        'Contraindicated',
+        'Aged Out',
+        'Not Recommended',
+      };
+      final hl7Codes = {
+        'due',
+        'overdue',
         'immune',
         'contraindicated',
-        'notRecommended',
-        'agedOut',
+        'complete',
+        'agedout',
+      };
+      final loincCodes = {
+        'LA13421-5', // Complete
+        'LA13422-3', // On schedule
+        'LA13423-1', // Overdue
+        'LA13424-9', // Too old
+        'LA27183-5', // Immune
+        'LA4216-3', // Contraindicated
+        'LA4695-8', // Not Recommended
       };
 
       for (final r in rec.recommendation) {
-        final coding = r.forecastStatus.coding!.first;
-        expect(uriStr(coding.system), expectedSystem,
-            reason: 'forecastStatus system mismatch');
-        expect(validCodes, contains(codeStr(coding.code)),
-            reason: 'forecastStatus code "${codeStr(coding.code)}" not valid');
+        final codings = r.forecastStatus.coding!;
+
+        // First coding should be CDSi-compatible
+        final cdsiCoding =
+            codings.where((c) => uriStr(c.system) == cdsiSystem);
+        expect(cdsiCoding, isNotEmpty,
+            reason: 'forecastStatus should have CDSi coding');
+        expect(cdsiCodes, contains(codeStr(cdsiCoding.first.code)),
+            reason: 'CDSi code "${codeStr(cdsiCoding.first.code)}" '
+                'not valid');
+
+        // Should have LOINC coding
+        final loincCoding =
+            codings.where((c) => uriStr(c.system) == 'http://loinc.org');
+        expect(loincCoding, isNotEmpty,
+            reason: 'forecastStatus should have LOINC coding');
+        expect(loincCodes, contains(codeStr(loincCoding.first.code)),
+            reason: 'LOINC code "${codeStr(loincCoding.first.code)}" '
+                'not in LL940-8');
+
+        // For statuses with an HL7 standard code, verify it
+        final hl7Coding =
+            codings.where((c) => uriStr(c.system) == hl7System);
+        if (hl7Coding.isNotEmpty) {
+          expect(hl7Codes, contains(codeStr(hl7Coding.first.code)),
+              reason: 'HL7 code "${codeStr(hl7Coding.first.code)}" not valid');
+        }
       }
     });
 
@@ -336,9 +383,10 @@ void main() {
           .resource as ImmunizationRecommendation;
 
       // The known group CVX codes from the _vaccineGroupCvx map
+      // (CDC official: https://www2a.cdc.gov/vaccines/iis/iisstandards/vaccines.asp?rpt=vg)
       final knownGroupCvx = <String>{
         '26', '213', '330', '107', '214', '85', '45', '17', '137', '88',
-        '129', '108', '164', '03', '325', '109', '89', '90', '122', '304',
+        '129', '108', '164', '03', '325', '152', '89', '90', '122', '304',
         '222', '91', '21', '184', '188',
       };
 

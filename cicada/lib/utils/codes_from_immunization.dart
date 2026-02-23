@@ -2,7 +2,11 @@ import 'package:fhir_r4/fhir_r4.dart';
 import '../cicada.dart';
 
 String? cvxFromImmunization(Immunization immunization) =>
-    codeFromImmunization(immunization, FhirUri('http://hl7.org/fhir/sid/cvx'));
+    codeFromImmunization(immunization, FhirUri('http://hl7.org/fhir/sid/cvx')) ??
+    // vaccineCode is bound to CVX in the US (US Core / ImmDS IG). Accept the
+    // first code when the system URI is absent — real-world callers (including
+    // FITS) often omit it.
+    immunization.vaccineCode.coding?.firstOrNull?.code?.toString();
 
 String? mvxFromImmunization(Immunization immunization) =>
     codeFromImmunization(

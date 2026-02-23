@@ -188,13 +188,12 @@ const _corsHeaders = {
   'Access-Control-Allow-Headers': 'Content-Type, Accept',
 };
 
-/// Log the first request/response to /tmp for debugging
-bool _logged = false;
+/// Log request/response pairs to /tmp for debugging.
+int _logCount = 0;
 void _logOnce(String label, String content) {
-  if (_logged) return;
   try {
-    File('/tmp/fits_$label.xml').writeAsStringSync(content);
-    if (label == 'response') _logged = true;
+    File('/tmp/fits_${_logCount}_$label.xml').writeAsStringSync(content);
+    if (label == 'response') _logCount++;
   } catch (_) {}
 }
 
