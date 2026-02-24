@@ -27,8 +27,7 @@ final AntigenSupportingData whoMumps = AntigenSupportingData.fromJson(
                         {
                             "absMinAge": "12 months",
                             "minAge": "12 months",
-                            "earliestRecAge": "12 months",
-                            "latestRecAge": "15 months"
+                            "earliestRecAge": "12 months"
                         }
                     ],
                     "preferableVaccine": [
@@ -62,10 +61,9 @@ final AntigenSupportingData whoMumps = AntigenSupportingData.fromJson(
                     "doseNumber": "Dose 2",
                     "age": [
                         {
-                            "absMinAge": "15 months",
+                            "absMinAge": "13 months",
                             "minAge": "15 months",
-                            "earliestRecAge": "15 months",
-                            "latestRecAge": "6 years"
+                            "earliestRecAge": "15 months"
                         }
                     ],
                     "interval": [
@@ -73,7 +71,7 @@ final AntigenSupportingData whoMumps = AntigenSupportingData.fromJson(
                             "fromPrevious": "Y",
                             "absMinInt": "4 weeks",
                             "minInt": "4 weeks",
-                            "earliestRecInt": "3 months"
+                            "earliestRecInt": "4 weeks"
                         }
                     ],
                     "preferableVaccine": [

@@ -8,18 +8,71 @@ final AntigenSupportingData whoInfluenza = AntigenSupportingData.fromJson(
     "vaccineGroup": "Influenza",
     "series": [
         {
-            "seriesName": "WHO Influenza annual series",
+            "seriesName": "WHO Influenza priority group series",
             "targetDisease": "Influenza",
             "vaccineGroup": "Influenza",
-            "seriesType": "Standard",
+            "seriesType": "Risk",
             "selectSeries": {
-                "defaultSeries": "Yes",
+                "defaultSeries": "No",
                 "productPath": "No",
-                "seriesGroupName": "Standard",
+                "seriesGroupName": "WHO Priority",
                 "seriesGroup": "1",
                 "seriesPriority": "A",
                 "seriesPreference": "1"
             },
+            "indication": [
+                {
+                    "observationCode": {
+                        "text": "Pregnant",
+                        "code": "1023"
+                    },
+                    "description": "Patient is pregnant",
+                    "guidance": ""
+                },
+                {
+                    "observationCode": {
+                        "text": "Healthcare worker",
+                        "code": "1020"
+                    },
+                    "description": "Patient is a healthcare worker with occupational exposure risk",
+                    "guidance": ""
+                },
+                {
+                    "observationCode": {
+                        "text": "Immunocompromised individual",
+                        "code": "1022"
+                    },
+                    "description": "Patient is immunocompromised",
+                    "guidance": ""
+                },
+                {
+                    "observationCode": {
+                        "text": "Chronic medical condition",
+                        "code": "1024"
+                    },
+                    "description": "Patient has a chronic medical condition increasing influenza risk",
+                    "guidance": ""
+                },
+                {
+                    "observationCode": {
+                        "text": "WHO influenza priority - young child",
+                        "code": "1025"
+                    },
+                    "description": "Child aged 6 months to 5 years (WHO priority group)",
+                    "beginAge": "6 months",
+                    "endAge": "5 years",
+                    "guidance": ""
+                },
+                {
+                    "observationCode": {
+                        "text": "WHO influenza priority - older adult",
+                        "code": "1026"
+                    },
+                    "description": "Older adult aged 65 years or older (WHO priority group)",
+                    "beginAge": "65 years",
+                    "guidance": ""
+                }
+            ],
             "seriesDose": [
                 {
                     "doseNumber": "Dose 1",

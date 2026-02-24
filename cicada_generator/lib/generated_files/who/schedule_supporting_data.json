@@ -1138,6 +1138,26 @@
                 "observationCode": "1022",
                 "observationTitle": "Immunocompromised individual",
                 "indicationText": "Patient is immunocompromised"
+            },
+            {
+                "observationCode": "1023",
+                "observationTitle": "Pregnant",
+                "indicationText": "Patient is pregnant"
+            },
+            {
+                "observationCode": "1024",
+                "observationTitle": "Chronic medical condition",
+                "indicationText": "Patient has a chronic medical condition increasing influenza risk"
+            },
+            {
+                "observationCode": "1025",
+                "observationTitle": "WHO influenza priority - young child",
+                "indicationText": "Child aged 6 months to 5 years (WHO influenza priority group)"
+            },
+            {
+                "observationCode": "1026",
+                "observationTitle": "WHO influenza priority - older adult",
+                "indicationText": "Older adult aged 65 years or older (WHO influenza priority group)"
             }
         ]
     }
