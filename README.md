@@ -12,7 +12,7 @@ Cicada implements the CDC's [Clinical Decision Support for Immunization (CDSi)](
 - Handles clinical conditions, contraindications, immunity evidence, and risk-based series
 - Multi-antigen vaccine group aggregation (DTaP/Tdap/Td, MMR, DTP, MR)
 - FHIR R4 `Parameters` in, FHIR R4 `Parameters` out
-- Built-in HTTP server for the `$immds-forecast` FHIR operation (JSON and XML)
+- Built-in HTTP server with `$immds-forecast` (CDC) and `$immds-forecast-who` (WHO) endpoints (JSON and XML)
 - 99.6% accuracy against CDC test suite, 98.8% against NIST FITS
 
 ## Installation
@@ -72,7 +72,18 @@ Cicada includes an HTTP server that implements the FHIR `$immds-forecast` operat
 dart run bin/server.dart -p 8080
 ```
 
-The server accepts `POST /$immds-forecast` with JSON or XML FHIR Parameters and returns the forecast result. It supports CORS headers for browser clients and has been tested against [NIST FITS](https://fits.nist.gov) (167/169 correct).
+The server accepts JSON or XML FHIR Parameters and returns the forecast result:
+- `POST /$immds-forecast` — CDC/CDSi schedule
+- `POST /$immds-forecast-who` — WHO EPI schedule
+
+Both endpoints accept identical input. The server supports CORS headers for browser clients and has been tested against [NIST FITS](https://fits.nist.gov) (167/169 correct).
+
+```bash
+# WHO forecast
+curl -X POST http://localhost:8080/\$immds-forecast-who \
+  -H 'Content-Type: application/fhir+json' \
+  -d @input.json
+```
 
 To expose the server for external testing (e.g., FITS):
 ```bash
@@ -89,7 +100,7 @@ Cicada supports two forecasting modes:
 | Antigens | 30+ (U.S. formulations) | 22 (global formulations) |
 | Vaccines | DTaP, IPV, MMR, etc. | DTP, OPV+IPV, MR, pentavalent, etc. |
 | Dose timing | 2/4/6 months | 6/10/14 weeks |
-| Spec version | CDSi v4.61-508 | WHO position papers (2024) |
+| Spec version | CDSi v4.61-508 | WHO position papers (2025) |
 
 Switch modes at runtime:
 ```dart
@@ -163,9 +174,8 @@ The supporting data (antigen definitions, schedule rules) is generated from sour
 dart cicada_generator/lib/xml_to_json.dart    # CDSi XML → JSON
 dart cicada_generator/lib/main.dart           # Excel/JSON → Dart
 
-# WHO pipeline
-dart cicada_generator/lib/generate_who.dart   # Create WHO JSON sources
-dart cicada_generator/lib/main.dart --who     # JSON → Dart
+# WHO pipeline (Excel → JSON → Dart)
+dart cicada_generator/lib/main.dart --who
 ```
 
 Generated files are written to `cicada/lib/generated_files/` (CDC) and `cicada/lib/generated_files/who/` (WHO). Do not hand-edit these files.

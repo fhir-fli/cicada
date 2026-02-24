@@ -109,8 +109,8 @@ Files in `cicada/lib/generated_files/` are produced by the generator and should 
 
 ### ImmDS Server
 
-`bin/server.dart` runs a Shelf HTTP server implementing the `$immds-forecast` operation:
-- Accepts `POST /$immds-forecast` with JSON or XML FHIR Parameters
+`bin/server.dart` runs a Shelf HTTP server implementing the ImmDS forecast operations:
+- Accepts `POST /$immds-forecast` (CDC) and `POST /$immds-forecast-who` (WHO) with JSON or XML FHIR Parameters
 - Returns FHIR Parameters with evaluations and recommendations
 - Supports CORS for browser-based clients
 - Tested against NIST FITS (Forecasting and Immunization Testing Standard): 167/169 correct
