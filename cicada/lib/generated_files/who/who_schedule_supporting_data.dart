@@ -1163,6 +1163,11 @@ final whoScheduleSupportingData = ScheduleSupportingData.fromJson(
                 "observationCode": "1026",
                 "observationTitle": "WHO influenza priority - older adult",
                 "indicationText": "Older adult aged 65 years or older (WHO influenza priority group)"
+            },
+            {
+                "observationCode": "1027",
+                "observationTitle": "Lives in HepA intermediate/high endemicity area",
+                "indicationText": "Patient lives in a hepatitis A intermediate or high endemicity area"
             }
         ]
     }

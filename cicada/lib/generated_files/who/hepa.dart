@@ -8,18 +8,90 @@ final AntigenSupportingData whoHepa = AntigenSupportingData.fromJson(
     "vaccineGroup": "HepA",
     "series": [
         {
-            "seriesName": "WHO HepA 2-dose series",
+            "seriesName": "WHO HepA single-dose series",
             "targetDisease": "HepA",
             "vaccineGroup": "HepA",
-            "seriesType": "Standard",
+            "seriesType": "Risk",
             "selectSeries": {
-                "defaultSeries": "Yes",
+                "defaultSeries": "No",
                 "productPath": "No",
-                "seriesGroupName": "Standard",
+                "seriesGroupName": "Increased Risk",
                 "seriesGroup": "1",
                 "seriesPriority": "A",
                 "seriesPreference": "1"
             },
+            "indication": [
+                {
+                    "observationCode": {
+                        "text": "Lives in HepA intermediate/high endemicity area",
+                        "code": "1027"
+                    },
+                    "description": "Patient lives in a hepatitis A intermediate or high endemicity area",
+                    "guidance": ""
+                }
+            ],
+            "seriesDose": [
+                {
+                    "doseNumber": "Dose 1",
+                    "age": [
+                        {
+                            "absMinAge": "12 months",
+                            "minAge": "12 months",
+                            "earliestRecAge": "12 months"
+                        }
+                    ],
+                    "preferableVaccine": [
+                        {
+                            "vaccineType": "HepA, pediatric/adolescent",
+                            "cvx": "83",
+                            "beginAge": "12 months",
+                            "forecastVaccineType": "Y"
+                        }
+                    ],
+                    "allowableVaccine": [
+                        {
+                            "vaccineType": "HepA, pediatric/adolescent",
+                            "cvx": "83",
+                            "beginAge": "12 months"
+                        },
+                        {
+                            "vaccineType": "HepA, adult",
+                            "cvx": "52",
+                            "beginAge": "19 years"
+                        },
+                        {
+                            "vaccineType": "HepA-HepB (Twinrix)",
+                            "cvx": "104",
+                            "beginAge": "18 years"
+                        }
+                    ],
+                    "recurringDose": "No"
+                }
+            ]
+        },
+        {
+            "seriesName": "WHO HepA 2-dose series",
+            "targetDisease": "HepA",
+            "vaccineGroup": "HepA",
+            "seriesType": "Risk",
+            "selectSeries": {
+                "defaultSeries": "No",
+                "productPath": "No",
+                "seriesGroupName": "Increased Risk",
+                "seriesGroup": "1",
+                "seriesPriority": "A",
+                "seriesPreference": "2"
+            },
+            "indication": [
+                {
+                    "observationCode": {
+                        "text": "Lives in HepA intermediate/high endemicity area",
+                        "code": "1027"
+                    },
+                    "description": "Patient lives in a hepatitis A intermediate or high endemicity area",
+                    "guidance": ""
+                }
+            ],
             "seriesDose": [
                 {
                     "doseNumber": "Dose 1",
@@ -63,8 +135,7 @@ final AntigenSupportingData whoHepa = AntigenSupportingData.fromJson(
                         {
                             "absMinAge": "18 months",
                             "minAge": "18 months",
-                            "earliestRecAge": "18 months",
-                            "latestRecAge": "24 months"
+                            "earliestRecAge": "18 months"
                         }
                     ],
                     "interval": [
