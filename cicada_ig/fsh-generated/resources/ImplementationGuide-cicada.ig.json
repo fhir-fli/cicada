@@ -91,6 +91,14 @@
       },
       {
         "reference": {
+          "reference": "CodeSystem/EvalStatus"
+        },
+        "name": "Cicada Evaluation Status",
+        "description": "Extension codes for dose evaluation status beyond the HL7 THO immunization-evaluation-dose-status CodeSystem. Only codes not covered by the standard are defined here.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/VaccineConditionFhir"
         },
         "name": "Condition Profile with Vaccine Condition Codes",
@@ -103,6 +111,14 @@
         },
         "name": "Dose of a Vaccine",
         "description": "Detailed information about each vaccination dose.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/dose-status-reason"
+        },
+        "name": "Dose Status Reason Value Set",
+        "description": "Value set for dose evaluation status reasons, referencing the published ImmDS IG StatusReason CodeSystem.",
         "exampleBoolean": false
       },
       {
@@ -131,18 +147,18 @@
       },
       {
         "reference": {
-          "reference": "CodeSystem/EvalStatus"
+          "reference": "ValueSet/eval-status"
         },
-        "name": "Evaluation Status",
-        "description": "The status of the result of an evaluation.",
+        "name": "Evaluation Status Value Set",
+        "description": "Combined value set for dose evaluation status, including HL7 THO standard codes (valid, notvalid) and the Cicada extension code (extraneous).",
         "exampleBoolean": false
       },
       {
         "reference": {
-          "reference": "ValueSet/eval-status"
+          "reference": "ValueSet/forecast-status"
         },
-        "name": "Evaluation Status Value Set",
-        "description": "Value Set for the status of the result of an evaluation.",
+        "name": "Forecast Status Value Set",
+        "description": "Combined value set for immunization forecast status, referencing published standard CodeSystems. Includes ImmDS IG ForecastStatus (CDSi-compatible), HL7 THO immunization-recommendation-status, and LOINC answer list LL940-8.",
         "exampleBoolean": false
       },
       {

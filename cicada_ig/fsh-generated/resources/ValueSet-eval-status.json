@@ -4,28 +4,19 @@
   "name": "EvalStatusVS",
   "id": "eval-status",
   "title": "Evaluation Status Value Set",
-  "description": "Value Set for the status of the result of an evaluation.",
+  "description": "Combined value set for dose evaluation status, including HL7 THO standard codes (valid, notvalid) and the Cicada extension code (extraneous).",
   "url": "http://fhirfli.dev/fhir/ig/cicada/ValueSet/eval-status",
   "compose": {
     "include": [
       {
+        "system": "http://terminology.hl7.org/CodeSystem/immunization-evaluation-dose-status"
+      },
+      {
         "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/EvalStatus",
         "concept": [
           {
-            "code": "valid",
-            "display": "Valid"
-          },
-          {
-            "code": "not_valid",
-            "display": "Not Valid"
-          },
-          {
             "code": "extraneous",
             "display": "Extraneous"
-          },
-          {
-            "code": "sub_standard",
-            "display": "Substandard"
           }
         ]
       }

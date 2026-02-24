@@ -1,17 +1,12 @@
 CodeSystem: EvalStatusCS
 Id: EvalStatus
-Title: "Evaluation Status"
-Description: "The status of the result of an evaluation."
-* #valid "Valid" "Valid"
-* #not_valid "Not Valid" "Not Valid"
-* #extraneous "Extraneous" "Extraneous"
-* #sub_standard "Substandard" "Substandard"
+Title: "Cicada Evaluation Status"
+Description: "Extension codes for dose evaluation status beyond the HL7 THO immunization-evaluation-dose-status CodeSystem. Only codes not covered by the standard are defined here."
+* #extraneous "Extraneous" "The dose was administered after the series was already complete. Every administered dose must be reported, so extraneous doses are tracked but do not affect the forecast."
 
 ValueSet: EvalStatusVS
 Id: eval-status
 Title: "Evaluation Status Value Set"
-Description: "Value Set for the status of the result of an evaluation."
-* EvalStatus#valid "Valid"
-* EvalStatus#not_valid "Not Valid"
-* EvalStatus#extraneous "Extraneous"
-* EvalStatus#sub_standard "Substandard"
+Description: "Combined value set for dose evaluation status, including HL7 THO standard codes (valid, notvalid) and the Cicada extension code (extraneous)."
+* include codes from system http://terminology.hl7.org/CodeSystem/immunization-evaluation-dose-status
+* include EvalStatus#extraneous "Extraneous"

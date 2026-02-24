@@ -329,36 +329,40 @@ ImmunizationRecommendation _buildRecommendation(ForecastResult result) {
 /// Maps [EvalStatus] to the FHIR dose status CodeableConcept.
 ///
 /// Uses two coding layers:
-/// 1. CDSi-compatible display text (read first by FITS/testing tools)
-/// 2. HL7 standard: `http://terminology.hl7.org/CodeSystem/immunization-evaluation-dose-status`
+/// 1. HL7 THO: `http://terminology.hl7.org/CodeSystem/immunization-evaluation-dose-status`
 ///    Codes: valid, notvalid
+/// 2. Cicada IG (extraneous only): `http://fhirfli.dev/fhir/ig/cicada/CodeSystem/EvalStatus`
+///    Code: extraneous — no standard exists for this status
+///
+/// Sub-standard maps to `notvalid` (FHIR's `isSubpotent` on the input
+/// Immunization covers the potency distinction).
 CodeableConcept _mapDoseStatus(EvalStatus status) {
-  const cdsiSystem =
-      'http://hl7.org/fhir/us/immds/CodeSystem/EvaluationStatus';
   const hl7System =
       'http://terminology.hl7.org/CodeSystem/immunization-evaluation-dose-status';
+  const cicadaSystem =
+      'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/EvalStatus';
 
-  final String cdsiCode = switch (status) {
-    EvalStatus.valid => 'Valid',
-    EvalStatus.not_valid => 'Not Valid',
-    EvalStatus.extraneous => 'Extraneous',
-    EvalStatus.sub_standard => 'Sub standard',
-  };
   final String hl7Code = status == EvalStatus.valid ? 'valid' : 'notvalid';
   final String hl7Display = status == EvalStatus.valid ? 'Valid' : 'Not Valid';
 
-  return CodeableConcept(coding: [
-    Coding(
-      system: cdsiSystem.toFhirUri,
-      code: cdsiCode.toFhirCode,
-      display: cdsiCode.toFhirString,
-    ),
+  final List<Coding> codings = [
     Coding(
       system: hl7System.toFhirUri,
       code: hl7Code.toFhirCode,
       display: hl7Display.toFhirString,
     ),
-  ]);
+  ];
+
+  // Add Cicada-specific code for extraneous (no standard equivalent)
+  if (status == EvalStatus.extraneous) {
+    codings.add(Coding(
+      system: cicadaSystem.toFhirUri,
+      code: 'extraneous'.toFhirCode,
+      display: 'Extraneous'.toFhirString,
+    ));
+  }
+
+  return CodeableConcept(coding: codings);
 }
 
 /// Maps [EvalReason] to a FHIR dose status reason CodeableConcept.

@@ -6,13 +6,15 @@
 [AssessmentDate]: StructureDefinition-assessment-date.html
 [BeginAge]: StructureDefinition-begin-age.html
 [CdsiObservationCodes]: CodeSystem-cdsi-observation-codes.html
+[EvalStatusCS]: CodeSystem-EvalStatus.html
 [VaccineConditionFhir]: StructureDefinition-VaccineConditionFhir.html
 [VaxDose]: StructureDefinition-vax-dose.html
+[DoseStatusReasonVS]: ValueSet-dose-status-reason.html
 [EndAge]: StructureDefinition-end-age.html
 [EvalReasonVS]: ValueSet-eval-reason.html
 [EvalReasonCS]: CodeSystem-EvalReason.html
-[EvalStatusCS]: CodeSystem-EvalStatus.html
 [EvalStatusVS]: ValueSet-eval-status.html
+[ForecastStatusVS]: ValueSet-forecast-status.html
 [Icd10ToCdsiObservation]: ConceptMap-Icd10ToCdsiObservation.html
 [ProcedureProfile]: StructureDefinition-ProcedureProfile.html
 [VaccineMedicationCodesRxnorm]: ValueSet-vaccine-medication-codes-rxnorm.html

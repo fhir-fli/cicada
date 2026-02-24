@@ -1,6 +1,6 @@
 Output File                                                 Name                               Type        FSH File                                Lines
 CodeSystem-EvalReason.json                                  EvalReasonCS                       CodeSystem  cs_vs_eval_reason.fsh                   1 - 19
-CodeSystem-EvalStatus.json                                  EvalStatusCS                       CodeSystem  cs_vs_eval_status.fsh                   1 - 8
+CodeSystem-EvalStatus.json                                  EvalStatusCS                       CodeSystem  cs_vs_eval_status.fsh                   1 - 5
 CodeSystem-IntervalReason.json                              IntervalReasonCS                   CodeSystem  cs_vs_interval_reason.fsh               1 - 7
 CodeSystem-PreferredAllowedReason.json                      PreferredAllowedReasonCS           CodeSystem  cs_vs_preferred_allowed_reason.fsh      1 - 10
 CodeSystem-VaccineGender.json                               VaccineGenderCS                    CodeSystem  cs_vs_vaccine_gender.fsh                2 - 9
@@ -38,8 +38,10 @@ StructureDefinition-valid-age-status.json                   ValidAgeStatus      
 StructureDefinition-vax-dose.json                           VaxDose                            Profile     vax_dose_immunization_profile.fsh       1 - 36
 StructureDefinition-vax-patient.json                        VaxPatient                         Profile     profile_vax_patient.fsh                 2 - 14
 ValueSet-VaccineCodesCvxMvx.json                            VaccineCodesCvxMvx                 ValueSet    vs_vaccine_codes_cvx_mvx.fsh            1 - 3
+ValueSet-dose-status-reason.json                            DoseStatusReasonVS                 ValueSet    cs_vs_dose_status_reason.fsh            1 - 5
 ValueSet-eval-reason.json                                   EvalReasonVS                       ValueSet    cs_vs_eval_reason.fsh                   21 - 39
-ValueSet-eval-status.json                                   EvalStatusVS                       ValueSet    cs_vs_eval_status.fsh                   10 - 17
+ValueSet-eval-status.json                                   EvalStatusVS                       ValueSet    cs_vs_eval_status.fsh                   7 - 12
+ValueSet-forecast-status.json                               ForecastStatusVS                   ValueSet    cs_vs_forecast_status.fsh               1 - 13
 ValueSet-immunization-procedures-cpt.json                   ImmunizationProceduresCpt          ValueSet    vs_vaccine_condition_codes_cpt.fsh      1 - 15
 ValueSet-interval-reason.json                               IntervalReasonVS                   ValueSet    cs_vs_interval_reason.fsh               9 - 15
 ValueSet-preferred-allowed-reason.json                      PreferredAllowedReasonVS           ValueSet    cs_vs_preferred_allowed_reason.fsh      12 - 21

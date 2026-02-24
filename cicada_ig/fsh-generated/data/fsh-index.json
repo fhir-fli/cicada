@@ -13,7 +13,7 @@
     "fshType": "CodeSystem",
     "fshFile": "cs_vs_eval_status.fsh",
     "startLine": 1,
-    "endLine": 8
+    "endLine": 5
   },
   {
     "outputFile": "CodeSystem-IntervalReason.json",
@@ -312,6 +312,14 @@
     "endLine": 3
   },
   {
+    "outputFile": "ValueSet-dose-status-reason.json",
+    "fshName": "DoseStatusReasonVS",
+    "fshType": "ValueSet",
+    "fshFile": "cs_vs_dose_status_reason.fsh",
+    "startLine": 1,
+    "endLine": 5
+  },
+  {
     "outputFile": "ValueSet-eval-reason.json",
     "fshName": "EvalReasonVS",
     "fshType": "ValueSet",
@@ -324,8 +332,16 @@
     "fshName": "EvalStatusVS",
     "fshType": "ValueSet",
     "fshFile": "cs_vs_eval_status.fsh",
-    "startLine": 10,
-    "endLine": 17
+    "startLine": 7,
+    "endLine": 12
+  },
+  {
+    "outputFile": "ValueSet-forecast-status.json",
+    "fshName": "ForecastStatusVS",
+    "fshType": "ValueSet",
+    "fshFile": "cs_vs_forecast_status.fsh",
+    "startLine": 1,
+    "endLine": 13
   },
   {
     "outputFile": "ValueSet-immunization-procedures-cpt.json",

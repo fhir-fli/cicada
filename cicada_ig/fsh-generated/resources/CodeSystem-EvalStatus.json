@@ -4,30 +4,15 @@
   "content": "complete",
   "name": "EvalStatusCS",
   "id": "EvalStatus",
-  "title": "Evaluation Status",
-  "description": "The status of the result of an evaluation.",
+  "title": "Cicada Evaluation Status",
+  "description": "Extension codes for dose evaluation status beyond the HL7 THO immunization-evaluation-dose-status CodeSystem. Only codes not covered by the standard are defined here.",
   "url": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/EvalStatus",
   "concept": [
     {
-      "code": "valid",
-      "display": "Valid",
-      "definition": "Valid"
-    },
-    {
-      "code": "not_valid",
-      "display": "Not Valid",
-      "definition": "Not Valid"
-    },
-    {
       "code": "extraneous",
       "display": "Extraneous",
-      "definition": "Extraneous"
-    },
-    {
-      "code": "sub_standard",
-      "display": "Substandard",
-      "definition": "Substandard"
+      "definition": "The dose was administered after the series was already complete. Every administered dose must be reported, so extraneous doses are tracked but do not affect the forecast."
     }
   ],
-  "count": 4
+  "count": 1
 }
