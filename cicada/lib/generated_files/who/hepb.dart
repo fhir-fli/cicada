@@ -135,17 +135,22 @@ final AntigenSupportingData whoHepb = AntigenSupportingData.fromJson(
                     "doseNumber": "Dose 3",
                     "age": [
                         {
-                            "absMinAge": "14 weeks",
-                            "minAge": "14 weeks",
-                            "earliestRecAge": "14 weeks"
+                            "absMinAge": "24 weeks",
+                            "minAge": "24 weeks",
+                            "earliestRecAge": "24 weeks"
                         }
                     ],
                     "interval": [
                         {
                             "fromPrevious": "Y",
-                            "absMinInt": "4 weeks",
-                            "minInt": "4 weeks",
+                            "absMinInt": "8 weeks",
+                            "minInt": "8 weeks",
                             "earliestRecInt": "8 weeks"
+                        },
+                        {
+                            "absMinInt": "16 weeks",
+                            "minInt": "16 weeks",
+                            "earliestRecInt": "16 weeks"
                         }
                     ],
                     "preferableVaccine": [
