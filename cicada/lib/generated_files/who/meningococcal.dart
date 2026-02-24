@@ -35,8 +35,7 @@ final AntigenSupportingData whoMeningococcal = AntigenSupportingData.fromJson(
                         {
                             "absMinAge": "9 months",
                             "minAge": "9 months",
-                            "earliestRecAge": "9 months",
-                            "latestRecAge": "18 months"
+                            "earliestRecAge": "9 months"
                         }
                     ],
                     "preferableVaccine": [

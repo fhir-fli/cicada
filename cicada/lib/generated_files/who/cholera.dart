@@ -8,7 +8,7 @@ final AntigenSupportingData whoCholera = AntigenSupportingData.fromJson(
     "vaccineGroup": "Cholera",
     "series": [
         {
-            "seriesName": "WHO Cholera oral 2-dose series",
+            "seriesName": "WHO Cholera single-dose series",
             "targetDisease": "Cholera",
             "vaccineGroup": "Cholera",
             "seriesType": "Risk",
@@ -25,7 +25,65 @@ final AntigenSupportingData whoCholera = AntigenSupportingData.fromJson(
                     "observationCode": {
                         "text": "Lives in or traveling to cholera endemic/outbreak area",
                         "code": "1013"
-                    }
+                    },
+                    "description": "",
+                    "beginAge": "",
+                    "endAge": "",
+                    "guidance": ""
+                }
+            ],
+            "seriesDose": [
+                {
+                    "doseNumber": "Dose 1",
+                    "age": [
+                        {
+                            "absMinAge": "1 year",
+                            "minAge": "1 year",
+                            "earliestRecAge": "1 year"
+                        }
+                    ],
+                    "preferableVaccine": [
+                        {
+                            "vaccineType": "Cholera, oral (BivWC)",
+                            "cvx": "26",
+                            "beginAge": "1 year",
+                            "forecastVaccineType": "Y"
+                        }
+                    ],
+                    "allowableVaccine": [
+                        {
+                            "vaccineType": "Cholera, oral (BivWC)",
+                            "cvx": "26",
+                            "beginAge": "1 year"
+                        }
+                    ],
+                    "recurringDose": "No"
+                }
+            ]
+        },
+        {
+            "seriesName": "WHO Cholera oral 2-dose series",
+            "targetDisease": "Cholera",
+            "vaccineGroup": "Cholera",
+            "seriesType": "Risk",
+            "selectSeries": {
+                "defaultSeries": "No",
+                "productPath": "No",
+                "seriesGroupName": "Increased Risk",
+                "seriesGroup": "1",
+                "seriesPriority": "A",
+                "seriesPreference": "2"
+            },
+            "indication": [
+                {
+                    "observationCode": {
+                        "text": "Lives in or traveling to cholera endemic/outbreak area",
+                        "code": "1013"
+                    },
+                    "description": "",
+                    "beginAge": "",
+                    "endAge": "",
+                    "guidance": ""
                 }
             ],
             "seriesDose": [
@@ -62,8 +120,7 @@ final AntigenSupportingData whoCholera = AntigenSupportingData.fromJson(
                             "fromPrevious": "Y",
                             "absMinInt": "2 weeks",
                             "minInt": "2 weeks",
-                            "earliestRecInt": "2 weeks",
-                            "latestRecInt": "6 weeks"
+                            "earliestRecInt": "2 weeks"
                         }
                     ],
                     "preferableVaccine": [

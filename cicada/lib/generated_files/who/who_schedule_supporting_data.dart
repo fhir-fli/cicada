@@ -1128,6 +1128,21 @@ final whoScheduleSupportingData = ScheduleSupportingData.fromJson(
                         }
                     ]
                 }
+            },
+            {
+                "observationCode": "1020",
+                "observationTitle": "Healthcare worker",
+                "indicationText": "Patient is a healthcare worker with occupational exposure risk"
+            },
+            {
+                "observationCode": "1021",
+                "observationTitle": "Older adult 60+ years",
+                "indicationText": "Patient is an older adult (60 years or older)"
+            },
+            {
+                "observationCode": "1022",
+                "observationTitle": "Immunocompromised individual",
+                "indicationText": "Patient is immunocompromised"
             }
         ]
     }
