@@ -5,12 +5,17 @@ import 'package:cicada_generator/antigen_sheet_parser.dart';
 import 'package:cicada_generator/schedule_sheet_parser.dart';
 
 void main(List<String> args) {
-  final whoMode = args.contains('--who');
+  final cdcOnly = args.contains('--cdc');
+  final whoOnly = args.contains('--who');
 
-  if (whoMode) {
+  if (cdcOnly) {
+    _generateCdc();
+  } else if (whoOnly) {
     _generateWho();
   } else {
+    // Default: generate both
     _generateCdc();
+    _generateWho();
   }
 }
 

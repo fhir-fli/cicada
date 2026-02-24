@@ -6,9 +6,7 @@ import 'package:shelf/shelf.dart';
 import 'package:shelf/shelf_io.dart' as shelf_io;
 import 'package:shelf_router/shelf_router.dart';
 
-import 'package:cicada/forecast/forecast.dart';
-import 'package:cicada/utils/fhir_json_to_xml.dart';
-import 'package:cicada/utils/fhir_xml_to_json.dart';
+import 'package:cicada/cicada.dart';
 
 void main(List<String> args) async {
   final parser = ArgParser()
@@ -19,6 +17,7 @@ void main(List<String> args) async {
 
   final router = Router()
     ..post(r'/$immds-forecast', _handleForecast)
+    ..post(r'/$immds-forecast-who', _handleForecastWho)
     ..post('/', _handleForecast)
     ..post('/<anything|.*>', _handleForecast)
     ..get('/metadata', _handleMetadata)
@@ -33,12 +32,20 @@ void main(List<String> args) async {
   print('Cicada ImmDS server listening on port ${server.port}');
 }
 
-/// POST /$immds-forecast — run the forecasting engine.
-/// Accepts JSON or XML input and returns the corresponding format.
-Future<Response> _handleForecast(Request request) async {
+/// POST /$immds-forecast — run the CDC forecasting engine.
+Future<Response> _handleForecast(Request request) =>
+    _runForecast(request, ForecastMode.cdc);
+
+/// POST /$immds-forecast-who — run the WHO forecasting engine.
+Future<Response> _handleForecastWho(Request request) =>
+    _runForecast(request, ForecastMode.who);
+
+/// Shared forecast handler. Accepts JSON or XML input, runs the engine with
+/// the given [mode], and returns the corresponding format.
+Future<Response> _runForecast(Request request, ForecastMode mode) async {
   try {
     final body = await request.readAsString();
-    print('  Body length: ${body.length}');
+    print('  Body length: ${body.length} (mode: ${mode.name})');
 
     if (body.isEmpty) {
       return _operationOutcome('No request body provided', 400);
@@ -68,7 +75,7 @@ Future<Response> _handleForecast(Request request) async {
     }
 
     // --- Run forecast ---
-    final output = forecastFromMap(json);
+    final output = forecastFromMap(json, mode: mode);
     final outputJson = output.toJson();
 
     // --- Format output ---
@@ -76,7 +83,6 @@ Future<Response> _handleForecast(Request request) async {
       try {
         final xmlResponse = fhirJsonToXml(outputJson);
         print('  Response XML length: ${xmlResponse.length}');
-        // Log first request/response pair to files for debugging
         _logOnce('request', body);
         _logOnce('response', xmlResponse);
         final xmlContentType = accept.contains('fhir')
@@ -129,6 +135,11 @@ Response _handleMetadata(Request request) {
             'definition':
                 'http://hl7.org/fhir/us/immds/OperationDefinition/immds-forecast',
           },
+          {
+            'name': 'immds-forecast-who',
+            'definition':
+                'http://hl7.org/fhir/us/immds/OperationDefinition/immds-forecast',
+          },
         ],
       },
     ],
@@ -150,7 +161,10 @@ Response _handleRoot(Request request) {
       'name': 'Cicada ImmDS Forecast Server',
       'status': 'ok',
       'fhirVersion': '4.0.1',
-      'operation': r'POST /$immds-forecast',
+      'operations': [
+        r'POST /$immds-forecast (CDC/CDSi)',
+        r'POST /$immds-forecast-who (WHO EPI)',
+      ],
     }),
     headers: {'content-type': 'application/json'},
   );
