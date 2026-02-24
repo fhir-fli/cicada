@@ -22,8 +22,7 @@
                         {
                             "absMinAge": "6 weeks",
                             "minAge": "6 weeks",
-                            "earliestRecAge": "6 weeks",
-                            "maxAge": "15 weeks"
+                            "earliestRecAge": "6 weeks"
                         }
                     ],
                     "preferableVaccine": [
@@ -117,8 +116,7 @@
                         {
                             "absMinAge": "6 weeks",
                             "minAge": "6 weeks",
-                            "earliestRecAge": "6 weeks",
-                            "maxAge": "15 weeks"
+                            "earliestRecAge": "6 weeks"
                         }
                     ],
                     "preferableVaccine": [

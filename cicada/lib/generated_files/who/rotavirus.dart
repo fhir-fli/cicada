@@ -27,8 +27,7 @@ final AntigenSupportingData whoRotavirus = AntigenSupportingData.fromJson(
                         {
                             "absMinAge": "6 weeks",
                             "minAge": "6 weeks",
-                            "earliestRecAge": "6 weeks",
-                            "maxAge": "15 weeks"
+                            "earliestRecAge": "6 weeks"
                         }
                     ],
                     "preferableVaccine": [
@@ -122,8 +121,7 @@ final AntigenSupportingData whoRotavirus = AntigenSupportingData.fromJson(
                         {
                             "absMinAge": "6 weeks",
                             "minAge": "6 weeks",
-                            "earliestRecAge": "6 weeks",
-                            "maxAge": "15 weeks"
+                            "earliestRecAge": "6 weeks"
                         }
                     ],
                     "preferableVaccine": [

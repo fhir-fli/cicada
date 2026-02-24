@@ -8,7 +8,7 @@ final AntigenSupportingData whoPolio = AntigenSupportingData.fromJson(
     "vaccineGroup": "Polio",
     "series": [
         {
-            "seriesName": "WHO Polio 5-dose series",
+            "seriesName": "WHO Polio 4-dose series (OPV+IPV)",
             "targetDisease": "Polio",
             "vaccineGroup": "Polio",
             "seriesType": "Standard",
@@ -25,9 +25,9 @@ final AntigenSupportingData whoPolio = AntigenSupportingData.fromJson(
                     "doseNumber": "Dose 1",
                     "age": [
                         {
-                            "absMinAge": "0 days",
-                            "minAge": "0 days",
-                            "earliestRecAge": "0 days"
+                            "absMinAge": "6 weeks",
+                            "minAge": "6 weeks",
+                            "earliestRecAge": "6 weeks"
                         }
                     ],
                     "preferableVaccine": [
@@ -52,61 +52,11 @@ final AntigenSupportingData whoPolio = AntigenSupportingData.fromJson(
                         {
                             "vaccineType": "IPV",
                             "cvx": "10",
-                            "beginAge": "0 days"
+                            "beginAge": "6 weeks"
                         },
                         {
                             "vaccineType": "Polio, unspecified",
                             "cvx": "89",
-                            "beginAge": "0 days"
-                        }
-                    ],
-                    "recurringDose": "No"
-                },
-                {
-                    "doseNumber": "Dose 2",
-                    "age": [
-                        {
-                            "absMinAge": "6 weeks",
-                            "minAge": "6 weeks",
-                            "earliestRecAge": "6 weeks"
-                        }
-                    ],
-                    "interval": [
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "4 weeks",
-                            "minInt": "4 weeks",
-                            "earliestRecInt": "6 weeks"
-                        }
-                    ],
-                    "preferableVaccine": [
-                        {
-                            "vaccineType": "IPV",
-                            "cvx": "10",
-                            "beginAge": "6 weeks",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "OPV, bivalent",
-                            "cvx": "178",
-                            "beginAge": "6 weeks",
-                            "forecastVaccineType": "N"
-                        }
-                    ],
-                    "allowableVaccine": [
-                        {
-                            "vaccineType": "IPV",
-                            "cvx": "10",
-                            "beginAge": "6 weeks"
-                        },
-                        {
-                            "vaccineType": "OPV, bivalent",
-                            "cvx": "178",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "OPV, trivalent",
-                            "cvx": "02",
                             "beginAge": "0 days"
                         },
                         {
@@ -118,12 +68,17 @@ final AntigenSupportingData whoPolio = AntigenSupportingData.fromJson(
                             "vaccineType": "DTaP-IPV/Hib",
                             "cvx": "120",
                             "beginAge": "6 weeks"
+                        },
+                        {
+                            "vaccineType": "DTP-HepB-Hib",
+                            "cvx": "198",
+                            "beginAge": "6 weeks"
                         }
                     ],
                     "recurringDose": "No"
                 },
                 {
-                    "doseNumber": "Dose 3",
+                    "doseNumber": "Dose 2",
                     "age": [
                         {
                             "absMinAge": "10 weeks",
@@ -143,7 +98,7 @@ final AntigenSupportingData whoPolio = AntigenSupportingData.fromJson(
                         {
                             "vaccineType": "OPV, bivalent",
                             "cvx": "178",
-                            "beginAge": "6 weeks",
+                            "beginAge": "0 days",
                             "forecastVaccineType": "Y"
                         }
                     ],
@@ -162,12 +117,32 @@ final AntigenSupportingData whoPolio = AntigenSupportingData.fromJson(
                             "vaccineType": "IPV",
                             "cvx": "10",
                             "beginAge": "6 weeks"
+                        },
+                        {
+                            "vaccineType": "Polio, unspecified",
+                            "cvx": "89",
+                            "beginAge": "0 days"
+                        },
+                        {
+                            "vaccineType": "DTaP-IPV",
+                            "cvx": "130",
+                            "beginAge": "6 weeks"
+                        },
+                        {
+                            "vaccineType": "DTaP-IPV/Hib",
+                            "cvx": "120",
+                            "beginAge": "6 weeks"
+                        },
+                        {
+                            "vaccineType": "DTP-HepB-Hib",
+                            "cvx": "198",
+                            "beginAge": "6 weeks"
                         }
                     ],
                     "recurringDose": "No"
                 },
                 {
-                    "doseNumber": "Dose 4",
+                    "doseNumber": "Dose 3",
                     "age": [
                         {
                             "absMinAge": "14 weeks",
@@ -187,22 +162,17 @@ final AntigenSupportingData whoPolio = AntigenSupportingData.fromJson(
                         {
                             "vaccineType": "IPV",
                             "cvx": "10",
-                            "beginAge": "14 weeks",
+                            "beginAge": "6 weeks",
                             "forecastVaccineType": "Y"
                         },
                         {
                             "vaccineType": "OPV, bivalent",
                             "cvx": "178",
-                            "beginAge": "6 weeks",
+                            "beginAge": "0 days",
                             "forecastVaccineType": "N"
                         }
                     ],
                     "allowableVaccine": [
-                        {
-                            "vaccineType": "IPV",
-                            "cvx": "10",
-                            "beginAge": "6 weeks"
-                        },
                         {
                             "vaccineType": "OPV, bivalent",
                             "cvx": "178",
@@ -214,15 +184,35 @@ final AntigenSupportingData whoPolio = AntigenSupportingData.fromJson(
                             "beginAge": "0 days"
                         },
                         {
+                            "vaccineType": "IPV",
+                            "cvx": "10",
+                            "beginAge": "6 weeks"
+                        },
+                        {
+                            "vaccineType": "Polio, unspecified",
+                            "cvx": "89",
+                            "beginAge": "0 days"
+                        },
+                        {
                             "vaccineType": "DTaP-IPV",
                             "cvx": "130",
+                            "beginAge": "6 weeks"
+                        },
+                        {
+                            "vaccineType": "DTaP-IPV/Hib",
+                            "cvx": "120",
+                            "beginAge": "6 weeks"
+                        },
+                        {
+                            "vaccineType": "DTP-HepB-Hib",
+                            "cvx": "198",
                             "beginAge": "6 weeks"
                         }
                     ],
                     "recurringDose": "No"
                 },
                 {
-                    "doseNumber": "Dose 5",
+                    "doseNumber": "Dose 4",
                     "age": [
                         {
                             "absMinAge": "9 months",
@@ -255,6 +245,11 @@ final AntigenSupportingData whoPolio = AntigenSupportingData.fromJson(
                         {
                             "vaccineType": "OPV, bivalent",
                             "cvx": "178",
+                            "beginAge": "0 days"
+                        },
+                        {
+                            "vaccineType": "OPV, trivalent",
+                            "cvx": "02",
                             "beginAge": "0 days"
                         }
                     ],
