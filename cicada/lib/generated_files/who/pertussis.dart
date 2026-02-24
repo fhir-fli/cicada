@@ -8,7 +8,7 @@ final AntigenSupportingData whoPertussis = AntigenSupportingData.fromJson(
     "vaccineGroup": "DTP",
     "series": [
         {
-            "seriesName": "WHO Pertussis 5-dose series",
+            "seriesName": "WHO Pertussis 4-dose series (3p+1)",
             "targetDisease": "Pertussis",
             "vaccineGroup": "DTP",
             "seriesType": "Standard",
@@ -207,57 +207,6 @@ final AntigenSupportingData whoPertussis = AntigenSupportingData.fromJson(
                             "vaccineType": "Tdap",
                             "cvx": "115",
                             "beginAge": "6 weeks"
-                        }
-                    ],
-                    "recurringDose": "No"
-                },
-                {
-                    "doseNumber": "Dose 5",
-                    "age": [
-                        {
-                            "absMinAge": "4 years",
-                            "minAge": "4 years",
-                            "earliestRecAge": "4 years",
-                            "latestRecAge": "7 years"
-                        }
-                    ],
-                    "interval": [
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "6 months",
-                            "minInt": "6 months",
-                            "earliestRecInt": "3 years"
-                        }
-                    ],
-                    "preferableVaccine": [
-                        {
-                            "vaccineType": "DTP",
-                            "cvx": "01",
-                            "beginAge": "4 years",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "DTaP",
-                            "cvx": "20",
-                            "beginAge": "4 years",
-                            "forecastVaccineType": "N"
-                        }
-                    ],
-                    "allowableVaccine": [
-                        {
-                            "vaccineType": "DTP",
-                            "cvx": "01",
-                            "beginAge": "6 weeks"
-                        },
-                        {
-                            "vaccineType": "DTaP",
-                            "cvx": "20",
-                            "beginAge": "6 weeks"
-                        },
-                        {
-                            "vaccineType": "Tdap",
-                            "cvx": "115",
-                            "beginAge": "4 years"
                         }
                     ],
                     "recurringDose": "No"
