@@ -1,0 +1,83 @@
+// ignore_for_file: prefer_single_quotes, always_specify_types
+
+import '../../cicada.dart';
+
+final AntigenSupportingData whoMeningococcal = AntigenSupportingData.fromJson(
+{
+    "targetDisease": "Meningococcal",
+    "vaccineGroup": "Meningococcal",
+    "series": [
+        {
+            "seriesName": "WHO MenA conjugate 1-dose series",
+            "targetDisease": "Meningococcal",
+            "vaccineGroup": "Meningococcal",
+            "seriesType": "Risk",
+            "selectSeries": {
+                "defaultSeries": "No",
+                "productPath": "No",
+                "seriesGroupName": "Increased Risk",
+                "seriesGroup": "1",
+                "seriesPriority": "A",
+                "seriesPreference": "1"
+            },
+            "indication": [
+                {
+                    "observationCode": {
+                        "text": "Lives in meningitis belt",
+                        "code": "1010"
+                    }
+                }
+            ],
+            "seriesDose": [
+                {
+                    "doseNumber": "Dose 1",
+                    "age": [
+                        {
+                            "absMinAge": "9 months",
+                            "minAge": "9 months",
+                            "earliestRecAge": "9 months",
+                            "latestRecAge": "18 months"
+                        }
+                    ],
+                    "preferableVaccine": [
+                        {
+                            "vaccineType": "MenA conjugate (MenAfriVac)",
+                            "cvx": "163",
+                            "beginAge": "9 months",
+                            "forecastVaccineType": "Y"
+                        },
+                        {
+                            "vaccineType": "Meningococcal ACWY",
+                            "cvx": "108",
+                            "beginAge": "9 months",
+                            "forecastVaccineType": "N"
+                        }
+                    ],
+                    "allowableVaccine": [
+                        {
+                            "vaccineType": "MenA conjugate (MenAfriVac)",
+                            "cvx": "163",
+                            "beginAge": "9 months"
+                        },
+                        {
+                            "vaccineType": "Meningococcal ACWY",
+                            "cvx": "108",
+                            "beginAge": "9 months"
+                        },
+                        {
+                            "vaccineType": "Meningococcal ACWY (Menactra)",
+                            "cvx": "114",
+                            "beginAge": "9 months"
+                        },
+                        {
+                            "vaccineType": "Meningococcal ACWY (Menveo)",
+                            "cvx": "136",
+                            "beginAge": "2 months"
+                        }
+                    ],
+                    "recurringDose": "No"
+                }
+            ]
+        }
+    ]
+});

@@ -82,7 +82,7 @@ VaxObservation? observationFromCodeableConcept(CodeableConcept? code) {
 VaxObservation? _matchCodingsToObservation(List<Coding>? codings) {
   if (codings == null || codings.isEmpty) return null;
   final allObservations =
-      scheduleSupportingData.observations?.observation;
+      activeScheduleData.observations?.observation;
   if (allObservations == null || allObservations.isEmpty) return null;
 
   // Check for direct CDSi observation code (bypasses crosswalk)

@@ -1,0 +1,98 @@
+{
+    "targetDisease": "Rabies",
+    "vaccineGroup": "Rabies",
+    "series": [
+        {
+            "seriesName": "WHO Rabies pre-exposure 2-dose series",
+            "targetDisease": "Rabies",
+            "vaccineGroup": "Rabies",
+            "seriesType": "Risk",
+            "selectSeries": {
+                "defaultSeries": "No",
+                "productPath": "No",
+                "seriesGroupName": "Increased Risk",
+                "seriesGroup": "1",
+                "seriesPriority": "A",
+                "seriesPreference": "1"
+            },
+            "indication": [
+                {
+                    "observationCode": {
+                        "text": "High risk of rabies exposure",
+                        "code": "1015"
+                    }
+                }
+            ],
+            "seriesDose": [
+                {
+                    "doseNumber": "Dose 1",
+                    "preferableVaccine": [
+                        {
+                            "vaccineType": "Rabies, IM",
+                            "cvx": "18",
+                            "forecastVaccineType": "Y"
+                        },
+                        {
+                            "vaccineType": "Rabies, ID",
+                            "cvx": "40",
+                            "forecastVaccineType": "N"
+                        }
+                    ],
+                    "allowableVaccine": [
+                        {
+                            "vaccineType": "Rabies, IM",
+                            "cvx": "18"
+                        },
+                        {
+                            "vaccineType": "Rabies, ID",
+                            "cvx": "40"
+                        },
+                        {
+                            "vaccineType": "Rabies, unspecified",
+                            "cvx": "90"
+                        }
+                    ],
+                    "recurringDose": "No"
+                },
+                {
+                    "doseNumber": "Dose 2",
+                    "interval": [
+                        {
+                            "fromPrevious": "Y",
+                            "absMinInt": "7 days",
+                            "minInt": "7 days",
+                            "earliestRecInt": "7 days"
+                        }
+                    ],
+                    "preferableVaccine": [
+                        {
+                            "vaccineType": "Rabies, IM",
+                            "cvx": "18",
+                            "forecastVaccineType": "Y"
+                        },
+                        {
+                            "vaccineType": "Rabies, ID",
+                            "cvx": "40",
+                            "forecastVaccineType": "N"
+                        }
+                    ],
+                    "allowableVaccine": [
+                        {
+                            "vaccineType": "Rabies, IM",
+                            "cvx": "18"
+                        },
+                        {
+                            "vaccineType": "Rabies, ID",
+                            "cvx": "40"
+                        },
+                        {
+                            "vaccineType": "Rabies, unspecified",
+                            "cvx": "90"
+                        }
+                    ],
+                    "recurringDose": "No"
+                }
+            ]
+        }
+    ]
+}

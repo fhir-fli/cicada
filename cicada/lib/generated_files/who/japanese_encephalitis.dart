@@ -1,0 +1,98 @@
+// ignore_for_file: prefer_single_quotes, always_specify_types
+
+import '../../cicada.dart';
+
+final AntigenSupportingData whoJapaneseEncephalitis = AntigenSupportingData.fromJson(
+{
+    "targetDisease": "Japanese Encephalitis",
+    "vaccineGroup": "JE",
+    "series": [
+        {
+            "seriesName": "WHO JE 2-dose series (inactivated)",
+            "targetDisease": "Japanese Encephalitis",
+            "vaccineGroup": "JE",
+            "seriesType": "Risk",
+            "selectSeries": {
+                "defaultSeries": "No",
+                "productPath": "No",
+                "seriesGroupName": "Increased Risk",
+                "seriesGroup": "1",
+                "seriesPriority": "A",
+                "seriesPreference": "1"
+            },
+            "indication": [
+                {
+                    "observationCode": {
+                        "text": "Lives in or traveling to JE endemic area",
+                        "code": "1011"
+                    }
+                }
+            ],
+            "seriesDose": [
+                {
+                    "doseNumber": "Dose 1",
+                    "age": [
+                        {
+                            "absMinAge": "2 months",
+                            "minAge": "2 months",
+                            "earliestRecAge": "8 months"
+                        }
+                    ],
+                    "preferableVaccine": [
+                        {
+                            "vaccineType": "JE, inactivated (Ixiaro)",
+                            "cvx": "134",
+                            "beginAge": "2 months",
+                            "forecastVaccineType": "Y"
+                        }
+                    ],
+                    "allowableVaccine": [
+                        {
+                            "vaccineType": "JE, inactivated (Ixiaro)",
+                            "cvx": "134",
+                            "beginAge": "2 months"
+                        },
+                        {
+                            "vaccineType": "JE, unspecified",
+                            "cvx": "39",
+                            "beginAge": "2 months"
+                        }
+                    ],
+                    "recurringDose": "No"
+                },
+                {
+                    "doseNumber": "Dose 2",
+                    "interval": [
+                        {
+                            "fromPrevious": "Y",
+                            "absMinInt": "7 days",
+                            "minInt": "28 days",
+                            "earliestRecInt": "28 days"
+                        }
+                    ],
+                    "preferableVaccine": [
+                        {
+                            "vaccineType": "JE, inactivated (Ixiaro)",
+                            "cvx": "134",
+                            "beginAge": "2 months",
+                            "forecastVaccineType": "Y"
+                        }
+                    ],
+                    "allowableVaccine": [
+                        {
+                            "vaccineType": "JE, inactivated (Ixiaro)",
+                            "cvx": "134",
+                            "beginAge": "2 months"
+                        },
+                        {
+                            "vaccineType": "JE, unspecified",
+                            "cvx": "39",
+                            "beginAge": "2 months"
+                        }
+                    ],
+                    "recurringDose": "No"
+                }
+            ]
+        }
+    ]
+});

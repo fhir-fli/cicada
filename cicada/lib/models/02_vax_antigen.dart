@@ -97,7 +97,7 @@ class VaxAntigen {
 
   void immunity() {
     final List<int>? obsInts = observations.codesAsInt;
-    final AntigenSupportingData? ag = antigenSupportingDataMap[targetDisease];
+    final AntigenSupportingData? ag = activeAntigenMap[targetDisease];
 
     /// We check to see if the patient has any listed conditions that could
     /// make them immune

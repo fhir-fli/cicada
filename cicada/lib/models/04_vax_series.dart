@@ -621,7 +621,7 @@ class VaxSeries {
     for (int i = dosesToCheck.length - 1; i >= 0; i--) {
       final VaxDose dose = dosesToCheck[i];
       final List<LiveVirusConflict>? liveVirusConflicts =
-          scheduleSupportingData.liveVirusConflicts?.liveVirusConflict
+          activeScheduleData.liveVirusConflicts?.liveVirusConflict
               ?.where((LiveVirusConflict element) =>
                   element.previous?.cvxAsInt == dose.cvxAsInt)
               .toList();

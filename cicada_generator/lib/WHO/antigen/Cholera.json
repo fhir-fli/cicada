@@ -1,0 +1,84 @@
+{
+    "targetDisease": "Cholera",
+    "vaccineGroup": "Cholera",
+    "series": [
+        {
+            "seriesName": "WHO Cholera oral 2-dose series",
+            "targetDisease": "Cholera",
+            "vaccineGroup": "Cholera",
+            "seriesType": "Risk",
+            "selectSeries": {
+                "defaultSeries": "No",
+                "productPath": "No",
+                "seriesGroupName": "Increased Risk",
+                "seriesGroup": "1",
+                "seriesPriority": "A",
+                "seriesPreference": "1"
+            },
+            "indication": [
+                {
+                    "observationCode": {
+                        "code": "1013",
+                        "text": "Lives in or traveling to cholera endemic/outbreak area"
+                    }
+                }
+            ],
+            "seriesDose": [
+                {
+                    "doseNumber": "Dose 1",
+                    "age": [
+                        {
+                            "absMinAge": "1 year",
+                            "minAge": "1 year",
+                            "earliestRecAge": "1 year"
+                        }
+                    ],
+                    "preferableVaccine": [
+                        {
+                            "vaccineType": "Cholera, oral (BivWC)",
+                            "cvx": "26",
+                            "beginAge": "1 year",
+                            "forecastVaccineType": "Y"
+                        }
+                    ],
+                    "allowableVaccine": [
+                        {
+                            "vaccineType": "Cholera, oral (BivWC)",
+                            "cvx": "26",
+                            "beginAge": "1 year"
+                        }
+                    ],
+                    "recurringDose": "No"
+                },
+                {
+                    "doseNumber": "Dose 2",
+                    "interval": [
+                        {
+                            "fromPrevious": "Y",
+                            "absMinInt": "2 weeks",
+                            "minInt": "2 weeks",
+                            "earliestRecInt": "2 weeks",
+                            "latestRecInt": "6 weeks"
+                        }
+                    ],
+                    "preferableVaccine": [
+                        {
+                            "vaccineType": "Cholera, oral (BivWC)",
+                            "cvx": "26",
+                            "beginAge": "1 year",
+                            "forecastVaccineType": "Y"
+                        }
+                    ],
+                    "allowableVaccine": [
+                        {
+                            "vaccineType": "Cholera, oral (BivWC)",
+                            "cvx": "26",
+                            "beginAge": "1 year"
+                        }
+                    ],
+                    "recurringDose": "No"
+                }
+            ]
+        }
+    ]
+}

@@ -480,7 +480,7 @@ class VaxDose {
   }) {
     /// Look to see if the current cvx type is one of the conflict types listed
     /// in the supporting data
-    final List<LiveVirusConflict>? liveVirusConflicts = scheduleSupportingData
+    final List<LiveVirusConflict>? liveVirusConflicts = activeScheduleData
         .liveVirusConflicts?.liveVirusConflict
         ?.where((LiveVirusConflict element) =>
             element.current?.cvxAsInt == cvxAsInt)

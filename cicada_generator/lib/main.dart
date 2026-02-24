@@ -5,6 +5,20 @@ import 'package:cicada_generator/antigen_sheet_parser.dart';
 import 'package:cicada_generator/schedule_sheet_parser.dart';
 
 void main(List<String> args) {
+  final whoMode = args.contains('--who');
+
+  if (whoMode) {
+    _generateWho();
+  } else {
+    _generateCdc();
+  }
+}
+
+// =============================================================================
+//  CDC Mode (original pipeline)
+// =============================================================================
+
+void _generateCdc() {
   // 1) Auto-detect source directory
   final sourceDir = Directory(_findVersionSubdir('Excel'));
   if (!sourceDir.existsSync()) {
@@ -177,6 +191,230 @@ $fileString);
     'cicada/lib/generated_files/antigen_supporting_data.dart',
   ).writeAsStringSync(antigenOutputString.toString());
 }
+
+// =============================================================================
+//  WHO Mode
+// =============================================================================
+
+void _generateWho() {
+  final antigenDir = Directory('cicada_generator/lib/WHO/antigen');
+  final scheduleDir = Directory('cicada_generator/lib/WHO/schedule');
+
+  if (!antigenDir.existsSync()) {
+    print('WHO antigen directory not found: ${antigenDir.path}');
+    return;
+  }
+
+  // Create output directories
+  final outputJsonDir = Directory('cicada_generator/lib/generated_files/who');
+  if (outputJsonDir.existsSync()) {
+    for (final f in outputJsonDir.listSync()) {
+      if (f is File && f.path.endsWith('.json')) f.deleteSync();
+    }
+  } else {
+    outputJsonDir.createSync(recursive: true);
+  }
+
+  final dartOutputDir = Directory('cicada/lib/generated_files/who');
+  if (!dartOutputDir.existsSync()) {
+    dartOutputDir.createSync(recursive: true);
+  }
+
+  final antigenParser = AntigenSheetParser();
+  final scheduleParser = ScheduleSheetParser();
+  // Use a map to deduplicate by targetDisease (JSON takes precedence over xlsx)
+  final Map<String, AntigenSupportingData> antigenByDisease = {};
+  var scheduleData = ScheduleSupportingData();
+
+  // ---------- Process antigen files ----------
+  // Process xlsx first, then json (so json overwrites xlsx for same disease)
+  final files = antigenDir.listSync().whereType<File>().toList()
+    ..sort((a, b) {
+      // xlsx before json so json takes precedence
+      final aIsJson = a.path.endsWith('.json') ? 1 : 0;
+      final bIsJson = b.path.endsWith('.json') ? 1 : 0;
+      return aIsJson.compareTo(bIsJson);
+    });
+
+  for (final fileEntity in files) {
+    final filePath = fileEntity.path;
+
+    if (filePath.endsWith('.xlsx')) {
+      print('Processing WHO antigen Excel: $filePath');
+      try {
+        final antigenData = antigenParser.parseFile(filePath);
+        final disease = antigenData.targetDisease;
+        if (disease != null) {
+          antigenByDisease[disease] = antigenData;
+          final jsonPath = '${outputJsonDir.path}/$disease.json';
+          File(jsonPath)
+              .writeAsStringSync(jsonPrettyPrint(antigenData.toJson()));
+          print('Wrote $jsonPath');
+        }
+      } catch (e) {
+        print('ERROR processing $filePath: $e');
+      }
+    } else if (filePath.endsWith('.json')) {
+      print('Processing WHO antigen JSON: $filePath');
+      try {
+        final jsonData = json.decode(File(filePath).readAsStringSync())
+            as Map<String, dynamic>;
+        var antigenData = AntigenSupportingData.fromJson(jsonData);
+        if (antigenData.targetDisease == null &&
+            antigenData.series != null &&
+            antigenData.series!.isNotEmpty) {
+          antigenData = antigenData.copyWith(
+            targetDisease: antigenData.series!.first.targetDisease,
+            vaccineGroup: antigenData.series!.first.vaccineGroup,
+          );
+        }
+        final disease = antigenData.targetDisease;
+        if (disease != null) {
+          antigenByDisease[disease] = antigenData;
+          final jsonPath = '${outputJsonDir.path}/$disease.json';
+          File(jsonPath)
+              .writeAsStringSync(jsonPrettyPrint(antigenData.toJson()));
+          print('Wrote $jsonPath');
+        }
+      } catch (e) {
+        print('ERROR processing $filePath: $e');
+      }
+    }
+  }
+
+  final allAntigenData = antigenByDisease.values.toList();
+
+  // ---------- Process schedule files ----------
+  if (scheduleDir.existsSync()) {
+    for (final fileEntity in scheduleDir.listSync()) {
+      if (fileEntity is! File) continue;
+      final filePath = fileEntity.path;
+
+      if (filePath.endsWith('.xlsx')) {
+        print('Processing WHO schedule Excel: $filePath');
+        try {
+          scheduleData = scheduleParser.parseFile(filePath, scheduleData);
+        } catch (e) {
+          print('ERROR processing $filePath: $e');
+        }
+      } else if (filePath.endsWith('.json')) {
+        print('Processing WHO schedule JSON: $filePath');
+        try {
+          final jsonData = json.decode(File(filePath).readAsStringSync())
+              as Map<String, dynamic>;
+          final partial = ScheduleSupportingData.fromJson(jsonData);
+          scheduleData = ScheduleSupportingData(
+            liveVirusConflicts:
+                partial.liveVirusConflicts ?? scheduleData.liveVirusConflicts,
+            vaccineGroups:
+                partial.vaccineGroups ?? scheduleData.vaccineGroups,
+            vaccineGroupToAntigenMap: partial.vaccineGroupToAntigenMap ??
+                scheduleData.vaccineGroupToAntigenMap,
+            cvxToAntigenMap:
+                partial.cvxToAntigenMap ?? scheduleData.cvxToAntigenMap,
+            observations:
+                partial.observations ?? scheduleData.observations,
+          );
+        } catch (e) {
+          print('ERROR processing $filePath: $e');
+        }
+      }
+    }
+  }
+
+  // ---------- Write schedule Dart ----------
+  final scheduleJsonPath =
+      '${outputJsonDir.path}/schedule_supporting_data.json';
+  File(scheduleJsonPath)
+      .writeAsStringSync(jsonPrettyPrint(scheduleData.toJson()));
+
+  final scheduleDartString = '''
+// ignore_for_file: prefer_single_quotes, always_specify_types
+
+import '../../cicada.dart';
+
+final whoScheduleSupportingData = ScheduleSupportingData.fromJson(
+${jsonPrettyPrint(scheduleData.toJson())});
+''';
+
+  File('${dartOutputDir.path}/who_schedule_supporting_data.dart')
+      .writeAsStringSync(scheduleDartString);
+  print('Wrote WHO schedule supporting data');
+
+  // ---------- Write antigen Dart files ----------
+  for (final file in outputJsonDir.listSync()) {
+    if (file is File &&
+        file.path.endsWith('.json') &&
+        !file.path.contains('schedule')) {
+      final fileString = file.readAsStringSync();
+      final fileName = file.path
+          .split('/')
+          .last
+          .replaceAll('.json', '')
+          .toLowerCase()
+          .replaceAll(' ', '_')
+          .replaceAll('-', '_');
+      final className = 'who${snakeCaseToCamelCase(fileName).replaceRange(0, 1, snakeCaseToCamelCase(fileName)[0].toUpperCase())}';
+      final dartString = '''
+// ignore_for_file: prefer_single_quotes, always_specify_types
+
+import '../../cicada.dart';
+
+final AntigenSupportingData $className = AntigenSupportingData.fromJson(
+$fileString);
+''';
+      File('${dartOutputDir.path}/$fileName.dart')
+          .writeAsStringSync(dartString);
+      print('Generated WHO file: $fileName.dart');
+    }
+  }
+
+  // ---------- Write barrel file ----------
+  final antigenOutputString = StringBuffer();
+  final fileNames = <String>[];
+  for (final agData in allAntigenData) {
+    fileNames.add(
+      agData.targetDisease!
+          .toLowerCase()
+          .replaceAll(' ', '_')
+          .replaceAll('-', '_'),
+    );
+  }
+  for (final fileName in fileNames) {
+    antigenOutputString.writeln("import '$fileName.dart';");
+  }
+  // Schedule is imported separately; not needed in the barrel file.
+
+  // List
+  antigenOutputString.writeln('\n\nfinal whoAntigenSupportingData = [');
+  final classNames = fileNames.map((e) {
+    final camel = snakeCaseToCamelCase(e);
+    return 'who${camel.replaceRange(0, 1, camel[0].toUpperCase())}';
+  }).toList();
+  for (final className in classNames) {
+    antigenOutputString.writeln('  $className,');
+  }
+  antigenOutputString.writeln('];\n');
+
+  // Map
+  antigenOutputString.writeln('final whoAntigenSupportingDataMap = {');
+  for (var i = 0; i < allAntigenData.length; i++) {
+    antigenOutputString.writeln(
+        "  '${allAntigenData[i].targetDisease}': ${classNames[i]},");
+  }
+  antigenOutputString.writeln('};\n');
+
+  File('${dartOutputDir.path}/who_antigen_supporting_data.dart')
+      .writeAsStringSync(antigenOutputString.toString());
+
+  print('\nWHO generation complete:');
+  print('  ${allAntigenData.length} antigens');
+  print('  Output: ${dartOutputDir.path}/');
+}
+
+// =============================================================================
+//  Shared Utilities
+// =============================================================================
 
 const jsonEncoder = JsonEncoder.withIndent('    ');
 

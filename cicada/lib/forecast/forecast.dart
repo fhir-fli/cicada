@@ -41,11 +41,17 @@ class VaccineGroupForecast {
   final int? doseNumber;
 }
 
-/// Multi-antigen vaccine groups per CDSi spec Chapter 9
-const _multiAntigenGroups = <String, List<String>>{
-  'DTaP/Tdap/Td': ['Diphtheria', 'Tetanus', 'Pertussis'],
-  'MMR': ['Measles', 'Mumps', 'Rubella'],
-};
+/// Multi-antigen vaccine groups derived from the active schedule data.
+/// Falls back to CDSi defaults if the map is not available.
+Map<String, List<String>> get _multiAntigenGroups {
+  final derived = activeMultiAntigenGroups;
+  if (derived.isNotEmpty) return derived;
+  // CDSi fallback
+  return const {
+    'DTaP/Tdap/Td': ['Diphtheria', 'Tetanus', 'Pertussis'],
+    'MMR': ['Measles', 'Mumps', 'Rubella'],
+  };
+}
 
 /// CDSi Section 8.8 — Determine Best Patient Series (Table 8-14).
 ///
@@ -658,7 +664,7 @@ Map<String, VaccineGroupForecast> _aggregateVaccineGroupForecasts(
     }
     if (doseNums.isNotEmpty) {
       // Look up administerFullVaccineGroup flag
-      final vgList = scheduleSupportingData.vaccineGroups?.vaccineGroup
+      final vgList = activeScheduleData.vaccineGroups?.vaccineGroup
           ?.where((g) => g.name == groupName);
       final vgDef = (vgList != null && vgList.isNotEmpty)
           ? vgList.first
@@ -689,15 +695,18 @@ Map<String, VaccineGroupForecast> _aggregateVaccineGroupForecasts(
   return result;
 }
 
-Parameters forecastFromMap(Map<String, dynamic> parameters) {
+Parameters forecastFromMap(Map<String, dynamic> parameters,
+    {ForecastMode mode = ForecastMode.cdc}) {
   if (parameters['resourceType'] == 'Parameters') {
     final Parameters newParameters = Parameters.fromJson(parameters);
-    return forecastFromParameters(newParameters);
+    return forecastFromParameters(newParameters, mode: mode);
   }
   return const Parameters();
 }
 
-ForecastResult evaluateForForecast(Parameters parameters) {
+ForecastResult evaluateForForecast(Parameters parameters,
+    {ForecastMode mode = ForecastMode.cdc}) {
+  setForecastMode(mode);
   final ProviderContainer container = ProviderContainer();
 
   /// Parse out and organize all of the information from input parameters
@@ -743,7 +752,8 @@ ForecastResult evaluateForForecast(Parameters parameters) {
   );
 }
 
-Parameters forecastFromParameters(Parameters parameters) {
-  final result = evaluateForForecast(parameters);
+Parameters forecastFromParameters(Parameters parameters,
+    {ForecastMode mode = ForecastMode.cdc}) {
+  final result = evaluateForForecast(parameters, mode: mode);
   return buildImmdsResponse(result);
 }
