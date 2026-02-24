@@ -18,7 +18,7 @@
                 "seriesPriority": "A",
                 "seriesPreference": "1",
                 "minAgeToStart": "9 years",
-                "maxAgeToStart": "15 years"
+                "maxAgeToStart": "20 years"
             },
             "seriesDose": [
                 {
@@ -29,7 +29,7 @@
                             "minAge": "9 years",
                             "earliestRecAge": "9 years",
                             "latestRecAge": "14 years",
-                            "maxAge": "15 years"
+                            "maxAge": "20 years"
                         }
                     ],
                     "preferableVaccine": [
@@ -62,7 +62,7 @@
             ]
         },
         {
-            "seriesName": "WHO HPV 2-dose series (>=15y)",
+            "seriesName": "WHO HPV 2-dose series (>=21y)",
             "targetDisease": "HPV",
             "vaccineGroup": "HPV",
             "seriesType": "Standard",
@@ -77,7 +77,7 @@
                 "seriesGroup": "2",
                 "seriesPriority": "A",
                 "seriesPreference": "2",
-                "minAgeToStart": "15 years"
+                "minAgeToStart": "21 years"
             },
             "seriesDose": [
                 {
@@ -85,8 +85,8 @@
                     "age": [
                         {
                             "absMinAge": "9 years",
-                            "minAge": "15 years",
-                            "earliestRecAge": "15 years"
+                            "minAge": "21 years",
+                            "earliestRecAge": "21 years"
                         }
                     ],
                     "preferableVaccine": [
@@ -118,17 +118,152 @@
                 },
                 {
                     "doseNumber": "Dose 2",
-                    "age": [
-                        {
-                            "absMinAge": "15 years + 5 months"
-                        }
-                    ],
                     "interval": [
                         {
                             "fromPrevious": "Y",
                             "absMinInt": "5 months",
                             "minInt": "6 months",
                             "earliestRecInt": "6 months"
+                        }
+                    ],
+                    "preferableVaccine": [
+                        {
+                            "vaccineType": "HPV, 9-valent",
+                            "cvx": "165",
+                            "beginAge": "9 years",
+                            "forecastVaccineType": "Y"
+                        }
+                    ],
+                    "allowableVaccine": [
+                        {
+                            "vaccineType": "HPV, 9-valent",
+                            "cvx": "165",
+                            "beginAge": "9 years"
+                        },
+                        {
+                            "vaccineType": "HPV, quadrivalent",
+                            "cvx": "62",
+                            "beginAge": "9 years"
+                        },
+                        {
+                            "vaccineType": "HPV, bivalent",
+                            "cvx": "118",
+                            "beginAge": "9 years"
+                        }
+                    ],
+                    "recurringDose": "No"
+                }
+            ]
+        },
+        {
+            "seriesName": "WHO HPV 3-dose series (immunocompromised)",
+            "targetDisease": "HPV",
+            "vaccineGroup": "HPV",
+            "seriesType": "Risk",
+            "requiredGender": [
+                "Female"
+            ],
+            "selectSeries": {
+                "defaultSeries": "No",
+                "productPath": "No",
+                "seriesGroupName": "Immunocompromised",
+                "seriesGroup": "3",
+                "seriesPriority": "A",
+                "seriesPreference": "1",
+                "minAgeToStart": "9 years"
+            },
+            "indication": [
+                {
+                    "observationCode": {
+                        "text": "Immunocompromised individual",
+                        "code": "1022"
+                    },
+                    "description": "Patient is immunocompromised — requires 3-dose HPV series",
+                    "guidance": ""
+                }
+            ],
+            "seriesDose": [
+                {
+                    "doseNumber": "Dose 1",
+                    "age": [
+                        {
+                            "absMinAge": "9 years",
+                            "minAge": "9 years",
+                            "earliestRecAge": "9 years"
+                        }
+                    ],
+                    "preferableVaccine": [
+                        {
+                            "vaccineType": "HPV, 9-valent",
+                            "cvx": "165",
+                            "beginAge": "9 years",
+                            "forecastVaccineType": "Y"
+                        }
+                    ],
+                    "allowableVaccine": [
+                        {
+                            "vaccineType": "HPV, 9-valent",
+                            "cvx": "165",
+                            "beginAge": "9 years"
+                        },
+                        {
+                            "vaccineType": "HPV, quadrivalent",
+                            "cvx": "62",
+                            "beginAge": "9 years"
+                        },
+                        {
+                            "vaccineType": "HPV, bivalent",
+                            "cvx": "118",
+                            "beginAge": "9 years"
+                        }
+                    ],
+                    "recurringDose": "No"
+                },
+                {
+                    "doseNumber": "Dose 2",
+                    "interval": [
+                        {
+                            "fromPrevious": "Y",
+                            "absMinInt": "4 weeks",
+                            "minInt": "4 weeks",
+                            "earliestRecInt": "2 months"
+                        }
+                    ],
+                    "preferableVaccine": [
+                        {
+                            "vaccineType": "HPV, 9-valent",
+                            "cvx": "165",
+                            "beginAge": "9 years",
+                            "forecastVaccineType": "Y"
+                        }
+                    ],
+                    "allowableVaccine": [
+                        {
+                            "vaccineType": "HPV, 9-valent",
+                            "cvx": "165",
+                            "beginAge": "9 years"
+                        },
+                        {
+                            "vaccineType": "HPV, quadrivalent",
+                            "cvx": "62",
+                            "beginAge": "9 years"
+                        },
+                        {
+                            "vaccineType": "HPV, bivalent",
+                            "cvx": "118",
+                            "beginAge": "9 years"
+                        }
+                    ],
+                    "recurringDose": "No"
+                },
+                {
+                    "doseNumber": "Dose 3",
+                    "interval": [
+                        {
+                            "fromPrevious": "Y",
+                            "absMinInt": "12 weeks",
+                            "minInt": "4 months",
+                            "earliestRecInt": "4 months"
                         }
                     ],
                     "preferableVaccine": [
