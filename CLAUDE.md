@@ -25,12 +25,12 @@ cicada/
 ├── cicada_generator/        # Code generator that produces generated_files/
 │   └── lib/
 │       ├── Version_4.61-508/ # CDSi source XML/Excel files
-│       ├── WHO/              # WHO source data
-│       │   ├── antigen/      # WHO antigen definitions (.xlsx and .json)
-│       │   └── schedule/     # WHO schedule supporting data (.json)
+│       ├── WHO/              # WHO source data (Excel = source of truth)
+│       │   ├── antigen/      # WHO antigen definitions (22 .xlsx files)
+│       │   └── schedule/     # WHO schedule supporting data (5 .xlsx files)
 │       ├── generated_files/  # Intermediate JSON output (CDC and WHO)
 │       ├── test_cases/       # Test case Excel/NDJSON files
-│       └── generate_who.dart # Generates WHO JSON source files from definitions
+│       └── generate_who_excel.dart # One-time migration: JSON → Excel
 ├── cicada_ig/               # FHIR Implementation Guide (FSH/Docusaurus)
 └── generate.sh              # Runs the generator
 ```
@@ -53,9 +53,8 @@ dart run cicada/bin/server.dart -p 8080
 dart cicada_generator/lib/xml_to_json.dart         # Step 1: XML → JSON
 dart cicada_generator/lib/main.dart                # Step 2: Excel/JSON → Dart
 
-# Regenerate WHO supporting data
-dart cicada_generator/lib/generate_who.dart        # Step 1: Create WHO JSON sources
-dart cicada_generator/lib/main.dart --who           # Step 2: JSON → Dart
+# Regenerate WHO supporting data from Excel sources
+dart cicada_generator/lib/main.dart --who           # Excel → JSON → Dart
 
 # Generate Riverpod code
 cd cicada && dart run build_runner build

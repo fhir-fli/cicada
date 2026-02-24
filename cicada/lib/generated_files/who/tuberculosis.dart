@@ -27,8 +27,7 @@ final AntigenSupportingData whoTuberculosis = AntigenSupportingData.fromJson(
                         {
                             "absMinAge": "0 days",
                             "minAge": "0 days",
-                            "earliestRecAge": "0 days",
-                            "maxAge": "12 months"
+                            "earliestRecAge": "0 days"
                         }
                     ],
                     "preferableVaccine": [

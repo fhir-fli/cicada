@@ -222,18 +222,18 @@ void _generateWho() {
 
   final antigenParser = AntigenSheetParser();
   final scheduleParser = ScheduleSheetParser();
-  // Use a map to deduplicate by targetDisease (JSON takes precedence over xlsx)
+  // Use a map to deduplicate by targetDisease (xlsx takes precedence over JSON)
   final Map<String, AntigenSupportingData> antigenByDisease = {};
   var scheduleData = ScheduleSupportingData();
 
   // ---------- Process antigen files ----------
-  // Process xlsx first, then json (so json overwrites xlsx for same disease)
+  // Process json first, then xlsx (so xlsx overwrites json for same disease)
   final files = antigenDir.listSync().whereType<File>().toList()
     ..sort((a, b) {
-      // xlsx before json so json takes precedence
-      final aIsJson = a.path.endsWith('.json') ? 1 : 0;
-      final bIsJson = b.path.endsWith('.json') ? 1 : 0;
-      return aIsJson.compareTo(bIsJson);
+      // json before xlsx so xlsx takes precedence
+      final aIsXlsx = a.path.endsWith('.xlsx') ? 1 : 0;
+      final bIsXlsx = b.path.endsWith('.xlsx') ? 1 : 0;
+      return aIsXlsx.compareTo(bIsXlsx);
     });
 
   for (final fileEntity in files) {
@@ -286,8 +286,14 @@ void _generateWho() {
 
   // ---------- Process schedule files ----------
   if (scheduleDir.existsSync()) {
-    for (final fileEntity in scheduleDir.listSync()) {
-      if (fileEntity is! File) continue;
+    // Sort: json first, then xlsx (so xlsx overwrites json)
+    final schedFiles = scheduleDir.listSync().whereType<File>().toList()
+      ..sort((a, b) {
+        final aIsXlsx = a.path.endsWith('.xlsx') ? 1 : 0;
+        final bIsXlsx = b.path.endsWith('.xlsx') ? 1 : 0;
+        return aIsXlsx.compareTo(bIsXlsx);
+      });
+    for (final fileEntity in schedFiles) {
       final filePath = fileEntity.path;
 
       if (filePath.endsWith('.xlsx')) {

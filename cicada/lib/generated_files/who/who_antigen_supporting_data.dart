@@ -1,74 +1,74 @@
-import 'hepa.dart';
-import 'rotavirus.dart';
-import 'tuberculosis.dart';
-import 'polio.dart';
-import 'yellow_fever.dart';
-import 'hepb.dart';
-import 'pertussis.dart';
-import 'meningococcal.dart';
+import 'rabies.dart';
 import 'japanese_encephalitis.dart';
-import 'measles.dart';
-import 'covid_19.dart';
-import 'mumps.dart';
-import 'tetanus.dart';
+import 'rubella.dart';
 import 'influenza.dart';
 import 'hib.dart';
-import 'typhoid.dart';
-import 'rubella.dart';
 import 'hpv.dart';
-import 'rabies.dart';
+import 'pertussis.dart';
+import 'tetanus.dart';
+import 'meningococcal.dart';
+import 'pneumococcal.dart';
+import 'rotavirus.dart';
 import 'cholera.dart';
 import 'diphtheria.dart';
-import 'pneumococcal.dart';
+import 'mumps.dart';
+import 'typhoid.dart';
+import 'hepa.dart';
+import 'polio.dart';
+import 'measles.dart';
+import 'covid_19.dart';
+import 'yellow_fever.dart';
+import 'hepb.dart';
+import 'tuberculosis.dart';
 
 
 final whoAntigenSupportingData = [
-  whoHepa,
-  whoRotavirus,
-  whoTuberculosis,
-  whoPolio,
-  whoYellowFever,
-  whoHepb,
-  whoPertussis,
-  whoMeningococcal,
+  whoRabies,
   whoJapaneseEncephalitis,
-  whoMeasles,
-  whoCovid19,
-  whoMumps,
-  whoTetanus,
+  whoRubella,
   whoInfluenza,
   whoHib,
-  whoTyphoid,
-  whoRubella,
   whoHpv,
-  whoRabies,
+  whoPertussis,
+  whoTetanus,
+  whoMeningococcal,
+  whoPneumococcal,
+  whoRotavirus,
   whoCholera,
   whoDiphtheria,
-  whoPneumococcal,
+  whoMumps,
+  whoTyphoid,
+  whoHepa,
+  whoPolio,
+  whoMeasles,
+  whoCovid19,
+  whoYellowFever,
+  whoHepb,
+  whoTuberculosis,
 ];
 
 final whoAntigenSupportingDataMap = {
-  'HepA': whoHepa,
-  'Rotavirus': whoRotavirus,
-  'Tuberculosis': whoTuberculosis,
-  'Polio': whoPolio,
-  'Yellow Fever': whoYellowFever,
-  'HepB': whoHepb,
-  'Pertussis': whoPertussis,
-  'Meningococcal': whoMeningococcal,
+  'Rabies': whoRabies,
   'Japanese Encephalitis': whoJapaneseEncephalitis,
-  'Measles': whoMeasles,
-  'COVID-19': whoCovid19,
-  'Mumps': whoMumps,
-  'Tetanus': whoTetanus,
+  'Rubella': whoRubella,
   'Influenza': whoInfluenza,
   'Hib': whoHib,
-  'Typhoid': whoTyphoid,
-  'Rubella': whoRubella,
   'HPV': whoHpv,
-  'Rabies': whoRabies,
+  'Pertussis': whoPertussis,
+  'Tetanus': whoTetanus,
+  'Meningococcal': whoMeningococcal,
+  'Pneumococcal': whoPneumococcal,
+  'Rotavirus': whoRotavirus,
   'Cholera': whoCholera,
   'Diphtheria': whoDiphtheria,
-  'Pneumococcal': whoPneumococcal,
+  'Mumps': whoMumps,
+  'Typhoid': whoTyphoid,
+  'HepA': whoHepa,
+  'Polio': whoPolio,
+  'Measles': whoMeasles,
+  'COVID-19': whoCovid19,
+  'Yellow Fever': whoYellowFever,
+  'HepB': whoHepb,
+  'Tuberculosis': whoTuberculosis,
 };
 
