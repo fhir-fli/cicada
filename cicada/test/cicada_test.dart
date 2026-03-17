@@ -15,9 +15,9 @@ Future<void> main() async {
     final Parameters result =
         forecastFromParameters(parameters[i] as Parameters);
     // Verify the output contains a recommendation
-    final hasRecommendation = result.parameter?.any(
-            (p) => p.name?.toString() == 'recommendation') ??
-        false;
+    final hasRecommendation =
+        result.parameter?.any((p) => p.name.toString() == 'recommendation') ??
+            false;
     if (!hasRecommendation) {
       print('  WARNING: No recommendation in output');
     }

@@ -12,22 +12,19 @@ Future<void> main() async {
       for (final CodedValue codedValue
           in observation.codedValues?.codedValue ?? <CodedValue>[]) {
         if (codedValue.codeSystem == 'SNOMED') {
-          snomedEntries +=
-              '''
+          snomedEntries += '''
       src.code as codeValue where codeValue = '${codedValue.code}' -> 
           newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',
           newCoding.code = '${observation.observationCode}',
           newCoding.display = "${codedValue.text}" "SetSNOMEDCode${codedValue.code}";\n\n''';
         } else if (codedValue.codeSystem == 'CVX') {
-          cvxEntries +=
-              '''
+          cvxEntries += '''
       src.code as codeValue where codeValue = '${codedValue.code}' -> 
           newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',
           newCoding.code = '${observation.observationCode}',
           newCoding.display = "${codedValue.text}" "SetCVXCode${codedValue.code}";\n\n''';
         } else if (codedValue.codeSystem == 'CDCPHINVS') {
-          phinvadsEntries +=
-              '''
+          phinvadsEntries += '''
       src.code as codeValue where codeValue = '${codedValue.code}' -> 
           newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',
           newCoding.code = '${observation.observationCode}',

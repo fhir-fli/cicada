@@ -21,7 +21,8 @@ class VaxDate extends DateTime {
   VaxDate.fromString(String date, [bool useMax = false])
       : this._fromParsed(_parseDate(date, useMax));
 
-  VaxDate._fromParsed(VaxDate parsed) : super(parsed.year, parsed.month, parsed.day);
+  VaxDate._fromParsed(VaxDate parsed)
+      : super(parsed.year, parsed.month, parsed.day);
 
   static VaxDate _parseDate(String date, bool useMax) {
     final dt = DateTime.tryParse(date);

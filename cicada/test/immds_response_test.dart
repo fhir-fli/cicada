@@ -155,8 +155,7 @@ void main() {
         final statusCode = codeStr(r.forecastStatus.coding?.first.code);
         if (statusCode == 'Not Complete') {
           expect(r.dateCriterion, isNotNull,
-              reason:
-                  'Not Complete recommendation should have dateCriteria');
+              reason: 'Not Complete recommendation should have dateCriteria');
           expect(r.dateCriterion, isNotEmpty);
         }
       }
@@ -220,8 +219,7 @@ void main() {
           expect(eval.doseStatusReason, isNotNull,
               reason: 'notvalid evaluation should have doseStatusReason');
           expect(eval.doseStatusReason, isNotEmpty);
-          expect(
-              uriStr(eval.doseStatusReason!.first.coding?.first.system),
+          expect(uriStr(eval.doseStatusReason!.first.coding?.first.system),
               'http://hl7.org/fhir/us/immds/CodeSystem/StatusReason');
         }
       }
@@ -268,8 +266,7 @@ void main() {
         final codings = r.forecastStatus.coding!;
 
         // First coding should be CDSi-compatible
-        final cdsiCoding =
-            codings.where((c) => uriStr(c.system) == cdsiSystem);
+        final cdsiCoding = codings.where((c) => uriStr(c.system) == cdsiSystem);
         expect(cdsiCoding, isNotEmpty,
             reason: 'forecastStatus should have CDSi coding');
         expect(cdsiCodes, contains(codeStr(cdsiCoding.first.code)),
@@ -286,8 +283,7 @@ void main() {
                 'not in LL940-8');
 
         // For statuses with an HL7 standard code, verify it
-        final hl7Coding =
-            codings.where((c) => uriStr(c.system) == hl7System);
+        final hl7Coding = codings.where((c) => uriStr(c.system) == hl7System);
         if (hl7Coding.isNotEmpty) {
           expect(hl7Codes, contains(codeStr(hl7Coding.first.code)),
               reason: 'HL7 code "${codeStr(hl7Coding.first.code)}" not valid');
@@ -322,8 +318,8 @@ void main() {
         if (r.vaccineCode != null) {
           for (final vc in r.vaccineCode!) {
             expect(vc.coding, isNotNull);
-            expect(uriStr(vc.coding!.first.system),
-                'http://hl7.org/fhir/sid/cvx',
+            expect(
+                uriStr(vc.coding!.first.system), 'http://hl7.org/fhir/sid/cvx',
                 reason: 'vaccineCode should use CVX system');
           }
         }
@@ -345,8 +341,7 @@ void main() {
             expect(uriStr(coding.system), 'http://loinc.org',
                 reason: 'dateCriterion should use LOINC');
             expect(validLoincCodes, contains(codeStr(coding.code)),
-                reason:
-                    'dateCriterion LOINC code "${codeStr(coding.code)}" '
+                reason: 'dateCriterion LOINC code "${codeStr(coding.code)}" '
                     'not valid');
             expect(dc.value, isNotNull,
                 reason: 'dateCriterion must have a value');
@@ -385,9 +380,31 @@ void main() {
       // The known group CVX codes from the _vaccineGroupCvx map
       // (CDC official: https://www2a.cdc.gov/vaccines/iis/iisstandards/vaccines.asp?rpt=vg)
       final knownGroupCvx = <String>{
-        '26', '213', '330', '107', '214', '85', '45', '17', '137', '88',
-        '129', '108', '164', '03', '325', '152', '89', '90', '122', '304',
-        '222', '91', '21', '184', '188',
+        '26',
+        '213',
+        '330',
+        '107',
+        '214',
+        '85',
+        '45',
+        '17',
+        '137',
+        '88',
+        '129',
+        '108',
+        '164',
+        '03',
+        '325',
+        '152',
+        '89',
+        '90',
+        '122',
+        '304',
+        '222',
+        '91',
+        '21',
+        '184',
+        '188',
       };
 
       for (final r in rec.recommendation) {
@@ -416,10 +433,10 @@ void main() {
       expect(recParam.resource, isA<ImmunizationRecommendation>());
 
       final rec = recParam.resource as ImmunizationRecommendation;
-      expect(rec.recommendation.length,
+      expect(
+          rec.recommendation.length,
           (noDoseResponse.parameter!
-                  .firstWhere(
-                      (p) => p.name.valueString == 'recommendation')
+                  .firstWhere((p) => p.name.valueString == 'recommendation')
                   .resource as ImmunizationRecommendation)
               .recommendation
               .length);

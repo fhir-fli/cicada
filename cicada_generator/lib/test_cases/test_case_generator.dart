@@ -61,16 +61,15 @@ Future<void> main() async {
   ));
 
   // Underlying conditions test cases
-  final conditionPath = _findExcel('CDSi-underlying-conditions-test-cases',
-      caseSensitive: false);
+  final conditionPath =
+      _findExcel('CDSi-underlying-conditions-test-cases', caseSensitive: false);
   if (conditionPath != null) {
     print('\nUsing condition test case file: $conditionPath');
     await _generateTestCases(TestCaseConfig(
       excelPath: conditionPath,
       sheetName: 'Underlying Condition Test Cases',
       observationStyle: ObservationStyle.observationCode,
-      ndjsonPath:
-          'cicada_generator/lib/test_cases/condition_test_cases.ndjson',
+      ndjsonPath: 'cicada_generator/lib/test_cases/condition_test_cases.ndjson',
       testNdjsonPath: 'cicada/test/conditionTestCases.ndjson',
       dosesDartPath: 'cicada/lib/generated_files/test_condition_doses.dart',
       forecastsDartPath:
@@ -88,22 +87,17 @@ Future<void> main() async {
 /// Returns null if [required] is false and nothing found.
 String? _findExcel(String nameFragment, {bool caseSensitive = true}) {
   final dir = Directory('cicada_generator/lib/test_cases');
-  final matches = dir
-      .listSync()
-      .whereType<File>()
-      .where((f) {
-        final name = f.path.split('/').last;
-        if (caseSensitive) {
-          return name.contains(nameFragment) && name.endsWith('.xlsx');
-        }
-        return name.toLowerCase().contains(nameFragment.toLowerCase()) &&
-            name.endsWith('.xlsx');
-      })
-      .toList();
+  final matches = dir.listSync().whereType<File>().where((f) {
+    final name = f.path.split('/').last;
+    if (caseSensitive) {
+      return name.contains(nameFragment) && name.endsWith('.xlsx');
+    }
+    return name.toLowerCase().contains(nameFragment.toLowerCase()) &&
+        name.endsWith('.xlsx');
+  }).toList();
   if (matches.isEmpty) return null;
   if (matches.length > 1) {
-    throw StateError(
-        'Multiple "$nameFragment" files found: '
+    throw StateError('Multiple "$nameFragment" files found: '
         '${matches.map((f) => f.path).join(', ')}');
   }
   return matches.first.path;
@@ -116,9 +110,8 @@ Future<void> _generateTestCases(TestCaseConfig config) async {
   final sheet = excel[config.sheetName];
 
   // Read headers
-  final headers = sheet.rows.first
-      .map((cell) => cell?.value?.toString() ?? '')
-      .toList();
+  final headers =
+      sheet.rows.first.map((cell) => cell?.value?.toString() ?? '').toList();
 
   // Containers for output
   final Map<String, List<Map<String, dynamic>>> testDoses = {};
@@ -221,8 +214,7 @@ Future<void> _generateTestCases(TestCaseConfig config) async {
 
     // Extract forecast data — trim whitespace from vaccine group
     final patientId = patient.id.toString();
-    final vaccineGroup =
-        (rowMap['Vaccine_Group']?.toString() ?? '').trim();
+    final vaccineGroup = (rowMap['Vaccine_Group']?.toString() ?? '').trim();
     final seriesStatus = rowMap['Series_Status']?.toString() ?? '';
     final forecastNum = rowMap['Forecast_#']?.toString() ?? '';
     final earliestDate = _extractDate(rowMap['Earliest_Date']);
@@ -249,8 +241,7 @@ Future<void> _generateTestCases(TestCaseConfig config) async {
           ParametersParameter(
             name: _extractDateStr(rowMap['Assessment_Date']).toFhirString,
           ),
-          ParametersParameter(
-              name: 'Patient'.toFhirString, resource: patient),
+          ParametersParameter(name: 'Patient'.toFhirString, resource: patient),
           ...immunizations.map(
             (i) => ParametersParameter(
               name: 'immunization'.toFhirString,
@@ -270,8 +261,7 @@ Future<void> _generateTestCases(TestCaseConfig config) async {
 
   // Write outputs
   await File(config.dosesJsonPath).writeAsString(jsonEncode(testDoses));
-  final ndjson =
-      parametersList.map((p) => jsonEncode(p.toJson())).join('\n');
+  final ndjson = parametersList.map((p) => jsonEncode(p.toJson())).join('\n');
   await File(config.ndjsonPath).writeAsString(ndjson);
 
   // Write NDJSON to test directory
@@ -348,8 +338,7 @@ Condition _buildConditionFromObsCode(
   Patient patient,
 ) {
   final obsCode = rawCode.padLeft(3, '0');
-  final obsList =
-      scheduleSupportingData.observations?.observation ?? [];
+  final obsList = scheduleSupportingData.observations?.observation ?? [];
   final match = obsList.firstWhere(
     (o) => o.observationCode == obsCode,
     orElse: () => throw Exception('Obs code $obsCode not found'),
@@ -399,8 +388,7 @@ void _writeTestDosesDart(
 ) {
   final varName = label == 'healthy' ? 'testDoses' : 'testConditionDoses';
   final sb = StringBuffer();
-  sb.writeln(
-      'final Map<String, List<Map<String, Object>>> $varName =');
+  sb.writeln('final Map<String, List<Map<String, Object>>> $varName =');
   sb.writeln('    <String, List<Map<String, Object>>>{');
 
   final patientIds = testDoses.keys.toList()..sort();
@@ -501,8 +489,7 @@ void _writeTestForecastsDart(
   final varName =
       label == 'healthy' ? 'testForecasts' : 'testConditionForecasts';
   final sb = StringBuffer();
-  sb.writeln(
-      'final Map<String, List<Map<String, String>>> $varName =');
+  sb.writeln('final Map<String, List<Map<String, String>>> $varName =');
   sb.writeln('    <String, List<Map<String, String>>>{');
 
   final patientIds = testForecasts.keys.toList()..sort();
@@ -516,8 +503,7 @@ void _writeTestForecastsDart(
     for (final forecast in forecasts) {
       sb.writeln('    <String, String>{');
       for (final entry in forecast.entries) {
-        sb.writeln(
-            "      '${entry.key}': '${_escapeString(entry.value)}',");
+        sb.writeln("      '${entry.key}': '${_escapeString(entry.value)}',");
       }
       sb.writeln('    },');
     }

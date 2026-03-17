@@ -1,7 +1,6 @@
 import 'package:fhir_r4/fhir_r4.dart';
 
 import '../cicada.dart';
-import 'forecast.dart';
 
 /// CDC official vaccine group CVX codes.
 ///
@@ -69,25 +68,6 @@ const _diseaseSnomedCodes = <String, String>{
   'Zoster': '4740000',
 };
 
-/// Returns a [CodeableConcept] with SNOMED CT coding and text display for a
-/// target disease name.
-CodeableConcept _diseaseCodeableConcept(String targetDisease) {
-  final snomedCode = _diseaseSnomedCodes[targetDisease];
-  if (snomedCode != null) {
-    return CodeableConcept(
-      coding: [
-        Coding(
-          system: 'http://snomed.info/sct'.toFhirUri,
-          code: snomedCode.toFhirCode,
-          display: targetDisease.toFhirString,
-        ),
-      ],
-      text: targetDisease.toFhirString,
-    );
-  }
-  return CodeableConcept(text: targetDisease.toFhirString);
-}
-
 /// Converts a [ForecastResult] into a FHIR [Parameters] resource conforming
 /// to the ImmDS IG `$immds-forecast` operation output.
 ///
@@ -143,7 +123,8 @@ List<ImmunizationEvaluation> _buildEvaluations(ForecastResult result) {
         if (dose.evalStatus == null) continue;
 
         // De-duplicate: one evaluation per (dose date, vaccine group)
-        final key = '${dose.dateGiven}_${groupCvx?.$1 ?? group.vaccineGroupName}';
+        final key =
+            '${dose.dateGiven}_${groupCvx?.$1 ?? group.vaccineGroupName}';
         if (seen.contains(key)) continue;
         seen.add(key);
 
@@ -151,8 +132,7 @@ List<ImmunizationEvaluation> _buildEvaluations(ForecastResult result) {
           status: ImmunizationEvaluationStatusCodes.completed,
           patient: Reference(reference: patientRef),
           date: dose.dateGiven.toFhirDateTime(),
-          targetDisease: _evalTargetDisease(
-              antigen.targetDisease, groupCvx),
+          targetDisease: _evalTargetDisease(antigen.targetDisease, groupCvx),
           immunizationEvent: Reference(
             reference: 'Immunization/${dose.doseId}'.toFhirString,
           ),
@@ -417,8 +397,7 @@ CodeableConcept _mapDoseStatusReason(EvalReason reason) {
 /// date is past the past due date to distinguish `due` from `overdue`.
 CodeableConcept _mapForecastStatus(SeriesStatus status,
     {bool isOverdue = false}) {
-  const cdsiSystem =
-      'http://hl7.org/fhir/us/immds/CodeSystem/ForecastStatus';
+  const cdsiSystem = 'http://hl7.org/fhir/us/immds/CodeSystem/ForecastStatus';
   const hl7System =
       'http://terminology.hl7.org/CodeSystem/immunization-recommendation-status';
   const loincSystem = 'http://loinc.org';
@@ -443,13 +422,18 @@ CodeableConcept _mapForecastStatus(SeriesStatus status,
   // Secondary: HL7 standard code (where a standard code exists)
   switch (status) {
     case SeriesStatus.complete:
-      codings.add(Coding(system: hl7System.toFhirUri,
-          code: 'complete'.toFhirCode, display: 'Complete'.toFhirString));
+      codings.add(Coding(
+          system: hl7System.toFhirUri,
+          code: 'complete'.toFhirCode,
+          display: 'Complete'.toFhirString));
     case SeriesStatus.immune:
-      codings.add(Coding(system: hl7System.toFhirUri,
-          code: 'immune'.toFhirCode, display: 'Immune'.toFhirString));
+      codings.add(Coding(
+          system: hl7System.toFhirUri,
+          code: 'immune'.toFhirCode,
+          display: 'Immune'.toFhirString));
     case SeriesStatus.contraindicated:
-      codings.add(Coding(system: hl7System.toFhirUri,
+      codings.add(Coding(
+          system: hl7System.toFhirUri,
           code: 'contraindicated'.toFhirCode,
           display: 'Contraindicated'.toFhirString));
     case SeriesStatus.notComplete:
@@ -459,8 +443,10 @@ CodeableConcept _mapForecastStatus(SeriesStatus status,
         display: isOverdue ? 'Overdue'.toFhirString : 'Due'.toFhirString,
       ));
     case SeriesStatus.agedOut:
-      codings.add(Coding(system: hl7System.toFhirUri,
-          code: 'agedout'.toFhirCode, display: 'Aged Out'.toFhirString));
+      codings.add(Coding(
+          system: hl7System.toFhirUri,
+          code: 'agedout'.toFhirCode,
+          display: 'Aged Out'.toFhirString));
     case SeriesStatus.notRecommended:
       break; // No HL7 standard code exists
   }
@@ -485,5 +471,4 @@ CodeableConcept _mapForecastStatus(SeriesStatus status,
 }
 
 /// Returns true if the date is a VaxDate sentinel (min or max boundary).
-bool _isSentinel(VaxDate date) =>
-    date.year <= 1900 || date.year >= 2999;
+bool _isSentinel(VaxDate date) => date.year <= 1900 || date.year >= 2999;

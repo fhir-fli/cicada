@@ -46,8 +46,7 @@ class ScheduleSheetParser {
         final rows = _sheetToRows(sheet);
         final obsList = _parseConditionsTab(rows);
         partial = partial.copyWith(
-          observations:
-              partial.observations?.copyWith(observation: obsList) ??
+          observations: partial.observations?.copyWith(observation: obsList) ??
               VaxObservations(observation: obsList),
         );
       }
@@ -59,8 +58,7 @@ class ScheduleSheetParser {
         final rows = _sheetToRows(sheet);
         final cvxList = _parseCvxToAntigenMapTab(rows);
         partial = partial.copyWith(
-          cvxToAntigenMap:
-              partial.cvxToAntigenMap?.copyWith(cvxMap: cvxList) ??
+          cvxToAntigenMap: partial.cvxToAntigenMap?.copyWith(cvxMap: cvxList) ??
               CvxToAntigenMap(cvxMap: cvxList),
         );
       }
@@ -81,8 +79,7 @@ class ScheduleSheetParser {
         final rows = _sheetToRows(sheet);
         final groupMaps = _parseVaccineGroupToAntigenMapTab(rows);
         partial = partial.copyWith(
-          vaccineGroupToAntigenMap:
-              partial.vaccineGroupToAntigenMap?.copyWith(
+          vaccineGroupToAntigenMap: partial.vaccineGroupToAntigenMap?.copyWith(
                 vaccineGroupMap: groupMaps,
               ) ??
               VaccineGroupToAntigenMap(vaccineGroupMap: groupMaps),
@@ -187,12 +184,10 @@ class ScheduleSheetParser {
       final observation = VaxObservation(
         observationCode: obsCode,
         observationTitle: obsTitle,
-        indicationText: indication.isNotEmpty && indication != 'n/a'
-            ? indication
-            : null,
-        contraindicationText: contra.isNotEmpty && contra != 'n/a'
-            ? contra
-            : null,
+        indicationText:
+            indication.isNotEmpty && indication != 'n/a' ? indication : null,
+        contraindicationText:
+            contra.isNotEmpty && contra != 'n/a' ? contra : null,
         clarifyingText: clarify.isNotEmpty && clarify != 'n/a' ? clarify : null,
         codedValues: codedValues.isNotEmpty
             ? CodedValues(codedValue: codedValues)
@@ -234,12 +229,10 @@ class ScheduleSheetParser {
         final assoc = <Association>[
           Association(
             antigen: antigenVal,
-            associationBeginAge: beginAge == null || beginAge == 'n/a'
-                ? null
-                : beginAge,
-            associationEndAge: endAge == null || endAge == 'n/a'
-                ? null
-                : endAge,
+            associationBeginAge:
+                beginAge == null || beginAge == 'n/a' ? null : beginAge,
+            associationEndAge:
+                endAge == null || endAge == 'n/a' ? null : endAge,
           ),
         ];
 
@@ -252,12 +245,10 @@ class ScheduleSheetParser {
         assoc.add(
           Association(
             antigen: antigenVal,
-            associationBeginAge: beginAge == null || beginAge == 'n/a'
-                ? null
-                : beginAge,
-            associationEndAge: endAge == null || endAge == 'n/a'
-                ? null
-                : endAge,
+            associationBeginAge:
+                beginAge == null || beginAge == 'n/a' ? null : beginAge,
+            associationEndAge:
+                endAge == null || endAge == 'n/a' ? null : endAge,
           ),
         );
 
@@ -287,9 +278,8 @@ class ScheduleSheetParser {
       if (row.isEmpty) continue;
 
       final (previousCvx, previousType) = _extractCodeAndText(row[0].trim());
-      final (currentCvx, currentType) = row.length > 1
-          ? _extractCodeAndText(row[1].trim())
-          : (null, null);
+      final (currentCvx, currentType) =
+          row.length > 1 ? _extractCodeAndText(row[1].trim()) : (null, null);
       final beginInt = row.length > 2 ? row[2].trim() : '';
       final minEnd = row.length > 3 ? row[3].trim() : '';
       final endInt = row.length > 4 ? row[4].trim() : '';
@@ -298,8 +288,7 @@ class ScheduleSheetParser {
           ? null
           : Vaccine(vaccineType: previousType, cvx: previousCvx);
       Vaccine(vaccineType: previousType, cvx: previousCvx);
-      final currentVac =
-          (currentType == null || currentType.isEmpty) &&
+      final currentVac = (currentType == null || currentType.isEmpty) &&
               (currentCvx == null || currentCvx.isEmpty)
           ? null
           : Vaccine(vaccineType: currentType, cvx: currentCvx);

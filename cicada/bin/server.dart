@@ -9,8 +9,7 @@ import 'package:shelf_router/shelf_router.dart';
 import 'package:cicada/cicada.dart';
 
 void main(List<String> args) async {
-  final parser = ArgParser()
-    ..addOption('port', abbr: 'p', defaultsTo: '8080');
+  final parser = ArgParser()..addOption('port', abbr: 'p', defaultsTo: '8080');
   final results = parser.parse(args);
   final port =
       int.parse(Platform.environment['PORT'] ?? results['port'] as String);

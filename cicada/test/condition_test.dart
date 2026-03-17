@@ -51,37 +51,35 @@ List<String> checkDoseConsistency(VaxDose dose) {
 
   if (dose.evalReason == EvalReason.ageTooOld &&
       dose.validAgeReason != ValidAgeReason.tooOld) {
-    violations.add(
-        'evalReason=ageTooOld but validAgeReason=${dose.validAgeReason}');
+    violations
+        .add('evalReason=ageTooOld but validAgeReason=${dose.validAgeReason}');
   }
 
   if (dose.evalReason == EvalReason.intervalTooShort &&
       dose.allowedIntervalReason != IntervalReason.tooShort &&
       dose.preferredIntervalReason != IntervalReason.tooShort) {
-    violations.add(
-        'evalReason=intervalTooShort but '
+    violations.add('evalReason=intervalTooShort but '
         'allowedIntervalReason=${dose.allowedIntervalReason}, '
         'preferredIntervalReason=${dose.preferredIntervalReason}');
   }
 
   if (dose.evalReason == EvalReason.liveVirusConflict &&
       dose.conflict != true) {
-    violations.add(
-        'evalReason=liveVirusConflict but conflict=${dose.conflict}');
+    violations
+        .add('evalReason=liveVirusConflict but conflict=${dose.conflict}');
   }
 
   if (dose.evalReason == EvalReason.notPreferableOrAllowable &&
       dose.allowedVaccine != false) {
-    violations.add(
-        'evalReason=notPreferableOrAllowable but '
+    violations.add('evalReason=notPreferableOrAllowable but '
         'allowedVaccine=${dose.allowedVaccine}');
   }
 
   if (dose.evalStatus == EvalStatus.valid) {
     if (dose.validAgeReason == ValidAgeReason.tooYoung ||
         dose.validAgeReason == ValidAgeReason.tooOld) {
-      violations.add(
-          'evalStatus=valid but validAgeReason=${dose.validAgeReason}');
+      violations
+          .add('evalStatus=valid but validAgeReason=${dose.validAgeReason}');
     }
     if (dose.conflict == true) {
       violations.add('evalStatus=valid but conflict=true');
@@ -105,8 +103,7 @@ const conditionExcelToEngine = <String, String>{
 
 String _patientId(Parameters parameters, int index) {
   final Patient? patient = parameters.parameter
-      ?.firstWhereOrNull(
-          (ParametersParameter e) => e.resource is Patient)
+      ?.firstWhereOrNull((ParametersParameter e) => e.resource is Patient)
       ?.resource as Patient?;
   final id = patient?.id?.toString();
   if (id == null || id == 'null') return 'case-$index';
@@ -136,8 +133,7 @@ void main() {
         if (expectedDoseMaps != null) {
           for (final doseMap in expectedDoseMaps) {
             final expectedDose = VaxDose.fromJson(doseMap);
-            final expectedSeriesType =
-                doseMap['seriesType'] as String?;
+            final expectedSeriesType = doseMap['seriesType'] as String?;
             bool foundStatusMatch = false;
             bool foundReasonMatch = false;
             bool foundAnyEval = false;
@@ -162,8 +158,8 @@ void main() {
                     if (actualType != expectedSeriesType) continue;
                   }
 
-                  final actualDose = series.doses.firstWhereOrNull(
-                      (d) => d.doseId == expectedDose.doseId);
+                  final actualDose = series.doses
+                      .firstWhereOrNull((d) => d.doseId == expectedDose.doseId);
                   if (actualDose == null || actualDose.evalStatus == null) {
                     continue;
                   }
@@ -173,8 +169,7 @@ void main() {
                   // Consistency check
                   final violations = checkDoseConsistency(actualDose);
                   for (final v in violations) {
-                    mismatches.add(
-                        'consistency: ${actualDose.doseId} $v');
+                    mismatches.add('consistency: ${actualDose.doseId} $v');
                   }
 
                   if (actualDose.evalStatus == expectedDose.evalStatus) {
@@ -190,22 +185,21 @@ void main() {
             });
 
             if (!foundAnyEval && expectedDose.evalStatus != null) {
-              mismatches.add(
-                  'dose ${expectedDose.doseId}: '
+              mismatches.add('dose ${expectedDose.doseId}: '
                   'not found in any evaluated series '
                   '(expected ${expectedDose.evalStatus}'
                   '${expectedSeriesType != null ? ', seriesType=$expectedSeriesType' : ''})');
             } else if (foundAnyEval && !foundStatusMatch) {
-              mismatches.add(
-                  'dose ${expectedDose.doseId}: '
+              mismatches.add('dose ${expectedDose.doseId}: '
                   'evalStatus expected=${expectedDose.evalStatus} '
                   'reason=${expectedDose.evalReason}'
                   '${expectedSeriesType != null ? ' seriesType=$expectedSeriesType' : ''}');
             }
-            if (foundAnyEval && foundStatusMatch && hasExpectedReason &&
+            if (foundAnyEval &&
+                foundStatusMatch &&
+                hasExpectedReason &&
                 !foundReasonMatch) {
-              mismatches.add(
-                  'dose ${expectedDose.doseId}: '
+              mismatches.add('dose ${expectedDose.doseId}: '
                   'evalReason expected=${expectedDose.evalReason} '
                   'actual=${actualReasons.join(",")}');
             }
@@ -230,19 +224,16 @@ void main() {
             final expectedStatus = expected['seriesStatus']!.toLowerCase();
             final actualStatus = vgForecast.status.toString().toLowerCase();
             if (expectedStatus != actualStatus) {
-              mismatches.add(
-                  '[$excelVg] status: '
+              mismatches.add('[$excelVg] status: '
                   'expected=$expectedStatus actual=$actualStatus');
             }
 
             // Dose number
             final expectedDoseNum = expected['forecastNum'] ?? '';
             if (expectedDoseNum.isNotEmpty && expectedDoseNum != '-') {
-              final actualDoseNum =
-                  vgForecast.doseNumber?.toString() ?? '';
+              final actualDoseNum = vgForecast.doseNumber?.toString() ?? '';
               if (expectedDoseNum != actualDoseNum) {
-                mismatches.add(
-                    '[$excelVg] doseNum: '
+                mismatches.add('[$excelVg] doseNum: '
                     'expected=$expectedDoseNum actual=$actualDoseNum');
               }
             }
@@ -252,29 +243,24 @@ void main() {
             final expectedRecommended = expected['recommendedDate'] ?? '';
             final expectedPastDue = expected['pastDueDate'] ?? '';
 
-            final actualEarliest =
-                vgForecast.earliestDate?.toString() ?? '';
+            final actualEarliest = vgForecast.earliestDate?.toString() ?? '';
             final actualRecommended =
                 vgForecast.recommendedDate?.toString() ?? '';
-            final actualPastDue =
-                vgForecast.pastDueDate?.toString() ?? '';
+            final actualPastDue = vgForecast.pastDueDate?.toString() ?? '';
 
             if (expectedEarliest.isNotEmpty &&
                 expectedEarliest != actualEarliest) {
-              mismatches.add(
-                  '[$excelVg] earliest: '
+              mismatches.add('[$excelVg] earliest: '
                   'expected=$expectedEarliest actual=$actualEarliest');
             }
             if (expectedRecommended.isNotEmpty &&
                 expectedRecommended != actualRecommended) {
-              mismatches.add(
-                  '[$excelVg] recommended: '
+              mismatches.add('[$excelVg] recommended: '
                   'expected=$expectedRecommended actual=$actualRecommended');
             }
             if (expectedPastDue.isNotEmpty &&
                 expectedPastDue != actualPastDue) {
-              mismatches.add(
-                  '[$excelVg] pastDue: '
+              mismatches.add('[$excelVg] pastDue: '
                   'expected=$expectedPastDue actual=$actualPastDue');
             }
           }

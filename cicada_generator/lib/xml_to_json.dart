@@ -7,8 +7,8 @@ void main() {
   final xmlDir = Directory(supportDir);
   Directory(supportDir.replaceAll('XML', 'JSON')).createSync(recursive: true);
   final xmlFiles = xmlDir.listSync().where(
-    (file) => file.path.endsWith('.xml'),
-  );
+        (file) => file.path.endsWith('.xml'),
+      );
 
   // Create an instance of Xml2Json.
   final transformer = Xml2Json();
@@ -61,9 +61,8 @@ void main() {
     final finalJson = ensureKeysAreLists(cleanedJson, keysToAlwaysList);
 
     // Write the resulting JSON to a new file.
-    final outputPath = file.path
-        .replaceAll('.xml', '.json')
-        .replaceAll('XML', 'JSON');
+    final outputPath =
+        file.path.replaceAll('.xml', '.json').replaceAll('XML', 'JSON');
     File(outputPath).writeAsStringSync(jsonPrettyPrint(finalJson), flush: true);
   }
 }

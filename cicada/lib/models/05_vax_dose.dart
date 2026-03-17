@@ -255,8 +255,8 @@ class VaxDose {
 
     // Column 1: before absMinAge → Not Valid "Too young"
     if (!isDoseGivenAtValidAge(age)) {
-      setAgeReason(
-          ValidAgeReason.tooYoung, EvalStatus.not_valid, EvalReason.ageTooYoung);
+      setAgeReason(ValidAgeReason.tooYoung, EvalStatus.not_valid,
+          EvalReason.ageTooYoung);
       return false;
     }
 
@@ -299,7 +299,8 @@ class VaxDose {
       setAgeReason(ValidAgeReason.gracePeriod);
       return true;
     }
-    setAgeReason(ValidAgeReason.tooOld, EvalStatus.extraneous, EvalReason.ageTooOld);
+    setAgeReason(
+        ValidAgeReason.tooOld, EvalStatus.extraneous, EvalReason.ageTooOld);
     return false;
   }
 
@@ -361,7 +362,8 @@ class VaxDose {
       }
 
       if (dateGiven < minimumDate) {
-        updatePreferredInterval(valid: true, reason: IntervalReason.gracePeriod);
+        updatePreferredInterval(
+            valid: true, reason: IntervalReason.gracePeriod);
       } else {
         updatePreferredInterval(valid: true);
       }
@@ -464,8 +466,7 @@ class VaxDose {
     final VaxObservation obs = observations!.observation![obsIndex];
     // CALCDTINT-9: Use period.start (the date the observation occurred),
     // fallback to period.end
-    if (obs.period?.start != null &&
-        obs.period!.start!.valueDateTime != null) {
+    if (obs.period?.start != null && obs.period!.start!.valueDateTime != null) {
       return VaxDate.fromDateTime(obs.period!.start!.valueDateTime!);
     }
     if (obs.period?.end != null && obs.period!.end!.valueDateTime != null) {
@@ -513,11 +514,10 @@ class VaxDose {
 
         /// Per CALCDTCONFLICT-2: use minConflictEndInterval when previous
         /// is Valid or has no eval status; use conflictEndInterval otherwise
-        final String? endInterval =
-            (previousDose.evalStatus == null ||
-                    previousDose.evalStatus == EvalStatus.valid)
-                ? lvc.minConflictEndInterval
-                : lvc.conflictEndInterval;
+        final String? endInterval = (previousDose.evalStatus == null ||
+                previousDose.evalStatus == EvalStatus.valid)
+            ? lvc.minConflictEndInterval
+            : lvc.conflictEndInterval;
 
         final VaxDate conflictEndDate =
             previousDose.dateGiven.changeNullable(endInterval, true)!;

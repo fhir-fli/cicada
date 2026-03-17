@@ -24,7 +24,8 @@ void main() {
   _generateScheduleExcel(scheduleDir);
 
   print('\nDone. Excel files are now the source of truth.');
-  print('Next: delete JSON files, then run: dart cicada_generator/lib/main.dart --who');
+  print(
+      'Next: delete JSON files, then run: dart cicada_generator/lib/main.dart --who');
 }
 
 // =============================================================================
@@ -36,8 +37,7 @@ TextCellValue _t(String value) => TextCellValue(value);
 List<CellValue?> _row(List<String> cells) => cells.map(_t).toList();
 
 /// Return "n/a" for null/empty values (parser's _nullIfNA treats as null).
-String _na(String? value) =>
-    (value == null || value.isEmpty) ? 'n/a' : value;
+String _na(String? value) => (value == null || value.isEmpty) ? 'n/a' : value;
 
 /// Format "text (code)" — parser's _extractCodeAndText uses lastIndexOf('(').
 String _codeText(String? code, String? text) {
@@ -86,8 +86,7 @@ void _generateAntigenExcel(String antigenDir) {
     final usedNames = <String>{};
     for (var i = 0; i < seriesList.length; i++) {
       final series = seriesList[i] as Map<String, dynamic>;
-      final doseCount =
-          (series['seriesDose'] as List<dynamic>?)?.length ?? 0;
+      final doseCount = (series['seriesDose'] as List<dynamic>?)?.length ?? 0;
       var sheetName = '$doseCount-dose series';
       if (usedNames.contains(sheetName)) {
         sheetName = '$sheetName (${i + 1})';
@@ -160,8 +159,7 @@ void _writeContraindicationsSheet(
   final vaccineGroup =
       contraindications['vaccineGroup'] as Map<String, dynamic>?;
   if (vaccineGroup != null) {
-    final contras =
-        vaccineGroup['contraindication'] as List<dynamic>? ?? [];
+    final contras = vaccineGroup['contraindication'] as List<dynamic>? ?? [];
     for (final c in contras) {
       final entry = c as Map<String, dynamic>;
       sheet.appendRow(_row([
@@ -188,8 +186,7 @@ void _writeContraindicationsSheet(
       final obsTitle = entry['observationTitle'] as String?;
       final desc = entry['contraindicationText'] as String?;
       final guidance = entry['contraindicationGuidance'] as String?;
-      final vaccines =
-          entry['contraindicatedVaccine'] as List<dynamic>? ?? [];
+      final vaccines = entry['contraindicatedVaccine'] as List<dynamic>? ?? [];
       if (vaccines.isEmpty) {
         sheet.appendRow(_row([
           'Vaccine Contraindication',
@@ -277,8 +274,7 @@ void _writeSeriesSheet(
   if (indications != null) {
     for (final ind in indications) {
       final indication = ind as Map<String, dynamic>;
-      final obsCode =
-          indication['observationCode'] as Map<String, dynamic>?;
+      final obsCode = indication['observationCode'] as Map<String, dynamic>?;
       sheet.appendRow(_row([
         'Indication',
         _codeText(
@@ -349,8 +345,7 @@ void _writeSeriesSheet(
     }
 
     // Allowable Interval
-    final allowInterval =
-        dose['allowableInterval'] as Map<String, dynamic>?;
+    final allowInterval = dose['allowableInterval'] as Map<String, dynamic>?;
     if (allowInterval != null) {
       sheet.appendRow(_row([
         'Allowable Interval',
@@ -363,8 +358,7 @@ void _writeSeriesSheet(
     }
 
     // Preferable Vaccine
-    final prefVaccines =
-        dose['preferableVaccine'] as List<dynamic>? ?? [];
+    final prefVaccines = dose['preferableVaccine'] as List<dynamic>? ?? [];
     for (final v in prefVaccines) {
       final vac = v as Map<String, dynamic>;
       sheet.appendRow(_row([
@@ -384,8 +378,7 @@ void _writeSeriesSheet(
     }
 
     // Allowable Vaccine
-    final allowVaccines =
-        dose['allowableVaccine'] as List<dynamic>? ?? [];
+    final allowVaccines = dose['allowableVaccine'] as List<dynamic>? ?? [];
     for (final v in allowVaccines) {
       final vac = v as Map<String, dynamic>;
       sheet.appendRow(_row([
@@ -397,8 +390,7 @@ void _writeSeriesSheet(
     }
 
     // Inadvertent Vaccine
-    final inadVertVaccines =
-        dose['inadvertentVaccine'] as List<dynamic>? ?? [];
+    final inadVertVaccines = dose['inadvertentVaccine'] as List<dynamic>? ?? [];
     for (final v in inadVertVaccines) {
       final vac = v as Map<String, dynamic>;
       sheet.appendRow(_row([
@@ -408,15 +400,13 @@ void _writeSeriesSheet(
     }
 
     // Conditional Skip
-    final conditionalSkips =
-        dose['conditionalSkip'] as List<dynamic>? ?? [];
+    final conditionalSkips = dose['conditionalSkip'] as List<dynamic>? ?? [];
     for (final cs in conditionalSkips) {
       final skip = cs as Map<String, dynamic>;
       final context = skip['context'] as String? ?? 'n/a';
       final setLogic = skip['setLogic'] as String? ?? '';
-      final sets = skip['set'] as List<dynamic>? ??
-          skip['set_'] as List<dynamic>? ??
-          [];
+      final sets =
+          skip['set'] as List<dynamic>? ?? skip['set_'] as List<dynamic>? ?? [];
       for (final s in sets) {
         final setMap = s as Map<String, dynamic>;
         final setId = setMap['setID'] as String? ?? '';
@@ -424,8 +414,7 @@ void _writeSeriesSheet(
         final effectiveDate = setMap['effectiveDate'] as String?;
         final cessationDate = setMap['cessationDate'] as String?;
         final condLogic = setMap['conditionLogic'] as String?;
-        final conditions =
-            setMap['condition'] as List<dynamic>? ?? [];
+        final conditions = setMap['condition'] as List<dynamic>? ?? [];
         if (conditions.isEmpty) {
           sheet.appendRow(_row([
             'Conditional Skip',
@@ -436,8 +425,18 @@ void _writeSeriesSheet(
             _na(effectiveDate),
             _na(cessationDate),
             _na(condLogic),
-            'n/a', 'n/a', 'n/a', 'n/a', 'n/a', 'n/a', 'n/a',
-            'n/a', 'n/a', 'n/a', 'n/a', 'n/a',
+            'n/a',
+            'n/a',
+            'n/a',
+            'n/a',
+            'n/a',
+            'n/a',
+            'n/a',
+            'n/a',
+            'n/a',
+            'n/a',
+            'n/a',
+            'n/a',
           ]));
         } else {
           for (final cond in conditions) {
@@ -475,8 +474,7 @@ void _writeSeriesSheet(
     );
 
     // Seasonal Recommendation
-    final seasonal =
-        dose['seasonalRecommendation'] as Map<String, dynamic>?;
+    final seasonal = dose['seasonalRecommendation'] as Map<String, dynamic>?;
     if (seasonal != null) {
       sheet.appendRow(_row([
         'Seasonal Recommendation',
@@ -498,8 +496,8 @@ void _generateScheduleExcel(String scheduleDir) {
     return;
   }
 
-  final scheduleData = json.decode(scheduleFile.readAsStringSync())
-      as Map<String, dynamic>;
+  final scheduleData =
+      json.decode(scheduleFile.readAsStringSync()) as Map<String, dynamic>;
 
   _writeCodedObservationsExcel(scheduleDir, scheduleData);
   _writeCvxToAntigenMapExcel(scheduleDir, scheduleData);
@@ -530,15 +528,13 @@ void _writeCodedObservationsExcel(
     'CDCPHINVS',
   ]));
 
-  final observations =
-      scheduleData['observations'] as Map<String, dynamic>?;
+  final observations = scheduleData['observations'] as Map<String, dynamic>?;
   final obsList = observations?['observation'] as List<dynamic>? ?? [];
 
   for (final obs in obsList) {
     final o = obs as Map<String, dynamic>;
     final codedValues = o['codedValues'] as Map<String, dynamic>?;
-    final codedValueList =
-        codedValues?['codedValue'] as List<dynamic>? ?? [];
+    final codedValueList = codedValues?['codedValue'] as List<dynamic>? ?? [];
 
     // Group coded values by system
     final snomed = <String>[];
@@ -594,16 +590,14 @@ void _writeCvxToAntigenMapExcel(
     'Association End Age',
   ]));
 
-  final cvxMap =
-      scheduleData['cvxToAntigenMap'] as Map<String, dynamic>?;
+  final cvxMap = scheduleData['cvxToAntigenMap'] as Map<String, dynamic>?;
   final cvxList = cvxMap?['cvxMap'] as List<dynamic>? ?? [];
 
   for (final entry in cvxList) {
     final cvxEntry = entry as Map<String, dynamic>;
     final cvxCode = cvxEntry['cvx'] as String? ?? '';
     final shortDesc = cvxEntry['shortDescription'] as String? ?? '';
-    final associations =
-        cvxEntry['association'] as List<dynamic>? ?? [];
+    final associations = cvxEntry['association'] as List<dynamic>? ?? [];
     for (final assoc in associations) {
       final a = assoc as Map<String, dynamic>;
       sheet.appendRow(_row([
@@ -638,10 +632,8 @@ void _writeLiveVirusConflictsExcel(
     'Conflict End Interval',
   ]));
 
-  final conflicts =
-      scheduleData['liveVirusConflicts'] as Map<String, dynamic>?;
-  final conflictList =
-      conflicts?['liveVirusConflict'] as List<dynamic>? ?? [];
+  final conflicts = scheduleData['liveVirusConflicts'] as Map<String, dynamic>?;
+  final conflictList = conflicts?['liveVirusConflict'] as List<dynamic>? ?? [];
 
   for (final c in conflictList) {
     final conflict = c as Map<String, dynamic>;
@@ -687,8 +679,7 @@ void _writeVaccineGroupToAntigenMapExcel(
 
   final groupMap =
       scheduleData['vaccineGroupToAntigenMap'] as Map<String, dynamic>?;
-  final groupList =
-      groupMap?['vaccineGroupMap'] as List<dynamic>? ?? [];
+  final groupList = groupMap?['vaccineGroupMap'] as List<dynamic>? ?? [];
 
   for (final entry in groupList) {
     final group = entry as Map<String, dynamic>;
@@ -718,10 +709,8 @@ void _writeVaccineGroupsExcel(
     'Administer Full Vaccine Group',
   ]));
 
-  final groups =
-      scheduleData['vaccineGroups'] as Map<String, dynamic>?;
-  final groupList =
-      groups?['vaccineGroup'] as List<dynamic>? ?? [];
+  final groups = scheduleData['vaccineGroups'] as Map<String, dynamic>?;
+  final groupList = groups?['vaccineGroup'] as List<dynamic>? ?? [];
 
   for (final entry in groupList) {
     final group = entry as Map<String, dynamic>;

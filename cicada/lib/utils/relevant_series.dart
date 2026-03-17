@@ -53,12 +53,10 @@ List<Series> relevantSeries(
             final ind = series.indication!.firstWhere(
               (i) => i.observationCode?.code == obsCode,
             );
-            return patient.birthdate
-                        .changeNullable(ind.beginAge, false)! <=
+            return patient.birthdate.changeNullable(ind.beginAge, false)! <=
                     patient.assessmentDate &&
                 patient.assessmentDate <
-                    patient.birthdate
-                        .changeNullable(ind.endAge, true)!;
+                    patient.birthdate.changeNullable(ind.endAge, true)!;
           });
           return obsIndex != -1;
         }

@@ -112,8 +112,10 @@ String getSeriesStatusFromResult(
   VaxSeries? bestSeries;
   if (antigenRepresentatives.isNotEmpty) {
     final notComplete = antigenRepresentatives.values
-        .where((s) => s.seriesStatus != SeriesStatus.complete
-            && s.seriesStatus != SeriesStatus.immune).toList();
+        .where((s) =>
+            s.seriesStatus != SeriesStatus.complete &&
+            s.seriesStatus != SeriesStatus.immune)
+        .toList();
     bestSeries = notComplete.isNotEmpty
         ? notComplete.first
         : antigenRepresentatives.values.first;
@@ -124,24 +126,17 @@ String getSeriesStatusFromResult(
   return bestSeries.seriesStatus.toString().toLowerCase();
 }
 
-bool _isLessComplete(SeriesStatus a, SeriesStatus b) {
-  const order = {
-    SeriesStatus.notComplete: 0,
-    SeriesStatus.agedOut: 1,
-    SeriesStatus.complete: 2,
-    SeriesStatus.immune: 3,
-  };
-  return (order[a] ?? 0) < (order[b] ?? 0);
-}
-
-void printSeriesDetails(VaxSeries series, String indent, {bool isBest = false, bool isPrioritized = false}) {
+void printSeriesDetails(VaxSeries series, String indent,
+    {bool isBest = false, bool isPrioritized = false}) {
   final marker = isBest ? ' [BEST]' : (isPrioritized ? ' [PRIORITIZED]' : '');
   print('$indent- ${series.series.seriesName}$marker');
   print('$indent  Type: ${series.series.seriesType}');
   print('$indent  Status: ${series.seriesStatus}');
   print('$indent  TargetDose: ${series.targetDose}');
   print('$indent  Evaluated doses: ${series.evaluatedDoses.length}');
-  final validDoses = series.evaluatedDoses.where((d) => d.evalStatus == EvalStatus.valid).length;
+  final validDoses = series.evaluatedDoses
+      .where((d) => d.evalStatus == EvalStatus.valid)
+      .length;
   print('$indent  Valid doses: $validDoses');
   print('$indent  Score: ${series.score}');
 
@@ -185,19 +180,22 @@ void analyzeMismatch(
       }
 
       print('\n  Antigen: $antigenName');
-      final groups = ag.groups.values.where((g) => g.vaccineGroupName == engineGroup);
+      final groups =
+          ag.groups.values.where((g) => g.vaccineGroupName == engineGroup);
 
       for (final group in groups) {
         print('\n    Group: ${group.vaccineGroupName}');
         print('    Total series: ${group.series.length}');
         print('    Prioritized series: ${group.prioritizedSeries.length}');
-        print('    Best series: ${group.bestSeries?.series.seriesName ?? "NONE"}');
+        print(
+            '    Best series: ${group.bestSeries?.series.seriesName ?? "NONE"}');
 
         print('\n    All series:');
         for (final series in group.series) {
           final isBest = series == group.bestSeries;
           final isPrioritized = group.prioritizedSeries.contains(series);
-          printSeriesDetails(series, '      ', isBest: isBest, isPrioritized: isPrioritized);
+          printSeriesDetails(series, '      ',
+              isBest: isBest, isPrioritized: isPrioritized);
           print('');
         }
       }
@@ -234,7 +232,8 @@ void analyzeMismatch(
     for (final series in group.series) {
       final isBest = series == group.bestSeries;
       final isPrioritized = group.prioritizedSeries.contains(series);
-      printSeriesDetails(series, '    ', isBest: isBest, isPrioritized: isPrioritized);
+      printSeriesDetails(series, '    ',
+          isBest: isBest, isPrioritized: isPrioritized);
       print('');
     }
   }
@@ -273,8 +272,10 @@ void main() async {
       if (expectedStatus != actualStatus) {
         mismatchCount++;
         final mismatchType = '$expectedStatus→$actualStatus';
-        mismatchesByType[mismatchType] = (mismatchesByType[mismatchType] ?? 0) + 1;
-        mismatchesByGroup[vaccineGroup] = (mismatchesByGroup[vaccineGroup] ?? 0) + 1;
+        mismatchesByType[mismatchType] =
+            (mismatchesByType[mismatchType] ?? 0) + 1;
+        mismatchesByGroup[vaccineGroup] =
+            (mismatchesByGroup[vaccineGroup] ?? 0) + 1;
 
         // Analyze this mismatch
         analyzeMismatch(
@@ -294,12 +295,12 @@ void main() async {
   print('Total mismatches: $mismatchCount');
   print('\nBy type:');
   for (final entry in mismatchesByType.entries.toList()
-      ..sort((a, b) => b.value.compareTo(a.value))) {
+    ..sort((a, b) => b.value.compareTo(a.value))) {
     print('  ${entry.key}: ${entry.value}');
   }
   print('\nBy vaccine group:');
   for (final entry in mismatchesByGroup.entries.toList()
-      ..sort((a, b) => b.value.compareTo(a.value))) {
+    ..sort((a, b) => b.value.compareTo(a.value))) {
     print('  ${entry.key}: ${entry.value}');
   }
 }

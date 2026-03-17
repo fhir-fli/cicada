@@ -146,9 +146,8 @@ class AntigenSheetParser {
         if (dob == null) {
           dob = DateOfBirth(
             immunityBirthDate: date,
-            birthCountry: country.contains('n/a') || country.isEmpty
-                ? null
-                : country,
+            birthCountry:
+                country.contains('n/a') || country.isEmpty ? null : country,
             exclusion: const [],
           );
         }
@@ -199,15 +198,12 @@ class AntigenSheetParser {
       if (firstCell.contains('Antigen Contraindication') && row.length > 1) {
         final (code, text) = _extractCodeAndText(row[1]);
         final desc = row.length > 2 ? row[2] : '';
-        final guidance = (row.length > 3 && !row[3].contains('n/a'))
-            ? row[3]
-            : null;
-        final beginAge = (row.length > 4 && !row[4].contains('n/a'))
-            ? row[4]
-            : null;
-        final endAge = (row.length > 5 && !row[5].contains('n/a'))
-            ? row[5]
-            : null;
+        final guidance =
+            (row.length > 3 && !row[3].contains('n/a')) ? row[3] : null;
+        final beginAge =
+            (row.length > 4 && !row[4].contains('n/a')) ? row[4] : null;
+        final endAge =
+            (row.length > 5 && !row[5].contains('n/a')) ? row[5] : null;
 
         // Avoid adding a dummy item if 'Code' or 'n/a'
         if (code.isNotEmpty && code != 'Code') {
@@ -216,9 +212,8 @@ class AntigenSheetParser {
               observationCode: code,
               observationTitle: text,
               contraindicationText: desc,
-              contraindicationGuidance: guidance == null || guidance.isEmpty
-                  ? null
-                  : guidance,
+              contraindicationGuidance:
+                  guidance == null || guidance.isEmpty ? null : guidance,
               beginAge: beginAge,
               endAge: endAge,
             ),
@@ -232,14 +227,12 @@ class AntigenSheetParser {
           row.length > 1) {
         final (code, text) = _extractCodeAndText(row[1]);
         final desc = row.length > 2 ? row[2] : '';
-        final guidance = (row.length > 3 && !row[3].contains('n/a'))
-            ? row[3]
-            : null;
+        final guidance =
+            (row.length > 3 && !row[3].contains('n/a')) ? row[3] : null;
 
         // If you store "vaccineType" and "cvx" in columns [4] and [5], for example:
-        final (cvx, vaccineType) = row.length > 4
-            ? _extractCodeAndText(row[4].trim())
-            : (null, null);
+        final (cvx, vaccineType) =
+            row.length > 4 ? _extractCodeAndText(row[4].trim()) : (null, null);
 
         // Retrieve any existing 'VaccineContraindication' with the same code
         var existingContra = vaccineContraMap[code];
@@ -248,9 +241,8 @@ class AntigenSheetParser {
             observationCode: code,
             observationTitle: text,
             contraindicationText: desc,
-            contraindicationGuidance: guidance == null || guidance.isEmpty
-                ? null
-                : guidance,
+            contraindicationGuidance:
+                guidance == null || guidance.isEmpty ? null : guidance,
             contraindicatedVaccine: const [],
           );
         }
@@ -258,12 +250,10 @@ class AntigenSheetParser {
         // If the row has a non-empty vaccineType/cvx, attach it as a new 'contraindicatedVaccine'
         if ((vaccineType?.isNotEmpty ?? false) &&
             !vaccineType!.contains('n/a')) {
-          final beginAge = (row.length > 5 && !row[5].contains('n/a'))
-              ? row[5]
-              : null;
-          final endAge = (row.length > 6 && !row[6].contains('n/a'))
-              ? row[6]
-              : null;
+          final beginAge =
+              (row.length > 5 && !row[5].contains('n/a')) ? row[5] : null;
+          final endAge =
+              (row.length > 6 && !row[6].contains('n/a')) ? row[6] : null;
           final newVac = Vaccine(
             vaccineType: vaccineType,
             cvx: cvx,
@@ -405,18 +395,14 @@ class AntigenSheetParser {
         // row[2] => description, row[3] => beginAge, row[4] => endAge, row[5] => guidance
         final obsCell = row[1];
         final (code, text) = _extractCodeAndText(obsCell);
-        final desc = (row.length > 2 && !row[2].contains('n/a'))
-            ? row[2]
-            : null;
-        final beginAge = (row.length > 3 && !row[3].contains('n/a'))
-            ? row[3]
-            : null;
-        final endAge = (row.length > 4 && !row[4].contains('n/a'))
-            ? row[4]
-            : null;
-        final guidance = (row.length > 5 && !row[5].contains('n/a'))
-            ? row[5]
-            : null;
+        final desc =
+            (row.length > 2 && !row[2].contains('n/a')) ? row[2] : null;
+        final beginAge =
+            (row.length > 3 && !row[3].contains('n/a')) ? row[3] : null;
+        final endAge =
+            (row.length > 4 && !row[4].contains('n/a')) ? row[4] : null;
+        final guidance =
+            (row.length > 5 && !row[5].contains('n/a')) ? row[5] : null;
 
         final existingInd = series.indication?.toList() ?? [];
         if (code == 'Code' || code.isEmpty) {
@@ -540,9 +526,8 @@ class AntigenSheetParser {
           currentDose != null &&
           row.length > 1) {
         final (cvxCode, vaccineType) = _extractCodeAndText(row[1]);
-        final (mvxCode, tradeName) = row.length > 4
-            ? _extractCodeAndText(row[4])
-            : (null, null);
+        final (mvxCode, tradeName) =
+            row.length > 4 ? _extractCodeAndText(row[4]) : (null, null);
         if (!vaccineType.contains('Vaccine Type') &&
             !vaccineType.contains('n/a')) {
           final vac = Vaccine(
@@ -550,8 +535,7 @@ class AntigenSheetParser {
             cvx: cvxCode,
             beginAge: _nullIfNA(row.length > 2 ? row[2] : ''),
             endAge: _nullIfNA(row.length > 3 ? row[3] : ''),
-            tradeName:
-                tradeName == null ||
+            tradeName: tradeName == null ||
                     tradeName.isEmpty ||
                     tradeName.contains('n/a')
                 ? null
@@ -625,83 +609,70 @@ class AntigenSheetParser {
             // Basic set-level fields
             final setId = row.length > 3 ? row[3] : null;
             final setDesc = row.length > 4 ? row[4] : null;
-            final effectiveDate = (row.length > 5 && !row[5].contains('n/a'))
-                ? row[5]
-                : null;
+            final effectiveDate =
+                (row.length > 5 && !row[5].contains('n/a')) ? row[5] : null;
 
-            final cessationDate = (row.length > 6 && !row[6].contains('n/a'))
-                ? row[6]
-                : null;
+            final cessationDate =
+                (row.length > 6 && !row[6].contains('n/a')) ? row[6] : null;
 
-            final condLogic = (row.length > 7 && !row[7].contains('n/a'))
-                ? row[7]
-                : null;
+            final condLogic =
+                (row.length > 7 && !row[7].contains('n/a')) ? row[7] : null;
 
             // Condition-level fields
             final condID =
                 (row.length > 8 && row[8].isNotEmpty && !row[8].contains('n/a'))
-                ? row[8]
-                : null;
+                    ? row[8]
+                    : null;
             final condType =
                 (row.length > 9 && row[9].isNotEmpty && !row[9].contains('n/a'))
-                ? row[9]
-                : null;
-            final startDate =
-                (row.length > 10 &&
+                    ? row[9]
+                    : null;
+            final startDate = (row.length > 10 &&
                     row[10].isNotEmpty &&
                     !row[10].contains('n/a'))
                 ? row[10]
                 : null;
-            final endDate =
-                (row.length > 11 &&
+            final endDate = (row.length > 11 &&
                     row[11].isNotEmpty &&
                     !row[11].contains('n/a'))
                 ? row[11]
                 : null;
-            final beginAge =
-                (row.length > 12 &&
+            final beginAge = (row.length > 12 &&
                     row[12].isNotEmpty &&
                     !row[12].contains('n/a'))
                 ? row[12]
                 : null;
-            final endAge =
-                (row.length > 13 &&
+            final endAge = (row.length > 13 &&
                     row[13].isNotEmpty &&
                     !row[13].contains('n/a'))
                 ? row[13]
                 : null;
-            final interval =
-                (row.length > 14 &&
+            final interval = (row.length > 14 &&
                     row[14].isNotEmpty &&
                     !row[14].contains('n/a'))
                 ? row[14]
                 : null;
-            final doseCount =
-                (row.length > 15 &&
+            final doseCount = (row.length > 15 &&
                     row[15].isNotEmpty &&
                     !row[15].contains('n/a'))
                 ? row[15]
                 : null;
-            final doseType =
-                (row.length > 16 &&
+            final doseType = (row.length > 16 &&
                     row[16].isNotEmpty &&
                     !row[16].contains('n/a'))
                 ? DoseType.fromJson(row[16])
                 : null;
-            final doseCountLogic =
-                (row.length > 17 &&
+            final doseCountLogic = (row.length > 17 &&
                     row[17].isNotEmpty &&
                     !row[17].contains('n/a'))
                 ? row[17]
                 : null;
-            final vaccineTypes =
-                (row.length > 18 &&
+            final vaccineTypes = (row.length > 18 &&
                     row[18].isNotEmpty &&
                     !row[18].contains('n/a'))
                 ? row[18]
                 : null;
-            final seriesGroups =
-                (row.length > 19 &&
+            final seriesGroups = (row.length > 19 &&
                     row[19].isNotEmpty &&
                     !row[19].contains('n/a'))
                 ? row[19]

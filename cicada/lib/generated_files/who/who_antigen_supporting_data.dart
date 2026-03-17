@@ -21,7 +21,6 @@ import 'yellow_fever.dart';
 import 'hepb.dart';
 import 'tuberculosis.dart';
 
-
 final whoAntigenSupportingData = [
   whoRabies,
   whoJapaneseEncephalitis,
@@ -71,4 +70,3 @@ final whoAntigenSupportingDataMap = {
   'HepB': whoHepb,
   'Tuberculosis': whoTuberculosis,
 };
-

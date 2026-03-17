@@ -2,196 +2,167 @@
 
 import '../../cicada.dart';
 
-final AntigenSupportingData whoHepb = AntigenSupportingData.fromJson(
-{
-    "targetDisease": "HepB",
-    "vaccineGroup": "HepB",
-    "immunity": {
-        "clinicalHistory": [
-            {
-                "guidelineCode": "1070",
-                "guidelineTitle": "Serologic evidence of immunity (anti-HBs ≥10 mIU/mL)"
-            }
-        ]
-    },
-    "series": [
-        {
-            "seriesName": "WHO HepB 3-dose series",
-            "targetDisease": "HepB",
-            "vaccineGroup": "HepB",
-            "seriesType": "Standard",
-            "selectSeries": {
-                "defaultSeries": "Yes",
-                "productPath": "No",
-                "seriesGroupName": "Standard",
-                "seriesGroup": "1",
-                "seriesPriority": "A",
-                "seriesPreference": "1"
-            },
-            "seriesDose": [
-                {
-                    "doseNumber": "Dose 1",
-                    "age": [
-                        {
-                            "absMinAge": "0 days",
-                            "minAge": "0 days",
-                            "earliestRecAge": "0 days",
-                            "latestRecAge": "24 hours"
-                        }
-                    ],
-                    "preferableVaccine": [
-                        {
-                            "vaccineType": "Hep B, adolescent or pediatric",
-                            "cvx": "08",
-                            "beginAge": "0 days",
-                            "forecastVaccineType": "Y"
-                        }
-                    ],
-                    "allowableVaccine": [
-                        {
-                            "vaccineType": "Hep B, adolescent or pediatric",
-                            "cvx": "08",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, adult",
-                            "cvx": "43",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, unspecified",
-                            "cvx": "45",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B-Hib",
-                            "cvx": "51",
-                            "beginAge": "6 weeks"
-                        },
-                        {
-                            "vaccineType": "DTP-HepB-Hib",
-                            "cvx": "198",
-                            "beginAge": "6 weeks"
-                        }
-                    ],
-                    "recurringDose": "No"
-                },
-                {
-                    "doseNumber": "Dose 2",
-                    "age": [
-                        {
-                            "absMinAge": "4 weeks",
-                            "minAge": "4 weeks",
-                            "earliestRecAge": "6 weeks"
-                        }
-                    ],
-                    "interval": [
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "4 weeks",
-                            "minInt": "4 weeks",
-                            "earliestRecInt": "6 weeks"
-                        }
-                    ],
-                    "preferableVaccine": [
-                        {
-                            "vaccineType": "DTP-HepB-Hib (Pentavalent)",
-                            "cvx": "198",
-                            "beginAge": "6 weeks",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "Hep B, adolescent or pediatric",
-                            "cvx": "08",
-                            "beginAge": "0 days",
-                            "forecastVaccineType": "N"
-                        }
-                    ],
-                    "allowableVaccine": [
-                        {
-                            "vaccineType": "DTP-HepB-Hib",
-                            "cvx": "198",
-                            "beginAge": "6 weeks"
-                        },
-                        {
-                            "vaccineType": "Hep B, adolescent or pediatric",
-                            "cvx": "08",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, adult",
-                            "cvx": "43",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B-Hib",
-                            "cvx": "51",
-                            "beginAge": "6 weeks"
-                        }
-                    ],
-                    "recurringDose": "No"
-                },
-                {
-                    "doseNumber": "Dose 3",
-                    "age": [
-                        {
-                            "absMinAge": "24 weeks",
-                            "minAge": "24 weeks",
-                            "earliestRecAge": "24 weeks"
-                        }
-                    ],
-                    "interval": [
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "8 weeks",
-                            "minInt": "8 weeks",
-                            "earliestRecInt": "8 weeks"
-                        },
-                        {
-                            "absMinInt": "16 weeks",
-                            "minInt": "16 weeks",
-                            "earliestRecInt": "16 weeks"
-                        }
-                    ],
-                    "preferableVaccine": [
-                        {
-                            "vaccineType": "DTP-HepB-Hib (Pentavalent)",
-                            "cvx": "198",
-                            "beginAge": "6 weeks",
-                            "forecastVaccineType": "Y"
-                        },
-                        {
-                            "vaccineType": "Hep B, adolescent or pediatric",
-                            "cvx": "08",
-                            "beginAge": "0 days",
-                            "forecastVaccineType": "N"
-                        }
-                    ],
-                    "allowableVaccine": [
-                        {
-                            "vaccineType": "DTP-HepB-Hib",
-                            "cvx": "198",
-                            "beginAge": "6 weeks"
-                        },
-                        {
-                            "vaccineType": "Hep B, adolescent or pediatric",
-                            "cvx": "08",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B, adult",
-                            "cvx": "43",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "Hep B-Hib",
-                            "cvx": "51",
-                            "beginAge": "6 weeks"
-                        }
-                    ],
-                    "recurringDose": "No"
-                }
-            ]
-        }
+final AntigenSupportingData whoHepb = AntigenSupportingData.fromJson({
+  "targetDisease": "HepB",
+  "vaccineGroup": "HepB",
+  "immunity": {
+    "clinicalHistory": [
+      {
+        "guidelineCode": "1070",
+        "guidelineTitle": "Serologic evidence of immunity (anti-HBs ≥10 mIU/mL)"
+      }
     ]
+  },
+  "series": [
+    {
+      "seriesName": "WHO HepB 3-dose series",
+      "targetDisease": "HepB",
+      "vaccineGroup": "HepB",
+      "seriesType": "Standard",
+      "selectSeries": {
+        "defaultSeries": "Yes",
+        "productPath": "No",
+        "seriesGroupName": "Standard",
+        "seriesGroup": "1",
+        "seriesPriority": "A",
+        "seriesPreference": "1"
+      },
+      "seriesDose": [
+        {
+          "doseNumber": "Dose 1",
+          "age": [
+            {
+              "absMinAge": "0 days",
+              "minAge": "0 days",
+              "earliestRecAge": "0 days",
+              "latestRecAge": "24 hours"
+            }
+          ],
+          "preferableVaccine": [
+            {
+              "vaccineType": "Hep B, adolescent or pediatric",
+              "cvx": "08",
+              "beginAge": "0 days",
+              "forecastVaccineType": "Y"
+            }
+          ],
+          "allowableVaccine": [
+            {
+              "vaccineType": "Hep B, adolescent or pediatric",
+              "cvx": "08",
+              "beginAge": "0 days"
+            },
+            {"vaccineType": "Hep B, adult", "cvx": "43", "beginAge": "0 days"},
+            {
+              "vaccineType": "Hep B, unspecified",
+              "cvx": "45",
+              "beginAge": "0 days"
+            },
+            {"vaccineType": "Hep B-Hib", "cvx": "51", "beginAge": "6 weeks"},
+            {"vaccineType": "DTP-HepB-Hib", "cvx": "198", "beginAge": "6 weeks"}
+          ],
+          "recurringDose": "No"
+        },
+        {
+          "doseNumber": "Dose 2",
+          "age": [
+            {
+              "absMinAge": "4 weeks",
+              "minAge": "4 weeks",
+              "earliestRecAge": "6 weeks"
+            }
+          ],
+          "interval": [
+            {
+              "fromPrevious": "Y",
+              "absMinInt": "4 weeks",
+              "minInt": "4 weeks",
+              "earliestRecInt": "6 weeks"
+            }
+          ],
+          "preferableVaccine": [
+            {
+              "vaccineType": "DTP-HepB-Hib (Pentavalent)",
+              "cvx": "198",
+              "beginAge": "6 weeks",
+              "forecastVaccineType": "Y"
+            },
+            {
+              "vaccineType": "Hep B, adolescent or pediatric",
+              "cvx": "08",
+              "beginAge": "0 days",
+              "forecastVaccineType": "N"
+            }
+          ],
+          "allowableVaccine": [
+            {
+              "vaccineType": "DTP-HepB-Hib",
+              "cvx": "198",
+              "beginAge": "6 weeks"
+            },
+            {
+              "vaccineType": "Hep B, adolescent or pediatric",
+              "cvx": "08",
+              "beginAge": "0 days"
+            },
+            {"vaccineType": "Hep B, adult", "cvx": "43", "beginAge": "0 days"},
+            {"vaccineType": "Hep B-Hib", "cvx": "51", "beginAge": "6 weeks"}
+          ],
+          "recurringDose": "No"
+        },
+        {
+          "doseNumber": "Dose 3",
+          "age": [
+            {
+              "absMinAge": "24 weeks",
+              "minAge": "24 weeks",
+              "earliestRecAge": "24 weeks"
+            }
+          ],
+          "interval": [
+            {
+              "fromPrevious": "Y",
+              "absMinInt": "8 weeks",
+              "minInt": "8 weeks",
+              "earliestRecInt": "8 weeks"
+            },
+            {
+              "absMinInt": "16 weeks",
+              "minInt": "16 weeks",
+              "earliestRecInt": "16 weeks"
+            }
+          ],
+          "preferableVaccine": [
+            {
+              "vaccineType": "DTP-HepB-Hib (Pentavalent)",
+              "cvx": "198",
+              "beginAge": "6 weeks",
+              "forecastVaccineType": "Y"
+            },
+            {
+              "vaccineType": "Hep B, adolescent or pediatric",
+              "cvx": "08",
+              "beginAge": "0 days",
+              "forecastVaccineType": "N"
+            }
+          ],
+          "allowableVaccine": [
+            {
+              "vaccineType": "DTP-HepB-Hib",
+              "cvx": "198",
+              "beginAge": "6 weeks"
+            },
+            {
+              "vaccineType": "Hep B, adolescent or pediatric",
+              "cvx": "08",
+              "beginAge": "0 days"
+            },
+            {"vaccineType": "Hep B, adult", "cvx": "43", "beginAge": "0 days"},
+            {"vaccineType": "Hep B-Hib", "cvx": "51", "beginAge": "6 weeks"}
+          ],
+          "recurringDose": "No"
+        }
+      ]
+    }
+  ]
 });

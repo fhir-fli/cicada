@@ -165,10 +165,12 @@ List<VaxSeries> _determineBestPatientSeries(VaxAntigen antigen) {
       if (pri.series.seriesType == SeriesType.risk) {
         final group = antigen.groups[groupKey];
         if (group != null) {
-          final candidates = group.series.where((s) =>
-              s != pri &&
-              s.series.seriesType == SeriesType.risk &&
-              s.seriesStatus == SeriesStatus.notComplete).toList();
+          final candidates = group.series
+              .where((s) =>
+                  s != pri &&
+                  s.series.seriesType == SeriesType.risk &&
+                  s.seriesStatus == SeriesStatus.notComplete)
+              .toList();
           if (candidates.isNotEmpty) {
             // Prefer the candidate with the latest candidateEarliestDate
             // (most age-appropriate for the patient).
@@ -176,7 +178,8 @@ List<VaxSeries> _determineBestPatientSeries(VaxAntigen antigen) {
             for (final c in candidates.skip(1)) {
               if (c.candidateEarliestDate != null &&
                   (fallback.candidateEarliestDate == null ||
-                      c.candidateEarliestDate! > fallback.candidateEarliestDate!)) {
+                      c.candidateEarliestDate! >
+                          fallback.candidateEarliestDate!)) {
                 fallback = c;
               }
             }
@@ -256,8 +259,8 @@ SeriesStatus _aggregateStatus(List<SeriesStatus> statuses) {
     return SeriesStatus.immune;
   }
   // Complete if all complete or immune
-  if (statuses.every(
-      (s) => s == SeriesStatus.complete || s == SeriesStatus.immune)) {
+  if (statuses
+      .every((s) => s == SeriesStatus.complete || s == SeriesStatus.immune)) {
     return SeriesStatus.complete;
   }
   return SeriesStatus.notComplete;
@@ -267,8 +270,8 @@ SeriesStatus _aggregateStatus(List<SeriesStatus> statuses) {
 /// Prefers preferableVaccine entries with forecastVaccineType == 'Y', but falls
 /// back to the first preferableVaccine CVX if none are marked for forecasting.
 /// FITS requires at least one vaccineCode per recommendation to match results.
-({List<String> cvx, List<String> desc, int? doseNum}) _extractForecastVaccineInfo(
-    VaxSeries series) {
+({List<String> cvx, List<String> desc, int? doseNum})
+    _extractForecastVaccineInfo(VaxSeries series) {
   final int td = series.targetDose;
   final seriesDoses = series.series.seriesDose;
   if (seriesDoses == null || td >= seriesDoses.length) {
@@ -546,15 +549,14 @@ Map<String, VaccineGroupForecast> _aggregateVaccineGroupForecasts(
     if (earliestDates.isNotEmpty) {
       if (anyPriority) {
         // Branch 1: min of all earliests, floored at latest dose date
-        vgEarliest = earliestDates.reduce((VaxDate a, VaxDate b) =>
-            a < b ? a : b);
+        vgEarliest =
+            earliestDates.reduce((VaxDate a, VaxDate b) => a < b ? a : b);
         VaxDate? latestDoseDate;
         for (final antigen in antigens) {
           for (final group in antigen.groups.values) {
             for (final s in group.series) {
               for (final dose in s.doses) {
-                if (latestDoseDate == null ||
-                    dose.dateGiven > latestDoseDate) {
+                if (latestDoseDate == null || dose.dateGiven > latestDoseDate) {
                   latestDoseDate = dose.dateGiven;
                 }
               }
@@ -566,20 +568,18 @@ Map<String, VaccineGroupForecast> _aggregateVaccineGroupForecasts(
         }
       } else {
         // Branch 2: max of all earliests (latest earliest date)
-        vgEarliest = earliestDates.reduce((VaxDate a, VaxDate b) =>
-            a > b ? a : b);
+        vgEarliest =
+            earliestDates.reduce((VaxDate a, VaxDate b) => a > b ? a : b);
       }
     }
 
     // FORECASTVG-2: recommended = max(min(all recommendeds), vgEarliest)
     VaxDate? vgRecommended;
     if (recommendedDates.isNotEmpty) {
-      final minRecommended = recommendedDates.reduce(
-          (a, b) => a < b ? a : b);
+      final minRecommended = recommendedDates.reduce((a, b) => a < b ? a : b);
       if (vgEarliest != null) {
-        vgRecommended = vgEarliest > minRecommended
-            ? vgEarliest
-            : minRecommended;
+        vgRecommended =
+            vgEarliest > minRecommended ? vgEarliest : minRecommended;
       } else {
         vgRecommended = minRecommended;
       }
@@ -588,8 +588,7 @@ Map<String, VaccineGroupForecast> _aggregateVaccineGroupForecasts(
     // FORECASTVG-3: past due = max(min(all past dues), vgEarliest)
     VaxDate? vgPastDue;
     if (pastDueDates.isNotEmpty) {
-      final minPastDue = pastDueDates.reduce(
-          (a, b) => a < b ? a : b);
+      final minPastDue = pastDueDates.reduce((a, b) => a < b ? a : b);
       if (vgEarliest != null) {
         vgPastDue = vgEarliest > minPastDue ? vgEarliest : minPastDue;
       } else {
@@ -600,8 +599,7 @@ Map<String, VaccineGroupForecast> _aggregateVaccineGroupForecasts(
     // FORECASTVG-4: latest = min(all latest dates)
     VaxDate? vgLatest;
     if (latestDates.isNotEmpty) {
-      vgLatest = latestDates.reduce(
-          (a, b) => a < b ? a : b);
+      vgLatest = latestDates.reduce((a, b) => a < b ? a : b);
     }
 
     // For multi-antigen groups, collect vaccine info from each antigen.
@@ -624,13 +622,16 @@ Map<String, VaccineGroupForecast> _aggregateVaccineGroupForecasts(
         final riskBest = bestList
             .where((s) => s.series.seriesType == SeriesType.risk)
             .toList();
-        final notCompleteRisk = riskBest.where((s) =>
-            s.seriesStatus != SeriesStatus.complete &&
-            s.seriesStatus != SeriesStatus.immune).toList();
+        final notCompleteRisk = riskBest
+            .where((s) =>
+                s.seriesStatus != SeriesStatus.complete &&
+                s.seriesStatus != SeriesStatus.immune)
+            .toList();
         final infoSeries = notCompleteRisk.isNotEmpty
             ? notCompleteRisk.first
             : bestList.firstWhere(
-                (s) => s.seriesStatus != SeriesStatus.complete &&
+                (s) =>
+                    s.seriesStatus != SeriesStatus.complete &&
                     s.seriesStatus != SeriesStatus.immune,
                 orElse: () => bestList.first);
         final info = _extractForecastVaccineInfo(infoSeries);
@@ -645,10 +646,11 @@ Map<String, VaccineGroupForecast> _aggregateVaccineGroupForecasts(
         // 2. Risk series is Complete (e.g., 1-dose travel series finished;
         //    its valid doses should count toward the standard forecast).
         int? antigenDoseNum = info.doseNum;
-        if (riskBest.isNotEmpty && riskBest.length < bestList.length &&
+        if (riskBest.isNotEmpty &&
+            riskBest.length < bestList.length &&
             (riskBest.first.evaluatedDoses.isEmpty ||
-             riskBest.first.seriesStatus == SeriesStatus.complete ||
-             riskBest.first.seriesStatus == SeriesStatus.immune)) {
+                riskBest.first.seriesStatus == SeriesStatus.complete ||
+                riskBest.first.seriesStatus == SeriesStatus.immune)) {
           final Set<String> uniqueValidDoseIds = {};
           for (final s in bestList) {
             for (final d in s.evaluatedDoses) {
@@ -666,16 +668,17 @@ Map<String, VaccineGroupForecast> _aggregateVaccineGroupForecasts(
       // Look up administerFullVaccineGroup flag
       final vgList = activeScheduleData.vaccineGroups?.vaccineGroup
           ?.where((g) => g.name == groupName);
-      final vgDef = (vgList != null && vgList.isNotEmpty)
-          ? vgList.first
-          : null;
+      final vgDef = (vgList != null && vgList.isNotEmpty) ? vgList.first : null;
       final bool useMin =
           vgDef?.administerFullVaccineGroup?.toString() == 'Yes';
       final int aggregatedDoseNum = useMin
           ? doseNums.reduce((a, b) => a < b ? a : b)
           : doseNums.reduce((a, b) => a > b ? a : b);
-      multiVaxInfo =
-          (cvx: multiVaxInfo.cvx, desc: multiVaxInfo.desc, doseNum: aggregatedDoseNum);
+      multiVaxInfo = (
+        cvx: multiVaxInfo.cvx,
+        desc: multiVaxInfo.desc,
+        doseNum: aggregatedDoseNum
+      );
     }
 
     result[groupName] = VaccineGroupForecast(

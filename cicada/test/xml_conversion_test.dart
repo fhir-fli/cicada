@@ -70,8 +70,7 @@ void main() {
           (p) => (p as Map)['name'] == 'recommendation',
           orElse: () => null);
       expect(recParam, isNotNull, reason: 'recommendation parameter missing');
-      final recResource =
-          (recParam as Map)['resource'] as Map<String, dynamic>;
+      final recResource = (recParam as Map)['resource'] as Map<String, dynamic>;
       expect(recResource['resourceType'], 'ImmunizationRecommendation');
 
       // Verify recommendation array exists
@@ -93,9 +92,8 @@ void main() {
       // Count evaluations and recommendations
       final evalParams =
           params.where((p) => (p as Map)['name'] == 'evaluation').toList();
-      final recParams = params
-          .where((p) => (p as Map)['name'] == 'recommendation')
-          .toList();
+      final recParams =
+          params.where((p) => (p as Map)['name'] == 'recommendation').toList();
 
       // With-doses case should have evaluations
       expect(evalParams, isNotEmpty,
@@ -104,8 +102,7 @@ void main() {
 
       // Verify evaluation structure survives
       for (final ep in evalParams) {
-        final resource =
-            (ep as Map)['resource'] as Map<String, dynamic>;
+        final resource = (ep as Map)['resource'] as Map<String, dynamic>;
         expect(resource['resourceType'], 'ImmunizationEvaluation');
         expect(resource['doseStatus'], isNotNull,
             reason: 'doseStatus lost in roundtrip');
@@ -130,8 +127,7 @@ void main() {
       // Extract from roundtripped
       final rtRec = (roundtrippedJson['parameter'] as List)
           .firstWhere((p) => (p as Map)['name'] == 'recommendation');
-      final rtRecResource =
-          (rtRec as Map)['resource'] as Map<String, dynamic>;
+      final rtRecResource = (rtRec as Map)['resource'] as Map<String, dynamic>;
       final rtDate = rtRecResource['date'];
 
       expect(rtDate, origDate, reason: 'recommendation date changed');

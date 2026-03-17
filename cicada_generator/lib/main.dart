@@ -78,15 +78,13 @@ void _generateCdc() {
         if (filePath.contains('AntigenSupportingData')) {
           // Fall back to XML-derived JSON
           final jsonDir = _findVersionSubdir('JSON');
-          final jsonFileName = filePath
-              .split('/')
-              .last
-              .replaceAll('.xlsx', '.json');
+          final jsonFileName =
+              filePath.split('/').last.replaceAll('.xlsx', '.json');
           final jsonFile = File('$jsonDir/$jsonFileName');
           if (jsonFile.existsSync()) {
             print('Falling back to XML-derived JSON: ${jsonFile.path}');
-            final jsonData =
-                json.decode(jsonFile.readAsStringSync()) as Map<String, dynamic>;
+            final jsonData = json.decode(jsonFile.readAsStringSync())
+                as Map<String, dynamic>;
             var antigenData = AntigenSupportingData.fromJson(jsonData);
             // XML format may not set targetDisease at top level; extract from series
             if (antigenData.targetDisease == null &&
@@ -120,8 +118,7 @@ void _generateCdc() {
   final jsonPath = '${outputDir.path}/schedule_supporting_data.json';
   File(jsonPath).writeAsStringSync(jsonPrettyPrint(scheduleData.toJson()));
 
-  final scheduleSupportingString =
-      '''
+  final scheduleSupportingString = '''
 import 'package:cicada/cicada.dart';
 
 final scheduleSupportingData = ScheduleSupportingData.fromJson(
@@ -145,8 +142,7 @@ ${jsonPrettyPrint(scheduleData.toJson())});
           .replaceAll(' ', '_')
           .replaceAll('-', '_');
       final className = snakeCaseToCamelCase(fileName);
-      final dartString =
-          '''
+      final dartString = '''
 // ignore_for_file: prefer_single_quotes, always_specify_types
 
 import '../cicada.dart';
@@ -317,14 +313,12 @@ void _generateWho() {
           scheduleData = ScheduleSupportingData(
             liveVirusConflicts:
                 partial.liveVirusConflicts ?? scheduleData.liveVirusConflicts,
-            vaccineGroups:
-                partial.vaccineGroups ?? scheduleData.vaccineGroups,
+            vaccineGroups: partial.vaccineGroups ?? scheduleData.vaccineGroups,
             vaccineGroupToAntigenMap: partial.vaccineGroupToAntigenMap ??
                 scheduleData.vaccineGroupToAntigenMap,
             cvxToAntigenMap:
                 partial.cvxToAntigenMap ?? scheduleData.cvxToAntigenMap,
-            observations:
-                partial.observations ?? scheduleData.observations,
+            observations: partial.observations ?? scheduleData.observations,
           );
         } catch (e) {
           print('ERROR processing $filePath: $e');
@@ -365,7 +359,8 @@ ${jsonPrettyPrint(scheduleData.toJson())});
           .toLowerCase()
           .replaceAll(' ', '_')
           .replaceAll('-', '_');
-      final className = 'who${snakeCaseToCamelCase(fileName).replaceRange(0, 1, snakeCaseToCamelCase(fileName)[0].toUpperCase())}';
+      final className =
+          'who${snakeCaseToCamelCase(fileName).replaceRange(0, 1, snakeCaseToCamelCase(fileName)[0].toUpperCase())}';
       final dartString = '''
 // ignore_for_file: prefer_single_quotes, always_specify_types
 
@@ -410,8 +405,8 @@ $fileString);
   // Map
   antigenOutputString.writeln('final whoAntigenSupportingDataMap = {');
   for (var i = 0; i < allAntigenData.length; i++) {
-    antigenOutputString.writeln(
-        "  '${allAntigenData[i].targetDisease}': ${classNames[i]},");
+    antigenOutputString
+        .writeln("  '${allAntigenData[i].targetDisease}': ${classNames[i]},");
   }
   antigenOutputString.writeln('};\n');
 
@@ -469,17 +464,16 @@ ScheduleSupportingData _mergeCrosswalk(ScheduleSupportingData data) {
     return data;
   }
 
-  final crosswalk = json.decode(crosswalkFile.readAsStringSync())
-      as Map<String, dynamic>;
+  final crosswalk =
+      json.decode(crosswalkFile.readAsStringSync()) as Map<String, dynamic>;
   final observations = data.observations?.observation;
   if (observations == null || observations.isEmpty) return data;
 
   final updatedObs = <VaxObservation>[];
   for (final obs in observations) {
     final obsCode = obs.observationCode;
-    final crosswalkEntry = obsCode != null
-        ? crosswalk[obsCode] as Map<String, dynamic>?
-        : null;
+    final crosswalkEntry =
+        obsCode != null ? crosswalk[obsCode] as Map<String, dynamic>? : null;
     if (crosswalkEntry == null) {
       updatedObs.add(obs);
       continue;

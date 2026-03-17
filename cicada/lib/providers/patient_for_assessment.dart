@@ -61,15 +61,13 @@ class PatientForAssessment extends _$PatientForAssessment {
             }
           case Observation _:
             {
-              final code =
-                  (parameter.resource! as Observation).code;
-              if (code != null) otherResourceCodes.add(code);
+              final code = (parameter.resource! as Observation).code;
+              otherResourceCodes.add(code);
               break;
             }
           case Procedure _:
             {
-              final code =
-                  (parameter.resource! as Procedure).code;
+              final code = (parameter.resource! as Procedure).code;
               if (code != null) otherResourceCodes.add(code);
               break;
             }
@@ -134,8 +132,8 @@ class PatientForAssessment extends _$PatientForAssessment {
       List<VaxDose> pastDoses,
       List<CodeableConcept> otherResourceCodes) {
     final bd = birthdate ?? VaxDate(1900, 01, 01);
-    final List<VaxObservation> observations = observationsFromConditions(
-        conditions, bd);
+    final List<VaxObservation> observations =
+        observationsFromConditions(conditions, bd);
     // Add observations from AllergyIntolerance resources
     observations.addAll(observationsFromAllergies(allergies));
     // Add observations from Observation, Procedure, Medication* resources

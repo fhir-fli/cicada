@@ -296,8 +296,7 @@ class VaxSeries {
   }
 
   bool skipByCompletedSeries(VaxCondition condition) {
-    return seriesGroupCompletion[targetDisease]
-            ?[condition.seriesGroups] ??
+    return seriesGroupCompletion[targetDisease]?[condition.seriesGroups] ??
         false;
   }
 
@@ -320,18 +319,19 @@ class VaxSeries {
         : VaxDate.fromString(condition.endDate!);
     final VaxDate? ageEndDate = dob.changeNullable(condition.endAge, true);
     final List<int> types = parseTypes(condition.vaccineTypes);
-    final int totalCount =
-        countVaccinesDateAndAge(types, startDate, endDate, ageEndDate, condition.doseType);
+    final int totalCount = countVaccinesDateAndAge(
+        types, startDate, endDate, ageEndDate, condition.doseType);
     return evaluateCountLogic(
         totalCount, condition.doseCountLogic, condition.doseCount);
   }
 
   int countVaccinesDateAndAge(List<int> types, VaxDate? startDate,
       VaxDate? endDate, VaxDate? ageEndDate, DoseType? doseType) {
-    final List<VaxDose> source =
-        doseType == DoseType.total && _forecastMode && allPatientDoses.isNotEmpty
-            ? allPatientDoses
-            : evaluatedDoses;
+    final List<VaxDose> source = doseType == DoseType.total &&
+            _forecastMode &&
+            allPatientDoses.isNotEmpty
+        ? allPatientDoses
+        : evaluatedDoses;
     return source
         .where((VaxDose dose) =>
             (types.isEmpty || types.contains(dose.cvxAsInt)) &&
@@ -376,10 +376,11 @@ class VaxSeries {
     // During forecast, use all patient doses for "Total" counts (CDSi counts
     // all administered doses, not just those evaluated in this series).
     // During evaluation, use evaluatedDoses to avoid counting future doses.
-    final List<VaxDose> source =
-        doseType == DoseType.total && _forecastMode && allPatientDoses.isNotEmpty
-            ? allPatientDoses
-            : evaluatedDoses;
+    final List<VaxDose> source = doseType == DoseType.total &&
+            _forecastMode &&
+            allPatientDoses.isNotEmpty
+        ? allPatientDoses
+        : evaluatedDoses;
     return source
         .where((VaxDose dose) =>
             (types.isEmpty || types.contains(dose.cvxAsInt)) &&
@@ -516,10 +517,9 @@ class VaxSeries {
     final List<VaxAge> filteredAges =
         _filterAges(seriesDose.age, assessmentDate);
 
-    final VaxDate maximumAgeDate =
-        filteredAges.firstOrNull?.maxAge == null
-            ? VaxDate.max()
-            : dob.change(filteredAges.first.maxAge!);
+    final VaxDate maximumAgeDate = filteredAges.firstOrNull?.maxAge == null
+        ? VaxDate.max()
+        : dob.change(filteredAges.first.maxAge!);
 
     if (assessmentDate >= maximumAgeDate) {
       shouldRecieveAnotherDose = false;
@@ -530,10 +530,9 @@ class VaxSeries {
 
     /// The candidate earliest date must be the latest of the following dates:
     /// • Minimum age date
-    candidateEarliestDate =
-        filteredAges.firstOrNull?.minAge == null
-            ? dob
-            : dob.change(filteredAges.first.minAge!);
+    candidateEarliestDate = filteredAges.firstOrNull?.minAge == null
+        ? dob
+        : dob.change(filteredAges.first.minAge!);
 
     // Filter intervals by effectiveDate/cessationDate
     final List<Interval> filteredIntervals =
@@ -547,10 +546,9 @@ class VaxSeries {
       final VaxDate? refDate = _getReferenceDateForForecast(interval);
       if (refDate != null && interval.minInt != null) {
         final VaxDate intervalDate = refDate.change(interval.minInt!);
-        candidateEarliestDate =
-            candidateEarliestDate! > intervalDate
-                ? candidateEarliestDate
-                : intervalDate;
+        candidateEarliestDate = candidateEarliestDate! > intervalDate
+            ? candidateEarliestDate
+            : intervalDate;
       }
     }
 
@@ -560,9 +558,8 @@ class VaxSeries {
     _applyLiveVirusConflictDates(seriesDose);
 
     /// • Seasonal recommendation start date
-    final VaxDate seasonalRecommendationStartDate =
-        VaxDate.fromNullableString(
-            seriesDose.seasonalRecommendation?.startDate);
+    final VaxDate seasonalRecommendationStartDate = VaxDate.fromNullableString(
+        seriesDose.seasonalRecommendation?.startDate);
     candidateEarliestDate =
         candidateEarliestDate! > seasonalRecommendationStartDate
             ? candidateEarliestDate
@@ -583,14 +580,13 @@ class VaxSeries {
     ///   administered (Valid or Not Valid, not inadvertent)
     final VaxDate lastDateAdministered =
         _getLastValidOrNotValidDose()?.dateGiven ?? VaxDate.min();
-    candidateEarliestDate =
-        candidateEarliestDate! > lastDateAdministered
-            ? candidateEarliestDate
-            : lastDateAdministered;
+    candidateEarliestDate = candidateEarliestDate! > lastDateAdministered
+        ? candidateEarliestDate
+        : lastDateAdministered;
 
     /// • Minimum age date (using filtered ages)
-    final VaxDate minimumAgeDate = dob.changeNullable(
-        filteredAges.firstOrNull?.minAge, false)!;
+    final VaxDate minimumAgeDate =
+        dob.changeNullable(filteredAges.firstOrNull?.minAge, false)!;
     candidateEarliestDate = candidateEarliestDate! > minimumAgeDate
         ? candidateEarliestDate
         : minimumAgeDate;
@@ -600,8 +596,8 @@ class VaxSeries {
     if (candidateEarliestDate! >= maximumAgeDate) {
       shouldRecieveAnotherDose = false;
       seriesStatus = SeriesStatus.agedOut;
-      forecastReason = ForecastReason
-          .patientIsUnableToFinishTheSeriesPriorToTheMaximumAge;
+      forecastReason =
+          ForecastReason.patientIsUnableToFinishTheSeriesPriorToTheMaximumAge;
     } else {
       shouldRecieveAnotherDose = true;
       seriesStatus = SeriesStatus.notComplete;
@@ -620,15 +616,14 @@ class VaxSeries {
         allPatientDoses.isNotEmpty ? allPatientDoses : doses;
     for (int i = dosesToCheck.length - 1; i >= 0; i--) {
       final VaxDose dose = dosesToCheck[i];
-      final List<LiveVirusConflict>? liveVirusConflicts =
-          activeScheduleData.liveVirusConflicts?.liveVirusConflict
-              ?.where((LiveVirusConflict element) =>
-                  element.previous?.cvxAsInt == dose.cvxAsInt)
-              .toList();
+      final List<LiveVirusConflict>? liveVirusConflicts = activeScheduleData
+          .liveVirusConflicts?.liveVirusConflict
+          ?.where((LiveVirusConflict element) =>
+              element.previous?.cvxAsInt == dose.cvxAsInt)
+          .toList();
       if (liveVirusConflicts?.isNotEmpty ?? false) {
         for (final LiveVirusConflict conflict in liveVirusConflicts!) {
-          final Vaccine? preferredConflict = seriesDose
-              .preferableVaccine
+          final Vaccine? preferredConflict = seriesDose.preferableVaccine
               ?.firstWhereOrNull((Vaccine element) =>
                   element.cvxAsInt == conflict.current?.cvxAsInt);
           if (preferredConflict != null &&
@@ -811,7 +806,8 @@ class VaxSeries {
       for (final Interval interval in filteredIntervals) {
         final VaxDate? refDate = _getReferenceDateForForecast(interval);
         if (refDate != null) {
-          final VaxDate? earliest = refDate.changeNullable(interval.earliestRecInt);
+          final VaxDate? earliest =
+              refDate.changeNullable(interval.earliestRecInt);
           if (earliest != null) earliestRecIntDates.add(earliest);
           final VaxDate? latest = refDate.changeNullable(interval.latestRecInt);
           if (latest != null) latestRecIntDates.add(latest);
