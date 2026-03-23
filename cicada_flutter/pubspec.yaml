@@ -1,0 +1,24 @@
+name: cicada_flutter
+description: Vaccine forecasting UI for the Cicada immunization engine
+publish_to: 'none'
+version: 0.1.0+1
+
+environment:
+  sdk: ^3.10.4
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cicada:
+    path: ../cicada
+  fhir_r4: ^0.4.4
+  flutter_riverpod: ^3.0.0
+  intl: ^0.20.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  very_good_analysis: ^10.1.0
+
+flutter:
+  uses-material-design: true
