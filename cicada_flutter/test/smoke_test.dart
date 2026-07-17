@@ -1,4 +1,3 @@
-import 'package:cicada/cicada.dart';
 import 'package:cicada_flutter/src/models/forecast_category.dart';
 import 'package:cicada_flutter/src/models/patient_info.dart';
 import 'package:cicada_flutter/src/models/sample_patients.dart';
