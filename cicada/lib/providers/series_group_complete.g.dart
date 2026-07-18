@@ -67,7 +67,7 @@ abstract class _$SeriesGroupComplete
   Map<String, Map<String, bool>> build();
   @$mustCallSuper
   @override
-  void runBuild() {
+  WhenComplete runBuild() {
     final ref = this.ref
         as $Ref<Map<String, Map<String, bool>>, Map<String, Map<String, bool>>>;
     final element = ref.element as $ClassProviderElement<
@@ -76,6 +76,6 @@ abstract class _$SeriesGroupComplete
         Map<String, Map<String, bool>>,
         Object?,
         Object?>;
-    element.handleCreate(ref, build);
+    return element.handleCreate(ref, build);
   }
 }

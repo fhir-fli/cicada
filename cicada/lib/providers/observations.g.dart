@@ -47,13 +47,13 @@ abstract class _$Observations extends $Notifier<VaxObservations> {
   VaxObservations build();
   @$mustCallSuper
   @override
-  void runBuild() {
+  WhenComplete runBuild() {
     final ref = this.ref as $Ref<VaxObservations, VaxObservations>;
     final element = ref.element as $ClassProviderElement<
         AnyNotifier<VaxObservations, VaxObservations>,
         VaxObservations,
         Object?,
         Object?>;
-    element.handleCreate(ref, build);
+    return element.handleCreate(ref, build);
   }
 }

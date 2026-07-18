@@ -47,7 +47,7 @@ abstract class _$OperationOutcomes extends $Notifier<List<OperationOutcomes>> {
   List<OperationOutcomes> build();
   @$mustCallSuper
   @override
-  void runBuild() {
+  WhenComplete runBuild() {
     final ref =
         this.ref as $Ref<List<OperationOutcomes>, List<OperationOutcomes>>;
     final element = ref.element as $ClassProviderElement<
@@ -55,6 +55,6 @@ abstract class _$OperationOutcomes extends $Notifier<List<OperationOutcomes>> {
         List<OperationOutcomes>,
         Object?,
         Object?>;
-    element.handleCreate(ref, build);
+    return element.handleCreate(ref, build);
   }
 }

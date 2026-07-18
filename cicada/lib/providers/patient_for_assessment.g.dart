@@ -59,7 +59,7 @@ final class PatientForAssessmentProvider
 }
 
 String _$patientForAssessmentHash() =>
-    r'e351ed00f681c56f5fc4de85f1caf4e68f013a10';
+    r'bf99327ee64abf290eb053e7bf4f74f8e023ad5b';
 
 final class PatientForAssessmentFamily extends $Family
     with
@@ -92,11 +92,11 @@ abstract class _$PatientForAssessment extends $Notifier<VaxPatient> {
   );
   @$mustCallSuper
   @override
-  void runBuild() {
+  WhenComplete runBuild() {
     final ref = this.ref as $Ref<VaxPatient, VaxPatient>;
     final element = ref.element as $ClassProviderElement<
         AnyNotifier<VaxPatient, VaxPatient>, VaxPatient, Object?, Object?>;
-    element.handleCreate(
+    return element.handleCreate(
         ref,
         () => build(
               _$args,
