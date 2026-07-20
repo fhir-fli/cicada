@@ -5,7 +5,7 @@ import 'package:cicada/forecast/forecast.dart';
 
 Future<void> main() async {
   final List<Resource> parameters =
-      await FhirBulk.fromFile('healthyTestCases.ndjson');
+      await FhirBulk.fromFile('test/healthyTestCases.ndjson');
   for (int i = 0; i < parameters.length; i++) {
     final Patient? patient = (parameters[i] as Parameters)
         .parameter
