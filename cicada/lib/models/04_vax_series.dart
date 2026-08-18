@@ -177,6 +177,24 @@ class VaxSeries {
     List<VaccineContraindication> vaccineContraindications,
     bool evidenceOfImmunity,
   ) {
+    /// A series carrying a minimum age to start cannot be started by a patient
+    /// younger than that age, and so must not recommend anything.
+    ///
+    /// The engine honoured the maximum age to start but never its counterpart,
+    /// which arrived with the CDSi 4.61 supporting data. Each series group is
+    /// its own [VaxGroup], so "RSV 75 years+ 1-dose series" (minimum age to
+    /// start 50 years) had no sibling to lose to and forecast unopposed: a
+    /// five-day-old with cystic fibrosis was told to come back at her birth
+    /// date plus 75 years. The same gate appears on pneumococcal, HPV, rabies,
+    /// meningococcal B and cholera series.
+    final String? minAgeToStart = series.selectSeries?.minAgeToStart;
+    if (minAgeToStart != null &&
+        assessmentDate < dob.change(minAgeToStart)) {
+      shouldRecieveAnotherDose = false;
+      forecastReason = ForecastReason.patientHasNotReachedTheMinimumAgeToStart;
+      return;
+    }
+
     evaluateConditionalSkip(assessmentDate: assessmentDate);
     determineContraindications(
         vaccineContraindications: vaccineContraindications);

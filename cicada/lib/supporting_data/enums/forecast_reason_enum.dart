@@ -11,7 +11,11 @@ enum ForecastReason {
 
   patientHasExceededTheMaximumAge,
 
-  patientIsUnableToFinishTheSeriesPriorToTheMaximumAge;
+  patientIsUnableToFinishTheSeriesPriorToTheMaximumAge,
+
+  /// The series carries a minimum age to start and the patient has not
+  /// reached it, so this series cannot be begun yet.
+  patientHasNotReachedTheMinimumAgeToStart;
 
   static ForecastReason? fromString(String? string) {
     switch (string) {
@@ -31,6 +35,8 @@ enum ForecastReason {
       case 'Patient is unable to finish the series prior to the maximum age':
         return ForecastReason
             .patientIsUnableToFinishTheSeriesPriorToTheMaximumAge;
+      case 'Patient has not reached the minimum age to start':
+        return ForecastReason.patientHasNotReachedTheMinimumAgeToStart;
       default:
         return null;
     }
@@ -56,6 +62,8 @@ enum ForecastReason {
         return 'Patient has exceeded the maximum age';
       case patientIsUnableToFinishTheSeriesPriorToTheMaximumAge:
         return 'Patient is unable to finish the series prior to the maximum age';
+      case patientHasNotReachedTheMinimumAgeToStart:
+        return 'Patient has not reached the minimum age to start';
     }
   }
 
