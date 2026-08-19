@@ -32,6 +32,36 @@ class VaxSeries {
       evaluateSeriesDoses();
       markExtraneousDoses();
     }
+    _recordSeriesGroupCompletion();
+  }
+
+  /// Publishes "this series group is complete" as soon as evaluation says so.
+  ///
+  /// A "Completed Series" conditional skip asks whether the patient has
+  /// finished another series group, and its context is 'Both' — it is meant to
+  /// fire while doses are being evaluated, not only while forecasting. The
+  /// flag was written in [determineForecastNeed], which runs after every
+  /// antigen has been evaluated, so during evaluation it was always false and
+  /// the skip could never fire.
+  ///
+  /// The cost: a lab worker who had finished the childhood polio series and
+  /// then received his single adult risk booster had doses 1 and 2 of the risk
+  /// series skipped in the *forecast* pass but not the evaluation pass, so the
+  /// booster was counted as dose 1 and the engine asked for two more
+  /// (`2016-UC-0133`). With the skip firing during evaluation the booster
+  /// satisfies the last target dose and the series is complete, as CDSi says.
+  void _recordSeriesGroupCompletion() {
+    final bool anyNotSatisfied = evaluatedTargetDose.values
+        .any((TargetDoseStatus s) => s == TargetDoseStatus.notSatisfied);
+    final bool anySatisfied = evaluatedTargetDose.values
+        .any((TargetDoseStatus s) => s == TargetDoseStatus.satisfied);
+    if (!anyNotSatisfied && anySatisfied) {
+      seriesGroupCompletion[targetDisease]?[seriesGroupKey] = true;
+      final VaxDate? completedOn = lastCompleted?.dateGiven;
+      if (completedOn != null) {
+        seriesGroupCompletionDate[targetDisease]?[seriesGroupKey] = completedOn;
+      }
+    }
   }
 
   /// Per Figure 4-6 / Step 6b: any dose that was never matched to a target
@@ -349,7 +379,7 @@ class VaxSeries {
       case 'age':
         return skipByAge(condition, evalDate);
       case 'completed series':
-        return skipByCompletedSeries(condition);
+        return skipByCompletedSeries(condition, evalDate);
       case 'interval':
         return skipByInterval(condition, evalDate);
       case 'vaccine count by age':
@@ -374,7 +404,24 @@ class VaxSeries {
         evalDate < conditionalSkipEndAgeDate;
   }
 
-  bool skipByCompletedSeries(VaxCondition condition) {
+  /// Had the patient completed the named series group by [evalDate]?
+  ///
+  /// Asking only whether the group is complete *now* answers the wrong
+  /// question while doses are being evaluated. A dialysis patient's four HepB
+  /// doses all count towards the risk series even though the standard group
+  /// completed part way through them (`2024-UC-0019`); the group's completion
+  /// date is what separates that from a lab worker whose polio booster came
+  /// decades after he finished the childhood series (`2016-UC-0133`).
+  ///
+  /// The end-state flag remains the fallback for a group whose completion date
+  /// is not known — completion recorded during the forecast pass, where there
+  /// is no satisfying dose to date it by.
+  bool skipByCompletedSeries(VaxCondition condition, VaxDate evalDate) {
+    final VaxDate? completedOn =
+        seriesGroupCompletionDate[targetDisease]?[condition.seriesGroups];
+    if (completedOn != null) {
+      return evalDate >= completedOn;
+    }
     return seriesGroupCompletion[targetDisease]?[condition.seriesGroups] ??
         false;
   }
@@ -839,6 +886,11 @@ class VaxSeries {
             seriesStatus = SeriesStatus.complete;
             forecastReason = ForecastReason.patientSeriesIsComplete;
             seriesGroupCompletion[targetDisease]?[seriesGroupKey] = true;
+            final VaxDate? completedOn = lastCompleted?.dateGiven;
+            if (completedOn != null) {
+              seriesGroupCompletionDate[targetDisease]?[seriesGroupKey] =
+                  completedOn;
+            }
           }
         }
       }
@@ -978,6 +1030,13 @@ class VaxSeries {
   String seriesGroupKey = 'none';
   Map<String, Map<String, bool>> seriesGroupCompletion =
       <String, Map<String, bool>>{};
+
+  /// When each series group became complete — the date of the dose that
+  /// satisfied its last target dose. A "Completed Series" conditional skip is
+  /// a question about a moment in time, not about the end state: see
+  /// [skipByCompletedSeries].
+  Map<String, Map<String, VaxDate>> seriesGroupCompletionDate =
+      <String, Map<String, VaxDate>>{};
   bool _forecastMode = false;
   List<VaxDose> evaluatedDoses = <VaxDose>[];
   Map<int, TargetDoseStatus> evaluatedTargetDose = <int, TargetDoseStatus>{};
