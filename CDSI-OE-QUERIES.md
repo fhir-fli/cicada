@@ -107,3 +107,46 @@ for when an interval-based dose becomes past due?
 Paste one section at a time. Any case where OE says the CDC row is right is a
 cicada defect to fix; any case where OE agrees the row is defective should be
 reported to CDC rather than conformed to.
+
+---
+
+## 3. `2022-UC-0030` / `-0031` — orthopox indication for healthcare personnel dropped
+
+CDC's 2022 cases give the patient observation **235, "Healthcare personnel who
+care for patients infected with more virulent orthopoxviruses (e.g., Variola
+virus or mpox virus)"**, and expect a JYNNEOS (CVX 206) dose to be valid in a
+risk series with a booster forecast two years later.
+
+In the current supporting data (4.65-508, read from CDC's own
+`AntigenSupportingData- Orthopoxvirus-508.xml`), the "Orthopoxvirus risk more
+virulent 2-dose series" is indicated by **232** (research laboratory
+personnel), **233** (clinical laboratory personnel) and **234** (designated
+response team members) only. Observation 235 still exists in the schedule
+supporting data, with the indication text "Administer to healthcare personnel
+who care for patients infected with more virulent orthopoxviruses" — but no
+series names it. cicada therefore produces no orthopox series at all for these
+patients, which follows the data it was given.
+
+**Question for OE:** does ACIP still recommend JYNNEOS pre-exposure vaccination
+for healthcare personnel who care for patients infected with more virulent
+orthopoxviruses, or has that recommendation been narrowed to laboratory and
+response-team personnel? If it stands, CDSi's supporting data has dropped an
+indication it still defines, and that is worth reporting to CDC.
+
+---
+
+## 4. `2023-UC-0047` — infant RSV risk indication: chronic lung disease
+
+CDC's 2023 case gives an 8-month-old observation **017, "Chronic lung
+disease"**, and expects a nirsevimab forecast at the season start.
+
+In 4.65-508 the infant series ("RSV risk under 20 months series") is indicated
+by **280, "Chronic lung disease of prematurity"**, together with cystic
+fibrosis, American Indian or Alaska Native, and severe immunocompromise. Plain
+017 now belongs to the *adult* "RSV risk 50-74 years" series. cicada selects no
+infant series for this patient.
+
+**Question for OE:** for the second-season nirsevimab recommendation in
+children aged 8–19 months at increased risk, is the qualifying condition
+chronic lung disease **of prematurity** specifically (requiring medical support
+in the 6 months before the second season), or chronic lung disease generally?
