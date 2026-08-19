@@ -264,14 +264,14 @@
                             "vaccineType": "Hep B, Adult",
                             "cvx": "43",
                             "beginAge": "20 years",
-                            "volume": "1",
+                            "volume": "1.0",
                             "forecastVaccineType": "N"
                         },
                         {
                             "vaccineType": "Hep B, Dialysis",
                             "cvx": "44",
                             "beginAge": "20 years",
-                            "volume": "1",
+                            "volume": "1.0",
                             "forecastVaccineType": "N"
                         },
                         {
@@ -365,6 +365,12 @@
                             "vaccineType": "Hep B, adjuvanted",
                             "cvx": "189",
                             "beginAge": "18 years - 4 days"
+                        },
+                        {
+                            "vaccineType": "Hep A-Hep B, pediatric/adolescent",
+                            "cvx": "193",
+                            "beginAge": "0 days",
+                            "endAge": "18 years"
                         },
                         {
                             "vaccineType": "DTP-HepB-Hib Pentavalent Non-US",
@@ -412,14 +418,14 @@
                             "vaccineType": "Hep B, Adult",
                             "cvx": "43",
                             "beginAge": "20 years",
-                            "volume": "1",
+                            "volume": "1.0",
                             "forecastVaccineType": "N"
                         },
                         {
                             "vaccineType": "Hep B, Dialysis",
                             "cvx": "44",
                             "beginAge": "20 years",
-                            "volume": "1",
+                            "volume": "1.0",
                             "forecastVaccineType": "N"
                         },
                         {
@@ -513,6 +519,12 @@
                             "vaccineType": "Hep B, adjuvanted",
                             "cvx": "189",
                             "beginAge": "18 years - 4 days"
+                        },
+                        {
+                            "vaccineType": "Hep A-Hep B, pediatric/adolescent",
+                            "cvx": "193",
+                            "beginAge": "0 days",
+                            "endAge": "18 years"
                         },
                         {
                             "vaccineType": "DTP-HepB-Hib Pentavalent Non-US",
@@ -566,14 +578,14 @@
                             "vaccineType": "Hep B, Adult",
                             "cvx": "43",
                             "beginAge": "20 years",
-                            "volume": "1",
+                            "volume": "1.0",
                             "forecastVaccineType": "N"
                         },
                         {
                             "vaccineType": "Hep B, Dialysis",
                             "cvx": "44",
                             "beginAge": "20 years",
-                            "volume": "1",
+                            "volume": "1.0",
                             "forecastVaccineType": "N"
                         },
                         {
@@ -667,6 +679,12 @@
                             "vaccineType": "Hep B, adjuvanted",
                             "cvx": "189",
                             "beginAge": "18 years - 4 days"
+                        },
+                        {
+                            "vaccineType": "Hep A-Hep B, pediatric/adolescent",
+                            "cvx": "193",
+                            "beginAge": "0 days",
+                            "endAge": "18 years"
                         },
                         {
                             "vaccineType": "DTP-HepB-Hib Pentavalent Non-US",
@@ -815,6 +833,12 @@
                             "beginAge": "18 years - 4 days"
                         },
                         {
+                            "vaccineType": "Hep A-Hep B, pediatric/adolescent",
+                            "cvx": "193",
+                            "beginAge": "0 days",
+                            "endAge": "18 years"
+                        },
+                        {
                             "vaccineType": "DTP-HepB-Hib Pentavalent Non-US",
                             "cvx": "198",
                             "beginAge": "0 days",
@@ -949,6 +973,12 @@
                             "beginAge": "18 years - 4 days"
                         },
                         {
+                            "vaccineType": "Hep A-Hep B, pediatric/adolescent",
+                            "cvx": "193",
+                            "beginAge": "0 days",
+                            "endAge": "18 years"
+                        },
+                        {
                             "vaccineType": "DTP-HepB-Hib Pentavalent Non-US",
                             "cvx": "198",
                             "beginAge": "0 days",
@@ -1072,6 +1102,12 @@
                             "vaccineType": "Hep B, adjuvanted",
                             "cvx": "189",
                             "beginAge": "18 years - 4 days"
+                        },
+                        {
+                            "vaccineType": "Hep A-Hep B, pediatric/adolescent",
+                            "cvx": "193",
+                            "beginAge": "0 days",
+                            "endAge": "18 years"
                         },
                         {
                             "vaccineType": "DTP-HepB-Hib Pentavalent Non-US",
@@ -1213,6 +1249,12 @@
                             "beginAge": "18 years - 4 days"
                         },
                         {
+                            "vaccineType": "Hep A-Hep B, pediatric/adolescent",
+                            "cvx": "193",
+                            "beginAge": "0 days",
+                            "endAge": "18 years"
+                        },
+                        {
                             "vaccineType": "DTP-HepB-Hib Pentavalent Non-US",
                             "cvx": "198",
                             "beginAge": "0 days",
@@ -1262,7 +1304,7 @@
                             "cvx": "43",
                             "tradeName": "RECOMBIVAX ADULT",
                             "mvx": "MSD",
-                            "volume": "1",
+                            "volume": "1.0",
                             "forecastVaccineType": "Y"
                         }
                     ],
@@ -1290,7 +1332,7 @@
                             "cvx": "43",
                             "tradeName": "RECOMBIVAX ADULT",
                             "mvx": "MSD",
-                            "volume": "1",
+                            "volume": "1.0",
                             "forecastVaccineType": "Y"
                         }
                     ],
@@ -1339,14 +1381,14 @@
                             "vaccineType": "Hep B, Adult",
                             "cvx": "43",
                             "beginAge": "20 years",
-                            "volume": "1",
+                            "volume": "1.0",
                             "forecastVaccineType": "N"
                         },
                         {
                             "vaccineType": "Hep B, Dialysis",
                             "cvx": "44",
                             "beginAge": "20 years",
-                            "volume": "1",
+                            "volume": "1.0",
                             "forecastVaccineType": "N"
                         },
                         {
@@ -1462,14 +1504,14 @@
                             "vaccineType": "Hep B, Adult",
                             "cvx": "43",
                             "beginAge": "20 years",
-                            "volume": "1",
+                            "volume": "1.0",
                             "forecastVaccineType": "N"
                         },
                         {
                             "vaccineType": "Hep B, Dialysis",
                             "cvx": "44",
                             "beginAge": "20 years",
-                            "volume": "1",
+                            "volume": "1.0",
                             "forecastVaccineType": "N"
                         },
                         {
@@ -1591,14 +1633,14 @@
                             "vaccineType": "Hep B, Adult",
                             "cvx": "43",
                             "beginAge": "20 years",
-                            "volume": "1",
+                            "volume": "1.0",
                             "forecastVaccineType": "N"
                         },
                         {
                             "vaccineType": "Hep B, Dialysis",
                             "cvx": "44",
                             "beginAge": "20 years",
-                            "volume": "1",
+                            "volume": "1.0",
                             "forecastVaccineType": "N"
                         },
                         {
@@ -1734,14 +1776,14 @@
                             "vaccineType": "Hep B, Adult",
                             "cvx": "43",
                             "beginAge": "20 years",
-                            "volume": "1",
+                            "volume": "1.0",
                             "forecastVaccineType": "N"
                         },
                         {
                             "vaccineType": "Hep B, Dialysis",
                             "cvx": "44",
                             "beginAge": "20 years",
-                            "volume": "1",
+                            "volume": "1.0",
                             "forecastVaccineType": "N"
                         },
                         {
@@ -1857,14 +1899,14 @@
                             "vaccineType": "Hep B, Adult",
                             "cvx": "43",
                             "beginAge": "20 years",
-                            "volume": "1",
+                            "volume": "1.0",
                             "forecastVaccineType": "N"
                         },
                         {
                             "vaccineType": "Hep B, Dialysis",
                             "cvx": "44",
                             "beginAge": "20 years",
-                            "volume": "1",
+                            "volume": "1.0",
                             "forecastVaccineType": "N"
                         },
                         {
@@ -1980,14 +2022,14 @@
                             "vaccineType": "Hep B, Adult",
                             "cvx": "43",
                             "beginAge": "20 years",
-                            "volume": "1",
+                            "volume": "1.0",
                             "forecastVaccineType": "N"
                         },
                         {
                             "vaccineType": "Hep B, Dialysis",
                             "cvx": "44",
                             "beginAge": "20 years",
-                            "volume": "1",
+                            "volume": "1.0",
                             "forecastVaccineType": "N"
                         },
                         {
@@ -2110,14 +2152,14 @@
                             "vaccineType": "Hep B, Adult",
                             "cvx": "43",
                             "beginAge": "20 years",
-                            "volume": "1",
+                            "volume": "1.0",
                             "forecastVaccineType": "N"
                         },
                         {
                             "vaccineType": "Hep B, Dialysis",
                             "cvx": "44",
                             "beginAge": "20 years",
-                            "volume": "1",
+                            "volume": "1.0",
                             "forecastVaccineType": "N"
                         },
                         {
@@ -2342,14 +2384,14 @@
                             "vaccineType": "Hep B, Adult",
                             "cvx": "43",
                             "beginAge": "20 years",
-                            "volume": "1",
+                            "volume": "1.0",
                             "forecastVaccineType": "N"
                         },
                         {
                             "vaccineType": "Hep B, Dialysis",
                             "cvx": "44",
                             "beginAge": "20 years",
-                            "volume": "1",
+                            "volume": "1.0",
                             "forecastVaccineType": "N"
                         },
                         {
@@ -2433,6 +2475,12 @@
                             "endAge": "20 years"
                         },
                         {
+                            "vaccineType": "Hep A-Hep B, pediatric/adolescent",
+                            "cvx": "193",
+                            "beginAge": "0 days",
+                            "endAge": "18 years"
+                        },
+                        {
                             "vaccineType": "DTP-HepB-Hib Pentavalent Non-US",
                             "cvx": "198",
                             "beginAge": "0 days",
@@ -2502,14 +2550,14 @@
                             "vaccineType": "Hep B, Adult",
                             "cvx": "43",
                             "beginAge": "20 years",
-                            "volume": "1",
+                            "volume": "1.0",
                             "forecastVaccineType": "N"
                         },
                         {
                             "vaccineType": "Hep B, Dialysis",
                             "cvx": "44",
                             "beginAge": "20 years",
-                            "volume": "1",
+                            "volume": "1.0",
                             "forecastVaccineType": "N"
                         },
                         {
@@ -2741,14 +2789,14 @@
                             "vaccineType": "Hep B, Adult",
                             "cvx": "43",
                             "beginAge": "20 years",
-                            "volume": "1",
+                            "volume": "1.0",
                             "forecastVaccineType": "N"
                         },
                         {
                             "vaccineType": "Hep B, Dialysis",
                             "cvx": "44",
                             "beginAge": "20 years",
-                            "volume": "1",
+                            "volume": "1.0",
                             "forecastVaccineType": "N"
                         }
                     ],
@@ -2851,14 +2899,14 @@
                             "vaccineType": "Hep B, Adult",
                             "cvx": "43",
                             "beginAge": "20 years",
-                            "volume": "1",
+                            "volume": "1.0",
                             "forecastVaccineType": "N"
                         },
                         {
                             "vaccineType": "Hep B, Dialysis",
                             "cvx": "44",
                             "beginAge": "20 years",
-                            "volume": "1",
+                            "volume": "1.0",
                             "forecastVaccineType": "N"
                         },
                         {
@@ -3043,7 +3091,7 @@
                             "vaccineType": "HepA-HepB",
                             "cvx": "104",
                             "beginAge": "18 years",
-                            "volume": "1",
+                            "volume": "1.0",
                             "forecastVaccineType": "Y"
                         }
                     ],
@@ -3071,7 +3119,7 @@
                             "vaccineType": "HepA-HepB",
                             "cvx": "104",
                             "beginAge": "18 years",
-                            "volume": "1",
+                            "volume": "1.0",
                             "forecastVaccineType": "Y"
                         }
                     ],
@@ -3106,7 +3154,7 @@
                             "vaccineType": "HepA-HepB",
                             "cvx": "104",
                             "beginAge": "18 years",
-                            "volume": "1",
+                            "volume": "1.0",
                             "forecastVaccineType": "Y"
                         }
                     ],
@@ -3165,7 +3213,7 @@
                             "vaccineType": "HepA-HepB",
                             "cvx": "104",
                             "beginAge": "18 years",
-                            "volume": "1",
+                            "volume": "1.0",
                             "forecastVaccineType": "Y"
                         }
                     ],
@@ -3193,7 +3241,7 @@
                             "vaccineType": "HepA-HepB",
                             "cvx": "104",
                             "beginAge": "18 years",
-                            "volume": "1",
+                            "volume": "1.0",
                             "forecastVaccineType": "Y"
                         }
                     ],
@@ -3222,7 +3270,7 @@
                             "vaccineType": "HepA-HepB",
                             "cvx": "104",
                             "beginAge": "18 years",
-                            "volume": "1",
+                            "volume": "1.0",
                             "forecastVaccineType": "Y"
                         }
                     ],
@@ -3251,7 +3299,7 @@
                             "vaccineType": "HepA-HepB",
                             "cvx": "104",
                             "beginAge": "18 years",
-                            "volume": "1",
+                            "volume": "1.0",
                             "forecastVaccineType": "Y"
                         }
                     ],
@@ -3465,7 +3513,7 @@
                             "vaccineType": "Hep B, Adult",
                             "cvx": "43",
                             "beginAge": "20 years",
-                            "volume": "1",
+                            "volume": "1.0",
                             "forecastVaccineType": "N"
                         }
                     ],
@@ -3536,6 +3584,12 @@
                             "vaccineType": "Hep B, adjuvanted",
                             "cvx": "189",
                             "beginAge": "18 years - 4 days"
+                        },
+                        {
+                            "vaccineType": "Hep A-Hep B, pediatric/adolescent",
+                            "cvx": "193",
+                            "beginAge": "0 days",
+                            "endAge": "18 years"
                         },
                         {
                             "vaccineType": "DTP-HepB-Hib Pentavalent Non-US",
@@ -3566,7 +3620,7 @@
                             "vaccineType": "Hep B, Adult",
                             "cvx": "43",
                             "beginAge": "20 years",
-                            "volume": "1",
+                            "volume": "1.0",
                             "forecastVaccineType": "N"
                         }
                     ],
@@ -3637,6 +3691,12 @@
                             "vaccineType": "Hep B, adjuvanted",
                             "cvx": "189",
                             "beginAge": "18 years - 4 days"
+                        },
+                        {
+                            "vaccineType": "Hep A-Hep B, pediatric/adolescent",
+                            "cvx": "193",
+                            "beginAge": "0 days",
+                            "endAge": "18 years"
                         },
                         {
                             "vaccineType": "DTP-HepB-Hib Pentavalent Non-US",
@@ -3673,7 +3733,7 @@
                             "vaccineType": "Hep B, Adult",
                             "cvx": "43",
                             "beginAge": "20 years",
-                            "volume": "1",
+                            "volume": "1.0",
                             "forecastVaccineType": "N"
                         }
                     ],
@@ -3744,6 +3804,12 @@
                             "vaccineType": "Hep B, adjuvanted",
                             "cvx": "189",
                             "beginAge": "18 years - 4 days"
+                        },
+                        {
+                            "vaccineType": "Hep A-Hep B, pediatric/adolescent",
+                            "cvx": "193",
+                            "beginAge": "0 days",
+                            "endAge": "18 years"
                         },
                         {
                             "vaccineType": "DTP-HepB-Hib Pentavalent Non-US",
@@ -4196,14 +4262,14 @@
                             "vaccineType": "Hep B, Adult",
                             "cvx": "43",
                             "beginAge": "20 years",
-                            "volume": "1",
+                            "volume": "1.0",
                             "forecastVaccineType": "N"
                         },
                         {
                             "vaccineType": "Hep B, Dialysis",
                             "cvx": "44",
                             "beginAge": "20 years",
-                            "volume": "1",
+                            "volume": "1.0",
                             "forecastVaccineType": "N"
                         },
                         {
@@ -4287,6 +4353,12 @@
                             "endAge": "20 years"
                         },
                         {
+                            "vaccineType": "Hep A-Hep B, pediatric/adolescent",
+                            "cvx": "193",
+                            "beginAge": "0 days",
+                            "endAge": "18 years"
+                        },
+                        {
                             "vaccineType": "DTP-HepB-Hib Pentavalent Non-US",
                             "cvx": "198",
                             "beginAge": "0 days",
@@ -4348,14 +4420,14 @@
                             "vaccineType": "Hep B, Adult",
                             "cvx": "43",
                             "beginAge": "20 years",
-                            "volume": "1",
+                            "volume": "1.0",
                             "forecastVaccineType": "N"
                         },
                         {
                             "vaccineType": "Hep B, Dialysis",
                             "cvx": "44",
                             "beginAge": "20 years",
-                            "volume": "1",
+                            "volume": "1.0",
                             "forecastVaccineType": "N"
                         },
                         {
@@ -4735,14 +4807,14 @@
                             "vaccineType": "Hep B, Adult",
                             "cvx": "43",
                             "beginAge": "20 years",
-                            "volume": "1",
+                            "volume": "1.0",
                             "forecastVaccineType": "N"
                         },
                         {
                             "vaccineType": "Hep B, Dialysis",
                             "cvx": "44",
                             "beginAge": "20 years",
-                            "volume": "1",
+                            "volume": "1.0",
                             "forecastVaccineType": "N"
                         }
                     ],
@@ -4836,14 +4908,14 @@
                             "vaccineType": "Hep B, Adult",
                             "cvx": "43",
                             "beginAge": "20 years",
-                            "volume": "1",
+                            "volume": "1.0",
                             "forecastVaccineType": "N"
                         },
                         {
                             "vaccineType": "Hep B, Dialysis",
                             "cvx": "44",
                             "beginAge": "20 years",
-                            "volume": "1",
+                            "volume": "1.0",
                             "forecastVaccineType": "N"
                         },
                         {
@@ -5184,7 +5256,7 @@
                             "vaccineType": "HepA-HepB",
                             "cvx": "104",
                             "beginAge": "18 years",
-                            "volume": "1",
+                            "volume": "1.0",
                             "forecastVaccineType": "Y"
                         }
                     ],
@@ -5212,7 +5284,7 @@
                             "vaccineType": "HepA-HepB",
                             "cvx": "104",
                             "beginAge": "18 years",
-                            "volume": "1",
+                            "volume": "1.0",
                             "forecastVaccineType": "Y"
                         }
                     ],
@@ -5247,7 +5319,7 @@
                             "vaccineType": "HepA-HepB",
                             "cvx": "104",
                             "beginAge": "18 years",
-                            "volume": "1",
+                            "volume": "1.0",
                             "forecastVaccineType": "Y"
                         }
                     ],
@@ -5461,7 +5533,7 @@
                             "vaccineType": "HepA-HepB",
                             "cvx": "104",
                             "beginAge": "18 years",
-                            "volume": "1",
+                            "volume": "1.0",
                             "forecastVaccineType": "Y"
                         }
                     ],
@@ -5489,7 +5561,7 @@
                             "vaccineType": "HepA-HepB",
                             "cvx": "104",
                             "beginAge": "18 years",
-                            "volume": "1",
+                            "volume": "1.0",
                             "forecastVaccineType": "Y"
                         }
                     ],
@@ -5518,7 +5590,7 @@
                             "vaccineType": "HepA-HepB",
                             "cvx": "104",
                             "beginAge": "18 years",
-                            "volume": "1",
+                            "volume": "1.0",
                             "forecastVaccineType": "Y"
                         }
                     ],
@@ -5547,7 +5619,7 @@
                             "vaccineType": "HepA-HepB",
                             "cvx": "104",
                             "beginAge": "18 years",
-                            "volume": "1",
+                            "volume": "1.0",
                             "forecastVaccineType": "Y"
                         }
                     ],
@@ -5618,7 +5690,7 @@
                             "beginAge": "20 years",
                             "tradeName": "ENGERIX-B ADULT",
                             "mvx": "SKB",
-                            "volume": "2",
+                            "volume": "2.0",
                             "forecastVaccineType": "N"
                         }
                     ],
@@ -5632,7 +5704,8 @@
                         {
                             "vaccineType": "Hep B, Adol/high risk infant",
                             "cvx": "42",
-                            "beginAge": "0 days"
+                            "beginAge": "0 days",
+                            "endAge": "20 years"
                         },
                         {
                             "vaccineType": "Hep B, Adult",
@@ -5652,27 +5725,14 @@
                         {
                             "vaccineType": "Hib-HepB",
                             "cvx": "51",
-                            "beginAge": "0 days"
+                            "beginAge": "0 days",
+                            "endAge": "20 years"
                         },
                         {
                             "vaccineType": "DTP-Hib-HepB",
                             "cvx": "102",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTaP-HepB-IPV",
-                            "cvx": "110",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTaP-IPV-Hib-HepB, historical",
-                            "cvx": "132",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTaP-IPV-Hib-HepB",
-                            "cvx": "146",
-                            "beginAge": "0 days"
+                            "beginAge": "0 days",
+                            "endAge": "20 years"
                         },
                         {
                             "vaccineType": "HepA-HepB",
@@ -5680,14 +5740,39 @@
                             "beginAge": "0 days"
                         },
                         {
+                            "vaccineType": "DTaP-HepB-IPV",
+                            "cvx": "110",
+                            "beginAge": "0 days",
+                            "endAge": "20 years"
+                        },
+                        {
+                            "vaccineType": "DTaP-IPV-Hib-HepB, historical",
+                            "cvx": "132",
+                            "beginAge": "0 days",
+                            "endAge": "20 years"
+                        },
+                        {
+                            "vaccineType": "DTaP-IPV-Hib-HepB",
+                            "cvx": "146",
+                            "beginAge": "0 days",
+                            "endAge": "20 years"
+                        },
+                        {
                             "vaccineType": "Hep B, adjuvanted",
                             "cvx": "189",
                             "beginAge": "18 years - 4 days"
                         },
                         {
+                            "vaccineType": "Hep A-Hep B, pediatric/adolescent",
+                            "cvx": "193",
+                            "beginAge": "0 days",
+                            "endAge": "18 years"
+                        },
+                        {
                             "vaccineType": "DTP-HepB-Hib Pentavalent Non-US",
                             "cvx": "198",
-                            "beginAge": "0 days"
+                            "beginAge": "0 days",
+                            "endAge": "20 years"
                         },
                         {
                             "vaccineType": "HepB recombinant, 3-antigen, Al(OH)3",
@@ -5733,7 +5818,7 @@
                             "beginAge": "20 years",
                             "tradeName": "ENGERIX-B ADULT",
                             "mvx": "SKB",
-                            "volume": "2",
+                            "volume": "2.0",
                             "forecastVaccineType": "N"
                         }
                     ],
@@ -5747,7 +5832,8 @@
                         {
                             "vaccineType": "Hep B, Adol/high risk infant",
                             "cvx": "42",
-                            "beginAge": "0 days"
+                            "beginAge": "0 days",
+                            "endAge": "20 years"
                         },
                         {
                             "vaccineType": "Hep B, Adult",
@@ -5767,27 +5853,14 @@
                         {
                             "vaccineType": "Hib-HepB",
                             "cvx": "51",
-                            "beginAge": "0 days"
+                            "beginAge": "0 days",
+                            "endAge": "20 years"
                         },
                         {
                             "vaccineType": "DTP-Hib-HepB",
                             "cvx": "102",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTaP-HepB-IPV",
-                            "cvx": "110",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTaP-IPV-Hib-HepB, historical",
-                            "cvx": "132",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTaP-IPV-Hib-HepB",
-                            "cvx": "146",
-                            "beginAge": "0 days"
+                            "beginAge": "0 days",
+                            "endAge": "20 years"
                         },
                         {
                             "vaccineType": "HepA-HepB",
@@ -5795,14 +5868,39 @@
                             "beginAge": "0 days"
                         },
                         {
+                            "vaccineType": "DTaP-HepB-IPV",
+                            "cvx": "110",
+                            "beginAge": "0 days",
+                            "endAge": "20 years"
+                        },
+                        {
+                            "vaccineType": "DTaP-IPV-Hib-HepB, historical",
+                            "cvx": "132",
+                            "beginAge": "0 days",
+                            "endAge": "20 years"
+                        },
+                        {
+                            "vaccineType": "DTaP-IPV-Hib-HepB",
+                            "cvx": "146",
+                            "beginAge": "0 days",
+                            "endAge": "20 years"
+                        },
+                        {
                             "vaccineType": "Hep B, adjuvanted",
                             "cvx": "189",
                             "beginAge": "18 years - 4 days"
                         },
                         {
+                            "vaccineType": "Hep A-Hep B, pediatric/adolescent",
+                            "cvx": "193",
+                            "beginAge": "0 days",
+                            "endAge": "18 years"
+                        },
+                        {
                             "vaccineType": "DTP-HepB-Hib Pentavalent Non-US",
                             "cvx": "198",
-                            "beginAge": "0 days"
+                            "beginAge": "0 days",
+                            "endAge": "20 years"
                         },
                         {
                             "vaccineType": "HepB recombinant, 3-antigen, Al(OH)3",
@@ -5848,7 +5946,7 @@
                             "beginAge": "20 years",
                             "tradeName": "ENGERIX-B ADULT",
                             "mvx": "SKB",
-                            "volume": "2",
+                            "volume": "2.0",
                             "forecastVaccineType": "N"
                         }
                     ],
@@ -5862,7 +5960,8 @@
                         {
                             "vaccineType": "Hep B, Adol/high risk infant",
                             "cvx": "42",
-                            "beginAge": "0 days"
+                            "beginAge": "0 days",
+                            "endAge": "20 years"
                         },
                         {
                             "vaccineType": "Hep B, Adult",
@@ -5882,27 +5981,14 @@
                         {
                             "vaccineType": "Hib-HepB",
                             "cvx": "51",
-                            "beginAge": "0 days"
+                            "beginAge": "0 days",
+                            "endAge": "20 years"
                         },
                         {
                             "vaccineType": "DTP-Hib-HepB",
                             "cvx": "102",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTaP-HepB-IPV",
-                            "cvx": "110",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTaP-IPV-Hib-HepB, historical",
-                            "cvx": "132",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTaP-IPV-Hib-HepB",
-                            "cvx": "146",
-                            "beginAge": "0 days"
+                            "beginAge": "0 days",
+                            "endAge": "20 years"
                         },
                         {
                             "vaccineType": "HepA-HepB",
@@ -5910,14 +5996,39 @@
                             "beginAge": "0 days"
                         },
                         {
+                            "vaccineType": "DTaP-HepB-IPV",
+                            "cvx": "110",
+                            "beginAge": "0 days",
+                            "endAge": "20 years"
+                        },
+                        {
+                            "vaccineType": "DTaP-IPV-Hib-HepB, historical",
+                            "cvx": "132",
+                            "beginAge": "0 days",
+                            "endAge": "20 years"
+                        },
+                        {
+                            "vaccineType": "DTaP-IPV-Hib-HepB",
+                            "cvx": "146",
+                            "beginAge": "0 days",
+                            "endAge": "20 years"
+                        },
+                        {
                             "vaccineType": "Hep B, adjuvanted",
                             "cvx": "189",
                             "beginAge": "18 years - 4 days"
                         },
                         {
+                            "vaccineType": "Hep A-Hep B, pediatric/adolescent",
+                            "cvx": "193",
+                            "beginAge": "0 days",
+                            "endAge": "18 years"
+                        },
+                        {
                             "vaccineType": "DTP-HepB-Hib Pentavalent Non-US",
                             "cvx": "198",
-                            "beginAge": "0 days"
+                            "beginAge": "0 days",
+                            "endAge": "20 years"
                         },
                         {
                             "vaccineType": "HepB recombinant, 3-antigen, Al(OH)3",
@@ -5983,7 +6094,7 @@
                             "beginAge": "20 years",
                             "tradeName": "ENGERIX-B ADULT",
                             "mvx": "SKB",
-                            "volume": "2",
+                            "volume": "2.0",
                             "forecastVaccineType": "N"
                         }
                     ],
@@ -5997,7 +6108,8 @@
                         {
                             "vaccineType": "Hep B, Adol/high risk infant",
                             "cvx": "42",
-                            "beginAge": "0 days"
+                            "beginAge": "0 days",
+                            "endAge": "20 years"
                         },
                         {
                             "vaccineType": "Hep B, Adult",
@@ -6017,27 +6129,14 @@
                         {
                             "vaccineType": "Hib-HepB",
                             "cvx": "51",
-                            "beginAge": "0 days"
+                            "beginAge": "0 days",
+                            "endAge": "20 years"
                         },
                         {
                             "vaccineType": "DTP-Hib-HepB",
                             "cvx": "102",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTaP-HepB-IPV",
-                            "cvx": "110",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTaP-IPV-Hib-HepB, historical",
-                            "cvx": "132",
-                            "beginAge": "0 days"
-                        },
-                        {
-                            "vaccineType": "DTaP-IPV-Hib-HepB",
-                            "cvx": "146",
-                            "beginAge": "0 days"
+                            "beginAge": "0 days",
+                            "endAge": "20 years"
                         },
                         {
                             "vaccineType": "HepA-HepB",
@@ -6045,14 +6144,39 @@
                             "beginAge": "0 days"
                         },
                         {
+                            "vaccineType": "DTaP-HepB-IPV",
+                            "cvx": "110",
+                            "beginAge": "0 days",
+                            "endAge": "20 years"
+                        },
+                        {
+                            "vaccineType": "DTaP-IPV-Hib-HepB, historical",
+                            "cvx": "132",
+                            "beginAge": "0 days",
+                            "endAge": "20 years"
+                        },
+                        {
+                            "vaccineType": "DTaP-IPV-Hib-HepB",
+                            "cvx": "146",
+                            "beginAge": "0 days",
+                            "endAge": "20 years"
+                        },
+                        {
                             "vaccineType": "Hep B, adjuvanted",
                             "cvx": "189",
                             "beginAge": "18 years - 4 days"
                         },
                         {
+                            "vaccineType": "Hep A-Hep B, pediatric/adolescent",
+                            "cvx": "193",
+                            "beginAge": "0 days",
+                            "endAge": "18 years"
+                        },
+                        {
                             "vaccineType": "DTP-HepB-Hib Pentavalent Non-US",
                             "cvx": "198",
-                            "beginAge": "0 days"
+                            "beginAge": "0 days",
+                            "endAge": "20 years"
                         },
                         {
                             "vaccineType": "HepB recombinant, 3-antigen, Al(OH)3",
@@ -6121,14 +6245,14 @@
                             "beginAge": "20 years",
                             "tradeName": "ENGERIX-B ADULT",
                             "mvx": "SKB",
-                            "volume": "2",
+                            "volume": "2.0",
                             "forecastVaccineType": "N"
                         },
                         {
                             "vaccineType": "Hep B, Dialysis",
                             "cvx": "44",
                             "beginAge": "20 years",
-                            "volume": "1",
+                            "volume": "1.0",
                             "forecastVaccineType": "N"
                         },
                         {
@@ -6204,7 +6328,7 @@
                             "vaccineType": "Hep B, Dialysis",
                             "cvx": "44",
                             "beginAge": "20 years",
-                            "volume": "1",
+                            "volume": "1.0",
                             "forecastVaccineType": "N"
                         }
                     ],
@@ -6251,7 +6375,7 @@
                             "vaccineType": "Hep B, Dialysis",
                             "cvx": "44",
                             "beginAge": "20 years",
-                            "volume": "1",
+                            "volume": "1.0",
                             "forecastVaccineType": "N"
                         }
                     ],
@@ -6304,7 +6428,7 @@
                             "vaccineType": "Hep B, Dialysis",
                             "cvx": "44",
                             "beginAge": "20 years",
-                            "volume": "1",
+                            "volume": "1.0",
                             "forecastVaccineType": "Y"
                         }
                     ],
@@ -6353,14 +6477,14 @@
                             "beginAge": "20 years",
                             "tradeName": "ENGERIX-B ADULT",
                             "mvx": "SKB",
-                            "volume": "2",
+                            "volume": "2.0",
                             "forecastVaccineType": "N"
                         },
                         {
                             "vaccineType": "Hep B, Dialysis",
                             "cvx": "44",
                             "beginAge": "20 years",
-                            "volume": "1",
+                            "volume": "1.0",
                             "forecastVaccineType": "N"
                         },
                         {

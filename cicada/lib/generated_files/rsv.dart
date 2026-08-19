@@ -82,7 +82,7 @@ final AntigenSupportingData rsv = AntigenSupportingData.fromJson({
               "cvx": "307",
               "beginAge": "0 days",
               "endAge": "24 months",
-              "volume": "1",
+              "volume": "1.0",
               "forecastVaccineType": "N"
             },
             {
@@ -178,8 +178,12 @@ final AntigenSupportingData rsv = AntigenSupportingData.fromJson({
       },
       "indication": [
         {
-          "observationCode": {"text": "Chronic Lung Disease", "code": "017"},
-          "description": "Administer to persons who have chronic lung disease",
+          "observationCode": {
+            "text": "Chronic lung disease of prematurity",
+            "code": "280"
+          },
+          "description":
+              "Administer to persons who have chronic lung disease of prematurity",
           "beginAge": "0 days",
           "endAge": "20 months",
           "guidance":
@@ -237,7 +241,7 @@ final AntigenSupportingData rsv = AntigenSupportingData.fromJson({
               "cvx": "307",
               "beginAge": "0 days",
               "endAge": "24 months",
-              "volume": "1",
+              "volume": "1.0",
               "forecastVaccineType": "N"
             },
             {
@@ -342,7 +346,7 @@ final AntigenSupportingData rsv = AntigenSupportingData.fromJson({
               "cvx": "307",
               "beginAge": "0 days",
               "endAge": "24 months",
-              "volume": "1",
+              "volume": "1.0",
               "forecastVaccineType": "N"
             }
           ],
@@ -447,7 +451,7 @@ final AntigenSupportingData rsv = AntigenSupportingData.fromJson({
               "cvx": "307",
               "beginAge": "0 days",
               "endAge": "24 months",
-              "volume": "1",
+              "volume": "1.0",
               "forecastVaccineType": "N"
             }
           ],

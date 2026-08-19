@@ -73,7 +73,7 @@ final AntigenSupportingData cholera = AntigenSupportingData.fromJson({
               "cvx": "174",
               "beginAge": "6 years",
               "endAge": "65 years",
-              "volume": "100",
+              "volume": "100.0",
               "forecastVaccineType": "N"
             },
             {
@@ -81,7 +81,7 @@ final AntigenSupportingData cholera = AntigenSupportingData.fromJson({
               "cvx": "174",
               "beginAge": "2 years",
               "endAge": "6 years",
-              "volume": "50",
+              "volume": "50.0",
               "forecastVaccineType": "N"
             }
           ],

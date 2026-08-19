@@ -192,6 +192,9 @@ final AntigenSupportingData diphtheria = AntigenSupportingData.fromJson({
       "seriesName": "Diphtheria standard series",
       "targetDisease": "Diphtheria",
       "vaccineGroup": "DTaP/Tdap/Td",
+      "seriesAdminGuidance": [
+        "Dose 4 may be administered as early as age 12 months if at least 6 months have elapsed since dose 3"
+      ],
       "seriesType": "Standard",
       "selectSeries": {
         "defaultSeries": "Yes",
@@ -2334,6 +2337,9 @@ final AntigenSupportingData diphtheria = AntigenSupportingData.fromJson({
       "seriesName": "Diphtheria start at 12 months series",
       "targetDisease": "Diphtheria",
       "vaccineGroup": "DTaP/Tdap/Td",
+      "seriesAdminGuidance": [
+        "Dose 4 may be administered as early as age 12 months if at least 6 months have elapsed since dose 3"
+      ],
       "seriesType": "Standard",
       "selectSeries": {
         "defaultSeries": "No",

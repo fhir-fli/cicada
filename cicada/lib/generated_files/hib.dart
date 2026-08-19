@@ -2131,6 +2131,9 @@ final AntigenSupportingData hib = AntigenSupportingData.fromJson({
         },
         {
           "doseNumber": "Dose 2",
+          "age": [
+            {"absMinAge": "12 months - 4 days", "minAge": "12 months"}
+          ],
           "interval": [
             {
               "fromPrevious": "Y",

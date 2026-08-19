@@ -58,6 +58,7 @@ void _generateCdc() {
         if (filePath.contains('AntigenSupportingData')) {
           // Parse as an antigen
           final antigenData = antigenParser.parseFile(filePath);
+          _assertParsedNotHeaders(antigenData, filePath);
           allAntigenData.add(antigenData);
 
           // Write JSON
@@ -535,4 +536,41 @@ String _findVersionSubdir(String subdir) {
         'Multiple Version_* directories with $subdir/ found: ${matches.map((d) => d.path).join(', ')}');
   }
   return '${matches.first.path}/$subdir';
+}
+
+/// Column labels that must never survive into parsed data.
+///
+/// The sheets are matched by name, and their column layout is not part of any
+/// contract — CDSi 4.65 merged "Risk 1-dose" and "Risk 4-dose" into a single
+/// "Risk series" sheet, which the `contains('dose')` detector missed. The
+/// parser then fell through to a looser branch and read the header row as
+/// values, producing series whose seriesGroupName was literally "Series Group
+/// Name". It compiled, it analyzed clean, and 776 tests failed.
+///
+/// A header string appearing as data means the sheet moved under the parser.
+/// Fail here rather than write it out.
+const List<String> _headerLabels = <String>[
+  'Series Group Name',
+  'Series Group',
+  'Minimum Age To Start',
+  'Maximum Age To Start',
+  'Series Name',
+  'Series Type',
+  'Dose Number',
+  'Vaccine Group',
+  'Target Disease',
+];
+
+void _assertParsedNotHeaders(AntigenSupportingData data, String filePath) {
+  final String encoded = jsonPrettyPrint(data.toJson());
+  for (final String label in _headerLabels) {
+    if (encoded.contains('": "$label"')) {
+      throw StateError(
+        'Parsed "$label" as a VALUE from $filePath.\n'
+        'That is a column header, so the sheet layout has moved under the '
+        'parser and the output would be garbage. Fix '
+        'antigen_sheet_parser.dart for this CDSi release before regenerating.',
+      );
+    }
+  }
 }

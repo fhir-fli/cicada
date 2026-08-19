@@ -177,19 +177,20 @@
     },
     "series": [
         {
-            "seriesName": "Typhoid risk 1-dose series",
+            "seriesName": "Typhoid risk series",
             "targetDisease": "Typhoid",
             "vaccineGroup": "Typhoid",
             "seriesAdminGuidance": [
-                "This vaccine should be given at least 2 weeks before potential exposure."
+                "Primary vaccination with live-attenuated Ty21a vaccine consists of one enteric-coated capsule taken on alternate days (day 0, 2, 4, and 6), for a total of four capsules. The capsules must be kept refrigerated (not frozen). Each capsule should be taken with cool water no warmer than 98.6 F (37.0 C), approximately 1 hour before a meal. All doses should be completed at least 1 week before potential exposure."
             ],
             "seriesType": "Risk",
             "selectSeries": {
                 "defaultSeries": "No",
-                "productPath": "Yes",
+                "productPath": "No",
                 "seriesGroupName": "Increased Risk",
                 "seriesGroup": "1",
                 "seriesPriority": "A",
+                "seriesPreference": "1",
                 "minAgeToStart": "2 years"
             },
             "indication": [
@@ -230,6 +231,12 @@
                     ],
                     "preferableVaccine": [
                         {
+                            "vaccineType": "Typhoid oral, live, attenuated",
+                            "cvx": "25",
+                            "beginAge": "6 years",
+                            "forecastVaccineType": "N"
+                        },
+                        {
                             "vaccineType": "Typhoid capsular polysaccharide",
                             "cvx": "101",
                             "beginAge": "2 years",
@@ -238,6 +245,11 @@
                         }
                     ],
                     "allowableVaccine": [
+                        {
+                            "vaccineType": "Typhoid oral, live, attenuated",
+                            "cvx": "25",
+                            "beginAge": "6 years - 4 days"
+                        },
                         {
                             "vaccineType": "Typhoid capsular polysaccharide",
                             "cvx": "101",
@@ -250,14 +262,28 @@
                     "doseNumber": "Dose 2",
                     "interval": [
                         {
-                            "fromPrevious": "Y",
-                            "absMinInt": "2 years - 4 days",
+                            "fromPrevious": "N",
+                            "fromMostRecent": "25",
+                            "absMinInt": "0 days",
+                            "minInt": "5 years",
+                            "earliestRecInt": "5 years"
+                        },
+                        {
+                            "fromPrevious": "N",
+                            "fromMostRecent": "101",
+                            "absMinInt": "0 days",
                             "minInt": "2 years",
                             "earliestRecInt": "2 years"
                         }
                     ],
                     "preferableVaccine": [
                         {
+                            "vaccineType": "Typhoid oral, live, attenuated",
+                            "cvx": "25",
+                            "beginAge": "6 years",
+                            "forecastVaccineType": "N"
+                        },
+                        {
                             "vaccineType": "Typhoid capsular polysaccharide",
                             "cvx": "101",
                             "beginAge": "2 years",
@@ -267,107 +293,14 @@
                     ],
                     "allowableVaccine": [
                         {
+                            "vaccineType": "Typhoid oral, live, attenuated",
+                            "cvx": "25",
+                            "beginAge": "6 years - 4 days"
+                        },
+                        {
                             "vaccineType": "Typhoid capsular polysaccharide",
                             "cvx": "101",
                             "beginAge": "2 years - 4 days"
-                        }
-                    ],
-                    "recurringDose": "Yes"
-                }
-            ]
-        },
-        {
-            "seriesName": "Typhoid risk 4-dose series",
-            "targetDisease": "Typhoid",
-            "vaccineGroup": "Typhoid",
-            "seriesAdminGuidance": [
-                "Primary vaccination with live-attenuated Ty21a vaccine consists of one enteric-coated capsule taken on alternate days (day 0, 2, 4, and 6), for a total of four capsules. The capsules must be kept refrigerated (not frozen). Each capsule should be taken with cool water no warmer than 98.6 F (37.0 C), approximately 1 hour before a meal. All doses should be completed at least 1 week before potential exposure."
-            ],
-            "seriesType": "Risk",
-            "selectSeries": {
-                "defaultSeries": "No",
-                "productPath": "Yes",
-                "seriesGroupName": "Increased Risk",
-                "seriesGroup": "1",
-                "seriesPriority": "A",
-                "minAgeToStart": "2 years"
-            },
-            "indication": [
-                {
-                    "observationCode": {
-                        "text": "Microbiology laboratorians who work frequently with S. typhi",
-                        "code": "051"
-                    },
-                    "description": "Administer to persons who are microbiology laboratorians who work frequently with S. typhi.",
-                    "beginAge": "18 years"
-                },
-                {
-                    "observationCode": {
-                        "text": "Intimate exposure to a documented S. typhi carrier",
-                        "code": "072"
-                    },
-                    "description": "Administer to persons who have intimate exposure to a documented S. typhi carrier.",
-                    "beginAge": "2 years"
-                },
-                {
-                    "observationCode": {
-                        "text": "Travel to areas in which there is a recognized risk of exposure to S. typhi",
-                        "code": "163"
-                    },
-                    "description": "Administer to persons who travel to areas in which there is a recognized risk of exposure to S. typhi.",
-                    "beginAge": "2 years"
-                }
-            ],
-            "seriesDose": [
-                {
-                    "doseNumber": "Dose 1",
-                    "age": [
-                        {
-                            "absMinAge": "6 years - 4 days",
-                            "minAge": "6 years",
-                            "earliestRecAge": "6 years"
-                        }
-                    ],
-                    "preferableVaccine": [
-                        {
-                            "vaccineType": "Typhoid oral, live, attenuated",
-                            "cvx": "25",
-                            "beginAge": "6 years",
-                            "forecastVaccineType": "N"
-                        }
-                    ],
-                    "allowableVaccine": [
-                        {
-                            "vaccineType": "Typhoid oral, live, attenuated",
-                            "cvx": "25",
-                            "beginAge": "6 years - 4 days"
-                        }
-                    ],
-                    "recurringDose": "No"
-                },
-                {
-                    "doseNumber": "Dose 2",
-                    "interval": [
-                        {
-                            "fromPrevious": "Y",
-                            "absMinInt": "5 years - 4 days",
-                            "minInt": "5 years",
-                            "earliestRecInt": "5 years"
-                        }
-                    ],
-                    "preferableVaccine": [
-                        {
-                            "vaccineType": "Typhoid oral, live, attenuated",
-                            "cvx": "25",
-                            "beginAge": "6 years",
-                            "forecastVaccineType": "N"
-                        }
-                    ],
-                    "allowableVaccine": [
-                        {
-                            "vaccineType": "Typhoid oral, live, attenuated",
-                            "cvx": "25",
-                            "beginAge": "6 years - 4 days"
                         }
                     ],
                     "recurringDose": "Yes"

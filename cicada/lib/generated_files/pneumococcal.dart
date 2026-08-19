@@ -5641,15 +5641,15 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
               "fromPrevious": "N",
               "fromMostRecent": "133",
               "absMinInt": "0 days",
-              "minInt": "8 weeks",
-              "earliestRecInt": "8 weeks"
+              "minInt": "1 year",
+              "earliestRecInt": "1 year"
             },
             {
               "fromPrevious": "N",
               "fromMostRecent": "215",
               "absMinInt": "0 days",
               "minInt": "8 weeks",
-              "earliestRecInt": "1 year"
+              "earliestRecInt": "8 weeks"
             }
           ],
           "preferableVaccine": [
@@ -6633,15 +6633,15 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
               "fromPrevious": "N",
               "fromMostRecent": "133",
               "absMinInt": "0 days",
-              "minInt": "8 weeks",
-              "earliestRecInt": "8 weeks"
+              "minInt": "1 year",
+              "earliestRecInt": "1 year"
             },
             {
               "fromPrevious": "N",
               "fromMostRecent": "215",
               "absMinInt": "0 days",
               "minInt": "8 weeks",
-              "earliestRecInt": "1 year"
+              "earliestRecInt": "8 weeks"
             }
           ],
           "preferableVaccine": [
@@ -7381,17 +7381,10 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
           ],
           "interval": [
             {
-              "fromPrevious": "N",
-              "fromTargetDose": "1",
+              "fromPrevious": "Y",
               "absMinInt": "0 days",
               "minInt": "5 years",
               "earliestRecInt": "5 years"
-            },
-            {
-              "fromPrevious": "Y",
-              "absMinInt": "0 days",
-              "minInt": "8 weeks",
-              "earliestRecInt": "8 weeks"
             }
           ],
           "preferableVaccine": [

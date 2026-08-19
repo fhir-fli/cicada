@@ -104,6 +104,131 @@ final AntigenSupportingData hpv = AntigenSupportingData.fromJson({
         },
         {
           "doseNumber": "Dose 2",
+          "age": [
+            {"maxAge": "46 years"}
+          ],
+          "interval": [
+            {
+              "fromPrevious": "N",
+              "fromTargetDose": "1",
+              "absMinInt": "5 months - 4 days",
+              "minInt": "5 months",
+              "earliestRecInt": "6 months",
+              "latestRecInt": "13 months + 4 weeks"
+            },
+            {
+              "fromPrevious": "Y",
+              "absMinInt": "12 weeks - 4 days",
+              "minInt": "12 weeks"
+            }
+          ],
+          "preferableVaccine": [
+            {
+              "vaccineType": "9vHPV",
+              "cvx": "165",
+              "beginAge": "9 years",
+              "endAge": "46 years",
+              "volume": "0.5",
+              "forecastVaccineType": "N"
+            }
+          ],
+          "allowableVaccine": [
+            {
+              "vaccineType": "4vHPV",
+              "cvx": "62",
+              "beginAge": "9 years - 4 days"
+            },
+            {
+              "vaccineType": "2vHPV",
+              "cvx": "118",
+              "beginAge": "9 years - 4 days"
+            },
+            {
+              "vaccineType": "HPV Unspecified",
+              "cvx": "137",
+              "beginAge": "9 years - 4 days"
+            },
+            {
+              "vaccineType": "9vHPV",
+              "cvx": "165",
+              "beginAge": "9 years - 4 days"
+            }
+          ],
+          "recurringDose": "No"
+        }
+      ]
+    },
+    {
+      "seriesName": "HPV 3-dose start under 15 years series",
+      "targetDisease": "HPV",
+      "vaccineGroup": "HPV",
+      "seriesAdminGuidance": [
+        "ACIP recommends routine HPV vaccination at age 11 or 12 years. Vaccination can be given starting at age 9 years.",
+        "Shared clinical decision-making (SCDM) is recommended regarding Human papillomavirus (HPV) vaccination for persons 27-45 years of age. Shared clinical decision-making recommendations are intended to be flexible and should be informed by the characteristics, values, and preferences of the individual patient and the clinical discretion of the healthcare provider. More guidance can be found here: https://www.cdc.gov/vaccines/hcp/admin/downloads/ISD-job-aid-SCDM-HPV-shared-clinical-decision-making-HPV.pdf"
+      ],
+      "seriesType": "Standard",
+      "equivalentSeriesGroups": "2",
+      "requiredGender": ["Female", "Unknown"],
+      "selectSeries": {
+        "defaultSeries": "No",
+        "productPath": "No",
+        "seriesGroupName": "Standard",
+        "seriesGroup": "1",
+        "seriesPriority": "A",
+        "seriesPreference": "2",
+        "maxAgeToStart": "15 years"
+      },
+      "seriesDose": [
+        {
+          "doseNumber": "Dose 1",
+          "age": [
+            {
+              "absMinAge": "9 years - 4 days",
+              "minAge": "9 years",
+              "earliestRecAge": "11 years",
+              "latestRecAge": "13 years + 4 weeks",
+              "maxAge": "46 years"
+            }
+          ],
+          "preferableVaccine": [
+            {
+              "vaccineType": "9vHPV",
+              "cvx": "165",
+              "beginAge": "9 years",
+              "endAge": "46 years",
+              "volume": "0.5",
+              "forecastVaccineType": "N"
+            }
+          ],
+          "allowableVaccine": [
+            {
+              "vaccineType": "4vHPV",
+              "cvx": "62",
+              "beginAge": "9 years - 4 days"
+            },
+            {
+              "vaccineType": "2vHPV",
+              "cvx": "118",
+              "beginAge": "9 years - 4 days"
+            },
+            {
+              "vaccineType": "HPV Unspecified",
+              "cvx": "137",
+              "beginAge": "9 years - 4 days"
+            },
+            {
+              "vaccineType": "9vHPV",
+              "cvx": "165",
+              "beginAge": "9 years - 4 days"
+            }
+          ],
+          "recurringDose": "No"
+        },
+        {
+          "doseNumber": "Dose 2",
+          "age": [
+            {"maxAge": "46 years"}
+          ],
           "interval": [
             {
               "fromPrevious": "Y",
@@ -145,76 +270,31 @@ final AntigenSupportingData hpv = AntigenSupportingData.fromJson({
               "beginAge": "9 years - 4 days"
             }
           ],
-          "conditionalSkip": [
-            {
-              "context": "Evaluation",
-              "setLogic": "n/a",
-              "set": [
-                {
-                  "setID": "1",
-                  "setDescription":
-                      "Target Dose is not required if current dose was administered at least 5 months - 4 days from the previous dose OR two total doses have already been administered",
-                  "conditionLogic": "OR",
-                  "condition": [
-                    {
-                      "conditionID": "1",
-                      "conditionType": "Interval",
-                      "interval": "5 months - 4 days"
-                    },
-                    {
-                      "conditionID": "2",
-                      "conditionType": "Vaccine Count by Age",
-                      "beginAge": "9 years - 4 days",
-                      "doseCount": "1",
-                      "doseType": "Total",
-                      "doseCountLogic": "greater than",
-                      "vaccineTypes": "62;118;137;165"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "context": "Forecast",
-              "setLogic": "n/a",
-              "set": [
-                {
-                  "setID": "2",
-                  "setDescription":
-                      "Dose is not required once 5 months has passed since dose 1 or two total doses have already been administered.",
-                  "conditionLogic": "OR",
-                  "condition": [
-                    {
-                      "conditionID": "1",
-                      "conditionType": "Interval",
-                      "interval": "5 months"
-                    },
-                    {
-                      "conditionID": "2",
-                      "conditionType": "Vaccine Count by Age",
-                      "beginAge": "9 years - 4 days",
-                      "doseCount": "1",
-                      "doseType": "Total",
-                      "doseCountLogic": "greater than",
-                      "vaccineTypes": "62;118;137;165"
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
           "recurringDose": "No"
         },
         {
           "doseNumber": "Dose 3",
+          "age": [
+            {"maxAge": "46 years"}
+          ],
           "interval": [
+            {
+              "fromPrevious": "N",
+              "fromTargetDose": "1",
+              "absMinInt": "16 weeks - 4 days",
+              "minInt": "5 months",
+              "earliestRecInt": "6 months",
+              "latestRecInt": "13 months + 4 weeks",
+              "cessationDate": "2016-12-15"
+            },
             {
               "fromPrevious": "N",
               "fromTargetDose": "1",
               "absMinInt": "5 months - 4 days",
               "minInt": "5 months",
               "earliestRecInt": "6 months",
-              "latestRecInt": "13 months + 4 weeks"
+              "latestRecInt": "13 months + 4 weeks",
+              "effectiveDate": "2016-12-16"
             },
             {
               "fromPrevious": "Y",
@@ -275,7 +355,7 @@ final AntigenSupportingData hpv = AntigenSupportingData.fromJson({
         "seriesGroupName": "Standard",
         "seriesGroup": "1",
         "seriesPriority": "A",
-        "seriesPreference": "2",
+        "seriesPreference": "3",
         "minAgeToStart": "15 years"
       },
       "seriesDose": [
@@ -283,20 +363,11 @@ final AntigenSupportingData hpv = AntigenSupportingData.fromJson({
           "doseNumber": "Dose 1",
           "age": [
             {
-              "absMinAge": "9 years - 4 days",
-              "minAge": "9 years",
-              "earliestRecAge": "11 years",
-              "latestRecAge": "13 years + 4 weeks",
-              "maxAge": "46 years",
-              "cessationDate": "2016-12-15"
-            },
-            {
               "absMinAge": "15 years",
               "minAge": "15 years",
               "earliestRecAge": "15 years",
               "latestRecAge": "15 years",
-              "maxAge": "46 years",
-              "effectiveDate": "2016-12-16"
+              "maxAge": "46 years"
             }
           ],
           "interval": [
@@ -344,6 +415,9 @@ final AntigenSupportingData hpv = AntigenSupportingData.fromJson({
         },
         {
           "doseNumber": "Dose 2",
+          "age": [
+            {"maxAge": "46 years"}
+          ],
           "interval": [
             {
               "fromPrevious": "Y",
@@ -389,6 +463,9 @@ final AntigenSupportingData hpv = AntigenSupportingData.fromJson({
         },
         {
           "doseNumber": "Dose 3",
+          "age": [
+            {"maxAge": "46 years"}
+          ],
           "interval": [
             {
               "fromPrevious": "N",
@@ -516,6 +593,127 @@ final AntigenSupportingData hpv = AntigenSupportingData.fromJson({
         },
         {
           "doseNumber": "Dose 2",
+          "age": [
+            {"maxAge": "46 years"}
+          ],
+          "interval": [
+            {
+              "fromPrevious": "N",
+              "fromTargetDose": "1",
+              "absMinInt": "5 months - 4 days",
+              "minInt": "5 months",
+              "earliestRecInt": "6 months",
+              "latestRecInt": "13 months + 4 weeks"
+            },
+            {
+              "fromPrevious": "Y",
+              "absMinInt": "12 weeks - 4 days",
+              "minInt": "12 weeks"
+            }
+          ],
+          "preferableVaccine": [
+            {
+              "vaccineType": "9vHPV",
+              "cvx": "165",
+              "beginAge": "9 years",
+              "endAge": "46 years",
+              "volume": "0.5",
+              "forecastVaccineType": "N"
+            }
+          ],
+          "allowableVaccine": [
+            {
+              "vaccineType": "4vHPV",
+              "cvx": "62",
+              "beginAge": "9 years - 4 days"
+            },
+            {
+              "vaccineType": "HPV Unspecified",
+              "cvx": "137",
+              "beginAge": "9 years - 4 days"
+            },
+            {
+              "vaccineType": "9vHPV",
+              "cvx": "165",
+              "beginAge": "9 years - 4 days"
+            }
+          ],
+          "inadvertentVaccine": [
+            {"vaccineType": "2vHPV", "cvx": "118"}
+          ],
+          "recurringDose": "No"
+        }
+      ]
+    },
+    {
+      "seriesName": "HPV male 3-dose start under 15 years series",
+      "targetDisease": "HPV",
+      "vaccineGroup": "HPV",
+      "seriesAdminGuidance": [
+        "ACIP recommends routine HPV vaccination at age 11 or 12 years. Vaccination can be given starting at age 9 years.",
+        "Shared clinical decision-making (SCDM) is recommended regarding Human papillomavirus (HPV) vaccination for persons 27-45 years of age. Shared clinical decision-making recommendations are intended to be flexible and should be informed by the characteristics, values, and preferences of the individual patient and the clinical discretion of the healthcare provider. More guidance can be found here: https://www.cdc.gov/vaccines/hcp/admin/downloads/ISD-job-aid-SCDM-HPV-shared-clinical-decision-making-HPV.pdf"
+      ],
+      "seriesType": "Standard",
+      "equivalentSeriesGroups": "2",
+      "requiredGender": ["Male"],
+      "selectSeries": {
+        "defaultSeries": "No",
+        "productPath": "No",
+        "seriesGroupName": "Standard",
+        "seriesGroup": "1",
+        "seriesPriority": "A",
+        "seriesPreference": "2",
+        "maxAgeToStart": "15 years"
+      },
+      "seriesDose": [
+        {
+          "doseNumber": "Dose 1",
+          "age": [
+            {
+              "absMinAge": "9 years - 4 days",
+              "minAge": "9 years",
+              "earliestRecAge": "11 years",
+              "latestRecAge": "13 years + 4 weeks",
+              "maxAge": "46 years"
+            }
+          ],
+          "preferableVaccine": [
+            {
+              "vaccineType": "9vHPV",
+              "cvx": "165",
+              "beginAge": "9 years",
+              "endAge": "46 years",
+              "volume": "0.5",
+              "forecastVaccineType": "N"
+            }
+          ],
+          "allowableVaccine": [
+            {
+              "vaccineType": "4vHPV",
+              "cvx": "62",
+              "beginAge": "9 years - 4 days"
+            },
+            {
+              "vaccineType": "HPV Unspecified",
+              "cvx": "137",
+              "beginAge": "9 years - 4 days"
+            },
+            {
+              "vaccineType": "9vHPV",
+              "cvx": "165",
+              "beginAge": "9 years - 4 days"
+            }
+          ],
+          "inadvertentVaccine": [
+            {"vaccineType": "2vHPV", "cvx": "118"}
+          ],
+          "recurringDose": "No"
+        },
+        {
+          "doseNumber": "Dose 2",
+          "age": [
+            {"maxAge": "46 years"}
+          ],
           "interval": [
             {
               "fromPrevious": "Y",
@@ -555,76 +753,31 @@ final AntigenSupportingData hpv = AntigenSupportingData.fromJson({
           "inadvertentVaccine": [
             {"vaccineType": "2vHPV", "cvx": "118"}
           ],
-          "conditionalSkip": [
-            {
-              "context": "Evaluation",
-              "setLogic": "n/a",
-              "set": [
-                {
-                  "setID": "1",
-                  "setDescription":
-                      "Target Dose is not required if current dose was administered at least 5 months - 4 das from the previous dose OR two total doses have already been administered",
-                  "conditionLogic": "OR",
-                  "condition": [
-                    {
-                      "conditionID": "1",
-                      "conditionType": "Interval",
-                      "interval": "5 months - 4 days"
-                    },
-                    {
-                      "conditionID": "2",
-                      "conditionType": "Vaccine Count by Age",
-                      "beginAge": "9 years - 4 days",
-                      "doseCount": "1",
-                      "doseType": "Total",
-                      "doseCountLogic": "greater than",
-                      "vaccineTypes": "62;118;137;165"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "context": "Forecast",
-              "setLogic": "n/a",
-              "set": [
-                {
-                  "setID": "2",
-                  "setDescription":
-                      "Dose is not required once 5 months has passed since dose 1 or two total doses have already been administered.",
-                  "conditionLogic": "OR",
-                  "condition": [
-                    {
-                      "conditionID": "1",
-                      "conditionType": "Interval",
-                      "interval": "5 months"
-                    },
-                    {
-                      "conditionID": "2",
-                      "conditionType": "Vaccine Count by Age",
-                      "beginAge": "9 years - 4 days",
-                      "doseCount": "1",
-                      "doseType": "Total",
-                      "doseCountLogic": "greater than",
-                      "vaccineTypes": "62;118;137;165"
-                    }
-                  ]
-                }
-              ]
-            }
-          ],
           "recurringDose": "No"
         },
         {
           "doseNumber": "Dose 3",
+          "age": [
+            {"maxAge": "46 years"}
+          ],
           "interval": [
+            {
+              "fromPrevious": "N",
+              "fromTargetDose": "1",
+              "absMinInt": "16 weeks - 4 days",
+              "minInt": "5 months",
+              "earliestRecInt": "6 months",
+              "latestRecInt": "13 months + 4 weeks",
+              "cessationDate": "2016-12-15"
+            },
             {
               "fromPrevious": "N",
               "fromTargetDose": "1",
               "absMinInt": "5 months - 4 days",
               "minInt": "5 months",
               "earliestRecInt": "6 months",
-              "latestRecInt": "13 months + 4 weeks"
+              "latestRecInt": "13 months + 4 weeks",
+              "effectiveDate": "2016-12-16"
             },
             {
               "fromPrevious": "Y",
@@ -683,7 +836,7 @@ final AntigenSupportingData hpv = AntigenSupportingData.fromJson({
         "seriesGroupName": "Standard",
         "seriesGroup": "1",
         "seriesPriority": "A",
-        "seriesPreference": "2",
+        "seriesPreference": "3",
         "minAgeToStart": "15 years"
       },
       "seriesDose": [
@@ -691,20 +844,11 @@ final AntigenSupportingData hpv = AntigenSupportingData.fromJson({
           "doseNumber": "Dose 1",
           "age": [
             {
-              "absMinAge": "9 years - 4 days",
-              "minAge": "9 years",
-              "earliestRecAge": "11 years",
-              "latestRecAge": "13 years + 4 weeks",
-              "maxAge": "46 years",
-              "cessationDate": "2016-12-15"
-            },
-            {
               "absMinAge": "15 years",
               "minAge": "15 years",
               "earliestRecAge": "15 years",
               "latestRecAge": "15 years",
-              "maxAge": "46 years",
-              "effectiveDate": "2016-12-16"
+              "maxAge": "46 years"
             }
           ],
           "interval": [
@@ -750,6 +894,9 @@ final AntigenSupportingData hpv = AntigenSupportingData.fromJson({
         },
         {
           "doseNumber": "Dose 2",
+          "age": [
+            {"maxAge": "46 years"}
+          ],
           "interval": [
             {
               "fromPrevious": "Y",
@@ -793,6 +940,9 @@ final AntigenSupportingData hpv = AntigenSupportingData.fromJson({
         },
         {
           "doseNumber": "Dose 3",
+          "age": [
+            {"maxAge": "46 years"}
+          ],
           "interval": [
             {
               "fromPrevious": "N",
@@ -1500,6 +1650,9 @@ final AntigenSupportingData hpv = AntigenSupportingData.fromJson({
         },
         {
           "doseNumber": "Dose 2",
+          "age": [
+            {"maxAge": "46 Years"}
+          ],
           "interval": [
             {
               "fromPrevious": "Y",
@@ -1545,6 +1698,9 @@ final AntigenSupportingData hpv = AntigenSupportingData.fromJson({
         },
         {
           "doseNumber": "Dose 3",
+          "age": [
+            {"maxAge": "46 Years"}
+          ],
           "interval": [
             {
               "fromPrevious": "N",
@@ -1567,9 +1723,7 @@ final AntigenSupportingData hpv = AntigenSupportingData.fromJson({
             {
               "fromPrevious": "Y",
               "absMinInt": "12 weeks - 4 days",
-              "minInt": "12 weeks",
-              "earliestRecInt": "4 months",
-              "latestRecInt": "5 months + 4 weeks"
+              "minInt": "12 weeks"
             }
           ],
           "preferableVaccine": [
@@ -1798,6 +1952,9 @@ final AntigenSupportingData hpv = AntigenSupportingData.fromJson({
         },
         {
           "doseNumber": "Dose 2",
+          "age": [
+            {"maxAge": "46 Years"}
+          ],
           "interval": [
             {
               "fromPrevious": "Y",
@@ -1841,6 +1998,9 @@ final AntigenSupportingData hpv = AntigenSupportingData.fromJson({
         },
         {
           "doseNumber": "Dose 3",
+          "age": [
+            {"maxAge": "46 Years"}
+          ],
           "interval": [
             {
               "fromPrevious": "N",
@@ -1863,9 +2023,7 @@ final AntigenSupportingData hpv = AntigenSupportingData.fromJson({
             {
               "fromPrevious": "Y",
               "absMinInt": "12 weeks - 4 days",
-              "minInt": "12 weeks",
-              "earliestRecInt": "4 months",
-              "latestRecInt": "5 months + 4 weeks"
+              "minInt": "12 weeks"
             }
           ],
           "preferableVaccine": [

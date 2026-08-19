@@ -123,7 +123,7 @@
                         {
                             "vaccineType": "Meningococcal Polysaccharide A, C, Y, W-135 TT Conjugate",
                             "cvx": "203",
-                            "beginAge": "2 years - 4 days"
+                            "beginAge": "6 weeks - 4 days"
                         },
                         {
                             "vaccineType": "meningococcal polysaccharide (MenACWY-TT conjugate), (MenB), PF",
@@ -260,7 +260,7 @@
                         {
                             "vaccineType": "Meningococcal Polysaccharide A, C, Y, W-135 TT Conjugate",
                             "cvx": "203",
-                            "beginAge": "2 years - 4 days"
+                            "beginAge": "6 weeks - 4 days"
                         },
                         {
                             "vaccineType": "meningococcal polysaccharide (MenACWY-TT conjugate), (MenB), PF",
@@ -390,6 +390,16 @@
                             "vaccineType": "Meningococcal, MCV4O",
                             "cvx": "136",
                             "beginAge": "2 months - 4 days"
+                        },
+                        {
+                            "vaccineType": "MCV4, unspecified",
+                            "cvx": "147",
+                            "beginAge": "2 months - 4 days"
+                        },
+                        {
+                            "vaccineType": "Meningococcal Polysaccharide A, C, Y, W-135 TT Conjugate",
+                            "cvx": "203",
+                            "beginAge": "6 weeks - 4 days"
                         }
                     ],
                     "conditionalSkip": [
@@ -472,9 +482,14 @@
                             "beginAge": "2 months - 4 days"
                         },
                         {
+                            "vaccineType": "MCV4, unspecified",
+                            "cvx": "147",
+                            "beginAge": "2 months - 4 days"
+                        },
+                        {
                             "vaccineType": "Meningococcal Polysaccharide A, C, Y, W-135 TT Conjugate",
                             "cvx": "203",
-                            "beginAge": "2 years - 4 days"
+                            "beginAge": "6 weeks - 4 days"
                         }
                     ],
                     "conditionalSkip": [
@@ -546,9 +561,14 @@
                             "beginAge": "2 months - 4 days"
                         },
                         {
+                            "vaccineType": "MCV4, unspecified",
+                            "cvx": "147",
+                            "beginAge": "2 months - 4 days"
+                        },
+                        {
                             "vaccineType": "Meningococcal Polysaccharide A, C, Y, W-135 TT Conjugate",
                             "cvx": "203",
-                            "beginAge": "2 years - 4 days"
+                            "beginAge": "6 weeks - 4 days"
                         }
                     ],
                     "conditionalSkip": [
@@ -620,9 +640,14 @@
                             "beginAge": "2 months - 4 days"
                         },
                         {
+                            "vaccineType": "MCV4, unspecified",
+                            "cvx": "147",
+                            "beginAge": "2 months - 4 days"
+                        },
+                        {
                             "vaccineType": "Meningococcal Polysaccharide A, C, Y, W-135 TT Conjugate",
                             "cvx": "203",
-                            "beginAge": "2 years - 4 days"
+                            "beginAge": "6 weeks - 4 days"
                         }
                     ],
                     "conditionalSkip": [
@@ -638,7 +663,7 @@
                                         {
                                             "conditionID": "1",
                                             "conditionType": "Vaccine Count By Age",
-                                            "beginAge": "2 months",
+                                            "beginAge": "2 months - 4 days",
                                             "endAge": "7 months",
                                             "doseCount": "2",
                                             "doseType": "Valid",
@@ -725,9 +750,14 @@
                             "beginAge": "2 months - 4 days"
                         },
                         {
+                            "vaccineType": "MCV4, unspecified",
+                            "cvx": "147",
+                            "beginAge": "2 months - 4 days"
+                        },
+                        {
                             "vaccineType": "Meningococcal Polysaccharide A, C, Y, W-135 TT Conjugate",
                             "cvx": "203",
-                            "beginAge": "2 years - 4 days"
+                            "beginAge": "6 weeks - 4 days"
                         },
                         {
                             "vaccineType": "meningococcal polysaccharide (MenACWY-TT conjugate), (MenB), PF",
@@ -803,9 +833,14 @@
                             "beginAge": "2 months - 4 days"
                         },
                         {
+                            "vaccineType": "MCV4, unspecified",
+                            "cvx": "147",
+                            "beginAge": "2 months - 4 days"
+                        },
+                        {
                             "vaccineType": "Meningococcal Polysaccharide A, C, Y, W-135 TT Conjugate",
                             "cvx": "203",
-                            "beginAge": "2 years - 4 days"
+                            "beginAge": "6 weeks - 4 days"
                         },
                         {
                             "vaccineType": "meningococcal polysaccharide (MenACWY-TT conjugate), (MenB), PF",
@@ -903,9 +938,14 @@
                             "beginAge": "2 months - 4 days"
                         },
                         {
+                            "vaccineType": "MCV4, unspecified",
+                            "cvx": "147",
+                            "beginAge": "2 months - 4 days"
+                        },
+                        {
                             "vaccineType": "Meningococcal Polysaccharide A, C, Y, W-135 TT Conjugate",
                             "cvx": "203",
-                            "beginAge": "2 years - 4 days"
+                            "beginAge": "6 weeks - 4 days"
                         },
                         {
                             "vaccineType": "meningococcal polysaccharide (MenACWY-TT conjugate), (MenB), PF",
@@ -1217,9 +1257,14 @@
                             "beginAge": "2 months - 4 days"
                         },
                         {
+                            "vaccineType": "MCV4, unspecified",
+                            "cvx": "147",
+                            "beginAge": "2 months - 4 days"
+                        },
+                        {
                             "vaccineType": "Meningococcal Polysaccharide A, C, Y, W-135 TT Conjugate",
                             "cvx": "203",
-                            "beginAge": "2 years - 4 days"
+                            "beginAge": "6 weeks - 4 days"
                         },
                         {
                             "vaccineType": "meningococcal polysaccharide (MenACWY-TT conjugate), (MenB), PF",
@@ -1317,9 +1362,14 @@
                             "beginAge": "2 months - 4 days"
                         },
                         {
+                            "vaccineType": "MCV4, unspecified",
+                            "cvx": "147",
+                            "beginAge": "2 months - 4 days"
+                        },
+                        {
                             "vaccineType": "Meningococcal Polysaccharide A, C, Y, W-135 TT Conjugate",
                             "cvx": "203",
-                            "beginAge": "2 years - 4 days"
+                            "beginAge": "6 weeks - 4 days"
                         },
                         {
                             "vaccineType": "meningococcal polysaccharide (MenACWY-TT conjugate), (MenB), PF",
@@ -1463,9 +1513,14 @@
                             "beginAge": "2 months - 4 days"
                         },
                         {
+                            "vaccineType": "MCV4, unspecified",
+                            "cvx": "147",
+                            "beginAge": "2 months - 4 days"
+                        },
+                        {
                             "vaccineType": "Meningococcal Polysaccharide A, C, Y, W-135 TT Conjugate",
                             "cvx": "203",
-                            "beginAge": "2 years - 4 days"
+                            "beginAge": "6 weeks - 4 days"
                         },
                         {
                             "vaccineType": "meningococcal polysaccharide (MenACWY-TT conjugate), (MenB), PF",
@@ -1550,9 +1605,14 @@
                             "beginAge": "2 months - 4 days"
                         },
                         {
+                            "vaccineType": "MCV4, unspecified",
+                            "cvx": "147",
+                            "beginAge": "2 months - 4 days"
+                        },
+                        {
                             "vaccineType": "Meningococcal Polysaccharide A, C, Y, W-135 TT Conjugate",
                             "cvx": "203",
-                            "beginAge": "2 years - 4 days"
+                            "beginAge": "6 weeks - 4 days"
                         },
                         {
                             "vaccineType": "meningococcal polysaccharide (MenACWY-TT conjugate), (MenB), PF",
@@ -1629,9 +1689,14 @@
                             "beginAge": "2 months - 4 days"
                         },
                         {
+                            "vaccineType": "MCV4, unspecified",
+                            "cvx": "147",
+                            "beginAge": "2 months - 4 days"
+                        },
+                        {
                             "vaccineType": "Meningococcal Polysaccharide A, C, Y, W-135 TT Conjugate",
                             "cvx": "203",
-                            "beginAge": "2 years - 4 days"
+                            "beginAge": "6 weeks - 4 days"
                         },
                         {
                             "vaccineType": "meningococcal polysaccharide (MenACWY-TT conjugate), (MenB), PF",
@@ -1730,9 +1795,14 @@
                             "beginAge": "2 months - 4 days"
                         },
                         {
+                            "vaccineType": "MCV4, unspecified",
+                            "cvx": "147",
+                            "beginAge": "2 months - 4 days"
+                        },
+                        {
                             "vaccineType": "Meningococcal Polysaccharide A, C, Y, W-135 TT Conjugate",
                             "cvx": "203",
-                            "beginAge": "2 years - 4 days"
+                            "beginAge": "6 weeks - 4 days"
                         },
                         {
                             "vaccineType": "meningococcal polysaccharide (MenACWY-TT conjugate), (MenB), PF",
@@ -1875,9 +1945,14 @@
                             "beginAge": "2 months - 4 days"
                         },
                         {
+                            "vaccineType": "MCV4, unspecified",
+                            "cvx": "147",
+                            "beginAge": "2 months - 4 days"
+                        },
+                        {
                             "vaccineType": "Meningococcal Polysaccharide A, C, Y, W-135 TT Conjugate",
                             "cvx": "203",
-                            "beginAge": "2 years - 4 days"
+                            "beginAge": "6 weeks - 4 days"
                         },
                         {
                             "vaccineType": "meningococcal polysaccharide (MenACWY-TT conjugate), (MenB), PF",
@@ -1954,9 +2029,14 @@
                             "beginAge": "2 months - 4 days"
                         },
                         {
+                            "vaccineType": "MCV4, unspecified",
+                            "cvx": "147",
+                            "beginAge": "2 months - 4 days"
+                        },
+                        {
                             "vaccineType": "Meningococcal Polysaccharide A, C, Y, W-135 TT Conjugate",
                             "cvx": "203",
-                            "beginAge": "2 years - 4 days"
+                            "beginAge": "6 weeks - 4 days"
                         },
                         {
                             "vaccineType": "meningococcal polysaccharide (MenACWY-TT conjugate), (MenB), PF",
@@ -2054,9 +2134,14 @@
                             "beginAge": "2 months - 4 days"
                         },
                         {
+                            "vaccineType": "MCV4, unspecified",
+                            "cvx": "147",
+                            "beginAge": "2 months - 4 days"
+                        },
+                        {
                             "vaccineType": "Meningococcal Polysaccharide A, C, Y, W-135 TT Conjugate",
                             "cvx": "203",
-                            "beginAge": "2 years - 4 days"
+                            "beginAge": "6 weeks - 4 days"
                         },
                         {
                             "vaccineType": "meningococcal polysaccharide (MenACWY-TT conjugate), (MenB), PF",

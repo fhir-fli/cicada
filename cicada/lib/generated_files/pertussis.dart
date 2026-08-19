@@ -184,6 +184,9 @@ final AntigenSupportingData pertussis = AntigenSupportingData.fromJson({
       "seriesName": "Pertussis standard series",
       "targetDisease": "Pertussis",
       "vaccineGroup": "DTaP/Tdap/Td",
+      "seriesAdminGuidance": [
+        "Dose 4 may be administered as early as age 12 months if at least 6 months have elapsed since dose 3"
+      ],
       "seriesType": "Standard",
       "selectSeries": {
         "defaultSeries": "Yes",
@@ -2024,7 +2027,7 @@ final AntigenSupportingData pertussis = AntigenSupportingData.fromJson({
           ],
           "conditionalSkip": [
             {
-              "context": "Both",
+              "context": "Forecast",
               "setLogic": "n/a",
               "set": [
                 {
@@ -2045,7 +2048,7 @@ final AntigenSupportingData pertussis = AntigenSupportingData.fromJson({
               ]
             }
           ],
-          "recurringDose": "No"
+          "recurringDose": "Yes"
         }
       ]
     },
@@ -2053,6 +2056,9 @@ final AntigenSupportingData pertussis = AntigenSupportingData.fromJson({
       "seriesName": "Pertussis start at 12 months series",
       "targetDisease": "Pertussis",
       "vaccineGroup": "DTaP/Tdap/Td",
+      "seriesAdminGuidance": [
+        "Dose 4 may be administered as early as age 12 months if at least 6 months have elapsed since dose 3"
+      ],
       "seriesType": "Standard",
       "selectSeries": {
         "defaultSeries": "No",
@@ -3939,7 +3945,7 @@ final AntigenSupportingData pertussis = AntigenSupportingData.fromJson({
           ],
           "conditionalSkip": [
             {
-              "context": "Both",
+              "context": "Forecast",
               "setLogic": "n/a",
               "set": [
                 {
@@ -3960,7 +3966,7 @@ final AntigenSupportingData pertussis = AntigenSupportingData.fromJson({
               ]
             }
           ],
-          "recurringDose": "No"
+          "recurringDose": "Yes"
         }
       ]
     },

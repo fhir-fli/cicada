@@ -151,12 +151,15 @@ Uses Riverpod (non-Flutter) with `ProviderContainer` for managing:
 
 ## Code Style
 
-Uses `very_good_analysis`. The CDSi spec version currently implemented is **4.61-508**.
+Uses `very_good_analysis`. The CDSi supporting data currently implemented is **4.65-508** (Aug 2026). The logic specification is v4.6 (Dec 2024) — CDC versions them separately.
 
 ## Test Results
 
-- **CDC Healthy**: 1010/1014 (99.6%) — 4 failures believed to be version mismatch
-- **CDC Condition**: 747/777 (96.1%) — 30 failures, mostly version mismatch
+- **CDC Condition**: 746/777 on 4.65-508 supporting data — the only suite that
+  actually compares against expected results.
+- ⚠️ **`test/cicada_test.dart` ("healthy") asserts nothing.** It runs each case
+  and warns only if no recommendation comes back. The "1010/1014 (99.6%)" that
+  used to sit here is not produced by anything in this repo — do not quote it.
 
 ⚠️ **"Verified as version mismatch" was too strong, and it cost us.** That line
 went unquestioned for months and hid a real engine bug: `selectSeries

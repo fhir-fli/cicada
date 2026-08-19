@@ -193,6 +193,9 @@ final AntigenSupportingData tetanus = AntigenSupportingData.fromJson({
       "seriesName": "Tetanus standard series",
       "targetDisease": "Tetanus",
       "vaccineGroup": "DTaP/Tdap/Td",
+      "seriesAdminGuidance": [
+        "Dose 4 may be administered as early as age 12 months if at least 6 months have elapsed since dose 3"
+      ],
       "seriesType": "Standard",
       "selectSeries": {
         "defaultSeries": "Yes",
@@ -2370,6 +2373,9 @@ final AntigenSupportingData tetanus = AntigenSupportingData.fromJson({
       "seriesName": "Tetanus start at 12 months series",
       "targetDisease": "Tetanus",
       "vaccineGroup": "DTaP/Tdap/Td",
+      "seriesAdminGuidance": [
+        "Dose 4 may be administered as early as age 12 months if at least 6 months have elapsed since dose 3"
+      ],
       "seriesType": "Standard",
       "selectSeries": {
         "defaultSeries": "No",

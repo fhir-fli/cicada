@@ -134,7 +134,7 @@ final AntigenSupportingData meningococcal = AntigenSupportingData.fromJson({
               "vaccineType":
                   "Meningococcal Polysaccharide A, C, Y, W-135 TT Conjugate",
               "cvx": "203",
-              "beginAge": "2 years - 4 days"
+              "beginAge": "6 weeks - 4 days"
             },
             {
               "vaccineType":
@@ -279,7 +279,7 @@ final AntigenSupportingData meningococcal = AntigenSupportingData.fromJson({
               "vaccineType":
                   "Meningococcal Polysaccharide A, C, Y, W-135 TT Conjugate",
               "cvx": "203",
-              "beginAge": "2 years - 4 days"
+              "beginAge": "6 weeks - 4 days"
             },
             {
               "vaccineType":
@@ -412,6 +412,17 @@ final AntigenSupportingData meningococcal = AntigenSupportingData.fromJson({
               "vaccineType": "Meningococcal, MCV4O",
               "cvx": "136",
               "beginAge": "2 months - 4 days"
+            },
+            {
+              "vaccineType": "MCV4, unspecified",
+              "cvx": "147",
+              "beginAge": "2 months - 4 days"
+            },
+            {
+              "vaccineType":
+                  "Meningococcal Polysaccharide A, C, Y, W-135 TT Conjugate",
+              "cvx": "203",
+              "beginAge": "6 weeks - 4 days"
             }
           ],
           "conditionalSkip": [
@@ -494,10 +505,15 @@ final AntigenSupportingData meningococcal = AntigenSupportingData.fromJson({
               "beginAge": "2 months - 4 days"
             },
             {
+              "vaccineType": "MCV4, unspecified",
+              "cvx": "147",
+              "beginAge": "2 months - 4 days"
+            },
+            {
               "vaccineType":
                   "Meningococcal Polysaccharide A, C, Y, W-135 TT Conjugate",
               "cvx": "203",
-              "beginAge": "2 years - 4 days"
+              "beginAge": "6 weeks - 4 days"
             }
           ],
           "conditionalSkip": [
@@ -569,10 +585,15 @@ final AntigenSupportingData meningococcal = AntigenSupportingData.fromJson({
               "beginAge": "2 months - 4 days"
             },
             {
+              "vaccineType": "MCV4, unspecified",
+              "cvx": "147",
+              "beginAge": "2 months - 4 days"
+            },
+            {
               "vaccineType":
                   "Meningococcal Polysaccharide A, C, Y, W-135 TT Conjugate",
               "cvx": "203",
-              "beginAge": "2 years - 4 days"
+              "beginAge": "6 weeks - 4 days"
             }
           ],
           "conditionalSkip": [
@@ -644,10 +665,15 @@ final AntigenSupportingData meningococcal = AntigenSupportingData.fromJson({
               "beginAge": "2 months - 4 days"
             },
             {
+              "vaccineType": "MCV4, unspecified",
+              "cvx": "147",
+              "beginAge": "2 months - 4 days"
+            },
+            {
               "vaccineType":
                   "Meningococcal Polysaccharide A, C, Y, W-135 TT Conjugate",
               "cvx": "203",
-              "beginAge": "2 years - 4 days"
+              "beginAge": "6 weeks - 4 days"
             }
           ],
           "conditionalSkip": [
@@ -664,7 +690,7 @@ final AntigenSupportingData meningococcal = AntigenSupportingData.fromJson({
                     {
                       "conditionID": "1",
                       "conditionType": "Vaccine Count By Age",
-                      "beginAge": "2 months",
+                      "beginAge": "2 months - 4 days",
                       "endAge": "7 months",
                       "doseCount": "2",
                       "doseType": "Valid",
@@ -754,10 +780,15 @@ final AntigenSupportingData meningococcal = AntigenSupportingData.fromJson({
               "beginAge": "2 months - 4 days"
             },
             {
+              "vaccineType": "MCV4, unspecified",
+              "cvx": "147",
+              "beginAge": "2 months - 4 days"
+            },
+            {
               "vaccineType":
                   "Meningococcal Polysaccharide A, C, Y, W-135 TT Conjugate",
               "cvx": "203",
-              "beginAge": "2 years - 4 days"
+              "beginAge": "6 weeks - 4 days"
             },
             {
               "vaccineType":
@@ -838,10 +869,15 @@ final AntigenSupportingData meningococcal = AntigenSupportingData.fromJson({
               "beginAge": "2 months - 4 days"
             },
             {
+              "vaccineType": "MCV4, unspecified",
+              "cvx": "147",
+              "beginAge": "2 months - 4 days"
+            },
+            {
               "vaccineType":
                   "Meningococcal Polysaccharide A, C, Y, W-135 TT Conjugate",
               "cvx": "203",
-              "beginAge": "2 years - 4 days"
+              "beginAge": "6 weeks - 4 days"
             },
             {
               "vaccineType":
@@ -945,10 +981,15 @@ final AntigenSupportingData meningococcal = AntigenSupportingData.fromJson({
               "beginAge": "2 months - 4 days"
             },
             {
+              "vaccineType": "MCV4, unspecified",
+              "cvx": "147",
+              "beginAge": "2 months - 4 days"
+            },
+            {
               "vaccineType":
                   "Meningococcal Polysaccharide A, C, Y, W-135 TT Conjugate",
               "cvx": "203",
-              "beginAge": "2 years - 4 days"
+              "beginAge": "6 weeks - 4 days"
             },
             {
               "vaccineType":
@@ -1264,10 +1305,15 @@ final AntigenSupportingData meningococcal = AntigenSupportingData.fromJson({
               "beginAge": "2 months - 4 days"
             },
             {
+              "vaccineType": "MCV4, unspecified",
+              "cvx": "147",
+              "beginAge": "2 months - 4 days"
+            },
+            {
               "vaccineType":
                   "Meningococcal Polysaccharide A, C, Y, W-135 TT Conjugate",
               "cvx": "203",
-              "beginAge": "2 years - 4 days"
+              "beginAge": "6 weeks - 4 days"
             },
             {
               "vaccineType":
@@ -1371,10 +1417,15 @@ final AntigenSupportingData meningococcal = AntigenSupportingData.fromJson({
               "beginAge": "2 months - 4 days"
             },
             {
+              "vaccineType": "MCV4, unspecified",
+              "cvx": "147",
+              "beginAge": "2 months - 4 days"
+            },
+            {
               "vaccineType":
                   "Meningococcal Polysaccharide A, C, Y, W-135 TT Conjugate",
               "cvx": "203",
-              "beginAge": "2 years - 4 days"
+              "beginAge": "6 weeks - 4 days"
             },
             {
               "vaccineType":
@@ -1521,10 +1572,15 @@ final AntigenSupportingData meningococcal = AntigenSupportingData.fromJson({
               "beginAge": "2 months - 4 days"
             },
             {
+              "vaccineType": "MCV4, unspecified",
+              "cvx": "147",
+              "beginAge": "2 months - 4 days"
+            },
+            {
               "vaccineType":
                   "Meningococcal Polysaccharide A, C, Y, W-135 TT Conjugate",
               "cvx": "203",
-              "beginAge": "2 years - 4 days"
+              "beginAge": "6 weeks - 4 days"
             },
             {
               "vaccineType":
@@ -1614,10 +1670,15 @@ final AntigenSupportingData meningococcal = AntigenSupportingData.fromJson({
               "beginAge": "2 months - 4 days"
             },
             {
+              "vaccineType": "MCV4, unspecified",
+              "cvx": "147",
+              "beginAge": "2 months - 4 days"
+            },
+            {
               "vaccineType":
                   "Meningococcal Polysaccharide A, C, Y, W-135 TT Conjugate",
               "cvx": "203",
-              "beginAge": "2 years - 4 days"
+              "beginAge": "6 weeks - 4 days"
             },
             {
               "vaccineType":
@@ -1699,10 +1760,15 @@ final AntigenSupportingData meningococcal = AntigenSupportingData.fromJson({
               "beginAge": "2 months - 4 days"
             },
             {
+              "vaccineType": "MCV4, unspecified",
+              "cvx": "147",
+              "beginAge": "2 months - 4 days"
+            },
+            {
               "vaccineType":
                   "Meningococcal Polysaccharide A, C, Y, W-135 TT Conjugate",
               "cvx": "203",
-              "beginAge": "2 years - 4 days"
+              "beginAge": "6 weeks - 4 days"
             },
             {
               "vaccineType":
@@ -1807,10 +1873,15 @@ final AntigenSupportingData meningococcal = AntigenSupportingData.fromJson({
               "beginAge": "2 months - 4 days"
             },
             {
+              "vaccineType": "MCV4, unspecified",
+              "cvx": "147",
+              "beginAge": "2 months - 4 days"
+            },
+            {
               "vaccineType":
                   "Meningococcal Polysaccharide A, C, Y, W-135 TT Conjugate",
               "cvx": "203",
-              "beginAge": "2 years - 4 days"
+              "beginAge": "6 weeks - 4 days"
             },
             {
               "vaccineType":
@@ -1961,10 +2032,15 @@ final AntigenSupportingData meningococcal = AntigenSupportingData.fromJson({
               "beginAge": "2 months - 4 days"
             },
             {
+              "vaccineType": "MCV4, unspecified",
+              "cvx": "147",
+              "beginAge": "2 months - 4 days"
+            },
+            {
               "vaccineType":
                   "Meningococcal Polysaccharide A, C, Y, W-135 TT Conjugate",
               "cvx": "203",
-              "beginAge": "2 years - 4 days"
+              "beginAge": "6 weeks - 4 days"
             },
             {
               "vaccineType":
@@ -2046,10 +2122,15 @@ final AntigenSupportingData meningococcal = AntigenSupportingData.fromJson({
               "beginAge": "2 months - 4 days"
             },
             {
+              "vaccineType": "MCV4, unspecified",
+              "cvx": "147",
+              "beginAge": "2 months - 4 days"
+            },
+            {
               "vaccineType":
                   "Meningococcal Polysaccharide A, C, Y, W-135 TT Conjugate",
               "cvx": "203",
-              "beginAge": "2 years - 4 days"
+              "beginAge": "6 weeks - 4 days"
             },
             {
               "vaccineType":
@@ -2153,10 +2234,15 @@ final AntigenSupportingData meningococcal = AntigenSupportingData.fromJson({
               "beginAge": "2 months - 4 days"
             },
             {
+              "vaccineType": "MCV4, unspecified",
+              "cvx": "147",
+              "beginAge": "2 months - 4 days"
+            },
+            {
               "vaccineType":
                   "Meningococcal Polysaccharide A, C, Y, W-135 TT Conjugate",
               "cvx": "203",
-              "beginAge": "2 years - 4 days"
+              "beginAge": "6 weeks - 4 days"
             },
             {
               "vaccineType":

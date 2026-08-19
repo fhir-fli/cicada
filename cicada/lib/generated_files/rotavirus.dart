@@ -83,7 +83,7 @@ final AntigenSupportingData rotavirus = AntigenSupportingData.fromJson({
               "cvx": "116",
               "beginAge": "6 weeks",
               "endAge": "8 months + 1 day",
-              "volume": "2",
+              "volume": "2.0",
               "forecastVaccineType": "N"
             },
             {
@@ -91,7 +91,7 @@ final AntigenSupportingData rotavirus = AntigenSupportingData.fromJson({
               "cvx": "119",
               "beginAge": "6 weeks",
               "endAge": "8 months + 1 day",
-              "volume": "1",
+              "volume": "1.0",
               "forecastVaccineType": "N"
             }
           ],
@@ -145,7 +145,7 @@ final AntigenSupportingData rotavirus = AntigenSupportingData.fromJson({
               "cvx": "116",
               "beginAge": "6 weeks",
               "endAge": "8 months + 1 day",
-              "volume": "2",
+              "volume": "2.0",
               "forecastVaccineType": "N"
             },
             {
@@ -153,7 +153,7 @@ final AntigenSupportingData rotavirus = AntigenSupportingData.fromJson({
               "cvx": "119",
               "beginAge": "6 weeks",
               "endAge": "8 months + 1 day",
-              "volume": "1",
+              "volume": "1.0",
               "forecastVaccineType": "N"
             }
           ],
@@ -207,7 +207,7 @@ final AntigenSupportingData rotavirus = AntigenSupportingData.fromJson({
               "cvx": "116",
               "beginAge": "6 weeks",
               "endAge": "8 months + 1 day",
-              "volume": "2",
+              "volume": "2.0",
               "forecastVaccineType": "N"
             },
             {
@@ -215,7 +215,7 @@ final AntigenSupportingData rotavirus = AntigenSupportingData.fromJson({
               "cvx": "119",
               "beginAge": "6 weeks",
               "endAge": "8 months + 1 day",
-              "volume": "1",
+              "volume": "1.0",
               "forecastVaccineType": "N"
             }
           ],
@@ -278,7 +278,7 @@ final AntigenSupportingData rotavirus = AntigenSupportingData.fromJson({
               "cvx": "116",
               "beginAge": "6 weeks",
               "endAge": "8 months + 1 day",
-              "volume": "2",
+              "volume": "2.0",
               "forecastVaccineType": "N"
             },
             {
@@ -286,7 +286,7 @@ final AntigenSupportingData rotavirus = AntigenSupportingData.fromJson({
               "cvx": "119",
               "beginAge": "6 weeks",
               "endAge": "8 months + 1 day",
-              "volume": "1",
+              "volume": "1.0",
               "forecastVaccineType": "N"
             }
           ],
@@ -338,7 +338,7 @@ final AntigenSupportingData rotavirus = AntigenSupportingData.fromJson({
               "cvx": "116",
               "beginAge": "6 weeks",
               "endAge": "8 months + 1 day",
-              "volume": "2",
+              "volume": "2.0",
               "forecastVaccineType": "N"
             },
             {
@@ -346,7 +346,7 @@ final AntigenSupportingData rotavirus = AntigenSupportingData.fromJson({
               "cvx": "119",
               "beginAge": "6 weeks",
               "endAge": "8 months + 1 day",
-              "volume": "1",
+              "volume": "1.0",
               "forecastVaccineType": "N"
             }
           ],
@@ -398,7 +398,7 @@ final AntigenSupportingData rotavirus = AntigenSupportingData.fromJson({
               "cvx": "116",
               "beginAge": "6 weeks",
               "endAge": "8 months + 1 day",
-              "volume": "2",
+              "volume": "2.0",
               "forecastVaccineType": "N"
             },
             {
@@ -406,7 +406,7 @@ final AntigenSupportingData rotavirus = AntigenSupportingData.fromJson({
               "cvx": "119",
               "beginAge": "6 weeks",
               "endAge": "8 months + 1 day",
-              "volume": "1",
+              "volume": "1.0",
               "forecastVaccineType": "N"
             }
           ],
@@ -469,7 +469,7 @@ final AntigenSupportingData rotavirus = AntigenSupportingData.fromJson({
               "cvx": "119",
               "beginAge": "6 weeks",
               "endAge": "8 months + 1 day",
-              "volume": "1",
+              "volume": "1.0",
               "forecastVaccineType": "Y"
             }
           ],
@@ -508,7 +508,7 @@ final AntigenSupportingData rotavirus = AntigenSupportingData.fromJson({
               "cvx": "119",
               "beginAge": "6 weeks",
               "endAge": "8 months + 1 day",
-              "volume": "1",
+              "volume": "1.0",
               "forecastVaccineType": "Y"
             }
           ],
@@ -556,7 +556,7 @@ final AntigenSupportingData rotavirus = AntigenSupportingData.fromJson({
               "cvx": "119",
               "beginAge": "6 weeks",
               "endAge": "8 months + 1 day",
-              "volume": "1",
+              "volume": "1.0",
               "forecastVaccineType": "Y"
             }
           ],
@@ -593,7 +593,7 @@ final AntigenSupportingData rotavirus = AntigenSupportingData.fromJson({
               "cvx": "119",
               "beginAge": "6 weeks",
               "endAge": "8 months + 1 day",
-              "volume": "1",
+              "volume": "1.0",
               "forecastVaccineType": "Y"
             }
           ],

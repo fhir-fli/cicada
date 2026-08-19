@@ -629,8 +629,53 @@ final AntigenSupportingData influenza = AntigenSupportingData.fromJson({
               "forecastVaccineType": "N"
             },
             {
+              "vaccineType": "Influenza, split virus, trivalent, preservative",
+              "cvx": "141",
+              "beginAge": "6 months",
+              "tradeName": "Fluzone trivalent, with preservative",
+              "mvx": "PMC",
+              "volume": "0.5",
+              "forecastVaccineType": "N"
+            },
+            {
+              "vaccineType": "Influenza, split virus, trivalent, preservative",
+              "cvx": "141",
+              "beginAge": "6 months",
+              "endAge": "3 years",
+              "tradeName": "Fluzone trivalent, with preservative",
+              "mvx": "PMC",
+              "volume": "0.25",
+              "forecastVaccineType": "N"
+            },
+            {
+              "vaccineType": "Influenza, split virus, trivalent, preservative",
+              "cvx": "141",
+              "beginAge": "3 years",
+              "tradeName": "Afluria trivalent, with preservative",
+              "mvx": "SEQ",
+              "volume": "0.5",
+              "forecastVaccineType": "N"
+            },
+            {
+              "vaccineType": "Influenza, split virus, trivalent, preservative",
+              "cvx": "141",
+              "beginAge": "6 months",
+              "endAge": "3 years",
+              "tradeName": "Afluria trivalent, with preservative",
+              "mvx": "SEQ",
+              "volume": "0.25",
+              "forecastVaccineType": "N"
+            },
+            {
               "vaccineType": "Influenza, MDCK, trivalent, PF",
               "cvx": "153",
+              "beginAge": "6 months",
+              "volume": "0.5",
+              "forecastVaccineType": "N"
+            },
+            {
+              "vaccineType": "Influenza, MDCK, trivalent, preservative",
+              "cvx": "320",
               "beginAge": "6 months",
               "volume": "0.5",
               "forecastVaccineType": "N"
@@ -853,6 +898,44 @@ final AntigenSupportingData influenza = AntigenSupportingData.fromJson({
               "forecastVaccineType": "N"
             },
             {
+              "vaccineType": "Influenza, split virus, trivalent, preservative",
+              "cvx": "141",
+              "beginAge": "6 months",
+              "tradeName": "Fluzone trivalent, with preservative",
+              "mvx": "PMC",
+              "volume": "0.5",
+              "forecastVaccineType": "N"
+            },
+            {
+              "vaccineType": "Influenza, split virus, trivalent, preservative",
+              "cvx": "141",
+              "beginAge": "6 months",
+              "endAge": "3 years",
+              "tradeName": "Fluzone trivalent, with preservative",
+              "mvx": "PMC",
+              "volume": "0.25",
+              "forecastVaccineType": "N"
+            },
+            {
+              "vaccineType": "Influenza, split virus, trivalent, preservative",
+              "cvx": "141",
+              "beginAge": "3 years",
+              "tradeName": "Afluria trivalent, with preservative",
+              "mvx": "SEQ",
+              "volume": "0.5",
+              "forecastVaccineType": "N"
+            },
+            {
+              "vaccineType": "Influenza, split virus, trivalent, preservative",
+              "cvx": "141",
+              "beginAge": "6 months",
+              "endAge": "3 years",
+              "tradeName": "Afluria trivalent, with preservative",
+              "mvx": "SEQ",
+              "volume": "0.25",
+              "forecastVaccineType": "N"
+            },
+            {
               "vaccineType": "Influenza, MDCK, trivalent, PF",
               "cvx": "153",
               "beginAge": "6 months",
@@ -870,6 +953,13 @@ final AntigenSupportingData influenza = AntigenSupportingData.fromJson({
               "vaccineType": "Influenza, adjuvanted, trivalent, PF",
               "cvx": "168",
               "beginAge": "65 years",
+              "volume": "0.5",
+              "forecastVaccineType": "N"
+            },
+            {
+              "vaccineType": "Influenza, MDCK, trivalent, preservative",
+              "cvx": "320",
+              "beginAge": "6 months",
               "volume": "0.5",
               "forecastVaccineType": "N"
             },

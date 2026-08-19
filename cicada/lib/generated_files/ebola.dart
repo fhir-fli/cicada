@@ -111,7 +111,7 @@ final AntigenSupportingData ebola = AntigenSupportingData.fromJson({
               "vaccineType": "Ebola Zaire vaccine, live",
               "cvx": "204",
               "beginAge": "18 years",
-              "volume": "1",
+              "volume": "1.0",
               "forecastVaccineType": "N"
             }
           ],

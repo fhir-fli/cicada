@@ -70,7 +70,7 @@
                             "cvx": "307",
                             "beginAge": "0 days",
                             "endAge": "24 months",
-                            "volume": "1",
+                            "volume": "1.0",
                             "forecastVaccineType": "N"
                         },
                         {
@@ -162,10 +162,10 @@
             "indication": [
                 {
                     "observationCode": {
-                        "text": "Chronic Lung Disease",
-                        "code": "017"
+                        "text": "Chronic lung disease of prematurity",
+                        "code": "280"
                     },
-                    "description": "Administer to persons who have chronic lung disease",
+                    "description": "Administer to persons who have chronic lung disease of prematurity",
                     "beginAge": "0 days",
                     "endAge": "20 months",
                     "guidance": "Children with chronic lung disease of prematurity who required medical support (chronic corticosteroid therapy, diuretic therapy, or supplemental oxygen) any time during the 6-month period before the start of the second RSV season"
@@ -224,7 +224,7 @@
                             "cvx": "307",
                             "beginAge": "0 days",
                             "endAge": "24 months",
-                            "volume": "1",
+                            "volume": "1.0",
                             "forecastVaccineType": "N"
                         },
                         {
@@ -324,7 +324,7 @@
                             "cvx": "307",
                             "beginAge": "0 days",
                             "endAge": "24 months",
-                            "volume": "1",
+                            "volume": "1.0",
                             "forecastVaccineType": "N"
                         }
                     ],
@@ -425,7 +425,7 @@
                             "cvx": "307",
                             "beginAge": "0 days",
                             "endAge": "24 months",
-                            "volume": "1",
+                            "volume": "1.0",
                             "forecastVaccineType": "N"
                         }
                     ],

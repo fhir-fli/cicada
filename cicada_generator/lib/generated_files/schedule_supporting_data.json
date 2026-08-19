@@ -103,7 +103,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "28 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -259,7 +259,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "28 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -272,7 +272,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "28 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -428,7 +428,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "28 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -584,7 +584,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "28 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -597,7 +597,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "28 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -753,7 +753,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "28 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -909,7 +909,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "28 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -922,7 +922,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "28 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -1078,7 +1078,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "28 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -1234,7 +1234,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "28 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -1247,7 +1247,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "28 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -1403,7 +1403,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "28 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -1559,7 +1559,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "28 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -1572,7 +1572,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "28 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -2053,7 +2053,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "28 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -2209,7 +2209,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "28 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -2222,7 +2222,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "28 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -2287,7 +2287,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "28 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -2300,7 +2300,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "28 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -2313,7 +2313,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "28 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -2326,7 +2326,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "28 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -2339,7 +2339,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "28 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -2365,7 +2365,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "28 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -2378,7 +2378,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "24 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -2391,7 +2391,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "28 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -2404,7 +2404,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "28 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -2417,7 +2417,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "28 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -2430,7 +2430,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "28 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -2443,7 +2443,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "28 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -2456,7 +2456,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "28 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -2469,7 +2469,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "28 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -2482,7 +2482,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "28 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -2495,7 +2495,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "28 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -2508,7 +2508,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "28 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -2521,7 +2521,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "28 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -2534,7 +2534,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "24 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -2547,7 +2547,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "24 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -2560,7 +2560,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "28 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -2573,7 +2573,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "28 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -2586,7 +2586,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "28 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -2599,7 +2599,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "28 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -2703,7 +2703,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "28 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -2859,7 +2859,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "28 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -2872,7 +2872,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "28 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -3028,7 +3028,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "28 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -3184,7 +3184,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "28 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -3197,7 +3197,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "28 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -3353,7 +3353,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "28 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -3509,7 +3509,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "28 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -3522,7 +3522,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "28 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -3678,7 +3678,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "28 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -3834,7 +3834,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "28 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -3847,7 +3847,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "28 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -4003,7 +4003,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "28 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -4159,7 +4159,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "28 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -4172,7 +4172,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "28 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -4328,7 +4328,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "28 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -4484,7 +4484,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "28 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -4497,7 +4497,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "28 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -4653,7 +4653,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "28 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -4809,7 +4809,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "28 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -4822,7 +4822,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "28 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -4978,7 +4978,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "28 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -5134,7 +5134,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "28 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -5147,7 +5147,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "28 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -5303,7 +5303,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "28 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -5459,7 +5459,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "28 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -5472,7 +5472,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "28 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -5628,7 +5628,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "28 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -5784,7 +5784,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "28 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -5797,7 +5797,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "28 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -5953,7 +5953,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "28 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -6109,7 +6109,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "28 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -6122,7 +6122,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "28 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -6187,7 +6187,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "28 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -6200,7 +6200,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "28 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -6213,7 +6213,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "28 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -6226,7 +6226,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "28 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -6239,7 +6239,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "28 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -6265,7 +6265,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "28 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -6278,7 +6278,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "24 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -6291,7 +6291,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "28 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -6304,7 +6304,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "28 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -6317,7 +6317,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "28 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -6330,7 +6330,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "28 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -6343,7 +6343,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "28 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -6356,7 +6356,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "28 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -6369,7 +6369,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "28 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -6382,7 +6382,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "28 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -6395,7 +6395,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "28 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -6408,7 +6408,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "28 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -6421,7 +6421,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "28 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -6434,7 +6434,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "24 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -6447,7 +6447,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "24 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -6460,7 +6460,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "28 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -6473,7 +6473,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "28 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -6486,7 +6486,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "28 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -6499,7 +6499,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "28 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -6512,7 +6512,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "28 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -6525,7 +6525,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "28 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -6538,7 +6538,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "28 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -6551,7 +6551,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "28 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -6564,7 +6564,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "28 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -6590,7 +6590,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "28 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -6603,7 +6603,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "24 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -6616,7 +6616,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "28 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -6629,7 +6629,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "28 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -6642,7 +6642,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "28 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -6655,7 +6655,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "28 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -6668,7 +6668,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "28 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -6681,7 +6681,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "28 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -6694,7 +6694,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "28 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -6707,7 +6707,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "28 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -6720,7 +6720,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "28 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -6733,7 +6733,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "28 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -6746,7 +6746,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "28 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -6759,7 +6759,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "24 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -6772,7 +6772,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "24 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -6785,7 +6785,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "28 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -6798,7 +6798,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "28 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -6811,7 +6811,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "28 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -6824,7 +6824,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "28 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -6928,7 +6928,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "28 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -7084,7 +7084,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "28 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -7097,7 +7097,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "28 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -7253,7 +7253,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "28 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -7409,7 +7409,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "28 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -7422,7 +7422,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "28 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -7578,7 +7578,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "28 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -7734,7 +7734,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "28 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -7747,7 +7747,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "28 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -7903,7 +7903,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "28 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -8059,7 +8059,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "28 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -8072,7 +8072,7 @@
                 },
                 "conflictBeginInterval": "1 day",
                 "minConflictEndInterval": "28 days",
-                "conflictEndInterval": "30 days"
+                "conflictEndInterval": "28 days"
             },
             {
                 "previous": {
@@ -10362,6 +10362,15 @@
                 ]
             },
             {
+                "cvx": "337",
+                "shortDescription": "Influenza, Southern Hemisphere, high-dose, trivalent, PF",
+                "association": [
+                    {
+                        "antigen": "Influenza"
+                    }
+                ]
+            },
+            {
                 "cvx": "500",
                 "shortDescription": "COVID-19 Non-US Vaccine, Product Unknown",
                 "association": [
@@ -12042,7 +12051,7 @@
                 "observationCode": "045",
                 "observationTitle": "Travel to country with a Yellow Fever vaccination entry requirement",
                 "indicationText": "Administer to persons who travel to a country with a Yellow Fever vaccination entry requirement.",
-                "clarifyingText": "A list of country-specific requirements is available at https://wwwnc.cdc.gov/travel/yellowbook/2024/preparing/yellow-fever-vaccine-malaria-prevention-by-country"
+                "clarifyingText": "A list of country-specific requirements is available at https://www.cdc.gov/yellow-book/hcp/travel-associated-infections-diseases/yellow-fever.html"
             },
             {
                 "observationCode": "046",
@@ -15070,7 +15079,7 @@
                 "observationCode": "162",
                 "observationTitle": "Travel to areas at risk for Yellow Fever transmission",
                 "indicationText": "Administer to persons who travel to areas at risk for Yellow Fever transmission.",
-                "clarifyingText": "Given that changes in the designation of endemic regions can occur, travelers and health-care providers should obtain updated information from CDC, available at https://wwwnc.cdc.gov/travel/yellowbook/2024/infections-diseases/yellow-fever",
+                "clarifyingText": "Given that changes in the designation of endemic regions can occur, travelers and health-care providers should obtain updated information from CDC, available at https://www.cdc.gov/yellow-book/hcp/travel-associated-infections-diseases/yellow-fever.html",
                 "codedValues": {
                     "codedValue": [
                         {
@@ -15095,7 +15104,7 @@
                 "observationCode": "165",
                 "observationTitle": "Longer-term (e.g., 1 month or more) travel to a JE-endemic area",
                 "indicationText": "Administer to persons who plan for longer-term (e.g., 1 month or more) travel to JE-endemic areas.",
-                "clarifyingText": "Endemic Area and transmission season is determined by country.  Refer to the yellow book for a definition of the transmission season: https://wwwnc.cdc.gov/travel/yellowbook/2024/infections-diseases/japanese-encephalitis"
+                "clarifyingText": "Endemic Area and transmission season is determined by country.  Refer to the yellow book for a definition of the transmission season: https://www.cdc.gov/yellow-book/hcp/travel-associated-infections-diseases/japanese-encephalitis.html"
             },
             {
                 "observationCode": "166",
@@ -15236,13 +15245,13 @@
                 "observationCode": "173",
                 "observationTitle": "Moving to JE-endemic country to take up residence",
                 "indicationText": "Administer to persons who plan to move to JE-endemic countries to take up residence.",
-                "clarifyingText": "Endemic Area and transmission season is determined by country.  Refer to the yellow book for a definition of the transmission season: https://wwwnc.cdc.gov/travel/yellowbook/2024/infections-diseases/japanese-encephalitis"
+                "clarifyingText": "Endemic Area and transmission season is determined by country.  Refer to the yellow book for a definition of the transmission season: https://www.cdc.gov/yellow-book/hcp/travel-associated-infections-diseases/japanese-encephalitis.html"
             },
             {
                 "observationCode": "174",
                 "observationTitle": "Frequent travel to JE-endemic areas",
                 "indicationText": "Administer to persons who frequently travel to JE-endemic areas.",
-                "clarifyingText": "Endemic Area and transmission season is determined by country.  Refer to the yellow book for a definition of the transmission season: https://wwwnc.cdc.gov/travel/yellowbook/2024/infections-diseases/japanese-encephalitis"
+                "clarifyingText": "Endemic Area and transmission season is determined by country.  Refer to the yellow book for a definition of the transmission season: https://www.cdc.gov/yellow-book/hcp/travel-associated-infections-diseases/japanese-encephalitis.html"
             },
             {
                 "observationCode": "175",
@@ -16155,13 +16164,13 @@
                 "observationCode": "249",
                 "observationTitle": "Moving or traveling to an area where TBE is endemic and will have extensive exposure to ticks because of their planned outdoor activities and itinerary",
                 "indicationText": "Administer to persons moving or traveling to an area where TBE is endemic and will have extensive exposure to ticks because of their planned outdoor activities and itinerary",
-                "clarifyingText": "Endemic Area and transmission season is determined by country.  Refer to the yellow book for a definition of the transmission season: https://wwwnc.cdc.gov/travel/yellowbook/2024/infections-diseases/tick-borne-encephalitis"
+                "clarifyingText": "Endemic Area and transmission season is determined by country.  Refer to the yellow book for a definition of the transmission season: https://www.cdc.gov/yellow-book/hcp/travel-associated-infections-diseases/tick-borne-encephalitis.html"
             },
             {
                 "observationCode": "250",
                 "observationTitle": "Moving or traveling to an area where TBE is endemic who might engage in outdoor activities in areas where ticks are likely to be found",
                 "indicationText": "TBE vaccine may be considered for persons moving or traveling to an area where TBE is endemic who might engage in outdoor activities in areas where ticks are likely to be found",
-                "clarifyingText": "Endemic Area and transmission season is determined by country.  Refer to the yellow book for a definition of the transmission season: https://wwwnc.cdc.gov/travel/yellowbook/2024/infections-diseases/tick-borne-encephalitis"
+                "clarifyingText": "Endemic Area and transmission season is determined by country.  Refer to the yellow book for a definition of the transmission season: https://www.cdc.gov/yellow-book/hcp/travel-associated-infections-diseases/tick-borne-encephalitis.html"
             },
             {
                 "observationCode": "251",
@@ -16782,6 +16791,21 @@
                             "code": "80141007",
                             "codeSystem": "SNOMED",
                             "text": "hemoglobinopathy [disorder]"
+                        }
+                    ]
+                }
+            },
+            {
+                "observationCode": "280",
+                "observationTitle": "Chronic lung disease of prematurity",
+                "indicationText": "Administer to persons who have chronic lung disease of prematurity",
+                "clarifyingText": "e.g. chronic corticosteroid therapy, diuretic therapy, or supplemental oxygen",
+                "codedValues": {
+                    "codedValue": [
+                        {
+                            "code": "67569000",
+                            "codeSystem": "SNOMED",
+                            "text": "Bronchopulmonary dysplasia of newborn [disorder]"
                         }
                     ]
                 }

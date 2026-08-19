@@ -222,14 +222,14 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
               "vaccineType": "Hep B, Adult",
               "cvx": "43",
               "beginAge": "20 years",
-              "volume": "1",
+              "volume": "1.0",
               "forecastVaccineType": "N"
             },
             {
               "vaccineType": "Hep B, Dialysis",
               "cvx": "44",
               "beginAge": "20 years",
-              "volume": "1",
+              "volume": "1.0",
               "forecastVaccineType": "N"
             },
             {
@@ -315,6 +315,12 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
               "vaccineType": "Hep B, adjuvanted",
               "cvx": "189",
               "beginAge": "18 years - 4 days"
+            },
+            {
+              "vaccineType": "Hep A-Hep B, pediatric/adolescent",
+              "cvx": "193",
+              "beginAge": "0 days",
+              "endAge": "18 years"
             },
             {
               "vaccineType": "DTP-HepB-Hib Pentavalent Non-US",
@@ -362,14 +368,14 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
               "vaccineType": "Hep B, Adult",
               "cvx": "43",
               "beginAge": "20 years",
-              "volume": "1",
+              "volume": "1.0",
               "forecastVaccineType": "N"
             },
             {
               "vaccineType": "Hep B, Dialysis",
               "cvx": "44",
               "beginAge": "20 years",
-              "volume": "1",
+              "volume": "1.0",
               "forecastVaccineType": "N"
             },
             {
@@ -455,6 +461,12 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
               "vaccineType": "Hep B, adjuvanted",
               "cvx": "189",
               "beginAge": "18 years - 4 days"
+            },
+            {
+              "vaccineType": "Hep A-Hep B, pediatric/adolescent",
+              "cvx": "193",
+              "beginAge": "0 days",
+              "endAge": "18 years"
             },
             {
               "vaccineType": "DTP-HepB-Hib Pentavalent Non-US",
@@ -508,14 +520,14 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
               "vaccineType": "Hep B, Adult",
               "cvx": "43",
               "beginAge": "20 years",
-              "volume": "1",
+              "volume": "1.0",
               "forecastVaccineType": "N"
             },
             {
               "vaccineType": "Hep B, Dialysis",
               "cvx": "44",
               "beginAge": "20 years",
-              "volume": "1",
+              "volume": "1.0",
               "forecastVaccineType": "N"
             },
             {
@@ -601,6 +613,12 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
               "vaccineType": "Hep B, adjuvanted",
               "cvx": "189",
               "beginAge": "18 years - 4 days"
+            },
+            {
+              "vaccineType": "Hep A-Hep B, pediatric/adolescent",
+              "cvx": "193",
+              "beginAge": "0 days",
+              "endAge": "18 years"
             },
             {
               "vaccineType": "DTP-HepB-Hib Pentavalent Non-US",
@@ -741,6 +759,12 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
               "beginAge": "18 years - 4 days"
             },
             {
+              "vaccineType": "Hep A-Hep B, pediatric/adolescent",
+              "cvx": "193",
+              "beginAge": "0 days",
+              "endAge": "18 years"
+            },
+            {
               "vaccineType": "DTP-HepB-Hib Pentavalent Non-US",
               "cvx": "198",
               "beginAge": "0 days",
@@ -867,6 +891,12 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
               "beginAge": "18 years - 4 days"
             },
             {
+              "vaccineType": "Hep A-Hep B, pediatric/adolescent",
+              "cvx": "193",
+              "beginAge": "0 days",
+              "endAge": "18 years"
+            },
+            {
               "vaccineType": "DTP-HepB-Hib Pentavalent Non-US",
               "cvx": "198",
               "beginAge": "0 days",
@@ -982,6 +1012,12 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
               "vaccineType": "Hep B, adjuvanted",
               "cvx": "189",
               "beginAge": "18 years - 4 days"
+            },
+            {
+              "vaccineType": "Hep A-Hep B, pediatric/adolescent",
+              "cvx": "193",
+              "beginAge": "0 days",
+              "endAge": "18 years"
             },
             {
               "vaccineType": "DTP-HepB-Hib Pentavalent Non-US",
@@ -1115,6 +1151,12 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
               "beginAge": "18 years - 4 days"
             },
             {
+              "vaccineType": "Hep A-Hep B, pediatric/adolescent",
+              "cvx": "193",
+              "beginAge": "0 days",
+              "endAge": "18 years"
+            },
+            {
               "vaccineType": "DTP-HepB-Hib Pentavalent Non-US",
               "cvx": "198",
               "beginAge": "0 days",
@@ -1164,7 +1206,7 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
               "cvx": "43",
               "tradeName": "RECOMBIVAX ADULT",
               "mvx": "MSD",
-              "volume": "1",
+              "volume": "1.0",
               "forecastVaccineType": "Y"
             }
           ],
@@ -1190,7 +1232,7 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
               "cvx": "43",
               "tradeName": "RECOMBIVAX ADULT",
               "mvx": "MSD",
-              "volume": "1",
+              "volume": "1.0",
               "forecastVaccineType": "Y"
             }
           ],
@@ -1239,14 +1281,14 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
               "vaccineType": "Hep B, Adult",
               "cvx": "43",
               "beginAge": "20 years",
-              "volume": "1",
+              "volume": "1.0",
               "forecastVaccineType": "N"
             },
             {
               "vaccineType": "Hep B, Dialysis",
               "cvx": "44",
               "beginAge": "20 years",
-              "volume": "1",
+              "volume": "1.0",
               "forecastVaccineType": "N"
             },
             {
@@ -1354,14 +1396,14 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
               "vaccineType": "Hep B, Adult",
               "cvx": "43",
               "beginAge": "20 years",
-              "volume": "1",
+              "volume": "1.0",
               "forecastVaccineType": "N"
             },
             {
               "vaccineType": "Hep B, Dialysis",
               "cvx": "44",
               "beginAge": "20 years",
-              "volume": "1",
+              "volume": "1.0",
               "forecastVaccineType": "N"
             },
             {
@@ -1475,14 +1517,14 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
               "vaccineType": "Hep B, Adult",
               "cvx": "43",
               "beginAge": "20 years",
-              "volume": "1",
+              "volume": "1.0",
               "forecastVaccineType": "N"
             },
             {
               "vaccineType": "Hep B, Dialysis",
               "cvx": "44",
               "beginAge": "20 years",
-              "volume": "1",
+              "volume": "1.0",
               "forecastVaccineType": "N"
             },
             {
@@ -1610,14 +1652,14 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
               "vaccineType": "Hep B, Adult",
               "cvx": "43",
               "beginAge": "20 years",
-              "volume": "1",
+              "volume": "1.0",
               "forecastVaccineType": "N"
             },
             {
               "vaccineType": "Hep B, Dialysis",
               "cvx": "44",
               "beginAge": "20 years",
-              "volume": "1",
+              "volume": "1.0",
               "forecastVaccineType": "N"
             },
             {
@@ -1725,14 +1767,14 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
               "vaccineType": "Hep B, Adult",
               "cvx": "43",
               "beginAge": "20 years",
-              "volume": "1",
+              "volume": "1.0",
               "forecastVaccineType": "N"
             },
             {
               "vaccineType": "Hep B, Dialysis",
               "cvx": "44",
               "beginAge": "20 years",
-              "volume": "1",
+              "volume": "1.0",
               "forecastVaccineType": "N"
             },
             {
@@ -1840,14 +1882,14 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
               "vaccineType": "Hep B, Adult",
               "cvx": "43",
               "beginAge": "20 years",
-              "volume": "1",
+              "volume": "1.0",
               "forecastVaccineType": "N"
             },
             {
               "vaccineType": "Hep B, Dialysis",
               "cvx": "44",
               "beginAge": "20 years",
-              "volume": "1",
+              "volume": "1.0",
               "forecastVaccineType": "N"
             },
             {
@@ -1962,14 +2004,14 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
               "vaccineType": "Hep B, Adult",
               "cvx": "43",
               "beginAge": "20 years",
-              "volume": "1",
+              "volume": "1.0",
               "forecastVaccineType": "N"
             },
             {
               "vaccineType": "Hep B, Dialysis",
               "cvx": "44",
               "beginAge": "20 years",
-              "volume": "1",
+              "volume": "1.0",
               "forecastVaccineType": "N"
             },
             {
@@ -2179,14 +2221,14 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
               "vaccineType": "Hep B, Adult",
               "cvx": "43",
               "beginAge": "20 years",
-              "volume": "1",
+              "volume": "1.0",
               "forecastVaccineType": "N"
             },
             {
               "vaccineType": "Hep B, Dialysis",
               "cvx": "44",
               "beginAge": "20 years",
-              "volume": "1",
+              "volume": "1.0",
               "forecastVaccineType": "N"
             },
             {
@@ -2262,6 +2304,12 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
               "endAge": "20 years"
             },
             {
+              "vaccineType": "Hep A-Hep B, pediatric/adolescent",
+              "cvx": "193",
+              "beginAge": "0 days",
+              "endAge": "18 years"
+            },
+            {
               "vaccineType": "DTP-HepB-Hib Pentavalent Non-US",
               "cvx": "198",
               "beginAge": "0 days",
@@ -2327,14 +2375,14 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
               "vaccineType": "Hep B, Adult",
               "cvx": "43",
               "beginAge": "20 years",
-              "volume": "1",
+              "volume": "1.0",
               "forecastVaccineType": "N"
             },
             {
               "vaccineType": "Hep B, Dialysis",
               "cvx": "44",
               "beginAge": "20 years",
-              "volume": "1",
+              "volume": "1.0",
               "forecastVaccineType": "N"
             },
             {
@@ -2555,14 +2603,14 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
               "vaccineType": "Hep B, Adult",
               "cvx": "43",
               "beginAge": "20 years",
-              "volume": "1",
+              "volume": "1.0",
               "forecastVaccineType": "N"
             },
             {
               "vaccineType": "Hep B, Dialysis",
               "cvx": "44",
               "beginAge": "20 years",
-              "volume": "1",
+              "volume": "1.0",
               "forecastVaccineType": "N"
             }
           ],
@@ -2657,14 +2705,14 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
               "vaccineType": "Hep B, Adult",
               "cvx": "43",
               "beginAge": "20 years",
-              "volume": "1",
+              "volume": "1.0",
               "forecastVaccineType": "N"
             },
             {
               "vaccineType": "Hep B, Dialysis",
               "cvx": "44",
               "beginAge": "20 years",
-              "volume": "1",
+              "volume": "1.0",
               "forecastVaccineType": "N"
             },
             {
@@ -2842,7 +2890,7 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
               "vaccineType": "HepA-HepB",
               "cvx": "104",
               "beginAge": "18 years",
-              "volume": "1",
+              "volume": "1.0",
               "forecastVaccineType": "Y"
             }
           ],
@@ -2870,7 +2918,7 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
               "vaccineType": "HepA-HepB",
               "cvx": "104",
               "beginAge": "18 years",
-              "volume": "1",
+              "volume": "1.0",
               "forecastVaccineType": "Y"
             }
           ],
@@ -2905,7 +2953,7 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
               "vaccineType": "HepA-HepB",
               "cvx": "104",
               "beginAge": "18 years",
-              "volume": "1",
+              "volume": "1.0",
               "forecastVaccineType": "Y"
             }
           ],
@@ -2960,7 +3008,7 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
               "vaccineType": "HepA-HepB",
               "cvx": "104",
               "beginAge": "18 years",
-              "volume": "1",
+              "volume": "1.0",
               "forecastVaccineType": "Y"
             }
           ],
@@ -2988,7 +3036,7 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
               "vaccineType": "HepA-HepB",
               "cvx": "104",
               "beginAge": "18 years",
-              "volume": "1",
+              "volume": "1.0",
               "forecastVaccineType": "Y"
             }
           ],
@@ -3017,7 +3065,7 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
               "vaccineType": "HepA-HepB",
               "cvx": "104",
               "beginAge": "18 years",
-              "volume": "1",
+              "volume": "1.0",
               "forecastVaccineType": "Y"
             }
           ],
@@ -3046,7 +3094,7 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
               "vaccineType": "HepA-HepB",
               "cvx": "104",
               "beginAge": "18 years",
-              "volume": "1",
+              "volume": "1.0",
               "forecastVaccineType": "Y"
             }
           ],
@@ -3263,7 +3311,7 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
               "vaccineType": "Hep B, Adult",
               "cvx": "43",
               "beginAge": "20 years",
-              "volume": "1",
+              "volume": "1.0",
               "forecastVaccineType": "N"
             }
           ],
@@ -3326,6 +3374,12 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
               "vaccineType": "Hep B, adjuvanted",
               "cvx": "189",
               "beginAge": "18 years - 4 days"
+            },
+            {
+              "vaccineType": "Hep A-Hep B, pediatric/adolescent",
+              "cvx": "193",
+              "beginAge": "0 days",
+              "endAge": "18 years"
             },
             {
               "vaccineType": "DTP-HepB-Hib Pentavalent Non-US",
@@ -3356,7 +3410,7 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
               "vaccineType": "Hep B, Adult",
               "cvx": "43",
               "beginAge": "20 years",
-              "volume": "1",
+              "volume": "1.0",
               "forecastVaccineType": "N"
             }
           ],
@@ -3419,6 +3473,12 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
               "vaccineType": "Hep B, adjuvanted",
               "cvx": "189",
               "beginAge": "18 years - 4 days"
+            },
+            {
+              "vaccineType": "Hep A-Hep B, pediatric/adolescent",
+              "cvx": "193",
+              "beginAge": "0 days",
+              "endAge": "18 years"
             },
             {
               "vaccineType": "DTP-HepB-Hib Pentavalent Non-US",
@@ -3455,7 +3515,7 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
               "vaccineType": "Hep B, Adult",
               "cvx": "43",
               "beginAge": "20 years",
-              "volume": "1",
+              "volume": "1.0",
               "forecastVaccineType": "N"
             }
           ],
@@ -3518,6 +3578,12 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
               "vaccineType": "Hep B, adjuvanted",
               "cvx": "189",
               "beginAge": "18 years - 4 days"
+            },
+            {
+              "vaccineType": "Hep A-Hep B, pediatric/adolescent",
+              "cvx": "193",
+              "beginAge": "0 days",
+              "endAge": "18 years"
             },
             {
               "vaccineType": "DTP-HepB-Hib Pentavalent Non-US",
@@ -3984,14 +4050,14 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
               "vaccineType": "Hep B, Adult",
               "cvx": "43",
               "beginAge": "20 years",
-              "volume": "1",
+              "volume": "1.0",
               "forecastVaccineType": "N"
             },
             {
               "vaccineType": "Hep B, Dialysis",
               "cvx": "44",
               "beginAge": "20 years",
-              "volume": "1",
+              "volume": "1.0",
               "forecastVaccineType": "N"
             },
             {
@@ -4067,6 +4133,12 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
               "endAge": "20 years"
             },
             {
+              "vaccineType": "Hep A-Hep B, pediatric/adolescent",
+              "cvx": "193",
+              "beginAge": "0 days",
+              "endAge": "18 years"
+            },
+            {
               "vaccineType": "DTP-HepB-Hib Pentavalent Non-US",
               "cvx": "198",
               "beginAge": "0 days",
@@ -4124,14 +4196,14 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
               "vaccineType": "Hep B, Adult",
               "cvx": "43",
               "beginAge": "20 years",
-              "volume": "1",
+              "volume": "1.0",
               "forecastVaccineType": "N"
             },
             {
               "vaccineType": "Hep B, Dialysis",
               "cvx": "44",
               "beginAge": "20 years",
-              "volume": "1",
+              "volume": "1.0",
               "forecastVaccineType": "N"
             },
             {
@@ -4507,14 +4579,14 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
               "vaccineType": "Hep B, Adult",
               "cvx": "43",
               "beginAge": "20 years",
-              "volume": "1",
+              "volume": "1.0",
               "forecastVaccineType": "N"
             },
             {
               "vaccineType": "Hep B, Dialysis",
               "cvx": "44",
               "beginAge": "20 years",
-              "volume": "1",
+              "volume": "1.0",
               "forecastVaccineType": "N"
             }
           ],
@@ -4596,14 +4668,14 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
               "vaccineType": "Hep B, Adult",
               "cvx": "43",
               "beginAge": "20 years",
-              "volume": "1",
+              "volume": "1.0",
               "forecastVaccineType": "N"
             },
             {
               "vaccineType": "Hep B, Dialysis",
               "cvx": "44",
               "beginAge": "20 years",
-              "volume": "1",
+              "volume": "1.0",
               "forecastVaccineType": "N"
             },
             {
@@ -4944,7 +5016,7 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
               "vaccineType": "HepA-HepB",
               "cvx": "104",
               "beginAge": "18 years",
-              "volume": "1",
+              "volume": "1.0",
               "forecastVaccineType": "Y"
             }
           ],
@@ -4972,7 +5044,7 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
               "vaccineType": "HepA-HepB",
               "cvx": "104",
               "beginAge": "18 years",
-              "volume": "1",
+              "volume": "1.0",
               "forecastVaccineType": "Y"
             }
           ],
@@ -5007,7 +5079,7 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
               "vaccineType": "HepA-HepB",
               "cvx": "104",
               "beginAge": "18 years",
-              "volume": "1",
+              "volume": "1.0",
               "forecastVaccineType": "Y"
             }
           ],
@@ -5224,7 +5296,7 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
               "vaccineType": "HepA-HepB",
               "cvx": "104",
               "beginAge": "18 years",
-              "volume": "1",
+              "volume": "1.0",
               "forecastVaccineType": "Y"
             }
           ],
@@ -5252,7 +5324,7 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
               "vaccineType": "HepA-HepB",
               "cvx": "104",
               "beginAge": "18 years",
-              "volume": "1",
+              "volume": "1.0",
               "forecastVaccineType": "Y"
             }
           ],
@@ -5281,7 +5353,7 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
               "vaccineType": "HepA-HepB",
               "cvx": "104",
               "beginAge": "18 years",
-              "volume": "1",
+              "volume": "1.0",
               "forecastVaccineType": "Y"
             }
           ],
@@ -5310,7 +5382,7 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
               "vaccineType": "HepA-HepB",
               "cvx": "104",
               "beginAge": "18 years",
-              "volume": "1",
+              "volume": "1.0",
               "forecastVaccineType": "Y"
             }
           ],
@@ -5375,7 +5447,7 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
               "beginAge": "20 years",
               "tradeName": "ENGERIX-B ADULT",
               "mvx": "SKB",
-              "volume": "2",
+              "volume": "2.0",
               "forecastVaccineType": "N"
             }
           ],
@@ -5389,7 +5461,8 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
             {
               "vaccineType": "Hep B, Adol/high risk infant",
               "cvx": "42",
-              "beginAge": "0 days"
+              "beginAge": "0 days",
+              "endAge": "20 years"
             },
             {"vaccineType": "Hep B, Adult", "cvx": "43", "beginAge": "0 days"},
             {
@@ -5402,33 +5475,53 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
               "cvx": "45",
               "beginAge": "0 days"
             },
-            {"vaccineType": "Hib-HepB", "cvx": "51", "beginAge": "0 days"},
-            {"vaccineType": "DTP-Hib-HepB", "cvx": "102", "beginAge": "0 days"},
+            {
+              "vaccineType": "Hib-HepB",
+              "cvx": "51",
+              "beginAge": "0 days",
+              "endAge": "20 years"
+            },
+            {
+              "vaccineType": "DTP-Hib-HepB",
+              "cvx": "102",
+              "beginAge": "0 days",
+              "endAge": "20 years"
+            },
+            {"vaccineType": "HepA-HepB", "cvx": "104", "beginAge": "0 days"},
             {
               "vaccineType": "DTaP-HepB-IPV",
               "cvx": "110",
-              "beginAge": "0 days"
+              "beginAge": "0 days",
+              "endAge": "20 years"
             },
             {
               "vaccineType": "DTaP-IPV-Hib-HepB, historical",
               "cvx": "132",
-              "beginAge": "0 days"
+              "beginAge": "0 days",
+              "endAge": "20 years"
             },
             {
               "vaccineType": "DTaP-IPV-Hib-HepB",
               "cvx": "146",
-              "beginAge": "0 days"
+              "beginAge": "0 days",
+              "endAge": "20 years"
             },
-            {"vaccineType": "HepA-HepB", "cvx": "104", "beginAge": "0 days"},
             {
               "vaccineType": "Hep B, adjuvanted",
               "cvx": "189",
               "beginAge": "18 years - 4 days"
             },
             {
+              "vaccineType": "Hep A-Hep B, pediatric/adolescent",
+              "cvx": "193",
+              "beginAge": "0 days",
+              "endAge": "18 years"
+            },
+            {
               "vaccineType": "DTP-HepB-Hib Pentavalent Non-US",
               "cvx": "198",
-              "beginAge": "0 days"
+              "beginAge": "0 days",
+              "endAge": "20 years"
             },
             {
               "vaccineType": "HepB recombinant, 3-antigen, Al(OH)3",
@@ -5475,7 +5568,7 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
               "beginAge": "20 years",
               "tradeName": "ENGERIX-B ADULT",
               "mvx": "SKB",
-              "volume": "2",
+              "volume": "2.0",
               "forecastVaccineType": "N"
             }
           ],
@@ -5489,7 +5582,8 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
             {
               "vaccineType": "Hep B, Adol/high risk infant",
               "cvx": "42",
-              "beginAge": "0 days"
+              "beginAge": "0 days",
+              "endAge": "20 years"
             },
             {"vaccineType": "Hep B, Adult", "cvx": "43", "beginAge": "0 days"},
             {
@@ -5502,33 +5596,53 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
               "cvx": "45",
               "beginAge": "0 days"
             },
-            {"vaccineType": "Hib-HepB", "cvx": "51", "beginAge": "0 days"},
-            {"vaccineType": "DTP-Hib-HepB", "cvx": "102", "beginAge": "0 days"},
+            {
+              "vaccineType": "Hib-HepB",
+              "cvx": "51",
+              "beginAge": "0 days",
+              "endAge": "20 years"
+            },
+            {
+              "vaccineType": "DTP-Hib-HepB",
+              "cvx": "102",
+              "beginAge": "0 days",
+              "endAge": "20 years"
+            },
+            {"vaccineType": "HepA-HepB", "cvx": "104", "beginAge": "0 days"},
             {
               "vaccineType": "DTaP-HepB-IPV",
               "cvx": "110",
-              "beginAge": "0 days"
+              "beginAge": "0 days",
+              "endAge": "20 years"
             },
             {
               "vaccineType": "DTaP-IPV-Hib-HepB, historical",
               "cvx": "132",
-              "beginAge": "0 days"
+              "beginAge": "0 days",
+              "endAge": "20 years"
             },
             {
               "vaccineType": "DTaP-IPV-Hib-HepB",
               "cvx": "146",
-              "beginAge": "0 days"
+              "beginAge": "0 days",
+              "endAge": "20 years"
             },
-            {"vaccineType": "HepA-HepB", "cvx": "104", "beginAge": "0 days"},
             {
               "vaccineType": "Hep B, adjuvanted",
               "cvx": "189",
               "beginAge": "18 years - 4 days"
             },
             {
+              "vaccineType": "Hep A-Hep B, pediatric/adolescent",
+              "cvx": "193",
+              "beginAge": "0 days",
+              "endAge": "18 years"
+            },
+            {
               "vaccineType": "DTP-HepB-Hib Pentavalent Non-US",
               "cvx": "198",
-              "beginAge": "0 days"
+              "beginAge": "0 days",
+              "endAge": "20 years"
             },
             {
               "vaccineType": "HepB recombinant, 3-antigen, Al(OH)3",
@@ -5575,7 +5689,7 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
               "beginAge": "20 years",
               "tradeName": "ENGERIX-B ADULT",
               "mvx": "SKB",
-              "volume": "2",
+              "volume": "2.0",
               "forecastVaccineType": "N"
             }
           ],
@@ -5589,7 +5703,8 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
             {
               "vaccineType": "Hep B, Adol/high risk infant",
               "cvx": "42",
-              "beginAge": "0 days"
+              "beginAge": "0 days",
+              "endAge": "20 years"
             },
             {"vaccineType": "Hep B, Adult", "cvx": "43", "beginAge": "0 days"},
             {
@@ -5602,33 +5717,53 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
               "cvx": "45",
               "beginAge": "0 days"
             },
-            {"vaccineType": "Hib-HepB", "cvx": "51", "beginAge": "0 days"},
-            {"vaccineType": "DTP-Hib-HepB", "cvx": "102", "beginAge": "0 days"},
+            {
+              "vaccineType": "Hib-HepB",
+              "cvx": "51",
+              "beginAge": "0 days",
+              "endAge": "20 years"
+            },
+            {
+              "vaccineType": "DTP-Hib-HepB",
+              "cvx": "102",
+              "beginAge": "0 days",
+              "endAge": "20 years"
+            },
+            {"vaccineType": "HepA-HepB", "cvx": "104", "beginAge": "0 days"},
             {
               "vaccineType": "DTaP-HepB-IPV",
               "cvx": "110",
-              "beginAge": "0 days"
+              "beginAge": "0 days",
+              "endAge": "20 years"
             },
             {
               "vaccineType": "DTaP-IPV-Hib-HepB, historical",
               "cvx": "132",
-              "beginAge": "0 days"
+              "beginAge": "0 days",
+              "endAge": "20 years"
             },
             {
               "vaccineType": "DTaP-IPV-Hib-HepB",
               "cvx": "146",
-              "beginAge": "0 days"
+              "beginAge": "0 days",
+              "endAge": "20 years"
             },
-            {"vaccineType": "HepA-HepB", "cvx": "104", "beginAge": "0 days"},
             {
               "vaccineType": "Hep B, adjuvanted",
               "cvx": "189",
               "beginAge": "18 years - 4 days"
             },
             {
+              "vaccineType": "Hep A-Hep B, pediatric/adolescent",
+              "cvx": "193",
+              "beginAge": "0 days",
+              "endAge": "18 years"
+            },
+            {
               "vaccineType": "DTP-HepB-Hib Pentavalent Non-US",
               "cvx": "198",
-              "beginAge": "0 days"
+              "beginAge": "0 days",
+              "endAge": "20 years"
             },
             {
               "vaccineType": "HepB recombinant, 3-antigen, Al(OH)3",
@@ -5696,7 +5831,7 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
               "beginAge": "20 years",
               "tradeName": "ENGERIX-B ADULT",
               "mvx": "SKB",
-              "volume": "2",
+              "volume": "2.0",
               "forecastVaccineType": "N"
             }
           ],
@@ -5710,7 +5845,8 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
             {
               "vaccineType": "Hep B, Adol/high risk infant",
               "cvx": "42",
-              "beginAge": "0 days"
+              "beginAge": "0 days",
+              "endAge": "20 years"
             },
             {"vaccineType": "Hep B, Adult", "cvx": "43", "beginAge": "0 days"},
             {
@@ -5723,33 +5859,53 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
               "cvx": "45",
               "beginAge": "0 days"
             },
-            {"vaccineType": "Hib-HepB", "cvx": "51", "beginAge": "0 days"},
-            {"vaccineType": "DTP-Hib-HepB", "cvx": "102", "beginAge": "0 days"},
+            {
+              "vaccineType": "Hib-HepB",
+              "cvx": "51",
+              "beginAge": "0 days",
+              "endAge": "20 years"
+            },
+            {
+              "vaccineType": "DTP-Hib-HepB",
+              "cvx": "102",
+              "beginAge": "0 days",
+              "endAge": "20 years"
+            },
+            {"vaccineType": "HepA-HepB", "cvx": "104", "beginAge": "0 days"},
             {
               "vaccineType": "DTaP-HepB-IPV",
               "cvx": "110",
-              "beginAge": "0 days"
+              "beginAge": "0 days",
+              "endAge": "20 years"
             },
             {
               "vaccineType": "DTaP-IPV-Hib-HepB, historical",
               "cvx": "132",
-              "beginAge": "0 days"
+              "beginAge": "0 days",
+              "endAge": "20 years"
             },
             {
               "vaccineType": "DTaP-IPV-Hib-HepB",
               "cvx": "146",
-              "beginAge": "0 days"
+              "beginAge": "0 days",
+              "endAge": "20 years"
             },
-            {"vaccineType": "HepA-HepB", "cvx": "104", "beginAge": "0 days"},
             {
               "vaccineType": "Hep B, adjuvanted",
               "cvx": "189",
               "beginAge": "18 years - 4 days"
             },
             {
+              "vaccineType": "Hep A-Hep B, pediatric/adolescent",
+              "cvx": "193",
+              "beginAge": "0 days",
+              "endAge": "18 years"
+            },
+            {
               "vaccineType": "DTP-HepB-Hib Pentavalent Non-US",
               "cvx": "198",
-              "beginAge": "0 days"
+              "beginAge": "0 days",
+              "endAge": "20 years"
             },
             {
               "vaccineType": "HepB recombinant, 3-antigen, Al(OH)3",
@@ -5821,14 +5977,14 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
               "beginAge": "20 years",
               "tradeName": "ENGERIX-B ADULT",
               "mvx": "SKB",
-              "volume": "2",
+              "volume": "2.0",
               "forecastVaccineType": "N"
             },
             {
               "vaccineType": "Hep B, Dialysis",
               "cvx": "44",
               "beginAge": "20 years",
-              "volume": "1",
+              "volume": "1.0",
               "forecastVaccineType": "N"
             },
             {
@@ -5898,7 +6054,7 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
               "vaccineType": "Hep B, Dialysis",
               "cvx": "44",
               "beginAge": "20 years",
-              "volume": "1",
+              "volume": "1.0",
               "forecastVaccineType": "N"
             }
           ],
@@ -5946,7 +6102,7 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
               "vaccineType": "Hep B, Dialysis",
               "cvx": "44",
               "beginAge": "20 years",
-              "volume": "1",
+              "volume": "1.0",
               "forecastVaccineType": "N"
             }
           ],
@@ -6000,7 +6156,7 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
               "vaccineType": "Hep B, Dialysis",
               "cvx": "44",
               "beginAge": "20 years",
-              "volume": "1",
+              "volume": "1.0",
               "forecastVaccineType": "Y"
             }
           ],
@@ -6050,14 +6206,14 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
               "beginAge": "20 years",
               "tradeName": "ENGERIX-B ADULT",
               "mvx": "SKB",
-              "volume": "2",
+              "volume": "2.0",
               "forecastVaccineType": "N"
             },
             {
               "vaccineType": "Hep B, Dialysis",
               "cvx": "44",
               "beginAge": "20 years",
-              "volume": "1",
+              "volume": "1.0",
               "forecastVaccineType": "N"
             },
             {

@@ -776,8 +776,8 @@ final AntigenSupportingData orthopoxvirus = AntigenSupportingData.fromJson({
       "vaccineGroup": "Orthopoxvirus",
       "seriesAdminGuidance": [
         "CDC recommends initiating vaccination within 4 days following the date of exposure for the best chance to prevent on set of the disease. If initiated between 4 and 14 days following the date of exposure, vaccination might be less effective. Benefits might still outweigh risks when administering more than 14 days after exposure in some clinical situations (e.g., severely immunosuppressed)",
-        "JYNNEOS vaccine can be administered through 2 different regimens. Please see https://www.cdc.gov/poxvirus/mpox/clinicians/vaccines/vaccine-considerations.html for more details.",
-        "Prior to administration in people younger than age 6 months, clinicians should first contact their jurisdictional health department (https://resources.cste.org/epiafterhours). Jurisdictional health departments can facilitate consultation with CDC if needed.",
+        "JYNNEOS vaccine can be administered through 2 different regimens. Please see https://www.cdc.gov/monkeypox/hcp/vaccine-considerations/index.html for more details.",
+        "Prior to administration in people younger than age 6 months, clinicians should first contact their jurisdictional health department (https://libraries.cste.org/after-hours-contact/). Jurisdictional health departments can facilitate consultation with CDC if needed.",
         "In response to the current outbreak, vaccines and other medical measures should be given to eligible people who were previously vaccinated against smallpox.",
         "Evidence of a take is often used as a marker of successful vaccination after ACAM2000. Because JYNNEOS is a replication-deficient vaccine, vaccination with JYNNEOS does not produce a take",
         "When vaccination is used for prevention of mpox in persons with HIV infection, JYNNEOS is preferred over ACAM2000."

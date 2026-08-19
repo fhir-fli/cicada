@@ -62,7 +62,7 @@ final AntigenSupportingData meningococcalB = AntigenSupportingData.fromJson({
       "vaccineGroup": "Meningococcal B",
       "seriesAdminGuidance": [
         "Delay MenB until after pregnancy due to lack of safety data in pregnant persons. May administer if at increased risk and vaccination benefits outweigh potential risks.",
-        "ACIP recommends a MenB vaccine series for persons aged 16-23 years on the basis of shared clinical decision-making to provide short-term protection against most strains of serogroup B meningococcal disease. The preferred age for MenB vaccination is 16-18 years. More guidance can be found here: https://www.cdc.gov/vaccines/hcp/admin/downloads/ISD-job-aid-SCDM-mening-b-shared-clinical-decision-making.pdf",
+        "ACIP recommends a MenB vaccine series for persons aged 16-23 years on the basis of shared clinical decision-making to provide short-term protection against most strains of serogroup B meningococcal disease. The preferred age for MenB vaccination is 16-18 years. More guidance can be found here: https://www.cdc.gov/vaccines/media/pdfs/2025/03/2024-isd-job-aid-scdm-menb-508-remediated.pdf",
         "People desiring more rapid protection against serogroup B (e.g., students with less than 6 months before college entry) may receive a 3-dose series (0, 1-2, 6 months) to optimize rapid protection.",
         "Penmenvy (MenACWY/MenB - GSK) may be used when both MenACWY and MenB are indicated at the same visit."
       ],
@@ -203,7 +203,7 @@ final AntigenSupportingData meningococcalB = AntigenSupportingData.fromJson({
       "vaccineGroup": "Meningococcal B",
       "seriesAdminGuidance": [
         "Delay MenB until after pregnancy due to lack of safety data in pregnant persons. May administer if at increased risk and vaccination benefits outweigh potential risks.",
-        "ACIP recommends a MenB vaccine series for persons aged 16-23 years on the basis of shared clinical decision-making to provide short-term protection against most strains of serogroup B meningococcal disease. The preferred age for MenB vaccination is 16-18 years. More guidance can be found here: https://www.cdc.gov/vaccines/hcp/admin/downloads/ISD-job-aid-SCDM-mening-b-shared-clinical-decision-making.pdf",
+        "ACIP recommends a MenB vaccine series for persons aged 16-23 years on the basis of shared clinical decision-making to provide short-term protection against most strains of serogroup B meningococcal disease. The preferred age for MenB vaccination is 16-18 years. More guidance can be found here: https://www.cdc.gov/vaccines/media/pdfs/2025/03/2024-isd-job-aid-scdm-menb-508-remediated.pdf",
         "People desiring more rapid protection against serogroup B (e.g., students with less than 6 months before college entry) may receive a 3-dose series (0, 1-2, 6 months) to optimize rapid protection.",
         "Penbraya (MenABCWY - Pfizer) may be used when both MenACWY and MenB are indicated at the same visit."
       ],
@@ -327,7 +327,7 @@ final AntigenSupportingData meningococcalB = AntigenSupportingData.fromJson({
       "vaccineGroup": "Meningococcal B",
       "seriesAdminGuidance": [
         "Delay MenB until after pregnancy due to lack of safety data in pregnant persons. May administer if at increased risk and vaccination benefits outweigh potential risks.",
-        "ACIP recommends a MenB vaccine series for persons aged 16-23 years on the basis of shared clinical decision-making to provide short-term protection against most strains of serogroup B meningococcal disease. The preferred age for MenB vaccination is 16-18 years. More guidance can be found here: https://www.cdc.gov/vaccines/hcp/admin/downloads/ISD-job-aid-SCDM-mening-b-shared-clinical-decision-making.pdf",
+        "ACIP recommends a MenB vaccine series for persons aged 16-23 years on the basis of shared clinical decision-making to provide short-term protection against most strains of serogroup B meningococcal disease. The preferred age for MenB vaccination is 16-18 years. More guidance can be found here: https://www.cdc.gov/vaccines/media/pdfs/2025/03/2024-isd-job-aid-scdm-menb-508-remediated.pdf",
         "People desiring more rapid protection against serogroup B (e.g., students with less than 6 months before college entry) may receive a 3-dose series (0, 1-2, 6 months) to optimize rapid protection.",
         "Penmenvy (MenACWY/MenB - GSK) may be used when both MenACWY and MenB are indicated at the same visit."
       ],
@@ -508,7 +508,7 @@ final AntigenSupportingData meningococcalB = AntigenSupportingData.fromJson({
       "vaccineGroup": "Meningococcal B",
       "seriesAdminGuidance": [
         "Delay MenB until after pregnancy due to lack of safety data in pregnant persons. May administer if at increased risk and vaccination benefits outweigh potential risks.",
-        "ACIP recommends a MenB vaccine series for persons aged 16-23 years on the basis of shared clinical decision-making to provide short-term protection against most strains of serogroup B meningococcal disease. The preferred age for MenB vaccination is 16-18 years. More guidance can be found here: https://www.cdc.gov/vaccines/hcp/admin/downloads/ISD-job-aid-SCDM-mening-b-shared-clinical-decision-making.pdf",
+        "ACIP recommends a MenB vaccine series for persons aged 16-23 years on the basis of shared clinical decision-making to provide short-term protection against most strains of serogroup B meningococcal disease. The preferred age for MenB vaccination is 16-18 years. More guidance can be found here: https://www.cdc.gov/vaccines/media/pdfs/2025/03/2024-isd-job-aid-scdm-menb-508-remediated.pdf",
         "People desiring more rapid protection against serogroup B (e.g., students with less than 6 months before college entry) may receive a 3-dose series (0, 1-2, 6 months) to optimize rapid protection.",
         "Penbraya (MenABCWY - Pfizer) may be used when both MenACWY and MenB are indicated at the same visit."
       ],

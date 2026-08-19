@@ -331,7 +331,7 @@ final AntigenSupportingData rubella = AntigenSupportingData.fromJson({
             {
               "vaccineType": "MMRV",
               "cvx": "94",
-              "beginAge": "4 years",
+              "beginAge": "12 months",
               "endAge": "13 years",
               "volume": "0.5",
               "forecastVaccineType": "N"
@@ -396,7 +396,7 @@ final AntigenSupportingData rubella = AntigenSupportingData.fromJson({
             {
               "vaccineType": "MMRV",
               "cvx": "94",
-              "beginAge": "4 years",
+              "beginAge": "12 months",
               "endAge": "13 years",
               "volume": "0.5",
               "forecastVaccineType": "N"
@@ -431,7 +431,7 @@ final AntigenSupportingData rubella = AntigenSupportingData.fromJson({
           ],
           "conditionalSkip": [
             {
-              "context": "Both",
+              "context": "Forecast",
               "setLogic": "n/a",
               "set": [
                 {

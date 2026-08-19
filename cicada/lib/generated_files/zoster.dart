@@ -79,7 +79,7 @@ final AntigenSupportingData zoster = AntigenSupportingData.fromJson({
         {
           "doseNumber": "Dose 2",
           "age": [
-            {"absMinAge": "50 years - 4 days", "minAge": "50 years"}
+            {"absMinAge": "18 years - 4 days", "minAge": "50 years"}
           ],
           "interval": [
             {
@@ -367,7 +367,7 @@ final AntigenSupportingData zoster = AntigenSupportingData.fromJson({
           "doseNumber": "Dose 1",
           "age": [
             {
-              "absMinAge": "19 years - 4 days",
+              "absMinAge": "18 years - 4 days",
               "minAge": "19 years",
               "earliestRecAge": "19 years"
             }
@@ -401,6 +401,9 @@ final AntigenSupportingData zoster = AntigenSupportingData.fromJson({
         },
         {
           "doseNumber": "Dose 2",
+          "age": [
+            {"absMinAge": "18 years - 4 days", "minAge": "19 years"}
+          ],
           "interval": [
             {
               "fromPrevious": "Y",

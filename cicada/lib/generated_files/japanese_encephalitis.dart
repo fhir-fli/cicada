@@ -40,7 +40,7 @@ final AntigenSupportingData japaneseEncephalitis =
         "For adults and children, a booster dose (i.e., third dose) should be given on or after 1 year after completion of the primary JE-VC series if ongoing exposure or reexposure to JE virus is expected",
         "JE vaccination should be considered for shorter-term (e.g., less than 1 month) travel with an increased risk for JE on the basis of planned travel duration, season, location, activities, and accommodations. See JE recommendation box 2 for more detailed information. (https://www.cdc.gov/mmwr/volumes/68/rr/rr6802a1.htm#B2_down)",
         "JE vaccination should be considered for travel to a JE-endemic area but uncertain of specific duration of travel, destination, or activities.",
-        "Endemic Area and transmission season is determined by country.  Refer to the yellow book for a definition of the transmission season: https://wwwnc.cdc.gov/travel/yellowbook/2024/infections-diseases/japanese-encephalitis"
+        "Endemic Area and transmission season is determined by country.  Refer to the yellow book for a definition of the transmission season: https://www.cdc.gov/yellow-book/hcp/travel-associated-infections-diseases/yellow-fever.html"
       ],
       "seriesType": "Risk",
       "selectSeries": {
@@ -200,7 +200,7 @@ final AntigenSupportingData japaneseEncephalitis =
         "For adults and children, a booster dose (i.e., third dose) should be given on or after 1 year after completion of the primary JE-VC series if ongoing exposure or reexposure to JE virus is expected",
         "JE vaccination should be considered for shorter-term (e.g., less than 1 month) travel with an increased risk for JE on the basis of planned travel duration, season, location, activities, and accommodations. See JE recommendation box 2 for more detailed information. (https://www.cdc.gov/mmwr/volumes/68/rr/rr6802a1.htm#B2_down)",
         "JE vaccination should be considered for travel to a JE-endemic area but uncertain of specific duration of travel, destination, or activities.",
-        "Endemic Area and transmission season is determined by country.  Refer to the yellow book for a definition of the transmission season: https://wwwnc.cdc.gov/travel/yellowbook/2024/infections-diseases/japanese-encephalitis"
+        "Endemic Area and transmission season is determined by country.  Refer to the yellow book for a definition of the transmission season: https://www.cdc.gov/yellow-book/hcp/travel-associated-infections-diseases/yellow-fever.html"
       ],
       "seriesType": "Risk",
       "selectSeries": {
