@@ -198,11 +198,22 @@ class VaxSeries {
     /// period, series minimum age to start 18 years) and a PPSV23 at 47 in
     /// the "Pneumococcal 50+" series (`2024-0102`, minimum age to start 50
     /// years, next dose due at the 50th birthday).
+    ///
+    /// A series the patient cannot start is not a series they are on, so it
+    /// must also stop representing them: leaving the status at the default
+    /// "Not Complete" let step 8.14 pick the *unstartable* series as the best
+    /// patient series and report its status for the whole vaccine group. An
+    /// eight-month-old had aged out of the infant RSV series, but the "RSV 75
+    /// years+" series in the other series group still read Not Complete, so
+    /// the group answered Not Complete where CDSi says Aged Out
+    /// (`2023-0034`). Not Recommended is dismissed by 8.14 the same way Aged
+    /// Out is, which leaves the aged-out infant series to speak for the group.
     final String? minAgeToStart = series.selectSeries?.minAgeToStart;
     if (minAgeToStart != null &&
         evaluatedDoses.isEmpty &&
         assessmentDate < dob.change(minAgeToStart)) {
       shouldRecieveAnotherDose = false;
+      seriesStatus = SeriesStatus.notRecommended;
       forecastReason = ForecastReason.patientHasNotReachedTheMinimumAgeToStart;
       return;
     }
