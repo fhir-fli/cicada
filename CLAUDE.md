@@ -155,8 +155,26 @@ Uses `very_good_analysis`. The CDSi spec version currently implemented is **4.61
 
 ## Test Results
 
-- **CDC Healthy**: 1010/1014 (99.6%) — 4 failures verified as version mismatch issues
-- **CDC Condition**: 747/777 (96.1%) — 30 failures verified as version mismatch issues
+- **CDC Healthy**: 1010/1014 (99.6%) — 4 failures believed to be version mismatch
+- **CDC Condition**: 747/777 (96.1%) — 30 failures, mostly version mismatch
+
+⚠️ **"Verified as version mismatch" was too strong, and it cost us.** That line
+went unquestioned for months and hid a real engine bug: `selectSeries
+.minAgeToStart` was parsed and never read, so "RSV 75 years+ 1-dose series"
+applied to infants and forecast them at **birth date plus 75 years** — a
+5-day-old with cystic fibrosis included. Fixed 2026-08-18.
+
+The RSV cases still fail, and *those* really are data drift: the shipped CDSi
+4.61-508 supporting data carries only the **2025–26** RSV season (infant series
+starts 2025-10-01, pregnant series 2025-09-01), while the 2023 test cases expect
+the 2023–24 season. The engine is right given its data; no code change can pass
+them without historical seasonal data.
+
+**Adjudicate the remaining failures per case, not as a block.** Shapes that are
+NOT explained by season drift: two `pastDue` dates off by a single day in
+opposite directions (2016-UC-0092 MMR, 2025-UC-0015 HPV), and forecasts landing
+before the patient was born (2016-UC-0130 DTaP expects 2016 and gets 1995;
+2017-UC-0015 Cholera expects 2000 and gets 1984).
 - **FITS (external)**: 167/169 (98.8%) — 2 failures from FITS date rebasing
 
 ## Critical File Access Rules
