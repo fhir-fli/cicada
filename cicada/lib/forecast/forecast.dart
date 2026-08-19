@@ -526,15 +526,33 @@ Map<String, VaccineGroupForecast> _aggregateVaccineGroupForecasts(
     // patient has a condition that activated it, and the risk pathway is the
     // one being asked about. The single-antigen branch above already does
     // this; the multi-antigen branch did not.
-    // Restrict to risk only when a risk series still needs a dose. A complete
-    // series has nothing to contribute to a forecast, and preferring it anyway
-    // silently drops the group's real recommendation: an MMR international
-    // traveller has a *complete* risk series alongside a standard series still
-    // owing dose 2, and the group must still forecast that dose 2.
-    final bool groupHasRiskBest = antigens.any((VaxAntigen a) =>
-        bestByAntigen[a.targetDisease]!.any((VaxSeries s) =>
-            s.series.seriesType == SeriesType.risk &&
-            s.shouldRecieveAnotherDose));
+    // Restrict to risk when a risk series still needs a dose, or when it is
+    // finished and its own antigen has nothing else pending.
+    //
+    // A complete risk series usually has nothing to contribute to a forecast,
+    // and preferring it anyway would silently drop the group's real
+    // recommendation: an MMR international traveller (`2016-UC-0093`) has a
+    // *complete* risk series alongside a standard series still owing dose 2,
+    // and the group must still forecast that dose 2.
+    //
+    // But when the risk antigen is settled on both pathways, the risk answer
+    // is the group's answer, and the other antigens' lifelong series must not
+    // overrule it. A pregnant patient who has had her Tdap (`2016-UC-0131`)
+    // has a complete pertussis risk series and a complete pertussis standard
+    // series; blending in tetanus and diphtheria — never complete, since their
+    // boosters recur for life — reported the group as Not Complete where CDSi
+    // says Complete. This is what the specification means by a patient ending
+    // up with more than one vaccine group forecast: CDC's row is the risk one.
+    final bool groupHasRiskBest = antigens.any((VaxAntigen a) {
+      final List<VaxSeries> best = bestByAntigen[a.targetDisease]!;
+      final List<VaxSeries> risk = best
+          .where((VaxSeries s) => s.series.seriesType == SeriesType.risk)
+          .toList();
+      if (risk.isEmpty) return false;
+      if (risk.any((VaxSeries s) => s.shouldRecieveAnotherDose)) return true;
+      return !best.any((VaxSeries s) =>
+          s.series.seriesType != SeriesType.risk && s.shouldRecieveAnotherDose);
+    });
 
     for (final antigen in antigens) {
       var bestList = bestByAntigen[antigen.targetDisease]!;
