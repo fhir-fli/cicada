@@ -511,8 +511,38 @@ Map<String, VaccineGroupForecast> _aggregateVaccineGroupForecasts(
           _determineBestPatientSeries(antigen);
     }
 
+    // CDSi Chapter 9 intro, and section 4.4 for this exact vaccine group:
+    // "For vaccine groups which contain non-equivalent series groups, it is
+    // important to only blend best patient series of the same series type
+    // (e.g., risk with risk and standard with standard)."
+    //
+    // Blending across types produced nonsense here. A 28-year-old pregnant
+    // patient has a pertussis risk series forecasting during the pregnancy and
+    // a childhood standard series that can never age out — its doses carry no
+    // maxAge — still forecasting from her 7th birthday in 1995. Blending took
+    // the earliest of the two, so the vaccine group answered 1995.
+    //
+    // When a risk series is among the best series for this vaccine group, the
+    // patient has a condition that activated it, and the risk pathway is the
+    // one being asked about. The single-antigen branch above already does
+    // this; the multi-antigen branch did not.
+    // Restrict to risk only when a risk series still needs a dose. A complete
+    // series has nothing to contribute to a forecast, and preferring it anyway
+    // silently drops the group's real recommendation: an MMR international
+    // traveller has a *complete* risk series alongside a standard series still
+    // owing dose 2, and the group must still forecast that dose 2.
+    final bool groupHasRiskBest = antigens.any((VaxAntigen a) =>
+        bestByAntigen[a.targetDisease]!.any((VaxSeries s) =>
+            s.series.seriesType == SeriesType.risk &&
+            s.shouldRecieveAnotherDose));
+
     for (final antigen in antigens) {
-      final bestList = bestByAntigen[antigen.targetDisease]!;
+      var bestList = bestByAntigen[antigen.targetDisease]!;
+      if (groupHasRiskBest) {
+        bestList = bestList
+            .where((VaxSeries s) => s.series.seriesType == SeriesType.risk)
+            .toList();
+      }
       if (bestList.isEmpty) continue;
       antigenNames.add(antigen.targetDisease);
       for (final best in bestList) {
