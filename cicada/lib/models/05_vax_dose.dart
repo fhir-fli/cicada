@@ -544,60 +544,72 @@ class VaxDose {
       preferredVaccine = false;
       preferredVaccineReason = PreferredAllowedReason.noPreferredTypes;
       return false;
-    } else {
-      final List<Vaccine> preferredList = vaccines.toList();
-      preferredList.retainWhere(
-          (Vaccine element) => element.cvxAsInt == int.tryParse(cvx));
-      if (preferredList.isEmpty) {
-        preferredVaccine = false;
-        preferredVaccineReason =
-            PreferredAllowedReason.notAPreferableOrAllowableVaccine;
-        return false;
-      } else {
-        preferredList.retainWhere((Vaccine element) =>
-            element.mvx?.toLowerCase() == mvx?.toLowerCase());
-        if (preferredList.isEmpty) {
-          preferredVaccine = false;
-          preferredVaccineReason = PreferredAllowedReason.wrongTradeName;
-          return false;
-        } else if (preferredList.length != 1) {
-          throw Exception('Something wrong with the preferred list');
-        } else {
-          final Vaccine preferredVax = preferredList.first;
-          final VaxDate preferableVaccineTypeBeginAgeDate =
-              preferredVax.beginAge == null
-                  ? VaxDate.min()
-                  : birthdate.changeNullable(preferredVax.beginAge, false)!;
-          final VaxDate preferableVaccineTypeEndAgeDate =
-              preferredVax.endAge == null
-                  ? VaxDate.max()
-                  : birthdate.changeNullable(preferredVax.endAge, true)!;
-          final double? preferableVaccineVolume = preferredVax.volume == null
-              ? null
-              : double.tryParse(preferredVax.volume!);
-          if (preferableVaccineTypeBeginAgeDate <= dateGiven &&
-              dateGiven < preferableVaccineTypeEndAgeDate) {
-            if (preferableVaccineVolume == null || volume == null) {
-              preferredVaccine = true;
-              return true;
-            } else if (volume! >= preferableVaccineVolume) {
-              preferredVaccine = true;
-              return true;
-            } else {
-              preferredVaccine = true;
-              preferredVaccineReason =
-                  PreferredAllowedReason.lessThanRecommendedVolume;
-              return true;
-            }
-          } else {
-            preferredVaccine = false;
-            preferredVaccineReason =
-                PreferredAllowedReason.administeredOutsideOfPreferredAgeRange;
-            return false;
-          }
-        }
-      }
     }
+
+    final List<Vaccine> preferredList = vaccines
+        .where((Vaccine element) => element.cvxAsInt == int.tryParse(cvx))
+        .toList();
+    if (preferredList.isEmpty) {
+      preferredVaccine = false;
+      preferredVaccineReason =
+          PreferredAllowedReason.notAPreferableOrAllowableVaccine;
+      return false;
+    }
+
+    // Table 6-26 compares trade names, but only 24 of the 7,111 vaccine
+    // entries in the supporting data name one — the influenza and HepB
+    // product-path series. Everywhere else the trade name is not a constraint,
+    // and comparing it against an absent value meant any dose that carried a
+    // manufacturer failed to match: a Tdap given as SKB was not a preferable
+    // vaccine for the pregnancy risk series, so the dose did not count and the
+    // series never completed (`2016-UC-0131`). Real records carry MVX far more
+    // often than these test cases do, so this was silently discarding valid
+    // doses.
+    final List<Vaccine> tradeNameMatches = preferredList
+        .where((Vaccine element) =>
+            element.mvx == null ||
+            element.mvx!.toLowerCase() == mvx?.toLowerCase())
+        .toList();
+    if (tradeNameMatches.isEmpty) {
+      preferredVaccine = false;
+      preferredVaccineReason = PreferredAllowedReason.wrongTradeName;
+      return false;
+    }
+
+    // One CVX can appear more than once with different age ranges, exactly as
+    // in [isAllowedType] — take the first entry whose age range covers the
+    // date administered rather than assuming there is only one candidate.
+    for (final Vaccine preferredVax in tradeNameMatches) {
+      final VaxDate preferableVaccineTypeBeginAgeDate =
+          preferredVax.beginAge == null
+              ? VaxDate.min()
+              : birthdate.changeNullable(preferredVax.beginAge, false)!;
+      final VaxDate preferableVaccineTypeEndAgeDate =
+          preferredVax.endAge == null
+              ? VaxDate.max()
+              : birthdate.changeNullable(preferredVax.endAge, true)!;
+      if (!(preferableVaccineTypeBeginAgeDate <= dateGiven &&
+          dateGiven < preferableVaccineTypeEndAgeDate)) {
+        continue;
+      }
+
+      final double? preferableVaccineVolume = preferredVax.volume == null
+          ? null
+          : double.tryParse(preferredVax.volume!);
+      preferredVaccine = true;
+      if (preferableVaccineVolume != null &&
+          volume != null &&
+          volume! < preferableVaccineVolume) {
+        preferredVaccineReason =
+            PreferredAllowedReason.lessThanRecommendedVolume;
+      }
+      return true;
+    }
+
+    preferredVaccine = false;
+    preferredVaccineReason =
+        PreferredAllowedReason.administeredOutsideOfPreferredAgeRange;
+    return false;
   }
 
   bool isAllowedType(
