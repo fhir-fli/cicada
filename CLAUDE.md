@@ -155,11 +155,23 @@ Uses `very_good_analysis`. The CDSi supporting data currently implemented is **4
 
 ## Test Results
 
-- **CDC Condition**: 746/777 on 4.65-508 supporting data — the only suite that
-  actually compares against expected results.
-- ⚠️ **`test/cicada_test.dart` ("healthy") asserts nothing.** It runs each case
-  and warns only if no recommendation comes back. The "1010/1014 (99.6%)" that
-  used to sit here is not produced by anything in this repo — do not quote it.
+Both suites compare against CDC's expected results and both must be run before
+and after any engine change — from `cicada/`, with absolute paths:
+
+```bash
+dart run test/healthy_test.dart      # 1062 / 1065
+dart run test/condition_test.dart    #  751 / 777
+```
+
+- **Healthy (v4.46 cases, 4.65-508 data — versions match, so this is the gate).**
+  Its 3 failures are all dose-**evaluation reason labels**, not forecasts.
+- **Condition (v4.6 cases, Sept 2025).** Version-mismatched by construction:
+  several failures are cases written against supporting data CDC has since
+  changed. Movement in this suite is the signal, not its absolute number.
+- ⚠️ `test/cicada_test.dart` asserted **nothing** and has been replaced by
+  `healthy_test.dart`. The "1010/1014 (99.6%)" that used to sit here came from
+  nothing in this repo — do not quote it.
+- **FITS (external)**: 167/169 (98.8%) — 2 failures from FITS date rebasing.
 
 ⚠️ **"Verified as version mismatch" was too strong, and it cost us.** That line
 went unquestioned for months and hid a real engine bug: `selectSeries
@@ -167,18 +179,12 @@ went unquestioned for months and hid a real engine bug: `selectSeries
 applied to infants and forecast them at **birth date plus 75 years** — a
 5-day-old with cystic fibrosis included. Fixed 2026-08-18.
 
-The RSV cases still fail, and *those* really are data drift: the shipped CDSi
-4.61-508 supporting data carries only the **2025–26** RSV season (infant series
-starts 2025-10-01, pregnant series 2025-09-01), while the 2023 test cases expect
-the 2023–24 season. The engine is right given its data; no code change can pass
-them without historical seasonal data.
-
-**Adjudicate the remaining failures per case, not as a block.** Shapes that are
-NOT explained by season drift: two `pastDue` dates off by a single day in
-opposite directions (2016-UC-0092 MMR, 2025-UC-0015 HPV), and forecasts landing
-before the patient was born (2016-UC-0130 DTaP expects 2016 and gets 1995;
-2017-UC-0015 Cholera expects 2000 and gets 1984).
-- **FITS (external)**: 167/169 (98.8%) — 2 failures from FITS date rebasing
+**Adjudicate the remaining failures per case, not as a block.** Cases whose
+supporting data has genuinely moved under them (observation codes retired, an
+RSV season rolled forward, a licensed minimum age lowered) are written up with
+CDC's own row and the clinical question in `CDSI-OE-QUERIES.md`; anything we
+conclude CDC got *wrong* goes in there too, for outside adjudication, rather
+than being silently conformed to or silently ignored.
 
 ## Critical File Access Rules
 
