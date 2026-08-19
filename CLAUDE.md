@@ -50,7 +50,7 @@ cicada/
 │   └── test/
 ├── cicada_generator/        # Code generator that produces generated_files/
 │   └── lib/
-│       ├── Version_4.61-508/ # CDSi source XML/Excel files
+│       ├── Version_4.65-508/ # CDSi source XML/Excel files
 │       ├── WHO/              # WHO source data (Excel = source of truth)
 │       │   ├── antigen/      # WHO antigen definitions (22 .xlsx files)
 │       │   └── schedule/     # WHO schedule supporting data (5 .xlsx files)
@@ -69,7 +69,7 @@ cd cicada && dart pub get
 cd cicada_generator && dart pub get
 
 # Run tests
-cd cicada && dart run test/cicada_test.dart       # 1014 healthy CDC test cases
+cd cicada && dart run test/healthy_test.dart       # 1065 healthy CDC test cases
 cd cicada && dart run test/condition_test.dart     # 777 condition CDC test cases
 
 # Run ImmDS server
@@ -106,7 +106,7 @@ The core pipeline in `forecast/forecast.dart` runs these steps:
 
 The engine supports two modes via `ForecastMode` enum in `forecast/forecast_mode.dart`:
 
-- **`ForecastMode.cdc`** (default) — Uses CDSi v4.61-508 antigen definitions and U.S. schedule
+- **`ForecastMode.cdc`** (default) — Uses CDSi v4.65-508 antigen definitions and U.S. schedule
 - **`ForecastMode.who`** — Uses WHO EPI antigen definitions (22 antigens) and global schedule
 
 Runtime switching uses `activeAntigenMap` and `activeScheduleData` getters that dispatch to the correct dataset. Multi-antigen groups (e.g., DTP, MMR) are derived dynamically from the vaccine-group-to-antigen map.
@@ -189,7 +189,7 @@ than being silently conformed to or silently ignored.
 ## Critical File Access Rules
 
 **NEVER recursively list or read:**
-- `cicada_generator/lib/Version_4.61-508/` — Large CDSi XML/Excel source files
+- `cicada_generator/lib/Version_4.65-508/` — Large CDSi XML/Excel source files
 - `cicada_generator/lib/WHO/` — WHO source data files
 - `cicada_generator/lib/generated_files/` — Large intermediate JSON files
 - `cicada_generator/lib/test_cases/` — Test case data files
