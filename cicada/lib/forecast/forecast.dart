@@ -105,6 +105,14 @@ List<VaxSeries> _determineBestPatientSeries(VaxAntigen antigen) {
 
   // Apply Table 8-14 to each prioritized series.
   final List<VaxSeries> bestSeries = [];
+  prioritizedByGroup.forEach((String groupKey, VaxSeries pri) {
+    ForecastTrace.current?.log(
+      '8.14 best patient series',
+      '${antigen.targetDisease} group $groupKey',
+      'prioritized="${pri.series.seriesName}" type=${pri.series.seriesType} '
+          'status=${pri.seriesStatus} equiv=${groupToEquiv[groupKey]}',
+    );
+  });
 
   for (final entry in prioritizedByGroup.entries) {
     final groupKey = entry.key;
@@ -218,6 +226,11 @@ List<VaxSeries> _determineBestPatientSeries(VaxAntigen antigen) {
     // precedence over this non-complete standard series).
   }
 
+  ForecastTrace.current?.log(
+    '8.14 best patient series',
+    antigen.targetDisease,
+    'best=${bestSeries.map((VaxSeries e) => e.series.seriesName).toList()}',
+  );
   return bestSeries;
 }
 
@@ -519,6 +532,13 @@ Map<String, VaccineGroupForecast> _aggregateVaccineGroupForecasts(
       }
     }
 
+    ForecastTrace.current?.log(
+      '9 vaccine group aggregation',
+      groupName,
+      'antigens=${antigens.map((VaxAntigen a) => a.targetDisease).toList()} '
+          'statuses=$statuses earliest=$earliestDates '
+          'recommended=$recommendedDates',
+    );
     if (statuses.isEmpty) continue;
 
     // FORECASTVG-1: status

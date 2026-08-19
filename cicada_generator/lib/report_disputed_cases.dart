@@ -57,21 +57,33 @@ Map<String, Parameters> loadCases(String path) {
   return cases;
 }
 
+/// Excel vaccine-group label → engine vaccine-group name.
+///
+/// The two workbooks label the same groups differently and BOTH sets must be
+/// here. Dropping `DTaP` (conditions) while keeping `DTAP` (healthy) made this
+/// report claim "cicada produces no forecast for DTaP" on cases where it
+/// produces one — and that false line was then adjudicated as an engine bug.
 const groupMap = <String, String>{
+  // healthy workbook
   'DTAP': 'DTaP/Tdap/Td',
   'Td': 'DTaP/Tdap/Td',
   'FLU': 'Influenza',
-  'Flu': 'Influenza',
   'HIB': 'Hib',
   'MCV': 'Meningococcal',
   'MENB': 'Meningococcal B',
   'PCV': 'Pneumococcal',
   'POL': 'Polio',
-  'IPOL': 'Polio',
   'ROTA': 'Rotavirus',
-  'Rota': 'Rotavirus',
   'VAR': 'Varicella',
   'ZOSTER': 'Zoster',
+  // conditions workbook
+  'DTaP': 'DTaP/Tdap/Td',
+  'Flu': 'Influenza',
+  'IPOL': 'Polio',
+  'Rota': 'Rotavirus',
+  // COVID-19, HPV, HepA, HepB, MMR, RSV, Chikungunya, Cholera, Dengue, Ebola,
+  // Japanese Encephalitis, Meningococcal, Meningococcal B, Orthopoxvirus,
+  // Pneumococcal, Rabies, TBE, Typhoid, Yellow Fever, Zoster already match.
 };
 
 void emit(

@@ -30,3 +30,6 @@ doc/api/
 
 # FHIR IG Publisher cache
 input-cache/
+
+# Trace output from cicada_generator/lib/trace_case.dart
+scratch/

@@ -9,3 +9,4 @@ export 'observations_from_resources.dart';
 export 'period_of_condition.dart';
 export 'relevant_series.dart';
 export 'string_to_list.dart';
+export 'forecast_trace.dart';

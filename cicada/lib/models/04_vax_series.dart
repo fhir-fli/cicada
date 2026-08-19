@@ -199,6 +199,12 @@ class VaxSeries {
     determineContraindications(
         vaccineContraindications: vaccineContraindications);
     determineForecastNeed(evidenceOfImmunity);
+    ForecastTrace.current?.log(
+      '7 forecast need',
+      '$targetDisease / ${series.seriesName}',
+      'type=${series.seriesType} status=$seriesStatus '
+          'another=$shouldRecieveAnotherDose reason=$forecastReason',
+    );
     if (shouldRecieveAnotherDose) {
       int currentTargetDose = -1;
       while (currentTargetDose != targetDose) {
@@ -213,6 +219,13 @@ class VaxSeries {
         currentTargetDose = targetDose;
         evaluateConditionalSkip(assessmentDate: candidateEarliestDate);
       }
+      ForecastTrace.current?.log(
+        '7 forecast dates',
+        '$targetDisease / ${series.seriesName}',
+        'targetDose=$targetDose earliest=$candidateEarliestDate '
+            'recommended=$adjustedRecommendedDate '
+            'pastDue=$adjustedPastDueDate',
+      );
     }
   }
 

@@ -572,7 +572,7 @@ v4.0: added description
 Changed_In_Version       4.5
 ```
 
-**cicada produces no forecast for DTaP.**
+**cicada answers:** status `Not Complete`, forecast #`1`, earliest `1995/06/23`, recommended `1995/06/23`, past due `1995/06/23`.
 
 ### 2016-UC-0131
 
@@ -607,7 +607,7 @@ Reason_For_Change        added description
 Changed_In_Version       4.0
 ```
 
-**cicada produces no forecast for DTaP.**
+**cicada answers:** status `Not Complete`, forecast #`2`, earliest `2017/03/01`, recommended `2017/03/01`, past due `2017/03/29`.
 
 ### 2016-UC-0133
 
