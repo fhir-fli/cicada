@@ -177,8 +177,9 @@ class VaxSeries {
     List<VaccineContraindication> vaccineContraindications,
     bool evidenceOfImmunity,
   ) {
-    /// A series carrying a minimum age to start cannot be started by a patient
-    /// younger than that age, and so must not recommend anything.
+    /// A series carrying a minimum age to start cannot be *started* by a
+    /// patient younger than that age, and so must not recommend anything —
+    /// but only while it is still unstarted.
     ///
     /// The engine honoured the maximum age to start but never its counterpart,
     /// which arrived with the CDSi 4.61 supporting data. Each series group is
@@ -187,8 +188,19 @@ class VaxSeries {
     /// five-day-old with cystic fibrosis was told to come back at her birth
     /// date plus 75 years. The same gate appears on pneumococcal, HPV, rabies,
     /// meningococcal B and cholera series.
+    ///
+    /// A patient who already holds a valid dose in the series has started it,
+    /// whatever their age now, and the remaining doses must still be
+    /// forecast. Gating those too dropped the dates of a series the engine
+    /// had itself selected as the best patient series, so the group answered
+    /// "Not Complete" with no dates at all: a first Heplisav-B at 18 years
+    /// minus 4 days (`2018-0019`, the dose valid on the four-day grace
+    /// period, series minimum age to start 18 years) and a PPSV23 at 47 in
+    /// the "Pneumococcal 50+" series (`2024-0102`, minimum age to start 50
+    /// years, next dose due at the 50th birthday).
     final String? minAgeToStart = series.selectSeries?.minAgeToStart;
     if (minAgeToStart != null &&
+        evaluatedDoses.isEmpty &&
         assessmentDate < dob.change(minAgeToStart)) {
       shouldRecieveAnotherDose = false;
       forecastReason = ForecastReason.patientHasNotReachedTheMinimumAgeToStart;
