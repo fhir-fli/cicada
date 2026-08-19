@@ -209,3 +209,33 @@ conditional skips are dose-count conditions, not age conditions.
    carries no maximum age? This looks like a gap in the supporting data — the
    infant series has no maximum age to start — rather than a defect in either
    engine.
+
+---
+
+## 7. `2016-UC-0173` and `-0178` — what does the pneumococcal 5-year interval run from?
+
+Both cases are immunocompromised adults in the "Pneumococcal risk 19+ years
+immunocompromised PPSV-PCV-PPSV" series whose most recent dose is a PCV13
+given after their PPSV23:
+
+| case | doses | CDC expects | cicada answers |
+|---|---|---|---|
+| 2016-UC-0173 | PPSV23 2016-08-21, PCV13 2017-08-21 | dose 3 on **2021-08-21** (5y after the PPSV23) | 2022-08-21 (5y after the PCV13) |
+| 2016-UC-0178 | PPSV23 2006-08-03, PPSV23 2011-08-03, PCV13 2012-08-03 | dose 4 on **2016-08-03** (5y after the last PPSV23) | 2017-08-03 (5y after the PCV13) |
+
+CDC's own change note on the first case says "Updated earliest and recommended
+forecast date to 5 years after most previous dose of PPSV23" (v4.1, 2019).
+
+But the current supporting data does not say that. In `AntigenSupportingData-
+Pneumococcal-508.xml` that series' dose 3 carries a single interval —
+`fromPrevious = Y`, minimum and earliest recommended interval 5 years — i.e.
+five years from **whatever dose came last**, which is what cicada forecasts.
+The series was also rebuilt for the PCV20/PCV21 era, and its forecast vaccine
+is now PCV20 or PCV21 rather than a second PPSV23.
+
+**Question for OE:** for an immunocompromised adult who received PPSV23 and
+then PCV13, when is the next pneumococcal dose due under current ACIP — five
+years after the PPSV23, five years after the most recent dose whatever it was,
+or has the PCV20/PCV21 recommendation replaced this sequencing altogether? The
+answer decides whether these two rows are stale or whether the supporting data
+is wrong.
