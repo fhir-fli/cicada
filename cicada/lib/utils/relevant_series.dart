@@ -1,5 +1,10 @@
 import '../cicada.dart';
 
+/// Table 5-5: which of an antigen's series are relevant patient series.
+///
+/// Standard and Evaluation Only series are always relevant; a Risk series is
+/// relevant only when one of the indications that drives it applies to the
+/// patient (Table 5-4).
 List<Series> relevantSeries(
   VaxPatient patient,
   List<Series> oldSeries,
@@ -10,61 +15,73 @@ List<Series> relevantSeries(
       element.requiredGender!.isEmpty ||
       element.requiredGender!.contains(patient.gender));
 
-  /// Keep each series where....
-  series.retainWhere((Series series) {
-    /// If it's a Standard or Evaluation Only Series
-    if (series.seriesType == SeriesType.standard ||
-        series.seriesType == SeriesType.evaluationOnly) {
-      return true;
-    }
+  /// Whether any indication of [s] applies. [requireBeginAge] false drops
+  /// Table 5-4's lower age bound, keeping everything else.
+  bool indicated(Series s, {required bool requireBeginAge}) {
+    final List<String>? indicationList = s.indication
+        ?.map((Indication e) => e.observationCode?.code ?? '')
+        .toList();
 
-    /// If it's a Risk group
-    else if (series.seriesType == SeriesType.risk) {
-      /// Get the list of indications for this series
-      final List<String>? indicationList = series.indication
-          ?.map((Indication e) => e.observationCode?.code ?? '')
-          .toList();
-
-      /// If the indicationList is null, it means there are no conditions to
-      /// meet (this is probably an error in the rules), but either way,
-      /// we don't include this series
-      if (indicationList == null) {
-        return false;
-      } else {
-        /// Because in the above mapping, we inserted a '' if there are any
-        /// nulls, so we remove those
-        indicationList.retainWhere((String e) => e != '');
-
-        /// If that leaves an empty list, there are no indications (again,
-        /// probably an error and we don't include this series)
-        if (indicationList.isEmpty) {
-          return false;
-        }
-
-        /// Otherwise, we look to see if there is an observation from the
-        /// list of the patient's observations, that is also included as
-        /// one of the indications for this series
-        else {
-          final int obsIndex = indicationList.indexWhere((String obsCode) {
-            if (patient.observations.codeIndex(obsCode) == -1) {
-              return false;
-            }
-            // Find the matching indication in this series (by obsCode)
-            final ind = series.indication!.firstWhere(
-              (i) => i.observationCode?.code == obsCode,
-            );
-            return patient.birthdate.changeNullable(ind.beginAge, false)! <=
-                    patient.assessmentDate &&
-                patient.assessmentDate <
-                    patient.birthdate.changeNullable(ind.endAge, true)!;
-          });
-          return obsIndex != -1;
-        }
-      }
-    } else {
+    /// A risk series with no indications cannot be driven by anything (this
+    /// is probably an error in the rules), so it is never relevant.
+    if (indicationList == null) {
       return false;
     }
-  });
 
-  return series;
+    /// The mapping above inserted '' for nulls; drop those.
+    indicationList.retainWhere((String e) => e != '');
+    if (indicationList.isEmpty) {
+      return false;
+    }
+
+    return indicationList.indexWhere((String obsCode) {
+          if (patient.observations.codeIndex(obsCode) == -1) {
+            return false;
+          }
+          final Indication ind = s.indication!.firstWhere(
+            (Indication i) => i.observationCode?.code == obsCode,
+          );
+          final bool beforeEnd = patient.assessmentDate <
+              patient.birthdate.changeNullable(ind.endAge, true)!;
+          if (!requireBeginAge) {
+            return beforeEnd;
+          }
+          return patient.birthdate.changeNullable(ind.beginAge, false)! <=
+                  patient.assessmentDate &&
+              beforeEnd;
+        }) !=
+        -1;
+  }
+
+  bool keep(Series s, {required bool requireBeginAge}) {
+    if (s.seriesType == SeriesType.standard ||
+        s.seriesType == SeriesType.evaluationOnly) {
+      return true;
+    }
+    if (s.seriesType == SeriesType.risk) {
+      return indicated(s, requireBeginAge: requireBeginAge);
+    }
+    return false;
+  }
+
+  final List<Series> strict =
+      series.where((Series s) => keep(s, requireBeginAge: true)).toList();
+  if (strict.isNotEmpty) {
+    return strict;
+  }
+
+  /// Nothing is relevant yet, and the only thing standing between the patient
+  /// and a recommendation is their age: forecast the antigen anyway, from the
+  /// series' own minimum age.
+  ///
+  /// Table 5-4 requires the indication begin age date to be on or before the
+  /// assessment date, and while several series compete for a patient that
+  /// bound is what picks between them — dropping it globally handed a
+  /// three-year-old the "Pneumococcal risk 6-18 years" and "19+ years" series.
+  /// But when it silences the antigen outright, CDC's own data says forecast:
+  /// a child of 8 with laboratory-confirmed dengue living where dengue is
+  /// endemic is told to come back on their ninth birthday (`2022-UC-0001` at 8
+  /// years 11 months and `2022-UC-0005` at 8 years 7 months — two deliberate
+  /// cases, both dated to the birthday), where the engine said nothing at all.
+  return series.where((Series s) => keep(s, requireBeginAge: false)).toList();
 }
