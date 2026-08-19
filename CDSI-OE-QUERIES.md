@@ -150,3 +150,62 @@ infant series for this patient.
 children aged 8–19 months at increased risk, is the qualifying condition
 chronic lung disease **of prematurity** specifically (requiring medical support
 in the 6 months before the second season), or chronic lung disease generally?
+
+---
+
+## 5. `2017-UC-0015` — cholera minimum age, 2 years or 18 years
+
+CDC's 2017 case is a 35-year-old travelling to an area of active cholera
+transmission (observation 008), and expects the first dose to be forecast at
+**18 years** of age (2000-02-17 for a patient born 1982-02-17).
+
+CDSi's current supporting data says **2 years**: `AntigenSupportingData-
+Cholera-508.xml` gives the "Cholera 1-dose series" dose 1 an absolute minimum
+age of 2 years − 4 days and a minimum age of 2 years, which is what cicada
+forecasts (1984-02-17). The case predates that; Vaxchora was licensed for
+adults 18–64 when it was written.
+
+**Question for OE:** what is the current ACIP-recommended minimum age for
+Vaxchora (CVX 174, lyophilized CVD 103-HgR) — 2 years or 18? If it is 2 years,
+CDC's test row is simply stale and cicada matches their own current data.
+
+---
+
+## 6. `2016-UC-0198` — which meningococcal risk series applies to a 39-year-old
+
+**This one we have not resolved, and it is not a data-version question.**
+
+The patient is a 39-year-old microbiologist routinely exposed to *Neisseria
+meningitidis* (observation 050) who also travels to countries where
+meningococcal disease is hyperendemic (observation 164). Both observations are
+active; no doses administered.
+
+Two risk series in the same series group are relevant, and the current
+supporting data gives them:
+
+| series | series priority | minimum age to start | indication ages |
+|---|---|---|---|
+| Meningococcal ACWY risk 2-23 month | **A** | none | 164 from 2 months, no end age |
+| Meningococcal ACWY risk 1-dose series | B | 2 years | 050 from 19 years; 164 from 2 years |
+
+CDC expects earliest and recommended **1979-07-13** — the patient's second
+birthday, i.e. the *1-dose* (priority B) series. cicada answers from the
+**2-23 month** series, forecasting dose 4 at the patient's seventh month of
+life (1978-02-13), because the logic specification's SELECTSCORE-2 makes only
+the highest-priority risk series scorable, and that is priority A.
+
+The infant series carries no maximum age to start and none of its doses carry
+a maximum age, so nothing in the data ages a 39-year-old out of it; its
+conditional skips are dose-count conditions, not age conditions.
+
+**Questions for OE:**
+
+1. For a 39-year-old microbiologist with routine exposure to *N. meningitidis*
+   who also travels to hyperendemic areas, what does ACIP recommend — a single
+   MenACWY dose (with boosters), or the infant 2–23-month multi-dose schedule?
+   (We are confident of the answer; it is worth stating for the record.)
+2. Is there any published CDSi guidance for choosing between two risk series in
+   one series group when the higher-priority series is written for infants and
+   carries no maximum age? This looks like a gap in the supporting data — the
+   infant series has no maximum age to start — rather than a defect in either
+   engine.
