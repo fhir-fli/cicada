@@ -115,9 +115,23 @@ class VaxSeries {
     updateTargetDose(seriesDose);
   }
 
+  /// Records which component of step 6 decided this dose, for the trace.
+  ///
+  /// A dose that fails to count towards a series is the hardest thing to
+  /// diagnose from the outside: the series simply reports one target dose
+  /// fewer, and every later step inherits that. [verdict] names the component
+  /// that decided it — age, interval, vaccine type — so the trace says which.
+  void _traceDose(VaxDose dose, String verdict) => ForecastTrace.current?.log(
+        '6 dose evaluation',
+        '$targetDisease / ${series.seriesName}',
+        'dose=${dose.doseId} given=${dose.dateGiven} '
+            'targetDose=${targetDose + 1} $verdict',
+      );
+
   bool evaluateDoseValidity(SeriesDose seriesDose, VaxDose dose) {
     final bool inadvertent = dose.isInadvertent(seriesDose);
     if (inadvertent) {
+      _traceDose(dose, 'not counted: inadvertent');
       return false;
     }
 
@@ -138,11 +152,13 @@ class VaxSeries {
       // Both age and interval fail. Per CDSi FITS, when the dose is within
       // 4 days of absMinAge (grace period territory) but interval also fails,
       // interval is the primary reason. Otherwise age is primary.
+      _traceDose(dose, 'not counted: age and interval both fail');
       return false;
     }
 
     // Age-only failure
     if (!ageOk) {
+      _traceDose(dose, 'not counted: age');
       return false;
     }
 
@@ -150,19 +166,28 @@ class VaxSeries {
     if (!intervalOk) {
       dose.evalStatus ??= EvalStatus.not_valid;
       dose.evalReason ??= EvalReason.intervalTooShort;
+      _traceDose(dose, 'not counted: interval');
       return false;
     }
 
     // 6.7 Evaluate Live Virus Conflict
     if (dose.isLiveVirusConflict(doses, allPatientDoses: allPatientDoses)) {
+      _traceDose(dose, 'not counted: live virus conflict');
       return false;
     }
 
     // 6.8/6.9 Evaluate Vaccine Type (preferable then allowable)
     if (dose.isPreferredType(seriesDose.preferableVaccine, dob)) {
+      _traceDose(dose, 'counted: preferable vaccine');
       return true;
     }
-    return dose.isAllowedType(seriesDose.allowableVaccine, dob);
+    final bool allowedType = dose.isAllowedType(seriesDose.allowableVaccine, dob);
+    _traceDose(
+        dose,
+        allowedType
+            ? 'counted: allowable vaccine'
+            : 'not counted: vaccine type is neither preferable nor allowable');
+    return allowedType;
   }
 
   void markDoseValid(SeriesDose seriesDose, VaxDose dose) {
