@@ -9,6 +9,40 @@ CDC test suite is otherwise the reference.
 Each entry gives CDC's published row, cicada's answer, our reasoning, and the
 question to put to OE.
 
+## ✅ ADJUDICATED 2026-08-19 — all seven
+
+Grey ran every section through OpenEvidence with ACIP/MMWR citations.
+**cicada is right against current ACIP in six of the seven; the meningococcal
+case is a real defect in cicada.**
+
+| section | verdict | nature |
+|---|---|---|
+| 1. `2016-UC-0130` Tdap year | **cicada** | no ACIP basis for a Tdap dated before conception; CDC cell defective |
+| 1./2. past-due minus-1-day | **cicada** (convention) | ACIP defines no overdue date; it is CDSi's FORECASTDT-3, and CDC applies it elsewhere |
+| 3. orthopox HCP (obs 235) | **recommendation stands → CDSi data defect** | ACIP 2022 still lists HCP caring for orthopox patients (SCDM); report to CDC |
+| 4. RSV chronic lung disease | **cicada / current data** | the criterion is CLD **of prematurity requiring medical support**, not generic CLD |
+| 5. cholera minimum age | **cicada** | ACIP extended CVD 103-HgR to ages 2–17 in Feb 2022; the 18-year row predates it |
+| 6. `2016-UC-0198` meningococcal | 🔴 **CDC row — cicada is clinically wrong** | a 39-year-old microbiologist gets **1 MenACWY dose**, boosted every 5 years; not an infant schedule |
+| 7. pneumococcal 5-year anchor | **cicada** | current ACIP: PCV20/PCV21 ≥5 years after the **last** pneumococcal dose; the PPSV23 anchoring is superseded |
+
+Sources: MMWR — pertussis 67(2) and 69(3); ACOG Committee Opinion 718; JYNNEOS
+71(22); nirsevimab 72(34) with the 2025 child schedule; cholera 71(2);
+meningococcal 69(9) with the 2025 adult schedule; pneumococcal 72(3) and
+74(1).
+
+**Two things to report to CDC**, both supporting-data defects rather than
+engine defects:
+
+1. Observation **235** (healthcare personnel caring for patients infected with
+   more virulent orthopoxviruses) is defined in the schedule supporting data
+   and named by no series in 4.65-508, though ACIP still recommends JYNNEOS
+   pre-exposure vaccination for that group on a shared-clinical-decision-making
+   basis.
+2. The **"Meningococcal ACWY risk 2-23 month" series carries no maximum age to
+   start**, and none of its doses carry a maximum age, so a 39-year-old is
+   scorable in it — and it outranks the adult 1-dose series on series priority.
+   See section 6.
+
 ---
 
 ## 1. `2016-UC-0130` — pregnancy Tdap, forecast dated before the pregnancy
