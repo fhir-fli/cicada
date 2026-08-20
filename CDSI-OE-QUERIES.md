@@ -22,7 +22,7 @@ case is a real defect in cicada.**
 | 3. orthopox HCP (obs 235) | **recommendation stands → CDSi data defect** | ACIP 2022 still lists HCP caring for orthopox patients (SCDM); report to CDC |
 | 4. RSV chronic lung disease | **cicada / current data** | the criterion is CLD **of prematurity requiring medical support**, not generic CLD |
 | 5. cholera minimum age | **cicada** | ACIP extended CVD 103-HgR to ages 2–17 in Feb 2022; the 18-year row predates it |
-| 6. `2016-UC-0198` meningococcal | 🔴 **CDC row — cicada is clinically wrong** | a 39-year-old microbiologist gets **1 MenACWY dose**, boosted every 5 years; not an infant schedule |
+| 6. `2016-UC-0198` meningococcal | 🔴 **CDC row — cicada was clinically wrong** | a 39-year-old microbiologist gets **1 MenACWY dose**, boosted every 5 years; not an infant schedule — **fixed in `228b8935`** |
 | 7. pneumococcal 5-year anchor | **cicada** | current ACIP: PCV20/PCV21 ≥5 years after the **last** pneumococcal dose; the PPSV23 anchoring is superseded |
 
 Sources: MMWR — pertussis 67(2) and 69(3); ACOG Committee Opinion 718; JYNNEOS
@@ -41,7 +41,10 @@ engine defects:
 2. The **"Meningococcal ACWY risk 2-23 month" series carries no maximum age to
    start**, and none of its doses carry a maximum age, so a 39-year-old is
    scorable in it — and it outranks the adult 1-dose series on series priority.
-   See section 6.
+   See section 6. cicada now works around this by preferring, among risk series
+   of *differing* priority in one series group, the one whose applicable
+   indication begins latest in life (`228b8935`); a maximum age to start on the
+   infant series would make the workaround unnecessary.
 
 ---
 
