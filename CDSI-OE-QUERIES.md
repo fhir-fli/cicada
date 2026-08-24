@@ -276,3 +276,55 @@ years after the PPSV23, five years after the most recent dose whatever it was,
 or has the PCV20/PCV21 recommendation replaced this sequencing altogether? The
 answer decides whether these two rows are stale or whether the supporting data
 is wrong.
+
+---
+
+## 8. `2016-UC-0110` — infant MenACWY 4th dose: 6 months after dose 3, or at 12 months of age?
+
+**This case was never triaged.** It failed the condition suite from the start
+and was left out of `CDSI-DISPUTED-CASES.md` because that report's case list was
+typed by hand and this id carries a trailing space (`'2016-UC-0110 '`), so it
+does not survive a copy-paste out of the suite output. The report now derives
+its own list, and the case has been checked at every commit of the defect-fix
+session — it never passed, so nothing we changed caused it.
+
+An infant with anatomical or functional asplenia (observation 160), born
+2015-02-14, given MenACWY-O (CVX 136, MVX NOV) at 2015-04-14, 2015-06-09 and
+2015-08-04; assessed the day of the third dose.
+
+| column | CDC | cicada |
+|---|---|---|
+| series status | Not Complete | Not Complete ✅ |
+| forecast # | 4 | 4 ✅ |
+| **earliest** | **2016-02-04** (dose 3 + 6 months) | **2016-02-14** |
+| recommended | 2016-02-14 (the first birthday) | 2016-02-14 ✅ |
+
+Only the earliest date differs, by ten days, and cicada's is the later — the
+more conservative — of the two.
+
+**Why they differ.** CDC's row is labelled `Forecast_Test_Type: Recommended
+based on interval` and was last touched in v4.2 (2021-06-11): their earliest is
+driven by a six-month interval from dose 3. The supporting data no longer has
+that interval. In 4.65-508 — and identically in 4.64, so this is not a
+regression from the version bump — "Meningococcal ACWY risk 2-23 month" runs to
+seven doses, and:
+
+- dose 4 carries a conditional skip, *"not required if more than 2 doses have
+  been administered between 2 and 7 months OR at least 1 dose on or after 7
+  months"*. This patient's three doses all fall between 2 and 7 months, so it
+  is skipped;
+- dose 5 — the 12-month dose — carries minimum age 12 months and a minimum
+  interval of 12 weeks from the previous dose.
+
+Per FORECASTDTCAN-1 the candidate earliest date is the latest of the **minimum**
+age date and the minimum interval dates (absolute minimums belong to evaluation,
+not forecasting), so it is 2016-02-14 — the first birthday — and the six-month
+interval CDC's row is testing exists nowhere in the current series. cicada's
+answer also matches the ACIP Menveo infant schedule of 2, 4, 6 and 12 months.
+
+**Question for OE:** for an infant with asplenia who completed MenACWY-O at 2, 4
+and 6 months, may the fourth dose be given six months after the third — i.e. ten
+days before the first birthday — or does current ACIP require 12 months of age?
+The answer decides whether CDC's row is simply stale against their own newer
+supporting data, which is what we believe, or whether the data dropped an
+interval it should still carry.
