@@ -48,6 +48,34 @@ engine defects:
 
 ---
 
+## ✅ ADJUDICATED 2026-08-24 — sections 8, 9 and 10
+
+Grey ran the three new sections through OpenEvidence. **cicada is clinically
+correct in all three**; each CDC row is stale against the current supporting
+data, or — in section 10 — testing a patient whose dates contradict its own
+name. No engine change follows from any of them.
+
+| section | verdict | basis |
+|---|---|---|
+| 8. `2016-UC-0110` MenACWY 4th dose | **cicada** — the 4th dose is anchored to **12 months of age**, not to dose 3 + 6 months | asplenia MenACWY-CRM primary series is 2, 4, 6 and 12 months (MMWR 69(9); MenQuadfi label gives 2, 4, 6, 12–18 months). There is no ACIP basis for a dose ten days before the first birthday |
+| 9. HPV, history of sexual abuse (`2016-UC-0079`) | **cicada** — routine, not a risk series | ACIP recommends **routine** HPV from age 9 for this history: a routine-age trigger, not separate dosing. Past the routine start age the child is simply in catch-up (MMWR 65(49)) |
+| 9. HPV, MSM (`2016-UC-0087`, `-0088`) | **cicada** — routine/catch-up, no distinct schedule | HPV "as for all males", catch-up through 26, SCDM 27–45 (MMWR 65(49), 68(32)) |
+| 9. MenB "seeks protection" (`2020-UC-0003`) | **cicada** — SCDM **standard** series, not risk | MenB at 16–23 is shared clinical decision-making; risk-based MenB is reserved for asplenia, complement deficiency or inhibitor use, microbiologists and outbreaks (MMWR 69(9), 73(49)) |
+| 9. contraindication codes (`2016-UC-0203`, `2025-UC-0010`) | **cicada** | 116 and 172 indicate no series; Contraindicated with no forecast is right, and the status already matched CDC |
+| 9. `2016-UC-0032`, `2022-UC-0017` | **cicada** | interval and latest-recommended conventions settled in the earlier batch; the recommended dates already match CDC |
+| 10. `2016-UC-0057` Hib at 5 months | **cicada** — routine infant schedule | the high-risk Hib provision (2 doses 8 weeks apart for 0–1 prior doses) applies **only at 12–59 months** — a catch-up rule that does not begin until the first birthday (MMWR 63(RR-01)). A 5-month-old with one dose continues the routine primary series |
+
+**On the group question in section 9:** current ACIP does **not** define distinct
+risk schedules for these behavioural and exposure groups separate from the
+routine or SCDM recommendation. The rows are stale against CDC's own newer
+supporting data.
+
+Sources: MMWR 69(9) meningococcal · 73(49) MenB-4C · 65(49) and 68(32) HPV ·
+63(RR-01) Hib · MenQuadfi label · ACIP child/adolescent and adult schedules
+(addenda updated 2 July 2025).
+
+---
+
 ## 1. `2016-UC-0130` — pregnancy Tdap, forecast dated before the pregnancy
 
 **CDC's published row** (underlying-conditions workbook v4.6, read from the
@@ -279,7 +307,7 @@ is wrong.
 
 ---
 
-## 8. `2016-UC-0110` — infant MenACWY 4th dose: 6 months after dose 3, or at 12 months of age?
+## 8. ✅ `2016-UC-0110` — infant MenACWY 4th dose: 6 months after dose 3, or at 12 months of age?
 
 **This case was never triaged.** It failed the condition suite from the start
 and was left out of `CDSI-DISPUTED-CASES.md` because that report's case list was
@@ -331,7 +359,7 @@ interval it should still carry.
 
 ---
 
-## 9. Eleven condition rows that ask for a series the supporting data no longer has
+## 9. ✅ Eleven condition rows that ask for a series the supporting data no longer has
 
 Found by classifying every failing case on 2026-08-24. These are **not** engine
 disagreements: in each one cicada follows the supporting data it ships and the
@@ -357,7 +385,7 @@ define a *distinct risk schedule*, or has that group been folded into the
 routine recommendation? If it has, CDC's rows are simply stale against their own
 newer supporting data, which is what we believe.
 
-## 10. `2016-UC-0057` — a row that contradicts its own dates
+## 10. ✅ `2016-UC-0057` — a row that contradicts its own dates
 
 The test name says the patient is **18 months** old; the row's own DOB
 (2014-08-10) and assessment date (2015-01-10) make her **5 months**. She has
