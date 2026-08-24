@@ -9,53 +9,6 @@ cicada implements the CDSi logic specification v4.6 against supporting data 4.65
 
 Source: `cdsi-healthy-childhood-and-adult-test-cases-v4.46.xlsx`, sheet "FITS Exported TestCases".
 
-### 2013-0111
-
-CDC row, every populated column:
-
-```
-CDC_Test_ID              2013-0111
-Test_Case_Name           invalid age dose 3 in midst of others
-DOB                      2025-08-05
-gender                   F
-Series_Status            Not complete
-Date_Administered_1      2025-09-18
-Vaccine_Name_1           PEDIARIX
-CVX_1                    110
-MVX_1                    SKB
-Evaluation_Status_1      Valid
-Date_Administered_2      2025-10-14
-Vaccine_Name_2           PEDIARIX
-CVX_2                    110
-MVX_2                    SKB
-Evaluation_Status_2      Valid
-Date_Administered_3      2025-11-05
-Vaccine_Name_3           PEDIARIX
-CVX_3                    110
-MVX_3                    SKB
-Evaluation_Status_3      Not Valid
-Evaluation_Reason_3      Interval: too Soon
-Date_Administered_4      2026-08-05
-Vaccine_Name_4           PEDIARIX
-CVX_4                    110
-MVX_4                    SKB
-Evaluation_Status_4      Valid
-Forecast_#               4
-Earliest_Date            2027-02-05
-Recommended_Date         2027-02-05
-Past_Due_Date            2027-04-01
-Vaccine_Group            DTAP
-Assessment_Date          2026-08-05
-Evaluation_Test_Type     Interval: Below Absolute Minimum
-Date_Added               2013-01-01
-Date_Updated             2020-08-17
-Forecast_Test_Type       Recommended based on minimum interval from previous dose (catch-up)
-Changed_In_Version       1.0
-General_Description      This test case describes when a child is administered a third dose of Pediarix, at less than 14 weeks - 4 days, but is administered a repeat dose that the dose is valid.  Another dose should be forecast.
-```
-
-**cicada answers:** status `Not Complete`, forecast #`4`, earliest `2027/02/05`, recommended `2027/02/05`, past due `2027/04/01`.
-
 ### 2018-0022
 
 CDC row, every populated column:
@@ -90,42 +43,6 @@ General_Description      This test cases describes when a patient is administere
 ```
 
 **cicada answers:** status `Not Complete`, forecast #`1`, earliest `2026/08/05`, recommended `2026/08/05`, past due `2026/08/05`.
-
-### 2013-0503
-
-CDC row, every populated column:
-
-```
-CDC_Test_ID              2013-0503
-Test_Case_Name           Dose 1 to dose 2 interval 8 wks-5 days
-DOB                      2015-04-15
-gender                   F
-Series_Status            Not complete
-Date_Administered_1      2026-06-15
-Vaccine_Name_1           meningococcal MCV4, unspecified formulation
-CVX_1                    147
-Evaluation_Status_1      Valid
-Date_Administered_2      2026-08-05
-Vaccine_Name_2           meningococcal MCV4, unspecified formulation
-CVX_2                    147
-Evaluation_Status_2      Not Valid
-Evaluation_Reason_2      Interval: too Soon
-Forecast_#               2
-Earliest_Date            2031-04-15
-Recommended_Date         2031-04-15
-Past_Due_Date            2032-05-12
-Vaccine_Group            MCV
-Assessment_Date          2026-08-05
-Evaluation_Test_Type     Interval: Below Absolute Minimum
-Date_Added               2013-01-01
-Date_Updated             2018-04-23
-Forecast_Test_Type       Recommended based on age
-Reason_For_Change        v1.6: An EIPB clarification has resulted in a change to when dose 2 of MCV should be forecasted and validated.  The second dose must come on or after 16 years (- 4 days) of age to be considered valid.
-Changed_In_Version       1.6
-General_Description      This test case describes when dose #2 of a Mening vaccine is administered too early (8 weeks - 5 days after dose #1), that the dose is not valid.
-```
-
-**cicada answers:** status `Not Complete`, forecast #`2`, earliest `2031/04/15`, recommended `2031/04/15`, past due `2032/05/12`.
 
 
 ## Underlying-conditions cases (v4.6 — predate the supporting data)
@@ -238,49 +155,6 @@ Changed_In_Version       4.0
 ```
 
 **cicada answers:** status `Not Complete`, forecast #`3`, earliest `2013/08/05`, recommended `2013/08/05`, past due `2013/08/05`.
-
-### 2016-UC-0061
-
-CDC row, every populated column:
-
-```
-CDC_Test_ID              2016-UC-0061
-Test_Case_Name           Patient is 36 months of age, has anatomical or functional asplenia and has received two previous doses of the Standard Hib vaccine before 12 months of age and a dose of the Hib risk child 2 dose series vaccine.
-DOB                      2013-04-22
-Gender                   M
-Observation_Code_1       160
-Observation_Text_1       Anatomical or functional asplenia
-Series_Status            Complete
-Date_Administered_1      2013-06-10
-Vaccine_Name_1           PRP-T
-CVX_1                    48
-MVX_1                    PMC
-Evaluation_Status_1      Valid
-Series_Type_1            standard
-Date_Administered_2      2013-07-08
-Vaccine_Name_2           PRP-T
-CVX_2                    48
-MVX_2                    PMC
-Evaluation_Status_2      Valid
-Series_Type_2            standard
-Date_Administered_3      2016-05-14
-Vaccine_Name_3           PRP-T
-CVX_3                    48
-MVX_3                    PMC
-Evaluation_Status_3      Valid
-Series_Type_3            risk
-Forecast_#               -
-Vaccine_Group            Hib
-Assessment_Date          2016-05-14
-Evaluation_Test_Type     All Valid: Forecast Test
-Date_added               2016-08-11
-Date_updated             2019-04-25
-Forecast_Test_Type       Not Recommended: Series Complete
-Reason_For_Change        Added description
-Changed_In_Version       4.0
-```
-
-**cicada answers:** status `Not Complete`, forecast #`4`, earliest `2016/07/09`, recommended `2016/07/09`, past due `2016/07/09`.
 
 ### 2016-UC-0079
 
@@ -402,7 +276,7 @@ Changed_In_Version       4.0
 
 **cicada answers:** status `Complete`, forecast #`null`, earliest `null`, recommended `null`, past due `null`.
 
-### 2016-UC-0110 
+### 2016-UC-0110
 
 CDC row, every populated column:
 
