@@ -95,6 +95,49 @@ class VaxDose {
   EvalStatus? evalStatus;
   EvalReason? evalReason;
   int targetDoseSatisfied = -1;
+
+  /// Every evaluation reason that applies to this dose, in the order the
+  /// specification evaluates them.
+  ///
+  /// Table 6-31 sets the evaluation status "with evaluation **reasons**" —
+  /// plural — and the specification never says which one to report when more
+  /// than one applies. [evalReason] therefore cannot be right for every case:
+  /// a MenACWY dose 2 given at 11 years, eight weeks less five days after
+  /// dose 1, fails the 16-year minimum age *and* the minimum interval, and
+  /// CDC's row reports the interval while the engine reports the age
+  /// (`2013-0503`). Installing a precedence rule does not settle it — making
+  /// interval outrank age fixed that case and broke `2013-0034`, where CDC
+  /// reports the age for a dose that fails both by a wide margin.
+  ///
+  /// So the dose carries all of them. [evalReason] is unchanged, and remains
+  /// the single reason reported to callers who want one; this is what a
+  /// comparison against CDC's single column should be made against, because
+  /// their column holds one of these, not the only one.
+  ///
+  /// Derived from the sub-step fields the evaluation has already filled in —
+  /// it reports nothing the engine did not already work out.
+  List<EvalReason> get evalReasons {
+    final List<EvalReason> reasons = <EvalReason>[];
+    void add(EvalReason? reason) {
+      if (reason != null && !reasons.contains(reason)) reasons.add(reason);
+    }
+
+    // 6.3 inadvertent vaccine, 6.4 age, 6.5/6.6 intervals, 6.7 conflict,
+    // 6.8/6.9 preferable and allowable vaccine — the order of Chapter 6.
+    if (inadvertent) add(EvalReason.inadvertentVaccine);
+    if (validAgeReason == ValidAgeReason.tooYoung) add(EvalReason.ageTooYoung);
+    if (validAgeReason == ValidAgeReason.tooOld) add(EvalReason.ageTooOld);
+    if (preferredIntervalReason == IntervalReason.tooShort ||
+        allowedIntervalReason == IntervalReason.tooShort) {
+      add(EvalReason.intervalTooShort);
+    }
+    if (conflict == true) add(EvalReason.liveVirusConflict);
+    if (allowedVaccine == false) add(EvalReason.notPreferableOrAllowable);
+    // Reasons with no sub-step field of their own (expired product, recall,
+    // series already completed, and so on) live only in evalReason.
+    add(evalReason);
+    return reasons;
+  }
   VaxObservations? observations;
 
   VaxDose copyWith({

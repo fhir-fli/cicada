@@ -164,8 +164,11 @@ bool disagrees(
           if (inconsistent(actual)) sawInconsistency = true;
           if (actual.evalStatus == expected.evalStatus) {
             foundStatusMatch = true;
+            // evalReasons, plural, exactly as the suites compare — Table 6-31
+            // sets the status with evaluation reasons and CDC's column holds
+            // one of them.
             if (hasExpectedReason &&
-                actual.evalReason == expected.evalReason) {
+                actual.evalReasons.contains(expected.evalReason)) {
               foundReasonMatch = true;
             }
           }

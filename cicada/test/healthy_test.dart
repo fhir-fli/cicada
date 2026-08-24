@@ -219,9 +219,15 @@ void main() {
 
                   if (actualDose.evalStatus == expectedDose.evalStatus) {
                     foundStatusMatch = true;
-                    actualReasons.add(actualDose.evalReason);
+                    actualReasons.addAll(actualDose.evalReasons);
+                    // Against evalReasons, not evalReason: Table 6-31 sets the
+                    // status "with evaluation reasons", plural, and CDC's
+                    // column holds one of them. A dose failing both the age
+                    // and the interval has both, and which one their row
+                    // records is not something the specification decides.
                     if (hasExpectedReason &&
-                        actualDose.evalReason == expectedDose.evalReason) {
+                        actualDose.evalReasons
+                            .contains(expectedDose.evalReason)) {
                       foundReasonMatch = true;
                     }
                   }
