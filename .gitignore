@@ -4,8 +4,13 @@
 .dart_tool/
 .packages
 build/
-# If you're building an application, you may want to check-in your pubspec.lock
+# Library packages (cicada itself) leave the lock out; the two application
+# packages check theirs in, per dart.dev — an app's lock is the record of what
+# it actually built against. Without it, cicada_generator and cicada_flutter
+# silently sat on fhir_r4 0.7.0 for months while their pubspecs said ^0.8.0.
 pubspec.lock
+!cicada_generator/pubspec.lock
+!cicada_flutter/pubspec.lock
 
 # Directory created by dartdoc
 # If you don't generate documentation locally you can remove this line.
