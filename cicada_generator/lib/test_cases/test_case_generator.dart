@@ -120,8 +120,20 @@ Future<void> _generateTestCases(TestCaseConfig config) async {
 
   // Process each data row
   for (final row in sheet.rows.skip(1)) {
-    // Skip empty rows
-    if (row.every((c) => c == null || c.value.toString().trim().isEmpty)) {
+    // Skip empty rows.
+    //
+    // A cell can exist with a null value — Excel materialises them for
+    // formatting — and `c.value.toString()` on one yields the *string* "null",
+    // which is not empty, so a row of them used to survive this guard. The
+    // conditions workbook carries 439 such ghost rows after its last real
+    // case, and every one became a test case: a patient with no birth date, no
+    // doses, no conditions and the id "null" (see _buildPatient, where
+    // `null.toString()` did the same thing again). The suite named those cases
+    // `case-N`, found no expectations under that name, and asserted nothing —
+    // 439 of the 777 condition "tests" were no-ops, and the headline 752/777
+    // counted every one of them as a pass.
+    if (row.every((c) =>
+        c == null || c.value == null || c.value.toString().trim().isEmpty)) {
       continue;
     }
 
@@ -129,6 +141,13 @@ Future<void> _generateTestCases(TestCaseConfig config) async {
     final rowMap = <String, dynamic>{};
     for (var i = 0; i < headers.length; i++) {
       rowMap[headers[i]] = row.length > i ? row[i]?.value : null;
+    }
+
+    // A row with no case id cannot be compared against anything, so it is not
+    // a test case. Never let one through as the patient id "null".
+    final caseId = rowMap['CDC_Test_ID']?.toString().trim() ?? '';
+    if (caseId.isEmpty || caseId == 'null') {
+      continue;
     }
 
     // Create Patient
@@ -522,7 +541,13 @@ Patient _buildPatient(Map<String, dynamic> row) {
   final dobStr = row['DOB']?.toString() ?? '';
   final dob = dobStr.length >= 10 ? dobStr.substring(0, 10) : dobStr;
   return Patient(
-    id: row['CDC_Test_ID'].toString().toFhirString,
+    // Trimmed: `2016-UC-0110 ` is published with a trailing space, and that
+    // space then reached the NDJSON, the generated expectations and every id
+    // printed by the tools — but not the workbook's own id column, so the case
+    // could not be looked up there. It went untriaged for the whole audit
+    // because the id did not survive a copy-paste. The id is CDC's, the
+    // whitespace is not.
+    id: row['CDC_Test_ID'].toString().trim().toFhirString,
     name: [HumanName(family: row['Test_Case_Name']?.toString().toFhirString)],
     birthDate: dob.isNotEmpty ? FhirDate.fromString(dob) : null,
     gender: genderVal.toLowerCase().contains('f')

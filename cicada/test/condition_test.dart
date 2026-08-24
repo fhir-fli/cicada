@@ -116,7 +116,33 @@ void main() {
 
   group('CDSi condition test cases', () {
     test('loaded ${allParameters.length} test cases', () {
-      expect(allParameters.length, 776);
+      expect(allParameters.length, 337);
+    });
+
+    // Every case must be a real case that this suite actually checks.
+    //
+    // The conditions workbook carries ghost rows after its last real case —
+    // cells that exist with no value — and the generator used to turn each one
+    // into a test case, because `null.toString()` is the string "null": the
+    // empty-row guard did not see them as empty and the patient came out with
+    // the id "null". 439 of the 776 cases loaded here were those stubs. Each
+    // got a test, none matched an expectation key, so each asserted nothing
+    // and passed: the headline 752/777 counted 439 no-ops as passes. Assert
+    // the property that was violated, not just the count.
+    test('every case has an id and expectations to be checked against', () {
+      final List<String> unusable = <String>[];
+      for (int i = 0; i < allParameters.length; i++) {
+        final String id = _patientId(allParameters[i], i);
+        if (id.startsWith('case-')) {
+          unusable.add('index $i has no patient id');
+        } else if (testConditionForecasts[id] == null &&
+            testConditionDoses[id] == null) {
+          unusable.add('$id has no expected doses or forecasts');
+        }
+      }
+      expect(unusable, isEmpty,
+          reason: '${unusable.length} of ${allParameters.length} cases assert '
+              'nothing:\n${unusable.take(20).join("\n")}');
     });
 
     for (int i = 0; i < allParameters.length; i++) {

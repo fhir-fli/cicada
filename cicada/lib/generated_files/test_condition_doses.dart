@@ -1716,9 +1716,9 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'seriesType': 'risk',
     },
   ],
-  '2016-UC-0110 ': <Map<String, Object>>[
+  '2016-UC-0110': <Map<String, Object>>[
     <String, Object>{
-      'doseId': '2016-UC-0110 _dose1',
+      'doseId': '2016-UC-0110_dose1',
       'dateGiven': '2015/04/14',
       'cvx': '136',
       'mvx': 'NOV',
@@ -1730,7 +1730,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'seriesType': 'risk',
     },
     <String, Object>{
-      'doseId': '2016-UC-0110 _dose2',
+      'doseId': '2016-UC-0110_dose2',
       'dateGiven': '2015/06/09',
       'cvx': '136',
       'mvx': 'NOV',
@@ -1742,7 +1742,7 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'seriesType': 'risk',
     },
     <String, Object>{
-      'doseId': '2016-UC-0110 _dose3',
+      'doseId': '2016-UC-0110_dose3',
       'dateGiven': '2015/08/04',
       'cvx': '136',
       'mvx': 'NOV',
@@ -6757,5 +6757,4 @@ final Map<String, List<Map<String, Object>>> testConditionDoses =
       'seriesType': 'risk',
     },
   ],
-  'null': <Map<String, Object>>[],
 };

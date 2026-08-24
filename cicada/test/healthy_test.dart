@@ -143,7 +143,25 @@ void main() {
 
   group('CDSi healthy childhood and adult test cases', () {
     test('loaded ${allParameters.length} test cases', () {
-      expect(allParameters.length, greaterThan(1000));
+      expect(allParameters.length, 1064);
+    });
+
+    // Same guard as condition_test.dart: a case that matches no expectation key
+    // asserts nothing and passes regardless of what the engine answers. This
+    // suite has never had one, and must not acquire one.
+    test('every case has an id and expectations to be checked against', () {
+      final List<String> unusable = <String>[];
+      for (int i = 0; i < allParameters.length; i++) {
+        final String id = _patientId(allParameters[i], i);
+        if (id.startsWith('case-')) {
+          unusable.add('index $i has no patient id');
+        } else if (testForecasts[id] == null && testDoses[id] == null) {
+          unusable.add('$id has no expected doses or forecasts');
+        }
+      }
+      expect(unusable, isEmpty,
+          reason: '${unusable.length} of ${allParameters.length} cases assert '
+              'nothing:\n${unusable.take(20).join("\n")}');
     });
 
     for (int i = 0; i < allParameters.length; i++) {

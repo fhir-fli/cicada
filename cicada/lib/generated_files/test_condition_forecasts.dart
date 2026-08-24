@@ -843,7 +843,7 @@ final Map<String, List<Map<String, String>>> testConditionForecasts =
       'recommendedDate': '2015/08/14',
     },
   ],
-  '2016-UC-0110 ': <Map<String, String>>[
+  '2016-UC-0110': <Map<String, String>>[
     <String, String>{
       'vaccineGroup': 'Meningococcal',
       'seriesStatus': 'Not Complete',
