@@ -9,117 +9,6 @@ cicada implements the CDSi logic specification v4.6 against supporting data 4.65
 
 Source: `cdsi-healthy-childhood-and-adult-test-cases-v4.46.xlsx`, sheet "FITS Exported TestCases".
 
-### 2018-0019
-
-CDC row, every populated column:
-
-```
-CDC_Test_ID              2018-0019
-Test_Case_Name           Hep B: Patient is 18 years - 4 days with first dose of Heplisav
-DOB                      2008-08-09
-gender                   F
-Series_Status            Not complete
-Date_Administered_1      2026-08-05
-Vaccine_Name_1           HepB-CpG
-CVX_1                    189
-Evaluation_Status_1      Valid
-Forecast_#               2
-Earliest_Date            2026-09-02
-Recommended_Date         2026-09-02
-Past_Due_Date            2026-09-29
-Vaccine_Group            HepB
-Assessment_Date          2026-08-05
-Evaluation_Test_Type     Interval: At Absolute Minimum
-Date_Added               2018-04-12
-Date_Updated             2020-06-18
-Forecast_Test_Type       Recommended based on interval
-Changed_In_Version       3.4
-General_Description      This test case describes when a patient is administered the first dose of the Hep B (Heplisav) vaccine at 18 years - 4 days, that the dose is considered to be valid.
-```
-
-**cicada answers:** status `Not Complete`, forecast #`2`, earliest `null`, recommended `null`, past due `null`.
-
-### 2024-0102
-
-CDC row, every populated column:
-
-```
-CDC_Test_ID              2024-0102
-Test_Case_Name           Patient is 47 years of age and was administered a previous dose of PPSV23
-DOB                      1978-12-05
-gender                   F
-Series_Status            Not complete
-Date_Administered_1      2025-12-05
-Vaccine_Name_1           PNEUMOVAX 23
-CVX_1                    33
-MVX_1                    MSD
-Evaluation_Status_1      Valid
-Forecast_#               2
-Earliest_Date            2028-12-05
-Recommended_Date         2028-12-05
-Vaccine_Group            PCV
-Assessment_Date          2026-08-05
-Evaluation_Test_Type     All Valid: Forecast Test
-Date_Added               2024-12-10
-Date_Updated             2024-12-12
-Forecast_Test_Type       Recommended based on age
-Changed_In_Version       4.41
-General_Description      This test case describes when a patient that is 47 years of age and was administered a previous dose of PPSV23 that the dose is valid.  Another dose should be forecast.
-```
-
-**cicada answers:** status `Not Complete`, forecast #`2`, earliest `null`, recommended `null`, past due `null`.
-
-### 2023-0034
-
-CDC row, every populated column:
-
-```
-CDC_Test_ID              2023-0034
-Test_Case_Name           Patient is an infant born in April with an assessment date in December and hasn't received a RSV vaccine
-DOB                      2025-04-01
-gender                   M
-Series_Status            Aged out
-Vaccine_Group            RSV
-Assessment_Date          2025-12-01
-Evaluation_Test_Type     All Valid: Forecast Test
-Date_Added               2023-06-12
-Date_Updated             2025-08-04
-Forecast_Test_Type       Not Recommended: Aged Out
-Reason_For_Change        v4.44 Rolled test case Seasonal Recommendation Dates forward from 2024-2025 to 2025-2026.
-v4.37 Rolled test case Seasonal Recommendation Dates forward from 2023-2024 to 2024-2025.
-Changed_In_Version       4.44
-General_Description      This test case describes that when an infant is born in April with an assessment date in December that a RSV vaccine should not be forecast as the patient is now 8 months old.
-```
-
-**cicada answers:** status `Not Complete`, forecast #`1`, earliest `null`, recommended `null`, past due `null`.
-
-### 2025-0009
-
-CDC row, every populated column:
-
-```
-CDC_Test_ID              2025-0009
-Test_Case_Name           Patient is 49 years of age and has been administered a dose of the RSV (Abrysvo) vaccine
-DOB                      1977-03-25
-gender                   F
-Series_Status            Complete
-Date_Administered_1      2026-08-05
-Vaccine_Name_1           ABRYSVO
-CVX_1                    305
-MVX_1                    PFR
-Evaluation_Status_1      Valid
-Vaccine_Group            RSV
-Assessment_Date          2026-08-05
-Evaluation_Test_Type     All Valid: Forecast Test
-Date_Added               2025-07-15
-Date_Updated             2025-07-17
-Forecast_Test_Type       Not recommended: series complete
-Changed_In_Version       4.44
-General_Description      This test case describes when a patient that is 49 years of age and has been administered a dose of the RSV (Abrysvo) vaccine, that the dose is valid.  The series is complete.
-```
-
-**cicada answers:** status `Not Complete`, forecast #`null`, earliest `null`, recommended `null`, past due `null`.
-
 ### 2013-0111
 
 CDC row, every populated column:
@@ -513,33 +402,51 @@ Changed_In_Version       4.0
 
 **cicada answers:** status `Complete`, forecast #`null`, earliest `null`, recommended `null`, past due `null`.
 
-### 2016-UC-0092
+### 2016-UC-0110 
 
 CDC row, every populated column:
 
 ```
-CDC_Test_ID              2016-UC-0092
-Test_Case_Name           Patient is 6 months of age and plans to travel with parent from the U.S. for international travel and has not received the Measles (MMR) vaccine.
-DOB                      2016-02-28
-Gender                   F
-Observation_Code_1       048
-Observation_Text_1       Travelling Internationally
+CDC_Test_ID              2016-UC-0110
+Test_Case_Name           Patient is an  infant with anatomical or functional asplenia and has receive the third  dose of the Meningococcal ACWY vaccine.
+DOB                      2015-02-14
+Gender                   M
+Observation_Code_1       160
+Observation_Text_1       Anatomical or functional asplenia
 Series_Status            Not Complete
-Forecast_#               1
-Earliest_Date            2016-08-28
-Recommended_Date         2016-08-28
-Past_Due_Date            2017-02-27
-Vaccine_Group            MMR
-Assessment_Date          2016-08-28
-Evaluation_Test_Type     No Doses Administered
-Date_added               2016-08-28
-Date_updated             2019-04-25
-Forecast_Test_Type       Recommended based on Condition
-Reason_For_Change        added description.
-Changed_In_Version       4.0
+Date_Administered_1      2015-04-14
+Vaccine_Name_1           Meningococcal, MCV4O
+CVX_1                    136
+MVX_1                    NOV
+Evaluation_Status_1      Valid
+Series_Type_1            risk
+Date_Administered_2      2015-06-09
+Vaccine_Name_2           Meningococcal, MCV4O
+CVX_2                    136
+MVX_2                    NOV
+Evaluation_Status_2      Valid
+Series_Type_2            risk
+Date_Administered_3      2015-08-04
+Vaccine_Name_3           Meningococcal, MCV4O
+CVX_3                    136
+MVX_3                    NOV
+Evaluation_Status_3      Valid
+Series_Type_3            risk
+Forecast_#               4
+Earliest_Date            2016-02-04
+Recommended_Date         2016-02-14
+Administrative_Guidance  If MenACWY-D is used, it should be administered at least 4 weeks after completion of all PCV doses.
+Vaccine_Group            Meningococcal
+Assessment_Date          2015-08-04
+Evaluation_Test_Type     All Valid: Forecast Test
+Date_added               2016-09-08
+Date_updated             2021-06-11
+Forecast_Test_Type       Recommended based on interval
+Reason_For_Change        Updated the Recommended Date
+Changed_In_Version       4.2
 ```
 
-**cicada answers:** status `Not Complete`, forecast #`1`, earliest `2017/02/28`, recommended `2017/02/28`, past due `2017/02/28`.
+**cicada answers:** status `Not Complete`, forecast #`4`, earliest `2016/02/14`, recommended `2016/02/14`, past due `2016/02/14`.
 
 ### 2016-UC-0130
 
@@ -572,97 +479,7 @@ v4.0: added description
 Changed_In_Version       4.5
 ```
 
-**cicada answers:** status `Not Complete`, forecast #`1`, earliest `1995/06/23`, recommended `1995/06/23`, past due `1995/06/23`.
-
-### 2016-UC-0131
-
-CDC row, every populated column:
-
-```
-CDC_Test_ID              2016-UC-0131
-Test_Case_Name           Patient is pregnant, at 27 weeks of gestation, and has received a Tdap
-DOB                      1988-06-23
-Gender                   F
-Observation_Code_1       007
-Observation_Text_1       Pregnant
-Observation_Code_2       170
-Observation_Text_2       Onset of pregnancy
-Observation_Date_2       2016-08-22
-Series_Status            Complete
-Date_Administered_1      2017-03-01
-Vaccine_Name_1           Tdap
-CVX_1                    115
-MVX_1                    SKB
-Evaluation_Status_1      Valid
-Series_Type_1            risk
-Forecast_#               -
-Administrative_Guidance  Administer during each pregnancy (preferably during 27 to 36 weeks’ gestation) regardless of interval since prior Td or Tdap vaccination.
-Vaccine_Group            DTaP
-Assessment_Date          2017-03-01
-Evaluation_Test_Type     All Valid: Forecast Test
-Date_added               2016-08-23
-Date_updated             2019-03-28
-Forecast_Test_Type       Not Recommended: Series Complete
-Reason_For_Change        added description
-Changed_In_Version       4.0
-```
-
-**cicada answers:** status `Not Complete`, forecast #`2`, earliest `2017/03/01`, recommended `2017/03/01`, past due `2017/03/29`.
-
-### 2016-UC-0133
-
-CDC row, every populated column:
-
-```
-CDC_Test_ID              2016-UC-0133
-Test_Case_Name           Patient is a laboratory worker who handles specimens that might contain Polio and has completed a Polio standard dose series and the additional risk dose.
-DOB                      1977-11-23
-Gender                   M
-Observation_Code_1       054
-Observation_Text_1       Laboratory workers who handle specimens that might contain polioviruses
-Series_Status            Complete
-Date_Administered_1      1978-01-23
-Vaccine_Name_1           IPV
-CVX_1                    10
-MVX_1                    PMC
-Evaluation_Status_1      Valid
-Series_Type_1            standard
-Date_Administered_2      1978-02-20
-Vaccine_Name_2           IPV
-CVX_2                    10
-MVX_2                    PMC
-Evaluation_Status_2      Valid
-Series_Type_2            standard
-Date_Administered_3      1978-11-23
-Vaccine_Name_3           IPV
-CVX_3                    10
-MVX_3                    PMC
-Evaluation_Status_3      Valid
-Series_Type_3            standard
-Date_Administered_4      1982-02-02
-Vaccine_Name_4           IPV
-CVX_4                    10
-MVX_4                    PMC
-Evaluation_Status_4      Valid
-Series_Type_4            standard
-Date_Administered_5      2016-04-04
-Vaccine_Name_5           IPV
-CVX_5                    10
-MVX_5                    PMC
-Evaluation_Status_5      Valid
-Series_Type_5            standard
-Forecast_#               -
-Vaccine_Group            IPOL
-Assessment_Date          2016-04-04
-Evaluation_Test_Type     All Valid: Forecast Test
-Date_added               2016-08-19
-Date_updated             2019-01-15
-Forecast_Test_Type       Not Recommended: Series Complete
-Reason_For_Change        Updated test case description and first dose administration to match more closely to the recommendations for adults at risk for polio and added description
-Changed_In_Version       4.0
-```
-
-**cicada answers:** status `Not Complete`, forecast #`6`, earliest `2016/10/04`, recommended `2016/10/04`, past due `2017/04/03`.
+**cicada answers:** status `Not Complete`, forecast #`1`, earliest `2017/02/27`, recommended `2017/02/27`, past due `2017/04/30`.
 
 ### 2016-UC-0153
 
@@ -823,35 +640,6 @@ Changed_In_Version       4.5
 
 **cicada answers:** status `Not Complete`, forecast #`4`, earliest `2017/08/03`, recommended `2017/08/03`, past due `2017/08/03`.
 
-### 2016-UC-0198
-
-CDC row, every populated column:
-
-```
-CDC_Test_ID              2016-UC-0198
-Test_Case_Name           Patient is 39 years of age,  a microbiologist who is frequently exposed to Neisseria meningitidis, and  who plans to travel to countries where meningococcal disease is endemic.
-DOB                      1977-07-13
-Gender                   F
-Observation_Code_1       050
-Observation_Text_1       Microbiologists routinely exposed to Neisseria meningitidis
-Observation_Code_2       164
-Observation_Text_2       Travel to or are residents of countries in which meningococcal disease is hyperendemic or epidemic
-Series_Status            Not Complete
-Forecast_#               1
-Earliest_Date            1979-07-13
-Recommended_Date         1979-07-13
-Vaccine_Group            Meningococcal
-Assessment_Date          2016-08-02
-Evaluation_Test_Type     No Doses Administered
-Date_added               2016-08-02
-Date_updated             2019-03-14
-Forecast_Test_Type       Recommended based on Condition
-Reason_For_Change        Updated to reflect an Earliest and Recommended data of 07/13/79,07/13/1979, added description.
-Changed_In_Version       4.0
-```
-
-**cicada answers:** status `Not Complete`, forecast #`1`, earliest `1977/07/13`, recommended `1978/02/13`, past due `1977/07/13`.
-
 ### 2016-UC-0203
 
 CDC row, every populated column:
@@ -949,60 +737,6 @@ Changed_In_Version       4.5
 ```
 
 **cicada answers:** status `Not Complete`, forecast #`3`, earliest `2019/02/01`, recommended `2019/02/01`, past due `2019/02/01`.
-
-### 2022-UC-0001
-
-CDC row, every populated column:
-
-```
-CDC_Test_ID              2022-UC-0001
-Test_Case_Name           Patient is almost 9 years of age and has a positive test result for Dengue
-DOB                      2013-02-12
-Gender                   M
-Observation_Code_1       211
-Observation_Text_1       Evidence of previous dengue infection and living in areas where dengue is endemic
-Observation_Date_1       2022-01-03
-Series_Status            Not Complete
-Forecast_#               1
-Earliest_Date            2022-02-12
-Recommended_Date         2022-02-12
-Vaccine_Group            Dengue
-Assessment_Date          2022-01-04
-Evaluation_Test_Type     No Doses Administered
-Date_added               2022-01-04
-Date_updated             2022-01-04
-Forecast_Test_Type       Recommended based on Condition
-Changed_In_Version       4.4
-```
-
-**cicada produces no forecast for Dengue.**
-
-### 2022-UC-0005
-
-CDC row, every populated column:
-
-```
-CDC_Test_ID              2022-UC-0005
-Test_Case_Name           Patient is 8 years of age and has a positive test result for Dengue.
-DOB                      2013-07-10
-Gender                   F
-Observation_Code_1       211
-Observation_Text_1       Evidence of previous dengue infection and living in areas where dengue is endemic
-Observation_Date_1       2022-01-14
-Series_Status            Not Complete
-Forecast_#               1
-Earliest_Date            2022-07-10
-Recommended_Date         2022-07-10
-Vaccine_Group            Dengue
-Assessment_Date          2022-02-18
-Evaluation_Test_Type     No Doses Administered
-Date_added               2022-01-14
-Date_updated             2022-01-14
-Forecast_Test_Type       Recommended based on Condition
-Changed_In_Version       4.4
-```
-
-**cicada produces no forecast for Dengue.**
 
 ### 2022-UC-0017
 
@@ -1135,7 +869,7 @@ Forecast_Test_Type       Recommended based on Condition
 Changed_In_Version       4.5
 ```
 
-**cicada answers:** status `Not Complete`, forecast #`1`, earliest `null`, recommended `null`, past due `null`.
+**cicada answers:** status `Aged Out`, forecast #`null`, earliest `null`, recommended `null`, past due `null`.
 
 ### 2023-UC-0048
 
@@ -1161,7 +895,7 @@ Forecast_Test_Type       Recommended based on Condition
 Changed_In_Version       4.5
 ```
 
-**cicada answers:** status `Not Complete`, forecast #`1`, earliest `null`, recommended `null`, past due `null`.
+**cicada answers:** status `Aged Out`, forecast #`null`, earliest `null`, recommended `null`, past due `null`.
 
 ### 2023-UC-0050
 
@@ -1194,7 +928,7 @@ Forecast_Test_Type       Recommended based on interval
 Changed_In_Version       4.5
 ```
 
-**cicada answers:** status `Not Complete`, forecast #`1`, earliest `null`, recommended `null`, past due `null`.
+**cicada answers:** status `Aged Out`, forecast #`null`, earliest `null`, recommended `null`, past due `null`.
 
 ### 2023-UC-0051
 
