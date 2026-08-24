@@ -408,6 +408,31 @@ CDC's row is testing the 18-month patient its name describes rather than the
 
 ---
 
+## 11. 🔴 `2016-UC-0153` — ADJUDICATED AGAINST cicada, 2026-08-24
+
+**OE ruled for CDC's row.** ACIP is explicit that interruption of the schedule
+"does not require reinstitution of the entire series or the addition of extra
+doses" (MMWR 71(37)) — the dose given at 4 months **counts**. An incompletely
+vaccinated high-risk child aged 24–71 months is **caught up now**, on the
+catch-up interval from her most recent dose; she does not restart at 24 months
+and does not wait for it. Her remaining course is 2 more PCV doses ≥8 weeks
+apart, then PPSV23 (or a single PCV20 in lieu) ≥8 weeks after the last PCV.
+
+🔑 **The defect:** cicada treats the 2–5-year risk series as *unstarted*, because
+her infant dose falls below that series' 2-year minimum age, and lets that
+unstarted series set the vaccine group's dates — deferring to her second
+birthday. The aggregation already knows this is a hazard: where best patient
+series of mixed type are blended it computes the **dose number** from the union
+of valid doses across all of them, precisely because "the risk series may not see
+childhood doses", and then still takes the risk series for the **dates**. So the
+history carries into the count and not into the schedule.
+
+**This is not a stale-data case like section 9.** Do not conform CDC's exact
+interval without checking it, but the pathway is theirs: the next dose is due on
+catch-up from the most recent dose, not at the second birthday.
+
+---
+
 ## 11. `2016-UC-0153` — a 3-year-old with a cochlear implant and one infant PCV dose
 
 The last of the failing cases never put to OE. A child born 2013-01-08 with
