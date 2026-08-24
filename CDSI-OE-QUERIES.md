@@ -405,3 +405,41 @@ had one Hib dose — is the next dose due 4 weeks later on the routine infant
 schedule, or should she wait until 12 months? We believe 4 weeks, and that
 CDC's row is testing the 18-month patient its name describes rather than the
 5-month-old its dates describe.
+
+---
+
+## 11. `2016-UC-0153` — a 3-year-old with a cochlear implant and one infant PCV dose
+
+The last of the failing cases never put to OE. A child born 2013-01-08 with
+**cochlear implants** (observation 011) received a single PCV13 (CVX 133) on
+2013-05-08, at 4 months of age, and is **assessed on 2016-02-12, aged 3 years
+1 month**. Both candidate answers are therefore dates in the past; the question
+is which schedule she is on now.
+
+| | date | what it is |
+|---|---|---|
+| CDC's row | **2013-07-03** | her infant dose plus 8 weeks — the next dose of the routine infant PCV series |
+| cicada | **2015-01-08** | her **second birthday** — the start of the 2-to-5-year high-risk series |
+
+**Why cicada answers that.** Two patient series survive selection. The standard
+"Pneumococcal 4-dose series" counted her infant dose and forecasts its next
+target dose; the risk series *"Pneumococcal risk 2-5 years Chronic Medical
+Conditions PCV-PCV-PPSV"* is indicated by observation 011 and carries a minimum
+age to start of **2 years** (maximum 6), with dose 1 at an absolute minimum age
+of 2 years and dose 2 eight weeks later. Her single infant dose does not count
+in that series — it was given at 4 months, below its 2-year minimum — so the
+series is unstarted and its first dose is dated to her second birthday. Where a
+risk series still needs a dose, the vaccine group forecast takes it, so the
+group answers 2015-01-08.
+
+Neither answer is a defect in arithmetic: CDC's is exactly 8 weeks after her
+infant dose, cicada's is exactly her second birthday, and each follows the
+series it comes from.
+
+**Question for OE:** a child with a cochlear implant who received one PCV13 at 4
+months and is now 3 years old — does current ACIP have her complete the routine
+infant PCV catch-up (the next dose 8 weeks after the first), or does she move to
+the 2-to-5-year high-risk schedule for cochlear implants, whose first dose
+cannot be given before 24 months? The answer decides whether CDC's row is stale
+in the same way as the eleven in section 9, or whether cicada is choosing the
+wrong series for an incompletely vaccinated high-risk child.
