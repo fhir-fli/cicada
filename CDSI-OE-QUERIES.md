@@ -427,9 +427,41 @@ of valid doses across all of them, precisely because "the risk series may not se
 childhood doses", and then still takes the risk series for the **dates**. So the
 history carries into the count and not into the schedule.
 
-**This is not a stale-data case like section 9.** Do not conform CDC's exact
-interval without checking it, but the pathway is theirs: the next dose is due on
-catch-up from the most recent dose, not at the second birthday.
+⚠️ **The premise OE was given was mine, and it was incomplete — reopen before
+acting.** Section 11 below said her infant dose "does not count" in the risk
+series. That is true of *satisfying a target dose* and false of the interval,
+and the difference decides the case. Measured in the data and the trace:
+
+- Her infant dose **is** evaluated in the risk series (Not Valid, too young) and
+  is **not** discarded.
+- That series' dose 1 carries an interval `fromPrevious: N`,
+  `fromMostRecent: "133; 215; 216"` — PCV13, PCV15, PCV20 — with a minimum
+  interval of 8 weeks. It resolves **to her infant dose**, giving
+  2013-05-08 + 8 weeks = **2013-07-03, which is exactly CDC's date.** cicada
+  anchors to the prior dose, as ACIP requires.
+- The same dose 1 also carries `absMinAge`, `minAge` and `earliestRecAge` of
+  **2 years**, with no grace period.
+- FORECASTDTCAN-1 takes the **latest** of the minimum age date and the minimum
+  interval dates. 2015-01-08 is later than 2013-07-03, so the age floor wins.
+
+So cicada is not deferring her out of a catch-up: it is applying a two-year
+minimum age that **CDC's own supporting data puts on that dose**, and CDC's row
+reports the interval date while ignoring it. At the assessment date she is 3
+years old, so both answers mean the same thing clinically — overdue, vaccinate
+now — and they differ only in the earliest date reported.
+
+Conforming to CDC's row would mean ignoring a stated absolute minimum age, which
+FORECASTDTCAN-1 does not permit. **No engine change is being made on this
+evidence.**
+
+**Sharpened question for OE:** given that CDC's own 4.65-508 data sets an
+absolute minimum age of 2 years on the first dose of the
+"Pneumococcal risk 2-5 years Chronic Medical Conditions PCV-PCV-PPSV" series —
+is that 2-year floor correct under current ACIP for a child with a cochlear
+implant who already has a countable infant PCV dose, or should the catch-up dose
+be available at 8 weeks after the prior dose regardless of age? If the floor is
+correct, CDC's test row contradicts CDC's supporting data. If it is not, the
+supporting data is the thing to report.
 
 ---
 
