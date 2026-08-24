@@ -309,7 +309,6 @@ class VaxSeries {
 
   void evaluateConditionalSkip({VaxDate? assessmentDate}) {
     assessmentDate ??= VaxDate.now();
-    _forecastMode = true;
     while (targetDose < (series.seriesDose?.length ?? 0)) {
       final SeriesDose seriesDose = series.seriesDose![targetDose];
 
@@ -338,7 +337,6 @@ class VaxSeries {
         break;
       }
     }
-    _forecastMode = false;
   }
 
   bool canSkip(
@@ -365,7 +363,7 @@ class VaxSeries {
     final bool andLogic = set_.conditionLogic?.toLowerCase() == 'and';
     final List<bool> conditionResults = set_.condition
             ?.map((VaxCondition condition) =>
-                evaluateCondition(condition, evalDate, set_))
+                evaluateCondition(condition, evalDate, set_, skipContext))
             .toList() ??
         <bool>[];
     return andLogic
@@ -373,8 +371,8 @@ class VaxSeries {
         : conditionResults.any((bool res) => res);
   }
 
-  bool evaluateCondition(
-      VaxCondition condition, VaxDate evalDate, VaxSet set_) {
+  bool evaluateCondition(VaxCondition condition, VaxDate evalDate, VaxSet set_,
+      SkipContext skipContext) {
     switch (condition.conditionType?.toLowerCase()) {
       case 'age':
         return skipByAge(condition, evalDate);
@@ -383,11 +381,12 @@ class VaxSeries {
       case 'interval':
         return skipByInterval(condition, evalDate);
       case 'vaccine count by age':
-        return skipByCount(condition, dob, true);
+        return skipByCount(condition, dob, true, evalDate, skipContext);
       case 'vaccine count by date':
-        return skipByCount(condition, evalDate, false);
+        return skipByCount(
+            condition, evalDate, false, evalDate, skipContext);
       case 'vaccine count by date and age':
-        return skipByCountDateAndAge(condition);
+        return skipByCountDateAndAge(condition, evalDate, skipContext);
       default:
         return false;
     }
@@ -436,7 +435,8 @@ class VaxSeries {
     }
   }
 
-  bool skipByCountDateAndAge(VaxCondition condition) {
+  bool skipByCountDateAndAge(
+      VaxCondition condition, VaxDate referenceDate, SkipContext skipContext) {
     final VaxDate? startDate = condition.startDate == null
         ? dob.changeNullable(condition.beginAge, false)
         : VaxDate.fromString(condition.startDate!, true);
@@ -446,18 +446,67 @@ class VaxSeries {
     final VaxDate? ageEndDate = dob.changeNullable(condition.endAge, true);
     final List<int> types = parseTypes(condition.vaccineTypes);
     final int totalCount = countVaccinesDateAndAge(
-        types, startDate, endDate, ageEndDate, condition.doseType);
+        types, startDate, endDate, ageEndDate, condition.doseType,
+        referenceDate, skipContext);
     return evaluateCountLogic(
         totalCount, condition.doseCountLogic, condition.doseCount);
   }
 
+  /// The doses a conditional skip counts, per CONDSKIP-1.
+  ///
+  /// CONDSKIP-1 counts *the patient's vaccine doses administered* — not the
+  /// doses this series happens to have evaluated — where the vaccine type is
+  /// one of the conditional skip vaccine types, the date administered falls
+  /// inside the skip's age and date windows, and the evaluation status is
+  /// 'Valid' when the dose type is 'Valid' or any status when it is 'Total'.
+  ///
+  /// This used to widen to all patient doses only while forecasting; while
+  /// evaluating it saw just this series' own evaluated doses. So an asplenic
+  /// child's two infant Hib doses could not satisfy "2 or more doses before 12
+  /// months" (`2016-UC-0061`): they had failed the risk series' own 12-month
+  /// minimum age, so the series had evaluated neither and counted 0.
+  ///
+  /// Two bounds keep it honest, and both are load-bearing — measured, each one
+  /// alone is worse than doing nothing:
+  ///
+  /// - **The antigen.** Table 6-9: where a condition names no vaccine types,
+  ///   "any vaccine valid for the antigen is permitted". `allPatientDoses` is
+  ///   every dose the patient ever had, so without this a Hib or pneumococcal
+  ///   skip counts their DTaP, HepB and polio doses too. An earlier attempt
+  ///   without this filter broke 11 cases.
+  /// - **The reference date**, which CONDSKIP-2 defines as the date
+  ///   administered of the dose being evaluated, or the assessment date when
+  ///   forecasting. Counting doses given after it means deciding whether to
+  ///   skip a dose using doses that did not exist yet. Unbounded — antigen
+  ///   filter and all — that broke 21 cases while fixing 1.
+  ///
+  /// Forecasting is unaffected: there the reference date is the assessment
+  /// date, so every past dose still counts, as it did before.
+  ///
+  /// A 'Valid' count still comes from this series' evaluated doses: "valid"
+  /// has no meaning except with respect to a patient series.
+  List<VaxDose> conditionalSkipSource(List<int> types, DoseType? doseType,
+      VaxDate referenceDate, SkipContext skipContext) {
+    if (doseType != DoseType.total || allPatientDoses.isEmpty) {
+      return evaluatedDoses;
+    }
+    final bool evaluating = skipContext == SkipContext.evaluation;
+    return allPatientDoses
+        .where((VaxDose dose) =>
+            (evaluating
+                ? dose.dateGiven < referenceDate
+                : dose.dateGiven <= referenceDate) &&
+            (types.isNotEmpty ||
+                dose.antigens.any((String antigen) =>
+                    antigen.toLowerCase() == targetDisease.toLowerCase())))
+        .toList();
+  }
+
   int countVaccinesDateAndAge(List<int> types, VaxDate? startDate,
-      VaxDate? endDate, VaxDate? ageEndDate, DoseType? doseType) {
-    final List<VaxDose> source = doseType == DoseType.total &&
-            _forecastMode &&
-            allPatientDoses.isNotEmpty
-        ? allPatientDoses
-        : evaluatedDoses;
+      VaxDate? endDate, VaxDate? ageEndDate, DoseType? doseType,
+      VaxDate referenceDate, SkipContext skipContext) {
+    final List<VaxDose> source =
+        conditionalSkipSource(types, doseType, referenceDate, skipContext);
     return source
         .where((VaxDose dose) =>
             (types.isEmpty || types.contains(dose.cvxAsInt)) &&
@@ -470,7 +519,8 @@ class VaxSeries {
         .length;
   }
 
-  bool skipByCount(VaxCondition condition, VaxDate refDate, bool byAge) {
+  bool skipByCount(VaxCondition condition, VaxDate refDate, bool byAge,
+      VaxDate referenceDate, SkipContext skipContext) {
     final VaxDate? startDate = byAge
         ? dob.changeNullable(condition.beginAge, false)
         : condition.startDate == null
@@ -482,8 +532,8 @@ class VaxSeries {
             ? null
             : VaxDate.fromString(condition.endDate!);
     final List<int> types = parseTypes(condition.vaccineTypes);
-    final int totalCount =
-        countVaccines(types, startDate, endDate, condition.doseType);
+    final int totalCount = countVaccines(types, startDate, endDate,
+        condition.doseType, referenceDate, skipContext);
     return evaluateCountLogic(
         totalCount, condition.doseCountLogic, condition.doseCount);
   }
@@ -498,15 +548,9 @@ class VaxSeries {
   }
 
   int countVaccines(List<int> types, VaxDate? startDate, VaxDate? endDate,
-      DoseType? doseType) {
-    // During forecast, use all patient doses for "Total" counts (CDSi counts
-    // all administered doses, not just those evaluated in this series).
-    // During evaluation, use evaluatedDoses to avoid counting future doses.
-    final List<VaxDose> source = doseType == DoseType.total &&
-            _forecastMode &&
-            allPatientDoses.isNotEmpty
-        ? allPatientDoses
-        : evaluatedDoses;
+      DoseType? doseType, VaxDate referenceDate, SkipContext skipContext) {
+    final List<VaxDose> source =
+        conditionalSkipSource(types, doseType, referenceDate, skipContext);
     return source
         .where((VaxDose dose) =>
             (types.isEmpty || types.contains(dose.cvxAsInt)) &&
@@ -1037,7 +1081,6 @@ class VaxSeries {
   /// [skipByCompletedSeries].
   Map<String, Map<String, VaxDate>> seriesGroupCompletionDate =
       <String, Map<String, VaxDate>>{};
-  bool _forecastMode = false;
   List<VaxDose> evaluatedDoses = <VaxDose>[];
   Map<int, TargetDoseStatus> evaluatedTargetDose = <int, TargetDoseStatus>{};
   VaxDate assessmentDate;

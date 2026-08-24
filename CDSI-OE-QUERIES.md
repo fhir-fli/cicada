@@ -328,3 +328,52 @@ days before the first birthday — or does current ACIP require 12 months of age
 The answer decides whether CDC's row is simply stale against their own newer
 supporting data, which is what we believe, or whether the data dropped an
 interval it should still carry.
+
+---
+
+## 9. Eleven condition rows that ask for a series the supporting data no longer has
+
+Found by classifying every failing case on 2026-08-24. These are **not** engine
+disagreements: in each one cicada follows the supporting data it ships and the
+spec rule named, and CDC's row encodes an older version of the data. Each was
+checked against **4.64 as well as 4.65-508**, so none is a regression from the
+version upgrade. Grouped because one question settles most of them.
+
+| case | CDC's row wants | what the current data says |
+|---|---|---|
+| `2016-UC-0079` | HPV dose evaluated in a **risk** series (history of sexual abuse, obs 169) | that indication now **ends at 11 years**; the patient is 12 at assessment, and Table 5-4 tests the **assessment date** |
+| `2016-UC-0087`, `-0088` | HPV risk series for MSM (obs 036) | **no** HPV risk series is indicated by 036 any more |
+| `2020-UC-0003` | MenB risk 2-dose series (obs 177, "seeks MenB protection") | 177 drives no risk series; MenB is now four **Standard** shared-clinical-decision-making series |
+| `2016-UC-0203` | MenB dose in a risk series (obs 116) | 116 is a contraindication code and indicates no series. cicada's status **is** Contraindicated, matching CDC |
+| `2025-UC-0010` | Zoster dose in a risk series (obs 172) | same shape |
+| `2016-UC-0032` | MMR past due six years out | that dose carries **no latest recommended interval** in either data version |
+| `2022-UC-0017` | pneumococcal earliest 8 weeks after PCV15 | the dose carries `minInt: 1 year`. cicada's **recommended** date matches CDC exactly; only the earliest differs |
+| `2016-UC-0110` | MenACWY 4th dose 6 months after dose 3 | see section 8 |
+
+**Question for OE (one covers the group):** for each of these — a patient with a
+history of sexual abuse aged over 11, a man who has sex with men, an adult
+seeking MenB protection, an adult who had PCV15 — does current ACIP still
+define a *distinct risk schedule*, or has that group been folded into the
+routine recommendation? If it has, CDC's rows are simply stale against their own
+newer supporting data, which is what we believe.
+
+## 10. `2016-UC-0057` — a row that contradicts its own dates
+
+The test name says the patient is **18 months** old; the row's own DOB
+(2014-08-10) and assessment date (2015-01-10) make her **5 months**. She has
+persistent complement/properdin/factor B deficiency (obs 151) and one Hib dose,
+given the day of assessment.
+
+CDC expects the next Hib dose at **2015-08-10**, exactly her first birthday.
+That is the begin age of the risk indication, and the minimum age of the "Hib
+risk child 2-dose series" — a **12-month-to-5-year booster** series. Table 5-4
+says an indication applies only when its begin age date ≤ **assessment date**,
+and at 5 months she has not reached it, so cicada keeps her on the routine
+infant schedule and forecasts her next dose 4 weeks after the first
+(2015-02-07).
+
+**Question for OE:** a 5-month-old with persistent complement deficiency who has
+had one Hib dose — is the next dose due 4 weeks later on the routine infant
+schedule, or should she wait until 12 months? We believe 4 weeks, and that
+CDC's row is testing the 18-month patient its name describes rather than the
+5-month-old its dates describe.
