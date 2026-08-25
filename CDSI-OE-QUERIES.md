@@ -635,6 +635,12 @@ engine reading this data can return "Inadvertent Vaccine" for a HepB dose —
 CDC's own included. Our generator is faithful here: it emits zero for HepB,
 matching the source.
 
+**And cicada handles inadvertent vaccines correctly everywhere the data supports
+them.** 15 healthy cases assert an "Inadvertent Vaccine" evaluation; **14 pass**.
+The only failure is this one, the only HepB case among them. So this is not a
+missing capability in the engine — it is the one antigen where CDC's test row
+asks for a reason CDC's own data does not define.
+
 **Questions for OE:**
 
 1. Clinically, for a first Heplisav-B given 5 days before the 18th birthday: is
