@@ -408,7 +408,56 @@ CDC's row is testing the 18-month patient its name describes rather than the
 
 ---
 
-## 11. 🔴 `2016-UC-0153` — ADJUDICATED AGAINST cicada, 2026-08-24
+## 11. 🔴 `2016-UC-0153` — ADJUDICATED AGAINST cicada TWICE, on the corrected premise
+
+**Re-ruled 2026-08-25 on the full evidence** (the interval anchor and the age
+floor both put to OE). The verdict stands and sharpens:
+
+- **cicada's 2015-01-08 is clinically wrong.** ACIP does not defer a partially
+  vaccinated high-risk child's next PCV dose to the second birthday. Interruption
+  "does not require reinstitution of the entire series or the addition of extra
+  doses" — her 4-month PCV13 counts, and the interval anchors to it (MMWR 71(37)).
+- **The minimum interval is 8 weeks, or 4 weeks for a dose given in infancy**, so
+  her next dose was due around **2013-06-05** — earlier even than CDC's row. By
+  the 2016 assessment she is simply overdue.
+- 🔑 **The 2-year floor on that series' dose 1 is the underlying DATA defect, not
+  just a stale test row.** It is right for a child *initiating* the 2–5-year risk
+  pathway with no countable prior conjugate dose, and wrong as a gate on a child
+  already mid-series. **Report to CDC:** the risk series needs a countable
+  childhood PCV dose to carry into the *schedule*, not only into the dose count,
+  so the interval anchors to it rather than to the age floor.
+
+🛑 **MEASURED AND REJECTED — do not retry the obvious fix.** Bypassing the
+minimum age whenever an interval anchors to a countable prior dose was
+prototyped and run against both suites:
+
+| | before | after |
+|---|---|---|
+| healthy | 1 failure | **150 failures** |
+| condition | 24 failures | 26 failures |
+| `2016-UC-0153` | failing | **still failing** |
+
+It breaks 149 healthy cases, adds 2 condition failures, and does not even fix
+the case it was written for — because the **recommended** date is gated
+separately by `earliestRecAge`, also 2 years, so a full conform would need a
+second deviation on top of the first. A minimum age is load-bearing across the
+whole schedule (MMR at 12 months, HPV at 9, MenACWY dose 2 at 16); a countable
+prior dose is far too common a condition to hang a bypass on.
+
+⚠️ Also found while measuring: the minimum age date is applied **twice** in
+`_computeCandidateEarliestDate` — once initialising the candidate and again
+after the other contributors. Harmless (the same value maxed in twice) but it
+silently undoes any change made between the two, which invalidated the first
+run of this experiment.
+
+**Disposition: cicada is left conformant to CDSi, and the defect is reported to
+CDC as a data problem.** The risk series needs a way for a countable childhood
+PCV dose to carry into the *schedule* rather than only the dose count — either a
+second series for the mid-series child, or an age floor that does not apply once
+a prior conjugate dose exists. `2016-UC-0153` stays a known, documented
+non-conformance.
+
+## 11. (superseded framing) `2016-UC-0153` — ADJUDICATED AGAINST cicada, 2026-08-24
 
 **OE ruled for CDC's row.** ACIP is explicit that interruption of the schedule
 "does not require reinstitution of the entire series or the addition of extra
