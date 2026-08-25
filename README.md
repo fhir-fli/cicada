@@ -13,7 +13,7 @@ Cicada implements the CDC's [Clinical Decision Support for Immunization (CDSi)](
 - Multi-antigen vaccine group aggregation (DTaP/Tdap/Td, MMR, DTP, MR)
 - FHIR R4 `Parameters` in, FHIR R4 `Parameters` out
 - Built-in HTTP server with `$immds-forecast` (CDC) and `$immds-forecast-who` (WHO) endpoints (JSON and XML)
-- 99.6% accuracy against CDC test suite, 98.8% against NIST FITS
+- 1063/1064 on the CDC healthy suite and 313/337 on the conditions suite, 98.8% against NIST FITS
 
 ## Installation
 
@@ -185,19 +185,28 @@ Generated files are written to `cicada/lib/generated_files/` (CDC) and `cicada/l
 ```bash
 cd cicada
 
-# CDC healthy test cases (1014 cases, v4.45 test data)
-dart run test/cicada_test.dart
+# CDC healthy childhood and adult test cases (1,064 cases, v4.46 test data)
+dart run test/healthy_test.dart
 
-# CDC condition test cases (777 cases, v4.6 test data)
+# CDC underlying-conditions test cases (337 cases, v4.6 test data)
 dart run test/condition_test.dart
 ```
 
-Results:
-- **Healthy**: 1010/1014 (99.6%) — 4 failures from CDSi version mismatch (v4.45 test data vs v4.61 engine)
-- **Condition**: 747/777 (96.1%) — 30 failures from version mismatch (v4.6 test data vs v4.61 engine)
+Results against CDSi supporting data 4.65-508:
+- **Healthy**: 1063/1064 (99.9%) — one disagreement, `2018-0022`
+- **Condition**: 313/337 (92.9%) — 24 disagreements
 - **FITS**: 167/169 (98.8%) — 2 failures from FITS date rebasing (assessment date shifts)
 
-All remaining failures have been individually verified as version mismatch or test infrastructure issues, not engine bugs.
+Every one of the 25 disagreements is written up case by case in
+`CDSI-DISPUTED-CASES.md`, with the clinical adjudication in `CDSI-OE-QUERIES.md`.
+23 of the 25 have been put to an evidence review against current ACIP: most rule
+for cicada against a stale CDC test row, three are defects in CDC's supporting
+data, and where the review ruled against cicada the engine was fixed.
+
+The condition figure is out of **337**, not 777: the conditions workbook carries
+439 empty rows after its last real case, and those were previously loaded as
+test cases that matched no expectation and so asserted nothing. Both suites now
+fail if any case has no id or no expectations to compare against.
 
 ## Implementation Guide
 
