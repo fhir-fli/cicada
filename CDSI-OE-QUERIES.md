@@ -622,13 +622,18 @@ valid on age. This case is deliberately paired with `2018-0019`, the same
 scenario at **18 years minus 4 days**, where the grace does apply and the dose is
 Valid — cicada gets that one right, and gets the *status* right here too.
 
-🔑 **The reason CDC asserts does not exist in their data for this antigen.**
-An "Inadvertent Vaccine" evaluation is driven by an `inadvertentVaccine`
-definition on a target dose. Counted across the generated 4.65-508 supporting
-data: **122 such definitions across 8 antigens — COVID-19 37, polio 31,
-pneumococcal 15, HPV 14, RSV 7, tetanus, pertussis and diphtheria 6 each — and
-zero in HepB.** So no CDSi engine reading this data can return "Inadvertent
-Vaccine" for a hepatitis B dose, CDC's own included.
+🔑 **The reason CDC asserts does not exist in their data for this antigen** —
+checked in CDC's published XML, not in our generated copy of it.
+`AntigenSupportingData- HepB-508.xml` carries the `inadvertentVaccine` element
+on **every** target dose, **62 of them, and every one is empty**
+(`<inadvertentVaccine/>`); **not one is populated**. For contrast, in the same
+release Polio populates 93, COVID-19 90, Tetanus and Diphtheria 36 each, RSV 34,
+Pneumococcal 15, HPV 14 and Pertussis 6.
+
+So the slot is present for hepatitis B and deliberately left blank, and no CDSi
+engine reading this data can return "Inadvertent Vaccine" for a HepB dose —
+CDC's own included. Our generator is faithful here: it emits zero for HepB,
+matching the source.
 
 **Questions for OE:**
 
