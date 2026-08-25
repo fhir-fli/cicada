@@ -593,3 +593,50 @@ the 2-to-5-year high-risk schedule for cochlear implants, whose first dose
 cannot be given before 24 months? The answer decides whether CDC's row is stale
 in the same way as the eleven in section 9, or whether cicada is choosing the
 wrong series for an incompletely vaccinated high-risk child.
+
+---
+
+## 12. `2018-0022` — is a Heplisav-B dose 5 days early "Inadvertent Vaccine" or "Age: Too Young"?
+
+The last failing healthy case, and the only one of the 1,064 that disagrees.
+Previously filed as "not our bug" in the 37-case batch; raised again because the
+reason CDC asserts is one their own supporting data cannot produce.
+
+A patient born 2008-08-10 receives her **first** Heplisav-B (CVX 189, MVX DVX)
+on 2026-08-05 — **18 years minus 5 days** — and is assessed the same day.
+
+**CDC and cicada agree on everything except the reason:**
+
+| field | CDC | cicada |
+|---|---|---|
+| series status | Not complete | Not complete ✅ |
+| forecast # | 1 | 1 ✅ |
+| earliest / recommended / past due | 2026-08-05 | all three ✅ |
+| dose evaluation status | **Not Valid** | **Not Valid** ✅ |
+| dose evaluation **reason** | **Inadvertent Vaccine** | *Age: Too Young* (Heplisav-B series) / *Not a preferable or allowable vaccine* (the others) |
+
+**Why cicada says what it says.** Heplisav-B is licensed from 18 years, and the
+"HepB Heplisav-B 2-dose series" carries a minimum age of 18 years with the usual
+four-day grace. Five days early falls outside that grace, so the dose is not
+valid on age. This case is deliberately paired with `2018-0019`, the same
+scenario at **18 years minus 4 days**, where the grace does apply and the dose is
+Valid — cicada gets that one right, and gets the *status* right here too.
+
+🔑 **The reason CDC asserts does not exist in their data for this antigen.**
+An "Inadvertent Vaccine" evaluation is driven by an `inadvertentVaccine`
+definition on a target dose. Counted across the generated 4.65-508 supporting
+data: **122 such definitions across 8 antigens — COVID-19 37, polio 31,
+pneumococcal 15, HPV 14, RSV 7, tetanus, pertussis and diphtheria 6 each — and
+zero in HepB.** So no CDSi engine reading this data can return "Inadvertent
+Vaccine" for a hepatitis B dose, CDC's own included.
+
+**Questions for OE:**
+
+1. Clinically, for a first Heplisav-B given 5 days before the 18th birthday: is
+   the right characterisation that the patient was **too young** for the product,
+   or that the **wrong product** was administered for her age band — i.e.
+   inadvertent? Both make the dose invalid; they say different things to a
+   reviewer reading the record, and they differ in what should be done next.
+2. If "inadvertent" is right, then 4.65-508's HepB supporting data is missing an
+   inadvertent-vaccine definition that CDC's own test row depends on, and this
+   is a fourth data defect to report alongside orthopox observation 235.
