@@ -450,6 +450,22 @@ after the other contributors. Harmless (the same value maxed in twice) but it
 silently undoes any change made between the two, which invalidated the first
 run of this experiment.
 
+🔑 **The clinically right answer is already in cicada's output — the series
+structure hides it.** OE puts the true interval at **4 weeks**, not 8, for a dose
+given in infancy, i.e. about **2013-06-05**. cicada's own standard pathway
+produces exactly that: the "Pneumococcal dose 2 at 7 months series" counts her
+infant dose and forecasts `earliest=2013/06/05`. So the engine computes the
+correct catch-up date and then reports the risk series' date instead, because a
+risk series that still needs a dose takes the vaccine group forecast.
+
+That is worth putting in the CDC report: the collision is between **two rules
+written for two different children living on the same series dose** — the
+2-year floor belongs to the child *initiating* the 2–5-year pathway with no
+countable conjugate dose, and there is no separate pathway for the child who is
+already mid-series. Splitting those, or making the floor conditional on the
+absence of a countable prior dose, would resolve it in the data where it
+belongs.
+
 **Disposition: cicada is left conformant to CDSi, and the defect is reported to
 CDC as a data problem.** The risk series needs a way for a countable childhood
 PCV dose to carry into the *schedule* rather than only the dose count — either a
