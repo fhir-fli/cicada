@@ -30,7 +30,8 @@ Sources: MMWR — pertussis 67(2) and 69(3); ACOG Committee Opinion 718; JYNNEOS
 meningococcal 69(9) with the 2025 adult schedule; pneumococcal 72(3) and
 74(1).
 
-**Two things to report to CDC**, both supporting-data defects rather than
+**Three things to report to CDC** (the third added 2026-08-25), all
+supporting-data defects rather than
 engine defects:
 
 1. Observation **235** (healthcare personnel caring for patients infected with
@@ -45,6 +46,33 @@ engine defects:
    of *differing* priority in one series group, the one whose applicable
    indication begins latest in life (`228b8935`); a maximum age to start on the
    infant series would make the workaround unnecessary.
+
+3. **The "Pneumococcal risk 2-5 years Chronic Medical Conditions" series serves
+   two different children on one dose, and gates both with an absolute age.**
+   Its first dose carries an interval (8 weeks from the most recent PCV) *and*
+   an absolute minimum age of 2 years with no grace. FORECASTDTCAN-1 is an AND —
+   the earliest date is the latest of every constraint — so a child who is
+   already **mid-series** inherits an age gate written for the child *starting*
+   the pathway at 24 months with no countable conjugate dose, and is pushed to a
+   date with no clinical basis for her. ACIP is explicit that interrupting the
+   schedule does not restart it, so her earlier dose counts and the next is due
+   on the interval from it. CDC's own test row `2016-UC-0153` reports the
+   interval date and ignores the age floor its data publishes, which is the
+   contradiction in miniature.
+
+   **The fix is not to delete the 2-year floor** — the fresh-start child still
+   needs it — **but to make it conditional on dose history**, exactly as the
+   vaccine-group aggregation already conditions the forecast dose *number* on
+   the union of valid doses across series. Today a countable prior dose carries
+   into the **count** and not into the **schedule**, and that asymmetry is what
+   produces the defect. Alternatively, split the pathway into a starting series
+   and a continuing series.
+
+   Verified against 4.64 as well as 4.65-508, so it is not new to this release.
+   cicada already computes the clinically correct date — its standard
+   "Pneumococcal dose 2 at 7 months series" forecasts 2013-06-05 for this child
+   — but the risk series takes the vaccine group forecast, so that answer is not
+   the one reported.
 
 ---
 
