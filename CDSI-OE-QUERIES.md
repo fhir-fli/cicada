@@ -510,7 +510,7 @@ second series for the mid-series child, or an age floor that does not apply once
 a prior conjugate dose exists. `2016-UC-0153` stays a known, documented
 non-conformance.
 
-### The case as originally put to OE
+### The case
 
 The last of the failing cases never put to OE. A child born 2013-01-08 with
 **cochlear implants** (observation 011) received a single PCV13 (CVX 133) on
@@ -567,20 +567,6 @@ both the weaker clinical fit and impossible to produce from their own data.**
   the reviewer to reconsider **which** vaccine to use, which is actively
   misleading here.
 
-🔑 **Report this as a defective test EXPECTATION, not as missing data.** The HepB
-supporting data is self-consistent: it defines no inadvertent vaccines, and no
-conformant engine can emit that reason for a HepB dose. Since "too young" is the
-clinically correct reason anyway, there is **no reason to populate an
-inadvertent-vaccine definition** to satisfy the row — the row's reason is simply
-wrong. That makes it a **lesser-severity** finding than the orthopox
-observation-235 gap, where the data really is missing something ACIP recommends.
-
-**Do not conform.** cicada is right on status, forecast number, all three dates
-and the reason.
-
----
-
-## 12. (the question as put) `2018-0022` — is a Heplisav-B dose 5 days early "Inadvertent Vaccine" or "Age: Too Young"?
 
 The last failing healthy case, and the only one of the 1,064 that disagrees.
 Previously filed as "not our bug" in the 37-case batch; raised again because the
@@ -635,3 +621,13 @@ asks for a reason CDC's own data does not define.
 2. If "inadvertent" is right, then 4.65-508's HepB supporting data is missing an
    inadvertent-vaccine definition that CDC's own test row depends on, and this
    is a fourth data defect to report alongside orthopox observation 235.
+
+🔑 **Report this as a defective test EXPECTATION, not as missing data.** The HepB
+supporting data is self-consistent: it defines no inadvertent vaccines, and no
+conformant engine can emit that reason for a HepB dose. Since "too young" is the
+clinically correct reason anyway, there is **no reason to populate an
+inadvertent-vaccine definition** to satisfy the row — the row's reason is simply
+wrong. That makes it a **lesser-severity** finding than the orthopox
+observation-235 gap, where the data really is missing something ACIP recommends.
+
+**Do not conform.** cicada is right on status, forecast number, all three dates and the reason.
