@@ -74,6 +74,15 @@ engine defects:
    — but the risk series takes the vaccine group forecast, so that answer is not
    the one reported.
 
+**And one defective test row, reported separately** — not a data defect, because
+the data is self-consistent. `2018-0022` expects a HepB dose to evaluate as
+"Inadvertent Vaccine", and `AntigenSupportingData- HepB-508.xml` carries that
+element on all 62 of its target doses with **every one empty**. No conformant
+engine can produce that reason for hepatitis B. OE adjudicated the clinically
+correct reason as **"Age: Too Young"** anyway (§12), so the fix is to correct the
+row, not to add an inadvertent-vaccine definition. Lesser severity than the three
+above.
+
 ---
 
 ## ✅ ADJUDICATED 2026-08-24 — sections 8, 9 and 10
@@ -436,7 +445,7 @@ CDC's row is testing the 18-month patient its name describes rather than the
 
 ---
 
-## 11. 🔴 `2016-UC-0153` — ADJUDICATED AGAINST cicada TWICE, on the corrected premise
+## 11. 🔴 `2016-UC-0153` — ADJUDICATED AGAINST cicada, twice
 
 **Re-ruled 2026-08-25 on the full evidence** (the interval anchor and the age
 floor both put to OE). The verdict stands and sharpens:
@@ -501,64 +510,7 @@ second series for the mid-series child, or an age floor that does not apply once
 a prior conjugate dose exists. `2016-UC-0153` stays a known, documented
 non-conformance.
 
-## 11. (superseded framing) `2016-UC-0153` — ADJUDICATED AGAINST cicada, 2026-08-24
-
-**OE ruled for CDC's row.** ACIP is explicit that interruption of the schedule
-"does not require reinstitution of the entire series or the addition of extra
-doses" (MMWR 71(37)) — the dose given at 4 months **counts**. An incompletely
-vaccinated high-risk child aged 24–71 months is **caught up now**, on the
-catch-up interval from her most recent dose; she does not restart at 24 months
-and does not wait for it. Her remaining course is 2 more PCV doses ≥8 weeks
-apart, then PPSV23 (or a single PCV20 in lieu) ≥8 weeks after the last PCV.
-
-🔑 **The defect:** cicada treats the 2–5-year risk series as *unstarted*, because
-her infant dose falls below that series' 2-year minimum age, and lets that
-unstarted series set the vaccine group's dates — deferring to her second
-birthday. The aggregation already knows this is a hazard: where best patient
-series of mixed type are blended it computes the **dose number** from the union
-of valid doses across all of them, precisely because "the risk series may not see
-childhood doses", and then still takes the risk series for the **dates**. So the
-history carries into the count and not into the schedule.
-
-⚠️ **The premise OE was given was mine, and it was incomplete — reopen before
-acting.** Section 11 below said her infant dose "does not count" in the risk
-series. That is true of *satisfying a target dose* and false of the interval,
-and the difference decides the case. Measured in the data and the trace:
-
-- Her infant dose **is** evaluated in the risk series (Not Valid, too young) and
-  is **not** discarded.
-- That series' dose 1 carries an interval `fromPrevious: N`,
-  `fromMostRecent: "133; 215; 216"` — PCV13, PCV15, PCV20 — with a minimum
-  interval of 8 weeks. It resolves **to her infant dose**, giving
-  2013-05-08 + 8 weeks = **2013-07-03, which is exactly CDC's date.** cicada
-  anchors to the prior dose, as ACIP requires.
-- The same dose 1 also carries `absMinAge`, `minAge` and `earliestRecAge` of
-  **2 years**, with no grace period.
-- FORECASTDTCAN-1 takes the **latest** of the minimum age date and the minimum
-  interval dates. 2015-01-08 is later than 2013-07-03, so the age floor wins.
-
-So cicada is not deferring her out of a catch-up: it is applying a two-year
-minimum age that **CDC's own supporting data puts on that dose**, and CDC's row
-reports the interval date while ignoring it. At the assessment date she is 3
-years old, so both answers mean the same thing clinically — overdue, vaccinate
-now — and they differ only in the earliest date reported.
-
-Conforming to CDC's row would mean ignoring a stated absolute minimum age, which
-FORECASTDTCAN-1 does not permit. **No engine change is being made on this
-evidence.**
-
-**Sharpened question for OE:** given that CDC's own 4.65-508 data sets an
-absolute minimum age of 2 years on the first dose of the
-"Pneumococcal risk 2-5 years Chronic Medical Conditions PCV-PCV-PPSV" series —
-is that 2-year floor correct under current ACIP for a child with a cochlear
-implant who already has a countable infant PCV dose, or should the catch-up dose
-be available at 8 weeks after the prior dose regardless of age? If the floor is
-correct, CDC's test row contradicts CDC's supporting data. If it is not, the
-supporting data is the thing to report.
-
----
-
-## 11. `2016-UC-0153` — a 3-year-old with a cochlear implant and one infant PCV dose
+### The case as originally put to OE
 
 The last of the failing cases never put to OE. A child born 2013-01-08 with
 **cochlear implants** (observation 011) received a single PCV13 (CVX 133) on
@@ -596,7 +548,39 @@ wrong series for an incompletely vaccinated high-risk child.
 
 ---
 
-## 12. `2018-0022` — is a Heplisav-B dose 5 days early "Inadvertent Vaccine" or "Age: Too Young"?
+## 12. ✅ `2018-0022` — ADJUDICATED FOR cicada, 2026-08-25
+
+**"Age: Too Young" is the better description; CDC's "Inadvertent Vaccine" is
+both the weaker clinical fit and impossible to produce from their own data.**
+
+- *Too young* says the **right product** was given before the patient reached
+  its minimum age — a timing error. *Inadvertent* says the **wrong product** was
+  given. Heplisav-B is the correct adult HepB product in the correct series; she
+  is five days short of 18. That is a timing defect, not a product defect.
+- The pair `2018-0019` (−4 days, Valid on the grace) and `2018-0022` (−5 days,
+  Not Valid) exists to test the **age grace boundary**. Age is the only variable
+  that changes between them; nothing about product selection does. A reason of
+  "inadvertent" would fail the second case for something the pair does not vary.
+- The labels imply different corrective actions. *Too young* means repeat the
+  same product once she is old enough — which is exactly what both engines
+  forecast (2026-08-05, immediately, as she is now of age). *Inadvertent* invites
+  the reviewer to reconsider **which** vaccine to use, which is actively
+  misleading here.
+
+🔑 **Report this as a defective test EXPECTATION, not as missing data.** The HepB
+supporting data is self-consistent: it defines no inadvertent vaccines, and no
+conformant engine can emit that reason for a HepB dose. Since "too young" is the
+clinically correct reason anyway, there is **no reason to populate an
+inadvertent-vaccine definition** to satisfy the row — the row's reason is simply
+wrong. That makes it a **lesser-severity** finding than the orthopox
+observation-235 gap, where the data really is missing something ACIP recommends.
+
+**Do not conform.** cicada is right on status, forecast number, all three dates
+and the reason.
+
+---
+
+## 12. (the question as put) `2018-0022` — is a Heplisav-B dose 5 days early "Inadvertent Vaccine" or "Age: Too Young"?
 
 The last failing healthy case, and the only one of the 1,064 that disagrees.
 Previously filed as "not our bug" in the 37-case batch; raised again because the
