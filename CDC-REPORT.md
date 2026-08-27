@@ -2,8 +2,9 @@
 
 Found while running cicada against the published test cases. Three are defects in
 the **supporting data**; the fourth is a defective **test expectation**. Each was
-checked against CDC's published XML, and against the 4.64 release, so none is new
-to this version.
+checked in the published **Excel** supporting data — the authoritative form, and
+the one cicada's generator builds from — and cross-checked against the XML and
+the 4.64 release, so none is new to this version.
 
 ---
 
@@ -11,17 +12,25 @@ to this version.
 
 **Cases:** `2022-UC-0030`, `2022-UC-0031`
 
-Observation **235** — healthcare personnel caring for patients infected with more
-virulent orthopoxviruses — is defined in the schedule supporting data, but
-`AntigenSupportingData- Orthopoxvirus-508.xml` names only observations 232, 233
-and 234 in its indications. No series is driven by 235, so a patient carrying it
-gets no orthopox recommendation at all.
+**The data already carries the recommendation in prose and fails to wire it to a
+series.** `ScheduleSupportingData- Coded Observations` defines observation 235 —
+"Healthcare personnel who care for patients infected with more virulent
+orthopoxviruses (e.g., Variola virus or mpox virus)" — with the instruction
+spelled out in its own `indicationText`: *"Administer to healthcare personnel who
+care for patients infected with more virulent orthopoxviruses."*
 
-ACIP still recommends JYNNEOS pre-exposure vaccination for that group on a
-shared-clinical-decision-making basis (MMWR 71(22)), so the recommendation exists
-and the data cannot express it.
+But no series names it. Across the four risk series in
+`AntigenSupportingData- Orthopoxvirus-508`, the indications name observations
+**232, 233, 234, 236, 237, 238, 239, 241, 242, 247 and 248** — and not 235. So a
+patient carrying 235 gets no orthopox recommendation at all, while the
+supporting data shipped alongside says plainly that they should be vaccinated.
+ACIP agrees (MMWR 71(22), shared clinical decision-making).
 
-**Fix:** name observation 235 in the orthopox risk series' indications.
+The two halves of the package contradict each other, which also makes this cheap
+to fix: the clinical decision is already made and written down.
+
+**Fix:** name observation 235 in the indications of the "more virulent" risk
+series.
 
 ---
 
