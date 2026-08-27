@@ -69,8 +69,9 @@ cd cicada && dart pub get
 cd cicada_generator && dart pub get
 
 # Run tests
-cd cicada && dart run test/healthy_test.dart       # 1065 healthy CDC test cases
-cd cicada && dart run test/condition_test.dart     # 777 condition CDC test cases
+cd cicada && dart test                             # the whole suite — run this, not files by name
+cd cicada && dart run test/healthy_test.dart       # 1064 healthy CDC test cases
+cd cicada && dart run test/condition_test.dart     # 337 condition CDC test cases
 
 # Run ImmDS server
 dart run cicada/bin/server.dart -p 8080
@@ -130,6 +131,12 @@ Runtime switching uses `activeAntigenMap` and `activeScheduleData` getters that 
 
 Files in `cicada/lib/generated_files/` are produced by the generator and should not be hand-edited.
 
+🔑 **The Excel is the source of truth, not the XML.** `main.dart` builds from
+`Version_4.65-508/Excel/` and falls back to XML-derived JSON only when a sheet
+fails to parse. Cite the spreadsheets when making a claim about CDC's data.
+(Verified 2026-08-27: for indication observation codes the two agree exactly
+across all 30 antigens — but the XML is still the fallback, not the source.)
+
 - **CDC**: Each antigen (measles.dart, hepb.dart, etc.) contains an `AntigenSupportingData` instance. `antigenSupportingDataMap` provides disease-name-keyed lookup. `schedule_supporting_data.dart` contains `scheduleSupportingData`.
 - **WHO**: `generated_files/who/` mirrors the same structure with `who` prefix: `whoAntigenSupportingDataMap`, `whoScheduleSupportingData`. The barrel file is `who_generated_supporting_data.dart`.
 
@@ -159,18 +166,29 @@ Both suites compare against CDC's expected results and both must be run before
 and after any engine change — from `cicada/`, with absolute paths:
 
 ```bash
-dart run test/healthy_test.dart      # 1062 / 1065
-dart run test/condition_test.dart    #  751 / 777
+dart test                            # 25 failures, all classified — run THIS
+dart run test/healthy_test.dart      # 1063 / 1064
+dart run test/condition_test.dart    #  313 /  337
 ```
 
+🛑 **Run `dart test`, not files by name.** Running only healthy and condition by
+name hid four failures in `forecast_test.dart` — a stale weaker duplicate of
+`healthy_test.dart` — for an entire session.
+
+🔴 **The condition denominator is 337, not 777.** The workbook carries 439 empty
+rows after its last real case; those loaded as test cases, matched no
+expectation, asserted nothing and were counted as passes. Fixed in the generator
+2026-08-25; both suites now fail if any case has no id or no expectations.
+
 - **Healthy (v4.46 cases, 4.65-508 data — versions match, so this is the gate).**
-  Its 3 failures are all dose-**evaluation reason labels**, not forecasts.
+  Its 1 failure is `2018-0022`, a dose-**evaluation reason label**, not a forecast.
 - **Condition (v4.6 cases, Sept 2025).** Version-mismatched by construction:
   several failures are cases written against supporting data CDC has since
   changed. Movement in this suite is the signal, not its absolute number.
-- ⚠️ `test/cicada_test.dart` asserted **nothing** and has been replaced by
-  `healthy_test.dart`. The "1010/1014 (99.6%)" that used to sit here came from
-  nothing in this repo — do not quote it.
+- ⚠️ `test/cicada_test.dart` asserted **nothing** — zero `expect()` calls — and
+  `test/forecast_test.dart` was a weaker duplicate of `healthy_test.dart`. Both
+  deleted 2026-08-25. The "1010/1014 (99.6%)" that used to sit here came from
+  the first of them — do not quote it.
 - **FITS (external)**: 167/169 (98.8%) — 2 failures from FITS date rebasing.
 
 ⚠️ **"Verified as version mismatch" was too strong, and it cost us.** That line
