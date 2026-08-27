@@ -59,7 +59,6 @@ class VaxSeries {
       seriesGroupCompletion[targetDisease]?[seriesGroupKey] = true;
       final VaxDate? completedOn = lastCompleted?.dateGiven;
       if (completedOn != null) {
-        seriesGroupCompletionDate[targetDisease]?[seriesGroupKey] = completedOn;
       }
     }
   }
@@ -403,24 +402,23 @@ class VaxSeries {
         evalDate < conditionalSkipEndAgeDate;
   }
 
-  /// Had the patient completed the named series group by [evalDate]?
+  /// Table 6-7: "Does the Conditional Skip Series Group identify a Series Group
+  /// with at least one relevant patient series with a patient series status of
+  /// 'Complete'?"
   ///
-  /// Asking only whether the group is complete *now* answers the wrong
-  /// question while doses are being evaluated. A dialysis patient's four HepB
-  /// doses all count towards the risk series even though the standard group
-  /// completed part way through them (`2024-UC-0019`); the group's completion
-  /// date is what separates that from a lab worker whose polio booster came
-  /// decades after he finished the childhood series (`2016-UC-0133`).
+  /// That is the whole condition. It is a question about status, asked in the
+  /// present tense, and it takes no date. The Conditional Skip Reference Date
+  /// of CONDSKIP-2 is consumed by Table 6-6 (Age) and Table 6-8 (Interval) and
+  /// by nothing else — the specification never applies it here.
   ///
-  /// The end-state flag remains the fallback for a group whose completion date
-  /// is not known — completion recorded during the forecast pass, where there
-  /// is no satisfying dose to date it by.
+  /// This used to answer "was the group complete as of [evalDate]", dated by
+  /// the dose that satisfied the group's last target dose. That is a rule CDSi
+  /// does not contain, written to make cases pass. It is gone. Where the
+  /// present-tense answer differs from CDC's expected result the engine now
+  /// fails the case, and the ambiguity in Table 6-7 — what a series group's
+  /// status *is* midway through evaluating a dose sequence — is written up for
+  /// CDC rather than resolved by invention.
   bool skipByCompletedSeries(VaxCondition condition, VaxDate evalDate) {
-    final VaxDate? completedOn =
-        seriesGroupCompletionDate[targetDisease]?[condition.seriesGroups];
-    if (completedOn != null) {
-      return evalDate >= completedOn;
-    }
     return seriesGroupCompletion[targetDisease]?[condition.seriesGroups] ??
         false;
   }
@@ -932,8 +930,6 @@ class VaxSeries {
             seriesGroupCompletion[targetDisease]?[seriesGroupKey] = true;
             final VaxDate? completedOn = lastCompleted?.dateGiven;
             if (completedOn != null) {
-              seriesGroupCompletionDate[targetDisease]?[seriesGroupKey] =
-                  completedOn;
             }
           }
         }
@@ -1079,8 +1075,6 @@ class VaxSeries {
   /// satisfied its last target dose. A "Completed Series" conditional skip is
   /// a question about a moment in time, not about the end state: see
   /// [skipByCompletedSeries].
-  Map<String, Map<String, VaxDate>> seriesGroupCompletionDate =
-      <String, Map<String, VaxDate>>{};
   List<VaxDose> evaluatedDoses = <VaxDose>[];
   Map<int, TargetDoseStatus> evaluatedTargetDose = <int, TargetDoseStatus>{};
   VaxDate assessmentDate;

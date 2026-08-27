@@ -631,3 +631,47 @@ wrong. That makes it a **lesser-severity** finding than the orthopox
 observation-235 gap, where the data really is missing something ACIP recommends.
 
 **Do not conform.** cicada is right on status, forecast number, all three dates and the reason.
+
+---
+
+## 13. Table 6-7 has no reference date — what is a series group's status mid-evaluation?
+
+**Cases:** `2016-UC-0137`, `2024-UC-0019` — both now failing, deliberately.
+
+Table 6-7 is the whole of the "Completed Series" conditional skip:
+
+> *"Does the Conditional Skip Series Group identify a Series Group with at least
+> one relevant patient series with a patient series status of 'Complete'?"*
+
+Present tense, and it takes **no date**. The Conditional Skip Reference Date of
+CONDSKIP-2 is consumed by Table 6-6 (Age) and Table 6-8 (Interval) and by
+nothing else — the specification never applies it to this condition.
+
+But the condition's `context` is `Both`, so it is asked **while doses are being
+evaluated** — and a series group's status changes *during* that pass. So the
+question "is the group complete?" has no stable answer at the moment it is
+asked, and the specification does not say which moment it means.
+
+**It matters clinically, in opposite directions:**
+
+- `2024-UC-0019` — an adult dialysis patient's four HepB doses should all count
+  toward the risk series, even though the standard group completed part way
+  through them.
+- `2016-UC-0133` — a lab worker's single adult polio booster, given decades
+  after he finished the childhood series, must **not** be counted as dose 1 of a
+  fresh risk series.
+
+Answering "complete as of the date of the dose being evaluated" separates those
+two correctly. **cicada used to do exactly that — and it was removed, because
+CDSi contains no such rule.** Inventing a reference date the specification does
+not define is not something an implementation should do quietly, whatever it
+does to the test suite. With the present-tense reading, `2016-UC-0137` and
+`2024-UC-0019` fail.
+
+**Question for CDC:** for a conditional skip of type Completed Series with
+context `Both`, at what point is the referenced series group's status evaluated
+— the assessment date, the date administered of the dose being evaluated, or the
+end state after all antigens are evaluated? Table 6-7 does not say, and the
+three answers give different results for real patients. If the intended answer
+is the date administered, Table 6-7 needs the reference date that Tables 6-6 and
+6-8 already have.

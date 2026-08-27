@@ -794,11 +794,8 @@ ForecastResult evaluateForForecast(Parameters parameters,
   /// Build shared series group completion map and set up per-series state
   final Map<String, Map<String, bool>> seriesGroupCompletion =
       <String, Map<String, bool>>{};
-  final Map<String, Map<String, VaxDate>> seriesGroupCompletionDate =
-      <String, Map<String, VaxDate>>{};
   agMap.forEach((String k, VaxAntigen v) {
     seriesGroupCompletion[k] = <String, bool>{};
-    seriesGroupCompletionDate[k] = <String, VaxDate>{};
     v.groups.forEach((String key, VaxGroup group) {
       seriesGroupCompletion[k]![key] = false;
       for (final VaxSeries series in group.series) {
@@ -806,7 +803,6 @@ ForecastResult evaluateForForecast(Parameters parameters,
         series.observations = patient.observations;
         series.seriesGroupKey = key;
         series.seriesGroupCompletion = seriesGroupCompletion;
-        series.seriesGroupCompletionDate = seriesGroupCompletionDate;
       }
     });
   });
