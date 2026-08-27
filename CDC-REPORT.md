@@ -83,11 +83,11 @@ floor; the fresh-start child still needs it.
 **Case:** `2018-0022` — *defective test row, not a data defect. Lower severity.*
 
 The row expects a HepB dose to evaluate as **"Inadvertent Vaccine"**.
-`AntigenSupportingData- HepB-508.xml` carries the `inadvertentVaccine` element on
-**all 62** of its target doses and **every one is empty**. No conformant engine —
-CDC's included — can emit that reason for a hepatitis B dose. For contrast, in
-the same release Polio populates 93, COVID-19 90, Tetanus and Diphtheria 36 each,
-RSV 34, Pneumococcal 15, HPV 14, Pertussis 6.
+`AntigenSupportingData- HepB-508` carries an **Inadvertent Vaccine** row on all
+**62** of its target doses, and **not one names a vaccine** — every one is
+`n/a`. No conformant engine, CDC's included, can emit that reason for a
+hepatitis B dose. For contrast in the same release: Polio names a vaccine on
+**31 of 31** such rows, COVID-19 on **37 of 46**.
 
 The clinically correct reason is **"Age: Too Young"**. The patient received her
 first Heplisav-B five days before her 18th birthday: the *right product*, before
