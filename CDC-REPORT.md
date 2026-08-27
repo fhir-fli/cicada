@@ -36,7 +36,7 @@ series.
 
 ## 2. The meningococcal 2–23 month series has no maximum age to start
 
-**Cases:** none currently failing — surfaced via `2016-UC-0198`
+**Case:** `2016-UC-0198` — currently failing, and correctly so
 
 "Meningococcal ACWY risk 2-23 month" carries **no maximum age to start**, and
 none of its doses carries a maximum age. Nothing ages a patient out of it. A
@@ -46,11 +46,16 @@ is handed an infant schedule beginning in his seventh month of life.
 
 ACIP gives that patient one MenACWY dose boosted every five years (MMWR 69(9)).
 
-cicada works around this by preferring, among risk series of differing priority
-in one series group, the one whose applicable indication begins latest in life. A
-maximum age to start on the infant series would make the workaround unnecessary.
+cicada previously worked around this by preferring, among risk series of
+differing priority in one series group, the one whose applicable indication
+begins latest in life. **That workaround has been removed**: CDSi defines no
+such rule, and an engine that invents one is no longer implementing the
+specification. With it gone the engine follows SELECTSCORE-2 as written and
+`2016-UC-0198` fails — which is the correct behaviour for supporting data that
+cannot express the patient's age.
 
-**Fix:** add a maximum age to start (24 months) to the 2–23 month series.
+**Fix:** add a maximum age to start (24 months) to the 2–23 month series. Until
+then any conformant engine will hand this adult an infant's schedule.
 
 ---
 
