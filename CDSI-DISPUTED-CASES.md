@@ -355,6 +355,49 @@ Changed_In_Version       4.5
 
 **cicada answers:** status `Not Complete`, forecast #`1`, earliest `2017/02/27`, recommended `2017/02/27`, past due `2017/04/30`.
 
+### 2016-UC-0137
+
+CDC row, every populated column:
+
+```
+CDC_Test_ID              2016-UC-0137
+Test_Case_Name           Patient is traveling to areas or countries where polio is an epidemic and has received all three doses of the polio risk adult vaccine.
+DOB                      1961-08-10
+Gender                   F
+Observation_Code_1       143
+Observation_Text_1       Travel to areas or countries where polio is epidemic or endemic
+Series_Status            Complete
+Date_Administered_1      2016-09-05
+Vaccine_Name_1           IPV
+CVX_1                    10
+MVX_1                    PMC
+Evaluation_Status_1      Valid
+Series_Type_1            risk
+Date_Administered_2      2016-10-03
+Vaccine_Name_2           IPV
+CVX_2                    10
+MVX_2                    PMC
+Evaluation_Status_2      Valid
+Series_Type_2            risk
+Date_Administered_3      2017-04-03
+Vaccine_Name_3           IPV
+CVX_3                    10
+MVX_3                    PMC
+Evaluation_Status_3      Valid
+Series_Type_3            risk
+Forecast_#               -
+Vaccine_Group            IPOL
+Assessment_Date          2017-04-03
+Evaluation_Test_Type     All Valid: Forecast Test
+Date_added               2016-08-19
+Date_updated             2019-01-15
+Forecast_Test_Type       Not Recommended: Series Complete
+Reason_For_Change        Added description
+Changed_In_Version       4.0
+```
+
+**cicada answers:** status `Complete`, forecast #`4`, earliest `null`, recommended `null`, past due `null`.
+
 ### 2016-UC-0153
 
 CDC row, every populated column:
@@ -513,6 +556,35 @@ Changed_In_Version       4.5
 ```
 
 **cicada answers:** status `Not Complete`, forecast #`4`, earliest `2017/08/03`, recommended `2017/08/03`, past due `2017/08/03`.
+
+### 2016-UC-0198
+
+CDC row, every populated column:
+
+```
+CDC_Test_ID              2016-UC-0198
+Test_Case_Name           Patient is 39 years of age,  a microbiologist who is frequently exposed to Neisseria meningitidis, and  who plans to travel to countries where meningococcal disease is endemic.
+DOB                      1977-07-13
+Gender                   F
+Observation_Code_1       050
+Observation_Text_1       Microbiologists routinely exposed to Neisseria meningitidis
+Observation_Code_2       164
+Observation_Text_2       Travel to or are residents of countries in which meningococcal disease is hyperendemic or epidemic
+Series_Status            Not Complete
+Forecast_#               1
+Earliest_Date            1979-07-13
+Recommended_Date         1979-07-13
+Vaccine_Group            Meningococcal
+Assessment_Date          2016-08-02
+Evaluation_Test_Type     No Doses Administered
+Date_added               2016-08-02
+Date_updated             2019-03-14
+Forecast_Test_Type       Recommended based on Condition
+Reason_For_Change        Updated to reflect an Earliest and Recommended data of 07/13/79,07/13/1979, added description.
+Changed_In_Version       4.0
+```
+
+**cicada answers:** status `Not Complete`, forecast #`1`, earliest `1977/07/13`, recommended `1978/02/13`, past due `1977/07/13`.
 
 ### 2016-UC-0203
 
@@ -835,6 +907,56 @@ Changed_In_Version       4.5
 ```
 
 **cicada answers:** status `Not Complete`, forecast #`1`, earliest `2025/09/01`, recommended `2025/09/01`, past due `2025/09/01`.
+
+### 2024-UC-0019
+
+CDC row, every populated column:
+
+```
+CDC_Test_ID              2024-UC-0019
+Test_Case_Name           Patient is an adult dialysis patient and has been administered four doses of Hep B vaccine (3 CVX 104 and 1 CVX 43),
+DOB                      1994-09-15
+Gender                   M
+Observation_Code_1       032
+Observation_Text_1       Dialysis patient
+Series_Status            Not Complete
+Date_Administered_1      2024-10-18
+Vaccine_Name_1           HepA-HepB
+CVX_1                    104
+MVX_1                    SKB
+Evaluation_Status_1      Valid
+Series_Type_1            risk
+Date_Administered_2      2024-11-18
+Vaccine_Name_2           HepA-HepB
+CVX_2                    104
+MVX_2                    SKB
+Evaluation_Status_2      Valid
+Series_Type_2            risk
+Date_Administered_3      2024-12-18
+Vaccine_Name_3           HepA-HepB
+CVX_3                    104
+MVX_3                    SKB
+Evaluation_Status_3      Valid
+Series_Type_3            risk
+Date_Administered_4      2025-06-18
+Vaccine_Name_4           Hep B, Adult
+CVX_4                    43
+MVX_4                    SKB
+Evaluation_Status_4      Valid
+Series_Type_4            risk
+Forecast_#               5
+Earliest_Date            2026-06-18
+Recommended_Date         2026-06-18
+Vaccine_Group            HepB
+Assessment_Date          2025-06-18
+Evaluation_Test_Type     All Valid: Forecast Test
+Date_added               2025-02-07
+Date_updated             2025-02-07
+Forecast_Test_Type       Recommended based on interval
+Changed_In_Version       4.6
+```
+
+**cicada answers:** status `Not Complete`, forecast #`5`, earliest `2026/06/18`, recommended `2026/06/18`, past due `2026/06/18`.
 
 ### 2025-UC-0010
 
