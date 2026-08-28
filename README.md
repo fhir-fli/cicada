@@ -13,7 +13,7 @@ Cicada implements the CDC's [Clinical Decision Support for Immunization (CDSi)](
 - Multi-antigen vaccine group aggregation (DTaP/Tdap/Td, MMR, DTP, MR)
 - FHIR R4 `Parameters` in, FHIR R4 `Parameters` out
 - Built-in HTTP server with `$immds-forecast` (CDC) and `$immds-forecast-who` (WHO) endpoints (JSON and XML)
-- 1063/1064 on the CDC healthy suite and 313/337 on the conditions suite, 98.8% against NIST FITS
+- 1063/1064 on the CDC healthy suite and 310/337 on the conditions suite, 98.8% against NIST FITS
 
 ## Installation
 
@@ -194,14 +194,16 @@ dart run test/condition_test.dart
 
 Results against CDSi supporting data 4.65-508:
 - **Healthy**: 1063/1064 (99.9%) — one disagreement, `2018-0022`
-- **Condition**: 313/337 (92.9%) — 24 disagreements
+- **Condition**: 310/337 (92.0%) — 27 disagreements
 - **FITS**: 167/169 (98.8%) — 2 failures from FITS date rebasing (assessment date shifts)
 
-Every one of the 25 disagreements is written up case by case in
+Every one of the 28 disagreements is written up case by case in
 `CDSI-DISPUTED-CASES.md`, with the clinical adjudication in `CDSI-OE-QUERIES.md`.
-23 of the 25 have been put to an evidence review against current ACIP: most rule
-for cicada against a stale CDC test row, three are defects in CDC's supporting
-data, and where the review ruled against cicada the engine was fixed.
+23 have been put to an evidence review against current ACIP: most rule for
+cicada against a stale CDC test row, three are defects in CDC's supporting data,
+and where the review ruled against cicada the engine was fixed. Three more fail
+deliberately — rules that had made them pass appeared in no CDSi specification
+and were removed rather than kept for the sake of the score.
 
 The condition figure is out of **337**, not 777: the conditions workbook carries
 439 empty rows after its last real case, and those were previously loaded as
