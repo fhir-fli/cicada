@@ -467,6 +467,8 @@ class VaxSeries {
         false;
   }
 
+  /// Table 6-8: has at least one dose been administered, and is the Conditional
+  /// Skip Reference Date on or after the Conditional Skip Interval Date?
   bool skipByInterval(VaxCondition condition, VaxDate evalDate) {
     if (targetDose == 0) {
       return false;

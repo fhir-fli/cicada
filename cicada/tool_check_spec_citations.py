@@ -45,7 +45,12 @@ for f in FILES:
         if MECHANICAL.match(name) or name in classes:
             continue
         end = funcs[idx+1][0] if idx+1 < len(funcs) else len(lines)
-        block = '\n'.join(lines[max(0, i-22):end])
+        # Look back only as far as the previous function ends. A fixed window
+        # let a function borrow its neighbour's citation and pass by accident:
+        # skipByInterval had none of its own and went green for exactly that
+        # reason until a longer comment above it pushed the match out of range.
+        floor = funcs[idx-1][0] + 1 if idx else 0
+        block = '\n'.join(lines[max(floor, i-22):end])
         if not SPEC.search(block):
             missing.append(f'{f}:{i+1} {name}')
 

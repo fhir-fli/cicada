@@ -504,6 +504,9 @@ class VaxDose {
 
   /// Find the most recent dose of specified vaccine types, not inadvertent,
   /// given before the current dose (by index).
+  /// CALCDTINT-8: the reference dose date is the date administered of the most
+  /// recent vaccine dose administered that is the same vaccine type as the
+  /// interval's from-most-recent vaccine type.
   VaxDate? getMostRecentDoseDate(List<int> vaccineTypes, List<VaxDose> doses) {
     if (index == null) return null;
     final VaxDose? dose = doses.lastWhereOrNull((VaxDose d) =>
