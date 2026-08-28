@@ -203,9 +203,9 @@ Both suites compare against CDC's expected results and both must be run before
 and after any engine change — from `cicada/`, with absolute paths:
 
 ```bash
-dart test                            # 28 failures, all classified — run THIS
+dart test                            # 26 failures, all classified — run THIS
 dart run test/healthy_test.dart      # 1063 / 1064
-dart run test/condition_test.dart    #  310 /  337
+dart run test/condition_test.dart    #  312 /  337
 ```
 
 🛑 **Run `dart test`, not files by name.** Running only healthy and condition by
@@ -219,8 +219,7 @@ expectation, asserted nothing and were counted as passes. Fixed in the generator
 
 - **Healthy (v4.46 cases, 4.65-508 data — versions match, so this is the gate).**
   Its 1 failure is `2018-0022`, a dose-**evaluation reason label**, not a forecast.
-🔴 **Three of the 28 fail deliberately** — `2016-UC-0198`, `2016-UC-0137`,
-`2024-UC-0019`. Rules that had made them pass existed in **no CDSi
+🔴 **One of the 26 fails deliberately** — `2016-UC-0198`. Rules that had made them pass existed in **no CDSi
 specification** and were removed. **Do not "fix" them.** Before any engine
 change run `python3 tool_check_spec_citations.py` from `cicada/`: every
 decision-bearing function must name the rule it implements, and it exits
