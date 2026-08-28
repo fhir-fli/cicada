@@ -99,6 +99,14 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/cicada-immunization-recommendation"
+        },
+        "name": "Cicada Immunization Recommendation",
+        "description": "The forecast cicada returns. Constrains ImmunizationRecommendation to say which series group each recommendation belongs to, so that more than one recommendation for a single vaccine group can be told apart.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/VaccineConditionFhir"
         },
         "name": "Condition Profile with Vaccine Condition Codes",
@@ -335,6 +343,30 @@
         },
         "name": "Reasons why certain doses are Preferred or Allowed doses",
         "description": "Reasons why certain doses are Preferred or Allowed doses",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/series-type-ext"
+        },
+        "name": "Series Type",
+        "description": "Whether this recommendation came from the standard series group or a risk series group. Present so a client receiving two recommendations for one vaccine group can tell which pathway each describes.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/series-type"
+        },
+        "name": "Series Type Code System",
+        "description": "CDSi series type: whether a patient series is the routine schedule, one indicated by a risk condition, or evaluation-only. Mirrors the seriesType attribute of the CDSi antigen supporting data.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/series-type-vs"
+        },
+        "name": "Series Type Value Set",
+        "description": "Series types a forecast can be scoped to. In practice a forecast carries standard or risk: CDSi Table 8-14 excludes Evaluation Only series from best patient series.",
         "exampleBoolean": false
       },
       {

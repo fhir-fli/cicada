@@ -1,0 +1,29 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "draft",
+  "content": "complete",
+  "name": "SeriesTypeCS",
+  "id": "series-type",
+  "title": "Series Type Code System",
+  "description": "CDSi series type: whether a patient series is the routine schedule, one indicated by a risk condition, or evaluation-only. Mirrors the seriesType attribute of the CDSi antigen supporting data.",
+  "url": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/series-type",
+  "concept": [
+    {
+      "code": "standard",
+      "display": "Standard",
+      "definition": "The routine, age-based series."
+    },
+    {
+      "code": "risk",
+      "display": "Risk",
+      "definition": "A series indicated by a patient risk condition, such as travel, occupation, pregnancy, or a chronic medical condition."
+    },
+    {
+      "code": "evaluation-only",
+      "display": "Evaluation Only",
+      "definition": "A series used only to evaluate administered doses; it never produces a forecast."
+    }
+  ],
+  "caseSensitive": true,
+  "count": 3
+}

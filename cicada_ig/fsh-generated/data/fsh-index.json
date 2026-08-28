@@ -56,6 +56,14 @@
     "endLine": 506
   },
   {
+    "outputFile": "CodeSystem-series-type.json",
+    "fshName": "SeriesTypeCS",
+    "fshType": "CodeSystem",
+    "fshFile": "profile_forecast_recommendation.fsh",
+    "startLine": 17,
+    "endLine": 25
+  },
+  {
     "outputFile": "ConceptMap-Icd10ToCdsiObservation.json",
     "fshName": "Icd10ToCdsiObservation",
     "fshType": "Instance",
@@ -200,6 +208,14 @@
     "endLine": 22
   },
   {
+    "outputFile": "StructureDefinition-cicada-immunization-recommendation.json",
+    "fshName": "CicadaImmunizationRecommendation",
+    "fshType": "Profile",
+    "fshFile": "profile_forecast_recommendation.fsh",
+    "startLine": 40,
+    "endLine": 58
+  },
+  {
     "outputFile": "StructureDefinition-end-age.json",
     "fshName": "EndAge",
     "fshType": "Extension",
@@ -254,6 +270,14 @@
     "fshFile": "schedule_supporting_data.fsh",
     "startLine": 1,
     "endLine": 51
+  },
+  {
+    "outputFile": "StructureDefinition-series-type-ext.json",
+    "fshName": "SeriesType",
+    "fshType": "Extension",
+    "fshFile": "profile_forecast_recommendation.fsh",
+    "startLine": 33,
+    "endLine": 38
   },
   {
     "outputFile": "StructureDefinition-vaccination-conflict.json",
@@ -374,6 +398,14 @@
     "fshFile": "vs_immunization_procedures_snomed.fsh",
     "startLine": 1,
     "endLine": 16
+  },
+  {
+    "outputFile": "ValueSet-series-type-vs.json",
+    "fshName": "SeriesTypeVS",
+    "fshType": "ValueSet",
+    "fshFile": "profile_forecast_recommendation.fsh",
+    "startLine": 27,
+    "endLine": 31
   },
   {
     "outputFile": "ValueSet-vaccine-condition-codes-icd10.json",

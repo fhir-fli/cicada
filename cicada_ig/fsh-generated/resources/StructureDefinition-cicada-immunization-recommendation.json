@@ -1,0 +1,67 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "cicada-immunization-recommendation",
+  "url": "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/cicada-immunization-recommendation",
+  "name": "CicadaImmunizationRecommendation",
+  "title": "Cicada Immunization Recommendation",
+  "status": "draft",
+  "description": "The forecast cicada returns. Constrains ImmunizationRecommendation to say which series group each recommendation belongs to, so that more than one recommendation for a single vaccine group can be told apart.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "ImmunizationRecommendation",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/ImmunizationRecommendation",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "ImmunizationRecommendation.recommendation.extension",
+        "path": "ImmunizationRecommendation.recommendation.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      },
+      {
+        "id": "ImmunizationRecommendation.recommendation.extension:seriesType",
+        "path": "ImmunizationRecommendation.recommendation.extension",
+        "sliceName": "seriesType",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/series-type-ext"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "ImmunizationRecommendation.recommendation.targetDisease",
+        "path": "ImmunizationRecommendation.recommendation.targetDisease",
+        "mustSupport": true
+      },
+      {
+        "id": "ImmunizationRecommendation.recommendation.forecastStatus",
+        "path": "ImmunizationRecommendation.recommendation.forecastStatus",
+        "binding": {
+          "strength": "extensible",
+          "valueSet": "http://fhirfli.dev/fhir/ig/cicada/ValueSet/forecast-status"
+        }
+      },
+      {
+        "id": "ImmunizationRecommendation.recommendation.series",
+        "path": "ImmunizationRecommendation.recommendation.series",
+        "mustSupport": true
+      }
+    ]
+  }
+}

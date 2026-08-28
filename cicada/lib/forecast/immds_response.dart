@@ -300,6 +300,28 @@ ImmunizationRecommendation _buildRecommendation(ForecastResult result) {
       description: vgf.antigenNames.length > 1
           ? 'Antigens: ${vgf.antigenNames.join(", ")}'.toFhirString
           : null,
+      // The series group this forecast is scoped to (CDSi FORECASTVG-1).
+      // Core element: "One possible path to achieve presumed immunity against
+      // a disease - within the context of an authority."
+      series: vgf.seriesGroupName?.toFhirString,
+      // Which pathway this recommendation describes. A vaccine group can yield
+      // both a standard and a risk recommendation for the same target disease,
+      // and nothing in core FHIR or the US ImmDS IG distinguishes them.
+      extension_: [
+        FhirExtension(
+          url:
+              'http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/series-type-ext'
+                  .toFhirString,
+          valueCodeableConcept: CodeableConcept(coding: [
+            Coding(
+              system: 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/series-type'
+                  .toFhirUri,
+              code: (vgf.isRiskForecast ? 'risk' : 'standard').toFhirCode,
+              display: (vgf.isRiskForecast ? 'Risk' : 'Standard').toFhirString,
+            ),
+          ]),
+        ),
+      ],
     ));
   }
 

@@ -7,6 +7,7 @@
 [BeginAge]: StructureDefinition-begin-age.html
 [CdsiObservationCodes]: CodeSystem-cdsi-observation-codes.html
 [EvalStatusCS]: CodeSystem-EvalStatus.html
+[CicadaImmunizationRecommendation]: StructureDefinition-cicada-immunization-recommendation.html
 [VaccineConditionFhir]: StructureDefinition-VaccineConditionFhir.html
 [VaxDose]: StructureDefinition-vax-dose.html
 [DoseStatusReasonVS]: ValueSet-dose-status-reason.html
@@ -37,6 +38,9 @@
 [ImmunizationProceduresSnomed]: ValueSet-procedures.html
 [PreferredAllowedReasonVS]: ValueSet-preferred-allowed-reason.html
 [PreferredAllowedReasonCS]: CodeSystem-PreferredAllowedReason.html
+[SeriesType]: StructureDefinition-series-type-ext.html
+[SeriesTypeCS]: CodeSystem-series-type.html
+[SeriesTypeVS]: ValueSet-series-type-vs.html
 [SnomedToCdsiObservation]: ConceptMap-SnomedToCdsiObservation.html
 [VaccinationConflict]: StructureDefinition-vaccination-conflict.html
 [VaxPatient]: StructureDefinition-vax-patient.html

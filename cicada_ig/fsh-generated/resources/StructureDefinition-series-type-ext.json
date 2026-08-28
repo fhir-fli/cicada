@@ -1,0 +1,54 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "series-type-ext",
+  "url": "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/series-type-ext",
+  "name": "SeriesType",
+  "title": "Series Type",
+  "status": "draft",
+  "description": "Whether this recommendation came from the standard series group or a risk series group. Present so a client receiving two recommendations for one vaccine group can tell which pathway each describes.",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "Element"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "Series Type",
+        "definition": "Whether this recommendation came from the standard series group or a risk series group. Present so a client receiving two recommendations for one vaccine group can tell which pathway each describes."
+      },
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/series-type-ext"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://fhirfli.dev/fhir/ig/cicada/ValueSet/series-type-vs"
+        }
+      }
+    ]
+  }
+}
