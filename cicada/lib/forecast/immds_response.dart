@@ -191,7 +191,11 @@ ImmunizationRecommendation _buildRecommendation(ForecastResult result) {
   final assessmentDate = result.patient.assessmentDate;
   final List<ImmunizationRecommendationRecommendation> recommendations = [];
 
-  for (final vgf in result.vaccineGroupForecasts.values) {
+  // A vaccine group can carry more than one forecast: FORECASTVG-1 scopes a
+  // forecast to a series group, and a group may hold both a standard and a risk
+  // series group. Each becomes its own recommendation.
+  for (final vgf in result.vaccineGroupForecasts.values
+      .expand((List<VaccineGroupForecast> l) => l)) {
     final List<ImmunizationRecommendationDateCriterion> dateCriteria = [];
 
     // Earliest date (LOINC 30981-5)

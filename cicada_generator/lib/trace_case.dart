@@ -97,14 +97,21 @@ void main(List<String> args) {
 
   say('──────────── final vaccine group forecasts');
   if (result.vaccineGroupForecasts.isEmpty) say('  none');
-  result.vaccineGroupForecasts.forEach((String groupName, f) {
+  result.vaccineGroupForecasts
+      .forEach((String groupName, List<VaccineGroupForecast> fs) {
     if (filter != null &&
         !groupName.toLowerCase().contains(filter.toLowerCase())) {
       return;
     }
-    say('  $groupName  status=${f.status}  dose#=${f.doseNumber}');
-    say('      earliest=${f.earliestDate}  recommended=${f.recommendedDate}  '
-        'pastDue=${f.pastDueDate}');
+    // A group can carry a risk forecast and a standard one. Trace both.
+    for (final VaccineGroupForecast f in fs) {
+      final String kind = fs.length == 1
+          ? ''
+          : (f.isRiskForecast ? '  [risk]' : '  [standard]');
+      say('  $groupName$kind  status=${f.status}  dose#=${f.doseNumber}');
+      say('      earliest=${f.earliestDate}  recommended=${f.recommendedDate}  '
+          'pastDue=${f.pastDueDate}');
+    }
   });
 
   say('');

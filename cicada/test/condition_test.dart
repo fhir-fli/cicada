@@ -8,6 +8,8 @@ import 'package:cicada/generated_files/test_condition_doses.dart';
 import 'package:cicada/generated_files/test_condition_forecasts.dart';
 import 'package:test/test.dart';
 
+import 'cdc_row_collapse.dart';
+
 /// Loads NDJSON test cases, fixing up missing required fields.
 List<Parameters> loadConditionTestCases(String path) {
   final lines = File(path).readAsLinesSync();
@@ -246,7 +248,8 @@ void main() {
             final excelVg = expected['vaccineGroup']!.trim();
             final engineVg = conditionExcelToEngine[excelVg] ?? excelVg;
 
-            final vgForecast = result.vaccineGroupForecasts[engineVg];
+            final vgForecast =
+                collapseForComparison(result.vaccineGroupForecasts[engineVg]);
             if (vgForecast == null) {
               mismatches.add('[$excelVg] no forecast produced');
               continue;

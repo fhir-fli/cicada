@@ -6,7 +6,7 @@ import '../cicada.dart';
 typedef ForecastResult = ({
   VaxPatient patient,
   Map<String, VaxAntigen> agMap,
-  Map<String, VaccineGroupForecast> vaccineGroupForecasts,
+  Map<String, List<VaccineGroupForecast>> vaccineGroupForecasts,
 });
 
 class VaccineGroupForecast {
@@ -21,6 +21,9 @@ class VaccineGroupForecast {
     this.forecastCvxCodes = const [],
     this.forecastVaccineDescriptions = const [],
     this.doseNumber,
+    this.isRiskForecast = false,
+    this.seriesGroupName,
+    this.antigensNeedingDose = const [],
   });
 
   final String vaccineGroupName;
@@ -39,6 +42,22 @@ class VaccineGroupForecast {
 
   /// Target dose number (1-indexed)
   final int? doseNumber;
+
+  /// Whether this forecast came from risk series.
+  ///
+  /// CDSi Chapter 9 intro blends "risk with risk and standard with standard",
+  /// so a vaccine group holding both kinds of series group yields one forecast
+  /// of each. This says which one this is.
+  final bool isRiskForecast;
+
+  /// The series group this forecast is scoped to (FORECASTVG-1), when it came
+  /// from a single series group. Null when it aggregates several.
+  final String? seriesGroupName;
+
+  /// Target diseases in this forecast whose best patient series still needs
+  /// another dose. A fact about the series, reported so callers can see which
+  /// antigens drive the forecast rather than only the blended status.
+  final List<String> antigensNeedingDose;
 }
 
 /// Multi-antigen vaccine groups derived from the active schedule data.
@@ -356,7 +375,7 @@ SeriesStatus _aggregateStatus(List<SeriesStatus> statuses) {
 }
 
 /// Build vaccine group forecasts from per-antigen results
-Map<String, VaccineGroupForecast> _aggregateVaccineGroupForecasts(
+Map<String, List<VaccineGroupForecast>> _aggregateVaccineGroupForecasts(
     Map<String, VaxAntigen> agMap) {
   // Group antigens by vaccineGroupName
   final Map<String, List<VaxAntigen>> byGroup = {};
@@ -364,7 +383,7 @@ Map<String, VaccineGroupForecast> _aggregateVaccineGroupForecasts(
     byGroup.putIfAbsent(antigen.vaccineGroupName, () => []).add(antigen);
   }
 
-  final Map<String, VaccineGroupForecast> result = {};
+  final Map<String, List<VaccineGroupForecast>> result = {};
 
   for (final entry in byGroup.entries) {
     final groupName = entry.key;
@@ -393,11 +412,12 @@ Map<String, VaccineGroupForecast> _aggregateVaccineGroupForecasts(
           final aggregated = _aggregateStatus(statuses);
           if (aggregated == SeriesStatus.agedOut ||
               aggregated == SeriesStatus.notRecommended) {
-            result[groupName] = VaccineGroupForecast(
+            (result[groupName] ??= <VaccineGroupForecast>[])
+                .add(VaccineGroupForecast(
               vaccineGroupName: groupName,
               status: aggregated,
               antigenNames: [antigen.targetDisease],
-            );
+            ));
           }
         }
         continue;
@@ -409,113 +429,123 @@ Map<String, VaccineGroupForecast> _aggregateVaccineGroupForecasts(
       // risk with risk and standard with standard). Patients in this
       // situation may end up with more than 1 vaccine group forecast."
       //
-      // When multiple best series exist from non-equivalent groups of
-      // different types, separate by series type and use the risk forecast
-      // as the primary VG forecast (the patient has conditions that
-      // activated a risk series, so the risk pathway is determinative).
-      // When both risk and non-risk best series exist, the risk series
-      // may not see childhood doses (given before its minAge). Compute
-      // doseNum from the union of unique valid doses across ALL best
-      // series so that prior valid doses are counted regardless of which
-      // series evaluated them.
-      int? unionDoseNum;
-      if (bestList.length > 1) {
-        final riskBest = bestList
-            .where((s) => s.series.seriesType == SeriesType.risk)
-            .toList();
-        if (riskBest.isNotEmpty) {
-          if (riskBest.length < bestList.length) {
-            // Mixed risk + non-risk best series: count unique valid doses.
-            final Set<String> uniqueValidDoseIds = {};
-            for (final s in bestList) {
-              for (final d in s.evaluatedDoses) {
-                uniqueValidDoseIds.add(d.doseId);
-              }
-            }
-            unionDoseNum = uniqueValidDoseIds.length + 1;
+      // So partition the best patient series by series type and emit one
+      // vaccine group forecast per partition. The engine does not choose
+      // between them — the spec says the patient has both, and FORECASTVG-1
+      // scopes a forecast to a series group, not to a vaccine group.
+      final List<VaxSeries> riskBest = bestList
+          .where((s) => s.series.seriesType == SeriesType.risk)
+          .toList();
+      final List<VaxSeries> standardBest = bestList
+          .where((s) => s.series.seriesType != SeriesType.risk)
+          .toList();
+
+      // When both kinds are present the risk series may not see childhood
+      // doses, which were given before its minimum age. Count its dose
+      // number from the union of valid doses across all best series so a
+      // prior valid dose counts whichever series evaluated it.
+      int? riskUnionDoseNum;
+      if (riskBest.isNotEmpty && standardBest.isNotEmpty) {
+        final Set<String> uniqueValidDoseIds = {};
+        for (final s in bestList) {
+          for (final d in s.evaluatedDoses) {
+            uniqueValidDoseIds.add(d.doseId);
           }
-          // Risk series exist — use risk series for dates/status.
-          bestList = riskBest;
-        } else {
-          // No risk series. Exclude aged-out series from standard-only
-          // aggregation unless ALL are aged out.
-          final nonAgedOut = bestList
-              .where((s) => s.seriesStatus != SeriesStatus.agedOut)
-              .toList();
-          if (nonAgedOut.isNotEmpty) bestList = nonAgedOut;
         }
+        riskUnionDoseNum = uniqueValidDoseIds.length + 1;
       }
 
-      if (bestList.length == 1) {
-        // SINGLEANTVG-1: single best → use its status and dates directly.
-        final best = bestList.first;
-        final vaxInfo = _extractForecastVaccineInfo(best);
-        result[groupName] = VaccineGroupForecast(
-          vaccineGroupName: groupName,
-          status: best.seriesStatus,
-          earliestDate: best.candidateEarliestDate,
-          recommendedDate: best.adjustedRecommendedDate,
-          pastDueDate: best.adjustedPastDueDate,
-          latestDate: best.latestDate,
-          antigenNames: [antigen.targetDisease],
-          forecastCvxCodes: vaxInfo.cvx,
-          forecastVaccineDescriptions: vaxInfo.desc,
-          doseNumber: unionDoseNum ?? vaxInfo.doseNum,
-        );
-      } else {
-        // Multiple best series of the same type from non-equivalent
-        // groups. Aggregate status per Table 9-4, dates per SINGLEANTVG-2.
-        final statuses = bestList.map((s) => s.seriesStatus).toList();
-        final status = _aggregateStatus(statuses);
+      final List<List<VaxSeries>> partitions = <List<VaxSeries>>[];
+      if (riskBest.isNotEmpty) partitions.add(riskBest);
+      if (standardBest.isNotEmpty) {
+        // Exclude aged-out series from the standard forecast unless every
+        // standard series is aged out.
+        final List<VaxSeries> nonAgedOut = standardBest
+            .where((s) => s.seriesStatus != SeriesStatus.agedOut)
+            .toList();
+        partitions.add(nonAgedOut.isNotEmpty ? nonAgedOut : standardBest);
+      }
 
-        VaxDate? earliest;
-        VaxDate? recommended;
-        VaxDate? pastDue;
-        VaxDate? latest;
-        for (final s in bestList) {
-          if (s.candidateEarliestDate != null &&
-              (earliest == null || s.candidateEarliestDate! < earliest)) {
-            earliest = s.candidateEarliestDate;
+      for (final List<VaxSeries> part in partitions) {
+        final bool partIsRisk = part.first.series.seriesType == SeriesType.risk;
+        final int? partDoseNum = partIsRisk ? riskUnionDoseNum : null;
+
+        if (part.length == 1) {
+          // SINGLEANTVG-1: single best → use its status and dates directly.
+          final best = part.first;
+          final vaxInfo = _extractForecastVaccineInfo(best);
+          (result[groupName] ??= <VaccineGroupForecast>[])
+              .add(VaccineGroupForecast(
+            vaccineGroupName: groupName,
+            status: best.seriesStatus,
+            earliestDate: best.candidateEarliestDate,
+            recommendedDate: best.adjustedRecommendedDate,
+            pastDueDate: best.adjustedPastDueDate,
+            latestDate: best.latestDate,
+            antigenNames: [antigen.targetDisease],
+            forecastCvxCodes: vaxInfo.cvx,
+            forecastVaccineDescriptions: vaxInfo.desc,
+            doseNumber: partDoseNum ?? vaxInfo.doseNum,
+            isRiskForecast: partIsRisk,
+            seriesGroupName: best.series.selectSeries?.seriesGroupName,
+            antigensNeedingDose: best.shouldRecieveAnotherDose
+                ? <String>[antigen.targetDisease]
+                : const <String>[],
+          ));
+        } else {
+          // Several best series of the SAME type from non-equivalent series
+          // groups. Aggregate status per Table 9-4, dates per SINGLEANTVG-2.
+          final statuses = part.map((s) => s.seriesStatus).toList();
+          final status = _aggregateStatus(statuses);
+
+          VaxDate? earliest;
+          VaxDate? recommended;
+          VaxDate? pastDue;
+          VaxDate? latest;
+          for (final s in part) {
+            if (s.candidateEarliestDate != null &&
+                (earliest == null || s.candidateEarliestDate! < earliest)) {
+              earliest = s.candidateEarliestDate;
+            }
+            if (s.adjustedRecommendedDate != null &&
+                (recommended == null ||
+                    s.adjustedRecommendedDate! < recommended)) {
+              recommended = s.adjustedRecommendedDate;
+            }
+            if (s.adjustedPastDueDate != null &&
+                (pastDue == null || s.adjustedPastDueDate! < pastDue)) {
+              pastDue = s.adjustedPastDueDate;
+            }
+            if (s.latestDate != null &&
+                (latest == null || s.latestDate! < latest)) {
+              latest = s.latestDate;
+            }
           }
-          if (s.adjustedRecommendedDate != null &&
-              (recommended == null ||
-                  s.adjustedRecommendedDate! < recommended)) {
-            recommended = s.adjustedRecommendedDate;
-          }
-          if (s.adjustedPastDueDate != null &&
-              (pastDue == null || s.adjustedPastDueDate! < pastDue)) {
-            pastDue = s.adjustedPastDueDate;
-          }
-          if (s.latestDate != null &&
-              (latest == null || s.latestDate! < latest)) {
-            latest = s.latestDate;
-          }
+
+          final vaxInfo = _extractForecastVaccineInfo(part.first);
+          (result[groupName] ??= <VaccineGroupForecast>[])
+              .add(VaccineGroupForecast(
+            vaccineGroupName: groupName,
+            status: status,
+            earliestDate: earliest,
+            recommendedDate: recommended,
+            pastDueDate: pastDue,
+            latestDate: latest,
+            antigenNames: [antigen.targetDisease],
+            forecastCvxCodes: vaxInfo.cvx,
+            forecastVaccineDescriptions: vaxInfo.desc,
+            doseNumber: partDoseNum ?? vaxInfo.doseNum,
+            isRiskForecast: partIsRisk,
+            antigensNeedingDose: part.any((s) => s.shouldRecieveAnotherDose)
+                ? <String>[antigen.targetDisease]
+                : const <String>[],
+          ));
         }
-
-        final vaxInfo = _extractForecastVaccineInfo(bestList.first);
-        result[groupName] = VaccineGroupForecast(
-          vaccineGroupName: groupName,
-          status: status,
-          earliestDate: earliest,
-          recommendedDate: recommended,
-          pastDueDate: pastDue,
-          latestDate: latest,
-          antigenNames: [antigen.targetDisease],
-          forecastCvxCodes: vaxInfo.cvx,
-          forecastVaccineDescriptions: vaxInfo.desc,
-          doseNumber: unionDoseNum ?? vaxInfo.doseNum,
-        );
       }
       continue;
     }
 
     // Multi-antigen group: aggregate per CDSi Chapter 9
-    final List<SeriesStatus> statuses = [];
-    final List<VaxDate> earliestDates = [];
-    final List<VaxDate> recommendedDates = [];
-    final List<VaxDate> pastDueDates = [];
-    final List<VaxDate> latestDates = [];
-    final List<String> antigenNames = [];
 
     // Cache best series per antigen for reuse in priority check.
     final Map<String, List<VaxSeries>> bestByAntigen = {};
@@ -527,253 +557,254 @@ Map<String, VaccineGroupForecast> _aggregateVaccineGroupForecasts(
     // CDSi Chapter 9 intro, and section 4.4 for this exact vaccine group:
     // "For vaccine groups which contain non-equivalent series groups, it is
     // important to only blend best patient series of the same series type
-    // (e.g., risk with risk and standard with standard)."
+    // (e.g., risk with risk and standard with standard). Patients in this
+    // situation may end up with more than 1 vaccine group forecast."
     //
-    // Blending across types produced nonsense here. A 28-year-old pregnant
-    // patient has a pertussis risk series forecasting during the pregnancy and
-    // a childhood standard series that can never age out — its doses carry no
+    // Blending across types produced nonsense. A 28-year-old pregnant patient
+    // has a pertussis risk series forecasting during the pregnancy and a
+    // childhood standard series that can never age out — its doses carry no
     // maxAge — still forecasting from her 7th birthday in 1995. Blending took
     // the earliest of the two, so the vaccine group answered 1995.
     //
-    // When a risk series is among the best series for this vaccine group, the
-    // patient has a condition that activated it, and the risk pathway is the
-    // one being asked about. The single-antigen branch above already does
-    // this; the multi-antigen branch did not.
-    // Restrict to risk when a risk series still needs a dose, or when it is
-    // finished and its own antigen has nothing else pending.
-    //
-    // A complete risk series usually has nothing to contribute to a forecast,
-    // and preferring it anyway would silently drop the group's real
-    // recommendation: an MMR international traveller (`2016-UC-0093`) has a
-    // *complete* risk series alongside a standard series still owing dose 2,
-    // and the group must still forecast that dose 2.
-    //
-    // But when the risk antigen is settled on both pathways, the risk answer
-    // is the group's answer, and the other antigens' lifelong series must not
-    // overrule it. A pregnant patient who has had her Tdap (`2016-UC-0131`)
-    // has a complete pertussis risk series and a complete pertussis standard
-    // series; blending in tetanus and diphtheria — never complete, since their
-    // boosters recur for life — reported the group as Not Complete where CDSi
-    // says Complete. This is what the specification means by a patient ending
-    // up with more than one vaccine group forecast: CDC's row is the risk one.
-    final bool groupHasRiskBest = antigens.any((VaxAntigen a) {
-      final List<VaxSeries> best = bestByAntigen[a.targetDisease]!;
-      final List<VaxSeries> risk = best
-          .where((VaxSeries s) => s.series.seriesType == SeriesType.risk)
-          .toList();
-      if (risk.isEmpty) return false;
-      if (risk.any((VaxSeries s) => s.shouldRecieveAnotherDose)) return true;
-      return !best.any((VaxSeries s) =>
-          s.series.seriesType != SeriesType.risk && s.shouldRecieveAnotherDose);
-    });
+    // So run the aggregation once per series type present and emit a forecast
+    // for each. The engine does not choose between them; the last sentence of
+    // the passage says the patient has both.
+    bool typePresent({required bool risk}) =>
+        antigens.any((VaxAntigen a) => bestByAntigen[a.targetDisease]!.any(
+            (VaxSeries s) => (s.series.seriesType == SeriesType.risk) == risk));
+    final List<bool> passes = <bool>[
+      if (typePresent(risk: true)) true,
+      if (typePresent(risk: false)) false,
+    ];
 
-    for (final antigen in antigens) {
-      var bestList = bestByAntigen[antigen.targetDisease]!;
-      if (groupHasRiskBest) {
-        bestList = bestList
-            .where((VaxSeries s) => s.series.seriesType == SeriesType.risk)
-            .toList();
-      }
-      if (bestList.isEmpty) continue;
-      antigenNames.add(antigen.targetDisease);
-      for (final best in bestList) {
-        statuses.add(best.seriesStatus);
-        if (best.candidateEarliestDate != null) {
-          earliestDates.add(best.candidateEarliestDate!);
+    for (final bool forRisk in passes) {
+      final Map<String, List<VaxSeries>> passBest = <String, List<VaxSeries>>{
+        for (final VaxAntigen a in antigens)
+          a.targetDisease: bestByAntigen[a.targetDisease]!
+              .where((VaxSeries s) =>
+                  (s.series.seriesType == SeriesType.risk) == forRisk)
+              .toList(),
+      };
+
+      final List<SeriesStatus> statuses = [];
+      final List<VaxDate> earliestDates = [];
+      final List<VaxDate> recommendedDates = [];
+      final List<VaxDate> pastDueDates = [];
+      final List<VaxDate> latestDates = [];
+      final List<String> antigenNames = [];
+      final List<String> antigensNeedingDose = [];
+
+      for (final antigen in antigens) {
+        final List<VaxSeries> bestList = passBest[antigen.targetDisease]!;
+        if (bestList.isEmpty) continue;
+        antigenNames.add(antigen.targetDisease);
+        if (bestList.any((VaxSeries s) => s.shouldRecieveAnotherDose)) {
+          antigensNeedingDose.add(antigen.targetDisease);
         }
-        if (best.adjustedRecommendedDate != null) {
-          recommendedDates.add(best.adjustedRecommendedDate!);
-        }
-        if (best.adjustedPastDueDate != null) {
-          pastDueDates.add(best.adjustedPastDueDate!);
-        }
-        if (best.latestDate != null) {
-          latestDates.add(best.latestDate!);
+        for (final best in bestList) {
+          statuses.add(best.seriesStatus);
+          if (best.candidateEarliestDate != null) {
+            earliestDates.add(best.candidateEarliestDate!);
+          }
+          if (best.adjustedRecommendedDate != null) {
+            recommendedDates.add(best.adjustedRecommendedDate!);
+          }
+          if (best.adjustedPastDueDate != null) {
+            pastDueDates.add(best.adjustedPastDueDate!);
+          }
+          if (best.latestDate != null) {
+            latestDates.add(best.latestDate!);
+          }
         }
       }
-    }
 
-    ForecastTrace.current?.log(
-      '9 vaccine group aggregation',
-      groupName,
-      'antigens=${antigens.map((VaxAntigen a) => a.targetDisease).toList()} '
-          'statuses=$statuses earliest=$earliestDates '
-          'recommended=$recommendedDates',
-    );
-    if (statuses.isEmpty) continue;
+      ForecastTrace.current?.log(
+        '9 vaccine group aggregation',
+        groupName,
+        'antigens=${antigens.map((VaxAntigen a) => a.targetDisease).toList()} '
+            'statuses=$statuses earliest=$earliestDates '
+            'recommended=$recommendedDates',
+      );
+      if (statuses.isEmpty) continue;
 
-    // FORECASTVG-1: status
-    final vgStatus = _aggregateStatus(statuses);
+      // FORECASTVG-1: status
+      final vgStatus = _aggregateStatus(statuses);
 
-    // MULTIANTVG-1: earliest date per CDSi Table 9-5.
-    // Two branches depending on whether any forecast is a "priority
-    // patient series forecast" (FORECASTPRIORITY-1).
-    //
-    // Branch 1 (any priority): the later of
-    //   (a) the earliest date of all patient series forecasts, and
-    //   (b) the latest dose date administered for a vaccine in this group.
-    //
-    // Branch 2 (no priority): the latest earliest date of all patient
-    //   series forecasts (i.e., max of per-antigen earliest dates).
-    bool anyPriority = false;
-    for (final antigen in antigens) {
-      for (final best in bestByAntigen[antigen.targetDisease]!) {
-        if (_isPriorityForecast(best)) {
-          anyPriority = true;
-          break;
+      // MULTIANTVG-1: earliest date per CDSi Table 9-5.
+      // Two branches depending on whether any forecast is a "priority
+      // patient series forecast" (FORECASTPRIORITY-1).
+      //
+      // Branch 1 (any priority): the later of
+      //   (a) the earliest date of all patient series forecasts, and
+      //   (b) the latest dose date administered for a vaccine in this group.
+      //
+      // Branch 2 (no priority): the latest earliest date of all patient
+      //   series forecasts (i.e., max of per-antigen earliest dates).
+      bool anyPriority = false;
+      for (final antigen in antigens) {
+        for (final best in passBest[antigen.targetDisease]!) {
+          if (_isPriorityForecast(best)) {
+            anyPriority = true;
+            break;
+          }
         }
+        if (anyPriority) break;
       }
-      if (anyPriority) break;
-    }
 
-    VaxDate? vgEarliest;
-    if (earliestDates.isNotEmpty) {
-      if (anyPriority) {
-        // Branch 1: min of all earliests, floored at latest dose date
-        vgEarliest =
-            earliestDates.reduce((VaxDate a, VaxDate b) => a < b ? a : b);
-        VaxDate? latestDoseDate;
-        for (final antigen in antigens) {
-          for (final group in antigen.groups.values) {
-            for (final s in group.series) {
-              for (final dose in s.doses) {
-                if (latestDoseDate == null || dose.dateGiven > latestDoseDate) {
-                  latestDoseDate = dose.dateGiven;
+      VaxDate? vgEarliest;
+      if (earliestDates.isNotEmpty) {
+        if (anyPriority) {
+          // Branch 1: min of all earliests, floored at latest dose date
+          vgEarliest =
+              earliestDates.reduce((VaxDate a, VaxDate b) => a < b ? a : b);
+          VaxDate? latestDoseDate;
+          for (final antigen in antigens) {
+            for (final group in antigen.groups.values) {
+              for (final s in group.series) {
+                for (final dose in s.doses) {
+                  if (latestDoseDate == null ||
+                      dose.dateGiven > latestDoseDate) {
+                    latestDoseDate = dose.dateGiven;
+                  }
                 }
               }
             }
           }
-        }
-        if (latestDoseDate != null && vgEarliest < latestDoseDate) {
-          vgEarliest = latestDoseDate;
-        }
-      } else {
-        // Branch 2: max of all earliests (latest earliest date)
-        vgEarliest =
-            earliestDates.reduce((VaxDate a, VaxDate b) => a > b ? a : b);
-      }
-    }
-
-    // FORECASTVG-2: recommended = max(min(all recommendeds), vgEarliest)
-    VaxDate? vgRecommended;
-    if (recommendedDates.isNotEmpty) {
-      final minRecommended = recommendedDates.reduce((a, b) => a < b ? a : b);
-      if (vgEarliest != null) {
-        vgRecommended =
-            vgEarliest > minRecommended ? vgEarliest : minRecommended;
-      } else {
-        vgRecommended = minRecommended;
-      }
-    }
-
-    // FORECASTVG-3: past due = max(min(all past dues), vgEarliest)
-    VaxDate? vgPastDue;
-    if (pastDueDates.isNotEmpty) {
-      final minPastDue = pastDueDates.reduce((a, b) => a < b ? a : b);
-      if (vgEarliest != null) {
-        vgPastDue = vgEarliest > minPastDue ? vgEarliest : minPastDue;
-      } else {
-        vgPastDue = minPastDue;
-      }
-    }
-
-    // FORECASTVG-4: latest = min(all latest dates)
-    VaxDate? vgLatest;
-    if (latestDates.isNotEmpty) {
-      vgLatest = latestDates.reduce((a, b) => a < b ? a : b);
-    }
-
-    // For multi-antigen groups, collect vaccine info from each antigen.
-    // FORECASTDN-2: use min doseNum when administerFullVaccineGroup='Y',
-    // max when 'N'.
-    // When both risk and non-risk best series exist for an antigen, use
-    // unionDoseNum (unique valid doses across ALL best series + 1) so that
-    // prior valid doses from the standard series are counted even when the
-    // risk series can't see them (e.g., ART re-vaccination).
-    var multiVaxInfo =
-        (cvx: <String>[], desc: <String>[], doseNum: null as int?);
-    final List<int> doseNums = [];
-    for (final antigen in antigens) {
-      final bestList = bestByAntigen[antigen.targetDisease]!;
-      if (bestList.isNotEmpty) {
-        // Determine which series to use for vaccine info.
-        // Prefer a Not Complete risk series; fall back to any Not Complete
-        // series; last resort is bestList.first (may be Complete → null
-        // doseNum, handled below).
-        final riskBest = bestList
-            .where((s) => s.series.seriesType == SeriesType.risk)
-            .toList();
-        final notCompleteRisk = riskBest
-            .where((s) =>
-                s.seriesStatus != SeriesStatus.complete &&
-                s.seriesStatus != SeriesStatus.immune)
-            .toList();
-        final infoSeries = notCompleteRisk.isNotEmpty
-            ? notCompleteRisk.first
-            : bestList.firstWhere(
-                (s) =>
-                    s.seriesStatus != SeriesStatus.complete &&
-                    s.seriesStatus != SeriesStatus.immune,
-                orElse: () => bestList.first);
-        final info = _extractForecastVaccineInfo(infoSeries);
-        if (info.cvx.isNotEmpty && multiVaxInfo.cvx.isEmpty) {
-          multiVaxInfo = info;
-        }
-        // When mixed risk + non-risk best series exist, count unique valid
-        // doses across ALL best series so prior valid doses are reflected
-        // regardless of which series evaluated them. Two specific cases:
-        // 1. Risk series has no evaluated doses (ART re-vaccination: prior
-        //    standard doses count toward the risk forecast).
-        // 2. Risk series is Complete (e.g., 1-dose travel series finished;
-        //    its valid doses should count toward the standard forecast).
-        int? antigenDoseNum = info.doseNum;
-        if (riskBest.isNotEmpty &&
-            riskBest.length < bestList.length &&
-            (riskBest.first.evaluatedDoses.isEmpty ||
-                riskBest.first.seriesStatus == SeriesStatus.complete ||
-                riskBest.first.seriesStatus == SeriesStatus.immune)) {
-          final Set<String> uniqueValidDoseIds = {};
-          for (final s in bestList) {
-            for (final d in s.evaluatedDoses) {
-              uniqueValidDoseIds.add(d.doseId);
-            }
+          if (latestDoseDate != null && vgEarliest < latestDoseDate) {
+            vgEarliest = latestDoseDate;
           }
-          antigenDoseNum = uniqueValidDoseIds.length + 1;
-        }
-        if (antigenDoseNum != null) {
-          doseNums.add(antigenDoseNum);
+        } else {
+          // Branch 2: max of all earliests (latest earliest date)
+          vgEarliest =
+              earliestDates.reduce((VaxDate a, VaxDate b) => a > b ? a : b);
         }
       }
-    }
-    if (doseNums.isNotEmpty) {
-      // Look up administerFullVaccineGroup flag
-      final vgList = activeScheduleData.vaccineGroups?.vaccineGroup
-          ?.where((g) => g.name == groupName);
-      final vgDef = (vgList != null && vgList.isNotEmpty) ? vgList.first : null;
-      final bool useMin =
-          vgDef?.administerFullVaccineGroup?.toString() == 'Yes';
-      final int aggregatedDoseNum = useMin
-          ? doseNums.reduce((a, b) => a < b ? a : b)
-          : doseNums.reduce((a, b) => a > b ? a : b);
-      multiVaxInfo = (
-        cvx: multiVaxInfo.cvx,
-        desc: multiVaxInfo.desc,
-        doseNum: aggregatedDoseNum
-      );
-    }
 
-    result[groupName] = VaccineGroupForecast(
-      vaccineGroupName: groupName,
-      status: vgStatus,
-      earliestDate: vgEarliest,
-      recommendedDate: vgRecommended,
-      pastDueDate: vgPastDue,
-      latestDate: vgLatest,
-      antigenNames: antigenNames,
-      forecastCvxCodes: multiVaxInfo.cvx,
-      forecastVaccineDescriptions: multiVaxInfo.desc,
-      doseNumber: multiVaxInfo.doseNum,
-    );
+      // FORECASTVG-2: recommended = max(min(all recommendeds), vgEarliest)
+      VaxDate? vgRecommended;
+      if (recommendedDates.isNotEmpty) {
+        final minRecommended = recommendedDates.reduce((a, b) => a < b ? a : b);
+        if (vgEarliest != null) {
+          vgRecommended =
+              vgEarliest > minRecommended ? vgEarliest : minRecommended;
+        } else {
+          vgRecommended = minRecommended;
+        }
+      }
+
+      // FORECASTVG-3: past due = max(min(all past dues), vgEarliest)
+      VaxDate? vgPastDue;
+      if (pastDueDates.isNotEmpty) {
+        final minPastDue = pastDueDates.reduce((a, b) => a < b ? a : b);
+        if (vgEarliest != null) {
+          vgPastDue = vgEarliest > minPastDue ? vgEarliest : minPastDue;
+        } else {
+          vgPastDue = minPastDue;
+        }
+      }
+
+      // FORECASTVG-4: latest = min(all latest dates)
+      VaxDate? vgLatest;
+      if (latestDates.isNotEmpty) {
+        vgLatest = latestDates.reduce((a, b) => a < b ? a : b);
+      }
+
+      // For multi-antigen groups, collect vaccine info from each antigen.
+      // FORECASTDN-2: use min doseNum when administerFullVaccineGroup='Y',
+      // max when 'N'.
+      // When both risk and non-risk best series exist for an antigen, use
+      // the union of unique valid doses across ALL best series + 1 so that
+      // prior valid doses from the standard series are counted even when the
+      // risk series can't see them (e.g., ART re-vaccination).
+      var multiVaxInfo =
+          (cvx: <String>[], desc: <String>[], doseNum: null as int?);
+      final List<int> doseNums = [];
+      for (final antigen in antigens) {
+        final List<VaxSeries> allBest = bestByAntigen[antigen.targetDisease]!;
+        final List<VaxSeries> bestList = passBest[antigen.targetDisease]!;
+        if (bestList.isNotEmpty) {
+          // Determine which series to use for vaccine info.
+          // Prefer a Not Complete risk series; fall back to any Not Complete
+          // series; last resort is bestList.first (may be Complete → null
+          // doseNum, handled below).
+          final riskBest = allBest
+              .where((s) => s.series.seriesType == SeriesType.risk)
+              .toList();
+          final notCompleteRisk = riskBest
+              .where((s) =>
+                  s.seriesStatus != SeriesStatus.complete &&
+                  s.seriesStatus != SeriesStatus.immune)
+              .toList();
+          final infoSeries = notCompleteRisk.isNotEmpty
+              ? notCompleteRisk.first
+              : bestList.firstWhere(
+                  (s) =>
+                      s.seriesStatus != SeriesStatus.complete &&
+                      s.seriesStatus != SeriesStatus.immune,
+                  orElse: () => bestList.first);
+          final info = _extractForecastVaccineInfo(infoSeries);
+          if (info.cvx.isNotEmpty && multiVaxInfo.cvx.isEmpty) {
+            multiVaxInfo = info;
+          }
+          // When mixed risk + non-risk best series exist, count unique valid
+          // doses across ALL best series so prior valid doses are reflected
+          // regardless of which series evaluated them. Two specific cases:
+          // 1. Risk series has no evaluated doses (ART re-vaccination: prior
+          //    standard doses count toward the risk forecast).
+          // 2. Risk series is Complete (e.g., 1-dose travel series finished;
+          //    its valid doses should count toward the standard forecast).
+          int? antigenDoseNum = info.doseNum;
+          if (riskBest.isNotEmpty &&
+              riskBest.length < allBest.length &&
+              (riskBest.first.evaluatedDoses.isEmpty ||
+                  riskBest.first.seriesStatus == SeriesStatus.complete ||
+                  riskBest.first.seriesStatus == SeriesStatus.immune)) {
+            final Set<String> uniqueValidDoseIds = {};
+            for (final s in allBest) {
+              for (final d in s.evaluatedDoses) {
+                uniqueValidDoseIds.add(d.doseId);
+              }
+            }
+            antigenDoseNum = uniqueValidDoseIds.length + 1;
+          }
+          if (antigenDoseNum != null) {
+            doseNums.add(antigenDoseNum);
+          }
+        }
+      }
+      if (doseNums.isNotEmpty) {
+        // Look up administerFullVaccineGroup flag
+        final vgList = activeScheduleData.vaccineGroups?.vaccineGroup
+            ?.where((g) => g.name == groupName);
+        final vgDef =
+            (vgList != null && vgList.isNotEmpty) ? vgList.first : null;
+        final bool useMin =
+            vgDef?.administerFullVaccineGroup?.toString() == 'Yes';
+        final int aggregatedDoseNum = useMin
+            ? doseNums.reduce((a, b) => a < b ? a : b)
+            : doseNums.reduce((a, b) => a > b ? a : b);
+        multiVaxInfo = (
+          cvx: multiVaxInfo.cvx,
+          desc: multiVaxInfo.desc,
+          doseNum: aggregatedDoseNum
+        );
+      }
+
+      (result[groupName] ??= <VaccineGroupForecast>[]).add(VaccineGroupForecast(
+        vaccineGroupName: groupName,
+        status: vgStatus,
+        earliestDate: vgEarliest,
+        recommendedDate: vgRecommended,
+        pastDueDate: vgPastDue,
+        latestDate: vgLatest,
+        antigenNames: antigenNames,
+        forecastCvxCodes: multiVaxInfo.cvx,
+        forecastVaccineDescriptions: multiVaxInfo.desc,
+        doseNumber: multiVaxInfo.doseNum,
+        isRiskForecast: forRisk,
+        antigensNeedingDose: antigensNeedingDose,
+      ));
+    }
   }
 
   return result;

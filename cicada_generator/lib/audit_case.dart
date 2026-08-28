@@ -28,6 +28,7 @@ import 'package:cicada/generated_files/test_forecasts.dart';
 import 'package:collection/collection.dart';
 import 'package:excel/excel.dart';
 import 'package:fhir_r4/fhir_r4.dart';
+import 'package:cicada_generator/cdc_row_collapse.dart';
 
 late File log;
 
@@ -110,7 +111,8 @@ Map<String, dynamic>? rawCase(String path, String id) {
         in (decoded['parameter'] as List<dynamic>? ?? <dynamic>[])) {
       final Map<String, dynamic> param = p as Map<String, dynamic>;
       if (param.containsKey('resource')) {
-        final Map<String, dynamic> r = param['resource'] as Map<String, dynamic>;
+        final Map<String, dynamic> r =
+            param['resource'] as Map<String, dynamic>;
         if (r['resourceType'] == 'Immunization' && !r.containsKey('status')) {
           r['status'] = 'completed';
         }
@@ -184,8 +186,7 @@ void auditOne(String id) {
       raw['parameter'] as List<dynamic>? ?? <dynamic>[];
   for (final dynamic p in parameters) {
     final Map<String, dynamic> param = p as Map<String, dynamic>;
-    final Map<String, dynamic>? r =
-        param['resource'] as Map<String, dynamic>?;
+    final Map<String, dynamic>? r = param['resource'] as Map<String, dynamic>?;
     if (r == null) {
       say('  assessment date parameter: ${param["name"]}');
       continue;
@@ -195,26 +196,24 @@ void auditOne(String id) {
         say('  Patient    dob=${r["birthDate"]}  gender=${r["gender"]}');
         break;
       case 'Immunization':
-        final List<dynamic> codings =
-            ((r['vaccineCode'] as Map<String, dynamic>?)?['coding']
-                    as List<dynamic>?) ??
-                <dynamic>[];
+        final List<dynamic> codings = ((r['vaccineCode']
+                as Map<String, dynamic>?)?['coding'] as List<dynamic>?) ??
+            <dynamic>[];
         String codeFor(String system) =>
             (codings.firstWhereOrNull((dynamic c) =>
-                        (c as Map<String, dynamic>)['system']
-                            .toString()
-                            .contains(system)) as Map<String, dynamic>?)?['code']
-                    ?.toString() ??
-                '-';
+                    (c as Map<String, dynamic>)['system']
+                        .toString()
+                        .contains(system)) as Map<String, dynamic>?)?['code']
+                ?.toString() ??
+            '-';
         say('  Immunization ${r["id"]}  given=${r["occurrenceDateTime"]}  '
             'cvx=${codeFor("cvx")}  mvx=${codeFor("mvx")}  '
             'status=${r["status"]}');
         break;
       case 'Condition':
-        final List<dynamic> codings =
-            ((r['code'] as Map<String, dynamic>?)?['coding']
-                    as List<dynamic>?) ??
-                <dynamic>[];
+        final List<dynamic> codings = ((r['code']
+                as Map<String, dynamic>?)?['coding'] as List<dynamic>?) ??
+            <dynamic>[];
         for (final dynamic c in codings) {
           final Map<String, dynamic> coding = c as Map<String, dynamic>;
           say('  Condition   ${coding["code"]}  ${coding["display"]}  '
@@ -263,10 +262,16 @@ void auditOne(String id) {
   say('');
   say('  vaccine group forecasts:');
   if (result.vaccineGroupForecasts.isEmpty) say('    (none)');
-  result.vaccineGroupForecasts.forEach((String groupName, f) {
-    say('    ${groupName.padRight(16)} status=${f.status} dose#=${f.doseNumber} '
-        'earliest=${f.earliestDate} recommended=${f.recommendedDate} '
-        'pastDue=${f.pastDueDate}');
+  result.vaccineGroupForecasts
+      .forEach((String groupName, List<VaccineGroupForecast> fs) {
+    // A group can carry a risk forecast and a standard one. Show both.
+    for (final VaccineGroupForecast f in fs) {
+      final String kind =
+          fs.length == 1 ? '' : (f.isRiskForecast ? ' [risk]' : ' [standard]');
+      say('    ${groupName.padRight(16)}$kind status=${f.status} '
+          'dose#=${f.doseNumber} earliest=${f.earliestDate} '
+          'recommended=${f.recommendedDate} pastDue=${f.pastDueDate}');
+    }
   });
   say('');
 
@@ -314,8 +319,16 @@ void auditOne(String id) {
   for (final Map<String, String> expected in expectedForecasts) {
     final String excelGroup = expected['vaccineGroup']!.trim();
     final String engineGroup = groupMap[excelGroup] ?? excelGroup;
-    final f = result.vaccineGroupForecasts[engineGroup];
+    final List<VaccineGroupForecast>? all =
+        result.vaccineGroupForecasts[engineGroup];
+    // CDC records one row per group, so compare against the collapsed one.
+    final f = collapseForComparison(all);
     say('  [$excelGroup → $engineGroup]');
+    if (all != null && all.length > 1) {
+      say('      engine emitted ${all.length} forecasts for this group '
+          '(risk and standard); comparing against the '
+          '${f!.isRiskForecast ? "risk" : "standard"} one');
+    }
     if (f == null) {
       say('      engine produced NO forecast for this vaccine group');
       continue;

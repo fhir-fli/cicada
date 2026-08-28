@@ -197,6 +197,24 @@ Uses Riverpod (non-Flutter) with `ProviderContainer` for managing:
 
 Uses `very_good_analysis`. The CDSi supporting data currently implemented is **4.65-508** (Aug 2026). The logic specification is v4.6 (Dec 2024) — CDC versions them separately.
 
+## Vaccine group forecasts come in a list
+
+`ForecastResult.vaccineGroupForecasts` is
+`Map<String, List<VaccineGroupForecast>>`. A vaccine group holding both a
+standard and a risk series group gets **one forecast for each**: FORECASTVG-1
+scopes a forecast to a series group, and the Chapter 9 intro says such a patient
+"may end up with more than 1 vaccine group forecast". `$immds-forecast` emits a
+recommendation per forecast. Each carries `isRiskForecast`, `seriesGroupName`
+and `antigensNeedingDose` so a consumer can tell them apart.
+
+🛑 **The engine does not choose between them.** CDC's workbook records one row
+per case and never says which series group it means, so the test harness picks
+one via `collapseForComparison` in `cicada/test/cdc_row_collapse.dart`. That
+rule is an artefact of CDC's file format and **must not move into `lib/`**. It
+is duplicated into `cicada_generator/lib/cdc_row_collapse.dart` because the two
+packages cannot depend on each other (excel pins archive 3.x, fhir_r4_bulk needs
+4.x); `cdc_row_collapse_sync_test.dart` fails if the copies drift.
+
 ## Test Results
 
 Both suites compare against CDC's expected results and both must be run before

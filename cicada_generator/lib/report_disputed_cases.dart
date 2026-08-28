@@ -26,10 +26,12 @@ import 'package:cicada/generated_files/test_forecasts.dart';
 import 'package:collection/collection.dart';
 import 'package:excel/excel.dart';
 import 'package:fhir_r4/fhir_r4.dart';
+import 'package:cicada_generator/cdc_row_collapse.dart';
 
 late File out;
 
-void say(String line) => out.writeAsStringSync('$line\n', mode: FileMode.append);
+void say(String line) =>
+    out.writeAsStringSync('$line\n', mode: FileMode.append);
 
 String cell(List<Data?> row, int i) =>
     i < row.length ? (row[i]?.value?.toString() ?? '').trim() : '';
@@ -108,8 +110,8 @@ bool inconsistent(VaxDose dose) {
   if (dose.evalReason == EvalReason.intervalTooShort &&
       dose.allowedIntervalReason != IntervalReason.tooShort &&
       dose.preferredIntervalReason != IntervalReason.tooShort) return true;
-  if (dose.evalReason == EvalReason.liveVirusConflict &&
-      dose.conflict != true) return true;
+  if (dose.evalReason == EvalReason.liveVirusConflict && dose.conflict != true)
+    return true;
   if (dose.evalReason == EvalReason.notPreferableOrAllowable &&
       dose.allowedVaccine != false) return true;
   if (dose.evalStatus == EvalStatus.valid) {
@@ -190,8 +192,8 @@ bool disagrees(
   for (final expected
       in expectedForecasts[id] ?? const <Map<String, String>>[]) {
     final excelGroup = expected['vaccineGroup']!.trim();
-    final forecast =
-        result.vaccineGroupForecasts[groupMap[excelGroup] ?? excelGroup];
+    final forecast = collapseForComparison(
+        result.vaccineGroupForecasts[groupMap[excelGroup] ?? excelGroup]);
     if (forecast == null) return true;
     if (expected['seriesStatus']!.toLowerCase() !=
         forecast.status.toString().toLowerCase()) {
@@ -277,8 +279,8 @@ void emit(
       if (h.isEmpty || v.isEmpty) continue;
       // Only tidy real date columns: a case id like "2018-0019" parses as a
       // date and came out as 2017-12-19.
-      final isDate = h.toLowerCase().contains('date') ||
-          h.toLowerCase() == 'dob';
+      final isDate =
+          h.toLowerCase().contains('date') || h.toLowerCase() == 'dob';
       say('${h.padRight(24)} ${isDate ? tidy(v) : v}');
     }
     say('```\n');
@@ -290,7 +292,8 @@ void emit(
     }
     final result = evaluateForForecast(params);
     final excelGroup = cell(row, groupCol);
-    final f = result.vaccineGroupForecasts[groupMap[excelGroup] ?? excelGroup];
+    final f = collapseForComparison(
+        result.vaccineGroupForecasts[groupMap[excelGroup] ?? excelGroup]);
     if (f == null) {
       say('**cicada produces no forecast for $excelGroup.**\n');
     } else {
@@ -324,8 +327,8 @@ void main() {
   const healthyNdjson = 'cicada/test/healthyTestCases.ndjson';
   const conditionNdjson = 'cicada/test/conditionTestCases.ndjson';
 
-  final healthyIds = disagreeingIds(
-      loadCases(healthyNdjson), testForecasts, testDoses);
+  final healthyIds =
+      disagreeingIds(loadCases(healthyNdjson), testForecasts, testDoses);
   final conditionIds = disagreeingIds(
       loadCases(conditionNdjson), testConditionForecasts, testConditionDoses);
   stdout.writeln('${healthyIds.length} healthy and ${conditionIds.length} '
@@ -333,7 +336,7 @@ void main() {
 
   emit(
     'Healthy childhood and adult cases (v4.46 — versions match, so these are '
-    'the sharpest)',
+        'the sharpest)',
     'cicada_generator/lib/test_cases/'
         'cdsi-healthy-childhood-and-adult-test-cases-v4.46.xlsx',
     'FITS Exported TestCases',

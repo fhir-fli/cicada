@@ -21,6 +21,8 @@ import 'package:cicada/generated_files/test_doses.dart';
 import 'package:cicada/generated_files/test_forecasts.dart';
 import 'package:test/test.dart';
 
+import 'cdc_row_collapse.dart';
+
 /// Loads NDJSON test cases, fixing up missing required fields.
 List<Parameters> loadHealthyTestCases(String path) {
   final lines = File(path).readAsLinesSync();
@@ -138,8 +140,7 @@ String _patientId(Parameters parameters, int index) {
 }
 
 void main() {
-  final allParameters =
-      loadHealthyTestCases('test/healthyTestCases.ndjson');
+  final allParameters = loadHealthyTestCases('test/healthyTestCases.ndjson');
 
   group('CDSi healthy childhood and adult test cases', () {
     test('loaded ${allParameters.length} test cases', () {
@@ -265,7 +266,8 @@ void main() {
             final excelVg = expected['vaccineGroup']!.trim();
             final engineVg = healthyExcelToEngine[excelVg] ?? excelVg;
 
-            final vgForecast = result.vaccineGroupForecasts[engineVg];
+            final vgForecast =
+                collapseForComparison(result.vaccineGroupForecasts[engineVg]);
             if (vgForecast == null) {
               mismatches.add('[$excelVg] no forecast produced');
               continue;

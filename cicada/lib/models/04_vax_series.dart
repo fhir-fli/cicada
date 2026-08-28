@@ -226,7 +226,8 @@ class VaxSeries {
       _traceDose(dose, 'counted: preferable vaccine');
       return true;
     }
-    final bool allowedType = dose.isAllowedType(seriesDose.allowableVaccine, dob);
+    final bool allowedType =
+        dose.isAllowedType(seriesDose.allowableVaccine, dob);
     _traceDose(
         dose,
         allowedType
@@ -410,8 +411,7 @@ class VaxSeries {
       case 'vaccine count by age':
         return skipByCount(condition, dob, true, evalDate, skipContext);
       case 'vaccine count by date':
-        return skipByCount(
-            condition, evalDate, false, evalDate, skipContext);
+        return skipByCount(condition, evalDate, false, evalDate, skipContext);
       case 'vaccine count by date and age':
         return skipByCountDateAndAge(condition, evalDate, skipContext);
       default:
@@ -489,9 +489,8 @@ class VaxSeries {
         : VaxDate.fromString(condition.endDate!);
     final VaxDate? ageEndDate = dob.changeNullable(condition.endAge, true);
     final List<int> types = parseTypes(condition.vaccineTypes);
-    final int totalCount = countVaccinesDateAndAge(
-        types, startDate, endDate, ageEndDate, condition.doseType,
-        referenceDate, skipContext);
+    final int totalCount = countVaccinesDateAndAge(types, startDate, endDate,
+        ageEndDate, condition.doseType, referenceDate, skipContext);
     return evaluateCountLogic(
         totalCount, condition.doseCountLogic, condition.doseCount);
   }
@@ -547,9 +546,14 @@ class VaxSeries {
   }
 
   /// CONDSKIP-1 with both an age window and a date window (Table 6-9).
-  int countVaccinesDateAndAge(List<int> types, VaxDate? startDate,
-      VaxDate? endDate, VaxDate? ageEndDate, DoseType? doseType,
-      VaxDate referenceDate, SkipContext skipContext) {
+  int countVaccinesDateAndAge(
+      List<int> types,
+      VaxDate? startDate,
+      VaxDate? endDate,
+      VaxDate? ageEndDate,
+      DoseType? doseType,
+      VaxDate referenceDate,
+      SkipContext skipContext) {
     final List<VaxDose> source =
         conditionalSkipSource(types, doseType, referenceDate, skipContext);
     return source

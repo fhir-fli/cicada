@@ -138,6 +138,7 @@ class VaxDose {
     add(evalReason);
     return reasons;
   }
+
   VaxObservations? observations;
 
   VaxDose copyWith({

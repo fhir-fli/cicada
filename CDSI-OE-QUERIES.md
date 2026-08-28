@@ -732,9 +732,11 @@ for suppressing a forecast and become arguments for how to label and order two.*
 Each series group reports its own status independently, which is what the
 two-forecast model gives.
 
-⚠️ Still an interface break: `vaccineGroupForecasts` goes from one entry per
-vaccine group to one per series group, and `$immds-forecast` and every consumer
-assume the current cardinality. A product decision, not a silent conformance fix.
+✅ **Done 2026-08-28.** `vaccineGroupForecasts` is now
+`Map<String, List<VaccineGroupForecast>>` — one entry per series group — and
+`$immds-forecast` emits a recommendation for each. Measured over the condition
+suite: 181 cases have a vaccine group carrying two forecasts, and the response
+carries one recommendation per forecast in every one.
 
 ---
 
@@ -756,18 +758,25 @@ the consequence:
 > for a given vaccine group (e.g., a travel-based MMR forecast and an age-based
 > MMR forecast)."*
 
-**cicada emits one forecast per vaccine group.** Where a group holds both a risk
-and a standard best patient series it picks the risk one — restricted to when a
-risk series still needs a dose, or when it is finished and its own antigen has
-nothing else pending. **Those conditions are not in the specification.** They
-were derived from two cases pulling in opposite directions: an MMR traveller
-whose complete risk series must not silence a standard series still owing dose 2,
-and a pregnant patient whose complete pertussis risk series must not be dragged
-back to Not Complete by tetanus and diphtheria boosters that recur for life.
+**cicada used to emit one forecast per vaccine group.** Where a group held both
+a risk and a standard best patient series it picked the risk one — restricted to
+when a risk series still needed a dose, or when it was finished and its own
+antigen had nothing else pending. **Those conditions are not in the
+specification.** They were derived from two cases pulling in opposite directions:
+an MMR traveller whose complete risk series must not silence a standard series
+still owing dose 2, and a pregnant patient whose complete pertussis risk series
+must not be dragged back to Not Complete by tetanus and diphtheria boosters that
+recur for life.
 
-The engine gets both right. But the tie-break is ours, not CDC's, and the
-specification's own answer to the situation appears to be that both forecasts
-should be returned.
+✅ **Fixed 2026-08-28.** The engine now emits one forecast per series group, as
+Chapter 9 describes, and makes no choice between them. The tie-break moved to
+`cicada/test/cdc_row_collapse.dart`, used only to decide which forecast CDC's
+single workbook row refers to. It is documented there as an artefact of their
+file format, not a rule. The failing set did not move: 26 before, 26 after, the
+same 26.
+
+The questions below still stand — they ask what CDC intends, which is worth an
+answer even though the engine now follows the text.
 
 **Questions:**
 
@@ -779,7 +788,8 @@ should be returned.
 3. If a single forecast per vaccine group is intended, which series group's
    forecast wins, and on what rule?
 
-⚠️ **Implementation note:** conforming would change the shape of the response —
-`vaccineGroupForecasts` is currently one entry per vaccine group, and every
-consumer, including the `$immds-forecast` operation, assumes that. Not to be
-changed without a decision.
+✅ **Implementation note, resolved 2026-08-28.** `vaccineGroupForecasts` is now
+`Map<String, List<VaccineGroupForecast>>`, and `$immds-forecast` emits a
+recommendation per forecast. Each forecast carries `isRiskForecast`,
+`seriesGroupName` and `antigensNeedingDose` so a consumer can tell the two
+apart.
