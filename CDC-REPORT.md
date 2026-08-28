@@ -1,7 +1,9 @@
-# Four defects to report to CDC — CDSi 4.65-508
+# Five defects to report to CDC — CDSi 4.65-508
 
 Found while running cicada against the published test cases. Three are defects in
-the **supporting data**; the fourth is a defective **test expectation**. Each was
+the **supporting data**, one is a defective **test expectation**, and one is the
+underlying-conditions workbook as a whole being older than the data it is tested
+against. Each was
 checked in the published **Excel** supporting data — the authoritative form, and
 the one cicada's generator builds from — and cross-checked against the XML and
 the 4.64 release, so none is new to this version.
@@ -107,5 +109,42 @@ self-consistent and needs no inadvertent-vaccine definition added.
 
 ---
 
+## 5. The underlying-conditions test cases predate the supporting data
+
+**Cases:** `2016-UC-0032`, `2016-UC-0057`, `2016-UC-0079`, `2016-UC-0087`,
+`2016-UC-0088`, `2016-UC-0110`, `2016-UC-0130`, `2016-UC-0173`, `2016-UC-0178`,
+`2016-UC-0203`, `2017-UC-0015`, `2020-UC-0003`, `2022-UC-0017`, `2025-UC-0010`,
+`2025-UC-0015` — fifteen, reported as one finding.
+
+Each of these rows asks for a series, an interval or an evaluation reason that
+the current supporting data no longer contains. A conformant engine reading
+4.65-508 cannot produce the expected answer, because the rule the row tests is
+gone. Examples:
+
+- **The risk series was retired.** No HPV risk series is indicated by observation
+  036 any more, so `2016-UC-0087` and `2016-UC-0088` cannot evaluate a dose in
+  one. The same for observation 177 and MenB (`2020-UC-0003`), and for the
+  contraindication codes 116 and 172 (`2016-UC-0203`, `2025-UC-0010`).
+- **The indication window narrowed.** The HPV sexual-abuse indication now ends at
+  11 years; `2016-UC-0079`'s patient is 12 at assessment, and Table 5-4 tests the
+  assessment date.
+- **The interval was replaced.** `2016-UC-0110` expects a MenACWY fourth dose six
+  months after dose 3; that interval exists nowhere in the series now.
+  `2022-UC-0017` expects 8 weeks where the dose carries `minInt: 1 year`.
+- **The attribute was removed.** `2016-UC-0032` expects an MMR past-due date six
+  years out; that dose carries no latest recommended interval at all.
+
+All fifteen were reviewed against current ACIP by an independent evidence review,
+which found **cicada's answer clinically correct in every one** and the CDC row
+stale. Each was also checked against the 4.64 release, so none is new to
+4.65-508.
+
+**Fix:** regenerate or retire the underlying-conditions test cases against the
+current supporting data. They are dated v4.6 (September 2025) while the data is
+August 2026, and the healthy childhood and adult cases (v4.46) do not show this
+problem — cicada passes 1063 of 1064 of those.
+
+---
+
 Full working, including CDC's own row for each case and cicada's answer, is in
-`CDSI-OE-QUERIES.md` — sections 3, 6, 11 and 12 respectively.
+`CDSI-OE-QUERIES.md` — sections 3, 6, 11, 12 and 8/9/10 respectively.
