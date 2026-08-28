@@ -675,3 +675,51 @@ end state after all antigens are evaluated? Table 6-7 does not say, and the
 three answers give different results for real patients. If the intended answer
 is the date administered, Table 6-7 needs the reference date that Tables 6-6 and
 6-8 already have.
+
+---
+
+## 14. Chapter 9 scopes a forecast to a series group — should a vaccine group emit more than one?
+
+**Not a case failure.** A deviation found by auditing the engine against the
+specification, recorded because we do not follow the spec here and should say so.
+
+**FORECASTVG-1** puts a patient series forecast in a vaccine group forecast when
+
+> *"The best patient series belongs to **the series group** for which the vaccine
+> group forecast is being made."*
+
+The forecast is scoped to a **series group**, and a vaccine group can contain
+several — a standard group and a risk group. Chapter 9's introduction describes
+the consequence:
+
+> *"Patients in this situation may end up with more than 1 vaccine group forecast
+> for a given vaccine group (e.g., a travel-based MMR forecast and an age-based
+> MMR forecast)."*
+
+**cicada emits one forecast per vaccine group.** Where a group holds both a risk
+and a standard best patient series it picks the risk one — restricted to when a
+risk series still needs a dose, or when it is finished and its own antigen has
+nothing else pending. **Those conditions are not in the specification.** They
+were derived from two cases pulling in opposite directions: an MMR traveller
+whose complete risk series must not silence a standard series still owing dose 2,
+and a pregnant patient whose complete pertussis risk series must not be dragged
+back to Not Complete by tetanus and diphtheria boosters that recur for life.
+
+The engine gets both right. But the tie-break is ours, not CDC's, and the
+specification's own answer to the situation appears to be that both forecasts
+should be returned.
+
+**Questions:**
+
+1. Is a vaccine group forecast intended to be one per **series group**, so that a
+   patient with an active risk indication legitimately receives two forecasts for
+   one vaccine group?
+2. If so, is there a rule for which one a system should present when it can show
+   only one — or is that deliberately left to the implementation?
+3. If a single forecast per vaccine group is intended, which series group's
+   forecast wins, and on what rule?
+
+⚠️ **Implementation note:** conforming would change the shape of the response —
+`vaccineGroupForecasts` is currently one entry per vaccine group, and every
+consumer, including the `$immds-forecast` operation, assumes that. Not to be
+changed without a decision.
