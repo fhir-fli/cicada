@@ -33,6 +33,11 @@ class VaxGroup {
     }
   }
 
+  /// SELECTB-24: a relevant patient series is a *candidate scorable* patient
+  /// series when its forecast is not 'Contraindicated' — or when it is, and
+  /// every other series in the same series group is contraindicated too. That
+  /// second branch is the fallback below: a group in which everything is
+  /// contraindicated still has to produce a best patient series.
   List<VaxSeries> getRelevantSeries(List<VaxSeries> series) {
     final List<VaxSeries> relevantSeries = series
         .where((VaxSeries element) =>
@@ -41,6 +46,11 @@ class VaxGroup {
     return relevantSeries.isEmpty ? series.toList() : relevantSeries;
   }
 
+  /// SELECTSCORE-2 (section 8.1, Pre-Filter Patient Series). The comment
+  /// blocks below are that rule's own bullets, in its order: risk series at
+  /// the highest priority in the group, standard series with a valid dose
+  /// before the maximum age to start, standard series where the group has no
+  /// valid doses and no default series, and complete Evaluation Only series.
   List<VaxSeries> getScorableSeries(List<VaxSeries> relevantSeries) {
     final Set<VaxSeries> scorableSeries = <VaxSeries>{};
 
@@ -124,6 +134,8 @@ class VaxGroup {
     return scorableSeries.toList();
   }
 
+  /// Section 8.2 / Table 8-3: is there a single prioritized patient series in
+  /// this series group?
   VaxSeries? getPrioritizedSeries(
       List<VaxSeries> scorableSeries, List<VaxSeries> series) {
     if (scorableSeries.isEmpty) {
@@ -165,6 +177,8 @@ class VaxGroup {
     return null;
   }
 
+  /// Section 8.4, Complete Patient Series: score the complete scorable series
+  /// in a group against each other to find the prioritized one.
   List<VaxSeries> scoreCompleteSeries(List<VaxSeries> completeSeries) {
     /// Find what is the maximum number of valid doses in a series
     /// While we're at it, count how many series have that many doses
@@ -206,6 +220,7 @@ class VaxGroup {
     return completeSeries;
   }
 
+  /// Section 8.5, In-Process Patient Series.
   List<VaxSeries> scoreInProcessSeries(List<VaxSeries> inProcessSeries) {
     /// Find what is the maximum number of valid doses in a series
     /// While we're at it, count how many series have that many doses
@@ -373,6 +388,7 @@ class VaxGroup {
     return inProcessSeries;
   }
 
+  /// Section 8.6, No Valid Doses.
   List<VaxSeries> scoreZeroValidDosesSeries(
       List<VaxSeries> zeroValidDosesSeries) {
     VaxDate earliestStartDate = VaxDate.max();
@@ -502,6 +518,8 @@ class VaxGroup {
     }
   }
 
+  /// Section 8.3: classify scorable patient series — complete, in process, or
+  /// zero valid doses — before scoring within each class.
   void classifyScorableSeries(List<VaxSeries> scorableSeries) {
     final List<VaxSeries> completeScorableSeries = scorableSeries
         .where((VaxSeries element) =>
@@ -535,6 +553,7 @@ class VaxGroup {
     }
   }
 
+  /// Section 8.7, Select Prioritized Patient Series.
   void prioritizedScoredSeries(List<VaxSeries> scoredSeries) {
     int highestScore = -99;
     for (final VaxSeries series in scoredSeries) {
@@ -560,6 +579,7 @@ class VaxGroup {
     }
   }
 
+  /// Section 8.8, Determine Best Patient Series.
   void determineBestSeries() {
     if (prioritizedSeries.length == 1) {
       if (prioritizedSeries.first.seriesStatus == SeriesStatus.complete) {

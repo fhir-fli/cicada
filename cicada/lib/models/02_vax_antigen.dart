@@ -79,6 +79,9 @@ class VaxAntigen {
     }
   }
 
+  /// Table 7-5: does the antigen contraindication apply to the patient? The
+  /// observation itself was matched in an earlier step; what is tested here is
+  /// the contraindication's begin/end age window against the assessment date.
   void contraindicated() {
     /// Check each of the contraindications (we already ensured they apply
     /// to the patient in a previous step)
@@ -95,6 +98,9 @@ class VaxAntigen {
     }
   }
 
+  /// Table 7-3: does the patient have evidence of immunity? Either a listed
+  /// clinical-history observation, or a birth date before the antigen's
+  /// immunity birth date with none of that rule's exclusion observations.
   void immunity() {
     final List<int>? obsInts = observations.codesAsInt;
     final AntigenSupportingData? ag = activeAntigenMap[targetDisease];
