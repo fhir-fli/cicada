@@ -364,6 +364,10 @@ class VaxDose {
   /// requirements." (AND logic)
   /// Intervals with effectiveDate/cessationDate are filtered by the dose date
   /// first — only applicable intervals are evaluated.
+  /// Table 6-18: below the absolute minimum interval date the dose does not
+  /// satisfy the preferable interval; between the absolute minimum and the
+  /// minimum interval date it does, on the grace period; at or after the
+  /// minimum interval date it does outright.
   bool evaluatePreferableInterval(
       List<Interval>? intervals, List<VaxDose> doses, int targetDose) {
     if (intervals == null || intervals.isEmpty) {

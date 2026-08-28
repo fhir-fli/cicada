@@ -19,6 +19,9 @@ class VaxSeries {
   VaxDose? get currentDose =>
       doses.isEmpty ? null : doses[evaluatedDoses.length];
 
+  /// Chapter 6 step 5a: a satisfied *recurring* target dose is followed by "a
+  /// new target dose identical to the current target dose", so the collection
+  /// does not advance past it; any other satisfied target dose moves on.
   void updateTargetDose(SeriesDose seriesDose) {
     if (seriesDose.recurringDose != Binary.yes) {
       targetDose++;
@@ -35,21 +38,18 @@ class VaxSeries {
     _recordSeriesGroupCompletion();
   }
 
-  /// Publishes "this series group is complete" as soon as evaluation says so.
+  /// Publishes this series group's 'Complete' status at the end of evaluation.
   ///
-  /// A "Completed Series" conditional skip asks whether the patient has
-  /// finished another series group, and its context is 'Both' — it is meant to
-  /// fire while doses are being evaluated, not only while forecasting. The
-  /// flag was written in [determineForecastNeed], which runs after every
-  /// antigen has been evaluated, so during evaluation it was always false and
-  /// the skip could never fire.
+  /// Table 6-7 asks whether the conditional skip's series group contains a
+  /// relevant patient series with a patient series status of 'Complete'. A
+  /// conditional skip whose `context` is `Both` is asked during evaluation as
+  /// well as during forecasting, so that status has to exist by the time
+  /// evaluation runs; it was previously written only in [determineForecastNeed],
+  /// which runs after every antigen is evaluated, leaving the condition unable
+  /// to be met during the evaluation pass at all.
   ///
-  /// The cost: a lab worker who had finished the childhood polio series and
-  /// then received his single adult risk booster had doses 1 and 2 of the risk
-  /// series skipped in the *forecast* pass but not the evaluation pass, so the
-  /// booster was counted as dose 1 and the engine asked for two more
-  /// (`2016-UC-0133`). With the skip firing during evaluation the booster
-  /// satisfies the last target dose and the series is complete, as CDSi says.
+  /// A patient series is 'Complete' when every target dose is satisfied, which
+  /// is what is tested here.
   void _recordSeriesGroupCompletion() {
     final bool anyNotSatisfied = evaluatedTargetDose.values
         .any((TargetDoseStatus s) => s == TargetDoseStatus.notSatisfied);
@@ -57,9 +57,6 @@ class VaxSeries {
         .any((TargetDoseStatus s) => s == TargetDoseStatus.satisfied);
     if (!anyNotSatisfied && anySatisfied) {
       seriesGroupCompletion[targetDisease]?[seriesGroupKey] = true;
-      final VaxDate? completedOn = lastCompleted?.dateGiven;
-      if (completedOn != null) {
-      }
     }
   }
 
@@ -178,9 +175,10 @@ class VaxSeries {
     final bool intervalOk = preferableOk || allowableOk;
 
     if (!ageOk && !intervalOk) {
-      // Both age and interval fail. Per CDSi FITS, when the dose is within
-      // 4 days of absMinAge (grace period territory) but interval also fails,
-      // interval is the primary reason. Otherwise age is primary.
+      // Both fail. Table 6-31 sets the status "with evaluation reasons",
+      // plural, and defines no precedence between them, so none is imposed
+      // here — the dose carries every reason that applies (VaxDose.evalReasons)
+      // and evalReason reports one of them.
       _traceDose(dose, 'not counted: age and interval both fail');
       return false;
     }
@@ -912,9 +910,11 @@ class VaxSeries {
 
         ///If there are, then this is considered a completed series
         /// — unless the current target dose is a recurring dose that was
-        /// already satisfied (e.g., the decennial Td/Tdap booster). A
-        /// recurring dose being satisfied means one occurrence was given,
-        /// but the patient still needs the next future occurrence.
+        /// already satisfied. Chapter 6 step 5a: satisfying a recurring target
+        /// dose inserts "a new target dose identical to the current target
+        /// dose" after it, so the collection is not exhausted and the series
+        /// is not complete; the next occurrence is still owed (e.g. the
+        /// decennial Td booster, the yearly influenza dose).
         else {
           final SeriesDose? currentSeriesDose =
               targetDose < (series.seriesDose?.length ?? 0)
@@ -928,9 +928,6 @@ class VaxSeries {
             seriesStatus = SeriesStatus.complete;
             forecastReason = ForecastReason.patientSeriesIsComplete;
             seriesGroupCompletion[targetDisease]?[seriesGroupKey] = true;
-            final VaxDate? completedOn = lastCompleted?.dateGiven;
-            if (completedOn != null) {
-            }
           }
         }
       }
@@ -966,12 +963,12 @@ class VaxSeries {
       latestRecommendedAgeDate = dob.changeNullable(age?.latestRecAge);
       maximumAgeDate = dob.changeNullable(age?.maxAge);
 
-      // Filter intervals by effectiveDate/cessationDate (Bug 2 fix)
+      // Only intervals in force at the assessment date.
       final List<Interval> filteredIntervals =
           _filterIntervals(seriesDose.preferableInterval, assessmentDate);
 
-      // Compute interval dates from reference dose, not dob (Bug 3 fix)
-      // For each interval, resolve reference dose per-interval (Bug 4 fix)
+      // CALCDTINT-1: each interval resolves its own reference dose, and the
+      // interval runs from that dose's date administered — never from dob.
       final List<VaxDate> earliestRecIntDates = <VaxDate>[];
       final List<VaxDate> latestRecIntDates = <VaxDate>[];
       for (final Interval interval in filteredIntervals) {
@@ -987,6 +984,8 @@ class VaxSeries {
       earliestRecIntDates.sort();
       latestRecIntDates.sort((VaxDate a, VaxDate b) => b.compareTo(a));
       // FORECASTDT-2: "the latest of all earliest recommended interval dates"
+      // when there is no earliest recommended age date. FORECASTDT-3 takes the
+      // latest of the latest recommended interval dates, minus one day.
       earliestRecommendedIntervalDate =
           earliestRecIntDates.isEmpty ? null : earliestRecIntDates.last;
       latestRecommendedIntervalDate =
