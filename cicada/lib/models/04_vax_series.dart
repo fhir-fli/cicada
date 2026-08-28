@@ -131,8 +131,17 @@ class VaxSeries {
     return false;
   }
 
+  /// Chapter 6 step 3: the conditional skip is evaluated against the current
+  /// target dose, before the dose is evaluated against it. Recurring doses are
+  /// not exempt — the recurring check is step 5, which happens *after*
+  /// evaluation and only for a target dose that was satisfied, and step 5a
+  /// makes the new target dose "identical to the current target dose",
+  /// conditional skip included.
+  ///
+  /// An unconditional `recurringDose == yes -> false` used to sit here. It had
+  /// no rule behind it and no case depended on it: removing it left the suite
+  /// at 28 failures with an identical set.
   bool canSkipDose(SeriesDose seriesDose, VaxDose dose) {
-    if (seriesDose.recurringDose == Binary.yes) return false;
     return canSkip(seriesDose, SkipContext.evaluation, dose.dateGiven);
   }
 
@@ -311,9 +320,12 @@ class VaxSeries {
 
       // Don't overwrite already satisfied doses — advance past them
       if (evaluatedTargetDose[targetDose] == TargetDoseStatus.satisfied) {
-        // For recurring doses, check the conditional skip to determine
-        // if the patient is done for this period (e.g., has a seasonal dose).
-        // If the skip doesn't fire, the patient still needs another dose.
+        // Chapter 6 step 5a: satisfying a recurring target dose inserts a new
+        // target dose identical to it, so the collection does not advance —
+        // that is the `break` below. The skip is still asked, because the new
+        // target dose carries the same conditional skip, and it is what says
+        // whether the patient is done for this period (e.g. a seasonal dose
+        // already given).
         if (seriesDose.recurringDose == Binary.yes) {
           if (canSkip(seriesDose, SkipContext.forecast, assessmentDate)) {
             targetDose++;
