@@ -634,7 +634,38 @@ observation-235 gap, where the data really is missing something ACIP recommends.
 
 ---
 
-## 13. Table 6-7 has no reference date — what is a series group's status mid-evaluation?
+## 13. ✅ ADJUDICATED 2026-08-28 — the date administered is clinically forced
+
+**OE: a genuine specification gap, and the clinically correct reading is the
+date administered of the dose being evaluated — the reference date Tables 6-6
+and 6-8 already carry. Table 6-7 omitting it is a drafting omission, not a
+deliberate "end-state" instruction.**
+
+All three candidate reference points give different answers, and only
+date-administered satisfies both governing cases at once:
+
+- **Dialysis HepB (`2024-UC-0019`) is decisive.** ACIP maintains a *separate*
+  4-dose hemodialysis/immunocompromised HepB schedule as a distinct special
+  situation from the routine 3-dose adult series (MMWR 72(6)). All four doses
+  must count toward the risk series, and the standard group reaching Complete
+  part-way through them must not suppress them.
+- **Polio lab worker (`2016-UC-0133`) fails the opposite way** under an
+  end-state reading: a single adult IPV booster given decades after a completed
+  childhood series must not seed a fresh risk series as its dose 1.
+
+🔴 **Consequence of the removal.** cicada's date-anchored behaviour was removed
+for spec fidelity on 2026-08-28 (`842f89ad`). OE's note: that is defensible as
+fidelity to the literal text, but **it knowingly produces a clinically wrong
+evaluation for the dialysis patient** until CDC corrects Table 6-7. That
+conformance-versus-correctness trade-off is a decision for the owner, not a
+silent default.
+
+**Report to CDC:** Table 6-7 needs the Conditional Skip Reference Date that
+Tables 6-6 and 6-8 have.
+
+---
+
+## 13. (the question as put) Table 6-7 has no reference date — what is a series group's status mid-evaluation?
 
 **Cases:** `2016-UC-0137`, `2024-UC-0019` — both now failing, deliberately.
 
@@ -678,7 +709,36 @@ is the date administered, Table 6-7 needs the reference date that Tables 6-6 and
 
 ---
 
-## 14. Chapter 9 scopes a forecast to a series group — should a vaccine group emit more than one?
+## 14. ✅ ADJUDICATED 2026-08-28 — the spec is clearer than our implementation
+
+**OE: two forecasts is the intended output.** On the three questions:
+
+1. **Yes.** Per FORECASTVG-1 and Chapter 9, a patient with an active risk
+   indication is intended to receive two forecasts for one vaccine group. The
+   MMR traveller in the spec's own example is the paradigm case.
+2. **No "present only one" rule exists.** The spec assumes both are returned;
+   choosing one to display is left to the implementation or the consumer.
+3. **No spec-blessed tie-break**, so cicada's risk-priority-with-conditions
+   heuristic is an invented convention.
+
+Clinically this is why the model exists: the routine age-based schedule and the
+risk/travel schedule are different recommendations that can coexist and diverge
+— the early-infant MMR travel dose that does not count toward the routine
+2-dose series is the textbook case — and ACIP presents routine and special
+situations in parallel, not merged.
+
+🔑 **If we conform, the two cases that drove our heuristic stop being arguments
+for suppressing a forecast and become arguments for how to label and order two.**
+Each series group reports its own status independently, which is what the
+two-forecast model gives.
+
+⚠️ Still an interface break: `vaccineGroupForecasts` goes from one entry per
+vaccine group to one per series group, and `$immds-forecast` and every consumer
+assume the current cardinality. A product decision, not a silent conformance fix.
+
+---
+
+## 14. (the question as put) Chapter 9 scopes a forecast to a series group — should a vaccine group emit more than one?
 
 **Not a case failure.** A deviation found by auditing the engine against the
 specification, recorded because we do not follow the spec here and should say so.
