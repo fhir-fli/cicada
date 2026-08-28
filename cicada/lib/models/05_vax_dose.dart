@@ -232,6 +232,11 @@ class VaxDose {
           ? doseQuantity?.value?.valueDouble
           : null;
 
+  /// Section 6.1 / Table 6-3: does a condition on the dose administered prevent
+  /// it being evaluated at all? A dose given after the lot expiration date, or
+  /// carrying a condition such as a recall, cold chain break or subpotent
+  /// administration, is sub-standard and the target dose must be repeated
+  /// regardless of the other evaluation rules.
   static EvalStatus? immunizationEvalStatus(VaxDate dateGiven, String? cvx,
           bool expired, Immunization immunization) =>
       dateGiven.year == 2999
@@ -256,6 +261,8 @@ class VaxDose {
                       ? subpotentReason(immunization)
                       : null;
 
+  /// Section 6.3: was the vaccine dose administered an inadvertent vaccine for
+  /// the target dose?
   bool isInadvertent(SeriesDose seriesDose) {
     if ((seriesDose.inadvertentVaccineIndex(cvxAsInt) ?? -1) != -1) {
       markAsInadvertent();
@@ -329,12 +336,16 @@ class VaxDose {
     return !(dateGiven < absoluteMinimumAgeDate);
   }
 
+  /// Table 6-15 column 2: at or after the absolute minimum age but before the
+  /// minimum age — the grace period.
   bool isDoseWithinMinimumAge(VaxAge age) {
     final VaxDate minimumAgeDate =
         age.minAge == null ? VaxDate(1900, 01, 01) : dob.change(age.minAge!);
     return dateGiven < minimumAgeDate;
   }
 
+  /// Table 6-15 columns 3-4: before the maximum age date is a valid age; at or
+  /// after it the dose is extraneous, 'Too old'.
   bool isDoseGivenWithinMaximumAge(VaxAge age) {
     final VaxDate maximumAgeDate =
         age.maxAge == null ? VaxDate(2999, 12, 31) : dob.change(age.maxAge!);
@@ -659,6 +670,8 @@ class VaxDose {
     return false;
   }
 
+  /// Table 6-29: was the vaccine dose administered an allowable vaccine for
+  /// the target dose? Vaccine type, then the allowable begin/end age range.
   bool isAllowedType(
     List<Vaccine>? vaccines,
     VaxDate birthdate,

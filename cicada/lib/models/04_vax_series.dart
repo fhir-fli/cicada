@@ -84,6 +84,9 @@ class VaxSeries {
     }
   }
 
+  /// Chapter 6 steps 2-6: walk the target dose collection, evaluating the
+  /// next unevaluated dose against each in turn. Step 5a keeps a satisfied
+  /// recurring target dose in play, which is the inner loop.
   void evaluateSeriesDoses() {
     for (final SeriesDose seriesDose in series.seriesDose ?? <SeriesDose>[]) {
       if (evaluatedDoses.length == doses.length) {
@@ -104,6 +107,8 @@ class VaxSeries {
     }
   }
 
+  /// Chapter 6 step 2: take the next antigen administered record that has not
+  /// yet been evaluated, in ascending date order.
   void evaluateNextDose(SeriesDose seriesDose) {
     for (int i = evaluatedDoses.length; i < doses.length; i++) {
       final VaxDose dose = doses[i];
@@ -226,6 +231,8 @@ class VaxSeries {
     return allowedType;
   }
 
+  /// Table 6-31: the target dose is satisfied and the evaluation status is
+  /// 'Valid'. Step 4a then pushes on to the next target dose.
   void markDoseValid(SeriesDose seriesDose, VaxDose dose) {
     dose.evalStatus = EvalStatus.valid;
     dose.targetDoseSatisfied = targetDose;
@@ -348,6 +355,8 @@ class VaxSeries {
     }
   }
 
+  /// Table 6-11: can the target dose be skipped? A conditional skip applies in
+  /// the context it declares — evaluation, forecast, or both.
   bool canSkip(
           SeriesDose seriesDose, SkipContext skipContext, VaxDate evalDate) =>
       seriesDose.conditionalSkip?.any((ConditionalSkip conditionalSkip) =>
@@ -356,6 +365,7 @@ class VaxSeries {
           evaluateSkipCondition(conditionalSkip, skipContext, evalDate)) ??
       false;
 
+  /// Table 6-11: how many sets were met, against the skip's set logic.
   bool evaluateSkipCondition(ConditionalSkip conditionalSkip,
       SkipContext skipContext, VaxDate evalDate) {
     final bool andLogic = conditionalSkip.setLogic?.toLowerCase() == 'and';
@@ -368,6 +378,8 @@ class VaxSeries {
         : results.any((bool res) => res);
   }
 
+  /// Table 6-10: is the conditional skip set met? How many conditions were
+  /// met, against the set's condition logic.
   bool skipSet(VaxSet set_, SkipContext skipContext, VaxDate evalDate) {
     final bool andLogic = set_.conditionLogic?.toLowerCase() == 'and';
     final List<bool> conditionResults = set_.condition
@@ -380,6 +392,8 @@ class VaxSeries {
         : conditionResults.any((bool res) => res);
   }
 
+  /// Dispatch by conditional skip condition type: Table 6-6 age, Table 6-7
+  /// completed series, Table 6-8 interval, Table 6-9 vaccine count.
   bool evaluateCondition(VaxCondition condition, VaxDate evalDate, VaxSet set_,
       SkipContext skipContext) {
     switch (condition.conditionType?.toLowerCase()) {
@@ -510,6 +524,7 @@ class VaxSeries {
         .toList();
   }
 
+  /// CONDSKIP-1 with both an age window and a date window (Table 6-9).
   int countVaccinesDateAndAge(List<int> types, VaxDate? startDate,
       VaxDate? endDate, VaxDate? ageEndDate, DoseType? doseType,
       VaxDate referenceDate, SkipContext skipContext) {
@@ -527,6 +542,7 @@ class VaxSeries {
         .length;
   }
 
+  /// Table 6-9: vaccine count by age, or by date.
   bool skipByCount(VaxCondition condition, VaxDate refDate, bool byAge,
       VaxDate referenceDate, SkipContext skipContext) {
     final VaxDate? startDate = byAge
@@ -555,6 +571,7 @@ class VaxSeries {
         <int>[];
   }
 
+  /// CONDSKIP-1: the count of conditional doses administered.
   int countVaccines(List<int> types, VaxDate? startDate, VaxDate? endDate,
       DoseType? doseType, VaxDate referenceDate, SkipContext skipContext) {
     final List<VaxDose> source =
@@ -570,6 +587,8 @@ class VaxSeries {
         .length;
   }
 
+  /// Table 6-9: the dose count logic — greater than, equal to, or less than
+  /// the conditional skip dose count.
   bool evaluateCountLogic(
       int actualCount, String? logic, String? requiredCountStr) {
     final int requiredCount = int.tryParse(requiredCountStr ?? '0') ?? 0;
@@ -818,6 +837,8 @@ class VaxSeries {
     }
   }
 
+  /// Tables 7-5 and 7-6: does the antigen or vaccine contraindication apply to
+  /// the patient? Table 7-7 then makes the patient series contraindicated.
   void determineContraindications({
     VaxDate? assessmentDate,
     required List<VaccineContraindication> vaccineContraindications,
