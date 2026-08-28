@@ -96,7 +96,7 @@ name. No engine change follows from any of them.
 |---|---|---|
 | 8. `2016-UC-0110` MenACWY 4th dose | **cicada** — the 4th dose is anchored to **12 months of age**, not to dose 3 + 6 months | asplenia MenACWY-CRM primary series is 2, 4, 6 and 12 months (MMWR 69(9); MenQuadfi label gives 2, 4, 6, 12–18 months). There is no ACIP basis for a dose ten days before the first birthday |
 | 9. HPV, history of sexual abuse (`2016-UC-0079`) | **cicada** — routine, not a risk series | ACIP recommends **routine** HPV from age 9 for this history: a routine-age trigger, not separate dosing. Past the routine start age the child is simply in catch-up (MMWR 65(49)) |
-| 9. HPV, MSM (`2016-UC-0087`, `-0088`) | **cicada** — routine/catch-up, no distinct schedule | HPV "as for all males", catch-up through 26, SCDM 27–45 (MMWR 65(49), 68(32)) |
+| 9. HPV, MSM (`2016-UC-0087`, `2016-UC-0088`) | **cicada** — routine/catch-up, no distinct schedule | HPV "as for all males", catch-up through 26, SCDM 27–45 (MMWR 65(49), 68(32)) |
 | 9. MenB "seeks protection" (`2020-UC-0003`) | **cicada** — SCDM **standard** series, not risk | MenB at 16–23 is shared clinical decision-making; risk-based MenB is reserved for asplenia, complement deficiency or inhibitor use, microbiologists and outbreaks (MMWR 69(9), 73(49)) |
 | 9. contraindication codes (`2016-UC-0203`, `2025-UC-0010`) | **cicada** | 116 and 172 indicate no series; Contraindicated with no forecast is right, and the status already matched CDC |
 | 9. `2016-UC-0032`, `2022-UC-0017` | **cicada** | interval and latest-recommended conventions settled in the earlier batch; the recommended dates already match CDC |
@@ -407,7 +407,7 @@ version upgrade. Grouped because one question settles most of them.
 | case | CDC's row wants | what the current data says |
 |---|---|---|
 | `2016-UC-0079` | HPV dose evaluated in a **risk** series (history of sexual abuse, obs 169) | that indication now **ends at 11 years**; the patient is 12 at assessment, and Table 5-4 tests the **assessment date** |
-| `2016-UC-0087`, `-0088` | HPV risk series for MSM (obs 036) | **no** HPV risk series is indicated by 036 any more |
+| `2016-UC-0087`, `2016-UC-0088` | HPV risk series for MSM (obs 036) | **no** HPV risk series is indicated by 036 any more |
 | `2020-UC-0003` | MenB risk 2-dose series (obs 177, "seeks MenB protection") | 177 drives no risk series; MenB is now four **Standard** shared-clinical-decision-making series |
 | `2016-UC-0203` | MenB dose in a risk series (obs 116) | 116 is a contraindication code and indicates no series. cicada's status **is** Contraindicated, matching CDC |
 | `2025-UC-0010` | Zoster dose in a risk series (obs 172) | same shape |
