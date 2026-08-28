@@ -239,6 +239,9 @@ List<VaxSeries> _determineBestPatientSeries(VaxAntigen antigen) {
 /// preferable interval has an interval priority flag of 'Y'.
 /// Note: CDSi v4.64 supporting data uses "override" instead of "Y" for all
 /// interval priorities, so we treat both values as satisfying the condition.
+/// FORECASTPRIORITY-1: a patient series forecast is a *priority* forecast when
+/// the target dose it forecasts includes at least one preferable interval and
+/// every preferable interval for that dose has an interval priority flag of 'Y'.
 bool _isPriorityForecast(VaxSeries series) {
   final int td = series.targetDose;
   if (td >= (series.series.seriesDose?.length ?? 0)) return false;
@@ -249,7 +252,14 @@ bool _isPriorityForecast(VaxSeries series) {
       i.intervalPriority == 'Y' || i.intervalPriority == 'override');
 }
 
-/// FORECASTVG-1: Determine vaccine group status from antigen statuses
+/// Table 9-4: what is the vaccine group status of a vaccine group forecast for
+/// a multiple antigen vaccine group? Its condition rows are asked in this
+/// order — Contraindicated, then Aged Out, then Not Recommended, then Not
+/// Complete — and the tests below follow them.
+///
+/// Previously labelled FORECASTVG-1, which is a different rule: that one says
+/// which patient series forecasts are *contained in* a vaccine group forecast,
+/// and says nothing about deriving a status.
 SeriesStatus _aggregateStatus(List<SeriesStatus> statuses) {
   // Contraindicated if any
   if (statuses.any((s) => s == SeriesStatus.contraindicated)) {
@@ -280,9 +290,23 @@ SeriesStatus _aggregateStatus(List<SeriesStatus> statuses) {
 }
 
 /// Extracts forecast CVX codes, descriptions, and dose number from a series.
-/// Prefers preferableVaccine entries with forecastVaccineType == 'Y', but falls
-/// back to the first preferableVaccine CVX if none are marked for forecasting.
-/// FITS requires at least one vaccineCode per recommendation to match results.
+///
+/// FORECASTRECVAC-1: a series dose vaccine is a *recommended* series dose
+/// vaccine only if it is a preferable vaccine, its forecast vaccine type flag
+/// is 'Y', no vaccine contraindication involves its vaccine type, and the
+/// forecast's earliest or adjusted recommended date falls inside its begin/end
+/// age range. Table 7-12 assumes that flag is 'N' when empty, so a vaccine that
+/// is not marked is deliberately not recommended.
+///
+/// ⚠️ KNOWN DEVIATION. When no preferable vaccine for the target dose carries
+/// the flag, this falls back to the first preferable vaccine so that the
+/// response always names a vaccine. FORECASTRECVAC-1 has no such fallback — the
+/// correct answer is an empty set of recommended vaccines. The fallback exists
+/// because NIST FITS expects at least one vaccineCode per recommendation, which
+/// is a conformance tester's requirement, not a rule. It widens what a
+/// clinician is told to give beyond what the supporting data marks as
+/// forecastable, so it is recorded here rather than left looking like
+/// compliance.
 ({List<String> cvx, List<String> desc, int? doseNum})
     _extractForecastVaccineInfo(VaxSeries series) {
   final int td = series.targetDose;
