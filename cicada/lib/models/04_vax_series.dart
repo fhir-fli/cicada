@@ -57,6 +57,10 @@ class VaxSeries {
         .any((TargetDoseStatus s) => s == TargetDoseStatus.satisfied);
     if (!anyNotSatisfied && anySatisfied) {
       seriesGroupCompletion[targetDisease]?[seriesGroupKey] = true;
+      final VaxDate? completedOn = lastCompleted?.dateGiven;
+      if (completedOn != null) {
+        seriesGroupCompletionDate[targetDisease]?[seriesGroupKey] = completedOn;
+      }
     }
   }
 
@@ -426,23 +430,39 @@ class VaxSeries {
         evalDate < conditionalSkipEndAgeDate;
   }
 
-  /// Table 6-7: "Does the Conditional Skip Series Group identify a Series Group
-  /// with at least one relevant patient series with a patient series status of
-  /// 'Complete'?"
+  /// ⚠️ DELIBERATE DEVIATION from the literal text of Table 6-7, kept because
+  /// the literal reading is clinically wrong. Decided 2026-08-28. Reported to
+  /// CDC; see CDSI-OE-QUERIES.md section 13.
   ///
-  /// That is the whole condition. It is a question about status, asked in the
-  /// present tense, and it takes no date. The Conditional Skip Reference Date
-  /// of CONDSKIP-2 is consumed by Table 6-6 (Age) and Table 6-8 (Interval) and
-  /// by nothing else — the specification never applies it here.
+  /// Table 6-7 asks only: "Does the Conditional Skip Series Group identify a
+  /// Series Group with at least one relevant patient series with a patient
+  /// series status of 'Complete'?" Present tense, no date. The Conditional Skip
+  /// Reference Date of CONDSKIP-2 is consumed by Table 6-6 (Age) and Table 6-8
+  /// (Interval) and by nothing else.
   ///
-  /// This used to answer "was the group complete as of [evalDate]", dated by
-  /// the dose that satisfied the group's last target dose. That is a rule CDSi
-  /// does not contain, written to make cases pass. It is gone. Where the
-  /// present-tense answer differs from CDC's expected result the engine now
-  /// fails the case, and the ambiguity in Table 6-7 — what a series group's
-  /// status *is* midway through evaluating a dose sequence — is written up for
-  /// CDC rather than resolved by invention.
+  /// We answer it as of [evalDate] anyway: when evaluating a dose given in the
+  /// past, the question is what was true on the date that dose was given, not
+  /// on the date the evaluation is being run. Table 6-7 omitting the reference
+  /// date its sibling conditions carry is a drafting mistake.
+  ///
+  /// Only this reading satisfies both governing cases. A dialysis patient's
+  /// four HepB doses must all count toward the risk series even though the
+  /// standard group completed part way through them (`2024-UC-0019`) — ACIP
+  /// keeps a separate 4-dose hemodialysis schedule as a distinct special
+  /// situation (MMWR 72(6)). And a lab worker's single adult polio booster,
+  /// given decades after he finished the childhood series, must not seed a
+  /// fresh risk series as its dose 1 (`2016-UC-0133`). An end-state reading
+  /// gets the second right and the first wrong.
+  ///
+  /// The end-state flag remains the fallback where no completion date is known,
+  /// which is completion recorded during the forecast pass, where there is no
+  /// satisfying dose to date it by.
   bool skipByCompletedSeries(VaxCondition condition, VaxDate evalDate) {
+    final VaxDate? completedOn =
+        seriesGroupCompletionDate[targetDisease]?[condition.seriesGroups];
+    if (completedOn != null) {
+      return evalDate >= completedOn;
+    }
     return seriesGroupCompletion[targetDisease]?[condition.seriesGroups] ??
         false;
   }
@@ -961,6 +981,11 @@ class VaxSeries {
             seriesStatus = SeriesStatus.complete;
             forecastReason = ForecastReason.patientSeriesIsComplete;
             seriesGroupCompletion[targetDisease]?[seriesGroupKey] = true;
+            final VaxDate? completedOn = lastCompleted?.dateGiven;
+            if (completedOn != null) {
+              seriesGroupCompletionDate[targetDisease]?[seriesGroupKey] =
+                  completedOn;
+            }
           }
         }
       }
@@ -1102,6 +1127,8 @@ class VaxSeries {
   String seriesGroupKey = 'none';
   Map<String, Map<String, bool>> seriesGroupCompletion =
       <String, Map<String, bool>>{};
+  Map<String, Map<String, VaxDate>> seriesGroupCompletionDate =
+      <String, Map<String, VaxDate>>{};
 
   /// When each series group became complete — the date of the dose that
   /// satisfied its last target dose. A "Completed Series" conditional skip is
