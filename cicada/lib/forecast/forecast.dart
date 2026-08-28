@@ -298,15 +298,14 @@ SeriesStatus _aggregateStatus(List<SeriesStatus> statuses) {
 /// age range. Table 7-12 assumes that flag is 'N' when empty, so a vaccine that
 /// is not marked is deliberately not recommended.
 ///
-/// ⚠️ KNOWN DEVIATION. When no preferable vaccine for the target dose carries
-/// the flag, this falls back to the first preferable vaccine so that the
-/// response always names a vaccine. FORECASTRECVAC-1 has no such fallback — the
-/// correct answer is an empty set of recommended vaccines. The fallback exists
-/// because NIST FITS expects at least one vaccineCode per recommendation, which
-/// is a conformance tester's requirement, not a rule. It widens what a
-/// clinician is told to give beyond what the supporting data marks as
-/// forecastable, so it is recorded here rather than left looking like
-/// compliance.
+/// There is deliberately no fallback when nothing carries the flag: the
+/// recommended set is empty, which is what FORECASTRECVAC-1 gives. A fallback
+/// to the first preferable vaccine used to sit here, justified by NIST FITS
+/// expecting at least one vaccineCode per recommendation — a conformance
+/// tester's requirement, not a rule — and it recommended vaccines the
+/// supporting data does not mark as forecastable. Removed 2026-08-28; revisit
+/// only against FITS itself, and as a response-shaping concern rather than by
+/// changing what the engine recommends.
 ({List<String> cvx, List<String> desc, int? doseNum})
     _extractForecastVaccineInfo(VaxSeries series) {
   final int td = series.targetDose;
@@ -322,16 +321,6 @@ SeriesStatus _aggregateStatus(List<SeriesStatus> statuses) {
       if (v.forecastVaccineType == 'Y' && v.cvx != null) {
         cvxCodes.add(v.cvx!);
         descriptions.add(v.vaccineType ?? '');
-      }
-    }
-    // Fallback: if no forecastVaccineType == 'Y', use first preferableVaccine
-    if (cvxCodes.isEmpty) {
-      for (final v in prefVaccines) {
-        if (v.cvx != null) {
-          cvxCodes.add(v.cvx!);
-          descriptions.add(v.vaccineType ?? '');
-          break;
-        }
       }
     }
   }
