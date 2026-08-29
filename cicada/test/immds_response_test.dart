@@ -161,19 +161,32 @@ void main() {
       }
     });
 
-    test('doseNumberString is present for Not Complete recommendations', () {
+    // This test used to assert doseNumberString, which is what the code
+    // happened to emit. doseNumber[x] is a COUNT and every HL7 example uses
+    // doseNumberPositiveInt, so the test was defending the defect rather than
+    // checking the spec. Assert the integer, and assert the string form is
+    // absent so the wrong choice element cannot come back.
+    test('a Not Complete recommendation carries doseNumber as a positiveInt',
+        () {
       final rec = noDoseResponse.parameter!
           .firstWhere((p) => p.name.valueString == 'recommendation')
           .resource as ImmunizationRecommendation;
 
+      var checked = 0;
       for (final r in rec.recommendation) {
         final statusCode = codeStr(r.forecastStatus.coding?.first.code);
-        if (statusCode == 'Not Complete') {
-          expect(r.doseNumberString, isNotNull,
-              reason:
-                  'Not Complete recommendation should have doseNumberString');
-        }
+        if (statusCode != 'Not Complete') continue;
+        checked++;
+        expect(r.doseNumberPositiveInt, isNotNull,
+            reason: 'a Not Complete recommendation should carry '
+                'doseNumberPositiveInt');
+        expect(r.doseNumberString, isNull,
+            reason: 'doseNumber is a count; the string choice element is the '
+                'wrong one and a reader looking for the integer finds nothing');
       }
+      expect(checked, greaterThan(0),
+          reason: 'no Not Complete recommendation in this case, so this test '
+              'asserted nothing');
     });
   });
 
@@ -192,9 +205,25 @@ void main() {
             reason: 'evaluation missing targetDisease');
         expect(eval.immunizationEvent.reference, isNotNull,
             reason: 'evaluation missing immunizationEvent reference');
-        expect(eval.immunizationEvent.reference!.valueString,
-            contains('Immunization/'),
-            reason: 'immunizationEvent should reference an Immunization');
+        // R4 gives ImmunizationEvaluation no vaccineCode, so the only route
+        // to the vaccine is through immunizationEvent. The reference must
+        // therefore RESOLVE, not merely be present: a fragment pointing at a
+        // contained Immunization, or a literal Immunization reference.
+        final String ref = eval.immunizationEvent.reference!.valueString!;
+        if (ref.startsWith('#')) {
+          final contained = eval.contained
+              ?.whereType<Immunization>()
+              .where((Immunization i) => '#${i.id}' == ref);
+          expect(contained, isNotNull, reason: 'fragment $ref with no contained resources');
+          expect(contained!.length, 1,
+              reason: 'fragment $ref resolves to no contained Immunization');
+          expect(contained.first.vaccineCode.coding, isNotNull,
+              reason: 'the contained Immunization must carry the vaccine code, '
+                  'which is the only place a CVX exists for an evaluation');
+        } else {
+          expect(ref, contains('Immunization/'),
+              reason: 'immunizationEvent should reference an Immunization');
+        }
         expect(eval.doseStatus.coding, isNotNull);
         // First coding is CDSi-compatible, second is HL7 standard
         final hl7DoseStatus = eval.doseStatus.coding!.where((c) =>
