@@ -156,6 +156,18 @@ is duplicated into `cicada_generator/lib/cdc_row_collapse.dart` because the two
 packages cannot depend on each other (excel pins archive 3.x, fhir_r4_bulk needs
 4.x); `cdc_row_collapse_sync_test.dart` fails if the copies drift.
 
+## Check every package, not the one you have open
+
+```bash
+./tool_check_all.sh    # cicada + cicada_generator + cicada_flutter
+```
+
+🛑 `dart analyze` in one package cannot see the others. `64bd94f5` changed a
+type on `ForecastResult`; cicada and cicada_generator were checked, and
+**cicada_flutter did not compile for four commits** — 8 analyzer errors, and
+`flutter test` could not run. It surfaced only during an unrelated dependency
+bump. Run the script before claiming a change is clean.
+
 ## Test Results
 
 Both suites compare against CDC's expected results and both must be run before
