@@ -34,6 +34,8 @@ Extension: SeriesType
 Id: series-type-ext
 Title: "Series Type"
 Description: "Whether this recommendation came from the standard series group or a risk series group. Present so a client receiving two recommendations for one vaccine group can tell which pathway each describes."
+* ^context[0].type = #element
+* ^context[0].expression = "ImmunizationRecommendation.recommendation"
 * value[x] only CodeableConcept
 * valueCodeableConcept from SeriesTypeVS (required)
 

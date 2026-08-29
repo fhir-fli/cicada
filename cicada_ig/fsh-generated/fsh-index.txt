@@ -25,7 +25,7 @@ StructureDefinition-allowed-vaccine-status.json              AllowedVaccineStatu
 StructureDefinition-antigen-supporting-data.json             AntigenSupportingData              Resource    antigen_supporting_data.fsh             1 - 75
 StructureDefinition-assessment-date.json                     AssessmentDate                     Extension   date_time_assessment_date.fsh           2 - 5
 StructureDefinition-begin-age.json                           BeginAge                           Extension   profile_vaccine_as_medication.fsh       18 - 22
-StructureDefinition-cicada-immunization-recommendation.json  CicadaImmunizationRecommendation   Profile     profile_forecast_recommendation.fsh     40 - 58
+StructureDefinition-cicada-immunization-recommendation.json  CicadaImmunizationRecommendation   Profile     profile_forecast_recommendation.fsh     42 - 60
 StructureDefinition-end-age.json                             EndAge                             Extension   profile_vaccine_as_medication.fsh       24 - 28
 StructureDefinition-inadvertent-administration-status.json   InadvertentAdministrationStatus    Extension   vax_dose_immunization_profile.fsh       38 - 42
 StructureDefinition-preferred-interval-reason.json           PreferredIntervalReason            Extension   vax_dose_immunization_profile.fsh       62 - 66
@@ -33,7 +33,7 @@ StructureDefinition-preferred-interval-status.json           PreferredIntervalSt
 StructureDefinition-preferred-vaccine-reason.json            PreferredVaccineReason             Extension   vax_dose_immunization_profile.fsh       92 - 96
 StructureDefinition-preferred-vaccine-status.json            PreferredVaccineStatus             Extension   vax_dose_immunization_profile.fsh       86 - 90
 StructureDefinition-schedule-supporting-data.json            ScheduleSupportingData             Resource    schedule_supporting_data.fsh            1 - 51
-StructureDefinition-series-type-ext.json                     SeriesType                         Extension   profile_forecast_recommendation.fsh     33 - 38
+StructureDefinition-series-type-ext.json                     SeriesType                         Extension   profile_forecast_recommendation.fsh     33 - 40
 StructureDefinition-vaccination-conflict.json                VaccinationConflict                Extension   vax_dose_immunization_profile.fsh       80 - 84
 StructureDefinition-vaccine-type.json                        VaccineType                        Extension   profile_vaccine_as_medication.fsh       30 - 34
 StructureDefinition-valid-age-reason.json                    ValidAgeReason                     Extension   vax_dose_immunization_profile.fsh       50 - 54

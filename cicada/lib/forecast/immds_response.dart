@@ -303,7 +303,11 @@ ImmunizationRecommendation _buildRecommendation(ForecastResult result) {
       // The series group this forecast is scoped to (CDSi FORECASTVG-1).
       // Core element: "One possible path to achieve presumed immunity against
       // a disease - within the context of an authority."
-      series: vgf.seriesGroupName?.toFhirString,
+      // Only when there genuinely is one series. A multi-antigen group blends
+      // several, and `series` is 0..1 and means a path to immunity, not a
+      // category — the series GROUP name does not belong here. The coded
+      // standard/risk distinction is carried by the extension below instead.
+      series: vgf.seriesName?.toFhirString,
       // Which pathway this recommendation describes. A vaccine group can yield
       // both a standard and a risk recommendation for the same target disease,
       // and nothing in core FHIR or the US ImmDS IG distinguishes them.

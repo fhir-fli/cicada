@@ -23,6 +23,7 @@ class VaccineGroupForecast {
     this.doseNumber,
     this.isRiskForecast = false,
     this.seriesGroupName,
+    this.seriesName,
     this.antigensNeedingDose = const [],
   });
 
@@ -53,6 +54,12 @@ class VaccineGroupForecast {
   /// The series group this forecast is scoped to (FORECASTVG-1), when it came
   /// from a single series group. Null when it aggregates several.
   final String? seriesGroupName;
+
+  /// The CDSi series name this forecast came from, verbatim, when it came from
+  /// a single series. This is what goes in
+  /// `ImmunizationRecommendation.recommendation.series` — "one possible path to
+  /// achieve presumed immunity against a disease".
+  final String? seriesName;
 
   /// Target diseases in this forecast whose best patient series still needs
   /// another dose. A fact about the series, reported so callers can see which
@@ -488,6 +495,7 @@ Map<String, List<VaccineGroupForecast>> _aggregateVaccineGroupForecasts(
             doseNumber: partDoseNum ?? vaxInfo.doseNum,
             isRiskForecast: partIsRisk,
             seriesGroupName: best.series.selectSeries?.seriesGroupName,
+            seriesName: best.series.seriesName,
             antigensNeedingDose: best.shouldRecieveAnotherDose
                 ? <String>[antigen.targetDisease]
                 : const <String>[],
@@ -522,6 +530,15 @@ Map<String, List<VaccineGroupForecast>> _aggregateVaccineGroupForecasts(
             }
           }
 
+          final Set<String> partSeriesNames = <String>{};
+          final Set<String> partSeriesGroupNames = <String>{};
+          for (final VaxSeries s in part) {
+            final String? n = s.series.seriesName;
+            if (n != null) partSeriesNames.add(n);
+            final String? g = s.series.selectSeries?.seriesGroupName;
+            if (g != null) partSeriesGroupNames.add(g);
+          }
+
           final vaxInfo = _extractForecastVaccineInfo(part.first);
           (result[groupName] ??= <VaccineGroupForecast>[])
               .add(VaccineGroupForecast(
@@ -539,6 +556,12 @@ Map<String, List<VaccineGroupForecast>> _aggregateVaccineGroupForecasts(
             antigensNeedingDose: part.any((s) => s.shouldRecieveAnotherDose)
                 ? <String>[antigen.targetDisease]
                 : const <String>[],
+            // `series` is 0..1, so name it only when these agree on one.
+            seriesName:
+                partSeriesNames.length == 1 ? partSeriesNames.first : null,
+            seriesGroupName: partSeriesGroupNames.length == 1
+                ? partSeriesGroupNames.first
+                : null,
           ));
         }
       }
@@ -593,6 +616,10 @@ Map<String, List<VaccineGroupForecast>> _aggregateVaccineGroupForecasts(
       final List<VaxDate> latestDates = [];
       final List<String> antigenNames = [];
       final List<String> antigensNeedingDose = [];
+      // ImmunizationRecommendation.recommendation.series is 0..1, so it can
+      // name the series only when every antigen in this pass agrees on one.
+      final Set<String> passSeriesNames = <String>{};
+      final Set<String> passSeriesGroupNames = <String>{};
 
       for (final antigen in antigens) {
         final List<VaxSeries> bestList = passBest[antigen.targetDisease]!;
@@ -600,6 +627,12 @@ Map<String, List<VaccineGroupForecast>> _aggregateVaccineGroupForecasts(
         antigenNames.add(antigen.targetDisease);
         if (bestList.any((VaxSeries s) => s.shouldRecieveAnotherDose)) {
           antigensNeedingDose.add(antigen.targetDisease);
+        }
+        for (final VaxSeries s in bestList) {
+          final String? n = s.series.seriesName;
+          if (n != null) passSeriesNames.add(n);
+          final String? g = s.series.selectSeries?.seriesGroupName;
+          if (g != null) passSeriesGroupNames.add(g);
         }
         for (final best in bestList) {
           statuses.add(best.seriesStatus);
@@ -803,6 +836,10 @@ Map<String, List<VaccineGroupForecast>> _aggregateVaccineGroupForecasts(
         doseNumber: multiVaxInfo.doseNum,
         isRiskForecast: forRisk,
         antigensNeedingDose: antigensNeedingDose,
+        seriesName: passSeriesNames.length == 1 ? passSeriesNames.first : null,
+        seriesGroupName: passSeriesGroupNames.length == 1
+            ? passSeriesGroupNames.first
+            : null,
       ));
     }
   }

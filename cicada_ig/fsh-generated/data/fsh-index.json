@@ -212,8 +212,8 @@
     "fshName": "CicadaImmunizationRecommendation",
     "fshType": "Profile",
     "fshFile": "profile_forecast_recommendation.fsh",
-    "startLine": 40,
-    "endLine": 58
+    "startLine": 42,
+    "endLine": 60
   },
   {
     "outputFile": "StructureDefinition-end-age.json",
@@ -277,7 +277,7 @@
     "fshType": "Extension",
     "fshFile": "profile_forecast_recommendation.fsh",
     "startLine": 33,
-    "endLine": 38
+    "endLine": 40
   },
   {
     "outputFile": "StructureDefinition-vaccination-conflict.json",
