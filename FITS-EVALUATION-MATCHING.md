@@ -85,6 +85,33 @@ That is every route R4 offers, and neither reaches FITS.
 `seriesDosesString` vs `seriesDosesPositiveInt` · adding `id` and
 `meta.profile`.
 
+## A separate finding: AART-HepA-2's expected forecast row is internally inconsistent
+
+DOB 2025-08-29, assessment 2026-08-29, one HepA dose given 2026-08-29.
+
+| criterion | FITS expects | cicada | derived from |
+|---|---|---|---|
+| Earliest | 03/01/2027 | 03/01/2027 | dose 2 `minInt` 6 months from the dose |
+| Recommended | 03/01/2027 | 03/01/2027 | same |
+| Dose | 1 | 2 | — |
+| Past Due | 09/25/2027 | 04/25/2028 | see below |
+
+Checked against the CDSi supporting data for the HepA 2-dose series:
+
+- dose 1 `latestRecAge` = **24 months + 4 weeks**. DOB + that, less a day, is
+  **2027-09-25** — FITS's expected Past Due exactly.
+- dose 2 `latestRecInt` = **19 months + 4 weeks** from the previous dose. The
+  dose date + that, less a day, is **2028-04-25** — cicada's value exactly.
+
+So FITS's expected row takes Earliest and Recommended from **dose 2** and takes
+Dose number and Past Due from **dose 1**. No single dose produces all four.
+cicada is self-consistent on dose 2, which is the dose actually being forecast
+once the administered dose evaluates as valid, and FITS agrees it is valid.
+
+This looks like the relative-date collapse: the case is named "Dose 1 at 12
+months" and the dose lands on the assessment date, so a row written for an
+assessment later than the dose is being scored against one where they coincide.
+
 ## Confounded, do not cite
 
 Earlier runs varied `targetDisease` coding order (CVX first vs SNOMED first)

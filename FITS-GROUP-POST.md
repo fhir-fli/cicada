@@ -56,4 +56,14 @@ not just Dose Number. doseNumberString scores normally. R4 types this
 positiveInt|string, so both are conformant and the integer form fails the whole
 suite silently. Is that expected?
 
+Also on AART-HepA-2 (DOB 2025-08-29, assessment 2026-08-29, one HepA dose given
+2026-08-29), the expected forecast row looks like it mixes two doses. Expected
+Earliest and Recommended are both 03/01/2027, which is dose 2's 6-month minimum
+interval from that dose, and we match them. Expected Dose is 1 and expected Past
+Due is 09/25/2027, which is dose 1's latestRecAge of 24 months + 4 weeks from
+the birth date. Dose 2's latestRecInt of 19 months + 4 weeks from the previous
+dose gives 04/25/2028, which is what we send. No single dose number produces all
+four expected values. Is that row intended, or is it an artifact of the dose
+landing on the assessment date?
+
 Happy to supply full request and response XML.
