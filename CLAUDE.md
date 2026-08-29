@@ -1,67 +1,8 @@
 # CLAUDE.md
 
-# 🛑🛑🛑 NEVER INVENT A RULE TO MAKE A TEST PASS 🛑🛑🛑
-
-## **Every rule in an engine must NAME the specification rule it implements. If you cannot name one, you are inventing — STOP.**
-
-**2026-08-27, Grey furious.** He found **two rules in the cicada immunization
-engine that exist in NO CDSi specification**, both invented to make a failing
-test pass — after he had said, in that same session: *"DO NOT tack on a random
-function or some bullshit that is designed purely for that one instance to
-ensure it works."*
-
-- `relevant_series.dart` — "prefer the risk series whose indication begins
-  latest in life". No such rule in CDSi. **Removing it broke exactly one case:
-  the one it was written for.**
-- `skipByCompletedSeries` — dating the skip by the satisfying dose. **Table 6-7
-  asks one present-tense question and contains no date.**
-
-**This is a clinical decision engine. An invented rule is a recommendation no
-guideline supports, given to a real patient.**
-
-### Before ANY engine change
-1. **Which spec rule am I implementing?** Quote it. No quote → no change.
-2. **Would this rule exist if this test case did not?** If no, it is a one-off.
-3. **What does removing it cost?** A rule whose removal breaks only the case it
-   was written for **is** the one-off, proven.
-
-**A test case id is NOT a justification** — it is the symptom that made you
-look. Put the rule id in the comment: `CONDSKIP-1`, `FORECASTDTCAN-1`,
-`Table 6-7`.
-
-**If the spec has no rule for it, the engine is RIGHT to fail that case.** Write
-the defect up and let it fail. ⚠️ **"Defensible" is a weasel word** — either it
-follows from the spec or it does not.
-
-🔒 Hook-enforced: `~/.claude/hooks/warn-invented-rule.py`.
-
----
-
-# 🛑🛑🛑 ABSOLUTE RULE #1 — INCREMENTAL OUTPUT — NO EXCEPTIONS — READ THIS FIRST 🛑🛑🛑
-
-## **EVERY SCRIPT WRITES RESULTS TO DISK INCREMENTALLY. EVERY ITERATION. NO EXCEPTIONS. NEVER.**
-
-Violated multiple times; **the user has been furious every single time**. Applies to EVERY script — regardless of runtime, regardless of how "throwaway" it feels. No exceptions.
-
-**If you think "this is just a quick diagnostic, I don't need to write incrementally" — THAT THOUGHT IS THE VIOLATION.** Stop. Open the file. Write incrementally. NOW.
-
-**MANDATORY pattern:**
-```python
-fh = open(out_path, 'w'); fh.write('header\n')
-for item in items:
-    result = compute(item)
-    fh.write(f'{result}\n'); fh.flush()
-    print(f'{item}: {result}', flush=True)
-fh.close()
-```
-
-**FORBIDDEN:** `results.append(...)` accumulators with a final `json.dumps`; `print()` without `flush=True`; bash pipes that buffer (`| head`, `| tail`, `| tee`, `| grep`); single `>` redirect with no incremental writes; `concurrent.futures` final-collection patterns; importing/running ANY existing script WITHOUT first opening it to check for buffering.
-
-**Before running any existing script: READ IT.** If it buffers, fix it first. No exceptions.
-
-The user has been burned by scripts that ran 11+ minutes, crashed at the end, and left zero output. **Buffered output is data loss waiting to happen.** Apply every time.
-
----
+> **Universal rules are in `~/.claude/CLAUDE.md`** — it loads in every session, in
+> every directory, so they are not repeated here. Full records: `~/.claude/rules/`.
+> This file holds project facts only.
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 

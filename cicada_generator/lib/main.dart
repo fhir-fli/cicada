@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:cicada/cicada.dart';
 import 'package:cicada_generator/antigen_sheet_parser.dart';
 import 'package:cicada_generator/schedule_sheet_parser.dart';
+import 'package:cicada_generator/repo_root.dart';
 
 void main(List<String> args) {
   final cdcOnly = args.contains('--cdc');
@@ -32,7 +33,7 @@ void _generateCdc() {
   }
 
   // 2) Create output directory, clearing old JSON to avoid stale data
-  final outputDir = Directory('cicada_generator/lib/generated_files');
+  final outputDir = Directory(repoPath('cicada_generator/lib/generated_files'));
   if (outputDir.existsSync()) {
     for (final f in outputDir.listSync()) {
       if (f is File && f.path.endsWith('.json')) f.deleteSync();
@@ -199,8 +200,8 @@ $fileString);
 // =============================================================================
 
 void _generateWho() {
-  final antigenDir = Directory('cicada_generator/lib/WHO/antigen');
-  final scheduleDir = Directory('cicada_generator/lib/WHO/schedule');
+  final antigenDir = Directory(repoPath('cicada_generator/lib/WHO/antigen'));
+  final scheduleDir = Directory(repoPath('cicada_generator/lib/WHO/schedule'));
 
   if (!antigenDir.existsSync()) {
     print('WHO antigen directory not found: ${antigenDir.path}');
@@ -208,7 +209,8 @@ void _generateWho() {
   }
 
   // Create output directories
-  final outputJsonDir = Directory('cicada_generator/lib/generated_files/who');
+  final outputJsonDir =
+      Directory(repoPath('cicada_generator/lib/generated_files/who'));
   if (outputJsonDir.existsSync()) {
     for (final f in outputJsonDir.listSync()) {
       if (f is File && f.path.endsWith('.json')) f.deleteSync();
@@ -458,8 +460,8 @@ String snakeCaseToCamelCase(String snakeCaseString) {
 /// Merges supplementary crosswalk data (ICD-10-CM, LOINC, RxNorm, CPT) into
 /// the observation coded values parsed from the CDC Excel.
 ScheduleSupportingData _mergeCrosswalk(ScheduleSupportingData data) {
-  final crosswalkFile =
-      File('cicada_generator/lib/crosswalk/observation_crosswalk.json');
+  final crosswalkFile = File(
+      repoPath('cicada_generator/lib/crosswalk/observation_crosswalk.json'));
   if (!crosswalkFile.existsSync()) {
     print('No crosswalk file found, skipping merge.');
     return data;

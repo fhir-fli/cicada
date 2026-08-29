@@ -28,6 +28,8 @@ import 'package:excel/excel.dart';
 import 'package:fhir_r4/fhir_r4.dart';
 import 'package:cicada_generator/cdc_row_collapse.dart';
 
+import 'repo_root.dart';
+
 late File out;
 
 void say(String line) =>
@@ -324,8 +326,8 @@ void main() {
       'maternal 2025-09-01) while those cases were written against 2023-24.');
   say('');
 
-  const healthyNdjson = 'cicada/test/healthyTestCases.ndjson';
-  const conditionNdjson = 'cicada/test/conditionTestCases.ndjson';
+  final healthyNdjson = repoPath('cicada/test/healthyTestCases.ndjson');
+  final conditionNdjson = repoPath('cicada/test/conditionTestCases.ndjson');
 
   final healthyIds =
       disagreeingIds(loadCases(healthyNdjson), testForecasts, testDoses);
@@ -337,8 +339,8 @@ void main() {
   emit(
     'Healthy childhood and adult cases (v4.46 — versions match, so these are '
         'the sharpest)',
-    'cicada_generator/lib/test_cases/'
-        'cdsi-healthy-childhood-and-adult-test-cases-v4.46.xlsx',
+    repoPath('cicada_generator/lib/test_cases/'
+        'cdsi-healthy-childhood-and-adult-test-cases-v4.46.xlsx'),
     'FITS Exported TestCases',
     healthyNdjson,
     54,
@@ -347,8 +349,8 @@ void main() {
 
   emit(
     'Underlying-conditions cases (v4.6 — predate the supporting data)',
-    'cicada_generator/lib/test_cases/'
-        'CDSi-underlying-conditions-test-cases-v4.6.xlsx',
+    repoPath('cicada_generator/lib/test_cases/'
+        'CDSi-underlying-conditions-test-cases-v4.6.xlsx'),
     'Underlying Condition Test Cases',
     conditionNdjson,
     68,

@@ -30,6 +30,8 @@ import 'package:excel/excel.dart';
 import 'package:fhir_r4/fhir_r4.dart';
 import 'package:cicada_generator/cdc_row_collapse.dart';
 
+import 'repo_root.dart';
+
 late File log;
 
 void say(String line) {
@@ -82,18 +84,18 @@ class Suite {
 final List<Suite> suites = <Suite>[
   Suite(
     'healthy childhood and adult (v4.46)',
-    'cicada/test/healthyTestCases.ndjson',
-    'cicada_generator/lib/test_cases/'
-        'cdsi-healthy-childhood-and-adult-test-cases-v4.46.xlsx',
+    repoPath('cicada/test/healthyTestCases.ndjson'),
+    repoPath('cicada_generator/lib/test_cases/'
+        'cdsi-healthy-childhood-and-adult-test-cases-v4.46.xlsx'),
     'FITS Exported TestCases',
     testForecasts,
     testDoses,
   ),
   Suite(
     'underlying conditions (v4.6)',
-    'cicada/test/conditionTestCases.ndjson',
-    'cicada_generator/lib/test_cases/'
-        'CDSi-underlying-conditions-test-cases-v4.6.xlsx',
+    repoPath('cicada/test/conditionTestCases.ndjson'),
+    repoPath('cicada_generator/lib/test_cases/'
+        'CDSi-underlying-conditions-test-cases-v4.6.xlsx'),
     'Underlying Condition Test Cases',
     testConditionForecasts,
     testConditionDoses,
@@ -132,7 +134,7 @@ String verdict(String expected, String actual) {
 }
 
 void auditOne(String id) {
-  log = File('scratch/audit-$id.txt');
+  log = File(repoPath('scratch/audit-$id.txt'));
   log.parent.createSync(recursive: true);
   log.writeAsStringSync('');
 

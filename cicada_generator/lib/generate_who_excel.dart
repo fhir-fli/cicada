@@ -13,9 +13,11 @@ import 'dart:io';
 
 import 'package:excel/excel.dart';
 
+import 'repo_root.dart';
+
 void main() {
-  final antigenDir = 'cicada_generator/lib/WHO/antigen';
-  final scheduleDir = 'cicada_generator/lib/WHO/schedule';
+  final antigenDir = repoPath('cicada_generator/lib/WHO/antigen');
+  final scheduleDir = repoPath('cicada_generator/lib/WHO/schedule');
 
   // Generate antigen Excel files from JSON
   _generateAntigenExcel(antigenDir);

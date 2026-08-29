@@ -20,6 +20,8 @@ import 'package:cicada/cicada.dart';
 import 'package:collection/collection.dart';
 import 'package:fhir_r4/fhir_r4.dart';
 
+import 'repo_root.dart';
+
 late File log;
 
 void say(String line) {
@@ -29,8 +31,8 @@ void say(String line) {
 
 Parameters? findCase(String id) {
   for (final String path in <String>[
-    'cicada/test/healthyTestCases.ndjson',
-    'cicada/test/conditionTestCases.ndjson',
+    repoPath('cicada/test/healthyTestCases.ndjson'),
+    repoPath('cicada/test/conditionTestCases.ndjson'),
   ]) {
     final File file = File(path);
     if (!file.existsSync()) continue;
@@ -70,7 +72,7 @@ void main(List<String> args) {
   final String id = args.first;
   final String? filter = args.length > 1 ? args[1] : null;
 
-  log = File('scratch/trace-$id.txt');
+  log = File(repoPath('scratch/trace-$id.txt'));
   log.parent.createSync(recursive: true);
   log.writeAsStringSync('');
 
