@@ -15,22 +15,8 @@ List<Series> relevantSeries(
       element.requiredGender!.isEmpty ||
       element.requiredGender!.contains(patient.gender));
 
-  /// The indications of [s] that apply to the patient. [requireBeginAge] false
-  /// drops Table 5-4's lower age bound, keeping everything else.
-  List<Indication> applicable(Series s, {required bool requireBeginAge}) {
-    final List<Indication> indications = s.indication ?? <Indication>[];
-    return indications.where((Indication ind) {
-      final String? code = ind.observationCode?.code;
-      if (code == null || code.isEmpty) return false;
-      if (patient.observations.codeIndex(code) == -1) return false;
-      final bool beforeEnd = patient.assessmentDate <
-          patient.birthdate.changeNullable(ind.endAge, true)!;
-      if (!requireBeginAge) return beforeEnd;
-      return patient.birthdate.changeNullable(ind.beginAge, false)! <=
-              patient.assessmentDate &&
-          beforeEnd;
-    }).toList();
-  }
+  List<Indication> applicable(Series s, {required bool requireBeginAge}) =>
+      applicableIndications(patient, s, requireBeginAge: requireBeginAge);
 
   bool keep(Series s, {required bool requireBeginAge}) {
     if (s.seriesType == SeriesType.standard ||
@@ -65,4 +51,30 @@ List<Series> relevantSeries(
   final List<Series> relaxed =
       series.where((Series s) => keep(s, requireBeginAge: false)).toList();
   return relaxed;
+}
+
+/// Table 5-4: the indications of [s] that apply to [patient].
+///
+/// [requireBeginAge] false drops Table 5-4's lower age bound, keeping
+/// everything else — see the note in [relevantSeries] for when that applies.
+///
+/// Shared so that a caller reporting *why* a risk series applied uses the same
+/// test that made it apply, rather than a second copy of the rule.
+List<Indication> applicableIndications(
+  VaxPatient patient,
+  Series s, {
+  required bool requireBeginAge,
+}) {
+  final List<Indication> indications = s.indication ?? <Indication>[];
+  return indications.where((Indication ind) {
+    final String? code = ind.observationCode?.code;
+    if (code == null || code.isEmpty) return false;
+    if (patient.observations.codeIndex(code) == -1) return false;
+    final bool beforeEnd = patient.assessmentDate <
+        patient.birthdate.changeNullable(ind.endAge, true)!;
+    if (!requireBeginAge) return beforeEnd;
+    return patient.birthdate.changeNullable(ind.beginAge, false)! <=
+            patient.assessmentDate &&
+        beforeEnd;
+  }).toList();
 }

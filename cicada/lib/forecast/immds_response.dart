@@ -308,6 +308,17 @@ ImmunizationRecommendation _buildRecommendation(ForecastResult result) {
       // category — the series GROUP name does not belong here. The coded
       // standard/risk distinction is carried by the extension below instead.
       series: vgf.seriesName?.toFhirString,
+      // The patient information that made this series apply: the Condition or
+      // Observation carrying the risk indication (CDSi Table 5-4). "Patient
+      // Information that supports the status and recommendation."
+      supportingPatientInformation: vgf.supportingReferences.isEmpty
+          ? null
+          : vgf.supportingReferences
+              .map((SupportingResource r) => Reference(
+                    reference: r.reference?.toFhirString,
+                    display: r.display?.toFhirString,
+                  ))
+              .toList(),
       // Which pathway this recommendation describes. A vaccine group can yield
       // both a standard and a risk recommendation for the same target disease,
       // and nothing in core FHIR or the US ImmDS IG distinguishes them.

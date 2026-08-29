@@ -25,6 +25,7 @@ class VaccineGroupForecast {
     this.seriesGroupName,
     this.seriesName,
     this.antigensNeedingDose = const [],
+    this.supportingReferences = const <SupportingResource>[],
   });
 
   final String vaccineGroupName;
@@ -61,10 +62,48 @@ class VaccineGroupForecast {
   /// achieve presumed immunity against a disease".
   final String? seriesName;
 
+  /// FHIR references to the patient information that made this forecast's
+  /// series apply — the Condition or Observation carrying the risk indication
+  /// (CDSi Table 5-4). Empty for a standard series, which needs no indication.
+  /// Emitted as `ImmunizationRecommendation.recommendation`
+  /// `.supportingPatientInformation`.
+  final List<SupportingResource> supportingReferences;
+
   /// Target diseases in this forecast whose best patient series still needs
   /// another dose. A fact about the series, reported so callers can see which
   /// antigens drive the forecast rather than only the blended status.
   final List<String> antigensNeedingDose;
+}
+
+/// The patient information that made [series] apply: for each risk series, the
+/// resources asserting the observations its applicable indications name.
+///
+/// Uses [applicableIndications], the same Table 5-4 test that made the series
+/// relevant in the first place, strict bound first and the relaxed bound only
+/// if nothing passes — mirroring `relevantSeries`, so this reports the
+/// indications the engine actually acted on rather than a second guess at them.
+List<SupportingResource> _supportingReferences(
+    VaxPatient patient, Iterable<VaxSeries> series) {
+  final Set<SupportingResource> refs = <SupportingResource>{};
+  for (final VaxSeries s in series) {
+    if (s.series.seriesType != SeriesType.risk) continue;
+    var applicable =
+        applicableIndications(patient, s.series, requireBeginAge: true);
+    if (applicable.isEmpty) {
+      applicable =
+          applicableIndications(patient, s.series, requireBeginAge: false);
+    }
+    for (final Indication ind in applicable) {
+      final String? code = ind.observationCode?.code;
+      if (code == null) continue;
+      refs.addAll(
+          patient.observationSources[code] ?? const <SupportingResource>{});
+    }
+  }
+  final List<SupportingResource> out = refs.toList()
+    ..sort((SupportingResource a, SupportingResource b) =>
+        '${a.reference}|${a.display}'.compareTo('${b.reference}|${b.display}'));
+  return out;
 }
 
 /// Multi-antigen vaccine groups derived from the active schedule data.
@@ -383,7 +422,7 @@ SeriesStatus _aggregateStatus(List<SeriesStatus> statuses) {
 
 /// Build vaccine group forecasts from per-antigen results
 Map<String, List<VaccineGroupForecast>> _aggregateVaccineGroupForecasts(
-    Map<String, VaxAntigen> agMap) {
+    Map<String, VaxAntigen> agMap, VaxPatient patient) {
   // Group antigens by vaccineGroupName
   final Map<String, List<VaxAntigen>> byGroup = {};
   for (final antigen in agMap.values) {
@@ -496,6 +535,8 @@ Map<String, List<VaccineGroupForecast>> _aggregateVaccineGroupForecasts(
             isRiskForecast: partIsRisk,
             seriesGroupName: best.series.selectSeries?.seriesGroupName,
             seriesName: best.series.seriesName,
+            supportingReferences:
+                _supportingReferences(patient, <VaxSeries>[best]),
             antigensNeedingDose: best.shouldRecieveAnotherDose
                 ? <String>[antigen.targetDisease]
                 : const <String>[],
@@ -562,6 +603,7 @@ Map<String, List<VaccineGroupForecast>> _aggregateVaccineGroupForecasts(
             seriesGroupName: partSeriesGroupNames.length == 1
                 ? partSeriesGroupNames.first
                 : null,
+            supportingReferences: _supportingReferences(patient, part),
           ));
         }
       }
@@ -840,6 +882,8 @@ Map<String, List<VaccineGroupForecast>> _aggregateVaccineGroupForecasts(
         seriesGroupName: passSeriesGroupNames.length == 1
             ? passSeriesGroupNames.first
             : null,
+        supportingReferences: _supportingReferences(
+            patient, passBest.values.expand((List<VaxSeries> l) => l)),
       ));
     }
   }
@@ -899,7 +943,7 @@ ForecastResult evaluateForForecast(Parameters parameters,
   agMap.forEach((String k, VaxAntigen v) => v.forecast());
 
   /// Aggregate vaccine group forecasts (Chapter 9)
-  final vaccineGroupForecasts = _aggregateVaccineGroupForecasts(agMap);
+  final vaccineGroupForecasts = _aggregateVaccineGroupForecasts(agMap, patient);
 
   return (
     patient: patient,

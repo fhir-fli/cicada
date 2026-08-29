@@ -25,7 +25,7 @@ StructureDefinition-allowed-vaccine-status.json              AllowedVaccineStatu
 StructureDefinition-antigen-supporting-data.json             AntigenSupportingData              Resource    antigen_supporting_data.fsh             1 - 75
 StructureDefinition-assessment-date.json                     AssessmentDate                     Extension   date_time_assessment_date.fsh           2 - 5
 StructureDefinition-begin-age.json                           BeginAge                           Extension   profile_vaccine_as_medication.fsh       18 - 22
-StructureDefinition-cicada-immunization-recommendation.json  CicadaImmunizationRecommendation   Profile     profile_forecast_recommendation.fsh     42 - 60
+StructureDefinition-cicada-immunization-recommendation.json  CicadaImmunizationRecommendation   Profile     profile_forecast_recommendation.fsh     42 - 67
 StructureDefinition-end-age.json                             EndAge                             Extension   profile_vaccine_as_medication.fsh       24 - 28
 StructureDefinition-inadvertent-administration-status.json   InadvertentAdministrationStatus    Extension   vax_dose_immunization_profile.fsh       38 - 42
 StructureDefinition-preferred-interval-reason.json           PreferredIntervalReason            Extension   vax_dose_immunization_profile.fsh       62 - 66

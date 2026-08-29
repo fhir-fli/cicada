@@ -58,3 +58,10 @@ Description: "The forecast cicada returns. Constrains ImmunizationRecommendation
 
 * recommendation.extension contains SeriesType named seriesType 0..1
 * recommendation.extension[seriesType] MS
+
+// A risk recommendation exists because of something about the patient. CDSi
+// Table 5-4 makes a risk series relevant only when one of its indications names
+// an observation the patient has, so the recommendation points at the resource
+// that asserted it. A request whose resources carry no id still gets a
+// Reference identified by display.
+* recommendation.supportingPatientInformation MS

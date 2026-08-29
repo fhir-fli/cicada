@@ -89,6 +89,39 @@ void main() {
             'differ; got $statuses');
   });
 
+  test('a risk recommendation names the condition that triggered it', () {
+    final response = buildImmdsResponse(evaluateForForecast(params));
+    final risk = _recommendationsOf(response)
+        .where((r) => seriesTypeOf(r) == 'risk')
+        .toList();
+    expect(risk, isNotEmpty, reason: 'this case has a risk forecast');
+
+    for (final r in risk) {
+      final info = r.supportingPatientInformation;
+      expect(info, isNotNull,
+          reason: 'a risk series applies because of a patient observation '
+              '(CDSi Table 5-4); the recommendation must say which');
+      expect(info!, isNotEmpty);
+      // CDC's test resources carry no id, so the Reference identifies the
+      // condition by display. Either form has to name something.
+      for (final ref in info) {
+        expect(
+            ref.reference?.valueString ?? ref.display?.valueString, isNotNull,
+            reason: 'an empty Reference identifies nothing');
+      }
+    }
+  });
+
+  test('a standard recommendation claims no triggering condition', () {
+    final response = buildImmdsResponse(evaluateForForecast(params));
+    for (final r in _recommendationsOf(response)) {
+      if (seriesTypeOf(r) == 'risk') continue;
+      expect(r.supportingPatientInformation, isNull,
+          reason: 'a standard series needs no indication, so pointing at '
+              'patient information would assert a link that does not exist');
+    }
+  });
+
   test('every recommendation carries a series type', () {
     final response = buildImmdsResponse(evaluateForForecast(params));
     for (final r in _recommendationsOf(response)) {

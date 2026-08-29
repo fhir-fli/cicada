@@ -213,7 +213,7 @@
     "fshType": "Profile",
     "fshFile": "profile_forecast_recommendation.fsh",
     "startLine": 42,
-    "endLine": 60
+    "endLine": 67
   },
   {
     "outputFile": "StructureDefinition-end-age.json",

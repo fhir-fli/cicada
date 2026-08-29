@@ -24,7 +24,10 @@ class PatientForAssessment extends _$PatientForAssessment {
     final List<Condition> conditions = <Condition>[];
     final List<AllergyIntolerance> allergies = <AllergyIntolerance>[];
     final List<VaxDose> pastDoses = <VaxDose>[];
-    final List<CodeableConcept> otherResourceCodes = <CodeableConcept>[];
+    // The code alone is not enough: `supportingPatientInformation` has to
+    // reference the resource that carried it, so keep the reference with it.
+    final List<({CodeableConcept code, String? reference})> otherResourceCodes =
+        <({CodeableConcept code, String? reference})>[];
 
     parameters.parameter?.forEach((ParametersParameter parameter) {
       if (parameter.name == 'assessmentDate' &&
@@ -61,35 +64,68 @@ class PatientForAssessment extends _$PatientForAssessment {
             }
           case Observation _:
             {
-              final code = (parameter.resource! as Observation).code;
-              otherResourceCodes.add(code);
+              final observation = parameter.resource! as Observation;
+              otherResourceCodes.add((
+                code: observation.code,
+                reference: observation.id == null
+                    ? null
+                    : 'Observation/${observation.id}',
+              ));
               break;
             }
           case Procedure _:
             {
-              final code = (parameter.resource! as Procedure).code;
-              if (code != null) otherResourceCodes.add(code);
+              final resource = parameter.resource! as Procedure;
+              final code = resource.code;
+              if (code != null) {
+                otherResourceCodes.add((
+                  code: code,
+                  reference:
+                      resource.id == null ? null : 'Procedure/${resource.id}',
+                ));
+              }
               break;
             }
           case MedicationStatement _:
             {
-              final code = (parameter.resource! as MedicationStatement)
-                  .medicationCodeableConcept;
-              if (code != null) otherResourceCodes.add(code);
+              final resource = parameter.resource! as MedicationStatement;
+              final code = resource.medicationCodeableConcept;
+              if (code != null) {
+                otherResourceCodes.add((
+                  code: code,
+                  reference: resource.id == null
+                      ? null
+                      : 'MedicationStatement/${resource.id}',
+                ));
+              }
               break;
             }
           case MedicationRequest _:
             {
-              final code = (parameter.resource! as MedicationRequest)
-                  .medicationCodeableConcept;
-              if (code != null) otherResourceCodes.add(code);
+              final resource = parameter.resource! as MedicationRequest;
+              final code = resource.medicationCodeableConcept;
+              if (code != null) {
+                otherResourceCodes.add((
+                  code: code,
+                  reference: resource.id == null
+                      ? null
+                      : 'MedicationRequest/${resource.id}',
+                ));
+              }
               break;
             }
           case MedicationAdministration _:
             {
-              final code = (parameter.resource! as MedicationAdministration)
-                  .medicationCodeableConcept;
-              if (code != null) otherResourceCodes.add(code);
+              final resource = parameter.resource! as MedicationAdministration;
+              final code = resource.medicationCodeableConcept;
+              if (code != null) {
+                otherResourceCodes.add((
+                  code: code,
+                  reference: resource.id == null
+                      ? null
+                      : 'MedicationAdministration/${resource.id}',
+                ));
+              }
               break;
             }
           default:
@@ -130,16 +166,51 @@ class PatientForAssessment extends _$PatientForAssessment {
       List<Immunization> immunizations,
       List<AllergyIntolerance> allergies,
       List<VaxDose> pastDoses,
-      List<CodeableConcept> otherResourceCodes) {
+      List<({CodeableConcept code, String? reference})> otherResourceCodes) {
     final bd = birthdate ?? VaxDate(1900, 01, 01);
     final List<VaxObservation> observations =
         observationsFromConditions(conditions, bd);
     // Add observations from AllergyIntolerance resources
     observations.addAll(observationsFromAllergies(allergies));
     // Add observations from Observation, Procedure, Medication* resources
-    for (final CodeableConcept code in otherResourceCodes) {
-      final obs = observationFromCodeableConcept(code);
+    for (final pair in otherResourceCodes) {
+      final obs = observationFromCodeableConcept(pair.code);
       if (obs != null) observations.add(obs);
+    }
+
+    // Which resource asserted each CDSi observation, so a risk-driven
+    // recommendation can point at it via supportingPatientInformation.
+    // A resource with no id cannot be referenced and is left out.
+    final Map<String, Set<SupportingResource>> observationSources =
+        <String, Set<SupportingResource>>{};
+    void index(VaxObservation? obs, String? reference, CodeableConcept? code) {
+      final String? observationCode = obs?.observationCode;
+      if (observationCode == null) return;
+      final String? display = _displayOf(code);
+      if (reference == null && display == null) return;
+      (observationSources[observationCode] ??= <SupportingResource>{})
+          .add((reference: reference, display: display));
+    }
+
+    for (final Condition condition in conditions) {
+      index(
+        observationFromCodeableConcept(condition.code),
+        condition.id == null ? null : 'Condition/${condition.id}',
+        condition.code,
+      );
+    }
+    for (final AllergyIntolerance allergy in allergies) {
+      final String? ref =
+          allergy.id == null ? null : 'AllergyIntolerance/${allergy.id}';
+      index(observationFromCodeableConcept(allergy.code), ref, allergy.code);
+      for (final reaction in allergy.reaction ?? []) {
+        index(observationFromCodeableConcept(reaction.substance), ref,
+            reaction.substance);
+      }
+    }
+    for (final pair in otherResourceCodes) {
+      index(
+          observationFromCodeableConcept(pair.code), pair.reference, pair.code);
     }
     return VaxPatient(
       assessmentDate: assessmentDate == null
@@ -153,6 +224,18 @@ class PatientForAssessment extends _$PatientForAssessment {
       observations: VaxObservations(observation: observations),
       allergies: allergies,
       pastDoses: pastDoses,
+      observationSources: observationSources,
     );
   }
+}
+
+/// Human-readable name for a coded concept, for a Reference that has no target.
+String? _displayOf(CodeableConcept? code) {
+  final String? text = code?.text?.valueString;
+  if (text != null && text.isNotEmpty) return text;
+  for (final Coding coding in code?.coding ?? <Coding>[]) {
+    final String? display = coding.display?.valueString;
+    if (display != null && display.isNotEmpty) return display;
+  }
+  return null;
 }

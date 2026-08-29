@@ -61,6 +61,11 @@
         "id": "ImmunizationRecommendation.recommendation.series",
         "path": "ImmunizationRecommendation.recommendation.series",
         "mustSupport": true
+      },
+      {
+        "id": "ImmunizationRecommendation.recommendation.supportingPatientInformation",
+        "path": "ImmunizationRecommendation.recommendation.supportingPatientInformation",
+        "mustSupport": true
       }
     ]
   }
