@@ -68,6 +68,26 @@ const _diseaseSnomedCodes = <String, String>{
   'Zoster': '4740000',
 };
 
+/// Names CVX on any coding the caller left without a system.
+///
+/// A caller may send `vaccineCode` as a bare `<code value="45"/>`; FITS does.
+/// R4 gives [ImmunizationEvaluation] no `vaccineCode`, so a reader wanting the
+/// vaccine has to follow `immunizationEvent` to the [Immunization], and an
+/// unlabelled coding cannot be recognised there as CVX. We resolved this dose's
+/// antigens from CVX, so we name the system we already relied on. Fills a blank
+/// only; never rewrites a system the caller supplied.
+Immunization _withCvxSystem(Immunization immunization) =>
+    immunization.copyWith(
+      vaccineCode: CodeableConcept(
+        text: immunization.vaccineCode.text,
+        coding: immunization.vaccineCode.coding
+            ?.map((Coding c) => c.system == null
+                ? c.copyWith(system: 'http://hl7.org/fhir/sid/cvx'.toFhirUri)
+                : c)
+            .toList(),
+      ),
+    );
+
 /// Converts a [ForecastResult] into a FHIR [Parameters] resource conforming
 /// to the ImmDS IG `$immds-forecast` operation output.
 ///
@@ -76,6 +96,31 @@ const _diseaseSnomedCodes = <String, String>{
 ///   - `recommendation` (1..1): [ImmunizationRecommendation] with forecast
 Parameters buildImmdsResponse(ForecastResult result) {
   final List<ParametersParameter> outParams = [];
+
+  // Echo each administered Immunization back as a top-level parameter.
+  //
+  // R4 gives ImmunizationEvaluation no vaccineCode, so a reader wanting the
+  // vaccine must follow immunizationEvent to the Immunization. In an operation
+  // response there is no server to fetch it from, and the ImmDS
+  // OperationDefinition declares no output parameter for it, so a literal
+  // `Immunization/<id>` reference resolves to nothing. Returning the resources
+  // alongside the evaluations gives a resolver something to find.
+  //
+  // The parameter name mirrors the input parameter (`immunization`), since the
+  // operation defines no output name to use.
+  for (final Immunization immunization in result.patient.immunizations) {
+    if (immunization.id == null) continue;
+    // A caller may send vaccineCode as a bare code with no system; FITS does.
+    // R4 gives ImmunizationEvaluation no vaccineCode, so a reader wanting the
+    // vaccine has to follow immunizationEvent to here, and an unlabelled coding
+    // cannot be recognised as CVX. We resolved this dose's antigens from CVX,
+    // so name the system we already relied on. Fills a blank only; never
+    // rewrites a system the caller supplied.
+    outParams.add(ParametersParameter(
+      name: 'immunization'.toFhirString,
+      resource: _withCvxSystem(immunization),
+    ));
+  }
 
   // Build ImmunizationEvaluation resources (one per evaluated dose per series)
   final evaluations = _buildEvaluations(result);
@@ -142,11 +187,28 @@ List<ImmunizationEvaluation> _buildEvaluations(ForecastResult result) {
           // R4: "The date the evaluation of the vaccine administration event
           // was performed" — the assessment date, not the date of the dose.
           // The ImmDS example agrees: date 2020-05-26 against an immunization
-          // that occurred 2020-04-28. We were sending the dose date.
+          // that occurred 2020-04-28.
+          //
+          // Measured against NIST FITS 1.4.6: FITS only builds an evaluation
+          // candidate when this field equals the dose's administration date.
+          // We ran it both ways. Under the dose date every event produced a
+          // `[CHECKING AGAINST]` line; under the assessment date events with
+          // doses before it produced none. But the candidate FITS then builds
+          // carries no vaccine either way, so it matches nothing and the score
+          // is 0% under both. The deviation buys nothing, so we send what the
+          // specification and the published example say.
           date: result.patient.assessmentDate.toFhirDateTime(),
-          targetDisease: _evalTargetDisease(antigen.targetDisease, groupCvx),
+          targetDisease: _evalTargetDisease(antigen.targetDisease),
           // Literal reference, as all four R4 ImmunizationEvaluation examples
-          // use (`Immunization/example`). None uses a fragment.
+          // use (`Immunization/example`); none uses a fragment. The
+          // Immunization it names travels back as its own top-level
+          // `immunization` parameter, so the reference resolves within the
+          // response.
+          //
+          // A contained Immunization reached by `#fragment` was tried against
+          // NIST FITS 1.4.6 with the date filter satisfied, so the candidate
+          // was genuinely built, and the candidate's vaccine was still null.
+          // Neither route reaches FITS, so we send the example's form.
           immunizationEvent: Reference(
             reference: 'Immunization/${dose.doseId}'.toFhirString,
           ),
@@ -191,27 +253,15 @@ List<ImmunizationEvaluation> _buildEvaluations(ForecastResult result) {
 /// unspecified", so no reader could tell what was actually given. The product
 /// CVX now travels on the contained Immunization, which is the only element
 /// R4 gives it, so there is nothing left for a CVX to do here.
-CodeableConcept _evalTargetDisease(
-    String targetDisease, (String cvx, String display)? groupCvx) {
+CodeableConcept _evalTargetDisease(String targetDisease) {
   final List<Coding> codings = [];
   final snomedCode = _diseaseSnomedCodes[targetDisease];
-  // 🛑 CVX FIRST. R4 gives ImmunizationEvaluation no vaccineCode, so this is
-  // the only place a reader can find the vaccine, and NIST FITS reads
-  // `targetDisease.getCoding().get(0).getCode()` as a CVX number.
-  //
-  // With SNOMED first, FITS read 66071002 as the CVX, found no candidate, and
-  // its Vaccine Matcher Log showed [FOUND 0 MATCHES] with no
-  // [CHECKING AGAINST] lines at all for any vaccination event.
-  //
-  // The SNOMED disease coding follows, so the element still carries a disease
-  // code as R4 defines it.
-  if (groupCvx != null) {
-    codings.add(Coding(
-      system: 'http://hl7.org/fhir/sid/cvx'.toFhirUri,
-      code: groupCvx.$1.toFhirCode,
-      display: groupCvx.$2.toFhirString,
-    ));
-  }
+  // No CVX here. R4 defines this as the vaccine preventable DISEASE, and
+  // both the R4 and ImmDS bindings are SNOMED disease concepts with no CVX
+  // in them. A CVX was put here first to feed NIST FITS, which reads
+  // `targetDisease.getCoding().get(0).getCode()` as a CVX number; measured,
+  // it changed no FITS result, so a vaccine code in a disease element is all
+  // it bought.
   if (snomedCode != null) {
     codings.add(Coding(
       system: 'http://snomed.info/sct'.toFhirUri,

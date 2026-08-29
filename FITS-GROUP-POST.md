@@ -30,13 +30,25 @@ We return one evaluation per dose, immunizationEvent and patient referencing the
 ids FITS sent, doseStatus valid/Valid, series, doseNumberPositiveInt,
 seriesDosesPositiveInt.
 
-Tried as single changes, none of which matched: targetDisease coding order both
-ways (CVX first at least produces the [CHECKING AGAINST] line, SNOMED first
-produces none); date as assessment date rather than dose date;
-seriesDosesString vs seriesDosesPositiveInt; adding id and meta.profile;
-containing the Immunization with a #fragment reference; adding the CVX system to
-that contained vaccineCode; a literal Immunization/<id> reference with no
-contained resource.
+Two things I can now show, each measured as a single change:
+
+ImmunizationEvaluation.date controls whether a candidate is built at all. With
+the dose's administration date in it, every event prints a [CHECKING AGAINST]
+line. With the assessment date in it, events whose doses fall before that date
+print no candidate line at all. R4 defines the element as the date the
+evaluation was performed, and the ImmDS example uses the assessment date
+(2020-05-26) against an immunization given 2020-04-28, so the conformant value
+is the one that suppresses the candidate.
+
+With the dose date in place, so the candidate does get built, the candidate's
+vaccine is still null. Both ways of conveying it fail: the Immunization
+contained on the evaluation with a #fragment reference, and the Immunization
+returned as its own top-level parameter with a literal Immunization/<id>
+reference, in both cases with an explicit
+http://hl7.org/fhir/sid/cvx system on the coding.
+
+Also tried, no effect: targetDisease coding order both ways;
+seriesDosesString vs seriesDosesPositiveInt; adding id and meta.profile.
 
 Separately: on ImmunizationRecommendation.recommendation, doseNumberPositiveInt
 makes FITS score 0% on every criterion including Series Status and all dates,
