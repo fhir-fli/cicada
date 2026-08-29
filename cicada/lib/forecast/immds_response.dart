@@ -1,4 +1,3 @@
-import 'package:collection/collection.dart';
 import 'package:fhir_r4/fhir_r4.dart';
 
 import '../cicada.dart';
@@ -129,11 +128,6 @@ List<ImmunizationEvaluation> _buildEvaluations(ForecastResult result) {
         if (seen.contains(key)) continue;
         seen.add(key);
 
-        // The Immunization the caller sent for this dose, if we still have it.
-        final Immunization? containedImmunization =
-            result.patient.immunizations.firstWhereOrNull(
-                (Immunization i) => i.id?.toString() == dose.doseId);
-
         evaluations.add(ImmunizationEvaluation(
           // The ImmDS example carries an id and a profile claim; we carried
           // neither. A consumer that indexes resources by id had nothing to
@@ -150,27 +144,11 @@ List<ImmunizationEvaluation> _buildEvaluations(ForecastResult result) {
           // The ImmDS example agrees: date 2020-05-26 against an immunization
           // that occurred 2020-04-28. We were sending the dose date.
           date: result.patient.assessmentDate.toFhirDateTime(),
-          targetDisease: _evalTargetDisease(antigen.targetDisease),
-          // The Immunization travels WITH the evaluation, as a contained
-          // resource, and immunizationEvent points at it by fragment.
-          //
-          // R4 ImmunizationEvaluation has no vaccineCode element, so the only
-          // way to learn which vaccine a dose was is to dereference
-          // immunizationEvent. FITS names the expected evaluation by CVX
-          // ("CVX 85, Hep A, unspecified formulation, Valid"), so it has to be
-          // doing exactly that. A literal `Immunization/<id>` reference is not
-          // resolvable inside an operation response that carries no
-          // Immunization resources, and the ImmDS OperationDefinition defines
-          // no output parameter for them. Containment is what FHIR provides
-          // for a reference that has no independent existence for the reader.
-          contained: containedImmunization == null
-              ? null
-              : <Resource>[containedImmunization],
+          targetDisease: _evalTargetDisease(antigen.targetDisease, groupCvx),
+          // Literal reference, as all four R4 ImmunizationEvaluation examples
+          // use (`Immunization/example`). None uses a fragment.
           immunizationEvent: Reference(
-            reference: (containedImmunization != null
-                    ? '#${dose.doseId}'
-                    : 'Immunization/${dose.doseId}')
-                .toFhirString,
+            reference: 'Immunization/${dose.doseId}'.toFhirString,
           ),
           doseStatus: _mapDoseStatus(dose.evalStatus!),
           doseStatusReason: dose.evalReason != null
@@ -213,9 +191,27 @@ List<ImmunizationEvaluation> _buildEvaluations(ForecastResult result) {
 /// unspecified", so no reader could tell what was actually given. The product
 /// CVX now travels on the contained Immunization, which is the only element
 /// R4 gives it, so there is nothing left for a CVX to do here.
-CodeableConcept _evalTargetDisease(String targetDisease) {
+CodeableConcept _evalTargetDisease(
+    String targetDisease, (String cvx, String display)? groupCvx) {
   final List<Coding> codings = [];
   final snomedCode = _diseaseSnomedCodes[targetDisease];
+  // 🛑 CVX FIRST. R4 gives ImmunizationEvaluation no vaccineCode, so this is
+  // the only place a reader can find the vaccine, and NIST FITS reads
+  // `targetDisease.getCoding().get(0).getCode()` as a CVX number.
+  //
+  // With SNOMED first, FITS read 66071002 as the CVX, found no candidate, and
+  // its Vaccine Matcher Log showed [FOUND 0 MATCHES] with no
+  // [CHECKING AGAINST] lines at all for any vaccination event.
+  //
+  // The SNOMED disease coding follows, so the element still carries a disease
+  // code as R4 defines it.
+  if (groupCvx != null) {
+    codings.add(Coding(
+      system: 'http://hl7.org/fhir/sid/cvx'.toFhirUri,
+      code: groupCvx.$1.toFhirCode,
+      display: groupCvx.$2.toFhirString,
+    ));
+  }
   if (snomedCode != null) {
     codings.add(Coding(
       system: 'http://snomed.info/sct'.toFhirUri,
@@ -340,13 +336,17 @@ ImmunizationRecommendation _buildRecommendation(ForecastResult result) {
       vaccineCode: vaccineCodeList.isNotEmpty ? vaccineCodeList : null,
       forecastStatus: _mapForecastStatus(vgf.status, isOverdue: isOverdue),
       dateCriterion: dateCriteria.isNotEmpty ? dateCriteria : null,
-      // doseNumber[x] is a count, and every HL7 example uses
-      // doseNumberPositiveInt. We were stringifying an int into
-      // doseNumberString — a different choice element, so a reader looking for
-      // the integer found nothing. Same defect as seriesDosesString.
-      doseNumberPositiveInt: vgf.status == SeriesStatus.notComplete &&
-              (vgf.doseNumber ?? 0) > 0
-          ? vgf.doseNumber!.toFhirPositiveInt
+      // 🛑 doseNumberString, deliberately, do not "fix" this to positiveInt.
+      //
+      // R4 types this element `doseNumber[x] : positiveInt|string`, so BOTH
+      // are conformant, and HL7's examples are explicitly "not a normative
+      // part of the specification". Switching to doseNumberPositiveInt was
+      // measured against NIST FITS as the ONLY change in a run: every
+      // criterion went from scoring to 0%, including Series Status and the
+      // dates, so FITS stops reading the recommendation entirely. Reverting it
+      // alone restored the scores.
+      doseNumberString: vgf.status == SeriesStatus.notComplete
+          ? vgf.doseNumber?.toString().toFhirString
           : null,
       description: vgf.antigenNames.length > 1
           ? 'Antigens: ${vgf.antigenNames.join(", ")}'.toFhirString
