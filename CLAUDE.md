@@ -6,6 +6,33 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+## 🛑 The ImmDS response was built without reading HL7's examples
+
+**2026-08-28.** Four defects, all of which one diff would have caught:
+`seriesDosesString` and `doseNumberString` are real element names and both were
+the **wrong choice element**; `date` carried the dose date where R4 means the
+assessment date; and a vaccine CVX sat in `ImmunizationEvaluation.targetDisease`,
+whose examples carry SNOMED diseases only.
+
+🔴 A child given **TriHibit (CVX 50)** had an evaluation reading **CVX 107
+"DTaP, unspecified"** and **CVX 17 "Hib, unspecified"** — the vaccine *group*,
+not the product. R4 gives `ImmunizationEvaluation` **no `vaccineCode`**: the
+product lives only on `Immunization.vaccineCode`, reached via
+`immunizationEvent`. We returned no Immunization, so it was unreachable. The
+administered Immunization now travels **contained** inside each evaluation.
+
+```bash
+unzip -l ../../fhir_generator/fhir_r4/examples-json.zip | grep -i immunization
+ls ~/.fhir/packages/hl7.fhir.us.immds#1.0.0/package/example/
+```
+Diff **both directions** before claiming the response conforms.
+
+🛑 **A test written against your own output defends the bug.**
+`immds_response_test.dart` asserted "doseNumberString is present" and guarded
+the defect for months.
+
+Full record `~/.claude/rules/read-the-published-example.md`.
+
 ## Repository Overview
 
 Cicada is a Dart immunization forecasting engine that implements the CDC's [Clinical Decision Support for Immunization (CDSi)](https://www.cdc.gov/iis/cdsi/) logic and WHO Expanded Programme on Immunization (EPI) recommendations. It takes a FHIR R4 `Parameters` resource containing a patient's demographics, immunization history, and conditions, then evaluates past vaccine doses and forecasts future immunization needs.
