@@ -53,21 +53,46 @@ seriesDoses[x]. The only route to a vaccine code is dereferencing
 (`evaluation` 0..*, `recommendation` 1..1) defines no output parameter that
 would carry Immunization resources.
 
-## What we have already tested and ruled out
+## What is established
 
-Each was the ONLY change in its run, verified on the wire, with the FITS log
-compared before and after:
+**1. `ImmunizationEvaluation.date` gates candidate construction.**
 
-| # | change | result |
-|---|---|---|
-| 1 | `targetDisease` coding order, CVX first | created the `[CHECKING AGAINST]` line; vaccine still null |
-| 2 | `targetDisease` coding order, SNOMED first | no `[CHECKING AGAINST]` line at all |
-| 3 | `date` = assessment date rather than dose date | no change |
-| 4 | `seriesDosesString` -> `seriesDosesPositiveInt` | no change |
-| 5 | added `id` and `meta.profile` | no change |
-| 6 | contained the `Immunization`, `immunizationEvent` as `#fragment` | no change |
-| 7 | added `system` to the contained `vaccineCode` | no change |
-| 8 | literal `Immunization/<id>` reference, no `contained` | no change |
+Holding everything else fixed:
+
+| `date` carries | result |
+|---|---|
+| the dose's administration date | every vaccination event prints a `[CHECKING AGAINST]` line |
+| the assessment date | events whose doses fall before it print no candidate line at all |
+
+R4 defines the element as the date the evaluation was performed, and the ImmDS
+example uses the assessment date (2020-05-26) against an immunization given
+2020-04-28. **The conformant value is the one that suppresses the candidate.**
+
+**2. With the candidate built, its vaccine is still null — by both routes.**
+
+Run with the dose date in place, so `[CHECKING AGAINST]` lines do appear:
+
+| conveyance | result |
+|---|---|
+| `Immunization` contained, `immunizationEvent` = `#<id>` | `[FOUND 0 MATCHES]`, no vaccine printed |
+| `Immunization` as a top-level `immunization` parameter, `immunizationEvent` = `Immunization/<id>` | `[FOUND 0 MATCHES]`, no vaccine printed |
+
+Both carried an explicit `http://hl7.org/fhir/sid/cvx` system on the coding.
+That is every route R4 offers, and neither reaches FITS.
+
+## Tested, no effect
+
+`seriesDosesString` vs `seriesDosesPositiveInt` · adding `id` and
+`meta.profile`.
+
+## Confounded, do not cite
+
+Earlier runs varied `targetDisease` coding order (CVX first vs SNOMED first)
+and read the presence of the `[CHECKING AGAINST]` line as the outcome. Those
+runs carried the assessment date, which we now know governs that line on its
+own, so the coding-order result cannot be attributed. The same applies to the
+first containment test: it ran under the assessment date, so its negative was
+unknown rather than no. It has since been re-run properly and is row 2 above.
 
 Separately measured: `doseNumberPositiveInt` on
 `ImmunizationRecommendation.recommendation` causes FITS to score **0% on every
