@@ -24,6 +24,14 @@ publisher:
 # package id and the value is the version (or dev/current). For advanced
 # use cases, the value can be an object with keys for id, uri, and version.
 #
+dependencies:
+  # The IG binds forecastStatus and statusReason to ImmDS code systems. Without
+  # this the publisher reports "No definition could be found for URL value
+  # 'http://hl7.org/fhir/us/immds/CodeSystem/ForecastStatus'" — 17 times against
+  # a single forecast example. 1.0.0 is the current release and is FHIR 4.0.1,
+  # matching this IG.
+  hl7.fhir.us.immds: 1.0.0
+
 # dependencies:
 #   hl7.fhir.us.core: 3.1.0
 #   hl7.fhir.us.mcode:

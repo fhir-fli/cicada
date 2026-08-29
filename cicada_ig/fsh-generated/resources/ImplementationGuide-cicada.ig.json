@@ -23,8 +23,23 @@
   "fhirVersion": [
     "4.0.1"
   ],
+  "dependsOn": [
+    {
+      "packageId": "hl7.fhir.us.immds",
+      "version": "1.0.0",
+      "uri": "http://hl7.org/fhir/us/immds/ImplementationGuide/hl7.fhir.us.immds",
+      "id": "hl7_fhir_us_immds"
+    }
+  ],
   "definition": {
     "resource": [
+      {
+        "reference": {
+          "reference": "Patient/2016-UC-0032"
+        },
+        "exampleBoolean": false,
+        "name": "2016-UC-0032"
+      },
       {
         "reference": {
           "reference": "StructureDefinition/ReactionProfile"
@@ -104,6 +119,13 @@
         "name": "Cicada Immunization Recommendation",
         "description": "The forecast cicada returns. Constrains ImmunizationRecommendation to say which series group each recommendation belongs to, so that more than one recommendation for a single vaccine group can be told apart.",
         "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ImmunizationRecommendation/cicada-forecast-example"
+        },
+        "exampleBoolean": false,
+        "name": "cicada-forecast-example"
       },
       {
         "reference": {

@@ -44,3 +44,8 @@ scratch/
 # tracked, 98% of everything in the repo.
 cicada_ig/temp/
 cicada_ig/output/
+# The publisher rewrites these on every run: a terminology cache keyed by a
+# per-run uuid, and template scratch files. Neither is source.
+cicada_ig/input-cache/txcache/
+cicada_ig/template/[oO]n[LlGgCc]*
+cicada_ig/template/versions.txt

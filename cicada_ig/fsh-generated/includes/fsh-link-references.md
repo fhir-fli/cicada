@@ -1,3 +1,4 @@
+[2016-UC-0032]: Patient-2016-UC-0032.html
 [ReactionProfile]: StructureDefinition-ReactionProfile.html
 [AllowedIntervalReason]: StructureDefinition-allowed-interval-reason.html
 [AllowedIntervalStatus]: StructureDefinition-allowed-interval-status.html
@@ -8,6 +9,7 @@
 [CdsiObservationCodes]: CodeSystem-cdsi-observation-codes.html
 [EvalStatusCS]: CodeSystem-EvalStatus.html
 [CicadaImmunizationRecommendation]: StructureDefinition-cicada-immunization-recommendation.html
+[cicada-forecast-example]: ImmunizationRecommendation-cicada-forecast-example.html
 [VaccineConditionFhir]: StructureDefinition-VaccineConditionFhir.html
 [VaxDose]: StructureDefinition-vax-dose.html
 [DoseStatusReasonVS]: ValueSet-dose-status-reason.html
