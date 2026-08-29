@@ -68,6 +68,21 @@ R4 defines the element as the date the evaluation was performed, and the ImmDS
 example uses the assessment date (2020-05-26) against an immunization given
 2020-04-28. **The conformant value is the one that suppresses the candidate.**
 
+**1b. Confirmed again inside a single response.** AART-HepB-3 sends two doses,
+06/29/2026 and 08/29/2026, against an assessment of 08/29/2026. Every evaluation
+in that response carries `date` = the assessment date, so the only thing that
+differs between the two events is whether the dose date equals it:
+
+```
+[RESOLVING MATCH FOR] Vaccination Event (Vaccine) CVX=45 at 06/29/2026
+    [FOUND 0 MATCHES]                      <- no candidate line at all
+[RESOLVING MATCH FOR] Vaccination Event (Vaccine) CVX=45 at 08/29/2026
+    [CHECKING AGAINST]    [CHECKING AGAINST]    [FOUND 0 MATCHES]
+```
+
+Same build, same response, same two evaluations. This is stronger than the
+cross-run A/B above because nothing else can differ.
+
 **2. With the candidate built, its vaccine is still null — by both routes.**
 
 Run with the dose date in place, so `[CHECKING AGAINST]` lines do appear:
