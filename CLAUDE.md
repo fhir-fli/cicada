@@ -124,7 +124,7 @@ across all 30 antigens — but the XML is still the fallback, not the source.)
 - Accepts `POST /$immds-forecast` (CDC) and `POST /$immds-forecast-who` (WHO) with JSON or XML FHIR Parameters
 - Returns FHIR Parameters with evaluations and recommendations
 - Supports CORS for browser-based clients
-- Tested against NIST FITS (Forecasting and Immunization Testing Standard): 167/169 correct
+- NIST FITS: forecasts pass (70 values correct, 0 errors over 22 cases, 2026-08-29). FITS evaluations have never matched — see Test Results.
 
 ### State Management
 
@@ -203,7 +203,19 @@ non-zero if one does not.
   `test/forecast_test.dart` was a weaker duplicate of `healthy_test.dart`. Both
   deleted 2026-08-25. The "1010/1014 (99.6%)" that used to sit here came from
   the first of them — do not quote it.
-- **FITS (external)**: 167/169 (98.8%) — 2 failures from FITS date rebasing.
+- **FITS (external)**: **forecasts only.** 22 cases run 2026-08-29: **70
+  forecast values correct, 0 errors.** **Evaluations have never matched** —
+  every vaccination event comes back `Assessment: NO_MATCH` with 0 correct,
+  including 2026-02-23 runs that predate all current work. 🛑 **The old
+  "167/169 (98.8%)" counted forecasts only — do not quote it as an overall
+  score.** The response was checked element-for-element against the ImmDS
+  canonical `Parameters-parameters-out-example.json` and matches, including the
+  OperationDefinition's `evaluation` 0..* / `recommendation` 1..1 parameter
+  names. Four candidate causes were tested against FITS and **falsified**:
+  targetDisease coding order (NO_MATCH with CVX first *and* with SNOMED first),
+  `date` semantics, the `seriesDoses` choice type, and missing `id`/`meta`.
+  Each was a real defect and was fixed anyway. The remaining cause is inside
+  the FITS connector — **ask NIST rather than reshaping the response further.**
 
 ⚠️ **"Verified as version mismatch" was too strong, and it cost us.** That line
 went unquestioned for months and hid a real engine bug: `selectSeries

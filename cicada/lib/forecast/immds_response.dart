@@ -129,9 +129,21 @@ List<ImmunizationEvaluation> _buildEvaluations(ForecastResult result) {
         seen.add(key);
 
         evaluations.add(ImmunizationEvaluation(
+          // The ImmDS example carries an id and a profile claim; we carried
+          // neither. A consumer that indexes resources by id had nothing to
+          // index. The id is derived from the dose so it is stable per dose.
+          id: 'eval-${dose.doseId}'.toFhirString,
+          meta: FhirMeta(profile: <FhirCanonical>[
+            'http://hl7.org/fhir/us/immds/StructureDefinition/immds-immunizationevaluation'
+                .toFhirCanonical,
+          ]),
           status: ImmunizationEvaluationStatusCodes.completed,
           patient: Reference(reference: patientRef),
-          date: dose.dateGiven.toFhirDateTime(),
+          // R4: "The date the evaluation of the vaccine administration event
+          // was performed" — the assessment date, not the date of the dose.
+          // The ImmDS example agrees: date 2020-05-26 against an immunization
+          // that occurred 2020-04-28. We were sending the dose date.
+          date: result.patient.assessmentDate.toFhirDateTime(),
           targetDisease: _evalTargetDisease(antigen.targetDisease, groupCvx),
           immunizationEvent: Reference(
             reference: 'Immunization/${dose.doseId}'.toFhirString,
@@ -144,8 +156,14 @@ List<ImmunizationEvaluation> _buildEvaluations(ForecastResult result) {
           doseNumberPositiveInt: dose.targetDoseSatisfied >= 0
               ? (dose.targetDoseSatisfied + 1).toFhirPositiveInt
               : null,
-          seriesDosesString:
-              '${series.series.seriesDose?.length ?? 0}'.toFhirString,
+          // seriesDoses[x] is a count. The ImmDS example uses
+          // seriesDosesPositiveInt; we were sending seriesDosesString, a
+          // different choice element, so a reader looking for the integer
+          // found nothing. positiveInt cannot be 0, so omit when there are
+          // no doses defined.
+          seriesDosesPositiveInt: (series.series.seriesDose?.length ?? 0) > 0
+              ? series.series.seriesDose!.length.toFhirPositiveInt
+              : null,
         ));
       }
     }
@@ -156,25 +174,32 @@ List<ImmunizationEvaluation> _buildEvaluations(ForecastResult result) {
 
 /// Returns a [CodeableConcept] for evaluation targetDisease.
 ///
-/// FITS reads `targetDisease.getCoding().get(0).getCode()` as a CVX code,
-/// so the vaccine group CVX is placed first. SNOMED disease coding follows
-/// for spec-correctness.
+/// SNOMED first. R4 defines targetDisease as "the vaccine preventable
+/// **disease** the dose is being evaluated against", and the ImmDS binding is
+/// ValueSet/targetDisease: 43 SNOMED disease concepts, no CVX. A CVX code
+/// names a vaccine, so leading with it put a non-disease in a disease element.
+///
+/// The CVX coding is kept, second, for readers that want it.
+///
+/// Every FITS evaluation came back NO_MATCH while this emitted CVX first. That
+/// is evidence against CVX-first, and says nothing either way about
+/// SNOMED-first, which has not been run against FITS yet.
 CodeableConcept _evalTargetDisease(
     String targetDisease, (String cvx, String display)? groupCvx) {
   final List<Coding> codings = [];
-  if (groupCvx != null) {
-    codings.add(Coding(
-      system: 'http://hl7.org/fhir/sid/cvx'.toFhirUri,
-      code: groupCvx.$1.toFhirCode,
-      display: groupCvx.$2.toFhirString,
-    ));
-  }
   final snomedCode = _diseaseSnomedCodes[targetDisease];
   if (snomedCode != null) {
     codings.add(Coding(
       system: 'http://snomed.info/sct'.toFhirUri,
       code: snomedCode.toFhirCode,
       display: targetDisease.toFhirString,
+    ));
+  }
+  if (groupCvx != null) {
+    codings.add(Coding(
+      system: 'http://hl7.org/fhir/sid/cvx'.toFhirUri,
+      code: groupCvx.$1.toFhirCode,
+      display: groupCvx.$2.toFhirString,
     ));
   }
   return CodeableConcept(

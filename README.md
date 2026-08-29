@@ -13,7 +13,7 @@ Cicada implements the CDC's [Clinical Decision Support for Immunization (CDSi)](
 - Multi-antigen vaccine group aggregation (DTaP/Tdap/Td, MMR, DTP, MR)
 - FHIR R4 `Parameters` in, FHIR R4 `Parameters` out
 - Built-in HTTP server with `$immds-forecast` (CDC) and `$immds-forecast-who` (WHO) endpoints (JSON and XML)
-- 1063/1064 on the CDC healthy suite and 312/337 on the conditions suite, 98.8% against NIST FITS
+- 1063/1064 on the CDC healthy suite and 312/337 on the conditions suite; NIST FITS forecasts pass, FITS evaluations do not match (see Test Results)
 
 ## Installation
 
@@ -76,7 +76,7 @@ The server accepts JSON or XML FHIR Parameters and returns the forecast result:
 - `POST /$immds-forecast` — CDC/CDSi schedule
 - `POST /$immds-forecast-who` — WHO EPI schedule
 
-Both endpoints accept identical input. The server supports CORS headers for browser clients and has been tested against [NIST FITS](https://fits.nist.gov) (167/169 correct).
+Both endpoints accept identical input. The server supports CORS headers for browser clients and has been tested against [NIST FITS](https://fits.nist.gov). NIST FITS: forecasts pass (70 values correct, 0 errors over 22 cases, 2026-08-29). FITS evaluations have never matched — see Test Results.
 
 ```bash
 # WHO forecast
@@ -195,7 +195,19 @@ dart run test/condition_test.dart
 Results against CDSi supporting data 4.65-508:
 - **Healthy**: 1063/1064 (99.9%) — one disagreement, `2018-0022`
 - **Condition**: 312/337 (92.6%) — 25 disagreements
-- **FITS**: 167/169 (98.8%) — 2 failures from FITS date rebasing (assessment date shifts)
+- **FITS (external)**: **forecasts only.** 22 cases run 2026-08-29: **70
+  forecast values correct, 0 errors.** **Evaluations have never matched** —
+  every vaccination event comes back `Assessment: NO_MATCH` with 0 correct,
+  including 2026-02-23 runs that predate all current work. 🛑 **The old
+  "167/169 (98.8%)" counted forecasts only — do not quote it as an overall
+  score.** The response was checked element-for-element against the ImmDS
+  canonical `Parameters-parameters-out-example.json` and matches, including the
+  OperationDefinition's `evaluation` 0..* / `recommendation` 1..1 parameter
+  names. Four candidate causes were tested against FITS and **falsified**:
+  targetDisease coding order (NO_MATCH with CVX first *and* with SNOMED first),
+  `date` semantics, the `seriesDoses` choice type, and missing `id`/`meta`.
+  Each was a real defect and was fixed anyway. The remaining cause is inside
+  the FITS connector — **ask NIST rather than reshaping the response further.**
 
 Every one of the 26 disagreements is written up case by case in
 `CDSI-DISPUTED-CASES.md`, with the clinical adjudication in `CDSI-OE-QUERIES.md`.
