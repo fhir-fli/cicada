@@ -30,7 +30,10 @@ class ForecastDashboardScreen extends ConsumerWidget {
     // Categorize each forecast.
     final categorized =
         <(VaccineGroupForecast, ForecastCategory)>[
-          for (final f in result.vaccineGroupForecasts.values)
+          // A vaccine group can carry a standard forecast and a risk one; the
+          // dashboard shows a card for each.
+          for (final f in result.vaccineGroupForecasts.values
+              .expand((List<VaccineGroupForecast> l) => l))
             (f, categorize(f, assessmentDate)),
         ]..sort(
           (a, b) => _categoryPriority(a.$2).compareTo(_categoryPriority(b.$2)),

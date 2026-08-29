@@ -1,3 +1,4 @@
+import 'package:cicada/cicada.dart';
 import 'package:cicada_flutter/src/models/forecast_category.dart';
 import 'package:cicada_flutter/src/models/patient_info.dart';
 import 'package:cicada_flutter/src/models/sample_patients.dart';
@@ -16,7 +17,8 @@ void main() {
 
     expect(result.vaccineGroupForecasts, isNotEmpty);
     print('Vaccine groups: ${result.vaccineGroupForecasts.length}');
-    for (final f in result.vaccineGroupForecasts.values) {
+    for (final f in result.vaccineGroupForecasts.values
+        .expand((List<VaccineGroupForecast> l) => l)) {
       final cat = categorize(f, result.patient.assessmentDate);
       print('  ${f.vaccineGroupName}: ${cat.displayLabel}');
     }
@@ -32,7 +34,8 @@ void main() {
     );
 
     final cats = <ForecastCategory, List<String>>{};
-    for (final f in result.vaccineGroupForecasts.values) {
+    for (final f in result.vaccineGroupForecasts.values
+        .expand((List<VaccineGroupForecast> l) => l)) {
       final cat = categorize(f, result.patient.assessmentDate);
       cats.putIfAbsent(cat, () => []).add(f.vaccineGroupName);
     }
@@ -64,7 +67,8 @@ void main() {
     );
 
     final cats = <ForecastCategory, List<String>>{};
-    for (final f in result.vaccineGroupForecasts.values) {
+    for (final f in result.vaccineGroupForecasts.values
+        .expand((List<VaccineGroupForecast> l) => l)) {
       final cat = categorize(f, result.patient.assessmentDate);
       cats.putIfAbsent(cat, () => []).add(f.vaccineGroupName);
     }
