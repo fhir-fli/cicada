@@ -10,9 +10,16 @@ set -uo pipefail
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 fail=0
 
-for pkg in cicada cicada_generator cicada_flutter; do
-  dir="$ROOT/$pkg"
-  [ -f "$dir/pubspec.yaml" ] || continue
+# Discovered, not hardcoded: a package added later must not be skipped in
+# silence. That is the same failure as checking only the packages you have open.
+pkgs=$(find "$ROOT" -maxdepth 2 -name pubspec.yaml \
+         -not -path "*/build/*" -not -path "*/.dart_tool/*" | sort)
+[ -n "$pkgs" ] || { echo "no packages found under $ROOT"; exit 1; }
+printf 'checking %s packages\n\n' "$(printf '%s\n' "$pkgs" | wc -l)"
+
+for f in $pkgs; do
+  dir="$(dirname "$f")"
+  pkg="$(basename "$dir")"
   if grep -q "^  flutter:" "$dir/pubspec.yaml"; then bin=flutter; else bin=dart; fi
 
   printf '=== %s (%s)\n' "$pkg" "$bin"
