@@ -5,9 +5,11 @@
 
 Thank you both.
 
-Clement, glad the R4 Connector bug is identified. We will re-run the AART cases
-once the fix is deployed and report back. The endpoint can stay up as a test
-target for it if that is useful.
+Clement, glad the R4 Connector bug is identified. Sending this now rather than
+after deployment, since you mention identifying at least part of the bug — if
+any of it is useful to check the branch against before it merges, it is here.
+We will re-run the AART cases once the fix is live and report back, and the
+endpoint can stay up as a test target in the meantime.
 
 Here is what we return, for AART-HepA-2: female, DOB 2025-08-29, one Hep A dose
 CVX 85 given 2026-08-29, assessment date 2026-08-29. Same server build FITS was
@@ -182,7 +184,8 @@ parameter per administered dose, plus a single `recommendation` parameter
 carrying 16 recommendation entries, one per series group. It is 46 KB in full
 and I am happy to send it, or any other case.
 
-Two things in case they fall outside the connector fix:
+Two things that look separate from the evaluation matching, and so may survive
+the fix. Both are worth a glance against the branch:
 
 `ImmunizationEvaluation.date` decides whether a candidate gets built at all.
 With the assessment date in it, no candidate line prints for any event whose
