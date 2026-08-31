@@ -1,3 +1,20 @@
+# ✅ ANSWERED 2026-08-31 — the cause is a bug in the FITS FHIR R4 Connector
+
+NIST replied on the FITS Google Group: their team has identified at least part of
+the bug, the fix is ready on a branch, and it is limited to the FHIR R4
+Connector. Merging and deployment are deferred behind a server migration,
+expected to take a couple of weeks (so roughly mid-September 2026).
+
+**Nothing here is a defect in what we send, and nothing is open.** This document
+is now an archive of the evidence that was posted. Do not re-post any of it. The
+only outstanding action is to re-run the AART cases once the fixed connector is
+deployed.
+
+One AART-HepA-2 request/response pair is captured under `fits-capture/`, and the
+reply that ships it is the current contents of `FITS-GROUP-POST.md`.
+
+---
+
 # FITS never matches an ImmunizationEvaluation — question for NIST
 
 **FITS 1.4.6, ConnectionType FHIRR4.** Forecasts validate correctly. Evaluations

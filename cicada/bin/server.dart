@@ -201,11 +201,19 @@ const _corsHeaders = {
   'Access-Control-Allow-Headers': 'Content-Type, Accept',
 };
 
-/// Log request/response pairs to /tmp for debugging.
+/// Capture request/response pairs under `fits-capture/` in the repo, so a
+/// FITS run is still on disk after a reboot. /tmp did not survive one.
 int _logCount = 0;
 void _logOnce(String label, String content) {
   try {
-    File('/tmp/fits_${_logCount}_$label.xml').writeAsStringSync(content);
+    // <repo>/cicada/bin/server.dart -> <repo>/fits-capture, so the location
+    // does not depend on the cwd the server was started from.
+    final repoRoot = File.fromUri(Platform.script).parent.parent.parent.path;
+    final dir = Directory('$repoRoot/fits-capture')
+      ..createSync(recursive: true);
+    final stamp = DateTime.now().toIso8601String().replaceAll(':', '-');
+    File('${dir.path}/${stamp}_${_logCount}_$label.xml')
+        .writeAsStringSync(content);
     if (label == 'response') _logCount++;
   } catch (_) {}
 }

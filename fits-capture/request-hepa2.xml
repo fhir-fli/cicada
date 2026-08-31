@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Parameters xmlns="http://hl7.org/fhir">
+  <parameter>
+    <name value="assessmentDate"/>
+    <valueDate value="2026-08-29"/>
+  </parameter>
+  <parameter>
+    <name value="patient"/>
+    <resource>
+      <Patient>
+        <id value="1"/>
+        <gender value="female"/>
+        <birthDate value="2025-08-29"/>
+      </Patient>
+    </resource>
+  </parameter>
+  <parameter>
+    <name value="immunization"/>
+    <resource>
+      <Immunization>
+        <id value="1"/>
+        <status value="completed"/>
+        <vaccineCode>
+          <coding>
+            <code value="85"/>
+          </coding>
+        </vaccineCode>
+        <patient>
+          <reference value="Patient/1"/>
+        </patient>
+        <occurrenceDateTime value="2026-08-29"/>
+      </Immunization>
+    </resource>
+  </parameter>
+</Parameters>

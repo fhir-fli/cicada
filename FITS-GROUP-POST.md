@@ -1,69 +1,198 @@
-Subject: What does FITS require in an ImmunizationEvaluation?
+<!-- PASTE EVERYTHING BELOW THE LINE INTO THE FITS GOOGLE GROUP THREAD.
+     Nothing else is open on FITS. -->
 
-I'm testing an engine against FITS and can't find a detailed spec for what the
-FHIR R4 connector expects in a response.
+---
 
-Forecasts validate correctly. Evaluations never match — always NO MATCH with an
-empty Actual column, so Evaluations completion is 0% while correctness reads
-100%.
+Thank you both.
 
-The Vaccine Matcher Log shows forecasts enumerating candidates from our
-response, each printing its code:
+Clement, glad the R4 Connector bug is identified. We will re-run the AART cases
+once the fix is deployed and report back. The endpoint can stay up as a test
+target for it if that is useful.
 
-    [RESOLVING MATCH FOR FORECAST] (Vaccine) CVX=85
-        [CHECKING AGAINST] (Vaccine) CVX=03    [FAIL] CVX does not match
-        ... 16 candidates ...
-        [CHECKING AGAINST] (Vaccine) CVX=85    [PASS] CVX does match
-        [FOUND 1 MATCHES]
+Here is what we return, for AART-HepA-2: female, DOB 2025-08-29, one Hep A dose
+CVX 85 given 2026-08-29, assessment date 2026-08-29. Same server build FITS was
+pointed at, with the case replayed locally.
 
-For events the candidate line prints with no vaccine at all:
+What we receive. This is our reconstruction of the case parameters rather than a
+capture of your request; the vaccine code arrives with no system on it.
 
-    [RESOLVING MATCH FOR] Vaccination Event (Vaccine) CVX=85 at 08/29/2026
-        [CHECKING AGAINST]    [FOUND 0 MATCHES]
-        [DECISION] No match found
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<Parameters xmlns="http://hl7.org/fhir">
+  <parameter>
+    <name value="assessmentDate"/>
+    <valueDate value="2026-08-29"/>
+  </parameter>
+  <parameter>
+    <name value="patient"/>
+    <resource>
+      <Patient>
+        <id value="1"/>
+        <gender value="female"/>
+        <birthDate value="2025-08-29"/>
+      </Patient>
+    </resource>
+  </parameter>
+  <parameter>
+    <name value="immunization"/>
+    <resource>
+      <Immunization>
+        <id value="1"/>
+        <status value="completed"/>
+        <vaccineCode>
+          <coding>
+            <code value="85"/>
+          </coding>
+        </vaccineCode>
+        <patient>
+          <reference value="Patient/1"/>
+        </patient>
+        <occurrenceDateTime value="2026-08-29"/>
+      </Immunization>
+    </resource>
+  </parameter>
+</Parameters>
+```
 
-Which element does it read to get that CVX? R4 ImmunizationEvaluation has no
-vaccineCode, so I assume it dereferences immunizationEvent — but the operation
-declares no output parameter that returns Immunization resources.
+What we return, verbatim. The evaluation parameter:
 
-We return one evaluation per dose, immunizationEvent and patient referencing the
-ids FITS sent, doseStatus valid/Valid, series, doseNumberPositiveInt,
-seriesDosesPositiveInt.
+```xml
+  <parameter>
+    <name value="evaluation"/>
+    <resource>
+      <ImmunizationEvaluation xmlns="http://hl7.org/fhir">
+        <id value="eval-1"/>
+        <meta>
+          <profile value="http://hl7.org/fhir/us/immds/StructureDefinition/immds-immunizationevaluation"/>
+        </meta>
+        <status value="completed"/>
+        <patient>
+          <reference value="Patient/1"/>
+        </patient>
+        <date value="2026-08-29T00:00:00.000-04:00"/>
+        <targetDisease>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="40468003"/>
+            <display value="HepA"/>
+          </coding>
+          <text value="HepA"/>
+        </targetDisease>
+        <immunizationEvent>
+          <reference value="Immunization/1"/>
+        </immunizationEvent>
+        <doseStatus>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/immunization-evaluation-dose-status"/>
+            <code value="valid"/>
+            <display value="Valid"/>
+          </coding>
+        </doseStatus>
+        <series value="HepA 2-dose series"/>
+        <doseNumberPositiveInt value="1"/>
+        <seriesDosesPositiveInt value="2"/>
+      </ImmunizationEvaluation>
+    </resource>
+  </parameter>
+```
 
-Two things I can now show, each measured as a single change:
+...and the matching entry inside the recommendation parameter:
 
-ImmunizationEvaluation.date controls whether a candidate is built at all. With
-the dose's administration date in it, every event prints a [CHECKING AGAINST]
-line. With the assessment date in it, events whose doses fall before that date
-print no candidate line at all. R4 defines the element as the date the
-evaluation was performed, and the ImmDS example uses the assessment date
-(2020-05-26) against an immunization given 2020-04-28, so the conformant value
-is the one that suppresses the candidate.
+```xml
+        <recommendation>
+          <extension>
+            <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/series-type-ext"/>
+            <valueCodeableConcept>
+              <coding>
+                <system value="http://fhirfli.dev/fhir/ig/cicada/CodeSystem/series-type"/>
+                <code value="standard"/>
+                <display value="Standard"/>
+              </coding>
+            </valueCodeableConcept>
+          </extension>
+          <vaccineCode>
+            <coding>
+              <system value="http://hl7.org/fhir/sid/cvx"/>
+              <code value="85"/>
+              <display value="Hep A, unspecified formulation"/>
+            </coding>
+          </vaccineCode>
+          <targetDisease>
+            <coding>
+              <system value="http://snomed.info/sct"/>
+              <code value="40468003"/>
+              <display value="HepA"/>
+            </coding>
+            <text value="HepA"/>
+          </targetDisease>
+          <forecastStatus>
+            <coding>
+              <system value="http://hl7.org/fhir/us/immds/CodeSystem/ForecastStatus"/>
+              <code value="Not Complete"/>
+              <display value="Not Complete"/>
+            </coding>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/immunization-recommendation-status"/>
+              <code value="due"/>
+              <display value="Due"/>
+            </coding>
+            <coding>
+              <system value="http://loinc.org"/>
+              <code value="LA13422-3"/>
+              <display value="On schedule"/>
+            </coding>
+          </forecastStatus>
+          <dateCriterion>
+            <code>
+              <coding>
+                <system value="http://loinc.org"/>
+                <code value="30981-5"/>
+                <display value="Earliest date to give"/>
+              </coding>
+            </code>
+            <value value="2027-03-01T00:00:00.000-05:00"/>
+          </dateCriterion>
+          <dateCriterion>
+            <code>
+              <coding>
+                <system value="http://loinc.org"/>
+                <code value="30980-7"/>
+                <display value="Date vaccine due"/>
+              </coding>
+            </code>
+            <value value="2027-03-01T00:00:00.000-05:00"/>
+          </dateCriterion>
+          <dateCriterion>
+            <code>
+              <coding>
+                <system value="http://loinc.org"/>
+                <code value="59778-1"/>
+                <display value="Date when overdue for immunization"/>
+              </coding>
+            </code>
+            <value value="2028-04-25T00:00:00.000-04:00"/>
+          </dateCriterion>
+          <series value="HepA 2-dose series"/>
+          <doseNumberString value="2"/>
+        </recommendation>
+```
 
-With the dose date in place, so the candidate does get built, the candidate's
-vaccine is still null. Both ways of conveying it fail: the Immunization
-contained on the evaluation with a #fragment reference, and the Immunization
-returned as its own top-level parameter with a literal Immunization/<id>
-reference, in both cases with an explicit
-http://hl7.org/fhir/sid/cvx system on the coding.
+The whole response is one `immunization` parameter and one `evaluation`
+parameter per administered dose, plus a single `recommendation` parameter
+carrying 16 recommendation entries, one per series group. It is 46 KB in full
+and I am happy to send it, or any other case.
 
-Also tried, no effect: targetDisease coding order both ways;
-seriesDosesString vs seriesDosesPositiveInt; adding id and meta.profile.
+Two things in case they fall outside the connector fix:
 
-Separately: on ImmunizationRecommendation.recommendation, doseNumberPositiveInt
-makes FITS score 0% on every criterion including Series Status and all dates,
-not just Dose Number. doseNumberString scores normally. R4 types this
-positiveInt|string, so both are conformant and the integer form fails the whole
-suite silently. Is that expected?
+`ImmunizationEvaluation.date` decides whether a candidate gets built at all.
+With the assessment date in it, no candidate line prints for any event whose
+dose falls before that date. With the dose's administration date in it, every
+event prints a `[CHECKING AGAINST]` line. R4 defines the element as the date the
+evaluation was performed, and the ImmDS example uses the assessment date, so the
+conformant value is the one that suppresses the candidate.
 
-Also on AART-HepA-2 (DOB 2025-08-29, assessment 2026-08-29, one HepA dose given
-2026-08-29), the expected forecast row looks like it mixes two doses. Expected
-Earliest and Recommended are both 03/01/2027, which is dose 2's 6-month minimum
-interval from that dose, and we match them. Expected Dose is 1 and expected Past
-Due is 09/25/2027, which is dose 1's latestRecAge of 24 months + 4 weeks from
-the birth date. Dose 2's latestRecInt of 19 months + 4 weeks from the previous
-dose gives 04/25/2028, which is what we send. No single dose number produces all
-four expected values. Is that row intended, or is it an artifact of the dose
-landing on the assessment date?
-
-Happy to supply full request and response XML.
+On `ImmunizationRecommendation.recommendation`, `doseNumberPositiveInt` makes
+FITS score 0% on every criterion, including Series Status and all dates.
+`doseNumberString` scores normally. R4 types the element `positiveInt|string`,
+so both are conformant. We send the string form on recommendations and the
+integer form on evaluations for that reason.
