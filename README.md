@@ -2,7 +2,7 @@
 
 An immunization forecasting engine in Dart that evaluates past vaccine doses and recommends future immunizations based on clinical decision support logic.
 
-Cicada implements the CDC's [Clinical Decision Support for Immunization (CDSi)](https://www.cdc.gov/iis/cdsi/) specification (v4.61-508) and WHO Expanded Programme on Immunization (EPI) recommendations. It accepts FHIR R4 input and produces FHIR R4 output, making it interoperable with any FHIR-compliant system.
+Cicada implements the CDC's [Clinical Decision Support for Immunization (CDSi)](https://www.cdc.gov/iis/cdsi/) specification (v4.65-508) and WHO Expanded Programme on Immunization (EPI) recommendations. It accepts FHIR R4 input and produces FHIR R4 output, making it interoperable with any FHIR-compliant system.
 
 ## Features
 
@@ -100,7 +100,7 @@ Cicada supports two forecasting modes:
 | Antigens | 30+ (U.S. formulations) | 22 (global formulations) |
 | Vaccines | DTaP, IPV, MMR, etc. | DTP, OPV+IPV, MR, pentavalent, etc. |
 | Dose timing | 2/4/6 months | 6/10/14 weeks |
-| Spec version | CDSi v4.61-508 | WHO position papers (2025) |
+| Spec version | CDSi v4.65-508 | WHO position papers (2025) |
 
 Switch modes at runtime:
 ```dart

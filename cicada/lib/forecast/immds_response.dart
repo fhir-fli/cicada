@@ -250,6 +250,7 @@ List<ImmunizationEvaluation> _buildEvaluations(ForecastResult result) {
               ? series.series.seriesDose!.length.toFhirPositiveInt
               : null,
           extension_: <FhirExtension?>[
+            _versionExt(),
             if (series.evaluatedTargetDose[dose.targetDoseSatisfied] != null)
               _targetDoseStatusExt(
                   series.evaluatedTargetDose[dose.targetDoseSatisfied]!),
@@ -509,7 +510,9 @@ ImmunizationRecommendation _buildRecommendation(ForecastResult result) {
       // Which pathway this recommendation describes. A vaccine group can yield
       // both a standard and a risk recommendation for the same target disease,
       // and nothing in core FHIR or the US ImmDS IG distinguishes them.
-      extension_: [
+      extension_: <FhirExtension?>[
+        _versionExt(),
+        _dosesRemainingExt(vgf),
         // The series group this forecast is scoped to (FORECASTVG-1). `series`
         // 0..1 already names the series; core FHIR has nowhere for the group,
         // and it was computed and dropped.
@@ -544,7 +547,7 @@ ImmunizationRecommendation _buildRecommendation(ForecastResult result) {
             ),
           ]),
         ),
-      ],
+      ].whereType<FhirExtension>().toList(),
     ));
   }
 
@@ -766,6 +769,56 @@ FhirExtension _seriesDetailExt(VaxSeries series) {
   return FhirExtension(
     url: '$_cicadaSd/series-detail-ext'.toFhirString,
     extension_: parts.whereType<FhirExtension>().toList(),
+  );
+}
+
+/// Stamps the engine and the supporting-data release onto a response resource.
+///
+/// A forecast is a function of both, and a stored response that names neither
+/// cannot be traced back to what produced it. ICE does the same with
+/// `dataSourceType`. Parameters is not a DomainResource and carries no
+/// extension, so the stamp goes on each evaluation and on the recommendation.
+FhirExtension _versionExt() => FhirExtension(
+      url: '$_cicadaSd/engine-version-ext'.toFhirString,
+      extension_: <FhirExtension>[
+        FhirExtension(
+          url: 'engine'.toFhirString,
+          valueString: 'cicada/$cicadaEngineVersion'.toFhirString,
+        ),
+        FhirExtension(
+          url: 'supportingData'.toFhirString,
+          valueString: 'CDSi $cdsiSupportingDataVersion'.toFhirString,
+        ),
+      ],
+    );
+
+/// Doses left in the series after the one being forecast.
+///
+/// ICE returns a number of doses remaining, and "Recurring" when the series
+/// ends in a recurring dose, which no count can express. seriesDoses and
+/// doseNumber let a reader subtract, but they cannot tell them it never ends.
+FhirExtension? _dosesRemainingExt(VaccineGroupForecast vgf) {
+  if (vgf.contributingSeries.isEmpty) return null;
+  final VaxSeries series = vgf.contributingSeries.first;
+  final List<SeriesDose> doses =
+      series.series.seriesDose ?? const <SeriesDose>[];
+  if (doses.isEmpty) return null;
+
+  // `Binary` is ambiguous here: fhir_r4 exports a Binary resource too.
+  final bool recurring = doses.last.recurringDose?.toString() == 'Yes';
+  if (recurring) {
+    return FhirExtension(
+      url: '$_cicadaSd/doses-remaining-ext'.toFhirString,
+      valueString: 'Recurring'.toFhirString,
+    );
+  }
+  final int? next = vgf.doseNumber;
+  if (next == null) return null;
+  final int remaining = doses.length - next + 1;
+  if (remaining < 0) return null;
+  return FhirExtension(
+    url: '$_cicadaSd/doses-remaining-ext'.toFhirString,
+    valueString: remaining.toString().toFhirString,
   );
 }
 

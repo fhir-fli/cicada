@@ -23,10 +23,58 @@
     <name value="evaluation"/>
     <resource>
       <ImmunizationEvaluation xmlns="http://hl7.org/fhir">
-        <id value="eval-1"/>
+        <id value="eval-1-hepa"/>
         <meta>
           <profile value="http://hl7.org/fhir/us/immds/StructureDefinition/immds-immunizationevaluation"/>
         </meta>
+        <extension>
+          <extension>
+            <url value="engine"/>
+            <valueString value="cicada/0.0.1"/>
+          </extension>
+          <extension>
+            <url value="supportingData"/>
+            <valueString value="CDSi 4.65-508"/>
+          </extension>
+          <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/engine-version-ext"/>
+        </extension>
+        <extension>
+          <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/target-dose-status-ext"/>
+          <valueCodeableConcept>
+            <coding>
+              <system value="http://fhirfli.dev/fhir/ig/cicada/CodeSystem/target-dose-status"/>
+              <code value="satisfied"/>
+              <display value="Satisfied"/>
+            </coding>
+          </valueCodeableConcept>
+        </extension>
+        <extension>
+          <extension>
+            <url value="validAgeReason"/>
+            <valueString value="Age: Grace Period"/>
+          </extension>
+          <extension>
+            <url value="preferredInterval"/>
+            <valueBoolean value="true"/>
+          </extension>
+          <extension>
+            <url value="conflict"/>
+            <valueBoolean value="false"/>
+          </extension>
+          <extension>
+            <url value="preferredVaccine"/>
+            <valueBoolean value="false"/>
+          </extension>
+          <extension>
+            <url value="preferredVaccineReason"/>
+            <valueString value="Not a preferable or allowable vaccine"/>
+          </extension>
+          <extension>
+            <url value="allowedVaccine"/>
+            <valueBoolean value="true"/>
+          </extension>
+          <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/evaluation-detail-ext"/>
+        </extension>
         <status value="completed"/>
         <patient>
           <reference value="Patient/1"/>
@@ -66,6 +114,21 @@
         <date value="2026-08-29T00:00:00.000-04:00"/>
         <recommendation>
           <extension>
+            <extension>
+              <url value="engine"/>
+              <valueString value="cicada/0.0.1"/>
+            </extension>
+            <extension>
+              <url value="supportingData"/>
+              <valueString value="CDSi 4.65-508"/>
+            </extension>
+            <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/engine-version-ext"/>
+          </extension>
+          <extension>
+            <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/doses-remaining-ext"/>
+            <valueString value="2"/>
+          </extension>
+          <extension>
             <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/series-group-ext"/>
             <valueString value="Standard"/>
           </extension>
@@ -80,6 +143,183 @@
           <extension>
             <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/antigen-needing-dose-ext"/>
             <valueString value="Rubella"/>
+          </extension>
+          <extension>
+            <extension>
+              <url value="seriesName"/>
+              <valueString value="Mumps 2-dose series"/>
+            </extension>
+            <extension>
+              <url value="seriesGroupName"/>
+              <valueString value="Standard"/>
+            </extension>
+            <extension>
+              <url value="seriesType"/>
+              <valueString value="standard"/>
+            </extension>
+            <extension>
+              <url value="status"/>
+              <valueCodeableConcept>
+                <coding>
+                  <system value="http://hl7.org/fhir/us/immds/CodeSystem/ForecastStatus"/>
+                  <code value="Not Complete"/>
+                  <display value="Not Complete"/>
+                </coding>
+                <coding>
+                  <system value="http://terminology.hl7.org/CodeSystem/immunization-recommendation-status"/>
+                  <code value="due"/>
+                  <display value="Due"/>
+                </coding>
+                <coding>
+                  <system value="http://loinc.org"/>
+                  <code value="LA13422-3"/>
+                  <display value="On schedule"/>
+                </coding>
+              </valueCodeableConcept>
+            </extension>
+            <extension>
+              <url value="earliestDate"/>
+              <valueDateTime value="2026-08-29T00:00:00.000-04:00"/>
+            </extension>
+            <extension>
+              <url value="recommendedDate"/>
+              <valueDateTime value="2026-08-29T00:00:00.000-04:00"/>
+            </extension>
+            <extension>
+              <url value="pastDueDate"/>
+              <valueDateTime value="2027-01-25T00:00:00.000-05:00"/>
+            </extension>
+            <extension>
+              <url value="minimumAgeDate"/>
+              <valueDateTime value="2026-08-29T00:00:00.000-04:00"/>
+            </extension>
+            <extension>
+              <url value="earliestRecommendedAgeDate"/>
+              <valueDateTime value="2026-08-29T00:00:00.000-04:00"/>
+            </extension>
+            <extension>
+              <url value="latestRecommendedAgeDate"/>
+              <valueDateTime value="2027-01-26T00:00:00.000-05:00"/>
+            </extension>
+            <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/series-detail-ext"/>
+          </extension>
+          <extension>
+            <extension>
+              <url value="seriesName"/>
+              <valueString value="Measles 2-dose series"/>
+            </extension>
+            <extension>
+              <url value="seriesGroupName"/>
+              <valueString value="Standard"/>
+            </extension>
+            <extension>
+              <url value="seriesType"/>
+              <valueString value="standard"/>
+            </extension>
+            <extension>
+              <url value="status"/>
+              <valueCodeableConcept>
+                <coding>
+                  <system value="http://hl7.org/fhir/us/immds/CodeSystem/ForecastStatus"/>
+                  <code value="Not Complete"/>
+                  <display value="Not Complete"/>
+                </coding>
+                <coding>
+                  <system value="http://terminology.hl7.org/CodeSystem/immunization-recommendation-status"/>
+                  <code value="due"/>
+                  <display value="Due"/>
+                </coding>
+                <coding>
+                  <system value="http://loinc.org"/>
+                  <code value="LA13422-3"/>
+                  <display value="On schedule"/>
+                </coding>
+              </valueCodeableConcept>
+            </extension>
+            <extension>
+              <url value="earliestDate"/>
+              <valueDateTime value="2026-08-29T00:00:00.000-04:00"/>
+            </extension>
+            <extension>
+              <url value="recommendedDate"/>
+              <valueDateTime value="2026-08-29T00:00:00.000-04:00"/>
+            </extension>
+            <extension>
+              <url value="pastDueDate"/>
+              <valueDateTime value="2027-01-25T00:00:00.000-05:00"/>
+            </extension>
+            <extension>
+              <url value="minimumAgeDate"/>
+              <valueDateTime value="2026-08-29T00:00:00.000-04:00"/>
+            </extension>
+            <extension>
+              <url value="earliestRecommendedAgeDate"/>
+              <valueDateTime value="2026-08-29T00:00:00.000-04:00"/>
+            </extension>
+            <extension>
+              <url value="latestRecommendedAgeDate"/>
+              <valueDateTime value="2027-01-26T00:00:00.000-05:00"/>
+            </extension>
+            <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/series-detail-ext"/>
+          </extension>
+          <extension>
+            <extension>
+              <url value="seriesName"/>
+              <valueString value="Rubella 2-dose series"/>
+            </extension>
+            <extension>
+              <url value="seriesGroupName"/>
+              <valueString value="Standard"/>
+            </extension>
+            <extension>
+              <url value="seriesType"/>
+              <valueString value="standard"/>
+            </extension>
+            <extension>
+              <url value="status"/>
+              <valueCodeableConcept>
+                <coding>
+                  <system value="http://hl7.org/fhir/us/immds/CodeSystem/ForecastStatus"/>
+                  <code value="Not Complete"/>
+                  <display value="Not Complete"/>
+                </coding>
+                <coding>
+                  <system value="http://terminology.hl7.org/CodeSystem/immunization-recommendation-status"/>
+                  <code value="due"/>
+                  <display value="Due"/>
+                </coding>
+                <coding>
+                  <system value="http://loinc.org"/>
+                  <code value="LA13422-3"/>
+                  <display value="On schedule"/>
+                </coding>
+              </valueCodeableConcept>
+            </extension>
+            <extension>
+              <url value="earliestDate"/>
+              <valueDateTime value="2026-08-29T00:00:00.000-04:00"/>
+            </extension>
+            <extension>
+              <url value="recommendedDate"/>
+              <valueDateTime value="2026-08-29T00:00:00.000-04:00"/>
+            </extension>
+            <extension>
+              <url value="pastDueDate"/>
+              <valueDateTime value="2027-01-25T00:00:00.000-05:00"/>
+            </extension>
+            <extension>
+              <url value="minimumAgeDate"/>
+              <valueDateTime value="2026-08-29T00:00:00.000-04:00"/>
+            </extension>
+            <extension>
+              <url value="earliestRecommendedAgeDate"/>
+              <valueDateTime value="2026-08-29T00:00:00.000-04:00"/>
+            </extension>
+            <extension>
+              <url value="latestRecommendedAgeDate"/>
+              <valueDateTime value="2027-01-26T00:00:00.000-05:00"/>
+            </extension>
+            <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/series-detail-ext"/>
           </extension>
           <extension>
             <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/series-type-ext"/>
@@ -168,6 +408,21 @@
         </recommendation>
         <recommendation>
           <extension>
+            <extension>
+              <url value="engine"/>
+              <valueString value="cicada/0.0.1"/>
+            </extension>
+            <extension>
+              <url value="supportingData"/>
+              <valueString value="CDSi 4.65-508"/>
+            </extension>
+            <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/engine-version-ext"/>
+          </extension>
+          <extension>
+            <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/doses-remaining-ext"/>
+            <valueString value="Recurring"/>
+          </extension>
+          <extension>
             <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/series-group-ext"/>
             <valueString value="Standard"/>
           </extension>
@@ -182,6 +437,183 @@
           <extension>
             <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/antigen-needing-dose-ext"/>
             <valueString value="Diphtheria"/>
+          </extension>
+          <extension>
+            <extension>
+              <url value="seriesName"/>
+              <valueString value="Pertussis standard series"/>
+            </extension>
+            <extension>
+              <url value="seriesGroupName"/>
+              <valueString value="Standard"/>
+            </extension>
+            <extension>
+              <url value="seriesType"/>
+              <valueString value="standard"/>
+            </extension>
+            <extension>
+              <url value="status"/>
+              <valueCodeableConcept>
+                <coding>
+                  <system value="http://hl7.org/fhir/us/immds/CodeSystem/ForecastStatus"/>
+                  <code value="Not Complete"/>
+                  <display value="Not Complete"/>
+                </coding>
+                <coding>
+                  <system value="http://terminology.hl7.org/CodeSystem/immunization-recommendation-status"/>
+                  <code value="due"/>
+                  <display value="Due"/>
+                </coding>
+                <coding>
+                  <system value="http://loinc.org"/>
+                  <code value="LA13422-3"/>
+                  <display value="On schedule"/>
+                </coding>
+              </valueCodeableConcept>
+            </extension>
+            <extension>
+              <url value="earliestDate"/>
+              <valueDateTime value="2025-10-10T00:00:00.000-04:00"/>
+            </extension>
+            <extension>
+              <url value="recommendedDate"/>
+              <valueDateTime value="2025-10-29T00:00:00.000-04:00"/>
+            </extension>
+            <extension>
+              <url value="pastDueDate"/>
+              <valueDateTime value="2025-12-26T00:00:00.000-05:00"/>
+            </extension>
+            <extension>
+              <url value="minimumAgeDate"/>
+              <valueDateTime value="2025-10-10T00:00:00.000-04:00"/>
+            </extension>
+            <extension>
+              <url value="earliestRecommendedAgeDate"/>
+              <valueDateTime value="2025-10-29T00:00:00.000-04:00"/>
+            </extension>
+            <extension>
+              <url value="latestRecommendedAgeDate"/>
+              <valueDateTime value="2025-12-27T00:00:00.000-05:00"/>
+            </extension>
+            <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/series-detail-ext"/>
+          </extension>
+          <extension>
+            <extension>
+              <url value="seriesName"/>
+              <valueString value="Tetanus standard series"/>
+            </extension>
+            <extension>
+              <url value="seriesGroupName"/>
+              <valueString value="Standard"/>
+            </extension>
+            <extension>
+              <url value="seriesType"/>
+              <valueString value="standard"/>
+            </extension>
+            <extension>
+              <url value="status"/>
+              <valueCodeableConcept>
+                <coding>
+                  <system value="http://hl7.org/fhir/us/immds/CodeSystem/ForecastStatus"/>
+                  <code value="Not Complete"/>
+                  <display value="Not Complete"/>
+                </coding>
+                <coding>
+                  <system value="http://terminology.hl7.org/CodeSystem/immunization-recommendation-status"/>
+                  <code value="due"/>
+                  <display value="Due"/>
+                </coding>
+                <coding>
+                  <system value="http://loinc.org"/>
+                  <code value="LA13422-3"/>
+                  <display value="On schedule"/>
+                </coding>
+              </valueCodeableConcept>
+            </extension>
+            <extension>
+              <url value="earliestDate"/>
+              <valueDateTime value="2025-10-10T00:00:00.000-04:00"/>
+            </extension>
+            <extension>
+              <url value="recommendedDate"/>
+              <valueDateTime value="2025-10-29T00:00:00.000-04:00"/>
+            </extension>
+            <extension>
+              <url value="pastDueDate"/>
+              <valueDateTime value="2025-12-26T00:00:00.000-05:00"/>
+            </extension>
+            <extension>
+              <url value="minimumAgeDate"/>
+              <valueDateTime value="2025-10-10T00:00:00.000-04:00"/>
+            </extension>
+            <extension>
+              <url value="earliestRecommendedAgeDate"/>
+              <valueDateTime value="2025-10-29T00:00:00.000-04:00"/>
+            </extension>
+            <extension>
+              <url value="latestRecommendedAgeDate"/>
+              <valueDateTime value="2025-12-27T00:00:00.000-05:00"/>
+            </extension>
+            <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/series-detail-ext"/>
+          </extension>
+          <extension>
+            <extension>
+              <url value="seriesName"/>
+              <valueString value="Diphtheria standard series"/>
+            </extension>
+            <extension>
+              <url value="seriesGroupName"/>
+              <valueString value="Standard"/>
+            </extension>
+            <extension>
+              <url value="seriesType"/>
+              <valueString value="standard"/>
+            </extension>
+            <extension>
+              <url value="status"/>
+              <valueCodeableConcept>
+                <coding>
+                  <system value="http://hl7.org/fhir/us/immds/CodeSystem/ForecastStatus"/>
+                  <code value="Not Complete"/>
+                  <display value="Not Complete"/>
+                </coding>
+                <coding>
+                  <system value="http://terminology.hl7.org/CodeSystem/immunization-recommendation-status"/>
+                  <code value="due"/>
+                  <display value="Due"/>
+                </coding>
+                <coding>
+                  <system value="http://loinc.org"/>
+                  <code value="LA13422-3"/>
+                  <display value="On schedule"/>
+                </coding>
+              </valueCodeableConcept>
+            </extension>
+            <extension>
+              <url value="earliestDate"/>
+              <valueDateTime value="2025-10-10T00:00:00.000-04:00"/>
+            </extension>
+            <extension>
+              <url value="recommendedDate"/>
+              <valueDateTime value="2025-10-29T00:00:00.000-04:00"/>
+            </extension>
+            <extension>
+              <url value="pastDueDate"/>
+              <valueDateTime value="2025-12-26T00:00:00.000-05:00"/>
+            </extension>
+            <extension>
+              <url value="minimumAgeDate"/>
+              <valueDateTime value="2025-10-10T00:00:00.000-04:00"/>
+            </extension>
+            <extension>
+              <url value="earliestRecommendedAgeDate"/>
+              <valueDateTime value="2025-10-29T00:00:00.000-04:00"/>
+            </extension>
+            <extension>
+              <url value="latestRecommendedAgeDate"/>
+              <valueDateTime value="2025-12-27T00:00:00.000-05:00"/>
+            </extension>
+            <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/series-detail-ext"/>
           </extension>
           <extension>
             <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/series-type-ext"/>
@@ -270,6 +702,51 @@
         </recommendation>
         <recommendation>
           <extension>
+            <extension>
+              <url value="engine"/>
+              <valueString value="cicada/0.0.1"/>
+            </extension>
+            <extension>
+              <url value="supportingData"/>
+              <valueString value="CDSi 4.65-508"/>
+            </extension>
+            <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/engine-version-ext"/>
+          </extension>
+          <extension>
+            <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/doses-remaining-ext"/>
+            <valueString value="Recurring"/>
+          </extension>
+          <extension>
+            <extension>
+              <url value="seriesName"/>
+              <valueString value="Influenza standard series"/>
+            </extension>
+            <extension>
+              <url value="seriesGroupName"/>
+              <valueString value="Standard"/>
+            </extension>
+            <extension>
+              <url value="seriesType"/>
+              <valueString value="standard"/>
+            </extension>
+            <extension>
+              <url value="status"/>
+              <valueCodeableConcept>
+                <coding>
+                  <system value="http://hl7.org/fhir/us/immds/CodeSystem/ForecastStatus"/>
+                  <code value="Not Recommended"/>
+                  <display value="Not Recommended"/>
+                </coding>
+                <coding>
+                  <system value="http://loinc.org"/>
+                  <code value="LA4695-8"/>
+                  <display value="Not Recommended"/>
+                </coding>
+              </valueCodeableConcept>
+            </extension>
+            <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/series-detail-ext"/>
+          </extension>
+          <extension>
             <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/series-type-ext"/>
             <valueCodeableConcept>
               <coding>
@@ -322,12 +799,94 @@
         </recommendation>
         <recommendation>
           <extension>
+            <extension>
+              <url value="engine"/>
+              <valueString value="cicada/0.0.1"/>
+            </extension>
+            <extension>
+              <url value="supportingData"/>
+              <valueString value="CDSi 4.65-508"/>
+            </extension>
+            <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/engine-version-ext"/>
+          </extension>
+          <extension>
+            <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/doses-remaining-ext"/>
+            <valueString value="4"/>
+          </extension>
+          <extension>
             <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/series-group-ext"/>
             <valueString value="Standard"/>
           </extension>
           <extension>
             <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/antigen-needing-dose-ext"/>
             <valueString value="Hib"/>
+          </extension>
+          <extension>
+            <extension>
+              <url value="seriesName"/>
+              <valueString value="Hib start at 2 months 4-dose series"/>
+            </extension>
+            <extension>
+              <url value="seriesGroupName"/>
+              <valueString value="Standard"/>
+            </extension>
+            <extension>
+              <url value="seriesType"/>
+              <valueString value="standard"/>
+            </extension>
+            <extension>
+              <url value="status"/>
+              <valueCodeableConcept>
+                <coding>
+                  <system value="http://hl7.org/fhir/us/immds/CodeSystem/ForecastStatus"/>
+                  <code value="Not Complete"/>
+                  <display value="Not Complete"/>
+                </coding>
+                <coding>
+                  <system value="http://terminology.hl7.org/CodeSystem/immunization-recommendation-status"/>
+                  <code value="due"/>
+                  <display value="Due"/>
+                </coding>
+                <coding>
+                  <system value="http://loinc.org"/>
+                  <code value="LA13422-3"/>
+                  <display value="On schedule"/>
+                </coding>
+              </valueCodeableConcept>
+            </extension>
+            <extension>
+              <url value="earliestDate"/>
+              <valueDateTime value="2025-10-10T00:00:00.000-04:00"/>
+            </extension>
+            <extension>
+              <url value="recommendedDate"/>
+              <valueDateTime value="2025-10-29T00:00:00.000-04:00"/>
+            </extension>
+            <extension>
+              <url value="pastDueDate"/>
+              <valueDateTime value="2025-12-26T00:00:00.000-05:00"/>
+            </extension>
+            <extension>
+              <url value="latestDate"/>
+              <valueDateTime value="2030-08-28T00:00:00.000-04:00"/>
+            </extension>
+            <extension>
+              <url value="minimumAgeDate"/>
+              <valueDateTime value="2025-10-10T00:00:00.000-04:00"/>
+            </extension>
+            <extension>
+              <url value="maximumAgeDate"/>
+              <valueDateTime value="2030-08-29T00:00:00.000-04:00"/>
+            </extension>
+            <extension>
+              <url value="earliestRecommendedAgeDate"/>
+              <valueDateTime value="2025-10-29T00:00:00.000-04:00"/>
+            </extension>
+            <extension>
+              <url value="latestRecommendedAgeDate"/>
+              <valueDateTime value="2025-12-27T00:00:00.000-05:00"/>
+            </extension>
+            <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/series-detail-ext"/>
           </extension>
           <extension>
             <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/series-type-ext"/>
@@ -417,12 +976,94 @@
         </recommendation>
         <recommendation>
           <extension>
+            <extension>
+              <url value="engine"/>
+              <valueString value="cicada/0.0.1"/>
+            </extension>
+            <extension>
+              <url value="supportingData"/>
+              <valueString value="CDSi 4.65-508"/>
+            </extension>
+            <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/engine-version-ext"/>
+          </extension>
+          <extension>
+            <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/doses-remaining-ext"/>
+            <valueString value="5"/>
+          </extension>
+          <extension>
             <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/series-group-ext"/>
             <valueString value="Standard"/>
           </extension>
           <extension>
             <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/antigen-needing-dose-ext"/>
             <valueString value="Pneumococcal"/>
+          </extension>
+          <extension>
+            <extension>
+              <url value="seriesName"/>
+              <valueString value="Pneumococcal 4-dose series"/>
+            </extension>
+            <extension>
+              <url value="seriesGroupName"/>
+              <valueString value="Standard"/>
+            </extension>
+            <extension>
+              <url value="seriesType"/>
+              <valueString value="standard"/>
+            </extension>
+            <extension>
+              <url value="status"/>
+              <valueCodeableConcept>
+                <coding>
+                  <system value="http://hl7.org/fhir/us/immds/CodeSystem/ForecastStatus"/>
+                  <code value="Not Complete"/>
+                  <display value="Not Complete"/>
+                </coding>
+                <coding>
+                  <system value="http://terminology.hl7.org/CodeSystem/immunization-recommendation-status"/>
+                  <code value="due"/>
+                  <display value="Due"/>
+                </coding>
+                <coding>
+                  <system value="http://loinc.org"/>
+                  <code value="LA13422-3"/>
+                  <display value="On schedule"/>
+                </coding>
+              </valueCodeableConcept>
+            </extension>
+            <extension>
+              <url value="earliestDate"/>
+              <valueDateTime value="2025-10-10T00:00:00.000-04:00"/>
+            </extension>
+            <extension>
+              <url value="recommendedDate"/>
+              <valueDateTime value="2025-10-29T00:00:00.000-04:00"/>
+            </extension>
+            <extension>
+              <url value="pastDueDate"/>
+              <valueDateTime value="2025-12-26T00:00:00.000-05:00"/>
+            </extension>
+            <extension>
+              <url value="latestDate"/>
+              <valueDateTime value="2030-08-28T00:00:00.000-04:00"/>
+            </extension>
+            <extension>
+              <url value="minimumAgeDate"/>
+              <valueDateTime value="2025-10-10T00:00:00.000-04:00"/>
+            </extension>
+            <extension>
+              <url value="maximumAgeDate"/>
+              <valueDateTime value="2030-08-29T00:00:00.000-04:00"/>
+            </extension>
+            <extension>
+              <url value="earliestRecommendedAgeDate"/>
+              <valueDateTime value="2025-10-29T00:00:00.000-04:00"/>
+            </extension>
+            <extension>
+              <url value="latestRecommendedAgeDate"/>
+              <valueDateTime value="2025-12-27T00:00:00.000-05:00"/>
+            </extension>
+            <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/series-detail-ext"/>
           </extension>
           <extension>
             <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/series-type-ext"/>
@@ -525,12 +1166,86 @@
         </recommendation>
         <recommendation>
           <extension>
+            <extension>
+              <url value="engine"/>
+              <valueString value="cicada/0.0.1"/>
+            </extension>
+            <extension>
+              <url value="supportingData"/>
+              <valueString value="CDSi 4.65-508"/>
+            </extension>
+            <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/engine-version-ext"/>
+          </extension>
+          <extension>
+            <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/doses-remaining-ext"/>
+            <valueString value="2"/>
+          </extension>
+          <extension>
             <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/series-group-ext"/>
             <valueString value="Standard"/>
           </extension>
           <extension>
             <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/antigen-needing-dose-ext"/>
             <valueString value="Varicella"/>
+          </extension>
+          <extension>
+            <extension>
+              <url value="seriesName"/>
+              <valueString value="Varicella childhood 2-dose series"/>
+            </extension>
+            <extension>
+              <url value="seriesGroupName"/>
+              <valueString value="Standard"/>
+            </extension>
+            <extension>
+              <url value="seriesType"/>
+              <valueString value="standard"/>
+            </extension>
+            <extension>
+              <url value="status"/>
+              <valueCodeableConcept>
+                <coding>
+                  <system value="http://hl7.org/fhir/us/immds/CodeSystem/ForecastStatus"/>
+                  <code value="Not Complete"/>
+                  <display value="Not Complete"/>
+                </coding>
+                <coding>
+                  <system value="http://terminology.hl7.org/CodeSystem/immunization-recommendation-status"/>
+                  <code value="due"/>
+                  <display value="Due"/>
+                </coding>
+                <coding>
+                  <system value="http://loinc.org"/>
+                  <code value="LA13422-3"/>
+                  <display value="On schedule"/>
+                </coding>
+              </valueCodeableConcept>
+            </extension>
+            <extension>
+              <url value="earliestDate"/>
+              <valueDateTime value="2026-08-29T00:00:00.000-04:00"/>
+            </extension>
+            <extension>
+              <url value="recommendedDate"/>
+              <valueDateTime value="2026-08-29T00:00:00.000-04:00"/>
+            </extension>
+            <extension>
+              <url value="pastDueDate"/>
+              <valueDateTime value="2027-01-25T00:00:00.000-05:00"/>
+            </extension>
+            <extension>
+              <url value="minimumAgeDate"/>
+              <valueDateTime value="2026-08-29T00:00:00.000-04:00"/>
+            </extension>
+            <extension>
+              <url value="earliestRecommendedAgeDate"/>
+              <valueDateTime value="2026-08-29T00:00:00.000-04:00"/>
+            </extension>
+            <extension>
+              <url value="latestRecommendedAgeDate"/>
+              <valueDateTime value="2027-01-26T00:00:00.000-05:00"/>
+            </extension>
+            <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/series-detail-ext"/>
           </extension>
           <extension>
             <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/series-type-ext"/>
@@ -610,12 +1325,86 @@
         </recommendation>
         <recommendation>
           <extension>
+            <extension>
+              <url value="engine"/>
+              <valueString value="cicada/0.0.1"/>
+            </extension>
+            <extension>
+              <url value="supportingData"/>
+              <valueString value="CDSi 4.65-508"/>
+            </extension>
+            <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/engine-version-ext"/>
+          </extension>
+          <extension>
+            <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/doses-remaining-ext"/>
+            <valueString value="3"/>
+          </extension>
+          <extension>
             <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/series-group-ext"/>
             <valueString value="Standard"/>
           </extension>
           <extension>
             <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/antigen-needing-dose-ext"/>
             <valueString value="HepB"/>
+          </extension>
+          <extension>
+            <extension>
+              <url value="seriesName"/>
+              <valueString value="HepB 3-dose series"/>
+            </extension>
+            <extension>
+              <url value="seriesGroupName"/>
+              <valueString value="Standard"/>
+            </extension>
+            <extension>
+              <url value="seriesType"/>
+              <valueString value="standard"/>
+            </extension>
+            <extension>
+              <url value="status"/>
+              <valueCodeableConcept>
+                <coding>
+                  <system value="http://hl7.org/fhir/us/immds/CodeSystem/ForecastStatus"/>
+                  <code value="Not Complete"/>
+                  <display value="Not Complete"/>
+                </coding>
+                <coding>
+                  <system value="http://terminology.hl7.org/CodeSystem/immunization-recommendation-status"/>
+                  <code value="due"/>
+                  <display value="Due"/>
+                </coding>
+                <coding>
+                  <system value="http://loinc.org"/>
+                  <code value="LA13422-3"/>
+                  <display value="On schedule"/>
+                </coding>
+              </valueCodeableConcept>
+            </extension>
+            <extension>
+              <url value="earliestDate"/>
+              <valueDateTime value="2025-08-29T00:00:00.000-04:00"/>
+            </extension>
+            <extension>
+              <url value="recommendedDate"/>
+              <valueDateTime value="2025-08-29T00:00:00.000-04:00"/>
+            </extension>
+            <extension>
+              <url value="pastDueDate"/>
+              <valueDateTime value="2025-09-25T00:00:00.000-04:00"/>
+            </extension>
+            <extension>
+              <url value="minimumAgeDate"/>
+              <valueDateTime value="2025-08-29T00:00:00.000-04:00"/>
+            </extension>
+            <extension>
+              <url value="earliestRecommendedAgeDate"/>
+              <valueDateTime value="2025-08-29T00:00:00.000-04:00"/>
+            </extension>
+            <extension>
+              <url value="latestRecommendedAgeDate"/>
+              <valueDateTime value="2025-09-26T00:00:00.000-04:00"/>
+            </extension>
+            <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/series-detail-ext"/>
           </extension>
           <extension>
             <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/series-type-ext"/>
@@ -695,12 +1484,94 @@
         </recommendation>
         <recommendation>
           <extension>
+            <extension>
+              <url value="engine"/>
+              <valueString value="cicada/0.0.1"/>
+            </extension>
+            <extension>
+              <url value="supportingData"/>
+              <valueString value="CDSi 4.65-508"/>
+            </extension>
+            <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/engine-version-ext"/>
+          </extension>
+          <extension>
+            <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/doses-remaining-ext"/>
+            <valueString value="2"/>
+          </extension>
+          <extension>
             <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/series-group-ext"/>
             <valueString value="Standard"/>
           </extension>
           <extension>
             <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/antigen-needing-dose-ext"/>
             <valueString value="Meningococcal"/>
+          </extension>
+          <extension>
+            <extension>
+              <url value="seriesName"/>
+              <valueString value="Meningococcal ACWY 2-dose series"/>
+            </extension>
+            <extension>
+              <url value="seriesGroupName"/>
+              <valueString value="Standard"/>
+            </extension>
+            <extension>
+              <url value="seriesType"/>
+              <valueString value="standard"/>
+            </extension>
+            <extension>
+              <url value="status"/>
+              <valueCodeableConcept>
+                <coding>
+                  <system value="http://hl7.org/fhir/us/immds/CodeSystem/ForecastStatus"/>
+                  <code value="Not Complete"/>
+                  <display value="Not Complete"/>
+                </coding>
+                <coding>
+                  <system value="http://terminology.hl7.org/CodeSystem/immunization-recommendation-status"/>
+                  <code value="due"/>
+                  <display value="Due"/>
+                </coding>
+                <coding>
+                  <system value="http://loinc.org"/>
+                  <code value="LA13422-3"/>
+                  <display value="On schedule"/>
+                </coding>
+              </valueCodeableConcept>
+            </extension>
+            <extension>
+              <url value="earliestDate"/>
+              <valueDateTime value="2036-08-29T00:00:00.000-04:00"/>
+            </extension>
+            <extension>
+              <url value="recommendedDate"/>
+              <valueDateTime value="2036-08-29T00:00:00.000-04:00"/>
+            </extension>
+            <extension>
+              <url value="pastDueDate"/>
+              <valueDateTime value="2038-09-25T00:00:00.000-04:00"/>
+            </extension>
+            <extension>
+              <url value="latestDate"/>
+              <valueDateTime value="2044-08-28T00:00:00.000-04:00"/>
+            </extension>
+            <extension>
+              <url value="minimumAgeDate"/>
+              <valueDateTime value="2036-08-29T00:00:00.000-04:00"/>
+            </extension>
+            <extension>
+              <url value="maximumAgeDate"/>
+              <valueDateTime value="2044-08-29T00:00:00.000-04:00"/>
+            </extension>
+            <extension>
+              <url value="earliestRecommendedAgeDate"/>
+              <valueDateTime value="2036-08-29T00:00:00.000-04:00"/>
+            </extension>
+            <extension>
+              <url value="latestRecommendedAgeDate"/>
+              <valueDateTime value="2038-09-26T00:00:00.000-04:00"/>
+            </extension>
+            <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/series-detail-ext"/>
           </extension>
           <extension>
             <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/series-type-ext"/>
@@ -790,12 +1661,86 @@
         </recommendation>
         <recommendation>
           <extension>
+            <extension>
+              <url value="engine"/>
+              <valueString value="cicada/0.0.1"/>
+            </extension>
+            <extension>
+              <url value="supportingData"/>
+              <valueString value="CDSi 4.65-508"/>
+            </extension>
+            <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/engine-version-ext"/>
+          </extension>
+          <extension>
+            <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/doses-remaining-ext"/>
+            <valueString value="Recurring"/>
+          </extension>
+          <extension>
             <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/series-group-ext"/>
             <valueString value="Standard"/>
           </extension>
           <extension>
             <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/antigen-needing-dose-ext"/>
             <valueString value="COVID-19"/>
+          </extension>
+          <extension>
+            <extension>
+              <url value="seriesName"/>
+              <valueString value="COVID-19 start at 6mo-23mo shared clinical decision-making series"/>
+            </extension>
+            <extension>
+              <url value="seriesGroupName"/>
+              <valueString value="Standard"/>
+            </extension>
+            <extension>
+              <url value="seriesType"/>
+              <valueString value="standard"/>
+            </extension>
+            <extension>
+              <url value="status"/>
+              <valueCodeableConcept>
+                <coding>
+                  <system value="http://hl7.org/fhir/us/immds/CodeSystem/ForecastStatus"/>
+                  <code value="Not Complete"/>
+                  <display value="Not Complete"/>
+                </coding>
+                <coding>
+                  <system value="http://terminology.hl7.org/CodeSystem/immunization-recommendation-status"/>
+                  <code value="due"/>
+                  <display value="Due"/>
+                </coding>
+                <coding>
+                  <system value="http://loinc.org"/>
+                  <code value="LA13422-3"/>
+                  <display value="On schedule"/>
+                </coding>
+              </valueCodeableConcept>
+            </extension>
+            <extension>
+              <url value="earliestDate"/>
+              <valueDateTime value="2026-03-01T00:00:00.000-05:00"/>
+            </extension>
+            <extension>
+              <url value="recommendedDate"/>
+              <valueDateTime value="2026-03-01T00:00:00.000-05:00"/>
+            </extension>
+            <extension>
+              <url value="pastDueDate"/>
+              <valueDateTime value="2026-03-01T00:00:00.000-05:00"/>
+            </extension>
+            <extension>
+              <url value="minimumAgeDate"/>
+              <valueDateTime value="2026-03-01T00:00:00.000-05:00"/>
+            </extension>
+            <extension>
+              <url value="earliestRecommendedAgeDate"/>
+              <valueDateTime value="2026-03-01T00:00:00.000-05:00"/>
+            </extension>
+            <extension>
+              <url value="seasonalRecommendationStartDate"/>
+              <valueDateTime value="2025-08-27T00:00:00.000-04:00"/>
+            </extension>
+            <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/series-detail-ext"/>
           </extension>
           <extension>
             <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/series-type-ext"/>
@@ -875,12 +1820,94 @@
         </recommendation>
         <recommendation>
           <extension>
+            <extension>
+              <url value="engine"/>
+              <valueString value="cicada/0.0.1"/>
+            </extension>
+            <extension>
+              <url value="supportingData"/>
+              <valueString value="CDSi 4.65-508"/>
+            </extension>
+            <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/engine-version-ext"/>
+          </extension>
+          <extension>
+            <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/doses-remaining-ext"/>
+            <valueString value="4"/>
+          </extension>
+          <extension>
             <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/series-group-ext"/>
             <valueString value="Standard"/>
           </extension>
           <extension>
             <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/antigen-needing-dose-ext"/>
             <valueString value="Polio"/>
+          </extension>
+          <extension>
+            <extension>
+              <url value="seriesName"/>
+              <valueString value="Polio 4-dose series"/>
+            </extension>
+            <extension>
+              <url value="seriesGroupName"/>
+              <valueString value="Standard"/>
+            </extension>
+            <extension>
+              <url value="seriesType"/>
+              <valueString value="standard"/>
+            </extension>
+            <extension>
+              <url value="status"/>
+              <valueCodeableConcept>
+                <coding>
+                  <system value="http://hl7.org/fhir/us/immds/CodeSystem/ForecastStatus"/>
+                  <code value="Not Complete"/>
+                  <display value="Not Complete"/>
+                </coding>
+                <coding>
+                  <system value="http://terminology.hl7.org/CodeSystem/immunization-recommendation-status"/>
+                  <code value="due"/>
+                  <display value="Due"/>
+                </coding>
+                <coding>
+                  <system value="http://loinc.org"/>
+                  <code value="LA13422-3"/>
+                  <display value="On schedule"/>
+                </coding>
+              </valueCodeableConcept>
+            </extension>
+            <extension>
+              <url value="earliestDate"/>
+              <valueDateTime value="2025-10-10T00:00:00.000-04:00"/>
+            </extension>
+            <extension>
+              <url value="recommendedDate"/>
+              <valueDateTime value="2025-10-29T00:00:00.000-04:00"/>
+            </extension>
+            <extension>
+              <url value="pastDueDate"/>
+              <valueDateTime value="2025-12-26T00:00:00.000-05:00"/>
+            </extension>
+            <extension>
+              <url value="latestDate"/>
+              <valueDateTime value="2043-08-28T00:00:00.000-04:00"/>
+            </extension>
+            <extension>
+              <url value="minimumAgeDate"/>
+              <valueDateTime value="2025-10-10T00:00:00.000-04:00"/>
+            </extension>
+            <extension>
+              <url value="maximumAgeDate"/>
+              <valueDateTime value="2043-08-29T00:00:00.000-04:00"/>
+            </extension>
+            <extension>
+              <url value="earliestRecommendedAgeDate"/>
+              <valueDateTime value="2025-10-29T00:00:00.000-04:00"/>
+            </extension>
+            <extension>
+              <url value="latestRecommendedAgeDate"/>
+              <valueDateTime value="2025-12-27T00:00:00.000-05:00"/>
+            </extension>
+            <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/series-detail-ext"/>
           </extension>
           <extension>
             <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/series-type-ext"/>
@@ -970,12 +1997,82 @@
         </recommendation>
         <recommendation>
           <extension>
+            <extension>
+              <url value="engine"/>
+              <valueString value="cicada/0.0.1"/>
+            </extension>
+            <extension>
+              <url value="supportingData"/>
+              <valueString value="CDSi 4.65-508"/>
+            </extension>
+            <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/engine-version-ext"/>
+          </extension>
+          <extension>
+            <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/doses-remaining-ext"/>
+            <valueString value="2"/>
+          </extension>
+          <extension>
             <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/series-group-ext"/>
             <valueString value="Standard"/>
           </extension>
           <extension>
             <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/antigen-needing-dose-ext"/>
             <valueString value="Zoster"/>
+          </extension>
+          <extension>
+            <extension>
+              <url value="seriesName"/>
+              <valueString value="Zoster 2-dose series"/>
+            </extension>
+            <extension>
+              <url value="seriesGroupName"/>
+              <valueString value="Standard"/>
+            </extension>
+            <extension>
+              <url value="seriesType"/>
+              <valueString value="standard"/>
+            </extension>
+            <extension>
+              <url value="status"/>
+              <valueCodeableConcept>
+                <coding>
+                  <system value="http://hl7.org/fhir/us/immds/CodeSystem/ForecastStatus"/>
+                  <code value="Not Complete"/>
+                  <display value="Not Complete"/>
+                </coding>
+                <coding>
+                  <system value="http://terminology.hl7.org/CodeSystem/immunization-recommendation-status"/>
+                  <code value="due"/>
+                  <display value="Due"/>
+                </coding>
+                <coding>
+                  <system value="http://loinc.org"/>
+                  <code value="LA13422-3"/>
+                  <display value="On schedule"/>
+                </coding>
+              </valueCodeableConcept>
+            </extension>
+            <extension>
+              <url value="earliestDate"/>
+              <valueDateTime value="2075-08-29T00:00:00.000-04:00"/>
+            </extension>
+            <extension>
+              <url value="recommendedDate"/>
+              <valueDateTime value="2075-08-29T00:00:00.000-04:00"/>
+            </extension>
+            <extension>
+              <url value="pastDueDate"/>
+              <valueDateTime value="2075-08-29T00:00:00.000-04:00"/>
+            </extension>
+            <extension>
+              <url value="minimumAgeDate"/>
+              <valueDateTime value="2075-08-29T00:00:00.000-04:00"/>
+            </extension>
+            <extension>
+              <url value="earliestRecommendedAgeDate"/>
+              <valueDateTime value="2075-08-29T00:00:00.000-04:00"/>
+            </extension>
+            <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/series-detail-ext"/>
           </extension>
           <extension>
             <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/series-type-ext"/>
@@ -1054,12 +2151,94 @@
         </recommendation>
         <recommendation>
           <extension>
+            <extension>
+              <url value="engine"/>
+              <valueString value="cicada/0.0.1"/>
+            </extension>
+            <extension>
+              <url value="supportingData"/>
+              <valueString value="CDSi 4.65-508"/>
+            </extension>
+            <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/engine-version-ext"/>
+          </extension>
+          <extension>
+            <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/doses-remaining-ext"/>
+            <valueString value="1"/>
+          </extension>
+          <extension>
             <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/series-group-ext"/>
             <valueString value="Standard"/>
           </extension>
           <extension>
             <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/antigen-needing-dose-ext"/>
             <valueString value="HepA"/>
+          </extension>
+          <extension>
+            <extension>
+              <url value="seriesName"/>
+              <valueString value="HepA 2-dose series"/>
+            </extension>
+            <extension>
+              <url value="seriesGroupName"/>
+              <valueString value="Standard"/>
+            </extension>
+            <extension>
+              <url value="seriesType"/>
+              <valueString value="standard"/>
+            </extension>
+            <extension>
+              <url value="status"/>
+              <valueCodeableConcept>
+                <coding>
+                  <system value="http://hl7.org/fhir/us/immds/CodeSystem/ForecastStatus"/>
+                  <code value="Not Complete"/>
+                  <display value="Not Complete"/>
+                </coding>
+                <coding>
+                  <system value="http://terminology.hl7.org/CodeSystem/immunization-recommendation-status"/>
+                  <code value="due"/>
+                  <display value="Due"/>
+                </coding>
+                <coding>
+                  <system value="http://loinc.org"/>
+                  <code value="LA13422-3"/>
+                  <display value="On schedule"/>
+                </coding>
+              </valueCodeableConcept>
+            </extension>
+            <extension>
+              <url value="targetDoseNumber"/>
+              <valuePositiveInt value="1"/>
+            </extension>
+            <extension>
+              <url value="earliestDate"/>
+              <valueDateTime value="2027-03-01T00:00:00.000-05:00"/>
+            </extension>
+            <extension>
+              <url value="recommendedDate"/>
+              <valueDateTime value="2027-03-01T00:00:00.000-05:00"/>
+            </extension>
+            <extension>
+              <url value="pastDueDate"/>
+              <valueDateTime value="2028-04-25T00:00:00.000-04:00"/>
+            </extension>
+            <extension>
+              <url value="minimumAgeDate"/>
+              <valueDateTime value="2027-03-01T00:00:00.000-05:00"/>
+            </extension>
+            <extension>
+              <url value="earliestRecommendedAgeDate"/>
+              <valueDateTime value="2027-03-01T00:00:00.000-05:00"/>
+            </extension>
+            <extension>
+              <url value="earliestRecommendedIntervalDate"/>
+              <valueDateTime value="2027-03-01T00:00:00.000-05:00"/>
+            </extension>
+            <extension>
+              <url value="latestRecommendedIntervalDate"/>
+              <valueDateTime value="2028-04-26T00:00:00.000-04:00"/>
+            </extension>
+            <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/series-detail-ext"/>
           </extension>
           <extension>
             <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/series-type-ext"/>
@@ -1138,6 +2317,77 @@
         </recommendation>
         <recommendation>
           <extension>
+            <extension>
+              <url value="engine"/>
+              <valueString value="cicada/0.0.1"/>
+            </extension>
+            <extension>
+              <url value="supportingData"/>
+              <valueString value="CDSi 4.65-508"/>
+            </extension>
+            <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/engine-version-ext"/>
+          </extension>
+          <extension>
+            <extension>
+              <url value="seriesName"/>
+              <valueString value="RSV 1-dose series"/>
+            </extension>
+            <extension>
+              <url value="seriesGroupName"/>
+              <valueString value="Standard"/>
+            </extension>
+            <extension>
+              <url value="seriesType"/>
+              <valueString value="standard"/>
+            </extension>
+            <extension>
+              <url value="status"/>
+              <valueCodeableConcept>
+                <coding>
+                  <system value="http://hl7.org/fhir/us/immds/CodeSystem/ForecastStatus"/>
+                  <code value="Not Recommended"/>
+                  <display value="Not Recommended"/>
+                </coding>
+                <coding>
+                  <system value="http://loinc.org"/>
+                  <code value="LA4695-8"/>
+                  <display value="Not Recommended"/>
+                </coding>
+              </valueCodeableConcept>
+            </extension>
+            <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/series-detail-ext"/>
+          </extension>
+          <extension>
+            <extension>
+              <url value="seriesName"/>
+              <valueString value="RSV 75 years+ 1-dose series"/>
+            </extension>
+            <extension>
+              <url value="seriesGroupName"/>
+              <valueString value="Standard 75+"/>
+            </extension>
+            <extension>
+              <url value="seriesType"/>
+              <valueString value="standard"/>
+            </extension>
+            <extension>
+              <url value="status"/>
+              <valueCodeableConcept>
+                <coding>
+                  <system value="http://hl7.org/fhir/us/immds/CodeSystem/ForecastStatus"/>
+                  <code value="Not Recommended"/>
+                  <display value="Not Recommended"/>
+                </coding>
+                <coding>
+                  <system value="http://loinc.org"/>
+                  <code value="LA4695-8"/>
+                  <display value="Not Recommended"/>
+                </coding>
+              </valueCodeableConcept>
+            </extension>
+            <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/series-detail-ext"/>
+          </extension>
+          <extension>
             <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/series-type-ext"/>
             <valueCodeableConcept>
               <coding>
@@ -1190,12 +2440,94 @@
         </recommendation>
         <recommendation>
           <extension>
+            <extension>
+              <url value="engine"/>
+              <valueString value="cicada/0.0.1"/>
+            </extension>
+            <extension>
+              <url value="supportingData"/>
+              <valueString value="CDSi 4.65-508"/>
+            </extension>
+            <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/engine-version-ext"/>
+          </extension>
+          <extension>
+            <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/doses-remaining-ext"/>
+            <valueString value="2"/>
+          </extension>
+          <extension>
             <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/series-group-ext"/>
             <valueString value="Standard"/>
           </extension>
           <extension>
             <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/antigen-needing-dose-ext"/>
             <valueString value="HPV"/>
+          </extension>
+          <extension>
+            <extension>
+              <url value="seriesName"/>
+              <valueString value="HPV 2-dose series"/>
+            </extension>
+            <extension>
+              <url value="seriesGroupName"/>
+              <valueString value="Standard"/>
+            </extension>
+            <extension>
+              <url value="seriesType"/>
+              <valueString value="standard"/>
+            </extension>
+            <extension>
+              <url value="status"/>
+              <valueCodeableConcept>
+                <coding>
+                  <system value="http://hl7.org/fhir/us/immds/CodeSystem/ForecastStatus"/>
+                  <code value="Not Complete"/>
+                  <display value="Not Complete"/>
+                </coding>
+                <coding>
+                  <system value="http://terminology.hl7.org/CodeSystem/immunization-recommendation-status"/>
+                  <code value="due"/>
+                  <display value="Due"/>
+                </coding>
+                <coding>
+                  <system value="http://loinc.org"/>
+                  <code value="LA13422-3"/>
+                  <display value="On schedule"/>
+                </coding>
+              </valueCodeableConcept>
+            </extension>
+            <extension>
+              <url value="earliestDate"/>
+              <valueDateTime value="2034-08-29T00:00:00.000-04:00"/>
+            </extension>
+            <extension>
+              <url value="recommendedDate"/>
+              <valueDateTime value="2036-08-29T00:00:00.000-04:00"/>
+            </extension>
+            <extension>
+              <url value="pastDueDate"/>
+              <valueDateTime value="2038-09-25T00:00:00.000-04:00"/>
+            </extension>
+            <extension>
+              <url value="latestDate"/>
+              <valueDateTime value="2071-08-28T00:00:00.000-04:00"/>
+            </extension>
+            <extension>
+              <url value="minimumAgeDate"/>
+              <valueDateTime value="2034-08-29T00:00:00.000-04:00"/>
+            </extension>
+            <extension>
+              <url value="maximumAgeDate"/>
+              <valueDateTime value="2071-08-29T00:00:00.000-04:00"/>
+            </extension>
+            <extension>
+              <url value="earliestRecommendedAgeDate"/>
+              <valueDateTime value="2036-08-29T00:00:00.000-04:00"/>
+            </extension>
+            <extension>
+              <url value="latestRecommendedAgeDate"/>
+              <valueDateTime value="2038-09-26T00:00:00.000-04:00"/>
+            </extension>
+            <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/series-detail-ext"/>
           </extension>
           <extension>
             <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/series-type-ext"/>
@@ -1285,12 +2617,90 @@
         </recommendation>
         <recommendation>
           <extension>
+            <extension>
+              <url value="engine"/>
+              <valueString value="cicada/0.0.1"/>
+            </extension>
+            <extension>
+              <url value="supportingData"/>
+              <valueString value="CDSi 4.65-508"/>
+            </extension>
+            <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/engine-version-ext"/>
+          </extension>
+          <extension>
+            <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/doses-remaining-ext"/>
+            <valueString value="2"/>
+          </extension>
+          <extension>
             <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/series-group-ext"/>
             <valueString value="Standard"/>
           </extension>
           <extension>
             <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/antigen-needing-dose-ext"/>
             <valueString value="Meningococcal B"/>
+          </extension>
+          <extension>
+            <extension>
+              <url value="seriesName"/>
+              <valueString value="Meningococcal B 2-dose series MenB-4C Shared Clinical Decision Making"/>
+            </extension>
+            <extension>
+              <url value="seriesGroupName"/>
+              <valueString value="Standard"/>
+            </extension>
+            <extension>
+              <url value="seriesType"/>
+              <valueString value="standard"/>
+            </extension>
+            <extension>
+              <url value="status"/>
+              <valueCodeableConcept>
+                <coding>
+                  <system value="http://hl7.org/fhir/us/immds/CodeSystem/ForecastStatus"/>
+                  <code value="Not Complete"/>
+                  <display value="Not Complete"/>
+                </coding>
+                <coding>
+                  <system value="http://terminology.hl7.org/CodeSystem/immunization-recommendation-status"/>
+                  <code value="due"/>
+                  <display value="Due"/>
+                </coding>
+                <coding>
+                  <system value="http://loinc.org"/>
+                  <code value="LA13422-3"/>
+                  <display value="On schedule"/>
+                </coding>
+              </valueCodeableConcept>
+            </extension>
+            <extension>
+              <url value="earliestDate"/>
+              <valueDateTime value="2041-08-29T00:00:00.000-04:00"/>
+            </extension>
+            <extension>
+              <url value="recommendedDate"/>
+              <valueDateTime value="2041-08-29T00:00:00.000-04:00"/>
+            </extension>
+            <extension>
+              <url value="pastDueDate"/>
+              <valueDateTime value="2041-08-29T00:00:00.000-04:00"/>
+            </extension>
+            <extension>
+              <url value="latestDate"/>
+              <valueDateTime value="2049-08-28T00:00:00.000-04:00"/>
+            </extension>
+            <extension>
+              <url value="minimumAgeDate"/>
+              <valueDateTime value="2041-08-29T00:00:00.000-04:00"/>
+            </extension>
+            <extension>
+              <url value="maximumAgeDate"/>
+              <valueDateTime value="2049-08-29T00:00:00.000-04:00"/>
+            </extension>
+            <extension>
+              <url value="earliestRecommendedAgeDate"/>
+              <valueDateTime value="2041-08-29T00:00:00.000-04:00"/>
+            </extension>
+            <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/series-detail-ext"/>
           </extension>
           <extension>
             <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/series-type-ext"/>
@@ -1379,6 +2789,52 @@
           <doseNumberString value="1"/>
         </recommendation>
         <recommendation>
+          <extension>
+            <extension>
+              <url value="engine"/>
+              <valueString value="cicada/0.0.1"/>
+            </extension>
+            <extension>
+              <url value="supportingData"/>
+              <valueString value="CDSi 4.65-508"/>
+            </extension>
+            <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/engine-version-ext"/>
+          </extension>
+          <extension>
+            <extension>
+              <url value="seriesName"/>
+              <valueString value="Rotavirus 3-dose series"/>
+            </extension>
+            <extension>
+              <url value="seriesGroupName"/>
+              <valueString value="Standard"/>
+            </extension>
+            <extension>
+              <url value="seriesType"/>
+              <valueString value="standard"/>
+            </extension>
+            <extension>
+              <url value="status"/>
+              <valueCodeableConcept>
+                <coding>
+                  <system value="http://hl7.org/fhir/us/immds/CodeSystem/ForecastStatus"/>
+                  <code value="Aged Out"/>
+                  <display value="Aged Out"/>
+                </coding>
+                <coding>
+                  <system value="http://terminology.hl7.org/CodeSystem/immunization-recommendation-status"/>
+                  <code value="agedout"/>
+                  <display value="Aged Out"/>
+                </coding>
+                <coding>
+                  <system value="http://loinc.org"/>
+                  <code value="LA13424-9"/>
+                  <display value="Too old"/>
+                </coding>
+              </valueCodeableConcept>
+            </extension>
+            <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/series-detail-ext"/>
+          </extension>
           <extension>
             <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/series-type-ext"/>
             <valueCodeableConcept>
