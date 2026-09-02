@@ -131,6 +131,16 @@ Parameters buildImmdsResponse(ForecastResult result) {
     ));
   }
 
+  // Doses whose dates cannot describe an administration, reported rather than
+  // dropped.
+  final OperationOutcome? outcome = _implausibleDoseOutcome(result);
+  if (outcome != null) {
+    outParams.add(ParametersParameter(
+      name: 'outcome'.toFhirString,
+      resource: outcome,
+    ));
+  }
+
   // Build ImmunizationRecommendation resource (one per patient)
   final recommendation = _buildRecommendation(result);
   outParams.add(ParametersParameter(
@@ -139,6 +149,62 @@ Parameters buildImmdsResponse(ForecastResult result) {
   ));
 
   return Parameters(parameter: outParams);
+}
+
+/// Reports doses that were left out because their dates cannot describe an
+/// administration.
+///
+/// Returned as an `outcome` parameter rather than as evaluations. R4 makes
+/// `ImmunizationEvaluation.targetDisease` 1..1, so an evaluation for a dose we
+/// refused to evaluate would have to invent a disease, and `doseStatus` is a
+/// clinical verdict this is not: we are not saying the dose does not count, we
+/// are saying the record cannot be read as an administration. The Immunization
+/// itself still travels back in its own parameter, so nothing is dropped.
+OperationOutcome? _implausibleDoseOutcome(ForecastResult result) {
+  final List<ImplausibleDose> bad = result.patient.implausibleDoses;
+  if (bad.isEmpty) return null;
+
+  final VaxDate dob = result.patient.birthdate;
+  final VaxDate assessment = result.patient.assessmentDate;
+
+  return OperationOutcome(
+    issue: bad.map((ImplausibleDose entry) {
+      final (String code, String detail) = switch (entry.reason) {
+        ImplausibleDoseReason.beforeBirth => (
+            'dose-before-birth',
+            'Immunization/${entry.dose.doseId} is dated '
+                '${entry.dose.dateGiven}, before the patient date of birth '
+                '$dob. It was not evaluated. Check the birth date, the '
+                'administration date, and that the record belongs to this '
+                'patient.'
+          ),
+        ImplausibleDoseReason.afterAssessment => (
+            'dose-after-assessment',
+            'Immunization/${entry.dose.doseId} is dated '
+                '${entry.dose.dateGiven}, after the assessment date '
+                '$assessment, so it has not been administered. It was not '
+                'evaluated. A planned dose belongs in an '
+                'ImmunizationRecommendation, not an Immunization.'
+          ),
+      };
+      return OperationOutcomeIssue(
+        severity: IssueSeverity.warning,
+        // R4 defines `business-rule` for this, but the generated IssueType
+        // enum in fhir_r4 0.9.0 stops at `informational` and does not carry
+        // it. `value` is the closest it does carry: "the value is outside the
+        // range of acceptable values", which a date before birth or after the
+        // assessment is.
+        code: IssueType.value_,
+        details: CodeableConcept(coding: <Coding>[
+          Coding(
+            system: '$_cicadaCs/data-integrity'.toFhirUri,
+            code: code.toFhirCode,
+          ),
+        ]),
+        diagnostics: detail.toFhirString,
+      );
+    }).toList(),
+  );
 }
 
 /// Builds [ImmunizationEvaluation] resources from all evaluated doses across

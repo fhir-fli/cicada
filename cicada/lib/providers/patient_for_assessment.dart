@@ -24,6 +24,7 @@ class PatientForAssessment extends _$PatientForAssessment {
     final List<Condition> conditions = <Condition>[];
     final List<AllergyIntolerance> allergies = <AllergyIntolerance>[];
     final List<VaxDose> pastDoses = <VaxDose>[];
+    final List<ImplausibleDose> implausibleDoses = <ImplausibleDose>[];
     // The code alone is not enough: `supportingPatientInformation` has to
     // reference the resource that carried it, so keep the reference with it.
     final List<({CodeableConcept code, String? reference})> otherResourceCodes =
@@ -58,8 +59,10 @@ class PatientForAssessment extends _$PatientForAssessment {
               final Immunization immunization =
                   parameter.resource! as Immunization;
               immunizations.add(immunization);
-              pastDoses.add(VaxDose.fromImmunization(
-                  immunization, birthdate ?? VaxDate(1900, 1, 1)));
+              // Doses are built after the loop, not here. A dose needs the
+              // birth date, and the Patient parameter is not guaranteed to
+              // arrive before the Immunization ones; building inline dated
+              // every earlier dose from 1900-01-01.
               break;
             }
           case Observation _:
@@ -147,6 +150,32 @@ class PatientForAssessment extends _$PatientForAssessment {
       }
     }
 
+    // Build the doses now that the birth date and assessment date are known,
+    // and separate the ones whose dates cannot describe an administration.
+    //
+    // CDSi evaluates a "vaccine dose administered" and defines the assessment
+    // date as the current date, so a dose dated after it has not happened, and
+    // a dose dated before birth was not given to this patient. Neither can be
+    // evaluated, and neither is a clinical verdict: they are reported in an
+    // OperationOutcome, not as an invalid dose.
+    final VaxDate effectiveDob = birthdate ?? VaxDate(1900, 1, 1);
+    final VaxDate effectiveAssessment = assessmentDate == null
+        ? VaxDate.now()
+        : VaxDate.fromDateTime(assessmentDate!);
+    for (final Immunization immunization in immunizations) {
+      final VaxDose dose =
+          VaxDose.fromImmunization(immunization, effectiveDob);
+      if (birthdate != null && dose.dateGiven < birthdate!) {
+        implausibleDoses
+            .add((dose: dose, reason: ImplausibleDoseReason.beforeBirth));
+      } else if (dose.dateGiven > effectiveAssessment) {
+        implausibleDoses
+            .add((dose: dose, reason: ImplausibleDoseReason.afterAssessment));
+      } else {
+        pastDoses.add(dose);
+      }
+    }
+
     if (patient == null) {
       ref
           .read(operationOutcomesProvider.notifier)
@@ -154,7 +183,8 @@ class PatientForAssessment extends _$PatientForAssessment {
       return null;
     } else {
       return _createVaxPatient(patient!, assessmentDate, birthdate, conditions,
-          immunizations, allergies, pastDoses, otherResourceCodes);
+          immunizations, allergies, pastDoses, otherResourceCodes,
+          implausibleDoses);
     }
   }
 
@@ -166,7 +196,8 @@ class PatientForAssessment extends _$PatientForAssessment {
       List<Immunization> immunizations,
       List<AllergyIntolerance> allergies,
       List<VaxDose> pastDoses,
-      List<({CodeableConcept code, String? reference})> otherResourceCodes) {
+      List<({CodeableConcept code, String? reference})> otherResourceCodes,
+      List<ImplausibleDose> implausibleDoses) {
     final bd = birthdate ?? VaxDate(1900, 01, 01);
     final List<VaxObservation> observations =
         observationsFromConditions(conditions, bd);
@@ -225,6 +256,7 @@ class PatientForAssessment extends _$PatientForAssessment {
       allergies: allergies,
       pastDoses: pastDoses,
       observationSources: observationSources,
+      implausibleDoses: implausibleDoses,
     );
   }
 }

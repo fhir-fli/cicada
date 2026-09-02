@@ -705,4 +705,79 @@ void main() {
           isNot(contains('shared-clinical-decision-making')));
     });
   });
+
+  group('impossible dose dates', () {
+    Parameters withDose({required String dob, required String given,
+        String assessment = '2026-01-15'}) =>
+        Parameters.fromJson(<String, dynamic>{
+          'resourceType': 'Parameters',
+          'parameter': <Map<String, dynamic>>[
+            {'name': 'assessmentDate', 'valueDate': assessment},
+            {
+              'name': 'patient',
+              'resource': {
+                'resourceType': 'Patient',
+                'id': '1',
+                'birthDate': dob,
+              },
+            },
+            {
+              'name': 'immunization',
+              'resource': {
+                'resourceType': 'Immunization',
+                'id': '1',
+                'status': 'completed',
+                'vaccineCode': {
+                  'coding': [
+                    {'code': '52'},
+                  ],
+                },
+                'patient': {'reference': 'Patient/1'},
+                'occurrenceDateTime': given,
+              },
+            },
+          ],
+        });
+
+    List<String> outcomeCodes(Parameters response) => response.parameter!
+        .where((p) => p.name.valueString == 'outcome')
+        .map((p) => p.resource! as OperationOutcome)
+        .expand((o) => o.issue)
+        .expand((i) => i.details?.coding ?? <Coding>[])
+        .map((c) => c.code?.toString() ?? '')
+        .toList();
+
+    int evaluationCount(Parameters response) => response.parameter!
+        .where((p) => p.name.valueString == 'evaluation')
+        .length;
+
+    // CDSi evaluates a "vaccine dose administered". A dose dated before birth
+    // was not administered to this patient, so it cannot be evaluated. Before
+    // this it came back Not Valid, Too Young, which reads as a schedule
+    // problem and points a clinician at repeating the injection.
+    test('a dose before the date of birth is reported, not evaluated', () {
+      final response = buildImmdsResponse(evaluateForForecast(
+          withDose(dob: '2025-01-01', given: '2024-06-01')));
+      expect(outcomeCodes(response), contains('dose-before-birth'));
+      expect(evaluationCount(response), 0);
+    });
+
+    // CDSi defines the assessment date as the current date, so a dose dated
+    // after it has not happened. It used to be evaluated as history, counted
+    // toward the series and moved the forecast.
+    test('a dose after the assessment date is reported, not evaluated', () {
+      final response = buildImmdsResponse(evaluateForForecast(
+          withDose(dob: '2020-01-01', given: '2027-09-01')));
+      expect(outcomeCodes(response), contains('dose-after-assessment'));
+      expect(evaluationCount(response), 0);
+    });
+
+    // The control: an ordinary dose is evaluated and raises nothing.
+    test('a dose between those two is evaluated and raises no outcome', () {
+      final response = buildImmdsResponse(evaluateForForecast(
+          withDose(dob: '2020-01-01', given: '2025-06-01')));
+      expect(outcomeCodes(response), isEmpty);
+      expect(evaluationCount(response), greaterThan(0));
+    });
+  });
 }
