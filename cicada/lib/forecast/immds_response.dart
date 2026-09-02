@@ -249,6 +249,12 @@ List<ImmunizationEvaluation> _buildEvaluations(ForecastResult result) {
           seriesDosesPositiveInt: (series.series.seriesDose?.length ?? 0) > 0
               ? series.series.seriesDose!.length.toFhirPositiveInt
               : null,
+          extension_: <FhirExtension?>[
+            if (series.evaluatedTargetDose[dose.targetDoseSatisfied] != null)
+              _targetDoseStatusExt(
+                  series.evaluatedTargetDose[dose.targetDoseSatisfied]!),
+            _evaluationDetailExt(dose),
+          ].whereType<FhirExtension>().toList(),
         ));
       }
     }
@@ -524,6 +530,7 @@ ImmunizationRecommendation _buildRecommendation(ForecastResult result) {
                     .toFhirString,
             valueString: antigenName.toFhirString,
           ),
+        for (final VaxSeries s in vgf.contributingSeries) _seriesDetailExt(s),
         FhirExtension(
           url:
               'http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/series-type-ext'
@@ -624,6 +631,142 @@ CodeableConcept _mapDoseStatusReason(EvalReason reason) {
       display: display.toFhirString,
     ),
   ]);
+}
+
+
+const _cicadaSd = 'http://fhirfli.dev/fhir/ig/cicada/StructureDefinition';
+const _cicadaCs = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem';
+
+/// A date sub-extension, dropped when the date is absent or a sentinel.
+FhirExtension? _dateExt(String url, VaxDate? date) =>
+    date == null || _isSentinel(date)
+        ? null
+        : FhirExtension(
+            url: url.toFhirString, valueDateTime: date.toFhirDateTime());
+
+/// The CDSi target dose status this dose satisfied.
+///
+/// Chapter 6 evaluates each administered dose against a target dose and
+/// records satisfied, not satisfied, or skipped. Only `doseNumber` derived
+/// from it was leaving, so a skipped target dose and a satisfied one read the
+/// same to a caller.
+FhirExtension _targetDoseStatusExt(TargetDoseStatus status) {
+  final String code = switch (status) {
+    TargetDoseStatus.satisfied => 'satisfied',
+    TargetDoseStatus.skipped => 'skipped',
+    TargetDoseStatus.notSatisfied => 'not-satisfied',
+  };
+  return FhirExtension(
+    url: '$_cicadaSd/target-dose-status-ext'.toFhirString,
+    valueCodeableConcept: CodeableConcept(coding: <Coding>[
+      Coding(
+        system: '$_cicadaCs/target-dose-status'.toFhirUri,
+        code: code.toFhirCode,
+        display: status.toString().toFhirString,
+      ),
+    ]),
+  );
+}
+
+/// The Chapter 6 sub-step outcomes behind a dose's evaluation.
+///
+/// `doseStatusReason` carries the coded reasons, of which there are fifteen.
+/// The engine knows more than that: which of age, interval, conflict or
+/// vaccine choice passed, and for the ones that failed, which rule failed.
+/// Returns null when the evaluation recorded nothing beyond the status.
+FhirExtension? _evaluationDetailExt(VaxDose dose) {
+  FhirExtension boolExt(String url, bool value) => FhirExtension(
+      url: url.toFhirString, valueBoolean: value.toFhirBoolean);
+  FhirExtension codeExt(String url, String value) => FhirExtension(
+      url: url.toFhirString, valueString: value.toFhirString);
+
+  final List<FhirExtension> parts = <FhirExtension>[
+    if (dose.inadvertent) boolExt('inadvertent', true),
+    if (dose.validAgeReason != null)
+      codeExt('validAgeReason', dose.validAgeReason!.toString()),
+    if (dose.preferredInterval != null)
+      boolExt('preferredInterval', dose.preferredInterval!),
+    if (dose.preferredIntervalReason != null)
+      codeExt('preferredIntervalReason', dose.preferredIntervalReason!.toString()),
+    if (dose.allowedInterval != null)
+      boolExt('allowedInterval', dose.allowedInterval!),
+    if (dose.allowedIntervalReason != null)
+      codeExt('allowedIntervalReason', dose.allowedIntervalReason!.toString()),
+    if (dose.conflict != null) boolExt('conflict', dose.conflict!),
+    if (dose.conflictReason != null)
+      codeExt('conflictReason', dose.conflictReason!),
+    if (dose.preferredVaccine != null)
+      boolExt('preferredVaccine', dose.preferredVaccine!),
+    if (dose.preferredVaccineReason != null)
+      codeExt('preferredVaccineReason', dose.preferredVaccineReason!.toString()),
+    if (dose.allowedVaccine != null)
+      boolExt('allowedVaccine', dose.allowedVaccine!),
+    if (dose.allowedVaccineReason != null)
+      codeExt('allowedVaccineReason', dose.allowedVaccineReason!.toString()),
+  ];
+
+  return parts.isEmpty
+      ? null
+      : FhirExtension(
+          url: '$_cicadaSd/evaluation-detail-ext'.toFhirString,
+          extension_: parts,
+        );
+}
+
+/// One contributing series: its own status, its own four dates, and the
+/// component dates that produced them.
+///
+/// A vaccine group forecast reports the aggregate. Everything here was worked
+/// out per series and then merged away, so "due 2027-03-01" arrived with no
+/// way to see whether age or interval drove it, and a group covered by several
+/// series reported one answer for all of them.
+FhirExtension _seriesDetailExt(VaxSeries series) {
+  final List<FhirExtension?> parts = <FhirExtension?>[
+    if (series.series.seriesName != null)
+      FhirExtension(
+        url: 'seriesName'.toFhirString,
+        valueString: series.series.seriesName!.toFhirString,
+      ),
+    if (series.series.selectSeries?.seriesGroupName != null)
+      FhirExtension(
+        url: 'seriesGroupName'.toFhirString,
+        valueString: series.series.selectSeries!.seriesGroupName!.toFhirString,
+      ),
+    FhirExtension(
+      url: 'seriesType'.toFhirString,
+      valueString:
+          (series.series.seriesType == SeriesType.risk ? 'risk' : 'standard')
+              .toFhirString,
+    ),
+    FhirExtension(
+      url: 'status'.toFhirString,
+      valueCodeableConcept: _mapForecastStatus(series.seriesStatus),
+    ),
+    if (series.targetDose > 0)
+      FhirExtension(
+        url: 'targetDoseNumber'.toFhirString,
+        valuePositiveInt: series.targetDose.toFhirPositiveInt,
+      ),
+    _dateExt('earliestDate', series.candidateEarliestDate),
+    _dateExt('recommendedDate', series.adjustedRecommendedDate),
+    _dateExt('pastDueDate', series.adjustedPastDueDate),
+    _dateExt('latestDate', series.latestDate),
+    _dateExt('minimumAgeDate', series.minimumAgeDate),
+    _dateExt('maximumAgeDate', series.maximumAgeDate),
+    _dateExt('earliestRecommendedAgeDate', series.earliestRecommendedAgeDate),
+    _dateExt('latestRecommendedAgeDate', series.latestRecommendedAgeDate),
+    _dateExt('earliestRecommendedIntervalDate',
+        series.earliestRecommendedIntervalDate),
+    _dateExt('latestRecommendedIntervalDate',
+        series.latestRecommendedIntervalDate),
+    _dateExt('seasonalRecommendationStartDate',
+        series.seasonalRecommendationStartDate),
+  ];
+
+  return FhirExtension(
+    url: '$_cicadaSd/series-detail-ext'.toFhirString,
+    extension_: parts.whereType<FhirExtension>().toList(),
+  );
 }
 
 /// Maps [ForecastReason] to a `recommendation.forecastReason` CodeableConcept.

@@ -29,6 +29,7 @@ class VaccineGroupForecast {
     this.forecastReason,
     this.administrativeGuidance,
     this.contraindicatedCvxCodes = const <String>[],
+    this.contributingSeries = const <VaxSeries>[],
   });
 
   final String vaccineGroupName;
@@ -69,6 +70,15 @@ class VaccineGroupForecast {
   /// The series' own administrative guidance from the CDSi supporting data.
   /// Emitted in `recommendation.description`.
   final String? administrativeGuidance;
+
+  /// The series this forecast was built from.
+  ///
+  /// A vaccine group forecast reports one status and four dates, taken as the
+  /// aggregate over these. Each series also has its own status, its own dates,
+  /// and the component dates (minimum age, recommended age and interval
+  /// windows, seasonal start) that produced them — all worked out and then
+  /// merged away. They travel back in a per-series extension.
+  final List<VaxSeries> contributingSeries;
 
   /// CVX codes ruled out for this patient by a vaccine contraindication.
   /// Emitted as `recommendation.contraindicatedVaccineCode`.
@@ -510,6 +520,7 @@ Map<String, List<VaccineGroupForecast>> _aggregateVaccineGroupForecasts(
               forecastReason: detail.reason,
               administrativeGuidance: detail.guidance,
               contraindicatedCvxCodes: detail.contraCvx,
+              contributingSeries: allPrioritized,
             ));
           }
         }
@@ -591,6 +602,7 @@ Map<String, List<VaccineGroupForecast>> _aggregateVaccineGroupForecasts(
             forecastReason: detail.reason,
             administrativeGuidance: detail.guidance,
             contraindicatedCvxCodes: detail.contraCvx,
+            contributingSeries: <VaxSeries>[best],
           ));
         } else {
           // Several best series of the SAME type from non-equivalent series
@@ -659,6 +671,7 @@ Map<String, List<VaccineGroupForecast>> _aggregateVaccineGroupForecasts(
             forecastReason: detail.reason,
             administrativeGuidance: detail.guidance,
             contraindicatedCvxCodes: detail.contraCvx,
+            contributingSeries: part,
           ));
         }
       }
@@ -944,6 +957,8 @@ Map<String, List<VaccineGroupForecast>> _aggregateVaccineGroupForecasts(
         forecastReason: multiDetail.reason,
         administrativeGuidance: multiDetail.guidance,
         contraindicatedCvxCodes: multiDetail.contraCvx,
+        contributingSeries:
+            passBest.values.expand((List<VaxSeries> l) => l).toList(),
       ));
     }
   }
