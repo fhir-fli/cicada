@@ -1784,6 +1784,14 @@
               <display value="Overdue"/>
             </coding>
           </forecastStatus>
+          <forecastReason>
+            <coding>
+              <system value="http://fhirfli.dev/fhir/ig/cicada/CodeSystem/forecast-reason"/>
+              <code value="shared-clinical-decision-making"/>
+              <display value="Recommended by shared clinical decision-making"/>
+            </coding>
+            <text value="Recommended by shared clinical decision-making"/>
+          </forecastReason>
           <dateCriterion>
             <code>
               <coding>
@@ -2744,6 +2752,14 @@
               <display value="On schedule"/>
             </coding>
           </forecastStatus>
+          <forecastReason>
+            <coding>
+              <system value="http://fhirfli.dev/fhir/ig/cicada/CodeSystem/forecast-reason"/>
+              <code value="shared-clinical-decision-making"/>
+              <display value="Recommended by shared clinical decision-making"/>
+            </coding>
+            <text value="Recommended by shared clinical decision-making"/>
+          </forecastReason>
           <dateCriterion>
             <code>
               <coding>
