@@ -1,9 +1,10 @@
-# Five defects to report to CDC — CDSi 4.65-508
+# Six defects to report to CDC — CDSi 4.65-508
 
 Found while running cicada against the published test cases. Three are defects in
-the **supporting data**, one is a defective **test expectation**, and one is the
-underlying-conditions workbook as a whole being older than the data it is tested
-against. Each was
+the **supporting data**, one is a defective **test expectation**, one is an
+indication asked for by a test and carried by no series that could apply to that
+patient, and one is the underlying-conditions workbook as a whole being older
+than the data it is tested against. Each was
 checked in the published **Excel** supporting data — the authoritative form, and
 the one cicada's generator builds from — and cross-checked against the XML and
 the 4.64 release, so none is new to this version.
@@ -114,7 +115,8 @@ self-consistent and needs no inadvertent-vaccine definition added.
 **Cases:** `2016-UC-0032`, `2016-UC-0057`, `2016-UC-0079`, `2016-UC-0087`,
 `2016-UC-0088`, `2016-UC-0110`, `2016-UC-0130`, `2016-UC-0173`, `2016-UC-0178`,
 `2016-UC-0203`, `2017-UC-0015`, `2020-UC-0003`, `2022-UC-0017`, `2025-UC-0010`,
-`2025-UC-0015` — fifteen, reported as one finding.
+`2025-UC-0015`, and the RSV cases `2023-UC-0047`, `2023-UC-0048`, `2023-UC-0050`,
+`2023-UC-0051` — nineteen, reported as one finding.
 
 Each of these rows asks for a series, an interval or an evaluation reason that
 the current supporting data no longer contains. A conformant engine reading
@@ -133,6 +135,16 @@ gone. Examples:
   `2022-UC-0017` expects 8 weeks where the dose carries `minInt: 1 year`.
 - **The attribute was removed.** `2016-UC-0032` expects an MMR past-due date six
   years out; that dose carries no latest recommended interval at all.
+- **The season moved on.** Every RSV series in 4.65-508 carries the 2025-26
+  season: `2025-10-01` to `2026-03-31` for the standard and the under-20-months
+  risk series, `2025-09-01` to `2026-01-31` for the pregnancy series. The four
+  RSV cases are 2023-season rows expecting 2023 dates. cicada answers with the
+  season it was given, two years later than the row, and for `2023-UC-0048`
+  (cystic fibrosis, five days old) and `2023-UC-0050` (American Indian or
+  Alaskan Native, 19 months) that pushes the earliest date past the series'
+  20-month maximum age, so the correct reading of the current data is that the
+  child ages out before the season opens. Same month and day as the expected
+  answer in each case, two years on.
 
 All fifteen were reviewed against current ACIP by an independent evidence review,
 which found **cicada's answer clinically correct in every one** and the CDC row
@@ -143,6 +155,35 @@ stale. Each was also checked against the 4.64 release, so none is new to
 current supporting data. They are dated v4.6 (September 2025) while the data is
 August 2026, and the healthy childhood and adult cases (v4.46) do not show this
 problem — cicada passes 1063 of 1064 of those.
+
+---
+
+## 6. `2023-UC-0047` sends an observation no RSV series can apply to that child
+
+**Case:** `2023-UC-0047` — chronic lung disease, age 9 months 21 days at
+assessment. Independent of the season problem above.
+
+The case carries CDSi observation **017 "Chronic lung disease"**. In
+`AntigenSupportingData- RSV-508`, observation 017 is named by exactly one series,
+**"RSV risk 50-74 years 1-dose series"**, with `beginAge` 50 years and `endAge`
+75 years. The series that covers infants, **"RSV risk under 20 months series"**,
+names observations **280 "Chronic lung disease of prematurity"**, **200 "Cystic
+fibrosis"**, **245 "American Indian or Alaskan Native"** and **246 "Severe
+immunocompromise"** — not 017.
+
+So a nine-month-old carrying 017 matches no RSV series: the only series indicated
+by that observation begins at 50 years. The row nevertheless expects a dose 1
+forecast. A conformant engine reading this data cannot produce it, and no reading
+of the data makes 017 select the infant series.
+
+Either the test case should send 280, or the under-20-months series should also
+name 017. The sibling cases show which is intended: `2023-UC-0048` sends 200 and
+`2023-UC-0050` sends 245, both of which the infant series does name, so
+`2023-UC-0047` looks like the odd one out rather than the data being wrong.
+
+**Fix:** send observation 280 in `2023-UC-0047`, or add 017 to the indications of
+the under-20-months series if a chronic lung disease that is not of prematurity
+is meant to qualify.
 
 ---
 
