@@ -17,8 +17,8 @@ String fhirJsonToXml(Map<String, dynamic> json) {
   }
 
   final root = XmlElement(
-    XmlName.parts(resourceType),
-    [XmlAttribute(XmlName.parts('xmlns'), _fhirNs)],
+    XmlName(resourceType),
+    [XmlAttribute(XmlName('xmlns'), _fhirNs)],
   );
   _addChildren(root, json, resourceType);
 
@@ -76,8 +76,8 @@ void _addElement(
         parent.children.add(node.copy());
       }
     } catch (_) {
-      final div = XmlElement(XmlName.parts('div'), [
-        XmlAttribute(XmlName.parts('xmlns'), _xhtmlNs),
+      final div = XmlElement(XmlName('div'), [
+        XmlAttribute(XmlName('xmlns'), _xhtmlNs),
       ]);
       div.children.add(XmlText(value.toString()));
       parent.children.add(div);
@@ -90,9 +90,9 @@ void _addElement(
     if (value is Map<String, dynamic>) {
       final childType = value['resourceType'] as String?;
       if (childType != null) {
-        final wrapper = XmlElement(XmlName.parts(key));
-        final resourceEl = XmlElement(XmlName.parts(childType), [
-          XmlAttribute(XmlName.parts('xmlns'), _fhirNs),
+        final wrapper = XmlElement(XmlName(key));
+        final resourceEl = XmlElement(XmlName(childType), [
+          XmlAttribute(XmlName('xmlns'), _fhirNs),
         ]);
         _addChildren(resourceEl, value, childType);
         wrapper.children.add(resourceEl);
@@ -105,10 +105,10 @@ void _addElement(
   final fieldType = fieldDef?.type;
 
   if (value is Map<String, dynamic>) {
-    final el = XmlElement(XmlName.parts(key));
+    final el = XmlElement(XmlName(key));
     if (value.containsKey('resourceType')) {
       final innerType = value['resourceType'] as String;
-      final resourceEl = XmlElement(XmlName.parts(innerType));
+      final resourceEl = XmlElement(XmlName(innerType));
       _addChildren(resourceEl, value, innerType);
       el.children.add(resourceEl);
     } else {
@@ -116,15 +116,15 @@ void _addElement(
     }
     parent.children.add(el);
   } else if (value is String || value is num || value is bool) {
-    final el = XmlElement(XmlName.parts(key), [
-      XmlAttribute(XmlName.parts('value'), _primitiveToString(value)),
+    final el = XmlElement(XmlName(key), [
+      XmlAttribute(XmlName('value'), _primitiveToString(value)),
     ]);
     if (underscoreValue is Map<String, dynamic>) {
       _addChildren(el, underscoreValue, 'Element');
     }
     parent.children.add(el);
   } else if (value == null && underscoreValue is Map<String, dynamic>) {
-    final el = XmlElement(XmlName.parts(key));
+    final el = XmlElement(XmlName(key));
     _addChildren(el, underscoreValue, 'Element');
     parent.children.add(el);
   }

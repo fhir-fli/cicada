@@ -15,7 +15,7 @@ dependencies:
   riverpod_annotation: ^4.0.3
   shelf: ^1.4.2
   shelf_router: ^1.1.4
-  xml: ^7.0.1
+  xml: ^6.6.1
 
 dev_dependencies:
   test: ^1.29.0
