@@ -176,7 +176,13 @@ List<ImmunizationEvaluation> _buildEvaluations(ForecastResult result) {
         // MMR dose: the response carried the recommendation for all three
         // diseases and a single evaluation, for Mumps. A reader asking
         // whether that shot was valid got no answer about measles or rubella.
-        final key = '${dose.dateGiven}_${antigen.targetDisease}';
+        // Keyed on the dose, not its date: two doses of the same vaccine on
+        // the same day are two administered doses and each deserves its own
+        // evaluation. Measured before this change: a request carrying two
+        // same-day HepA doses got one evaluation back. (The forecast was
+        // right either way — the engine counted one valid dose and asked for
+        // dose 2 — so this was a reporting loss, not a counting error.)
+        final key = '${dose.doseId}_${antigen.targetDisease}';
         if (seen.contains(key)) continue;
         seen.add(key);
 
