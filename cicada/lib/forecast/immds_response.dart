@@ -161,15 +161,22 @@ List<ImmunizationEvaluation> _buildEvaluations(ForecastResult result) {
           : (group.series.isNotEmpty ? group.series.first : null);
       if (series == null) continue;
 
-      final groupCvx = _vaccineGroupCvx[group.vaccineGroupName];
-
       for (final dose in series.doses) {
         // Only include doses that were actually evaluated
         if (dose.evalStatus == null) continue;
 
-        // De-duplicate: one evaluation per (dose date, vaccine group)
-        final key =
-            '${dose.dateGiven}_${groupCvx?.$1 ?? group.vaccineGroupName}';
+        // One evaluation per (dose, target disease).
+        //
+        // This used to de-duplicate on (dose date, vaccine GROUP), on the
+        // reasoning that a multi-antigen group like MMR would otherwise
+        // produce "duplicate" evaluations for Measles, Mumps and Rubella.
+        // They are not duplicates. R4 gives ImmunizationEvaluation a single
+        // targetDisease, so an evaluation can speak for exactly one disease,
+        // and covering three diseases takes three of them. Measured on one
+        // MMR dose: the response carried the recommendation for all three
+        // diseases and a single evaluation, for Mumps. A reader asking
+        // whether that shot was valid got no answer about measles or rubella.
+        final key = '${dose.dateGiven}_${antigen.targetDisease}';
         if (seen.contains(key)) continue;
         seen.add(key);
 
@@ -177,7 +184,10 @@ List<ImmunizationEvaluation> _buildEvaluations(ForecastResult result) {
           // The ImmDS example carries an id and a profile claim; we carried
           // neither. A consumer that indexes resources by id had nothing to
           // index. The id is derived from the dose so it is stable per dose.
-          id: 'eval-${dose.doseId}'.toFhirString,
+          // Unique per (dose, disease): one dose evaluated against several
+          // antigens produces several evaluations, and they shared this id.
+          id: 'eval-${dose.doseId}-${_idToken(antigen.targetDisease)}'
+              .toFhirString,
           meta: FhirMeta(profile: <FhirCanonical>[
             'http://hl7.org/fhir/us/immds/StructureDefinition/immds-immunizationevaluation'
                 .toFhirCanonical,
@@ -246,6 +256,14 @@ List<ImmunizationEvaluation> _buildEvaluations(ForecastResult result) {
 
   return evaluations;
 }
+
+/// A target disease name as a FHIR id token: lower case, non-alphanumerics
+/// collapsed to '-'. FHIR ids allow [A-Za-z0-9-.] only, and disease names
+/// carry spaces ('Meningococcal B') and hyphens ('COVID-19').
+String _idToken(String name) => name
+    .toLowerCase()
+    .replaceAll(RegExp('[^a-z0-9]+'), '-')
+    .replaceAll(RegExp(r'^-+|-+$'), '');
 
 /// Returns a [CodeableConcept] for evaluation targetDisease.
 ///
