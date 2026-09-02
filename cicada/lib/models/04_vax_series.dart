@@ -984,10 +984,37 @@ class VaxSeries {
           if (currentSeriesDose?.recurringDose == Binary.yes &&
               evaluatedTargetDose[targetDose] == TargetDoseStatus.satisfied) {
             _computeCandidateEarliestDate();
+            // Complete for THIS season: the recurring dose is satisfied and
+            // the next one falls after the current season's end. The series
+            // stays Not Complete, because another dose is owed; the reason
+            // says which kind of Not Complete it is, so "had this year's flu
+            // shot" stops reading as an open gap.
+            //
+            // Deliberate deviation, see ForecastReason.completeForTheSeason.
+            final VaxDate? seasonEnd = VaxDate.fromNullableString(
+                currentSeriesDose?.seasonalRecommendation?.endDate, true);
+            if (seasonEnd != null &&
+                assessmentDate <= seasonEnd &&
+                candidateEarliestDate != null &&
+                candidateEarliestDate! > seasonEnd) {
+              forecastReason = ForecastReason.completeForTheSeason;
+            }
           } else {
             shouldRecieveAnotherDose = false;
             seriesStatus = SeriesStatus.complete;
-            forecastReason = ForecastReason.patientSeriesIsComplete;
+            // Complete, but a seasonal series is only ever complete for its
+            // season: the adult influenza series returns Complete after one
+            // dose, and a consumer cannot tell that from complete for good.
+            // Deliberate deviation, see ForecastReason.completeForTheSeason.
+            // currentSeriesDose is null once the collection is exhausted,
+            // which is the ordinary way a series completes, so fall back to
+            // the last dose to ask whether this series is seasonal at all.
+            final SeriesDose? seasonalSource =
+                currentSeriesDose ?? series.seriesDose?.lastOrNull;
+            forecastReason =
+                seasonalSource?.seasonalRecommendation?.endDate != null
+                    ? ForecastReason.completeForTheSeason
+                    : ForecastReason.patientSeriesIsComplete;
             seriesGroupCompletion[targetDisease]?[seriesGroupKey] = true;
             final VaxDate? completedOn = lastCompleted?.dateGiven;
             if (completedOn != null) {

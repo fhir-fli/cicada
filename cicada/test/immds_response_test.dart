@@ -564,4 +564,69 @@ void main() {
           reason: 'no forecast reason was checked, so this proved nothing');
     });
   });
+
+  group('seasonal series', () {
+    Parameters caseFor({required String dob, required String cvx}) =>
+        Parameters.fromJson(<String, dynamic>{
+          'resourceType': 'Parameters',
+          'parameter': <Map<String, dynamic>>[
+            {'name': 'assessmentDate', 'valueDate': '2026-01-15'},
+            {
+              'name': 'patient',
+              'resource': {
+                'resourceType': 'Patient',
+                'id': '1',
+                'birthDate': dob,
+              },
+            },
+            {
+              'name': 'immunization',
+              'resource': {
+                'resourceType': 'Immunization',
+                'id': '1',
+                'status': 'completed',
+                'vaccineCode': {
+                  'coding': [
+                    {'code': cvx},
+                  ],
+                },
+                'patient': {'reference': 'Patient/1'},
+                'occurrenceDateTime': '2025-11-01',
+              },
+            },
+          ],
+        });
+
+    List<String> reasonCodes(Parameters response, String group) {
+      final rec = response.parameter!
+          .firstWhere((p) => p.name.valueString == 'recommendation')
+          .resource! as ImmunizationRecommendation;
+      for (final r in rec.recommendation) {
+        if (r.targetDisease?.text?.valueString != group) continue;
+        return (r.forecastReason ?? <CodeableConcept>[])
+            .expand((c) => c.coding ?? <Coding>[])
+            .map((c) => c.code?.toString() ?? '')
+            .toList();
+      }
+      return <String>[];
+    }
+
+    // A seasonal series is only ever complete for its season. The adult
+    // influenza series returns Complete after one dose, and without this a
+    // consumer cannot tell that from complete for good, so a patient who had
+    // this year's flu shot reads as permanently done.
+    test('a completed influenza series reports the ImmDS seasonalComplete code',
+        () {
+      final response = buildImmdsResponse(
+          evaluateForForecast(caseFor(dob: '1990-01-01', cvx: '141')));
+      expect(reasonCodes(response, 'Influenza'), contains('seasonalComplete'));
+    });
+
+    // The control: a non-seasonal series must NOT claim it.
+    test('a completed HepA series does not', () {
+      final response = buildImmdsResponse(
+          evaluateForForecast(caseFor(dob: '1990-01-01', cvx: '52')));
+      expect(reasonCodes(response, 'HepA'), isNot(contains('seasonalComplete')));
+    });
+  });
 }

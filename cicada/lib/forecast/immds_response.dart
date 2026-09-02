@@ -888,6 +888,11 @@ CodeableConcept _mapForecastReason(ForecastReason reason) {
         null,
         null
       ),
+    ForecastReason.completeForTheSeason => (
+        'complete-for-the-season',
+        'seasonalComplete',
+        'Complete for the Season'
+      ),
   };
 
   return CodeableConcept(

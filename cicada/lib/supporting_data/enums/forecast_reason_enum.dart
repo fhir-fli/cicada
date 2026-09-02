@@ -15,7 +15,29 @@ enum ForecastReason {
 
   /// The series carries a minimum age to start and the patient has not
   /// reached it, so this series cannot be begun yet.
-  patientHasNotReachedTheMinimumAgeToStart;
+  patientHasNotReachedTheMinimumAgeToStart,
+
+  /// The patient has had every dose this season asks for, and the next one
+  /// falls in a later season.
+  ///
+  /// 🛑 DELIBERATE DEVIATION FROM CDSi. The logic spec has no such reason: its
+  /// only seasonal reason is 'Past seasonal recommendation end date'. The
+  /// series is genuinely Not Complete, because a further dose is owed, so the
+  /// status is unchanged and this reason says which kind of Not Complete it
+  /// is.
+  ///
+  /// Added because "Not Complete, due <next season>" and "Not Complete, due
+  /// now" are the same output to an alert or a quality measure, so a patient
+  /// who has had this year's influenza dose reads as a gap for the rest of the
+  /// season. ACIP defines influenza and RSV recommendations by season
+  /// (MMWR Recomm Rep 2022;71(1):1-28; MMWR 2025;74(32):500-507), and
+  /// OpenEvidence adjudicated this as the one addition with clear clinical
+  /// payoff, 2026-09-01.
+  ///
+  /// It is emitted as the ImmDS code `seasonalComplete`, "The patient is
+  /// complete for the season", so consumers get a standard code rather than
+  /// one of ours.
+  completeForTheSeason;
 
   static ForecastReason? fromString(String? string) {
     switch (string) {
@@ -37,6 +59,8 @@ enum ForecastReason {
             .patientIsUnableToFinishTheSeriesPriorToTheMaximumAge;
       case 'Patient has not reached the minimum age to start':
         return ForecastReason.patientHasNotReachedTheMinimumAgeToStart;
+      case 'Patient is complete for the season':
+        return ForecastReason.completeForTheSeason;
       default:
         return null;
     }
@@ -64,6 +88,8 @@ enum ForecastReason {
         return 'Patient is unable to finish the series prior to the maximum age';
       case patientHasNotReachedTheMinimumAgeToStart:
         return 'Patient has not reached the minimum age to start';
+      case completeForTheSeason:
+        return 'Patient is complete for the season';
     }
   }
 
