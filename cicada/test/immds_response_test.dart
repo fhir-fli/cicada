@@ -547,17 +547,25 @@ void main() {
             .firstWhere((p) => p.name.valueString == 'recommendation')
             .resource! as ImmunizationRecommendation;
 
-        final int withReason = result.vaccineGroupForecasts.values
+        // Set-based, not counted: forecastReason is 0..* and a recommendation
+        // can also carry the shared-decision qualifier, so a count comparison
+        // would fail for a reason that is not a loss. What must hold is that
+        // every reason the engine set appears somewhere in the response.
+        final Set<String> setByEngine = result.vaccineGroupForecasts.values
             .expand((List<VaccineGroupForecast> l) => l)
-            .where((VaccineGroupForecast f) => f.forecastReason != null)
-            .length;
-        final int emitted = rec.recommendation
-            .where((r) => (r.forecastReason?.isNotEmpty ?? false))
-            .length;
-        expect(emitted, withReason,
-            reason: 'the engine set $withReason forecast reasons; '
-                '$emitted were emitted');
-        checked += withReason;
+            .map((VaccineGroupForecast f) => f.forecastReason?.toString())
+            .whereType<String>()
+            .toSet();
+        final Set<String> emitted = rec.recommendation
+            .expand((r) => r.forecastReason ?? <CodeableConcept>[])
+            .map((CodeableConcept c) => c.text?.valueString)
+            .whereType<String>()
+            .toSet();
+        for (final String reason in setByEngine) {
+          expect(emitted, contains(reason),
+              reason: 'the engine set "$reason" and it was not emitted');
+        }
+        checked += setByEngine.length;
       }
 
       expect(checked, greaterThan(0),
@@ -627,6 +635,54 @@ void main() {
       final response = buildImmdsResponse(
           evaluateForForecast(caseFor(dob: '1990-01-01', cvx: '52')));
       expect(reasonCodes(response, 'HepA'), isNot(contains('seasonalComplete')));
+    });
+  });
+
+  group('shared clinical decision-making', () {
+    Parameters noDoses(String dob) => Parameters.fromJson(<String, dynamic>{
+          'resourceType': 'Parameters',
+          'parameter': <Map<String, dynamic>>[
+            {'name': 'assessmentDate', 'valueDate': '2026-01-15'},
+            {
+              'name': 'patient',
+              'resource': {
+                'resourceType': 'Patient',
+                'id': '1',
+                'birthDate': dob,
+              },
+            },
+          ],
+        });
+
+    List<String> codesFor(Parameters response, String group) {
+      final rec = response.parameter!
+          .firstWhere((p) => p.name.valueString == 'recommendation')
+          .resource! as ImmunizationRecommendation;
+      return rec.recommendation
+          .where((r) => r.targetDisease?.text?.valueString == group)
+          .expand((r) => r.forecastReason ?? <CodeableConcept>[])
+          .expand((c) => c.coding ?? <Coding>[])
+          .map((c) => c.code?.toString() ?? '')
+          .toList();
+    }
+
+    // ACIP recommends MenB at 16-23 by shared clinical decision-making, and
+    // CDC marks the whole series that way in its name. Without the code, an
+    // alert cannot tell it from a routine gap and reports the patient overdue
+    // for a conversation.
+    test('a 17-year-old MenB forecast carries the shared-decision code', () {
+      final response = buildImmdsResponse(evaluateForForecast(noDoses('2008-06-01')));
+      expect(codesFor(response, 'Meningococcal B'),
+          contains('shared-clinical-decision-making'));
+    });
+
+    // The control: a routine series must not claim it. HPV's guidance mentions
+    // SCDM for 27-45 year olds, so this also proves the prose is not what is
+    // being read.
+    test('a routine HPV forecast does not', () {
+      final response = buildImmdsResponse(evaluateForForecast(noDoses('2012-06-01')));
+      expect(codesFor(response, 'HPV'),
+          isNot(contains('shared-clinical-decision-making')));
     });
   });
 }

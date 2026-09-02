@@ -37,7 +37,27 @@ enum ForecastReason {
   /// It is emitted as the ImmDS code `seasonalComplete`, "The patient is
   /// complete for the season", so consumers get a standard code rather than
   /// one of ours.
-  completeForTheSeason;
+  completeForTheSeason,
+
+  /// ACIP recommends this series by shared clinical decision-making rather
+  /// than routinely.
+  ///
+  /// Read from CDC's own marking: the series NAME carries "shared clinical
+  /// decision making". Six series are named that way — four MenB and two
+  /// COVID-19 — and for those the whole series is SCDM.
+  ///
+  /// 🛑 NOT set from the guidance prose. Seventeen further series mention SCDM
+  /// in `seriesAdminGuidance` while being routine for most of their range: HPV
+  /// says SCDM applies at 27-45 years, and pneumococcal scopes it by age and
+  /// condition too. Coding those as SCDM outright would be wrong for the
+  /// patients they are routine for, and the engine has no scoped SCDM
+  /// attribute to read. That prose already reaches the caller in
+  /// `recommendation.description`.
+  ///
+  /// Emitted with a cicada code: neither CDSi nor the ImmDS ForecastReason
+  /// code system has a concept for it. ICE calls it
+  /// CLINICAL_PATIENT_DISCRETION.
+  sharedClinicalDecisionMaking;
 
   static ForecastReason? fromString(String? string) {
     switch (string) {
@@ -61,6 +81,8 @@ enum ForecastReason {
         return ForecastReason.patientHasNotReachedTheMinimumAgeToStart;
       case 'Patient is complete for the season':
         return ForecastReason.completeForTheSeason;
+      case 'Recommended by shared clinical decision-making':
+        return ForecastReason.sharedClinicalDecisionMaking;
       default:
         return null;
     }
@@ -90,6 +112,8 @@ enum ForecastReason {
         return 'Patient has not reached the minimum age to start';
       case completeForTheSeason:
         return 'Patient is complete for the season';
+      case sharedClinicalDecisionMaking:
+        return 'Recommended by shared clinical decision-making';
     }
   }
 

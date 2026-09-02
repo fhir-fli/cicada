@@ -464,9 +464,18 @@ ImmunizationRecommendation _buildRecommendation(ForecastResult result) {
       // and thrown away, so a reader saw "Not Complete, due <date>" with no
       // statement of why, and "Immune" with no statement of what made the
       // patient immune.
-      forecastReason: vgf.forecastReason == null
-          ? null
-          : [_mapForecastReason(vgf.forecastReason!)],
+      // 0..*, so the series' own reason and the shared-decision qualifier can
+      // both travel: a series can be Not Complete AND recommended only by
+      // shared clinical decision-making.
+      forecastReason: () {
+        final List<CodeableConcept> reasons = <CodeableConcept>[
+          if (vgf.forecastReason != null)
+            _mapForecastReason(vgf.forecastReason!),
+          if (_isSharedDecisionSeries(vgf))
+            _mapForecastReason(ForecastReason.sharedClinicalDecisionMaking),
+        ];
+        return reasons.isEmpty ? null : reasons;
+      }(),
       dateCriterion: dateCriteria.isNotEmpty ? dateCriteria : null,
       // 🛑 doseNumberString, deliberately, do not "fix" this to positiveInt.
       //
@@ -828,6 +837,26 @@ FhirExtension? _dosesRemainingExt(VaccineGroupForecast vgf) {
   );
 }
 
+/// CDC's own marking that a whole series is shared clinical decision-making.
+///
+/// Case-insensitive and hyphen-tolerant on purpose: the supporting data writes
+/// it both ways — "Shared Clinical Decision Making" on the MenB series and
+/// "shared clinical decision-making" on the COVID-19 ones.
+final RegExp _scdmSeriesName =
+    RegExp(r'shared\s+clinical\s+decision[-\s]?making', caseSensitive: false);
+
+/// True when every patient this series applies to is an SCDM patient.
+///
+/// Read from the series NAME, never the guidance prose. Series whose guidance
+/// mentions SCDM for part of their range (HPV at 27-45 years, several
+/// pneumococcal risk series) are routine for the rest, and there is no scoped
+/// SCDM attribute in the data to read. Their prose travels in
+/// `recommendation.description` instead.
+bool _isSharedDecisionSeries(VaccineGroupForecast vgf) =>
+    vgf.contributingSeries.any((VaxSeries s) =>
+        _scdmSeriesName.hasMatch(s.series.seriesName ?? '')) ||
+    _scdmSeriesName.hasMatch(vgf.seriesName ?? '');
+
 /// Maps [ForecastReason] to a `recommendation.forecastReason` CodeableConcept.
 ///
 /// Two coding layers, because the ImmDS value set does not cover the engine:
@@ -892,6 +921,11 @@ CodeableConcept _mapForecastReason(ForecastReason reason) {
         'complete-for-the-season',
         'seasonalComplete',
         'Complete for the Season'
+      ),
+    ForecastReason.sharedClinicalDecisionMaking => (
+        'shared-clinical-decision-making',
+        null,
+        null
       ),
   };
 
