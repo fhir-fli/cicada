@@ -187,6 +187,14 @@ OperationOutcome? _implausibleDoseOutcome(ForecastResult result) {
                 'ImmunizationRecommendation, not an Immunization.'
           ),
       };
+      // Shape taken from the published R4 examples, diffed both directions:
+      // operationoutcome-example.json, -validationfail, -searchfail, -allok,
+      // -exception and -break-the-glass. Every one carries the human sentence
+      // in `details.text`, and break-the-glass carries a coding beside it, so
+      // the code and the sentence travel together there. `diagnostics` in
+      // their examples holds a technical location, not the message, so it is
+      // left empty. `expression` points at the element at fault, as
+      // -validationfail and -searchfail do.
       return OperationOutcomeIssue(
         severity: IssueSeverity.warning,
         // R4 defines `business-rule` for this, but the generated IssueType
@@ -195,13 +203,20 @@ OperationOutcome? _implausibleDoseOutcome(ForecastResult result) {
         // range of acceptable values", which a date before birth or after the
         // assessment is.
         code: IssueType.value_,
-        details: CodeableConcept(coding: <Coding>[
-          Coding(
-            system: '$_cicadaCs/data-integrity'.toFhirUri,
-            code: code.toFhirCode,
-          ),
-        ]),
-        diagnostics: detail.toFhirString,
+        details: CodeableConcept(
+          coding: <Coding>[
+            Coding(
+              system: '$_cicadaCs/data-integrity'.toFhirUri,
+              code: code.toFhirCode,
+            ),
+          ],
+          text: detail.toFhirString,
+        ),
+        expression: <FhirString>[
+          "Parameters.parameter.where(name='immunization').resource"
+                  ".ofType(Immunization).where(id='${entry.dose.doseId}')"
+              .toFhirString,
+        ],
       );
     }).toList(),
   );
