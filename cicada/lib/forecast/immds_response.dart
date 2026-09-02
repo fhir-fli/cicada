@@ -323,6 +323,16 @@ ImmunizationRecommendation _buildRecommendation(ForecastResult result) {
   final patientRef =
       'Patient/${result.patient.patient.id ?? 'unknown'}'.toFhirString;
   final assessmentDate = result.patient.assessmentDate;
+  // VaxDate extends DateTime, so completed years is the year difference less
+  // one when the birthday has not come round yet in the assessment year.
+  final VaxDate dob = result.patient.birthdate;
+  final int ageInYears = assessmentDate.year -
+      dob.year -
+      ((assessmentDate.month < dob.month ||
+              (assessmentDate.month == dob.month &&
+                  assessmentDate.day < dob.day))
+          ? 1
+          : 0);
   final List<ImmunizationRecommendationRecommendation> recommendations = [];
 
   // A vaccine group can carry more than one forecast: FORECASTVG-1 scopes a
@@ -471,7 +481,7 @@ ImmunizationRecommendation _buildRecommendation(ForecastResult result) {
         final List<CodeableConcept> reasons = <CodeableConcept>[
           if (vgf.forecastReason != null)
             _mapForecastReason(vgf.forecastReason!),
-          if (_isSharedDecisionSeries(vgf))
+          if (_isSharedDecisionSeries(vgf, ageInYears))
             _mapForecastReason(ForecastReason.sharedClinicalDecisionMaking),
         ];
         return reasons.isEmpty ? null : reasons;
@@ -852,10 +862,30 @@ final RegExp _scdmSeriesName =
 /// pneumococcal risk series) are routine for the rest, and there is no scoped
 /// SCDM attribute in the data to read. Their prose travels in
 /// `recommendation.description` instead.
-bool _isSharedDecisionSeries(VaccineGroupForecast vgf) =>
-    vgf.contributingSeries.any((VaxSeries s) =>
-        _scdmSeriesName.hasMatch(s.series.seriesName ?? '')) ||
-    _scdmSeriesName.hasMatch(vgf.seriesName ?? '');
+bool _isSharedDecisionSeries(VaccineGroupForecast vgf, int ageInYears) {
+  if (vgf.contributingSeries
+          .any((VaxSeries s) => _scdmSeriesName.hasMatch(s.series.seriesName ?? '')) ||
+      _scdmSeriesName.hasMatch(vgf.seriesName ?? '')) {
+    return true;
+  }
+  // HPV is the one series where the SCDM range is stated plainly enough to
+  // structure. CDC's own guidance in the supporting data: "Shared clinical
+  // decision-making (SCDM) is recommended regarding Human papillomavirus (HPV)
+  // vaccination for persons 27-45 years of age." The series is routine below
+  // 27, so the flag is scoped to the band rather than set on the series.
+  //
+  // Pneumococcal is deliberately not handled the same way. Its SCDM prose is
+  // not an age band at all: "1 dose of PCV20 or PCV21 may be administered at
+  // least 5 years after the last pneumococcal vaccine dose provided the
+  // patient previously received both PCV13 and PPSV23 with at least one dose
+  // of PPSV23 received on or after 65 years of age." That is a conditional
+  // extra dose, not a property of the series, and there is nothing in the data
+  // to hang it on.
+  if (vgf.vaccineGroupName == 'HPV' && ageInYears >= 27 && ageInYears <= 45) {
+    return true;
+  }
+  return false;
+}
 
 /// Maps [ForecastReason] to a `recommendation.forecastReason` CodeableConcept.
 ///

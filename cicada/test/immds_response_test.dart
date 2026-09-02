@@ -676,11 +676,31 @@ void main() {
           contains('shared-clinical-decision-making'));
     });
 
-    // The control: a routine series must not claim it. HPV's guidance mentions
-    // SCDM for 27-45 year olds, so this also proves the prose is not what is
-    // being read.
-    test('a routine HPV forecast does not', () {
-      final response = buildImmdsResponse(evaluateForForecast(noDoses('2012-06-01')));
+    // The control: a 13-year-old is in HPV's routine range, so the code must
+    // not appear. This also proves the guidance prose, which mentions SCDM on
+    // every HPV series, is not what is being read.
+    test('a 13-year-old HPV forecast does not', () {
+      final response =
+          buildImmdsResponse(evaluateForForecast(noDoses('2012-06-01')));
+      expect(codesFor(response, 'HPV'),
+          isNot(contains('shared-clinical-decision-making')));
+    });
+
+    // CDC's own guidance, structured: "Shared clinical decision-making (SCDM)
+    // is recommended regarding Human papillomavirus (HPV) vaccination for
+    // persons 27-45 years of age." Routine below 27, so the flag is scoped to
+    // the band rather than set on the series.
+    test('a 30-year-old HPV forecast does', () {
+      final response =
+          buildImmdsResponse(evaluateForForecast(noDoses('1995-06-01')));
+      expect(codesFor(response, 'HPV'),
+          contains('shared-clinical-decision-making'));
+    });
+
+    // The upper edge: 46 is outside the band.
+    test('a 46-year-old HPV forecast does not', () {
+      final response =
+          buildImmdsResponse(evaluateForForecast(noDoses('1979-06-01')));
       expect(codesFor(response, 'HPV'),
           isNot(contains('shared-clinical-decision-making')));
     });
