@@ -1,10 +1,16 @@
-# Seven defects to report to CDC — CDSi 4.65-508
+# Six defects to report to CDC — CDSi 4.65-508
 
 Found while running cicada against the published test cases. Three are defects in
 the **supporting data**, one is a defective **test expectation**, one is an
 indication asked for by a test and carried by no series that could apply to that
 patient, and one is the underlying-conditions workbook as a whole being older
-than the data it is tested against. Each was
+than the data it is tested against.
+
+🛑 A seventh finding was drafted and **withdrawn on 2026-09-02 before sending**:
+four healthy cases appeared to administer a dose after their own assessment
+date. Opening CDC's workbook showed our generated NDJSON carries different dates
+from the workbook rows for those ids, so the discrepancy is ours to explain
+first. Do not re-raise it until the generator's test-case parsing is checked. Each was
 checked in the published **Excel** supporting data — the authoritative form, and
 the one cicada's generator builds from — and cross-checked against the XML and
 the 4.64 release, so none is new to this version.
@@ -184,43 +190,6 @@ name 017. The sibling cases show which is intended: `2023-UC-0048` sends 200 and
 **Fix:** send observation 280 in `2023-UC-0047`, or add 017 to the indications of
 the under-20-months series if a chronic lung disease that is not of prematurity
 is meant to qualify.
-
----
-
-## 7. Four healthy cases administer a dose after their own assessment date
-
-**Cases:** `2026-0043`, `2026-0050`, `2026-0052`, `2026-0060` — four of 1,006.
-
-| case | assessment date | dose dates |
-|---|---|---|
-| 2026-0043 | 2015-02-13 | 2015-09-13, 2016-02-13 |
-| 2026-0050 | 2015-02-13 | 2015-09-13, 2016-02-13 |
-| 2026-0052 | 2016-01-17 | 2016-03-09 |
-| 2026-0060 | 2016-04-01 | 2016-05-02 |
-
-Each expects those doses evaluated as Valid and the series complete.
-
-The logic spec defines the assessment date as the **current date** (v4.6, three
-places). Everything the evaluation process consumes is a *vaccine dose
-administered*. A dose dated after the current date has not been administered, so
-a conformant engine has nothing to evaluate: it cannot be Valid, and it cannot
-count toward completing a series. Reading the rows as written means an engine
-must treat a future event as history.
-
-cicada now excludes such doses and reports them in an `OperationOutcome`, so
-these four rows fail. The remaining 1,002 healthy cases are unaffected, which is
-why this looks like four rows whose assessment date was not moved when their
-dose dates were, rather than a deliberate design.
-
-⚠️ **Unverified provenance.** These dates are read from our generated NDJSON,
-not from CDC's own workbook: the healthy cases are the v4.46 set and that
-workbook is not in this repo, so the assessment date could not be checked
-against the source. If CDC's workbook carries a later assessment date for these
-rows, the defect is ours and not theirs.
-
-**Fix:** move the assessment date after the last dose in each of the four rows,
-or confirm that CDSi intends future-dated doses to be evaluated, in which case
-the definition of assessment date needs to say so.
 
 ---
 
