@@ -26,6 +26,9 @@ class VaccineGroupForecast {
     this.seriesName,
     this.antigensNeedingDose = const [],
     this.supportingReferences = const <SupportingResource>[],
+    this.forecastReason,
+    this.administrativeGuidance,
+    this.contraindicatedCvxCodes = const <String>[],
   });
 
   final String vaccineGroupName;
@@ -55,6 +58,21 @@ class VaccineGroupForecast {
   /// The series group this forecast is scoped to (FORECASTVG-1), when it came
   /// from a single series group. Null when it aggregates several.
   final String? seriesGroupName;
+
+  /// Why the engine forecast what it did, when it has a reason.
+  ///
+  /// Emitted as `recommendation.forecastReason`, whose ImmDS binding is
+  /// example strength, so reasons outside that value set travel on a second
+  /// coding rather than being dropped.
+  final ForecastReason? forecastReason;
+
+  /// The series' own administrative guidance from the CDSi supporting data.
+  /// Emitted in `recommendation.description`.
+  final String? administrativeGuidance;
+
+  /// CVX codes ruled out for this patient by a vaccine contraindication.
+  /// Emitted as `recommendation.contraindicatedVaccineCode`.
+  final List<String> contraindicatedCvxCodes;
 
   /// The CDSi series name this forecast came from, verbatim, when it came from
   /// a single series. This is what goes in
@@ -421,6 +439,31 @@ SeriesStatus _aggregateStatus(List<SeriesStatus> statuses) {
 }
 
 /// Build vaccine group forecasts from per-antigen results
+/// The reason, guidance and contraindicated products carried by a set of
+/// series, for the forecast that covers them.
+///
+/// A vaccine group forecast can blend several best patient series. Take the
+/// first reason present, join distinct guidance, and union the contraindicated
+/// CVX codes, so nothing the engine worked out is dropped on aggregation.
+({ForecastReason? reason, String? guidance, List<String> contraCvx})
+    _forecastDetail(Iterable<VaxSeries> series) {
+  ForecastReason? reason;
+  final Set<String> guidance = <String>{};
+  final Set<String> contraCvx = <String>{};
+  for (final VaxSeries s in series) {
+    reason ??= s.forecastReason;
+    if (s.administrativeGuidance.trim().isNotEmpty) {
+      guidance.add(s.administrativeGuidance.trim());
+    }
+    contraCvx.addAll(s.contraindicatedCvxCodes);
+  }
+  return (
+    reason: reason,
+    guidance: guidance.isEmpty ? null : guidance.join('\n'),
+    contraCvx: contraCvx.toList()..sort(),
+  );
+}
+
 Map<String, List<VaccineGroupForecast>> _aggregateVaccineGroupForecasts(
     Map<String, VaxAntigen> agMap, VaxPatient patient) {
   // Group antigens by vaccineGroupName
@@ -458,11 +501,15 @@ Map<String, List<VaccineGroupForecast>> _aggregateVaccineGroupForecasts(
           final aggregated = _aggregateStatus(statuses);
           if (aggregated == SeriesStatus.agedOut ||
               aggregated == SeriesStatus.notRecommended) {
+            final detail = _forecastDetail(allPrioritized);
             (result[groupName] ??= <VaccineGroupForecast>[])
                 .add(VaccineGroupForecast(
               vaccineGroupName: groupName,
               status: aggregated,
               antigenNames: [antigen.targetDisease],
+              forecastReason: detail.reason,
+              administrativeGuidance: detail.guidance,
+              contraindicatedCvxCodes: detail.contraCvx,
             ));
           }
         }
@@ -520,6 +567,7 @@ Map<String, List<VaccineGroupForecast>> _aggregateVaccineGroupForecasts(
           // SINGLEANTVG-1: single best → use its status and dates directly.
           final best = part.first;
           final vaxInfo = _extractForecastVaccineInfo(best);
+          final detail = _forecastDetail(<VaxSeries>[best]);
           (result[groupName] ??= <VaccineGroupForecast>[])
               .add(VaccineGroupForecast(
             vaccineGroupName: groupName,
@@ -540,6 +588,9 @@ Map<String, List<VaccineGroupForecast>> _aggregateVaccineGroupForecasts(
             antigensNeedingDose: best.shouldRecieveAnotherDose
                 ? <String>[antigen.targetDisease]
                 : const <String>[],
+            forecastReason: detail.reason,
+            administrativeGuidance: detail.guidance,
+            contraindicatedCvxCodes: detail.contraCvx,
           ));
         } else {
           // Several best series of the SAME type from non-equivalent series
@@ -581,6 +632,7 @@ Map<String, List<VaccineGroupForecast>> _aggregateVaccineGroupForecasts(
           }
 
           final vaxInfo = _extractForecastVaccineInfo(part.first);
+          final detail = _forecastDetail(part);
           (result[groupName] ??= <VaccineGroupForecast>[])
               .add(VaccineGroupForecast(
             vaccineGroupName: groupName,
@@ -604,6 +656,9 @@ Map<String, List<VaccineGroupForecast>> _aggregateVaccineGroupForecasts(
                 ? partSeriesGroupNames.first
                 : null,
             supportingReferences: _supportingReferences(patient, part),
+            forecastReason: detail.reason,
+            administrativeGuidance: detail.guidance,
+            contraindicatedCvxCodes: detail.contraCvx,
           ));
         }
       }
@@ -865,6 +920,8 @@ Map<String, List<VaccineGroupForecast>> _aggregateVaccineGroupForecasts(
         );
       }
 
+      final multiDetail = _forecastDetail(
+          passBest.values.expand((List<VaxSeries> l) => l));
       (result[groupName] ??= <VaccineGroupForecast>[]).add(VaccineGroupForecast(
         vaccineGroupName: groupName,
         status: vgStatus,
@@ -884,6 +941,9 @@ Map<String, List<VaccineGroupForecast>> _aggregateVaccineGroupForecasts(
             : null,
         supportingReferences: _supportingReferences(
             patient, passBest.values.expand((List<VaxSeries> l) => l)),
+        forecastReason: multiDetail.reason,
+        administrativeGuidance: multiDetail.guidance,
+        contraindicatedCvxCodes: multiDetail.contraCvx,
       ));
     }
   }

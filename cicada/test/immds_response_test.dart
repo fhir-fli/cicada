@@ -470,4 +470,98 @@ void main() {
               .length);
     });
   });
+
+  group('nothing the engine works out is dropped', () {
+    // Measured on the first 300 healthy cases before this test existed: 68 of
+    // 9,115 evaluated doses carry more than one evaluation reason, and the
+    // response used to emit only the singular `evalReason`, so those doses
+    // reached the caller with one of them. CDSi Table 6-31 sets several at
+    // once and R4 types doseStatusReason 0..*, so all of them belong there.
+    test('every evaluation reason on a dose reaches doseStatusReason', () {
+      final cases = _loadFirstN('test/healthyTestCases.ndjson', 300);
+      int multiReasonDosesChecked = 0;
+
+      for (final parameters in cases) {
+        final ForecastResult result = evaluateForForecast(parameters);
+        final Parameters response = buildImmdsResponse(result);
+
+        // Key on (dose, target disease): one dose of a multi-antigen product
+        // produces an evaluation per antigen, and they share an id.
+        final Map<String, ImmunizationEvaluation> byDoseAndDisease =
+            <String, ImmunizationEvaluation>{};
+        for (final p in response.parameter ?? <ParametersParameter>[]) {
+          if (p.name.valueString == 'evaluation' &&
+              p.resource is ImmunizationEvaluation) {
+            final e = p.resource! as ImmunizationEvaluation;
+            final ref = e.immunizationEvent.reference?.valueString;
+            final disease = e.targetDisease.text?.valueString;
+            if (ref != null) byDoseAndDisease['$ref|$disease'] = e;
+          }
+        }
+
+        for (final antigen in result.agMap.values) {
+          for (final group in antigen.groups.values) {
+            // The same physical dose exists in every series of the group, with
+            // its own evaluation state. buildImmdsResponse evaluates the
+            // prioritized series, so compare against that one.
+            final series = group.prioritizedSeries.isNotEmpty
+                ? group.prioritizedSeries.first
+                : (group.series.isNotEmpty ? group.series.first : null);
+            if (series != null) {
+              for (final dose in series.doses) {
+                if (dose.evalStatus == null) continue;
+                final int expected = <EvalReason>{
+                  if (dose.evalReason != null) dose.evalReason!,
+                  ...dose.evalReasons,
+                }.length;
+                if (expected <= 1) continue;
+                final e = byDoseAndDisease[
+                    'Immunization/${dose.doseId}|${antigen.targetDisease}'];
+                if (e == null) continue;
+                multiReasonDosesChecked++;
+                expect(e.doseStatusReason?.length, expected,
+                    reason: 'dose ${dose.doseId} carries $expected evaluation '
+                        'reasons; the evaluation emitted '
+                        '${e.doseStatusReason?.length}');
+              }
+            }
+          }
+        }
+      }
+
+      // Without this the test passes vacuously if the corpus stops producing
+      // multi-reason doses.
+      expect(multiReasonDosesChecked, greaterThan(0),
+          reason: 'no dose with more than one evaluation reason was checked, '
+              'so this test proved nothing');
+    });
+
+    test('a forecast reason the engine set is emitted', () {
+      final cases = _loadFirstN('test/healthyTestCases.ndjson', 300);
+      int checked = 0;
+
+      for (final parameters in cases) {
+        final ForecastResult result = evaluateForForecast(parameters);
+        final Parameters response = buildImmdsResponse(result);
+        final rec = response.parameter!
+            .firstWhere((p) => p.name.valueString == 'recommendation')
+            .resource! as ImmunizationRecommendation;
+
+        final int withReason = result.vaccineGroupForecasts.values
+            .expand((List<VaccineGroupForecast> l) => l)
+            .where((VaccineGroupForecast f) => f.forecastReason != null)
+            .length;
+        final int emitted = rec.recommendation
+            .where((r) => (r.forecastReason?.isNotEmpty ?? false))
+            .length;
+        expect(emitted, withReason,
+            reason: 'the engine set $withReason forecast reasons; '
+                '$emitted were emitted');
+        checked += withReason;
+      }
+
+      expect(checked, greaterThan(0),
+          reason: 'no forecast reason was checked, so this proved nothing');
+    });
+  });
 }

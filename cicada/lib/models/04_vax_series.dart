@@ -16,9 +16,6 @@ class VaxSeries {
     return index == -1 ? null : evaluatedDoses[index];
   }
 
-  VaxDose? get currentDose =>
-      doses.isEmpty ? null : doses[evaluatedDoses.length];
-
   /// Chapter 6 step 5a: a satisfied *recurring* target dose is followed by "a
   /// new target dose identical to the current target dose", so the collection
   /// does not advance past it; any other satisfied target dose moves on.
@@ -918,6 +915,11 @@ class VaxSeries {
                 assessmentDate &&
             assessmentDate <
                 dob.changeNullable(vaccineContraindication.endAge, true)!) {
+          final int? removedCvx = vaccineContraindication.cvxAsInt;
+          if (removedCvx != null &&
+              !contraindicatedCvxCodes.contains('$removedCvx')) {
+            contraindicatedCvxCodes.add('$removedCvx');
+          }
           preferableVaccines.removeWhere((Vaccine element) =>
               element.cvxAsInt == vaccineContraindication.cvxAsInt);
           allowableVaccines.removeWhere((Vaccine element) =>
@@ -1145,6 +1147,11 @@ class VaxSeries {
   VaxDate assessmentDate;
   VaxDate dob;
   bool isContraindicated = false;
+
+  /// CVX codes this series removed because a vaccine contraindication
+  /// applied to the patient at the assessment date. Emitted as
+  /// `ImmunizationRecommendation.recommendation.contraindicatedVaccineCode`.
+  List<String> contraindicatedCvxCodes = <String>[];
   SeriesStatus seriesStatus = SeriesStatus.notComplete;
   bool shouldRecieveAnotherDose = true;
   ForecastReason? forecastReason;

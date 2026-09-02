@@ -66,6 +66,22 @@
         <date value="2026-08-29T00:00:00.000-04:00"/>
         <recommendation>
           <extension>
+            <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/series-group-ext"/>
+            <valueString value="Standard"/>
+          </extension>
+          <extension>
+            <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/antigen-needing-dose-ext"/>
+            <valueString value="Mumps"/>
+          </extension>
+          <extension>
+            <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/antigen-needing-dose-ext"/>
+            <valueString value="Measles"/>
+          </extension>
+          <extension>
+            <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/antigen-needing-dose-ext"/>
+            <valueString value="Rubella"/>
+          </extension>
+          <extension>
             <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/series-type-ext"/>
             <valueCodeableConcept>
               <coding>
@@ -147,10 +163,26 @@
             </code>
             <value value="2027-01-25T00:00:00.000-05:00"/>
           </dateCriterion>
-          <description value="Antigens: Mumps, Measles, Rubella"/>
+          <description value="Persons identified as being at increased risk who have received less than or equal to 2 doses of mumps virus-containing vaccine should receive 1 dose.&#xA;For women of childbearing age, regardless of birth year, rubella immunity should be determined. If there is no evidence of immunity, women who are not pregnant should be vaccinated. Pregnant women who do not have evidence of immunity should receive MMR vaccine upon completion or termination of pregnancy and before discharge from the health care facility.&#xA;Antigens: Mumps, Measles, Rubella"/>
           <doseNumberString value="1"/>
         </recommendation>
         <recommendation>
+          <extension>
+            <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/series-group-ext"/>
+            <valueString value="Standard"/>
+          </extension>
+          <extension>
+            <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/antigen-needing-dose-ext"/>
+            <valueString value="Pertussis"/>
+          </extension>
+          <extension>
+            <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/antigen-needing-dose-ext"/>
+            <valueString value="Tetanus"/>
+          </extension>
+          <extension>
+            <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/antigen-needing-dose-ext"/>
+            <valueString value="Diphtheria"/>
+          </extension>
           <extension>
             <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/series-type-ext"/>
             <valueCodeableConcept>
@@ -233,7 +265,7 @@
             </code>
             <value value="2025-12-26T00:00:00.000-05:00"/>
           </dateCriterion>
-          <description value="Antigens: Pertussis, Tetanus, Diphtheria"/>
+          <description value="Dose 4 may be administered as early as age 12 months if at least 6 months have elapsed since dose 3&#xA;Antigens: Pertussis, Tetanus, Diphtheria"/>
           <doseNumberString value="1"/>
         </recommendation>
         <recommendation>
@@ -274,8 +306,29 @@
               <display value="Not Recommended"/>
             </coding>
           </forecastStatus>
+          <forecastReason>
+            <coding>
+              <system value="http://hl7.org/fhir/us/immds/CodeSystem/ForecastReason"/>
+              <code value="seasonalPast"/>
+              <display value="Seasonal End Date Passed"/>
+            </coding>
+            <coding>
+              <system value="http://fhirfli.dev/fhir/ig/cicada/CodeSystem/forecast-reason"/>
+              <code value="past-seasonal-end"/>
+              <display value="Past seasonal recommendation end date"/>
+            </coding>
+            <text value="Past seasonal recommendation end date"/>
+          </forecastReason>
         </recommendation>
         <recommendation>
+          <extension>
+            <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/series-group-ext"/>
+            <valueString value="Standard"/>
+          </extension>
+          <extension>
+            <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/antigen-needing-dose-ext"/>
+            <valueString value="Hib"/>
+          </extension>
           <extension>
             <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/series-type-ext"/>
             <valueCodeableConcept>
@@ -358,10 +411,19 @@
             </code>
             <value value="2030-08-28T00:00:00.000-04:00"/>
           </dateCriterion>
+          <description value="A primary Hib vaccination series consisting of either 1) monovalent PRP-OMP (2-dose series at ages 2 and 4 months) or 2) DTaP-IPV-Hib-HepB (3-dose series at ages 2, 4, and 6 months) is preferred over other Hib vaccine formulations for American Indian or Alaskan Native (AI/AN) infants. For the booster dose of Hib vaccine, no vaccine formulation is preferred for AI/AN children."/>
           <series value="Hib start at 2 months 4-dose series"/>
           <doseNumberString value="1"/>
         </recommendation>
         <recommendation>
+          <extension>
+            <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/series-group-ext"/>
+            <valueString value="Standard"/>
+          </extension>
+          <extension>
+            <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/antigen-needing-dose-ext"/>
+            <valueString value="Pneumococcal"/>
+          </extension>
           <extension>
             <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/series-type-ext"/>
             <valueCodeableConcept>
@@ -377,6 +439,20 @@
               <system value="http://hl7.org/fhir/sid/cvx"/>
               <code value="152"/>
               <display value="Pneumococcal Conjugate, unspecified formulation"/>
+            </coding>
+          </vaccineCode>
+          <vaccineCode>
+            <coding>
+              <system value="http://hl7.org/fhir/sid/cvx"/>
+              <code value="215"/>
+              <display value="PCV15"/>
+            </coding>
+          </vaccineCode>
+          <vaccineCode>
+            <coding>
+              <system value="http://hl7.org/fhir/sid/cvx"/>
+              <code value="216"/>
+              <display value="PCV20"/>
             </coding>
           </vaccineCode>
           <targetDisease>
@@ -449,6 +525,14 @@
         </recommendation>
         <recommendation>
           <extension>
+            <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/series-group-ext"/>
+            <valueString value="Standard"/>
+          </extension>
+          <extension>
+            <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/antigen-needing-dose-ext"/>
+            <valueString value="Varicella"/>
+          </extension>
+          <extension>
             <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/series-type-ext"/>
             <valueCodeableConcept>
               <coding>
@@ -520,10 +604,19 @@
             </code>
             <value value="2027-01-25T00:00:00.000-05:00"/>
           </dateCriterion>
+          <description value="HIV-infected people eligible for vaccination should get 2 doses of single-antigen varicella vaccine separated by 3 months. HIV-infected people should not get the combination MMRV vaccine."/>
           <series value="Varicella childhood 2-dose series"/>
           <doseNumberString value="1"/>
         </recommendation>
         <recommendation>
+          <extension>
+            <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/series-group-ext"/>
+            <valueString value="Standard"/>
+          </extension>
+          <extension>
+            <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/antigen-needing-dose-ext"/>
+            <valueString value="HepB"/>
+          </extension>
           <extension>
             <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/series-type-ext"/>
             <valueCodeableConcept>
@@ -596,10 +689,19 @@
             </code>
             <value value="2025-09-25T00:00:00.000-04:00"/>
           </dateCriterion>
+          <description value="Anyone age 60 years or older who does not meet risk-based recommendations may still receive Hepatitis B vaccination."/>
           <series value="HepB 3-dose series"/>
           <doseNumberString value="1"/>
         </recommendation>
         <recommendation>
+          <extension>
+            <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/series-group-ext"/>
+            <valueString value="Standard"/>
+          </extension>
+          <extension>
+            <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/antigen-needing-dose-ext"/>
+            <valueString value="Meningococcal"/>
+          </extension>
           <extension>
             <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/series-type-ext"/>
             <valueCodeableConcept>
@@ -682,10 +784,19 @@
             </code>
             <value value="2044-08-28T00:00:00.000-04:00"/>
           </dateCriterion>
+          <description value="Penbraya (MenACWY/MenB - Pfizer) or Penmenvy (MenACWY/MenB - GSK) may be used when both MenACWY and MenB are indicated at the same visit.&#xA;Persons aged 19-21 years who have not received a dose after their 16th birthday can receive a single MenACWY dose as part of catch-up vaccination."/>
           <series value="Meningococcal ACWY 2-dose series"/>
           <doseNumberString value="1"/>
         </recommendation>
         <recommendation>
+          <extension>
+            <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/series-group-ext"/>
+            <valueString value="Standard"/>
+          </extension>
+          <extension>
+            <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/antigen-needing-dose-ext"/>
+            <valueString value="COVID-19"/>
+          </extension>
           <extension>
             <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/series-type-ext"/>
             <valueCodeableConcept>
@@ -758,10 +869,19 @@
             </code>
             <value value="2026-03-01T00:00:00.000-05:00"/>
           </dateCriterion>
+          <description value="Vaccination based on individual-based decision-making- with an emphasis that the risk-benefit of vaccination is most favorable for individuals who are at an increased risk for severe COVID-19 disease and lowest for individuals who are not at an increased risk according to the CDC list of COVID-19 risk factors. see https://www.cdc.gov/covid/hcp/clinical-care/underlying-conditions.html&#xA;For people who have a history of myocarditis with MIS-C or MIS-A, see https://www.cdc.gov/covid/hcp/vaccine-considerations/special-situations-and-populations.html#cdc_clinical_guidance_recomm_key-covid-19-vaccination-and-mis-c-and-mis-a"/>
           <series value="COVID-19 start at 6mo-23mo shared clinical decision-making series"/>
           <doseNumberString value="1"/>
         </recommendation>
         <recommendation>
+          <extension>
+            <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/series-group-ext"/>
+            <valueString value="Standard"/>
+          </extension>
+          <extension>
+            <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/antigen-needing-dose-ext"/>
+            <valueString value="Polio"/>
+          </extension>
           <extension>
             <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/series-type-ext"/>
             <valueCodeableConcept>
@@ -844,10 +964,19 @@
             </code>
             <value value="2043-08-28T00:00:00.000-04:00"/>
           </dateCriterion>
+          <description value="When evaluating doses of oral polio vaccine (OPV) on or after 4/1/2016, only documentation specifying receipt of trivalent vaccine (tOPV) constitutes proof of vaccination according to the U.S. polio vaccination recommendations. Proper documentation of which OPV vaccine was received is critical to validation of records against U.S. vaccination recommendations.&#xA;Persons who received 4 doses of IPV before August 7, 2009 can be considered fully vaccinated for polio, regardless of age of the last dose, and it is not necessary to routinely administer an additional dose for these persons. If they are at increased risk of poliovirus exposure, they should be offered a single lifetime booster dose of IPV."/>
           <series value="Polio 4-dose series"/>
           <doseNumberString value="1"/>
         </recommendation>
         <recommendation>
+          <extension>
+            <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/series-group-ext"/>
+            <valueString value="Standard"/>
+          </extension>
+          <extension>
+            <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/antigen-needing-dose-ext"/>
+            <valueString value="Zoster"/>
+          </extension>
           <extension>
             <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/series-type-ext"/>
             <valueCodeableConcept>
@@ -924,6 +1053,14 @@
           <doseNumberString value="1"/>
         </recommendation>
         <recommendation>
+          <extension>
+            <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/series-group-ext"/>
+            <valueString value="Standard"/>
+          </extension>
+          <extension>
+            <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/antigen-needing-dose-ext"/>
+            <valueString value="HepA"/>
+          </extension>
           <extension>
             <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/series-type-ext"/>
             <valueCodeableConcept>
@@ -1037,8 +1174,29 @@
               <display value="Not Recommended"/>
             </coding>
           </forecastStatus>
+          <forecastReason>
+            <coding>
+              <system value="http://hl7.org/fhir/us/immds/CodeSystem/ForecastReason"/>
+              <code value="seasonalPast"/>
+              <display value="Seasonal End Date Passed"/>
+            </coding>
+            <coding>
+              <system value="http://fhirfli.dev/fhir/ig/cicada/CodeSystem/forecast-reason"/>
+              <code value="past-seasonal-end"/>
+              <display value="Past seasonal recommendation end date"/>
+            </coding>
+            <text value="Past seasonal recommendation end date"/>
+          </forecastReason>
         </recommendation>
         <recommendation>
+          <extension>
+            <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/series-group-ext"/>
+            <valueString value="Standard"/>
+          </extension>
+          <extension>
+            <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/antigen-needing-dose-ext"/>
+            <valueString value="HPV"/>
+          </extension>
           <extension>
             <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/series-type-ext"/>
             <valueCodeableConcept>
@@ -1121,10 +1279,19 @@
             </code>
             <value value="2071-08-28T00:00:00.000-04:00"/>
           </dateCriterion>
+          <description value="ACIP recommends routine HPV vaccination at age 11 or 12 years. Vaccination can be given starting at age 9 years.&#xA;Shared clinical decision-making (SCDM) is recommended regarding Human papillomavirus (HPV) vaccination for persons 27-45 years of age. Shared clinical decision-making recommendations are intended to be flexible and should be informed by the characteristics, values, and preferences of the individual patient and the clinical discretion of the healthcare provider. More guidance can be found here: https://www.cdc.gov/vaccines/hcp/admin/downloads/ISD-job-aid-SCDM-HPV-shared-clinical-decision-making-HPV.pdf"/>
           <series value="HPV 2-dose series"/>
           <doseNumberString value="1"/>
         </recommendation>
         <recommendation>
+          <extension>
+            <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/series-group-ext"/>
+            <valueString value="Standard"/>
+          </extension>
+          <extension>
+            <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/antigen-needing-dose-ext"/>
+            <valueString value="Meningococcal B"/>
+          </extension>
           <extension>
             <url value="http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/series-type-ext"/>
             <valueCodeableConcept>
@@ -1207,6 +1374,7 @@
             </code>
             <value value="2049-08-28T00:00:00.000-04:00"/>
           </dateCriterion>
+          <description value="Delay MenB until after pregnancy due to lack of safety data in pregnant persons. May administer if at increased risk and vaccination benefits outweigh potential risks.&#xA;ACIP recommends a MenB vaccine series for persons aged 16-23 years on the basis of shared clinical decision-making to provide short-term protection against most strains of serogroup B meningococcal disease. The preferred age for MenB vaccination is 16-18 years. More guidance can be found here: https://www.cdc.gov/vaccines/media/pdfs/2025/03/2024-isd-job-aid-scdm-menb-508-remediated.pdf&#xA;People desiring more rapid protection against serogroup B (e.g., students with less than 6 months before college entry) may receive a 3-dose series (0, 1-2, 6 months) to optimize rapid protection.&#xA;Penmenvy (MenACWY/MenB - GSK) may be used when both MenACWY and MenB are indicated at the same visit."/>
           <series value="Meningococcal B 2-dose series MenB-4C Shared Clinical Decision Making"/>
           <doseNumberString value="1"/>
         </recommendation>
@@ -1253,6 +1421,19 @@
               <display value="Too old"/>
             </coding>
           </forecastStatus>
+          <forecastReason>
+            <coding>
+              <system value="http://hl7.org/fhir/us/immds/CodeSystem/ForecastReason"/>
+              <code value="maximumAge"/>
+              <display value="Maximum Age Exceeded"/>
+            </coding>
+            <coding>
+              <system value="http://fhirfli.dev/fhir/ig/cicada/CodeSystem/forecast-reason"/>
+              <code value="exceeded-maximum-age"/>
+              <display value="Patient has exceeded the maximum age"/>
+            </coding>
+            <text value="Patient has exceeded the maximum age"/>
+          </forecastReason>
         </recommendation>
       </ImmunizationRecommendation>
     </resource>
