@@ -149,9 +149,9 @@ with gender identity in one list, which HL7's Gender Harmony work separates
 deliberately. It is not a SNOMED gap; it is a modelling decision to revisit against
 US Core and Gender Harmony before this IG goes anywhere.
 
-## 6. 🔴 Four codes this IG cites do not exist
+## 6. 🔴 Four codes this IG cites do not exist, and nine more mean something else
 
-232 distinct external codes were validated. Four fail:
+232 distinct external codes were validated. Four do not resolve at all:
 
 | system | code | our display |
 |---|---|---|
@@ -160,7 +160,40 @@ US Core and Gender Harmony before this IG goes anywhere.
 | LOINC | `6476-3` | Mumps virus IgG Ab [Units/volume] in Serum — unknown in 2.82 |
 | RxNorm | `24811` | Famciclovir — unknown in the 03022026 release |
 
-Evidence: `bumblebee/results/ig_external_codes.tsv`.
+**Resolving is not the same as meaning what we say it means.** Re-running the check
+with the `display` parameter, so the server has to agree with our label, found nine
+more where the code is a different concept:
+
+| system | code | our label | what it actually is |
+|---|---|---|---|
+| RxNorm | `39786` | Valacyclovir | **venlafaxine** |
+| LOINC | `39012-0` | Mumps virus IgG Ab [Presence] in Serum | **Mycoplasma pneumoniae Ab [Presence] in Body fluid** |
+| LOINC | `22416-2` | Mumps virus Ab [Presence] in Serum | **Mumps virus IgG Ab [Titer] in Cerebral spinal fluid** |
+| LOINC | `21500-4` | Measles virus IgG Ab [Units/volume] in Serum | **Measles virus IgG Ab [Titer] in Cerebral spinal fluid by Immunofluorescence** |
+| LOINC | `13950-1` | Hepatitis A virus Ab [Units/volume] in Serum | **Hepatitis A virus IgM Ab [Presence] in Serum or Plasma by Immunoassay** |
+| LOINC | `20458-6` | Rubella virus Ab [Presence] in Serum | Rubella virus IgG Ab [**Interpretation**] in Serum |
+| LOINC | `32018-4` | Hepatitis A virus Ab [Presence] in Serum | Hepatitis A virus **IgG** Ab [Presence] in Serum |
+| CPT | `38101` | Splenectomy; total, en bloc | Splenectomy; **partial** (separate procedure) |
+| CPT | `38115` | Repair of ruptured spleen with splenorrhaphy | Repair of ruptured spleen (splenorrhaphy) **with or without partial splenectomy** |
+
+🔴 **`39786` is venlafaxine, an antidepressant, sitting in a value set of antivirals
+that suppress the immune response to varicella vaccine.** 🔴 **Three of the six
+lab-evidence-of-immunity codes are CSF or the wrong organism**, in a value set whose
+entire job is deciding whether a patient is immune. A serum IgG result will not match
+a CSF titre code, so the evidence is silently not found and the engine forecasts a
+dose the patient does not need — or, for `39012-0`, matches a *Mycoplasma* antibody.
+
+Nine ICD-10-CM rows differ only in wording (abbreviations, "Fatty (change of) liver")
+and are fine.
+
+**None of these is fixed yet.** Each needs the right code looked up and the value set
+corrected; the lab-evidence set needs a clinician to say which test result actually
+constitutes evidence of immunity, because that is what the codes are asserting.
+
+Evidence: `bumblebee/results/ig_external_codes.tsv`, `ig_display_mismatches.tsv`.
+
+🔑 **`$validate-code` without `display` only proves the code exists.** My own first
+pass ran it that way and reported all 232 valid.
 
 ## 7. The 118 observations CDC does not code, adjudicated one at a time
 
@@ -200,7 +233,9 @@ set already uses LOINC answer list `LL940-8`.
 1. Regenerate `cdsi-observation-codes` from the 4.65-508 supporting data (§1).
 2. Generate both ConceptMaps from `<codedValues>` (§2) — 139 mappings we already have.
 3. Collapse the three CDSi URLs to one (§3).
-4. Fix the four dead external codes (§6).
+4. Fix the four dead external codes **and the nine that mean something else** (§6).
+   The venlafaxine-for-valacyclovir row and the three lab-evidence codes pointing at
+   CSF titres or *Mycoplasma* are the ones that change what the engine decides.
 5. Replace the `EvalReason` product-quality codes with the four SNOMED codes, and
    the rest with ImmDS `StatusReason` (§5).
 6. File `2219088009` in `CDC-REPORT.md` (§4).

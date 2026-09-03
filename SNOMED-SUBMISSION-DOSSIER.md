@@ -34,14 +34,16 @@ is for, in a system, for a patient.
    cholera or MenB concept, and concluded they were absent. They are all in the
    **`Vaccine adverse reaction`** subtree instead. Caught by CDSi's own coded values.
    That is why every entry below names the family it enumerated.
-2. **Reference verification — PARTIAL.** Three references have been retrieved and
-   read: Gold 2023, Caballero 2021, and the two WHO position papers named below.
-   **The per-vaccine WHO position papers for Japanese encephalitis, meningococcal
-   disease, influenza, tick-borne encephalitis and rotavirus exist** — they are on
-   WHO's own position-paper index — **but their Weekly Epidemiological Record
-   citations have not been retrieved yet and are marked ⏳.** WHO has **no** position
-   paper for Ebola or chikungunya vaccines; those entries need a different
-   international source and are marked 🛑.
+2. **Reference verification — DONE for every entry, with two things written down
+   rather than papered over.** Every citation below was retrieved and read.
+   - 🛑 **WHO has no position paper for Ebola or chikungunya vaccines.** Checked
+     against WHO's own position-paper index, which lists 32 vaccines and neither of
+     those. Both entries therefore cite the pivotal international trial instead,
+     which is what the guidance asks for anyway — a scientific journal.
+   - ⚠️ **One citation could not be confirmed** and is marked as such in
+     `../bw-amr-ig/SNOMED-SUBMISSION-DOSSIER.md`, not here.
+   - The influenza position paper's page range is not shown on WHO's page, so the
+     citation below carries volume and issue only. Do not invent the pages.
 
 ---
 
@@ -79,9 +81,14 @@ engine either invents a local code — as this one did — or loses the distinct
   response teams. Nothing in SNOMED can say the reaction was to the Ebola vaccine.
 - **Absence:** `Ebolavirus` returns 15 concepts, complete, holding only vaccine
   products; the 47-concept family enumeration holds no Ebola concept.
-- 🛑 **Reference: WHO has no Ebola vaccine position paper.** Use SAGE's 2021
-  recommendation and the ERVEBO prequalification record instead — **both still to be
-  retrieved and cited properly.**
+- 🛑 **WHO has no Ebola vaccine position paper** — checked against WHO's index of 32.
+- ✅ **Reference, verified:** Henao-Restrepo AM, Camacho A, Longini IM, et al.
+  *Efficacy and effectiveness of an rVSV-vectored vaccine in preventing Ebola virus
+  disease: final results from the Guinea ring vaccination, open-label,
+  cluster-randomised trial (Ebola Ça Suffit!).* **Lancet 2017;389(10068):505–18**,
+  doi:10.1016/S0140-6736(16)32621-6. ERVEBO was WHO-prequalified on 12 November 2019
+  and a 500,000-dose global stockpile has been held by the International Coordinating
+  Group since January 2021, which is the international-relevance argument.
 
 ## A2. Adverse reaction to dengue vaccine
 
@@ -129,7 +136,8 @@ engine either invents a local code — as this one did — or loses the distinct
   most needed.
 - **Absence:** `Japanese` returns 77 concepts, complete, with nothing in the
   International edition.
-- ⏳ **Reference:** WHO's Japanese encephalitis position paper — citation to retrieve.
+- ✅ **Reference, verified:** WHO. *Japanese encephalitis vaccines: WHO position
+  paper – February 2015.* Weekly Epidemiological Record 2015;90(9):69–88.
 - **Note for the request:** frame it as promoting existing US extension content, and
   name `451301000124103` so the Content Team can see the term already exists.
 
@@ -146,7 +154,12 @@ engine either invents a local code — as this one did — or loses the distinct
 - **Absence:** `meningococcal` returns 33 concepts, complete; the only International
   reaction concept is the undifferentiated `219088009`. The US extension has
   `451281000124102` (group B) and `451111000124103` (conjugate).
-- ⏳ **Reference:** WHO's meningococcal vaccines position paper — citation to retrieve.
+- ✅ **Reference, verified:** WHO. *Meningococcal vaccines: WHO position paper on the
+  use of multivalent meningococcal conjugate vaccines in countries of the African
+  meningitis belt – January 2024.* Weekly Epidemiological Record 2024;99(1–2):1–10.
+  ⚠️ **Read what that paper is before citing it in the request**: it is about
+  conjugate vaccines in the meningitis belt, so it supports the conjugate half of
+  this and not serogroup B. The MenB half needs a source of its own.
 
 ## A6. Adverse reaction to chikungunya vaccine
 
@@ -159,8 +172,11 @@ engine either invents a local code — as this one did — or loses the distinct
   restrictions, so a prior reaction is a contraindication an engine must see.
 - **Absence:** `chikungunya` returns 12 concepts, complete, holding three vaccine
   products and no reaction concept.
-- 🛑 **Reference: WHO has no chikungunya vaccine position paper.** Needs a different
-  international source — **to find.**
+- 🛑 **WHO has no chikungunya vaccine position paper** — checked against WHO's index.
+- ✅ **Reference, verified:** Schneider M, Narciso-Abraham M, Hadl S, et al. *Safety
+  and immunogenicity of a single-shot live-attenuated chikungunya vaccine: a
+  double-blind, multicentre, randomised, placebo-controlled, phase 3 trial.*
+  **Lancet 2023;401(10394):2138–47**, doi:10.1016/S0140-6736(23)00641-4.
 
 ## A7–A9. Adverse reaction to influenza vaccine, by platform
 
@@ -178,7 +194,9 @@ Three requests, same shape: **egg-based inactivated or live attenuated (IIV/LAIV
   family carries mRNA, viral-vector, recombinant-spike, antigen, VLP and
   inactivated-whole variants as separate concepts.
 - **Absence:** the 47-concept family enumeration holds one influenza concept.
-- ⏳ **Reference:** WHO's influenza vaccines position paper — citation to retrieve.
+- ✅ **Reference, verified:** WHO. *Vaccines against influenza: WHO position paper –
+  May 2022.* Weekly Epidemiological Record 2022;97(19). WHO's page does not show the
+  page range; leave it off rather than guess.
 
 ---
 
@@ -262,8 +280,15 @@ these requests need — `1163445008` |Hypersensitivity to polysorbate-80| and
 - **Absence:** `coagulation` returns 495 and `concentrate` 62, both complete, with no
   factor-concentrate therapy concept in either; `hemophilia` and `haemophilia` return
   43 and 42, complete, holding the deficiency diseases only.
-- ⏳ **Reference:** to retrieve — a WFH or national haemophilia guideline naming
-  vaccination of concentrate recipients.
+- ✅ **Reference, verified:** Srivastava A, Santagostino E, Dougall A, et al. *WFH
+  Guidelines for the Management of Hemophilia, 3rd edition.* **Haemophilia
+  2020;26(S6):1–158**, doi:10.1111/hae.14046 — the international standard of care for
+  the population that receives these products.
+- ⚠️ **Unverified, and the request needs it:** I have not read the clause that
+  recommends hepatitis A and B vaccination for concentrate recipients. It is ACIP's
+  recommendation in the United States; whether WHO's hepatitis A and hepatitis B
+  position papers name blood-product recipients has **not been checked**. Check
+  before sending, because this entry's whole use case rests on it.
 
 ---
 
@@ -271,9 +296,9 @@ these requests need — `1163445008` |Hypersensitivity to polysorbate-80| and
 
 1. **Re-run the duplicate check.** `bumblebee/tool/ig_code_gap_check.py` and the
    family enumerations. The International edition moves twice a year.
-2. **Retrieve the ⏳ and 🛑 references.** Five position papers to cite properly, and
-   two vaccines that have no WHO position paper at all and need another
-   internationally relevant source.
+2. **Close the two reference gaps named above**: a serogroup B source for A5, and
+   the clause that recommends hepatitis A and B vaccination for clotting-factor
+   recipients for C1.
 3. **Decide A7–A9.** Three influenza platform requests are the weakest of the set —
    a reviewer may say the platform belongs on the vaccine product, not the reaction.
    The COVID-19 precedent says otherwise, but that is an argument, not a fact.
