@@ -5,18 +5,14 @@
 
 Thank you both.
 
-Clement, glad the R4 Connector bug is identified. Sending this now rather than
-after deployment, since you mention identifying at least part of the bug — if
-any of it is useful to check the branch against before it merges, it is here.
-We will re-run the AART cases once the fix is live and report back, and the
-endpoint can stay up as a test target in the meantime.
+Clement, sending this now rather than after deployment, in case it is useful
+against the branch. Here is what we return for AART-HepA-2: female, DOB
+2025-08-29, one Hep A dose CVX 85 given 2026-08-29, assessment 2026-08-29. Same
+server build FITS was pointed at, replayed locally. Happy to leave the endpoint
+up as a test target.
 
-Here is what we return, for AART-HepA-2: female, DOB 2025-08-29, one Hep A dose
-CVX 85 given 2026-08-29, assessment date 2026-08-29. Same server build FITS was
-pointed at, with the case replayed locally.
-
-What we receive. This is our reconstruction of the case parameters rather than a
-capture of your request; the vaccine code arrives with no system on it.
+What we receive, reconstructed from the case rather than captured from your
+request. The vaccine code arrives with no system on it.
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -182,11 +178,3 @@ What we return, verbatim. The evaluation parameter:
 The full response is 46 KB: one `immunization` and one `evaluation` parameter
 per dose, plus one `recommendation` with 16 entries. Say if you want it, or any
 other case.
-
-Two things that look separate from the evaluation matching, so may survive the
-fix. FITS only builds an evaluation candidate when `ImmunizationEvaluation.date`
-holds the dose's administration date, but R4 and your own example put the
-assessment date there, so the conformant value is the one that suppresses it.
-And on `ImmunizationRecommendation.recommendation`, `doseNumberPositiveInt`
-scores 0% on every criterion while `doseNumberString` scores normally, though R4
-types the element `positiveInt|string` and allows both.
