@@ -56,12 +56,36 @@
     "endLine": 506
   },
   {
+    "outputFile": "CodeSystem-data-integrity.json",
+    "fshName": "DataIntegrityCS",
+    "fshType": "CodeSystem",
+    "fshFile": "cicada_response_extensions.fsh",
+    "startLine": 72,
+    "endLine": 79
+  },
+  {
+    "outputFile": "CodeSystem-forecast-reason.json",
+    "fshName": "CicadaForecastReasonCS",
+    "fshType": "CodeSystem",
+    "fshFile": "cicada_response_extensions.fsh",
+    "startLine": 16,
+    "endLine": 31
+  },
+  {
     "outputFile": "CodeSystem-series-type.json",
     "fshName": "SeriesTypeCS",
     "fshType": "CodeSystem",
     "fshFile": "profile_forecast_recommendation.fsh",
     "startLine": 17,
     "endLine": 25
+  },
+  {
+    "outputFile": "CodeSystem-target-dose-status.json",
+    "fshName": "TargetDoseStatusCS",
+    "fshType": "CodeSystem",
+    "fshFile": "cicada_response_extensions.fsh",
+    "startLine": 43,
+    "endLine": 51
   },
   {
     "outputFile": "ConceptMap-Icd10ToCdsiObservation.json",
@@ -184,6 +208,14 @@
     "endLine": 102
   },
   {
+    "outputFile": "StructureDefinition-antigen-needing-dose-ext.json",
+    "fshName": "AntigenNeedingDose",
+    "fshType": "Extension",
+    "fshFile": "cicada_response_extensions.fsh",
+    "startLine": 155,
+    "endLine": 161
+  },
+  {
     "outputFile": "StructureDefinition-antigen-supporting-data.json",
     "fshName": "AntigenSupportingData",
     "fshType": "Resource",
@@ -216,12 +248,36 @@
     "endLine": 67
   },
   {
+    "outputFile": "StructureDefinition-doses-remaining-ext.json",
+    "fshName": "DosesRemaining",
+    "fshType": "Extension",
+    "fshFile": "cicada_response_extensions.fsh",
+    "startLine": 163,
+    "endLine": 169
+  },
+  {
     "outputFile": "StructureDefinition-end-age.json",
     "fshName": "EndAge",
     "fshType": "Extension",
     "fshFile": "profile_vaccine_as_medication.fsh",
     "startLine": 24,
     "endLine": 28
+  },
+  {
+    "outputFile": "StructureDefinition-engine-version-ext.json",
+    "fshName": "EngineVersion",
+    "fshType": "Extension",
+    "fshFile": "cicada_response_extensions.fsh",
+    "startLine": 91,
+    "endLine": 105
+  },
+  {
+    "outputFile": "StructureDefinition-evaluation-detail-ext.json",
+    "fshName": "EvaluationDetail",
+    "fshType": "Extension",
+    "fshFile": "cicada_response_extensions.fsh",
+    "startLine": 111,
+    "endLine": 141
   },
   {
     "outputFile": "StructureDefinition-inadvertent-administration-status.json",
@@ -272,12 +328,36 @@
     "endLine": 51
   },
   {
+    "outputFile": "StructureDefinition-series-detail-ext.json",
+    "fshName": "SeriesDetail",
+    "fshType": "Extension",
+    "fshFile": "cicada_response_extensions.fsh",
+    "startLine": 171,
+    "endLine": 209
+  },
+  {
+    "outputFile": "StructureDefinition-series-group-ext.json",
+    "fshName": "SeriesGroup",
+    "fshType": "Extension",
+    "fshFile": "cicada_response_extensions.fsh",
+    "startLine": 147,
+    "endLine": 153
+  },
+  {
     "outputFile": "StructureDefinition-series-type-ext.json",
     "fshName": "SeriesType",
     "fshType": "Extension",
     "fshFile": "profile_forecast_recommendation.fsh",
     "startLine": 33,
     "endLine": 40
+  },
+  {
+    "outputFile": "StructureDefinition-target-dose-status-ext.json",
+    "fshName": "TargetDoseStatus",
+    "fshType": "Extension",
+    "fshFile": "cicada_response_extensions.fsh",
+    "startLine": 59,
+    "endLine": 66
   },
   {
     "outputFile": "StructureDefinition-vaccination-conflict.json",
@@ -336,6 +416,14 @@
     "endLine": 3
   },
   {
+    "outputFile": "ValueSet-data-integrity-vs.json",
+    "fshName": "DataIntegrityVS",
+    "fshType": "ValueSet",
+    "fshFile": "cicada_response_extensions.fsh",
+    "startLine": 81,
+    "endLine": 85
+  },
+  {
     "outputFile": "ValueSet-dose-status-reason.json",
     "fshName": "DoseStatusReasonVS",
     "fshType": "ValueSet",
@@ -358,6 +446,14 @@
     "fshFile": "cs_vs_eval_status.fsh",
     "startLine": 7,
     "endLine": 12
+  },
+  {
+    "outputFile": "ValueSet-forecast-reason-vs.json",
+    "fshName": "CicadaForecastReasonVS",
+    "fshType": "ValueSet",
+    "fshFile": "cicada_response_extensions.fsh",
+    "startLine": 33,
+    "endLine": 37
   },
   {
     "outputFile": "ValueSet-forecast-status.json",
@@ -406,6 +502,14 @@
     "fshFile": "profile_forecast_recommendation.fsh",
     "startLine": 27,
     "endLine": 31
+  },
+  {
+    "outputFile": "ValueSet-target-dose-status-vs.json",
+    "fshName": "TargetDoseStatusVS",
+    "fshType": "ValueSet",
+    "fshFile": "cicada_response_extensions.fsh",
+    "startLine": 53,
+    "endLine": 57
   },
   {
     "outputFile": "ValueSet-vaccine-condition-codes-icd10.json",

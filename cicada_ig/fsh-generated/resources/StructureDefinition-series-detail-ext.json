@@ -1,0 +1,457 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "series-detail-ext",
+  "url": "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/series-detail-ext",
+  "name": "SeriesDetail",
+  "title": "Contributing Series Detail",
+  "status": "draft",
+  "description": "One contributing series: its own status, its own four dates, and the component dates that produced them. A vaccine group forecast reports the aggregate over several series, so without this a group covered by more than one reports a single answer for all of them, and a due date arrives with no way to see whether age or interval produced it. Repeats, one per series.",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "ImmunizationRecommendation.recommendation"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "Contributing Series Detail",
+        "definition": "One contributing series: its own status, its own four dates, and the component dates that produced them. A vaccine group forecast reports the aggregate over several series, so without this a group covered by more than one reports a single answer for all of them, and a due date arrives with no way to see whether age or interval produced it. Repeats, one per series."
+      },
+      {
+        "id": "Extension.extension:seriesName",
+        "path": "Extension.extension",
+        "sliceName": "seriesName",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Extension.extension:seriesName.extension",
+        "path": "Extension.extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.extension:seriesName.url",
+        "path": "Extension.extension.url",
+        "fixedUri": "seriesName"
+      },
+      {
+        "id": "Extension.extension:seriesName.value[x]",
+        "path": "Extension.extension.value[x]",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:seriesGroupName",
+        "path": "Extension.extension",
+        "sliceName": "seriesGroupName",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Extension.extension:seriesGroupName.extension",
+        "path": "Extension.extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.extension:seriesGroupName.url",
+        "path": "Extension.extension.url",
+        "fixedUri": "seriesGroupName"
+      },
+      {
+        "id": "Extension.extension:seriesGroupName.value[x]",
+        "path": "Extension.extension.value[x]",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:seriesType",
+        "path": "Extension.extension",
+        "sliceName": "seriesType",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Extension.extension:seriesType.extension",
+        "path": "Extension.extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.extension:seriesType.url",
+        "path": "Extension.extension.url",
+        "fixedUri": "seriesType"
+      },
+      {
+        "id": "Extension.extension:seriesType.value[x]",
+        "path": "Extension.extension.value[x]",
+        "type": [
+          {
+            "code": "string"
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:status",
+        "path": "Extension.extension",
+        "sliceName": "status",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Extension.extension:status.extension",
+        "path": "Extension.extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.extension:status.url",
+        "path": "Extension.extension.url",
+        "fixedUri": "status"
+      },
+      {
+        "id": "Extension.extension:status.value[x]",
+        "path": "Extension.extension.value[x]",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:targetDoseNumber",
+        "path": "Extension.extension",
+        "sliceName": "targetDoseNumber",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Extension.extension:targetDoseNumber.extension",
+        "path": "Extension.extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.extension:targetDoseNumber.url",
+        "path": "Extension.extension.url",
+        "fixedUri": "targetDoseNumber"
+      },
+      {
+        "id": "Extension.extension:targetDoseNumber.value[x]",
+        "path": "Extension.extension.value[x]",
+        "type": [
+          {
+            "code": "positiveInt"
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:earliestDate",
+        "path": "Extension.extension",
+        "sliceName": "earliestDate",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Extension.extension:earliestDate.extension",
+        "path": "Extension.extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.extension:earliestDate.url",
+        "path": "Extension.extension.url",
+        "fixedUri": "earliestDate"
+      },
+      {
+        "id": "Extension.extension:earliestDate.value[x]",
+        "path": "Extension.extension.value[x]",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:recommendedDate",
+        "path": "Extension.extension",
+        "sliceName": "recommendedDate",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Extension.extension:recommendedDate.extension",
+        "path": "Extension.extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.extension:recommendedDate.url",
+        "path": "Extension.extension.url",
+        "fixedUri": "recommendedDate"
+      },
+      {
+        "id": "Extension.extension:recommendedDate.value[x]",
+        "path": "Extension.extension.value[x]",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:pastDueDate",
+        "path": "Extension.extension",
+        "sliceName": "pastDueDate",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Extension.extension:pastDueDate.extension",
+        "path": "Extension.extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.extension:pastDueDate.url",
+        "path": "Extension.extension.url",
+        "fixedUri": "pastDueDate"
+      },
+      {
+        "id": "Extension.extension:pastDueDate.value[x]",
+        "path": "Extension.extension.value[x]",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:latestDate",
+        "path": "Extension.extension",
+        "sliceName": "latestDate",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Extension.extension:latestDate.extension",
+        "path": "Extension.extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.extension:latestDate.url",
+        "path": "Extension.extension.url",
+        "fixedUri": "latestDate"
+      },
+      {
+        "id": "Extension.extension:latestDate.value[x]",
+        "path": "Extension.extension.value[x]",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:minimumAgeDate",
+        "path": "Extension.extension",
+        "sliceName": "minimumAgeDate",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Extension.extension:minimumAgeDate.extension",
+        "path": "Extension.extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.extension:minimumAgeDate.url",
+        "path": "Extension.extension.url",
+        "fixedUri": "minimumAgeDate"
+      },
+      {
+        "id": "Extension.extension:minimumAgeDate.value[x]",
+        "path": "Extension.extension.value[x]",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:maximumAgeDate",
+        "path": "Extension.extension",
+        "sliceName": "maximumAgeDate",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Extension.extension:maximumAgeDate.extension",
+        "path": "Extension.extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.extension:maximumAgeDate.url",
+        "path": "Extension.extension.url",
+        "fixedUri": "maximumAgeDate"
+      },
+      {
+        "id": "Extension.extension:maximumAgeDate.value[x]",
+        "path": "Extension.extension.value[x]",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:earliestRecommendedAgeDate",
+        "path": "Extension.extension",
+        "sliceName": "earliestRecommendedAgeDate",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Extension.extension:earliestRecommendedAgeDate.extension",
+        "path": "Extension.extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.extension:earliestRecommendedAgeDate.url",
+        "path": "Extension.extension.url",
+        "fixedUri": "earliestRecommendedAgeDate"
+      },
+      {
+        "id": "Extension.extension:earliestRecommendedAgeDate.value[x]",
+        "path": "Extension.extension.value[x]",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:latestRecommendedAgeDate",
+        "path": "Extension.extension",
+        "sliceName": "latestRecommendedAgeDate",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Extension.extension:latestRecommendedAgeDate.extension",
+        "path": "Extension.extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.extension:latestRecommendedAgeDate.url",
+        "path": "Extension.extension.url",
+        "fixedUri": "latestRecommendedAgeDate"
+      },
+      {
+        "id": "Extension.extension:latestRecommendedAgeDate.value[x]",
+        "path": "Extension.extension.value[x]",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:earliestRecommendedIntervalDate",
+        "path": "Extension.extension",
+        "sliceName": "earliestRecommendedIntervalDate",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Extension.extension:earliestRecommendedIntervalDate.extension",
+        "path": "Extension.extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.extension:earliestRecommendedIntervalDate.url",
+        "path": "Extension.extension.url",
+        "fixedUri": "earliestRecommendedIntervalDate"
+      },
+      {
+        "id": "Extension.extension:earliestRecommendedIntervalDate.value[x]",
+        "path": "Extension.extension.value[x]",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:latestRecommendedIntervalDate",
+        "path": "Extension.extension",
+        "sliceName": "latestRecommendedIntervalDate",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Extension.extension:latestRecommendedIntervalDate.extension",
+        "path": "Extension.extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.extension:latestRecommendedIntervalDate.url",
+        "path": "Extension.extension.url",
+        "fixedUri": "latestRecommendedIntervalDate"
+      },
+      {
+        "id": "Extension.extension:latestRecommendedIntervalDate.value[x]",
+        "path": "Extension.extension.value[x]",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      },
+      {
+        "id": "Extension.extension:seasonalRecommendationStartDate",
+        "path": "Extension.extension",
+        "sliceName": "seasonalRecommendationStartDate",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Extension.extension:seasonalRecommendationStartDate.extension",
+        "path": "Extension.extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.extension:seasonalRecommendationStartDate.url",
+        "path": "Extension.extension.url",
+        "fixedUri": "seasonalRecommendationStartDate"
+      },
+      {
+        "id": "Extension.extension:seasonalRecommendationStartDate.value[x]",
+        "path": "Extension.extension.value[x]",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/series-detail-ext"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "max": "0"
+      }
+    ]
+  }
+}

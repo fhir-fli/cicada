@@ -1,0 +1,16 @@
+{
+  "resourceType": "ValueSet",
+  "status": "draft",
+  "name": "DataIntegrityVS",
+  "id": "data-integrity-vs",
+  "title": "Cicada Data Integrity Value Set",
+  "description": "Reasons a dose was reported rather than evaluated.",
+  "url": "http://fhirfli.dev/fhir/ig/cicada/ValueSet/data-integrity-vs",
+  "compose": {
+    "include": [
+      {
+        "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/data-integrity"
+      }
+    ]
+  }
+}

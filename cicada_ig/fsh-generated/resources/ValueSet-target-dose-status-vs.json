@@ -1,0 +1,16 @@
+{
+  "resourceType": "ValueSet",
+  "status": "draft",
+  "name": "TargetDoseStatusVS",
+  "id": "target-dose-status-vs",
+  "title": "Target Dose Status Value Set",
+  "description": "CDSi target dose statuses.",
+  "url": "http://fhirfli.dev/fhir/ig/cicada/ValueSet/target-dose-status-vs",
+  "compose": {
+    "include": [
+      {
+        "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/target-dose-status"
+      }
+    ]
+  }
+}

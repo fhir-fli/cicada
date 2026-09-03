@@ -1,0 +1,29 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "draft",
+  "content": "complete",
+  "name": "TargetDoseStatusCS",
+  "id": "target-dose-status",
+  "title": "Target Dose Status Code System",
+  "description": "CDSi Table 3-2. The status of the target dose an administered dose was evaluated against. R4 ImmunizationEvaluation carries only doseNumber, derived from this, so a skipped target dose and a satisfied one are otherwise indistinguishable.",
+  "url": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/target-dose-status",
+  "concept": [
+    {
+      "code": "satisfied",
+      "display": "Satisfied",
+      "definition": "The target dose was satisfied by a vaccine dose administered."
+    },
+    {
+      "code": "not-satisfied",
+      "display": "Not Satisfied",
+      "definition": "The target dose was not satisfied."
+    },
+    {
+      "code": "skipped",
+      "display": "Skipped",
+      "definition": "The target dose was skipped, per a conditional skip in the series."
+    }
+  ],
+  "caseSensitive": true,
+  "count": 3
+}

@@ -82,6 +82,14 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/antigen-needing-dose-ext"
+        },
+        "name": "Antigen Needing a Dose",
+        "description": "An antigen within this vaccine group that needs the forecast dose. A multi-antigen group forecasts as one recommendation, so without this a caller cannot tell whether all of MMR is due or only the measles component. Repeats, one per antigen.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/assessment-date"
         },
         "name": "AssessmentDate",
@@ -106,10 +114,42 @@
       },
       {
         "reference": {
+          "reference": "CodeSystem/data-integrity"
+        },
+        "name": "Cicada Data Integrity Code System",
+        "description": "Records that cannot describe an administration. CDSi evaluates a vaccine dose administered and defines the assessment date as the current date, so these doses are excluded from evaluation and forecasting and reported in an OperationOutcome. They are statements about the data, never about the patient's immunity, which is why they are not evaluation statuses.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/data-integrity-vs"
+        },
+        "name": "Cicada Data Integrity Value Set",
+        "description": "Reasons a dose was reported rather than evaluated.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "CodeSystem/EvalStatus"
         },
         "name": "Cicada Evaluation Status",
         "description": "Extension codes for dose evaluation status beyond the HL7 THO immunization-evaluation-dose-status CodeSystem. Only codes not covered by the standard are defined here.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/forecast-reason"
+        },
+        "name": "Cicada Forecast Reason Code System",
+        "description": "Why the engine forecast what it did. The ImmDS ForecastReason code system covers four of these; the rest have no ImmDS concept, and the ImmDS binding on ImmunizationRecommendation.recommendation.forecastReason is example strength, so they travel as a second coding rather than being dropped.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/forecast-reason-vs"
+        },
+        "name": "Cicada Forecast Reason Value Set",
+        "description": "Forecast reasons the engine can report.",
         "exampleBoolean": false
       },
       {
@@ -137,6 +177,14 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/series-detail-ext"
+        },
+        "name": "Contributing Series Detail",
+        "description": "One contributing series: its own status, its own four dates, and the component dates that produced them. A vaccine group forecast reports the aggregate over several series, so without this a group covered by more than one reports a single answer for all of them, and a due date arrives with no way to see whether age or interval produced it. Repeats, one per series.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/vax-dose"
         },
         "name": "Dose of a Vaccine",
@@ -153,10 +201,26 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/doses-remaining-ext"
+        },
+        "name": "Doses Remaining",
+        "description": "How many doses remain in the series after the one being forecast, or 'Recurring' where the series ends in a recurring dose. seriesDoses and doseNumber allow a reader to subtract, but no arithmetic says the series never ends.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/end-age"
         },
         "name": "End Age",
         "description": "The age at which the vaccine is no longer applicable.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/engine-version-ext"
+        },
+        "name": "Engine and Supporting Data Version",
+        "description": "The engine build and the CDSi supporting-data release that produced this resource. A forecast is a function of both, so a stored response naming neither cannot be traced to what produced it. Parameters is not a DomainResource and carries no extension, so the stamp sits on each evaluation and on each recommendation.",
         "exampleBoolean": false
       },
       {
@@ -181,6 +245,14 @@
         },
         "name": "Evaluation Status Value Set",
         "description": "Combined value set for dose evaluation status, including HL7 THO standard codes (valid, notvalid) and the Cicada extension code (extraneous).",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/evaluation-detail-ext"
+        },
+        "name": "Evaluation Sub-step Detail",
+        "description": "The CDSi Chapter 6 sub-step outcomes behind a dose's evaluation: which of age, interval, conflict and vaccine choice passed, and for those that failed, which rule failed. doseStatusReason carries ten ImmDS codes; the engine knows more than that.",
         "exampleBoolean": false
       },
       {
@@ -369,6 +441,14 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/series-group-ext"
+        },
+        "name": "Series Group",
+        "description": "The series group this forecast is scoped to, per CDSi FORECASTVG-1. recommendation.series names the series; core FHIR has nowhere for the group.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/series-type-ext"
         },
         "name": "Series Type",
@@ -397,6 +477,30 @@
         },
         "name": "SNOMED CT to CDSi Observation Code Map",
         "description": "Maps SNOMED CT codes to CDSi observation codes used in immunization decision support.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/target-dose-status-ext"
+        },
+        "name": "Target Dose Status",
+        "description": "The CDSi target dose status this administered dose produced.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/target-dose-status"
+        },
+        "name": "Target Dose Status Code System",
+        "description": "CDSi Table 3-2. The status of the target dose an administered dose was evaluated against. R4 ImmunizationEvaluation carries only doseNumber, derived from this, so a skipped target dose and a satisfied one are otherwise indistinguishable.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/target-dose-status-vs"
+        },
+        "name": "Target Dose Status Value Set",
+        "description": "CDSi target dose statuses.",
         "exampleBoolean": false
       },
       {
@@ -541,6 +645,11 @@
         {
           "nameUrl": "06_select-patient-series.html",
           "title": "Select Patient Series",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "07_response-extensions.html",
+          "title": "What Cicada Returns",
           "generation": "markdown"
         }
       ]

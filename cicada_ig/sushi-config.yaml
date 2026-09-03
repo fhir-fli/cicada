@@ -66,6 +66,8 @@ pages:
     title: Forecast Dates and Reasons
   06_select-patient-series.md:
     title: Select Patient Series
+  07_response-extensions.md:
+    title: What Cicada Returns
 #
 #
 # The parameters property represents IG.definition.parameter. Rather
@@ -98,6 +100,7 @@ menu:
     Evaluate Vaccine Dose Administered: 04_evaluate-vaccine-dose-administered.html
     Forecast Dates and Reasons: 05_forecast-dates-and-reasons.html
     Select Patient Series: 06_select-patient-series.html
+    What Cicada Returns: 07_response-extensions.html
   Artifacts: artifacts.html
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮

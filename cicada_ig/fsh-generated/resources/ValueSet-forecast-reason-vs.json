@@ -1,0 +1,16 @@
+{
+  "resourceType": "ValueSet",
+  "status": "draft",
+  "name": "CicadaForecastReasonVS",
+  "id": "forecast-reason-vs",
+  "title": "Cicada Forecast Reason Value Set",
+  "description": "Forecast reasons the engine can report.",
+  "url": "http://fhirfli.dev/fhir/ig/cicada/ValueSet/forecast-reason-vs",
+  "compose": {
+    "include": [
+      {
+        "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/forecast-reason"
+      }
+    ]
+  }
+}
