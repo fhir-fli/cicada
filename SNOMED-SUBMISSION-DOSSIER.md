@@ -5,7 +5,19 @@
      set from bumblebee/tool/sct.py, and step 2 requires re-running the check
      immediately before anything is sent -->
 
-**THIRTEEN ITEMS OPEN. NOTHING HAS BEEN SUBMITTED.**
+**FOURTEEN CONCEPTS OPEN. NOTHING HAS BEEN SUBMITTED.**
+
+Nine vaccine adverse-reaction concepts (A1–A6, and A7–A9 under one heading), four
+excipient allergies (B1–B4), one indication (C1). **B5 and B6 were withdrawn** — see
+there.
+
+**Nine are true absences; five are refinements of a concept that already exists**, and
+a reviewer will treat those two classes differently:
+
+| | |
+|---|---|
+| **Absent at any granularity** | A1 Ebola · A2 dengue · A3 RSV · A4 Japanese encephalitis · A6 chikungunya · B1 2-phenoxyethanol · B2 arginine · B3 rice protein · C1 clotting factor concentrate |
+| **A refinement — the general concept exists** | A5 MenB (`219088009` covers meningococcal vaccine) · A7–A9 influenza platforms (`420113004` covers influenza vaccine) · B4 chicken protein (`703932008` is allergy to chicken meat) |
 
 Companion to `TERMINOLOGY-AUDIT.md`, which says how the list was arrived at, and to
 bumblebee's `docs/review/SNOMED-SUBMISSION-DOSSIER.md`, which uses the same format
@@ -253,15 +265,25 @@ these requests need — `1163445008` |Hypersensitivity to polysorbate-80| and
 - ⚠️ **A reviewer will raise `703932008`.** The request has to argue the distinction
   explicitly or it reads as a duplicate.
 
-## B5. Allergy to diphtheria toxoid · B6. Allergy to tetanus toxoid
+## ~~B5. Allergy to diphtheria toxoid · B6. Allergy to tetanus toxoid~~ — 🛑 WITHDRAWN
 
-- **Semantic tag:** disorder · **Proposed parent:** `419199007` |Allergy to substance|
-- **Use case:** CDSi observations 117 and 118. The toxoid is the antigen shared
-  across DTaP, Tdap, Td and several combination products, so an allergy to it rules
-  out a different set of vaccines than an allergy to any one of them.
-- **Absence:** `toxoid` returns 46 concepts, complete, and none is an allergy.
-  `219085007` and `219084006` are reactions to the *vaccines*, which is a different
-  statement.
+**Grey caught this: `294658007` |Allergy to tetanus vaccine| and `294642009` |Allergy
+to diphtheria vaccine| already exist**, along with `294644005` |Allergy to diphtheria
+and tetanus vaccine|, `294645006` |Allergy to diphtheria and pertussis and tetanus
+vaccine|, and `124942000` |Tetanus toxoid immunization reaction|. Checked:
+`tetanus` returns 195 concepts and `diphtheria` 237, both complete.
+
+My argument was that the toxoid is the shared antigen across DTaP, Tdap, Td and the
+combinations, so an allergy to it excludes a different set of products than an
+allergy to any one vaccine — and CDSi does separate observation 117/118 (allergy to
+the toxoid) from 087/088 (reaction after a previous dose). That distinction is real,
+but it does not need a new concept: SNOMED carries the toxoid antigens as substances
+(`161000221102` |Corynebacterium diphtheriae toxoid antigen|,
+`2021000221101` |Clostridium tetani toxoid antigen only vaccine product|), so
+"allergy to substance X" is post-coordinable, and a reviewer would fairly read the
+request as a duplicate of `294658007`.
+
+**Map 117 and 118 to the existing concepts instead.**
 
 ---
 

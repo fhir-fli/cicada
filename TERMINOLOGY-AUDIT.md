@@ -217,6 +217,45 @@ Evidence: `bumblebee/results/ig_external_codes.tsv`, `ig_display_mismatches.tsv`
 🔑 **`$validate-code` without `display` only proves the code exists.** My own first
 pass ran it that way and reported all 232 valid.
 
+## 6b. 🔴🔴 The same wrong codes are in the ENGINE, not just the IG
+
+`cicada_generator/lib/crosswalk/observation_crosswalk.json` is ours — one commit,
+hand-written — and `_mergeCrosswalk` in the generator merges it into CDC's supporting
+data before the Dart is written. **CDC's Excel carries SNOMED, CVX and PHIN VS only**
+(`ScheduleSupportingData- Coded Observations-508.xlsx`, columns checked). Every
+ICD-10-CM, LOINC, RxNorm and CPT code the engine holds came from that file.
+
+**323 coded values. Ten did not exist and eighteen were a different concept.**
+
+And they are live. `_matchCodingsToObservation` in
+`cicada/lib/utils/observations_from_resources.dart` matches an incoming
+Condition or Observation coding against `codedValues` by code system and code, so a
+wrong entry fails in **both** directions:
+
+- A real serum mumps IgG result is LOINC `22415-4`. The crosswalk had `22416-2`
+  (a CSF titre) and `39012-0`, so a genuine result **matched nothing** and the
+  patient's evidence of immunity was invisible.
+- `39012-0` is *Mycoplasma pneumoniae Ab [Presence] in Body fluid*. A patient with
+  that result **matched CDSi 021, "Laboratory Evidence of Immunity for Mumps"**, and
+  was treated as immune — which suppresses a dose they need.
+- `39786` is venlafaxine. A patient on an antidepressant matched CDSi 033, "taken
+  influenza antiviral medications within the previous 48 hours".
+
+**All 50 are corrected** — 323 of 323 now validate with their displays against
+tx.fhir.org (ICD-10-CM 2026-04-01, LOINC 2.82, RxNorm 03022026). The header comment
+in the crosswalk now says whose codes these are and how to re-check them.
+
+Corrections worth naming: `T78.1XXA` does not exist and was on six allergy
+observations — replaced with `T78.1` for the food-derived excipients (egg, gelatin,
+chicken protein, yeast), `T78.40XA` |Allergy, unspecified| for arginine, and
+`T50.B95A` |Adverse effect of other viral vaccines| for the COVID-19 vaccine
+reaction. `T50.A95A` |Adverse effect of other bacterial vaccines| was labelled as the
+pertussis code on five observations; pertussis is `T50.A15A`, and the other four keep
+the code with a corrected label.
+
+Evidence: `bumblebee/results/cicada_crosswalk_check.tsv`, and
+`bumblebee/tool/cicada_crosswalk_check.py` to re-run it.
+
 ## 7. The 118 observations CDC does not code, adjudicated one at a time
 
 Full table: `bumblebee/results/cdsi_uncoded_verdicts.tsv`.
