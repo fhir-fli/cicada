@@ -179,23 +179,14 @@ What we return, verbatim. The evaluation parameter:
         </recommendation>
 ```
 
-The whole response is one `immunization` parameter and one `evaluation`
-parameter per administered dose, plus a single `recommendation` parameter
-carrying 16 recommendation entries, one per series group. It is 46 KB in full
-and I am happy to send it, or any other case.
+The full response is 46 KB: one `immunization` and one `evaluation` parameter
+per dose, plus one `recommendation` with 16 entries. Say if you want it, or any
+other case.
 
-Two things that look separate from the evaluation matching, and so may survive
-the fix. Both are worth a glance against the branch:
-
-`ImmunizationEvaluation.date` decides whether a candidate gets built at all.
-With the assessment date in it, no candidate line prints for any event whose
-dose falls before that date. With the dose's administration date in it, every
-event prints a `[CHECKING AGAINST]` line. R4 defines the element as the date the
-evaluation was performed, and the ImmDS example uses the assessment date, so the
-conformant value is the one that suppresses the candidate.
-
-On `ImmunizationRecommendation.recommendation`, `doseNumberPositiveInt` makes
-FITS score 0% on every criterion, including Series Status and all dates.
-`doseNumberString` scores normally. R4 types the element `positiveInt|string`,
-so both are conformant. We send the string form on recommendations and the
-integer form on evaluations for that reason.
+Two things that look separate from the evaluation matching, so may survive the
+fix. FITS only builds an evaluation candidate when `ImmunizationEvaluation.date`
+holds the dose's administration date, but R4 and your own example put the
+assessment date there, so the conformant value is the one that suppresses it.
+And on `ImmunizationRecommendation.recommendation`, `doseNumberPositiveInt`
+scores 0% on every criterion while `doseNumberString` scores normally, though R4
+types the element `positiveInt|string` and allows both.
