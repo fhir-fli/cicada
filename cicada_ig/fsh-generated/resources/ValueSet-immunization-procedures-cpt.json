@@ -17,15 +17,15 @@
           },
           {
             "code": "38101",
-            "display": "Splenectomy; total, en bloc"
+            "display": "Splenectomy; partial (separate procedure)"
           },
           {
             "code": "38102",
-            "display": "Splenectomy; total, en bloc with other organs"
+            "display": "Splenectomy; total, en bloc for extensive disease, in conjunction with other procedure (List in addition to code for primary procedure)"
           },
           {
             "code": "38115",
-            "display": "Repair of ruptured spleen with splenorrhaphy"
+            "display": "Repair of ruptured spleen (splenorrhaphy) with or without partial splenectomy"
           },
           {
             "code": "38120",
@@ -33,7 +33,7 @@
           },
           {
             "code": "69930",
-            "display": "Cochlear device implantation"
+            "display": "Cochlear device implantation, with or without mastoidectomy"
           }
         ]
       }

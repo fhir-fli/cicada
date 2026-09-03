@@ -324,16 +324,8 @@
           "reference": "ValueSet/vaccine-lab-evidence-of-immunity-loinc"
         },
         "name": "Lab Evidence of Immunity (LOINC)",
-        "description": "LOINC codes for laboratory tests that provide evidence of immunity, mapped to CDSi observation codes for immunization decision support.",
+        "description": "LOINC codes for laboratory tests that provide evidence of immunity, mapped to CDSi observation codes for immunization decision support. Serum IgG in every case, plus total antibody for hepatitis A, which is what evidence of immunity means for these antigens; IgM, cerebrospinal fluid and avidity codes are deliberately excluded.",
         "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "StructureMap/MapVaccineCodes"
-        },
-        "description": "Define the usage of FHIR resource types with specific aliases",
-        "exampleBoolean": false,
-        "name": "MapVaccineCodes"
       },
       {
         "reference": {

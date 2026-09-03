@@ -364,8 +364,8 @@
             "display": "Respiratory tuberculosis unspecified"
           },
           {
-            "code": "A18.9",
-            "display": "Tuberculosis of other organs"
+            "code": "A18.89",
+            "display": "Tuberculosis of other sites"
           },
           {
             "code": "A19.9",

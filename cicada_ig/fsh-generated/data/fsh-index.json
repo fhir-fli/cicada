@@ -469,7 +469,7 @@
     "fshType": "ValueSet",
     "fshFile": "vs_vaccine_condition_codes_cpt.fsh",
     "startLine": 1,
-    "endLine": 15
+    "endLine": 19
   },
   {
     "outputFile": "ValueSet-interval-reason.json",
@@ -517,7 +517,7 @@
     "fshType": "ValueSet",
     "fshFile": "vs_vaccine_condition_codes_icd10.fsh",
     "startLine": 1,
-    "endLine": 143
+    "endLine": 146
   },
   {
     "outputFile": "ValueSet-vaccine-condition-codes-snomed.json",
@@ -540,8 +540,8 @@
     "fshName": "VaccineLabEvidenceOfImmunityLoinc",
     "fshType": "ValueSet",
     "fshFile": "vs_vaccine_condition_codes_loinc.fsh",
-    "startLine": 1,
-    "endLine": 35
+    "startLine": 23,
+    "endLine": 58
   },
   {
     "outputFile": "ValueSet-vaccine-medication-codes-rxnorm.json",
@@ -549,7 +549,7 @@
     "fshType": "ValueSet",
     "fshFile": "vs_vaccine_condition_codes_rxnorm.fsh",
     "startLine": 1,
-    "endLine": 13
+    "endLine": 19
   },
   {
     "outputFile": "ValueSet-vaccine-medication-codes-snomed.json",
