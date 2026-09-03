@@ -5,19 +5,24 @@
      set from bumblebee/tool/sct.py, and step 2 requires re-running the check
      immediately before anything is sent -->
 
-**FOURTEEN CONCEPTS OPEN. NOTHING HAS BEEN SUBMITTED.**
+# 🛑 CLOSED 2026-09-03 — NOTHING HERE IS BEING SUBMITTED. DO NOT RAISE IT AGAIN.
 
-Nine vaccine adverse-reaction concepts (A1–A6, and A7–A9 under one heading), four
-excipient allergies (B1–B4), one indication (C1). **B5 and B6 were withdrawn** — see
-there.
+**Grey's decision.** These are the less important requests, and submitting them
+alongside bumblebee's 12 risks those being discounted as a batch with immunization
+codes tacked on. His words: *"I don't feel like large groups of people suffer because
+we can't say that they have a reaction to the chikungunya vaccine."*
 
-**Nine are true absences; five are refinements of a concept that already exists**, and
-a reviewer will treat those two classes differently:
+**The 12 in `bumblebee/docs/review/SNOMED-SUBMISSION-DOSSIER.md` are the submission.**
+This file is kept as the record of what was checked and what SNOMED does and does not
+carry, which is what the audit was for. It is not a queue.
 
-| | |
-|---|---|
-| **Absent at any granularity** | A1 Ebola · A2 dengue · A3 RSV · A4 Japanese encephalitis · A6 chikungunya · B1 2-phenoxyethanol · B2 arginine · B3 rice protein · C1 clotting factor concentrate |
-| **A refinement — the general concept exists** | A5 MenB (`219088009` covers meningococcal vaccine) · A7–A9 influenza platforms (`420113004` covers influenza vaccine) · B4 chicken protein (`703932008` is allergy to chicken meat) |
+⚠️ If this file is ever pasted to an external reviewer, note that **B5 and B6 were
+withdrawn before that happened**: `294658007` |Allergy to tetanus vaccine| and
+`294642009` |Allergy to diphtheria vaccine| exist. An OpenEvidence read of an earlier
+copy listed both as true absences, because it was working from the table as it stood
+before the withdrawal.
+
+---
 
 Companion to `TERMINOLOGY-AUDIT.md`, which says how the list was arrived at, and to
 bumblebee's `docs/review/SNOMED-SUBMISSION-DOSSIER.md`, which uses the same format
