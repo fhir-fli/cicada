@@ -186,9 +186,31 @@ dose the patient does not need — or, for `39012-0`, matches a *Mycoplasma* ant
 Nine ICD-10-CM rows differ only in wording (abbreviations, "Fatty (change of) liver")
 and are fine.
 
-**None of these is fixed yet.** Each needs the right code looked up and the value set
-corrected; the lab-evidence set needs a clinician to say which test result actually
-constitutes evidence of immunity, because that is what the codes are asserting.
+**All of them are fixed**, and the codes were looked up rather than guessed:
+
+- **RxNorm** through RxNav (`rxnav.nlm.nih.gov/REST/rxcui.json?name=`), taking the
+  ingredient concept (TTY=IN) rather than the salt forms: valaciclovir is `73645`
+  (display `valACYclovir`, RxNorm's tall-man casing), famciclovir `68099`. `39786`
+  and the non-existent `24811` are gone.
+- **The lab-evidence set was rebuilt**, not patched. Candidates came from complete
+  LOINC 2.82 result sets per analyte, filtered to serum IgG — and total antibody for
+  hepatitis A, which is what evidence of immunity means there — with CSF, IgM, titre
+  and avidity codes excluded deliberately. **19 codes, all validated with their
+  displays, 19 of 19 exact.** `13950-1` went because IgM is acute infection, not
+  immunity. The section comments were also wrong: hepatitis A is CDSi observation
+  018 and hepatitis B is 019; 024 and 025 are the provider-verified varicella and
+  zoster histories, which are not laboratory tests.
+- **CPT** displays taken from the server: `38101` is *partial* splenectomy, `38102`
+  is the en-bloc add-on code, `38115` includes "with or without partial splenectomy",
+  `69930` includes "with or without mastoidectomy".
+- **ICD-10-CM** `A18.9` replaced with `A18.89` |Tuberculosis of other sites|, the
+  codeable leaf under `A18.8` |Tuberculosis of other specified organs|, which is what
+  the old display meant.
+
+What is left is 18 cosmetic differences — ICD-10-CM abbreviations we wrote out
+("SCID" for "Severe combined immunodeficiency [SCID]"), and the LOINC answer-list
+displays, which carry a whole sentence of definition. Those are worth normalising
+so the next sweep is quiet, but none changes what a code means.
 
 Evidence: `bumblebee/results/ig_external_codes.tsv`, `ig_display_mismatches.tsv`.
 

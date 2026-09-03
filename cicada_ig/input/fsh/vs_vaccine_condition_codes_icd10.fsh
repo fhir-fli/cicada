@@ -129,7 +129,10 @@ Description: "Value set for conditions based on ICD-10-CM that may impact immuni
 // 031 - Tuberculosis
 * include http://hl7.org/fhir/sid/icd-10-cm#A15.0 "Tuberculosis of lung"
 * include http://hl7.org/fhir/sid/icd-10-cm#A15.9 "Respiratory tuberculosis unspecified"
-* include http://hl7.org/fhir/sid/icd-10-cm#A18.9 "Tuberculosis of other organs"
+// A18.9 does not exist in ICD-10-CM (checked against the 2026-04-01 release).
+// A18.89 is the codeable leaf; its parent category A18.8 is "Tuberculosis of
+// other specified organs", which is what the old display meant.
+* include http://hl7.org/fhir/sid/icd-10-cm#A18.89 "Tuberculosis of other sites"
 * include http://hl7.org/fhir/sid/icd-10-cm#A19.9 "Miliary tuberculosis, unspecified"
 * include http://hl7.org/fhir/sid/icd-10-cm#R76.11 "Nonspecific reaction to tuberculin skin test without active tuberculosis"
 * include http://hl7.org/fhir/sid/icd-10-cm#Z86.11 "Personal history of tuberculosis"
