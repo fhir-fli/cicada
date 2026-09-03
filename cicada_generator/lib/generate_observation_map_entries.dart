@@ -89,7 +89,9 @@ group MapToVaccineConditionObservation(source src, target tgt : targetCondition)
 
 group MapFromObservation(source src : sourceObservation, target tgt : targetCondition) {
   src -> tgt.clinicalStatus = cc('http://terminology.hl7.org/CodeSystem/condition-clinical', 'active') "SetObservationStatus";
-  src.code as code -> code.coding as coding then ApplyCommonMappings(coding, tgt) "ApplyObsMappings";
+  src.code as code then {
+    code.coding as coding -> tgt then ApplyCommonMappings(coding, tgt) "ApplyObsMappingsCoding";
+  } "ApplyObsMappings";
   src -> tgt.onset = src.effectiveDateTime "SetObsOnsetDateTime";
   src -> tgt.onset = src.effectivePeriod "SetObsOnsetPeriod";
   src -> tgt.onset = src.effectiveInstant "SetObsOnsetInstant";
@@ -97,7 +99,9 @@ group MapFromObservation(source src : sourceObservation, target tgt : targetCond
 
 group MapFromCondition(source src : sourceCondition, target tgt : targetCondition) {
   src -> tgt.clinicalStatus = cc('http://terminology.hl7.org/CodeSystem/condition-clinical', 'active') "SetConditionStatus";
-  src.code as code -> code.coding as coding then ApplyCommonMappings(coding, tgt) "ApplyCondMappings";
+  src.code as code then {
+    code.coding as coding -> tgt then ApplyCommonMappings(coding, tgt) "ApplyCondMappingsCoding";
+  } "ApplyCondMappings";
   src -> tgt.onset = src.onsetDateTime "SetCondOnsetDateTime";
   src -> tgt.onset = src.onsetAge "SetCondOnsetAge";
   src -> tgt.onset = src.onsetPeriod "SetCondOnsetPeriod";
@@ -112,7 +116,9 @@ group MapFromCondition(source src : sourceCondition, target tgt : targetConditio
 
 group MapFromProcedure(source src : sourceProcedure, target tgt : targetCondition) {
   src -> tgt.clinicalStatus = cc('http://terminology.hl7.org/CodeSystem/condition-clinical', 'active') "SetProcedureStatus";
-  src.code as code -> code.coding as coding then ApplyCommonMappings(coding, tgt) "ApplyProcedureMappings";
+  src.code as code then {
+    code.coding as coding -> tgt then ApplyCommonMappings(coding, tgt) "ApplyProcedureMappingsCoding";
+  } "ApplyProcedureMappings";
   src -> tgt.onset = src.performedDateTime "SetProcedureOnsetDateTime";
   src -> tgt.onset = src.performedAge "SetProcedureOnsetAge";
   src -> tgt.onset = src.performedPeriod "SetProcedureOnsetPeriod";
@@ -122,42 +128,54 @@ group MapFromProcedure(source src : sourceProcedure, target tgt : targetConditio
 
 group MapFromImmunization(source src : sourceImmunization, target tgt : targetCondition) {
   src -> tgt.clinicalStatus = cc('http://terminology.hl7.org/CodeSystem/condition-clinical', 'active') "SetImmunizationStatus";
-  src.vaccineCode as code -> code.coding as coding then ApplyCommonMappings(coding, tgt) "ApplyImmunizationMappings";
+  src.vaccineCode as code then {
+    code.coding as coding -> tgt then ApplyCommonMappings(coding, tgt) "ApplyImmunizationMappingsCoding";
+  } "ApplyImmunizationMappings";
   src -> tgt.onset = src.occurrenceDateTime "SetImmunizationOnsetDateTime";
   src -> tgt.onset = src.occurrenceString "SetImmunizationOnsetString";
 }
 
 group MapFromMedication(source src : sourceMedication, target tgt : targetCondition) {
   src -> tgt.clinicalStatus = cc('http://terminology.hl7.org/CodeSystem/condition-clinical', 'active') "SetMedicationStatus";
-  src.code as code -> code.coding as coding then ApplyCommonMappings(coding, tgt) "ApplyMedicationMappings";
+  src.code as code then {
+    code.coding as coding -> tgt then ApplyCommonMappings(coding, tgt) "ApplyMedicationMappingsCoding";
+  } "ApplyMedicationMappings";
 }
 
 // TODO(Dokotela): what about medicationReference?
 group MapFromMedicationStatement(source src : sourceMedicationStatement, target tgt : targetCondition) {
   src -> tgt.clinicalStatus = cc('http://terminology.hl7.org/CodeSystem/condition-clinical', 'active') "SetMedStatementStatus";
-  src.medication as code -> code.coding as coding then ApplyCommonMappings(coding, tgt) "ApplyMedStatementMappings";
+  src.medication as code then {
+    code.coding as coding -> tgt then ApplyCommonMappings(coding, tgt) "ApplyMedStatementMappingsCoding";
+  } "ApplyMedStatementMappings";
 }
 
 group MapFromMedicationRequest(source src : sourceMedicationRequest, target tgt : targetCondition) {
   src -> tgt.clinicalStatus = cc('http://terminology.hl7.org/CodeSystem/condition-clinical', 'active') "SetMedRequestStatus";
-  src.medication as code -> code.coding as coding then ApplyCommonMappings(coding, tgt) "ApplyMedRequestMappings";
+  src.medication as code then {
+    code.coding as coding -> tgt then ApplyCommonMappings(coding, tgt) "ApplyMedRequestMappingsCoding";
+  } "ApplyMedRequestMappings";
   src -> tgt.onset = src.authoredOn "SetMedRequestOnsetDateTime";
 }
 
 group MapFromMedicationAdministration(source src : sourceMedicationAdministration, target tgt : targetCondition) {
   src -> tgt.clinicalStatus = cc('http://terminology.hl7.org/CodeSystem/condition-clinical', 'active') "SetMedAdminStatus";
-  src.medication as code -> code.coding as coding then ApplyCommonMappings(coding, tgt) "ApplyMedAdminMappings";
+  src.medication as code then {
+    code.coding as coding -> tgt then ApplyCommonMappings(coding, tgt) "ApplyMedAdminMappingsCoding";
+  } "ApplyMedAdminMappings";
   src -> tgt.onset = src.effectiveDateTime "SetMedAdminOnsetDateTime";
   src -> tgt.onset = src.effectivePeriod "SetMedAdminOnsetPeriod";
 }
 
 group MapFromMedicationDispense(source src : sourceMedicationDispense, target tgt : targetCondition) {
   src -> tgt.clinicalStatus = cc('http://terminology.hl7.org/CodeSystem/condition-clinical', 'active') "SetMedDispenseStatus";
-  src.medication as code -> code.coding as coding then ApplyCommonMappings(coding, tgt) "ApplyMedDispenseMappings";
+  src.medication as code then {
+    code.coding as coding -> tgt then ApplyCommonMappings(coding, tgt) "ApplyMedDispenseMappingsCoding";
+  } "ApplyMedDispenseMappings";
   src -> tgt.onset = src.whenHandedOver "SetMedDispenseOnsetDateTime";
 }
 
-group ApplyCommonMappings(source src : Coding, target tgt : targetCondition) {
+group ApplyCommonMappings(source src, target tgt : targetCondition) {
 ''';
 
 const fileEnd = '}';
