@@ -77,6 +77,7 @@ Description: "Records that cannot describe an administration. CDSi evaluates a v
 * ^content = #complete
 * #dose-before-birth "Dose dated before the date of birth" "The administration date precedes the patient's date of birth, so the dose was not given to this patient. Check the birth date, the administration date, and that the record belongs to this patient."
 * #dose-after-assessment "Dose dated after the assessment date" "The administration date is after the assessment date, so the administration has not happened. A planned dose belongs in an ImmunizationRecommendation."
+* #duplicate-same-day "Two doses covering one antigen on one day" "Two administered doses covering the same antigen carry the same date. Matched on the antigen, not the product, so it catches a combination given alongside a component — Pediarix and Pentacel are different CVX codes that both carry diphtheria, tetanus, pertussis and polio. Both doses are still evaluated on their own merits; the engine cannot tell a record entered twice from a second injection."
 
 ValueSet: DataIntegrityVS
 Id: data-integrity-vs

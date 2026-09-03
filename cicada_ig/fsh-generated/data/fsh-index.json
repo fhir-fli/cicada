@@ -61,7 +61,7 @@
     "fshType": "CodeSystem",
     "fshFile": "cicada_response_extensions.fsh",
     "startLine": 72,
-    "endLine": 79
+    "endLine": 80
   },
   {
     "outputFile": "CodeSystem-forecast-reason.json",
@@ -212,8 +212,8 @@
     "fshName": "AntigenNeedingDose",
     "fshType": "Extension",
     "fshFile": "cicada_response_extensions.fsh",
-    "startLine": 155,
-    "endLine": 161
+    "startLine": 156,
+    "endLine": 162
   },
   {
     "outputFile": "StructureDefinition-antigen-supporting-data.json",
@@ -252,8 +252,8 @@
     "fshName": "DosesRemaining",
     "fshType": "Extension",
     "fshFile": "cicada_response_extensions.fsh",
-    "startLine": 163,
-    "endLine": 169
+    "startLine": 164,
+    "endLine": 170
   },
   {
     "outputFile": "StructureDefinition-end-age.json",
@@ -268,16 +268,16 @@
     "fshName": "EngineVersion",
     "fshType": "Extension",
     "fshFile": "cicada_response_extensions.fsh",
-    "startLine": 91,
-    "endLine": 105
+    "startLine": 92,
+    "endLine": 106
   },
   {
     "outputFile": "StructureDefinition-evaluation-detail-ext.json",
     "fshName": "EvaluationDetail",
     "fshType": "Extension",
     "fshFile": "cicada_response_extensions.fsh",
-    "startLine": 111,
-    "endLine": 141
+    "startLine": 112,
+    "endLine": 142
   },
   {
     "outputFile": "StructureDefinition-inadvertent-administration-status.json",
@@ -332,16 +332,16 @@
     "fshName": "SeriesDetail",
     "fshType": "Extension",
     "fshFile": "cicada_response_extensions.fsh",
-    "startLine": 171,
-    "endLine": 209
+    "startLine": 172,
+    "endLine": 210
   },
   {
     "outputFile": "StructureDefinition-series-group-ext.json",
     "fshName": "SeriesGroup",
     "fshType": "Extension",
     "fshFile": "cicada_response_extensions.fsh",
-    "startLine": 147,
-    "endLine": 153
+    "startLine": 148,
+    "endLine": 154
   },
   {
     "outputFile": "StructureDefinition-series-type-ext.json",
@@ -420,8 +420,8 @@
     "fshName": "DataIntegrityVS",
     "fshType": "ValueSet",
     "fshFile": "cicada_response_extensions.fsh",
-    "startLine": 81,
-    "endLine": 85
+    "startLine": 82,
+    "endLine": 86
   },
   {
     "outputFile": "ValueSet-dose-status-reason.json",

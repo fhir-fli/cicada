@@ -780,4 +780,71 @@ void main() {
       expect(evaluationCount(response), greaterThan(0));
     });
   });
+
+  group('same-day duplicate', () {
+    Parameters twoDoses(String cvx1, String cvx2,
+            {String dob = '2020-01-01', String given = '2025-06-01'}) =>
+        Parameters.fromJson(<String, dynamic>{
+          'resourceType': 'Parameters',
+          'parameter': <Map<String, dynamic>>[
+            {'name': 'assessmentDate', 'valueDate': '2026-01-15'},
+            {
+              'name': 'patient',
+              'resource': {
+                'resourceType': 'Patient',
+                'id': '1',
+                'birthDate': dob,
+              },
+            },
+            for (final MapEntry<int, String> e
+                in <String>[cvx1, cvx2].asMap().entries)
+              {
+                'name': 'immunization',
+                'resource': {
+                  'resourceType': 'Immunization',
+                  'id': '${e.key + 1}',
+                  'status': 'completed',
+                  'vaccineCode': {
+                    'coding': [
+                      {'code': e.value},
+                    ],
+                  },
+                  'patient': {'reference': 'Patient/1'},
+                  'occurrenceDateTime': given,
+                },
+              },
+          ],
+        });
+
+    List<String> codes(Parameters response) => response.parameter!
+        .where((p) => p.name.valueString == 'outcome')
+        .map((p) => p.resource! as OperationOutcome)
+        .expand((o) => o.issue)
+        .expand((i) => i.details?.coding ?? <Coding>[])
+        .map((c) => c.code?.toString() ?? '')
+        .toList();
+
+    // The same product twice on one day.
+    test('two identical doses on one day are reported', () {
+      expect(codes(buildImmdsResponse(evaluateForForecast(
+              twoDoses('52', '52')))),
+          contains('duplicate-same-day'));
+    });
+
+    // The case that actually happens: Pediarix and Pentacel are different CVX
+    // codes that both carry diphtheria, tetanus, pertussis and polio, so a
+    // check comparing products would see nothing.
+    test('Pediarix and Pentacel on one day are reported', () {
+      final List<String> found = codes(buildImmdsResponse(
+          evaluateForForecast(twoDoses('110', '120', dob: '2025-01-01'))));
+      expect(found, contains('duplicate-same-day'));
+    });
+
+    // The control: two vaccines sharing no antigen are not a duplicate.
+    test('two unrelated vaccines on one day are not', () {
+      expect(codes(buildImmdsResponse(evaluateForForecast(
+              twoDoses('52', '21')))),
+          isNot(contains('duplicate-same-day')));
+    });
+  });
 }

@@ -162,13 +162,15 @@ Parameters buildImmdsResponse(ForecastResult result) {
 /// itself still travels back in its own parameter, so nothing is dropped.
 OperationOutcome? _implausibleDoseOutcome(ForecastResult result) {
   final List<ImplausibleDose> bad = result.patient.implausibleDoses;
-  if (bad.isEmpty) return null;
+  final List<OperationOutcomeIssue> issues = <OperationOutcomeIssue>[
+    ..._sameDayIssues(result),
+  ];
+  if (bad.isEmpty && issues.isEmpty) return null;
 
   final VaxDate dob = result.patient.birthdate;
   final VaxDate assessment = result.patient.assessmentDate;
 
-  return OperationOutcome(
-    issue: bad.map((ImplausibleDose entry) {
+  issues.addAll(bad.map((ImplausibleDose entry) {
       final (String code, String detail) = switch (entry.reason) {
         ImplausibleDoseReason.beforeBirth => (
             'dose-before-birth',
@@ -213,13 +215,80 @@ OperationOutcome? _implausibleDoseOutcome(ForecastResult result) {
           text: detail.toFhirString,
         ),
         expression: <FhirString>[
-          "Parameters.parameter.where(name='immunization').resource"
-                  ".ofType(Immunization).where(id='${entry.dose.doseId}')"
-              .toFhirString,
+          _immunizationPath(entry.dose.doseId),
         ],
       );
-    }).toList(),
-  );
+    }));
+
+  return OperationOutcome(issue: issues);
+}
+
+/// A FHIRPath naming one Immunization in the request.
+FhirString _immunizationPath(String doseId) =>
+    "Parameters.parameter.where(name='immunization').resource"
+            ".ofType(Immunization).where(id='$doseId')"
+        .toFhirString;
+
+/// Two doses covering the same antigen on the same day.
+///
+/// Reported, never evaluated differently: both records may be real, and the
+/// engine cannot tell a duplicated record from a second injection. Whatever the
+/// second dose is worth, CDSi decides that by the ordinary rules — usually too
+/// soon, but not always, since 180 of 1,135 minimum intervals in the supporting
+/// data are zero days.
+///
+/// Matched on the ANTIGEN, not the product. Pediarix (CVX 110) and Pentacel
+/// (CVX 120) are different codes that both carry diphtheria, tetanus, pertussis
+/// and polio, so a check comparing CVX would miss the case that actually
+/// happens on a ward. The engine already evaluates per antigen, so the two
+/// doses sit side by side there.
+List<OperationOutcomeIssue> _sameDayIssues(ForecastResult result) {
+  final List<OperationOutcomeIssue> issues = <OperationOutcomeIssue>[];
+
+  for (final VaxAntigen antigen in result.agMap.values) {
+    // One series per antigen is enough: every series of a group holds the same
+    // administered doses, so reading them all would report each clash twice.
+    final VaxSeries? series = antigen.groups.values
+        .expand((VaxGroup g) =>
+            g.prioritizedSeries.isNotEmpty ? g.prioritizedSeries : g.series)
+        .firstOrNull;
+    if (series == null) continue;
+
+    final Map<String, List<VaxDose>> byDate = <String, List<VaxDose>>{};
+    for (final VaxDose dose in series.doses) {
+      if (dose.evalStatus == null) continue;
+      (byDate['${dose.dateGiven}'] ??= <VaxDose>[]).add(dose);
+    }
+
+    for (final MapEntry<String, List<VaxDose>> day in byDate.entries) {
+      if (day.value.length < 2) continue;
+      final String ids = day.value.map((VaxDose d) => d.doseId).join(', ');
+      final String cvxs =
+          day.value.map((VaxDose d) => 'CVX ${d.cvx}').toSet().join(' and ');
+      issues.add(OperationOutcomeIssue(
+        severity: IssueSeverity.warning,
+        code: IssueType.duplicate,
+        details: CodeableConcept(
+          coding: <Coding>[
+            Coding(
+              system: '$_cicadaCs/data-integrity'.toFhirUri,
+              code: 'duplicate-same-day'.toFhirCode,
+            ),
+          ],
+          text: '${day.value.length} doses covering ${antigen.targetDisease} '
+                  'were administered on ${day.key}: $ids, $cvxs. Each is '
+                  'evaluated on its own merits. If these are one injection '
+                  'recorded twice, or one product recorded alongside a '
+                  'combination containing it, the duplicate should be removed '
+                  'rather than the patient revaccinated.'
+              .toFhirString,
+        ),
+        expression:
+            day.value.map((VaxDose d) => _immunizationPath(d.doseId)).toList(),
+      ));
+    }
+  }
+  return issues;
 }
 
 /// Builds [ImmunizationEvaluation] resources from all evaluated doses across

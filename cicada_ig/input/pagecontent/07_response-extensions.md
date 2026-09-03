@@ -76,3 +76,12 @@ in an `OperationOutcome` returned as an `outcome` parameter, coded from the
 [Cicada Data Integrity](CodeSystem-data-integrity.html) code system, carrying
 both conflicting dates and what to check. The `Immunization` still returns in
 its own parameter, so nothing is dropped silently.
+
+The same `outcome` parameter also reports **two doses covering one antigen on
+one day**. That one is a warning only: both records may be real, and the engine
+cannot tell a record entered twice from a second injection, so each dose is
+still evaluated on its own merits. It is matched on the antigen rather than the
+product, because the case that actually happens is a combination given beside
+one of its components — Pediarix and Pentacel are different CVX codes that both
+carry diphtheria, tetanus, pertussis and polio, and a check comparing products
+would see nothing.
