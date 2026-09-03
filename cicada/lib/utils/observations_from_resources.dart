@@ -5,6 +5,9 @@ import '../cicada.dart';
 /// CDSi observation code system URI used in condition test cases.
 const _cdsiSystemUri = 'https://www.cdc.gov/vaccines/programs/iis/cdsi.html';
 
+/// SNOMED CT, the one system in the crosswalk that is a hierarchy.
+const _snomedSystemUri = 'http://snomed.info/sct';
+
 /// Maps FHIR coding system URIs to CDSi codeSystem identifiers.
 const Map<String, String> _fhirSystemToCdsi = {
   'http://snomed.info/sct': 'SNOMED',
@@ -111,6 +114,34 @@ VaxObservation? _matchCodingsToObservation(List<Coding>? codings) {
       for (final CodedValue cv in codedValues) {
         if (cv.codeSystem == cdsiSystem && cv.code == code) {
           return allObservations[i];
+        }
+      }
+    }
+  }
+
+  // Nothing matched exactly. SNOMED is a hierarchy and clinicians record
+  // specific concepts, so try the listed concepts this code falls under.
+  //
+  // Without this a patient recorded as, say, sickle cell disease does not match
+  // CDSi's `Disorder of hematopoietic structure`, the observation is silently
+  // absent, and the forecast reads as though they carried no risk condition.
+  // Measured 2026-09-03: 7,975 concepts sit under the 132 listed SNOMED codes
+  // that have descendants.
+  //
+  // Only SNOMED. The other systems the crosswalk carries are enumerations, not
+  // hierarchies, and ICD-10-CM's dotted codes are not a subsumption axis.
+  for (final Coding coding in codings) {
+    if (coding.system?.toString() != _snomedSystemUri) continue;
+    final String? code = coding.code?.toString();
+    if (code == null) continue;
+    for (final String ancestor in snomedClosure[code] ?? const <String>[]) {
+      for (int i = 0; i < allObservations.length; i++) {
+        final codedValues = allObservations[i].codedValues?.codedValue;
+        if (codedValues == null) continue;
+        for (final CodedValue cv in codedValues) {
+          if (cv.codeSystem == 'SNOMED' && cv.code == ancestor) {
+            return allObservations[i];
+          }
         }
       }
     }

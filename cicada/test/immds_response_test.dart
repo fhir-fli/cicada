@@ -847,4 +847,54 @@ void main() {
           isNot(contains('duplicate-same-day')));
     });
   });
+
+  group('SNOMED subsumption', () {
+    // The engine matched a patient's coding against CDSi's coded values by
+    // exact string equality. SNOMED is a hierarchy and clinicians record
+    // specific concepts, so a patient coded with a descendant matched nothing,
+    // the observation was silently absent, and the forecast read as though
+    // they carried no risk condition. Measured 2026-09-03: 7,975 concepts sit
+    // under the 132 listed codes that have descendants.
+    //
+    // No CDC test case exercises this, because CDC's cases use the exact codes
+    // from their own supporting data. That is why it survived.
+    List<String> observationCodesFor(String snomed) {
+      final condition = Condition.fromJson(<String, dynamic>{
+        'resourceType': 'Condition',
+        'id': 'c1',
+        'subject': {'reference': 'Patient/1'},
+        'code': {
+          'coding': [
+            {'system': 'http://snomed.info/sct', 'code': snomed},
+          ],
+        },
+      });
+      return observationsFromConditions(<Condition>[condition], VaxDate(2020, 1, 1))
+          .map((VaxObservation o) => o.observationCode ?? '')
+          .toList();
+    }
+
+    // 16360009 Delta beta thalassemia is a descendant of 40108008 Thalassemia,
+    // which CDSi codes to observation 205.
+    test('a specific thalassemia matches the CDSi thalassemia observation', () {
+      expect(observationCodesFor('16360009'), contains('205'));
+    });
+
+    // 44218004 Implantation of cochlear electrode is a descendant of
+    // 359612003, which CDSi codes to observation 011, cochlear implants.
+    test('a specific cochlear implantation matches the implant observation', () {
+      expect(observationCodesFor('44218004'), contains('011'));
+    });
+
+    // The listed concept itself must still match, by the exact path.
+    test('the listed concept itself still matches', () {
+      expect(observationCodesFor('40108008'), contains('205'));
+    });
+
+    // The control: an unrelated concept must match nothing, so the fallback
+    // cannot be passing by matching everything.
+    test('an unrelated concept matches nothing', () {
+      expect(observationCodesFor('80146002'), isEmpty); // appendectomy
+    });
+  });
 }
