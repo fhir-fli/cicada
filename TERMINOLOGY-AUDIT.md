@@ -289,6 +289,43 @@ codes for measles, mumps, rubella, varicella, hepatitis A and hepatitis B serolo
 two of them are retired or wrong (§6) and the rest resolve. The forecast status value
 set already uses LOINC answer list `LL940-8`.
 
+## 9. 🟠 Seven codes fail validation because tx serves the wrong SNOMED edition
+
+Added 2026-09-03 after chasing this to a dead end, so nobody repeats it.
+
+`451301000124103`, `429301000124101`, `451331000124106`, `429311000124103`,
+`451111000124103`, `451291000124104` and `451281000124102` are **not wrong
+codes**. They are US-extension concepts. Checked against tx.fhir.org: each
+returns *Adverse reaction to component of vaccine* under
+`http://snomed.info/sct/731000124108` and returns nothing under International,
+which is what tx serves by default. `2219088009` is absent from both editions
+and is the one that belongs in `CDC-REPORT.md` per §4.
+
+**Two attempts to point the build at the US edition, both reverted:**
+
+| attempt | result |
+|---|---|
+| `parameters: system-version` in `sushi-config.yaml` | not a valid IG parameter code; the publisher rejects it against `ig-parameters` and errors went 107 → 111 |
+| `ig-expansion-parameters` naming a `Parameters` resource | the documented mechanism — its own definition says the usual use is specifying the SNOMED edition — but the build did not finish in 69 minutes, sitting in *Generating Narratives* on 56 seconds of CPU |
+
+🔴 **The obvious explanation is wrong.** It is not that tx cannot serve the US
+edition. Measured directly: expanding our own `vaccine-condition-codes-snomed`,
+201 includes, takes **0.20 s against International and 0.21 s against the US
+edition**, and a plain `is-a` expansion returns 124 concepts against
+International and 129 against US, both in 0.13 s. The hang is on the publisher
+side and **its cause is not known**. Note that an International run also once
+sat for 45 minutes before completing, so slowness there is not by itself
+evidence of a hang.
+
+**What would settle it:** run the publisher with the expansion parameters and
+leave it for several hours, since the one long run that was left alone did
+finish.
+
+Meanwhile the IG validates against International and these seven are expected
+failures, not defects.
+
+---
+
 ## What to change here, in order
 
 1. Regenerate `cdsi-observation-codes` from the 4.65-508 supporting data (§1).
