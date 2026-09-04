@@ -44,14 +44,6 @@
         ]
       },
       {
-        "id": "Patient.gender",
-        "path": "Patient.gender",
-        "binding": {
-          "strength": "required",
-          "valueSet": "http://fhirfli.dev/fhir/ig/cicada/ValueSet/vaccine-gender"
-        }
-      },
-      {
         "id": "Patient.birthDate",
         "path": "Patient.birthDate",
         "min": 1

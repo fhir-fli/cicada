@@ -157,7 +157,7 @@
     "fshType": "Profile",
     "fshFile": "profile_vaccine_as_medication.fsh",
     "startLine": 1,
-    "endLine": 16
+    "endLine": 18
   },
   {
     "outputFile": "StructureDefinition-VaccineConditionFhir.json",
@@ -180,32 +180,32 @@
     "fshName": "AllowedIntervalReason",
     "fshType": "Extension",
     "fshFile": "vax_dose_immunization_profile.fsh",
-    "startLine": 74,
-    "endLine": 78
+    "startLine": 83,
+    "endLine": 87
   },
   {
     "outputFile": "StructureDefinition-allowed-interval-status.json",
     "fshName": "AllowedIntervalStatus",
     "fshType": "Extension",
     "fshFile": "vax_dose_immunization_profile.fsh",
-    "startLine": 68,
-    "endLine": 72
+    "startLine": 77,
+    "endLine": 81
   },
   {
     "outputFile": "StructureDefinition-allowed-vaccine-reason.json",
     "fshName": "AllowedVaccineReason",
     "fshType": "Extension",
     "fshFile": "vax_dose_immunization_profile.fsh",
-    "startLine": 104,
-    "endLine": 108
+    "startLine": 113,
+    "endLine": 117
   },
   {
     "outputFile": "StructureDefinition-allowed-vaccine-status.json",
     "fshName": "AllowedVaccineStatus",
     "fshType": "Extension",
     "fshFile": "vax_dose_immunization_profile.fsh",
-    "startLine": 98,
-    "endLine": 102
+    "startLine": 107,
+    "endLine": 111
   },
   {
     "outputFile": "StructureDefinition-antigen-needing-dose-ext.json",
@@ -236,8 +236,8 @@
     "fshName": "BeginAge",
     "fshType": "Extension",
     "fshFile": "profile_vaccine_as_medication.fsh",
-    "startLine": 18,
-    "endLine": 22
+    "startLine": 20,
+    "endLine": 24
   },
   {
     "outputFile": "StructureDefinition-cicada-immunization-recommendation.json",
@@ -260,8 +260,8 @@
     "fshName": "EndAge",
     "fshType": "Extension",
     "fshFile": "profile_vaccine_as_medication.fsh",
-    "startLine": 24,
-    "endLine": 28
+    "startLine": 26,
+    "endLine": 30
   },
   {
     "outputFile": "StructureDefinition-engine-version-ext.json",
@@ -284,40 +284,40 @@
     "fshName": "InadvertentAdministrationStatus",
     "fshType": "Extension",
     "fshFile": "vax_dose_immunization_profile.fsh",
-    "startLine": 38,
-    "endLine": 42
+    "startLine": 47,
+    "endLine": 51
   },
   {
     "outputFile": "StructureDefinition-preferred-interval-reason.json",
     "fshName": "PreferredIntervalReason",
     "fshType": "Extension",
     "fshFile": "vax_dose_immunization_profile.fsh",
-    "startLine": 62,
-    "endLine": 66
+    "startLine": 71,
+    "endLine": 75
   },
   {
     "outputFile": "StructureDefinition-preferred-interval-status.json",
     "fshName": "PreferredIntervalStatus",
     "fshType": "Extension",
     "fshFile": "vax_dose_immunization_profile.fsh",
-    "startLine": 56,
-    "endLine": 60
+    "startLine": 65,
+    "endLine": 69
   },
   {
     "outputFile": "StructureDefinition-preferred-vaccine-reason.json",
     "fshName": "PreferredVaccineReason",
     "fshType": "Extension",
     "fshFile": "vax_dose_immunization_profile.fsh",
-    "startLine": 92,
-    "endLine": 96
+    "startLine": 101,
+    "endLine": 105
   },
   {
     "outputFile": "StructureDefinition-preferred-vaccine-status.json",
     "fshName": "PreferredVaccineStatus",
     "fshType": "Extension",
     "fshFile": "vax_dose_immunization_profile.fsh",
-    "startLine": 86,
-    "endLine": 90
+    "startLine": 95,
+    "endLine": 99
   },
   {
     "outputFile": "StructureDefinition-schedule-supporting-data.json",
@@ -364,32 +364,32 @@
     "fshName": "VaccinationConflict",
     "fshType": "Extension",
     "fshFile": "vax_dose_immunization_profile.fsh",
-    "startLine": 80,
-    "endLine": 84
+    "startLine": 89,
+    "endLine": 93
   },
   {
     "outputFile": "StructureDefinition-vaccine-type.json",
     "fshName": "VaccineType",
     "fshType": "Extension",
     "fshFile": "profile_vaccine_as_medication.fsh",
-    "startLine": 30,
-    "endLine": 34
+    "startLine": 32,
+    "endLine": 36
   },
   {
     "outputFile": "StructureDefinition-valid-age-reason.json",
     "fshName": "ValidAgeReason",
     "fshType": "Extension",
     "fshFile": "vax_dose_immunization_profile.fsh",
-    "startLine": 50,
-    "endLine": 54
+    "startLine": 59,
+    "endLine": 63
   },
   {
     "outputFile": "StructureDefinition-valid-age-status.json",
     "fshName": "ValidAgeStatus",
     "fshType": "Extension",
     "fshFile": "vax_dose_immunization_profile.fsh",
-    "startLine": 44,
-    "endLine": 48
+    "startLine": 53,
+    "endLine": 57
   },
   {
     "outputFile": "StructureDefinition-vax-dose.json",
@@ -397,7 +397,7 @@
     "fshType": "Profile",
     "fshFile": "vax_dose_immunization_profile.fsh",
     "startLine": 1,
-    "endLine": 36
+    "endLine": 45
   },
   {
     "outputFile": "StructureDefinition-vax-patient.json",
@@ -405,7 +405,7 @@
     "fshType": "Profile",
     "fshFile": "profile_vax_patient.fsh",
     "startLine": 2,
-    "endLine": 14
+    "endLine": 21
   },
   {
     "outputFile": "ValueSet-VaccineCodesCvxMvx.json",

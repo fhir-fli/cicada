@@ -3,7 +3,9 @@ Parent: Medication
 Id: Vaccine
 Title: "Vaccine"
 Description: "Simple vaccine to easily obtain needed information for forecasting"
-* ^url = "http://example.org/fhir/StructureDefinition/Vaccine"
+// The canonical is the IG's own, not example.org, which the publisher
+// reports as a URL mismatch against the resource's actual location.
+* ^url = "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/Vaccine"
 
 * extension contains BeginAge named beginAge 0..1
 * extension contains EndAge named endAge 0..1

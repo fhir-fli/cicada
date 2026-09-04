@@ -3,8 +3,17 @@ Parent: Immunization
 Id: vax-dose
 Title: "Dose of a Vaccine"
 Description: "Detailed information about each vaccination dose."
-* ^url = "http://example.org/fhir/StructureDefinition/vax-dose"
-* status from EvalStatusVS (required)
+// The canonical is the IG's own, not example.org, which was a URL mismatch
+// against every other artefact here.
+* ^url = "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/vax-dose"
+
+// Immunization.status is NOT rebound. It is bound required in R4 to
+// completed | entered-in-error | not-done, which is the status of the
+// administration. This profile used to bind it to EvalStatusVS —
+// valid | notvalid | extraneous | sub-standard — which is the CDSi
+// EVALUATION status of a dose, a different thing about a different act. A
+// required binding cannot be widened, and the engine already reports the
+// evaluation status where R4 puts it: ImmunizationEvaluation.doseStatus.
 * statusReason from EvalReasonVS (extensible)
 * vaccineCode from VaccineCodesCvxMvx (required)
 * occurrenceDateTime 1..1

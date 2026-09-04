@@ -1,7 +1,7 @@
 {
   "resourceType": "StructureDefinition",
   "id": "vax-dose",
-  "url": "http://example.org/fhir/StructureDefinition/vax-dose",
+  "url": "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/vax-dose",
   "name": "VaxDose",
   "title": "Dose of a Vaccine",
   "status": "draft",
@@ -222,14 +222,6 @@
             ]
           }
         ]
-      },
-      {
-        "id": "Immunization.status",
-        "path": "Immunization.status",
-        "binding": {
-          "strength": "required",
-          "valueSet": "http://fhirfli.dev/fhir/ig/cicada/ValueSet/eval-status"
-        }
       },
       {
         "id": "Immunization.statusReason",
