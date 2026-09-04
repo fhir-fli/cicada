@@ -13,7 +13,8 @@ List<Series> relevantSeries(
   series.retainWhere((Series element) =>
       element.requiredGender == null ||
       element.requiredGender!.isEmpty ||
-      element.requiredGender!.contains(patient.gender));
+      element.requiredGender!.contains(patient.gender) ||
+      _pregnancyOutranksGender(element, patient));
 
   List<Indication> applicable(Series s, {required bool requireBeginAge}) =>
       applicableIndications(patient, s, requireBeginAge: requireBeginAge);
@@ -77,4 +78,38 @@ List<Indication> applicableIndications(
             patient.assessmentDate &&
         beforeEnd;
   }).toList();
+}
+
+/// 🛑 DELIBERATE DEVIATION FROM CDSi. A recorded sex must not exclude a
+/// pregnant patient from Tdap.
+///
+/// The pertussis risk 1-dose series carries BOTH `requiredGender`
+/// Female-or-Unknown AND an indication on observation 007, Pregnant, whose own
+/// text reads "Administer to women who are pregnant". The indication already
+/// establishes the anatomy the recommendation is about, so the gender gate adds
+/// nothing and can only exclude: a pregnant patient whose record says `male`
+/// satisfies the indication and fails the gate.
+///
+/// ACIP recommends Tdap in every pregnancy. The clinically relevant fact is the
+/// pregnancy, not the administrative sex on the record, and administrative sex
+/// is what `Patient.gender` carries by its own R4 definition. A trans man, or
+/// anyone whose recorded sex does not match their anatomy, is exactly the
+/// patient this gate drops.
+///
+/// Scoped to pregnancy on purpose. Of the eleven gender-gated series in
+/// 4.65-508, this is the only one whose indication is the qualifying state
+/// itself; the ten HPV ones are gated on age or immunocompromise and exist as
+/// duplicated male and non-male pairs with identical doses, ages and intervals,
+/// so ignoring gender there would match both pairs and forecast twice.
+///
+/// Raised with CDC and put to OpenEvidence rather than decided here alone.
+bool _pregnancyOutranksGender(Series series, VaxPatient patient) {
+  const pregnantObservation = '007';
+  final bool gated = series.indication?.any((Indication i) =>
+          i.observationCode?.code == pregnantObservation) ??
+      false;
+  if (!gated) return false;
+  return patient.observations.observation?.any(
+          (VaxObservation o) => o.observationCode == pregnantObservation) ??
+      false;
 }

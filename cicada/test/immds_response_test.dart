@@ -897,4 +897,102 @@ void main() {
       expect(observationCodesFor('80146002'), isEmpty); // appendectomy
     });
   });
+
+  group('gender', () {
+    Parameters patientWith(String? gender, {bool pregnant = false}) {
+      final params = <Map<String, dynamic>>[
+        {'name': 'assessmentDate', 'valueDate': '2026-01-15'},
+        {
+          'name': 'patient',
+          'resource': <String, dynamic>{
+            'resourceType': 'Patient',
+            'id': '1',
+            'birthDate': '1996-01-01',
+            if (gender != null) 'gender': gender,
+          },
+        },
+      ];
+      if (pregnant) {
+        params.add({
+          'name': 'condition',
+          'resource': {
+            'resourceType': 'Condition',
+            'id': 'preg',
+            'subject': {'reference': 'Patient/1'},
+            'code': {
+              'coding': [
+                {
+                  'system': 'https://www.cdc.gov/vaccines/programs/iis/cdsi.html',
+                  'code': '007',
+                },
+              ],
+            },
+          },
+        });
+      }
+      return Parameters.fromJson(<String, dynamic>{
+        'resourceType': 'Parameters',
+        'parameter': params,
+      });
+    }
+
+    int hpvSeriesFor(String? gender) {
+      final result = evaluateForForecast(patientWith(gender));
+      var n = 0;
+      for (final ag in result.agMap.values) {
+        if (ag.targetDisease != 'HPV') continue;
+        for (final g in ag.groups.values) {
+          n += g.series.length;
+        }
+      }
+      return n;
+    }
+
+    // CDSi's gate is a positive allow-list, not a "not male" test, so a value
+    // on no list is excluded from everything rather than falling through.
+    // fhir_r4 does not enforce the required binding on Patient.gender, so a
+    // non-conformant string reaches the engine; it must land on unknown, which
+    // CDC lists beside Female on every female-scoped series.
+    test('a non-conformant gender gets the same series as other', () {
+      expect(hpvSeriesFor('transgender'), hpvSeriesFor('other'));
+    });
+
+    test('an absent gender gets the same series as other', () {
+      expect(hpvSeriesFor(null), hpvSeriesFor('other'));
+    });
+
+    test('male and female both select series', () {
+      expect(hpvSeriesFor('male'), greaterThan(0));
+      expect(hpvSeriesFor('female'), greaterThan(0));
+    });
+
+    // DELIBERATE DEVIATION. The pertussis risk series carries requiredGender
+    // Female-or-Unknown and an indication on observation 007, Pregnant. The
+    // pregnancy is what makes Tdap apply, so a recorded sex must not exclude
+    // it. Without the deviation a pregnant patient recorded as male gets no
+    // pertussis risk series at all.
+    bool pertussisRiskSelected(String gender) {
+      final result = evaluateForForecast(patientWith(gender, pregnant: true));
+      for (final ag in result.agMap.values) {
+        if (ag.targetDisease != 'Pertussis') continue;
+        for (final g in ag.groups.values) {
+          for (final s in g.series) {
+            if ((s.series.seriesName ?? '').toLowerCase().contains('risk')) {
+              return true;
+            }
+          }
+        }
+      }
+      return false;
+    }
+
+    test('a pregnant patient recorded as male still gets the Tdap risk series',
+        () {
+      expect(pertussisRiskSelected('male'), isTrue);
+    });
+
+    test('a pregnant patient recorded as female gets it too', () {
+      expect(pertussisRiskSelected('female'), isTrue);
+    });
+  });
 }
