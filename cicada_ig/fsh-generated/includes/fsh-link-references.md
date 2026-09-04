@@ -8,6 +8,7 @@
 [AssessmentDate]: StructureDefinition-assessment-date.html
 [BeginAge]: StructureDefinition-begin-age.html
 [CdsiObservationCodes]: CodeSystem-cdsi-observation-codes.html
+[CdsiObservationCodesVS]: ValueSet-cdsi-observation-codes-vs.html
 [DataIntegrityCS]: CodeSystem-data-integrity.html
 [DataIntegrityVS]: ValueSet-data-integrity-vs.html
 [EvalStatusCS]: CodeSystem-EvalStatus.html

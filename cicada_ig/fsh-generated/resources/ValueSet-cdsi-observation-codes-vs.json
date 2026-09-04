@@ -1,0 +1,16 @@
+{
+  "resourceType": "ValueSet",
+  "status": "draft",
+  "name": "CdsiObservationCodesVS",
+  "id": "cdsi-observation-codes-vs",
+  "title": "CDSI Observation Codes Value Set",
+  "description": "Every CDSi observation code, as published in the supporting data.",
+  "url": "http://fhirfli.dev/fhir/ig/cicada/ValueSet/cdsi-observation-codes-vs",
+  "compose": {
+    "include": [
+      {
+        "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes"
+      }
+    ]
+  }
+}

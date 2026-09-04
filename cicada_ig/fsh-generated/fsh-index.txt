@@ -5,13 +5,13 @@ CodeSystem-IntervalReason.json                               IntervalReasonCS   
 CodeSystem-PreferredAllowedReason.json                       PreferredAllowedReasonCS           CodeSystem  cs_vs_preferred_allowed_reason.fsh      1 - 10
 CodeSystem-VaccineGender.json                                VaccineGenderCS                    CodeSystem  cs_vs_vaccine_gender.fsh                2 - 9
 CodeSystem-ValidAgeReason.json                               ValidAgeReasonCS                   CodeSystem  cs_vs_valid_age_reason.fsh              2 - 8
-CodeSystem-cdsi-observation-codes.json                       CdsiObservationCodes               CodeSystem  cs_cdsi_obs_codes.fsh                   7 - 568
+CodeSystem-cdsi-observation-codes.json                       CdsiObservationCodes               CodeSystem  cs_cdsi_obs_codes.fsh                   7 - 290
 CodeSystem-data-integrity.json                               DataIntegrityCS                    CodeSystem  cicada_response_extensions.fsh          72 - 80
 CodeSystem-forecast-reason.json                              CicadaForecastReasonCS             CodeSystem  cicada_response_extensions.fsh          16 - 31
 CodeSystem-series-type.json                                  SeriesTypeCS                       CodeSystem  profile_forecast_recommendation.fsh     17 - 25
 CodeSystem-target-dose-status.json                           TargetDoseStatusCS                 CodeSystem  cicada_response_extensions.fsh          43 - 51
 ConceptMap-Icd10ToCdsiObservation.json                       Icd10ToCdsiObservation             Instance    cm_icd10_to_cdsi.fsh                    1 - 128
-ConceptMap-SnomedToCdsiObservation.json                      SnomedToCdsiObservation            Instance    cm_snomed_to_cdsi.fsh                   1 - 88
+ConceptMap-SnomedToCdsiObservation.json                      SnomedToCdsiObservation            Instance    cm_snomed_to_cdsi.fsh                   6 - 1757
 StructureDefinition-MedicationAdministrationProfile.json     MedicationAdministrationProfile    Profile     profile_medications.fsh                 15 - 20
 StructureDefinition-MedicationDispenseProfile.json           MedicationDispenseProfile          Profile     profile_medications.fsh                 22 - 27
 StructureDefinition-MedicationRequestProfile.json            MedicationRequestProfile           Profile     profile_medications.fsh                 8 - 13
@@ -51,6 +51,7 @@ StructureDefinition-valid-age-status.json                    ValidAgeStatus     
 StructureDefinition-vax-dose.json                            VaxDose                            Profile     vax_dose_immunization_profile.fsh       1 - 36
 StructureDefinition-vax-patient.json                         VaxPatient                         Profile     profile_vax_patient.fsh                 2 - 14
 ValueSet-VaccineCodesCvxMvx.json                             VaccineCodesCvxMvx                 ValueSet    vs_vaccine_codes_cvx_mvx.fsh            1 - 3
+ValueSet-cdsi-observation-codes-vs.json                      CdsiObservationCodesVS             ValueSet    cs_cdsi_obs_codes.fsh                   295 - 299
 ValueSet-data-integrity-vs.json                              DataIntegrityVS                    ValueSet    cicada_response_extensions.fsh          82 - 86
 ValueSet-dose-status-reason.json                             DoseStatusReasonVS                 ValueSet    cs_vs_dose_status_reason.fsh            1 - 5
 ValueSet-eval-reason.json                                    EvalReasonVS                       ValueSet    cs_vs_eval_reason.fsh                   21 - 39

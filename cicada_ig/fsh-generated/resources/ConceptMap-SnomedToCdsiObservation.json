@@ -3,7 +3,7 @@
   "id": "SnomedToCdsiObservation",
   "url": "http://fhirfli.dev/fhir/ig/cicada/ConceptMap/SnomedToCdsiObservation",
   "title": "SNOMED CT to CDSi Observation Code Map",
-  "description": "Maps SNOMED CT codes to CDSi observation codes used in immunization decision support.",
+  "description": "Maps SNOMED CT codes to CDSi observation codes used in immunization decision support. Generated from CDC's supporting data.",
   "group": [
     {
       "element": [
@@ -16,7 +16,29 @@
             }
           ],
           "code": "370388006",
-          "display": "Patient immunocompromised"
+          "display": "Patient Immunocompromised"
+        },
+        {
+          "target": [
+            {
+              "code": "004",
+              "display": "Recipient of a hematopoietic stem cell transplant",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "234336002",
+          "display": "Hemopoietic stem cell transplant [procedure]"
+        },
+        {
+          "target": [
+            {
+              "code": "004",
+              "display": "Recipient of a hematopoietic stem cell transplant",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "23719005",
+          "display": "Transplantation of bone marrow [procedure]"
         },
         {
           "target": [
@@ -27,7 +49,7 @@
             }
           ],
           "code": "50711007",
-          "display": "Viral hepatitis type C"
+          "display": "Viral hepatitis type C [disorder]"
         },
         {
           "target": [
@@ -38,7 +60,84 @@
             }
           ],
           "code": "77386006",
-          "display": "Patient currently pregnant"
+          "display": "Patient currently pregnant [finding]"
+        },
+        {
+          "target": [
+            {
+              "code": "007",
+              "display": "Pregnant",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "102874004",
+          "display": "Possible pregnancy [finding]"
+        },
+        {
+          "target": [
+            {
+              "code": "007",
+              "display": "Pregnant",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "255409004",
+          "display": "Pregnant woman [person]"
+        },
+        {
+          "target": [
+            {
+              "code": "009",
+              "display": "Breastfeeding",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "413712001",
+          "display": "Breastfeeding [mother] [observable entity]"
+        },
+        {
+          "target": [
+            {
+              "code": "010",
+              "display": "Cerebrospinal fluid leaks",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "230744007",
+          "display": "Cerebrospinal fluid leak [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "011",
+              "display": "Cochlear implants",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "449840001",
+          "display": "Cochlear prosthesis in situ [finding]"
+        },
+        {
+          "target": [
+            {
+              "code": "011",
+              "display": "Cochlear implants",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "43252007",
+          "display": "Cochlear prosthesis, device [physical object]"
+        },
+        {
+          "target": [
+            {
+              "code": "011",
+              "display": "Cochlear implants",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "359612003",
+          "display": "Implantation of cochlear prosthetic device [procedure]"
         },
         {
           "target": [
@@ -49,7 +148,7 @@
             }
           ],
           "code": "31323000",
-          "display": "Severe combined immunodeficiency disease"
+          "display": "Severe combined immunodeficiency disease [disorder]"
         },
         {
           "target": [
@@ -60,7 +159,194 @@
             }
           ],
           "code": "73211009",
-          "display": "Diabetes mellitus"
+          "display": "Diabetes mellitus [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "015",
+              "display": "Chronic liver disease",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "328383001",
+          "display": "Chronic liver disease [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "015",
+              "display": "Chronic liver disease",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "19943007",
+          "display": "Cirrhosis of liver [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "016",
+              "display": "Chronic heart disease",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "128238001",
+          "display": "Chronic heart disease [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "016",
+              "display": "Chronic heart disease",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "42343007",
+          "display": "Congestive heart failure [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "016",
+              "display": "Chronic heart disease",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "57809008",
+          "display": "Myocardial disease [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "016",
+              "display": "Chronic heart disease",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "12770006",
+          "display": "Cyanotic congenital heart disease [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "016",
+              "display": "Chronic heart disease",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "53741008",
+          "display": "Coronary arteriosclerosis [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "016",
+              "display": "Chronic heart disease",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "79619009",
+          "display": "Mitral valve stenosis [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "016",
+              "display": "Chronic heart disease",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "698247007",
+          "display": "Cardiac arrhythmia [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "017",
+              "display": "Chronic lung disease",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "413839001",
+          "display": "Chronic lung disease [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "017",
+              "display": "Chronic lung disease",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "13645005",
+          "display": "Chronic obstructive lung disease [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "017",
+              "display": "Chronic lung disease",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "87433001",
+          "display": "Pulmonary emphysema [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "017",
+              "display": "Chronic lung disease",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "39871006",
+          "display": "Chronic respiratory failure [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "017",
+              "display": "Chronic lung disease",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "427896006",
+          "display": "Chronic respiratory insufficiency [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "017",
+              "display": "Chronic lung disease",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "17097001",
+          "display": "Chronic disease of respiratory system [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "018",
+              "display": "Laboratory Evidence of Immunity or confirmation of Hepatitis A disease",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "278971009",
+          "display": "Hepatitis A Immune [Finding]"
+        },
+        {
+          "target": [
+            {
+              "code": "019",
+              "display": "Laboratory Evidence of Immunity or confirmation of Hepatitis B disease",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "271511000",
+          "display": "Hepatitis B Immune [Finding]"
         },
         {
           "target": [
@@ -71,7 +357,7 @@
             }
           ],
           "code": "371111005",
-          "display": "Measles immune"
+          "display": "Measles Immune [finding]"
         },
         {
           "target": [
@@ -82,7 +368,7 @@
             }
           ],
           "code": "371112003",
-          "display": "Mumps immune"
+          "display": "Mumps Immune [finding]"
         },
         {
           "target": [
@@ -93,18 +379,73 @@
             }
           ],
           "code": "278968001",
-          "display": "Rubella immune"
+          "display": "Rubella Immune [finding]"
+        },
+        {
+          "target": [
+            {
+              "code": "023",
+              "display": "Laboratory Evidence of Immunity or confirmation of Varicella disease",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "371113008",
+          "display": "Varicella Immune"
+        },
+        {
+          "target": [
+            {
+              "code": "024",
+              "display": "Healthcare provider verified history of or diagnosis of Varicella",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "38907003",
+          "display": "Varicella [Disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "025",
+              "display": "Healthcare provider verified history or diagnosis of Herpes Zoster",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "4740000",
+          "display": "Herpes Zoster [Disorder]"
         },
         {
           "target": [
             {
               "code": "026",
-              "display": "HIV/AIDS - immunocompromised",
+              "display": "Persons with perinatal HIV infection who do not have evidence of severe immunosuppression and who were vaccinated with MMR before establishment of antiviral therapy [ART]",
               "equivalence": "equivalent"
             }
           ],
           "code": "86406008",
-          "display": "Human immunodeficiency virus infection"
+          "display": "Human immunodeficiency virus infection [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "026",
+              "display": "Persons with perinatal HIV infection who do not have evidence of severe immunosuppression and who were vaccinated with MMR before establishment of antiviral therapy [ART]",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "427314002",
+          "display": "Antiviral therapy [procedure]"
+        },
+        {
+          "target": [
+            {
+              "code": "027",
+              "display": "Asthma",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "390798007",
+          "display": "Asthma finding [finding]"
         },
         {
           "target": [
@@ -115,7 +456,40 @@
             }
           ],
           "code": "195967001",
-          "display": "Asthma"
+          "display": "Asthma [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "028",
+              "display": "Intussusception",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "35327006",
+          "display": "Intussusception [morphologic abnormality]"
+        },
+        {
+          "target": [
+            {
+              "code": "028",
+              "display": "Intussusception",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "49723003",
+          "display": "Intussusception of intestine [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "029",
+              "display": "Acute gastroenteritis",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "69776003",
+          "display": "Acute gastroenteritis [disorder]"
         },
         {
           "target": [
@@ -126,14 +500,2204 @@
             }
           ],
           "code": "56717001",
-          "display": "Tuberculosis"
+          "display": "Tuberculosis [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "033",
+              "display": "Taken influenza antiviral medications within the previous 48 hours",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "372763006",
+          "display": "Amantadine [substance]"
+        },
+        {
+          "target": [
+            {
+              "code": "033",
+              "display": "Taken influenza antiviral medications within the previous 48 hours",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "51361008",
+          "display": "Amantadine [product]"
+        },
+        {
+          "target": [
+            {
+              "code": "033",
+              "display": "Taken influenza antiviral medications within the previous 48 hours",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "372532009",
+          "display": "Rimantadine [substance]"
+        },
+        {
+          "target": [
+            {
+              "code": "033",
+              "display": "Taken influenza antiviral medications within the previous 48 hours",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "108712009",
+          "display": "Rimantadine [product]"
+        },
+        {
+          "target": [
+            {
+              "code": "033",
+              "display": "Taken influenza antiviral medications within the previous 48 hours",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "387010007",
+          "display": "Zanamivir [substance]"
+        },
+        {
+          "target": [
+            {
+              "code": "033",
+              "display": "Taken influenza antiviral medications within the previous 48 hours",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "116100000",
+          "display": "Zanamivir [product]"
+        },
+        {
+          "target": [
+            {
+              "code": "033",
+              "display": "Taken influenza antiviral medications within the previous 48 hours",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "412261005",
+          "display": "Oseltamivir [substance]"
+        },
+        {
+          "target": [
+            {
+              "code": "033",
+              "display": "Taken influenza antiviral medications within the previous 48 hours",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "386142008",
+          "display": "Oseltamivir [product]"
+        },
+        {
+          "target": [
+            {
+              "code": "034",
+              "display": "Receiving long-term aspirin therapy",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "405742008",
+          "display": "Aspirin therapy finding [finding]"
+        },
+        {
+          "target": [
+            {
+              "code": "036",
+              "display": "Men who have sex with men",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "76102007",
+          "display": "Male homosexual [finding]"
+        },
+        {
+          "target": [
+            {
+              "code": "036",
+              "display": "Men who have sex with men",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "225531006",
+          "display": "Homosexual behavior [finding]"
+        },
+        {
+          "target": [
+            {
+              "code": "037",
+              "display": "Not in a long-term, mutually monogamous relationship",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "225516002",
+          "display": "Multiple sexual contacts [finding]"
+        },
+        {
+          "target": [
+            {
+              "code": "037",
+              "display": "Not in a long-term, mutually monogamous relationship",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "228460004",
+          "display": "Multiple current sexual partners [finding]"
+        },
+        {
+          "target": [
+            {
+              "code": "037",
+              "display": "Not in a long-term, mutually monogamous relationship",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "228466005",
+          "display": "Commitment to sexual relationship [observable entity]"
+        },
+        {
+          "target": [
+            {
+              "code": "038",
+              "display": "Sex partner of Hepatitis B surface antigen-positive persons",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "225517006",
+          "display": "Sexual partners [observable entity]"
+        },
+        {
+          "target": [
+            {
+              "code": "038",
+              "display": "Sex partner of Hepatitis B surface antigen-positive persons",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "11723008",
+          "display": "Contact with [contextual qualifier] [qualifier value]"
+        },
+        {
+          "target": [
+            {
+              "code": "038",
+              "display": "Sex partner of Hepatitis B surface antigen-positive persons",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "165806002",
+          "display": "Hepatitis B surface antigen positive [finding]"
+        },
+        {
+          "target": [
+            {
+              "code": "039",
+              "display": "Receives treatment for STD",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "305489005",
+          "display": "Under care of genitourinary medicine physician [finding]"
+        },
+        {
+          "target": [
+            {
+              "code": "039",
+              "display": "Receives treatment for STD",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "305679000",
+          "display": "Seen by genitourinary medicine physician [finding]"
+        },
+        {
+          "target": [
+            {
+              "code": "039",
+              "display": "Receives treatment for STD",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "8098009",
+          "display": "Sexually transmitted infectious disease [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "040",
+              "display": "Illicit drug use",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "307052004",
+          "display": "Illicit drug use [finding]"
+        },
+        {
+          "target": [
+            {
+              "code": "040",
+              "display": "Illicit drug use",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "228366006",
+          "display": "Finding relating to drug misuse behavior [finding]"
+        },
+        {
+          "target": [
+            {
+              "code": "041",
+              "display": "Illicit injection drug use",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "226034001",
+          "display": "Injecting drug user [finding]"
+        },
+        {
+          "target": [
+            {
+              "code": "041",
+              "display": "Illicit injection drug use",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "228388006",
+          "display": "Intravenous drug user [finding]"
+        },
+        {
+          "target": [
+            {
+              "code": "041",
+              "display": "Illicit injection drug use",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "145101000119102",
+          "display": "Intravenous cocaine abuse [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "041",
+              "display": "Illicit injection drug use",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "403746009",
+          "display": "Skin lesion due to intravenous drug abuse [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "041",
+              "display": "Illicit injection drug use",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "860699005",
+          "display": "Deep vein thrombosis of lower extremity due to intravenous drug use [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "042",
+              "display": "Smoke cigarettes",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "77176002",
+          "display": "Smoker [finding]"
+        },
+        {
+          "target": [
+            {
+              "code": "043",
+              "display": "Alcoholism",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "228281002",
+          "display": "Problem drinker [finding]"
+        },
+        {
+          "target": [
+            {
+              "code": "043",
+              "display": "Alcoholism",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "7200002",
+          "display": "Alcoholism [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "050",
+              "display": "Microbiologists routinely exposed to Neisseria meningitidis",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "159138004",
+          "display": "Microbiologist [occupation]"
+        },
+        {
+          "target": [
+            {
+              "code": "050",
+              "display": "Microbiologists routinely exposed to Neisseria meningitidis",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "14698002",
+          "display": "Medical microbiologist [occupation]"
+        },
+        {
+          "target": [
+            {
+              "code": "050",
+              "display": "Microbiologists routinely exposed to Neisseria meningitidis",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "24932003",
+          "display": "Exposure to [contextual qualifier] [qualifier value]"
+        },
+        {
+          "target": [
+            {
+              "code": "050",
+              "display": "Microbiologists routinely exposed to Neisseria meningitidis",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "17872004",
+          "display": "Neisseria meningitidis [organism]"
+        },
+        {
+          "target": [
+            {
+              "code": "051",
+              "display": "Microbiology laboratorians who work frequently with S. typhi",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "159282002",
+          "display": "Laboratory technician [occupation]"
+        },
+        {
+          "target": [
+            {
+              "code": "051",
+              "display": "Microbiology laboratorians who work frequently with S. typhi",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "5595000",
+          "display": "Salmonella Typhi [organism]"
+        },
+        {
+          "target": [
+            {
+              "code": "052",
+              "display": "Laboratory personnel who might be exposed to YFV",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "26630006",
+          "display": "Yellow fever virus [organism]"
+        },
+        {
+          "target": [
+            {
+              "code": "053",
+              "display": "Rabies researchers",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "59881000",
+          "display": "Rabies virus [organism]"
+        },
+        {
+          "target": [
+            {
+              "code": "054",
+              "display": "Laboratory workers who handle specimens that might contain polioviruses",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "44172002",
+          "display": "Human poliovirus [organism]"
+        },
+        {
+          "target": [
+            {
+              "code": "055",
+              "display": "Health care personnel",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "223366009",
+          "display": "Healthcare professional [occupation]"
+        },
+        {
+          "target": [
+            {
+              "code": "057",
+              "display": "Public safety worker exposed to blood or infection body fluids",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "26369006",
+          "display": "Public health nurse [occupation]"
+        },
+        {
+          "target": [
+            {
+              "code": "057",
+              "display": "Public safety worker exposed to blood or infection body fluids",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "68867008",
+          "display": "Public health dentist [occupation]"
+        },
+        {
+          "target": [
+            {
+              "code": "057",
+              "display": "Public safety worker exposed to blood or infection body fluids",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "307969004",
+          "display": "Public health officer [occupation]"
+        },
+        {
+          "target": [
+            {
+              "code": "057",
+              "display": "Public safety worker exposed to blood or infection body fluids",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "56466003",
+          "display": "Public health physician [occupation]"
+        },
+        {
+          "target": [
+            {
+              "code": "057",
+              "display": "Public safety worker exposed to blood or infection body fluids",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "56079002",
+          "display": "Public health veterinarian [occupation]"
+        },
+        {
+          "target": [
+            {
+              "code": "057",
+              "display": "Public safety worker exposed to blood or infection body fluids",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "60008001",
+          "display": "Public health nutritionist [occupation]"
+        },
+        {
+          "target": [
+            {
+              "code": "057",
+              "display": "Public safety worker exposed to blood or infection body fluids",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "87612001",
+          "display": "Blood [substance]"
+        },
+        {
+          "target": [
+            {
+              "code": "057",
+              "display": "Public safety worker exposed to blood or infection body fluids",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "32457005",
+          "display": "Body fluid [substance]"
+        },
+        {
+          "target": [
+            {
+              "code": "059",
+              "display": "Occupational exposure for Hepatitis A",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "158942005",
+          "display": "Residential child care worker [occupation]"
+        },
+        {
+          "target": [
+            {
+              "code": "059",
+              "display": "Occupational exposure for Hepatitis A",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "158939004",
+          "display": "Child care officer [occupation]"
+        },
+        {
+          "target": [
+            {
+              "code": "059",
+              "display": "Occupational exposure for Hepatitis A",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "73851001",
+          "display": "Plumber [general] [occupation]"
+        },
+        {
+          "target": [
+            {
+              "code": "059",
+              "display": "Occupational exposure for Hepatitis A",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "160157004",
+          "display": "Sewerman [occupation]"
+        },
+        {
+          "target": [
+            {
+              "code": "059",
+              "display": "Occupational exposure for Hepatitis A",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "266006009",
+          "display": "Food/drink processor [occupation]"
+        },
+        {
+          "target": [
+            {
+              "code": "059",
+              "display": "Occupational exposure for Hepatitis A",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "274272004",
+          "display": "Catering services occupation [occupation]"
+        },
+        {
+          "target": [
+            {
+              "code": "059",
+              "display": "Occupational exposure for Hepatitis A",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "160133004",
+          "display": "Packer - food/garden produce [occupation]"
+        },
+        {
+          "target": [
+            {
+              "code": "060",
+              "display": "Veterinarians and their staff",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "265940000",
+          "display": "Animal health occupation [occupation]"
+        },
+        {
+          "target": [
+            {
+              "code": "061",
+              "display": "Animal handlers",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "159091009",
+          "display": "Trainer - performing animals [occupation]"
+        },
+        {
+          "target": [
+            {
+              "code": "063",
+              "display": "Post secondary student",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "65853000",
+          "display": "Student [occupation]"
+        },
+        {
+          "target": [
+            {
+              "code": "063",
+              "display": "Post secondary student",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "257561002",
+          "display": "Further education establishment [environment]"
+        },
+        {
+          "target": [
+            {
+              "code": "066",
+              "display": "Chronic renal failure",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "90688005",
+          "display": "Chronic renal failure syndrome [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "068",
+              "display": "In drug abuse treatment and prevention facility",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "20078004",
+          "display": "Substance abuse treatment center [environment]"
+        },
+        {
+          "target": [
+            {
+              "code": "069",
+              "display": "In correctional facility",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "257656006",
+          "display": "Penal institution [environment]"
+        },
+        {
+          "target": [
+            {
+              "code": "070",
+              "display": "Persons at risk during an outbreak",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "410519009",
+          "display": "At risk context [qualifier value]"
+        },
+        {
+          "target": [
+            {
+              "code": "070",
+              "display": "Persons at risk during an outbreak",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "443684005",
+          "display": "Disease outbreak [event]"
+        },
+        {
+          "target": [
+            {
+              "code": "072",
+              "display": "Intimate exposure to a documented S. typhi carrier",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "170484009",
+          "display": "Typhoid carrier [finding]"
+        },
+        {
+          "target": [
+            {
+              "code": "075",
+              "display": "Transgender person",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "12271241000119109",
+          "display": "Transgender identify [finding]"
+        },
+        {
+          "target": [
+            {
+              "code": "076",
+              "display": "Progressive neurologic disorder",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "84757009",
+          "display": "Epilepsy [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "079",
+              "display": "Encephalopathy not attributable to another identifiable cause within 7 days of administration of a previous dose of Tdap, DTP, or DTaP vaccine",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "192711008",
+          "display": "Post diphtheria vaccination encephalitis [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "079",
+              "display": "Encephalopathy not attributable to another identifiable cause within 7 days of administration of a previous dose of Tdap, DTP, or DTaP vaccine",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "192710009",
+          "display": "Post tetanus vaccination encephalitis [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "079",
+              "display": "Encephalopathy not attributable to another identifiable cause within 7 days of administration of a previous dose of Tdap, DTP, or DTaP vaccine",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "192712001",
+          "display": "Post pertussis vaccination encephalitis [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "080",
+              "display": "Adverse reaction to vaccine component",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "293104008",
+          "display": "Vaccines adverse reaction [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "081",
+              "display": "Severe allergic reaction after previous dose of Polio",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "293117006",
+          "display": "Poliomyelitis vaccine adverse reaction [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "082",
+              "display": "Severe allergic reaction after previous dose of Japanese Encephalitis",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "451301000124103",
+          "display": "Adverse reaction caused by Japanese encephalitis virus vaccine [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "083",
+              "display": "Severe allergic reaction after previous dose of Rotavirus",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "429301000124101",
+          "display": "Adverse reaction to rotavirus vaccine [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "084",
+              "display": "Severe allergic reaction after previous dose of Typhoid",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "293122006",
+          "display": "Typhoid vaccine adverse reaction [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "085",
+              "display": "Severe allergic reaction after previous dose of Influenza",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "420113004",
+          "display": "Influenza virus vaccine adverse reaction [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "086",
+              "display": "Severe allergic reaction after previous dose of Pertussis",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "293115003",
+          "display": "Pertussis vaccine adverse reaction [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "087",
+              "display": "Severe allergic reaction after previous dose of Diphtheria",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "219085007",
+          "display": "Adverse reaction to diphtheria vaccine [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "088",
+              "display": "Severe allergic reaction after previous dose of Tetanus",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "219084006",
+          "display": "Adverse reaction to tetanus vaccine [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "089",
+              "display": "Severe allergic reaction after previous dose of Varicella",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "451331000124106",
+          "display": "Adverse reaction caused by varicella virus live vaccine [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "090",
+              "display": "Severe allergic reaction after previous dose of HPV",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "429311000124103",
+          "display": "Adverse reaction to human papillomavirus vaccine [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "091",
+              "display": "Severe allergic reaction after previous dose of Measles",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "219096004",
+          "display": "Adverse reaction to measles vaccine [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "092",
+              "display": "Severe allergic reaction after previous dose of Mumps",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "293114004",
+          "display": "Mumps vaccine adverse reaction [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "093",
+              "display": "Severe allergic reaction after previous dose of Rubella",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "293119009",
+          "display": "Rubella vaccine adverse reaction [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "094",
+              "display": "Severe allergic reaction after previous dose of Pneumococcal",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "293116002",
+          "display": "Pneumococcal vaccine adverse reaction [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "095",
+              "display": "Severe allergic reaction after previous dose of Meningococcal",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "2219088009",
+          "display": "Adverse reaction to meningococcal vaccine [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "095",
+              "display": "Severe allergic reaction after previous dose of Meningococcal",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "451111000124103",
+          "display": "Adverse reaction caused by meningococcal conjugate vaccine [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "096",
+              "display": "Severe allergic reaction after previous dose of Hepatitis A",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "293126009",
+          "display": "Hepatitis A vaccine adverse reaction [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "097",
+              "display": "Severe allergic reaction after previous dose of Hepatitis B",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "293110008",
+          "display": "Hepatitis B vaccine adverse reaction [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "098",
+              "display": "Severe allergic reaction after previous dose of Hib",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "293127000",
+          "display": "Haemophilus influenzae Type B vaccine adverse reaction [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "099",
+              "display": "Severe allergic reaction after previous dose of Yellow Fever",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "219095000",
+          "display": "Adverse reaction to yellow fever vaccine [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "100",
+              "display": "Severe allergic reaction after previous dose of live zoster",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "451291000124104",
+          "display": "Adverse reaction caused by zoster vaccine [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "101",
+              "display": "Allergic reaction to egg protein",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "213020009",
+          "display": "Egg protein allergy [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "101",
+              "display": "Allergic reaction to egg protein",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "91930004",
+          "display": "Allergy to eggs [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "102",
+              "display": "Severe allergic reaction to gelatin",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "293309006",
+          "display": "Gelatin adverse reaction [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "102",
+              "display": "Severe allergic reaction to gelatin",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "294847001",
+          "display": "Gelatin allergy [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "104",
+              "display": "Allergic reaction to latex",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "300916003",
+          "display": "Latex allergy [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "104",
+              "display": "Allergic reaction to latex",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "441593005",
+          "display": "Anaphylaxis due to latex [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "106",
+              "display": "Severe allergic reaction to gentamicin",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "419522004",
+          "display": "Gentamycin sensitivity [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "106",
+              "display": "Severe allergic reaction to gentamicin",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "420094007",
+          "display": "Gentamicin adverse reaction [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "106",
+              "display": "Severe allergic reaction to gentamicin",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "294469003",
+          "display": "Gentamicin allergy [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "107",
+              "display": "Severe allergic reaction to neomycin",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "294468006",
+          "display": "Neomycin allergy [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "107",
+              "display": "Severe allergic reaction to neomycin",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "292927007",
+          "display": "Neomycin adverse reaction [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "108",
+              "display": "Severe allergic reaction to streptomycin",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "294466005",
+          "display": "Streptomycin allergy [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "108",
+              "display": "Severe allergic reaction to streptomycin",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "292925004",
+          "display": "Streptomycin adverse reaction [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "109",
+              "display": "Severe allergic reaction to polymyxin B",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "294530006",
+          "display": "Polymyxin B allergy [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "109",
+              "display": "Severe allergic reaction to polymyxin B",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "292992006",
+          "display": "Polymyxin B adverse reaction [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "110",
+              "display": "Hypersensitivity to yeast",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "703936006",
+          "display": "Allergy to yeast [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "113",
+              "display": "Severe allergic reaction after previous dose of Rabies",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "293118001",
+          "display": "Rabies vaccine adverse reaction [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "114",
+              "display": "End stage renal disease",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "46177005",
+          "display": "End stage renal disease [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "114",
+              "display": "End stage renal disease",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "443143006",
+          "display": "Dependence on hemodialysis [finding]"
+        },
+        {
+          "target": [
+            {
+              "code": "114",
+              "display": "End stage renal disease",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "714749008",
+          "display": "Continuous renal replacement therapy [procedure]"
+        },
+        {
+          "target": [
+            {
+              "code": "115",
+              "display": "Severe allergic reaction to protamine sulfate",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "64520006",
+          "display": "Protamine sulfate [substance]"
+        },
+        {
+          "target": [
+            {
+              "code": "115",
+              "display": "Severe allergic reaction to protamine sulfate",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "294278007",
+          "display": "Protamine allergy [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "116",
+              "display": "Severe allergic reaction after previous dose of Meningococcal B",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "451281000124102",
+          "display": "Adverse reaction caused by meningococcal group B vaccine [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "119",
+              "display": "Severe allergic reaction after previous dose of cholera",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "219082005",
+          "display": "Adverse reaction caused by cholera vaccine [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "121",
+              "display": "Homelessness",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "32911000",
+          "display": "Homeless [finding]"
+        },
+        {
+          "target": [
+            {
+              "code": "132",
+              "display": "RBC [adenine-saline added] blood transfusion",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "116859006",
+          "display": "Transfusion of blood product [procedure]"
+        },
+        {
+          "target": [
+            {
+              "code": "135",
+              "display": "Plasma/platelet products blood transfusion",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "13569004",
+          "display": "Transfusion of plasma [procedure]"
+        },
+        {
+          "target": [
+            {
+              "code": "135",
+              "display": "Plasma/platelet products blood transfusion",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "12719002",
+          "display": "Platelet transfusion [procedure]"
+        },
+        {
+          "target": [
+            {
+              "code": "145",
+              "display": "B-lymphocyte [humoral] - Severe antibody deficiencies",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "65880007",
+          "display": "X-linked agammaglobulinemia [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "145",
+              "display": "B-lymphocyte [humoral] - Severe antibody deficiencies",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "23238000",
+          "display": "Common variable agammaglobulinemia [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "146",
+              "display": "B-lymphocyte [humoral] - Less severe antibody deficiencies",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "190979003",
+          "display": "Selective immunoglobulin A deficiency [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "146",
+              "display": "B-lymphocyte [humoral] - Less severe antibody deficiencies",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "123785006",
+          "display": "Immunoglobulin G subclass deficiency [finding]"
+        },
+        {
+          "target": [
+            {
+              "code": "147",
+              "display": "T-lymphocyte [cell-mediated and humoral] - Complete defects",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "77128003",
+          "display": "DiGeorge sequence [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "148",
+              "display": "T-lymphocyte [cell-mediated and humoral] - Partial defects",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "36070007",
+          "display": "Wiskott-Aldrich syndrome [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "148",
+              "display": "T-lymphocyte [cell-mediated and humoral] - Partial defects",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "68504005",
+          "display": "Ataxia-telangiectasia syndrome [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "151",
+              "display": "Persistent complement, properdin, or factor B deficiency",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "24743004",
+          "display": "Complement deficiency disease [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "151",
+              "display": "Persistent complement, properdin, or factor B deficiency",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "81166004",
+          "display": "Properdin deficiency disease [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "151",
+              "display": "Persistent complement, properdin, or factor B deficiency",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "234605000",
+          "display": "Factor B deficiency [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "152",
+              "display": "Phagocytic function - Chronic granulomatous disease",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "387759001",
+          "display": "Chronic granulomatous disease [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "153",
+              "display": "Phagocytic function - Leukocyte adhesion defect, and myeloperoxidase deficiency",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "77358003",
+          "display": "Congenital leukocyte adherence deficiency [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "153",
+              "display": "Phagocytic function - Leukocyte adhesion defect, and myeloperoxidase deficiency",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "234433009",
+          "display": "Myeloperoxidase deficiency [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "154",
+              "display": "HIV/AIDS - severely immunocompromised",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "62479008",
+          "display": "Acquired immune deficiency syndrome [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "157",
+              "display": "Solid organ transplantation",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "313039003",
+          "display": "Solid organ transplant [procedure]"
+        },
+        {
+          "target": [
+            {
+              "code": "158",
+              "display": "Immunosuppressive therapy",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "86553008",
+          "display": "Immunosuppressive therapy [procedure]"
+        },
+        {
+          "target": [
+            {
+              "code": "159",
+              "display": "Radiation therapy",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "53438000",
+          "display": "Radiation therapy procedure or service [procedure]"
+        },
+        {
+          "target": [
+            {
+              "code": "160",
+              "display": "Anatomical or functional asplenia",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "707147002",
+          "display": "Asplenia [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "161",
+              "display": "Chronic kidney disease",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "709044004",
+          "display": "Chronic kidney disease [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "167",
+              "display": "Nephrotic Syndrome",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "52254009",
+          "display": "Nephrotic syndrome [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "168",
+              "display": "Chemotherapy",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "367336001",
+          "display": "Chemotherapy [procedure]"
+        },
+        {
+          "target": [
+            {
+              "code": "169",
+              "display": "History of sexual abuse or assault",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "213017001",
+          "display": "Sexual abuse [event]"
+        },
+        {
+          "target": [
+            {
+              "code": "169",
+              "display": "History of sexual abuse or assault",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "422608009",
+          "display": "Sexual assault [finding]"
+        },
+        {
+          "target": [
+            {
+              "code": "169",
+              "display": "History of sexual abuse or assault",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "248110007",
+          "display": "Sexual assault [event]"
+        },
+        {
+          "target": [
+            {
+              "code": "170",
+              "display": "Onset of pregnancy",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "248986005",
+          "display": "Estimated date of conception [observable entity]"
+        },
+        {
+          "target": [
+            {
+              "code": "178",
+              "display": "Leukemia",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "93143009",
+          "display": "Leukemia, disease [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "179",
+              "display": "Lymphoma",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "399600009",
+          "display": "Lymphoma [finding]"
+        },
+        {
+          "target": [
+            {
+              "code": "180",
+              "display": "Hodgkin's disease",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "118599009",
+          "display": "Hodgkin's disease [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "181",
+              "display": "Multiple myeloma",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "109989006",
+          "display": "Multiple myeloma [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "191",
+              "display": "Receipt of CAR-T-cell therapy",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "1156961008",
+          "display": "Chimeric antigen receptor T-cell immunotherapy [procedure]"
+        },
+        {
+          "target": [
+            {
+              "code": "198",
+              "display": "Cancer",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "363346000",
+          "display": "Malignant neoplastic disease [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "199",
+              "display": "Interstitial lung disease",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "233703007",
+          "display": "Interstitial lung disease [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "200",
+              "display": "Cystic fibrosis",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "190905008",
+          "display": "cystic fibrosis [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "201",
+              "display": "Pulmonary hypertension",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "70995007",
+          "display": "Pulmonary hypertension [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "202",
+              "display": "Dementia",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "52448006",
+          "display": "Dimensia [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "203",
+              "display": "Down syndrome",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "41040004",
+          "display": "Complete trisomy 21 syndrome [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "204",
+              "display": "Obesity",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "238131007",
+          "display": "Overweight [finding]"
+        },
+        {
+          "target": [
+            {
+              "code": "204",
+              "display": "Obesity",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "414915002",
+          "display": "Obese [finding]"
+        },
+        {
+          "target": [
+            {
+              "code": "204",
+              "display": "Obesity",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "83911000119104",
+          "display": "Severe obesity [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "205",
+              "display": "Thalassemia",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "40108008",
+          "display": "Thalassemia [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "206",
+              "display": "Cerebrovascular disease",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "62914000",
+          "display": "Cerebrovascular disease [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "245",
+              "display": "American Indian or Alaskan Native",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "413490006",
+          "display": "American Indian or Alaska Native [racial group]"
+        },
+        {
+          "target": [
+            {
+              "code": "253",
+              "display": "Moderate persistent or severe persistent asthma",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "370219009",
+          "display": "Moderate Asthma [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "253",
+              "display": "Moderate persistent or severe persistent asthma",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "427295004",
+          "display": "Moderate Persistent Asthma [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "253",
+              "display": "Moderate persistent or severe persistent asthma",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "370221004",
+          "display": "Severe Asthma [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "253",
+              "display": "Moderate persistent or severe persistent asthma",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "426656000",
+          "display": "Severe Persistent Asthma [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "253",
+              "display": "Moderate persistent or severe persistent asthma",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "5281000124103",
+          "display": "Persistent Asthma [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "253",
+              "display": "Moderate persistent or severe persistent asthma",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "2360001000004109",
+          "display": "Steroid dependent asthma [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "254",
+              "display": "Chronic cardiovascular disease",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "128292002",
+          "display": "Chronic disease of cardiovascular system [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "254",
+              "display": "Chronic cardiovascular disease",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "400047006",
+          "display": "Peripheral vascular disease [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "254",
+              "display": "Chronic cardiovascular disease",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "21631000119105",
+          "display": "Limb ischemia [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "254",
+              "display": "Chronic cardiovascular disease",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "63491006",
+          "display": "Intermittent claudication [finding]"
+        },
+        {
+          "target": [
+            {
+              "code": "254",
+              "display": "Chronic cardiovascular disease",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "65198009",
+          "display": "Arterial thrombosis [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "254",
+              "display": "Chronic cardiovascular disease",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "111354009",
+          "display": "Chronic vascular insufficiency of intestine [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "254",
+              "display": "Chronic cardiovascular disease",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "59282003",
+          "display": "Pulmonary embolism [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "254",
+              "display": "Chronic cardiovascular disease",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "17920008",
+          "display": "Portal vein thrombosis [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "254",
+              "display": "Chronic cardiovascular disease",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "67362008",
+          "display": "Aortic aneurysm [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "254",
+              "display": "Chronic cardiovascular disease",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "233996000",
+          "display": "Type II dissection of thoracic aorta [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "254",
+              "display": "Chronic cardiovascular disease",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "301899003",
+          "display": "Dissection of proximal aorta [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "254",
+              "display": "Chronic cardiovascular disease",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "233997009",
+          "display": "Dissection of distal aorta [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "254",
+              "display": "Chronic cardiovascular disease",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "27631000146108",
+          "display": "Dissection of aortic arch [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "254",
+              "display": "Chronic cardiovascular disease",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "45894003",
+          "display": "Medionecrosis of aorta [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "254",
+              "display": "Chronic cardiovascular disease",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "1303726005",
+          "display": "Dissection of infrarenal aorta [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "256",
+              "display": "Diabetes mellitus complicated by chronic kidney disease",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "127013003",
+          "display": "Disorder of kidney due to diabetes mellitus [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "257",
+              "display": "Severe obesity",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "408512008",
+          "display": "Body mass index 40+ - severely obese [finding]"
+        },
+        {
+          "target": [
+            {
+              "code": "258",
+              "display": "Chronic hematologic disorders",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "414027002",
+          "display": "Disorder of hematopoietic structure [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "258",
+              "display": "Chronic hematologic disorders",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "417357006",
+          "display": "Sickling disorder due to hemoglobin S [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "260",
+              "display": "Neurologic or neuromuscular conditions causing impaired airway clearance or respiratory muscle weakness",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "350586651000119105",
+          "display": "Chronic respiratory failure due to neuromuscular disease [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "260",
+              "display": "Neurologic or neuromuscular conditions causing impaired airway clearance or respiratory muscle weakness",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "67750007",
+          "display": "Ineffective airway clearance [finding]"
+        },
+        {
+          "target": [
+            {
+              "code": "261",
+              "display": "Resident of a nursing home",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "160734000",
+          "display": "Lives in nursing home [finding]"
+        },
+        {
+          "target": [
+            {
+              "code": "262",
+              "display": "Frailty",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "248279007",
+          "display": "Frailty [finding]"
+        },
+        {
+          "target": [
+            {
+              "code": "263",
+              "display": "Diabetes mellitus complicated by neuropathy",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "230572002",
+          "display": "Neuropathy due to diabetes mellitus [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "264",
+              "display": "Diabetes mellitus complicated by retinopathy",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "4855003",
+          "display": "Retinopathy due to diabetes mellitus [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "266",
+              "display": "Diabetes requiring treatment with insulin",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "170747006",
+          "display": "Diabetic on insulin [finding]"
+        },
+        {
+          "target": [
+            {
+              "code": "268",
+              "display": "Islet Transplantation",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "128531006",
+          "display": "Islet cell transplant [procedure]"
+        },
+        {
+          "target": [
+            {
+              "code": "269",
+              "display": "Transplantation",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "77465005",
+          "display": "Transplantation [procedure]"
+        },
+        {
+          "target": [
+            {
+              "code": "273",
+              "display": "Immunoglobulin deficiency",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "124950009",
+          "display": "Deficiency of immunoglobulin [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "279",
+              "display": "Hemoglobinopathy disorder",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "80141007",
+          "display": "hemoglobinopathy [disorder]"
+        },
+        {
+          "target": [
+            {
+              "code": "280",
+              "display": "Chronic lung disease of prematurity",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "67569000",
+          "display": "Bronchopulmonary dysplasia of newborn [disorder]"
         }
       ],
       "source": "http://snomed.info/sct",
-      "target": "https://www.cdc.gov/vaccines/programs/iis/cdsi"
+      "target": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes"
     }
   ],
   "status": "active",
-  "sourceUri": "http://snomed.info/sct",
-  "targetUri": "https://www.cdc.gov/vaccines/programs/iis/cdsi"
+  "experimental": false,
+  "sourceCanonical": "http://fhirfli.dev/fhir/ig/cicada/ValueSet/vaccine-condition-codes-snomed",
+  "targetCanonical": "http://fhirfli.dev/fhir/ig/cicada/ValueSet/cdsi-observation-codes-vs"
 }

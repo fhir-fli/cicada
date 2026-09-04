@@ -114,6 +114,14 @@
       },
       {
         "reference": {
+          "reference": "ValueSet/cdsi-observation-codes-vs"
+        },
+        "name": "CDSI Observation Codes Value Set",
+        "description": "Every CDSi observation code, as published in the supporting data.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "CodeSystem/data-integrity"
         },
         "name": "Cicada Data Integrity Code System",
@@ -468,7 +476,7 @@
           "reference": "ConceptMap/SnomedToCdsiObservation"
         },
         "name": "SNOMED CT to CDSi Observation Code Map",
-        "description": "Maps SNOMED CT codes to CDSi observation codes used in immunization decision support.",
+        "description": "Maps SNOMED CT codes to CDSi observation codes used in immunization decision support. Generated from CDC's supporting data.",
         "exampleBoolean": false
       },
       {

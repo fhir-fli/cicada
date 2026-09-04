@@ -53,7 +53,7 @@
     "fshType": "CodeSystem",
     "fshFile": "cs_cdsi_obs_codes.fsh",
     "startLine": 7,
-    "endLine": 568
+    "endLine": 290
   },
   {
     "outputFile": "CodeSystem-data-integrity.json",
@@ -100,8 +100,8 @@
     "fshName": "SnomedToCdsiObservation",
     "fshType": "Instance",
     "fshFile": "cm_snomed_to_cdsi.fsh",
-    "startLine": 1,
-    "endLine": 88
+    "startLine": 6,
+    "endLine": 1757
   },
   {
     "outputFile": "StructureDefinition-MedicationAdministrationProfile.json",
@@ -414,6 +414,14 @@
     "fshFile": "vs_vaccine_codes_cvx_mvx.fsh",
     "startLine": 1,
     "endLine": 3
+  },
+  {
+    "outputFile": "ValueSet-cdsi-observation-codes-vs.json",
+    "fshName": "CdsiObservationCodesVS",
+    "fshType": "ValueSet",
+    "fshFile": "cs_cdsi_obs_codes.fsh",
+    "startLine": 295,
+    "endLine": 299
   },
   {
     "outputFile": "ValueSet-data-integrity-vs.json",

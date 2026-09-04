@@ -40,7 +40,12 @@ def main(xml_path, out_path):
         rows.append((code, title.replace('"', "'")))
     rows.sort(key=lambda r: r[0])
 
-    body = ''.join(f'* #{c} "{c}"\n  "{t}"\n' for c, t in rows)
+    # display is the observation title, definition is CDC's text for it.
+    # The hand-written file had `* #003 "003"` with the title as the
+    # definition, so every display was just the code repeated, which the
+    # publisher reports as CONCEPTMAP_GROUP_TARGET_DISPLAY_INVALID against
+    # every element of the ConceptMap.
+    body = ''.join(f'* #{c} "{t}"\n' for c, t in rows)
     with open(out_path, 'w', encoding='utf-8') as f:
         f.write(HEADER.format(version=version.group(1) if version else 'unknown'))
         f.write(body)
