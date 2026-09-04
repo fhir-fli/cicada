@@ -1,4 +1,4 @@
-# Seven defects to report to CDC — CDSi 4.65-508
+# Eight defects to report to CDC — CDSi 4.65-508
 
 Found while running cicada against the published test cases. Three are defects in
 the **supporting data**, one is a defective **test expectation**, one is an
@@ -223,5 +223,48 @@ would contradict the current definition of assessment date.
 
 ---
 
+## 8. Tdap in pregnancy is gated on recorded sex as well as on pregnancy
+
+**Series:** `Pertussis risk 1-dose series`, in
+`AntigenSupportingData- Pertussis-508.xml`.
+
+It carries two conditions at once:
+
+* `requiredGender`: **Female** and **Unknown**
+* an indication on observation **007, Pregnant**, whose own text reads
+  *"Administer to women who are pregnant."*
+
+An engine applies both, so a pregnant patient whose record carries
+`Patient.gender = male` satisfies the indication and is then excluded by the
+gender gate, receiving no Tdap recommendation. Recorded as `other`, `unknown`,
+or with the element absent, the same patient receives it.
+
+**The gate cannot add a correct exclusion, only a wrong one.** To satisfy the
+indication a patient must actually be pregnant, which already entails the
+anatomy the gate is a proxy for; the conditions are nested. ACIP recommends
+Tdap "during each pregnancy, irrespective of history", the only modifiers being
+gestational timing of 27–36 weeks and history-independence, never sex
+(MMWR 69(3); ACOG Committee Opinion 718; AAP Red Book, Immunization in
+Pregnancy). Independently adjudicated by OpenEvidence, 2026-09-04.
+
+`Patient.gender` is bound required in FHIR R4 to male | female | other |
+unknown and its own definition calls the element administrative, so the field
+this gate reads is not a statement about reproductive anatomy.
+
+**The point of the fix:** listing `Female` *and* `Unknown` shows the gate was
+already widened deliberately to fail open for ambiguity. That `male` was not
+also included is arbitrary once the indication guarantees pregnancy.
+
+**Fix:** remove `requiredGender` from this series, or recast it as an anatomy
+or pregnancy-capability condition rather than an administrative-sex one
+(Dufendach KR et al., *Pediatrics* 2024;154(4):e2024068509).
+
+This is the only one of the eleven gender-gated series in 4.65-508 whose
+indication is the qualifying state itself. The other ten are HPV, gated on age
+or immunocompromise, and are duplicated male and non-male pairs with identical
+doses, ages and intervals, where the gate routes rather than excludes.
+
+---
+
 Full working, including CDC's own row for each case and cicada's answer, is in
-`CDSI-OE-QUERIES.md` — sections 3, 6, 11, 12 and 8/9/10 respectively.
+`CDSI-OE-ADJUDICATED.md`.

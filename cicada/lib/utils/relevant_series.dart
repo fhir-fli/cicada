@@ -102,7 +102,11 @@ List<Indication> applicableIndications(
 /// duplicated male and non-male pairs with identical doses, ages and intervals,
 /// so ignoring gender there would match both pairs and forecast twice.
 ///
-/// Raised with CDC and put to OpenEvidence rather than decided here alone.
+/// Adjudicated by OpenEvidence 2026-09-04: the gate cannot add a correct
+/// exclusion, only a wrong one, because the conditions are nested — pregnancy
+/// is a subset of pregnancy-capable — and ACIP recommends Tdap in every
+/// pregnancy irrespective of history, with no sex condition (MMWR 69(3); ACOG
+/// Committee Opinion 718). Reported to CDC as finding 8.
 bool _pregnancyOutranksGender(Series series, VaxPatient patient) {
   const pregnantObservation = '007';
   final bool gated = series.indication?.any((Indication i) =>

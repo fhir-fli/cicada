@@ -365,3 +365,45 @@ suite: 181 cases have a vaccine group carrying two forecasts, and the response
 carries one recommendation per forecast in every one.
 
 ---
+
+## 15. ✅ ADJUDICATED 2026-09-04 — Tdap in pregnancy, gated on recorded sex
+
+**OE: a pregnant patient whose record says `male` should receive Tdap, and the
+`requiredGender` on that series cannot add a correct exclusion, only a wrong
+one.** ACIP recommends Tdap "during each pregnancy, irrespective of history",
+with the only modifiers being gestational timing of 27–36 weeks and
+history-independence — never sex (MMWR 69(3); ACOG Committee Opinion 718; AAP
+Red Book, Immunization in Pregnancy).
+
+On the three questions as put:
+
+1. **No patient exists for whom the gate is right.** To satisfy the indication a
+   patient must actually be pregnant, which already entails the anatomy the gate
+   is a crude proxy for. The conditions are logically nested — pregnancy is a
+   subset of pregnancy-capable — so the gate carries no independent clinical
+   information. The only patients it changes are those whose recorded
+   administrative sex diverges from their pregnancy-capable anatomy, and for
+   every one of them the change is a false exclusion.
+2. **Yes**, they should receive it. The `Unknown` / `other` / absent behaviour is
+   correct; `male` being excluded is the outlier and it is the wrong one.
+3. **Report it to CDC as a supporting-data defect, and keep our behaviour as a
+   documented, series-scoped deviation.** OE set out both positions: the
+   strict-conformance one, that an engine which drops published conditions when
+   it judges them wrong stops implementing CDSi; and the safety one, that this
+   particular gate can only produce false exclusions from a universally
+   recommended maternal vaccine, so failing open has no false-positive cost —
+   unlike a minimum-age floor, where bypassing pulls a dose genuinely too early.
+
+🛑 **Do not generalise it.** The HPV pairs are a different situation: duplicated
+male and non-male series with identical schedules, where the gate routes rather
+than excludes.
+
+**The framing to use with CDC**, which is OE's: CDSi already lists `Female` *and*
+`Unknown`, so the gate was deliberately widened to fail open for ambiguity. The
+defect is that `male` was not also included, which is arbitrary once the
+indication already guarantees pregnancy. Better still, recast the gate as an
+anatomy or pregnancy-capability condition rather than an administrative-sex one
+(Dufendach, *Pediatrics* 2024;154(4):e2024068509).
+
+Applied: `_pregnancyOutranksGender` in `cicada/lib/utils/relevant_series.dart`,
+with two tests, one of which was made to fail by disabling the deviation.
