@@ -19,6 +19,19 @@ import html
 import re
 import sys
 
+# Codes CDC publishes that exist in no SNOMED edition. Verified typos, not
+# judgements: the published code resolves nowhere and the replacement carries
+# CDC's own text as its display. Checked against tx.fhir.org for International
+# and the US edition 731000124108 on 2026-09-04. Also reported to CDC.
+CDC_CODE_CORRECTIONS = {
+    # "Adverse reaction to meningococcal vaccine [disorder]", CDC's own label,
+    # is the display of 219088009. Theirs has an extra leading 2. It sits on
+    # observation 095, severe allergic reaction after a previous meningococcal
+    # dose, so while it is wrong a patient with a documented reaction matches
+    # nothing and MenACWY is forecast for them.
+    '2219088009': '219088009',
+}
+
 CDSI_CS = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes'
 CDSI_VS = 'http://fhirfli.dev/fhir/ig/cicada/ValueSet/cdsi-observation-codes-vs'
 SNOMED_VS = 'http://fhirfli.dev/fhir/ig/cicada/ValueSet/vaccine-condition-codes-snomed'
@@ -57,6 +70,7 @@ def main(xml_path, out_path):
                 r'<codedValue>\s*<code>([^<]+)</code>\s*<codeSystem>SNOMED</codeSystem>\s*'
                 r'<text>(.*?)</text>', body, re.S):
             src, disp = cm.group(1).strip(), ' '.join(html.unescape(cm.group(2)).split())
+            src = CDC_CODE_CORRECTIONS.get(src, src)
             # A SNOMED concept can be cited by more than one observation; the
             # first wins, and the rest are recorded so the loss is visible.
             if src in seen:

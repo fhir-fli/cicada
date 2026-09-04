@@ -116,15 +116,19 @@ void _generateCdc() {
   // Merge supplementary crosswalk coded values into observations
   scheduleData = _mergeCrosswalk(scheduleData);
 
+  // Correct CDC's own typos before anything downstream reads them.
+  final Map<String, dynamic> scheduleJson =
+      _correctCdcCodes(scheduleData.toJson());
+
   // Write JSON
   final jsonPath = '${outputDir.path}/schedule_supporting_data.json';
-  File(jsonPath).writeAsStringSync(jsonPrettyPrint(scheduleData.toJson()));
+  File(jsonPath).writeAsStringSync(jsonPrettyPrint(scheduleJson));
 
   final scheduleSupportingString = '''
 import 'package:cicada/cicada.dart';
 
 final scheduleSupportingData = ScheduleSupportingData.fromJson(
-${jsonPrettyPrint(scheduleData.toJson())});
+${jsonPrettyPrint(scheduleJson)});
 ''';
 
   File(
@@ -575,4 +579,49 @@ void _assertParsedNotHeaders(AntigenSupportingData data, String filePath) {
       );
     }
   }
+}
+
+
+/// Corrections to codes CDC publishes that exist in no SNOMED edition.
+///
+/// Each entry is a verified typo, not a judgement: the published code resolves
+/// nowhere, and the replacement carries CDC's own text as its display. Applied
+/// in the generator rather than by hand so a regeneration cannot quietly
+/// reinstate them. Every one is also reported to CDC.
+///
+/// 2219088009 -> 219088009. CDC labels it "Adverse reaction to meningococcal
+/// vaccine [disorder]", which is the exact display of 219088009; their code
+/// carries an extra leading 2 and resolves in no edition, checked against
+/// tx.fhir.org for International and for the US edition 731000124108 on
+/// 2026-09-04. It sits on observation 095, "Severe allergic reaction after
+/// previous dose of Meningococcal", so while it is wrong a patient with a
+/// documented reaction to a meningococcal vaccine matches nothing and the
+/// engine forecasts MenACWY for them.
+const Map<String, String> _cdcCodeCorrections = <String, String>{
+  '2219088009': '219088009',
+};
+
+/// Applies [_cdcCodeCorrections] to every SNOMED coded value in the schedule
+/// supporting data, working on the JSON because the model is immutable.
+Map<String, dynamic> _correctCdcCodes(Map<String, dynamic> json) {
+  var corrected = 0;
+  final observations = (json['observations']
+      as Map<String, dynamic>?)?['observation'] as List<dynamic>?;
+  for (final o in observations ?? <dynamic>[]) {
+    final obs = o as Map<String, dynamic>;
+    final coded = (obs['codedValues'] as Map<String, dynamic>?)?['codedValue']
+        as List<dynamic>?;
+    for (final c in coded ?? <dynamic>[]) {
+      final cv = c as Map<String, dynamic>;
+      final String? fixed = _cdcCodeCorrections[cv['code']];
+      if (cv['codeSystem'] == 'SNOMED' && fixed != null) {
+        print('  correcting CDC code ${cv['code']} -> $fixed on '
+            'observation ${obs['observationCode']}');
+        cv['code'] = fixed;
+        corrected++;
+      }
+    }
+  }
+  print('Applied $corrected CDC code correction(s).');
+  return json;
 }

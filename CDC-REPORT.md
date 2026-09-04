@@ -1,4 +1,4 @@
-# Eight defects to report to CDC — CDSi 4.65-508
+# Nine defects to report to CDC — CDSi 4.65-508
 
 Found while running cicada against the published test cases. Three are defects in
 the **supporting data**, one is a defective **test expectation**, one is an
@@ -263,6 +263,33 @@ This is the only one of the eleven gender-gated series in 4.65-508 whose
 indication is the qualifying state itself. The other ten are HPV, gated on age
 or immunocompromise, and are duplicated male and non-male pairs with identical
 doses, ages and intervals, where the gate routes rather than excludes.
+
+---
+
+## 9. A SNOMED code in the schedule supporting data has an extra leading digit
+
+**Observation:** 095, "Severe allergic reaction after previous dose of
+Meningococcal", in `ScheduleSupportingData.xml`.
+
+Its SNOMED coded value is **`2219088009`**, labelled *"Adverse reaction to
+meningococcal vaccine [disorder]"*. That code resolves in no SNOMED edition:
+checked against tx.fhir.org for International and for the US edition
+`731000124108` on 2026-09-04, `$validate-code` returns false for both.
+
+The concept CDC means is **`219088009`**, whose display in SNOMED International
+is *"Adverse reaction to meningococcal vaccine"* — CDC's own label, verbatim.
+The published code carries an extra leading `2`.
+
+**Why it matters clinically.** Observation 095 is a contraindication. While the
+code is wrong, a patient recorded with the real SNOMED concept for a
+meningococcal vaccine adverse reaction matches nothing, the observation never
+fires, and a conformant engine forecasts MenACWY for a patient with a
+documented reaction to it.
+
+**Fix:** `2219088009` to `219088009`.
+
+Found by expanding SNOMED with a text filter on "meningococcal", which returns
+33 concepts of which one matches CDC's label exactly.
 
 ---
 

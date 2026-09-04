@@ -132,7 +132,11 @@ Description: "Value set for conditions based on SNOMED CT, that may impact immun
 * include codes from system http://snomed.info/sct where concept is-a #293114004 //Mumps vaccine adverse reaction [disorder] 
 * include codes from system http://snomed.info/sct where concept is-a #293119009 //Rubella vaccine adverse reaction [disorder] 
 * include codes from system http://snomed.info/sct where concept is-a #293116002 //Pneumococcal vaccine adverse reaction [disorder] 
-* include codes from system http://snomed.info/sct where concept is-a #2219088009 //Adverse reaction to meningococcal vaccine [disorder] 
+// CDC publishes 2219088009 for this, which resolves in no SNOMED edition.
+// Their own label is the exact display of 219088009; theirs has an extra
+// leading 2. Checked against tx.fhir.org, International and US 731000124108,
+// on 2026-09-04, and reported to CDC.
+* include codes from system http://snomed.info/sct where concept is-a #219088009 //Adverse reaction to meningococcal vaccine [disorder] 
 * include codes from system http://snomed.info/sct where concept is-a #451111000124103 //Adverse reaction caused by meningococcal conjugate vaccine [disorder] 
 * include codes from system http://snomed.info/sct where concept is-a #293126009 //Hepatitis A vaccine adverse reaction [disorder] 
 * include codes from system http://snomed.info/sct where concept is-a #293110008 //Hepatitis B vaccine adverse reaction [disorder] 

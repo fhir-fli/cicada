@@ -533,7 +533,7 @@
     "fshType": "ValueSet",
     "fshFile": "vs_vaccine_condition_codes_snomed.fsh",
     "startLine": 1,
-    "endLine": 205
+    "endLine": 209
   },
   {
     "outputFile": "ValueSet-vaccine-gender.json",

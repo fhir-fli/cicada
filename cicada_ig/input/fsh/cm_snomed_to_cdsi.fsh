@@ -946,7 +946,7 @@ Description: "Maps SNOMED CT codes to CDSi observation codes used in immunizatio
 * group[=].element[=].target[=].equivalence = #equivalent
 
 // 095 - Severe allergic reaction after previous dose of Meningococcal
-* group[=].element[+].code = #2219088009
+* group[=].element[+].code = #219088009
 * group[=].element[=].display = "Adverse reaction to meningococcal vaccine [disorder]"
 * group[=].element[=].target[+].code = #095
 * group[=].element[=].target[=].display = "Severe allergic reaction after previous dose of Meningococcal"
