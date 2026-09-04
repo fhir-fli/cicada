@@ -272,19 +272,6 @@
           "strength": "required",
           "valueSet": "http://hl7.org/fhir/ValueSet/immunization-subpotent-reason"
         }
-      },
-      {
-        "id": "Immunization.protocolApplied",
-        "path": "Immunization.protocolApplied",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "pattern",
-              "path": "doseNumberPositiveInt"
-            }
-          ],
-          "rules": "open"
-        }
       }
     ]
   }

@@ -90,6 +90,14 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/antigen-supporting-data"
+        },
+        "name": "Antigen Supporting Data",
+        "description": "A resource to store supporting data for antigens including target disease, vaccine groups, immunity criteria, contraindications, and vaccination series.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/assessment-date"
         },
         "name": "AssessmentDate",
@@ -441,6 +449,14 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/schedule-supporting-data"
+        },
+        "name": "Schedule Supporting Data",
+        "description": "This resource consolidates various mapping and conflict information related to vaccine scheduling to support decision-making processes.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/series-group-ext"
         },
         "name": "Series Group",
@@ -662,10 +678,6 @@
       {
         "code": "releaselabel",
         "value": "ci-build"
-      },
-      {
-        "code": "autoload-resources",
-        "value": "false"
       }
     ]
   }

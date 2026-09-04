@@ -7,9 +7,9 @@
   "status": "draft",
   "description": "A resource to store supporting data for antigens including target disease, vaccine groups, immunity criteria, contraindications, and vaccination series.",
   "fhirVersion": "4.0.1",
-  "kind": "resource",
+  "kind": "logical",
   "abstract": false,
-  "type": "antigen-supporting-data",
+  "type": "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/antigen-supporting-data",
   "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
   "derivation": "specialization",
   "differential": {

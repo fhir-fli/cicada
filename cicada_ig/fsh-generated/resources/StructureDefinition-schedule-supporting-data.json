@@ -7,9 +7,9 @@
   "status": "draft",
   "description": "This resource consolidates various mapping and conflict information related to vaccine scheduling to support decision-making processes.",
   "fhirVersion": "4.0.1",
-  "kind": "resource",
+  "kind": "logical",
   "abstract": false,
-  "type": "schedule-supporting-data",
+  "type": "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/schedule-supporting-data",
   "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
   "derivation": "specialization",
   "differential": {

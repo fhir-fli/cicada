@@ -22,11 +22,11 @@ Description: "Detailed information about each vaccination dose."
 * manufacturer only Reference(Organization)
 * subpotentReason from http://hl7.org/fhir/ValueSet/immunization-subpotent-reason (required)
 
-* protocolApplied ^slicing.discriminator.type = #pattern
-* protocolApplied ^slicing.discriminator.path = "doseNumberPositiveInt"
-* protocolApplied ^slicing.rules = #open
-// * protocolApplied contains VaxDoseProtocol 0..* named vaxDoseProtocol
-// * protocolApplied[VaxDoseProtocol].doseNumberPositiveInt 1..1
+// No slicing on protocolApplied. It declared a pattern discriminator on
+// `doseNumberPositiveInt`, which is not an element: R4 has `doseNumber[x]`, and
+// a discriminator names the choice, not one of its types. The slices it was
+// written for were commented out, so this was a slicing declaration with
+// nothing sliced.
 // * protocolApplied[VaxDoseProtocol].seriesDosesPositiveInt 0..1
 
 // Define extensions

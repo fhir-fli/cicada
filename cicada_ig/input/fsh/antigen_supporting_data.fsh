@@ -1,9 +1,13 @@
-Resource: AntigenSupportingData
+// A logical model, not a resource. Declared as `Resource:` it produced
+// SD_TYPE_NOT_LOCAL — "the type is not legal because it is not defined in the
+// FHIR specification" — because R4 does not admit custom resource types. This
+// is a shape for CDC's supporting data, never something exchanged, which is
+// what a logical model is for.
+Logical: AntigenSupportingData
 Id: antigen-supporting-data
-Parent: Resource
+Parent: Element
 Title: "Antigen Supporting Data"
 Description: "A resource to store supporting data for antigens including target disease, vaccine groups, immunity criteria, contraindications, and vaccination series."
-* ^baseDefinition = "http://hl7.org/fhir/StructureDefinition/Element"
 
 // Define the elements specific to each disease
 * targetDisease 0..1 CodeableConcept "The disease that the vaccine targets."

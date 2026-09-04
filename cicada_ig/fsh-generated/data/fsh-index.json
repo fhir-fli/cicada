@@ -218,10 +218,10 @@
   {
     "outputFile": "StructureDefinition-antigen-supporting-data.json",
     "fshName": "AntigenSupportingData",
-    "fshType": "Resource",
+    "fshType": "Logical",
     "fshFile": "antigen_supporting_data.fsh",
-    "startLine": 1,
-    "endLine": 75
+    "startLine": 6,
+    "endLine": 79
   },
   {
     "outputFile": "StructureDefinition-assessment-date.json",
@@ -322,10 +322,10 @@
   {
     "outputFile": "StructureDefinition-schedule-supporting-data.json",
     "fshName": "ScheduleSupportingData",
-    "fshType": "Resource",
+    "fshType": "Logical",
     "fshFile": "schedule_supporting_data.fsh",
-    "startLine": 1,
-    "endLine": 51
+    "startLine": 6,
+    "endLine": 55
   },
   {
     "outputFile": "StructureDefinition-series-detail-ext.json",

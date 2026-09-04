@@ -1,10 +1,14 @@
-Resource: ScheduleSupportingData
+// A logical model, not a resource. Declared as `Resource:` it produced
+// SD_TYPE_NOT_LOCAL — "the type is not legal because it is not defined in the
+// FHIR specification" — because R4 does not admit custom resource types. This
+// is a shape for CDC's supporting data, never something exchanged, which is
+// what a logical model is for.
+Logical: ScheduleSupportingData
 Id: schedule-supporting-data
-Parent: Resource
+Parent: Element
 Title: "Schedule Supporting Data"
 Description: "This resource consolidates various mapping and conflict information related to vaccine scheduling to support decision-making processes."
 
-* ^baseDefinition = "http://hl7.org/fhir/StructureDefinition/Element"
 
 // Base element for the liveVirusConflict
 * liveVirusConflict 0..1 BackboneElement "Potential conflicts between live virus vaccines based on previous and current vaccinations and the required time intervals to avoid interference."

@@ -5,6 +5,7 @@
 [AllowedVaccineReason]: StructureDefinition-allowed-vaccine-reason.html
 [AllowedVaccineStatus]: StructureDefinition-allowed-vaccine-status.html
 [AntigenNeedingDose]: StructureDefinition-antigen-needing-dose-ext.html
+[AntigenSupportingData]: StructureDefinition-antigen-supporting-data.html
 [AssessmentDate]: StructureDefinition-assessment-date.html
 [BeginAge]: StructureDefinition-begin-age.html
 [CdsiObservationCodes]: CodeSystem-cdsi-observation-codes.html
@@ -49,6 +50,7 @@
 [ImmunizationProceduresSnomed]: ValueSet-procedures.html
 [PreferredAllowedReasonVS]: ValueSet-preferred-allowed-reason.html
 [PreferredAllowedReasonCS]: CodeSystem-PreferredAllowedReason.html
+[ScheduleSupportingData]: StructureDefinition-schedule-supporting-data.html
 [SeriesGroup]: StructureDefinition-series-group-ext.html
 [SeriesType]: StructureDefinition-series-type-ext.html
 [SeriesTypeCS]: CodeSystem-series-type.html
