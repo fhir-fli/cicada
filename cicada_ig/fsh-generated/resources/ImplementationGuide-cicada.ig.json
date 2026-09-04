@@ -162,13 +162,6 @@
       },
       {
         "reference": {
-          "reference": "Parameters/cicada-expansions"
-        },
-        "exampleBoolean": false,
-        "name": "cicada-expansions"
-      },
-      {
-        "reference": {
           "reference": "ImmunizationRecommendation/cicada-forecast-example"
         },
         "exampleBoolean": false,
@@ -661,10 +654,6 @@
       {
         "code": "releaselabel",
         "value": "ci-build"
-      },
-      {
-        "code": "ig-expansion-parameters",
-        "value": "cicada-expansions"
       },
       {
         "code": "autoload-resources",
