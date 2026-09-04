@@ -79,6 +79,12 @@ pages:
 # For parameters defined by the FHIR Tools IG see:
 # http://build.fhir.org/ig/FHIR/fhir-tools-ig/branches/master/CodeSystem-ig-parameters.html
 #
+# Expand and validate SNOMED against the US edition, not International.
+# CDSi is a US specification and cites US-extension concepts; tx.fhir.org serves
+# International by default, which is why seven real codes failed validation.
+parameters:
+  ig-expansion-parameters: cicada-expansions
+
 # parameters:
 #   excludettl: true
 #   validation: [allow-any-extensions, no-broken-links]

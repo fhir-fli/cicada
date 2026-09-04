@@ -14,6 +14,7 @@
 [CicadaForecastReasonCS]: CodeSystem-forecast-reason.html
 [CicadaForecastReasonVS]: ValueSet-forecast-reason-vs.html
 [CicadaImmunizationRecommendation]: StructureDefinition-cicada-immunization-recommendation.html
+[cicada-expansions]: Parameters-cicada-expansions.html
 [cicada-forecast-example]: ImmunizationRecommendation-cicada-forecast-example.html
 [VaccineConditionFhir]: StructureDefinition-VaccineConditionFhir.html
 [SeriesDetail]: StructureDefinition-series-detail-ext.html
