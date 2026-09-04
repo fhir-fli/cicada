@@ -52,8 +52,8 @@
     "fshName": "CdsiObservationCodes",
     "fshType": "CodeSystem",
     "fshFile": "cs_cdsi_obs_codes.fsh",
-    "startLine": 1,
-    "endLine": 506
+    "startLine": 7,
+    "endLine": 568
   },
   {
     "outputFile": "CodeSystem-data-integrity.json",

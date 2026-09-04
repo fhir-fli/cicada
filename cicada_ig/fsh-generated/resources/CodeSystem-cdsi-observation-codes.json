@@ -621,7 +621,7 @@
     {
       "code": "124",
       "display": "124",
-      "definition": "Severe allergic reaction to rice protein "
+      "definition": "Severe allergic reaction to rice protein"
     },
     {
       "code": "125",
@@ -751,7 +751,7 @@
     {
       "code": "150",
       "display": "150",
-      "definition": "T-lymphocyte [cell-mediated and humoral] - interferon-gamma or interferon-alpha"
+      "definition": "T-lymphocyte [cell-mediated and humoral] - interferon-gamma or interferon-alpha deficiencies"
     },
     {
       "code": "151",
@@ -786,7 +786,7 @@
     {
       "code": "157",
       "display": "157",
-      "definition": "Transplantation"
+      "definition": "Solid organ transplantation"
     },
     {
       "code": "158",
@@ -1236,12 +1236,12 @@
     {
       "code": "247",
       "display": "247",
-      "definition": "Gay, bisexual, and other men who have sex with men, transgender or nonbinary peope who in the past 6 months have had one of the following:  1) A new diagnosis of ≥ 1 sexually transmitted disease 2)  More than one sex partner 3)  Sex at a commercial sex venue 4)   Sex in association with a large public event in a geographic area where mpox transmission is occurring"
+      "definition": "Gay, bisexual, or other man who has sex with men (MSM), or a person who has sex with gay, bisexual, or other MSM who in the past 6 months have had one of the following: 1) A new diagnosis of ≥ 1 sexually transmitted disease 2) More than one sex partner 3) Sex at a commercial sex venue 4) Sex in association with a large public event in a geographic area where mpox transmission is occurring"
     },
     {
       "code": "248",
       "display": "248",
-      "definition": "Sexual partners of gay, bisexual, and other men who have sex with men, transgender or nonbinary peope who in the past 6 months have had one of the following:  1) A new diagnosis of ≥ 1 sexually transmitted disease 2)  More than one sex partner 3)  Sex at a commercial sex venue 4)   Sex in association with a large public event in a geographic area where mpox transmission is occurring"
+      "definition": "Sexual partners of gay, bisexual, or other man who has sex with men (MSM), or a person who has sex with gay, bisexual, or other MSM who in the past 6 months have had one of the following: 1) A new diagnosis of ≥ 1 sexually transmitted disease 2) More than one sex partner 3) Sex at a commercial sex venue 4) Sex in association with a large public event in a geographic area where mpox transmission is occurring"
     },
     {
       "code": "249",
@@ -1262,7 +1262,143 @@
       "code": "252",
       "display": "252",
       "definition": "Severe allergic reaction after previous dose of Tick-borne Encephalitis vaccine"
+    },
+    {
+      "code": "253",
+      "display": "253",
+      "definition": "Moderate persistent or severe persistent asthma"
+    },
+    {
+      "code": "254",
+      "display": "254",
+      "definition": "Chronic cardiovascular disease"
+    },
+    {
+      "code": "256",
+      "display": "256",
+      "definition": "Diabetes mellitus complicated by chronic kidney disease"
+    },
+    {
+      "code": "257",
+      "display": "257",
+      "definition": "Severe obesity"
+    },
+    {
+      "code": "258",
+      "display": "258",
+      "definition": "Chronic hematologic disorders"
+    },
+    {
+      "code": "259",
+      "display": "259",
+      "definition": "Sickle cell disease"
+    },
+    {
+      "code": "260",
+      "display": "260",
+      "definition": "Neurologic or neuromuscular conditions causing impaired airway clearance or respiratory muscle weakness"
+    },
+    {
+      "code": "261",
+      "display": "261",
+      "definition": "Resident of a nursing home"
+    },
+    {
+      "code": "262",
+      "display": "262",
+      "definition": "Frailty"
+    },
+    {
+      "code": "263",
+      "display": "263",
+      "definition": "Diabetes mellitus complicated by neuropathy"
+    },
+    {
+      "code": "264",
+      "display": "264",
+      "definition": "Diabetes mellitus complicated by retinopathy"
+    },
+    {
+      "code": "265",
+      "display": "265",
+      "definition": "Diabetes mellitus complicated by end-organ damage"
+    },
+    {
+      "code": "266",
+      "display": "266",
+      "definition": "Diabetes requiring treatment with insulin"
+    },
+    {
+      "code": "267",
+      "display": "267",
+      "definition": "Diabetes requiring treatment with sodium-glucose cotransporter-2 (SGLT2) inhibitor"
+    },
+    {
+      "code": "268",
+      "display": "268",
+      "definition": "Islet Transplantation"
+    },
+    {
+      "code": "269",
+      "display": "269",
+      "definition": "Transplantation"
+    },
+    {
+      "code": "270",
+      "display": "270",
+      "definition": "Severe allergic reaction after previous dose of Chikungunya vaccine"
+    },
+    {
+      "code": "271",
+      "display": "271",
+      "definition": "Traveling to a country or territory where there is a chikungunya outbreak"
+    },
+    {
+      "code": "272",
+      "display": "272",
+      "definition": "Traveling or moving to a country or territory without an outbreak but with elevated chikungunya risk for U.S. travelers if planning to stay for an extended period of time [e.g., 6 months or more]"
+    },
+    {
+      "code": "273",
+      "display": "273",
+      "definition": "Immunoglobulin deficiency"
+    },
+    {
+      "code": "274",
+      "display": "274",
+      "definition": "Early component complement inhibitor use"
+    },
+    {
+      "code": "275",
+      "display": "275",
+      "definition": "Persons at risk during a measles outbreak"
+    },
+    {
+      "code": "276",
+      "display": "276",
+      "definition": "Age is 60 years or older"
+    },
+    {
+      "code": "277",
+      "display": "277",
+      "definition": "Laboratory worker with potential for exposure to chikungunya virus"
+    },
+    {
+      "code": "278",
+      "display": "278",
+      "definition": "Birth mother received RSV vaccine during pregnancy"
+    },
+    {
+      "code": "279",
+      "display": "279",
+      "definition": "Hemoglobinopathy disorder"
+    },
+    {
+      "code": "280",
+      "display": "280",
+      "definition": "Chronic lung disease of prematurity"
     }
   ],
-  "count": 251
+  "caseSensitive": true,
+  "count": 278
 }

@@ -5,7 +5,7 @@ CodeSystem-IntervalReason.json                               IntervalReasonCS   
 CodeSystem-PreferredAllowedReason.json                       PreferredAllowedReasonCS           CodeSystem  cs_vs_preferred_allowed_reason.fsh      1 - 10
 CodeSystem-VaccineGender.json                                VaccineGenderCS                    CodeSystem  cs_vs_vaccine_gender.fsh                2 - 9
 CodeSystem-ValidAgeReason.json                               ValidAgeReasonCS                   CodeSystem  cs_vs_valid_age_reason.fsh              2 - 8
-CodeSystem-cdsi-observation-codes.json                       CdsiObservationCodes               CodeSystem  cs_cdsi_obs_codes.fsh                   1 - 506
+CodeSystem-cdsi-observation-codes.json                       CdsiObservationCodes               CodeSystem  cs_cdsi_obs_codes.fsh                   7 - 568
 CodeSystem-data-integrity.json                               DataIntegrityCS                    CodeSystem  cicada_response_extensions.fsh          72 - 80
 CodeSystem-forecast-reason.json                              CicadaForecastReasonCS             CodeSystem  cicada_response_extensions.fsh          16 - 31
 CodeSystem-series-type.json                                  SeriesTypeCS                       CodeSystem  profile_forecast_recommendation.fsh     17 - 25
