@@ -1,13 +1,59 @@
-# CDSi cases where cicada says the CDC test row is wrong — for OpenEvidence
+# ONE ITEM OPEN — paste the section under "OPEN" below into OpenEvidence
 
-Companion to `CDSI-DISPUTED-CASES.md`. That file lists every case where cicada
-and the CDC data differ. This one holds only the cases where, after checking
-the workbook and the logic specification, **we concluded the CDC row itself is
-defective** — the claims that most need an outside adjudicator, because the
-CDC test suite is otherwise the reference.
+Everything under CLOSED is settled and **must not be pasted again**. OE has
+twice re-answered a question that was still sitting in this file after it had
+been ruled on.
 
-Each entry gives CDC's published row, cicada's answer, our reasoning, and the
-question to put to OE.
+---
+
+# OPEN
+
+## Tdap in pregnancy is gated on recorded sex as well as on pregnancy
+
+CDSi 4.65-508 defines a "Pertussis risk 1-dose series" with two conditions on
+it at once:
+
+* `requiredGender`: **Female** and **Unknown**
+* an indication on observation **007, Pregnant**, whose own text reads
+  *"Administer to women who are pregnant."*
+
+An engine applies both, so a pregnant patient whose record carries
+`Patient.gender = male` satisfies the indication and is excluded by the gender
+gate. They receive no Tdap risk recommendation. Recorded as `other`, `unknown`,
+or with the element absent, they receive it, because CDC lists Unknown beside
+Female.
+
+`Patient.gender` is bound required in FHIR R4 to male | female | other |
+unknown and its own definition calls the element administrative. CDSi does not
+say what its Gender attribute means: the glossary reads "Patient Gender: the
+patient's gender".
+
+**Our reading:** the pregnancy is what makes Tdap apply. The gender gate adds
+no information on this series and can only exclude, and the patient it excludes
+is one whose recorded sex does not match their anatomy. We have therefore made
+pregnancy outrank the gender gate for this series only, and we would like that
+checked.
+
+**The questions:**
+
+1. Is there any patient for whom the `requiredGender` on this series changes the
+   right answer, given that observation 007 is already required?
+2. Should a pregnant patient whose record says `male` receive Tdap?
+3. If yes, is the defect in CDSi's supporting data, or is an engine expected to
+   apply `requiredGender` strictly and leave this to a clinician override?
+
+Of the eleven gender-gated series in 4.65-508 this is the only one whose
+indication is the qualifying state itself. The other ten are HPV, gated on age
+or immunocompromise, and exist as duplicated male and non-male pairs with
+identical doses, ages and intervals.
+
+---
+
+# CLOSED — rulings only, questions deleted
+
+Fourteen sections were adjudicated between 2026-08-19 and 2026-08-28. The
+question write-ups are gone; what follows is what was decided and where it was
+applied. Full working is in the git history of this file.
 
 ## ✅ ADJUDICATED 2026-08-19 — all seven
 
@@ -110,338 +156,6 @@ supporting data.
 Sources: MMWR 69(9) meningococcal · 73(49) MenB-4C · 65(49) and 68(32) HPV ·
 63(RR-01) Hib · MenQuadfi label · ACIP child/adolescent and adult schedules
 (addenda updated 2 July 2025).
-
----
-
-## 1. `2016-UC-0130` — pregnancy Tdap, forecast dated before the pregnancy
-
-**CDC's published row** (underlying-conditions workbook v4.6, read from the
-xlsx itself, not from our generated copy):
-
-```
-Test_Case_Name    Patient is pregnant, and at 27 weeks of gestation, and has
-                  not received the Pertussis vaccine (Tdap)
-DOB               1988-06-23        Gender  F
-Observation_1     007  Pregnant
-Observation_2     170  Onset of pregnancy   Observation_Date_2  2016-08-22
-Assessment_Date   2016-08-22
-Series_Status     Not Complete      Forecast_#  1
-Earliest_Date     2016-02-27
-Recommended_Date  2016-02-27
-Past_Due_Date     2017-05-01
-Admin_Guidance    Administer during each pregnancy (preferably during 27 to 36
-                  weeks' gestation) regardless of interval since prior Td/Tdap.
-Reason_For_Change v4.5: Added a forecast earliest date.
-```
-
-**Supporting data** (Pertussis risk 1-dose series, dose 1) sets the interval
-from the "Onset of pregnancy" observation: absolute minimum 0 days, minimum and
-earliest-recommended **27 weeks**, latest-recommended **36 weeks**.
-
-**cicada answers:** earliest and recommended `2017-02-27`, past due
-`2017-04-30`.
-
-**Our reasoning:**
-
-- Onset 2016-08-22 + 27 weeks = **2017-02-27**. CDC's 2016-02-27 is one year
-  earlier — and therefore about six months *before* the onset of pregnancy
-  recorded in their own row, i.e. a Tdap recommended before conception.
-- Their own past-due column is 2017-05-01 = onset + 36 weeks exactly, so the
-  anchor and the window are not in dispute; only the year in the earliest and
-  recommended cells.
-- On the past due: the logic specification (FORECASTDT-3) makes the past due
-  date the latest recommended date **minus one day**, which gives 2017-04-30.
-  CDC's cell is the un-decremented 2017-05-01.
-
-**Questions for OE:**
-
-1. For a patient whose pregnancy began 2016-08-22, does ACIP support a Tdap
-   forecast dated 2016-02-27 — six months before that pregnancy began — or
-   should the recommendation fall at 27 weeks' gestation (2017-02-27)?
-2. ACIP recommends Tdap "preferably during the early part of gestational weeks
-   27–36." If a dose is recommended across gestational weeks 27–36, on what
-   date should the patient be considered *overdue*: the last day of that window
-   (36 weeks, 2017-05-01) or the day after the window's last recommended day
-   (2017-04-30)?
-
----
-
-## 2. `2025-UC-0015` — HPV dose 3 past-due date, one day
-
-**CDC's published row** (same workbook):
-
-```
-Test_Case_Name    Patient is female, 38 years of age, undergoing radiation
-                  therapy, and has been administered the second dose of HPV
-DOB               1986-08-03        Gender  F
-Observation_1     159  Radiation therapy
-Dose 1  2024-11-02  9vHPV (CVX 165)  Valid  risk
-Dose 2  2024-11-30  9vHPV (CVX 165)  Valid  risk
-Assessment_Date   2024-11-30
-Series_Status     Not Complete      Forecast_#  3
-Earliest_Date     2025-04-02
-Recommended_Date  2025-05-02
-Past_Due_Date     2025-06-30
-```
-
-**Supporting data** (HPV risk 3-dose series, dose 3) intervals from dose 1:
-absolute minimum 5 months − 4 days, minimum 5 months, earliest recommended
-6 months, latest recommended **7 months + 4 weeks**.
-
-**cicada answers:** earliest `2025-04-02` and recommended `2025-05-02` — both
-matching CDC — past due `2025-06-29`.
-
-**Our reasoning:** dose 1 (2024-11-02) + 7 months + 4 weeks = 2025-06-30, and
-FORECASTDT-3 subtracts one day → 2025-06-29. CDC's cell is the un-decremented
-date. CDC applies the subtraction in other rows (`2015-UC-0012`,
-`2016-UC-0032`), so this row and `2016-UC-0130` are the outliers: 3 past-due
-mismatches in ~1,800 cases.
-
-**Question for OE:** this is a convention question rather than a clinical one —
-if the last recommended day for HPV dose 3 is 2025-06-30, is the patient
-"overdue" *on* that date or the day after? Is there an ACIP or IIS convention
-for when an interval-based dose becomes past due?
-
----
-
-## How to use this file
-
-Paste one section at a time. Any case where OE says the CDC row is right is a
-cicada defect to fix; any case where OE agrees the row is defective should be
-reported to CDC rather than conformed to.
-
----
-
-## 3. `2022-UC-0030` / `-0031` — orthopox indication for healthcare personnel dropped
-
-CDC's 2022 cases give the patient observation **235, "Healthcare personnel who
-care for patients infected with more virulent orthopoxviruses (e.g., Variola
-virus or mpox virus)"**, and expect a JYNNEOS (CVX 206) dose to be valid in a
-risk series with a booster forecast two years later.
-
-In the current supporting data (4.65-508, read from CDC's own
-`AntigenSupportingData- Orthopoxvirus-508.xml`), the "Orthopoxvirus risk more
-virulent 2-dose series" is indicated by **232** (research laboratory
-personnel), **233** (clinical laboratory personnel) and **234** (designated
-response team members) only. Observation 235 still exists in the schedule
-supporting data, with the indication text "Administer to healthcare personnel
-who care for patients infected with more virulent orthopoxviruses" — but no
-series names it. cicada therefore produces no orthopox series at all for these
-patients, which follows the data it was given.
-
-**Question for OE:** does ACIP still recommend JYNNEOS pre-exposure vaccination
-for healthcare personnel who care for patients infected with more virulent
-orthopoxviruses, or has that recommendation been narrowed to laboratory and
-response-team personnel? If it stands, CDSi's supporting data has dropped an
-indication it still defines, and that is worth reporting to CDC.
-
----
-
-## 4. `2023-UC-0047` — infant RSV risk indication: chronic lung disease
-
-CDC's 2023 case gives an 8-month-old observation **017, "Chronic lung
-disease"**, and expects a nirsevimab forecast at the season start.
-
-In 4.65-508 the infant series ("RSV risk under 20 months series") is indicated
-by **280, "Chronic lung disease of prematurity"**, together with cystic
-fibrosis, American Indian or Alaska Native, and severe immunocompromise. Plain
-017 now belongs to the *adult* "RSV risk 50-74 years" series. cicada selects no
-infant series for this patient.
-
-**Question for OE:** for the second-season nirsevimab recommendation in
-children aged 8–19 months at increased risk, is the qualifying condition
-chronic lung disease **of prematurity** specifically (requiring medical support
-in the 6 months before the second season), or chronic lung disease generally?
-
----
-
-## 5. `2017-UC-0015` — cholera minimum age, 2 years or 18 years
-
-CDC's 2017 case is a 35-year-old travelling to an area of active cholera
-transmission (observation 008), and expects the first dose to be forecast at
-**18 years** of age (2000-02-17 for a patient born 1982-02-17).
-
-CDSi's current supporting data says **2 years**: `AntigenSupportingData-
-Cholera-508.xml` gives the "Cholera 1-dose series" dose 1 an absolute minimum
-age of 2 years − 4 days and a minimum age of 2 years, which is what cicada
-forecasts (1984-02-17). The case predates that; Vaxchora was licensed for
-adults 18–64 when it was written.
-
-**Question for OE:** what is the current ACIP-recommended minimum age for
-Vaxchora (CVX 174, lyophilized CVD 103-HgR) — 2 years or 18? If it is 2 years,
-CDC's test row is simply stale and cicada matches their own current data.
-
----
-
-## 6. `2016-UC-0198` — which meningococcal risk series applies to a 39-year-old
-
-**This one we have not resolved, and it is not a data-version question.**
-
-The patient is a 39-year-old microbiologist routinely exposed to *Neisseria
-meningitidis* (observation 050) who also travels to countries where
-meningococcal disease is hyperendemic (observation 164). Both observations are
-active; no doses administered.
-
-Two risk series in the same series group are relevant, and the current
-supporting data gives them:
-
-| series | series priority | minimum age to start | indication ages |
-|---|---|---|---|
-| Meningococcal ACWY risk 2-23 month | **A** | none | 164 from 2 months, no end age |
-| Meningococcal ACWY risk 1-dose series | B | 2 years | 050 from 19 years; 164 from 2 years |
-
-CDC expects earliest and recommended **1979-07-13** — the patient's second
-birthday, i.e. the *1-dose* (priority B) series. cicada answers from the
-**2-23 month** series, forecasting dose 4 at the patient's seventh month of
-life (1978-02-13), because the logic specification's SELECTSCORE-2 makes only
-the highest-priority risk series scorable, and that is priority A.
-
-The infant series carries no maximum age to start and none of its doses carry
-a maximum age, so nothing in the data ages a 39-year-old out of it; its
-conditional skips are dose-count conditions, not age conditions.
-
-**Questions for OE:**
-
-1. For a 39-year-old microbiologist with routine exposure to *N. meningitidis*
-   who also travels to hyperendemic areas, what does ACIP recommend — a single
-   MenACWY dose (with boosters), or the infant 2–23-month multi-dose schedule?
-   (We are confident of the answer; it is worth stating for the record.)
-2. Is there any published CDSi guidance for choosing between two risk series in
-   one series group when the higher-priority series is written for infants and
-   carries no maximum age? This looks like a gap in the supporting data — the
-   infant series has no maximum age to start — rather than a defect in either
-   engine.
-
----
-
-## 7. `2016-UC-0173` and `-0178` — what does the pneumococcal 5-year interval run from?
-
-Both cases are immunocompromised adults in the "Pneumococcal risk 19+ years
-immunocompromised PPSV-PCV-PPSV" series whose most recent dose is a PCV13
-given after their PPSV23:
-
-| case | doses | CDC expects | cicada answers |
-|---|---|---|---|
-| 2016-UC-0173 | PPSV23 2016-08-21, PCV13 2017-08-21 | dose 3 on **2021-08-21** (5y after the PPSV23) | 2022-08-21 (5y after the PCV13) |
-| 2016-UC-0178 | PPSV23 2006-08-03, PPSV23 2011-08-03, PCV13 2012-08-03 | dose 4 on **2016-08-03** (5y after the last PPSV23) | 2017-08-03 (5y after the PCV13) |
-
-CDC's own change note on the first case says "Updated earliest and recommended
-forecast date to 5 years after most previous dose of PPSV23" (v4.1, 2019).
-
-But the current supporting data does not say that. In `AntigenSupportingData-
-Pneumococcal-508.xml` that series' dose 3 carries a single interval —
-`fromPrevious = Y`, minimum and earliest recommended interval 5 years — i.e.
-five years from **whatever dose came last**, which is what cicada forecasts.
-The series was also rebuilt for the PCV20/PCV21 era, and its forecast vaccine
-is now PCV20 or PCV21 rather than a second PPSV23.
-
-**Question for OE:** for an immunocompromised adult who received PPSV23 and
-then PCV13, when is the next pneumococcal dose due under current ACIP — five
-years after the PPSV23, five years after the most recent dose whatever it was,
-or has the PCV20/PCV21 recommendation replaced this sequencing altogether? The
-answer decides whether these two rows are stale or whether the supporting data
-is wrong.
-
----
-
-## 8. ✅ `2016-UC-0110` — infant MenACWY 4th dose: 6 months after dose 3, or at 12 months of age?
-
-**This case was never triaged.** It failed the condition suite from the start
-and was left out of `CDSI-DISPUTED-CASES.md` because that report's case list was
-typed by hand and this id carries a trailing space (`'2016-UC-0110 '`), so it
-does not survive a copy-paste out of the suite output. The report now derives
-its own list, and the case has been checked at every commit of the defect-fix
-session — it never passed, so nothing we changed caused it.
-
-An infant with anatomical or functional asplenia (observation 160), born
-2015-02-14, given MenACWY-O (CVX 136, MVX NOV) at 2015-04-14, 2015-06-09 and
-2015-08-04; assessed the day of the third dose.
-
-| column | CDC | cicada |
-|---|---|---|
-| series status | Not Complete | Not Complete ✅ |
-| forecast # | 4 | 4 ✅ |
-| **earliest** | **2016-02-04** (dose 3 + 6 months) | **2016-02-14** |
-| recommended | 2016-02-14 (the first birthday) | 2016-02-14 ✅ |
-
-Only the earliest date differs, by ten days, and cicada's is the later — the
-more conservative — of the two.
-
-**Why they differ.** CDC's row is labelled `Forecast_Test_Type: Recommended
-based on interval` and was last touched in v4.2 (2021-06-11): their earliest is
-driven by a six-month interval from dose 3. The supporting data no longer has
-that interval. In 4.65-508 — and identically in 4.64, so this is not a
-regression from the version bump — "Meningococcal ACWY risk 2-23 month" runs to
-seven doses, and:
-
-- dose 4 carries a conditional skip, *"not required if more than 2 doses have
-  been administered between 2 and 7 months OR at least 1 dose on or after 7
-  months"*. This patient's three doses all fall between 2 and 7 months, so it
-  is skipped;
-- dose 5 — the 12-month dose — carries minimum age 12 months and a minimum
-  interval of 12 weeks from the previous dose.
-
-Per FORECASTDTCAN-1 the candidate earliest date is the latest of the **minimum**
-age date and the minimum interval dates (absolute minimums belong to evaluation,
-not forecasting), so it is 2016-02-14 — the first birthday — and the six-month
-interval CDC's row is testing exists nowhere in the current series. cicada's
-answer also matches the ACIP Menveo infant schedule of 2, 4, 6 and 12 months.
-
-**Question for OE:** for an infant with asplenia who completed MenACWY-O at 2, 4
-and 6 months, may the fourth dose be given six months after the third — i.e. ten
-days before the first birthday — or does current ACIP require 12 months of age?
-The answer decides whether CDC's row is simply stale against their own newer
-supporting data, which is what we believe, or whether the data dropped an
-interval it should still carry.
-
----
-
-## 9. ✅ Eleven condition rows that ask for a series the supporting data no longer has
-
-Found by classifying every failing case on 2026-08-24. These are **not** engine
-disagreements: in each one cicada follows the supporting data it ships and the
-spec rule named, and CDC's row encodes an older version of the data. Each was
-checked against **4.64 as well as 4.65-508**, so none is a regression from the
-version upgrade. Grouped because one question settles most of them.
-
-| case | CDC's row wants | what the current data says |
-|---|---|---|
-| `2016-UC-0079` | HPV dose evaluated in a **risk** series (history of sexual abuse, obs 169) | that indication now **ends at 11 years**; the patient is 12 at assessment, and Table 5-4 tests the **assessment date** |
-| `2016-UC-0087`, `2016-UC-0088` | HPV risk series for MSM (obs 036) | **no** HPV risk series is indicated by 036 any more |
-| `2020-UC-0003` | MenB risk 2-dose series (obs 177, "seeks MenB protection") | 177 drives no risk series; MenB is now four **Standard** shared-clinical-decision-making series |
-| `2016-UC-0203` | MenB dose in a risk series (obs 116) | 116 is a contraindication code and indicates no series. cicada's status **is** Contraindicated, matching CDC |
-| `2025-UC-0010` | Zoster dose in a risk series (obs 172) | same shape |
-| `2016-UC-0032` | MMR past due six years out | that dose carries **no latest recommended interval** in either data version |
-| `2022-UC-0017` | pneumococcal earliest 8 weeks after PCV15 | the dose carries `minInt: 1 year`. cicada's **recommended** date matches CDC exactly; only the earliest differs |
-| `2016-UC-0110` | MenACWY 4th dose 6 months after dose 3 | see section 8 |
-
-**Question for OE (one covers the group):** for each of these — a patient with a
-history of sexual abuse aged over 11, a man who has sex with men, an adult
-seeking MenB protection, an adult who had PCV15 — does current ACIP still
-define a *distinct risk schedule*, or has that group been folded into the
-routine recommendation? If it has, CDC's rows are simply stale against their own
-newer supporting data, which is what we believe.
-
-## 10. ✅ `2016-UC-0057` — a row that contradicts its own dates
-
-The test name says the patient is **18 months** old; the row's own DOB
-(2014-08-10) and assessment date (2015-01-10) make her **5 months**. She has
-persistent complement/properdin/factor B deficiency (obs 151) and one Hib dose,
-given the day of assessment.
-
-CDC expects the next Hib dose at **2015-08-10**, exactly her first birthday.
-That is the begin age of the risk indication, and the minimum age of the "Hib
-risk child 2-dose series" — a **12-month-to-5-year booster** series. Table 5-4
-says an indication applies only when its begin age date ≤ **assessment date**,
-and at 5 months she has not reached it, so cicada keeps her on the routine
-infant schedule and forecasts her next dose 4 weeks after the first
-(2015-02-07).
-
-**Question for OE:** a 5-month-old with persistent complement deficiency who has
-had one Hib dose — is the next dose due 4 weeks later on the routine infant
-schedule, or should she wait until 12 months? We believe 4 weeks, and that
-CDC's row is testing the 18-month patient its name describes rather than the
-5-month-old its dates describe.
 
 ---
 
@@ -665,50 +379,6 @@ Tables 6-6 and 6-8 have.
 
 ---
 
-## 13. (the question as put) Table 6-7 has no reference date — what is a series group's status mid-evaluation?
-
-**Cases:** `2016-UC-0137`, `2024-UC-0019` — both now failing, deliberately.
-
-Table 6-7 is the whole of the "Completed Series" conditional skip:
-
-> *"Does the Conditional Skip Series Group identify a Series Group with at least
-> one relevant patient series with a patient series status of 'Complete'?"*
-
-Present tense, and it takes **no date**. The Conditional Skip Reference Date of
-CONDSKIP-2 is consumed by Table 6-6 (Age) and Table 6-8 (Interval) and by
-nothing else — the specification never applies it to this condition.
-
-But the condition's `context` is `Both`, so it is asked **while doses are being
-evaluated** — and a series group's status changes *during* that pass. So the
-question "is the group complete?" has no stable answer at the moment it is
-asked, and the specification does not say which moment it means.
-
-**It matters clinically, in opposite directions:**
-
-- `2024-UC-0019` — an adult dialysis patient's four HepB doses should all count
-  toward the risk series, even though the standard group completed part way
-  through them.
-- `2016-UC-0133` — a lab worker's single adult polio booster, given decades
-  after he finished the childhood series, must **not** be counted as dose 1 of a
-  fresh risk series.
-
-Answering "complete as of the date of the dose being evaluated" separates those
-two correctly. **cicada used to do exactly that — and it was removed, because
-CDSi contains no such rule.** Inventing a reference date the specification does
-not define is not something an implementation should do quietly, whatever it
-does to the test suite. With the present-tense reading, `2016-UC-0137` and
-`2024-UC-0019` fail.
-
-**Question for CDC:** for a conditional skip of type Completed Series with
-context `Both`, at what point is the referenced series group's status evaluated
-— the assessment date, the date administered of the dose being evaluated, or the
-end state after all antigens are evaluated? Table 6-7 does not say, and the
-three answers give different results for real patients. If the intended answer
-is the date administered, Table 6-7 needs the reference date that Tables 6-6 and
-6-8 already have.
-
----
-
 ## 14. ✅ ADJUDICATED 2026-08-28 — the spec is clearer than our implementation
 
 **OE: two forecasts is the intended output.** On the three questions:
@@ -739,96 +409,3 @@ suite: 181 cases have a vaccine group carrying two forecasts, and the response
 carries one recommendation per forecast in every one.
 
 ---
-
-## 14. (the question as put) Chapter 9 scopes a forecast to a series group — should a vaccine group emit more than one?
-
-**Not a case failure.** A deviation found by auditing the engine against the
-specification, recorded because we do not follow the spec here and should say so.
-
-**FORECASTVG-1** puts a patient series forecast in a vaccine group forecast when
-
-> *"The best patient series belongs to **the series group** for which the vaccine
-> group forecast is being made."*
-
-The forecast is scoped to a **series group**, and a vaccine group can contain
-several — a standard group and a risk group. Chapter 9's introduction describes
-the consequence:
-
-> *"Patients in this situation may end up with more than 1 vaccine group forecast
-> for a given vaccine group (e.g., a travel-based MMR forecast and an age-based
-> MMR forecast)."*
-
-**cicada used to emit one forecast per vaccine group.** Where a group held both
-a risk and a standard best patient series it picked the risk one — restricted to
-when a risk series still needed a dose, or when it was finished and its own
-antigen had nothing else pending. **Those conditions are not in the
-specification.** They were derived from two cases pulling in opposite directions:
-an MMR traveller whose complete risk series must not silence a standard series
-still owing dose 2, and a pregnant patient whose complete pertussis risk series
-must not be dragged back to Not Complete by tetanus and diphtheria boosters that
-recur for life.
-
-✅ **Fixed 2026-08-28.** The engine now emits one forecast per series group, as
-Chapter 9 describes, and makes no choice between them. The tie-break moved to
-`cicada/test/cdc_row_collapse.dart`, used only to decide which forecast CDC's
-single workbook row refers to. It is documented there as an artefact of their
-file format, not a rule. The failing set did not move: 26 before, 26 after, the
-same 26.
-
-The questions below still stand — they ask what CDC intends, which is worth an
-answer even though the engine now follows the text.
-
-**Questions:**
-
-1. Is a vaccine group forecast intended to be one per **series group**, so that a
-   patient with an active risk indication legitimately receives two forecasts for
-   one vaccine group?
-2. If so, is there a rule for which one a system should present when it can show
-   only one — or is that deliberately left to the implementation?
-3. If a single forecast per vaccine group is intended, which series group's
-   forecast wins, and on what rule?
-
-✅ **Implementation note, resolved 2026-08-28.** `vaccineGroupForecasts` is now
-`Map<String, List<VaccineGroupForecast>>`, and `$immds-forecast` emits a
-recommendation per forecast. Each forecast carries `isRiskForecast`,
-`seriesGroupName` and `antigensNeedingDose` so a consumer can tell the two
-apart.
-
-## Tdap in pregnancy is gated on recorded sex as well as on pregnancy
-
-CDSi 4.65-508 defines a "Pertussis risk 1-dose series" with two conditions on
-it at once:
-
-* `requiredGender`: **Female** and **Unknown**
-* an indication on observation **007, Pregnant**, whose own text reads
-  *"Administer to women who are pregnant."*
-
-An engine applies both, so a pregnant patient whose record carries
-`Patient.gender = male` satisfies the indication and is excluded by the gender
-gate. They receive no Tdap risk recommendation. Recorded as `other`, `unknown`,
-or with the element absent, they receive it, because CDC lists Unknown beside
-Female.
-
-`Patient.gender` is bound required in FHIR R4 to male | female | other |
-unknown and its own definition calls the element administrative. CDSi does not
-say what its Gender attribute means: the glossary reads "Patient Gender: the
-patient's gender".
-
-**Our reading:** the pregnancy is what makes Tdap apply. The gender gate adds
-no information on this series and can only exclude, and the patient it excludes
-is one whose recorded sex does not match their anatomy. We have therefore made
-pregnancy outrank the gender gate for this series only, and we would like that
-checked.
-
-**The questions:**
-
-1. Is there any patient for whom the `requiredGender` on this series changes the
-   right answer, given that observation 007 is already required?
-2. Should a pregnant patient whose record says `male` receive Tdap?
-3. If yes, is the defect in CDSi's supporting data, or is an engine expected to
-   apply `requiredGender` strictly and leave this to a clinician override?
-
-Of the eleven gender-gated series in 4.65-508 this is the only one whose
-indication is the qualifying state itself. The other ten are HPV, gated on age
-or immunocompromise, and exist as duplicated male and non-male pairs with
-identical doses, ages and intervals.
