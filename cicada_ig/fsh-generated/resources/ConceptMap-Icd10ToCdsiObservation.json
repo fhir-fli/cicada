@@ -3,7 +3,7 @@
   "id": "Icd10ToCdsiObservation",
   "url": "http://fhirfli.dev/fhir/ig/cicada/ConceptMap/Icd10ToCdsiObservation",
   "title": "ICD-10-CM to CDSi Observation Code Map",
-  "description": "Maps ICD-10-CM diagnosis codes to CDSi observation codes used in immunization decision support.",
+  "description": "Maps ICD-10-CM codes to CDSi observation codes used in immunization decision support. Generated from the cicada crosswalk.",
   "group": [
     {
       "element": [
@@ -12,11 +12,88 @@
             {
               "code": "003",
               "display": "Immunocompromised",
-              "equivalence": "wider"
+              "equivalence": "equivalent"
             }
           ],
           "code": "D84.9",
           "display": "Immunodeficiency, unspecified"
+        },
+        {
+          "target": [
+            {
+              "code": "003",
+              "display": "Immunocompromised",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "D83.9",
+          "display": "Common variable immunodeficiency, unspecified"
+        },
+        {
+          "target": [
+            {
+              "code": "003",
+              "display": "Immunocompromised",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "D80.9",
+          "display": "Immunodeficiency with predominantly antibody defects, unspecified"
+        },
+        {
+          "target": [
+            {
+              "code": "003",
+              "display": "Immunocompromised",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "D89.9",
+          "display": "Disorder involving the immune mechanism, unspecified"
+        },
+        {
+          "target": [
+            {
+              "code": "003",
+              "display": "Immunocompromised",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "D84.8",
+          "display": "Other specified immunodeficiencies"
+        },
+        {
+          "target": [
+            {
+              "code": "004",
+              "display": "Recipient of a hematopoietic stem cell transplant",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "Z94.84",
+          "display": "Stem cells transplant status"
+        },
+        {
+          "target": [
+            {
+              "code": "004",
+              "display": "Recipient of a hematopoietic stem cell transplant",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "T86.00",
+          "display": "Unspecified complication of bone marrow transplant"
+        },
+        {
+          "target": [
+            {
+              "code": "004",
+              "display": "Recipient of a hematopoietic stem cell transplant",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "T86.09",
+          "display": "Other complications of bone marrow transplant"
         },
         {
           "target": [
@@ -32,6 +109,72 @@
         {
           "target": [
             {
+              "code": "005",
+              "display": "Hepatitis C virus infection",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "B17.10",
+          "display": "Acute hepatitis C without hepatic coma"
+        },
+        {
+          "target": [
+            {
+              "code": "005",
+              "display": "Hepatitis C virus infection",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "B17.11",
+          "display": "Acute hepatitis C with hepatic coma"
+        },
+        {
+          "target": [
+            {
+              "code": "005",
+              "display": "Hepatitis C virus infection",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "B19.20",
+          "display": "Unspecified viral hepatitis C without hepatic coma"
+        },
+        {
+          "target": [
+            {
+              "code": "006",
+              "display": "Receives clotting factor concentrates",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "D66",
+          "display": "Hereditary factor VIII deficiency"
+        },
+        {
+          "target": [
+            {
+              "code": "006",
+              "display": "Receives clotting factor concentrates",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "D67",
+          "display": "Hereditary factor IX deficiency"
+        },
+        {
+          "target": [
+            {
+              "code": "006",
+              "display": "Receives clotting factor concentrates",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "D68.2",
+          "display": "Hereditary deficiency of other clotting factors"
+        },
+        {
+          "target": [
+            {
               "code": "007",
               "display": "Pregnant",
               "equivalence": "equivalent"
@@ -43,9 +186,130 @@
         {
           "target": [
             {
+              "code": "007",
+              "display": "Pregnant",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "O09.90",
+          "display": "Supervision of high risk pregnancy, unspecified, unspecified trimester"
+        },
+        {
+          "target": [
+            {
+              "code": "007",
+              "display": "Pregnant",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "Z34.00",
+          "display": "Encounter for supervision of normal first pregnancy, unspecified trimester"
+        },
+        {
+          "target": [
+            {
+              "code": "007",
+              "display": "Pregnant",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "Z34.80",
+          "display": "Encounter for supervision of other normal pregnancy, unspecified trimester"
+        },
+        {
+          "target": [
+            {
+              "code": "009",
+              "display": "Breastfeeding",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "Z39.1",
+          "display": "Encounter for care and examination of lactating mother"
+        },
+        {
+          "target": [
+            {
+              "code": "010",
+              "display": "Cerebrospinal fluid leaks",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "G96.00",
+          "display": "Cerebrospinal fluid leak, unspecified"
+        },
+        {
+          "target": [
+            {
+              "code": "010",
+              "display": "Cerebrospinal fluid leaks",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "G96.01",
+          "display": "Cranial cerebrospinal fluid leak, spontaneous"
+        },
+        {
+          "target": [
+            {
+              "code": "010",
+              "display": "Cerebrospinal fluid leaks",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "G96.02",
+          "display": "Spinal cerebrospinal fluid leak, spontaneous"
+        },
+        {
+          "target": [
+            {
+              "code": "010",
+              "display": "Cerebrospinal fluid leaks",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "G96.08",
+          "display": "Other cranial cerebrospinal fluid leak"
+        },
+        {
+          "target": [
+            {
+              "code": "010",
+              "display": "Cerebrospinal fluid leaks",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "G96.09",
+          "display": "Other spinal cerebrospinal fluid leak"
+        },
+        {
+          "target": [
+            {
+              "code": "011",
+              "display": "Cochlear implants",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "Z96.21",
+          "display": "Cochlear implant status"
+        },
+        {
+          "target": [
+            {
+              "code": "012",
+              "display": "Family history of altered immunocompetence",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "Z83.2",
+          "display": "Family history of diseases of the blood and blood-forming organs and certain disorders involving the immune mechanism"
+        },
+        {
+          "target": [
+            {
               "code": "013",
               "display": "Severe Combined Immunodeficiency [SCID]",
-              "equivalence": "wider"
+              "equivalence": "equivalent"
             }
           ],
           "code": "D81.9",
@@ -54,9 +318,108 @@
         {
           "target": [
             {
+              "code": "013",
+              "display": "Severe Combined Immunodeficiency [SCID]",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "D81.0",
+          "display": "Severe combined immunodeficiency [SCID] with reticular dysgenesis"
+        },
+        {
+          "target": [
+            {
+              "code": "013",
+              "display": "Severe Combined Immunodeficiency [SCID]",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "D81.1",
+          "display": "Severe combined immunodeficiency [SCID] with low T- and B-cell numbers"
+        },
+        {
+          "target": [
+            {
+              "code": "013",
+              "display": "Severe Combined Immunodeficiency [SCID]",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "D81.2",
+          "display": "Severe combined immunodeficiency [SCID] with low or normal B-cell numbers"
+        },
+        {
+          "target": [
+            {
+              "code": "013",
+              "display": "Severe Combined Immunodeficiency [SCID]",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "D81.3",
+          "display": "Adenosine deaminase [ADA] deficiency"
+        },
+        {
+          "target": [
+            {
+              "code": "013",
+              "display": "Severe Combined Immunodeficiency [SCID]",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "D81.5",
+          "display": "Purine nucleoside phosphorylase [PNP] deficiency"
+        },
+        {
+          "target": [
+            {
+              "code": "013",
+              "display": "Severe Combined Immunodeficiency [SCID]",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "D81.6",
+          "display": "Major histocompatibility complex class I deficiency"
+        },
+        {
+          "target": [
+            {
+              "code": "013",
+              "display": "Severe Combined Immunodeficiency [SCID]",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "D81.7",
+          "display": "Major histocompatibility complex class II deficiency"
+        },
+        {
+          "target": [
+            {
               "code": "014",
               "display": "Diabetes",
-              "equivalence": "wider"
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "E10.9",
+          "display": "Type 1 diabetes mellitus without complications"
+        },
+        {
+          "target": [
+            {
+              "code": "014",
+              "display": "Diabetes",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "E10.65",
+          "display": "Type 1 diabetes mellitus with hyperglycemia"
+        },
+        {
+          "target": [
+            {
+              "code": "014",
+              "display": "Diabetes",
+              "equivalence": "equivalent"
             }
           ],
           "code": "E11.9",
@@ -65,9 +428,97 @@
         {
           "target": [
             {
+              "code": "014",
+              "display": "Diabetes",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "E11.65",
+          "display": "Type 2 diabetes mellitus with hyperglycemia"
+        },
+        {
+          "target": [
+            {
+              "code": "014",
+              "display": "Diabetes",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "E13.9",
+          "display": "Other specified diabetes mellitus without complications"
+        },
+        {
+          "target": [
+            {
+              "code": "014",
+              "display": "Diabetes",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "E08.9",
+          "display": "Diabetes mellitus due to underlying condition without complications"
+        },
+        {
+          "target": [
+            {
+              "code": "014",
+              "display": "Diabetes",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "E09.9",
+          "display": "Drug or chemical induced diabetes mellitus without complications"
+        },
+        {
+          "target": [
+            {
               "code": "015",
               "display": "Chronic liver disease",
-              "equivalence": "wider"
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "K70.30",
+          "display": "Alcoholic cirrhosis of liver without ascites"
+        },
+        {
+          "target": [
+            {
+              "code": "015",
+              "display": "Chronic liver disease",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "K70.31",
+          "display": "Alcoholic cirrhosis of liver with ascites"
+        },
+        {
+          "target": [
+            {
+              "code": "015",
+              "display": "Chronic liver disease",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "K73.9",
+          "display": "Chronic hepatitis, unspecified"
+        },
+        {
+          "target": [
+            {
+              "code": "015",
+              "display": "Chronic liver disease",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "K74.0",
+          "display": "Hepatic fibrosis"
+        },
+        {
+          "target": [
+            {
+              "code": "015",
+              "display": "Chronic liver disease",
+              "equivalence": "equivalent"
             }
           ],
           "code": "K74.60",
@@ -76,9 +527,64 @@
         {
           "target": [
             {
+              "code": "015",
+              "display": "Chronic liver disease",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "K74.69",
+          "display": "Other cirrhosis of liver"
+        },
+        {
+          "target": [
+            {
+              "code": "015",
+              "display": "Chronic liver disease",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "K76.0",
+          "display": "Fatty (change of) liver, not elsewhere classified"
+        },
+        {
+          "target": [
+            {
+              "code": "015",
+              "display": "Chronic liver disease",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "K76.9",
+          "display": "Liver disease, unspecified"
+        },
+        {
+          "target": [
+            {
               "code": "016",
               "display": "Chronic heart disease",
-              "equivalence": "wider"
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "I25.10",
+          "display": "Atherosclerotic heart disease of native coronary artery without angina pectoris"
+        },
+        {
+          "target": [
+            {
+              "code": "016",
+              "display": "Chronic heart disease",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "I25.9",
+          "display": "Chronic ischemic heart disease, unspecified"
+        },
+        {
+          "target": [
+            {
+              "code": "016",
+              "display": "Chronic heart disease",
+              "equivalence": "equivalent"
             }
           ],
           "code": "I50.9",
@@ -87,9 +593,64 @@
         {
           "target": [
             {
+              "code": "016",
+              "display": "Chronic heart disease",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "I50.20",
+          "display": "Unspecified systolic (congestive) heart failure"
+        },
+        {
+          "target": [
+            {
+              "code": "016",
+              "display": "Chronic heart disease",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "I50.30",
+          "display": "Unspecified diastolic (congestive) heart failure"
+        },
+        {
+          "target": [
+            {
+              "code": "016",
+              "display": "Chronic heart disease",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "I42.9",
+          "display": "Cardiomyopathy, unspecified"
+        },
+        {
+          "target": [
+            {
+              "code": "016",
+              "display": "Chronic heart disease",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "I42.0",
+          "display": "Dilated cardiomyopathy"
+        },
+        {
+          "target": [
+            {
+              "code": "016",
+              "display": "Chronic heart disease",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "Q24.9",
+          "display": "Congenital malformation of heart, unspecified"
+        },
+        {
+          "target": [
+            {
               "code": "017",
               "display": "Chronic lung disease",
-              "equivalence": "wider"
+              "equivalence": "equivalent"
             }
           ],
           "code": "J44.9",
@@ -98,8 +659,74 @@
         {
           "target": [
             {
+              "code": "017",
+              "display": "Chronic lung disease",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "J44.1",
+          "display": "Chronic obstructive pulmonary disease with (acute) exacerbation"
+        },
+        {
+          "target": [
+            {
+              "code": "017",
+              "display": "Chronic lung disease",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "J43.9",
+          "display": "Emphysema, unspecified"
+        },
+        {
+          "target": [
+            {
+              "code": "017",
+              "display": "Chronic lung disease",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "J84.9",
+          "display": "Interstitial pulmonary disease, unspecified"
+        },
+        {
+          "target": [
+            {
+              "code": "017",
+              "display": "Chronic lung disease",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "J84.10",
+          "display": "Pulmonary fibrosis, unspecified"
+        },
+        {
+          "target": [
+            {
+              "code": "017",
+              "display": "Chronic lung disease",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "J47.9",
+          "display": "Bronchiectasis, uncomplicated"
+        },
+        {
+          "target": [
+            {
+              "code": "017",
+              "display": "Chronic lung disease",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "P27.1",
+          "display": "Bronchopulmonary dysplasia originating in the perinatal period"
+        },
+        {
+          "target": [
+            {
               "code": "018",
-              "display": "Asplenia",
+              "display": "Laboratory Evidence of Immunity or confirmation of Hepatitis A disease",
               "equivalence": "equivalent"
             }
           ],
@@ -110,7 +737,29 @@
           "target": [
             {
               "code": "018",
-              "display": "Asplenia",
+              "display": "Laboratory Evidence of Immunity or confirmation of Hepatitis A disease",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "Q89.01",
+          "display": "Asplenia (congenital)"
+        },
+        {
+          "target": [
+            {
+              "code": "018",
+              "display": "Laboratory Evidence of Immunity or confirmation of Hepatitis A disease",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "D73.89",
+          "display": "Other diseases of spleen"
+        },
+        {
+          "target": [
+            {
+              "code": "018",
+              "display": "Laboratory Evidence of Immunity or confirmation of Hepatitis A disease",
               "equivalence": "equivalent"
             }
           ],
@@ -121,8 +770,63 @@
           "target": [
             {
               "code": "019",
-              "display": "Chronic renal failure",
-              "equivalence": "wider"
+              "display": "Laboratory Evidence of Immunity or confirmation of Hepatitis B disease",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "N18.1",
+          "display": "Chronic kidney disease, stage 1"
+        },
+        {
+          "target": [
+            {
+              "code": "019",
+              "display": "Laboratory Evidence of Immunity or confirmation of Hepatitis B disease",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "N18.2",
+          "display": "Chronic kidney disease, stage 2 (mild)"
+        },
+        {
+          "target": [
+            {
+              "code": "019",
+              "display": "Laboratory Evidence of Immunity or confirmation of Hepatitis B disease",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "N18.30",
+          "display": "Chronic kidney disease, stage 3 unspecified"
+        },
+        {
+          "target": [
+            {
+              "code": "019",
+              "display": "Laboratory Evidence of Immunity or confirmation of Hepatitis B disease",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "N18.4",
+          "display": "Chronic kidney disease, stage 4 (severe)"
+        },
+        {
+          "target": [
+            {
+              "code": "019",
+              "display": "Laboratory Evidence of Immunity or confirmation of Hepatitis B disease",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "N18.5",
+          "display": "Chronic kidney disease, stage 5"
+        },
+        {
+          "target": [
+            {
+              "code": "019",
+              "display": "Laboratory Evidence of Immunity or confirmation of Hepatitis B disease",
+              "equivalence": "equivalent"
             }
           ],
           "code": "N18.6",
@@ -131,8 +835,30 @@
         {
           "target": [
             {
+              "code": "019",
+              "display": "Laboratory Evidence of Immunity or confirmation of Hepatitis B disease",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "N18.9",
+          "display": "Chronic kidney disease, unspecified"
+        },
+        {
+          "target": [
+            {
+              "code": "019",
+              "display": "Laboratory Evidence of Immunity or confirmation of Hepatitis B disease",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "Z99.2",
+          "display": "Dependence on renal dialysis"
+        },
+        {
+          "target": [
+            {
               "code": "026",
-              "display": "HIV/AIDS - immunocompromised",
+              "display": "Persons with perinatal HIV infection who do not have evidence of severe immunosuppression and who were vaccinated with MMR before establishment of antiviral therapy [ART]",
               "equivalence": "equivalent"
             }
           ],
@@ -143,8 +869,8 @@
           "target": [
             {
               "code": "026",
-              "display": "HIV/AIDS - immunocompromised",
-              "equivalence": "wider"
+              "display": "Persons with perinatal HIV infection who do not have evidence of severe immunosuppression and who were vaccinated with MMR before establishment of antiviral therapy [ART]",
+              "equivalence": "equivalent"
             }
           ],
           "code": "Z21",
@@ -155,11 +881,66 @@
             {
               "code": "027",
               "display": "Asthma",
-              "equivalence": "wider"
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "J45.20",
+          "display": "Mild intermittent asthma, uncomplicated"
+        },
+        {
+          "target": [
+            {
+              "code": "027",
+              "display": "Asthma",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "J45.30",
+          "display": "Mild persistent asthma, uncomplicated"
+        },
+        {
+          "target": [
+            {
+              "code": "027",
+              "display": "Asthma",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "J45.40",
+          "display": "Moderate persistent asthma, uncomplicated"
+        },
+        {
+          "target": [
+            {
+              "code": "027",
+              "display": "Asthma",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "J45.50",
+          "display": "Severe persistent asthma, uncomplicated"
+        },
+        {
+          "target": [
+            {
+              "code": "027",
+              "display": "Asthma",
+              "equivalence": "equivalent"
             }
           ],
           "code": "J45.909",
           "display": "Unspecified asthma, uncomplicated"
+        },
+        {
+          "target": [
+            {
+              "code": "027",
+              "display": "Asthma",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "J45.998",
+          "display": "Other asthma"
         },
         {
           "target": [
@@ -175,13 +956,123 @@
         {
           "target": [
             {
+              "code": "029",
+              "display": "Acute gastroenteritis",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "K52.9",
+          "display": "Noninfective gastroenteritis and colitis, unspecified"
+        },
+        {
+          "target": [
+            {
+              "code": "029",
+              "display": "Acute gastroenteritis",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "A09",
+          "display": "Infectious gastroenteritis and colitis, unspecified"
+        },
+        {
+          "target": [
+            {
+              "code": "029",
+              "display": "Acute gastroenteritis",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "A08.0",
+          "display": "Rotaviral enteritis"
+        },
+        {
+          "target": [
+            {
+              "code": "029",
+              "display": "Acute gastroenteritis",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "A08.39",
+          "display": "Other viral enteritis"
+        },
+        {
+          "target": [
+            {
+              "code": "030",
+              "display": "Acute febrile illness",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "R50.9",
+          "display": "Fever, unspecified"
+        },
+        {
+          "target": [
+            {
               "code": "031",
               "display": "Tuberculosis",
-              "equivalence": "wider"
+              "equivalence": "equivalent"
             }
           ],
           "code": "A15.0",
           "display": "Tuberculosis of lung"
+        },
+        {
+          "target": [
+            {
+              "code": "031",
+              "display": "Tuberculosis",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "A15.9",
+          "display": "Respiratory tuberculosis unspecified"
+        },
+        {
+          "target": [
+            {
+              "code": "031",
+              "display": "Tuberculosis",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "A18.89",
+          "display": "Tuberculosis of other sites"
+        },
+        {
+          "target": [
+            {
+              "code": "031",
+              "display": "Tuberculosis",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "A19.9",
+          "display": "Miliary tuberculosis, unspecified"
+        },
+        {
+          "target": [
+            {
+              "code": "031",
+              "display": "Tuberculosis",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "R76.11",
+          "display": "Nonspecific reaction to tuberculin skin test without active tuberculosis"
+        },
+        {
+          "target": [
+            {
+              "code": "031",
+              "display": "Tuberculosis",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "Z86.11",
+          "display": "Personal history of tuberculosis"
         },
         {
           "target": [
@@ -193,13 +1084,1125 @@
           ],
           "code": "Z79.82",
           "display": "Long term (current) use of aspirin"
+        },
+        {
+          "target": [
+            {
+              "code": "039",
+              "display": "Receives treatment for STD",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "Z11.3",
+          "display": "Encounter for screening for infections with a predominantly sexual mode of transmission"
+        },
+        {
+          "target": [
+            {
+              "code": "039",
+              "display": "Receives treatment for STD",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "Z11.4",
+          "display": "Encounter for screening for human immunodeficiency virus [HIV]"
+        },
+        {
+          "target": [
+            {
+              "code": "039",
+              "display": "Receives treatment for STD",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "Z20.2",
+          "display": "Contact with and (suspected) exposure to infections with a predominantly sexual mode of transmission"
+        },
+        {
+          "target": [
+            {
+              "code": "040",
+              "display": "Illicit drug use",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "F19.10",
+          "display": "Other psychoactive substance abuse, uncomplicated"
+        },
+        {
+          "target": [
+            {
+              "code": "040",
+              "display": "Illicit drug use",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "F14.10",
+          "display": "Cocaine abuse, uncomplicated"
+        },
+        {
+          "target": [
+            {
+              "code": "040",
+              "display": "Illicit drug use",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "F11.10",
+          "display": "Opioid abuse, uncomplicated"
+        },
+        {
+          "target": [
+            {
+              "code": "040",
+              "display": "Illicit drug use",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "F16.10",
+          "display": "Hallucinogen abuse, uncomplicated"
+        },
+        {
+          "target": [
+            {
+              "code": "042",
+              "display": "Smoke cigarettes",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "F17.210",
+          "display": "Nicotine dependence, cigarettes, uncomplicated"
+        },
+        {
+          "target": [
+            {
+              "code": "042",
+              "display": "Smoke cigarettes",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "Z72.0",
+          "display": "Tobacco use"
+        },
+        {
+          "target": [
+            {
+              "code": "043",
+              "display": "Alcoholism",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "F10.20",
+          "display": "Alcohol dependence, uncomplicated"
+        },
+        {
+          "target": [
+            {
+              "code": "043",
+              "display": "Alcoholism",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "F10.10",
+          "display": "Alcohol abuse, uncomplicated"
+        },
+        {
+          "target": [
+            {
+              "code": "071",
+              "display": "Household contact with hepatitis B surface antigen-positive persons",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "Z11.59",
+          "display": "Encounter for screening for other viral diseases"
+        },
+        {
+          "target": [
+            {
+              "code": "076",
+              "display": "Progressive neurologic disorder",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "G31.9",
+          "display": "Degenerative disease of nervous system, unspecified"
+        },
+        {
+          "target": [
+            {
+              "code": "077",
+              "display": "Received inactivated or unknown measles vaccine between 1963-1967",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "T50.B95A",
+          "display": "Adverse effect of other viral vaccines, initial encounter"
+        },
+        {
+          "target": [
+            {
+              "code": "077",
+              "display": "Received inactivated or unknown measles vaccine between 1963-1967",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "Z88.9",
+          "display": "Allergy status to unspecified drugs, medicaments and biological substances"
+        },
+        {
+          "target": [
+            {
+              "code": "081",
+              "display": "Severe allergic reaction after previous dose of Polio",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "Z91.012",
+          "display": "Allergy to eggs"
+        },
+        {
+          "target": [
+            {
+              "code": "086",
+              "display": "Severe allergic reaction after previous dose of Pertussis",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "T50.A15A",
+          "display": "Adverse effect of pertussis vaccine, including combinations with a pertussis component, initial encounter"
+        },
+        {
+          "target": [
+            {
+              "code": "087",
+              "display": "Severe allergic reaction after previous dose of Diphtheria",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "T50.A95A",
+          "display": "Adverse effect of other bacterial vaccines, initial encounter"
+        },
+        {
+          "target": [
+            {
+              "code": "101",
+              "display": "Allergic reaction to egg protein",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "T78.1",
+          "display": "Other adverse food reactions, not elsewhere classified"
+        },
+        {
+          "target": [
+            {
+              "code": "102",
+              "display": "Severe allergic reaction to gelatin",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "Z91.018",
+          "display": "Allergy to other foods"
+        },
+        {
+          "target": [
+            {
+              "code": "103",
+              "display": "Severe allergic reaction to arginine",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "T78.40XA",
+          "display": "Allergy, unspecified, initial encounter"
+        },
+        {
+          "target": [
+            {
+              "code": "104",
+              "display": "Allergic reaction to latex",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "Z91.040",
+          "display": "Latex allergy status"
+        },
+        {
+          "target": [
+            {
+              "code": "106",
+              "display": "Severe allergic reaction to gentamicin",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "Z88.1",
+          "display": "Allergy status to other antibiotic agents"
+        },
+        {
+          "target": [
+            {
+              "code": "106",
+              "display": "Severe allergic reaction to gentamicin",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "T36.5X5A",
+          "display": "Adverse effect of aminoglycosides, initial encounter"
+        },
+        {
+          "target": [
+            {
+              "code": "109",
+              "display": "Severe allergic reaction to polymyxin B",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "T36.8X5A",
+          "display": "Adverse effect of other systemic antibiotics, initial encounter"
+        },
+        {
+          "target": [
+            {
+              "code": "111",
+              "display": "Hypersensitivity to the preservative 2-phenoxyethanol",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "T78.49XA",
+          "display": "Other allergy, initial encounter"
+        },
+        {
+          "target": [
+            {
+              "code": "115",
+              "display": "Severe allergic reaction to protamine sulfate",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "T45.7X5A",
+          "display": "Adverse effect of anticoagulant antagonists, vitamin K and other coagulants, initial encounter"
+        },
+        {
+          "target": [
+            {
+              "code": "115",
+              "display": "Severe allergic reaction to protamine sulfate",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "Z88.8",
+          "display": "Allergy status to other drugs, medicaments and biological substances"
+        },
+        {
+          "target": [
+            {
+              "code": "121",
+              "display": "Homelessness",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "Z59.00",
+          "display": "Homelessness unspecified"
+        },
+        {
+          "target": [
+            {
+              "code": "142",
+              "display": "Travel to or working in countries that have high or intermediate endemicity of Hepatitis A",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "D84.821",
+          "display": "Immunodeficiency due to drugs"
+        },
+        {
+          "target": [
+            {
+              "code": "156",
+              "display": "Generalized malignant neoplasm",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "C80.0",
+          "display": "Disseminated malignant neoplasm, unspecified"
+        },
+        {
+          "target": [
+            {
+              "code": "156",
+              "display": "Generalized malignant neoplasm",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "C80.1",
+          "display": "Malignant (primary) neoplasm, unspecified"
+        },
+        {
+          "target": [
+            {
+              "code": "157",
+              "display": "Solid organ transplantation",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "Z94.0",
+          "display": "Kidney transplant status"
+        },
+        {
+          "target": [
+            {
+              "code": "157",
+              "display": "Solid organ transplantation",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "Z94.1",
+          "display": "Heart transplant status"
+        },
+        {
+          "target": [
+            {
+              "code": "157",
+              "display": "Solid organ transplantation",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "Z94.2",
+          "display": "Lung transplant status"
+        },
+        {
+          "target": [
+            {
+              "code": "157",
+              "display": "Solid organ transplantation",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "Z94.4",
+          "display": "Liver transplant status"
+        },
+        {
+          "target": [
+            {
+              "code": "157",
+              "display": "Solid organ transplantation",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "Z94.9",
+          "display": "Transplanted organ and tissue status, unspecified"
+        },
+        {
+          "target": [
+            {
+              "code": "158",
+              "display": "Immunosuppressive therapy",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "Z79.52",
+          "display": "Long term (current) use of systemic steroids"
+        },
+        {
+          "target": [
+            {
+              "code": "158",
+              "display": "Immunosuppressive therapy",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "Z79.899",
+          "display": "Other long term (current) drug therapy"
+        },
+        {
+          "target": [
+            {
+              "code": "159",
+              "display": "Radiation therapy",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "Z51.0",
+          "display": "Encounter for antineoplastic radiation therapy"
+        },
+        {
+          "target": [
+            {
+              "code": "161",
+              "display": "Chronic kidney disease",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "N18.3",
+          "display": "Chronic kidney disease, stage 3 (moderate)"
+        },
+        {
+          "target": [
+            {
+              "code": "162",
+              "display": "Travel to areas at risk for Yellow Fever transmission",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "N04.9",
+          "display": "Nephrotic syndrome with unspecified morphologic changes"
+        },
+        {
+          "target": [
+            {
+              "code": "168",
+              "display": "Chemotherapy",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "Z51.11",
+          "display": "Encounter for antineoplastic chemotherapy"
+        },
+        {
+          "target": [
+            {
+              "code": "168",
+              "display": "Chemotherapy",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "Z51.12",
+          "display": "Encounter for antineoplastic immunotherapy"
+        },
+        {
+          "target": [
+            {
+              "code": "169",
+              "display": "History of sexual abuse or assault",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "Z04.81",
+          "display": "Encounter for examination and observation of victim following forced sexual exploitation"
+        },
+        {
+          "target": [
+            {
+              "code": "169",
+              "display": "History of sexual abuse or assault",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "T74.21XA",
+          "display": "Adult sexual abuse, confirmed, initial encounter"
+        },
+        {
+          "target": [
+            {
+              "code": "169",
+              "display": "History of sexual abuse or assault",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "T74.22XA",
+          "display": "Child sexual abuse, confirmed, initial encounter"
+        },
+        {
+          "target": [
+            {
+              "code": "170",
+              "display": "Onset of pregnancy",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "Z34.90",
+          "display": "Encounter for supervision of normal pregnancy, unspecified, unspecified trimester"
+        },
+        {
+          "target": [
+            {
+              "code": "178",
+              "display": "Leukemia",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "C95.90",
+          "display": "Leukemia, unspecified not having achieved remission"
+        },
+        {
+          "target": [
+            {
+              "code": "178",
+              "display": "Leukemia",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "C91.00",
+          "display": "Acute lymphoblastic leukemia not having achieved remission"
+        },
+        {
+          "target": [
+            {
+              "code": "178",
+              "display": "Leukemia",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "C92.00",
+          "display": "Acute myeloblastic leukemia, not having achieved remission"
+        },
+        {
+          "target": [
+            {
+              "code": "179",
+              "display": "Lymphoma",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "C85.90",
+          "display": "Non-Hodgkin lymphoma, unspecified, unspecified site"
+        },
+        {
+          "target": [
+            {
+              "code": "179",
+              "display": "Lymphoma",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "C84.40",
+          "display": "Peripheral T-cell lymphoma, not elsewhere classified, unspecified site"
+        },
+        {
+          "target": [
+            {
+              "code": "180",
+              "display": "Hodgkin's disease",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "C81.90",
+          "display": "Hodgkin lymphoma, unspecified, unspecified site"
+        },
+        {
+          "target": [
+            {
+              "code": "181",
+              "display": "Multiple myeloma",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "C90.00",
+          "display": "Multiple myeloma not having achieved remission"
+        },
+        {
+          "target": [
+            {
+              "code": "190",
+              "display": "Active treatment for hematologic malignancies",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "C96.9",
+          "display": "Malignant neoplasm of lymphoid, hematopoietic and related tissue, unspecified"
+        },
+        {
+          "target": [
+            {
+              "code": "192",
+              "display": "Severe allergic reaction after previous dose of any egg-based IIV or LAIV influenza vaccine",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "Z59.3",
+          "display": "Problems related to living in residential institution"
+        },
+        {
+          "target": [
+            {
+              "code": "199",
+              "display": "Interstitial lung disease",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "J84.89",
+          "display": "Other specified interstitial pulmonary diseases"
+        },
+        {
+          "target": [
+            {
+              "code": "200",
+              "display": "Cystic fibrosis",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "E84.0",
+          "display": "Cystic fibrosis with pulmonary manifestations"
+        },
+        {
+          "target": [
+            {
+              "code": "200",
+              "display": "Cystic fibrosis",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "E84.9",
+          "display": "Cystic fibrosis, unspecified"
+        },
+        {
+          "target": [
+            {
+              "code": "201",
+              "display": "Pulmonary hypertension",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "I27.0",
+          "display": "Primary pulmonary hypertension"
+        },
+        {
+          "target": [
+            {
+              "code": "201",
+              "display": "Pulmonary hypertension",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "I27.20",
+          "display": "Pulmonary hypertension, unspecified"
+        },
+        {
+          "target": [
+            {
+              "code": "201",
+              "display": "Pulmonary hypertension",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "I27.9",
+          "display": "Pulmonary heart disease, unspecified"
+        },
+        {
+          "target": [
+            {
+              "code": "202",
+              "display": "Dementia",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "F03.90",
+          "display": "Unspecified dementia, unspecified severity, without behavioral disturbance, psychotic disturbance, mood disturbance, and anxiety"
+        },
+        {
+          "target": [
+            {
+              "code": "202",
+              "display": "Dementia",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "G30.9",
+          "display": "Alzheimer's disease, unspecified"
+        },
+        {
+          "target": [
+            {
+              "code": "203",
+              "display": "Down syndrome",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "Q90.9",
+          "display": "Down syndrome, unspecified"
+        },
+        {
+          "target": [
+            {
+              "code": "204",
+              "display": "Obesity",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "E66.9",
+          "display": "Obesity, unspecified"
+        },
+        {
+          "target": [
+            {
+              "code": "204",
+              "display": "Obesity",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "E66.01",
+          "display": "Morbid (severe) obesity due to excess calories"
+        },
+        {
+          "target": [
+            {
+              "code": "205",
+              "display": "Thalassemia",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "D56.9",
+          "display": "Thalassemia, unspecified"
+        },
+        {
+          "target": [
+            {
+              "code": "205",
+              "display": "Thalassemia",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "D56.0",
+          "display": "Alpha thalassemia"
+        },
+        {
+          "target": [
+            {
+              "code": "205",
+              "display": "Thalassemia",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "D56.1",
+          "display": "Beta thalassemia"
+        },
+        {
+          "target": [
+            {
+              "code": "206",
+              "display": "Cerebrovascular disease",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "I67.9",
+          "display": "Cerebrovascular disease, unspecified"
+        },
+        {
+          "target": [
+            {
+              "code": "206",
+              "display": "Cerebrovascular disease",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "I63.9",
+          "display": "Cerebral infarction, unspecified"
+        },
+        {
+          "target": [
+            {
+              "code": "207",
+              "display": "Substance use disorder",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "F19.20",
+          "display": "Other psychoactive substance dependence, uncomplicated"
+        },
+        {
+          "target": [
+            {
+              "code": "208",
+              "display": "Mental Health conditions",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "F99",
+          "display": "Mental disorder, not otherwise specified"
+        },
+        {
+          "target": [
+            {
+              "code": "223",
+              "display": "Severe allergic reaction after previous dose of orthopoxvirus vaccine",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "L20.9",
+          "display": "Atopic dermatitis, unspecified"
+        },
+        {
+          "target": [
+            {
+              "code": "223",
+              "display": "Severe allergic reaction after previous dose of orthopoxvirus vaccine",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "L20.89",
+          "display": "Other atopic dermatitis"
+        },
+        {
+          "target": [
+            {
+              "code": "225",
+              "display": "Household contact with history or presence of atopic dermatitis",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "L26",
+          "display": "Exfoliative dermatitis"
+        },
+        {
+          "target": [
+            {
+              "code": "225",
+              "display": "Household contact with history or presence of atopic dermatitis",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "L10.9",
+          "display": "Pemphigus, unspecified"
+        },
+        {
+          "target": [
+            {
+              "code": "240",
+              "display": "Healthcare personnel who care for patients infected with less virulent orthopoxviruses (e.g., Vaccinia virus or Cowpox virus)",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "Z20.828",
+          "display": "Contact with and (suspected) exposure to other viral communicable diseases"
+        },
+        {
+          "target": [
+            {
+              "code": "254",
+              "display": "Chronic cardiovascular disease",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "I51.9",
+          "display": "Heart disease, unspecified"
+        },
+        {
+          "target": [
+            {
+              "code": "256",
+              "display": "Diabetes mellitus complicated by chronic kidney disease",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "E66.2",
+          "display": "Morbid (severe) obesity with alveolar hypoventilation"
+        },
+        {
+          "target": [
+            {
+              "code": "258",
+              "display": "Chronic hematologic disorders",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "D75.9",
+          "display": "Disease of blood and blood-forming organs, unspecified"
+        },
+        {
+          "target": [
+            {
+              "code": "259",
+              "display": "Sickle cell disease",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "D57.1",
+          "display": "Sickle-cell disease without crisis"
+        },
+        {
+          "target": [
+            {
+              "code": "259",
+              "display": "Sickle cell disease",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "D57.00",
+          "display": "Hb-SS disease with crisis, unspecified"
+        },
+        {
+          "target": [
+            {
+              "code": "262",
+              "display": "Frailty",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "R54",
+          "display": "Age-related physical debility"
+        },
+        {
+          "target": [
+            {
+              "code": "263",
+              "display": "Diabetes mellitus complicated by neuropathy",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "E11.40",
+          "display": "Type 2 diabetes mellitus with diabetic neuropathy, unspecified"
+        },
+        {
+          "target": [
+            {
+              "code": "263",
+              "display": "Diabetes mellitus complicated by neuropathy",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "E10.40",
+          "display": "Type 1 diabetes mellitus with diabetic neuropathy, unspecified"
+        },
+        {
+          "target": [
+            {
+              "code": "263",
+              "display": "Diabetes mellitus complicated by neuropathy",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "E13.40",
+          "display": "Other specified diabetes mellitus with diabetic neuropathy, unspecified"
+        },
+        {
+          "target": [
+            {
+              "code": "264",
+              "display": "Diabetes mellitus complicated by retinopathy",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "E11.319",
+          "display": "Type 2 diabetes mellitus with unspecified diabetic retinopathy without macular edema"
+        },
+        {
+          "target": [
+            {
+              "code": "264",
+              "display": "Diabetes mellitus complicated by retinopathy",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "E10.319",
+          "display": "Type 1 diabetes mellitus with unspecified diabetic retinopathy without macular edema"
+        },
+        {
+          "target": [
+            {
+              "code": "265",
+              "display": "Diabetes mellitus complicated by end-organ damage",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "E11.69",
+          "display": "Type 2 diabetes mellitus with other specified complication"
+        },
+        {
+          "target": [
+            {
+              "code": "265",
+              "display": "Diabetes mellitus complicated by end-organ damage",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "E10.69",
+          "display": "Type 1 diabetes mellitus with other specified complication"
+        },
+        {
+          "target": [
+            {
+              "code": "265",
+              "display": "Diabetes mellitus complicated by end-organ damage",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "E13.69",
+          "display": "Other specified diabetes mellitus with other specified complication"
+        },
+        {
+          "target": [
+            {
+              "code": "266",
+              "display": "Diabetes requiring treatment with insulin",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "Z79.4",
+          "display": "Long term (current) use of insulin"
+        },
+        {
+          "target": [
+            {
+              "code": "267",
+              "display": "Diabetes requiring treatment with sodium-glucose cotransporter-2 (SGLT2) inhibitor",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "Z94.83",
+          "display": "Pancreas transplant status"
+        },
+        {
+          "target": [
+            {
+              "code": "270",
+              "display": "Severe allergic reaction after previous dose of Chikungunya vaccine",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "D80.1",
+          "display": "Nonfamilial hypogammaglobulinemia"
+        },
+        {
+          "target": [
+            {
+              "code": "270",
+              "display": "Severe allergic reaction after previous dose of Chikungunya vaccine",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "D80.0",
+          "display": "Hereditary hypogammaglobulinemia"
+        },
+        {
+          "target": [
+            {
+              "code": "274",
+              "display": "Early component complement inhibitor use",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "D84.1",
+          "display": "Defects in the complement system"
+        },
+        {
+          "target": [
+            {
+              "code": "277",
+              "display": "Laboratory worker with potential for exposure to chikungunya virus",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "D58.2",
+          "display": "Other hemoglobinopathies"
+        },
+        {
+          "target": [
+            {
+              "code": "277",
+              "display": "Laboratory worker with potential for exposure to chikungunya virus",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "D57.3",
+          "display": "Sickle-cell trait"
         }
       ],
       "source": "http://hl7.org/fhir/sid/icd-10-cm",
-      "target": "https://www.cdc.gov/vaccines/programs/iis/cdsi"
+      "target": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes"
     }
   ],
   "status": "active",
-  "sourceUri": "http://hl7.org/fhir/sid/icd-10-cm",
-  "targetUri": "https://www.cdc.gov/vaccines/programs/iis/cdsi"
+  "experimental": false,
+  "sourceCanonical": "http://fhirfli.dev/fhir/ig/cicada/ValueSet/vaccine-condition-codes-icd10",
+  "targetCanonical": "http://fhirfli.dev/fhir/ig/cicada/ValueSet/cdsi-observation-codes-vs"
 }

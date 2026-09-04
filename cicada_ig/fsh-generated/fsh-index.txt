@@ -10,7 +10,7 @@ CodeSystem-data-integrity.json                               DataIntegrityCS    
 CodeSystem-forecast-reason.json                              CicadaForecastReasonCS             CodeSystem  cicada_response_extensions.fsh          16 - 31
 CodeSystem-series-type.json                                  SeriesTypeCS                       CodeSystem  profile_forecast_recommendation.fsh     17 - 25
 CodeSystem-target-dose-status.json                           TargetDoseStatusCS                 CodeSystem  cicada_response_extensions.fsh          43 - 51
-ConceptMap-Icd10ToCdsiObservation.json                       Icd10ToCdsiObservation             Instance    cm_icd10_to_cdsi.fsh                    1 - 128
+ConceptMap-Icd10ToCdsiObservation.json                       Icd10ToCdsiObservation             Instance    cm_icd10_to_cdsi.fsh                    6 - 1507
 ConceptMap-SnomedToCdsiObservation.json                      SnomedToCdsiObservation            Instance    cm_snomed_to_cdsi.fsh                   6 - 1757
 StructureDefinition-MedicationAdministrationProfile.json     MedicationAdministrationProfile    Profile     profile_medications.fsh                 15 - 20
 StructureDefinition-MedicationDispenseProfile.json           MedicationDispenseProfile          Profile     profile_medications.fsh                 22 - 27

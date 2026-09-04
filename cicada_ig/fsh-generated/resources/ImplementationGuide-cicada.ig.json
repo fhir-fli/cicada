@@ -276,7 +276,7 @@
           "reference": "ConceptMap/Icd10ToCdsiObservation"
         },
         "name": "ICD-10-CM to CDSi Observation Code Map",
-        "description": "Maps ICD-10-CM diagnosis codes to CDSi observation codes used in immunization decision support.",
+        "description": "Maps ICD-10-CM codes to CDSi observation codes used in immunization decision support. Generated from the cicada crosswalk.",
         "exampleBoolean": false
       },
       {

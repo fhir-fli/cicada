@@ -92,8 +92,8 @@
     "fshName": "Icd10ToCdsiObservation",
     "fshType": "Instance",
     "fshFile": "cm_icd10_to_cdsi.fsh",
-    "startLine": 1,
-    "endLine": 128
+    "startLine": 6,
+    "endLine": 1507
   },
   {
     "outputFile": "ConceptMap-SnomedToCdsiObservation.json",
