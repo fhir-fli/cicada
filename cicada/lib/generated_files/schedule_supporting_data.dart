@@ -6777,17 +6777,19 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
             {
               "code": "38101",
               "codeSystem": "CPT",
-              "text": "Splenectomy; total, en bloc"
+              "text": "Splenectomy; partial (separate procedure)"
             },
             {
               "code": "38102",
               "codeSystem": "CPT",
-              "text": "Splenectomy; total, en bloc with other organs"
+              "text":
+                  "Splenectomy; total, en bloc for extensive disease, in conjunction with other procedure (List in addition to code for primary procedure)"
             },
             {
               "code": "38115",
               "codeSystem": "CPT",
-              "text": "Repair of ruptured spleen with splenorrhaphy"
+              "text":
+                  "Repair of ruptured spleen (splenorrhaphy) with or without partial splenectomy"
             },
             {
               "code": "38120",
@@ -6833,12 +6835,12 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
             {
               "code": "D89.9",
               "codeSystem": "ICD10CM",
-              "text": "Disorder involving immune mechanism, unspecified"
+              "text": "Disorder involving the immune mechanism, unspecified"
             },
             {
               "code": "D84.8",
               "codeSystem": "ICD10CM",
-              "text": "Other specified immunodeficiency disorders"
+              "text": "Other specified immunodeficiencies"
             }
           ]
         }
@@ -6863,7 +6865,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
             {
               "code": "Z94.84",
               "codeSystem": "ICD10CM",
-              "text": "Bone marrow transplant status"
+              "text": "Stem cells transplant status"
             },
             {
               "code": "T86.00",
@@ -6969,7 +6971,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               "code": "O09.90",
               "codeSystem": "ICD10CM",
               "text":
-                  "Supervision of high risk pregnancy, unspecified trimester"
+                  "Supervision of high risk pregnancy, unspecified, unspecified trimester"
             },
             {
               "code": "Z34.00",
@@ -7130,27 +7132,30 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
             {
               "code": "D81.0",
               "codeSystem": "ICD10CM",
-              "text": "SCID with reticular dysgenesis"
+              "text":
+                  "Severe combined immunodeficiency [SCID] with reticular dysgenesis"
             },
             {
               "code": "D81.1",
               "codeSystem": "ICD10CM",
-              "text": "SCID with low T- and B-cell numbers"
+              "text":
+                  "Severe combined immunodeficiency [SCID] with low T- and B-cell numbers"
             },
             {
               "code": "D81.2",
               "codeSystem": "ICD10CM",
-              "text": "SCID with low or normal B-cell numbers"
+              "text":
+                  "Severe combined immunodeficiency [SCID] with low or normal B-cell numbers"
             },
             {
               "code": "D81.3",
               "codeSystem": "ICD10CM",
-              "text": "Adenosine deaminase deficiency"
+              "text": "Adenosine deaminase [ADA] deficiency"
             },
             {
               "code": "D81.5",
               "codeSystem": "ICD10CM",
-              "text": "Purine nucleoside phosphorylase deficiency"
+              "text": "Purine nucleoside phosphorylase [PNP] deficiency"
             },
             {
               "code": "D81.6",
@@ -7267,7 +7272,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
             {
               "code": "K76.0",
               "codeSystem": "ICD10CM",
-              "text": "Fatty liver, not elsewhere classified"
+              "text": "Fatty (change of) liver, not elsewhere classified"
             },
             {
               "code": "K76.9",
@@ -7415,7 +7420,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               "code": "J44.1",
               "codeSystem": "ICD10CM",
               "text":
-                  "Chronic obstructive pulmonary disease with acute exacerbation"
+                  "Chronic obstructive pulmonary disease with (acute) exacerbation"
             },
             {
               "code": "J43.9",
@@ -7495,7 +7500,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
             {
               "code": "N18.2",
               "codeSystem": "ICD10CM",
-              "text": "Chronic kidney disease, stage 2"
+              "text": "Chronic kidney disease, stage 2 (mild)"
             },
             {
               "code": "N18.30",
@@ -7505,7 +7510,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
             {
               "code": "N18.4",
               "codeSystem": "ICD10CM",
-              "text": "Chronic kidney disease, stage 4"
+              "text": "Chronic kidney disease, stage 4 (severe)"
             },
             {
               "code": "N18.5",
@@ -7541,19 +7546,19 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               "text": "Measles Immune [finding]"
             },
             {
-              "code": "21500-4",
+              "code": "7962-4",
               "codeSystem": "LOINC",
               "text": "Measles virus IgG Ab [Units/volume] in Serum"
             },
             {
               "code": "35275-7",
               "codeSystem": "LOINC",
-              "text": "Measles virus IgG Ab [Presence] in Serum"
+              "text": "Measles virus IgG Ab [Presence] in Serum by Immunoassay"
             },
             {
               "code": "20479-2",
               "codeSystem": "LOINC",
-              "text": "Measles virus Ab [Presence] in Serum"
+              "text": "Measles virus IgG Ab [Presence] in Serum"
             }
           ]
         }
@@ -7569,19 +7574,19 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               "text": "Mumps Immune [finding]"
             },
             {
-              "code": "6476-3",
+              "code": "7966-5",
               "codeSystem": "LOINC",
               "text": "Mumps virus IgG Ab [Units/volume] in Serum"
             },
             {
-              "code": "39012-0",
+              "code": "6476-6",
               "codeSystem": "LOINC",
-              "text": "Mumps virus IgG Ab [Presence] in Serum"
+              "text": "Mumps virus IgG Ab [Presence] in Serum by Immunoassay"
             },
             {
-              "code": "22416-2",
+              "code": "22415-4",
               "codeSystem": "LOINC",
-              "text": "Mumps virus Ab [Presence] in Serum"
+              "text": "Mumps virus IgG Ab [Presence] in Serum"
             }
           ]
         }
@@ -7607,9 +7612,10 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               "text": "Rubella virus IgG Ab [Presence] in Serum"
             },
             {
-              "code": "20458-6",
+              "code": "40667-8",
               "codeSystem": "LOINC",
-              "text": "Rubella virus Ab [Presence] in Serum"
+              "text":
+                  "Rubella virus IgG Ab [Presence] in Serum or Plasma by Immunoassay"
             }
           ]
         }
@@ -7628,17 +7634,18 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
             {
               "code": "19162-7",
               "codeSystem": "LOINC",
-              "text": "Varicella zoster virus IgG Ab [Units/volume] in Serum"
-            },
-            {
-              "code": "17763-4",
-              "codeSystem": "LOINC",
               "text": "Varicella zoster virus IgG Ab [Presence] in Serum"
             },
             {
-              "code": "5403-8",
+              "code": "15410-4",
               "codeSystem": "LOINC",
-              "text": "Varicella zoster virus Ab [Presence] in Serum"
+              "text":
+                  "Varicella zoster virus IgG Ab [Presence] in Serum by Immunoassay"
+            },
+            {
+              "code": "8047-3",
+              "codeSystem": "LOINC",
+              "text": "Varicella zoster virus IgG Ab [Units/volume] in Serum"
             }
           ]
         }
@@ -7668,7 +7675,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               "code": "10900-9",
               "codeSystem": "LOINC",
               "text":
-                  "Hepatitis B virus surface Ab [Units/volume] in Serum by Immunoassay"
+                  "Hepatitis B virus surface Ab [Presence] in Serum by Immunoassay"
             }
           ]
         }
@@ -7687,17 +7694,18 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
             {
               "code": "32018-4",
               "codeSystem": "LOINC",
-              "text": "Hepatitis A virus Ab [Presence] in Serum"
+              "text": "Hepatitis A virus IgG Ab [Presence] in Serum"
             },
             {
               "code": "40724-7",
               "codeSystem": "LOINC",
-              "text": "Hepatitis A virus IgG Ab [Presence] in Serum"
+              "text":
+                  "Hepatitis A virus IgG Ab [Presence] in Serum by Immunoassay"
             },
             {
-              "code": "13950-1",
+              "code": "22313-1",
               "codeSystem": "LOINC",
-              "text": "Hepatitis A virus Ab [Units/volume] in Serum"
+              "text": "Hepatitis A virus IgG Ab [Units/volume] in Serum"
             }
           ]
         }
@@ -7886,9 +7894,9 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               "text": "Respiratory tuberculosis unspecified"
             },
             {
-              "code": "A18.9",
+              "code": "A18.89",
               "codeSystem": "ICD10CM",
-              "text": "Tuberculosis of other organs"
+              "text": "Tuberculosis of other sites"
             },
             {
               "code": "A19.9",
@@ -7975,8 +7983,8 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               "text": "Oseltamivir [product]"
             },
             {"code": "281", "codeSystem": "RXNORM", "text": "Acyclovir"},
-            {"code": "24811", "codeSystem": "RXNORM", "text": "Famciclovir"},
-            {"code": "39786", "codeSystem": "RXNORM", "text": "Valacyclovir"}
+            {"code": "68099", "codeSystem": "RXNORM", "text": "famciclovir"},
+            {"code": "73645", "codeSystem": "RXNORM", "text": "valACYclovir"}
           ]
         }
       },
@@ -8121,7 +8129,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               "code": "Z20.2",
               "codeSystem": "ICD10CM",
               "text":
-                  "Contact with and exposure to infections with a predominantly sexual mode of transmission"
+                  "Contact with and (suspected) exposure to infections with a predominantly sexual mode of transmission"
             }
           ]
         }
@@ -9292,7 +9300,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                   "Allergy to previous dose of this vaccine or to any of its unlisted vaccine components [anaphylactic]"
             },
             {
-              "code": "T50.A95A",
+              "code": "T50.A15A",
               "codeSystem": "ICD10CM",
               "text":
                   "Adverse effect of pertussis vaccine, including combinations with a pertussis component, initial encounter"
@@ -9363,7 +9371,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               "code": "T50.A95A",
               "codeSystem": "ICD10CM",
               "text":
-                  "Adverse effect of pertussis vaccine, including combinations with a pertussis component, initial encounter"
+                  "Adverse effect of other bacterial vaccines, initial encounter"
             },
             {
               "code": "T50.B95A",
@@ -9432,7 +9440,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               "code": "T50.A95A",
               "codeSystem": "ICD10CM",
               "text":
-                  "Adverse effect of pertussis vaccine, including combinations with a pertussis component, initial encounter"
+                  "Adverse effect of other bacterial vaccines, initial encounter"
             },
             {
               "code": "T50.B95A",
@@ -9655,7 +9663,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
         "codedValues": {
           "codedValue": [
             {
-              "code": "2219088009",
+              "code": "219088009",
               "codeSystem": "SNOMED",
               "text": "Adverse reaction to meningococcal vaccine [disorder]"
             },
@@ -9930,10 +9938,9 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               "text": "Allergy to eggs"
             },
             {
-              "code": "T78.1XXA",
+              "code": "T78.1",
               "codeSystem": "ICD10CM",
-              "text":
-                  "Other adverse food reactions, not elsewhere classified, initial encounter"
+              "text": "Other adverse food reactions, not elsewhere classified"
             }
           ]
         }
@@ -9956,10 +9963,9 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               "text": "Gelatin allergy [disorder]"
             },
             {
-              "code": "T78.1XXA",
+              "code": "T78.1",
               "codeSystem": "ICD10CM",
-              "text":
-                  "Other adverse food reactions, not elsewhere classified, initial encounter"
+              "text": "Other adverse food reactions, not elsewhere classified"
             },
             {
               "code": "Z91.018",
@@ -9977,10 +9983,9 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
         "codedValues": {
           "codedValue": [
             {
-              "code": "T78.1XXA",
+              "code": "T78.40XA",
               "codeSystem": "ICD10CM",
-              "text":
-                  "Other adverse food reactions, not elsewhere classified, initial encounter"
+              "text": "Allergy, unspecified, initial encounter"
             }
           ]
         }
@@ -10018,10 +10023,9 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
         "codedValues": {
           "codedValue": [
             {
-              "code": "T78.1XXA",
+              "code": "T78.1",
               "codeSystem": "ICD10CM",
-              "text":
-                  "Other adverse food reactions, not elsewhere classified, initial encounter"
+              "text": "Other adverse food reactions, not elsewhere classified"
             },
             {
               "code": "Z91.018",
@@ -10180,10 +10184,9 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               "text": "Allergy to other foods"
             },
             {
-              "code": "T78.1XXA",
+              "code": "T78.1",
               "codeSystem": "ICD10CM",
-              "text":
-                  "Other adverse food reactions, not elsewhere classified, initial encounter"
+              "text": "Other adverse food reactions, not elsewhere classified"
             }
           ]
         }
@@ -10304,7 +10307,8 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
             {
               "code": "T45.7X5A",
               "codeSystem": "ICD10CM",
-              "text": "Adverse effect of anticoagulants, initial encounter"
+              "text":
+                  "Adverse effect of anticoagulant antagonists, vitamin K and other coagulants, initial encounter"
             },
             {
               "code": "Z88.8",
@@ -10354,7 +10358,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               "code": "T50.A95A",
               "codeSystem": "ICD10CM",
               "text":
-                  "Adverse effect of pertussis vaccine, including combinations with a pertussis component, initial encounter"
+                  "Adverse effect of other bacterial vaccines, initial encounter"
             },
             {
               "code": "Z88.8",
@@ -10382,7 +10386,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               "code": "T50.A95A",
               "codeSystem": "ICD10CM",
               "text":
-                  "Adverse effect of pertussis vaccine, including combinations with a pertussis component, initial encounter"
+                  "Adverse effect of other bacterial vaccines, initial encounter"
             },
             {
               "code": "Z88.8",
@@ -10446,7 +10450,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
             {
               "code": "Z59.00",
               "codeSystem": "ICD10CM",
-              "text": "Homelessness, unspecified"
+              "text": "Homelessness unspecified"
             }
           ]
         }
@@ -10476,10 +10480,10 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               "text": "Allergy to other foods"
             },
             {
-              "code": "T78.1XXA",
+              "code": "T50.B95A",
               "codeSystem": "ICD10CM",
               "text":
-                  "Other adverse food reactions, not elsewhere classified, initial encounter"
+                  "Adverse effect of other viral vaccines, initial encounter"
             }
           ]
         }
@@ -11816,12 +11820,13 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
             {
               "code": "F03.90",
               "codeSystem": "ICD10CM",
-              "text": "Unspecified dementia without behavioral disturbance"
+              "text":
+                  "Unspecified dementia, unspecified severity, without behavioral disturbance, psychotic disturbance, mood disturbance, and anxiety"
             },
             {
               "code": "G30.9",
               "codeSystem": "ICD10CM",
-              "text": "Alzheimer disease, unspecified"
+              "text": "Alzheimer's disease, unspecified"
             }
           ]
         }
@@ -12760,7 +12765,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
             {
               "code": "R54",
               "codeSystem": "ICD10CM",
-              "text": "Age-related physical debility (frailty)"
+              "text": "Age-related physical debility"
             }
           ]
         }

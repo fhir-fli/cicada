@@ -137,8 +137,13 @@ ${jsonPrettyPrint(scheduleJson)});
 
   print('Wrote $jsonPath');
 
+  // Only the antigen JSON becomes a Dart file. The directory also holds the
+  // FML map written by generate_observation_map_entries.dart; wrapping that
+  // produced vaccine_observation_codes_map.map.dart, which broke dart format.
   for (final file in outputDir.listSync()) {
-    if (file is File && !file.path.contains('schedule')) {
+    if (file is File &&
+        file.path.endsWith('.json') &&
+        !file.path.contains('schedule')) {
       final fileString = file.readAsStringSync();
       final fileName = file.path
           .split('/')
