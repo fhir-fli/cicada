@@ -281,6 +281,14 @@
       },
       {
         "reference": {
+          "reference": "CodeSystem/icd-10-cm"
+        },
+        "name": "ICD-10-CM (external, content not present)",
+        "description": "Placeholder for the International Classification of Diseases, Tenth Revision, Clinical Modification, maintained by the US National Center for Health Statistics. No concepts are carried here; codes are validated by the terminology server.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "ConceptMap/Icd10ToCdsiObservation"
         },
         "name": "ICD-10-CM to CDSi Observation Code Map",
@@ -678,6 +686,10 @@
       {
         "code": "releaselabel",
         "value": "ci-build"
+      },
+      {
+        "code": "special-url",
+        "value": "http://hl7.org/fhir/sid/icd-10-cm"
       }
     ]
   }

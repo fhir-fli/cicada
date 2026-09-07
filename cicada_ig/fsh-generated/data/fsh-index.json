@@ -72,6 +72,14 @@
     "endLine": 31
   },
   {
+    "outputFile": "CodeSystem-icd-10-cm.json",
+    "fshName": "Icd10Cm",
+    "fshType": "CodeSystem",
+    "fshFile": "cs_icd10cm_stub.fsh",
+    "startLine": 17,
+    "endLine": 25
+  },
+  {
     "outputFile": "CodeSystem-series-type.json",
     "fshName": "SeriesTypeCS",
     "fshType": "CodeSystem",

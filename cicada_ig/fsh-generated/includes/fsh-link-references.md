@@ -29,6 +29,7 @@
 [EvalStatusVS]: ValueSet-eval-status.html
 [EvaluationDetail]: StructureDefinition-evaluation-detail-ext.html
 [ForecastStatusVS]: ValueSet-forecast-status.html
+[Icd10Cm]: CodeSystem-icd-10-cm.html
 [Icd10ToCdsiObservation]: ConceptMap-Icd10ToCdsiObservation.html
 [ProcedureProfile]: StructureDefinition-ProcedureProfile.html
 [VaccineMedicationCodesRxnorm]: ValueSet-vaccine-medication-codes-rxnorm.html

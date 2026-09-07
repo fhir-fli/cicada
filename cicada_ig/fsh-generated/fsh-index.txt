@@ -8,6 +8,7 @@ CodeSystem-ValidAgeReason.json                               ValidAgeReasonCS   
 CodeSystem-cdsi-observation-codes.json                       CdsiObservationCodes               CodeSystem  cs_cdsi_obs_codes.fsh                   7 - 290
 CodeSystem-data-integrity.json                               DataIntegrityCS                    CodeSystem  cicada_response_extensions.fsh          72 - 80
 CodeSystem-forecast-reason.json                              CicadaForecastReasonCS             CodeSystem  cicada_response_extensions.fsh          16 - 31
+CodeSystem-icd-10-cm.json                                    Icd10Cm                            CodeSystem  cs_icd10cm_stub.fsh                     17 - 25
 CodeSystem-series-type.json                                  SeriesTypeCS                       CodeSystem  profile_forecast_recommendation.fsh     17 - 25
 CodeSystem-target-dose-status.json                           TargetDoseStatusCS                 CodeSystem  cicada_response_extensions.fsh          43 - 51
 ConceptMap-Icd10ToCdsiObservation.json                       Icd10ToCdsiObservation             Instance    cm_icd10_to_cdsi.fsh                    6 - 1507

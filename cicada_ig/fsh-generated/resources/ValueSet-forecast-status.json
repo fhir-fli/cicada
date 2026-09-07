@@ -19,15 +19,15 @@
         "concept": [
           {
             "code": "LA13421-5",
-            "display": "Complete"
+            "display": "Complete - all required doses have been received to meet the requirements for a particular vaccine group."
           },
           {
             "code": "LA13422-3",
-            "display": "On schedule"
+            "display": "On schedule - person is not overdue for a given dose in the series. Includes a person too young to start the series."
           },
           {
             "code": "LA13423-1",
-            "display": "Overdue"
+            "display": "Overdue - person is late getting the next dose in the series."
           },
           {
             "code": "LA27183-5",
@@ -43,7 +43,7 @@
           },
           {
             "code": "LA13424-9",
-            "display": "Too old"
+            "display": "Too old - cannot complete the series because the latest age for receiving dose has passed."
           }
         ]
       }

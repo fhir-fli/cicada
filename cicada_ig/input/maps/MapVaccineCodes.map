@@ -854,10 +854,10 @@ group ApplyCommonMappings(source src, target tgt : targetCondition) {
           newCoding.code = '094',
           newCoding.display = "Pneumococcal vaccine adverse reaction [disorder]" "SetSNOMEDCode293116002";
 
-      src.code as codeValue where codeValue = '2219088009' -> 
+      src.code as codeValue where codeValue = '219088009' -> 
           newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',
           newCoding.code = '095',
-          newCoding.display = "Adverse reaction to meningococcal vaccine [disorder]" "SetSNOMEDCode2219088009";
+          newCoding.display = "Adverse reaction to meningococcal vaccine [disorder]" "SetSNOMEDCode219088009";
 
       src.code as codeValue where codeValue = '451111000124103' -> 
           newCoding.system = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-observation-codes',
