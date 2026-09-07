@@ -35,38 +35,60 @@ const _vaccineGroupCvx = <String, (String cvx, String display)>{
   'Zoster': ('188', 'zoster, unspecified formulation'),
 };
 
-/// SNOMED CT codes for CDSi target diseases.
-const _diseaseSnomedCodes = <String, String>{
-  'Cholera': '63650001',
-  'COVID-19': '840539006',
-  'Dengue': '38362002',
-  'Diphtheria': '397430003',
-  'Pertussis': '27836007',
-  'Tetanus': '76902006',
-  'Ebola': '37109004',
-  'HepA': '40468003',
-  'HepB': '66071002',
-  'Hib': '709410003',
-  'HPV': '240532009',
-  'Influenza': '6142004',
-  'Japanese Encephalitis': '52947006',
-  'Meningococcal': '23511006',
-  'Meningococcal B': '860805006',
-  'Measles': '14189004',
-  'Mumps': '36989005',
-  'Rubella': '36653000',
-  'Orthopoxvirus': '359814004',
-  'Pneumococcal': '16814004',
-  'Polio': '398102009',
-  'Rabies': '14168008',
-  'Rotavirus': '18624000',
-  'RSV': '55735004',
-  'TBE': '712986001',
-  'Typhoid': '4834000',
-  'Varicella': '38907003',
-  'Yellow Fever': '16541001',
-  'Zoster': '4740000',
+/// SNOMED CT disease concept for each CDSi target disease: (code, display).
+///
+/// The display is SNOMED's preferred term, verbatim from tx.fhir.org $lookup
+/// on 2026-09-06; the IG publisher reports anything else as "Wrong Display
+/// Name" (9 errors on the forecast example). The CDSi antigen name goes in
+/// CodeableConcept.text, not in the coding.
+///
+/// Codes follow hl7.fhir.us.immds 1.0.0 ValueSet/targetDisease where it has
+/// the disease: Diphtheria, Polio, Rotavirus and seasonal Influenza moved to
+/// its concepts on 2026-09-06. Where it has none, the concept was found by
+/// SNOMED search: Meningococcal B is the serogroup B disease concept (the
+/// previous 860805006 was "Encephalomyelitis caused by Neisseria
+/// meningitidis", a complication), and Orthopoxvirus is "Disease caused by
+/// Orthopoxvirus" (the previous 359814004 was Mpox alone; the antigen also
+/// covers smallpox). Kept against ImmDS: COVID-19 840539006 (ImmDS has only
+/// the generic 186747009 Coronavirus infection), HPV 240532009 (ImmDS lists
+/// cervical cancer and genital warts, which are outcomes, not the infection),
+/// Ebola 37109004 (ImmDS has none).
+const _diseaseSnomed = <String, (String, String)>{
+  'Cholera': ('63650001', 'Cholera'),
+  'COVID-19': ('840539006', 'COVID-19'),
+  'Dengue': ('38362002', 'Dengue'),
+  'Diphtheria': ('397428000', 'Diphtheria'),
+  'Pertussis': ('27836007', 'Pertussis'),
+  'Tetanus': ('76902006', 'Tetanus'),
+  'Ebola': ('37109004', 'Ebola virus disease'),
+  'HepA': ('40468003', 'Viral hepatitis, type A'),
+  'HepB': ('66071002', 'Type B viral hepatitis'),
+  'Hib': ('709410003', 'Haemophilus influenzae type b infection'),
+  'HPV': ('240532009', 'Human papilloma virus infection'),
+  'Influenza': ('719590007', 'Influenza caused by seasonal influenza virus'),
+  'Japanese Encephalitis': ('52947006', 'Japanese encephalitis virus disease'),
+  'Meningococcal': ('23511006', 'Meningococcal infectious disease'),
+  'Meningococcal B': (
+    '1354584007',
+    'Meningococcal infectious disease caused by Neisseria meningitidis '
+        'serogroup B'
+  ),
+  'Measles': ('14189004', 'Measles'),
+  'Mumps': ('36989005', 'Mumps'),
+  'Rubella': ('36653000', 'Rubella'),
+  'Orthopoxvirus': ('414015000', 'Disease caused by Orthopoxvirus'),
+  'Pneumococcal': ('16814004', 'Pneumococcal infectious disease'),
+  'Polio': ('721764008', 'Infection caused by Human poliovirus'),
+  'Rabies': ('14168008', 'Rabies'),
+  'Rotavirus': ('415822001', 'Viral gastroenteritis caused by Rotavirus'),
+  'RSV': ('55735004', 'Respiratory syncytial virus infection'),
+  'TBE': ('712986001', 'Encephalitis caused by tick-borne encephalitis virus'),
+  'Typhoid': ('4834000', 'Typhoid fever'),
+  'Varicella': ('38907003', 'Varicella'),
+  'Yellow Fever': ('16541001', 'Yellow fever'),
+  'Zoster': ('4740000', 'Herpes zoster'),
 };
+
 
 /// Names CVX on any coding the caller left without a system.
 ///
@@ -447,18 +469,18 @@ String _idToken(String name) => name
 /// R4 gives it, so there is nothing left for a CVX to do here.
 CodeableConcept _evalTargetDisease(String targetDisease) {
   final List<Coding> codings = [];
-  final snomedCode = _diseaseSnomedCodes[targetDisease];
+  final snomed = _diseaseSnomed[targetDisease];
   // No CVX here. R4 defines this as the vaccine preventable DISEASE, and
   // both the R4 and ImmDS bindings are SNOMED disease concepts with no CVX
   // in them. A CVX was put here first to feed NIST FITS, which reads
   // `targetDisease.getCoding().get(0).getCode()` as a CVX number; measured,
   // it changed no FITS result, so a vaccine code in a disease element is all
   // it bought.
-  if (snomedCode != null) {
+  if (snomed != null) {
     codings.add(Coding(
       system: 'http://snomed.info/sct'.toFhirUri,
-      code: snomedCode.toFhirCode,
-      display: targetDisease.toFhirString,
+      code: snomed.$1.toFhirCode,
+      display: snomed.$2.toFhirString,
     ));
   }
   return CodeableConcept(
@@ -551,12 +573,12 @@ ImmunizationRecommendation _buildRecommendation(ForecastResult result) {
     // Build targetDisease with SNOMED coding for each antigen in the group
     final List<Coding> diseaseCodings = [];
     for (final antigenName in vgf.antigenNames) {
-      final snomedCode = _diseaseSnomedCodes[antigenName];
-      if (snomedCode != null) {
+      final snomed = _diseaseSnomed[antigenName];
+      if (snomed != null) {
         diseaseCodings.add(Coding(
           system: 'http://snomed.info/sct'.toFhirUri,
-          code: snomedCode.toFhirCode,
-          display: antigenName.toFhirString,
+          code: snomed.$1.toFhirCode,
+          display: snomed.$2.toFhirString,
         ));
       }
     }
