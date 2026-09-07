@@ -96,6 +96,14 @@
     "endLine": 51
   },
   {
+    "outputFile": "CodeSystem-vaccine-recommendation-category.json",
+    "fshName": "VaccineRecommendationCategoryCS",
+    "fshType": "CodeSystem",
+    "fshFile": "cs_vs_vaccine_recommendation_category.fsh",
+    "startLine": 1,
+    "endLine": 9
+  },
+  {
     "outputFile": "ConceptMap-Icd10ToCdsiObservation.json",
     "fshName": "Icd10ToCdsiObservation",
     "fshType": "Instance",
@@ -376,6 +384,14 @@
     "endLine": 93
   },
   {
+    "outputFile": "StructureDefinition-vaccine-recommendation-category-ext.json",
+    "fshName": "VaccineRecommendationCategory",
+    "fshType": "Extension",
+    "fshFile": "cicada_response_extensions.fsh",
+    "startLine": 212,
+    "endLine": 228
+  },
+  {
     "outputFile": "StructureDefinition-vaccine-type.json",
     "fshName": "VaccineType",
     "fshType": "Extension",
@@ -574,6 +590,14 @@
     "fshFile": "vs_vaccine_medication_codes_snomed.fsh",
     "startLine": 1,
     "endLine": 13
+  },
+  {
+    "outputFile": "ValueSet-vaccine-recommendation-category-vs.json",
+    "fshName": "VaccineRecommendationCategoryVS",
+    "fshType": "ValueSet",
+    "fshFile": "cs_vs_vaccine_recommendation_category.fsh",
+    "startLine": 11,
+    "endLine": 15
   },
   {
     "outputFile": "ValueSet-valid-age-reason.json",

@@ -208,3 +208,21 @@ Description: "One contributing series: its own status, its own four dates, and t
 * extension[earliestRecommendedIntervalDate].value[x] only dateTime
 * extension[latestRecommendedIntervalDate].value[x] only dateTime
 * extension[seasonalRecommendationStartDate].value[x] only dateTime
+
+Extension: VaccineRecommendationCategory
+Id: vaccine-recommendation-category-ext
+Title: "Vaccine Recommendation Category"
+Description: "CDC's vaccine recommendation category for one Best Patient Series in this forecast: Routine, High-Risk, or SCDM (shared clinical decision making), determined per CDC's Vaccine Recommendation Category Determination (CDSi supporting data 4.65) once the forecast is known, for a series whose status is Not Complete. Carries the series name, the category, and CDC's material for it. One extension per contributing series that has a category."
+* ^context[0].type = #element
+* ^context[0].expression = "ImmunizationRecommendation.recommendation"
+* extension contains
+    series 1..1 and
+    category 1..1 and
+    material 0..*
+* extension[series].value[x] only string
+* extension[series] ^short = "The Best Patient Series the category is for"
+* extension[category].value[x] only CodeableConcept
+* extension[category].valueCodeableConcept from VaccineRecommendationCategoryVS (required)
+* extension[category] ^short = "Routine, High-Risk, or SCDM"
+* extension[material].value[x] only url
+* extension[material] ^short = "CDC's additional material for this recommendation"

@@ -68,6 +68,9 @@
 [VaccineConditionCodesIcd10]: ValueSet-vaccine-condition-codes-icd10.html
 [VaccineGenderVS]: ValueSet-vaccine-gender.html
 [VaccineGenderCS]: CodeSystem-VaccineGender.html
+[VaccineRecommendationCategory]: StructureDefinition-vaccine-recommendation-category-ext.html
+[VaccineRecommendationCategoryCS]: CodeSystem-vaccine-recommendation-category.html
+[VaccineRecommendationCategoryVS]: ValueSet-vaccine-recommendation-category-vs.html
 [VaccineType]: StructureDefinition-vaccine-type.html
 [VaccineCodesCvxMvx]: ValueSet-VaccineCodesCvxMvx.html
 [ValidAgeReason]: StructureDefinition-valid-age-reason.html

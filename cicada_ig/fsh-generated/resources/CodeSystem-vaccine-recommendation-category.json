@@ -1,0 +1,29 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "draft",
+  "content": "complete",
+  "name": "VaccineRecommendationCategoryCS",
+  "id": "vaccine-recommendation-category",
+  "title": "Vaccine Recommendation Category",
+  "description": "The three categories of CDC's Vaccine Recommendation Category Determination (CDSi supporting data 4.65): the type of recommendation a Best Patient Series carries for a patient who is recommended further doses. Displays are CDC's own words.",
+  "url": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-recommendation-category",
+  "concept": [
+    {
+      "code": "routine",
+      "display": "Routine",
+      "definition": "An age-based recommendation for the general population."
+    },
+    {
+      "code": "high-risk",
+      "display": "High-Risk",
+      "definition": "A recommendation because of a risk factor the patient has (a risk-based series, or an included indication)."
+    },
+    {
+      "code": "scdm",
+      "display": "SCDM",
+      "definition": "Shared clinical decision making: the recommendation depends on a discussion between the patient and the clinician."
+    }
+  ],
+  "caseSensitive": true,
+  "count": 3
+}

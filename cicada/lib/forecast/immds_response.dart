@@ -467,6 +467,66 @@ CodeableConcept _cvxConcept(String cvx, String? description) {
   );
 }
 
+/// The vaccine recommendation category of one contributing series, as an
+/// extension: `series` (the Best Patient Series name), `category` (a coding
+/// from CodeSystem/vaccine-recommendation-category with CDC's text as the
+/// display), and one `material` URL per link CDC gives for it.
+FhirExtension? _recommendationCategoryExt(VaxSeries s, VaxPatient patient) {
+  final antigen = activeAntigenMap[s.targetDisease];
+  final seriesName = s.series.seriesName;
+  if (antigen == null || seriesName == null) return null;
+  final codes = (patient.observations.observation ?? const <VaxObservation>[])
+      .map((o) => o.observationCode)
+      .whereType<String>()
+      .toSet();
+  final r = determineVaccineRecommendationCategory(
+    antigen: antigen,
+    seriesName: seriesName,
+    status: s.seriesStatus,
+    // targetDose indexes seriesDose; CDC numbers doses from 1.
+    forecastTargetDoseNumber: s.targetDose + 1,
+    birthdate: patient.birthdate,
+    assessmentDate: patient.assessmentDate,
+    patientObservationCodes: codes,
+    seriesIndications: s.series.indication ?? const <Indication>[],
+  );
+  if (r == null) return null;
+  final code = switch (r.category.toUpperCase()) {
+    'ROUTINE' => 'routine',
+    'HIGH-RISK' => 'high-risk',
+    'SCDM' => 'scdm',
+    _ => r.category.toLowerCase(),
+  };
+  return FhirExtension(
+    url:
+        'http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/vaccine-recommendation-category-ext'
+            .toFhirString,
+    extension_: [
+      FhirExtension(
+        url: 'series'.toFhirString,
+        valueString: seriesName.toFhirString,
+      ),
+      FhirExtension(
+        url: 'category'.toFhirString,
+        valueCodeableConcept: CodeableConcept(coding: [
+          Coding(
+            system:
+                'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-recommendation-category'
+                    .toFhirUri,
+            code: code.toFhirCode,
+            display: r.category.toFhirString,
+          ),
+        ]),
+      ),
+      for (final url in r.material)
+        FhirExtension(
+          url: 'material'.toFhirString,
+          valueUrl: url.toFhirUrl,
+        ),
+    ],
+  );
+}
+
 /// Returns a [CodeableConcept] for evaluation targetDisease.
 ///
 /// SNOMED disease codes only.
@@ -735,6 +795,13 @@ ImmunizationRecommendation _buildRecommendation(ForecastResult result) {
             valueString: antigenName.toFhirString,
           ),
         for (final VaxSeries s in vgf.contributingSeries) _seriesDetailExt(s),
+        // CDC's vaccine recommendation category (Routine, High-Risk, SCDM),
+        // decided per Best Patient Series after the forecast, from the
+        // "Vaccine Recommendation Category" worksheet new in 4.65. One
+        // extension per contributing series that has a category; a series
+        // that is not Not Complete, or matches no row, has none.
+        for (final VaxSeries s in vgf.contributingSeries)
+          _recommendationCategoryExt(s, result.patient),
         FhirExtension(
           url:
               'http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/series-type-ext'

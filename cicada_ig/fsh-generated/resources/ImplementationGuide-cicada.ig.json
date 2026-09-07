@@ -592,6 +592,30 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/vaccine-recommendation-category-ext"
+        },
+        "name": "Vaccine Recommendation Category",
+        "description": "CDC's vaccine recommendation category for one Best Patient Series in this forecast: Routine, High-Risk, or SCDM (shared clinical decision making), determined per CDC's Vaccine Recommendation Category Determination (CDSi supporting data 4.65) once the forecast is known, for a series whose status is Not Complete. Carries the series name, the category, and CDC's material for it. One extension per contributing series that has a category.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/vaccine-recommendation-category"
+        },
+        "name": "Vaccine Recommendation Category",
+        "description": "The three categories of CDC's Vaccine Recommendation Category Determination (CDSi supporting data 4.65): the type of recommendation a Best Patient Series carries for a patient who is recommended further doses. Displays are CDC's own words.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/vaccine-recommendation-category-vs"
+        },
+        "name": "Vaccine Recommendation Category Value Set",
+        "description": "All codes from the Vaccine Recommendation Category code system.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/vaccine-type"
         },
         "name": "Vaccine Type",
