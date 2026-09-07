@@ -2,6 +2,7 @@ ValueSet: VaccineConditionCodesIcd10
 Id: vaccine-condition-codes-icd10
 Title: "Vaccine Condition Codes (ICD-10-CM)"
 Description: "Value set for conditions based on ICD-10-CM that may impact immunization decisions, mapped to CDSi observation codes."
+* ^experimental = false
 * ^status = #active
 
 // 003 - Immunocompromised

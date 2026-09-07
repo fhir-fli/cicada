@@ -2,6 +2,7 @@ ValueSet: ForecastStatusVS
 Id: forecast-status
 Title: "Forecast Status Value Set"
 Description: "Combined value set for immunization forecast status, referencing published standard CodeSystems. Includes ImmDS IG ForecastStatus (CDSi-compatible), HL7 THO immunization-recommendation-status, and LOINC answer list LL940-8."
+* ^experimental = false
 * include codes from system http://hl7.org/fhir/us/immds/CodeSystem/ForecastStatus
 * include codes from system http://terminology.hl7.org/CodeSystem/immunization-recommendation-status
 * http://loinc.org#LA13421-5 "Complete - all required doses have been received to meet the requirements for a particular vaccine group."

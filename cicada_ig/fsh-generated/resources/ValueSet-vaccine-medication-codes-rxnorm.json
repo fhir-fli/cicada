@@ -6,6 +6,7 @@
   "title": "Immunization-Relevant Medications (RxNorm)",
   "description": "RxNorm codes for medications relevant to immunization decision support, including antivirals and aspirin.",
   "url": "http://fhirfli.dev/fhir/ig/cicada/ValueSet/vaccine-medication-codes-rxnorm",
+  "experimental": false,
   "compose": {
     "include": [
       {

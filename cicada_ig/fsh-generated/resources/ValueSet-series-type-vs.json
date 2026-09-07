@@ -6,6 +6,7 @@
   "title": "Series Type Value Set",
   "description": "Series types a forecast can be scoped to. In practice a forecast carries standard or risk: CDSi Table 8-14 excludes Evaluation Only series from best patient series.",
   "url": "http://fhirfli.dev/fhir/ig/cicada/ValueSet/series-type-vs",
+  "experimental": false,
   "compose": {
     "include": [
       {

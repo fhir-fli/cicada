@@ -6,6 +6,7 @@
   "title": "Vaccine Condition Codes",
   "description": "Value set for conditions based on SNOMED CT, that may impact immunization.",
   "url": "http://fhirfli.dev/fhir/ig/cicada/ValueSet/vaccine-condition-codes-snomed",
+  "experimental": false,
   "compose": {
     "include": [
       {

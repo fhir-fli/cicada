@@ -47,6 +47,7 @@ Usage: #definition
 Title: "SNOMED CT to CDSi Observation Code Map"
 Description: "Maps SNOMED CT codes to CDSi observation codes used in immunization decision support. Generated from CDC's supporting data."
 * status = #active
+* name = "SnomedToCdsiObservation"
 * experimental = false
 // ValueSets, not CodeSystems: R4 binds ConceptMap.source[x] to a ValueSet.
 * sourceCanonical = "{snomed_vs}"

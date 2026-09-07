@@ -6,6 +6,7 @@
   "title": "Interval Reason",
   "description": "This value set includes codes for the reason an interval is considered to be invalid.",
   "url": "http://fhirfli.dev/fhir/ig/cicada/ValueSet/interval-reason",
+  "experimental": false,
   "compose": {
     "include": [
       {

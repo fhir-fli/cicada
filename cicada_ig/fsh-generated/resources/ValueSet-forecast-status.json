@@ -6,6 +6,7 @@
   "title": "Forecast Status Value Set",
   "description": "Combined value set for immunization forecast status, referencing published standard CodeSystems. Includes ImmDS IG ForecastStatus (CDSi-compatible), HL7 THO immunization-recommendation-status, and LOINC answer list LL940-8.",
   "url": "http://fhirfli.dev/fhir/ig/cicada/ValueSet/forecast-status",
+  "experimental": false,
   "compose": {
     "include": [
       {

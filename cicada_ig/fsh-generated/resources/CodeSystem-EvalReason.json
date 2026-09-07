@@ -84,5 +84,7 @@
       "definition": "Live Virus Conflict"
     }
   ],
+  "experimental": false,
+  "caseSensitive": true,
   "count": 15
 }

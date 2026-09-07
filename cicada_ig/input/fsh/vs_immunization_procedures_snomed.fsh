@@ -2,6 +2,7 @@ ValueSet: ImmunizationProceduresSnomed
 Id: procedures
 Title: "Procedures"
 Description: "Comprehensive Value Set for medical procedures based on SNOMED CT codes."
+* ^experimental = false
 * include codes from system http://snomed.info/sct where concept is-a #234336002  // Hemopoietic stem cell transplant [procedure]
 * include codes from system http://snomed.info/sct where concept is-a #359612003  // Implantation of cochlear prosthetic device [procedure]
 * include codes from system http://snomed.info/sct where concept is-a #427314002  // Antiviral therapy [procedure]

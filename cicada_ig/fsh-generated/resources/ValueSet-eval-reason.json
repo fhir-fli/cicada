@@ -6,6 +6,7 @@
   "title": "Evaluation Reason",
   "description": "The reason for the evaluation.",
   "url": "http://fhirfli.dev/fhir/ig/cicada/ValueSet/eval-reason",
+  "experimental": false,
   "compose": {
     "include": [
       {

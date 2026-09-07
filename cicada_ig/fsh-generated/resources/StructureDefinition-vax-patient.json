@@ -15,35 +15,6 @@
   "differential": {
     "element": [
       {
-        "id": "Patient.extension",
-        "path": "Patient.extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        }
-      },
-      {
-        "id": "Patient.extension:assessmentDate",
-        "path": "Patient.extension",
-        "sliceName": "assessmentDate",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": [
-              "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/assessment-date"
-            ]
-          }
-        ]
-      },
-      {
         "id": "Patient.birthDate",
         "path": "Patient.birthDate",
         "min": 1

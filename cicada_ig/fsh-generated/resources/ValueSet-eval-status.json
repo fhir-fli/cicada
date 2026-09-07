@@ -6,6 +6,7 @@
   "title": "Evaluation Status Value Set",
   "description": "Combined value set for dose evaluation status, including HL7 THO standard codes (valid, notvalid) and the Cicada extension code (extraneous).",
   "url": "http://fhirfli.dev/fhir/ig/cicada/ValueSet/eval-status",
+  "experimental": false,
   "compose": {
     "include": [
       {

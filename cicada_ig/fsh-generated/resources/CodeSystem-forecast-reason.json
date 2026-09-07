@@ -59,6 +59,7 @@
       "definition": "ACIP recommends this series by shared clinical decision-making rather than routinely, so it is not a care gap. Read from CDC's own marking in the series name, and for HPV from the 27-45 year band CDC states in its guidance. No CDSi or ImmDS concept; ICE calls it CLINICAL_PATIENT_DISCRETION."
     }
   ],
+  "experimental": false,
   "caseSensitive": true,
   "count": 10
 }

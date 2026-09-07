@@ -6,6 +6,7 @@
   "title": "CDSI Observation Codes Value Set",
   "description": "Every CDSi observation code, as published in the supporting data.",
   "url": "http://fhirfli.dev/fhir/ig/cicada/ValueSet/cdsi-observation-codes-vs",
+  "experimental": false,
   "compose": {
     "include": [
       {

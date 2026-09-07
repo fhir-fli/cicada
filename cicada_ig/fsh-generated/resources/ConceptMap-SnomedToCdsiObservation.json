@@ -2697,6 +2697,7 @@
     }
   ],
   "status": "active",
+  "name": "SnomedToCdsiObservation",
   "experimental": false,
   "sourceCanonical": "http://fhirfli.dev/fhir/ig/cicada/ValueSet/vaccine-condition-codes-snomed",
   "targetCanonical": "http://fhirfli.dev/fhir/ig/cicada/ValueSet/cdsi-observation-codes-vs"

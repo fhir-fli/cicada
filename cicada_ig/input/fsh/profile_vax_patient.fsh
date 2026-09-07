@@ -16,6 +16,5 @@ Description: "A profile that extends the base FHIR Patient resource to include d
 // Gender Harmony elements are the place for it, not a widened base binding.
 
 // Apply the AssessmentDate extension to the VaxPatient profile
-* extension contains AssessmentDate named assessmentDate 0..1
 
 * birthDate 1..1

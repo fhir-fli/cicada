@@ -29,5 +29,7 @@
       "definition": "Male"
     }
   ],
+  "experimental": false,
+  "caseSensitive": true,
   "count": 4
 }

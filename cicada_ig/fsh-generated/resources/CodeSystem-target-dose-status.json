@@ -24,6 +24,7 @@
       "definition": "The target dose was skipped, per a conditional skip in the series."
     }
   ],
+  "experimental": false,
   "caseSensitive": true,
   "count": 3
 }

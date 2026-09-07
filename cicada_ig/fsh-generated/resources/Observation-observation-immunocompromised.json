@@ -1,0 +1,23 @@
+{
+  "resourceType": "Observation",
+  "id": "observation-immunocompromised",
+  "meta": {
+    "profile": [
+      "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/VaccineObservationFhir"
+    ]
+  },
+  "status": "final",
+  "code": {
+    "coding": [
+      {
+        "code": "370388006",
+        "system": "http://snomed.info/sct",
+        "display": "Patient immunocompromised"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/2016-UC-0032"
+  },
+  "effectiveDateTime": "2015-04-30"
+}

@@ -2,6 +2,7 @@ ValueSet: VaccineConditionCodesSnomed
 Id: vaccine-condition-codes-snomed
 Title: "Vaccine Condition Codes"
 Description: "Value set for conditions based on SNOMED CT, that may impact immunization."
+* ^experimental = false
 * include codes from system http://snomed.info/sct where concept is-a #370388006 //Patient Immunocompromised 
 * include codes from system http://snomed.info/sct where concept is-a #50711007 //Viral hepatitis type C [disorder] 
 * include codes from system http://snomed.info/sct where concept is-a #77386006 //Patient currently pregnant [finding] 

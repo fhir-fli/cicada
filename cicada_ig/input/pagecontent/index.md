@@ -30,3 +30,16 @@ This is not completely FHIR compliant. As part of this was to help myself get mo
 
 ### [Select Patient Series](06_select-patient-series.html)
 - After evaluating and forecasting, we need to pick the best series for each antigen. This covers pre-filtering, prioritization, scoring, and final selection.
+### Dependencies and terminology
+
+{% include dependency-table.xhtml %}
+
+{% include globals-table.xhtml %}
+
+{% include expansion-params.xhtml %}
+
+{% include cross-version-analysis.xhtml %}
+
+### Intellectual property
+
+{% include ip-statements.xhtml %}

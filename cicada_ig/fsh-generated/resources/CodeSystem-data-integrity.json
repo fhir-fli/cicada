@@ -24,6 +24,7 @@
       "definition": "Two administered doses covering the same antigen carry the same date. Matched on the antigen, not the product, so it catches a combination given alongside a component — Pediarix and Pentacel are different CVX codes that both carry diphtheria, tetanus, pertussis and polio. Both doses are still evaluated on their own merits; the engine cannot tell a record entered twice from a second injection."
     }
   ],
+  "experimental": false,
   "caseSensitive": true,
   "count": 3
 }

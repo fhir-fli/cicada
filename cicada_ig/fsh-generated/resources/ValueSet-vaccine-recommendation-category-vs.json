@@ -6,6 +6,7 @@
   "title": "Vaccine Recommendation Category Value Set",
   "description": "All codes from the Vaccine Recommendation Category code system.",
   "url": "http://fhirfli.dev/fhir/ig/cicada/ValueSet/vaccine-recommendation-category-vs",
+  "experimental": false,
   "compose": {
     "include": [
       {

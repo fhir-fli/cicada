@@ -61,6 +61,7 @@ Usage: #definition
 Title: "{label} to CDSi Observation Code Map"
 Description: "Maps {label} codes to CDSi observation codes used in immunization decision support. Generated from the cicada crosswalk."
 * status = #active
+* name = "Icd10ToCdsiObservation"
 * experimental = false
 // ValueSets, not CodeSystems: R4 binds ConceptMap.source[x] to a ValueSet.
 * sourceCanonical = "{source_vs}"

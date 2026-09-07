@@ -24,6 +24,7 @@ ValueSet: VaccineLabEvidenceOfImmunityLoinc
 Id: vaccine-lab-evidence-of-immunity-loinc
 Title: "Lab Evidence of Immunity (LOINC)"
 Description: "LOINC codes for laboratory tests that provide evidence of immunity, mapped to CDSi observation codes for immunization decision support. Serum IgG in every case, plus total antibody for hepatitis A, which is what evidence of immunity means for these antigens; IgM, cerebrospinal fluid and avidity codes are deliberately excluded."
+* ^experimental = false
 * ^status = #active
 
 // 018 - Laboratory Evidence of Immunity or confirmation of Hepatitis A disease

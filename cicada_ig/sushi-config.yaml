@@ -70,6 +70,25 @@ pages:
     title: What Cicada Returns
 #
 #
+# Descriptions the publisher cannot infer from the resources themselves.
+resources:
+  Patient/2016-UC-0032:
+    description: "The patient of CDC CDSi condition test case 2016-UC-0032, the case the forecast example is computed from."
+  ImmunizationRecommendation/cicada-forecast-example:
+    description: "The engine's forecast for 2016-UC-0032, all 17 recommendations, regenerated from the engine by cicada/tool/write_ig_example.dart."
+  Parameters/manifest:
+    description: "Expansion parameters for the build: SNOMED CT is expanded and validated against the US edition, which carries the US-extension concepts CDSi cites."
+  Immunization/2016-UC-0032-dose1:
+    description: "The one dose in case 2016-UC-0032, an MMR, as the engine reads it (vax-dose)."
+  Condition/2016-UC-0032-055:
+    description: "The one condition in case 2016-UC-0032, CDSi observation 055 Health care personnel, as the engine reads it (VaccineConditionFhir)."
+  ImmunizationEvaluation/2016-UC-0032-1:
+    description: "The engine's evaluation of the case's MMR dose against measles, with the target-dose status and the sub-step detail extensions."
+  ImmunizationEvaluation/2016-UC-0032-2:
+    description: "The engine's evaluation of the case's MMR dose against mumps."
+  ImmunizationEvaluation/2016-UC-0032-3:
+    description: "The engine's evaluation of the case's MMR dose against rubella."
+
 # The parameters property represents IG.definition.parameter. Rather
 # than a list of code/value pairs (as in the ImplementationGuide
 # resource), the code is the YAML key. If a parameter allows repeating

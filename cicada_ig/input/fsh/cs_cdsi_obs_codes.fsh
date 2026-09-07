@@ -9,6 +9,7 @@ Id: cdsi-observation-codes
 Title: "CDSI Observation Codes"
 Description:  "Observations and Conditions that are important to indications or contraindications in vaccine forecasting"
 * ^caseSensitive = true
+* ^experimental = false
 * ^content = #complete
 * #001 "Patient seeks protection"
 * #002 "Undergoing elective splenectomy"
@@ -289,11 +290,14 @@ Description:  "Observations and Conditions that are important to indications or 
 * #279 "Hemoglobinopathy disorder"
 * #280 "Chronic lung disease of prematurity"
 
-// The ConceptMap needs a ValueSet on each side: R4 binds ConceptMap.source[x]
-// and target[x] to ValueSets, not CodeSystems, which is the
-// CONCEPTMAP_VS_NOT_A_VS error the hand-written map carried.
+
+// The ConceptMaps need a ValueSet on each side: R4 binds ConceptMap.source[x]
+// and target[x] to ValueSets, not CodeSystems. Generated here, with the code
+// system, so a regeneration can never drop it (it was hand-appended to this
+// file until 2026-09-07 and one regeneration removed it).
 ValueSet: CdsiObservationCodesVS
 Id: cdsi-observation-codes-vs
 Title: "CDSI Observation Codes Value Set"
 Description: "Every CDSi observation code, as published in the supporting data."
+* ^experimental = false
 * include codes from system CdsiObservationCodes

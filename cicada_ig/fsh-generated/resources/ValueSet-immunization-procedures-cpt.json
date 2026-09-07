@@ -6,6 +6,7 @@
   "title": "Immunization-Relevant Procedures (CPT)",
   "description": "CPT codes for procedures relevant to immunization decision support, including splenectomy and cochlear implant.",
   "url": "http://fhirfli.dev/fhir/ig/cicada/ValueSet/immunization-procedures-cpt",
+  "experimental": false,
   "compose": {
     "include": [
       {

@@ -2,6 +2,7 @@ ValueSet: VaccineMedicationCodesRxnorm
 Id: vaccine-medication-codes-rxnorm
 Title: "Immunization-Relevant Medications (RxNorm)"
 Description: "RxNorm codes for medications relevant to immunization decision support, including antivirals and aspirin."
+* ^experimental = false
 * ^status = #active
 
 // 033 - Antiviral therapy

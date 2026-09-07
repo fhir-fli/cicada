@@ -1,0 +1,23 @@
+{
+  "resourceType": "MedicationDispense",
+  "id": "medication-dispense-hepb",
+  "meta": {
+    "profile": [
+      "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/MedicationDispenseProfile"
+    ]
+  },
+  "status": "completed",
+  "medicationCodeableConcept": {
+    "coding": [
+      {
+        "code": "08",
+        "system": "http://hl7.org/fhir/sid/cvx",
+        "display": "Hep B, adolescent or pediatric"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/2016-UC-0032"
+  },
+  "whenHandedOver": "1998-03-10"
+}

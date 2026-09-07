@@ -9,6 +9,7 @@ Usage: #definition
 Title: "ICD-10-CM to CDSi Observation Code Map"
 Description: "Maps ICD-10-CM codes to CDSi observation codes used in immunization decision support. Generated from the cicada crosswalk."
 * status = #active
+* name = "Icd10ToCdsiObservation"
 * experimental = false
 // ValueSets, not CodeSystems: R4 binds ConceptMap.source[x] to a ValueSet.
 * sourceCanonical = "http://fhirfli.dev/fhir/ig/cicada/ValueSet/vaccine-condition-codes-icd10"

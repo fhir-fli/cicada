@@ -24,5 +24,7 @@
       "definition": "Age: Too Old"
     }
   ],
+  "experimental": false,
+  "caseSensitive": true,
   "count": 3
 }

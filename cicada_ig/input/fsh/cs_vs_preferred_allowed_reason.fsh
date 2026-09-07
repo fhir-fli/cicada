@@ -2,6 +2,8 @@ CodeSystem: PreferredAllowedReasonCS
 Id: PreferredAllowedReason
 Title: "Reasons why certain doses are Preferred or Allowed doses"
 Description: "Reasons why certain doses are Preferred or Allowed doses"
+* ^experimental = false
+* ^caseSensitive = true
 * #notAPreferableOrAllowableVaccine "Not a preferable or allowable vaccine" "Not a preferable or allowable vaccine"
 * #wrongTradeName "Wrong trade name" "Wrong trade name"
 * #lessThanRecommendedVolume "Less than recommended volume" "Less than recommended volume"
@@ -13,6 +15,7 @@ ValueSet: PreferredAllowedReasonVS
 Id: preferred-allowed-reason
 Title: "Reasons why certain doses are Preferred or Allowed doses"
 Description: "Reasons why certain doses are Preferred or Allowed doses"
+* ^experimental = false
 * PreferredAllowedReason#notAPreferableOrAllowableVaccine "Not a preferable or allowable vaccine"
 * PreferredAllowedReason#wrongTradeName "Wrong trade name"
 * PreferredAllowedReason#lessThanRecommendedVolume "Less than recommended volume"

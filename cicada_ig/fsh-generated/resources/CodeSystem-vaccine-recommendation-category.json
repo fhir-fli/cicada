@@ -24,6 +24,7 @@
       "definition": "Shared clinical decision making: the recommendation depends on a discussion between the patient and the clinician."
     }
   ],
+  "experimental": false,
   "caseSensitive": true,
   "count": 3
 }

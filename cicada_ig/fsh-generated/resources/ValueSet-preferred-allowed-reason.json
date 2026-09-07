@@ -6,6 +6,7 @@
   "title": "Reasons why certain doses are Preferred or Allowed doses",
   "description": "Reasons why certain doses are Preferred or Allowed doses",
   "url": "http://fhirfli.dev/fhir/ig/cicada/ValueSet/preferred-allowed-reason",
+  "experimental": false,
   "compose": {
     "include": [
       {

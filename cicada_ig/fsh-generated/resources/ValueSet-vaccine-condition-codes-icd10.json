@@ -6,6 +6,7 @@
   "title": "Vaccine Condition Codes (ICD-10-CM)",
   "description": "Value set for conditions based on ICD-10-CM that may impact immunization decisions, mapped to CDSi observation codes.",
   "url": "http://fhirfli.dev/fhir/ig/cicada/ValueSet/vaccine-condition-codes-icd10",
+  "experimental": false,
   "compose": {
     "include": [
       {

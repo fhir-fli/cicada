@@ -6,6 +6,7 @@
   "title": "Procedures",
   "description": "Comprehensive Value Set for medical procedures based on SNOMED CT codes.",
   "url": "http://fhirfli.dev/fhir/ig/cicada/ValueSet/procedures",
+  "experimental": false,
   "compose": {
     "include": [
       {

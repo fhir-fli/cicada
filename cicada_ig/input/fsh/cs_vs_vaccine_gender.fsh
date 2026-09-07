@@ -3,6 +3,8 @@ CodeSystem: VaccineGenderCS
 Id: VaccineGender
 Title: "Vaccine Gender"
 Description: "Value set for gender categories relevant to vaccination data."
+* ^experimental = false
+* ^caseSensitive = true
 * #female "Female" "Female" 
 * #transgender "Transgender" "Transgender" 
 * #unknown "Unknown" "Unknown" 
@@ -13,6 +15,7 @@ ValueSet: VaccineGenderVS
 Id: vaccine-gender
 Title: "Vaccine Gender"
 Description: "Value set for gender categories relevant to vaccination data."
+* ^experimental = false
 * VaccineGender#female "Female"
 * VaccineGender#transgender "Transgender"
 * VaccineGender#unknown "Unknown"

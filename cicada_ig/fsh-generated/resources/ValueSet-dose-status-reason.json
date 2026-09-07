@@ -6,6 +6,7 @@
   "title": "Dose Status Reason Value Set",
   "description": "Value set for dose evaluation status reasons, referencing the published ImmDS IG StatusReason CodeSystem.",
   "url": "http://fhirfli.dev/fhir/ig/cicada/ValueSet/dose-status-reason",
+  "experimental": false,
   "compose": {
     "include": [
       {

@@ -1263,10 +1263,16 @@ CodeableConcept _mapForecastStatus(SeriesStatus status,
   // Secondary: HL7 standard code (where a standard code exists)
   switch (status) {
     case SeriesStatus.complete:
+      // Read whole from hl7.terminology.r4 7.3.0,
+      // CodeSystem-immunization-recommendation-status.json (version 2.0.0):
+      // "complete" carries property status = retired; "seriescomplete",
+      // display "Series Complete", has the identical definition text, "The
+      // patient is fully protected and no further doses are recommended."
+      // The IG publisher flagged the retired code on every Complete forecast.
       codings.add(Coding(
           system: hl7System.toFhirUri,
-          code: 'complete'.toFhirCode,
-          display: 'Complete'.toFhirString));
+          code: 'seriescomplete'.toFhirCode,
+          display: 'Series Complete'.toFhirString));
     case SeriesStatus.immune:
       codings.add(Coding(
           system: hl7System.toFhirUri,

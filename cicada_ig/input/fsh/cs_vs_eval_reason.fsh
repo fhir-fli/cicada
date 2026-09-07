@@ -2,6 +2,8 @@ CodeSystem: EvalReasonCS
 Id: EvalReason
 Title: "Evaluation Reason"
 Description: "The reason for the evaluation."
+* ^experimental = false
+* ^caseSensitive = true
 * #noDateGiven "No Date Given" "No Date Given"
 * #noCvx "No Cvx" "No Cvx"
 * #expired "Expired Product" "Expired Product"
@@ -22,6 +24,7 @@ ValueSet: EvalReasonVS
 Id: eval-reason
 Title: "Evaluation Reason"
 Description: "The reason for the evaluation."
+* ^experimental = false
 * EvalReason#noDateGiven "No Date Given"
 * EvalReason#noCvx "No Cvx"
 * EvalReason#expired "Expired Product"

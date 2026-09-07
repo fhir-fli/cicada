@@ -1,0 +1,22 @@
+{
+  "resourceType": "Procedure",
+  "id": "procedure-stem-cell-transplant",
+  "meta": {
+    "profile": [
+      "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/ProcedureProfile"
+    ]
+  },
+  "status": "completed",
+  "code": {
+    "coding": [
+      {
+        "code": "234336002",
+        "system": "http://snomed.info/sct"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/2016-UC-0032"
+  },
+  "performedDateTime": "2014-11-02"
+}

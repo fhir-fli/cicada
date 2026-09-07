@@ -1,0 +1,29 @@
+{
+  "resourceType": "Immunization",
+  "id": "2016-UC-0032-dose1",
+  "status": "completed",
+  "vaccineCode": {
+    "coding": [
+      {
+        "system": "http://hl7.org/fhir/sid/cvx",
+        "code": "03",
+        "display": "MMR"
+      },
+      {
+        "system": "http://hl7.org/fhir/sid/mvx",
+        "code": "MSD",
+        "display": "Merck and Co., Inc."
+      }
+    ]
+  },
+  "patient": {
+    "reference": "Patient/2016-UC-0032",
+    "type": "Patient"
+  },
+  "occurrenceDateTime": "2015-04-30",
+  "meta": {
+    "profile": [
+      "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/vax-dose"
+    ]
+  }
+}

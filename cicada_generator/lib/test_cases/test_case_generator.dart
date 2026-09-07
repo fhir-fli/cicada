@@ -182,10 +182,13 @@ Future<void> _generateTestCases(TestCaseConfig config) async {
                 display: vaccineName.toFhirString,
               ),
               if (mvx != null && mvx.isNotEmpty)
+                // MVX's own display (the manufacturer), not the vaccine
+                // name: the IG validator rejected "MMR" on mvx#MSD, whose
+                // display is "Merck and Co., Inc.".
                 Coding(
                   system: FhirUri('http://hl7.org/fhir/sid/mvx'),
                   code: FhirCode(mvx),
-                  display: vaccineName.toFhirString,
+                  display: mvxDisplays[mvx]?.toFhirString,
                 ),
             ],
           ),

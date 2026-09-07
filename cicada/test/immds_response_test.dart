@@ -279,7 +279,7 @@ void main() {
         'overdue',
         'immune',
         'contraindicated',
-        'complete',
+        'seriescomplete', // 'complete' is retired in THO 2.0.0, read from its CodeSystem json
         'agedout',
       };
       final loincCodes = {

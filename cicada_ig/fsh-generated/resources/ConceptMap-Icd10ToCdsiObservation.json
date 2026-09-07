@@ -2202,6 +2202,7 @@
     }
   ],
   "status": "active",
+  "name": "Icd10ToCdsiObservation",
   "experimental": false,
   "sourceCanonical": "http://fhirfli.dev/fhir/ig/cicada/ValueSet/vaccine-condition-codes-icd10",
   "targetCanonical": "http://fhirfli.dev/fhir/ig/cicada/ValueSet/cdsi-observation-codes-vs"

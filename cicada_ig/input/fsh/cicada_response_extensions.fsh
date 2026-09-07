@@ -17,6 +17,7 @@ CodeSystem: CicadaForecastReasonCS
 Id: forecast-reason
 Title: "Cicada Forecast Reason Code System"
 Description: "Why the engine forecast what it did. The ImmDS ForecastReason code system covers four of these; the rest have no ImmDS concept, and the ImmDS binding on ImmunizationRecommendation.recommendation.forecastReason is example strength, so they travel as a second coding rather than being dropped."
+* ^experimental = false
 * ^caseSensitive = true
 * ^content = #complete
 * #series-complete "Patient series is complete" "Every target dose in the series is satisfied. Maps to ImmDS #complete."
@@ -34,6 +35,7 @@ ValueSet: CicadaForecastReasonVS
 Id: forecast-reason-vs
 Title: "Cicada Forecast Reason Value Set"
 Description: "Forecast reasons the engine can report."
+* ^experimental = false
 * include codes from system CicadaForecastReasonCS
 
 // ---------------------------------------------------------------------------
@@ -44,6 +46,7 @@ CodeSystem: TargetDoseStatusCS
 Id: target-dose-status
 Title: "Target Dose Status Code System"
 Description: "CDSi Table 3-2. The status of the target dose an administered dose was evaluated against. R4 ImmunizationEvaluation carries only doseNumber, derived from this, so a skipped target dose and a satisfied one are otherwise indistinguishable."
+* ^experimental = false
 * ^caseSensitive = true
 * ^content = #complete
 * #satisfied "Satisfied" "The target dose was satisfied by a vaccine dose administered."
@@ -54,6 +57,7 @@ ValueSet: TargetDoseStatusVS
 Id: target-dose-status-vs
 Title: "Target Dose Status Value Set"
 Description: "CDSi target dose statuses."
+* ^experimental = false
 * include codes from system TargetDoseStatusCS
 
 Extension: TargetDoseStatus
@@ -73,6 +77,7 @@ CodeSystem: DataIntegrityCS
 Id: data-integrity
 Title: "Cicada Data Integrity Code System"
 Description: "Records that cannot describe an administration. CDSi evaluates a vaccine dose administered and defines the assessment date as the current date, so these doses are excluded from evaluation and forecasting and reported in an OperationOutcome. They are statements about the data, never about the patient's immunity, which is why they are not evaluation statuses."
+* ^experimental = false
 * ^caseSensitive = true
 * ^content = #complete
 * #dose-before-birth "Dose dated before the date of birth" "The administration date precedes the patient's date of birth, so the dose was not given to this patient. Check the birth date, the administration date, and that the record belongs to this patient."
@@ -83,6 +88,7 @@ ValueSet: DataIntegrityVS
 Id: data-integrity-vs
 Title: "Cicada Data Integrity Value Set"
 Description: "Reasons a dose was reported rather than evaluated."
+* ^experimental = false
 * include codes from system DataIntegrityCS
 
 // ---------------------------------------------------------------------------

@@ -24,6 +24,7 @@
       "definition": "A series used only to evaluate administered doses; it never produces a forecast."
     }
   ],
+  "experimental": false,
   "caseSensitive": true,
   "count": 3
 }

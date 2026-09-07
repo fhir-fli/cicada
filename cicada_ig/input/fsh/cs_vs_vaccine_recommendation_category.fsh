@@ -2,6 +2,7 @@ CodeSystem: VaccineRecommendationCategoryCS
 Id: vaccine-recommendation-category
 Title: "Vaccine Recommendation Category"
 Description: "The three categories of CDC's Vaccine Recommendation Category Determination (CDSi supporting data 4.65): the type of recommendation a Best Patient Series carries for a patient who is recommended further doses. Displays are CDC's own words."
+* ^experimental = false
 * ^caseSensitive = true
 * ^content = #complete
 * #routine "Routine" "An age-based recommendation for the general population."
@@ -12,4 +13,5 @@ ValueSet: VaccineRecommendationCategoryVS
 Id: vaccine-recommendation-category-vs
 Title: "Vaccine Recommendation Category Value Set"
 Description: "All codes from the Vaccine Recommendation Category code system."
+* ^experimental = false
 * include codes from system VaccineRecommendationCategoryCS

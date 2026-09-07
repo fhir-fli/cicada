@@ -6,6 +6,7 @@
   "title": "Cicada Forecast Reason Value Set",
   "description": "Forecast reasons the engine can report.",
   "url": "http://fhirfli.dev/fhir/ig/cicada/ValueSet/forecast-reason-vs",
+  "experimental": false,
   "compose": {
     "include": [
       {

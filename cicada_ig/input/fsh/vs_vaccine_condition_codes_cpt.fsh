@@ -2,6 +2,7 @@ ValueSet: ImmunizationProceduresCpt
 Id: immunization-procedures-cpt
 Title: "Immunization-Relevant Procedures (CPT)"
 Description: "CPT codes for procedures relevant to immunization decision support, including splenectomy and cochlear implant."
+* ^experimental = false
 * ^status = #active
 
 // 002 - Elective splenectomy

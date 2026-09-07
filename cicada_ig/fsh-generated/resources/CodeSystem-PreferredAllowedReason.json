@@ -39,5 +39,7 @@
       "definition": "No allowed types"
     }
   ],
+  "experimental": false,
+  "caseSensitive": true,
   "count": 6
 }

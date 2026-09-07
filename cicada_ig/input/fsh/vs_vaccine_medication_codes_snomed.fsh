@@ -2,6 +2,7 @@ ValueSet: VaccineMedicationCodesSnomed
 Id: vaccine-medication-codes-snomed
 Title: "Medications"
 Description: "Value set for medications and substances based on SNOMED CT, including both active ingredients and marketed products."
+* ^experimental = false
 * include codes from system http://snomed.info/sct where concept is-a #372763006  // Amantadine [substance]
 * include codes from system http://snomed.info/sct where concept is-a #51361008   // Amantadine [product]
 * include codes from system http://snomed.info/sct where concept is-a #372532009  // Rimantadine [substance]

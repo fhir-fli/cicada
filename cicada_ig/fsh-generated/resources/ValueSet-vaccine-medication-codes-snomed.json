@@ -6,6 +6,7 @@
   "title": "Medications",
   "description": "Value set for medications and substances based on SNOMED CT, including both active ingredients and marketed products.",
   "url": "http://fhirfli.dev/fhir/ig/cicada/ValueSet/vaccine-medication-codes-snomed",
+  "experimental": false,
   "compose": {
     "include": [
       {

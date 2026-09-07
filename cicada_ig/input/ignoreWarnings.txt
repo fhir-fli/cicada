@@ -9,3 +9,16 @@
 # They are web pages, not FHIR definitions, and the validator cannot fetch them
 # at build time. 13 of these on the forecast example, 2026-09-06.
 No definition could be found for URL value 'https://www.cdc.gov/%
+
+# No OID root is registered for fhirfli.dev (searched every sushi-config under
+# ~/dev/fhir on 2026-09-07: none carries auto-oid-root or an urn:oid). Assigning
+# OIDs is a registration act, not a build setting, and nothing here is exchanged
+# as CDA. If an OID root is ever registered, set auto-oid-root and delete this.
+%should have an OID assigned to cater for possible use with OID based terminology systems%
+
+# CDC's schedule supporting data cites 18 SNOMED concepts that are inactive
+# (20 coded values); the SNOMED condition value set is built from those coded
+# values, so its filters carry them. Reported to CDC as CDC-REPORT.md finding
+# 10 on 2026-09-07 with the per-code lookups. The data is CDC's to correct;
+# until it is, the value set carries what CDC publishes.
+The code for the filter 'concept' is inactive%

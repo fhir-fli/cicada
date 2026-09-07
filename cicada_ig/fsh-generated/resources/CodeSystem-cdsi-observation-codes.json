@@ -1122,5 +1122,6 @@
     }
   ],
   "caseSensitive": true,
+  "experimental": false,
   "count": 278
 }

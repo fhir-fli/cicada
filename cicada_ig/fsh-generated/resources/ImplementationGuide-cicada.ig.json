@@ -37,8 +37,49 @@
         "reference": {
           "reference": "Patient/2016-UC-0032"
         },
+        "description": "The patient of CDC CDSi condition test case 2016-UC-0032, the case the forecast example is computed from.",
         "exampleBoolean": false,
         "name": "2016-UC-0032"
+      },
+      {
+        "reference": {
+          "reference": "Condition/2016-UC-0032-055"
+        },
+        "description": "The one condition in case 2016-UC-0032, CDSi observation 055 Health care personnel, as the engine reads it (VaccineConditionFhir).",
+        "exampleBoolean": false,
+        "name": "2016-UC-0032-055"
+      },
+      {
+        "reference": {
+          "reference": "ImmunizationEvaluation/2016-UC-0032-1"
+        },
+        "description": "The engine's evaluation of the case's MMR dose against measles, with the target-dose status and the sub-step detail extensions.",
+        "exampleBoolean": false,
+        "name": "2016-UC-0032-1"
+      },
+      {
+        "reference": {
+          "reference": "ImmunizationEvaluation/2016-UC-0032-2"
+        },
+        "description": "The engine's evaluation of the case's MMR dose against mumps.",
+        "exampleBoolean": false,
+        "name": "2016-UC-0032-2"
+      },
+      {
+        "reference": {
+          "reference": "ImmunizationEvaluation/2016-UC-0032-3"
+        },
+        "description": "The engine's evaluation of the case's MMR dose against rubella.",
+        "exampleBoolean": false,
+        "name": "2016-UC-0032-3"
+      },
+      {
+        "reference": {
+          "reference": "Immunization/2016-UC-0032-dose1"
+        },
+        "description": "The one dose in case 2016-UC-0032, an MMR, as the engine reads it (vax-dose).",
+        "exampleBoolean": false,
+        "name": "2016-UC-0032-dose1"
       },
       {
         "reference": {
@@ -50,35 +91,11 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/allowed-interval-reason"
+          "reference": "AllergyIntolerance/allergy-vaccine-reaction"
         },
-        "name": "Allowed Interval Reason",
-        "description": "Captures the reason for the allowed interval between vaccine doses.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/allowed-interval-status"
-        },
-        "name": "Allowed Interval Status",
-        "description": "Captures the status of the allowed interval for vaccination.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/allowed-vaccine-reason"
-        },
-        "name": "Allowed Vaccine Reason",
-        "description": "Captures the reason why a particular vaccine is allowed.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/allowed-vaccine-status"
-        },
-        "name": "Allowed Vaccine Status",
-        "description": "Indicates if the vaccine administered is allowed under certain conditions.",
-        "exampleBoolean": false
+        "name": "AllergyIntolerance: adverse reaction to a vaccine",
+        "description": "An allergy record the engine reads as a contraindication candidate: SNOMED 293104008, Vaccines adverse reaction, the root of the vaccine reaction concepts in the condition value set, with the substance as the CVX of the vaccine reacted to.",
+        "exampleCanonical": "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/ReactionProfile"
       },
       {
         "reference": {
@@ -94,14 +111,6 @@
         },
         "name": "Antigen Supporting Data",
         "description": "A resource to store supporting data for antigens including target disease, vaccine groups, immunity criteria, contraindications, and vaccination series.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/assessment-date"
-        },
-        "name": "AssessmentDate",
-        "description": "The date on which the vaccination assessment was made.",
         "exampleBoolean": false
       },
       {
@@ -180,6 +189,7 @@
         "reference": {
           "reference": "ImmunizationRecommendation/cicada-forecast-example"
         },
+        "description": "The engine's forecast for 2016-UC-0032, all 17 recommendations, regenerated from the engine by cicada/tool/write_ig_example.dart.",
         "exampleBoolean": false,
         "name": "cicada-forecast-example"
       },
@@ -204,7 +214,7 @@
           "reference": "StructureDefinition/vax-dose"
         },
         "name": "Dose of a Vaccine",
-        "description": "Detailed information about each vaccination dose.",
+        "description": "An administered dose as the engine reads it: the vaccine as CVX, the date, the patient, and optionally the dose volume, the manufacturer and a subpotency reason. The engine's evaluation of the dose is returned on ImmunizationEvaluation (target-dose-status-ext, evaluation-detail-ext), not written back onto the Immunization; until 2026-09-07 this profile declared thirteen evaluation extensions nothing ever emitted.",
         "exampleBoolean": false
       },
       {
@@ -321,14 +331,6 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/inadvertent-administration-status"
-        },
-        "name": "Inadvertent Administration Status",
-        "description": "Indicates if the vaccine was administered inadvertently.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
           "reference": "ValueSet/interval-reason"
         },
         "name": "Interval Reason",
@@ -355,6 +357,7 @@
         "reference": {
           "reference": "Parameters/manifest"
         },
+        "description": "Expansion parameters for the build: SNOMED CT is expanded and validated against the US edition, which carries the US-extension concepts CDSi cites.",
         "exampleBoolean": false,
         "name": "manifest"
       },
@@ -392,11 +395,51 @@
       },
       {
         "reference": {
+          "reference": "Medication/vaccine-hepb-adult"
+        },
+        "name": "Medication: Hep B, adult",
+        "description": "A vaccine product as a Medication: CVX 43 with a trade name, the age from which CDC's HepB 3-dose series lists it as a preferable vaccine (20 years, no upper bound), and its vaccine type. CVX 08's begin age of 0 days cannot be an example here: FHIR's Age datatype requires a positive value (age-1).",
+        "exampleCanonical": "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/Vaccine"
+      },
+      {
+        "reference": {
+          "reference": "MedicationAdministration/medication-administration-hepb"
+        },
+        "name": "MedicationAdministration: a vaccine given as a medication",
+        "description": "A hepatitis B dose recorded as a MedicationAdministration, which the engine accepts as an administered dose.",
+        "exampleCanonical": "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/MedicationAdministrationProfile"
+      },
+      {
+        "reference": {
+          "reference": "MedicationDispense/medication-dispense-hepb"
+        },
+        "name": "MedicationDispense: a vaccine dispensed as a medication",
+        "description": "A hepatitis B dose dispensed as a MedicationDispense.",
+        "exampleCanonical": "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/MedicationDispenseProfile"
+      },
+      {
+        "reference": {
+          "reference": "MedicationRequest/medication-request-hepb"
+        },
+        "name": "MedicationRequest: a vaccine ordered as a medication",
+        "description": "A hepatitis B dose ordered as a MedicationRequest.",
+        "exampleCanonical": "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/MedicationRequestProfile"
+      },
+      {
+        "reference": {
           "reference": "ValueSet/vaccine-medication-codes-snomed"
         },
         "name": "Medications",
         "description": "Value set for medications and substances based on SNOMED CT, including both active ingredients and marketed products.",
         "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "MedicationStatement/medication-statement-hepb"
+        },
+        "name": "MedicationStatement: a vaccine recorded as a medication",
+        "description": "A hepatitis B dose recorded as a MedicationStatement, which the engine accepts as an administered dose.",
+        "exampleCanonical": "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/MedicationStatementProfile"
       },
       {
         "reference": {
@@ -408,35 +451,19 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/preferred-interval-reason"
+          "reference": "Observation/observation-immunocompromised"
         },
-        "name": "Preferred Interval Reason",
-        "description": "Captures the reason for the preferred interval between vaccine doses.",
-        "exampleBoolean": false
+        "name": "Observation: patient immunocompromised",
+        "description": "A coded observation carrying CDSi observation 003, Immunocompromised, as its SNOMED coded value 370388006.",
+        "exampleCanonical": "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/VaccineObservationFhir"
       },
       {
         "reference": {
-          "reference": "StructureDefinition/preferred-interval-status"
+          "reference": "Procedure/procedure-stem-cell-transplant"
         },
-        "name": "Preferred Interval Status",
-        "description": "Indicates if the vaccine was administered at the preferred interval.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/preferred-vaccine-reason"
-        },
-        "name": "Preferred Vaccine Reason",
-        "description": "Captures the reason why a particular vaccine is preferred.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/preferred-vaccine-status"
-        },
-        "name": "Preferred Vaccine Status",
-        "description": "Indicates if the vaccine administered is the preferred vaccine.",
-        "exampleBoolean": false
+        "name": "Procedure: haemopoietic stem cell transplant",
+        "description": "A procedure the engine reads as an immunization-relevant history item: SNOMED 234336002, one of the roots of the immunization procedures value set.",
+        "exampleCanonical": "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/ProcedureProfile"
       },
       {
         "reference": {
@@ -536,14 +563,6 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/vaccination-conflict"
-        },
-        "name": "Vaccination Conflict",
-        "description": "Indicates any conflicts with other vaccinations.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
           "reference": "StructureDefinition/vax-patient"
         },
         "name": "Vaccination Patient",
@@ -555,7 +574,15 @@
           "reference": "StructureDefinition/Vaccine"
         },
         "name": "Vaccine",
-        "description": "Simple vaccine to easily obtain needed information for forecasting",
+        "description": "A vaccine product as CDC's supporting data describes one: the CVX, the trade name, the ages between which it is a preferable vaccine, and its type. Note that beginAge and endAge are FHIR Age values, which must be positive (age-1), so CDC's \"0 days\" cannot be carried; a begin age of 0 days is expressed by omitting beginAge.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/VaccineCodesCvxMvx"
+        },
+        "name": "Vaccine Codes (CVX and MVX)",
+        "description": "Every code from CVX (vaccine administered) and MVX (manufacturer), the two CDC code systems a vaccine dose is recorded with.",
         "exampleBoolean": false
       },
       {
@@ -624,21 +651,6 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/VaccineCodesCvxMvx"
-        },
-        "name": "VaccineCodesCvxMvx",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/valid-age-reason"
-        },
-        "name": "Valid Age Reason",
-        "description": "Captures the reason why the vaccine was administered at a particular age.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
           "reference": "ValueSet/valid-age-reason"
         },
         "name": "Valid Age Reason",
@@ -651,14 +663,6 @@
         },
         "name": "Valid Age Reason",
         "description": "Value set for reasons why a patient's age is considered valid/invalid for a vaccine.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/valid-age-status"
-        },
-        "name": "Valid Age Status",
-        "description": "Indicates if the vaccine was administered at the correct age.",
         "exampleBoolean": false
       }
     ],

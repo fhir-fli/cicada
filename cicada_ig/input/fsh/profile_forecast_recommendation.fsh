@@ -18,6 +18,7 @@ CodeSystem: SeriesTypeCS
 Id: series-type
 Title: "Series Type Code System"
 Description: "CDSi series type: whether a patient series is the routine schedule, one indicated by a risk condition, or evaluation-only. Mirrors the seriesType attribute of the CDSi antigen supporting data."
+* ^experimental = false
 * ^caseSensitive = true
 * ^content = #complete
 * #standard "Standard" "The routine, age-based series."
@@ -28,6 +29,7 @@ ValueSet: SeriesTypeVS
 Id: series-type-vs
 Title: "Series Type Value Set"
 Description: "Series types a forecast can be scoped to. In practice a forecast carries standard or risk: CDSi Table 8-14 excludes Evaluation Only series from best patient series."
+* ^experimental = false
 * include codes from system SeriesTypeCS
 
 Extension: SeriesType

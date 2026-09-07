@@ -14,5 +14,7 @@
       "definition": "The dose was administered after the series was already complete. Every administered dose must be reported, so extraneous doses are tracked but do not affect the forecast."
     }
   ],
+  "experimental": false,
+  "caseSensitive": true,
   "count": 1
 }

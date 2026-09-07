@@ -1,0 +1,47 @@
+{
+  "resourceType": "Medication",
+  "id": "vaccine-hepb-adult",
+  "meta": {
+    "profile": [
+      "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/Vaccine"
+    ]
+  },
+  "identifier": [
+    {
+      "system": "http://fhirfli.dev/fhir/ig/cicada/identifier/trade-name",
+      "value": "Engerix-B"
+    }
+  ],
+  "extension": [
+    {
+      "url": "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/begin-age",
+      "valueAge": {
+        "value": 20,
+        "code": "a",
+        "system": "http://unitsofmeasure.org",
+        "unit": "years"
+      }
+    },
+    {
+      "url": "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/vaccine-type",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "43",
+            "system": "http://hl7.org/fhir/sid/cvx",
+            "display": "Hep B, adult"
+          }
+        ]
+      }
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "code": "43",
+        "system": "http://hl7.org/fhir/sid/cvx",
+        "display": "Hep B, adult"
+      }
+    ]
+  }
+}

@@ -6,6 +6,7 @@
   "title": "Cicada Data Integrity Value Set",
   "description": "Reasons a dose was reported rather than evaluated.",
   "url": "http://fhirfli.dev/fhir/ig/cicada/ValueSet/data-integrity-vs",
+  "experimental": false,
   "compose": {
     "include": [
       {

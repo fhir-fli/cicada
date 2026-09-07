@@ -3,7 +3,10 @@
   "status": "draft",
   "name": "VaccineCodesCvxMvx",
   "id": "VaccineCodesCvxMvx",
+  "title": "Vaccine Codes (CVX and MVX)",
+  "description": "Every code from CVX (vaccine administered) and MVX (manufacturer), the two CDC code systems a vaccine dose is recorded with.",
   "url": "http://fhirfli.dev/fhir/ig/cicada/ValueSet/VaccineCodesCvxMvx",
+  "experimental": false,
   "compose": {
     "include": [
       {

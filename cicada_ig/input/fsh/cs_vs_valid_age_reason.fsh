@@ -3,6 +3,8 @@ CodeSystem: ValidAgeReasonCS
 Id: ValidAgeReason
 Title: "Valid Age Reason"
 Description: "Value set for reasons why a patient's age is considered valid/invalid for a vaccine."
+* ^experimental = false
+* ^caseSensitive = true
 * #gracePeriod "Age: Grace Period" "Age: Grace Period"
 * #tooYoung "Age: Too Young" "Age: Too Young"
 * #tooOld "Age: Too Old" "Age: Too Old"
@@ -11,6 +13,7 @@ ValueSet: ValidAgeReasonVS
 Id: valid-age-reason
 Title: "Valid Age Reason"
 Description: "Value set for reasons why a patient's age is considered valid/invalid for a vaccine."
+* ^experimental = false
 * ValidAgeReason#gracePeriod "Age: Grace Period"
 * ValidAgeReason#tooYoung "Age: Too Young"
 * ValidAgeReason#tooOld "Age: Too Old"

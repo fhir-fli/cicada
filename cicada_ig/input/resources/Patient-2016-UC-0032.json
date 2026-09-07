@@ -7,5 +7,10 @@
     }
   ],
   "gender": "female",
-  "birthDate": "1955-08-12"
+  "birthDate": "1955-08-12",
+  "meta": {
+    "profile": [
+      "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/vax-patient"
+    ]
+  }
 }

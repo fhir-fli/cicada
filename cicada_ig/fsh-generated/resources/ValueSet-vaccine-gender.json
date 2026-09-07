@@ -6,6 +6,7 @@
   "title": "Vaccine Gender",
   "description": "Value set for gender categories relevant to vaccination data.",
   "url": "http://fhirfli.dev/fhir/ig/cicada/ValueSet/vaccine-gender",
+  "experimental": false,
   "compose": {
     "include": [
       {

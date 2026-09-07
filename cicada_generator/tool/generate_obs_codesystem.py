@@ -22,7 +22,23 @@ Id: cdsi-observation-codes
 Title: "CDSI Observation Codes"
 Description:  "Observations and Conditions that are important to indications or contraindications in vaccine forecasting"
 * ^caseSensitive = true
+* ^experimental = false
 * ^content = #complete
+'''
+
+
+VALUE_SET_FSH = '''
+
+// The ConceptMaps need a ValueSet on each side: R4 binds ConceptMap.source[x]
+// and target[x] to ValueSets, not CodeSystems. Generated here, with the code
+// system, so a regeneration can never drop it (it was hand-appended to this
+// file until 2026-09-07 and one regeneration removed it).
+ValueSet: CdsiObservationCodesVS
+Id: cdsi-observation-codes-vs
+Title: "CDSI Observation Codes Value Set"
+Description: "Every CDSi observation code, as published in the supporting data."
+* ^experimental = false
+* include codes from system CdsiObservationCodes
 '''
 
 
@@ -49,6 +65,7 @@ def main(xml_path, out_path):
     with open(out_path, 'w', encoding='utf-8') as f:
         f.write(HEADER.format(version=version.group(1) if version else 'unknown'))
         f.write(body)
+        f.write(VALUE_SET_FSH)
     print(f'{len(rows)} observations written to {out_path}')
 
 

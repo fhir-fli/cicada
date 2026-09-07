@@ -6,6 +6,7 @@
   "title": "Target Dose Status Value Set",
   "description": "CDSi target dose statuses.",
   "url": "http://fhirfli.dev/fhir/ig/cicada/ValueSet/target-dose-status-vs",
+  "experimental": false,
   "compose": {
     "include": [
       {
