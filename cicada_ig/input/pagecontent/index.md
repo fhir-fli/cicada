@@ -7,7 +7,7 @@ All I've done is take all of their hard work, guidance and expertise and make it
 The CDSi Logic Specification can be found on the [CDC CDSi page](https://www.cdc.gov/iis/cdsi/). The current supporting data version implemented is **4.61-508**.
 
 First, a warning:
-This is not completely FHIR compliant. As part of this was to help myself get more familiar with [FHIR Shorthand (commonly known as FSH)](https://build.fhir.org/ig/HL7/fhir-shorthand/), there are some "Resources" I've defined (e.g. [Antigen Supporting Data](StructureDefinition-antigen-supporting-data.html) and [Schedule Supporting Data](StructureDefinition-schedule-supporting-data.html)), that are certainly NOT FHIR. However, they are an accurate representation (at least in JSON) for the data used in the CDC's "CLINICAL DECISION SUPPORT FOR IMMUNIZATION (CDSI): LOGIC SPECIFICATION FOR ACIP RECOMMENDATIONS".
+This is not completely FHIR compliant. As part of this was to help myself get more familiar with [FHIR Shorthand (commonly known as FSH)](https://build.fhir.org/ig/HL7/fhir-shorthand/), there are some "Resources" I've defined (e.g. [Antigen Supporting Data](StructureDefinition-AntigenSupportingData.html) and [Schedule Supporting Data](StructureDefinition-ScheduleSupportingData.html)), that are certainly NOT FHIR. However, they are an accurate representation (at least in JSON) for the data used in the CDC's "CLINICAL DECISION SUPPORT FOR IMMUNIZATION (CDSI): LOGIC SPECIFICATION FOR ACIP RECOMMENDATIONS".
 
 ### [Preparation](01_preparation.html)
 - Technical background on the code generator and build pipeline for anyone interested in working on this themselves.

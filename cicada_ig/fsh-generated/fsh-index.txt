@@ -14,12 +14,14 @@ CodeSystem-target-dose-status.json                            TargetDoseStatusCS
 CodeSystem-vaccine-recommendation-category.json               VaccineRecommendationCategoryCS    CodeSystem  cs_vs_vaccine_recommendation_category.fsh  1 - 9
 ConceptMap-Icd10ToCdsiObservation.json                        Icd10ToCdsiObservation             Instance    cm_icd10_to_cdsi.fsh                       6 - 1507
 ConceptMap-SnomedToCdsiObservation.json                       SnomedToCdsiObservation            Instance    cm_snomed_to_cdsi.fsh                      6 - 1757
+StructureDefinition-AntigenSupportingData.json                AntigenSupportingData              Logical     antigen_supporting_data.fsh                11 - 84
 StructureDefinition-MedicationAdministrationProfile.json      MedicationAdministrationProfile    Profile     profile_medications.fsh                    15 - 20
 StructureDefinition-MedicationDispenseProfile.json            MedicationDispenseProfile          Profile     profile_medications.fsh                    22 - 27
 StructureDefinition-MedicationRequestProfile.json             MedicationRequestProfile           Profile     profile_medications.fsh                    8 - 13
 StructureDefinition-MedicationStatementProfile.json           MedicationStatementProfile         Profile     profile_medications.fsh                    1 - 6
 StructureDefinition-ProcedureProfile.json                     ProcedureProfile                   Profile     profile_procedure.fsh                      1 - 6
 StructureDefinition-ReactionProfile.json                      ReactionProfile                    Profile     profile_allergy_intolerance.fsh            1 - 7
+StructureDefinition-ScheduleSupportingData.json               ScheduleSupportingData             Logical     schedule_supporting_data.fsh               11 - 60
 StructureDefinition-Vaccine.json                              Vaccine                            Profile     profile_vaccine_as_medication.fsh          1 - 18
 StructureDefinition-VaccineConditionFhir.json                 VaccineConditionFhir               Profile     profile_condition.fsh                      1 - 6
 StructureDefinition-VaccineObservationFhir.json               VaccineObservationFhir             Profile     profile_observation.fsh                    1 - 6
@@ -28,7 +30,6 @@ StructureDefinition-allowed-interval-status.json              AllowedIntervalSta
 StructureDefinition-allowed-vaccine-reason.json               AllowedVaccineReason               Extension   vax_dose_immunization_profile.fsh          113 - 117
 StructureDefinition-allowed-vaccine-status.json               AllowedVaccineStatus               Extension   vax_dose_immunization_profile.fsh          107 - 111
 StructureDefinition-antigen-needing-dose-ext.json             AntigenNeedingDose                 Extension   cicada_response_extensions.fsh             156 - 162
-StructureDefinition-antigen-supporting-data.json              AntigenSupportingData              Logical     antigen_supporting_data.fsh                6 - 79
 StructureDefinition-assessment-date.json                      AssessmentDate                     Extension   date_time_assessment_date.fsh              2 - 5
 StructureDefinition-begin-age.json                            BeginAge                           Extension   profile_vaccine_as_medication.fsh          20 - 24
 StructureDefinition-cicada-immunization-recommendation.json   CicadaImmunizationRecommendation   Profile     profile_forecast_recommendation.fsh        42 - 67
@@ -41,7 +42,6 @@ StructureDefinition-preferred-interval-reason.json            PreferredIntervalR
 StructureDefinition-preferred-interval-status.json            PreferredIntervalStatus            Extension   vax_dose_immunization_profile.fsh          65 - 69
 StructureDefinition-preferred-vaccine-reason.json             PreferredVaccineReason             Extension   vax_dose_immunization_profile.fsh          101 - 105
 StructureDefinition-preferred-vaccine-status.json             PreferredVaccineStatus             Extension   vax_dose_immunization_profile.fsh          95 - 99
-StructureDefinition-schedule-supporting-data.json             ScheduleSupportingData             Logical     schedule_supporting_data.fsh               6 - 55
 StructureDefinition-series-detail-ext.json                    SeriesDetail                       Extension   cicada_response_extensions.fsh             172 - 210
 StructureDefinition-series-group-ext.json                     SeriesGroup                        Extension   cicada_response_extensions.fsh             148 - 154
 StructureDefinition-series-type-ext.json                      SeriesType                         Extension   profile_forecast_recommendation.fsh        33 - 40

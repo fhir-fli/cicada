@@ -120,6 +120,14 @@
     "endLine": 1757
   },
   {
+    "outputFile": "StructureDefinition-AntigenSupportingData.json",
+    "fshName": "AntigenSupportingData",
+    "fshType": "Logical",
+    "fshFile": "antigen_supporting_data.fsh",
+    "startLine": 11,
+    "endLine": 84
+  },
+  {
     "outputFile": "StructureDefinition-MedicationAdministrationProfile.json",
     "fshName": "MedicationAdministrationProfile",
     "fshType": "Profile",
@@ -166,6 +174,14 @@
     "fshFile": "profile_allergy_intolerance.fsh",
     "startLine": 1,
     "endLine": 7
+  },
+  {
+    "outputFile": "StructureDefinition-ScheduleSupportingData.json",
+    "fshName": "ScheduleSupportingData",
+    "fshType": "Logical",
+    "fshFile": "schedule_supporting_data.fsh",
+    "startLine": 11,
+    "endLine": 60
   },
   {
     "outputFile": "StructureDefinition-Vaccine.json",
@@ -230,14 +246,6 @@
     "fshFile": "cicada_response_extensions.fsh",
     "startLine": 156,
     "endLine": 162
-  },
-  {
-    "outputFile": "StructureDefinition-antigen-supporting-data.json",
-    "fshName": "AntigenSupportingData",
-    "fshType": "Logical",
-    "fshFile": "antigen_supporting_data.fsh",
-    "startLine": 6,
-    "endLine": 79
   },
   {
     "outputFile": "StructureDefinition-assessment-date.json",
@@ -334,14 +342,6 @@
     "fshFile": "vax_dose_immunization_profile.fsh",
     "startLine": 95,
     "endLine": 99
-  },
-  {
-    "outputFile": "StructureDefinition-schedule-supporting-data.json",
-    "fshName": "ScheduleSupportingData",
-    "fshType": "Logical",
-    "fshFile": "schedule_supporting_data.fsh",
-    "startLine": 6,
-    "endLine": 55
   },
   {
     "outputFile": "StructureDefinition-series-detail-ext.json",

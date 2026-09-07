@@ -1,0 +1,276 @@
+observation	title	code	cdc_text	edition	version	inactive	effectiveTime	preferred_term
+003	Immunocompromised	370388006	Patient Immunocompromised	International	20250201	False	None	Patient immunocompromised
+004	Recipient of a hematopoietic stem cell transplant	234336002	Hemopoietic stem cell transplant [procedure]	International	20250201	False	None	Hemopoietic stem cell transplant
+004	Recipient of a hematopoietic stem cell transplant	23719005	Transplantation of bone marrow [procedure]	International	20250201	False	None	Transplantation of bone marrow
+005	Hepatitis C virus infection	50711007	Viral hepatitis type C [disorder]	International	20250201	False	None	Viral hepatitis C
+007	Pregnant	77386006	Patient currently pregnant [finding]	International	20250201	False	None	Pregnancy
+007	Pregnant	102874004	Possible pregnancy [finding]	International	20250201	True	None	Possible pregnancy
+007	Pregnant	255409004	Pregnant woman [person]	International	20250201	True	None	Pregnant woman
+009	Breastfeeding	413712001	Breastfeeding [mother] [observable entity]	International	20250201	False	None	Breastfeeding (mother)
+010	Cerebrospinal fluid leaks	230744007	Cerebrospinal fluid leak [disorder]	International	20250201	False	None	Cerebrospinal fluid leak
+011	Cochlear implants	449840001	Cochlear prosthesis in situ [finding]	International	20250201	False	None	Cochlear prosthesis in situ
+011	Cochlear implants	43252007	Cochlear prosthesis, device [physical object]	International	20250201	False	None	Cochlear prosthesis
+011	Cochlear implants	359612003	Implantation of cochlear prosthetic device [procedure]	International	20250201	False	None	Implantation of cochlear prosthetic device
+013	Severe Combined Immunodeficiency [SCID]	31323000	Severe combined immunodeficiency disease [disorder]	International	20250201	False	None	Severe combined immunodeficiency disease
+014	Diabetes	73211009	Diabetes mellitus [disorder]	International	20250201	False	None	Diabetes mellitus
+015	Chronic liver disease	328383001	Chronic liver disease [disorder]	International	20250201	False	None	Chronic liver disease
+015	Chronic liver disease	19943007	Cirrhosis of liver [disorder]	International	20250201	False	None	Cirrhosis of liver
+016	Chronic heart disease	128238001	Chronic heart disease [disorder]	International	20250201	False	None	Chronic heart disease
+016	Chronic heart disease	42343007	Congestive heart failure [disorder]	International	20250201	False	None	Congestive heart failure
+016	Chronic heart disease	57809008	Myocardial disease [disorder]	International	20250201	False	None	Myocardial disease
+016	Chronic heart disease	12770006	Cyanotic congenital heart disease [disorder]	International	20250201	False	None	Cyanotic congenital heart disease
+016	Chronic heart disease	53741008	Coronary arteriosclerosis [disorder]	International	20250201	False	None	Coronary arteriosclerosis
+016	Chronic heart disease	79619009	Mitral valve stenosis [disorder]	International	20250201	False	None	Mitral valve stenosis
+016	Chronic heart disease	698247007	Cardiac arrhythmia [disorder]	International	20250201	False	None	Cardiac arrhythmia
+017	Chronic lung disease	413839001	Chronic lung disease [disorder]	International	20250201	False	None	Chronic lung disease
+017	Chronic lung disease	13645005	Chronic obstructive lung disease [disorder]	International	20250201	False	None	Chronic obstructive pulmonary disease
+017	Chronic lung disease	87433001	Pulmonary emphysema [disorder]	International	20250201	False	None	Pulmonary emphysema
+017	Chronic lung disease	39871006	Chronic respiratory failure [disorder]	International	20250201	False	None	Chronic respiratory failure
+017	Chronic lung disease	427896006	Chronic respiratory insufficiency [disorder]	International	20250201	False	None	Chronic respiratory insufficiency
+017	Chronic lung disease	17097001	Chronic disease of respiratory system [disorder]	International	20250201	False	None	Chronic disease of respiratory system
+018	Laboratory Evidence of Immunity or confirmation of Hepatitis A disease	278971009	Hepatitis A Immune [Finding]	International	20250201	False	None	Hepatitis A immune
+019	Laboratory Evidence of Immunity or confirmation of Hepatitis B disease	271511000	Hepatitis B Immune [Finding]	International	20250201	False	None	Hepatitis B immune
+020	Laboratory Evidence of Immunity for Measles	371111005	Measles Immune [finding]	International	20250201	False	None	Measles immune
+021	Laboratory Evidence of Immunity for Mumps	371112003	Mumps Immune [finding]	International	20250201	False	None	Mumps immune
+022	Laboratory Evidence of Immunity for Rubella	278968001	Rubella Immune [finding]	International	20250201	False	None	Rubella immune
+023	Laboratory Evidence of Immunity or confirmation of Varicella disease	371113008	Varicella Immune	International	20250201	False	None	Varicella immune
+024	Healthcare provider verified history of or diagnosis of Varicella	38907003	Varicella [Disorder]	International	20250201	False	None	Varicella
+025	Healthcare provider verified history or diagnosis of Herpes Zoster	4740000	Herpes Zoster [Disorder]	International	20250201	False	None	Herpes zoster
+026	Persons with perinatal HIV infection who do not have evidence of severe immunosuppression and who were vaccinated with MMR before establishment of antiviral therapy [ART]	86406008	Human immunodeficiency virus infection [disorder]	International	20250201	False	None	Human immunodeficiency virus infection
+026	Persons with perinatal HIV infection who do not have evidence of severe immunosuppression and who were vaccinated with MMR before establishment of antiviral therapy [ART]	427314002	Antiviral therapy [procedure]	International	20250201	False	None	Antiviral therapy
+027	Asthma	390798007	Asthma finding [finding]	International	20250201	False	None	Asthma finding
+027	Asthma	195967001	Asthma [disorder]	International	20250201	False	None	Asthma
+028	Intussusception	35327006	Intussusception [morphologic abnormality]	International	20250201	True	None	Intussusception
+028	Intussusception	49723003	Intussusception of intestine [disorder]	International	20250201	False	None	Intussusception of intestine
+029	Acute gastroenteritis	69776003	Acute gastroenteritis [disorder]	International	20250201	False	None	Acute gastroenteritis
+031	Tuberculosis	56717001	Tuberculosis [disorder]	International	20250201	False	None	Tuberculosis
+033	Taken influenza antiviral medications within the previous 48 hours	372763006	Amantadine [substance]	International	20250201	False	None	Amantadine
+033	Taken influenza antiviral medications within the previous 48 hours	51361008	Amantadine [product]	International	20250201	False	None	Amantadine-containing product
+033	Taken influenza antiviral medications within the previous 48 hours	372532009	Rimantadine [substance]	International	20250201	False	None	Rimantadine
+033	Taken influenza antiviral medications within the previous 48 hours	108712009	Rimantadine [product]	International	20250201	False	None	Rimantadine-containing product
+033	Taken influenza antiviral medications within the previous 48 hours	387010007	Zanamivir [substance]	International	20250201	False	None	Zanamivir
+033	Taken influenza antiviral medications within the previous 48 hours	116100000	Zanamivir [product]	International	20250201	False	None	Zanamivir-containing product
+033	Taken influenza antiviral medications within the previous 48 hours	412261005	Oseltamivir [substance]	International	20250201	False	None	Oseltamivir
+033	Taken influenza antiviral medications within the previous 48 hours	386142008	Oseltamivir [product]	International	20250201	False	None	Oseltamivir-containing product
+034	Receiving long-term aspirin therapy	405742008	Aspirin therapy finding [finding]	International	20250201	False	None	Aspirin therapy finding
+036	Men who have sex with men	76102007	Male homosexual [finding]	International	20250201	False	None	Male homosexual
+036	Men who have sex with men	225531006	Homosexual behavior [finding]	International	20250201	False	None	Homosexual behavior
+037	Not in a long-term, mutually monogamous relationship	225516002	Multiple sexual contacts [finding]	International	20250201	False	None	Multiple sexual contacts
+037	Not in a long-term, mutually monogamous relationship	228460004	Multiple current sexual partners [finding]	International	20250201	False	None	Multiple current sexual partners
+037	Not in a long-term, mutually monogamous relationship	228466005	Commitment to sexual relationship [observable entity]	International	20250201	False	None	Commitment to sexual relationship
+038	Sex partner of Hepatitis B surface antigen-positive persons	225517006	Sexual partners [observable entity]	International	20250201	False	None	Sexual partners
+038	Sex partner of Hepatitis B surface antigen-positive persons	11723008	Contact with [contextual qualifier] [qualifier value]	International	20250201	False	None	Contact with
+038	Sex partner of Hepatitis B surface antigen-positive persons	165806002	Hepatitis B surface antigen positive [finding]	International	20250201	False	None	Hepatitis B surface antigen detected
+039	Receives treatment for STD	305489005	Under care of genitourinary medicine physician [finding]	International	20250201	False	None	Under care of genitourinary medicine physician
+039	Receives treatment for STD	305679000	Seen by genitourinary medicine physician [finding]	International	20250201	False	None	Seen by genitourinary medicine physician
+039	Receives treatment for STD	8098009	Sexually transmitted infectious disease [disorder]	International	20250201	False	None	Sexually transmitted infectious disease
+040	Illicit drug use	307052004	Illicit drug use [finding]	International	20250201	False	None	Illicit drug use
+040	Illicit drug use	228366006	Finding relating to drug misuse behavior [finding]	International	20250201	False	None	Finding relating to drug misuse behavior
+041	Illicit injection drug use	226034001	Injecting drug user [finding]	International	20250201	False	None	Injecting drug user
+041	Illicit injection drug use	228388006	Intravenous drug user  [finding]	International	20250201	False	None	Intravenous drug user
+041	Illicit injection drug use	145101000119102	Intravenous cocaine abuse [disorder]	International	20250201	False	None	Harmful pattern of use of intravenous cocaine
+041	Illicit injection drug use	403746009	Skin lesion due to intravenous drug abuse [disorder]	International	20250201	False	None	Skin lesion due to intravenous drug abuse
+041	Illicit injection drug use	860699005	Deep vein thrombosis of lower extremity due to intravenous drug use [disorder]	International	20250201	False	None	Deep vein thrombosis of lower extremity due to intravenous drug use
+042	Smoke cigarettes	77176002	Smoker [finding]	International	20250201	False	None	Smoker
+043	Alcoholism	228281002	Problem drinker [finding]	International	20250201	False	None	Problem drinker
+043	Alcoholism	7200002	Alcoholism [disorder]	International	20250201	False	None	Alcoholism
+050	Microbiologists routinely exposed to Neisseria meningitidis	159138004	Microbiologist [occupation]	International	20250201	False	None	Microbiologist
+050	Microbiologists routinely exposed to Neisseria meningitidis	14698002	Medical microbiologist [occupation]	International	20250201	False	None	Medical microbiologist
+050	Microbiologists routinely exposed to Neisseria meningitidis	24932003	Exposure to [contextual qualifier] [qualifier value]	International	20250201	False	None	Exposure to
+050	Microbiologists routinely exposed to Neisseria meningitidis	17872004	Neisseria meningitidis [organism]	International	20250201	False	None	Neisseria meningitidis
+051	Microbiology laboratorians who work frequently with S. typhi	159138004	Microbiologist [occupation]	International	20250201	False	None	Microbiologist
+051	Microbiology laboratorians who work frequently with S. typhi	14698002	Medical microbiologist [occupation]	International	20250201	False	None	Medical microbiologist
+051	Microbiology laboratorians who work frequently with S. typhi	159282002	Laboratory technician [occupation]	International	20250201	False	None	Laboratory technician
+051	Microbiology laboratorians who work frequently with S. typhi	24932003	Exposure to [contextual qualifier] [qualifier value]	International	20250201	False	None	Exposure to
+051	Microbiology laboratorians who work frequently with S. typhi	5595000	Salmonella Typhi [organism]	International	20250201	False	None	Salmonella enterica subspecies enterica serovar Typhi
+052	Laboratory personnel who might be exposed to YFV	159282002	Laboratory technician [occupation]	International	20250201	False	None	Laboratory technician
+052	Laboratory personnel who might be exposed to YFV	24932003	Exposure to [contextual qualifier] [qualifier value]	International	20250201	False	None	Exposure to
+052	Laboratory personnel who might be exposed to YFV	26630006	Yellow fever virus [organism]	International	20250201	False	None	Yellow fever virus
+053	Rabies researchers	159282002	Laboratory technician [occupation]	International	20250201	False	None	Laboratory technician
+053	Rabies researchers	24932003	Exposure to [contextual qualifier] [qualifier value]	International	20250201	False	None	Exposure to
+053	Rabies researchers	59881000	Rabies virus [organism]	International	20250201	False	None	Rabies virus
+054	Laboratory workers who handle specimens that might contain polioviruses	159282002	Laboratory technician [occupation]	International	20250201	False	None	Laboratory technician
+054	Laboratory workers who handle specimens that might contain polioviruses	24932003	Exposure to [contextual qualifier] [qualifier value]	International	20250201	False	None	Exposure to
+054	Laboratory workers who handle specimens that might contain polioviruses	44172002	Human poliovirus [organism]	International	20250201	False	None	Human poliovirus
+055	Health care personnel	223366009	Healthcare professional [occupation]	International	20250201	False	None	Healthcare professional
+056	Health-care workers who have close contact with patients who might be excreting wild polioviruses	223366009	Healthcare professional [occupation]	International	20250201	False	None	Healthcare professional
+056	Health-care workers who have close contact with patients who might be excreting wild polioviruses	24932003	Exposure to [contextual qualifier] [qualifier value]	International	20250201	False	None	Exposure to
+056	Health-care workers who have close contact with patients who might be excreting wild polioviruses	44172002	Human poliovirus [organism]	International	20250201	False	None	Human poliovirus
+057	Public safety worker exposed to blood or infection body fluids	26369006	Public health nurse [occupation]	International	20250201	False	None	Public health nurse
+057	Public safety worker exposed to blood or infection body fluids	68867008	Public health dentist [occupation]	International	20250201	False	None	Public health dentist
+057	Public safety worker exposed to blood or infection body fluids	307969004	Public health officer [occupation]	International	20250201	False	None	Public health officer
+057	Public safety worker exposed to blood or infection body fluids	56466003	Public health physician [occupation]	International	20250201	False	None	Public health physician
+057	Public safety worker exposed to blood or infection body fluids	56079002	Public health veterinarian [occupation]	International	20250201	False	None	Public health veterinarian
+057	Public safety worker exposed to blood or infection body fluids	60008001	Public health nutritionist [occupation]	International	20250201	False	None	Public health nutritionist
+057	Public safety worker exposed to blood or infection body fluids	24932003	Exposure to [contextual qualifier] [qualifier value]	International	20250201	False	None	Exposure to
+057	Public safety worker exposed to blood or infection body fluids	87612001	Blood [substance]	International	20250201	False	None	Blood
+057	Public safety worker exposed to blood or infection body fluids	32457005	Body fluid [substance]	International	20250201	False	None	Body fluid
+059	Occupational exposure for Hepatitis A	223366009	Healthcare professional [occupation]	International	20250201	False	None	Healthcare professional
+059	Occupational exposure for Hepatitis A	158942005	Residential child care worker [occupation]	International	20250201	False	None	Residential child care worker
+059	Occupational exposure for Hepatitis A	158939004	Child care officer [occupation]	International	20250201	False	None	Child care officer
+059	Occupational exposure for Hepatitis A	73851001	Plumber [general] [occupation]	International	20250201	False	None	Plumber (general)
+059	Occupational exposure for Hepatitis A	160157004	Sewerman [occupation]	International	20250201	False	None	Sewerman
+059	Occupational exposure for Hepatitis A	266006009	Food/drink processor [occupation]	International	20250201	False	None	Food and drink processor
+059	Occupational exposure for Hepatitis A	274272004	Catering services occupation [occupation]	International	20250201	False	None	Catering services occupation
+059	Occupational exposure for Hepatitis A	160133004	Packer - food/garden produce [occupation]	International	20250201	False	None	Packer - food/garden produce
+060	Veterinarians and their staff	265940000	Animal health occupation [occupation]	International	20250201	False	None	Animal health occupation
+061	Animal handlers	159091009	Trainer - performing animals [occupation]	International	20250201	False	None	Trainer - performing animals
+062	Persons whose activities bring them into frequent contact with rabies virus or potentially rabid animals	24932003	Exposure to [contextual qualifier] [qualifier value]	International	20250201	False	None	Exposure to
+062	Persons whose activities bring them into frequent contact with rabies virus or potentially rabid animals	59881000	Rabies virus [organism]	International	20250201	False	None	Rabies virus
+063	Post secondary student	65853000	Student [occupation]	International	20250201	False	None	Student
+063	Post secondary student	257561002	Further education establishment [environment]	International	20250201	False	None	Further education establishment
+066	Chronic renal failure	90688005	Chronic renal failure syndrome [disorder]	International	20250201	False	None	Chronic renal failure
+068	In drug abuse treatment and prevention facility	20078004	Substance abuse treatment center [environment]	International	20250201	False	None	Substance abuse treatment center
+069	In correctional facility	257656006	Penal institution [environment]	International	20250201	False	None	Penal institution
+070	Persons at risk during an outbreak	410519009	At risk context [qualifier value]	International	20250201	True	None	At risk
+070	Persons at risk during an outbreak	443684005	Disease outbreak [event]	International	20250201	False	None	Disease outbreak
+071	Household contact with hepatitis B surface antigen-positive persons	11723008	Contact with [contextual qualifier] [qualifier value]	International	20250201	False	None	Contact with
+071	Household contact with hepatitis B surface antigen-positive persons	165806002	Hepatitis B surface antigen positive [finding]	International	20250201	False	None	Hepatitis B surface antigen detected
+072	Intimate exposure to a documented S. typhi carrier	170484009	Typhoid carrier [finding]	International	20250201	False	None	Typhoid carrier
+075	Transgender person	12271241000119109	Transgender identify [finding]	International	20250201	True	None	Transgender identity
+076	Progressive neurologic disorder	84757009	Epilepsy [disorder]	International	20250201	False	None	Epilepsy
+079	Encephalopathy not attributable to another identifiable cause within 7 days of administration of a previous dose of Tdap, DTP, or DTaP vaccine	192711008	Post diphtheria vaccination encephalitis [disorder]	International	20250201	False	None	Post diphtheria vaccination encephalitis
+079	Encephalopathy not attributable to another identifiable cause within 7 days of administration of a previous dose of Tdap, DTP, or DTaP vaccine	192710009	Post tetanus vaccination encephalitis [disorder]	International	20250201	False	None	Post tetanus vaccination encephalitis
+079	Encephalopathy not attributable to another identifiable cause within 7 days of administration of a previous dose of Tdap, DTP, or DTaP vaccine	192712001	Post pertussis vaccination encephalitis [disorder]	International	20250201	False	None	Post pertussis vaccination encephalitis
+080	Adverse reaction to vaccine component	293104008	Vaccines adverse reaction [disorder]	International	20250201	False	None	Vaccine adverse reaction
+081	Severe allergic reaction after previous dose of Polio	293117006	Poliomyelitis vaccine adverse reaction [disorder]	International	20250201	False	None	Adverse reaction to poliomyelitis vaccine
+082	Severe allergic reaction after previous dose of Japanese Encephalitis	451301000124103	Adverse reaction caused by Japanese encephalitis virus vaccine [disorder]	US	20250901	False	None	Adverse reaction to component of vaccine product containing Japanese encephalitis virus antigen
+083	Severe allergic reaction after previous dose of Rotavirus	429301000124101	Adverse reaction to rotavirus vaccine [disorder]	US	20250901	False	None	Adverse reaction to component of Vaccine product containing Rotavirus antigen
+084	Severe allergic reaction after previous dose of Typhoid	293122006	Typhoid vaccine adverse reaction [disorder]	International	20250201	False	None	Adverse reaction to typhoid vaccine
+085	Severe allergic reaction after previous dose of Influenza	420113004	Influenza virus vaccine adverse reaction [disorder]	International	20250201	False	None	Adverse reaction to influenza virus vaccine
+086	Severe allergic reaction after previous dose of Pertussis	293115003	Pertussis vaccine adverse reaction [disorder]	International	20250201	False	None	Adverse reaction to pertussis vaccine
+087	Severe allergic reaction after previous dose of Diphtheria	219085007	Adverse reaction to diphtheria vaccine [disorder]	International	20250201	False	None	Adverse reaction to diphtheria vaccine
+088	Severe allergic reaction after previous dose of Tetanus	219084006	Adverse reaction to tetanus vaccine [disorder]	International	20250201	False	None	Adverse reaction to tetanus vaccine
+089	Severe allergic reaction after previous dose of Varicella	451331000124106	Adverse reaction caused by varicella virus live vaccine [disorder]	US	20250901	False	None	Adverse reaction to component of vaccine product containing only live attenuated Human alphaherpesvirus 3 antigen
+090	Severe allergic reaction after previous dose of HPV	429311000124103	Adverse reaction to human papillomavirus vaccine [disorder]	US	20250901	True	None	Adverse reaction to component of vaccine product containing Human papillomavirus antigen
+091	Severe allergic reaction after previous dose of Measles	219096004	Adverse reaction to measles vaccine [disorder]	International	20250201	False	None	Adverse reaction to measles vaccine
+092	Severe allergic reaction after previous dose of Mumps	293114004	Mumps vaccine adverse reaction [disorder]	International	20250201	False	None	Adverse reaction to mumps vaccine
+093	Severe allergic reaction after previous dose of Rubella	293119009	Rubella vaccine adverse reaction [disorder]	International	20250201	False	None	Adverse reaction to rubella vaccine
+094	Severe allergic reaction after previous dose of Pneumococcal	293116002	Pneumococcal vaccine adverse reaction [disorder]	International	20250201	False	None	Adverse reaction to pneumococcal vaccine
+095	Severe allergic reaction after previous dose of Meningococcal	219088009	Adverse reaction to meningococcal vaccine [disorder]	International	20250201	False	None	Adverse reaction to meningococcal vaccine
+095	Severe allergic reaction after previous dose of Meningococcal	451111000124103	Adverse reaction caused by meningococcal conjugate vaccine [disorder]	US	20250901	False	None	Adverse reaction to component of vaccine product containing only Neisseria meningitidis conjugated antigen
+096	Severe allergic reaction after previous dose of Hepatitis A	293126009	Hepatitis A vaccine adverse reaction [disorder]	International	20250201	False	None	Adverse reaction to hepatitis A vaccine
+097	Severe allergic reaction after previous dose of Hepatitis B	293110008	Hepatitis B vaccine adverse reaction [disorder]	International	20250201	False	None	Adverse reaction to hepatitis B vaccine
+098	Severe allergic reaction after previous dose of Hib	293127000	Haemophilus influenzae Type B vaccine adverse reaction [disorder]	International	20250201	False	None	Adverse reaction to Haemophilus influenzae type b vaccine
+099	Severe allergic reaction after previous dose of Yellow Fever	219095000	Adverse reaction to yellow fever vaccine [disorder]	International	20250201	False	None	Adverse reaction to yellow fever vaccine
+100	Severe allergic reaction after previous dose of live zoster	451291000124104	Adverse reaction caused by zoster vaccine [disorder]	US	20250901	True	None	Adverse reaction to component of vaccine product containing Human alphaherpesvirus 3 antigen
+101	Allergic reaction to egg protein	213020009	Egg protein allergy [disorder]	International	20250201	False	None	Allergy to egg protein
+101	Allergic reaction to egg protein	91930004	Allergy to eggs [disorder]	International	20250201	True	None	Allergy to edible egg
+102	Severe allergic reaction to gelatin	293309006	Gelatin adverse reaction [disorder]	International	20250201	False	None	Gelatin adverse reaction
+102	Severe allergic reaction to gelatin	294847001	Gelatin allergy [disorder]	International	20250201	False	None	Allergy to gelatin
+104	Allergic reaction to latex	300916003	Latex allergy [disorder]	International	20250201	True	None	Allergy to latex
+104	Allergic reaction to latex	441593005	Anaphylaxis due to latex [disorder]	International	20250201	True	None	Anaphylaxis due to latex
+106	Severe allergic reaction to gentamicin	419522004	Gentamycin sensitivity [disorder]	International	20250201	True	None	Gentamicin sensitivity
+106	Severe allergic reaction to gentamicin	420094007	Gentamicin adverse reaction [disorder]	International	20250201	False	None	Gentamicin adverse reaction
+106	Severe allergic reaction to gentamicin	294469003	Gentamicin allergy [disorder]	International	20250201	False	None	Allergy to gentamicin
+107	Severe allergic reaction to neomycin	294468006	Neomycin allergy [disorder]	International	20250201	False	None	Allergy to neomycin
+107	Severe allergic reaction to neomycin	292927007	Neomycin adverse reaction [disorder]	International	20250201	False	None	Neomycin adverse reaction
+108	Severe allergic reaction to streptomycin	294466005	Streptomycin allergy [disorder]	International	20250201	False	None	Allergy to streptomycin
+108	Severe allergic reaction to streptomycin	292925004	Streptomycin adverse reaction [disorder]	International	20250201	False	None	Streptomycin adverse reaction
+109	Severe allergic reaction to polymyxin B	294530006	Polymyxin B allergy [disorder]	International	20250201	False	None	Allergy to polymyxin B
+109	Severe allergic reaction to polymyxin B	292992006	Polymyxin B adverse reaction [disorder]	International	20250201	False	None	Polymyxin B adverse reaction
+110	Hypersensitivity to yeast	703936006	Allergy to yeast [disorder]	International	20250201	True	None	Allergy to yeast antigen
+113	Severe allergic reaction after previous dose of Rabies	293118001	Rabies vaccine adverse reaction [disorder]	International	20250201	False	None	Adverse reaction to rabies vaccine
+114	End stage renal disease	46177005	End stage renal disease [disorder]	International	20250201	False	None	End-stage renal disease
+114	End stage renal disease	443143006	Dependence on hemodialysis [finding]	International	20250201	False	None	Dependence on haemodialysis
+114	End stage renal disease	714749008	Continuous renal replacement therapy [procedure]	International	20250201	False	None	Continuous renal replacement therapy
+115	Severe allergic reaction to protamine sulfate	64520006	Protamine sulfate [substance]	International	20250201	False	None	Protamine sulfate
+115	Severe allergic reaction to protamine sulfate	294278007	Protamine allergy [disorder]	International	20250201	False	None	Allergy to protamine
+116	Severe allergic reaction after previous dose of Meningococcal B	451281000124102	Adverse reaction caused by meningococcal group B vaccine [disorder]	US	20250901	False	None	Adverse reaction to component of vaccine product containing only Neisseria meningitidis serogroup B antigen
+119	Severe allergic reaction after previous dose of cholera	219082005	Adverse reaction caused by cholera vaccine [disorder]	International	20250201	False	None	Adverse reaction to cholera vaccine
+121	Homelessness	32911000	Homeless [finding]	International	20250201	False	None	Homeless
+132	RBC [adenine-saline added] blood transfusion	116859006	Transfusion of blood product [procedure]	International	20250201	False	None	Transfusion of blood product
+133	Packed RBC blood transfusion	116859006	Transfusion of blood product [procedure]	International	20250201	False	None	Transfusion of blood product
+134	Whole blood transfusion	116859006	Transfusion of blood product [procedure]	International	20250201	False	None	Transfusion of blood product
+135	Plasma/platelet products blood transfusion	13569004	Transfusion of plasma [procedure]	International	20250201	False	None	Transfusion of plasma
+135	Plasma/platelet products blood transfusion	12719002	Platelet transfusion [procedure]	International	20250201	False	None	Platelet transfusion
+145	B-lymphocyte [humoral] - Severe antibody deficiencies	65880007	X-linked agammaglobulinemia [disorder]	International	20250201	False	None	X-linked agammaglobulinemia
+145	B-lymphocyte [humoral] - Severe antibody deficiencies	23238000	Common variable agammaglobulinemia [disorder]	International	20250201	False	None	Common variable agammaglobulinemia
+146	B-lymphocyte [humoral] - Less severe antibody deficiencies	190979003	Selective immunoglobulin A deficiency [disorder]	International	20250201	False	None	Selective immunoglobulin A deficiency
+146	B-lymphocyte [humoral] - Less severe antibody deficiencies	123785006	Immunoglobulin G subclass deficiency [finding]	International	20250201	False	None	Immunoglobulin G subclass deficiency
+147	T-lymphocyte [cell-mediated and humoral] - Complete defects	31323000	Severe combined immunodeficiency disease [disorder]	International	20250201	False	None	Severe combined immunodeficiency disease
+147	T-lymphocyte [cell-mediated and humoral] - Complete defects	77128003	DiGeorge sequence [disorder]	International	20250201	True	None	DiGeorge sequence
+148	T-lymphocyte [cell-mediated and humoral] - Partial defects	77128003	DiGeorge sequence [disorder]	International	20250201	True	None	DiGeorge sequence
+148	T-lymphocyte [cell-mediated and humoral] - Partial defects	36070007	Wiskott-Aldrich syndrome [disorder]	International	20250201	False	None	Wiskott-Aldrich syndrome
+148	T-lymphocyte [cell-mediated and humoral] - Partial defects	68504005	Ataxia-telangiectasia syndrome [disorder]	International	20250201	False	None	Ataxia-telangiectasia syndrome
+151	Persistent complement, properdin, or factor B deficiency	24743004	Complement deficiency disease [disorder]	International	20250201	False	None	Complement deficiency disease
+151	Persistent complement, properdin, or factor B deficiency	81166004	Properdin deficiency disease [disorder]	International	20250201	False	None	Properdin deficiency disease
+151	Persistent complement, properdin, or factor B deficiency	234605000	Factor B deficiency [disorder]	International	20250201	False	None	Factor B deficiency
+152	Phagocytic function - Chronic granulomatous disease	387759001	Chronic granulomatous disease [disorder]	International	20250201	False	None	Chronic granulomatous disease
+153	Phagocytic function - Leukocyte adhesion defect, and myeloperoxidase deficiency	77358003	Congenital leukocyte adherence deficiency [disorder]	International	20250201	True	None	Congenital leukocyte adherence deficiency
+153	Phagocytic function - Leukocyte adhesion defect, and myeloperoxidase deficiency	234433009	Myeloperoxidase deficiency [disorder]	International	20250201	False	None	Myeloperoxidase deficiency
+154	HIV/AIDS - severely immunocompromised	62479008	Acquired immune deficiency syndrome [disorder]	International	20250201	False	None	AIDS
+155	HIV/AIDS - not severely immunocompromised	62479008	Acquired immune deficiency syndrome [disorder]	International	20250201	False	None	AIDS
+157	Solid organ transplantation	313039003	Solid organ transplant [procedure]	International	20250201	False	None	Solid organ transplant to recipient
+158	Immunosuppressive therapy	86553008	Immunosuppressive therapy [procedure]	International	20250201	False	None	Immunosuppressive therapy
+159	Radiation therapy	53438000	Radiation therapy procedure or service [procedure]	International	20250201	True	None	Radiation therapy procedure or service
+160	Anatomical or functional asplenia	707147002	Asplenia [disorder]	International	20250201	False	None	Asplenia
+161	Chronic kidney disease	709044004	Chronic kidney disease [disorder]	International	20250201	False	None	Chronic kidney disease
+167	Nephrotic Syndrome	52254009	Nephrotic syndrome [disorder]	International	20250201	False	None	Nephrotic syndrome
+168	Chemotherapy	367336001	Chemotherapy [procedure]	International	20250201	False	None	Chemotherapy
+169	History of sexual abuse or assault	213017001	Sexual abuse [event]	International	20250201	False	None	Sexual abuse
+169	History of sexual abuse or assault	422608009	Sexual assault [finding]	International	20250201	True	None	Sexual assault
+169	History of sexual abuse or assault	248110007	Sexual assault [event]	International	20250201	False	None	Sexual assault
+170	Onset of pregnancy	248986005	Estimated date of conception [observable entity]	International	20250201	False	None	Estimated date of conception
+172	Severe allergic reaction after previous dose of recombinant zoster	451291000124104	Adverse reaction caused by zoster vaccine [disorder]	US	20250901	True	None	Adverse reaction to component of vaccine product containing Human alphaherpesvirus 3 antigen
+178	Leukemia	93143009	Leukemia, disease [disorder]	International	20250201	False	None	Leukaemia
+179	Lymphoma	399600009	Lymphoma [finding]	International	20250201	False	None	Lymphoma finding
+180	Hodgkin's disease	118599009	Hodgkin's disease [disorder]	International	20250201	False	None	Hodgkin's disease (clinical)
+181	Multiple myeloma	109989006	Multiple myeloma [disorder]	International	20250201	False	None	Multiple myeloma
+186	HIV Infection	86406008	Human immunodeficiency virus infection [disorder]	International	20250201	False	None	Human immunodeficiency virus infection
+191	Receipt of CAR-T-cell therapy	1156961008	Chimeric antigen receptor T-cell immunotherapy [procedure]	International	20250201	False	None	Chimeric antigen receptor T-cell immunotherapy
+198	Cancer	363346000	Malignant neoplastic disease [disorder]	International	20250201	False	None	Malignant neoplastic disease
+199	Interstitial lung disease	233703007	Interstitial lung disease [disorder]	International	20250201	False	None	Interstitial lung disease
+200	Cystic fibrosis	190905008	cystic fibrosis [disorder]	International	20250201	False	None	Cystic fibrosis
+201	Pulmonary hypertension	70995007	Pulmonary hypertension [disorder]	International	20250201	False	None	Pulmonary hypertension
+202	Dementia	52448006	Dimensia [disorder]	International	20250201	False	None	Dementia
+203	Down syndrome	41040004	Complete trisomy 21 syndrome [disorder]	International	20250201	False	None	Complete trisomy 21 syndrome
+204	Obesity	238131007	Overweight [finding]	International	20250201	False	None	Overweight
+204	Obesity	414915002	Obese [finding]	International	20250201	False	None	Obese
+204	Obesity	83911000119104	Severe obesity [disorder]	International	20250201	False	None	Severe obesity
+205	Thalassemia	40108008	Thalassemia [disorder]	International	20250201	False	None	Thalassemia
+206	Cerebrovascular disease	62914000	Cerebrovascular disease [disorder]	International	20250201	False	None	Cerebrovascular disease
+214	Chronic obstructive pulmonary disease	13645005	Chronic obstructive lung disease [disorder]	International	20250201	False	None	Chronic obstructive pulmonary disease
+215	Emphysema	87433001	Pulmonary emphysema [disorder]	International	20250201	False	None	Pulmonary emphysema
+245	American Indian or Alaskan Native	413490006	American Indian or Alaska Native [racial group]	International	20250201	True	None	American Indian or Alaska native
+253	Moderate persistent or severe persistent asthma	370219009	Moderate Asthma [disorder]	International	20250201	False	None	Moderate asthma
+253	Moderate persistent or severe persistent asthma	427295004	Moderate Persistent Asthma [disorder]	International	20250201	False	None	Moderate persistent asthma
+253	Moderate persistent or severe persistent asthma	370221004	Severe Asthma [disorder]	International	20250201	False	None	Severe asthma
+253	Moderate persistent or severe persistent asthma	426656000	Severe Persistent Asthma [disorder]	International	20250201	False	None	Severe persistent asthma
+253	Moderate persistent or severe persistent asthma	5281000124103	Persistent Asthma [disorder]	US	20250901	False	None	Persistent asthma
+253	Moderate persistent or severe persistent asthma	2360001000004109	Steroid dependent asthma [disorder]	International	20250201	False	None	Steroid dependent asthma
+254	Chronic cardiovascular disease	128292002	Chronic disease of cardiovascular system [disorder]	International	20250201	False	None	Chronic disease of cardiovascular system
+254	Chronic cardiovascular disease	400047006	Peripheral vascular disease [disorder]	International	20250201	False	None	Peripheral vascular disease
+254	Chronic cardiovascular disease	21631000119105	Limb ischemia [disorder]	International	20250201	False	None	Limb ischaemia
+254	Chronic cardiovascular disease	63491006	Intermittent claudication [finding]	International	20250201	False	None	Intermittent claudication
+254	Chronic cardiovascular disease	65198009	Arterial thrombosis [disorder]	International	20250201	False	None	Arterial thrombosis
+254	Chronic cardiovascular disease	111354009	Chronic vascular insufficiency of intestine [disorder]	International	20250201	False	None	Chronic vascular insufficiency of intestine
+254	Chronic cardiovascular disease	70995007	Pulmonary hypertension [disorder]	International	20250201	False	None	Pulmonary hypertension
+254	Chronic cardiovascular disease	59282003	Pulmonary embolism [disorder]	International	20250201	False	None	Pulmonary embolism
+254	Chronic cardiovascular disease	17920008	Portal vein thrombosis [disorder]	International	20250201	False	None	Portal vein thrombosis
+254	Chronic cardiovascular disease	67362008	Aortic aneurysm [disorder]	International	20250201	False	None	Aortic aneurysm
+254	Chronic cardiovascular disease	233996000	Type II dissection of thoracic aorta [disorder]	International	20250201	False	None	Type II dissection of thoracic aorta
+254	Chronic cardiovascular disease	301899003	Dissection of proximal aorta [disorder]	International	20250201	False	None	Dissection of proximal aorta
+254	Chronic cardiovascular disease	233997009	Dissection of distal aorta [disorder]	International	20250201	True	None	Dissection of distal aorta
+254	Chronic cardiovascular disease	27631000146108	Dissection of aortic arch [disorder]	International	20250201	False	None	Dissection of aortic arch
+254	Chronic cardiovascular disease	45894003	Medionecrosis of aorta [disorder]	International	20250201	False	None	Medionecrosis of aorta
+254	Chronic cardiovascular disease	1303726005	Dissection of infrarenal aorta [disorder]	International	20250201	False	None	Infrarenal aortic dissection
+256	Diabetes mellitus complicated by chronic kidney disease	127013003	Disorder of kidney due to diabetes mellitus [disorder]	International	20250201	False	None	Disorder of kidney due to diabetes mellitus
+257	Severe obesity	83911000119104	Severe obesity [disorder]	International	20250201	False	None	Severe obesity
+257	Severe obesity	408512008	Body mass index 40+ - severely obese [finding]	International	20250201	False	None	Body mass index 40+ - severely obese
+258	Chronic hematologic disorders	414027002	Disorder of hematopoietic structure [disorder]	International	20250201	False	None	Disorder of hematopoietic structure
+258	Chronic hematologic disorders	417357006	Sickling disorder due to hemoglobin S [disorder]	International	20250201	False	None	Sickling disorder due to hemoglobin S
+258	Chronic hematologic disorders	40108008	Thalassemia [disorder]	International	20250201	False	None	Thalassemia
+259	Sickle cell disease	417357006	Sickling disorder due to hemoglobin S [disorder]	International	20250201	False	None	Sickling disorder due to hemoglobin S
+260	Neurologic or neuromuscular conditions causing impaired airway clearance or respiratory muscle weakness	350586651000119105	Chronic respiratory failure due to neuromuscular disease [disorder]	International	20250201	False	None	Chronic respiratory failure due to neuromuscular disease
+260	Neurologic or neuromuscular conditions causing impaired airway clearance or respiratory muscle weakness	67750007	Ineffective airway clearance [finding]	International	20250201	False	None	Ineffective airway clearance
+261	Resident of a nursing home	160734000	Lives in nursing home [finding]	International	20250201	False	None	Lives in nursing home
+262	Frailty	248279007	Frailty [finding]	International	20250201	False	None	Frailty
+263	Diabetes mellitus complicated by neuropathy	230572002	Neuropathy due to diabetes mellitus [disorder]	International	20250201	False	None	Neuropathy due to diabetes mellitus
+264	Diabetes mellitus complicated by retinopathy	4855003	Retinopathy due to diabetes mellitus [disorder]	International	20250201	False	None	Retinopathy due to diabetes mellitus
+266	Diabetes requiring treatment with insulin	170747006	Diabetic on insulin [finding]	International	20250201	False	None	Diabetic on insulin
+268	Islet Transplantation	128531006	Islet cell transplant [procedure]	International	20250201	False	None	Transplantation of pancreatic islet cells
+269	Transplantation	77465005	Transplantation [procedure]	International	20250201	False	None	Transplantation to recipient
+273	Immunoglobulin deficiency	124950009	Deficiency of immunoglobulin [disorder]	International	20250201	False	None	Disorder of immunoglobulin
+279	Hemoglobinopathy disorder	80141007	hemoglobinopathy [disorder]	International	20250201	False	None	Hemoglobinopathy
+280	Chronic lung disease of prematurity	67569000	Bronchopulmonary dysplasia of newborn [disorder]	International	20250201	False	None	Bronchopulmonary dysplasia of newborn

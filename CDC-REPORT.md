@@ -1,4 +1,4 @@
-# Nine defects to report to CDC — CDSi 4.65-508
+# Ten defects to report to CDC — CDSi 4.65-508
 
 Found while running cicada against the published test cases. Three are defects in
 the **supporting data**, one is a defective **test expectation**, one is an
@@ -290,6 +290,79 @@ documented reaction to it.
 
 Found by expanding SNOMED with a text filter on "meningococcal", which returns
 33 concepts of which one matches CDC's label exactly.
+
+---
+
+## 10. Eighteen SNOMED coded values in the schedule supporting data are inactive concepts
+
+**Where:** the SNOMED `codedValue`s of the CDSi observations in the schedule
+supporting data. Of the 275 SNOMED coded values CDC publishes, 20 (18 distinct
+concepts, on 18 observations) are inactive in SNOMED CT. Checked on 2026-09-07 with
+`CodeSystem/$lookup` and the `inactive` property on tx.fhir.org (International
+2025-02-01; US edition 2025-09-01 for the two US-extension concepts) and on CSIRO's
+Ontoserver (International 2026-01-01, which also gives the inactivation date). A
+known-active concept (73211009, diabetes mellitus) reads `inactive = false` on the
+same query, so the flag distinguishes.
+
+| SNOMED code | CDC's label | CDSi observation(s) | inactive since |
+|---|---|---|---|
+| `102874004` | Possible pregnancy [finding] | 007 Pregnant | 2021-07-31 |
+| `255409004` | Pregnant woman [person] | 007 Pregnant | 2024-11-01 |
+| `12271241000119109` | Transgender identify [finding] | 075 Transgender person | 2022-06-30 |
+| `300916003` | Latex allergy [disorder] | 104 Allergic reaction to latex | 2021-01-31 |
+| `441593005` | Anaphylaxis due to latex [disorder] | 104 Allergic reaction to latex | 2021-01-31 |
+| `35327006` | Intussusception [morphologic abnormality] | 028 Intussusception | 2018-07-31 |
+| `410519009` | At risk context [qualifier value] | 070 Persons at risk during an outbreak | 2023-12-01 |
+| `413490006` | American Indian or Alaska Native [racial group] | 245 American Indian or Alaskan Native | 2024-07-01 |
+| `419522004` | Gentamycin sensitivity [disorder] | 106 Severe allergic reaction to gentamicin | 2023-04-30 |
+| `422608009` | Sexual assault [finding] | 169 History of sexual abuse or assault | 2019-07-31 |
+| `429311000124103` | Adverse reaction to human papillomavirus vaccine [disorder] | 090 Severe allergic reaction after previous dose of HPV | US edition 2025-09-01 |
+| `451291000124104` | Adverse reaction caused by zoster vaccine [disorder] | 100 Severe allergic reaction after previous dose of live zoster; 172 Severe allergic reaction after previous dose of recombinant zoster | US edition 2025-09-01 |
+| `53438000` | Radiation therapy procedure or service [procedure] | 159 Radiation therapy | 2021-09-30 |
+| `703936006` | Allergy to yeast [disorder] | 110 Hypersensitivity to yeast | 2020-07-31 |
+| `77128003` | DiGeorge sequence [disorder] | 147 T-lymphocyte [cell-mediated and humoral] - Complete defects; 148 T-lymphocyte [cell-mediated and humoral] - Partial defects | 2018-07-31 |
+| `77358003` | Congenital leukocyte adherence deficiency [disorder] | 153 Phagocytic function - Leukocyte adhesion defect, and myeloperoxidase deficiency | 2021-11-30 |
+| `91930004` | Allergy to eggs [disorder] | 101 Allergic reaction to egg protein | 2020-07-31 |
+| `233997009` | Dissection of distal aorta [disorder] | 254 Chronic cardiovascular disease | International 2025-02-01 |
+
+The two US-extension concepts (HPV and zoster vaccine reactions) are reported
+inactive by tx.fhir.org's US edition 2025-09-01, where their preferred term has
+become "Adverse reaction to component of vaccine product containing …"; an
+unversioned Ontoserver lookup still returned them active, so the US 2025-09-01
+release is where they changed.
+
+**Why it matters clinically.** A record coded today carries the concept that
+replaced the inactive one, and a conformant engine matching CDC's coded values
+matches nothing. For ten of the 18 observations CDC also lists an active SNOMED
+concept, so a modern record can still reach the observation by another code.
+**Eight observations have no active SNOMED concept at all:**
+
+- 075 Transgender person
+- 104 Allergic reaction to latex
+- 245 American Indian or Alaskan Native
+- 090 Severe allergic reaction after previous dose of HPV
+- 100 Severe allergic reaction after previous dose of live zoster
+- 172 Severe allergic reaction after previous dose of recombinant zoster
+- 159 Radiation therapy
+- 110 Hypersensitivity to yeast
+
+Three of those eight are contraindications (090, 100, 172): a patient with a
+documented severe reaction to HPV or zoster vaccine, coded with the current
+concept, matches no contraindication, and the vaccine is forecast for them. 104
+(latex allergy) and 110 (yeast hypersensitivity) are vaccine contraindications
+as well.
+
+**Fix:** replace each inactive concept with its active successor, which SNOMED
+publishes in the historical association reference set for each inactivation.
+Neither terminology server we can reach exposes those associations through
+`$lookup`, so the successors are not listed here; the SNOMED CT browser's
+"inactive concept" view names them.
+
+Found by the IG publisher's terminology validation of the SNOMED value set
+built from these coded values (19 "filter code is inactive" warnings), then
+checked over every SNOMED coded value by
+`cicada_generator/tool/check_inactive_snomed.py`, whose per-code results are
+`cicada_generator/results/inactive_snomed.tsv`.
 
 ---
 

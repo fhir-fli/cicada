@@ -3,8 +3,13 @@
 // FHIR specification" — because R4 does not admit custom resource types. This
 // is a shape for CDC's supporting data, never something exchanged, which is
 // what a logical model is for.
+//
+// The Id is CamelCase on purpose: SUSHI uses a logical model's Id as the root
+// of every element path, and eld-20 requires the root segment to be simple
+// alphanumerics. With a hyphenated Id every element in the model (156 here,
+// 97 in the schedule model) failed eld-20 (measured 2026-09-06, build 10).
 Logical: AntigenSupportingData
-Id: antigen-supporting-data
+Id: AntigenSupportingData
 Parent: Element
 Title: "Antigen Supporting Data"
 Description: "A resource to store supporting data for antigens including target disease, vaccine groups, immunity criteria, contraindications, and vaccination series."

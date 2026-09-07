@@ -90,7 +90,7 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/antigen-supporting-data"
+          "reference": "StructureDefinition/AntigenSupportingData"
         },
         "name": "Antigen Supporting Data",
         "description": "A resource to store supporting data for antigens including target disease, vaccine groups, immunity criteria, contraindications, and vaccination series.",
@@ -464,7 +464,7 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/schedule-supporting-data"
+          "reference": "StructureDefinition/ScheduleSupportingData"
         },
         "name": "Schedule Supporting Data",
         "description": "This resource consolidates various mapping and conflict information related to vaccine scheduling to support decision-making processes.",
