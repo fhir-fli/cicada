@@ -79,6 +79,11 @@ pages:
 # For parameters defined by the FHIR Tools IG see:
 # http://build.fhir.org/ig/FHIR/fhir-tools-ig/branches/master/CodeSystem-ig-parameters.html
 #
+# The ICD-10-CM placeholder CodeSystem (input/fsh/cs_icd10cm_stub.fsh) carries
+# a canonical outside this IG. special-url tells the publisher that is intended.
+parameters:
+  special-url: http://hl7.org/fhir/sid/icd-10-cm
+
 # parameters:
 #   excludettl: true
 #   validation: [allow-any-extensions, no-broken-links]
