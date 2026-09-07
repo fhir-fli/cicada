@@ -49,3 +49,8 @@ cicada_ig/output/
 cicada_ig/input-cache/txcache/
 cicada_ig/template/[oO]n[LlGgCc]*
 cicada_ig/template/versions.txt
+
+# Workbooks written by write_who_workbooks.dart for the round-trip check; the
+# .tsv results next to them are kept, the workbooks are regenerated each run.
+cicada_generator/results/cdc_roundtrip/
+cicada_generator/results/who_roundtrip/

@@ -26,8 +26,7 @@ final AntigenSupportingData whoHepa = AntigenSupportingData.fromJson({
             "code": "1027"
           },
           "description":
-              "Patient lives in a hepatitis A intermediate or high endemicity area",
-          "guidance": ""
+              "Patient lives in a hepatitis A intermediate or high endemicity area"
         }
       ],
       "seriesDose": [
@@ -85,8 +84,7 @@ final AntigenSupportingData whoHepa = AntigenSupportingData.fromJson({
             "code": "1027"
           },
           "description":
-              "Patient lives in a hepatitis A intermediate or high endemicity area",
-          "guidance": ""
+              "Patient lives in a hepatitis A intermediate or high endemicity area"
         }
       ],
       "seriesDose": [

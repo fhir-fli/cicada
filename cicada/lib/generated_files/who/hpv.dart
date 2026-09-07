@@ -177,8 +177,7 @@ final AntigenSupportingData whoHpv = AntigenSupportingData.fromJson({
             "code": "1022"
           },
           "description":
-              "Patient is immunocompromised — requires 3-dose HPV series",
-          "guidance": ""
+              "Patient is immunocompromised — requires 3-dose HPV series"
         }
       ],
       "seriesDose": [

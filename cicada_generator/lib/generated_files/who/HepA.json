@@ -21,8 +21,7 @@
                         "text": "Lives in HepA intermediate/high endemicity area",
                         "code": "1027"
                     },
-                    "description": "Patient lives in a hepatitis A intermediate or high endemicity area",
-                    "guidance": ""
+                    "description": "Patient lives in a hepatitis A intermediate or high endemicity area"
                 }
             ],
             "seriesDose": [
@@ -83,8 +82,7 @@
                         "text": "Lives in HepA intermediate/high endemicity area",
                         "code": "1027"
                     },
-                    "description": "Patient lives in a hepatitis A intermediate or high endemicity area",
-                    "guidance": ""
+                    "description": "Patient lives in a hepatitis A intermediate or high endemicity area"
                 }
             ],
             "seriesDose": [

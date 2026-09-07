@@ -24,24 +24,29 @@ class _SharedStringsMaintainer {
     return newSharedString;
   }
 
-  // cicada patch (2026-09-06): keep every <si> at its file position.
-  //
-  // Upstream dedupes by value here, so a sharedStrings.xml that carries the
-  // same text twice (CDC's AntigenSupportingData- Hib-508.xlsx has "Hib"
-  // twice, 508 entries, uniqueCount="508") loses a slot: every cell index
-  // after the duplicate points one string too far, and the last index
-  // returns null, which Parser._parseCell dereferences with `!`. Cell
-  // references are positions in the file, not values, so the list must
-  // follow the file. The map still points at the first occurrence for
-  // writing, which stays correct.
   void add(SharedString val, String key) {
     _map[val]?.increaseCount();
     _map.putIfAbsent(val, () {
       _mapString[key] = val;
-      return _IndexingHolder(_index);
+      _list.add(val);
+      return _IndexingHolder(_index++);
     });
-    _list.add(val);
-    _index++;
+  }
+
+  // cicada patch (2026-09-06): a workbook's cell references are positions in
+  // its sharedStrings.xml, so reading must keep every <si> at its file
+  // position even when two carry the same text (CDC's AntigenSupportingData-
+  // Hib-508.xlsx has "Hib" twice: 508 entries, uniqueCount 508). Upstream
+  // `add` dedupes by value, which is right for writing (the saved table is
+  // unique and the cells are re-indexed) but shifts every read index after
+  // a duplicate and makes the last one resolve to null, dereferenced with
+  // `!` in Parser._parseCell. So the parser records positions here and
+  // `value` answers from them; `add`, `indexOf` and saving are untouched.
+  final List<SharedString> _filePositions = <SharedString>[];
+
+  void addFromFile(SharedString val, String key) {
+    add(val, key);
+    _filePositions.add(val);
   }
 
   int indexOf(SharedString val) {
@@ -49,6 +54,9 @@ class _SharedStringsMaintainer {
   }
 
   SharedString? value(int i) {
+    if (_filePositions.isNotEmpty) {
+      return i < _filePositions.length ? _filePositions[i] : null;
+    }
     if (i < _list.length) {
       return _list[i];
     } else {

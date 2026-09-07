@@ -178,8 +178,7 @@
                         "text": "Immunocompromised individual",
                         "code": "1022"
                     },
-                    "description": "Patient is immunocompromised — requires 3-dose HPV series",
-                    "guidance": ""
+                    "description": "Patient is immunocompromised — requires 3-dose HPV series"
                 }
             ],
             "seriesDose": [

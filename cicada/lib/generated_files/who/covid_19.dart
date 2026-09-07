@@ -23,22 +23,19 @@ final AntigenSupportingData whoCovid19 = AntigenSupportingData.fromJson({
         {
           "observationCode": {"text": "Healthcare worker", "code": "1020"},
           "description":
-              "Patient is a healthcare worker with occupational exposure risk",
-          "guidance": ""
+              "Patient is a healthcare worker with occupational exposure risk"
         },
         {
           "observationCode": {"text": "Older adult 60+ years", "code": "1021"},
           "description": "Patient is an older adult (60 years or older)",
-          "beginAge": "60 years",
-          "guidance": ""
+          "beginAge": "60 years"
         },
         {
           "observationCode": {
             "text": "Immunocompromised individual",
             "code": "1022"
           },
-          "description": "Patient is immunocompromised",
-          "guidance": ""
+          "description": "Patient is immunocompromised"
         }
       ],
       "seriesDose": [

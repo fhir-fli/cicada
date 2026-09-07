@@ -25,11 +25,7 @@ final AntigenSupportingData whoJapaneseEncephalitis =
           "observationCode": {
             "text": "Lives in or traveling to JE endemic area",
             "code": "1011"
-          },
-          "description": "",
-          "beginAge": "",
-          "endAge": "",
-          "guidance": ""
+          }
         }
       ],
       "seriesDose": [
@@ -123,11 +119,7 @@ final AntigenSupportingData whoJapaneseEncephalitis =
           "observationCode": {
             "text": "Lives in or traveling to JE endemic area",
             "code": "1011"
-          },
-          "description": "",
-          "beginAge": "",
-          "endAge": "",
-          "guidance": ""
+          }
         }
       ],
       "seriesDose": [

@@ -139,7 +139,8 @@ class Parser {
 
   void _parseSharedString(XmlElement node) {
     final sharedString = SharedString(node: node);
-    _excel._sharedStrings.add(sharedString, sharedString.stringValue);
+    // cicada patch: keep file positions for reading; see SharedStrings.
+    _excel._sharedStrings.addFromFile(sharedString, sharedString.stringValue);
   }
 
   void _parseContent({bool run = true}) {

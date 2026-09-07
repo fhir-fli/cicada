@@ -18,6 +18,7 @@ import 'dart:io';
 
 import 'package:cicada/cicada.dart';
 import 'package:cicada_generator/antigen_sheet_parser.dart';
+import 'package:cicada_generator/json_diff.dart';
 import 'package:cicada_generator/repo_root.dart';
 
 void main() {
@@ -63,7 +64,7 @@ void main() {
       // The category sheet has no XML counterpart; report it, do not diff it.
       final categories =
           (fromExcel.remove('vaccineRecommendationCategory') as List?)?.length ?? 0;
-      diffs = _diff(fromXml, fromExcel, '');
+      diffs = jsonDiff(fromXml, fromExcel);
       status = diffs.isEmpty ? 'MATCH (categories=$categories)' : 'DIFFERS';
     } catch (e) {
       status = 'PARSE FAILED: $e';
@@ -78,37 +79,4 @@ void main() {
   sink.close();
   stdout.writeln('${files.length} workbooks, $failures not matching. ${out.path}');
   exit(failures == 0 ? 0 : 1);
-}
-
-/// Every leaf where [xml] and [excel] disagree, as "path: xml -> excel".
-List<String> _diff(dynamic xml, dynamic excel, String path) {
-  final out = <String>[];
-  if (xml is Map && excel is Map) {
-    for (final k in {...xml.keys, ...excel.keys}) {
-      out.addAll(_diff(xml[k], excel[k], '$path/$k'));
-    }
-  } else if (xml is List && excel is List) {
-    final n = xml.length > excel.length ? xml.length : excel.length;
-    for (var i = 0; i < n; i++) {
-      out.addAll(_diff(i < xml.length ? xml[i] : null,
-          i < excel.length ? excel[i] : null, '$path[$i]'));
-    }
-  } else if (xml != excel && !_sameNumber(xml, excel)) {
-    out.add('$path: ${_short(xml)} -> ${_short(excel)}');
-  }
-  return out;
-}
-
-/// The XML writes a numeric cell as "100.0" where the workbook holds 100;
-/// the same number is not a difference.
-bool _sameNumber(dynamic a, dynamic b) {
-  if (a is! String || b is! String) return false;
-  final x = double.tryParse(a);
-  final y = double.tryParse(b);
-  return x != null && y != null && x == y;
-}
-
-String _short(dynamic v) {
-  final s = v == null ? 'null' : jsonEncode(v);
-  return s.length > 70 ? '${s.substring(0, 70)}…' : s;
 }

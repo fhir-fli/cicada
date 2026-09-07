@@ -63,7 +63,12 @@ class AntigenSheetParser {
       // 5) Contraindications tab
       else if (sheetName == 'Contraindications') {
         final contraindications = _parseContraindicationsRows(rows);
-        data = data.copyWith(contraindications: contraindications);
+        // A sheet with only header and n/a rows means no contraindications,
+        // which the model spells as null, not an empty object.
+        if (contraindications.vaccineGroup != null ||
+            contraindications.vaccine != null) {
+          data = data.copyWith(contraindications: contraindications);
+        }
       }
       // 5b) Vaccine Recommendation Category tab, new in 4.65. Its header
       //     row contains "Best Patient Series Name", so it must be caught
@@ -287,11 +292,11 @@ class AntigenSheetParser {
         final (code, text) = _extractCodeAndText(row[1]);
         final desc = row.length > 2 ? row[2] : '';
         final guidance =
-            (row.length > 3 && !row[3].contains('n/a')) ? row[3] : null;
+            (row.length > 3 ? _nullIfNA(row[3]) : null);
         final beginAge =
-            (row.length > 4 && !row[4].contains('n/a')) ? row[4] : null;
+            (row.length > 4 ? _nullIfNA(row[4]) : null);
         final endAge =
-            (row.length > 5 && !row[5].contains('n/a')) ? row[5] : null;
+            (row.length > 5 ? _nullIfNA(row[5]) : null);
 
         // Avoid adding a dummy item if 'Code' or 'n/a'
         if (code.isNotEmpty && code != 'Code') {
@@ -316,7 +321,7 @@ class AntigenSheetParser {
         final (code, text) = _extractCodeAndText(row[1]);
         final desc = row.length > 2 ? row[2] : '';
         final guidance =
-            (row.length > 3 && !row[3].contains('n/a')) ? row[3] : null;
+            (row.length > 3 ? _nullIfNA(row[3]) : null);
 
         // If you store "vaccineType" and "cvx" in columns [4] and [5], for example:
         final (cvx, vaccineType) =
@@ -339,9 +344,9 @@ class AntigenSheetParser {
         if ((vaccineType?.isNotEmpty ?? false) &&
             !vaccineType!.contains('n/a')) {
           final beginAge =
-              (row.length > 5 && !row[5].contains('n/a')) ? row[5] : null;
+              (row.length > 5 ? _nullIfNA(row[5]) : null);
           final endAge =
-              (row.length > 6 && !row[6].contains('n/a')) ? row[6] : null;
+              (row.length > 6 ? _nullIfNA(row[6]) : null);
           final newVac = Vaccine(
             vaccineType: vaccineType,
             cvx: cvx,
@@ -484,13 +489,13 @@ class AntigenSheetParser {
         final obsCell = row[1];
         final (code, text) = _extractCodeAndText(obsCell);
         final desc =
-            (row.length > 2 && !row[2].contains('n/a')) ? row[2] : null;
+            (row.length > 2 ? _nullIfNA(row[2]) : null);
         final beginAge =
-            (row.length > 3 && !row[3].contains('n/a')) ? row[3] : null;
+            (row.length > 3 ? _nullIfNA(row[3]) : null);
         final endAge =
-            (row.length > 4 && !row[4].contains('n/a')) ? row[4] : null;
+            (row.length > 4 ? _nullIfNA(row[4]) : null);
         final guidance =
-            (row.length > 5 && !row[5].contains('n/a')) ? row[5] : null;
+            (row.length > 5 ? _nullIfNA(row[5]) : null);
 
         final existingInd = series.indication?.toList() ?? [];
         if (code == 'Code' || code.isEmpty) {
@@ -703,7 +708,7 @@ class AntigenSheetParser {
             final cessationDate = row.length > 6 ? _nullIfNA(row[6]) : null;
 
             final condLogic =
-                (row.length > 7 && !row[7].contains('n/a')) ? row[7] : null;
+                (row.length > 7 ? _nullIfNA(row[7]) : null);
 
             // Condition-level fields
             final condID =
@@ -860,9 +865,9 @@ class AntigenSheetParser {
       // 4.o) Seasonal Recommendation
       else if (firstCell.contains('Seasonal Recommendation') &&
           currentDose != null) {
-        var start = (row.length > 1 && !row[1].contains('n/a')) ? row[1] : null;
+        var start = (row.length > 1 ? _nullIfNA(row[1]) : null);
 
-        var end = (row.length > 2 && !row[2].contains('n/a')) ? row[2] : null;
+        var end = (row.length > 2 ? _nullIfNA(row[2]) : null);
 
         if (start?.contains('Start Date') ?? false) {
           start = null;

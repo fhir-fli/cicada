@@ -20,11 +20,7 @@
                     "observationCode": {
                         "text": "Lives in or traveling to cholera endemic/outbreak area",
                         "code": "1013"
-                    },
-                    "description": "",
-                    "beginAge": "",
-                    "endAge": "",
-                    "guidance": ""
+                    }
                 }
             ],
             "seriesDose": [
@@ -74,11 +70,7 @@
                     "observationCode": {
                         "text": "Lives in or traveling to cholera endemic/outbreak area",
                         "code": "1013"
-                    },
-                    "description": "",
-                    "beginAge": "",
-                    "endAge": "",
-                    "guidance": ""
+                    }
                 }
             ],
             "seriesDose": [

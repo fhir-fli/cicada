@@ -24,11 +24,7 @@ final AntigenSupportingData whoCholera = AntigenSupportingData.fromJson({
           "observationCode": {
             "text": "Lives in or traveling to cholera endemic/outbreak area",
             "code": "1013"
-          },
-          "description": "",
-          "beginAge": "",
-          "endAge": "",
-          "guidance": ""
+          }
         }
       ],
       "seriesDose": [
@@ -78,11 +74,7 @@ final AntigenSupportingData whoCholera = AntigenSupportingData.fromJson({
           "observationCode": {
             "text": "Lives in or traveling to cholera endemic/outbreak area",
             "code": "1013"
-          },
-          "description": "",
-          "beginAge": "",
-          "endAge": "",
-          "guidance": ""
+          }
         }
       ],
       "seriesDose": [

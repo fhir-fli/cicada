@@ -22,22 +22,19 @@ final AntigenSupportingData whoInfluenza = AntigenSupportingData.fromJson({
       "indication": [
         {
           "observationCode": {"text": "Pregnant", "code": "1023"},
-          "description": "Patient is pregnant",
-          "guidance": ""
+          "description": "Patient is pregnant"
         },
         {
           "observationCode": {"text": "Healthcare worker", "code": "1020"},
           "description":
-              "Patient is a healthcare worker with occupational exposure risk",
-          "guidance": ""
+              "Patient is a healthcare worker with occupational exposure risk"
         },
         {
           "observationCode": {
             "text": "Immunocompromised individual",
             "code": "1022"
           },
-          "description": "Patient is immunocompromised",
-          "guidance": ""
+          "description": "Patient is immunocompromised"
         },
         {
           "observationCode": {
@@ -45,8 +42,7 @@ final AntigenSupportingData whoInfluenza = AntigenSupportingData.fromJson({
             "code": "1024"
           },
           "description":
-              "Patient has a chronic medical condition increasing influenza risk",
-          "guidance": ""
+              "Patient has a chronic medical condition increasing influenza risk"
         },
         {
           "observationCode": {
@@ -55,8 +51,7 @@ final AntigenSupportingData whoInfluenza = AntigenSupportingData.fromJson({
           },
           "description": "Child aged 6 months to 5 years (WHO priority group)",
           "beginAge": "6 months",
-          "endAge": "5 years",
-          "guidance": ""
+          "endAge": "5 years"
         },
         {
           "observationCode": {
@@ -65,8 +60,7 @@ final AntigenSupportingData whoInfluenza = AntigenSupportingData.fromJson({
           },
           "description":
               "Older adult aged 65 years or older (WHO priority group)",
-          "beginAge": "65 years",
-          "guidance": ""
+          "beginAge": "65 years"
         }
       ],
       "seriesDose": [
