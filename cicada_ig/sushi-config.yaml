@@ -83,6 +83,17 @@ pages:
 # a canonical outside this IG. special-url tells the publisher that is intended.
 parameters:
   special-url: http://hl7.org/fhir/sid/icd-10-cm
+  # Expand and validate SNOMED against the US edition (731000124108). CDSi is
+  # a US specification and cites eight US-extension concepts; tx.fhir.org
+  # serves International unless asked, so those eight failed validation twice
+  # each (filter check and ConceptMap source). Same shape as US Core:
+  # Parameters-manifest.json carries the system-version, and the path is
+  # relative to the IG resource, which SUSHI writes to fsh-generated/resources,
+  # hence ../../ (measured: without it the publisher looks under
+  # fsh-generated/resources/input/resources). ig-expansion-parameters was tried first
+  # (2026-09-04 and 2026-09-06) and does nothing: the publisher's loader adds
+  # an empty parameter named after the value and never reads the resource.
+  path-expansion-params: '../../input/resources/Parameters-manifest.json'
 
 # parameters:
 #   excludettl: true

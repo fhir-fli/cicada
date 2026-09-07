@@ -38,6 +38,7 @@
 [IntervalReasonVS]: ValueSet-interval-reason.html
 [IntervalReasonCS]: CodeSystem-IntervalReason.html
 [VaccineLabEvidenceOfImmunityLoinc]: ValueSet-vaccine-lab-evidence-of-immunity-loinc.html
+[manifest]: Parameters-manifest.html
 [MedicationAdministrationProfile]: StructureDefinition-MedicationAdministrationProfile.html
 [MedicationDispenseProfile]: StructureDefinition-MedicationDispenseProfile.html
 [MedicationRequestProfile]: StructureDefinition-MedicationRequestProfile.html

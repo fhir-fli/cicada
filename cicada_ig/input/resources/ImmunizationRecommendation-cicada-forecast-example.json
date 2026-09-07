@@ -244,7 +244,8 @@
               "code": "03",
               "display": "MMR"
             }
-          ]
+          ],
+          "text": "MMR"
         }
       ],
       "targetDisease": {
@@ -505,7 +506,8 @@
               "code": "03",
               "display": "MMR"
             }
-          ]
+          ],
+          "text": "MMR"
         }
       ],
       "targetDisease": {
@@ -823,7 +825,8 @@
               "code": "107",
               "display": "DTaP, unspecified formulation"
             }
-          ]
+          ],
+          "text": "DTaP, unspecified formulation"
         }
       ],
       "targetDisease": {
@@ -1013,7 +1016,8 @@
               "code": "88",
               "display": "influenza, unspecified formulation"
             }
-          ]
+          ],
+          "text": "influenza, unspecified formulation"
         }
       ],
       "targetDisease": {
@@ -1162,7 +1166,8 @@
               "code": "17",
               "display": "Hib, unspecified formulation"
             }
-          ]
+          ],
+          "text": "Hib, unspecified formulation"
         }
       ],
       "targetDisease": {
@@ -1319,34 +1324,38 @@
               "code": "152",
               "display": "Pneumococcal Conjugate, unspecified formulation"
             }
-          ]
+          ],
+          "text": "Pneumococcal Conjugate, unspecified formulation"
         },
         {
           "coding": [
             {
               "system": "http://hl7.org/fhir/sid/cvx",
               "code": "215",
-              "display": "PCV15"
+              "display": "Pneumococcal conjugate PCV15, polysaccharide CRM197 conjugate, adjuvant, PF"
             }
-          ]
+          ],
+          "text": "PCV15"
         },
         {
           "coding": [
             {
               "system": "http://hl7.org/fhir/sid/cvx",
               "code": "216",
-              "display": "PCV20"
+              "display": "Pneumococcal conjugate PCV20, polysaccharide CRM197 conjugate, adjuvant, PF"
             }
-          ]
+          ],
+          "text": "PCV20"
         },
         {
           "coding": [
             {
               "system": "http://hl7.org/fhir/sid/cvx",
               "code": "327",
-              "display": "PCV21"
+              "display": "Pneumococcal conjugate PCV21, polysaccharide CRM197 conjugate, PF"
             }
-          ]
+          ],
+          "text": "PCV21"
         }
       ],
       "targetDisease": {
@@ -1531,7 +1540,8 @@
               "code": "21",
               "display": "varicella"
             }
-          ]
+          ],
+          "text": "varicella"
         }
       ],
       "targetDisease": {
@@ -1716,7 +1726,8 @@
               "code": "45",
               "display": "Hep B, unspecified formulation"
             }
-          ]
+          ],
+          "text": "Hep B, unspecified formulation"
         }
       ],
       "targetDisease": {
@@ -1867,9 +1878,10 @@
             {
               "system": "http://hl7.org/fhir/sid/cvx",
               "code": "108",
-              "display": "meningococcal, unspecified formulation"
+              "display": "meningococcal ACWY, unspecified formulation"
             }
-          ]
+          ],
+          "text": "meningococcal, unspecified formulation"
         }
       ],
       "targetDisease": {
@@ -2028,9 +2040,10 @@
             {
               "system": "http://hl7.org/fhir/sid/cvx",
               "code": "213",
-              "display": "SARS-COV-2 (COVID-19) vaccine, unspecified"
+              "display": "SARS-COV-2 (COVID-19) vaccine, UNSPECIFIED"
             }
-          ]
+          ],
+          "text": "SARS-COV-2 (COVID-19) vaccine, unspecified"
         }
       ],
       "targetDisease": {
@@ -2191,7 +2204,8 @@
               "code": "89",
               "display": "polio, unspecified formulation"
             }
-          ]
+          ],
+          "text": "polio, unspecified formulation"
         }
       ],
       "targetDisease": {
@@ -2348,7 +2362,8 @@
               "code": "188",
               "display": "zoster, unspecified formulation"
             }
-          ]
+          ],
+          "text": "zoster, unspecified formulation"
         }
       ],
       "targetDisease": {
@@ -2555,7 +2570,8 @@
               "code": "85",
               "display": "Hep A, unspecified formulation"
             }
-          ]
+          ],
+          "text": "Hep A, unspecified formulation"
         }
       ],
       "targetDisease": {
@@ -2710,9 +2726,10 @@
             {
               "system": "http://hl7.org/fhir/sid/cvx",
               "code": "304",
-              "display": "RSV, unspecified"
+              "display": "Respiratory syncytial virus (RSV), unspecified"
             }
-          ]
+          ],
+          "text": "RSV, unspecified"
         }
       ],
       "targetDisease": {
@@ -2860,7 +2877,8 @@
               "code": "137",
               "display": "HPV, unspecified formulation"
             }
-          ]
+          ],
+          "text": "HPV, unspecified formulation"
         }
       ],
       "targetDisease": {
@@ -2985,7 +3003,8 @@
               "code": "164",
               "display": "meningococcal B, unspecified"
             }
-          ]
+          ],
+          "text": "meningococcal B, unspecified"
         }
       ],
       "targetDisease": {
@@ -3120,7 +3139,8 @@
               "code": "122",
               "display": "rotavirus, unspecified formulation"
             }
-          ]
+          ],
+          "text": "rotavirus, unspecified formulation"
         }
       ],
       "targetDisease": {
