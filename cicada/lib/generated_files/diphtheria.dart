@@ -4524,5 +4524,31 @@ final AntigenSupportingData diphtheria = AntigenSupportingData.fromJson({
         }
       ]
     }
+  ],
+  "vaccineRecommendationCategory": [
+    {
+      "worksheetName": "Standard",
+      "seriesName": "Diphtheria standard series",
+      "patientBeginAge": "0 days",
+      "patientEndAge": "n/a",
+      "forecastTargetDose": "Any",
+      "includedIndication": "n/a",
+      "excludedIndication": "n/a",
+      "category": "Routine",
+      "additionalMaterial":
+          "https://www.cdc.gov/diphtheria/hcp/vaccine-recommendations/index.html"
+    },
+    {
+      "worksheetName": "Start at 12 months",
+      "seriesName": "Diphtheria start at 12 months series",
+      "patientBeginAge": "0 days",
+      "patientEndAge": "n/a",
+      "forecastTargetDose": "Any",
+      "includedIndication": "n/a",
+      "excludedIndication": "n/a",
+      "category": "Routine",
+      "additionalMaterial":
+          "https://www.cdc.gov/diphtheria/hcp/vaccine-recommendations/index.html"
+    }
   ]
 });

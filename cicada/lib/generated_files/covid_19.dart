@@ -8901,5 +8901,133 @@ final AntigenSupportingData covid19 = AntigenSupportingData.fromJson({
         }
       ]
     }
+  ],
+  "vaccineRecommendationCategory": [
+    {
+      "worksheetName": "Start at 6mo-23mo SCDM",
+      "seriesName":
+          "COVID-19 start at 6mo-23mo shared clinical decision-making series",
+      "patientBeginAge": "0 days",
+      "patientEndAge": "n/a",
+      "forecastTargetDose": "Any",
+      "includedIndication": "n/a",
+      "excludedIndication": "n/a",
+      "category": "SCDM",
+      "additionalMaterial":
+          "https://www.cdc.gov/covid/hcp/vaccine-considerations/routine-guidance.html"
+    },
+    {
+      "worksheetName": "Start at 2 years+ SCDM",
+      "seriesName":
+          "COVID-19 start at 2 years+ shared clinical decision-making series",
+      "patientBeginAge": "0 days",
+      "patientEndAge": "n/a",
+      "forecastTargetDose": "Any",
+      "includedIndication": "n/a",
+      "excludedIndication": "n/a",
+      "category": "SCDM",
+      "additionalMaterial":
+          "https://www.cdc.gov/covid/hcp/vaccine-considerations/routine-guidance.html"
+    },
+    {
+      "worksheetName": "Risk IC 6 mo+ Moderna",
+      "seriesName": "COVID-19 risk immunocompromised 6 mo+ Moderna series",
+      "patientBeginAge": "6 months",
+      "patientEndAge": "n/a",
+      "forecastTargetDose": "Any",
+      "includedIndication": "Any",
+      "excludedIndication": "n/a",
+      "category": "SCDM",
+      "additionalMaterial":
+          "https://www.cdc.gov/covid/hcp/vaccine-considerations/immunocompromised.html"
+    },
+    {
+      "worksheetName": "Risk IC 5 yrs+ Pfizer",
+      "seriesName":
+          "COVID-19 risk immunocompromised start at 5 yrs+ Pfizer series",
+      "patientBeginAge": "5 years",
+      "patientEndAge": "n/a",
+      "forecastTargetDose": "Any",
+      "includedIndication": "Any",
+      "excludedIndication": "n/a",
+      "category": "SCDM",
+      "additionalMaterial":
+          "https://www.cdc.gov/covid/hcp/vaccine-considerations/immunocompromised.html"
+    },
+    {
+      "worksheetName": "Risk IC 12 yrs+ Novavax",
+      "seriesName": "COVID-19 risk immunocompromised 12 yrs+ Novavax series",
+      "patientBeginAge": "12 years",
+      "patientEndAge": "n/a",
+      "forecastTargetDose": "Any",
+      "includedIndication": "Any",
+      "excludedIndication": "n/a",
+      "category": "SCDM",
+      "additionalMaterial":
+          "https://www.cdc.gov/covid/hcp/vaccine-considerations/immunocompromised.html"
+    },
+    {
+      "worksheetName": "Risk IC 18 yrs+ Janssen",
+      "seriesName": "COVID-19 risk immunocompromised 18 yrs+ Janssen series",
+      "patientBeginAge": "18 years",
+      "patientEndAge": "n/a",
+      "forecastTargetDose": "Any",
+      "includedIndication": "Any",
+      "excludedIndication": "n/a",
+      "category": "SCDM",
+      "additionalMaterial":
+          "https://www.cdc.gov/covid/hcp/vaccine-considerations/immunocompromised.html"
+    },
+    {
+      "worksheetName": "Risk IC 6mo-4yrs Mixed Product",
+      "seriesName":
+          "COVID-19 risk immunocompromised start at 6 mo - 4 yrs mixed product series",
+      "patientBeginAge": "6 months",
+      "patientEndAge": "n/a",
+      "forecastTargetDose": "Any",
+      "includedIndication": "Any",
+      "excludedIndication": "n/a",
+      "category": "SCDM",
+      "additionalMaterial":
+          "https://www.cdc.gov/covid/hcp/vaccine-considerations/immunocompromised.html"
+    },
+    {
+      "worksheetName": "Risk IC 5 yrs+ Mixed Product",
+      "seriesName":
+          "COVID-19 risk immunocompromised start at 5 yrs+ mixed product series",
+      "patientBeginAge": "5 years",
+      "patientEndAge": "n/a",
+      "forecastTargetDose": "Any",
+      "includedIndication": "Any",
+      "excludedIndication": "n/a",
+      "category": "SCDM",
+      "additionalMaterial":
+          "https://www.cdc.gov/covid/hcp/vaccine-considerations/immunocompromised.html"
+    },
+    {
+      "worksheetName": "Risk IC WHO-Authorized",
+      "seriesName": "COVID-19 risk immunocompromised WHO-authorized series",
+      "patientBeginAge": "6 months",
+      "patientEndAge": "n/a",
+      "forecastTargetDose": "Any",
+      "includedIndication": "Any",
+      "excludedIndication": "n/a",
+      "category": "SCDM",
+      "additionalMaterial":
+          "https://www.cdc.gov/covid/hcp/vaccine-considerations/immunocompromised.html"
+    },
+    {
+      "worksheetName": "Risk IC Medicago Clinical Trial",
+      "seriesName":
+          "COVID-19 risk immunocompromised 18 yrs+ Medicago clinical trial series",
+      "patientBeginAge": "6 months",
+      "patientEndAge": "n/a",
+      "forecastTargetDose": "Any",
+      "includedIndication": "Any",
+      "excludedIndication": "n/a",
+      "category": "SCDM",
+      "additionalMaterial":
+          "https://www.cdc.gov/covid/hcp/vaccine-considerations/immunocompromised.html"
+    }
   ]
 });

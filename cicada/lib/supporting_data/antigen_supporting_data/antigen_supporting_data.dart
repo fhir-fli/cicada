@@ -14,6 +14,7 @@ export 'select_series.dart';
 export 'series.dart';
 export 'series_dose.dart';
 export 'vaccine.dart';
+export 'vaccine_recommendation_category.dart';
 export 'vaccine_contraindications.dart';
 export 'vaccine_group_contraindications.dart';
 export 'vax_age.dart';
@@ -27,6 +28,7 @@ class AntigenSupportingData {
     this.immunity,
     this.contraindications,
     this.series,
+    this.vaccineRecommendationCategory,
   });
 
   final String? targetDisease;
@@ -34,6 +36,10 @@ class AntigenSupportingData {
   final Immunity? immunity;
   final Contraindications? contraindications;
   final List<Series>? series;
+
+  /// The "Vaccine Recommendation Category" worksheet, new in 4.65. Null for
+  /// data generated before it existed (the WHO workbooks, for now).
+  final List<VaccineRecommendationCategory>? vaccineRecommendationCategory;
 
   factory AntigenSupportingData.fromJson(Map<String, dynamic> oldJson) {
     final json = oldJson['antigenSupportingData'] ?? oldJson;
@@ -50,6 +56,11 @@ class AntigenSupportingData {
       series: (json['series'] as List<dynamic>?)
           ?.map((e) => Series.fromJson(e as Map<String, dynamic>))
           .toList(),
+      vaccineRecommendationCategory:
+          (json['vaccineRecommendationCategory'] as List<dynamic>?)
+              ?.map((e) => VaccineRecommendationCategory.fromJson(
+                  e as Map<String, dynamic>))
+              .toList(),
     );
   }
 
@@ -61,6 +72,9 @@ class AntigenSupportingData {
       if (contraindications != null)
         'contraindications': contraindications?.toJson(),
       if (series != null) 'series': series?.map((e) => e.toJson()).toList(),
+      if (vaccineRecommendationCategory != null)
+        'vaccineRecommendationCategory':
+            vaccineRecommendationCategory?.map((e) => e.toJson()).toList(),
     };
   }
 
@@ -70,6 +84,7 @@ class AntigenSupportingData {
     Immunity? immunity,
     Contraindications? contraindications,
     List<Series>? series,
+    List<VaccineRecommendationCategory>? vaccineRecommendationCategory,
   }) {
     return AntigenSupportingData(
       targetDisease: targetDisease ?? this.targetDisease,
@@ -77,6 +92,8 @@ class AntigenSupportingData {
       immunity: immunity ?? this.immunity,
       contraindications: contraindications ?? this.contraindications,
       series: series ?? this.series,
+      vaccineRecommendationCategory:
+          vaccineRecommendationCategory ?? this.vaccineRecommendationCategory,
     );
   }
 }

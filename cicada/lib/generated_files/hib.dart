@@ -2608,5 +2608,103 @@ final AntigenSupportingData hib = AntigenSupportingData.fromJson({
         }
       ]
     }
+  ],
+  "vaccineRecommendationCategory": [
+    {
+      "worksheetName": "Start at 2 months 4-dose",
+      "seriesName": "Hib start at 2 months 4-dose series",
+      "patientBeginAge": "0 days",
+      "patientEndAge": "n/a",
+      "forecastTargetDose": "Any",
+      "includedIndication": "n/a",
+      "excludedIndication": "n/a",
+      "category": "Routine",
+      "additionalMaterial":
+          "https://www.cdc.gov/hi-disease/hcp/vaccine-recommendations/index.html"
+    },
+    {
+      "worksheetName": "Start at 7 months 3-dose",
+      "seriesName": "Hib start at 7 months 3-dose series",
+      "patientBeginAge": "0 days",
+      "patientEndAge": "n/a",
+      "forecastTargetDose": "Any",
+      "includedIndication": "n/a",
+      "excludedIndication": "n/a",
+      "category": "Routine",
+      "additionalMaterial":
+          "https://www.cdc.gov/hi-disease/hcp/vaccine-recommendations/index.html"
+    },
+    {
+      "worksheetName": "Start at 12 months 2-dose",
+      "seriesName": "Hib start at 12 months 2-dose series",
+      "patientBeginAge": "0 days",
+      "patientEndAge": "n/a",
+      "forecastTargetDose": "Any",
+      "includedIndication": "n/a",
+      "excludedIndication": "n/a",
+      "category": "Routine",
+      "additionalMaterial":
+          "https://www.cdc.gov/hi-disease/hcp/vaccine-recommendations/index.html"
+    },
+    {
+      "worksheetName": "Start at 15 months 1-dose",
+      "seriesName": "Hib start at 15 months 1-dose series",
+      "patientBeginAge": "0 days",
+      "patientEndAge": "n/a",
+      "forecastTargetDose": "Any",
+      "includedIndication": "n/a",
+      "excludedIndication": "n/a",
+      "category": "Routine",
+      "additionalMaterial":
+          "https://www.cdc.gov/hi-disease/hcp/vaccine-recommendations/index.html"
+    },
+    {
+      "worksheetName": "PRP-OMP 3-dose",
+      "seriesName": "Hib PRP-OMP 3-dose series",
+      "patientBeginAge": "0 days",
+      "patientEndAge": "n/a",
+      "forecastTargetDose": "Any",
+      "includedIndication": "n/a",
+      "excludedIndication": "n/a",
+      "category": "Routine",
+      "additionalMaterial":
+          "https://www.cdc.gov/hi-disease/hcp/vaccine-recommendations/index.html"
+    },
+    {
+      "worksheetName": "Risk child 2-dose",
+      "seriesName": "Hib risk child 2-dose series",
+      "patientBeginAge": "12 months",
+      "patientEndAge": "5 years",
+      "forecastTargetDose": "Any",
+      "includedIndication": "Any",
+      "excludedIndication": "n/a",
+      "category": "High-Risk",
+      "additionalMaterial":
+          "https://www.cdc.gov/hi-disease/hcp/vaccine-recommendations/index.html"
+    },
+    {
+      "worksheetName": "Risk 1-dose",
+      "seriesName": "Hib risk 1-dose series",
+      "patientBeginAge": "15 months",
+      "patientEndAge": "n/a",
+      "forecastTargetDose": "Any",
+      "includedIndication": "Any",
+      "excludedIndication": "n/a",
+      "category": "High-Risk",
+      "additionalMaterial":
+          "https://www.cdc.gov/hi-disease/hcp/vaccine-recommendations/index.html"
+    },
+    {
+      "worksheetName": "Risk 3-dose",
+      "seriesName": "Hib risk 3-dose series",
+      "patientBeginAge": "6 weeks",
+      "patientEndAge": "n/a",
+      "forecastTargetDose": "Any",
+      "includedIndication": "Any",
+      "excludedIndication": "n/a",
+      "category": "High-Risk",
+      "additionalMaterial":
+          "https://www.cdc.gov/hi-disease/hcp/vaccine-recommendations/index.html"
+    }
   ]
 });

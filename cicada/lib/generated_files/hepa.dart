@@ -101,7 +101,7 @@ final AntigenSupportingData hepa = AntigenSupportingData.fromJson({
               "vaccineType": "Hep A, adult",
               "cvx": "52",
               "beginAge": "19 years",
-              "volume": "1.0",
+              "volume": "1",
               "forecastVaccineType": "N"
             },
             {
@@ -173,7 +173,7 @@ final AntigenSupportingData hepa = AntigenSupportingData.fromJson({
               "vaccineType": "Hep A, adult",
               "cvx": "52",
               "beginAge": "19 years",
-              "volume": "1.0",
+              "volume": "1",
               "forecastVaccineType": "N"
             },
             {
@@ -248,7 +248,7 @@ final AntigenSupportingData hepa = AntigenSupportingData.fromJson({
               "vaccineType": "Hep A, adult",
               "cvx": "52",
               "beginAge": "19 years",
-              "volume": "1.0",
+              "volume": "1",
               "forecastVaccineType": "N"
             },
             {
@@ -306,7 +306,7 @@ final AntigenSupportingData hepa = AntigenSupportingData.fromJson({
               "vaccineType": "Hep A, adult",
               "cvx": "52",
               "beginAge": "19 years",
-              "volume": "1.0",
+              "volume": "1",
               "forecastVaccineType": "N"
             }
           ],
@@ -367,7 +367,7 @@ final AntigenSupportingData hepa = AntigenSupportingData.fromJson({
               "vaccineType": "HepA-HepB",
               "cvx": "104",
               "beginAge": "18 years",
-              "volume": "1.0",
+              "volume": "1",
               "forecastVaccineType": "Y"
             }
           ],
@@ -402,7 +402,7 @@ final AntigenSupportingData hepa = AntigenSupportingData.fromJson({
               "vaccineType": "HepA-HepB",
               "cvx": "104",
               "beginAge": "18 years",
-              "volume": "1.0",
+              "volume": "1",
               "forecastVaccineType": "Y"
             }
           ],
@@ -459,7 +459,7 @@ final AntigenSupportingData hepa = AntigenSupportingData.fromJson({
               "vaccineType": "HepA-HepB",
               "cvx": "104",
               "beginAge": "18 years",
-              "volume": "1.0",
+              "volume": "1",
               "forecastVaccineType": "Y"
             }
           ],
@@ -568,7 +568,7 @@ final AntigenSupportingData hepa = AntigenSupportingData.fromJson({
               "vaccineType": "HepA-HepB",
               "cvx": "104",
               "beginAge": "18 years",
-              "volume": "1.0",
+              "volume": "1",
               "forecastVaccineType": "Y"
             }
           ],
@@ -610,7 +610,7 @@ final AntigenSupportingData hepa = AntigenSupportingData.fromJson({
               "vaccineType": "HepA-HepB",
               "cvx": "104",
               "beginAge": "18 years",
-              "volume": "1.0",
+              "volume": "1",
               "forecastVaccineType": "Y"
             }
           ],
@@ -812,7 +812,7 @@ final AntigenSupportingData hepa = AntigenSupportingData.fromJson({
               "vaccineType": "HepA-HepB",
               "cvx": "104",
               "beginAge": "18 years",
-              "volume": "1.0",
+              "volume": "1",
               "forecastVaccineType": "Y"
             }
           ],
@@ -840,7 +840,7 @@ final AntigenSupportingData hepa = AntigenSupportingData.fromJson({
               "vaccineType": "HepA-HepB",
               "cvx": "104",
               "beginAge": "18 years",
-              "volume": "1.0",
+              "volume": "1",
               "forecastVaccineType": "Y"
             }
           ],
@@ -869,7 +869,7 @@ final AntigenSupportingData hepa = AntigenSupportingData.fromJson({
               "vaccineType": "HepA-HepB",
               "cvx": "104",
               "beginAge": "18 years",
-              "volume": "1.0",
+              "volume": "1",
               "forecastVaccineType": "Y"
             }
           ],
@@ -898,7 +898,7 @@ final AntigenSupportingData hepa = AntigenSupportingData.fromJson({
               "vaccineType": "HepA-HepB",
               "cvx": "104",
               "beginAge": "18 years",
-              "volume": "1.0",
+              "volume": "1",
               "forecastVaccineType": "Y"
             }
           ],
@@ -1092,7 +1092,7 @@ final AntigenSupportingData hepa = AntigenSupportingData.fromJson({
               "vaccineType": "Hep A, adult",
               "cvx": "52",
               "beginAge": "19 years",
-              "volume": "1.0",
+              "volume": "1",
               "forecastVaccineType": "N"
             },
             {
@@ -1150,7 +1150,7 @@ final AntigenSupportingData hepa = AntigenSupportingData.fromJson({
               "vaccineType": "Hep A, adult",
               "cvx": "52",
               "beginAge": "19 years",
-              "volume": "1.0",
+              "volume": "1",
               "forecastVaccineType": "N"
             }
           ],
@@ -1339,7 +1339,7 @@ final AntigenSupportingData hepa = AntigenSupportingData.fromJson({
               "vaccineType": "HepA-HepB",
               "cvx": "104",
               "beginAge": "18 years",
-              "volume": "1.0",
+              "volume": "1",
               "forecastVaccineType": "Y"
             }
           ],
@@ -1367,7 +1367,7 @@ final AntigenSupportingData hepa = AntigenSupportingData.fromJson({
               "vaccineType": "HepA-HepB",
               "cvx": "104",
               "beginAge": "18 years",
-              "volume": "1.0",
+              "volume": "1",
               "forecastVaccineType": "Y"
             }
           ],
@@ -1424,7 +1424,7 @@ final AntigenSupportingData hepa = AntigenSupportingData.fromJson({
               "vaccineType": "HepA-HepB",
               "cvx": "104",
               "beginAge": "18 years",
-              "volume": "1.0",
+              "volume": "1",
               "forecastVaccineType": "Y"
             }
           ],
@@ -1654,7 +1654,7 @@ final AntigenSupportingData hepa = AntigenSupportingData.fromJson({
               "vaccineType": "HepA-HepB",
               "cvx": "104",
               "beginAge": "18 years",
-              "volume": "1.0",
+              "volume": "1",
               "forecastVaccineType": "Y"
             }
           ],
@@ -1689,7 +1689,7 @@ final AntigenSupportingData hepa = AntigenSupportingData.fromJson({
               "vaccineType": "HepA-HepB",
               "cvx": "104",
               "beginAge": "18 years",
-              "volume": "1.0",
+              "volume": "1",
               "forecastVaccineType": "Y"
             }
           ],
@@ -2020,7 +2020,7 @@ final AntigenSupportingData hepa = AntigenSupportingData.fromJson({
               "vaccineType": "HepA-HepB",
               "cvx": "104",
               "beginAge": "18 years",
-              "volume": "1.0",
+              "volume": "1",
               "forecastVaccineType": "Y"
             }
           ],
@@ -2048,7 +2048,7 @@ final AntigenSupportingData hepa = AntigenSupportingData.fromJson({
               "vaccineType": "HepA-HepB",
               "cvx": "104",
               "beginAge": "18 years",
-              "volume": "1.0",
+              "volume": "1",
               "forecastVaccineType": "Y"
             }
           ],
@@ -2077,7 +2077,7 @@ final AntigenSupportingData hepa = AntigenSupportingData.fromJson({
               "vaccineType": "HepA-HepB",
               "cvx": "104",
               "beginAge": "18 years",
-              "volume": "1.0",
+              "volume": "1",
               "forecastVaccineType": "Y"
             }
           ],
@@ -2106,7 +2106,7 @@ final AntigenSupportingData hepa = AntigenSupportingData.fromJson({
               "vaccineType": "HepA-HepB",
               "cvx": "104",
               "beginAge": "18 years",
-              "volume": "1.0",
+              "volume": "1",
               "forecastVaccineType": "Y"
             }
           ],
@@ -2224,6 +2224,152 @@ final AntigenSupportingData hepa = AntigenSupportingData.fromJson({
           "recurringDose": "No"
         }
       ]
+    }
+  ],
+  "vaccineRecommendationCategory": [
+    {
+      "worksheetName": "2-dose",
+      "seriesName": "HepA 2-dose series",
+      "patientBeginAge": "0 days",
+      "patientEndAge": "n/a",
+      "forecastTargetDose": "Any",
+      "includedIndication": "n/a",
+      "excludedIndication": "n/a",
+      "category": "Routine",
+      "additionalMaterial":
+          "https://www.cdc.gov/hepatitis-a/hcp/vaccine-administration/index.html"
+    },
+    {
+      "worksheetName": "Adult 2-dose",
+      "seriesName": "HepA adult 2-dose series",
+      "patientBeginAge": "19 years",
+      "patientEndAge": "n/a",
+      "forecastTargetDose": "Any",
+      "includedIndication": "n/a",
+      "excludedIndication": "n/a",
+      "category": "High-Risk",
+      "additionalMaterial":
+          "https://www.cdc.gov/hepatitis-a/hcp/vaccine-administration/index.html"
+    },
+    {
+      "worksheetName": "Adult Twinrix 3-dose",
+      "seriesName": "HepA adult Twinrix 3-dose series",
+      "patientBeginAge": "19 years",
+      "patientEndAge": "n/a",
+      "forecastTargetDose": "Any",
+      "includedIndication": "n/a",
+      "excludedIndication": "n/a",
+      "category": "High-Risk",
+      "additionalMaterial":
+          "https://www.cdc.gov/hepatitis-a/hcp/vaccine-administration/index.html"
+    },
+    {
+      "worksheetName": "Adult Twinrix secondary 3-dose",
+      "seriesName": "HepA adult Twinrix secondary 3-dose series",
+      "patientBeginAge": "19 years",
+      "patientEndAge": "n/a",
+      "forecastTargetDose": "Any",
+      "includedIndication": "n/a",
+      "excludedIndication": "n/a",
+      "category": "High-Risk",
+      "additionalMaterial":
+          "https://www.cdc.gov/hepatitis-a/hcp/vaccine-administration/index.html"
+    },
+    {
+      "worksheetName": "Adult Twinrix tertiary 3-dose",
+      "seriesName": "HepA adult Twinrix tertiary 3-dose series",
+      "patientBeginAge": "19 years",
+      "patientEndAge": "n/a",
+      "forecastTargetDose": "Any",
+      "includedIndication": "n/a",
+      "excludedIndication": "n/a",
+      "category": "High-Risk",
+      "additionalMaterial":
+          "https://www.cdc.gov/hepatitis-a/hcp/vaccine-administration/index.html"
+    },
+    {
+      "worksheetName": "Adult Twinrix 4-dose",
+      "seriesName": "HepA adult Twinrix 4 dose Series",
+      "patientBeginAge": "19 years",
+      "patientEndAge": "n/a",
+      "forecastTargetDose": "Any",
+      "includedIndication": "n/a",
+      "excludedIndication": "n/a",
+      "category": "High-Risk",
+      "additionalMaterial":
+          "https://www.cdc.gov/hepatitis-a/hcp/vaccine-administration/index.html"
+    },
+    {
+      "worksheetName": "Risk 2-dose",
+      "seriesName": "HepA risk 2-dose series",
+      "patientBeginAge": "19 years",
+      "patientEndAge": "n/a",
+      "forecastTargetDose": "Any",
+      "includedIndication": "Any",
+      "excludedIndication": "n/a",
+      "category": "High-Risk",
+      "additionalMaterial":
+          "https://www.cdc.gov/hepatitis-a/hcp/vaccine-administration/index.html"
+    },
+    {
+      "worksheetName": "Risk Twinrix 3-dose",
+      "seriesName": "HepA risk Twinrix 3-dose series",
+      "patientBeginAge": "19 years",
+      "patientEndAge": "n/a",
+      "forecastTargetDose": "Any",
+      "includedIndication": "Any",
+      "excludedIndication": "n/a",
+      "category": "High-Risk",
+      "additionalMaterial":
+          "https://www.cdc.gov/hepatitis-a/hcp/vaccine-administration/index.html"
+    },
+    {
+      "worksheetName": "Risk Twinrix secondary 3-dose",
+      "seriesName": "HepA risk Twinrix secondary 3-dose series",
+      "patientBeginAge": "19 years",
+      "patientEndAge": "n/a",
+      "forecastTargetDose": "Any",
+      "includedIndication": "Any",
+      "excludedIndication": "n/a",
+      "category": "High-Risk",
+      "additionalMaterial":
+          "https://www.cdc.gov/hepatitis-a/hcp/vaccine-administration/index.html"
+    },
+    {
+      "worksheetName": "Risk Twinrix tertiary 3-dose",
+      "seriesName": "HepA risk Twinrix tertiary 3-dose series",
+      "patientBeginAge": "19 years",
+      "patientEndAge": "n/a",
+      "forecastTargetDose": "Any",
+      "includedIndication": "Any",
+      "excludedIndication": "n/a",
+      "category": "High-Risk",
+      "additionalMaterial":
+          "https://www.cdc.gov/hepatitis-a/hcp/vaccine-administration/index.html"
+    },
+    {
+      "worksheetName": "Risk Twinrix 4-dose",
+      "seriesName": "HepA risk Twinrix 4 dose Series",
+      "patientBeginAge": "19 years",
+      "patientEndAge": "n/a",
+      "forecastTargetDose": "Any",
+      "includedIndication": "Any",
+      "excludedIndication": "n/a",
+      "category": "High-Risk",
+      "additionalMaterial":
+          "https://www.cdc.gov/hepatitis-a/hcp/vaccine-administration/index.html"
+    },
+    {
+      "worksheetName": "Risk 1-dose",
+      "seriesName": "HepA risk 1-dose series",
+      "patientBeginAge": "6 months",
+      "patientEndAge": "12 months",
+      "forecastTargetDose": "Any",
+      "includedIndication": "Any",
+      "excludedIndication": "n/a",
+      "category": "High-Risk",
+      "additionalMaterial":
+          "https://www.cdc.gov/hepatitis-a/hcp/vaccine-administration/index.html"
     }
   ]
 });

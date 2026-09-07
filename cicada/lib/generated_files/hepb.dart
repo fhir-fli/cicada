@@ -222,14 +222,14 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
               "vaccineType": "Hep B, Adult",
               "cvx": "43",
               "beginAge": "20 years",
-              "volume": "1.0",
+              "volume": "1",
               "forecastVaccineType": "N"
             },
             {
               "vaccineType": "Hep B, Dialysis",
               "cvx": "44",
               "beginAge": "20 years",
-              "volume": "1.0",
+              "volume": "1",
               "forecastVaccineType": "N"
             },
             {
@@ -368,14 +368,14 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
               "vaccineType": "Hep B, Adult",
               "cvx": "43",
               "beginAge": "20 years",
-              "volume": "1.0",
+              "volume": "1",
               "forecastVaccineType": "N"
             },
             {
               "vaccineType": "Hep B, Dialysis",
               "cvx": "44",
               "beginAge": "20 years",
-              "volume": "1.0",
+              "volume": "1",
               "forecastVaccineType": "N"
             },
             {
@@ -520,14 +520,14 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
               "vaccineType": "Hep B, Adult",
               "cvx": "43",
               "beginAge": "20 years",
-              "volume": "1.0",
+              "volume": "1",
               "forecastVaccineType": "N"
             },
             {
               "vaccineType": "Hep B, Dialysis",
               "cvx": "44",
               "beginAge": "20 years",
-              "volume": "1.0",
+              "volume": "1",
               "forecastVaccineType": "N"
             },
             {
@@ -1206,7 +1206,7 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
               "cvx": "43",
               "tradeName": "RECOMBIVAX ADULT",
               "mvx": "MSD",
-              "volume": "1.0",
+              "volume": "1",
               "forecastVaccineType": "Y"
             }
           ],
@@ -1232,7 +1232,7 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
               "cvx": "43",
               "tradeName": "RECOMBIVAX ADULT",
               "mvx": "MSD",
-              "volume": "1.0",
+              "volume": "1",
               "forecastVaccineType": "Y"
             }
           ],
@@ -1281,14 +1281,14 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
               "vaccineType": "Hep B, Adult",
               "cvx": "43",
               "beginAge": "20 years",
-              "volume": "1.0",
+              "volume": "1",
               "forecastVaccineType": "N"
             },
             {
               "vaccineType": "Hep B, Dialysis",
               "cvx": "44",
               "beginAge": "20 years",
-              "volume": "1.0",
+              "volume": "1",
               "forecastVaccineType": "N"
             },
             {
@@ -1396,14 +1396,14 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
               "vaccineType": "Hep B, Adult",
               "cvx": "43",
               "beginAge": "20 years",
-              "volume": "1.0",
+              "volume": "1",
               "forecastVaccineType": "N"
             },
             {
               "vaccineType": "Hep B, Dialysis",
               "cvx": "44",
               "beginAge": "20 years",
-              "volume": "1.0",
+              "volume": "1",
               "forecastVaccineType": "N"
             },
             {
@@ -1517,14 +1517,14 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
               "vaccineType": "Hep B, Adult",
               "cvx": "43",
               "beginAge": "20 years",
-              "volume": "1.0",
+              "volume": "1",
               "forecastVaccineType": "N"
             },
             {
               "vaccineType": "Hep B, Dialysis",
               "cvx": "44",
               "beginAge": "20 years",
-              "volume": "1.0",
+              "volume": "1",
               "forecastVaccineType": "N"
             },
             {
@@ -1652,14 +1652,14 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
               "vaccineType": "Hep B, Adult",
               "cvx": "43",
               "beginAge": "20 years",
-              "volume": "1.0",
+              "volume": "1",
               "forecastVaccineType": "N"
             },
             {
               "vaccineType": "Hep B, Dialysis",
               "cvx": "44",
               "beginAge": "20 years",
-              "volume": "1.0",
+              "volume": "1",
               "forecastVaccineType": "N"
             },
             {
@@ -1767,14 +1767,14 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
               "vaccineType": "Hep B, Adult",
               "cvx": "43",
               "beginAge": "20 years",
-              "volume": "1.0",
+              "volume": "1",
               "forecastVaccineType": "N"
             },
             {
               "vaccineType": "Hep B, Dialysis",
               "cvx": "44",
               "beginAge": "20 years",
-              "volume": "1.0",
+              "volume": "1",
               "forecastVaccineType": "N"
             },
             {
@@ -1882,14 +1882,14 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
               "vaccineType": "Hep B, Adult",
               "cvx": "43",
               "beginAge": "20 years",
-              "volume": "1.0",
+              "volume": "1",
               "forecastVaccineType": "N"
             },
             {
               "vaccineType": "Hep B, Dialysis",
               "cvx": "44",
               "beginAge": "20 years",
-              "volume": "1.0",
+              "volume": "1",
               "forecastVaccineType": "N"
             },
             {
@@ -2004,14 +2004,14 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
               "vaccineType": "Hep B, Adult",
               "cvx": "43",
               "beginAge": "20 years",
-              "volume": "1.0",
+              "volume": "1",
               "forecastVaccineType": "N"
             },
             {
               "vaccineType": "Hep B, Dialysis",
               "cvx": "44",
               "beginAge": "20 years",
-              "volume": "1.0",
+              "volume": "1",
               "forecastVaccineType": "N"
             },
             {
@@ -2221,14 +2221,14 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
               "vaccineType": "Hep B, Adult",
               "cvx": "43",
               "beginAge": "20 years",
-              "volume": "1.0",
+              "volume": "1",
               "forecastVaccineType": "N"
             },
             {
               "vaccineType": "Hep B, Dialysis",
               "cvx": "44",
               "beginAge": "20 years",
-              "volume": "1.0",
+              "volume": "1",
               "forecastVaccineType": "N"
             },
             {
@@ -2375,14 +2375,14 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
               "vaccineType": "Hep B, Adult",
               "cvx": "43",
               "beginAge": "20 years",
-              "volume": "1.0",
+              "volume": "1",
               "forecastVaccineType": "N"
             },
             {
               "vaccineType": "Hep B, Dialysis",
               "cvx": "44",
               "beginAge": "20 years",
-              "volume": "1.0",
+              "volume": "1",
               "forecastVaccineType": "N"
             },
             {
@@ -2603,14 +2603,14 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
               "vaccineType": "Hep B, Adult",
               "cvx": "43",
               "beginAge": "20 years",
-              "volume": "1.0",
+              "volume": "1",
               "forecastVaccineType": "N"
             },
             {
               "vaccineType": "Hep B, Dialysis",
               "cvx": "44",
               "beginAge": "20 years",
-              "volume": "1.0",
+              "volume": "1",
               "forecastVaccineType": "N"
             }
           ],
@@ -2705,14 +2705,14 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
               "vaccineType": "Hep B, Adult",
               "cvx": "43",
               "beginAge": "20 years",
-              "volume": "1.0",
+              "volume": "1",
               "forecastVaccineType": "N"
             },
             {
               "vaccineType": "Hep B, Dialysis",
               "cvx": "44",
               "beginAge": "20 years",
-              "volume": "1.0",
+              "volume": "1",
               "forecastVaccineType": "N"
             },
             {
@@ -2890,7 +2890,7 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
               "vaccineType": "HepA-HepB",
               "cvx": "104",
               "beginAge": "18 years",
-              "volume": "1.0",
+              "volume": "1",
               "forecastVaccineType": "Y"
             }
           ],
@@ -2918,7 +2918,7 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
               "vaccineType": "HepA-HepB",
               "cvx": "104",
               "beginAge": "18 years",
-              "volume": "1.0",
+              "volume": "1",
               "forecastVaccineType": "Y"
             }
           ],
@@ -2953,7 +2953,7 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
               "vaccineType": "HepA-HepB",
               "cvx": "104",
               "beginAge": "18 years",
-              "volume": "1.0",
+              "volume": "1",
               "forecastVaccineType": "Y"
             }
           ],
@@ -3008,7 +3008,7 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
               "vaccineType": "HepA-HepB",
               "cvx": "104",
               "beginAge": "18 years",
-              "volume": "1.0",
+              "volume": "1",
               "forecastVaccineType": "Y"
             }
           ],
@@ -3036,7 +3036,7 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
               "vaccineType": "HepA-HepB",
               "cvx": "104",
               "beginAge": "18 years",
-              "volume": "1.0",
+              "volume": "1",
               "forecastVaccineType": "Y"
             }
           ],
@@ -3065,7 +3065,7 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
               "vaccineType": "HepA-HepB",
               "cvx": "104",
               "beginAge": "18 years",
-              "volume": "1.0",
+              "volume": "1",
               "forecastVaccineType": "Y"
             }
           ],
@@ -3094,7 +3094,7 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
               "vaccineType": "HepA-HepB",
               "cvx": "104",
               "beginAge": "18 years",
-              "volume": "1.0",
+              "volume": "1",
               "forecastVaccineType": "Y"
             }
           ],
@@ -3311,7 +3311,7 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
               "vaccineType": "Hep B, Adult",
               "cvx": "43",
               "beginAge": "20 years",
-              "volume": "1.0",
+              "volume": "1",
               "forecastVaccineType": "N"
             }
           ],
@@ -3410,7 +3410,7 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
               "vaccineType": "Hep B, Adult",
               "cvx": "43",
               "beginAge": "20 years",
-              "volume": "1.0",
+              "volume": "1",
               "forecastVaccineType": "N"
             }
           ],
@@ -3515,7 +3515,7 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
               "vaccineType": "Hep B, Adult",
               "cvx": "43",
               "beginAge": "20 years",
-              "volume": "1.0",
+              "volume": "1",
               "forecastVaccineType": "N"
             }
           ],
@@ -4050,14 +4050,14 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
               "vaccineType": "Hep B, Adult",
               "cvx": "43",
               "beginAge": "20 years",
-              "volume": "1.0",
+              "volume": "1",
               "forecastVaccineType": "N"
             },
             {
               "vaccineType": "Hep B, Dialysis",
               "cvx": "44",
               "beginAge": "20 years",
-              "volume": "1.0",
+              "volume": "1",
               "forecastVaccineType": "N"
             },
             {
@@ -4196,14 +4196,14 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
               "vaccineType": "Hep B, Adult",
               "cvx": "43",
               "beginAge": "20 years",
-              "volume": "1.0",
+              "volume": "1",
               "forecastVaccineType": "N"
             },
             {
               "vaccineType": "Hep B, Dialysis",
               "cvx": "44",
               "beginAge": "20 years",
-              "volume": "1.0",
+              "volume": "1",
               "forecastVaccineType": "N"
             },
             {
@@ -4579,14 +4579,14 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
               "vaccineType": "Hep B, Adult",
               "cvx": "43",
               "beginAge": "20 years",
-              "volume": "1.0",
+              "volume": "1",
               "forecastVaccineType": "N"
             },
             {
               "vaccineType": "Hep B, Dialysis",
               "cvx": "44",
               "beginAge": "20 years",
-              "volume": "1.0",
+              "volume": "1",
               "forecastVaccineType": "N"
             }
           ],
@@ -4668,14 +4668,14 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
               "vaccineType": "Hep B, Adult",
               "cvx": "43",
               "beginAge": "20 years",
-              "volume": "1.0",
+              "volume": "1",
               "forecastVaccineType": "N"
             },
             {
               "vaccineType": "Hep B, Dialysis",
               "cvx": "44",
               "beginAge": "20 years",
-              "volume": "1.0",
+              "volume": "1",
               "forecastVaccineType": "N"
             },
             {
@@ -5016,7 +5016,7 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
               "vaccineType": "HepA-HepB",
               "cvx": "104",
               "beginAge": "18 years",
-              "volume": "1.0",
+              "volume": "1",
               "forecastVaccineType": "Y"
             }
           ],
@@ -5044,7 +5044,7 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
               "vaccineType": "HepA-HepB",
               "cvx": "104",
               "beginAge": "18 years",
-              "volume": "1.0",
+              "volume": "1",
               "forecastVaccineType": "Y"
             }
           ],
@@ -5079,7 +5079,7 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
               "vaccineType": "HepA-HepB",
               "cvx": "104",
               "beginAge": "18 years",
-              "volume": "1.0",
+              "volume": "1",
               "forecastVaccineType": "Y"
             }
           ],
@@ -5296,7 +5296,7 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
               "vaccineType": "HepA-HepB",
               "cvx": "104",
               "beginAge": "18 years",
-              "volume": "1.0",
+              "volume": "1",
               "forecastVaccineType": "Y"
             }
           ],
@@ -5324,7 +5324,7 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
               "vaccineType": "HepA-HepB",
               "cvx": "104",
               "beginAge": "18 years",
-              "volume": "1.0",
+              "volume": "1",
               "forecastVaccineType": "Y"
             }
           ],
@@ -5353,7 +5353,7 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
               "vaccineType": "HepA-HepB",
               "cvx": "104",
               "beginAge": "18 years",
-              "volume": "1.0",
+              "volume": "1",
               "forecastVaccineType": "Y"
             }
           ],
@@ -5382,7 +5382,7 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
               "vaccineType": "HepA-HepB",
               "cvx": "104",
               "beginAge": "18 years",
-              "volume": "1.0",
+              "volume": "1",
               "forecastVaccineType": "Y"
             }
           ],
@@ -5447,7 +5447,7 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
               "beginAge": "20 years",
               "tradeName": "ENGERIX-B ADULT",
               "mvx": "SKB",
-              "volume": "2.0",
+              "volume": "2",
               "forecastVaccineType": "N"
             }
           ],
@@ -5568,7 +5568,7 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
               "beginAge": "20 years",
               "tradeName": "ENGERIX-B ADULT",
               "mvx": "SKB",
-              "volume": "2.0",
+              "volume": "2",
               "forecastVaccineType": "N"
             }
           ],
@@ -5689,7 +5689,7 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
               "beginAge": "20 years",
               "tradeName": "ENGERIX-B ADULT",
               "mvx": "SKB",
-              "volume": "2.0",
+              "volume": "2",
               "forecastVaccineType": "N"
             }
           ],
@@ -5831,7 +5831,7 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
               "beginAge": "20 years",
               "tradeName": "ENGERIX-B ADULT",
               "mvx": "SKB",
-              "volume": "2.0",
+              "volume": "2",
               "forecastVaccineType": "N"
             }
           ],
@@ -5977,14 +5977,14 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
               "beginAge": "20 years",
               "tradeName": "ENGERIX-B ADULT",
               "mvx": "SKB",
-              "volume": "2.0",
+              "volume": "2",
               "forecastVaccineType": "N"
             },
             {
               "vaccineType": "Hep B, Dialysis",
               "cvx": "44",
               "beginAge": "20 years",
-              "volume": "1.0",
+              "volume": "1",
               "forecastVaccineType": "N"
             },
             {
@@ -6054,7 +6054,7 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
               "vaccineType": "Hep B, Dialysis",
               "cvx": "44",
               "beginAge": "20 years",
-              "volume": "1.0",
+              "volume": "1",
               "forecastVaccineType": "N"
             }
           ],
@@ -6102,7 +6102,7 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
               "vaccineType": "Hep B, Dialysis",
               "cvx": "44",
               "beginAge": "20 years",
-              "volume": "1.0",
+              "volume": "1",
               "forecastVaccineType": "N"
             }
           ],
@@ -6156,7 +6156,7 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
               "vaccineType": "Hep B, Dialysis",
               "cvx": "44",
               "beginAge": "20 years",
-              "volume": "1.0",
+              "volume": "1",
               "forecastVaccineType": "Y"
             }
           ],
@@ -6206,14 +6206,14 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
               "beginAge": "20 years",
               "tradeName": "ENGERIX-B ADULT",
               "mvx": "SKB",
-              "volume": "2.0",
+              "volume": "2",
               "forecastVaccineType": "N"
             },
             {
               "vaccineType": "Hep B, Dialysis",
               "cvx": "44",
               "beginAge": "20 years",
-              "volume": "1.0",
+              "volume": "1",
               "forecastVaccineType": "N"
             },
             {
@@ -6240,6 +6240,380 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
           "recurringDose": "Yes"
         }
       ]
+    }
+  ],
+  "vaccineRecommendationCategory": [
+    {
+      "worksheetName": "3-dose",
+      "seriesName": "HepB 3-dose series",
+      "patientBeginAge": "0 days",
+      "patientEndAge": "n/a",
+      "forecastTargetDose": "Any",
+      "includedIndication": "n/a",
+      "excludedIndication": "n/a",
+      "category": "Routine",
+      "additionalMaterial":
+          "https://www.cdc.gov/vaccines/hcp/imz-schedules/child-adolescent-notes.html#note-hepb"
+    },
+    {
+      "worksheetName": "4-dose",
+      "seriesName": "HepB 4-dose series",
+      "patientBeginAge": "0 days",
+      "patientEndAge": "n/a",
+      "forecastTargetDose": "Any",
+      "includedIndication": "n/a",
+      "excludedIndication": "n/a",
+      "category": "Routine",
+      "additionalMaterial":
+          "https://www.cdc.gov/vaccines/hcp/imz-schedules/child-adolescent-notes.html#note-hepb"
+    },
+    {
+      "worksheetName": "Adolescent 2-dose",
+      "seriesName": "HepB adolescent 2-dose series",
+      "patientBeginAge": "0 days",
+      "patientEndAge": "n/a",
+      "forecastTargetDose": "Any",
+      "includedIndication": "n/a",
+      "excludedIndication": "n/a",
+      "category": "Routine",
+      "additionalMaterial":
+          "https://www.cdc.gov/vaccines/hcp/imz-schedules/child-adolescent-notes.html#note-hepb"
+    },
+    {
+      "worksheetName": "19+ 3-dose",
+      "seriesName": "HepB 19+ 3-dose series",
+      "patientBeginAge": "19 years",
+      "patientEndAge": "60 years",
+      "forecastTargetDose": "Any",
+      "includedIndication": "n/a",
+      "excludedIndication": "n/a",
+      "category": "Routine",
+      "additionalMaterial":
+          "https://www.cdc.gov/vaccines/hcp/imz-schedules/adult-notes.html#note-hepb"
+    },
+    {
+      "worksheetName": "19+ 3-dose",
+      "seriesName": "HepB 19+ 3-dose series",
+      "patientBeginAge": "60 years",
+      "patientEndAge": "n/a",
+      "forecastTargetDose": "Any",
+      "includedIndication": "n/a",
+      "excludedIndication": "n/a",
+      "category": "SCDM",
+      "additionalMaterial":
+          "https://www.cdc.gov/vaccines/hcp/imz-schedules/adult-notes.html#note-hepb"
+    },
+    {
+      "worksheetName": "19+ 4-dose",
+      "seriesName": "HepB 19+ 4-dose series",
+      "patientBeginAge": "19 years",
+      "patientEndAge": "60 years",
+      "forecastTargetDose": "Any",
+      "includedIndication": "n/a",
+      "excludedIndication": "n/a",
+      "category": "Routine",
+      "additionalMaterial":
+          "https://www.cdc.gov/vaccines/hcp/imz-schedules/adult-notes.html#note-hepb"
+    },
+    {
+      "worksheetName": "19+ 4-dose",
+      "seriesName": "HepB 19+ 4-dose series",
+      "patientBeginAge": "60 years",
+      "patientEndAge": "n/a",
+      "forecastTargetDose": "Any",
+      "includedIndication": "n/a",
+      "excludedIndication": "n/a",
+      "category": "SCDM",
+      "additionalMaterial":
+          "https://www.cdc.gov/vaccines/hcp/imz-schedules/adult-notes.html#note-hepb"
+    },
+    {
+      "worksheetName": "CpG 2-dose",
+      "seriesName": "HepB Heplisav-B 2-dose series",
+      "patientBeginAge": "18 years",
+      "patientEndAge": "60 years",
+      "forecastTargetDose": "Any",
+      "includedIndication": "n/a",
+      "excludedIndication": "n/a",
+      "category": "Routine",
+      "additionalMaterial":
+          "https://www.cdc.gov/vaccines/hcp/imz-schedules/adult-notes.html#note-hepb"
+    },
+    {
+      "worksheetName": "CpG 2-dose",
+      "seriesName": "HepB Heplisav-B 2-dose series",
+      "patientBeginAge": "60 years",
+      "patientEndAge": "n/a",
+      "forecastTargetDose": "Any",
+      "includedIndication": "n/a",
+      "excludedIndication": "n/a",
+      "category": "SCDM",
+      "additionalMaterial":
+          "https://www.cdc.gov/vaccines/hcp/imz-schedules/adult-notes.html#note-hepb"
+    },
+    {
+      "worksheetName": "HepB-CpG 4-dose Mixed Use",
+      "seriesName": "HepB Heplisav-B secondary 4-dose series",
+      "patientBeginAge": "18 years",
+      "patientEndAge": "60 years",
+      "forecastTargetDose": "Any",
+      "includedIndication": "n/a",
+      "excludedIndication": "n/a",
+      "category": "Routine",
+      "additionalMaterial":
+          "https://www.cdc.gov/vaccines/hcp/imz-schedules/adult-notes.html#note-hepb"
+    },
+    {
+      "worksheetName": "HepB-CpG 4-dose Mixed Use",
+      "seriesName": "HepB Heplisav-B secondary 4-dose series",
+      "patientBeginAge": "60 years",
+      "patientEndAge": "n/a",
+      "forecastTargetDose": "Any",
+      "includedIndication": "n/a",
+      "excludedIndication": "n/a",
+      "category": "SCDM",
+      "additionalMaterial":
+          "https://www.cdc.gov/vaccines/hcp/imz-schedules/adult-notes.html#note-hepb"
+    },
+    {
+      "worksheetName": "CpG-HepB 4-dose Mixed Use",
+      "seriesName": "HepB Heplisav-B tertiary 4-dose series",
+      "patientBeginAge": "18 years",
+      "patientEndAge": "60 years",
+      "forecastTargetDose": "Any",
+      "includedIndication": "n/a",
+      "excludedIndication": "n/a",
+      "category": "Routine",
+      "additionalMaterial":
+          "https://www.cdc.gov/vaccines/hcp/imz-schedules/adult-notes.html#note-hepb"
+    },
+    {
+      "worksheetName": "CpG-HepB 4-dose Mixed Use",
+      "seriesName": "HepB Heplisav-B tertiary 4-dose series",
+      "patientBeginAge": "60 years",
+      "patientEndAge": "n/a",
+      "forecastTargetDose": "Any",
+      "includedIndication": "n/a",
+      "excludedIndication": "n/a",
+      "category": "SCDM",
+      "additionalMaterial":
+          "https://www.cdc.gov/vaccines/hcp/imz-schedules/adult-notes.html#note-hepb"
+    },
+    {
+      "worksheetName": "Twinrix 3-dose",
+      "seriesName": "HepB Twinrix 3 Dose Series",
+      "patientBeginAge": "18 years",
+      "patientEndAge": "60 years",
+      "forecastTargetDose": "Any",
+      "includedIndication": "n/a",
+      "excludedIndication": "n/a",
+      "category": "Routine",
+      "additionalMaterial":
+          "https://www.cdc.gov/vaccines/hcp/imz-schedules/adult-notes.html#note-hepb"
+    },
+    {
+      "worksheetName": "Twinrix 3-dose",
+      "seriesName": "HepB Twinrix 3 Dose Series",
+      "patientBeginAge": "60 years",
+      "patientEndAge": "n/a",
+      "forecastTargetDose": "Any",
+      "includedIndication": "n/a",
+      "excludedIndication": "n/a",
+      "category": "SCDM",
+      "additionalMaterial":
+          "https://www.cdc.gov/vaccines/hcp/imz-schedules/adult-notes.html#note-hepb"
+    },
+    {
+      "worksheetName": "Twinrix 4-dose",
+      "seriesName": "HepB Twinrix 4-dose series",
+      "patientBeginAge": "18 years",
+      "patientEndAge": "60 years",
+      "forecastTargetDose": "Any",
+      "includedIndication": "n/a",
+      "excludedIndication": "n/a",
+      "category": "Routine",
+      "additionalMaterial":
+          "https://www.cdc.gov/vaccines/hcp/imz-schedules/adult-notes.html#note-hepb"
+    },
+    {
+      "worksheetName": "Twinrix 4-dose",
+      "seriesName": "HepB Twinrix 4-dose series",
+      "patientBeginAge": "60 years",
+      "patientEndAge": "n/a",
+      "forecastTargetDose": "Any",
+      "includedIndication": "n/a",
+      "excludedIndication": "n/a",
+      "category": "SCDM",
+      "additionalMaterial":
+          "https://www.cdc.gov/vaccines/hcp/imz-schedules/adult-notes.html#note-hepb"
+    },
+    {
+      "worksheetName": "Risk 3-dose",
+      "seriesName": "HepB risk 3-dose series",
+      "patientBeginAge": "60 years",
+      "patientEndAge": "n/a",
+      "forecastTargetDose": "Any",
+      "includedIndication": "Any",
+      "excludedIndication": "Diabetes (014)",
+      "category": "High-Risk",
+      "additionalMaterial":
+          "https://www.cdc.gov/vaccines/hcp/imz-schedules/adult-notes.html#note-hepb"
+    },
+    {
+      "worksheetName": "Risk 3-dose",
+      "seriesName": "HepB risk 3-dose series",
+      "patientBeginAge": "60 years",
+      "patientEndAge": "n/a",
+      "forecastTargetDose": "Any",
+      "includedIndication": "Diabetes (014)",
+      "excludedIndication": "n/a",
+      "category": "SCDM",
+      "additionalMaterial":
+          "https://www.cdc.gov/vaccines/hcp/imz-schedules/adult-notes.html#note-hepb"
+    },
+    {
+      "worksheetName": "Risk CpG 2-dose",
+      "seriesName": "HepB risk Heplisav-B 2-dose series",
+      "patientBeginAge": "60 years",
+      "patientEndAge": "n/a",
+      "forecastTargetDose": "Any",
+      "includedIndication": "Any",
+      "excludedIndication": "Diabetes (014)",
+      "category": "High-Risk",
+      "additionalMaterial":
+          "https://www.cdc.gov/vaccines/hcp/imz-schedules/adult-notes.html#note-hepb"
+    },
+    {
+      "worksheetName": "Risk CpG 2-dose",
+      "seriesName": "HepB risk Heplisav-B 2-dose series",
+      "patientBeginAge": "60 years",
+      "patientEndAge": "n/a",
+      "forecastTargetDose": "Any",
+      "includedIndication": "Diabetes (014)",
+      "excludedIndication": "n/a",
+      "category": "SCDM",
+      "additionalMaterial":
+          "https://www.cdc.gov/vaccines/hcp/imz-schedules/adult-notes.html#note-hepb"
+    },
+    {
+      "worksheetName": "Risk HepB-CpG 4-dose Mixed Use",
+      "seriesName": "HepB risk Heplisav-B secondary 4-dose series",
+      "patientBeginAge": "60 years",
+      "patientEndAge": "n/a",
+      "forecastTargetDose": "Any",
+      "includedIndication": "Any",
+      "excludedIndication": "Diabetes (014)",
+      "category": "High-Risk",
+      "additionalMaterial":
+          "https://www.cdc.gov/vaccines/hcp/imz-schedules/adult-notes.html#note-hepb"
+    },
+    {
+      "worksheetName": "Risk HepB-CpG 4-dose Mixed Use",
+      "seriesName": "HepB risk Heplisav-B secondary 4-dose series",
+      "patientBeginAge": "60 years",
+      "patientEndAge": "n/a",
+      "forecastTargetDose": "Any",
+      "includedIndication": "Diabetes (014)",
+      "excludedIndication": "n/a",
+      "category": "SCDM",
+      "additionalMaterial":
+          "https://www.cdc.gov/vaccines/hcp/imz-schedules/adult-notes.html#note-hepb"
+    },
+    {
+      "worksheetName": "Risk CpG-HepB 4-dose Mixed Use",
+      "seriesName": "HepB risk Heplisav-B tertiary 4-dose series",
+      "patientBeginAge": "60 years",
+      "patientEndAge": "n/a",
+      "forecastTargetDose": "Any",
+      "includedIndication": "Any",
+      "excludedIndication": "Diabetes (014)",
+      "category": "High-Risk",
+      "additionalMaterial":
+          "https://www.cdc.gov/vaccines/hcp/imz-schedules/adult-notes.html#note-hepb"
+    },
+    {
+      "worksheetName": "Risk CpG-HepB 4-dose Mixed Use",
+      "seriesName": "HepB risk Heplisav-B tertiary 4-dose series",
+      "patientBeginAge": "60 years",
+      "patientEndAge": "n/a",
+      "forecastTargetDose": "Any",
+      "includedIndication": "Diabetes (014)",
+      "excludedIndication": "n/a",
+      "category": "SCDM",
+      "additionalMaterial":
+          "https://www.cdc.gov/vaccines/hcp/imz-schedules/adult-notes.html#note-hepb"
+    },
+    {
+      "worksheetName": "Risk Twinrix 3-dose",
+      "seriesName": "HepB risk Twinrix 3 Dose Series",
+      "patientBeginAge": "60 years",
+      "patientEndAge": "n/a",
+      "forecastTargetDose": "Any",
+      "includedIndication": "Any",
+      "excludedIndication": "Diabetes (014)",
+      "category": "High-Risk",
+      "additionalMaterial":
+          "https://www.cdc.gov/vaccines/hcp/imz-schedules/adult-notes.html#note-hepb"
+    },
+    {
+      "worksheetName": "Risk Twinrix 3-dose",
+      "seriesName": "HepB risk Twinrix 3 Dose Series",
+      "patientBeginAge": "60 years",
+      "patientEndAge": "n/a",
+      "forecastTargetDose": "Any",
+      "includedIndication": "Diabetes (014)",
+      "excludedIndication": "n/a",
+      "category": "SCDM",
+      "additionalMaterial":
+          "https://www.cdc.gov/vaccines/hcp/imz-schedules/adult-notes.html#note-hepb"
+    },
+    {
+      "worksheetName": "Risk Twinrix 4-dose",
+      "seriesName": "HepB risk Twinrix 4-dose series",
+      "patientBeginAge": "60 years",
+      "patientEndAge": "n/a",
+      "forecastTargetDose": "Any",
+      "includedIndication": "Any",
+      "excludedIndication": "Diabetes (014)",
+      "category": "High-Risk",
+      "additionalMaterial":
+          "https://www.cdc.gov/vaccines/hcp/imz-schedules/adult-notes.html#note-hepb"
+    },
+    {
+      "worksheetName": "Risk Twinrix 4-dose",
+      "seriesName": "HepB risk Twinrix 4-dose series",
+      "patientBeginAge": "60 years",
+      "patientEndAge": "n/a",
+      "forecastTargetDose": "Any",
+      "includedIndication": "Diabetes (014)",
+      "excludedIndication": "n/a",
+      "category": "SCDM",
+      "additionalMaterial":
+          "https://www.cdc.gov/vaccines/hcp/imz-schedules/adult-notes.html#note-hepb"
+    },
+    {
+      "worksheetName": "Risk Dialysis 4-dose",
+      "seriesName": "HepB risk Dialysis 4-dose series",
+      "patientBeginAge": "20 years",
+      "patientEndAge": "n/a",
+      "forecastTargetDose": "Any",
+      "includedIndication": "Any",
+      "excludedIndication": "n/a",
+      "category": "High-Risk",
+      "additionalMaterial":
+          "https://www.cdc.gov/vaccines/hcp/imz-schedules/adult-notes.html#note-hepb"
+    },
+    {
+      "worksheetName": "Risk Recombivax 3-dose",
+      "seriesName": "HepB risk Recombivax 3-dose series",
+      "patientBeginAge": "20 years",
+      "patientEndAge": "n/a",
+      "forecastTargetDose": "Any",
+      "includedIndication": "Any",
+      "excludedIndication": "n/a",
+      "category": "High-Risk",
+      "additionalMaterial":
+          "https://www.cdc.gov/vaccines/hcp/imz-schedules/adult-notes.html#note-hepb"
     }
   ]
 });

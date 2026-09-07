@@ -4827,5 +4827,29 @@
                 }
             ]
         }
+    ],
+    "vaccineRecommendationCategory": [
+        {
+            "worksheetName": "Standard",
+            "seriesName": "Tetanus standard series",
+            "patientBeginAge": "0 days",
+            "patientEndAge": "n/a",
+            "forecastTargetDose": "Any",
+            "includedIndication": "n/a",
+            "excludedIndication": "n/a",
+            "category": "Routine",
+            "additionalMaterial": "https://www.cdc.gov/tetanus/hcp/vaccine-recommendations/index.html"
+        },
+        {
+            "worksheetName": "Start at 12 months",
+            "seriesName": "Tetanus start at 12 months series",
+            "patientBeginAge": "0 days",
+            "patientEndAge": "n/a",
+            "forecastTargetDose": "Any",
+            "includedIndication": "n/a",
+            "excludedIndication": "n/a",
+            "category": "Routine",
+            "additionalMaterial": "https://www.cdc.gov/tetanus/hcp/vaccine-recommendations/index.html"
+        }
     ]
 }

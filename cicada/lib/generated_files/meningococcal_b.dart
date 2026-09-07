@@ -1425,5 +1425,84 @@ final AntigenSupportingData meningococcalB = AntigenSupportingData.fromJson({
         }
       ]
     }
+  ],
+  "vaccineRecommendationCategory": [
+    {
+      "worksheetName": "2-dose MenB-4C SCDM",
+      "seriesName":
+          "Meningococcal B 2-dose series MenB-4C Shared Clinical Decision Making",
+      "patientBeginAge": "0 days",
+      "patientEndAge": "n/a",
+      "forecastTargetDose": "Any",
+      "includedIndication": "n/a",
+      "excludedIndication": "n/a",
+      "category": "SCDM",
+      "additionalMaterial":
+          "https://www.cdc.gov/vaccines/media/pdfs/2025/03/2024-isd-job-aid-scdm-menb-508-remediated.pdf"
+    },
+    {
+      "worksheetName": "2-dose MenB-FHbp SCDM",
+      "seriesName":
+          "Meningococcal B 2-dose series MenB-FHbp Shared Clinical Decision Making",
+      "patientBeginAge": "0 days",
+      "patientEndAge": "n/a",
+      "forecastTargetDose": "Any",
+      "includedIndication": "n/a",
+      "excludedIndication": "n/a",
+      "category": "SCDM",
+      "additionalMaterial":
+          "https://www.cdc.gov/vaccines/media/pdfs/2025/03/2024-isd-job-aid-scdm-menb-508-remediated.pdf"
+    },
+    {
+      "worksheetName": "3-dose MenB-4C SCDM",
+      "seriesName":
+          "Meningococcal B 3-dose series MenB-4C Shared Clinical Decision Making",
+      "patientBeginAge": "0 days",
+      "patientEndAge": "n/a",
+      "forecastTargetDose": "Any",
+      "includedIndication": "n/a",
+      "excludedIndication": "n/a",
+      "category": "SCDM",
+      "additionalMaterial":
+          "https://www.cdc.gov/vaccines/media/pdfs/2025/03/2024-isd-job-aid-scdm-menb-508-remediated.pdf"
+    },
+    {
+      "worksheetName": "3-dose MenB-FHbp SCDM",
+      "seriesName":
+          "Meningococcal B 3-dose series MenB-FHbp Shared Clinical Decision Making",
+      "patientBeginAge": "0 days",
+      "patientEndAge": "n/a",
+      "forecastTargetDose": "Any",
+      "includedIndication": "n/a",
+      "excludedIndication": "n/a",
+      "category": "SCDM",
+      "additionalMaterial":
+          "https://www.cdc.gov/vaccines/media/pdfs/2025/03/2024-isd-job-aid-scdm-menb-508-remediated.pdf"
+    },
+    {
+      "worksheetName": "Risk 3-dose MenB-4C IR",
+      "seriesName": "Meningococcal B risk 3-dose series MenB-4C increased risk",
+      "patientBeginAge": "10 years",
+      "patientEndAge": "n/a",
+      "forecastTargetDose": "Any",
+      "includedIndication": "Any",
+      "excludedIndication": "n/a",
+      "category": "High-Risk",
+      "additionalMaterial":
+          "https://www.cdc.gov/meningococcal/hcp/vaccine-recommendations/index.html#cdc_generic_section_3-menb-vaccination"
+    },
+    {
+      "worksheetName": "Risk 3-dose MenB-FHbp IR",
+      "seriesName":
+          "Meningococcal B risk 3-dose series MenB-FHbp Increased Risk",
+      "patientBeginAge": "10 years",
+      "patientEndAge": "n/a",
+      "forecastTargetDose": "Any",
+      "includedIndication": "Any",
+      "excludedIndication": "n/a",
+      "category": "High-Risk",
+      "additionalMaterial":
+          "https://www.cdc.gov/meningococcal/hcp/vaccine-recommendations/index.html#cdc_generic_section_3-menb-vaccination"
+    }
   ]
 });

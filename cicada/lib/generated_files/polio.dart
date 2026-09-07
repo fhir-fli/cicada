@@ -3639,5 +3639,91 @@ final AntigenSupportingData polio = AntigenSupportingData.fromJson({
         }
       ]
     }
+  ],
+  "vaccineRecommendationCategory": [
+    {
+      "worksheetName": "4-dose",
+      "seriesName": "Polio 4-dose series",
+      "patientBeginAge": "0 days",
+      "patientEndAge": "n/a",
+      "forecastTargetDose": "Any",
+      "includedIndication": "n/a",
+      "excludedIndication": "n/a",
+      "category": "Routine",
+      "additionalMaterial":
+          "https://www.cdc.gov/polio/hcp/vaccine-considerations/index.html"
+    },
+    {
+      "worksheetName": "5-dose",
+      "seriesName": "Polio 5-dose series",
+      "patientBeginAge": "0 days",
+      "patientEndAge": "n/a",
+      "forecastTargetDose": "Any",
+      "includedIndication": "n/a",
+      "excludedIndication": "n/a",
+      "category": "Routine",
+      "additionalMaterial":
+          "https://www.cdc.gov/polio/hcp/vaccine-considerations/index.html"
+    },
+    {
+      "worksheetName": "Adult Catch-up",
+      "seriesName": "Polio adult catch-up series",
+      "patientBeginAge": "0 days",
+      "patientEndAge": "n/a",
+      "forecastTargetDose": "Any",
+      "includedIndication": "n/a",
+      "excludedIndication": "n/a",
+      "category": "Routine",
+      "additionalMaterial":
+          "https://www.cdc.gov/polio/hcp/vaccine-considerations/index.html"
+    },
+    {
+      "worksheetName": "fIPV",
+      "seriesName": "Polio fIPV series",
+      "patientBeginAge": "0 days",
+      "patientEndAge": "n/a",
+      "forecastTargetDose": "Any",
+      "includedIndication": "n/a",
+      "excludedIndication": "n/a",
+      "category": "Routine",
+      "additionalMaterial":
+          "https://www.cdc.gov/polio/hcp/vaccine-considerations/index.html"
+    },
+    {
+      "worksheetName": "fIPV Secondary",
+      "seriesName": "Polio fIPV secondary series",
+      "patientBeginAge": "0 days",
+      "patientEndAge": "n/a",
+      "forecastTargetDose": "Any",
+      "includedIndication": "n/a",
+      "excludedIndication": "n/a",
+      "category": "Routine",
+      "additionalMaterial":
+          "https://www.cdc.gov/polio/hcp/vaccine-considerations/index.html"
+    },
+    {
+      "worksheetName": "Risk childhood",
+      "seriesName": "Polio risk childhood series",
+      "patientBeginAge": "0 days",
+      "patientEndAge": "18 years",
+      "forecastTargetDose": "Any",
+      "includedIndication": "Any",
+      "excludedIndication": "n/a",
+      "category": "High-Risk",
+      "additionalMaterial":
+          "https://www.cdc.gov/polio/hcp/vaccine-considerations/index.html"
+    },
+    {
+      "worksheetName": "Risk adult",
+      "seriesName": "Polio risk adult series",
+      "patientBeginAge": "18 years",
+      "patientEndAge": "n/a",
+      "forecastTargetDose": "Any",
+      "includedIndication": "Any",
+      "excludedIndication": "n/a",
+      "category": "High-Risk",
+      "additionalMaterial":
+          "https://www.cdc.gov/polio/hcp/vaccine-considerations/index.html"
+    }
   ]
 });

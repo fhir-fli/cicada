@@ -73,7 +73,7 @@ final AntigenSupportingData cholera = AntigenSupportingData.fromJson({
               "cvx": "174",
               "beginAge": "6 years",
               "endAge": "65 years",
-              "volume": "100.0",
+              "volume": "100",
               "forecastVaccineType": "N"
             },
             {
@@ -81,7 +81,7 @@ final AntigenSupportingData cholera = AntigenSupportingData.fromJson({
               "cvx": "174",
               "beginAge": "2 years",
               "endAge": "6 years",
-              "volume": "50.0",
+              "volume": "50",
               "forecastVaccineType": "N"
             }
           ],
@@ -95,6 +95,20 @@ final AntigenSupportingData cholera = AntigenSupportingData.fromJson({
           "recurringDose": "No"
         }
       ]
+    }
+  ],
+  "vaccineRecommendationCategory": [
+    {
+      "worksheetName": "1-dose",
+      "seriesName": "Cholera 1-dose series",
+      "patientBeginAge": "2 years",
+      "patientEndAge": "65 years",
+      "forecastTargetDose": "Any",
+      "includedIndication": "Any",
+      "excludedIndication": "n/a",
+      "category": "High-Risk",
+      "additionalMaterial":
+          "https://www.cdc.gov/cholera/prevention/cholera-vaccines.html"
     }
   ]
 });

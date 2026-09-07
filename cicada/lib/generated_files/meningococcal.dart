@@ -2263,5 +2263,67 @@ final AntigenSupportingData meningococcal = AntigenSupportingData.fromJson({
         }
       ]
     }
+  ],
+  "vaccineRecommendationCategory": [
+    {
+      "worksheetName": "2-dose",
+      "seriesName": "Meningococcal ACWY 2-dose series",
+      "patientBeginAge": "0 days",
+      "patientEndAge": "n/a",
+      "forecastTargetDose": "Any",
+      "includedIndication": "n/a",
+      "excludedIndication": "n/a",
+      "category": "Routine",
+      "additionalMaterial":
+          "https://www.cdc.gov/meningococcal/hcp/vaccine-recommendations/index.html#cdc_generic_section_2-menacwy-vaccination"
+    },
+    {
+      "worksheetName": "Risk Start 2-23 months",
+      "seriesName": "Meningococcal ACWY risk 2-23 month",
+      "patientBeginAge": "2 months",
+      "patientEndAge": "n/a",
+      "forecastTargetDose": "Any",
+      "includedIndication": "n/a",
+      "excludedIndication": "n/a",
+      "category": "High-Risk",
+      "additionalMaterial":
+          "https://www.cdc.gov/meningococcal/hcp/vaccine-recommendations/index.html#cdc_generic_section_2-menacwy-vaccination"
+    },
+    {
+      "worksheetName": "Risk Hib-MenCY-TT 4-dose",
+      "seriesName": "Meningococcal ACWY risk Hib-MenCY-TT 4-dose series",
+      "patientBeginAge": "2 months",
+      "patientEndAge": "n/a",
+      "forecastTargetDose": "Any",
+      "includedIndication": "n/a",
+      "excludedIndication": "n/a",
+      "category": "High-Risk",
+      "additionalMaterial":
+          "https://www.cdc.gov/meningococcal/hcp/vaccine-recommendations/index.html#cdc_generic_section_2-menacwy-vaccination"
+    },
+    {
+      "worksheetName": "Risk 2-dose",
+      "seriesName": "Meningococcal ACWY risk 2-dose series",
+      "patientBeginAge": "2 years",
+      "patientEndAge": "n/a",
+      "forecastTargetDose": "Any",
+      "includedIndication": "n/a",
+      "excludedIndication": "n/a",
+      "category": "High-Risk",
+      "additionalMaterial":
+          "https://www.cdc.gov/meningococcal/hcp/vaccine-recommendations/index.html#cdc_generic_section_2-menacwy-vaccination"
+    },
+    {
+      "worksheetName": "Risk 1-dose",
+      "seriesName": "Meningococcal ACWY risk 1-dose series",
+      "patientBeginAge": "2 years",
+      "patientEndAge": "n/a",
+      "forecastTargetDose": "Any",
+      "includedIndication": "n/a",
+      "excludedIndication": "n/a",
+      "category": "High-Risk",
+      "additionalMaterial":
+          "https://www.cdc.gov/meningococcal/hcp/vaccine-recommendations/index.html#cdc_generic_section_2-menacwy-vaccination"
+    }
   ]
 });

@@ -83,7 +83,7 @@ final AntigenSupportingData rotavirus = AntigenSupportingData.fromJson({
               "cvx": "116",
               "beginAge": "6 weeks",
               "endAge": "8 months + 1 day",
-              "volume": "2.0",
+              "volume": "2",
               "forecastVaccineType": "N"
             },
             {
@@ -91,7 +91,7 @@ final AntigenSupportingData rotavirus = AntigenSupportingData.fromJson({
               "cvx": "119",
               "beginAge": "6 weeks",
               "endAge": "8 months + 1 day",
-              "volume": "1.0",
+              "volume": "1",
               "forecastVaccineType": "N"
             }
           ],
@@ -145,7 +145,7 @@ final AntigenSupportingData rotavirus = AntigenSupportingData.fromJson({
               "cvx": "116",
               "beginAge": "6 weeks",
               "endAge": "8 months + 1 day",
-              "volume": "2.0",
+              "volume": "2",
               "forecastVaccineType": "N"
             },
             {
@@ -153,7 +153,7 @@ final AntigenSupportingData rotavirus = AntigenSupportingData.fromJson({
               "cvx": "119",
               "beginAge": "6 weeks",
               "endAge": "8 months + 1 day",
-              "volume": "1.0",
+              "volume": "1",
               "forecastVaccineType": "N"
             }
           ],
@@ -207,7 +207,7 @@ final AntigenSupportingData rotavirus = AntigenSupportingData.fromJson({
               "cvx": "116",
               "beginAge": "6 weeks",
               "endAge": "8 months + 1 day",
-              "volume": "2.0",
+              "volume": "2",
               "forecastVaccineType": "N"
             },
             {
@@ -215,7 +215,7 @@ final AntigenSupportingData rotavirus = AntigenSupportingData.fromJson({
               "cvx": "119",
               "beginAge": "6 weeks",
               "endAge": "8 months + 1 day",
-              "volume": "1.0",
+              "volume": "1",
               "forecastVaccineType": "N"
             }
           ],
@@ -278,7 +278,7 @@ final AntigenSupportingData rotavirus = AntigenSupportingData.fromJson({
               "cvx": "116",
               "beginAge": "6 weeks",
               "endAge": "8 months + 1 day",
-              "volume": "2.0",
+              "volume": "2",
               "forecastVaccineType": "N"
             },
             {
@@ -286,7 +286,7 @@ final AntigenSupportingData rotavirus = AntigenSupportingData.fromJson({
               "cvx": "119",
               "beginAge": "6 weeks",
               "endAge": "8 months + 1 day",
-              "volume": "1.0",
+              "volume": "1",
               "forecastVaccineType": "N"
             }
           ],
@@ -338,7 +338,7 @@ final AntigenSupportingData rotavirus = AntigenSupportingData.fromJson({
               "cvx": "116",
               "beginAge": "6 weeks",
               "endAge": "8 months + 1 day",
-              "volume": "2.0",
+              "volume": "2",
               "forecastVaccineType": "N"
             },
             {
@@ -346,7 +346,7 @@ final AntigenSupportingData rotavirus = AntigenSupportingData.fromJson({
               "cvx": "119",
               "beginAge": "6 weeks",
               "endAge": "8 months + 1 day",
-              "volume": "1.0",
+              "volume": "1",
               "forecastVaccineType": "N"
             }
           ],
@@ -398,7 +398,7 @@ final AntigenSupportingData rotavirus = AntigenSupportingData.fromJson({
               "cvx": "116",
               "beginAge": "6 weeks",
               "endAge": "8 months + 1 day",
-              "volume": "2.0",
+              "volume": "2",
               "forecastVaccineType": "N"
             },
             {
@@ -406,7 +406,7 @@ final AntigenSupportingData rotavirus = AntigenSupportingData.fromJson({
               "cvx": "119",
               "beginAge": "6 weeks",
               "endAge": "8 months + 1 day",
-              "volume": "1.0",
+              "volume": "1",
               "forecastVaccineType": "N"
             }
           ],
@@ -469,7 +469,7 @@ final AntigenSupportingData rotavirus = AntigenSupportingData.fromJson({
               "cvx": "119",
               "beginAge": "6 weeks",
               "endAge": "8 months + 1 day",
-              "volume": "1.0",
+              "volume": "1",
               "forecastVaccineType": "Y"
             }
           ],
@@ -508,7 +508,7 @@ final AntigenSupportingData rotavirus = AntigenSupportingData.fromJson({
               "cvx": "119",
               "beginAge": "6 weeks",
               "endAge": "8 months + 1 day",
-              "volume": "1.0",
+              "volume": "1",
               "forecastVaccineType": "Y"
             }
           ],
@@ -556,7 +556,7 @@ final AntigenSupportingData rotavirus = AntigenSupportingData.fromJson({
               "cvx": "119",
               "beginAge": "6 weeks",
               "endAge": "8 months + 1 day",
-              "volume": "1.0",
+              "volume": "1",
               "forecastVaccineType": "Y"
             }
           ],
@@ -593,7 +593,7 @@ final AntigenSupportingData rotavirus = AntigenSupportingData.fromJson({
               "cvx": "119",
               "beginAge": "6 weeks",
               "endAge": "8 months + 1 day",
-              "volume": "1.0",
+              "volume": "1",
               "forecastVaccineType": "Y"
             }
           ],
@@ -607,6 +607,56 @@ final AntigenSupportingData rotavirus = AntigenSupportingData.fromJson({
           "recurringDose": "No"
         }
       ]
+    }
+  ],
+  "vaccineRecommendationCategory": [
+    {
+      "worksheetName": "3-dose",
+      "seriesName": "Rotavirus 3-dose series",
+      "patientBeginAge": "0 days",
+      "patientEndAge": "n/a",
+      "forecastTargetDose": "Any",
+      "includedIndication": "n/a",
+      "excludedIndication": "n/a",
+      "category": "Routine",
+      "additionalMaterial":
+          "https://www.cdc.gov/rotavirus/hcp/vaccine-considerations/index.html"
+    },
+    {
+      "worksheetName": "Late start at 15 weeks 3-dose",
+      "seriesName": "Rotavirus late start at 15 weeks 3-dose series",
+      "patientBeginAge": "0 days",
+      "patientEndAge": "n/a",
+      "forecastTargetDose": "Any",
+      "includedIndication": "n/a",
+      "excludedIndication": "n/a",
+      "category": "Routine",
+      "additionalMaterial":
+          "https://www.cdc.gov/rotavirus/hcp/vaccine-considerations/index.html"
+    },
+    {
+      "worksheetName": "2-dose",
+      "seriesName": "Rotavirus 2-dose series",
+      "patientBeginAge": "0 days",
+      "patientEndAge": "n/a",
+      "forecastTargetDose": "Any",
+      "includedIndication": "n/a",
+      "excludedIndication": "n/a",
+      "category": "Routine",
+      "additionalMaterial":
+          "https://www.cdc.gov/rotavirus/hcp/vaccine-considerations/index.html"
+    },
+    {
+      "worksheetName": "Late start at 15 weeks 2-dose",
+      "seriesName": "Rotavirus late start at 15 weeks 2-dose series",
+      "patientBeginAge": "0 days",
+      "patientEndAge": "n/a",
+      "forecastTargetDose": "Any",
+      "includedIndication": "n/a",
+      "excludedIndication": "n/a",
+      "category": "Routine",
+      "additionalMaterial":
+          "https://www.cdc.gov/rotavirus/hcp/vaccine-considerations/index.html"
     }
   ]
 });

@@ -82,7 +82,7 @@ final AntigenSupportingData rsv = AntigenSupportingData.fromJson({
               "cvx": "307",
               "beginAge": "0 days",
               "endAge": "24 months",
-              "volume": "1.0",
+              "volume": "1",
               "forecastVaccineType": "N"
             },
             {
@@ -241,7 +241,7 @@ final AntigenSupportingData rsv = AntigenSupportingData.fromJson({
               "cvx": "307",
               "beginAge": "0 days",
               "endAge": "24 months",
-              "volume": "1.0",
+              "volume": "1",
               "forecastVaccineType": "N"
             },
             {
@@ -346,7 +346,7 @@ final AntigenSupportingData rsv = AntigenSupportingData.fromJson({
               "cvx": "307",
               "beginAge": "0 days",
               "endAge": "24 months",
-              "volume": "1.0",
+              "volume": "1",
               "forecastVaccineType": "N"
             }
           ],
@@ -451,7 +451,7 @@ final AntigenSupportingData rsv = AntigenSupportingData.fromJson({
               "cvx": "307",
               "beginAge": "0 days",
               "endAge": "24 months",
-              "volume": "1.0",
+              "volume": "1",
               "forecastVaccineType": "N"
             }
           ],
@@ -1268,6 +1268,68 @@ final AntigenSupportingData rsv = AntigenSupportingData.fromJson({
           "recurringDose": "No"
         }
       ]
+    }
+  ],
+  "vaccineRecommendationCategory": [
+    {
+      "worksheetName": "1-dose",
+      "seriesName": "RSV 1-dose series",
+      "patientBeginAge": "0 days",
+      "patientEndAge": "n/a",
+      "forecastTargetDose": "Any",
+      "includedIndication": "n/a",
+      "excludedIndication": "n/a",
+      "category": "Routine",
+      "additionalMaterial":
+          "https://www.cdc.gov/rsv/hcp/vaccine-clinical-guidance/infants-young-children.html"
+    },
+    {
+      "worksheetName": "Risk under 20 months",
+      "seriesName": "RSV risk under 20 months series",
+      "patientBeginAge": "0 days",
+      "patientEndAge": "20 months",
+      "forecastTargetDose": "Any",
+      "includedIndication": "Any",
+      "excludedIndication": "n/a",
+      "category": "High-Risk",
+      "additionalMaterial":
+          "https://www.cdc.gov/rsv/hcp/vaccine-clinical-guidance/infants-young-children.html"
+    },
+    {
+      "worksheetName": "Risk Pregnant 1-dose",
+      "seriesName": "RSV risk pregnant 1-dose series",
+      "patientBeginAge": "0 days",
+      "patientEndAge": "n/a",
+      "forecastTargetDose": "Any",
+      "includedIndication": "Any",
+      "excludedIndication": "n/a",
+      "category": "High-Risk",
+      "additionalMaterial":
+          "https://www.cdc.gov/rsv/hcp/vaccine-clinical-guidance/pregnant-people.html"
+    },
+    {
+      "worksheetName": "Risk 50-74 years 1-dose",
+      "seriesName": "RSV risk 50-74 years 1-dose series",
+      "patientBeginAge": "50 years",
+      "patientEndAge": "75 years",
+      "forecastTargetDose": "Any",
+      "includedIndication": "Any",
+      "excludedIndication": "n/a",
+      "category": "High-Risk",
+      "additionalMaterial":
+          "https://www.cdc.gov/rsv/hcp/vaccine-clinical-guidance/adults.html"
+    },
+    {
+      "worksheetName": "75 years+ 1-dose",
+      "seriesName": "RSV 75 years+ 1-dose series",
+      "patientBeginAge": "10 years",
+      "patientEndAge": "n/a",
+      "forecastTargetDose": "Any",
+      "includedIndication": "n/a",
+      "excludedIndication": "n/a",
+      "category": "Routine",
+      "additionalMaterial":
+          "https://www.cdc.gov/rsv/hcp/vaccine-clinical-guidance/adults.html"
     }
   ]
 });

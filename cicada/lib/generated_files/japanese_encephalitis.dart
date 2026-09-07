@@ -344,5 +344,31 @@ final AntigenSupportingData japaneseEncephalitis =
         }
       ]
     }
+  ],
+  "vaccineRecommendationCategory": [
+    {
+      "worksheetName": "Risk 2-dose",
+      "seriesName": "Japanese Encephalitis risk 2-dose series",
+      "patientBeginAge": "2 months",
+      "patientEndAge": "n/a",
+      "forecastTargetDose": "Any",
+      "includedIndication": "Any",
+      "excludedIndication": "n/a",
+      "category": "High-Risk",
+      "additionalMaterial":
+          "https://www.cdc.gov/japanese-encephalitis/hcp/vaccine/index.html"
+    },
+    {
+      "worksheetName": "Risk 2-dose 18-65",
+      "seriesName": "Japanese Encephalitis risk 2-dose series 18-65 years",
+      "patientBeginAge": "18 years",
+      "patientEndAge": "66 years",
+      "forecastTargetDose": "Any",
+      "includedIndication": "Any",
+      "excludedIndication": "n/a",
+      "category": "High-Risk",
+      "additionalMaterial":
+          "https://www.cdc.gov/japanese-encephalitis/hcp/vaccine/index.html"
+    }
   ]
 });

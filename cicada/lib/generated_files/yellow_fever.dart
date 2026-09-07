@@ -221,5 +221,19 @@ final AntigenSupportingData yellowFever = AntigenSupportingData.fromJson({
         }
       ]
     }
+  ],
+  "vaccineRecommendationCategory": [
+    {
+      "worksheetName": "Risk 1-dose",
+      "seriesName": "Yellow Fever risk 1-dose series",
+      "patientBeginAge": "9 months",
+      "patientEndAge": "n/a",
+      "forecastTargetDose": "Any",
+      "includedIndication": "Any",
+      "excludedIndication": "n/a",
+      "category": "High-Risk",
+      "additionalMaterial":
+          "https://www.cdc.gov/yellow-fever/hcp/vaccine/index.html"
+    }
   ]
 });

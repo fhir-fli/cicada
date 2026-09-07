@@ -448,5 +448,40 @@
                 }
             ]
         }
+    ],
+    "vaccineRecommendationCategory": [
+        {
+            "worksheetName": "2-dose",
+            "seriesName": "Zoster 2-dose series",
+            "patientBeginAge": "0 days",
+            "patientEndAge": "n/a",
+            "forecastTargetDose": "Any",
+            "includedIndication": "n/a",
+            "excludedIndication": "n/a",
+            "category": "Routine",
+            "additionalMaterial": "https://www.cdc.gov/shingles/hcp/vaccine-considerations/index.html"
+        },
+        {
+            "worksheetName": "3-dose",
+            "seriesName": "Zoster 3-dose series",
+            "patientBeginAge": "0 days",
+            "patientEndAge": "n/a",
+            "forecastTargetDose": "Any",
+            "includedIndication": "n/a",
+            "excludedIndication": "n/a",
+            "category": "Routine",
+            "additionalMaterial": "https://www.cdc.gov/shingles/hcp/vaccine-considerations/index.html"
+        },
+        {
+            "worksheetName": "Risk 2-dose",
+            "seriesName": "Zoster Risk 2-dose series",
+            "patientBeginAge": "19 years",
+            "patientEndAge": "n/a",
+            "forecastTargetDose": "Any",
+            "includedIndication": "Any",
+            "excludedIndication": "n/a",
+            "category": "High-Risk",
+            "additionalMaterial": "https://www.cdc.gov/shingles/hcp/vaccine-considerations/index.html"
+        }
     ]
 }

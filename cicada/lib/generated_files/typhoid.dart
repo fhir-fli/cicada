@@ -304,5 +304,19 @@ final AntigenSupportingData typhoid = AntigenSupportingData.fromJson({
         }
       ]
     }
+  ],
+  "vaccineRecommendationCategory": [
+    {
+      "worksheetName": "Risk series",
+      "seriesName": "Typhoid risk series",
+      "patientBeginAge": "2 years",
+      "patientEndAge": "n/a",
+      "forecastTargetDose": "Any",
+      "includedIndication": "Any",
+      "excludedIndication": "n/a",
+      "category": "High-Risk",
+      "additionalMaterial":
+          "https://www.cdc.gov/typhoid-fever/prevention/index.html"
+    }
   ]
 });

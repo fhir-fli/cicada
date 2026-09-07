@@ -9057,5 +9057,411 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
         }
       ]
     }
+  ],
+  "vaccineRecommendationCategory": [
+    {
+      "worksheetName": "4-dose",
+      "seriesName": "Pneumococcal 4-dose series",
+      "patientBeginAge": "0 days",
+      "patientEndAge": "n/a",
+      "forecastTargetDose": "Any",
+      "includedIndication": "n/a",
+      "excludedIndication": "n/a",
+      "category": "Routine",
+      "additionalMaterial":
+          "https://www.cdc.gov/pneumococcal/hcp/vaccine-recommendations/index.html#cdc_generic_section_2-infants-and-children"
+    },
+    {
+      "worksheetName": "Dose 2 at 7 months",
+      "seriesName": "Pneumococcal dose 2 at 7 months series",
+      "patientBeginAge": "0 days",
+      "patientEndAge": "n/a",
+      "forecastTargetDose": "Any",
+      "includedIndication": "n/a",
+      "excludedIndication": "n/a",
+      "category": "Routine",
+      "additionalMaterial":
+          "https://www.cdc.gov/pneumococcal/hcp/vaccine-recommendations/index.html#cdc_generic_section_2-infants-and-children"
+    },
+    {
+      "worksheetName": "Start at 12 months",
+      "seriesName": "Pneumococcal start at 12 months series",
+      "patientBeginAge": "0 days",
+      "patientEndAge": "n/a",
+      "forecastTargetDose": "Any",
+      "includedIndication": "n/a",
+      "excludedIndication": "n/a",
+      "category": "Routine",
+      "additionalMaterial":
+          "https://www.cdc.gov/pneumococcal/hcp/vaccine-recommendations/index.html#cdc_generic_section_2-infants-and-children"
+    },
+    {
+      "worksheetName": "Start at 24 months",
+      "seriesName": "Pneumococcal start at 24 months series",
+      "patientBeginAge": "0 days",
+      "patientEndAge": "n/a",
+      "forecastTargetDose": "Any",
+      "includedIndication": "n/a",
+      "excludedIndication": "n/a",
+      "category": "Routine",
+      "additionalMaterial":
+          "https://www.cdc.gov/pneumococcal/hcp/vaccine-recommendations/index.html#cdc_generic_section_2-infants-and-children"
+    },
+    {
+      "worksheetName": "Risk 2-5 years CMC PCV-PCV-PPSV",
+      "seriesName":
+          "Pneumococcal risk 2-5 years Chronic Medical Conditions PCV-PCV-PPSV series",
+      "patientBeginAge": "2 years",
+      "patientEndAge": "6 years",
+      "forecastTargetDose": "Any",
+      "includedIndication": "Any",
+      "excludedIndication": "n/a",
+      "category": "High-Risk",
+      "additionalMaterial":
+          "https://www.cdc.gov/pneumococcal/hcp/vaccine-recommendations/risk-indications.html#cdc_generic_section_2-children-2-through-5-years-old"
+    },
+    {
+      "worksheetName": "Risk 2-5 years CMC PCV-PPSV-PCV",
+      "seriesName":
+          "Pneumococcal risk 2-5 years Chronic Medical Conditions PCV-PPSV-PCV series",
+      "patientBeginAge": "2 years",
+      "patientEndAge": "6 years",
+      "forecastTargetDose": "Any",
+      "includedIndication": "Any",
+      "excludedIndication": "n/a",
+      "category": "High-Risk",
+      "additionalMaterial":
+          "https://www.cdc.gov/pneumococcal/hcp/vaccine-recommendations/risk-indications.html#cdc_generic_section_2-children-2-through-5-years-old"
+    },
+    {
+      "worksheetName": "Risk 2-5 years CMC PPSV-PCV-PCV",
+      "seriesName":
+          "Pneumococcal risk 2-5 years Chronic Medical Conditions PPSV-PCV-PCV series",
+      "patientBeginAge": "2 years",
+      "patientEndAge": "6 years",
+      "forecastTargetDose": "Any",
+      "includedIndication": "Any",
+      "excludedIndication": "n/a",
+      "category": "High-Risk",
+      "additionalMaterial":
+          "https://www.cdc.gov/pneumococcal/hcp/vaccine-recommendations/risk-indications.html#cdc_generic_section_2-children-2-through-5-years-old"
+    },
+    {
+      "worksheetName": "Risk 2-5 years 4-dose",
+      "seriesName": "Pneumococcal risk 2-5 years 4-dose series",
+      "patientBeginAge": "2 years",
+      "patientEndAge": "6 years",
+      "forecastTargetDose": "Any",
+      "includedIndication": "Any",
+      "excludedIndication": "n/a",
+      "category": "High-Risk",
+      "additionalMaterial":
+          "https://www.cdc.gov/pneumococcal/hcp/vaccine-recommendations/risk-indications.html#cdc_generic_section_2-children-2-through-5-years-old"
+    },
+    {
+      "worksheetName": "Risk 6-18 yrs 2-dose PCV-PPSV",
+      "seriesName": "Pneumococcal risk 6-18 years 2-dose PCV-PPSV series",
+      "patientBeginAge": "6 years",
+      "patientEndAge": "19 years",
+      "forecastTargetDose": "Any",
+      "includedIndication": "Any",
+      "excludedIndication": "n/a",
+      "category": "High-Risk",
+      "additionalMaterial":
+          "https://www.cdc.gov/pneumococcal/hcp/vaccine-recommendations/risk-indications.html#cdc_generic_section_3-children-6-through-18-years-old"
+    },
+    {
+      "worksheetName": "Risk 6-18 yrs 2-dose PPSV-PCV",
+      "seriesName": "Pneumococcal risk 6-18 years 2-dose PPSV-PCV series",
+      "patientBeginAge": "6 years",
+      "patientEndAge": "19 years",
+      "forecastTargetDose": "Any",
+      "includedIndication": "Any",
+      "excludedIndication": "n/a",
+      "category": "High-Risk",
+      "additionalMaterial":
+          "https://www.cdc.gov/pneumococcal/hcp/vaccine-recommendations/risk-indications.html#cdc_generic_section_3-children-6-through-18-years-old"
+    },
+    {
+      "worksheetName": "Risk 6-18 yrs IC PCV-PPSV-PPSV",
+      "seriesName":
+          "Pneumococcal risk 6-18 yrs immunocompromised PCV-PPSV-PPSV",
+      "patientBeginAge": "6 years",
+      "patientEndAge": "19 years",
+      "forecastTargetDose": "Any",
+      "includedIndication": "Any",
+      "excludedIndication": "n/a",
+      "category": "High-Risk",
+      "additionalMaterial":
+          "https://www.cdc.gov/pneumococcal/hcp/vaccine-recommendations/risk-indications.html#cdc_generic_section_3-children-6-through-18-years-old"
+    },
+    {
+      "worksheetName": "Risk 6-18 yrs IC PPSV-PCV-PPSV",
+      "seriesName":
+          "Pneumococcal risk 6-18 years immunocompromised PPSV-PCV-PPSV series",
+      "patientBeginAge": "6 years",
+      "patientEndAge": "19 years",
+      "forecastTargetDose": "Any",
+      "includedIndication": "Any",
+      "excludedIndication": "n/a",
+      "category": "High-Risk",
+      "additionalMaterial":
+          "https://www.cdc.gov/pneumococcal/hcp/vaccine-recommendations/risk-indications.html#cdc_generic_section_3-children-6-through-18-years-old"
+    },
+    {
+      "worksheetName": "Risk 6-18 yrs IC PPSV-PPSV-PCV",
+      "seriesName":
+          "Pneumococcal risk 6-18 years immunocompromised PPSV-PPSV-PCV series",
+      "patientBeginAge": "6 years",
+      "patientEndAge": "19 years",
+      "forecastTargetDose": "Any",
+      "includedIndication": "Any",
+      "excludedIndication": "n/a",
+      "category": "High-Risk",
+      "additionalMaterial":
+          "https://www.cdc.gov/pneumococcal/hcp/vaccine-recommendations/risk-indications.html#cdc_generic_section_3-children-6-through-18-years-old"
+    },
+    {
+      "worksheetName": "Risk 19+ yrs CMC PCV-PPSV",
+      "seriesName":
+          "Pneumococcal risk 19+ Chronic Medical Conditions PCV-PPSV series",
+      "patientBeginAge": "19 years",
+      "patientEndAge": "n/a",
+      "forecastTargetDose": "1; 2; 3",
+      "includedIndication": "Any",
+      "excludedIndication": "n/a",
+      "category": "High-Risk",
+      "additionalMaterial":
+          "https://www.cdc.gov/pneumococcal/hcp/vaccine-recommendations/risk-indications.html#cdc_generic_section_4-adults-19-through-49-years-old"
+    },
+    {
+      "worksheetName": "Risk 19+ yrs CMC PCV-PPSV",
+      "seriesName":
+          "Pneumococcal risk 19+ Chronic Medical Conditions PCV-PPSV series",
+      "patientBeginAge": "65 years",
+      "patientEndAge": "n/a",
+      "forecastTargetDose": "4",
+      "includedIndication": "Any",
+      "excludedIndication": "n/a",
+      "category": "SCDM",
+      "additionalMaterial":
+          "https://www.cdc.gov/vaccines/hcp/admin/downloads/job-aid-SCDM-pneumococcal-508.pdf"
+    },
+    {
+      "worksheetName": "Risk 19+ yrs CMC PPSV-PCV",
+      "seriesName":
+          "Pneumococcal risk 19+ years Chronic Medical Conditions PPSV-PCV series",
+      "patientBeginAge": "19 years",
+      "patientEndAge": "n/a",
+      "forecastTargetDose": "1; 2; 3",
+      "includedIndication": "Any",
+      "excludedIndication": "n/a",
+      "category": "High-Risk",
+      "additionalMaterial":
+          "https://www.cdc.gov/pneumococcal/hcp/vaccine-recommendations/risk-indications.html#cdc_generic_section_4-adults-19-through-49-years-old"
+    },
+    {
+      "worksheetName": "Risk 19+ yrs CMC PPSV-PCV",
+      "seriesName":
+          "Pneumococcal risk 19+ years Chronic Medical Conditions PPSV-PCV series",
+      "patientBeginAge": "65 years",
+      "patientEndAge": "n/a",
+      "forecastTargetDose": "4",
+      "includedIndication": "Any",
+      "excludedIndication": "n/a",
+      "category": "SCDM",
+      "additionalMaterial":
+          "https://www.cdc.gov/vaccines/hcp/admin/downloads/job-aid-SCDM-pneumococcal-508.pdf"
+    },
+    {
+      "worksheetName": "Risk 19+ yrs CSF CI PCV-PPSV",
+      "seriesName":
+          "Pneumococcal risk 19+ years CSF Leaks or Cochlear Implants PCV-PPSV series",
+      "patientBeginAge": "19 years",
+      "patientEndAge": "n/a",
+      "forecastTargetDose": "1; 2; 3",
+      "includedIndication": "Any",
+      "excludedIndication": "n/a",
+      "category": "High-Risk",
+      "additionalMaterial":
+          "https://www.cdc.gov/pneumococcal/hcp/vaccine-recommendations/risk-indications.html#cdc_generic_section_4-adults-19-through-49-years-old"
+    },
+    {
+      "worksheetName": "Risk 19+ yrs CSF CI PCV-PPSV",
+      "seriesName":
+          "Pneumococcal risk 19+ years CSF Leaks or Cochlear Implants PCV-PPSV series",
+      "patientBeginAge": "65 years",
+      "patientEndAge": "n/a",
+      "forecastTargetDose": "4",
+      "includedIndication": "Any",
+      "excludedIndication": "n/a",
+      "category": "SCDM",
+      "additionalMaterial":
+          "https://www.cdc.gov/vaccines/hcp/admin/downloads/job-aid-SCDM-pneumococcal-508.pdf"
+    },
+    {
+      "worksheetName": "Risk 19+ yrs CSF CI PPSV-PCV",
+      "seriesName":
+          "Pneumococcal risk 19+ years CSF Leaks or Cochlear Implants PPSV-PCV series",
+      "patientBeginAge": "19 years",
+      "patientEndAge": "n/a",
+      "forecastTargetDose": "1; 2; 3",
+      "includedIndication": "Any",
+      "excludedIndication": "n/a",
+      "category": "High-Risk",
+      "additionalMaterial":
+          "https://www.cdc.gov/pneumococcal/hcp/vaccine-recommendations/risk-indications.html#cdc_generic_section_4-adults-19-through-49-years-old"
+    },
+    {
+      "worksheetName": "Risk 19+ yrs CSF CI PPSV-PCV",
+      "seriesName":
+          "Pneumococcal risk 19+ years CSF Leaks or Cochlear Implants PPSV-PCV series",
+      "patientBeginAge": "65 years",
+      "patientEndAge": "n/a",
+      "forecastTargetDose": "4",
+      "includedIndication": "Any",
+      "excludedIndication": "n/a",
+      "category": "SCDM",
+      "additionalMaterial":
+          "https://www.cdc.gov/vaccines/hcp/admin/downloads/job-aid-SCDM-pneumococcal-508.pdf"
+    },
+    {
+      "worksheetName": "Risk 19+ yrs IC PCV-PPSV-PPSV",
+      "seriesName":
+          "Pneumococcal risk 19+ years immunocompromised PCV-PPSV-PPSV series",
+      "patientBeginAge": "19 years",
+      "patientEndAge": "n/a",
+      "forecastTargetDose": "1; 2; 3; 4",
+      "includedIndication": "Any",
+      "excludedIndication": "n/a",
+      "category": "High-Risk",
+      "additionalMaterial":
+          "https://www.cdc.gov/pneumococcal/hcp/vaccine-recommendations/risk-indications.html#cdc_generic_section_4-adults-19-through-49-years-old"
+    },
+    {
+      "worksheetName": "Risk 19+ yrs IC PCV-PPSV-PPSV",
+      "seriesName":
+          "Pneumococcal risk 19+ years immunocompromised PCV-PPSV-PPSV series",
+      "patientBeginAge": "65 years",
+      "patientEndAge": "n/a",
+      "forecastTargetDose": "5",
+      "includedIndication": "Any",
+      "excludedIndication": "n/a",
+      "category": "SCDM",
+      "additionalMaterial":
+          "https://www.cdc.gov/vaccines/hcp/admin/downloads/job-aid-SCDM-pneumococcal-508.pdf"
+    },
+    {
+      "worksheetName": "Risk 19+ yrs IC PPSV-PCV-PPSV",
+      "seriesName":
+          "Pneumococcal risk 19+ years immunocompromised PPSV-PCV-PPSV series",
+      "patientBeginAge": "19 years",
+      "patientEndAge": "n/a",
+      "forecastTargetDose": "1; 2; 3; 4",
+      "includedIndication": "Any",
+      "excludedIndication": "n/a",
+      "category": "High-Risk",
+      "additionalMaterial":
+          "https://www.cdc.gov/pneumococcal/hcp/vaccine-recommendations/risk-indications.html#cdc_generic_section_4-adults-19-through-49-years-old"
+    },
+    {
+      "worksheetName": "Risk 19+ yrs IC PPSV-PCV-PPSV",
+      "seriesName":
+          "Pneumococcal risk 19+ years immunocompromised PPSV-PCV-PPSV series",
+      "patientBeginAge": "65 years",
+      "patientEndAge": "n/a",
+      "forecastTargetDose": "5",
+      "includedIndication": "Any",
+      "excludedIndication": "n/a",
+      "category": "SCDM",
+      "additionalMaterial":
+          "https://www.cdc.gov/vaccines/hcp/admin/downloads/job-aid-SCDM-pneumococcal-508.pdf"
+    },
+    {
+      "worksheetName": "Risk 19+ yrs IC PPSV-PPSV-PCV",
+      "seriesName":
+          "Pneumococcal risk 19+ years immunocompromised PPSV-PPSV-PCV series",
+      "patientBeginAge": "19 years",
+      "patientEndAge": "n/a",
+      "forecastTargetDose": "1; 2; 3; 4",
+      "includedIndication": "Any",
+      "excludedIndication": "n/a",
+      "category": "High-Risk",
+      "additionalMaterial":
+          "https://www.cdc.gov/pneumococcal/hcp/vaccine-recommendations/risk-indications.html#cdc_generic_section_4-adults-19-through-49-years-old"
+    },
+    {
+      "worksheetName": "Risk 19+ yrs IC PPSV-PPSV-PCV",
+      "seriesName":
+          "Pneumococcal risk 19+ years immunocompromised PPSV-PPSV-PCV series",
+      "patientBeginAge": "65 years",
+      "patientEndAge": "n/a",
+      "forecastTargetDose": "5",
+      "includedIndication": "Any",
+      "excludedIndication": "n/a",
+      "category": "SCDM",
+      "additionalMaterial":
+          "https://www.cdc.gov/vaccines/hcp/admin/downloads/job-aid-SCDM-pneumococcal-508.pdf"
+    },
+    {
+      "worksheetName": "50+ 1-dose PCV",
+      "seriesName": "Pneumococcal 50+ 1-dose PCV series",
+      "patientBeginAge": "19 years",
+      "patientEndAge": "n/a",
+      "forecastTargetDose": "Any",
+      "includedIndication": "n/a",
+      "excludedIndication": "n/a",
+      "category": "Routine",
+      "additionalMaterial":
+          "https://www.cdc.gov/pneumococcal/hcp/vaccine-recommendations/index.html#cdc_generic_section_3-adults-50-years-or-older"
+    },
+    {
+      "worksheetName": "50+ 2-dose PCV13",
+      "seriesName": "Pneumococcal 50+ 2-dose PCV13 series",
+      "patientBeginAge": "19 years",
+      "patientEndAge": "n/a",
+      "forecastTargetDose": "1; 2; 3",
+      "includedIndication": "n/a",
+      "excludedIndication": "n/a",
+      "category": "Routine",
+      "additionalMaterial":
+          "https://www.cdc.gov/pneumococcal/hcp/vaccine-recommendations/index.html#cdc_generic_section_3-adults-50-years-or-older"
+    },
+    {
+      "worksheetName": "50+ 2-dose PCV13",
+      "seriesName": "Pneumococcal 50+ 2-dose PCV13 series",
+      "patientBeginAge": "65 years",
+      "patientEndAge": "n/a",
+      "forecastTargetDose": "4",
+      "includedIndication": "n/a",
+      "excludedIndication": "n/a",
+      "category": "SCDM",
+      "additionalMaterial":
+          "https://www.cdc.gov/vaccines/hcp/admin/downloads/job-aid-SCDM-pneumococcal-508.pdf"
+    },
+    {
+      "worksheetName": "50+ 2-dose PPSV23-PCV",
+      "seriesName": "Pneumococcal 50+ 2-dose PPSV23-PCV series",
+      "patientBeginAge": "19 years",
+      "patientEndAge": "n/a",
+      "forecastTargetDose": "1; 2; 3",
+      "includedIndication": "n/a",
+      "excludedIndication": "n/a",
+      "category": "Routine",
+      "additionalMaterial":
+          "https://www.cdc.gov/pneumococcal/hcp/vaccine-recommendations/index.html#cdc_generic_section_3-adults-50-years-or-older"
+    },
+    {
+      "worksheetName": "50+ 2-dose PPSV23-PCV",
+      "seriesName": "Pneumococcal 50+ 2-dose PPSV23-PCV series",
+      "patientBeginAge": "65 years",
+      "patientEndAge": "n/a",
+      "forecastTargetDose": "4",
+      "includedIndication": "n/a",
+      "excludedIndication": "n/a",
+      "category": "SCDM",
+      "additionalMaterial":
+          "https://www.cdc.gov/vaccines/hcp/admin/downloads/job-aid-SCDM-pneumococcal-508.pdf"
+    }
   ]
 });

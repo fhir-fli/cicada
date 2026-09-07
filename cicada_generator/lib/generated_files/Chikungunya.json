@@ -99,5 +99,29 @@
                 }
             ]
         }
+    ],
+    "vaccineRecommendationCategory": [
+        {
+            "worksheetName": "Risk 1-dose",
+            "seriesName": "Chikungunya Risk 1-dose series",
+            "patientBeginAge": "11 years",
+            "patientEndAge": "n/a",
+            "forecastTargetDose": "Any",
+            "includedIndication": "Any",
+            "excludedIndication": "Traveling or moving to a country or territory without an outbreak but with elevated chikungunya risk for U.S. travelers if planning to stay for an extended period of time [e.g., 6 months or more] (272)",
+            "category": "High-Risk",
+            "additionalMaterial": "https://www.cdc.gov/chikungunya/hcp/vaccines/index.html"
+        },
+        {
+            "worksheetName": "Risk 1-dose",
+            "seriesName": "Chikungunya Risk 1-dose series",
+            "patientBeginAge": "11 years",
+            "patientEndAge": "n/a",
+            "forecastTargetDose": "Any",
+            "includedIndication": "Traveling or moving to a country or territory without an outbreak but with elevated chikungunya risk for U.S. travelers if planning to stay for an extended period of time [e.g., 6 months or more] (272)",
+            "excludedIndication": "n/a",
+            "category": "SCDM",
+            "additionalMaterial": "https://www.cdc.gov/chikungunya/hcp/vaccines/index.html"
+        }
     ]
 }

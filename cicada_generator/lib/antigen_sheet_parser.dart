@@ -25,17 +25,20 @@ class AntigenSheetParser {
     // Go through each sheet in the workbook
     for (final sheetName in excel.tables.keys) {
       final sheet = excel.tables[sheetName]!;
-      final rows = sheet.rows
-          .map(
-            (row) => row
-                .map(
-                  (cell) =>
-                      cell?.value?.toString().replaceAll('\n', ' ').trim() ??
-                      '',
-                )
-                .toList(),
-          )
-          .toList();
+      final rows = _fillLabels(
+        sheet.rows
+            .map(
+              (row) => row
+                  .map(
+                    (cell) =>
+                        cell?.value?.toString().replaceAll('\n', ' ').trim() ??
+                        '',
+                  )
+                  .toList(),
+            )
+            .toList(),
+        sheetName,
+      );
 
       // 1) Antigen Series Overview tab
       if (sheetName == 'Antigen Series Overview') {
@@ -62,13 +65,22 @@ class AntigenSheetParser {
         final contraindications = _parseContraindicationsRows(rows);
         data = data.copyWith(contraindications: contraindications);
       }
-      // 6) Series tab(s)
-      //
-      //    We look for tabs that either have “dose” in the name,
-      //    or at least one row containing “Series Name”.
-      //    Adjust as needed to detect your actual series tabs.
-      else if (sheetName.toLowerCase().contains('dose') ||
-          rows.any((r) => r.any((cell) => cell.contains('Series Name')))) {
+      // 5b) Vaccine Recommendation Category tab, new in 4.65. Its header
+      //     row contains "Best Patient Series Name", so it must be caught
+      //     before the series test below.
+      else if (sheetName == 'Vaccine Recommendation Category') {
+        final categories = _parseVaccineRecommendationCategoryRows(rows);
+        if (categories.isNotEmpty) {
+          data = data.copyWith(vaccineRecommendationCategory: categories);
+        }
+      }
+      // 6) Series tab(s): every series worksheet has "Series Name" in A1
+      //    and the series name in B1 (CDC's docx says so, and every 4.64 and
+      //    4.65 workbook does). Sheet names vary ("Risk 1-dose",
+      //    "Risk series"), so the name is not used.
+      else if (rows.isNotEmpty &&
+          rows.first.isNotEmpty &&
+          rows.first.first == 'Series Name') {
         final singleSeries = _parseSeriesRows(rows);
 
         // Combine with any existing series
@@ -107,6 +119,82 @@ class AntigenSheetParser {
   //   }
   //   return buffer.toString();
   // }
+
+  /// Carries a block's label, and any leading context cells, down to the
+  /// rows that belong to it.
+  ///
+  /// CDSi 4.64 repeated the column-A label ("Series Type", "Age", "Vaccine
+  /// Contraindication", ...) on every row of a block, and repeated a
+  /// parent's cells on each child row (a vaccine contraindication's text on
+  /// each of its CVX rows; a conditional skip's context and set logic on
+  /// each set and condition row). 4.65 writes each once and leaves the cells
+  /// blank below; there are no merged cells, the cells are simply empty.
+  /// Every row parser in this file keys on those cells, so the 4.65
+  /// workbooks parsed as nothing (contraindications), as header text
+  /// (series), or as new empty sets (conditional skips).
+  ///
+  /// The rule that restores the 4.64 shape, verified against both editions
+  /// of the Hib and Diphtheria workbooks: on a row whose column A is blank,
+  /// the leading run of blank cells is inherited from the row above; the
+  /// first non-blank cell and everything after it are the row's own. A blank
+  /// after a value (a 4.65 empty date, for instance) stays blank.
+  List<List<String>> _fillLabels(List<List<String>> rows, String sheetName) {
+    final filled = <List<String>>[];
+    List<String>? previous;
+    for (final row in rows) {
+      if (row.every((c) => c.isEmpty)) {
+        filled.add(row);
+        continue;
+      }
+      final r = List<String>.from(row);
+      if (r.first.isEmpty && previous != null) {
+        for (var i = 0; i < r.length && i < previous.length; i++) {
+          if (r[i].isNotEmpty) break;
+          r[i] = previous[i];
+        }
+      }
+      filled.add(r);
+      previous = r;
+    }
+    return filled;
+  }
+
+  /// -----------------------------------------------------------
+  ///   1b) Helper: Parse "Vaccine Recommendation Category" rows
+  /// -----------------------------------------------------------
+  ///
+  /// Row 1 is a prose header, row 2 the column names (starting "Excel
+  /// Worksheet Name"), then one row per series and category. Values are
+  /// kept as CDC writes them; see [VaccineRecommendationCategory].
+  List<VaccineRecommendationCategory> _parseVaccineRecommendationCategoryRows(
+    List<List<String>> rows,
+  ) {
+    final result = <VaccineRecommendationCategory>[];
+    var pastHeader = false;
+    for (final row in rows) {
+      if (row.isEmpty || row.every((c) => c.isEmpty)) continue;
+      if (!pastHeader) {
+        if (row.first == 'Excel Worksheet Name') pastHeader = true;
+        continue;
+      }
+      String? at(int i) => i < row.length && row[i].isNotEmpty ? row[i] : null;
+      if (at(0) == null || at(1) == null) continue;
+      result.add(
+        VaccineRecommendationCategory(
+          worksheetName: at(0),
+          seriesName: at(1),
+          patientBeginAge: at(2),
+          patientEndAge: at(3),
+          forecastTargetDose: at(4),
+          includedIndication: at(5),
+          excludedIndication: at(6),
+          category: at(7),
+          additionalMaterial: at(8),
+        ),
+      );
+    }
+    return result;
+  }
 
   /// -----------------------------------------------------------
   ///         2) Helper: Parse "Immunity" rows
@@ -609,11 +697,10 @@ class AntigenSheetParser {
             // Basic set-level fields
             final setId = row.length > 3 ? row[3] : null;
             final setDesc = row.length > 4 ? row[4] : null;
-            final effectiveDate =
-                (row.length > 5 && !row[5].contains('n/a')) ? row[5] : null;
-
-            final cessationDate =
-                (row.length > 6 && !row[6].contains('n/a')) ? row[6] : null;
+            // 4.65 leaves these cells empty rather than "n/a"; an empty
+            // string reached simplifyDate and crashed on substring(0, 10).
+            final effectiveDate = row.length > 5 ? _nullIfNA(row[5]) : null;
+            final cessationDate = row.length > 6 ? _nullIfNA(row[6]) : null;
 
             final condLogic =
                 (row.length > 7 && !row[7].contains('n/a')) ? row[7] : null;
@@ -819,7 +906,9 @@ class AntigenSheetParser {
 }
 
 extension SimplifyDate on String {
+  /// The date part of a cell like "2024-01-01 00:00:00.000". A value too
+  /// short to hold a date is returned unchanged rather than throwing.
   String get simplifyDate {
-    return this.substring(0, 10);
+    return length >= 10 ? substring(0, 10) : this;
   }
 }

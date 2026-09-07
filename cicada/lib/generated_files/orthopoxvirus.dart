@@ -945,5 +945,55 @@ final AntigenSupportingData orthopoxvirus = AntigenSupportingData.fromJson({
         }
       ]
     }
+  ],
+  "vaccineRecommendationCategory": [
+    {
+      "worksheetName": "Risk more virulent 2-dose",
+      "seriesName": "Orthopoxvirus risk more virulent 2-dose series",
+      "patientBeginAge": "18 years",
+      "patientEndAge": "n/a",
+      "forecastTargetDose": "Any",
+      "includedIndication": "Any",
+      "excludedIndication": "n/a",
+      "category": "High-Risk",
+      "additionalMaterial":
+          "https://www.cdc.gov/monkeypox/hcp/vaccine-considerations/index.html"
+    },
+    {
+      "worksheetName": "Risk less virulent 2-dose",
+      "seriesName": "Orthopoxvirus risk less virulent 2-dose series",
+      "patientBeginAge": "18 years",
+      "patientEndAge": "n/a",
+      "forecastTargetDose": "Any",
+      "includedIndication": "Any",
+      "excludedIndication": "n/a",
+      "category": "High-Risk",
+      "additionalMaterial":
+          "https://www.cdc.gov/monkeypox/hcp/vaccine-considerations/index.html"
+    },
+    {
+      "worksheetName": "Risk pre-exposure 2-dose",
+      "seriesName": "Orthopoxvirus risk pre-exposure 2-dose series",
+      "patientBeginAge": "18 years",
+      "patientEndAge": "n/a",
+      "forecastTargetDose": "Any",
+      "includedIndication": "Any",
+      "excludedIndication": "n/a",
+      "category": "High-Risk",
+      "additionalMaterial":
+          "https://www.cdc.gov/monkeypox/hcp/vaccine-considerations/index.html"
+    },
+    {
+      "worksheetName": "Risk post-exposure 2-dose",
+      "seriesName": "Orthopoxvirus risk post-exposure 2-dose series",
+      "patientBeginAge": "0 days",
+      "patientEndAge": "n/a",
+      "forecastTargetDose": "Any",
+      "includedIndication": "Any",
+      "excludedIndication": "n/a",
+      "category": "High-Risk",
+      "additionalMaterial":
+          "https://www.cdc.gov/monkeypox/hcp/vaccine-considerations/index.html"
+    }
   ]
 });

@@ -1197,5 +1197,18 @@ final AntigenSupportingData influenza = AntigenSupportingData.fromJson({
         }
       ]
     }
+  ],
+  "vaccineRecommendationCategory": [
+    {
+      "worksheetName": "Standard",
+      "seriesName": "Influenza standard series",
+      "patientBeginAge": "0 days",
+      "patientEndAge": "n/a",
+      "forecastTargetDose": "Any",
+      "includedIndication": "n/a",
+      "excludedIndication": "n/a",
+      "category": "Routine",
+      "additionalMaterial": "https://www.cdc.gov/flu/hcp/vax-summary/index.html"
+    }
   ]
 });

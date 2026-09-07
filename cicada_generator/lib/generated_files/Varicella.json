@@ -503,5 +503,29 @@
                 }
             ]
         }
+    ],
+    "vaccineRecommendationCategory": [
+        {
+            "worksheetName": "Childhood 2-dose",
+            "seriesName": "Varicella childhood 2-dose series",
+            "patientBeginAge": "0 days",
+            "patientEndAge": "n/a",
+            "forecastTargetDose": "Any",
+            "includedIndication": "n/a",
+            "excludedIndication": "n/a",
+            "category": "Routine",
+            "additionalMaterial": "https://www.cdc.gov/chickenpox/hcp/vaccine-considerations/index.html"
+        },
+        {
+            "worksheetName": "13+ 2-dose",
+            "seriesName": "Varicella 13+ 2-dose series",
+            "patientBeginAge": "0 days",
+            "patientEndAge": "n/a",
+            "forecastTargetDose": "Any",
+            "includedIndication": "n/a",
+            "excludedIndication": "n/a",
+            "category": "Routine",
+            "additionalMaterial": "https://www.cdc.gov/chickenpox/hcp/vaccine-considerations/index.html"
+        }
     ]
 }

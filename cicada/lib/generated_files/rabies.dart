@@ -83,14 +83,14 @@ final AntigenSupportingData rabies = AntigenSupportingData.fromJson({
               "vaccineType": "Rabies - IM Diploid cell culture",
               "cvx": "175",
               "beginAge": "0 days",
-              "volume": "1.0",
+              "volume": "1",
               "forecastVaccineType": "N"
             },
             {
               "vaccineType": "Rabies - IM fibroblast culture",
               "cvx": "176",
               "beginAge": "0 days",
-              "volume": "1.0",
+              "volume": "1",
               "forecastVaccineType": "N"
             }
           ],
@@ -133,14 +133,14 @@ final AntigenSupportingData rabies = AntigenSupportingData.fromJson({
               "vaccineType": "Rabies - IM Diploid cell culture",
               "cvx": "175",
               "beginAge": "0 days",
-              "volume": "1.0",
+              "volume": "1",
               "forecastVaccineType": "N"
             },
             {
               "vaccineType": "Rabies - IM fibroblast culture",
               "cvx": "176",
               "beginAge": "0 days",
-              "volume": "1.0",
+              "volume": "1",
               "forecastVaccineType": "N"
             }
           ],
@@ -184,14 +184,14 @@ final AntigenSupportingData rabies = AntigenSupportingData.fromJson({
               "vaccineType": "Rabies - IM Diploid cell culture",
               "cvx": "175",
               "beginAge": "0 days",
-              "volume": "1.0",
+              "volume": "1",
               "forecastVaccineType": "N"
             },
             {
               "vaccineType": "Rabies - IM fibroblast culture",
               "cvx": "176",
               "beginAge": "0 days",
-              "volume": "1.0",
+              "volume": "1",
               "forecastVaccineType": "N"
             }
           ],
@@ -282,14 +282,14 @@ final AntigenSupportingData rabies = AntigenSupportingData.fromJson({
               "vaccineType": "Rabies - IM Diploid cell culture",
               "cvx": "175",
               "beginAge": "0 days",
-              "volume": "1.0",
+              "volume": "1",
               "forecastVaccineType": "N"
             },
             {
               "vaccineType": "Rabies - IM fibroblast culture",
               "cvx": "176",
               "beginAge": "0 days",
-              "volume": "1.0",
+              "volume": "1",
               "forecastVaccineType": "N"
             }
           ],
@@ -391,14 +391,14 @@ final AntigenSupportingData rabies = AntigenSupportingData.fromJson({
               "vaccineType": "Rabies - IM Diploid cell culture",
               "cvx": "175",
               "beginAge": "0 days",
-              "volume": "1.0",
+              "volume": "1",
               "forecastVaccineType": "N"
             },
             {
               "vaccineType": "Rabies - IM fibroblast culture",
               "cvx": "176",
               "beginAge": "0 days",
-              "volume": "1.0",
+              "volume": "1",
               "forecastVaccineType": "N"
             }
           ],
@@ -441,14 +441,14 @@ final AntigenSupportingData rabies = AntigenSupportingData.fromJson({
               "vaccineType": "Rabies - IM Diploid cell culture",
               "cvx": "175",
               "beginAge": "0 days",
-              "volume": "1.0",
+              "volume": "1",
               "forecastVaccineType": "N"
             },
             {
               "vaccineType": "Rabies - IM fibroblast culture",
               "cvx": "176",
               "beginAge": "0 days",
-              "volume": "1.0",
+              "volume": "1",
               "forecastVaccineType": "N"
             }
           ],
@@ -492,14 +492,14 @@ final AntigenSupportingData rabies = AntigenSupportingData.fromJson({
               "vaccineType": "Rabies - IM Diploid cell culture",
               "cvx": "175",
               "beginAge": "0 days",
-              "volume": "1.0",
+              "volume": "1",
               "forecastVaccineType": "N"
             },
             {
               "vaccineType": "Rabies - IM fibroblast culture",
               "cvx": "176",
               "beginAge": "0 days",
-              "volume": "1.0",
+              "volume": "1",
               "forecastVaccineType": "N"
             }
           ],
@@ -590,14 +590,14 @@ final AntigenSupportingData rabies = AntigenSupportingData.fromJson({
               "vaccineType": "Rabies - IM Diploid cell culture",
               "cvx": "175",
               "beginAge": "0 days",
-              "volume": "1.0",
+              "volume": "1",
               "forecastVaccineType": "N"
             },
             {
               "vaccineType": "Rabies - IM fibroblast culture",
               "cvx": "176",
               "beginAge": "0 days",
-              "volume": "1.0",
+              "volume": "1",
               "forecastVaccineType": "N"
             }
           ],
@@ -687,14 +687,14 @@ final AntigenSupportingData rabies = AntigenSupportingData.fromJson({
               "vaccineType": "Rabies - IM Diploid cell culture",
               "cvx": "175",
               "beginAge": "0 days",
-              "volume": "1.0",
+              "volume": "1",
               "forecastVaccineType": "N"
             },
             {
               "vaccineType": "Rabies - IM fibroblast culture",
               "cvx": "176",
               "beginAge": "0 days",
-              "volume": "1.0",
+              "volume": "1",
               "forecastVaccineType": "N"
             }
           ],
@@ -737,14 +737,14 @@ final AntigenSupportingData rabies = AntigenSupportingData.fromJson({
               "vaccineType": "Rabies - IM Diploid cell culture",
               "cvx": "175",
               "beginAge": "0 days",
-              "volume": "1.0",
+              "volume": "1",
               "forecastVaccineType": "N"
             },
             {
               "vaccineType": "Rabies - IM fibroblast culture",
               "cvx": "176",
               "beginAge": "0 days",
-              "volume": "1.0",
+              "volume": "1",
               "forecastVaccineType": "N"
             }
           ],
@@ -788,14 +788,14 @@ final AntigenSupportingData rabies = AntigenSupportingData.fromJson({
               "vaccineType": "Rabies - IM Diploid cell culture",
               "cvx": "175",
               "beginAge": "0 days",
-              "volume": "1.0",
+              "volume": "1",
               "forecastVaccineType": "N"
             },
             {
               "vaccineType": "Rabies - IM fibroblast culture",
               "cvx": "176",
               "beginAge": "0 days",
-              "volume": "1.0",
+              "volume": "1",
               "forecastVaccineType": "N"
             }
           ],
@@ -887,14 +887,14 @@ final AntigenSupportingData rabies = AntigenSupportingData.fromJson({
               "vaccineType": "Rabies - IM Diploid cell culture",
               "cvx": "175",
               "beginAge": "0 days",
-              "volume": "1.0",
+              "volume": "1",
               "forecastVaccineType": "N"
             },
             {
               "vaccineType": "Rabies - IM fibroblast culture",
               "cvx": "176",
               "beginAge": "0 days",
-              "volume": "1.0",
+              "volume": "1",
               "forecastVaccineType": "N"
             }
           ],
@@ -923,6 +923,44 @@ final AntigenSupportingData rabies = AntigenSupportingData.fromJson({
           "recurringDose": "No"
         }
       ]
+    }
+  ],
+  "vaccineRecommendationCategory": [
+    {
+      "worksheetName": "Risk continuous exposure",
+      "seriesName": "Rabies risk continuous exposure series",
+      "patientBeginAge": "0 days",
+      "patientEndAge": "n/a",
+      "forecastTargetDose": "Any",
+      "includedIndication": "Any",
+      "excludedIndication": "n/a",
+      "category": "High-Risk",
+      "additionalMaterial":
+          "https://www.cdc.gov/rabies/hcp/clinical-care/pre-exposure-prophylaxis.html"
+    },
+    {
+      "worksheetName": "Risk frequent exposure",
+      "seriesName": "Rabies risk frequent exposure series",
+      "patientBeginAge": "0 days",
+      "patientEndAge": "n/a",
+      "forecastTargetDose": "Any",
+      "includedIndication": "Any",
+      "excludedIndication": "n/a",
+      "category": "High-Risk",
+      "additionalMaterial":
+          "https://www.cdc.gov/rabies/hcp/clinical-care/pre-exposure-prophylaxis.html"
+    },
+    {
+      "worksheetName": "Risk infrequent exposure",
+      "seriesName": "Rabies risk infrequent exposure series",
+      "patientBeginAge": "0 days",
+      "patientEndAge": "n/a",
+      "forecastTargetDose": "Any",
+      "includedIndication": "Any",
+      "excludedIndication": "n/a",
+      "category": "High-Risk",
+      "additionalMaterial":
+          "https://www.cdc.gov/rabies/hcp/clinical-care/pre-exposure-prophylaxis.html"
     }
   ]
 });

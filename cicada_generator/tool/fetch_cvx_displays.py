@@ -66,4 +66,5 @@ with open(TSV, "w") as tsv, open(DART, "w") as dart:
         tsv.flush(); dart.flush()
         print(code, disp, flush=True)
     dart.write("};\n")
+subprocess.run(["dart", "format", str(DART)], check=True, capture_output=True)
 print(f"wrote {len(items)} CVX displays ({version}) to {DART}", flush=True)

@@ -447,5 +447,31 @@ final AntigenSupportingData tbe = AntigenSupportingData.fromJson({
         }
       ]
     }
+  ],
+  "vaccineRecommendationCategory": [
+    {
+      "worksheetName": "Risk 1-15 years 3-dose",
+      "seriesName": "Risk 1-15 years 3-dose",
+      "patientBeginAge": "1 year",
+      "patientEndAge": "16 years",
+      "forecastTargetDose": "Any",
+      "includedIndication": "Any",
+      "excludedIndication": "n/a",
+      "category": "High-Risk",
+      "additionalMaterial":
+          "https://www.cdc.gov/tick-borne-encephalitis/hcp/vaccine/index.html"
+    },
+    {
+      "worksheetName": "Risk 16 years+ 3-dose",
+      "seriesName": "Risk 16 years+ 3-dose",
+      "patientBeginAge": "16 years",
+      "patientEndAge": "n/a",
+      "forecastTargetDose": "Any",
+      "includedIndication": "Any",
+      "excludedIndication": "n/a",
+      "category": "High-Risk",
+      "additionalMaterial":
+          "https://www.cdc.gov/tick-borne-encephalitis/hcp/vaccine/index.html"
+    }
   ]
 });

@@ -2121,5 +2121,205 @@
                 }
             ]
         }
+    ],
+    "vaccineRecommendationCategory": [
+        {
+            "worksheetName": "2-dose",
+            "seriesName": "HPV 2-dose series",
+            "patientBeginAge": "0 days",
+            "patientEndAge": "27 years",
+            "forecastTargetDose": "Any",
+            "includedIndication": "n/a",
+            "excludedIndication": "n/a",
+            "category": "Routine",
+            "additionalMaterial": "https://www.cdc.gov/hpv/hcp/vaccination-considerations/index.html"
+        },
+        {
+            "worksheetName": "2-dose",
+            "seriesName": "HPV 2-dose series",
+            "patientBeginAge": "27 years",
+            "patientEndAge": "46 years",
+            "forecastTargetDose": "Any",
+            "includedIndication": "n/a",
+            "excludedIndication": "n/a",
+            "category": "SCDM",
+            "additionalMaterial": "https://www.cdc.gov/vaccines/hcp/admin/downloads/isd-job-aid-scdm-hpv-shared-clinical-decision-making-hpv.pdf"
+        },
+        {
+            "worksheetName": "3-dose start under 15",
+            "seriesName": "HPV 3-dose start under 15 years series",
+            "patientBeginAge": "0 days",
+            "patientEndAge": "27 years",
+            "forecastTargetDose": "Any",
+            "includedIndication": "n/a",
+            "excludedIndication": "n/a",
+            "category": "Routine",
+            "additionalMaterial": "https://www.cdc.gov/hpv/hcp/vaccination-considerations/index.html"
+        },
+        {
+            "worksheetName": "3-dose start under 15",
+            "seriesName": "HPV 3-dose start under 15 years series",
+            "patientBeginAge": "27 years",
+            "patientEndAge": "46 years",
+            "forecastTargetDose": "Any",
+            "includedIndication": "n/a",
+            "excludedIndication": "n/a",
+            "category": "SCDM",
+            "additionalMaterial": "https://www.cdc.gov/vaccines/hcp/admin/downloads/isd-job-aid-scdm-hpv-shared-clinical-decision-making-hpv.pdf"
+        },
+        {
+            "worksheetName": "3-dose",
+            "seriesName": "HPV 3-dose series",
+            "patientBeginAge": "0 days",
+            "patientEndAge": "27 years",
+            "forecastTargetDose": "Any",
+            "includedIndication": "n/a",
+            "excludedIndication": "n/a",
+            "category": "Routine",
+            "additionalMaterial": "https://www.cdc.gov/hpv/hcp/vaccination-considerations/index.html"
+        },
+        {
+            "worksheetName": "3-dose",
+            "seriesName": "HPV 3-dose series",
+            "patientBeginAge": "27 years",
+            "patientEndAge": "46 years",
+            "forecastTargetDose": "Any",
+            "includedIndication": "n/a",
+            "excludedIndication": "n/a",
+            "category": "SCDM",
+            "additionalMaterial": "https://www.cdc.gov/vaccines/hcp/admin/downloads/isd-job-aid-scdm-hpv-shared-clinical-decision-making-hpv.pdf"
+        },
+        {
+            "worksheetName": "Male 2-dose",
+            "seriesName": "HPV male 2-dose series",
+            "patientBeginAge": "0 days",
+            "patientEndAge": "27 years",
+            "forecastTargetDose": "Any",
+            "includedIndication": "n/a",
+            "excludedIndication": "n/a",
+            "category": "Routine",
+            "additionalMaterial": "https://www.cdc.gov/hpv/hcp/vaccination-considerations/index.html"
+        },
+        {
+            "worksheetName": "Male 2-dose",
+            "seriesName": "HPV male 2-dose series",
+            "patientBeginAge": "27 years",
+            "patientEndAge": "46 years",
+            "forecastTargetDose": "Any",
+            "includedIndication": "n/a",
+            "excludedIndication": "n/a",
+            "category": "SCDM",
+            "additionalMaterial": "https://www.cdc.gov/vaccines/hcp/admin/downloads/isd-job-aid-scdm-hpv-shared-clinical-decision-making-hpv.pdf"
+        },
+        {
+            "worksheetName": "Male 3-dose start under 15",
+            "seriesName": "HPV male 3-dose start under 15 years series",
+            "patientBeginAge": "0 days",
+            "patientEndAge": "27 years",
+            "forecastTargetDose": "Any",
+            "includedIndication": "n/a",
+            "excludedIndication": "n/a",
+            "category": "Routine",
+            "additionalMaterial": "https://www.cdc.gov/hpv/hcp/vaccination-considerations/index.html"
+        },
+        {
+            "worksheetName": "Male 3-dose start under 15",
+            "seriesName": "HPV male 3-dose start under 15 years series",
+            "patientBeginAge": "27 years",
+            "patientEndAge": "46 years",
+            "forecastTargetDose": "Any",
+            "includedIndication": "n/a",
+            "excludedIndication": "n/a",
+            "category": "SCDM",
+            "additionalMaterial": "https://www.cdc.gov/vaccines/hcp/admin/downloads/isd-job-aid-scdm-hpv-shared-clinical-decision-making-hpv.pdf"
+        },
+        {
+            "worksheetName": "Male 3-dose",
+            "seriesName": "HPV male 3-dose series",
+            "patientBeginAge": "0 days",
+            "patientEndAge": "27 years",
+            "forecastTargetDose": "Any",
+            "includedIndication": "n/a",
+            "excludedIndication": "n/a",
+            "category": "Routine",
+            "additionalMaterial": "https://www.cdc.gov/hpv/hcp/vaccination-considerations/index.html"
+        },
+        {
+            "worksheetName": "Male 3-dose",
+            "seriesName": "HPV male 3-dose series",
+            "patientBeginAge": "27 years",
+            "patientEndAge": "46 years",
+            "forecastTargetDose": "Any",
+            "includedIndication": "n/a",
+            "excludedIndication": "n/a",
+            "category": "SCDM",
+            "additionalMaterial": "https://www.cdc.gov/vaccines/hcp/admin/downloads/isd-job-aid-scdm-hpv-shared-clinical-decision-making-hpv.pdf"
+        },
+        {
+            "worksheetName": "Risk 2-dose",
+            "seriesName": "HPV risk 2-dose series",
+            "patientBeginAge": "0 days",
+            "patientEndAge": "11 years",
+            "forecastTargetDose": "Any",
+            "includedIndication": "Any",
+            "excludedIndication": "n/a",
+            "category": "High-Risk",
+            "additionalMaterial": "https://www.cdc.gov/hpv/hcp/vaccination-considerations/index.html"
+        },
+        {
+            "worksheetName": "Risk male 2-dose",
+            "seriesName": "HPV risk male 2-dose series",
+            "patientBeginAge": "0 days",
+            "patientEndAge": "11 years",
+            "forecastTargetDose": "Any",
+            "includedIndication": "Any",
+            "excludedIndication": "n/a",
+            "category": "High-Risk",
+            "additionalMaterial": "https://www.cdc.gov/hpv/hcp/vaccination-considerations/index.html"
+        },
+        {
+            "worksheetName": "Risk 3-dose",
+            "seriesName": "HPV risk 3-dose series",
+            "patientBeginAge": "9 years",
+            "patientEndAge": "27 years",
+            "forecastTargetDose": "Any",
+            "includedIndication": "Any",
+            "excludedIndication": "n/a",
+            "category": "High-Risk",
+            "additionalMaterial": "https://www.cdc.gov/hpv/hcp/vaccination-considerations/index.html"
+        },
+        {
+            "worksheetName": "Risk 3-dose",
+            "seriesName": "HPV risk 3-dose series",
+            "patientBeginAge": "27 years",
+            "patientEndAge": "46 years",
+            "forecastTargetDose": "Any",
+            "includedIndication": "Any",
+            "excludedIndication": "n/a",
+            "category": "SCDM",
+            "additionalMaterial": "https://www.cdc.gov/vaccines/hcp/admin/downloads/isd-job-aid-scdm-hpv-shared-clinical-decision-making-hpv.pdf"
+        },
+        {
+            "worksheetName": "Risk male 3-dose",
+            "seriesName": "HPV risk male 3-dose series",
+            "patientBeginAge": "9 years",
+            "patientEndAge": "27 years",
+            "forecastTargetDose": "Any",
+            "includedIndication": "Any",
+            "excludedIndication": "n/a",
+            "category": "High-Risk",
+            "additionalMaterial": "https://www.cdc.gov/hpv/hcp/vaccination-considerations/index.html"
+        },
+        {
+            "worksheetName": "Risk male 3-dose",
+            "seriesName": "HPV risk male 3-dose series",
+            "patientBeginAge": "27 years",
+            "patientEndAge": "46 years",
+            "forecastTargetDose": "Any",
+            "includedIndication": "Any",
+            "excludedIndication": "n/a",
+            "category": "SCDM",
+            "additionalMaterial": "https://www.cdc.gov/vaccines/hcp/admin/downloads/isd-job-aid-scdm-hpv-shared-clinical-decision-making-hpv.pdf"
+        }
     ]
 }

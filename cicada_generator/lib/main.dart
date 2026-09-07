@@ -76,39 +76,15 @@ void _generateCdc() {
           print('Unrecognized file (not Antigen nor Schedule): $filePath');
         }
       } catch (e) {
-        print('ERROR processing $filePath: $e');
-        if (filePath.contains('AntigenSupportingData')) {
-          // Fall back to XML-derived JSON
-          final jsonDir = _findVersionSubdir('JSON');
-          final jsonFileName =
-              filePath.split('/').last.replaceAll('.xlsx', '.json');
-          final jsonFile = File('$jsonDir/$jsonFileName');
-          if (jsonFile.existsSync()) {
-            print('Falling back to XML-derived JSON: ${jsonFile.path}');
-            final jsonData = json.decode(jsonFile.readAsStringSync())
-                as Map<String, dynamic>;
-            var antigenData = AntigenSupportingData.fromJson(jsonData);
-            // XML format may not set targetDisease at top level; extract from series
-            if (antigenData.targetDisease == null &&
-                antigenData.series != null &&
-                antigenData.series!.isNotEmpty) {
-              antigenData = antigenData.copyWith(
-                targetDisease: antigenData.series!.first.targetDisease,
-                vaccineGroup: antigenData.series!.first.vaccineGroup,
-              );
-            }
-            allAntigenData.add(antigenData);
-            final outPath =
-                '${outputDir.path}/${antigenData.targetDisease}.json';
-            File(outPath)
-                .writeAsStringSync(jsonPrettyPrint(antigenData.toJson()));
-            print('Wrote $outPath (from XML fallback)');
-          } else {
-            print('No XML fallback found, skipping.');
-          }
-        } else {
-          print('Skipping this file.');
-        }
+        // No fallback. Until 2026-09-06 a parse failure fell back to CDC's
+        // XML rendering of the same workbook, silently: all 30 antigen
+        // workbooks failed on the 4.65 layout and the engine was generated
+        // from the XML for weeks while the log printed 30 errors and the
+        // script exited 0. The Excel is the source of record (it is what
+        // experts and other programmes can edit), so a workbook that does
+        // not parse stops the run. cicada_generator/lib/check_excel_vs_xml.dart
+        // proves the parse against the XML rendering.
+        throw StateError('Cannot parse $filePath: $e');
       }
     }
   }

@@ -213,5 +213,18 @@
                 }
             ]
         }
+    ],
+    "vaccineRecommendationCategory": [
+        {
+            "worksheetName": "Risk 3-dose",
+            "seriesName": "Dengue risk 3-dose series",
+            "patientBeginAge": "9 years",
+            "patientEndAge": "17 years",
+            "forecastTargetDose": "Any",
+            "includedIndication": "Any",
+            "excludedIndication": "n/a",
+            "category": "High-Risk",
+            "additionalMaterial": "https://www.cdc.gov/dengue/hcp/vaccine/index.html"
+        }
     ]
 }

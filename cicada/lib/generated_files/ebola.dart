@@ -111,7 +111,7 @@ final AntigenSupportingData ebola = AntigenSupportingData.fromJson({
               "vaccineType": "Ebola Zaire vaccine, live",
               "cvx": "204",
               "beginAge": "18 years",
-              "volume": "1.0",
+              "volume": "1",
               "forecastVaccineType": "N"
             }
           ],
@@ -125,6 +125,20 @@ final AntigenSupportingData ebola = AntigenSupportingData.fromJson({
           "recurringDose": "No"
         }
       ]
+    }
+  ],
+  "vaccineRecommendationCategory": [
+    {
+      "worksheetName": "Risk 1-dose",
+      "seriesName": "Ebola Risk 1-dose series",
+      "patientBeginAge": "18 years",
+      "patientEndAge": "n/a",
+      "forecastTargetDose": "Any",
+      "includedIndication": "Any",
+      "excludedIndication": "n/a",
+      "category": "High-Risk",
+      "additionalMaterial":
+          "https://www.cdc.gov/ebola/hcp/vaccines/ebola-vaccine-administration.html"
     }
   ]
 });

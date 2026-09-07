@@ -802,5 +802,55 @@ final AntigenSupportingData mumps = AntigenSupportingData.fromJson({
         }
       ]
     }
+  ],
+  "vaccineRecommendationCategory": [
+    {
+      "worksheetName": "2-dose",
+      "seriesName": "Mumps 2-dose series",
+      "patientBeginAge": "0 days",
+      "patientEndAge": "n/a",
+      "forecastTargetDose": "Any",
+      "includedIndication": "n/a",
+      "excludedIndication": "n/a",
+      "category": "Routine",
+      "additionalMaterial":
+          "https://www.cdc.gov/mumps/hcp/vaccine-considerations/index.html"
+    },
+    {
+      "worksheetName": "Risk 1-dose",
+      "seriesName": "Mumps risk 1-dose series",
+      "patientBeginAge": "6 months",
+      "patientEndAge": "12 months",
+      "forecastTargetDose": "Any",
+      "includedIndication": "Any",
+      "excludedIndication": "n/a",
+      "category": "High-Risk",
+      "additionalMaterial":
+          "https://www.cdc.gov/mumps/hcp/vaccine-considerations/index.html"
+    },
+    {
+      "worksheetName": "Risk 2-dose",
+      "seriesName": "Mumps risk 2-dose series",
+      "patientBeginAge": "18 years",
+      "patientEndAge": "n/a",
+      "forecastTargetDose": "Any",
+      "includedIndication": "Any",
+      "excludedIndication": "n/a",
+      "category": "High-Risk",
+      "additionalMaterial":
+          "https://www.cdc.gov/mumps/hcp/vaccine-considerations/index.html"
+    },
+    {
+      "worksheetName": "Risk 2-dose ART",
+      "seriesName": "Mumps risk 2-dose ART series",
+      "patientBeginAge": "0 days",
+      "patientEndAge": "n/a",
+      "forecastTargetDose": "Any",
+      "includedIndication": "Any",
+      "excludedIndication": "n/a",
+      "category": "High-Risk",
+      "additionalMaterial":
+          "https://www.cdc.gov/mumps/hcp/vaccine-considerations/index.html"
+    }
   ]
 });

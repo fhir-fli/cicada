@@ -15,6 +15,10 @@ dependencies:
   xml2json: ^6.2.7
 
 dependency_overrides:
+  # excel 4.0.6 crashes on a workbook whose sharedStrings.xml repeats a
+  # value (CDC's Hib 4.65 workbook). third_party/excel/CICADA-PATCH.md.
+  excel:
+    path: third_party/excel
   archive: ^3.6.1
 
 dev_dependencies:
