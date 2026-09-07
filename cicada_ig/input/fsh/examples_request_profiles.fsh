@@ -12,6 +12,7 @@ Description: "A coded observation carrying CDSi observation 003, Immunocompromis
 * status = #final
 * code = http://snomed.info/sct#370388006 "Patient immunocompromised"
 * subject = Reference(Patient/2016-UC-0032)
+* performer = Reference(Practitioner/practitioner-recording)
 * effectiveDateTime = "2015-04-30"
 
 Instance: procedure-stem-cell-transplant
@@ -77,12 +78,21 @@ Description: "A hepatitis B dose dispensed as a MedicationDispense."
 * subject = Reference(Patient/2016-UC-0032)
 * whenHandedOver = "1998-03-10"
 
-Instance: vaccine-hepb-adult
+Instance: vaccine-dtap
 InstanceOf: Vaccine
 Usage: #example
-Title: "Medication: Hep B, adult"
-Description: "A vaccine product as a Medication: CVX 43 with a trade name, the age from which CDC's HepB 3-dose series lists it as a preferable vaccine (20 years, no upper bound), and its vaccine type. CVX 08's begin age of 0 days cannot be an example here: FHIR's Age datatype requires a positive value (age-1)."
-* code = http://hl7.org/fhir/sid/cvx#43 "Hep B, adult"
-* identifier[tradeName].value = "Engerix-B"
-* extension[beginAge].valueAge = 20 'a' "years"
-* extension[vaccineType].valueCodeableConcept = http://hl7.org/fhir/sid/cvx#43 "Hep B, adult"
+Title: "Medication: DTaP"
+Description: "A vaccine product as a Medication: CVX 20 with a trade name, the ages between which CDC's Diphtheria standard series lists it as a preferable vaccine (6 weeks to 7 years), and its vaccine type. CDC's \"0 days\" begin ages cannot be examples here: FHIR's Age datatype requires a positive value (age-1)."
+* code = http://hl7.org/fhir/sid/cvx#20 "DTaP"
+* identifier[tradeName].value = "Infanrix"
+* extension[beginAge].valueAge = 6 'wk' "weeks"
+* extension[endAge].valueAge = 7 'a' "years"
+* extension[vaccineType].valueCodeableConcept = http://hl7.org/fhir/sid/cvx#20 "DTaP"
+
+Instance: practitioner-recording
+InstanceOf: Practitioner
+Usage: #example
+Title: "Practitioner: the recorder of the example observation"
+Description: "The performer of observation-immunocompromised. Practitioner is not profiled by this IG; the example exists so that the observation can carry a performer, as the base specification recommends."
+* name.family = "Okello"
+* name.given = "Grace"

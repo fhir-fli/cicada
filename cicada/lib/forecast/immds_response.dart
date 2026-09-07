@@ -43,7 +43,7 @@ const _vaccineGroupCvx = <String, (String cvx, String display)>{
 /// CodeableConcept.text, not in the coding.
 ///
 /// Codes follow hl7.fhir.us.immds 1.0.0 ValueSet/targetDisease where it has
-/// the disease: Diphtheria, Polio, Rotavirus and seasonal Influenza moved to
+/// the disease: Polio, Rotavirus and seasonal Influenza moved to
 /// its concepts on 2026-09-06. Where it has none, the concept was found by
 /// SNOMED search: Meningococcal B is the serogroup B disease concept (the
 /// previous 860805006 was "Encephalomyelitis caused by Neisseria
@@ -57,7 +57,10 @@ const _diseaseSnomed = <String, (String, String)>{
   'Cholera': ('63650001', 'Cholera'),
   'COVID-19': ('840539006', 'COVID-19'),
   'Dengue': ('38362002', 'Dengue'),
-  'Diphtheria': ('397428000', 'Diphtheria'),
+  // Not ImmDS's 397428000 "Diphtheria": tx.fhir.org $lookup reports it
+  // inactive in both the International (2025-02-01) and US (2025-09-01)
+  // editions, checked 2026-09-07 for all 29 codes here; it was the only one.
+  'Diphtheria': ('397430003', 'Diphtheria caused by Corynebacterium diphtheriae'),
   'Pertussis': ('27836007', 'Pertussis'),
   'Tetanus': ('76902006', 'Tetanus'),
   'Ebola': ('37109004', 'Ebola virus disease'),

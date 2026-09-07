@@ -26,16 +26,22 @@ Extension: BeginAge
 Id: begin-age
 Title: "Begin Age"
 Description: "The age at which the vaccine becomes applicable."
+* ^context[0].type = #element
+* ^context[0].expression = "Medication"
 * value[x] only Age // Assuming you want to store age, using FHIR's Age datatype
 
 Extension: EndAge
 Id: end-age
 Title: "End Age"
 Description: "The age at which the vaccine is no longer applicable."
+* ^context[0].type = #element
+* ^context[0].expression = "Medication"
 * value[x] only Age // Similarly, using Age datatype
 
 Extension: VaccineType
 Id: vaccine-type
 Title: "Vaccine Type"
 Description: "Type of the vaccine."
+* ^context[0].type = #element
+* ^context[0].expression = "Medication"
 * value[x] only CodeableConcept // Assuming you want to store a coded type of vaccine

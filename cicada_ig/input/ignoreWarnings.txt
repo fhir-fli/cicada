@@ -22,3 +22,24 @@ No definition could be found for URL value 'https://www.cdc.gov/%
 # 10 on 2026-09-07 with the per-code lookups. The data is CDC's to correct;
 # until it is, the value set carries what CDC publishes.
 The code for the filter 'concept' is inactive%
+
+# vaccine-condition-codes-snomed has no narrative on purpose: the build runs with
+# -no-narrative on it, because rendering its 201 is-a filters is 201 terminology
+# calls for a page nobody reads (2026-09-06).
+%vaccine-condition-codes-snomed: ValueSet: Constraint failed: dom-6%
+
+# The ICD-10-CM code system in this IG is a content-not-present stub, on purpose
+# (cs_icd10cm_stub.fsh): without it the publisher fetches and re-uploads the
+# whole of ICD-10-CM. The ConceptMap's source codes are validated by the
+# terminology server through the value set instead.
+%Source Code System http://hl7.org/fhir/sid/icd-10-cm doesn't have all content%
+
+# Identifier.system for a vaccine's trade name is an identifier namespace, a
+# URI this IG mints; it is not a definition and there is nothing to resolve.
+No definition could be found for URL value 'http://fhirfli.dev/fhir/ig/cicada/identifier/trade-name'
+
+# MapToVaccineConditionObservation takes `src : any` on purpose: the same
+# group maps Observation, Condition, Procedure, AllergyIntolerance and the
+# Medication resources to the CDSi observation code, and R4 FML has no union
+# type. The paths it uses (code, coding) exist on every one of them.
+%parameter src has no type, so the paths cannot be validated%

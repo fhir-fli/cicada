@@ -43,7 +43,7 @@
 [MedicationDispenseProfile]: StructureDefinition-MedicationDispenseProfile.html
 [MedicationRequestProfile]: StructureDefinition-MedicationRequestProfile.html
 [MedicationStatementProfile]: StructureDefinition-MedicationStatementProfile.html
-[vaccine-hepb-adult]: Medication-vaccine-hepb-adult.html
+[vaccine-dtap]: Medication-vaccine-dtap.html
 [medication-administration-hepb]: MedicationAdministration-medication-administration-hepb.html
 [medication-dispense-hepb]: MedicationDispense-medication-dispense-hepb.html
 [medication-request-hepb]: MedicationRequest-medication-request-hepb.html
@@ -51,6 +51,7 @@
 [medication-statement-hepb]: MedicationStatement-medication-statement-hepb.html
 [VaccineObservationFhir]: StructureDefinition-VaccineObservationFhir.html
 [observation-immunocompromised]: Observation-observation-immunocompromised.html
+[practitioner-recording]: Practitioner-practitioner-recording.html
 [procedure-stem-cell-transplant]: Procedure-procedure-stem-cell-transplant.html
 [ImmunizationProceduresSnomed]: ValueSet-procedures.html
 [PreferredAllowedReasonVS]: ValueSet-preferred-allowed-reason.html

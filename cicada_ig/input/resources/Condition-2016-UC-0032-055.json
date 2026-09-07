@@ -11,7 +11,7 @@
   "code": {
     "coding": [
       {
-        "system": "https://www.cdc.gov/vaccines/programs/iis/cdsi.html",
+        "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes",
         "code": "055",
         "display": "Health care personnel"
       },

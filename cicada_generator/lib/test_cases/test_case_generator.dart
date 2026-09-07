@@ -382,7 +382,7 @@ Condition _buildConditionFromObsCode(
       coding: [
         Coding(
           system: FhirUri(
-            'https://www.cdc.gov/vaccines/programs/iis/cdsi.html',
+            'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes',
           ),
           code: FhirCode(obsCode),
           display: displayText.toFhirString,

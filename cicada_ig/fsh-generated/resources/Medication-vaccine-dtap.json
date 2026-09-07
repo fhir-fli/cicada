@@ -1,6 +1,6 @@
 {
   "resourceType": "Medication",
-  "id": "vaccine-hepb-adult",
+  "id": "vaccine-dtap",
   "meta": {
     "profile": [
       "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/Vaccine"
@@ -9,14 +9,23 @@
   "identifier": [
     {
       "system": "http://fhirfli.dev/fhir/ig/cicada/identifier/trade-name",
-      "value": "Engerix-B"
+      "value": "Infanrix"
     }
   ],
   "extension": [
     {
       "url": "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/begin-age",
       "valueAge": {
-        "value": 20,
+        "value": 6,
+        "code": "wk",
+        "system": "http://unitsofmeasure.org",
+        "unit": "weeks"
+      }
+    },
+    {
+      "url": "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/end-age",
+      "valueAge": {
+        "value": 7,
         "code": "a",
         "system": "http://unitsofmeasure.org",
         "unit": "years"
@@ -27,9 +36,9 @@
       "valueCodeableConcept": {
         "coding": [
           {
-            "code": "43",
+            "code": "20",
             "system": "http://hl7.org/fhir/sid/cvx",
-            "display": "Hep B, adult"
+            "display": "DTaP"
           }
         ]
       }
@@ -38,9 +47,9 @@
   "code": {
     "coding": [
       {
-        "code": "43",
+        "code": "20",
         "system": "http://hl7.org/fhir/sid/cvx",
-        "display": "Hep B, adult"
+        "display": "DTaP"
       }
     ]
   }

@@ -4,8 +4,8 @@
     "fshName": "allergy-vaccine-reaction",
     "fshType": "Instance",
     "fshFile": "examples_request_profiles.fsh",
-    "startLine": 27,
-    "endLine": 37
+    "startLine": 28,
+    "endLine": 38
   },
   {
     "outputFile": "CodeSystem-EvalReason.json",
@@ -128,44 +128,44 @@
     "endLine": 1758
   },
   {
-    "outputFile": "Medication-vaccine-hepb-adult.json",
-    "fshName": "vaccine-hepb-adult",
+    "outputFile": "Medication-vaccine-dtap.json",
+    "fshName": "vaccine-dtap",
     "fshType": "Instance",
     "fshFile": "examples_request_profiles.fsh",
-    "startLine": 80,
-    "endLine": 88
+    "startLine": 81,
+    "endLine": 90
   },
   {
     "outputFile": "MedicationAdministration-medication-administration-hepb.json",
     "fshName": "medication-administration-hepb",
     "fshType": "Instance",
     "fshFile": "examples_request_profiles.fsh",
-    "startLine": 60,
-    "endLine": 68
+    "startLine": 61,
+    "endLine": 69
   },
   {
     "outputFile": "MedicationDispense-medication-dispense-hepb.json",
     "fshName": "medication-dispense-hepb",
     "fshType": "Instance",
     "fshFile": "examples_request_profiles.fsh",
-    "startLine": 70,
-    "endLine": 78
+    "startLine": 71,
+    "endLine": 79
   },
   {
     "outputFile": "MedicationRequest-medication-request-hepb.json",
     "fshName": "medication-request-hepb",
     "fshType": "Instance",
     "fshFile": "examples_request_profiles.fsh",
-    "startLine": 49,
-    "endLine": 58
+    "startLine": 50,
+    "endLine": 59
   },
   {
     "outputFile": "MedicationStatement-medication-statement-hepb.json",
     "fshName": "medication-statement-hepb",
     "fshType": "Instance",
     "fshFile": "examples_request_profiles.fsh",
-    "startLine": 39,
-    "endLine": 47
+    "startLine": 40,
+    "endLine": 48
   },
   {
     "outputFile": "Observation-observation-immunocompromised.json",
@@ -173,15 +173,23 @@
     "fshType": "Instance",
     "fshFile": "examples_request_profiles.fsh",
     "startLine": 7,
-    "endLine": 15
+    "endLine": 16
+  },
+  {
+    "outputFile": "Practitioner-practitioner-recording.json",
+    "fshName": "practitioner-recording",
+    "fshType": "Instance",
+    "fshFile": "examples_request_profiles.fsh",
+    "startLine": 92,
+    "endLine": 98
   },
   {
     "outputFile": "Procedure-procedure-stem-cell-transplant.json",
     "fshName": "procedure-stem-cell-transplant",
     "fshType": "Instance",
     "fshFile": "examples_request_profiles.fsh",
-    "startLine": 17,
-    "endLine": 25
+    "startLine": 18,
+    "endLine": 26
   },
   {
     "outputFile": "StructureDefinition-AntigenSupportingData.json",
@@ -285,7 +293,7 @@
     "fshType": "Extension",
     "fshFile": "profile_vaccine_as_medication.fsh",
     "startLine": 25,
-    "endLine": 29
+    "endLine": 31
   },
   {
     "outputFile": "StructureDefinition-cicada-immunization-recommendation.json",
@@ -308,8 +316,8 @@
     "fshName": "EndAge",
     "fshType": "Extension",
     "fshFile": "profile_vaccine_as_medication.fsh",
-    "startLine": 31,
-    "endLine": 35
+    "startLine": 33,
+    "endLine": 39
   },
   {
     "outputFile": "StructureDefinition-engine-version-ext.json",
@@ -372,8 +380,8 @@
     "fshName": "VaccineType",
     "fshType": "Extension",
     "fshFile": "profile_vaccine_as_medication.fsh",
-    "startLine": 37,
-    "endLine": 41
+    "startLine": 41,
+    "endLine": 47
   },
   {
     "outputFile": "StructureDefinition-vax-dose.json",

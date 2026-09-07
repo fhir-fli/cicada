@@ -2,8 +2,13 @@ import 'package:fhir_r4/fhir_r4.dart';
 
 import '../cicada.dart';
 
-/// CDSi observation code system URI used in condition test cases.
-const _cdsiSystemUri = 'https://www.cdc.gov/vaccines/programs/iis/cdsi.html';
+/// The system URIs a CDSi observation code may arrive under: the IG's own
+/// CodeSystem canonical, and the CDC page URL the condition test cases used
+/// before the IG existed. Both name the same codes.
+const _cdsiSystemUris = <String>{
+  'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes',
+  'https://www.cdc.gov/vaccines/programs/iis/cdsi.html',
+};
 
 /// SNOMED CT, the one system in the crosswalk that is a hierarchy.
 const _snomedSystemUri = 'http://snomed.info/sct';
@@ -91,7 +96,7 @@ VaxObservation? _matchCodingsToObservation(List<Coding>? codings) {
   for (final Coding coding in codings) {
     final String? systemUri = coding.system?.toString();
     final String? code = coding.code?.toString();
-    if (systemUri == _cdsiSystemUri && code != null) {
+    if (_cdsiSystemUris.contains(systemUri) && code != null) {
       for (int i = 0; i < allObservations.length; i++) {
         if (allObservations[i].observationCode == code) {
           return allObservations[i];

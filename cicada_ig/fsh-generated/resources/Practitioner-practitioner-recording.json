@@ -1,0 +1,12 @@
+{
+  "resourceType": "Practitioner",
+  "id": "practitioner-recording",
+  "name": [
+    {
+      "given": [
+        "Grace"
+      ],
+      "family": "Okello"
+    }
+  ]
+}

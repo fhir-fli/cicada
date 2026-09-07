@@ -6,6 +6,11 @@
       "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/VaccineObservationFhir"
     ]
   },
+  "performer": [
+    {
+      "reference": "Practitioner/practitioner-recording"
+    }
+  ],
   "status": "final",
   "code": {
     "coding": [
