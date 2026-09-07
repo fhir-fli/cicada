@@ -450,6 +450,23 @@ String _idToken(String name) => name
     .replaceAll(RegExp('[^a-z0-9]+'), '-')
     .replaceAll(RegExp(r'^-+|-+$'), '');
 
+/// A CVX [CodeableConcept]: the code system's own display on the coding,
+/// CDC's description (if any) as the text. A code the CVX release does not
+/// carry keeps the description as its display, so nothing is lost.
+CodeableConcept _cvxConcept(String cvx, String? description) {
+  final String? display = cvxDisplays[cvx] ?? description;
+  return CodeableConcept(
+    coding: [
+      Coding(
+        system: 'http://hl7.org/fhir/sid/cvx'.toFhirUri,
+        code: cvx.toFhirCode,
+        display: display?.toFhirString,
+      ),
+    ],
+    text: description?.toFhirString,
+  );
+}
+
 /// Returns a [CodeableConcept] for evaluation targetDisease.
 ///
 /// SNOMED disease codes only.
@@ -588,30 +605,22 @@ ImmunizationRecommendation _buildRecommendation(ForecastResult result) {
     // satisfy the next target dose (preferableVaccine with
     // forecastVaccineType = Y), and those were being discarded. Group code
     // first, then each specific product.
+    // Coding.display is always the CVX code system's own display
+    // (generated_files/cvx_displays.dart); the IG publisher validates it and
+    // reports anything else as "Wrong Display Name". CDC's short product name
+    // ("PCV15") and the hand-written group name go in CodeableConcept.text.
     final List<CodeableConcept> vaccineCodeList = [];
     final groupCvx = _vaccineGroupCvx[vgf.vaccineGroupName];
     if (groupCvx != null) {
-      vaccineCodeList.add(CodeableConcept(coding: [
-        Coding(
-          system: 'http://hl7.org/fhir/sid/cvx'.toFhirUri,
-          code: groupCvx.$1.toFhirCode,
-          display: groupCvx.$2.toFhirString,
-        ),
-      ]));
+      vaccineCodeList.add(_cvxConcept(groupCvx.$1, groupCvx.$2));
     }
     for (int i = 0; i < vgf.forecastCvxCodes.length; i++) {
       final String cvx = vgf.forecastCvxCodes[i];
       if (groupCvx != null && cvx == groupCvx.$1) continue;
-      final String? display = i < vgf.forecastVaccineDescriptions.length
+      final String? description = i < vgf.forecastVaccineDescriptions.length
           ? vgf.forecastVaccineDescriptions[i]
           : null;
-      vaccineCodeList.add(CodeableConcept(coding: [
-        Coding(
-          system: 'http://hl7.org/fhir/sid/cvx'.toFhirUri,
-          code: cvx.toFhirCode,
-          display: display?.toFhirString,
-        ),
-      ]));
+      vaccineCodeList.add(_cvxConcept(cvx, description));
     }
 
     // contraindicatedVaccineCode is 0..*, same binding. The series removed
@@ -619,12 +628,7 @@ ImmunizationRecommendation _buildRecommendation(ForecastResult result) {
     // patient; saying which ones is the difference between "contraindicated"
     // and a clinician knowing what not to give.
     final List<CodeableConcept> contraindicatedList = vgf.contraindicatedCvxCodes
-        .map((String cvx) => CodeableConcept(coding: [
-              Coding(
-                system: 'http://hl7.org/fhir/sid/cvx'.toFhirUri,
-                code: cvx.toFhirCode,
-              ),
-            ]))
+        .map((String cvx) => _cvxConcept(cvx, null))
         .toList();
 
     // Determine due vs overdue for Not Complete status
