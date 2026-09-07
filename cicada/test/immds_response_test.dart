@@ -153,7 +153,7 @@ void main() {
 
       for (final r in rec.recommendation) {
         final statusCode = codeStr(r.forecastStatus.coding?.first.code);
-        if (statusCode == 'Not Complete') {
+        if (statusCode == 'notComplete') {
           expect(r.dateCriterion, isNotNull,
               reason: 'Not Complete recommendation should have dateCriteria');
           expect(r.dateCriterion, isNotEmpty);
@@ -175,7 +175,7 @@ void main() {
       var checked = 0;
       for (final r in rec.recommendation) {
         final statusCode = codeStr(r.forecastStatus.coding?.first.code);
-        if (statusCode != 'Not Complete') continue;
+        if (statusCode != 'notComplete') continue;
         checked++;
         // Asserts whichever choice element is currently emitted. The integer
         // is correct per the HL7 examples and will be restored once the FITS
@@ -264,13 +264,15 @@ void main() {
           'http://hl7.org/fhir/us/immds/CodeSystem/ForecastStatus';
       const hl7System =
           'http://terminology.hl7.org/CodeSystem/immunization-recommendation-status';
+      // The codes of hl7.fhir.us.immds CodeSystem/ForecastStatus, as published.
+      // Not the display text: that is what the code used to emit.
       final cdsiCodes = {
-        'Not Complete',
-        'Complete',
-        'Immune',
-        'Contraindicated',
-        'Aged Out',
-        'Not Recommended',
+        'notComplete',
+        'complete',
+        'immune',
+        'contraindicated',
+        'agedOut',
+        'notRecommended',
       };
       final hl7Codes = {
         'due',

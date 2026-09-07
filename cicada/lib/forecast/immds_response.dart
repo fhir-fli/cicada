@@ -1147,19 +1147,24 @@ CodeableConcept _mapForecastStatus(SeriesStatus status,
 
   final List<Coding> codings = [];
 
-  // Primary: CDSi-compatible status text (parsed by FITS/testing tools)
-  final String cdsiCode = switch (status) {
-    SeriesStatus.complete => 'Complete',
-    SeriesStatus.notComplete => 'Not Complete',
-    SeriesStatus.immune => 'Immune',
-    SeriesStatus.contraindicated => 'Contraindicated',
-    SeriesStatus.agedOut => 'Aged Out',
-    SeriesStatus.notRecommended => 'Not Recommended',
+  // Primary: the ImmDS ForecastStatus CodeSystem (hl7.fhir.us.immds 1.0.0).
+  // Its codes are camelCase and its displays are the CDSi status text; the
+  // published example ImmunizationRecommendation-immunizationrecommendation-
+  // forecast-example carries code "notComplete", display "Not Complete".
+  // Until 2026-09-06 the status TEXT was emitted as the code, so every
+  // forecast failed IG validation ("Unknown code 'Not Complete'").
+  final (String cdsiCode, String cdsiDisplay) = switch (status) {
+    SeriesStatus.complete => ('complete', 'Complete'),
+    SeriesStatus.notComplete => ('notComplete', 'Not Complete'),
+    SeriesStatus.immune => ('immune', 'Immune'),
+    SeriesStatus.contraindicated => ('contraindicated', 'Contraindicated'),
+    SeriesStatus.agedOut => ('agedOut', 'Aged Out'),
+    SeriesStatus.notRecommended => ('notRecommended', 'Not Recommended'),
   };
   codings.add(Coding(
     system: cdsiSystem.toFhirUri,
     code: cdsiCode.toFhirCode,
-    display: cdsiCode.toFhirString,
+    display: cdsiDisplay.toFhirString,
   ));
 
   // Secondary: HL7 standard code (where a standard code exists)
@@ -1194,15 +1199,33 @@ CodeableConcept _mapForecastStatus(SeriesStatus status,
       break; // No HL7 standard code exists
   }
 
-  // Tertiary: LOINC answer list LL940-8 (LOINC 59783-1)
+  // Tertiary: LOINC answer list LL940-8 (LOINC 59783-1). Displays are LOINC's
+  // own, verbatim from tx.fhir.org $lookup on 2026-09-06; the IG publisher
+  // rejects an abbreviated display as "Wrong Display Name".
   final (String laCode, String laDisplay) = switch (status) {
-    SeriesStatus.complete => ('LA13421-5', 'Complete'),
-    SeriesStatus.notComplete =>
-      isOverdue ? ('LA13423-1', 'Overdue') : ('LA13422-3', 'On schedule'),
+    SeriesStatus.complete => (
+        'LA13421-5',
+        'Complete - all required doses have been received to meet the '
+            'requirements for a particular vaccine group.'
+      ),
+    SeriesStatus.notComplete => isOverdue
+        ? (
+            'LA13423-1',
+            'Overdue - person is late getting the next dose in the series.'
+          )
+        : (
+            'LA13422-3',
+            'On schedule - person is not overdue for a given dose in the '
+                'series. Includes a person too young to start the series.'
+          ),
     SeriesStatus.immune => ('LA27183-5', 'Immune'),
     SeriesStatus.contraindicated => ('LA4216-3', 'Contraindicated'),
     SeriesStatus.notRecommended => ('LA4695-8', 'Not Recommended'),
-    SeriesStatus.agedOut => ('LA13424-9', 'Too old'),
+    SeriesStatus.agedOut => (
+        'LA13424-9',
+        'Too old - cannot complete the series because the latest age for '
+            'receiving dose has passed.'
+      ),
   };
   codings.add(Coding(
     system: loincSystem.toFhirUri,
