@@ -6,8 +6,9 @@
 /// To regenerate Dart code from Excel:
 ///   dart cicada_generator/lib/main.dart --who
 ///
-/// The one-time migration tool that created the Excel files from the original
-/// hardcoded JSON definitions is: generate_who_excel.dart
+/// The workbooks are in the CDC CDSi 4.65 layout. To rewrite them from the
+/// model (after a change to the layout or the writers) and prove the round
+/// trip: dart run lib/write_who_workbooks.dart [--schedule] --apply
 void main() {
   print('WHO source data is now maintained in Excel files.');
   print('');

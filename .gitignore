@@ -54,3 +54,5 @@ cicada_ig/template/versions.txt
 # .tsv results next to them are kept, the workbooks are regenerated each run.
 cicada_generator/results/cdc_roundtrip/
 cicada_generator/results/who_roundtrip/
+cicada_generator/results/cdc_schedule_roundtrip/
+cicada_generator/results/who_schedule_roundtrip/
