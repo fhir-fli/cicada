@@ -3,3 +3,9 @@
 # Add warning and/or information messages here after you've confirmed that they aren't really a problem
 # (And include comments like this justifying why)
 # See https://github.com/FHIR/sample-ig/blob/master/input/ignoreWarnings.txt for examples
+# The material sub-extension of vaccine-recommendation-category-ext carries the
+# CDC web pages CDC names for a recommendation (the "Additional Material" column
+# of the Vaccine Recommendation Category worksheet, CDSi supporting data 4.65).
+# They are web pages, not FHIR definitions, and the validator cannot fetch them
+# at build time. 13 of these on the forecast example, 2026-09-06.
+No definition could be found for URL value 'https://www.cdc.gov/%

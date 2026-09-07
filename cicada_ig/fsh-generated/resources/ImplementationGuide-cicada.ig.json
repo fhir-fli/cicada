@@ -723,6 +723,10 @@
         "value": "http://hl7.org/fhir/sid/icd-10-cm"
       },
       {
+        "code": "path-suppressed-warnings",
+        "value": "input/ignoreWarnings.txt"
+      },
+      {
         "code": "path-expansion-params",
         "value": "../../input/resources/Parameters-manifest.json"
       }

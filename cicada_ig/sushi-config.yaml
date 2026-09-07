@@ -83,6 +83,8 @@ pages:
 # a canonical outside this IG. special-url tells the publisher that is intended.
 parameters:
   special-url: http://hl7.org/fhir/sid/icd-10-cm
+  # Known, reasoned warnings; each entry in the file says why.
+  path-suppressed-warnings: input/ignoreWarnings.txt
   # Expand and validate SNOMED against the US edition (731000124108). CDSi is
   # a US specification and cites eight US-extension concepts; tx.fhir.org
   # serves International unless asked, so those eight failed validation twice
