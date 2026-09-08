@@ -1,0 +1,66 @@
+COVID-19.xlsx: DIFFERS (4)
+    /series[0]/indication[0]/guidance:  -> null
+    /series[0]/indication[1]/guidance:  -> null
+    /series[0]/indication[2]/guidance:  -> null
+    /contraindications: null -> {}
+Cholera.xlsx: DIFFERS (9)
+    /series[0]/indication[0]/description:  -> null
+    /series[0]/indication[0]/beginAge:  -> null
+    /series[0]/indication[0]/endAge:  -> null
+    /series[0]/indication[0]/guidance:  -> null
+    /series[1]/indication[0]/description:  -> null
+    /series[1]/indication[0]/beginAge:  -> null
+Diphtheria.xlsx: DIFFERS (1)
+    /contraindications: null -> {}
+HPV.xlsx: DIFFERS (2)
+    /series[2]/indication[0]/guidance:  -> null
+    /contraindications: null -> {}
+HepA.xlsx: DIFFERS (3)
+    /series[0]/indication[0]/guidance:  -> null
+    /series[1]/indication[0]/guidance:  -> null
+    /contraindications: null -> {}
+HepB.xlsx: DIFFERS (1)
+    /contraindications: null -> {}
+Hib.xlsx: DIFFERS (1)
+    /contraindications: null -> {}
+Influenza.xlsx: DIFFERS (7)
+    /series[0]/indication[0]/guidance:  -> null
+    /series[0]/indication[1]/guidance:  -> null
+    /series[0]/indication[2]/guidance:  -> null
+    /series[0]/indication[3]/guidance:  -> null
+    /series[0]/indication[4]/guidance:  -> null
+    /series[0]/indication[5]/guidance:  -> null
+Japanese Encephalitis.xlsx: DIFFERS (9)
+    /series[0]/indication[0]/description:  -> null
+    /series[0]/indication[0]/beginAge:  -> null
+    /series[0]/indication[0]/endAge:  -> null
+    /series[0]/indication[0]/guidance:  -> null
+    /series[1]/indication[0]/description:  -> null
+    /series[1]/indication[0]/beginAge:  -> null
+Measles.xlsx: DIFFERS (1)
+    /contraindications: null -> {}
+Meningococcal.xlsx: DIFFERS (1)
+    /contraindications: null -> {}
+Mumps.xlsx: DIFFERS (1)
+    /contraindications: null -> {}
+Pertussis.xlsx: DIFFERS (1)
+    /contraindications: null -> {}
+Pneumococcal.xlsx: DIFFERS (1)
+    /contraindications: null -> {}
+Polio.xlsx: DIFFERS (1)
+    /contraindications: null -> {}
+Rabies.xlsx: DIFFERS (1)
+    /contraindications: null -> {}
+Rotavirus.xlsx: DIFFERS (1)
+    /contraindications: null -> {}
+Rubella.xlsx: DIFFERS (1)
+    /contraindications: null -> {}
+Tetanus.xlsx: DIFFERS (1)
+    /contraindications: null -> {}
+Tuberculosis.xlsx: DIFFERS (1)
+    /contraindications: null -> {}
+Typhoid.xlsx: DIFFERS (1)
+    /contraindications: null -> {}
+Yellow Fever.xlsx: DIFFERS (1)
+    /contraindications: null -> {}
+22 workbooks, 22 not round-tripping.

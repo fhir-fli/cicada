@@ -1,0 +1,91 @@
+FHIR IG Publisher Version 2.3.4 (Git# 7ae92f79415a). Built 2026-09-04T06:21:07.840Z (3 days old)    
+Detected Java version: 17.0.20 from /usr/lib/jvm/java-17-openjdk-amd64 on Linux/amd64 (64bit). 14992MB available
+dir = /home/grey/dev/fhir/cicada/cicada_ig, path = /home/grey/flutter/bin:/home/grey/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+Parameters: -ig . -no-narrative ValueSet/vaccine-condition-codes-snomed                             
+Character encoding = UTF-8 / UTF-8                                                                  
+Start Clock @ Monday, September 7, 2026 at 7:25:48 PM Eastern Daylight Time (2026-09-07T19:25:48-04:00)
+                                                                                                    
+Build FHIR IG from /home/grey/dev/fhir/cicada/cicada_ig/.                                            (00:00.097 / 00:00.098, 73Mb)
+No FHIR settings file at /home/grey/.fhir/fhir-settings.json; using defaults (no API keys or npm path) (00:00.008 / 00:00.106, 73Mb)
+Package Cache: /home/grey/.fhir/packages                                                             (00:00.007 / 00:00.114, 74Mb)
+Run Sushi on /home/grey/dev/fhir/cicada/cicada_ig                                                    (00:00.033 / 00:00.147, 74Mb)
+Sushi: info  Running SUSHI v3.20.0 (implements FHIR Shorthand specification v3.0.0)                  (00:03.394 / 00:03.542, 76Mb)
+Sushi: info  Arguments:                                                                              (00:00.001 / 00:03.544, 76Mb)
+Sushi: info    --out /home/grey/dev/fhir/cicada/cicada_ig                                            (00:00.002 / 00:03.545, 76Mb)
+Sushi: info    /home/grey/dev/fhir/cicada/cicada_ig                                                  (00:00.000 / 00:03.550, 76Mb)
+Sushi: info  Using configuration file: /home/grey/dev/fhir/cicada/cicada_ig/sushi-config.yaml        (00:02.560 / 00:06.106, 76Mb)
+Sushi: info  Importing FSH text...                                                                   (00:00.561 / 00:06.669, 76Mb)
+Sushi: info  Preprocessed 34 documents with 0 aliases.                                               (00:02.892 / 00:09.560, 76Mb)
+Sushi: info  Imported 60 definitions and 10 instances.                                               (00:00.523 / 00:10.084, 76Mb)
+Sushi: info  Loaded virtual package sushi-r5forR4#1.0.0 with 7 resources                             (00:00.594 / 00:10.678, 76Mb)
+Sushi: info  Resolved hl7.fhir.uv.tools.r4#latest to concrete version 1.1.2                          (00:01.086 / 00:11.765, 76Mb)
+Sushi: info  Loaded hl7.fhir.uv.tools.r4#1.1.2 with 119 resources                                    (00:00.426 / 00:12.196, 76Mb)
+Sushi: info  Resolved hl7.terminology.r4#latest to concrete version 7.3.0                            (00:00.525 / 00:12.717, 76Mb)
+Sushi: info  Loaded hl7.terminology.r4#7.3.0 with 4176 resources                                     (00:07.023 / 00:19.740, 76Mb)
+Sushi: info  Loaded hl7.fhir.us.immds#1.0.0 with 14 resources                                        (00:00.023 / 00:19.764, 76Mb)
+Sushi: info  Loaded hl7.fhir.r4.core#4.0.1 with 4581 resources                                       (00:05.211 / 00:24.975, 76Mb)
+Sushi: info  Resolved hl7.fhir.uv.extensions.r4#latest to concrete version 5.3.0                     (00:00.558 / 00:25.534, 76Mb)
+Sushi: info  Loaded hl7.fhir.uv.extensions.r4#5.3.0 with 885 resources                               (00:01.470 / 00:27.005, 76Mb)
+Sushi: info  Loaded virtual package sushi-local#LOCAL with 8 resources                               (00:00.068 / 00:27.076, 76Mb)
+Sushi: info  Converting FSH to FHIR resources...                                                     (00:00.052 / 00:27.126, 76Mb)
+Sushi: info  Converted 26 FHIR StructureDefinitions.                                                 (00:08.387 / 00:35.513, 76Mb)
+Sushi: info  Converted 13 FHIR CodeSystems.                                                          (00:00.887 / 00:36.400, 76Mb)
+Sushi: info  Converted 21 FHIR ValueSets.                                                            (00:02.344 / 00:38.745, 76Mb)
+Sushi: info  Converted 10 FHIR instances.                                                            (00:18.847 / 00:57.592, 76Mb)
+Sushi: info  Exporting FHIR resources as JSON...                                                     (00:00.004 / 00:57.597, 76Mb)
+Sushi: info  Exported 70 FHIR resources as JSON.                                                     (00:00.371 / 00:57.968, 76Mb)
+Sushi: info  Assembling Implementation Guide sources...                                              (00:00.010 / 00:57.978, 76Mb)
+Sushi: info  Generated ImplementationGuide-cicada.ig.json                                            (00:00.097 / 00:58.076, 76Mb)
+Sushi: info  Assembled Implementation Guide sources; ready for IG Publisher.                         (00:00.000 / 00:58.077, 76Mb)
+Sushi: info  The _build script hosted at https://github.com/HL7/ig-publisher-scripts is useful for downloading and running the IG Publisher. (00:00.000 / 00:58.077, 76Mb)
+Sushi: ========================= SUSHI RESULTS ===========================                           (00:00.007 / 00:58.086, 76Mb)
+Sushi: |  -------------------------------------------------------------  |                           (00:00.002 / 00:58.088, 76Mb)
+Sushi: | |    Profiles   |  Extensions  |   Logicals   |   Resources   | |                           (00:00.001 / 00:58.089, 76Mb)
+Sushi: | |-------------------------------------------------------------| |                           (00:00.000 / 00:58.092, 76Mb)
+Sushi: | |      12       |      12      |      2       |       0       | |                           (00:00.003 / 00:58.093, 76Mb)
+Sushi: |  -------------------------------------------------------------  |                           (00:00.000 / 00:58.094, 76Mb)
+Sushi: |  -------------------------------------------------------------  |                           (00:00.000 / 00:58.094, 76Mb)
+Sushi: | |      ValueSets     |    CodeSystems    |     Instances      | |                           (00:00.000 / 00:58.095, 76Mb)
+Sushi: | |-------------------------------------------------------------| |                           (00:00.004 / 00:58.100, 76Mb)
+Sushi: | |         21         |        13         |         10         | |                           (00:00.000 / 00:58.100, 76Mb)
+Sushi: |  -------------------------------------------------------------  |                           (00:00.000 / 00:58.101, 76Mb)
+Sushi: |                                                                 |                           (00:00.000 / 00:58.101, 76Mb)
+Sushi: ===================================================================                           (00:00.000 / 00:58.102, 76Mb)
+Sushi: | Everything is ship-shape!              0 Errors      0 Warnings |                           (00:00.000 / 00:58.102, 76Mb)
+Sushi: ===================================================================                           (00:00.000 / 00:58.103, 76Mb)
+Sushi: |    You are using SUSHI version 3.20.0, but the latest stable    |                           (00:00.000 / 00:58.104, 76Mb)
+Sushi: | release is version 3.20.1. To install the latest release, run:  |                           (00:00.000 / 00:58.104, 76Mb)
+Sushi: |                    npm install -g fsh-sushi                     |                           (00:00.000 / 00:58.105, 76Mb)
+Sushi: ===================================================================                           (00:00.000 / 00:58.106, 76Mb)
+Root directory: /home/grey/dev/fhir/cicada/cicada_ig                                                 (00:00.089 / 00:58.195, 76Mb)
+Unable to load IG as an r5 IG - try R4 (property code is a class com.google.gson.JsonPrimitive looking for an object) (00:01.834 / 01:00.029, 68Mb)
+Load Template from fhir.base.template#current                                                        (00:02.080 / 01:02.110, 87Mb)
+[33mThis content depends on fhir.base.template which is no longer considered secure to use
+[0;39m[33mSee Security notification at https://www.fhir.org/guides/security-notices/2026-03-npm-dependencies.html
+[0;39mScanning directory: /home/grey/dev/fhir/cicada/cicada_ig/template
+======================================================================
+Terminology Cache is at /home/grey/dev/fhir/cicada/cicada_ig/input-cache/txcache. 20 files in cache  (00:11.613 / 01:13.726, 138Mb)
+Core Package hl7.fhir.r4.core#4.0.1                                                                  (00:00.006 / 01:13.729, 138Mb)
+Running Terminology Log: /tmp/ohfu-fhir-ig-8650970642725393818.html
+Connect to Terminology Server at https://tx.fhir.org                                                 (00:12.864 / 01:26.594, 358Mb)
+[39mLoad Package hl7.fhir.pubpack#0.2.5
+[0;39m[39mLoad Package hl7.fhir.xver-extensions#0.1.0
+[0;39m[39mLoad Package hl7.terminology.r4#7.3.0
+[0;39m[39mLoad Package hl7.fhir.uv.extensions.r4#5.3.0
+[0;39m[39mLoad Package hl7.fhir.us.core#3.1.0
+[0;39m[39mLoad Package hl7.fhir.us.immds#1.0.0
+[0;39m[39mLoad Package hl7.fhir.uv.tools.r4#1.1.2
+[0;39mLoad R5 Specials
+Initialization complete                                                                              (00:22.349 / 01:48.944, 934Mb)
+Load IG                                                                                              (00:00.002 / 01:48.946, 934Mb)
+Publishing Content Failed: Unable to find file /home/grey/dev/fhir/cicada/cicada_ig/fsh-generated/resources/ImplementationGuide-cicada.ig.json (00:00.015 / 01:48.962, 937Mb)
+                                                                                                     (00:00.000 / 01:48.963, 937Mb)
+Use -? to get command line help                                                                      (00:00.005 / 01:48.968, 937Mb)
+                                                                                                     (00:00.000 / 01:48.969, 937Mb)
+Stack Dump (for debugging):                                                                          (00:00.000 / 01:48.969, 937Mb)
+java.lang.Exception: Unable to find file /home/grey/dev/fhir/cicada/cicada_ig/fsh-generated/resources/ImplementationGuide-cicada.ig.json
+	at org.hl7.fhir.igtools.publisher.SimpleFetcher.fetch(SimpleFetcher.java:116)
+	at org.hl7.fhir.igtools.publisher.PublisherIGLoader.load(PublisherIGLoader.java:2134)
+	at org.hl7.fhir.igtools.publisher.Publisher.createIg(Publisher.java:380)
+	at org.hl7.fhir.igtools.publisher.Publisher.execute(Publisher.java:226)
+	at org.hl7.fhir.igtools.publisher.Publisher.main(Publisher.java:1601)

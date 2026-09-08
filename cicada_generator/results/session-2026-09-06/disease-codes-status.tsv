@@ -1,0 +1,30 @@
+antigen	code	INT_inactive	INT_display	US_inactive	US_display
+Cholera	63650001	False	Cholera	False	Cholera
+COVID-19	840539006	False	COVID-19	False	COVID-19
+Dengue	38362002	False	Dengue	False	Dengue
+Diphtheria	397428000	True	Diphtheria	True	Diphtheria
+Pertussis	27836007	False	Pertussis	False	Pertussis
+Tetanus	76902006	False	Tetanus	False	Tetanus
+Ebola	37109004	False	Ebola virus disease	False	Ebola virus disease
+HepA	40468003	False	Viral hepatitis, type A	False	Viral hepatitis, type A
+HepB	66071002	False	Type B viral hepatitis	False	Type B viral hepatitis
+Hib	709410003	False	Haemophilus influenzae type b infection	False	Haemophilus influenzae type b infection
+HPV	240532009	False	Human papilloma virus infection	False	Human papilloma virus infection
+Influenza	719590007	False	Influenza caused by seasonal influenza virus	False	Influenza caused by seasonal influenza virus
+Japanese Encephalitis	52947006	False	Japanese encephalitis virus disease	False	Japanese encephalitis virus disease
+Meningococcal	23511006	False	Meningococcal infectious disease	False	Meningococcal infectious disease
+Meningococcal B	1354584007	False	Meningococcal infectious disease caused by Neisseria meningitidis serogroup B	False	Meningococcal infectious disease caused by Neisseria meningitidis serogroup B
+Measles	14189004	False	Measles	False	Measles
+Mumps	36989005	False	Mumps	False	Mumps
+Rubella	36653000	False	Rubella	False	Rubella
+Orthopoxvirus	414015000	False	Disease caused by Orthopoxvirus	False	Disease caused by Orthopoxvirus
+Pneumococcal	16814004	False	Pneumococcal infectious disease	False	Pneumococcal infectious disease
+Polio	721764008	False	Infection caused by Human poliovirus	False	Infection caused by human poliovirus
+Rabies	14168008	False	Rabies	False	Rabies
+Rotavirus	415822001	False	Viral gastroenteritis caused by Rotavirus	False	Viral gastroenteritis caused by Rotavirus
+RSV	55735004	False	Respiratory syncytial virus infection	False	Respiratory syncytial virus infection
+TBE	712986001	False	Encephalitis caused by tick-borne encephalitis virus	False	Encephalitis caused by tick-borne encephalitis virus
+Typhoid	4834000	False	Typhoid fever	False	Typhoid fever
+Varicella	38907003	False	Varicella	False	Varicella
+Yellow Fever	16541001	False	Yellow fever	False	Yellow fever
+Zoster	4740000	False	Herpes zoster	False	Herpes zoster

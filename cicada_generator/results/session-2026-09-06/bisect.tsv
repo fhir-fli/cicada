@@ -1,0 +1,25 @@
+variant	http	seconds
+full-publisher-request	000	20.002463
+drop:displayLanguage	000	20.002245
+drop:lenient-display-validation	000	20.002281
+drop:default-to-latest-version	000	20.002539
+drop:cache-id	200	0.172265
+drop:x-system-cache-id	000	20.001565
+drop:mode	000	20.001636
+drop:diagnostics	000	20.001603
+drop:coding.display	000	20.002322
+full-with-plain-headers	000	20.002377
+fresh-random-cache-id	000	20.002375
+fresh-random-cache-id-no-system-cache-id	000	20.002140
+run2-ontoserver-cache-id-585122e1	000	20.002412
+no-cache-id-no-system-cache-id	200	0.223112
+snomed-73211009-with-cache-id	000	20.002245
+loinc-40724-7-with-cache-id	000	20.002087
+icd10cm-D84.9-minimal-with-cache-id	000	20.002734
+cpt-90707-with-cache-id	000	20.002135
+tx.fhir.org http r4 + cache-id	000	25.002646
+tx-dev.fhir.org https r4 + cache-id	000	25.000993
+tx.fhir.org r5 + cache-id	000	25.001879
+tx.fhir.org ValueSet/validate-code + cache-id	404	0.161686
+tx-dev.fhir.org no cache-id (control)	200	0.164850
+validate-code with SERVER-ISSUED cache-id	200 0.150140

@@ -1,0 +1,18 @@
+code	cdc_text	observations	onto_inactive	onto_effectiveTime	onto_display
+102874004	Possible pregnancy [finding]	007 Pregnant	True	20210731	Possible pregnancy
+12271241000119109	Transgender identify [finding]	075 Transgender person	True	20220630	Transgender identity
+255409004	Pregnant woman [person]	007 Pregnant	True	20241101	Pregnant woman
+300916003	Latex allergy [disorder]	104 Allergic reaction to latex	True	20210131	Allergy to latex
+35327006	Intussusception [morphologic abnormality]	028 Intussusception	True	20180731	Intussusception
+410519009	At risk context [qualifier value]	070 Persons at risk during an outbreak	True	20231201	At risk
+413490006	American Indian or Alaska Native [racial group]	245 American Indian or Alaskan Native	True	20240701	American Indian or Alaska native
+419522004	Gentamycin sensitivity [disorder]	106 Severe allergic reaction to gentamicin	True	20230430	Gentamicin sensitivity
+422608009	Sexual assault [finding]	169 History of sexual abuse or assault	True	20190731	Sexual assault
+429311000124103	Adverse reaction to human papillomavirus vaccine [disorder]	090 Severe allergic reaction after previous dose of HPV	False	20120901	Adverse reaction to human papillomavirus vaccine
+441593005	Anaphylaxis due to latex [disorder]	104 Allergic reaction to latex	True	20210131	Anaphylaxis due to latex
+451291000124104	Adverse reaction caused by zoster vaccine [disorder]	100 Severe allergic reaction after previous dose of live zoster | 172 Severe allergic reaction after previous dose of recombinant zoster	False	20160901	Adverse reaction caused by zoster vaccine
+53438000	Radiation therapy procedure or service [procedure]	159 Radiation therapy	True	20210930	Radiation therapy procedure or service
+703936006	Allergy to yeast [disorder]	110 Hypersensitivity to yeast	True	20200731	Allergy to yeast antigen
+77128003	DiGeorge sequence [disorder]	147 T-lymphocyte [cell-mediated and humoral] - Complete defects | 148 T-lymphocyte [cell-mediated and humoral] - Partial defects	True	20180731	DiGeorge sequence
+77358003	Congenital leukocyte adherence deficiency [disorder]	153 Phagocytic function - Leukocyte adhesion defect, and myeloperoxidase deficiency	True	20211130	Congenital leukocyte adherence deficiency
+91930004	Allergy to eggs [disorder]	101 Allergic reaction to egg protein	True	20200731	Allergy to edible egg

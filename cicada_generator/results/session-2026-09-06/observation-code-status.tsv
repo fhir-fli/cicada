@@ -1,0 +1,32 @@
+observation	title	code	cdc_text	inactive	preferred	edition
+007	Pregnant	77386006	Patient currently pregnant [finding]	False	Pregnancy	INT
+007	Pregnant	102874004	Possible pregnancy [finding]	True	Possible pregnancy	INT
+007	Pregnant	255409004	Pregnant woman [person]	True	Pregnant woman	INT
+075	Transgender person	12271241000119109	Transgender identify [finding]	True	Transgender identity	INT
+104	Allergic reaction to latex	300916003	Latex allergy [disorder]	True	Allergy to latex	INT
+104	Allergic reaction to latex	441593005	Anaphylaxis due to latex [disorder]	True	Anaphylaxis due to latex	INT
+028	Intussusception	35327006	Intussusception [morphologic abnormality]	True	Intussusception	INT
+028	Intussusception	49723003	Intussusception of intestine [disorder]	False	Intussusception of intestine	INT
+070	Persons at risk during an outbreak	410519009	At risk context [qualifier value]	True	At risk	INT
+070	Persons at risk during an outbreak	443684005	Disease outbreak [event]	False	Disease outbreak	INT
+245	American Indian or Alaskan Native	413490006	American Indian or Alaska Native [racial group]	True	American Indian or Alaska native	INT
+106	Severe allergic reaction to gentamicin	419522004	Gentamycin sensitivity [disorder]	True	Gentamicin sensitivity	INT
+106	Severe allergic reaction to gentamicin	420094007	Gentamicin adverse reaction [disorder]	False	Gentamicin adverse reaction	INT
+106	Severe allergic reaction to gentamicin	294469003	Gentamicin allergy [disorder]	False	Allergy to gentamicin	INT
+169	History of sexual abuse or assault	213017001	Sexual abuse [event]	False	Sexual abuse	INT
+169	History of sexual abuse or assault	422608009	Sexual assault [finding]	True	Sexual assault	INT
+169	History of sexual abuse or assault	248110007	Sexual assault [event]	False	Sexual assault	INT
+090	Severe allergic reaction after previous dose of HPV	429311000124103	Adverse reaction to human papillomavirus vaccine [disorder]	True	Adverse reaction to component of vaccine product containing Human papillomavirus antigen	US
+100	Severe allergic reaction after previous dose of live zoster	451291000124104	Adverse reaction caused by zoster vaccine [disorder]	True	Adverse reaction to component of vaccine product containing Human alphaherpesvirus 3 antigen	US
+172	Severe allergic reaction after previous dose of recombinant zoster	451291000124104	Adverse reaction caused by zoster vaccine [disorder]	True	Adverse reaction to component of vaccine product containing Human alphaherpesvirus 3 antigen	US
+159	Radiation therapy	53438000	Radiation therapy procedure or service [procedure]	True	Radiation therapy procedure or service	INT
+110	Hypersensitivity to yeast	703936006	Allergy to yeast [disorder]	True	Allergy to yeast antigen	INT
+147	T-lymphocyte [cell-mediated and humoral] - Complete defects	31323000	Severe combined immunodeficiency disease [disorder]	False	Severe combined immunodeficiency disease	INT
+147	T-lymphocyte [cell-mediated and humoral] - Complete defects	77128003	DiGeorge sequence [disorder]	True	DiGeorge sequence	INT
+148	T-lymphocyte [cell-mediated and humoral] - Partial defects	77128003	DiGeorge sequence [disorder]	True	DiGeorge sequence	INT
+148	T-lymphocyte [cell-mediated and humoral] - Partial defects	36070007	Wiskott-Aldrich syndrome [disorder]	False	Wiskott-Aldrich syndrome	INT
+148	T-lymphocyte [cell-mediated and humoral] - Partial defects	68504005	Ataxia-telangiectasia syndrome [disorder]	False	Ataxia-telangiectasia syndrome	INT
+153	Phagocytic function - Leukocyte adhesion defect, and myeloperoxidase deficiency	77358003	Congenital leukocyte adherence deficiency [disorder]	True	Congenital leukocyte adherence deficiency	INT
+153	Phagocytic function - Leukocyte adhesion defect, and myeloperoxidase deficiency	234433009	Myeloperoxidase deficiency [disorder]	False	Myeloperoxidase deficiency	INT
+101	Allergic reaction to egg protein	213020009	Egg protein allergy [disorder]	False	Allergy to egg protein	INT
+101	Allergic reaction to egg protein	91930004	Allergy to eggs [disorder]	True	Allergy to edible egg	INT

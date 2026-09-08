@@ -1,0 +1,96 @@
+COVID-19: PARSE FAILED: RangeError (end): Invalid value: Only valid value is 0: 10
+Chikungunya: DIFFERS (2)
+    /targetDisease: null -> "Chikungunya"
+    /vaccineGroup: null -> "Chikungunya"
+Cholera: DIFFERS (4)
+    /series[0]/seriesDose[0]/preferableVaccine[0]/volume: "100.0" -> "100"
+    /series[0]/seriesDose[0]/preferableVaccine[1]/volume: "50.0" -> "50"
+    /targetDisease: null -> "Cholera"
+    /vaccineGroup: null -> "Cholera"
+Dengue: DIFFERS (2)
+    /targetDisease: null -> "Dengue"
+    /vaccineGroup: null -> "Dengue"
+Diphtheria: PARSE FAILED: RangeError (end): Invalid value: Only valid value is 0: 10
+Ebola: DIFFERS (3)
+    /series[0]/seriesDose[0]/preferableVaccine[0]/volume: "1.0" -> "1"
+    /targetDisease: null -> "Ebola"
+    /vaccineGroup: null -> "Ebola"
+HPV: PARSE FAILED: RangeError (end): Invalid value: Only valid value is 0: 10
+HepA: DIFFERS (26)
+    /series[0]/seriesDose[0]/preferableVaccine[0]/volume: "1.0" -> "1"
+    /series[0]/seriesDose[1]/preferableVaccine[0]/volume: "1.0" -> "1"
+    /series[1]/seriesDose[0]/preferableVaccine[0]/volume: "1.0" -> "1"
+    /series[1]/seriesDose[1]/preferableVaccine[0]/volume: "1.0" -> "1"
+    /series[2]/seriesDose[0]/preferableVaccine[0]/volume: "1.0" -> "1"
+    /series[2]/seriesDose[1]/preferableVaccine[0]/volume: "1.0" -> "1"
+    /series[2]/seriesDose[2]/preferableVaccine[0]/volume: "1.0" -> "1"
+    /series[3]/seriesDose[1]/preferableVaccine[0]/volume: "1.0" -> "1"
+HepB: PARSE FAILED: RangeError (end): Invalid value: Only valid value is 0: 10
+Hib: PARSE FAILED: Null check operator used on a null value
+Influenza: PARSE FAILED: RangeError (end): Invalid value: Only valid value is 0: 10
+JE: DIFFERS (2)
+    /targetDisease: null -> "Japanese Encephalitis"
+    /vaccineGroup: null -> "Japanese Encephalitis"
+Measles: DIFFERS (2)
+    /targetDisease: null -> "Measles"
+    /vaccineGroup: null -> "MMR"
+Meningococcal B: DIFFERS (2)
+    /targetDisease: null -> "Meningococcal B"
+    /vaccineGroup: null -> "Meningococcal B"
+Meningococcal: PARSE FAILED: RangeError (end): Invalid value: Only valid value is 0: 10
+Mumps: DIFFERS (2)
+    /targetDisease: null -> "Mumps"
+    /vaccineGroup: null -> "MMR"
+Orthopoxvirus: DIFFERS (2)
+    /targetDisease: null -> "Orthopoxvirus"
+    /vaccineGroup: null -> "Orthopoxvirus"
+Pertussis: PARSE FAILED: RangeError (end): Invalid value: Only valid value is 0: 10
+Pneumococcal: PARSE FAILED: RangeError (end): Invalid value: Only valid value is 0: 10
+Polio: PARSE FAILED: RangeError (end): Invalid value: Only valid value is 0: 10
+RSV: DIFFERS (23)
+    /series[0]/seriesDose[0]/preferableVaccine[1]/volume: "1.0" -> "1"
+    /series[1]/seriesDose[0]/preferableVaccine[1]/volume: "1.0" -> "1"
+    /series[1]/seriesDose[1]/preferableVaccine[0]/volume: "1.0" -> "1"
+    /series[1]/seriesDose[2]/preferableVaccine[0]/volume: "1.0" -> "1"
+    /series[1]/seriesDose[2]/conditionalSkip[0]/set[1]/condition[1]: {"conditionID":"2","conditionType":"Vaccine Count by Date and Age","st… -> null
+    /series[1]/seriesDose[2]/conditionalSkip[1]/context: "Forecast" -> null
+    /series[1]/seriesDose[2]/conditionalSkip[1]/setLogic: "OR" -> ""
+    /series[1]/seriesDose[2]/conditionalSkip[1]/set[0]/setID: "3" -> ""
+Rabies: DIFFERS (26)
+    /series[0]/seriesDose[0]/preferableVaccine[0]/volume: "1.0" -> "1"
+    /series[0]/seriesDose[0]/preferableVaccine[1]/volume: "1.0" -> "1"
+    /series[0]/seriesDose[1]/preferableVaccine[0]/volume: "1.0" -> "1"
+    /series[0]/seriesDose[1]/preferableVaccine[1]/volume: "1.0" -> "1"
+    /series[0]/seriesDose[2]/preferableVaccine[0]/volume: "1.0" -> "1"
+    /series[0]/seriesDose[2]/preferableVaccine[1]/volume: "1.0" -> "1"
+    /series[0]/seriesDose[3]/preferableVaccine[0]/volume: "1.0" -> "1"
+    /series[0]/seriesDose[3]/preferableVaccine[1]/volume: "1.0" -> "1"
+Rotavirus: DIFFERS (18)
+    /series[0]/seriesDose[0]/preferableVaccine[0]/volume: "2.0" -> "2"
+    /series[0]/seriesDose[0]/preferableVaccine[1]/volume: "1.0" -> "1"
+    /series[0]/seriesDose[1]/preferableVaccine[0]/volume: "2.0" -> "2"
+    /series[0]/seriesDose[1]/preferableVaccine[1]/volume: "1.0" -> "1"
+    /series[0]/seriesDose[2]/preferableVaccine[0]/volume: "2.0" -> "2"
+    /series[0]/seriesDose[2]/preferableVaccine[1]/volume: "1.0" -> "1"
+    /series[1]/seriesDose[0]/preferableVaccine[0]/volume: "2.0" -> "2"
+    /series[1]/seriesDose[0]/preferableVaccine[1]/volume: "1.0" -> "1"
+Rubella: DIFFERS (2)
+    /targetDisease: null -> "Rubella"
+    /vaccineGroup: null -> "MMR"
+TBE: DIFFERS (2)
+    /targetDisease: null -> "TBE"
+    /vaccineGroup: null -> "TBE"
+Tetanus: PARSE FAILED: RangeError (end): Invalid value: Only valid value is 0: 10
+Typhoid: DIFFERS (2)
+    /targetDisease: null -> "Typhoid"
+    /vaccineGroup: null -> "Typhoid"
+Varicella: DIFFERS (2)
+    /targetDisease: null -> "Varicella"
+    /vaccineGroup: null -> "Varicella"
+YF: DIFFERS (2)
+    /targetDisease: null -> "Yellow Fever"
+    /vaccineGroup: null -> "Yellow Fever"
+Zoster: DIFFERS (2)
+    /targetDisease: null -> "Zoster"
+    /vaccineGroup: null -> "Zoster"
+30 workbooks, 30 not matching. /home/grey/dev/fhir/cicada/cicada_generator/results/excel_vs_xml.tsv

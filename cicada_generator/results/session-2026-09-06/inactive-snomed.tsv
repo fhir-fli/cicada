@@ -1,0 +1,18 @@
+code	cdc_text	observations	inactive	preferred_term	effectiveTime
+102874004	Possible pregnancy [finding]	007 Pregnant	True	Possible pregnancy	None
+12271241000119109	Transgender identify [finding]	075 Transgender person	True	Transgender identity	None
+255409004	Pregnant woman [person]	007 Pregnant	True	Pregnant woman	None
+300916003	Latex allergy [disorder]	104 Allergic reaction to latex	True	Allergy to latex	None
+35327006	Intussusception [morphologic abnormality]	028 Intussusception	True	Intussusception	None
+410519009	At risk context [qualifier value]	070 Persons at risk during an outbreak	True	At risk	None
+413490006	American Indian or Alaska Native [racial group]	245 American Indian or Alaskan Native	True	American Indian or Alaska native	None
+419522004	Gentamycin sensitivity [disorder]	106 Severe allergic reaction to gentamicin	True	Gentamicin sensitivity	None
+422608009	Sexual assault [finding]	169 History of sexual abuse or assault	True	Sexual assault	None
+429311000124103	Adverse reaction to human papillomavirus vaccine [disorder]	090 Severe allergic reaction after previous dose of HPV	None	ERROR {"resourceType":"OperationOutcome","issue":[{"severity":"error","code":"not-foun	None
+441593005	Anaphylaxis due to latex [disorder]	104 Allergic reaction to latex	True	Anaphylaxis due to latex	None
+451291000124104	Adverse reaction caused by zoster vaccine [disorder]	100 Severe allergic reaction after previous dose of live zoster | 172 Severe allergic reaction after previous dose of recombinant zoster	None	ERROR {"resourceType":"OperationOutcome","issue":[{"severity":"error","code":"not-foun	None
+53438000	Radiation therapy procedure or service [procedure]	159 Radiation therapy	True	Radiation therapy procedure or service	None
+703936006	Allergy to yeast [disorder]	110 Hypersensitivity to yeast	True	Allergy to yeast antigen	None
+77128003	DiGeorge sequence [disorder]	147 T-lymphocyte [cell-mediated and humoral] - Complete defects | 148 T-lymphocyte [cell-mediated and humoral] - Partial defects	True	DiGeorge sequence	None
+77358003	Congenital leukocyte adherence deficiency [disorder]	153 Phagocytic function - Leukocyte adhesion defect, and myeloperoxidase deficiency	True	Congenital leukocyte adherence deficiency	None
+91930004	Allergy to eggs [disorder]	101 Allergic reaction to egg protein	True	Allergy to edible egg	None

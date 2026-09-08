@@ -1,0 +1,248 @@
+=== Step 1: XML to JSON ===
+=== Step 2: Generate supporting data Dart files ===
+Processing file: cicada_generator/lib/Version_4.65-508/Excel/AntigenSupportingData- Typhoid-508.xlsx
+Wrote /home/grey/dev/fhir/cicada/cicada_generator/lib/generated_files/Typhoid.json
+Processing file: cicada_generator/lib/Version_4.65-508/Excel/AntigenSupportingData- Dengue-508.xlsx
+Wrote /home/grey/dev/fhir/cicada/cicada_generator/lib/generated_files/Dengue.json
+Processing file: cicada_generator/lib/Version_4.65-508/Excel/AntigenSupportingData- Mumps-508.xlsx
+Wrote /home/grey/dev/fhir/cicada/cicada_generator/lib/generated_files/Mumps.json
+Processing file: cicada_generator/lib/Version_4.65-508/Excel/AntigenSupportingData- JE-508.xlsx
+Wrote /home/grey/dev/fhir/cicada/cicada_generator/lib/generated_files/Japanese Encephalitis.json
+Processing file: cicada_generator/lib/Version_4.65-508/Excel/AntigenSupportingData- Pertussis-508.xlsx
+Wrote /home/grey/dev/fhir/cicada/cicada_generator/lib/generated_files/Pertussis.json
+Processing file: cicada_generator/lib/Version_4.65-508/Excel/AntigenSupportingData- Influenza-508.xlsx
+Wrote /home/grey/dev/fhir/cicada/cicada_generator/lib/generated_files/Influenza.json
+Processing file: cicada_generator/lib/Version_4.65-508/Excel/ScheduleSupportingData- CVX to Antigen Map-508.xlsx
+Processing file: cicada_generator/lib/Version_4.65-508/Excel/AntigenSupportingData- Measles-508.xlsx
+Wrote /home/grey/dev/fhir/cicada/cicada_generator/lib/generated_files/Measles.json
+Processing file: cicada_generator/lib/Version_4.65-508/Excel/AntigenSupportingData- Hib-508.xlsx
+Wrote /home/grey/dev/fhir/cicada/cicada_generator/lib/generated_files/Hib.json
+Processing file: cicada_generator/lib/Version_4.65-508/Excel/AntigenSupportingData- Cholera-508.xlsx
+Wrote /home/grey/dev/fhir/cicada/cicada_generator/lib/generated_files/Cholera.json
+Processing file: cicada_generator/lib/Version_4.65-508/Excel/AntigenSupportingData- Ebola-508.xlsx
+Wrote /home/grey/dev/fhir/cicada/cicada_generator/lib/generated_files/Ebola.json
+Processing file: cicada_generator/lib/Version_4.65-508/Excel/AntigenSupportingData- Tetanus-508.xlsx
+Wrote /home/grey/dev/fhir/cicada/cicada_generator/lib/generated_files/Tetanus.json
+Processing file: cicada_generator/lib/Version_4.65-508/Excel/AntigenSupportingData- Chikungunya-508.xlsx
+Wrote /home/grey/dev/fhir/cicada/cicada_generator/lib/generated_files/Chikungunya.json
+Processing file: cicada_generator/lib/Version_4.65-508/Excel/AntigenSupportingData- Pneumococcal-508.xlsx
+Wrote /home/grey/dev/fhir/cicada/cicada_generator/lib/generated_files/Pneumococcal.json
+Processing file: cicada_generator/lib/Version_4.65-508/Excel/AntigenSupportingData- Varicella-508.xlsx
+Wrote /home/grey/dev/fhir/cicada/cicada_generator/lib/generated_files/Varicella.json
+Processing file: cicada_generator/lib/Version_4.65-508/Excel/AntigenSupportingData- HepB-508.xlsx
+Wrote /home/grey/dev/fhir/cicada/cicada_generator/lib/generated_files/HepB.json
+Processing file: cicada_generator/lib/Version_4.65-508/Excel/AntigenSupportingData- Meningococcal-508.xlsx
+Wrote /home/grey/dev/fhir/cicada/cicada_generator/lib/generated_files/Meningococcal.json
+Processing file: cicada_generator/lib/Version_4.65-508/Excel/AntigenSupportingData- COVID-19-508.xlsx
+Wrote /home/grey/dev/fhir/cicada/cicada_generator/lib/generated_files/COVID-19.json
+Processing file: cicada_generator/lib/Version_4.65-508/Excel/AntigenSupportingData- Diphtheria-508.xlsx
+Wrote /home/grey/dev/fhir/cicada/cicada_generator/lib/generated_files/Diphtheria.json
+Processing file: cicada_generator/lib/Version_4.65-508/Excel/ScheduleSupportingData- Vaccine Group-508.xlsx
+Processing file: cicada_generator/lib/Version_4.65-508/Excel/AntigenSupportingData- TBE-508.xlsx
+Wrote /home/grey/dev/fhir/cicada/cicada_generator/lib/generated_files/TBE.json
+Processing file: cicada_generator/lib/Version_4.65-508/Excel/AntigenSupportingData- Rubella-508.xlsx
+Wrote /home/grey/dev/fhir/cicada/cicada_generator/lib/generated_files/Rubella.json
+Processing file: cicada_generator/lib/Version_4.65-508/Excel/ScheduleSupportingData- Coded Observations-508.xlsx
+Processing file: cicada_generator/lib/Version_4.65-508/Excel/AntigenSupportingData- Rabies-508.xlsx
+Wrote /home/grey/dev/fhir/cicada/cicada_generator/lib/generated_files/Rabies.json
+Processing file: cicada_generator/lib/Version_4.65-508/Excel/AntigenSupportingData- Polio-508.xlsx
+Wrote /home/grey/dev/fhir/cicada/cicada_generator/lib/generated_files/Polio.json
+Processing file: cicada_generator/lib/Version_4.65-508/Excel/AntigenSupportingData- Zoster-508.xlsx
+Wrote /home/grey/dev/fhir/cicada/cicada_generator/lib/generated_files/Zoster.json
+Processing file: cicada_generator/lib/Version_4.65-508/Excel/AntigenSupportingData- HepA-508.xlsx
+Wrote /home/grey/dev/fhir/cicada/cicada_generator/lib/generated_files/HepA.json
+Processing file: cicada_generator/lib/Version_4.65-508/Excel/AntigenSupportingData- YF-508.xlsx
+Wrote /home/grey/dev/fhir/cicada/cicada_generator/lib/generated_files/Yellow Fever.json
+Processing file: cicada_generator/lib/Version_4.65-508/Excel/ScheduleSupportingData- Live Virus Conflicts-508.xlsx
+Processing file: cicada_generator/lib/Version_4.65-508/Excel/AntigenSupportingData- RSV-508.xlsx
+Wrote /home/grey/dev/fhir/cicada/cicada_generator/lib/generated_files/RSV.json
+Processing file: cicada_generator/lib/Version_4.65-508/Excel/AntigenSupportingData- HPV-508.xlsx
+Wrote /home/grey/dev/fhir/cicada/cicada_generator/lib/generated_files/HPV.json
+Processing file: cicada_generator/lib/Version_4.65-508/Excel/ScheduleSupportingData- Vaccine Group to Antigen Map-508.xlsx
+Processing file: cicada_generator/lib/Version_4.65-508/Excel/AntigenSupportingData- Meningococcal B-508.xlsx
+Wrote /home/grey/dev/fhir/cicada/cicada_generator/lib/generated_files/Meningococcal B.json
+Processing file: cicada_generator/lib/Version_4.65-508/Excel/AntigenSupportingData- Rotavirus-508.xlsx
+Wrote /home/grey/dev/fhir/cicada/cicada_generator/lib/generated_files/Rotavirus.json
+Processing file: cicada_generator/lib/Version_4.65-508/Excel/AntigenSupportingData- Orthopoxvirus-508.xlsx
+Wrote /home/grey/dev/fhir/cicada/cicada_generator/lib/generated_files/Orthopoxvirus.json
+  correcting CDC code 2219088009 -> 219088009 on observation 095
+Applied 1 CDC code correction(s).
+Wrote /home/grey/dev/fhir/cicada/cicada_generator/lib/generated_files/schedule_supporting_data.json
+Generated file: /home/grey/dev/fhir/cicada/cicada_generator/lib/generated_files/Polio.json
+Generated file: /home/grey/dev/fhir/cicada/cicada_generator/lib/generated_files/Yellow Fever.json
+Generated file: /home/grey/dev/fhir/cicada/cicada_generator/lib/generated_files/HepA.json
+Generated file: /home/grey/dev/fhir/cicada/cicada_generator/lib/generated_files/Orthopoxvirus.json
+Generated file: /home/grey/dev/fhir/cicada/cicada_generator/lib/generated_files/HepB.json
+Generated file: /home/grey/dev/fhir/cicada/cicada_generator/lib/generated_files/Pertussis.json
+Generated file: /home/grey/dev/fhir/cicada/cicada_generator/lib/generated_files/Meningococcal.json
+Generated file: /home/grey/dev/fhir/cicada/cicada_generator/lib/generated_files/Ebola.json
+Generated file: /home/grey/dev/fhir/cicada/cicada_generator/lib/generated_files/Japanese Encephalitis.json
+Generated file: /home/grey/dev/fhir/cicada/cicada_generator/lib/generated_files/Rotavirus.json
+Generated file: /home/grey/dev/fhir/cicada/cicada_generator/lib/generated_files/Chikungunya.json
+Generated file: /home/grey/dev/fhir/cicada/cicada_generator/lib/generated_files/Measles.json
+Generated file: /home/grey/dev/fhir/cicada/cicada_generator/lib/generated_files/COVID-19.json
+Generated file: /home/grey/dev/fhir/cicada/cicada_generator/lib/generated_files/Mumps.json
+Generated file: /home/grey/dev/fhir/cicada/cicada_generator/lib/generated_files/Tetanus.json
+Generated file: /home/grey/dev/fhir/cicada/cicada_generator/lib/generated_files/Influenza.json
+Generated file: /home/grey/dev/fhir/cicada/cicada_generator/lib/generated_files/Hib.json
+Generated file: /home/grey/dev/fhir/cicada/cicada_generator/lib/generated_files/Varicella.json
+Generated file: /home/grey/dev/fhir/cicada/cicada_generator/lib/generated_files/Typhoid.json
+Generated file: /home/grey/dev/fhir/cicada/cicada_generator/lib/generated_files/Rubella.json
+Generated file: /home/grey/dev/fhir/cicada/cicada_generator/lib/generated_files/HPV.json
+Generated file: /home/grey/dev/fhir/cicada/cicada_generator/lib/generated_files/Rabies.json
+Generated file: /home/grey/dev/fhir/cicada/cicada_generator/lib/generated_files/TBE.json
+Generated file: /home/grey/dev/fhir/cicada/cicada_generator/lib/generated_files/Cholera.json
+Generated file: /home/grey/dev/fhir/cicada/cicada_generator/lib/generated_files/Zoster.json
+Generated file: /home/grey/dev/fhir/cicada/cicada_generator/lib/generated_files/Diphtheria.json
+Generated file: /home/grey/dev/fhir/cicada/cicada_generator/lib/generated_files/Dengue.json
+Generated file: /home/grey/dev/fhir/cicada/cicada_generator/lib/generated_files/Pneumococcal.json
+Generated file: /home/grey/dev/fhir/cicada/cicada_generator/lib/generated_files/RSV.json
+Generated file: /home/grey/dev/fhir/cicada/cicada_generator/lib/generated_files/Meningococcal B.json
+Processing WHO antigen Excel: /home/grey/dev/fhir/cicada/cicada_generator/lib/WHO/antigen/Rabies.xlsx
+Wrote /home/grey/dev/fhir/cicada/cicada_generator/lib/generated_files/who/Rabies.json
+Processing WHO antigen Excel: /home/grey/dev/fhir/cicada/cicada_generator/lib/WHO/antigen/Japanese Encephalitis.xlsx
+Wrote /home/grey/dev/fhir/cicada/cicada_generator/lib/generated_files/who/Japanese Encephalitis.json
+Processing WHO antigen Excel: /home/grey/dev/fhir/cicada/cicada_generator/lib/WHO/antigen/Rubella.xlsx
+Wrote /home/grey/dev/fhir/cicada/cicada_generator/lib/generated_files/who/Rubella.json
+Processing WHO antigen Excel: /home/grey/dev/fhir/cicada/cicada_generator/lib/WHO/antigen/Influenza.xlsx
+Wrote /home/grey/dev/fhir/cicada/cicada_generator/lib/generated_files/who/Influenza.json
+Processing WHO antigen Excel: /home/grey/dev/fhir/cicada/cicada_generator/lib/WHO/antigen/Hib.xlsx
+Wrote /home/grey/dev/fhir/cicada/cicada_generator/lib/generated_files/who/Hib.json
+Processing WHO antigen Excel: /home/grey/dev/fhir/cicada/cicada_generator/lib/WHO/antigen/HPV.xlsx
+Wrote /home/grey/dev/fhir/cicada/cicada_generator/lib/generated_files/who/HPV.json
+Processing WHO antigen Excel: /home/grey/dev/fhir/cicada/cicada_generator/lib/WHO/antigen/Pertussis.xlsx
+Wrote /home/grey/dev/fhir/cicada/cicada_generator/lib/generated_files/who/Pertussis.json
+Processing WHO antigen Excel: /home/grey/dev/fhir/cicada/cicada_generator/lib/WHO/antigen/Tetanus.xlsx
+Wrote /home/grey/dev/fhir/cicada/cicada_generator/lib/generated_files/who/Tetanus.json
+Processing WHO antigen Excel: /home/grey/dev/fhir/cicada/cicada_generator/lib/WHO/antigen/Meningococcal.xlsx
+Wrote /home/grey/dev/fhir/cicada/cicada_generator/lib/generated_files/who/Meningococcal.json
+Processing WHO antigen Excel: /home/grey/dev/fhir/cicada/cicada_generator/lib/WHO/antigen/Pneumococcal.xlsx
+Wrote /home/grey/dev/fhir/cicada/cicada_generator/lib/generated_files/who/Pneumococcal.json
+Processing WHO antigen Excel: /home/grey/dev/fhir/cicada/cicada_generator/lib/WHO/antigen/Rotavirus.xlsx
+Wrote /home/grey/dev/fhir/cicada/cicada_generator/lib/generated_files/who/Rotavirus.json
+Processing WHO antigen Excel: /home/grey/dev/fhir/cicada/cicada_generator/lib/WHO/antigen/Cholera.xlsx
+Wrote /home/grey/dev/fhir/cicada/cicada_generator/lib/generated_files/who/Cholera.json
+Processing WHO antigen Excel: /home/grey/dev/fhir/cicada/cicada_generator/lib/WHO/antigen/Diphtheria.xlsx
+Wrote /home/grey/dev/fhir/cicada/cicada_generator/lib/generated_files/who/Diphtheria.json
+Processing WHO antigen Excel: /home/grey/dev/fhir/cicada/cicada_generator/lib/WHO/antigen/Mumps.xlsx
+Wrote /home/grey/dev/fhir/cicada/cicada_generator/lib/generated_files/who/Mumps.json
+Processing WHO antigen Excel: /home/grey/dev/fhir/cicada/cicada_generator/lib/WHO/antigen/Typhoid.xlsx
+Wrote /home/grey/dev/fhir/cicada/cicada_generator/lib/generated_files/who/Typhoid.json
+Processing WHO antigen Excel: /home/grey/dev/fhir/cicada/cicada_generator/lib/WHO/antigen/HepA.xlsx
+Wrote /home/grey/dev/fhir/cicada/cicada_generator/lib/generated_files/who/HepA.json
+Processing WHO antigen Excel: /home/grey/dev/fhir/cicada/cicada_generator/lib/WHO/antigen/Polio.xlsx
+Wrote /home/grey/dev/fhir/cicada/cicada_generator/lib/generated_files/who/Polio.json
+Processing WHO antigen Excel: /home/grey/dev/fhir/cicada/cicada_generator/lib/WHO/antigen/Measles.xlsx
+Wrote /home/grey/dev/fhir/cicada/cicada_generator/lib/generated_files/who/Measles.json
+Processing WHO antigen Excel: /home/grey/dev/fhir/cicada/cicada_generator/lib/WHO/antigen/COVID-19.xlsx
+Wrote /home/grey/dev/fhir/cicada/cicada_generator/lib/generated_files/who/COVID-19.json
+Processing WHO antigen Excel: /home/grey/dev/fhir/cicada/cicada_generator/lib/WHO/antigen/Yellow Fever.xlsx
+Wrote /home/grey/dev/fhir/cicada/cicada_generator/lib/generated_files/who/Yellow Fever.json
+Processing WHO antigen Excel: /home/grey/dev/fhir/cicada/cicada_generator/lib/WHO/antigen/HepB.xlsx
+Wrote /home/grey/dev/fhir/cicada/cicada_generator/lib/generated_files/who/HepB.json
+Processing WHO antigen Excel: /home/grey/dev/fhir/cicada/cicada_generator/lib/WHO/antigen/Tuberculosis.xlsx
+Wrote /home/grey/dev/fhir/cicada/cicada_generator/lib/generated_files/who/Tuberculosis.json
+Processing WHO schedule Excel: /home/grey/dev/fhir/cicada/cicada_generator/lib/WHO/schedule/WHO Live Virus Conflicts.xlsx
+Processing WHO schedule Excel: /home/grey/dev/fhir/cicada/cicada_generator/lib/WHO/schedule/WHO Vaccine Group.xlsx
+Processing WHO schedule Excel: /home/grey/dev/fhir/cicada/cicada_generator/lib/WHO/schedule/WHO CVX to Antigen Map.xlsx
+Processing WHO schedule Excel: /home/grey/dev/fhir/cicada/cicada_generator/lib/WHO/schedule/WHO Vaccine Group to Antigen Map.xlsx
+Processing WHO schedule Excel: /home/grey/dev/fhir/cicada/cicada_generator/lib/WHO/schedule/WHO Coded Observations.xlsx
+Wrote WHO schedule supporting data
+Generated WHO file: polio.dart
+Generated WHO file: yellow_fever.dart
+Generated WHO file: hepa.dart
+Generated WHO file: hepb.dart
+Generated WHO file: pertussis.dart
+Generated WHO file: meningococcal.dart
+Generated WHO file: tuberculosis.dart
+Generated WHO file: japanese_encephalitis.dart
+Generated WHO file: rotavirus.dart
+Generated WHO file: measles.dart
+Generated WHO file: covid_19.dart
+Generated WHO file: mumps.dart
+Generated WHO file: tetanus.dart
+Generated WHO file: influenza.dart
+Generated WHO file: hib.dart
+Generated WHO file: typhoid.dart
+Generated WHO file: rubella.dart
+Generated WHO file: hpv.dart
+Generated WHO file: rabies.dart
+Generated WHO file: cholera.dart
+Generated WHO file: diphtheria.dart
+Generated WHO file: pneumococcal.dart
+
+WHO generation complete:
+  22 antigens
+  Output: cicada/lib/generated_files/who/
+=== Step 3: Generate test cases + expected results ===
+Using healthy test case file: cicada_generator/lib/test_cases/cdsi-healthy-childhood-and-adult-test-cases-v4.46.xlsx
+Wrote cicada/test/healthyTestCases.ndjson (1064 cases)
+Wrote cicada/lib/generated_files/test_doses.dart (1064 patients)
+Wrote cicada/lib/generated_files/test_forecasts.dart (1064 patients, 1064 forecasts)
+
+Using condition test case file: cicada_generator/lib/test_cases/CDSi-underlying-conditions-test-cases-v4.6.xlsx
+Wrote cicada/test/conditionTestCases.ndjson (337 cases)
+Wrote cicada/lib/generated_files/test_condition_doses.dart (337 patients)
+Wrote cicada/lib/generated_files/test_condition_forecasts.dart (337 patients, 337 forecasts)
+=== Step 4: Format generated code ===
+Formatted cicada/lib/generated_files/antigen_supporting_data.dart
+Formatted cicada/lib/generated_files/chikungunya.dart
+Formatted cicada/lib/generated_files/cholera.dart
+Formatted cicada/lib/generated_files/covid_19.dart
+Formatted cicada/lib/generated_files/cvx_displays.dart
+Formatted cicada/lib/generated_files/dengue.dart
+Formatted cicada/lib/generated_files/diphtheria.dart
+Formatted cicada/lib/generated_files/ebola.dart
+Formatted cicada/lib/generated_files/hepa.dart
+Formatted cicada/lib/generated_files/hepb.dart
+Formatted cicada/lib/generated_files/hib.dart
+Formatted cicada/lib/generated_files/hpv.dart
+Formatted cicada/lib/generated_files/influenza.dart
+Formatted cicada/lib/generated_files/japanese_encephalitis.dart
+Formatted cicada/lib/generated_files/measles.dart
+Formatted cicada/lib/generated_files/meningococcal.dart
+Formatted cicada/lib/generated_files/meningococcal_b.dart
+Formatted cicada/lib/generated_files/mumps.dart
+Formatted cicada/lib/generated_files/orthopoxvirus.dart
+Formatted cicada/lib/generated_files/pertussis.dart
+Formatted cicada/lib/generated_files/pneumococcal.dart
+Formatted cicada/lib/generated_files/polio.dart
+Formatted cicada/lib/generated_files/rabies.dart
+Formatted cicada/lib/generated_files/rotavirus.dart
+Formatted cicada/lib/generated_files/rsv.dart
+Formatted cicada/lib/generated_files/rubella.dart
+Formatted cicada/lib/generated_files/schedule_supporting_data.dart
+Formatted cicada/lib/generated_files/tbe.dart
+Formatted cicada/lib/generated_files/test_condition_doses.dart
+Formatted cicada/lib/generated_files/test_doses.dart
+Formatted cicada/lib/generated_files/tetanus.dart
+Formatted cicada/lib/generated_files/typhoid.dart
+Formatted cicada/lib/generated_files/varicella.dart
+Formatted cicada/lib/generated_files/who/cholera.dart
+Formatted cicada/lib/generated_files/who/covid_19.dart
+Formatted cicada/lib/generated_files/who/diphtheria.dart
+Formatted cicada/lib/generated_files/who/hepa.dart
+Formatted cicada/lib/generated_files/who/hepb.dart
+Formatted cicada/lib/generated_files/who/hib.dart
+Formatted cicada/lib/generated_files/who/hpv.dart
+Formatted cicada/lib/generated_files/who/influenza.dart
+Formatted cicada/lib/generated_files/who/japanese_encephalitis.dart
+Formatted cicada/lib/generated_files/who/measles.dart
+Formatted cicada/lib/generated_files/who/meningococcal.dart
+Formatted cicada/lib/generated_files/who/mumps.dart
+Formatted cicada/lib/generated_files/who/pertussis.dart
+Formatted cicada/lib/generated_files/who/pneumococcal.dart
+Formatted cicada/lib/generated_files/who/polio.dart
+Formatted cicada/lib/generated_files/who/rabies.dart
+Formatted cicada/lib/generated_files/who/rotavirus.dart
+Formatted cicada/lib/generated_files/who/rubella.dart
+Formatted cicada/lib/generated_files/who/tetanus.dart
+Formatted cicada/lib/generated_files/who/tuberculosis.dart
+Formatted cicada/lib/generated_files/who/typhoid.dart
+Formatted cicada/lib/generated_files/who/who_antigen_supporting_data.dart
+Formatted cicada/lib/generated_files/who/who_schedule_supporting_data.dart
+Formatted cicada/lib/generated_files/who/yellow_fever.dart
+Formatted cicada/lib/generated_files/yellow_fever.dart
+Formatted cicada/lib/generated_files/zoster.dart
+Formatted 64 files (59 changed) in 0.96 seconds.
+=== Done ===

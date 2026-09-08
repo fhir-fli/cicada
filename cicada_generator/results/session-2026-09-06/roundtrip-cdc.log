@@ -1,0 +1,43 @@
+AntigenSupportingData- COVID-19-508.xlsx: DIFFERS (416)
+    /series[3]/seriesName: COVID-19 risk immunocompromised start at 5 yrs+ Pfizer series -> COVID-19 risk immunocompromised start at 5 yrs+ mixed product series
+    /series[3]/seriesAdminGuidance[2]: null -> COVID-19 vaccine doses from the same manufacturer should be administer…
+    /series[3]/seriesAdminGuidance[3]: null -> For people who have a history of myocarditis with MIS-C or MIS-A, see …
+    /series[3]/seriesAdminGuidance[4]: null -> COVID-19 vaccine doses from the same manufacturer should be administer…
+    /series[3]/seriesAdminGuidance[5]: null -> For people who have a history of myocarditis with MIS-C or MIS-A, see …
+    /series[3]/selectSeries/seriesPreference: 2 -> 6
+AntigenSupportingData- Chikungunya-508.xlsx: MATCH
+AntigenSupportingData- Cholera-508.xlsx: MATCH
+AntigenSupportingData- Dengue-508.xlsx: MATCH
+AntigenSupportingData- Diphtheria-508.xlsx: MATCH
+AntigenSupportingData- Ebola-508.xlsx: MATCH
+AntigenSupportingData- HPV-508.xlsx: MATCH
+AntigenSupportingData- HepA-508.xlsx: MATCH
+AntigenSupportingData- HepB-508.xlsx: MATCH
+AntigenSupportingData- Hib-508.xlsx: MATCH
+AntigenSupportingData- Influenza-508.xlsx: MATCH
+AntigenSupportingData- JE-508.xlsx: MATCH
+AntigenSupportingData- Measles-508.xlsx: MATCH
+AntigenSupportingData- Meningococcal B-508.xlsx: MATCH
+AntigenSupportingData- Meningococcal-508.xlsx: MATCH
+AntigenSupportingData- Mumps-508.xlsx: MATCH
+AntigenSupportingData- Orthopoxvirus-508.xlsx: MATCH
+AntigenSupportingData- Pertussis-508.xlsx: MATCH
+AntigenSupportingData- Pneumococcal-508.xlsx: DIFFERS (991)
+    /series[4]/seriesName: Pneumococcal risk 2-5 years Chronic Medical Conditions PCV-PCV-PPSV se… -> Pneumococcal risk 2-5 years Chronic Medical Conditions PPSV-PCV-PCV se…
+    /series[4]/selectSeries/seriesPreference: 1 -> 3
+    /series[4]/indication[10]: null -> {observationCode: {text: Cerebrospinal fluid leaks, code: 010}, descri…
+    /series[4]/indication[11]: null -> {observationCode: {text: Cochlear implants, code: 011}, description: A…
+    /series[4]/indication[12]: null -> {observationCode: {text: Diabetes, code: 014}, description: Administer…
+    /series[4]/indication[13]: null -> {observationCode: {text: Chronic liver disease, code: 015}, descriptio…
+AntigenSupportingData- Polio-508.xlsx: MATCH
+AntigenSupportingData- RSV-508.xlsx: MATCH
+AntigenSupportingData- Rabies-508.xlsx: MATCH
+AntigenSupportingData- Rotavirus-508.xlsx: MATCH
+AntigenSupportingData- Rubella-508.xlsx: MATCH
+AntigenSupportingData- TBE-508.xlsx: MATCH
+AntigenSupportingData- Tetanus-508.xlsx: MATCH
+AntigenSupportingData- Typhoid-508.xlsx: MATCH
+AntigenSupportingData- Varicella-508.xlsx: MATCH
+AntigenSupportingData- YF-508.xlsx: MATCH
+AntigenSupportingData- Zoster-508.xlsx: MATCH
+30 workbooks, 2 not round-tripping.

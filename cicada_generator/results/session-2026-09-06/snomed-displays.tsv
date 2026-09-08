@@ -1,0 +1,30 @@
+antigen	code	display	seconds
+Cholera	63650001	Cholera	0.171072
+COVID-19	840539006	COVID-19	0.168679
+Dengue	38362002	Dengue	0.158854
+Diphtheria	397430003	Diphtheria caused by Corynebacterium diphtheriae	0.164325
+Pertussis	27836007	Pertussis	0.160198
+Tetanus	76902006	Tetanus	0.157924
+Ebola	37109004	Ebola virus disease	0.157904
+HepA	40468003	Viral hepatitis, type A	0.160462
+HepB	66071002	Type B viral hepatitis	0.173075
+Hib	709410003	Haemophilus influenzae type b infection	0.155064
+HPV	240532009	Human papilloma virus infection	0.170274
+Influenza	6142004	Influenza	0.163489
+Japanese Encephalitis	52947006	Japanese encephalitis virus disease	0.161123
+Meningococcal	23511006	Meningococcal infectious disease	0.156027
+Meningococcal B	860805006	Encephalomyelitis caused by Neisseria meningitidis	0.209211
+Measles	14189004	Measles	0.165013
+Mumps	36989005	Mumps	0.161951
+Rubella	36653000	Rubella	0.159846
+Orthopoxvirus	359814004	Mpox	0.158422
+Pneumococcal	16814004	Pneumococcal infectious disease	0.169714
+Polio	398102009	Acute poliomyelitis	0.161512
+Rabies	14168008	Rabies	0.166216
+Rotavirus	18624000	Disease caused by Rotavirus	0.172004
+RSV	55735004	Respiratory syncytial virus infection	0.161845
+TBE	712986001	Encephalitis caused by tick-borne encephalitis virus	0.160072
+Typhoid	4834000	Typhoid fever	0.167717
+Varicella	38907003	Varicella	0.165455
+Yellow Fever	16541001	Yellow fever	0.163613
+Zoster	4740000	Herpes zoster	0.183698

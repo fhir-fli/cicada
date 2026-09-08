@@ -1,0 +1,631 @@
+FHIR IG Publisher Version 2.3.4 (Git# 7ae92f79415a). Built 2026-09-04T06:21:07.840Z (3 days old)    
+Detected Java version: 17.0.20 from /usr/lib/jvm/java-17-openjdk-amd64 on Linux/amd64 (64bit). 14992MB available
+dir = /home/grey/dev/fhir/cicada/cicada_ig, path = /home/grey/flutter/bin:/home/grey/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+Parameters: -ig . -no-narrative ValueSet/vaccine-condition-codes-snomed                             
+Character encoding = UTF-8 / UTF-8                                                                  
+Start Clock @ Monday, September 7, 2026 at 6:55:40 PM Eastern Daylight Time (2026-09-07T18:55:40-04:00)
+                                                                                                    
+Build FHIR IG from /home/grey/dev/fhir/cicada/cicada_ig/.                                            (00:00.074 / 00:00.076, 73Mb)
+No FHIR settings file at /home/grey/.fhir/fhir-settings.json; using defaults (no API keys or npm path) (00:00.012 / 00:00.088, 73Mb)
+Package Cache: /home/grey/.fhir/packages                                                             (00:00.009 / 00:00.097, 73Mb)
+Run Sushi on /home/grey/dev/fhir/cicada/cicada_ig                                                    (00:00.039 / 00:00.136, 74Mb)
+Sushi: info  Running SUSHI v3.20.0 (implements FHIR Shorthand specification v3.0.0)                  (00:04.425 / 00:04.562, 75Mb)
+Sushi: info  Arguments:                                                                              (00:00.003 / 00:04.565, 75Mb)
+Sushi: info    --out /home/grey/dev/fhir/cicada/cicada_ig                                            (00:00.001 / 00:04.566, 75Mb)
+Sushi: info    /home/grey/dev/fhir/cicada/cicada_ig                                                  (00:00.001 / 00:04.567, 75Mb)
+Sushi: info  Using configuration file: /home/grey/dev/fhir/cicada/cicada_ig/sushi-config.yaml        (00:03.330 / 00:07.903, 75Mb)
+Sushi: info  Importing FSH text...                                                                   (00:00.785 / 00:08.684, 75Mb)
+Sushi: info  Preprocessed 34 documents with 0 aliases.                                               (00:02.352 / 00:11.036, 75Mb)
+Sushi: info  Imported 74 definitions and 2 instances.                                                (00:00.331 / 00:11.367, 75Mb)
+Sushi: info  Loaded virtual package sushi-r5forR4#1.0.0 with 7 resources                             (00:00.404 / 00:11.772, 75Mb)
+Sushi: info  Resolved hl7.fhir.uv.tools.r4#latest to concrete version 1.1.2                          (00:01.101 / 00:12.874, 75Mb)
+Sushi: info  Loaded hl7.fhir.uv.tools.r4#1.1.2 with 119 resources                                    (00:00.403 / 00:13.280, 75Mb)
+Sushi: info  Resolved hl7.terminology.r4#latest to concrete version 7.3.0                            (00:00.532 / 00:13.809, 75Mb)
+Sushi: info  Loaded hl7.terminology.r4#7.3.0 with 4176 resources                                     (00:08.509 / 00:22.319, 75Mb)
+Sushi: info  Loaded hl7.fhir.us.immds#1.0.0 with 14 resources                                        (00:00.082 / 00:22.401, 75Mb)
+Sushi: info  Loaded hl7.fhir.r4.core#4.0.1 with 4581 resources                                       (00:08.303 / 00:30.705, 75Mb)
+Sushi: info  Resolved hl7.fhir.uv.extensions.r4#latest to concrete version 5.3.0                     (00:00.638 / 00:31.343, 75Mb)
+Sushi: info  Loaded hl7.fhir.uv.extensions.r4#5.3.0 with 885 resources                               (00:01.640 / 00:32.984, 75Mb)
+Sushi: info  Loaded virtual package sushi-local#LOCAL with 3 resources                               (00:00.057 / 00:33.041, 75Mb)
+Sushi: info  Converting FSH to FHIR resources...                                                     (00:00.052 / 00:33.093, 75Mb)
+Sushi: info  Converted 39 FHIR StructureDefinitions.                                                 (00:10.710 / 00:43.804, 75Mb)
+Sushi: info  Converted 13 FHIR CodeSystems.                                                          (00:01.352 / 00:45.157, 75Mb)
+Sushi: info  Converted 22 FHIR ValueSets.                                                            (00:02.678 / 00:47.835, 75Mb)
+Sushi: info  Converted 2 FHIR instances.                                                             (00:18.633 / 01:06.469, 75Mb)
+Sushi: info  Exporting FHIR resources as JSON...                                                     (00:00.006 / 01:06.476, 75Mb)
+Sushi: info  Exported 76 FHIR resources as JSON.                                                     (00:00.471 / 01:06.947, 75Mb)
+Sushi: info  Assembling Implementation Guide sources...                                              (00:00.019 / 01:06.967, 75Mb)
+Sushi: info  Generated ImplementationGuide-cicada.ig.json                                            (00:00.150 / 01:07.118, 75Mb)
+Sushi: info  Assembled Implementation Guide sources; ready for IG Publisher.                         (00:00.002 / 01:07.120, 75Mb)
+Sushi: info  The _build script hosted at https://github.com/HL7/ig-publisher-scripts is useful for downloading and running the IG Publisher. (00:00.001 / 01:07.121, 75Mb)
+Sushi: ========================= SUSHI RESULTS ===========================                           (00:00.011 / 01:07.132, 75Mb)
+Sushi: |  -------------------------------------------------------------  |                           (00:00.000 / 01:07.133, 75Mb)
+Sushi: | |    Profiles   |  Extensions  |   Logicals   |   Resources   | |                           (00:00.000 / 01:07.133, 75Mb)
+Sushi: | |-------------------------------------------------------------| |                           (00:00.000 / 01:07.133, 75Mb)
+Sushi: | |      12       |      25      |      2       |       0       | |                           (00:00.000 / 01:07.134, 75Mb)
+Sushi: |  -------------------------------------------------------------  |                           (00:00.000 / 01:07.134, 75Mb)
+Sushi: |  -------------------------------------------------------------  |                           (00:00.000 / 01:07.135, 75Mb)
+Sushi: | |      ValueSets     |    CodeSystems    |     Instances      | |                           (00:00.000 / 01:07.135, 75Mb)
+Sushi: | |-------------------------------------------------------------| |                           (00:00.000 / 01:07.136, 75Mb)
+Sushi: | |         22         |        13         |         2          | |                           (00:00.000 / 01:07.136, 75Mb)
+Sushi: |  -------------------------------------------------------------  |                           (00:00.000 / 01:07.137, 75Mb)
+Sushi: |                                                                 |                           (00:00.001 / 01:07.139, 75Mb)
+Sushi: ===================================================================                           (00:00.001 / 01:07.140, 75Mb)
+Sushi: | You're swimming in success!            0 Errors      0 Warnings |                           (00:00.000 / 01:07.140, 75Mb)
+Sushi: ===================================================================                           (00:00.000 / 01:07.141, 75Mb)
+Sushi: |    You are using SUSHI version 3.20.0, but the latest stable    |                           (00:00.000 / 01:07.142, 75Mb)
+Sushi: | release is version 3.20.1. To install the latest release, run:  |                           (00:00.000 / 01:07.143, 75Mb)
+Sushi: |                    npm install -g fsh-sushi                     |                           (00:00.001 / 01:07.143, 75Mb)
+Sushi: ===================================================================                           (00:00.000 / 01:07.144, 75Mb)
+Root directory: /home/grey/dev/fhir/cicada/cicada_ig                                                 (00:00.091 / 01:07.236, 76Mb)
+Unable to load IG as an r5 IG - try R4 (property code is a class com.google.gson.JsonPrimitive looking for an object) (00:02.099 / 01:09.335, 70Mb)
+Load Template from fhir.base.template#current                                                        (00:01.880 / 01:11.216, 71Mb)
+[33mThis content depends on fhir.base.template which is no longer considered secure to use
+[0;39m[33mSee Security notification at https://www.fhir.org/guides/security-notices/2026-03-npm-dependencies.html
+[0;39mScanning directory: /home/grey/dev/fhir/cicada/cicada_ig/template
+======================================================================
+Terminology Cache is at /home/grey/dev/fhir/cicada/cicada_ig/input-cache/txcache. 19 files in cache  (00:11.348 / 01:22.565, 158Mb)
+Core Package hl7.fhir.r4.core#4.0.1                                                                  (00:00.002 / 01:22.567, 158Mb)
+Running Terminology Log: /tmp/ohfu-fhir-ig-1270990770660322697.html
+Connect to Terminology Server at https://tx.fhir.org                                                 (00:11.660 / 01:34.228, 458Mb)
+[39mLoad Package hl7.fhir.pubpack#0.2.5
+[0;39m[39mLoad Package hl7.fhir.xver-extensions#0.1.0
+[0;39m[39mLoad Package hl7.terminology.r4#7.3.0
+[0;39m[39mLoad Package hl7.fhir.uv.extensions.r4#5.3.0
+[0;39m[39mLoad Package hl7.fhir.us.core#3.1.0
+[0;39m[39mLoad Package hl7.fhir.us.immds#1.0.0
+[0;39m[39mLoad Package hl7.fhir.uv.tools.r4#1.1.2
+[0;39mLoad R5 Specials
+Initialization complete                                                                              (00:18.552 / 01:52.781, 588Mb)
+Load IG                                                                                              (00:00.001 / 01:52.785, 588Mb)
+Load Content                                                                                         (00:00.010 / 01:52.793, 590Mb)
+Using en-US as the default narrative language. (no language information in Implementation Guide)     (00:00.130 / 01:52.923, 602Mb)
+Error loading /home/grey/dev/fhir/cicada/cicada_ig/input/maps/MapVaccineCodes.map as XML: Content is not allowed in prolog. at line 0 col 0 (00:00.618 / 01:53.542, 354Mb)
+Error loading /home/grey/dev/fhir/cicada/cicada_ig/input/maps/MapVaccineCodes.map as JSON: Error parsing JSON source: Unexpected content at start of JSON: String at Line 1 (path=[map]) (00:00.007 / 01:53.550, 354Mb)
+Error loading /home/grey/dev/fhir/cicada/cicada_ig/input/maps/MapVaccineCodes.map as Turtle: Unknown prefix map (00:00.026 / 01:53.577, 354Mb)
+Process Loaded Resources                                                                             (00:00.670 / 01:54.248, 442Mb)
+[33mFML: 'where' clause at 116, 76 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 117, 123 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 122, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 127, 60 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 132, 60 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 137, 60 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 142, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 147, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 152, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 157, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 162, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 167, 60 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 172, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 177, 60 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 182, 60 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 187, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 192, 60 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 197, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 202, 60 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 207, 60 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 212, 60 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 217, 60 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 222, 60 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 227, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 232, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 237, 60 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 242, 60 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 247, 60 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 252, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 257, 60 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 262, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 267, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 272, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 277, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 282, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 287, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 292, 60 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 297, 59 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 302, 60 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 307, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 312, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 317, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 322, 60 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 327, 60 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 332, 60 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 337, 60 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 342, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 347, 60 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 352, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 357, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 362, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 367, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 372, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 377, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 382, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 387, 60 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 392, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 397, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 402, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 407, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 412, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 417, 60 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 422, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 427, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 432, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 437, 59 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 442, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 447, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 452, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 457, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 462, 67 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 467, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 472, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 477, 60 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 482, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 487, 59 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 492, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 497, 60 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 502, 60 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 507, 60 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 512, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 517, 60 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 522, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 527, 60 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 532, 59 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 537, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 542, 60 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 547, 60 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 552, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 557, 60 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 562, 60 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 567, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 572, 60 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 577, 60 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 582, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 587, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 592, 60 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 597, 60 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 602, 60 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 607, 60 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 612, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 617, 60 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 622, 60 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 627, 60 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 632, 60 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 637, 60 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 642, 60 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 647, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 652, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 657, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 662, 60 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 667, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 672, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 677, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 682, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 687, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 692, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 697, 60 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 702, 60 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 707, 60 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 712, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 717, 60 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 722, 60 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 727, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 732, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 737, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 742, 60 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 747, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 752, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 757, 69 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 762, 60 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 767, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 772, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 777, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 782, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 787, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 792, 67 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 797, 67 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 802, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 807, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 812, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 817, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 822, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 827, 67 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 832, 67 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 837, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 842, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 847, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 852, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 857, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 862, 67 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 867, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 872, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 877, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 882, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 887, 67 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 892, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 897, 60 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 902, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 907, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 912, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 917, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 922, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 927, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 932, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 937, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 942, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 947, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 952, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 957, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 962, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 967, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 972, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 977, 60 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 982, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 987, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 992, 60 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 997, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1002, 67 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1007, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1012, 60 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1017, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1022, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1027, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1032, 60 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1037, 60 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1042, 60 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1047, 60 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1052, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1057, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1062, 60 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1067, 60 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1072, 60 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1077, 60 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1082, 60 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1087, 60 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1092, 60 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1097, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1102, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1107, 60 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1112, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1117, 60 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1122, 60 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1127, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1132, 60 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1137, 60 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1142, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1147, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1152, 60 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1157, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1162, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1167, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1172, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1177, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1182, 67 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1187, 60 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1192, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1197, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1202, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1207, 60 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1212, 62 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1217, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1222, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1227, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1232, 60 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1237, 60 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1242, 60 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1247, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1252, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1257, 66 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1262, 60 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1267, 60 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1272, 60 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1277, 60 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1282, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1287, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1292, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1297, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1302, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1307, 65 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1312, 68 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1317, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1322, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1327, 66 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1332, 60 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1337, 60 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1342, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1347, 60 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1352, 60 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1357, 60 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1362, 60 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1367, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1372, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1377, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1382, 66 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1387, 60 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1392, 62 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1397, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1402, 66 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1407, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1412, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1417, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1422, 60 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1427, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1432, 70 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1437, 60 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1442, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1447, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1452, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1457, 59 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1462, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1467, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1472, 60 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1477, 61 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1482, 60 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1487, 60 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1495, 81 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1496, 116 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1501, 54 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1506, 54 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1511, 55 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1516, 55 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1521, 55 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1526, 55 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1531, 55 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1536, 54 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1541, 55 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1546, 55 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1551, 55 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1556, 55 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1561, 54 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1566, 55 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1571, 55 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1576, 54 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1581, 54 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1586, 54 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1591, 54 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1596, 54 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1601, 54 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1606, 54 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1611, 55 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1616, 55 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1621, 55 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1626, 55 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1631, 55 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1636, 55 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1641, 55 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1646, 55 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1651, 55 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1656, 55 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1661, 55 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1666, 55 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1671, 55 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1676, 54 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1681, 54 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1686, 54 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1691, 54 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1696, 55 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1701, 55 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1706, 55 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1711, 55 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1716, 55 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1721, 55 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1726, 55 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1731, 55 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1736, 55 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1741, 54 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1746, 54 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1751, 54 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1756, 54 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1761, 54 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1766, 54 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1771, 55 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1776, 55 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1781, 55 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1786, 55 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1791, 55 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1796, 55 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1801, 55 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1806, 55 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1811, 55 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1816, 55 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1821, 55 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1826, 55 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1831, 54 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1836, 54 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1841, 54 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1846, 54 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1851, 54 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1856, 54 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1861, 54 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1866, 55 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1871, 55 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1876, 55 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1881, 55 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1886, 55 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1891, 55 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1896, 55 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1901, 55 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1906, 55 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1911, 55 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1916, 55 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1921, 55 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1926, 54 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1931, 54 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1936, 55 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1941, 54 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1946, 55 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1951, 55 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1956, 55 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1961, 54 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1966, 54 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1971, 54 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1976, 54 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1981, 54 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1986, 54 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1991, 54 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 1996, 54 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 2001, 54 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 2006, 54 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 2011, 54 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 2016, 54 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 2021, 54 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 2026, 55 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 2031, 55 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 2036, 54 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 2041, 55 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 2046, 55 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 2051, 54 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 2056, 55 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 2061, 55 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 2066, 55 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 2071, 55 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 2076, 55 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 2081, 55 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 2086, 54 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 2091, 54 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 2096, 54 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 2101, 54 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 2106, 55 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 2111, 54 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 2116, 54 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 2121, 54 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 2126, 54 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 2131, 54 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 2136, 54 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 2141, 55 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 2146, 55 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 2151, 55 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 2156, 55 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 2161, 55 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 2166, 54 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 2171, 54 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 2176, 54 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 2181, 54 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 2186, 54 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 2191, 54 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 2196, 54 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 2201, 54 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 2206, 55 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 2211, 55 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 2216, 55 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 2221, 55 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 2226, 55 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 2231, 54 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 2236, 55 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 2241, 54 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 2246, 54 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 2251, 54 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 2256, 55 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 2261, 55 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 2266, 55 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 2271, 54 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 2276, 55 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 2281, 55 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 2286, 55 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 2291, 55 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 2296, 54 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 2301, 55 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 2306, 54 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 2311, 54 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 2316, 54 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 2321, 55 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 2326, 54 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 2331, 55 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 2336, 55 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 2341, 55 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 2346, 55 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 2354, 77 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 2355, 119 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 2360, 57 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 2365, 57 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 2370, 57 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 2375, 57 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 2380, 57 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 2385, 57 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 2390, 57 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 2395, 57 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 2400, 57 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 2405, 57 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 2410, 57 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 2415, 57 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 2420, 57 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 2425, 57 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 2430, 57 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 2435, 57 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 2440, 57 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 2445, 57 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 2450, 57 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 2455, 57 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 2460, 57 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 2465, 57 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 2470, 57 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 2475, 57 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 2480, 57 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 2485, 57 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 2490, 57 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 2495, 57 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 2500, 57 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 2505, 57 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39m[33mFML: 'where' clause at 2510, 57 is not enclosed in parentheses; the FML grammar requires `where ( ... )`. Output will be canonicalised.
+[0;39mGenerating Snapshots                                                                                 (00:01.510 / 01:55.758, 610Mb)
+
+Signing Certificate: RSA key for Subject: OU=IG Publisher, L=Ann Arbor, CN=hl7.org, O=HL7, ST=Missouri, C=us from: OU=IG Publisher, L=Ann Arbor, CN=hl7.org, O=HL7, ST=Missouri, C=us
+Fetch https://fhirfli.dev/fhir/ig/cicada/package-list.json for version check                         (00:01.927 / 01:57.685, 572Mb)
+Checking Language                                                                                    (00:00.639 / 01:58.325, 582Mb)
+Load Dependency Info                                                                                 (00:00.009 / 01:58.334, 582Mb)
+Load Info                                                                                            (00:00.006 / 01:58.341, 582Mb)
+Load Paths                                                                                           (00:00.005 / 01:58.346, 583Mb)
+Check R4 / R4B                                                                                       (00:00.004 / 01:58.351, 583Mb)
+Assign Comparison Ids                                                                                (00:00.249 / 01:58.600, 419Mb)
+Propagating status                                                                                   (00:00.000 / 01:58.601, 419Mb)
+Generating Narratives                                                                                (00:00.000 / 01:58.602, 419Mb)
+Validating Conformance Resources                                                                     (00:02.987 / 02:01.589, 546Mb)
+Check profiles & code systems                                                                        (00:26.745 / 02:28.334, 1Gb)
+Check realm rules                                                                                    (00:00.011 / 02:28.346, 1Gb)
+Previous Version Comparison                                                                          (00:00.004 / 02:28.351, 1Gb)
+.. loaded. Process                                                                                   (00:00.001 / 02:28.352, 1Gb)
+finish previous version comparison                                                                   (00:00.000 / 02:28.353, 1Gb)
+finish ipa version                                                                                   (00:00.000 / 02:28.353, 1Gb)
+finish ips version                                                                                   (00:00.000 / 02:28.354, 1Gb)
+comparisons done                                                                                     (00:00.000 / 02:28.354, 1Gb)
+Checking for Bundles to sign                                                                         (00:00.072 / 02:28.427, 1Gb)
+Validating Resources                                                                                 (00:00.001 / 02:28.428, 1Gb)
+Processing Provenance Records                                                                        (00:09.583 / 02:38.012, 776Mb)
+Generating Outputs in /home/grey/dev/fhir/cicada/cicada_ig/output                                    (00:00.001 / 02:38.014, 776Mb)
+Generate Native Outputs                                                                              (00:01.682 / 02:39.696, 797Mb)
+Run Template                                                                                         (01:01.048 / 03:40.746, 660Mb)
+Generate HTML Outputs                                                                                (00:03.153 / 03:43.899, 765Mb)
+Generate Spreadsheets                                                                                (00:22.353 / 04:06.252, 854Mb)
+Generate Summaries                                                                                   (00:09.867 / 04:16.120, 750Mb)
+Generating Summary Outputs                                                                           (00:00.001 / 04:16.121, 750Mb)
+DB Cumulative Time invested: 00:00:05.216
+Sending Usage Stats to Server                                                                        (00:04.820 / 04:20.941, 730Mb)
+## Memory (MB): Use = 734, Free = 1065, Total = 1800, Max = 14992                                    (00:00.029 / 04:20.971, 734Mb)
+Reclaiming memory...                                                                                 (00:00.001 / 04:20.972, 734Mb)
+Generating combined package                                                                          (00:00.023 / 04:20.999, 734Mb)
+Error generating combined package: /home/grey/dev/fhir/cicada/cicada_ig/output/package.tgz (No such file or directory) (00:00.009 / 04:21.005, 734Mb)
+## Memory (MB): Use = 571, Free = 1228, Total = 1800, Max = 14992                                    (00:00.586 / 04:21.591, 575Mb)
+Run jekyll: jekyll build --destination "/home/grey/dev/fhir/cicada/cicada_ig/output" (in folder /home/grey/dev/fhir/cicada/cicada_ig/temp/pages) (00:00.002 / 04:21.593, 575Mb)
+Troubleshooting Note: usual cases for Jekyll to fail are:                                            (00:00.004 / 04:21.598, 579Mb)
+* A failure to produce a fragment that is already logged in the output above                         (00:00.000 / 04:21.599, 579Mb)
+* A reference to a manually edited file that hasn't been provided                                    (00:00.000 / 04:21.600, 579Mb)
+Jekyll: Source: /home/grey/dev/fhir/cicada/cicada_ig/temp/pages                                      (00:01.645 / 04:23.249, 586Mb)
+Jekyll: Generating...                                                                                (00:00.005 / 04:23.251, 586Mb)
+Jekyll: done in 8.18 seconds.                                                                        (00:08.173 / 04:31.424, 586Mb)
+[39m
+[0;39m[39mInstalling cicada.ig#dev
+[0;39m[39m done.
+[0;39m[39m loaded @ /home/grey/.fhir/packages/cicada.ig#dev
+[0;39mChecking Output HTML                                                                                 (00:11.576 / 04:43.000, 764Mb)
+Processed /home/grey/dev/fhir/cicada/cicada_ig/output - % reduction = 99 (81068422 ==> 1308919)
+found 1649 files                                                                                     (00:02.679 / 04:45.680, 766Mb)
+........................................
+........................................
+  ... 1649 html files, 0 pages invalid xhtml (0%)                                                    (00:53.830 / 05:39.511, 831Mb)
+  ... 344296 links, 0 broken links (0%)                                                              (00:00.000 / 05:39.512, 831Mb)
+Generate fragment-usage-analysis.csv                                                                 (00:00.000 / 05:39.512, 831Mb)
+Build final .zip                                                                                     (00:00.020 / 05:39.533, 831Mb)
+Final .zip built                                                                                     (00:04.645 / 05:44.178, 846Mb)
+Built. Times: loading: 00:05.532, generate: 04:00.542, narrative generation: 00:02.981, realm-rules: 00:00.004, previous-version: 00:00.002, jekyll: 00:09.925, validation: 00:35.103 (#81), template: 00:02.981 (#3) (00:14.689 / 05:58.867, 926Mb)
+Generating QA                                                                                        (00:00.000 / 05:58.868, 926Mb)
+Validation output in /home/grey/dev/fhir/cicada/cicada_ig/output/qa.html
+Errors: 0, Warnings: 118, Info: 226, Broken Links: 0 (00:01.292 / 06:00.161, 1Gb)
+Finished @ 9/7/26, 7:01 PM. Max Memory Used = 1Gb. Log file saved in /tmp/fhir-ig-publisher-tmp.log  (00:00.076 / 06:00.237, 1Gb)

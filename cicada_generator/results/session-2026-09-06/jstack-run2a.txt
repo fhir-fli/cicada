@@ -1,0 +1,379 @@
+2026-09-06 19:35:58
+Full thread dump OpenJDK 64-Bit Server VM (17.0.20+8-1-24.04-Ubuntu mixed mode, sharing):
+
+Threads class SMR info:
+_java_thread_list=0x000071a278001880, length=20, elements={
+0x000071a31c018970, 0x000071a31c1c9f00, 0x000071a31c1cb2f0, 0x000071a31c1d0890,
+0x000071a31c1d1c50, 0x000071a31c1d3070, 0x000071a31c1d4ab0, 0x000071a31c1d5ff0,
+0x000071a31c1d7470, 0x000071a31c1df2a0, 0x000071a31c1e2040, 0x000071a31d6b5710,
+0x000071a31d6b5e80, 0x000071a31d6bcc70, 0x000071a1f89c6aa0, 0x000071a1c804f440,
+0x000071a1c804a480, 0x000071a1c804a9f0, 0x000071a1a8b5a130, 0x000071a278000ea0
+}
+
+"main" #1 prio=5 os_prio=0 cpu=34312.87ms elapsed=269.17s tid=0x000071a31c018970 nid=0x35bc in Object.wait()  [0x000071a323dfc000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait(java.base@17.0.20/Native Method)
+	- waiting on <no object reference available>
+	at java.lang.Object.wait(java.base@17.0.20/Object.java:338)
+	at okhttp3.internal.http2.Http2Stream.waitForIo$okhttp(Http2Stream.kt:714)
+	at okhttp3.internal.http2.Http2Stream.takeHeaders(Http2Stream.kt:140)
+	- locked <0x000000050a224308> (a okhttp3.internal.http2.Http2Stream)
+	at okhttp3.internal.http2.Http2ExchangeCodec.readResponseHeaders(Http2ExchangeCodec.kt:97)
+	at okhttp3.internal.connection.Exchange.readResponseHeaders(Exchange.kt:110)
+	at okhttp3.internal.http.CallServerInterceptor.intercept(CallServerInterceptor.kt:93)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109)
+	at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.kt:34)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109)
+	at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.kt:95)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109)
+	at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.kt:83)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109)
+	at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.kt:76)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109)
+	at org.hl7.fhir.utilities.http.okhttpimpl.RetryInterceptor.intercept(RetryInterceptor.java:41)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109)
+	at org.hl7.fhir.utilities.http.okhttpimpl.LoggingInterceptor.intercept(LoggingInterceptor.java:46)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.kt:109)
+	at okhttp3.internal.connection.RealCall.getResponseWithInterceptorChain$okhttp(RealCall.kt:201)
+	at okhttp3.internal.connection.RealCall.execute(RealCall.kt:154)
+	at org.hl7.fhir.utilities.http.ManagedFhirWebAccessor.httpCall(ManagedFhirWebAccessor.java:132)
+	at org.hl7.fhir.r4.utils.client.network.FhirRequestBuilder.execute(FhirRequestBuilder.java:167)
+	at org.hl7.fhir.r4.utils.client.network.Client.executeFhirRequest(Client.java:148)
+	at org.hl7.fhir.r4.utils.client.network.Client.issuePostRequest(Client.java:84)
+	at org.hl7.fhir.r4.utils.client.FHIRToolingClient.operateType(FHIRToolingClient.java:296)
+	at org.hl7.fhir.convertors.txClient.TerminologyClientR4.validateCS(TerminologyClientR4.java:129)
+	at org.hl7.fhir.r5.context.BaseWorkerContext.validateOnServer2(BaseWorkerContext.java:1917)
+	at org.hl7.fhir.r5.context.BaseWorkerContext.validateCode(BaseWorkerContext.java:1555)
+	at org.hl7.fhir.r5.context.BaseWorkerContext.validateCode(BaseWorkerContext.java:1436)
+	at org.hl7.fhir.validation.instance.type.ValueSetValidator.validateValueSetIncludeConcept(ValueSetValidator.java:529)
+	at org.hl7.fhir.validation.instance.type.ValueSetValidator.validateValueSetInclude(ValueSetValidator.java:468)
+	at org.hl7.fhir.validation.instance.type.ValueSetValidator.validateValueSetCompose(ValueSetValidator.java:288)
+	at org.hl7.fhir.validation.instance.type.ValueSetValidator.validateValueSet(ValueSetValidator.java:242)
+	at org.hl7.fhir.validation.instance.InstanceValidator.checkSpecials(InstanceValidator.java:6687)
+	at org.hl7.fhir.validation.instance.InstanceValidator.startInner(InstanceValidator.java:6617)
+	at org.hl7.fhir.validation.instance.InstanceValidator.start(InstanceValidator.java:6346)
+	at org.hl7.fhir.validation.instance.InstanceValidator.validateResource(InstanceValidator.java:8446)
+	at org.hl7.fhir.validation.instance.InstanceValidator.validate(InstanceValidator.java:1012)
+	at org.hl7.fhir.igtools.publisher.PublisherProcessor.validate(PublisherProcessor.java:550)
+	at org.hl7.fhir.igtools.publisher.PublisherProcessor.validate(PublisherProcessor.java:1734)
+	at org.hl7.fhir.igtools.publisher.PublisherProcessor.validate(PublisherProcessor.java:1959)
+	at org.hl7.fhir.igtools.publisher.PublisherProcessor.loadConformance2(PublisherProcessor.java:99)
+	at org.hl7.fhir.igtools.publisher.Publisher.createIg(Publisher.java:404)
+	at org.hl7.fhir.igtools.publisher.Publisher.execute(Publisher.java:233)
+	at org.hl7.fhir.igtools.publisher.Publisher.main(Publisher.java:1598)
+
+"Reference Handler" #2 daemon prio=10 os_prio=0 cpu=4.18ms elapsed=269.14s tid=0x000071a31c1c9f00 nid=0x35c3 waiting on condition  [0x000071a2d5dab000]
+   java.lang.Thread.State: RUNNABLE
+	at java.lang.ref.Reference.waitForReferencePendingList(java.base@17.0.20/Native Method)
+	at java.lang.ref.Reference.processPendingReferences(java.base@17.0.20/Reference.java:253)
+	at java.lang.ref.Reference$ReferenceHandler.run(java.base@17.0.20/Reference.java:215)
+
+"Finalizer" #3 daemon prio=8 os_prio=0 cpu=3.78ms elapsed=269.14s tid=0x000071a31c1cb2f0 nid=0x35c4 in Object.wait()  [0x000071a2d5cab000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait(java.base@17.0.20/Native Method)
+	- waiting on <no object reference available>
+	at java.lang.ref.ReferenceQueue.remove(java.base@17.0.20/ReferenceQueue.java:155)
+	- locked <0x00000007fefe0680> (a java.lang.ref.ReferenceQueue$Lock)
+	at java.lang.ref.ReferenceQueue.remove(java.base@17.0.20/ReferenceQueue.java:176)
+	at java.lang.ref.Finalizer$FinalizerThread.run(java.base@17.0.20/Finalizer.java:172)
+
+"Signal Dispatcher" #4 daemon prio=9 os_prio=0 cpu=0.42ms elapsed=269.13s tid=0x000071a31c1d0890 nid=0x35c5 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Service Thread" #5 daemon prio=9 os_prio=0 cpu=4.01ms elapsed=269.13s tid=0x000071a31c1d1c50 nid=0x35c6 runnable  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Monitor Deflation Thread" #6 daemon prio=9 os_prio=0 cpu=61.79ms elapsed=269.13s tid=0x000071a31c1d3070 nid=0x35c7 runnable  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"C2 CompilerThread0" #7 daemon prio=9 os_prio=0 cpu=21804.07ms elapsed=269.13s tid=0x000071a31c1d4ab0 nid=0x35c8 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+   No compile task
+
+"C1 CompilerThread0" #15 daemon prio=9 os_prio=0 cpu=2929.57ms elapsed=269.13s tid=0x000071a31c1d5ff0 nid=0x35c9 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+   No compile task
+
+"Sweeper thread" #19 daemon prio=9 os_prio=0 cpu=656.51ms elapsed=269.13s tid=0x000071a31c1d7470 nid=0x35ca runnable  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Notification Thread" #20 daemon prio=9 os_prio=0 cpu=0.22ms elapsed=269.13s tid=0x000071a31c1df2a0 nid=0x35cb runnable  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Common-Cleaner" #21 daemon prio=8 os_prio=0 cpu=5.04ms elapsed=269.13s tid=0x000071a31c1e2040 nid=0x35cd in Object.wait()  [0x000071a2d4dfd000]
+   java.lang.Thread.State: TIMED_WAITING (on object monitor)
+	at java.lang.Object.wait(java.base@17.0.20/Native Method)
+	- waiting on <no object reference available>
+	at java.lang.ref.ReferenceQueue.remove(java.base@17.0.20/ReferenceQueue.java:155)
+	- locked <0x00000007fef99ce8> (a java.lang.ref.ReferenceQueue$Lock)
+	at jdk.internal.ref.CleanerImpl.run(java.base@17.0.20/CleanerImpl.java:140)
+	at java.lang.Thread.run(java.base@17.0.20/Thread.java:840)
+	at jdk.internal.misc.InnocuousThread.run(java.base@17.0.20/InnocuousThread.java:162)
+
+"OkHttp TaskRunner" #29 daemon prio=5 os_prio=0 cpu=21.52ms elapsed=229.51s tid=0x000071a31d6b5710 nid=0x372a in Object.wait()  [0x000071a2826f5000]
+   java.lang.Thread.State: TIMED_WAITING (on object monitor)
+	at java.lang.Object.wait(java.base@17.0.20/Native Method)
+	- waiting on <no object reference available>
+	at java.lang.Object.wait(java.base@17.0.20/Object.java:472)
+	at okhttp3.internal.concurrent.TaskRunner$RealBackend.coordinatorWait(TaskRunner.kt:294)
+	at okhttp3.internal.concurrent.TaskRunner.awaitTaskToRun(TaskRunner.kt:218)
+	at okhttp3.internal.concurrent.TaskRunner$runnable$1.run(TaskRunner.kt:59)
+	- locked <0x00000004636c3620> (a okhttp3.internal.concurrent.TaskRunner)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@17.0.20/ThreadPoolExecutor.java:1136)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@17.0.20/ThreadPoolExecutor.java:635)
+	at java.lang.Thread.run(java.base@17.0.20/Thread.java:840)
+
+"OkHttp tx.ontoserver.csiro.au" #30 daemon prio=5 os_prio=0 cpu=11.44ms elapsed=229.50s tid=0x000071a31d6b5e80 nid=0x372b runnable  [0x000071a2824f4000]
+   java.lang.Thread.State: RUNNABLE
+	at sun.nio.ch.Net.poll(java.base@17.0.20/Native Method)
+	at sun.nio.ch.NioSocketImpl.park(java.base@17.0.20/NioSocketImpl.java:186)
+	at sun.nio.ch.NioSocketImpl.park(java.base@17.0.20/NioSocketImpl.java:195)
+	at sun.nio.ch.NioSocketImpl.implRead(java.base@17.0.20/NioSocketImpl.java:319)
+	at sun.nio.ch.NioSocketImpl.read(java.base@17.0.20/NioSocketImpl.java:355)
+	at sun.nio.ch.NioSocketImpl$1.read(java.base@17.0.20/NioSocketImpl.java:808)
+	at java.net.Socket$SocketInputStream.read(java.base@17.0.20/Socket.java:966)
+	at sun.security.ssl.SSLSocketInputRecord.read(java.base@17.0.20/SSLSocketInputRecord.java:484)
+	at sun.security.ssl.SSLSocketInputRecord.readHeader(java.base@17.0.20/SSLSocketInputRecord.java:478)
+	at sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(java.base@17.0.20/SSLSocketInputRecord.java:70)
+	at sun.security.ssl.SSLSocketImpl.readApplicationRecord(java.base@17.0.20/SSLSocketImpl.java:1464)
+	at sun.security.ssl.SSLSocketImpl$AppInputStream.read(java.base@17.0.20/SSLSocketImpl.java:1069)
+	at okio.InputStreamSource.read(JvmOkio.kt:93)
+	at okio.AsyncTimeout$source$1.read(AsyncTimeout.kt:128)
+	at okio.RealBufferedSource.request(RealBufferedSource.kt:209)
+	at okio.RealBufferedSource.require(RealBufferedSource.kt:202)
+	at okhttp3.internal.http2.Http2Reader.nextFrame(Http2Reader.kt:89)
+	at okhttp3.internal.http2.Http2Connection$ReaderRunnable.invoke(Http2Connection.kt:618)
+	at okhttp3.internal.http2.Http2Connection$ReaderRunnable.invoke(Http2Connection.kt:609)
+	at okhttp3.internal.concurrent.TaskQueue$execute$1.runOnce(TaskQueue.kt:98)
+	at okhttp3.internal.concurrent.TaskRunner.runTask(TaskRunner.kt:116)
+	at okhttp3.internal.concurrent.TaskRunner.access$runTask(TaskRunner.kt:42)
+	at okhttp3.internal.concurrent.TaskRunner$runnable$1.run(TaskRunner.kt:65)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@17.0.20/ThreadPoolExecutor.java:1136)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@17.0.20/ThreadPoolExecutor.java:635)
+	at java.lang.Thread.run(java.base@17.0.20/Thread.java:840)
+
+"Okio Watchdog" #31 daemon prio=5 os_prio=0 cpu=101.91ms elapsed=229.49s tid=0x000071a31d6bcc70 nid=0x372c waiting on condition  [0x000071a2d46fd000]
+   java.lang.Thread.State: TIMED_WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@17.0.20/Native Method)
+	- parking to wait for  <0x000000046374c0d0> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.parkNanos(java.base@17.0.20/LockSupport.java:252)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(java.base@17.0.20/AbstractQueuedSynchronizer.java:1764)
+	at okio.AsyncTimeout$Companion.awaitTimeout$okio(AsyncTimeout.kt:320)
+	at okio.AsyncTimeout$Watchdog.run(AsyncTimeout.kt:186)
+
+"OkHttp tx.ontoserver.csiro.au" #33 daemon prio=5 os_prio=0 cpu=353.80ms elapsed=229.12s tid=0x000071a1f89c6aa0 nid=0x372e runnable  [0x000071a2d49fc000]
+   java.lang.Thread.State: RUNNABLE
+	at sun.nio.ch.Net.poll(java.base@17.0.20/Native Method)
+	at sun.nio.ch.NioSocketImpl.park(java.base@17.0.20/NioSocketImpl.java:186)
+	at sun.nio.ch.NioSocketImpl.park(java.base@17.0.20/NioSocketImpl.java:195)
+	at sun.nio.ch.NioSocketImpl.implRead(java.base@17.0.20/NioSocketImpl.java:319)
+	at sun.nio.ch.NioSocketImpl.read(java.base@17.0.20/NioSocketImpl.java:355)
+	at sun.nio.ch.NioSocketImpl$1.read(java.base@17.0.20/NioSocketImpl.java:808)
+	at java.net.Socket$SocketInputStream.read(java.base@17.0.20/Socket.java:966)
+	at sun.security.ssl.SSLSocketInputRecord.read(java.base@17.0.20/SSLSocketInputRecord.java:484)
+	at sun.security.ssl.SSLSocketInputRecord.readHeader(java.base@17.0.20/SSLSocketInputRecord.java:478)
+	at sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(java.base@17.0.20/SSLSocketInputRecord.java:70)
+	at sun.security.ssl.SSLSocketImpl.readApplicationRecord(java.base@17.0.20/SSLSocketImpl.java:1464)
+	at sun.security.ssl.SSLSocketImpl$AppInputStream.read(java.base@17.0.20/SSLSocketImpl.java:1069)
+	at okio.InputStreamSource.read(JvmOkio.kt:93)
+	at okio.AsyncTimeout$source$1.read(AsyncTimeout.kt:128)
+	at okio.RealBufferedSource.request(RealBufferedSource.kt:209)
+	at okio.RealBufferedSource.require(RealBufferedSource.kt:202)
+	at okhttp3.internal.http2.Http2Reader.nextFrame(Http2Reader.kt:89)
+	at okhttp3.internal.http2.Http2Connection$ReaderRunnable.invoke(Http2Connection.kt:618)
+	at okhttp3.internal.http2.Http2Connection$ReaderRunnable.invoke(Http2Connection.kt:609)
+	at okhttp3.internal.concurrent.TaskQueue$execute$1.runOnce(TaskQueue.kt:98)
+	at okhttp3.internal.concurrent.TaskRunner.runTask(TaskRunner.kt:116)
+	at okhttp3.internal.concurrent.TaskRunner.access$runTask(TaskRunner.kt:42)
+	at okhttp3.internal.concurrent.TaskRunner$runnable$1.run(TaskRunner.kt:65)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@17.0.20/ThreadPoolExecutor.java:1136)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@17.0.20/ThreadPoolExecutor.java:635)
+	at java.lang.Thread.run(java.base@17.0.20/Thread.java:840)
+
+"OkHttp tx.ontoserver.csiro.au" #34 daemon prio=5 os_prio=0 cpu=7.80ms elapsed=228.16s tid=0x000071a1c804f440 nid=0x3752 runnable  [0x000071a2d47fc000]
+   java.lang.Thread.State: RUNNABLE
+	at sun.nio.ch.Net.poll(java.base@17.0.20/Native Method)
+	at sun.nio.ch.NioSocketImpl.park(java.base@17.0.20/NioSocketImpl.java:186)
+	at sun.nio.ch.NioSocketImpl.park(java.base@17.0.20/NioSocketImpl.java:195)
+	at sun.nio.ch.NioSocketImpl.implRead(java.base@17.0.20/NioSocketImpl.java:319)
+	at sun.nio.ch.NioSocketImpl.read(java.base@17.0.20/NioSocketImpl.java:355)
+	at sun.nio.ch.NioSocketImpl$1.read(java.base@17.0.20/NioSocketImpl.java:808)
+	at java.net.Socket$SocketInputStream.read(java.base@17.0.20/Socket.java:966)
+	at sun.security.ssl.SSLSocketInputRecord.read(java.base@17.0.20/SSLSocketInputRecord.java:484)
+	at sun.security.ssl.SSLSocketInputRecord.readHeader(java.base@17.0.20/SSLSocketInputRecord.java:478)
+	at sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(java.base@17.0.20/SSLSocketInputRecord.java:70)
+	at sun.security.ssl.SSLSocketImpl.readApplicationRecord(java.base@17.0.20/SSLSocketImpl.java:1464)
+	at sun.security.ssl.SSLSocketImpl$AppInputStream.read(java.base@17.0.20/SSLSocketImpl.java:1069)
+	at okio.InputStreamSource.read(JvmOkio.kt:93)
+	at okio.AsyncTimeout$source$1.read(AsyncTimeout.kt:128)
+	at okio.RealBufferedSource.request(RealBufferedSource.kt:209)
+	at okio.RealBufferedSource.require(RealBufferedSource.kt:202)
+	at okhttp3.internal.http2.Http2Reader.nextFrame(Http2Reader.kt:89)
+	at okhttp3.internal.http2.Http2Connection$ReaderRunnable.invoke(Http2Connection.kt:618)
+	at okhttp3.internal.http2.Http2Connection$ReaderRunnable.invoke(Http2Connection.kt:609)
+	at okhttp3.internal.concurrent.TaskQueue$execute$1.runOnce(TaskQueue.kt:98)
+	at okhttp3.internal.concurrent.TaskRunner.runTask(TaskRunner.kt:116)
+	at okhttp3.internal.concurrent.TaskRunner.access$runTask(TaskRunner.kt:42)
+	at okhttp3.internal.concurrent.TaskRunner$runnable$1.run(TaskRunner.kt:65)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@17.0.20/ThreadPoolExecutor.java:1136)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@17.0.20/ThreadPoolExecutor.java:635)
+	at java.lang.Thread.run(java.base@17.0.20/Thread.java:840)
+
+"OkHttp tx.ontoserver.csiro.au" #45 daemon prio=5 os_prio=0 cpu=12.67ms elapsed=209.53s tid=0x000071a1c804a480 nid=0x384a runnable  [0x000071a280a9b000]
+   java.lang.Thread.State: RUNNABLE
+	at sun.nio.ch.Net.poll(java.base@17.0.20/Native Method)
+	at sun.nio.ch.NioSocketImpl.park(java.base@17.0.20/NioSocketImpl.java:186)
+	at sun.nio.ch.NioSocketImpl.park(java.base@17.0.20/NioSocketImpl.java:195)
+	at sun.nio.ch.NioSocketImpl.implRead(java.base@17.0.20/NioSocketImpl.java:319)
+	at sun.nio.ch.NioSocketImpl.read(java.base@17.0.20/NioSocketImpl.java:355)
+	at sun.nio.ch.NioSocketImpl$1.read(java.base@17.0.20/NioSocketImpl.java:808)
+	at java.net.Socket$SocketInputStream.read(java.base@17.0.20/Socket.java:966)
+	at sun.security.ssl.SSLSocketInputRecord.read(java.base@17.0.20/SSLSocketInputRecord.java:484)
+	at sun.security.ssl.SSLSocketInputRecord.readHeader(java.base@17.0.20/SSLSocketInputRecord.java:478)
+	at sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(java.base@17.0.20/SSLSocketInputRecord.java:70)
+	at sun.security.ssl.SSLSocketImpl.readApplicationRecord(java.base@17.0.20/SSLSocketImpl.java:1464)
+	at sun.security.ssl.SSLSocketImpl$AppInputStream.read(java.base@17.0.20/SSLSocketImpl.java:1069)
+	at okio.InputStreamSource.read(JvmOkio.kt:93)
+	at okio.AsyncTimeout$source$1.read(AsyncTimeout.kt:128)
+	at okio.RealBufferedSource.request(RealBufferedSource.kt:209)
+	at okio.RealBufferedSource.require(RealBufferedSource.kt:202)
+	at okhttp3.internal.http2.Http2Reader.nextFrame(Http2Reader.kt:89)
+	at okhttp3.internal.http2.Http2Connection$ReaderRunnable.invoke(Http2Connection.kt:618)
+	at okhttp3.internal.http2.Http2Connection$ReaderRunnable.invoke(Http2Connection.kt:609)
+	at okhttp3.internal.concurrent.TaskQueue$execute$1.runOnce(TaskQueue.kt:98)
+	at okhttp3.internal.concurrent.TaskRunner.runTask(TaskRunner.kt:116)
+	at okhttp3.internal.concurrent.TaskRunner.access$runTask(TaskRunner.kt:42)
+	at okhttp3.internal.concurrent.TaskRunner$runnable$1.run(TaskRunner.kt:65)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@17.0.20/ThreadPoolExecutor.java:1136)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@17.0.20/ThreadPoolExecutor.java:635)
+	at java.lang.Thread.run(java.base@17.0.20/Thread.java:840)
+
+"OkHttp tx.ontoserver.csiro.au" #46 daemon prio=5 os_prio=0 cpu=8.36ms elapsed=208.41s tid=0x000071a1c804a9f0 nid=0x384d runnable  [0x000071a2823f4000]
+   java.lang.Thread.State: RUNNABLE
+	at sun.nio.ch.Net.poll(java.base@17.0.20/Native Method)
+	at sun.nio.ch.NioSocketImpl.park(java.base@17.0.20/NioSocketImpl.java:186)
+	at sun.nio.ch.NioSocketImpl.park(java.base@17.0.20/NioSocketImpl.java:195)
+	at sun.nio.ch.NioSocketImpl.implRead(java.base@17.0.20/NioSocketImpl.java:319)
+	at sun.nio.ch.NioSocketImpl.read(java.base@17.0.20/NioSocketImpl.java:355)
+	at sun.nio.ch.NioSocketImpl$1.read(java.base@17.0.20/NioSocketImpl.java:808)
+	at java.net.Socket$SocketInputStream.read(java.base@17.0.20/Socket.java:966)
+	at sun.security.ssl.SSLSocketInputRecord.read(java.base@17.0.20/SSLSocketInputRecord.java:484)
+	at sun.security.ssl.SSLSocketInputRecord.readHeader(java.base@17.0.20/SSLSocketInputRecord.java:478)
+	at sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(java.base@17.0.20/SSLSocketInputRecord.java:70)
+	at sun.security.ssl.SSLSocketImpl.readApplicationRecord(java.base@17.0.20/SSLSocketImpl.java:1464)
+	at sun.security.ssl.SSLSocketImpl$AppInputStream.read(java.base@17.0.20/SSLSocketImpl.java:1069)
+	at okio.InputStreamSource.read(JvmOkio.kt:93)
+	at okio.AsyncTimeout$source$1.read(AsyncTimeout.kt:128)
+	at okio.RealBufferedSource.request(RealBufferedSource.kt:209)
+	at okio.RealBufferedSource.require(RealBufferedSource.kt:202)
+	at okhttp3.internal.http2.Http2Reader.nextFrame(Http2Reader.kt:89)
+	at okhttp3.internal.http2.Http2Connection$ReaderRunnable.invoke(Http2Connection.kt:618)
+	at okhttp3.internal.http2.Http2Connection$ReaderRunnable.invoke(Http2Connection.kt:609)
+	at okhttp3.internal.concurrent.TaskQueue$execute$1.runOnce(TaskQueue.kt:98)
+	at okhttp3.internal.concurrent.TaskRunner.runTask(TaskRunner.kt:116)
+	at okhttp3.internal.concurrent.TaskRunner.access$runTask(TaskRunner.kt:42)
+	at okhttp3.internal.concurrent.TaskRunner$runnable$1.run(TaskRunner.kt:65)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@17.0.20/ThreadPoolExecutor.java:1136)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@17.0.20/ThreadPoolExecutor.java:635)
+	at java.lang.Thread.run(java.base@17.0.20/Thread.java:840)
+
+"OkHttp tx.ontoserver.csiro.au" #47 daemon prio=5 os_prio=0 cpu=12.30ms elapsed=207.32s tid=0x000071a1a8b5a130 nid=0x3852 runnable  [0x000071a2d4cfc000]
+   java.lang.Thread.State: RUNNABLE
+	at sun.nio.ch.Net.poll(java.base@17.0.20/Native Method)
+	at sun.nio.ch.NioSocketImpl.park(java.base@17.0.20/NioSocketImpl.java:186)
+	at sun.nio.ch.NioSocketImpl.park(java.base@17.0.20/NioSocketImpl.java:195)
+	at sun.nio.ch.NioSocketImpl.implRead(java.base@17.0.20/NioSocketImpl.java:319)
+	at sun.nio.ch.NioSocketImpl.read(java.base@17.0.20/NioSocketImpl.java:355)
+	at sun.nio.ch.NioSocketImpl$1.read(java.base@17.0.20/NioSocketImpl.java:808)
+	at java.net.Socket$SocketInputStream.read(java.base@17.0.20/Socket.java:966)
+	at sun.security.ssl.SSLSocketInputRecord.read(java.base@17.0.20/SSLSocketInputRecord.java:484)
+	at sun.security.ssl.SSLSocketInputRecord.readHeader(java.base@17.0.20/SSLSocketInputRecord.java:478)
+	at sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(java.base@17.0.20/SSLSocketInputRecord.java:70)
+	at sun.security.ssl.SSLSocketImpl.readApplicationRecord(java.base@17.0.20/SSLSocketImpl.java:1464)
+	at sun.security.ssl.SSLSocketImpl$AppInputStream.read(java.base@17.0.20/SSLSocketImpl.java:1069)
+	at okio.InputStreamSource.read(JvmOkio.kt:93)
+	at okio.AsyncTimeout$source$1.read(AsyncTimeout.kt:128)
+	at okio.RealBufferedSource.request(RealBufferedSource.kt:209)
+	at okio.RealBufferedSource.require(RealBufferedSource.kt:202)
+	at okhttp3.internal.http2.Http2Reader.nextFrame(Http2Reader.kt:89)
+	at okhttp3.internal.http2.Http2Connection$ReaderRunnable.invoke(Http2Connection.kt:618)
+	at okhttp3.internal.http2.Http2Connection$ReaderRunnable.invoke(Http2Connection.kt:609)
+	at okhttp3.internal.concurrent.TaskQueue$execute$1.runOnce(TaskQueue.kt:98)
+	at okhttp3.internal.concurrent.TaskRunner.runTask(TaskRunner.kt:116)
+	at okhttp3.internal.concurrent.TaskRunner.access$runTask(TaskRunner.kt:42)
+	at okhttp3.internal.concurrent.TaskRunner$runnable$1.run(TaskRunner.kt:65)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@17.0.20/ThreadPoolExecutor.java:1136)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@17.0.20/ThreadPoolExecutor.java:635)
+	at java.lang.Thread.run(java.base@17.0.20/Thread.java:840)
+
+"Attach Listener" #50 daemon prio=9 os_prio=0 cpu=0.43ms elapsed=0.10s tid=0x000071a278000ea0 nid=0x3dbb waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"G1 Refine#12" os_prio=0 cpu=13.40ms elapsed=227.79s tid=0x000071a1d8000d60 nid=0x3774 runnable  
+
+"G1 Refine#11" os_prio=0 cpu=12.05ms elapsed=239.39s tid=0x000071a1d4000d60 nid=0x36b7 runnable  
+
+"G1 Refine#10" os_prio=0 cpu=23.15ms elapsed=239.39s tid=0x000071a1e0000d60 nid=0x36b6 runnable  
+
+"G1 Refine#9" os_prio=0 cpu=22.99ms elapsed=239.39s tid=0x000071a1dc000d60 nid=0x36b5 runnable  
+
+"G1 Refine#8" os_prio=0 cpu=24.01ms elapsed=239.39s tid=0x000071a1e8000d60 nid=0x36b4 runnable  
+
+"G1 Refine#7" os_prio=0 cpu=20.55ms elapsed=239.40s tid=0x000071a1e4000d60 nid=0x36b3 runnable  
+
+"G1 Refine#6" os_prio=0 cpu=35.00ms elapsed=240.09s tid=0x000071a1f00130a0 nid=0x36af runnable  
+
+"G1 Refine#5" os_prio=0 cpu=44.25ms elapsed=240.09s tid=0x000071a208204470 nid=0x36ae runnable  
+
+"G1 Refine#4" os_prio=0 cpu=78.66ms elapsed=240.09s tid=0x000071a1ec2ab610 nid=0x36ad runnable  
+
+"G1 Refine#3" os_prio=0 cpu=61.82ms elapsed=240.09s tid=0x000071a2180331a0 nid=0x36ac runnable  
+
+"G1 Refine#2" os_prio=0 cpu=105.95ms elapsed=240.09s tid=0x000071a1f40014a0 nid=0x36ab runnable  
+
+"G1 Refine#1" os_prio=0 cpu=125.84ms elapsed=240.10s tid=0x000071a2d0005590 nid=0x36aa runnable  
+
+"G1 Conc#2" os_prio=0 cpu=1069.20ms elapsed=244.72s tid=0x000071a2d8001b30 nid=0x365b runnable  
+
+"G1 Conc#1" os_prio=0 cpu=1033.59ms elapsed=244.72s tid=0x000071a2d8000ea0 nid=0x365a runnable  
+
+"GC Thread#12" os_prio=0 cpu=398.82ms elapsed=245.02s tid=0x000071a2cc00cfb0 nid=0x3658 runnable  
+
+"GC Thread#11" os_prio=0 cpu=505.16ms elapsed=245.02s tid=0x000071a2cc00c2f0 nid=0x3657 runnable  
+
+"GC Thread#10" os_prio=0 cpu=510.85ms elapsed=245.02s tid=0x000071a2cc00ba20 nid=0x3656 runnable  
+
+"GC Thread#9" os_prio=0 cpu=552.07ms elapsed=245.02s tid=0x000071a2cc00b150 nid=0x3655 runnable  
+
+"GC Thread#8" os_prio=0 cpu=487.60ms elapsed=245.02s tid=0x000071a2cc00a880 nid=0x3654 runnable  
+
+"GC Thread#7" os_prio=0 cpu=509.02ms elapsed=245.02s tid=0x000071a2cc00a0c0 nid=0x3653 runnable  
+
+"GC Thread#6" os_prio=0 cpu=450.93ms elapsed=245.02s tid=0x000071a2cc009920 nid=0x3652 runnable  
+
+"GC Thread#5" os_prio=0 cpu=495.61ms elapsed=245.02s tid=0x000071a2cc009180 nid=0x3651 runnable  
+
+"GC Thread#4" os_prio=0 cpu=397.63ms elapsed=245.02s tid=0x000071a2cc008a10 nid=0x3650 runnable  
+
+"GC Thread#3" os_prio=0 cpu=407.94ms elapsed=245.02s tid=0x000071a2cc0082a0 nid=0x364f runnable  
+
+"GC Thread#2" os_prio=0 cpu=384.21ms elapsed=245.02s tid=0x000071a2cc007b30 nid=0x364e runnable  
+
+"GC Thread#1" os_prio=0 cpu=386.25ms elapsed=245.02s tid=0x000071a2cc0073c0 nid=0x364d runnable  
+
+"VM Periodic Task Thread" os_prio=0 cpu=440.12ms elapsed=269.13s tid=0x000071a31c1e0bf0 nid=0x35cc waiting on condition  
+
+"VM Thread" os_prio=0 cpu=107.67ms elapsed=269.14s tid=0x000071a31c1c5d00 nid=0x35c2 runnable  
+
+"G1 Service" os_prio=0 cpu=124.42ms elapsed=269.16s tid=0x000071a31c1939f0 nid=0x35c1 runnable  
+
+"G1 Refine#0" os_prio=0 cpu=609.91ms elapsed=269.16s tid=0x000071a31c192ae0 nid=0x35c0 runnable  
+
+"G1 Conc#0" os_prio=0 cpu=1106.15ms elapsed=269.17s tid=0x000071a31c05a9c0 nid=0x35bf runnable  
+
+"G1 Main Marker" os_prio=0 cpu=4.29ms elapsed=269.17s tid=0x000071a31c059a40 nid=0x35be runnable  
+
+"GC Thread#0" os_prio=0 cpu=530.97ms elapsed=269.17s tid=0x000071a31c0499c0 nid=0x35bd runnable  
+
+JNI global refs: 26, weak refs: 10
+

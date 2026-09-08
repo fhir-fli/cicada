@@ -1,0 +1,108 @@
+COVID-19: DIFFERS (6)
+    /series[0]/seriesDose[1]/conditionalSkip[0]/set[0]/condition[1]: {"conditionID":"2","conditionType":"Age","endAge":"2 years"} -> null
+    /series[0]/seriesDose[1]/conditionalSkip[0]/set[1]/condition[1]: {"conditionID":"2","conditionType":"Age","endAge":"2 years"} -> null
+    /series[0]/seriesDose[1]/conditionalSkip[0]/set[2]/condition[1]: {"conditionID":"2","conditionType":"Age","endAge":"2 years"} -> null
+    /series[0]/seriesDose[1]/conditionalSkip[1]: null -> {"setLogic":"","set":[{"setID":"","setDescription":"","conditionLogic"…
+    /series[6]/seriesDose[3]/conditionalSkip[0]/set[0]/condition[1]: {"conditionID":"2","conditionType":"Age","endAge":"5 years"} -> null
+    /series[6]/seriesDose[3]/conditionalSkip[1]: null -> {"setLogic":"","set":[{"setID":"","setDescription":"","conditionLogic"…
+Chikungunya: MATCH (categories=2)
+Cholera: MATCH (categories=1)
+Dengue: MATCH (categories=1)
+Diphtheria: DIFFERS (50)
+    /series[0]/seriesDose[0]/conditionalSkip[1]/set[1]: {"setID":"3","setDescription":"Dose is not required if the patient has… -> null
+    /series[0]/seriesDose[0]/conditionalSkip[2]: null -> {"setLogic":"","set":[{"setID":"3","setDescription":"Dose is not requi…
+    /series[0]/seriesDose[1]/conditionalSkip[1]/set[1]: {"setID":"3","setDescription":"Dose is not required if the patient has… -> null
+    /series[0]/seriesDose[1]/conditionalSkip[2]: null -> {"setLogic":"","set":[{"setID":"3","setDescription":"Dose is not requi…
+    /series[0]/seriesDose[2]/conditionalSkip[1]/set[1]: {"setID":"3","setDescription":"Dose is not required if the patient has… -> null
+    /series[0]/seriesDose[2]/conditionalSkip[2]: null -> {"setLogic":"","set":[{"setID":"3","setDescription":"Dose is not requi…
+    /series[0]/seriesDose[3]/conditionalSkip[1]/set[1]: {"setID":"3","setDescription":"Dose is not required if the patient has… -> null
+    /series[0]/seriesDose[3]/conditionalSkip[2]: null -> {"setLogic":"","set":[{"setID":"3","setDescription":"Dose is not requi…
+Ebola: MATCH (categories=1)
+HPV: DIFFERS (30)
+    /series[6]/seriesDose[1]/conditionalSkip[0]/set[0]/condition[1]: {"conditionID":"2","conditionType":"Vaccine Count by Age","beginAge":"… -> null
+    /series[6]/seriesDose[1]/conditionalSkip[1]/context: "Forecast" -> null
+    /series[6]/seriesDose[1]/conditionalSkip[1]/setLogic: "n/a" -> ""
+    /series[6]/seriesDose[1]/conditionalSkip[1]/set[0]/setID: "2" -> ""
+    /series[6]/seriesDose[1]/conditionalSkip[1]/set[0]/setDescription: "Dose is not required once 5 months has passed since dose 1 or two tot… -> ""
+    /series[6]/seriesDose[1]/conditionalSkip[1]/set[0]/conditionLogic: "OR" -> ""
+    /series[6]/seriesDose[1]/conditionalSkip[1]/set[0]/condition[0]/conditionID: "1" -> "2"
+    /series[6]/seriesDose[1]/conditionalSkip[1]/set[0]/condition[0]/conditionType: "Interval" -> "Vaccine Count by Age"
+HepA: MATCH (categories=12)
+HepB: DIFFERS (4)
+    /series[16]/seriesDose[2]/conditionalSkip[0]/set[1]: {"setID":"2","setDescription":"Dose is not required if patient has rec… -> null
+    /series[16]/seriesDose[2]/conditionalSkip[1]: null -> {"setLogic":"","set":[{"setID":"2","setDescription":"Dose is not requi…
+    /series[16]/seriesDose[3]/conditionalSkip[0]/set[1]: {"setID":"2","setDescription":"Dose is not required if patient has rec… -> null
+    /series[16]/seriesDose[3]/conditionalSkip[1]: null -> {"setLogic":"","set":[{"setID":"2","setDescription":"Dose is not requi…
+Hib: PARSE FAILED: Null check operator used on a null value
+Influenza: DIFFERS (3)
+    /series[0]/seriesDose[1]/conditionalSkip[0]/set[1]: {"setID":"2","setDescription":"Dose is not required if the patient has… -> null
+    /series[0]/seriesDose[1]/conditionalSkip[0]/set[2]: {"setID":"3","setDescription":"Dose is not required if the patient has… -> null
+    /series[0]/seriesDose[1]/conditionalSkip[1]: null -> {"setLogic":"","set":[{"setID":"2","setDescription":"Dose is not requi…
+JE: MATCH (categories=2)
+Measles: MATCH (categories=4)
+Meningococcal B: MATCH (categories=6)
+Meningococcal: DIFFERS (8)
+    /series[1]/seriesDose[0]/conditionalSkip[0]/set[0]/condition[1]: {"conditionID":"2","conditionType":"Vaccine Count By Age","beginAge":"… -> null
+    /series[1]/seriesDose[0]/conditionalSkip[1]: null -> {"setLogic":"","set":[{"setID":"","setDescription":"","conditionLogic"…
+    /series[1]/seriesDose[3]/conditionalSkip[0]/set[0]/condition[1]: {"conditionID":"2","conditionType":"Vaccine Count By Age","beginAge":"… -> null
+    /series[1]/seriesDose[3]/conditionalSkip[1]: null -> {"setLogic":"","set":[{"setID":"","setDescription":"","conditionLogic"…
+    /series[2]/seriesDose[2]/conditionalSkip[0]/set[1]: {"setID":"2","setDescription":"Dose is not required for those 19 month… -> null
+    /series[2]/seriesDose[2]/conditionalSkip[1]: null -> {"setLogic":"","set":[{"setID":"2","setDescription":"Dose is not requi…
+    /series[2]/seriesDose[3]/conditionalSkip[0]/set[1]: {"setID":"2","setDescription":"Dose is not required for those 19 month… -> null
+    /series[2]/seriesDose[3]/conditionalSkip[1]: null -> {"setLogic":"","set":[{"setID":"2","setDescription":"Dose is not requi…
+Mumps: MATCH (categories=4)
+Orthopoxvirus: MATCH (categories=4)
+Pertussis: DIFFERS (88)
+    /series[0]/seriesDose[0]/conditionalSkip[1]/set[1]: {"setID":"3","setDescription":"Dose is not required if the patient has… -> null
+    /series[0]/seriesDose[0]/conditionalSkip[2]: null -> {"setLogic":"","set":[{"setID":"3","setDescription":"Dose is not requi…
+    /series[0]/seriesDose[1]/conditionalSkip[1]/set[1]: {"setID":"3","setDescription":"Dose is not required if the patient has… -> null
+    /series[0]/seriesDose[1]/conditionalSkip[2]: null -> {"setLogic":"","set":[{"setID":"3","setDescription":"Dose is not requi…
+    /series[0]/seriesDose[2]/conditionalSkip[1]/set[1]: {"setID":"3","setDescription":"Dose is not required if the patient has… -> null
+    /series[0]/seriesDose[2]/conditionalSkip[2]: null -> {"setLogic":"","set":[{"setID":"3","setDescription":"Dose is not requi…
+    /series[0]/seriesDose[3]/conditionalSkip[1]/set[1]: {"setID":"3","setDescription":"Dose is not required if the patient has… -> null
+    /series[0]/seriesDose[3]/conditionalSkip[2]: null -> {"setLogic":"","set":[{"setID":"3","setDescription":"Dose is not requi…
+Pneumococcal: DIFFERS (166)
+    /series[0]/seriesDose[2]/conditionalSkip[0]/set[1]: {"setID":"2","setDescription":"Target Dose is not required if the curr… -> null
+    /series[0]/seriesDose[2]/conditionalSkip[1]/context: "Forecast" -> null
+    /series[0]/seriesDose[2]/conditionalSkip[1]/setLogic: "n/a" -> ""
+    /series[0]/seriesDose[2]/conditionalSkip[1]/set[0]/setID: "3" -> "2"
+    /series[0]/seriesDose[2]/conditionalSkip[1]/set[0]/setDescription: "Dose is not required for those 12 months or older" -> "Target Dose is not required if the current dose was administered on o…
+    /series[0]/seriesDose[2]/conditionalSkip[1]/set[0]/condition[0]/beginAge: "12 months" -> "12 months - 4 days"
+    /series[0]/seriesDose[2]/conditionalSkip[1]/set[0]/conditionLogic: null -> "AND"
+    /series[0]/seriesDose[2]/conditionalSkip[1]/set[1]: null -> {"setID":"","setDescription":"","conditionLogic":"","condition":[{"con…
+Polio: DIFFERS (36)
+    /series[0]/seriesDose[2]/conditionalSkip[0]/set[1]: {"setID":"2","setDescription":"Target Dose is not required if the curr… -> null
+    /series[0]/seriesDose[2]/conditionalSkip[1]/context: "Forecast" -> null
+    /series[0]/seriesDose[2]/conditionalSkip[1]/setLogic: "n/a" -> ""
+    /series[0]/seriesDose[2]/conditionalSkip[1]/set[0]/setID: "3" -> "2"
+    /series[0]/seriesDose[2]/conditionalSkip[1]/set[0]/setDescription: "Target Dose is not required for those who are 4 years of age or older… -> "Target Dose is not required if the current dose was administered on o…
+    /series[0]/seriesDose[2]/conditionalSkip[1]/set[0]/condition[0]/beginAge: "4 years" -> "4 years - 4 days"
+    /series[0]/seriesDose[2]/conditionalSkip[1]/set[0]/conditionLogic: null -> "AND"
+    /series[0]/seriesDose[2]/conditionalSkip[1]/set[1]: null -> {"setID":"","setDescription":"","conditionLogic":"","condition":[{"con…
+RSV: DIFFERS (17)
+    /series[1]/seriesDose[2]/conditionalSkip[0]/set[1]/condition[1]: {"conditionID":"2","conditionType":"Vaccine Count by Date and Age","st… -> null
+    /series[1]/seriesDose[2]/conditionalSkip[1]/context: "Forecast" -> null
+    /series[1]/seriesDose[2]/conditionalSkip[1]/setLogic: "OR" -> ""
+    /series[1]/seriesDose[2]/conditionalSkip[1]/set[0]/setID: "3" -> ""
+    /series[1]/seriesDose[2]/conditionalSkip[1]/set[0]/setDescription: "Dose is not needed if the patient is under 8 months of age" -> ""
+    /series[1]/seriesDose[2]/conditionalSkip[1]/set[0]/condition[0]/conditionID: "1" -> "2"
+    /series[1]/seriesDose[2]/conditionalSkip[1]/set[0]/condition[0]/conditionType: "Age" -> "Vaccine Count by Date and Age"
+    /series[1]/seriesDose[2]/conditionalSkip[1]/set[0]/condition[0]/startDate: null -> "2025-07-01"
+Rabies: MATCH (categories=3)
+Rotavirus: MATCH (categories=4)
+Rubella: MATCH (categories=4)
+TBE: MATCH (categories=2)
+Tetanus: DIFFERS (50)
+    /series[0]/seriesDose[0]/conditionalSkip[1]/set[1]: {"setID":"3","setDescription":"Dose is not required if the patient has… -> null
+    /series[0]/seriesDose[0]/conditionalSkip[2]: null -> {"setLogic":"","set":[{"setID":"3","setDescription":"Dose is not requi…
+    /series[0]/seriesDose[1]/conditionalSkip[1]/set[1]: {"setID":"3","setDescription":"Dose is not required if the patient has… -> null
+    /series[0]/seriesDose[1]/conditionalSkip[2]: null -> {"setLogic":"","set":[{"setID":"3","setDescription":"Dose is not requi…
+    /series[0]/seriesDose[2]/conditionalSkip[1]/set[1]: {"setID":"3","setDescription":"Dose is not required if the patient has… -> null
+    /series[0]/seriesDose[2]/conditionalSkip[2]: null -> {"setLogic":"","set":[{"setID":"3","setDescription":"Dose is not requi…
+    /series[0]/seriesDose[3]/conditionalSkip[1]/set[1]: {"setID":"3","setDescription":"Dose is not required if the patient has… -> null
+    /series[0]/seriesDose[3]/conditionalSkip[2]: null -> {"setLogic":"","set":[{"setID":"3","setDescription":"Dose is not requi…
+Typhoid: MATCH (categories=1)
+Varicella: MATCH (categories=2)
+YF: MATCH (categories=1)
+Zoster: MATCH (categories=3)
+30 workbooks, 12 not matching. /home/grey/dev/fhir/cicada/cicada_generator/results/excel_vs_xml.tsv
