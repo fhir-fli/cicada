@@ -1,7 +1,7 @@
 # CLAUDE.md
 
 > **Universal rules are in `~/.claude/CLAUDE.md`** — it loads in every session, in
-> every directory, so they are not repeated here. Full records: `~/.claude/rules/`.
+> every directory, so they are not repeated here. Full records: `~/.claude/rule-records/`.
 > This file holds project facts only.
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
@@ -31,7 +31,7 @@ Diff **both directions** before claiming the response conforms.
 `immds_response_test.dart` asserted "doseNumberString is present" and guarded
 the defect for months.
 
-Full record `~/.claude/rules/read-the-published-example.md`.
+Full record `~/.claude/rule-records/read-the-published-example.md`.
 
 ## Repository Overview
 
