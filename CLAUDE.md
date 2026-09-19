@@ -224,6 +224,11 @@ decision-bearing function must name the rule it implements, and it exits
 non-zero if one does not. It runs by itself after every edit to an engine file
 (`.claude/hooks/check_spec_citations.py`) and inside `tool_check_all.sh`.
 
+Two more project hooks (2026-09-19): every edited `.dart` file is analyzed on the
+spot (`analyze_edited.py`, ~0.5 s), and when Dart under `cicada/lib` or `cicada/test`
+changed since the last pass, the reply cannot end until 56 fast tests pass
+(`fast_tests_on_stop.py`, ~27 s). The 1,441-case CDC suites stay in `tool_check_all.sh`.
+
 - **Condition (v4.6 cases, Sept 2025).** Version-mismatched by construction:
   several failures are cases written against supporting data CDC has since
   changed. Movement in this suite is the signal, not its absolute number.
