@@ -50,7 +50,13 @@ for f in FILES:
         # skipByInterval had none of its own and went green for exactly that
         # reason until a longer comment above it pushed the match out of range.
         floor = funcs[idx-1][0] + 1 if idx else 0
-        block = '\n'.join(lines[max(floor, i-22):end])
+        # The whole doc comment directly above the definition counts, however
+        # long. A fixed 22-line window missed _pregnancyOutranksGender, whose
+        # 28-line comment opens with "DELIBERATE DEVIATION FROM CDSi".
+        top = i
+        while top - 1 >= floor and lines[top - 1].lstrip().startswith(('///', '//', '@')):
+            top -= 1
+        block = '\n'.join(lines[max(floor, min(top, i-22)):end])
         if not SPEC.search(block):
             missing.append(f'{f}:{i+1} {name}')
 

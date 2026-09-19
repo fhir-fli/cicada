@@ -17,6 +17,11 @@ pkgs=$(find "$ROOT" -maxdepth 2 -name pubspec.yaml \
 [ -n "$pkgs" ] || { echo "no packages found under $ROOT"; exit 1; }
 printf 'checking %s packages\n\n' "$(printf '%s\n' "$pkgs" | wc -l)"
 
+# Every decision-bearing engine function names the CDSi rule it implements.
+printf '=== engine spec citations\n'
+if ( cd "$ROOT/cicada" && python3 tool_check_spec_citations.py ); then :; else fail=1; fi
+printf '\n'
+
 for f in $pkgs; do
   dir="$(dirname "$f")"
   pkg="$(basename "$dir")"

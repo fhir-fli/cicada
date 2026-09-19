@@ -221,7 +221,8 @@ expectation, asserted nothing and were counted as passes. Fixed in the generator
 specification** and were removed. **Do not "fix" them.** Before any engine
 change run `python3 tool_check_spec_citations.py` from `cicada/`: every
 decision-bearing function must name the rule it implements, and it exits
-non-zero if one does not.
+non-zero if one does not. It runs by itself after every edit to an engine file
+(`.claude/hooks/check_spec_citations.py`) and inside `tool_check_all.sh`.
 
 - **Condition (v4.6 cases, Sept 2025).** Version-mismatched by construction:
   several failures are cases written against supporting data CDC has since
