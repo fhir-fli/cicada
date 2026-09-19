@@ -1,0 +1,17 @@
+{
+  "_why": "Read by ~/.claude/hooks/fast-tests-on-stop.py. 56 tests, ~27 s, measured 2026-09-19. The 1,441-case CDC suites take minutes and stay in tool_check_all.sh.",
+  "suites": [
+    {
+      "package": "cicada",
+      "watch": ["lib", "test"],
+      "suffix": ".dart",
+      "timeout": 150,
+      "command": ["dart", "test",
+                  "test/immds_response_test.dart",
+                  "test/series_type_extension_test.dart",
+                  "test/vaccine_recommendation_category_test.dart",
+                  "test/version_stamp_test.dart",
+                  "test/cdc_row_collapse_sync_test.dart"]
+    }
+  ]
+}
