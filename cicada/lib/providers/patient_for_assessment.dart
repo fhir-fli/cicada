@@ -153,8 +153,13 @@ class PatientForAssessment extends _$PatientForAssessment {
 
     // Build the doses now that the birth date and assessment date are known.
     //
-    // A dose dated before birth was not given to this patient: it is reported
-    // in an OperationOutcome, not evaluated as an invalid dose.
+    // 🛑 DELIBERATE DEVIATION FROM CDSi, adjudicated by OpenEvidence
+    // 2026-09-21 (CDSI-OE-ADJUDICATED.md section 17). A dose dated before
+    // birth is withheld from evaluation and reported in an OperationOutcome.
+    // The spec has no rule for it; its process alone would return Not Valid,
+    // Too Young, whose remedy is to repeat a dose that was never given to this
+    // patient on that date. No CDC case carries one (0 of 2,957 doses across
+    // 1,401 cases, scanned 2026-09-21), so no conformance case depends on it.
     //
     // A dose dated after the assessment date IS evaluated. Evaluation anchors
     // on the date administered (Logic Spec v4.6 section 3.3, CONDSKIP-2); the

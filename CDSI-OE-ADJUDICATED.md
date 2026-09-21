@@ -441,3 +441,32 @@ Applied: doses after the assessment date are evaluated and counted, and noted
 at severity `information` in the `outcome` parameter. The CDC-REPORT finding
 that called these four rows defective was withdrawn. Whole suite back to 26
 failures, the classified set.
+
+## 17. ✅ ADJUDICATED 2026-09-21 — a dose before birth is withheld, as a labelled deviation
+
+**OE: withholding the dose and flagging it as a data-quality problem is
+defensible and the better clinical behaviour, but it is a departure from what
+the CDSi process alone produces.** The spec's process would return Not Valid,
+Too Young, and an engine that did so would not violate the spec. That label is
+clinically misleading: the remedy for a genuinely too-young dose is to repeat
+it, the wrong action for a dose that could not have been given to this patient
+on that date. The likelier truth is a wrong birth date, a wrong administration
+date, or a record under the wrong patient.
+
+Not the same as section 16: a dose after the assessment date is a real dose
+against a back-dated clock; a dose before birth is impossible. The "no rule
+removes it, so evaluate it" argument does not transfer.
+
+Minimum under either design: flag the impossible date for a person to correct,
+never feed it to catch-up as an ordinary invalid dose. OE found no CDC or AIRA
+guidance on pre-birth doses in what it could retrieve; AIRA's data-quality
+guidance was not in its set.
+
+**OE's caution, checked 2026-09-21:** if a CDC case contained such a dose with
+an expected result, conformance would require matching it. None does: 0 of
+2,957 doses across all 1,064 healthy and 337 condition cases precede the birth
+date (the scan finds doses given on the day of birth, so it reads the dates).
+No configuration switch is needed while that holds.
+
+Applied: labelled 🛑 DELIBERATE DEVIATION FROM CDSi in
+`patient_for_assessment.dart` and on `ImplausibleDoseReason`.

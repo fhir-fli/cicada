@@ -10,7 +10,9 @@ typedef SupportingResource = ({String? reference, String? display});
 ///
 /// Not a clinical verdict. A dose dated before birth was not administered to
 /// this patient, so it is not a statement about immunity and does not belong
-/// in an evaluation's doseStatus.
+/// in an evaluation's doseStatus. 🛑 DELIBERATE DEVIATION FROM CDSi, which has
+/// no rule for it; see the note where these are built in
+/// `patient_for_assessment.dart`.
 ///
 /// A dose dated after the assessment date is NOT one of these: evaluation
 /// anchors on the date administered (Logic Spec v4.6 section 3.3, CONDSKIP-2),
