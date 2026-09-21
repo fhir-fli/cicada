@@ -459,8 +459,33 @@ removes it, so evaluate it" argument does not transfer.
 
 Minimum under either design: flag the impossible date for a person to correct,
 never feed it to catch-up as an ordinary invalid dose. OE found no CDC or AIRA
-guidance on pre-birth doses in what it could retrieve; AIRA's data-quality
-guidance was not in its set.
+guidance on pre-birth doses in what it could retrieve.
+
+**AIRA's guidance, found and read 2026-09-21** (it governs data entering an
+immunization information system, not a forecaster, so it supports this rather
+than binds it):
+- *Data Quality Assurance in Immunization Information Systems*, AIRA MIROW,
+  August 2022, business rule **BR111**, verbatim: "A vaccination event date
+  should not be before (less than) the patient's date of birth." Chapter on
+  validity calls it an **impossible error**: "not possibly correct in any
+  circumstance due to the laws of time and nature ... These issues are invalid
+  and inaccurate and either should not enter the IIS or should be flagged and
+  rectified by an IIS-AO or IIS program."
+- The retired 2008 edition (*Incoming Data*, 02-11-2008, Table 3), rule
+  **BR101**, verbatim: "Vaccination Encounter Date must not be before Patient
+  Date of Birth." Recommended action: batch, reject the patient and all related
+  vaccination event submissions; user interface, reject the vaccination event.
+  Possible interpretations it lists: the encounter date is wrong, the birth
+  date is wrong, both, or the patient identification is wrong ("could be a
+  sibling"). Those are the three things cicada's warning tells the reader to
+  check.
+- Neither says to evaluate such a dose. Both treat it as a record to stop and
+  correct.
+
+The same guides also cover section 16's neighbour: 2008 BR103 / 2022 BR113 say
+a vaccination date must not be after the **submission** date, the real clock.
+That is not the assessment date, which section 16 established can be set
+earlier than a recorded dose.
 
 **OE's caution, checked 2026-09-21:** if a CDC case contained such a dose with
 an expected result, conformance would require matching it. None does: 0 of
