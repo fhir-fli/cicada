@@ -8,18 +8,18 @@ typedef SupportingResource = ({String? reference, String? display});
 
 /// Why a dose could not be evaluated as a record of an administration.
 ///
-/// Not clinical verdicts. CDSi evaluates a *vaccine dose administered*, and
-/// defines the assessment date as the current date, so a dose dated after it
-/// has not been administered and a dose dated before birth was not
-/// administered to this patient. Neither is a statement about immunity, so
-/// neither belongs in an evaluation's doseStatus.
+/// Not a clinical verdict. A dose dated before birth was not administered to
+/// this patient, so it is not a statement about immunity and does not belong
+/// in an evaluation's doseStatus.
+///
+/// A dose dated after the assessment date is NOT one of these: evaluation
+/// anchors on the date administered (Logic Spec v4.6 section 3.3, CONDSKIP-2),
+/// and "current date" is only the assessment date's assumed value when empty
+/// (Tables 6-4, 7-9). Such a dose is evaluated; see
+/// [VaxPatient.dosesAfterAssessment].
 enum ImplausibleDoseReason {
   /// Administered before the patient's date of birth.
   beforeBirth,
-
-  /// Administered after the assessment date, which CDSi defines as the current
-  /// date, so the administration has not happened.
-  afterAssessment,
 }
 
 /// A dose left out of evaluation and forecasting because its date is
@@ -39,6 +39,7 @@ class VaxPatient {
     required this.pastDoses,
     this.observationSources = const <String, Set<SupportingResource>>{},
     this.implausibleDoses = const <ImplausibleDose>[],
+    this.dosesAfterAssessment = const <VaxDose>[],
   });
 
   VaxPatient copyWith({
@@ -53,6 +54,7 @@ class VaxPatient {
     List<VaxDose>? pastDoses,
     Map<String, Set<SupportingResource>>? observationSources,
     List<ImplausibleDose>? implausibleDoses,
+    List<VaxDose>? dosesAfterAssessment,
   }) =>
       VaxPatient(
         assessmentDate: assessmentDate ?? this.assessmentDate,
@@ -66,6 +68,7 @@ class VaxPatient {
         pastDoses: pastDoses ?? this.pastDoses,
         observationSources: observationSources ?? this.observationSources,
         implausibleDoses: implausibleDoses ?? this.implausibleDoses,
+        dosesAfterAssessment: dosesAfterAssessment ?? this.dosesAfterAssessment,
       );
 
   final VaxDate assessmentDate;
@@ -87,4 +90,9 @@ class VaxPatient {
 
   /// Doses excluded from evaluation because their dates are impossible.
   final List<ImplausibleDose> implausibleDoses;
+
+  /// Doses dated after the assessment date. They are in [pastDoses] and are
+  /// evaluated like any other; this list only lets the response note the
+  /// date, since a forecast "as of" a date before a recorded dose is unusual.
+  final List<VaxDose> dosesAfterAssessment;
 }

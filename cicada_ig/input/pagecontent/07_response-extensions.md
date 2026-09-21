@@ -65,17 +65,23 @@ decision-making for only part of their range are **not** marked, because they
 are routine for the rest and the supporting data has no scoped attribute to
 read.
 
-#### Records that cannot be evaluated
+#### Notes about dose records
 
-CDSi evaluates a *vaccine dose administered*, and defines the assessment date as
-the current date. A dose dated after the assessment date has not been
-administered; a dose dated before birth was not administered to this patient.
-Neither can be evaluated, and neither is a clinical verdict, so neither becomes
-an invalid dose. They are excluded from evaluation and forecasting and reported
-in an `OperationOutcome` returned as an `outcome` parameter, coded from the
+A dose dated before birth was not administered to this patient. It is not a
+clinical verdict, so it does not become an invalid dose: it is excluded from
+evaluation and forecasting and reported in an `OperationOutcome` returned as an
+`outcome` parameter, coded from the
 [Cicada Data Integrity](CodeSystem-data-integrity.html) code system, carrying
 both conflicting dates and what to check. The `Immunization` still returns in
 its own parameter, so nothing is dropped silently.
+
+A dose dated **after the assessment date** is evaluated and counted like any
+other. CDSi evaluation anchors on the date administered (Logic Specification
+v4.6, section 3.3 and CONDSKIP-2); the assessment date governs forecasting, and
+"current date" is only its assumed value when none is supplied (Tables 6-4 and
+7-9). The same `outcome` parameter carries an information-level note, because a
+forecast as of a date before a recorded dose usually means one of the two dates
+was entered wrongly.
 
 The same `outcome` parameter also reports **two doses covering one antigen on
 one day**. That one is a warning only: both records may be real, and the engine

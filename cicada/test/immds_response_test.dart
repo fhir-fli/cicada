@@ -769,14 +769,27 @@ void main() {
       expect(evaluationCount(response), 0);
     });
 
-    // CDSi defines the assessment date as the current date, so a dose dated
-    // after it has not happened. It used to be evaluated as history, counted
-    // toward the series and moved the forecast.
-    test('a dose after the assessment date is reported, not evaluated', () {
+    // Evaluation anchors on the date administered (Logic Spec v4.6 section
+    // 3.3, CONDSKIP-2); the assessment date drives forecasting only, and
+    // "current date" is its assumed value when empty (Tables 6-4, 7-9), not a
+    // filter on doses. CDC healthy cases 2026-0043, -0050, -0052 and -0060
+    // expect such a dose Valid. It is evaluated, and the response notes it.
+    test('a dose after the assessment date is evaluated, and noted', () {
       final response = buildImmdsResponse(evaluateForForecast(
           withDose(dob: '2020-01-01', given: '2027-09-01')));
       expect(outcomeCodes(response), contains('dose-after-assessment'));
-      expect(evaluationCount(response), 0);
+      expect(evaluationCount(response), greaterThan(0));
+      final severities = response.parameter!
+          .where((p) => p.name.valueString == 'outcome')
+          .map((p) => p.resource! as OperationOutcome)
+          .expand((o) => o.issue)
+          .where((i) =>
+              i.details?.coding
+                  ?.any((c) => c.code?.toString() == 'dose-after-assessment') ??
+              false)
+          .map((i) => i.severity)
+          .toList();
+      expect(severities, <IssueSeverity>[IssueSeverity.information]);
     });
 
     // The control: an ordinary dose is evaluated and raises nothing.

@@ -407,3 +407,37 @@ anatomy or pregnancy-capability condition rather than an administrative-sex one
 
 Applied: `_pregnancyOutranksGender` in `cicada/lib/utils/relevant_series.dart`,
 with two tests, one of which was made to fail by disabling the deviation.
+
+## 16. 🔴 ADJUDICATED 2026-09-21 AGAINST cicada — a dose after the assessment date is evaluated
+
+**OE: the engine was out of spec; CDC's expected results are correct.** Healthy
+cases `2026-0043`, `2026-0050`, `2026-0052` and `2026-0060` each carry a dose
+dated after the case's assessment date and expect it Valid and the HPV series
+complete. cicada had excluded such doses since 2026-09-02, reading "Assessment
+Date: current date" as a rule that a later dose has not happened.
+
+OE: "current date" is the assessment date's default source, not a validity
+rule. Evaluation tests each dose administered against its target dose (ages,
+intervals, conditions); none of those compares against the assessment date,
+which governs forecasting only. The four rows are consistent with the spec, not
+test-data defects.
+
+**Checked against the spec text, 2026-09-21.** Every table listing "Assessment
+Date / current date" puts it in the column headed "Assumed Value if Empty"
+(e.g. Table 6-4, Table 7-9). Section 3.3 anchors supporting-data selection on
+"the administration date in the case of an evaluation or the assessment date in
+the case of a forecast"; CONDSKIP-2 does the same for the conditional-skip
+reference date. The assessment date appears only in forecast, indication,
+contraindication and seasonal checks. OE is right.
+
+⚠️ **One error in OE's reasoning, not in its verdict.** It said `2026-0052`'s
+first two doses already complete a 2-dose series. They do not: the 2-dose
+series sets dose 2 at `absMinInt` "5 months - 4 days" from dose 1, so from
+2015-07-21 the earliest valid dose 2 is 2015-12-17, and it was given 2015-12-16.
+The third dose completes the 3-dose start-under-15 series, which is what CDC
+expects and what cicada now returns.
+
+Applied: doses after the assessment date are evaluated and counted, and noted
+at severity `information` in the `outcome` parameter. The CDC-REPORT finding
+that called these four rows defective was withdrawn. Whole suite back to 26
+failures, the classified set.

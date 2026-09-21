@@ -1,4 +1,4 @@
-# Ten defects to report to CDC — CDSi 4.65-508
+# Nine defects to report to CDC — CDSi 4.65-508
 
 Found while running cicada against the published test cases. Three are defects in
 the **supporting data**, one is a defective **test expectation**, one is an
@@ -188,42 +188,7 @@ is meant to qualify.
 
 ---
 
-## 7. Four healthy cases administer a dose after their own assessment date
-
-**Cases:** `2026-0043`, `2026-0050`, `2026-0052`, `2026-0060` — four of 1,006.
-
-Read from **CDC's own workbook**,
-`cdsi-healthy-childhood-and-adult-test-cases-v4.46.xlsx`, sheet *FITS Exported
-TestCases*, columns `DOB`, `Assessment_Date` and `Date_Administered_n`:
-
-| case | DOB | Assessment_Date | doses administered |
-|---|---|---|---|
-| 2026-0043 | 2004-07-12 | 2015-02-13 | 2015-09-13, 2016-02-13 |
-| 2026-0050 | 2004-07-12 | 2015-02-13 | 2015-09-13, 2016-02-13 |
-| 2026-0052 | 2004-05-03 | 2016-01-17 | 2015-07-21, 2015-12-16, **2016-03-09** |
-| 2026-0060 | 1999-11-03 | 2016-04-01 | 2015-11-02, 2015-12-02, **2016-05-02** |
-
-Each expects those later doses evaluated as Valid and the series complete.
-
-The logic spec defines the assessment date as the **current date** (v4.6, three
-places). Everything the evaluation process consumes is a *vaccine dose
-administered*. A dose dated after the current date has not been administered, so
-a conformant engine has nothing to evaluate: it cannot be Valid and cannot count
-toward completing a series. Reading these rows as written requires treating a
-future event as history.
-
-cicada excludes such doses and reports them in an `OperationOutcome`, so these
-four rows fail. The other 1,002 healthy cases are unaffected, which is why this
-reads as four rows whose assessment date was not moved when their dose dates
-were, rather than a deliberate design.
-
-**Fix:** move the assessment date after the last dose in each of the four rows,
-or state in the specification that future-dated doses are to be evaluated, which
-would contradict the current definition of assessment date.
-
----
-
-## 8. Tdap in pregnancy is gated on recorded sex as well as on pregnancy
+## 7. Tdap in pregnancy is gated on recorded sex as well as on pregnancy
 
 **Series:** `Pertussis risk 1-dose series`, in
 `AntigenSupportingData- Pertussis-508.xml`.
@@ -266,7 +231,7 @@ doses, ages and intervals, where the gate routes rather than excludes.
 
 ---
 
-## 9. A SNOMED code in the schedule supporting data has an extra leading digit
+## 8. A SNOMED code in the schedule supporting data has an extra leading digit
 
 **Observation:** 095, "Severe allergic reaction after previous dose of
 Meningococcal", in `ScheduleSupportingData.xml`.
@@ -293,7 +258,7 @@ Found by expanding SNOMED with a text filter on "meningococcal", which returns
 
 ---
 
-## 10. Eighteen SNOMED coded values in the schedule supporting data are inactive concepts
+## 9. Eighteen SNOMED coded values in the schedule supporting data are inactive concepts
 
 **Where:** the SNOMED `codedValue`s of the CDSi observations in the schedule
 supporting data. Of the 275 SNOMED coded values CDC publishes, 20 (18 distinct

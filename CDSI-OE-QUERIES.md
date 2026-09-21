@@ -5,39 +5,32 @@ to the adjudicated archive with the ruling and delete it from here. Do not
 paste anything from the archive; OE has twice re-answered a settled question
 that was still sitting in a queue.
 
-## Can a dose dated after the assessment date be evaluated as Valid?
+## Should a dose dated before the date of birth be evaluated?
 
-**Background.** CDC's CDSi Logic Specification for ACIP Recommendations v4.6
-lists the Assessment Date as runtime data whose source is "current date", and
-defines it as "the date for which a forecast is determined". The evaluation
-process operates on each "vaccine dose administered". The specification has no
-rule that says what to do with a dose whose date falls after the assessment
-date.
+**Background.** In CDC's CDSi Logic Specification for ACIP Recommendations v4.6,
+evaluation tests each vaccine dose administered against its target dose using
+minimum and maximum ages, intervals and other conditions. The specification has
+no rule that removes a dose from evaluation because it is dated before the
+patient's date of birth. Evaluated normally, such a dose fails the minimum age
+and comes back Not Valid, reason Too Young.
 
-**CDC's test rows.** Four cases in CDC's healthy childhood and adult test cases
-(v4.46), all Gardasil (HPV):
+**Our answer.** We do not evaluate a dose dated before birth. We leave it out of
+evaluation and forecasting and return a warning that names the dose, both dates,
+and says to check the birth date, the administration date and that the record
+belongs to this patient. Our reasoning: such a dose was not given to this
+patient, and a Not Valid / Too Young result points a clinician at repeating an
+injection that may never have happened, or hides a record filed under the wrong
+patient.
 
-| case | date of birth | assessment date | doses given | CDC expects |
-|---|---|---|---|---|
-| 2026-0043 | 2004-07-12 | 2015-02-13 | 2015-09-13, 2016-02-13 | both doses Valid, HPV series complete |
-| 2026-0050 | 2004-07-12 | 2015-02-13 | 2015-09-13, 2016-02-13 | both doses Valid, HPV series complete |
-| 2026-0052 | 2004-05-03 | 2016-01-17 | 2015-07-21, 2015-12-16, 2016-03-09 | all three Valid, HPV series complete |
-| 2026-0060 | 1999-11-03 | 2016-04-01 | 2015-11-02, 2015-12-02, 2016-05-02 | all three Valid, HPV series complete |
-
-The other 1,002 cases in the set place every dose on or before the assessment
-date.
-
-**Our answer.** Because the assessment date is the current date, a dose dated
-after it has not been given. We do not evaluate it and do not count it toward
-the series. We return it with a warning that its date is after the assessment
-date. So for these four patients we report HPV as not complete, based only on
-the doses dated on or before the assessment date.
+You ruled recently that a dose dated after the assessment date must be evaluated
+like any other, because nothing in the specification withholds evaluation on the
+basis of a date. The same reasoning may apply here.
 
 **Questions.**
-1. Is it clinically correct to refuse to count a dose dated after the
-   assessment date, and to report the series as not complete on that date?
-2. Or should an immunization forecaster evaluate every recorded dose whatever
-   its date, as CDC's expected results require?
-3. If our reading is right, are these four rows best described as a defect in
-   CDC's test data (an assessment date that was not moved when the dose dates
-   were)?
+1. Is it clinically correct to withhold evaluation of a dose dated before birth
+   and report it as a data problem, or should it be evaluated and returned as
+   Not Valid, Too Young, as the specification's process would produce?
+2. If it should be evaluated, is a separate data-quality warning alongside the
+   Not Valid result still appropriate?
+3. Does any CDC or AIRA guidance for immunization information systems address
+   doses dated before birth?

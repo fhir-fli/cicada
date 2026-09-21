@@ -190,11 +190,11 @@ OperationOutcome? _implausibleDoseOutcome(ForecastResult result) {
   final List<ImplausibleDose> bad = result.patient.implausibleDoses;
   final List<OperationOutcomeIssue> issues = <OperationOutcomeIssue>[
     ..._sameDayIssues(result),
+    ..._afterAssessmentIssues(result),
   ];
   if (bad.isEmpty && issues.isEmpty) return null;
 
   final VaxDate dob = result.patient.birthdate;
-  final VaxDate assessment = result.patient.assessmentDate;
 
   issues.addAll(bad.map((ImplausibleDose entry) {
     final (String code, String detail) = switch (entry.reason) {
@@ -205,14 +205,6 @@ OperationOutcome? _implausibleDoseOutcome(ForecastResult result) {
               '$dob. It was not evaluated. Check the birth date, the '
               'administration date, and that the record belongs to this '
               'patient.'
-        ),
-      ImplausibleDoseReason.afterAssessment => (
-          'dose-after-assessment',
-          'Immunization/${entry.dose.doseId} is dated '
-              '${entry.dose.dateGiven}, after the assessment date '
-              '$assessment, so it has not been administered. It was not '
-              'evaluated. A planned dose belongs in an '
-              'ImmunizationRecommendation, not an Immunization.'
         ),
     };
     // Shape taken from the published R4 examples, diffed both directions:
@@ -225,11 +217,11 @@ OperationOutcome? _implausibleDoseOutcome(ForecastResult result) {
     // -validationfail and -searchfail do.
     return OperationOutcomeIssue(
       severity: IssueSeverity.warning,
-      // R4 defines `business-rule` for this, but the generated IssueType
-      // enum in fhir_r4 0.9.0 stops at `informational` and does not carry
-      // it. `value` is the closest it does carry: "the value is outside the
-      // range of acceptable values", which a date before birth or after the
-      // assessment is.
+      // `value` is defined "An element or header value is invalid."
+      // (issue-type CodeSystem, R4B valuesets.json, read 2026-09-21). The
+      // older note here said fhir_r4 0.9.0 lacked `business-rule`; 0.12.0,
+      // which this package resolves, has IssueType.businessRule. Which of
+      // the two fits a dose before birth is not re-decided here.
       code: IssueType.value_,
       details: CodeableConcept(
         coding: <Coding>[
@@ -247,6 +239,41 @@ OperationOutcome? _implausibleDoseOutcome(ForecastResult result) {
   }));
 
   return OperationOutcome(issue: issues);
+}
+
+/// Notes each dose dated after the assessment date.
+///
+/// Information only: the dose was evaluated and counted like any other.
+/// Evaluation anchors on the date administered (Logic Spec v4.6 section 3.3,
+/// CONDSKIP-2); the assessment date governs forecasting, and "current date" is
+/// only its assumed value when empty (Tables 6-4, 7-9). The note is there
+/// because a forecast as of a date before a recorded dose usually means one of
+/// the two dates was entered wrongly, and the caller should see that.
+///
+/// Severity `information` with code `informational`, as the published R4
+/// example operationoutcome-example-allok.json pairs them.
+List<OperationOutcomeIssue> _afterAssessmentIssues(ForecastResult result) {
+  final VaxDate assessment = result.patient.assessmentDate;
+  return result.patient.dosesAfterAssessment
+      .map((VaxDose dose) => OperationOutcomeIssue(
+            severity: IssueSeverity.information,
+            code: IssueType.informational,
+            details: CodeableConcept(
+              coding: <Coding>[
+                Coding(
+                  system: '$_cicadaCs/data-integrity'.toFhirUri,
+                  code: 'dose-after-assessment'.toFhirCode,
+                ),
+              ],
+              text: ('Immunization/${dose.doseId} is dated ${dose.dateGiven}, '
+                      'after the assessment date $assessment. It was '
+                      'evaluated and counted. Check both dates if this was '
+                      'not intended.')
+                  .toFhirString,
+            ),
+            expression: <FhirString>[_immunizationPath(dose.doseId)],
+          ))
+      .toList();
 }
 
 /// A FHIRPath naming one Immunization in the request.

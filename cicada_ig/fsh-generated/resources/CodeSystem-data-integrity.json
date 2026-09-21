@@ -5,7 +5,7 @@
   "name": "DataIntegrityCS",
   "id": "data-integrity",
   "title": "Cicada Data Integrity Code System",
-  "description": "Records that cannot describe an administration. CDSi evaluates a vaccine dose administered and defines the assessment date as the current date, so these doses are excluded from evaluation and forecasting and reported in an OperationOutcome. They are statements about the data, never about the patient's immunity, which is why they are not evaluation statuses.",
+  "description": "Notes about dose records, reported in an OperationOutcome. They are statements about the data, never about the patient's immunity, which is why they are not evaluation statuses. Only a dose dated before birth is excluded from evaluation; the others are evaluated like any dose and only noted.",
   "url": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/data-integrity",
   "concept": [
     {
@@ -16,7 +16,7 @@
     {
       "code": "dose-after-assessment",
       "display": "Dose dated after the assessment date",
-      "definition": "The administration date is after the assessment date, so the administration has not happened. A planned dose belongs in an ImmunizationRecommendation."
+      "definition": "The administration date is after the assessment date. The dose is evaluated and counted like any other: CDSi evaluation anchors on the date administered, and the assessment date governs forecasting only. Noted because it usually means one of the two dates was entered wrongly."
     },
     {
       "code": "duplicate-same-day",
