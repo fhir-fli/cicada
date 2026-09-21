@@ -933,8 +933,8 @@ Map<String, List<VaccineGroupForecast>> _aggregateVaccineGroupForecasts(
         );
       }
 
-      final multiDetail = _forecastDetail(
-          passBest.values.expand((List<VaxSeries> l) => l));
+      final multiDetail =
+          _forecastDetail(passBest.values.expand((List<VaxSeries> l) => l));
       (result[groupName] ??= <VaccineGroupForecast>[]).add(VaccineGroupForecast(
         vaccineGroupName: groupName,
         status: vgStatus,

@@ -56,11 +56,11 @@ class AntigenSupportingData {
       series: (json['series'] as List<dynamic>?)
           ?.map((e) => Series.fromJson(e as Map<String, dynamic>))
           .toList(),
-      vaccineRecommendationCategory:
-          (json['vaccineRecommendationCategory'] as List<dynamic>?)
-              ?.map((e) => VaccineRecommendationCategory.fromJson(
-                  e as Map<String, dynamic>))
-              .toList(),
+      vaccineRecommendationCategory: (json['vaccineRecommendationCategory']
+              as List<dynamic>?)
+          ?.map((e) =>
+              VaccineRecommendationCategory.fromJson(e as Map<String, dynamic>))
+          .toList(),
     );
   }
 

@@ -163,8 +163,7 @@ class PatientForAssessment extends _$PatientForAssessment {
         ? VaxDate.now()
         : VaxDate.fromDateTime(assessmentDate!);
     for (final Immunization immunization in immunizations) {
-      final VaxDose dose =
-          VaxDose.fromImmunization(immunization, effectiveDob);
+      final VaxDose dose = VaxDose.fromImmunization(immunization, effectiveDob);
       if (birthdate != null && dose.dateGiven < birthdate!) {
         implausibleDoses
             .add((dose: dose, reason: ImplausibleDoseReason.beforeBirth));
@@ -182,8 +181,15 @@ class PatientForAssessment extends _$PatientForAssessment {
           .addError('No Patient was found in the parameters');
       return null;
     } else {
-      return _createVaxPatient(patient!, assessmentDate, birthdate, conditions,
-          immunizations, allergies, pastDoses, otherResourceCodes,
+      return _createVaxPatient(
+          patient!,
+          assessmentDate,
+          birthdate,
+          conditions,
+          immunizations,
+          allergies,
+          pastDoses,
+          otherResourceCodes,
           implausibleDoses);
     }
   }

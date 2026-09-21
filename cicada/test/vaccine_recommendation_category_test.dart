@@ -31,7 +31,8 @@ VaccineRecommendationCategoryResult? run({
 }
 
 void main() {
-  test('Basic Example: Pneumococcal 4-dose, 4 months, dose 2, no risk -> Routine',
+  test(
+      'Basic Example: Pneumococcal 4-dose, 4 months, dose 2, no risk -> Routine',
       () {
     final r = run(
         antigen: 'Pneumococcal',
@@ -50,11 +51,19 @@ void main() {
 
   test('the same series at 26 years is Routine (End Age is "less than")', () {
     expect(
-        run(antigen: 'HPV', series: 'HPV 3-dose series', age: '26 years', dose: 2)
+        run(
+                antigen: 'HPV',
+                series: 'HPV 3-dose series',
+                age: '26 years',
+                dose: 2)
             ?.category,
         'Routine');
     expect(
-        run(antigen: 'HPV', series: 'HPV 3-dose series', age: '27 years', dose: 2)
+        run(
+                antigen: 'HPV',
+                series: 'HPV 3-dose series',
+                age: '27 years',
+                dose: 2)
             ?.category,
         'SCDM');
   });
@@ -70,7 +79,8 @@ void main() {
     expect(r?.category, 'SCDM');
   });
 
-  test('Complex Example #2: HepB risk 3-dose, 60 years, Diabetes + HIV -> High-Risk',
+  test(
+      'Complex Example #2: HepB risk 3-dose, 60 years, Diabetes + HIV -> High-Risk',
       () {
     final r = run(
         antigen: 'HepB',
@@ -81,7 +91,8 @@ void main() {
     expect(r?.category, 'High-Risk');
   });
 
-  test('No Rows Determined: a series with no row for the patient has no category',
+  test(
+      'No Rows Determined: a series with no row for the patient has no category',
       () {
     // The HepB risk 3-dose rows begin at 60 years.
     final r = run(

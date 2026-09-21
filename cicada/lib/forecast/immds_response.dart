@@ -60,7 +60,10 @@ const _diseaseSnomed = <String, (String, String)>{
   // Not ImmDS's 397428000 "Diphtheria": tx.fhir.org $lookup reports it
   // inactive in both the International (2025-02-01) and US (2025-09-01)
   // editions, checked 2026-09-07 for all 29 codes here; it was the only one.
-  'Diphtheria': ('397430003', 'Diphtheria caused by Corynebacterium diphtheriae'),
+  'Diphtheria': (
+    '397430003',
+    'Diphtheria caused by Corynebacterium diphtheriae'
+  ),
   'Pertussis': ('27836007', 'Pertussis'),
   'Tetanus': ('76902006', 'Tetanus'),
   'Ebola': ('37109004', 'Ebola virus disease'),
@@ -92,7 +95,6 @@ const _diseaseSnomed = <String, (String, String)>{
   'Zoster': ('4740000', 'Herpes zoster'),
 };
 
-
 /// Names CVX on any coding the caller left without a system.
 ///
 /// A caller may send `vaccineCode` as a bare `<code value="45"/>`; FITS does.
@@ -101,8 +103,7 @@ const _diseaseSnomed = <String, (String, String)>{
 /// unlabelled coding cannot be recognised there as CVX. We resolved this dose's
 /// antigens from CVX, so we name the system we already relied on. Fills a blank
 /// only; never rewrites a system the caller supplied.
-Immunization _withCvxSystem(Immunization immunization) =>
-    immunization.copyWith(
+Immunization _withCvxSystem(Immunization immunization) => immunization.copyWith(
       vaccineCode: CodeableConcept(
         text: immunization.vaccineCode.text,
         coding: immunization.vaccineCode.coding
@@ -196,54 +197,54 @@ OperationOutcome? _implausibleDoseOutcome(ForecastResult result) {
   final VaxDate assessment = result.patient.assessmentDate;
 
   issues.addAll(bad.map((ImplausibleDose entry) {
-      final (String code, String detail) = switch (entry.reason) {
-        ImplausibleDoseReason.beforeBirth => (
-            'dose-before-birth',
-            'Immunization/${entry.dose.doseId} is dated '
-                '${entry.dose.dateGiven}, before the patient date of birth '
-                '$dob. It was not evaluated. Check the birth date, the '
-                'administration date, and that the record belongs to this '
-                'patient.'
-          ),
-        ImplausibleDoseReason.afterAssessment => (
-            'dose-after-assessment',
-            'Immunization/${entry.dose.doseId} is dated '
-                '${entry.dose.dateGiven}, after the assessment date '
-                '$assessment, so it has not been administered. It was not '
-                'evaluated. A planned dose belongs in an '
-                'ImmunizationRecommendation, not an Immunization.'
-          ),
-      };
-      // Shape taken from the published R4 examples, diffed both directions:
-      // operationoutcome-example.json, -validationfail, -searchfail, -allok,
-      // -exception and -break-the-glass. Every one carries the human sentence
-      // in `details.text`, and break-the-glass carries a coding beside it, so
-      // the code and the sentence travel together there. `diagnostics` in
-      // their examples holds a technical location, not the message, so it is
-      // left empty. `expression` points at the element at fault, as
-      // -validationfail and -searchfail do.
-      return OperationOutcomeIssue(
-        severity: IssueSeverity.warning,
-        // R4 defines `business-rule` for this, but the generated IssueType
-        // enum in fhir_r4 0.9.0 stops at `informational` and does not carry
-        // it. `value` is the closest it does carry: "the value is outside the
-        // range of acceptable values", which a date before birth or after the
-        // assessment is.
-        code: IssueType.value_,
-        details: CodeableConcept(
-          coding: <Coding>[
-            Coding(
-              system: '$_cicadaCs/data-integrity'.toFhirUri,
-              code: code.toFhirCode,
-            ),
-          ],
-          text: detail.toFhirString,
+    final (String code, String detail) = switch (entry.reason) {
+      ImplausibleDoseReason.beforeBirth => (
+          'dose-before-birth',
+          'Immunization/${entry.dose.doseId} is dated '
+              '${entry.dose.dateGiven}, before the patient date of birth '
+              '$dob. It was not evaluated. Check the birth date, the '
+              'administration date, and that the record belongs to this '
+              'patient.'
         ),
-        expression: <FhirString>[
-          _immunizationPath(entry.dose.doseId),
+      ImplausibleDoseReason.afterAssessment => (
+          'dose-after-assessment',
+          'Immunization/${entry.dose.doseId} is dated '
+              '${entry.dose.dateGiven}, after the assessment date '
+              '$assessment, so it has not been administered. It was not '
+              'evaluated. A planned dose belongs in an '
+              'ImmunizationRecommendation, not an Immunization.'
+        ),
+    };
+    // Shape taken from the published R4 examples, diffed both directions:
+    // operationoutcome-example.json, -validationfail, -searchfail, -allok,
+    // -exception and -break-the-glass. Every one carries the human sentence
+    // in `details.text`, and break-the-glass carries a coding beside it, so
+    // the code and the sentence travel together there. `diagnostics` in
+    // their examples holds a technical location, not the message, so it is
+    // left empty. `expression` points at the element at fault, as
+    // -validationfail and -searchfail do.
+    return OperationOutcomeIssue(
+      severity: IssueSeverity.warning,
+      // R4 defines `business-rule` for this, but the generated IssueType
+      // enum in fhir_r4 0.9.0 stops at `informational` and does not carry
+      // it. `value` is the closest it does carry: "the value is outside the
+      // range of acceptable values", which a date before birth or after the
+      // assessment is.
+      code: IssueType.value_,
+      details: CodeableConcept(
+        coding: <Coding>[
+          Coding(
+            system: '$_cicadaCs/data-integrity'.toFhirUri,
+            code: code.toFhirCode,
+          ),
         ],
-      );
-    }));
+        text: detail.toFhirString,
+      ),
+      expression: <FhirString>[
+        _immunizationPath(entry.dose.doseId),
+      ],
+    );
+  }));
 
   return OperationOutcome(issue: issues);
 }
@@ -690,7 +691,8 @@ ImmunizationRecommendation _buildRecommendation(ForecastResult result) {
     // these products because a vaccine contraindication applied to this
     // patient; saying which ones is the difference between "contraindicated"
     // and a clinician knowing what not to give.
-    final List<CodeableConcept> contraindicatedList = vgf.contraindicatedCvxCodes
+    final List<CodeableConcept> contraindicatedList = vgf
+        .contraindicatedCvxCodes
         .map((String cvx) => _cvxConcept(cvx, null))
         .toList();
 
@@ -907,7 +909,6 @@ CodeableConcept _mapDoseStatusReason(EvalReason reason) {
   ]);
 }
 
-
 const _cicadaSd = 'http://fhirfli.dev/fhir/ig/cicada/StructureDefinition';
 const _cicadaCs = 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem';
 
@@ -949,10 +950,10 @@ FhirExtension _targetDoseStatusExt(TargetDoseStatus status) {
 /// vaccine choice passed, and for the ones that failed, which rule failed.
 /// Returns null when the evaluation recorded nothing beyond the status.
 FhirExtension? _evaluationDetailExt(VaxDose dose) {
-  FhirExtension boolExt(String url, bool value) => FhirExtension(
-      url: url.toFhirString, valueBoolean: value.toFhirBoolean);
-  FhirExtension codeExt(String url, String value) => FhirExtension(
-      url: url.toFhirString, valueString: value.toFhirString);
+  FhirExtension boolExt(String url, bool value) =>
+      FhirExtension(url: url.toFhirString, valueBoolean: value.toFhirBoolean);
+  FhirExtension codeExt(String url, String value) =>
+      FhirExtension(url: url.toFhirString, valueString: value.toFhirString);
 
   final List<FhirExtension> parts = <FhirExtension>[
     if (dose.inadvertent) boolExt('inadvertent', true),
@@ -961,7 +962,8 @@ FhirExtension? _evaluationDetailExt(VaxDose dose) {
     if (dose.preferredInterval != null)
       boolExt('preferredInterval', dose.preferredInterval!),
     if (dose.preferredIntervalReason != null)
-      codeExt('preferredIntervalReason', dose.preferredIntervalReason!.toString()),
+      codeExt(
+          'preferredIntervalReason', dose.preferredIntervalReason!.toString()),
     if (dose.allowedInterval != null)
       boolExt('allowedInterval', dose.allowedInterval!),
     if (dose.allowedIntervalReason != null)
@@ -972,7 +974,8 @@ FhirExtension? _evaluationDetailExt(VaxDose dose) {
     if (dose.preferredVaccine != null)
       boolExt('preferredVaccine', dose.preferredVaccine!),
     if (dose.preferredVaccineReason != null)
-      codeExt('preferredVaccineReason', dose.preferredVaccineReason!.toString()),
+      codeExt(
+          'preferredVaccineReason', dose.preferredVaccineReason!.toString()),
     if (dose.allowedVaccine != null)
       boolExt('allowedVaccine', dose.allowedVaccine!),
     if (dose.allowedVaccineReason != null)
@@ -1031,8 +1034,8 @@ FhirExtension _seriesDetailExt(VaxSeries series) {
     _dateExt('latestRecommendedAgeDate', series.latestRecommendedAgeDate),
     _dateExt('earliestRecommendedIntervalDate',
         series.earliestRecommendedIntervalDate),
-    _dateExt('latestRecommendedIntervalDate',
-        series.latestRecommendedIntervalDate),
+    _dateExt(
+        'latestRecommendedIntervalDate', series.latestRecommendedIntervalDate),
     _dateExt('seasonalRecommendationStartDate',
         series.seasonalRecommendationStartDate),
   ];
@@ -1109,8 +1112,8 @@ final RegExp _scdmSeriesName =
 /// SCDM attribute in the data to read. Their prose travels in
 /// `recommendation.description` instead.
 bool _isSharedDecisionSeries(VaccineGroupForecast vgf, int ageInYears) {
-  if (vgf.contributingSeries
-          .any((VaxSeries s) => _scdmSeriesName.hasMatch(s.series.seriesName ?? '')) ||
+  if (vgf.contributingSeries.any((VaxSeries s) =>
+          _scdmSeriesName.hasMatch(s.series.seriesName ?? '')) ||
       _scdmSeriesName.hasMatch(vgf.seriesName ?? '')) {
     return true;
   }

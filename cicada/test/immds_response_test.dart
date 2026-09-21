@@ -213,7 +213,8 @@ void main() {
           final contained = eval.contained
               ?.whereType<Immunization>()
               .where((Immunization i) => '#${i.id}' == ref);
-          expect(contained, isNotNull, reason: 'fragment $ref with no contained resources');
+          expect(contained, isNotNull,
+              reason: 'fragment $ref with no contained resources');
           expect(contained!.length, 1,
               reason: 'fragment $ref resolves to no contained Immunization');
           expect(contained.first.vaccineCode.coding, isNotNull,
@@ -636,7 +637,8 @@ void main() {
     test('a completed HepA series does not', () {
       final response = buildImmdsResponse(
           evaluateForForecast(caseFor(dob: '1990-01-01', cvx: '52')));
-      expect(reasonCodes(response, 'HepA'), isNot(contains('seasonalComplete')));
+      expect(
+          reasonCodes(response, 'HepA'), isNot(contains('seasonalComplete')));
     });
   });
 
@@ -673,7 +675,8 @@ void main() {
     // alert cannot tell it from a routine gap and reports the patient overdue
     // for a conversation.
     test('a 17-year-old MenB forecast carries the shared-decision code', () {
-      final response = buildImmdsResponse(evaluateForForecast(noDoses('2008-06-01')));
+      final response =
+          buildImmdsResponse(evaluateForForecast(noDoses('2008-06-01')));
       expect(codesFor(response, 'Meningococcal B'),
           contains('shared-clinical-decision-making'));
     });
@@ -709,8 +712,10 @@ void main() {
   });
 
   group('impossible dose dates', () {
-    Parameters withDose({required String dob, required String given,
-        String assessment = '2026-01-15'}) =>
+    Parameters withDose(
+            {required String dob,
+            required String given,
+            String assessment = '2026-01-15'}) =>
         Parameters.fromJson(<String, dynamic>{
           'resourceType': 'Parameters',
           'parameter': <Map<String, dynamic>>[
@@ -828,8 +833,8 @@ void main() {
 
     // The same product twice on one day.
     test('two identical doses on one day are reported', () {
-      expect(codes(buildImmdsResponse(evaluateForForecast(
-              twoDoses('52', '52')))),
+      expect(
+          codes(buildImmdsResponse(evaluateForForecast(twoDoses('52', '52')))),
           contains('duplicate-same-day'));
     });
 
@@ -844,8 +849,8 @@ void main() {
 
     // The control: two vaccines sharing no antigen are not a duplicate.
     test('two unrelated vaccines on one day are not', () {
-      expect(codes(buildImmdsResponse(evaluateForForecast(
-              twoDoses('52', '21')))),
+      expect(
+          codes(buildImmdsResponse(evaluateForForecast(twoDoses('52', '21')))),
           isNot(contains('duplicate-same-day')));
     });
   });
@@ -871,7 +876,8 @@ void main() {
           ],
         },
       });
-      return observationsFromConditions(<Condition>[condition], VaxDate(2020, 1, 1))
+      return observationsFromConditions(
+              <Condition>[condition], VaxDate(2020, 1, 1))
           .map((VaxObservation o) => o.observationCode ?? '')
           .toList();
     }
@@ -884,7 +890,8 @@ void main() {
 
     // 44218004 Implantation of cochlear electrode is a descendant of
     // 359612003, which CDSi codes to observation 011, cochlear implants.
-    test('a specific cochlear implantation matches the implant observation', () {
+    test('a specific cochlear implantation matches the implant observation',
+        () {
       expect(observationCodesFor('44218004'), contains('011'));
     });
 
@@ -924,7 +931,8 @@ void main() {
             'code': {
               'coding': [
                 {
-                  'system': 'https://www.cdc.gov/vaccines/programs/iis/cdsi.html',
+                  'system':
+                      'https://www.cdc.gov/vaccines/programs/iis/cdsi.html',
                   'code': '007',
                 },
               ],

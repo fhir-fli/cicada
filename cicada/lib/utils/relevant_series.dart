@@ -109,8 +109,8 @@ List<Indication> applicableIndications(
 /// Committee Opinion 718). Reported to CDC as finding 8.
 bool _pregnancyOutranksGender(Series series, VaxPatient patient) {
   const pregnantObservation = '007';
-  final bool gated = series.indication?.any((Indication i) =>
-          i.observationCode?.code == pregnantObservation) ??
+  final bool gated = series.indication?.any(
+          (Indication i) => i.observationCode?.code == pregnantObservation) ??
       false;
   if (!gated) return false;
   return patient.observations.observation?.any(
