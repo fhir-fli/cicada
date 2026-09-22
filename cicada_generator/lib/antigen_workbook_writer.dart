@@ -14,6 +14,13 @@
 import 'package:cicada/cicada.dart';
 import 'package:excel/excel.dart';
 
+const _ageRow =
+    "AND the patient's current age is on or after the Begin Age and before "
+    'the End Age…';
+const _riskRow =
+    "AND the patient's risk factor is one of the Included Indications (and "
+    'not one of the Excluded Indications)…';
+
 class AntigenWorkbookWriter {
   AntigenWorkbookWriter({
     this.overview = const [],
@@ -54,9 +61,10 @@ class AntigenWorkbookWriter {
       while (!used.add(name)) {
         final suffix = ' ($n)';
         final base = (sheetNameFor ?? _defaultSheetName)(series[i], i);
-        name = base.length + suffix.length > 31
-            ? base.substring(0, 31 - suffix.length).trim() + suffix
-            : base + suffix;
+        name =
+            base.length + suffix.length > 31
+                ? base.substring(0, 31 - suffix.length).trim() + suffix
+                : base + suffix;
         n++;
       }
       _seriesSheet(excel[name], series[i]);
@@ -83,19 +91,17 @@ class AntigenWorkbookWriter {
 
   void _overviewSheet(Excel excel, AntigenSupportingData data) {
     final sheet = excel['Antigen Series Overview'];
-    final lines = overview.isEmpty
-        ? [
-            'This workbook holds the immunization supporting data for '
-                '${data.targetDisease ?? 'one antigen'}: the series a patient '
-                'may be on, the doses in each series, and the evidence of '
-                'immunity and contraindications that apply. It follows the '
-                'layout of the CDC CDSi Antigen Supporting Data workbooks '
-                '(version 4.65), so that one parser reads every workbook.',
-          ]
-        : overview;
+    final defaultOverview =
+        'This workbook holds the immunization supporting data for '
+        '${data.targetDisease ?? 'one antigen'}: the series a patient may be '
+        'on, the doses in each series, and the evidence of immunity and '
+        'contraindications that apply. It follows the layout of the CDC CDSi '
+        'Antigen Supporting Data workbooks (version 4.65), so that one parser '
+        'reads every workbook.';
+    final lines = overview.isEmpty ? [defaultOverview] : overview;
     var first = true;
     for (final line in lines) {
-      _add(sheet, [first ? 'Overview' : '', line]);
+      _add(sheet, [if (first) 'Overview' else '', line]);
       _add(sheet, const []);
       first = false;
     }
@@ -119,17 +125,35 @@ class AntigenWorkbookWriter {
         _add(sheet, _changeHeader);
       }
       n++;
-      _add(sheet, ['', '$n', row.length > 4 ? row[4] : 'n/a', 'n/a', row[2], row[3]]);
+      _add(sheet, [
+        '',
+        '$n',
+        if (row.length > 4) row[4] else 'n/a',
+        'n/a',
+        row[2],
+        row[3],
+      ]);
     }
   }
 
   static const _changeHeader = [
-    'Change', 'Change #', 'Area', 'Previous', 'Change', 'Reason for Change',
+    'Change',
+    'Change #',
+    'Area',
+    'Previous',
+    'Change',
+    'Reason for Change',
   ];
 
   void _faqSheet(Excel excel) {
     final sheet = excel['FAQ'];
-    _add(sheet, ['FAQs', 'Question', 'Answer', 'Reference', 'CDSi Manifestation']);
+    _add(sheet, [
+      'FAQs',
+      'Question',
+      'Answer',
+      'Reference',
+      'CDSi Manifestation',
+    ]);
     for (final row in faq) {
       _add(sheet, ['', ...row.map(_na)]);
     }
@@ -140,26 +164,36 @@ class AntigenWorkbookWriter {
     _add(sheet, [
       '',
       'If the Best Patient Series for the patient is…',
-      "AND the patient's current age is on or after the Begin Age and before the End Age…",
+      _ageRow,
       '',
       'AND the Target Dose being forecasted is…',
-      "AND the patient's risk factor is one of the Included Indications (and not one of the Excluded Indications)…",
+      _riskRow,
       '',
       'THEN the Vaccine Recommendation Category is…',
       'Vaccine Recommendation Category Specific Material',
     ]);
     _add(sheet, [
-      'Excel Worksheet Name', 'Best Patient Series Name', 'Patient Begin Age',
-      'Patient End Age (less than)', 'Forecast Target Dose Number',
-      'Included Indication', 'Excluded Indication',
-      'Vaccine Recommendation Category', 'Additional Material',
+      'Excel Worksheet Name',
+      'Best Patient Series Name',
+      'Patient Begin Age',
+      'Patient End Age (less than)',
+      'Forecast Target Dose Number',
+      'Included Indication',
+      'Excluded Indication',
+      'Vaccine Recommendation Category',
+      'Additional Material',
     ]);
     for (final r in rows) {
       _add(sheet, [
-        _na(r.worksheetName), _na(r.seriesName), _na(r.patientBeginAge),
-        _na(r.patientEndAge), _na(r.forecastTargetDose),
-        _na(r.includedIndication), _na(r.excludedIndication),
-        _na(r.category), _na(r.additionalMaterial),
+        _na(r.worksheetName),
+        _na(r.seriesName),
+        _na(r.patientBeginAge),
+        _na(r.patientEndAge),
+        _na(r.forecastTargetDose),
+        _na(r.includedIndication),
+        _na(r.excludedIndication),
+        _na(r.category),
+        _na(r.additionalMaterial),
       ]);
     }
   }
@@ -177,7 +211,9 @@ class AntigenWorkbookWriter {
     }
     _add(sheet, const []);
     _add(sheet, [
-      'Birth Date Immunity', 'Immunity Birth Date', 'Immunity Country of Birth',
+      'Birth Date Immunity',
+      'Immunity Birth Date',
+      'Immunity Country of Birth',
       'Immunity Exclusion Condition',
     ]);
     final dob = imm?.dateOfBirth;
@@ -186,11 +222,18 @@ class AntigenWorkbookWriter {
     } else {
       final ex = dob.exclusion ?? const <Exclusion>[];
       if (ex.isEmpty) {
-        _add(sheet, ['', _na(dob.immunityBirthDate), _na(dob.birthCountry), 'n/a']);
+        _add(sheet, [
+          '',
+          _na(dob.immunityBirthDate),
+          _na(dob.birthCountry),
+          'n/a',
+        ]);
       } else {
         for (final e in ex) {
           _add(sheet, [
-            '', _na(dob.immunityBirthDate), _na(dob.birthCountry),
+            '',
+            _na(dob.immunityBirthDate),
+            _na(dob.birthCountry),
             _codeText(e.exclusionTitle, e.exclusionCode),
           ]);
         }
@@ -201,29 +244,41 @@ class AntigenWorkbookWriter {
   void _contraindicationsSheet(Excel excel, Contraindications? c) {
     final sheet = excel['Contraindications'];
     _add(sheet, [
-      'Antigen Contraindication', 'Contraindication (Code)', 'Text Description',
-      'Administrative Guidance', 'Contraindication Begin Age',
+      'Antigen Contraindication',
+      'Contraindication (Code)',
+      'Text Description',
+      'Administrative Guidance',
+      'Contraindication Begin Age',
       'Contraindication End Age (less than)',
     ]);
-    final group = c?.vaccineGroup?.contraindication ?? const <GroupContraindication>[];
+    final group =
+        c?.vaccineGroup?.contraindication ?? const <GroupContraindication>[];
     if (group.isEmpty) {
       _add(sheet, ['', 'n/a', 'n/a', 'n/a', 'n/a', 'n/a']);
     } else {
       for (final g in group) {
         _add(sheet, [
-          '', _codeText(g.observationTitle, g.observationCode),
-          _na(g.contraindicationText), _na(g.contraindicationGuidance),
-          _na(g.beginAge), _na(g.endAge),
+          '',
+          _codeText(g.observationTitle, g.observationCode),
+          _na(g.contraindicationText),
+          _na(g.contraindicationGuidance),
+          _na(g.beginAge),
+          _na(g.endAge),
         ]);
       }
     }
     _add(sheet, const []);
     _add(sheet, [
-      'Vaccine Contraindication', 'Contraindication (Code)', 'Text Description',
-      'Administrative Guidance', 'Vaccine Type (CVX)',
-      'Contraindication Begin Age', 'Contraindication End Age (less than)',
+      'Vaccine Contraindication',
+      'Contraindication (Code)',
+      'Text Description',
+      'Administrative Guidance',
+      'Vaccine Type (CVX)',
+      'Contraindication Begin Age',
+      'Contraindication End Age (less than)',
     ]);
-    final vac = c?.vaccine?.contraindication ?? const <VaccineContraindication>[];
+    final vac =
+        c?.vaccine?.contraindication ?? const <VaccineContraindication>[];
     if (vac.isEmpty) {
       _add(sheet, ['', 'n/a', 'n/a', 'n/a', 'n/a', 'n/a', 'n/a']);
     } else {
@@ -231,9 +286,13 @@ class AntigenWorkbookWriter {
         final products = v.contraindicatedVaccine ?? const <Vaccine>[];
         if (products.isEmpty) {
           _add(sheet, [
-            '', _codeText(v.observationTitle, v.observationCode),
-            _na(v.contraindicationText), _na(v.contraindicationGuidance),
-            'n/a', 'n/a', 'n/a',
+            '',
+            _codeText(v.observationTitle, v.observationCode),
+            _na(v.contraindicationText),
+            _na(v.contraindicationGuidance),
+            'n/a',
+            'n/a',
+            'n/a',
           ]);
           continue;
         }
@@ -241,10 +300,12 @@ class AntigenWorkbookWriter {
         for (final p in products) {
           _add(sheet, [
             '',
-            first ? _codeText(v.observationTitle, v.observationCode) : '',
-            first ? _na(v.contraindicationText) : '',
-            first ? _na(v.contraindicationGuidance) : '',
-            _codeText(p.vaccineType, p.cvx), _na(p.beginAge), _na(p.endAge),
+            if (first) _codeText(v.observationTitle, v.observationCode) else '',
+            if (first) _na(v.contraindicationText) else '',
+            if (first) _na(v.contraindicationGuidance) else '',
+            _codeText(p.vaccineType, p.cvx),
+            _na(p.beginAge),
+            _na(p.endAge),
           ]);
           first = false;
         }
@@ -279,20 +340,34 @@ class AntigenWorkbookWriter {
       }
     }
     _add(sheet, [
-      'Select Patient Series', 'Default Series', 'Product Path',
-      'Series Group Name', 'Series Group', 'Series Priority',
-      'Series Preference', 'Minimum Age To Start', 'Maximum Age To Start',
+      'Select Patient Series',
+      'Default Series',
+      'Product Path',
+      'Series Group Name',
+      'Series Group',
+      'Series Priority',
+      'Series Preference',
+      'Minimum Age To Start',
+      'Maximum Age To Start',
     ]);
     final sel = s.selectSeries;
     _add(sheet, [
-      '', _na(sel?.defaultSeries?.toString()), _na(sel?.productPath?.toString()),
-      _na(sel?.seriesGroupName), _na(sel?.seriesGroup),
-      _na(sel?.seriesPriority?.toString()), _na(sel?.seriesPreference?.toString()),
-      _na(sel?.minAgeToStart), _na(sel?.maxAgeToStart),
+      '',
+      _na(sel?.defaultSeries?.toString()),
+      _na(sel?.productPath?.toString()),
+      _na(sel?.seriesGroupName),
+      _na(sel?.seriesGroup),
+      _na(sel?.seriesPriority?.toString()),
+      _na(sel?.seriesPreference?.toString()),
+      _na(sel?.minAgeToStart),
+      _na(sel?.maxAgeToStart),
     ]);
     _add(sheet, [
-      'Indication', 'Observation (Code)', 'Text Description',
-      'Indication Begin Age', 'Indication End Age (less than)',
+      'Indication',
+      'Observation (Code)',
+      'Text Description',
+      'Indication Begin Age',
+      'Indication End Age (less than)',
       'Administrative Guidance',
     ]);
     final ind = s.indication ?? const <Indication>[];
@@ -301,8 +376,12 @@ class AntigenWorkbookWriter {
     } else {
       for (final i in ind) {
         _add(sheet, [
-          '', _codeText(i.observationCode?.text, i.observationCode?.code),
-          _na(i.description), _na(i.beginAge), _na(i.endAge), _na(i.guidance),
+          '',
+          _codeText(i.observationCode?.text, i.observationCode?.code),
+          _na(i.description),
+          _na(i.beginAge),
+          _na(i.endAge),
+          _na(i.guidance),
         ]);
       }
     }
@@ -315,9 +394,14 @@ class AntigenWorkbookWriter {
   void _dose(Sheet sheet, SeriesDose d) {
     _add(sheet, ['Series Dose', _na(d.doseNumber?.toString())]);
     _add(sheet, [
-      'Age', 'Absolute Minimum Age', 'Minimum Age', 'Earliest Recommended Age',
-      'Latest Recommended Age (less than)', 'Maximum Age (less than)',
-      'Effective Date', 'Cessation Date',
+      'Age',
+      'Absolute Minimum Age',
+      'Minimum Age',
+      'Earliest Recommended Age',
+      'Latest Recommended Age (less than)',
+      'Maximum Age (less than)',
+      'Effective Date',
+      'Cessation Date',
     ]);
     final ages = d.age ?? const <VaxAge>[];
     if (ages.isEmpty) {
@@ -325,19 +409,30 @@ class AntigenWorkbookWriter {
     } else {
       for (final a in ages) {
         _add(sheet, [
-          '', _na(a.absMinAge), _na(a.minAge), _na(a.earliestRecAge),
-          _na(a.latestRecAge), _na(a.maxAge), _na(a.effectiveDate),
+          '',
+          _na(a.absMinAge),
+          _na(a.minAge),
+          _na(a.earliestRecAge),
+          _na(a.latestRecAge),
+          _na(a.maxAge),
+          _na(a.effectiveDate),
           _na(a.cessationDate),
         ]);
       }
     }
     _add(sheet, [
-      'Preferable Interval', 'From Immediate Previous Dose Administered? Y/N',
-      'From Target Dose # in Series', 'From Most Recent (CVX List)',
-      'From Relevant Observation (Code)', 'Absolute Minimum Interval',
-      'Minimum Interval', 'Earliest Recommended Interval',
-      'Latest Recommended Interval (less than)', 'Interval Priority Flag',
-      'Effective Date', 'Cessation Date',
+      'Preferable Interval',
+      'From Immediate Previous Dose Administered? Y/N',
+      'From Target Dose # in Series',
+      'From Most Recent (CVX List)',
+      'From Relevant Observation (Code)',
+      'Absolute Minimum Interval',
+      'Minimum Interval',
+      'Earliest Recommended Interval',
+      'Latest Recommended Interval (less than)',
+      'Interval Priority Flag',
+      'Effective Date',
+      'Cessation Date',
     ]);
     final pref = d.preferableInterval ?? const <Interval>[];
     if (pref.isEmpty) {
@@ -345,28 +440,45 @@ class AntigenWorkbookWriter {
     } else {
       for (final i in pref) {
         _add(sheet, [
-          '', _na(i.fromPrevious), _na(i.fromTargetDose?.toString()),
+          '',
+          _na(i.fromPrevious),
+          _na(i.fromTargetDose?.toString()),
           _na(i.fromMostRecent),
           _codeText(i.fromRelevantObs?.text, i.fromRelevantObs?.code),
-          _na(i.absMinInt), _na(i.minInt), _na(i.earliestRecInt),
-          _na(i.latestRecInt), _na(i.intervalPriority), _na(i.effectiveDate),
+          _na(i.absMinInt),
+          _na(i.minInt),
+          _na(i.earliestRecInt),
+          _na(i.latestRecInt),
+          _na(i.intervalPriority),
+          _na(i.effectiveDate),
           _na(i.cessationDate),
         ]);
       }
     }
     _add(sheet, [
-      'Allowable Interval', 'From Immediate Previous Dose Administered? Y/N',
-      'From Target Dose # in Series', 'Absolute Minimum Interval',
-      'Effective Date', 'Cessation Date',
+      'Allowable Interval',
+      'From Immediate Previous Dose Administered? Y/N',
+      'From Target Dose # in Series',
+      'Absolute Minimum Interval',
+      'Effective Date',
+      'Cessation Date',
     ]);
     final allow = d.allowableInterval;
     _add(sheet, [
-      '', _na(allow?.fromPrevious), _na(allow?.fromTargetDose?.toString()),
-      _na(allow?.absMinInt), _na(allow?.effectiveDate), _na(allow?.cessationDate),
+      '',
+      _na(allow?.fromPrevious),
+      _na(allow?.fromTargetDose?.toString()),
+      _na(allow?.absMinInt),
+      _na(allow?.effectiveDate),
+      _na(allow?.cessationDate),
     ]);
     _add(sheet, [
-      'Preferable Vaccine', 'Vaccine Type (CVX)', 'Vaccine Type Begin Age',
-      'Vaccine Type End Age (less than)', 'Trade Name (MVX)', 'Volume (in ml)',
+      'Preferable Vaccine',
+      'Vaccine Type (CVX)',
+      'Vaccine Type Begin Age',
+      'Vaccine Type End Age (less than)',
+      'Trade Name (MVX)',
+      'Volume (in ml)',
       'Forecast Vaccine Type (Y/N)',
     ]);
     final pv = d.preferableVaccine ?? const <Vaccine>[];
@@ -375,13 +487,20 @@ class AntigenWorkbookWriter {
     } else {
       for (final v in pv) {
         _add(sheet, [
-          '', _codeText(v.vaccineType, v.cvx), _na(v.beginAge), _na(v.endAge),
-          _codeText(v.tradeName, v.mvx), _na(v.volume), _na(v.forecastVaccineType),
+          '',
+          _codeText(v.vaccineType, v.cvx),
+          _na(v.beginAge),
+          _na(v.endAge),
+          _codeText(v.tradeName, v.mvx),
+          _na(v.volume),
+          _na(v.forecastVaccineType),
         ]);
       }
     }
     _add(sheet, [
-      'Allowable Vaccine', 'Vaccine Type (CVX)', 'Vaccine Type Begin Age',
+      'Allowable Vaccine',
+      'Vaccine Type (CVX)',
+      'Vaccine Type Begin Age',
       'Vaccine Type End Age (less than)',
     ]);
     final av = d.allowableVaccine ?? const <Vaccine>[];
@@ -389,7 +508,12 @@ class AntigenWorkbookWriter {
       _add(sheet, ['', 'n/a', 'n/a', 'n/a']);
     } else {
       for (final v in av) {
-        _add(sheet, ['', _codeText(v.vaccineType, v.cvx), _na(v.beginAge), _na(v.endAge)]);
+        _add(sheet, [
+          '',
+          _codeText(v.vaccineType, v.cvx),
+          _na(v.beginAge),
+          _na(v.endAge),
+        ]);
       }
     }
     _add(sheet, ['Inadvertent Vaccine', 'Vaccine Type (CVX)']);
@@ -402,11 +526,26 @@ class AntigenWorkbookWriter {
       }
     }
     _add(sheet, [
-      'Conditional Skip', 'Skip Context', 'Set Logic', 'Set ID', 'Description',
-      'Effective Date', 'Cessation Date', 'Condition Logic', 'Condition ID',
-      'Type', 'Start Date', 'End Date', 'Begin Age', 'End Age (less than)',
-      'Interval', 'Dose Count', 'Dose Type', 'Dose Count Logic',
-      'Vaccine Types (CVX List)', 'Series Group',
+      'Conditional Skip',
+      'Skip Context',
+      'Set Logic',
+      'Set ID',
+      'Description',
+      'Effective Date',
+      'Cessation Date',
+      'Condition Logic',
+      'Condition ID',
+      'Type',
+      'Start Date',
+      'End Date',
+      'Begin Age',
+      'End Age (less than)',
+      'Interval',
+      'Dose Count',
+      'Dose Type',
+      'Dose Count Logic',
+      'Vaccine Types (CVX List)',
+      'Series Group',
     ]);
     final skips = d.conditionalSkip ?? const <ConditionalSkip>[];
     if (skips.isEmpty) {
@@ -420,17 +559,28 @@ class AntigenWorkbookWriter {
           for (final cond in conditions) {
             _add(sheet, [
               '',
-              firstSet && firstCondition ? _na(skip.context?.toString()) : '',
-              firstSet && firstCondition ? _na(skip.setLogic) : '',
-              firstCondition ? _na(set.setID) : '',
-              firstCondition ? _na(set.setDescription) : '',
-              firstCondition ? _na(set.effectiveDate) : '',
-              firstCondition ? _na(set.cessationDate) : '',
-              firstCondition ? _na(set.conditionLogic) : '',
-              _na(cond.conditionID), _na(cond.conditionType), _na(cond.startDate),
-              _na(cond.endDate), _na(cond.beginAge), _na(cond.endAge),
-              _na(cond.interval), _na(cond.doseCount), _na(cond.doseType?.toString()),
-              _na(cond.doseCountLogic), _na(cond.vaccineTypes), _na(cond.seriesGroups),
+              if (firstSet && firstCondition)
+                _na(skip.context?.toString())
+              else
+                '',
+              if (firstSet && firstCondition) _na(skip.setLogic) else '',
+              if (firstCondition) _na(set.setID) else '',
+              if (firstCondition) _na(set.setDescription) else '',
+              if (firstCondition) _na(set.effectiveDate) else '',
+              if (firstCondition) _na(set.cessationDate) else '',
+              if (firstCondition) _na(set.conditionLogic) else '',
+              _na(cond.conditionID),
+              _na(cond.conditionType),
+              _na(cond.startDate),
+              _na(cond.endDate),
+              _na(cond.beginAge),
+              _na(cond.endAge),
+              _na(cond.interval),
+              _na(cond.doseCount),
+              _na(cond.doseType?.toString()),
+              _na(cond.doseCountLogic),
+              _na(cond.vaccineTypes),
+              _na(cond.seriesGroups),
             ]);
             firstCondition = false;
             firstSet = false;
@@ -442,7 +592,8 @@ class AntigenWorkbookWriter {
     _add(sheet, ['', d.recurringDose?.toString() ?? 'No']);
     _add(sheet, ['Seasonal Recommendation', 'Start Date', 'End Date']);
     _add(sheet, [
-      '', _na(d.seasonalRecommendation?.startDate),
+      '',
+      _na(d.seasonalRecommendation?.startDate),
       _na(d.seasonalRecommendation?.endDate),
     ]);
   }

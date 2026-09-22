@@ -19,22 +19,35 @@ void main() {
     final canonical = File('test/cdc_row_collapse.dart');
     final copy = File('../cicada_generator/lib/cdc_row_collapse.dart');
 
-    expect(canonical.existsSync(), isTrue,
-        reason: 'canonical copy missing at ${canonical.path}');
-    expect(copy.existsSync(), isTrue,
-        reason: 'generator copy missing at ${copy.path}');
+    expect(
+      canonical.existsSync(),
+      isTrue,
+      reason: 'canonical copy missing at ${canonical.path}',
+    );
+    expect(
+      copy.existsSync(),
+      isTrue,
+      reason: 'generator copy missing at ${copy.path}',
+    );
 
     String body(File f) {
       final text = f.readAsStringSync();
       final start = text.indexOf("/// Collapse a vaccine group's forecasts");
-      expect(start, greaterThanOrEqualTo(0),
-          reason: '${f.path} no longer contains collapseForComparison');
+      expect(
+        start,
+        greaterThanOrEqualTo(0),
+        reason: '${f.path} no longer contains collapseForComparison',
+      );
       return text.substring(start).trim();
     }
 
-    expect(body(copy), equals(body(canonical)),
-        reason: 'cicada_generator/lib/cdc_row_collapse.dart has drifted from '
-            'the canonical cicada/test/cdc_row_collapse.dart. Copy the '
-            'canonical version over it.');
+    expect(
+      body(copy),
+      equals(body(canonical)),
+      reason:
+          'cicada_generator/lib/cdc_row_collapse.dart has drifted from '
+          'the canonical cicada/test/cdc_row_collapse.dart. Copy the '
+          'canonical version over it.',
+    );
   });
 }

@@ -1,70 +1,68 @@
-// ignore_for_file: prefer_single_quotes, always_specify_types
-
-import '../../cicada.dart';
+import 'package:cicada/cicada.dart';
 
 final AntigenSupportingData whoTyphoid = AntigenSupportingData.fromJson({
-  "targetDisease": "Typhoid",
-  "vaccineGroup": "Typhoid",
-  "series": [
+  'targetDisease': 'Typhoid',
+  'vaccineGroup': 'Typhoid',
+  'series': [
     {
-      "seriesName": "WHO Typhoid conjugate 1-dose series",
-      "targetDisease": "Typhoid",
-      "vaccineGroup": "Typhoid",
-      "seriesType": "Risk",
-      "selectSeries": {
-        "defaultSeries": "No",
-        "productPath": "No",
-        "seriesGroupName": "Increased Risk",
-        "seriesGroup": "1",
-        "seriesPriority": "A",
-        "seriesPreference": "1"
+      'seriesName': 'WHO Typhoid conjugate 1-dose series',
+      'targetDisease': 'Typhoid',
+      'vaccineGroup': 'Typhoid',
+      'seriesType': 'Risk',
+      'selectSeries': {
+        'defaultSeries': 'No',
+        'productPath': 'No',
+        'seriesGroupName': 'Increased Risk',
+        'seriesGroup': '1',
+        'seriesPriority': 'A',
+        'seriesPreference': '1',
       },
-      "indication": [
+      'indication': [
         {
-          "observationCode": {
-            "text": "Lives in typhoid endemic area",
-            "code": "1014"
-          }
-        }
+          'observationCode': {
+            'text': 'Lives in typhoid endemic area',
+            'code': '1014',
+          },
+        },
       ],
-      "seriesDose": [
+      'seriesDose': [
         {
-          "doseNumber": "Dose 1",
-          "age": [
+          'doseNumber': 'Dose 1',
+          'age': [
             {
-              "absMinAge": "6 months",
-              "minAge": "6 months",
-              "earliestRecAge": "9 months"
-            }
+              'absMinAge': '6 months',
+              'minAge': '6 months',
+              'earliestRecAge': '9 months',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "Typhoid conjugate (TCV)",
-              "cvx": "190",
-              "beginAge": "6 months",
-              "forecastVaccineType": "Y"
-            }
+              'vaccineType': 'Typhoid conjugate (TCV)',
+              'cvx': '190',
+              'beginAge': '6 months',
+              'forecastVaccineType': 'Y',
+            },
           ],
-          "allowableVaccine": [
+          'allowableVaccine': [
             {
-              "vaccineType": "Typhoid conjugate (TCV)",
-              "cvx": "190",
-              "beginAge": "6 months"
+              'vaccineType': 'Typhoid conjugate (TCV)',
+              'cvx': '190',
+              'beginAge': '6 months',
             },
             {
-              "vaccineType": "Typhoid Vi polysaccharide",
-              "cvx": "101",
-              "beginAge": "2 years"
+              'vaccineType': 'Typhoid Vi polysaccharide',
+              'cvx': '101',
+              'beginAge': '2 years',
             },
             {
-              "vaccineType": "Typhoid oral (Ty21a)",
-              "cvx": "25",
-              "beginAge": "6 years"
-            }
+              'vaccineType': 'Typhoid oral (Ty21a)',
+              'cvx': '25',
+              'beginAge': '6 years',
+            },
           ],
-          "recurringDose": "No"
-        }
-      ]
-    }
-  ]
+          'recurringDose': 'No',
+        },
+      ],
+    },
+  ],
 });

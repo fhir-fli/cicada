@@ -1,11 +1,11 @@
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:collection/collection.dart';
-import 'package:fhir_r4/fhir_r4.dart';
 import 'package:cicada/cicada.dart';
 import 'package:cicada/generated_files/test_condition_doses.dart';
 import 'package:cicada/generated_files/test_condition_forecasts.dart';
+import 'package:collection/collection.dart';
+import 'package:fhir_r4/fhir_r4.dart';
 import 'package:test/test.dart';
 
 import 'cdc_row_collapse.dart';
@@ -48,40 +48,48 @@ List<String> checkDoseConsistency(VaxDose dose) {
   if (dose.evalReason == EvalReason.ageTooYoung &&
       dose.validAgeReason != ValidAgeReason.tooYoung) {
     violations.add(
-        'evalReason=ageTooYoung but validAgeReason=${dose.validAgeReason}');
+      'evalReason=ageTooYoung but validAgeReason=${dose.validAgeReason}',
+    );
   }
 
   if (dose.evalReason == EvalReason.ageTooOld &&
       dose.validAgeReason != ValidAgeReason.tooOld) {
-    violations
-        .add('evalReason=ageTooOld but validAgeReason=${dose.validAgeReason}');
+    violations.add(
+      'evalReason=ageTooOld but validAgeReason=${dose.validAgeReason}',
+    );
   }
 
   if (dose.evalReason == EvalReason.intervalTooShort &&
       dose.allowedIntervalReason != IntervalReason.tooShort &&
       dose.preferredIntervalReason != IntervalReason.tooShort) {
-    violations.add('evalReason=intervalTooShort but '
-        'allowedIntervalReason=${dose.allowedIntervalReason}, '
-        'preferredIntervalReason=${dose.preferredIntervalReason}');
+    violations.add(
+      'evalReason=intervalTooShort but '
+      'allowedIntervalReason=${dose.allowedIntervalReason}, '
+      'preferredIntervalReason=${dose.preferredIntervalReason}',
+    );
   }
 
   if (dose.evalReason == EvalReason.liveVirusConflict &&
       dose.conflict != true) {
-    violations
-        .add('evalReason=liveVirusConflict but conflict=${dose.conflict}');
+    violations.add(
+      'evalReason=liveVirusConflict but conflict=${dose.conflict}',
+    );
   }
 
   if (dose.evalReason == EvalReason.notPreferableOrAllowable &&
       dose.allowedVaccine != false) {
-    violations.add('evalReason=notPreferableOrAllowable but '
-        'allowedVaccine=${dose.allowedVaccine}');
+    violations.add(
+      'evalReason=notPreferableOrAllowable but '
+      'allowedVaccine=${dose.allowedVaccine}',
+    );
   }
 
   if (dose.evalStatus == EvalStatus.valid) {
     if (dose.validAgeReason == ValidAgeReason.tooYoung ||
         dose.validAgeReason == ValidAgeReason.tooOld) {
-      violations
-          .add('evalStatus=valid but validAgeReason=${dose.validAgeReason}');
+      violations.add(
+        'evalStatus=valid but validAgeReason=${dose.validAgeReason}',
+      );
     }
     if (dose.conflict == true) {
       violations.add('evalStatus=valid but conflict=true');
@@ -104,17 +112,22 @@ const conditionExcelToEngine = <String, String>{
 };
 
 String _patientId(Parameters parameters, int index) {
-  final Patient? patient = parameters.parameter
-      ?.firstWhereOrNull((ParametersParameter e) => e.resource is Patient)
-      ?.resource as Patient?;
+  final patient =
+      parameters.parameter
+              ?.firstWhereOrNull(
+                (e) => e.resource is Patient,
+              )
+              ?.resource
+          as Patient?;
   final id = patient?.id?.toString();
   if (id == null || id == 'null') return 'case-$index';
   return id;
 }
 
 void main() {
-  final allParameters =
-      loadConditionTestCases('test/conditionTestCases.ndjson');
+  final allParameters = loadConditionTestCases(
+    'test/conditionTestCases.ndjson',
+  );
 
   group('CDSi condition test cases', () {
     test('loaded ${allParameters.length} test cases', () {
@@ -132,9 +145,9 @@ void main() {
     // and passed: the headline 752/777 counted 439 no-ops as passes. Assert
     // the property that was violated, not just the count.
     test('every case has an id and expectations to be checked against', () {
-      final List<String> unusable = <String>[];
-      for (int i = 0; i < allParameters.length; i++) {
-        final String id = _patientId(allParameters[i], i);
+      final unusable = <String>[];
+      for (var i = 0; i < allParameters.length; i++) {
+        final id = _patientId(allParameters[i], i);
         if (id.startsWith('case-')) {
           unusable.add('index $i has no patient id');
         } else if (testConditionForecasts[id] == null &&
@@ -142,12 +155,16 @@ void main() {
           unusable.add('$id has no expected doses or forecasts');
         }
       }
-      expect(unusable, isEmpty,
-          reason: '${unusable.length} of ${allParameters.length} cases assert '
-              'nothing:\n${unusable.take(20).join("\n")}');
+      expect(
+        unusable,
+        isEmpty,
+        reason:
+            '${unusable.length} of ${allParameters.length} cases assert '
+            'nothing:\n${unusable.take(20).join("\n")}',
+      );
     });
 
-    for (int i = 0; i < allParameters.length; i++) {
+    for (var i = 0; i < allParameters.length; i++) {
       final parameters = allParameters[i];
       final id = _patientId(parameters, i);
 
@@ -162,20 +179,20 @@ void main() {
           for (final doseMap in expectedDoseMaps) {
             final expectedDose = VaxDose.fromJson(doseMap);
             final expectedSeriesType = doseMap['seriesType'] as String?;
-            bool foundStatusMatch = false;
-            bool foundReasonMatch = false;
-            bool foundAnyEval = false;
-            final bool hasExpectedReason = expectedDose.evalReason != null;
-            final Set<EvalReason?> actualReasons = {};
+            var foundStatusMatch = false;
+            var foundReasonMatch = false;
+            var foundAnyEval = false;
+            final hasExpectedReason = expectedDose.evalReason != null;
+            final actualReasons = <EvalReason?>{};
 
-            result.agMap.forEach((String antigenName, VaxAntigen antigen) {
+            result.agMap.forEach((antigenName, antigen) {
               if (!expectedDose.antigens
                   .map((s) => s.toLowerCase())
                   .contains(antigenName.toLowerCase())) {
                 return;
               }
 
-              antigen.groups.forEach((String groupKey, VaxGroup group) {
+              antigen.groups.forEach((groupKey, group) {
                 for (final series in group.series) {
                   // If expected dose has a seriesType, only match
                   // against series of that type.
@@ -186,8 +203,9 @@ void main() {
                     if (actualType != expectedSeriesType) continue;
                   }
 
-                  final actualDose = series.doses
-                      .firstWhereOrNull((d) => d.doseId == expectedDose.doseId);
+                  final actualDose = series.doses.firstWhereOrNull(
+                    (d) => d.doseId == expectedDose.doseId,
+                  );
                   if (actualDose == null || actualDose.evalStatus == null) {
                     continue;
                   }
@@ -209,8 +227,9 @@ void main() {
                     // and the interval has both, and which one their row
                     // records is not something the specification decides.
                     if (hasExpectedReason &&
-                        actualDose.evalReasons
-                            .contains(expectedDose.evalReason)) {
+                        actualDose.evalReasons.contains(
+                          expectedDose.evalReason,
+                        )) {
                       foundReasonMatch = true;
                     }
                   }
@@ -218,24 +237,34 @@ void main() {
               });
             });
 
+            final seriesTypeNote =
+                expectedSeriesType == null
+                    ? ''
+                    : 'seriesType=$expectedSeriesType';
             if (!foundAnyEval && expectedDose.evalStatus != null) {
-              mismatches.add('dose ${expectedDose.doseId}: '
-                  'not found in any evaluated series '
-                  '(expected ${expectedDose.evalStatus}'
-                  '${expectedSeriesType != null ? ', seriesType=$expectedSeriesType' : ''})');
+              mismatches.add(
+                'dose ${expectedDose.doseId}: '
+                'not found in any evaluated series '
+                '(expected ${expectedDose.evalStatus}'
+                '${seriesTypeNote.isEmpty ? '' : ', $seriesTypeNote'})',
+              );
             } else if (foundAnyEval && !foundStatusMatch) {
-              mismatches.add('dose ${expectedDose.doseId}: '
-                  'evalStatus expected=${expectedDose.evalStatus} '
-                  'reason=${expectedDose.evalReason}'
-                  '${expectedSeriesType != null ? ' seriesType=$expectedSeriesType' : ''}');
+              mismatches.add(
+                'dose ${expectedDose.doseId}: '
+                'evalStatus expected=${expectedDose.evalStatus} '
+                'reason=${expectedDose.evalReason}'
+                '${seriesTypeNote.isEmpty ? '' : ' $seriesTypeNote'}',
+              );
             }
             if (foundAnyEval &&
                 foundStatusMatch &&
                 hasExpectedReason &&
                 !foundReasonMatch) {
-              mismatches.add('dose ${expectedDose.doseId}: '
-                  'evalReason expected=${expectedDose.evalReason} '
-                  'actual=${actualReasons.join(",")}');
+              mismatches.add(
+                'dose ${expectedDose.doseId}: '
+                'evalReason expected=${expectedDose.evalReason} '
+                'actual=${actualReasons.join(",")}',
+              );
             }
           }
         }
@@ -248,8 +277,9 @@ void main() {
             final excelVg = expected['vaccineGroup']!.trim();
             final engineVg = conditionExcelToEngine[excelVg] ?? excelVg;
 
-            final vgForecast =
-                collapseForComparison(result.vaccineGroupForecasts[engineVg]);
+            final vgForecast = collapseForComparison(
+              result.vaccineGroupForecasts[engineVg],
+            );
             if (vgForecast == null) {
               mismatches.add('[$excelVg] no forecast produced');
               continue;
@@ -259,8 +289,10 @@ void main() {
             final expectedStatus = expected['seriesStatus']!.toLowerCase();
             final actualStatus = vgForecast.status.toString().toLowerCase();
             if (expectedStatus != actualStatus) {
-              mismatches.add('[$excelVg] status: '
-                  'expected=$expectedStatus actual=$actualStatus');
+              mismatches.add(
+                '[$excelVg] status: '
+                'expected=$expectedStatus actual=$actualStatus',
+              );
             }
 
             // Dose number
@@ -268,8 +300,10 @@ void main() {
             if (expectedDoseNum.isNotEmpty && expectedDoseNum != '-') {
               final actualDoseNum = vgForecast.doseNumber?.toString() ?? '';
               if (expectedDoseNum != actualDoseNum) {
-                mismatches.add('[$excelVg] doseNum: '
-                    'expected=$expectedDoseNum actual=$actualDoseNum');
+                mismatches.add(
+                  '[$excelVg] doseNum: '
+                  'expected=$expectedDoseNum actual=$actualDoseNum',
+                );
               }
             }
 
@@ -285,18 +319,24 @@ void main() {
 
             if (expectedEarliest.isNotEmpty &&
                 expectedEarliest != actualEarliest) {
-              mismatches.add('[$excelVg] earliest: '
-                  'expected=$expectedEarliest actual=$actualEarliest');
+              mismatches.add(
+                '[$excelVg] earliest: '
+                'expected=$expectedEarliest actual=$actualEarliest',
+              );
             }
             if (expectedRecommended.isNotEmpty &&
                 expectedRecommended != actualRecommended) {
-              mismatches.add('[$excelVg] recommended: '
-                  'expected=$expectedRecommended actual=$actualRecommended');
+              mismatches.add(
+                '[$excelVg] recommended: '
+                'expected=$expectedRecommended actual=$actualRecommended',
+              );
             }
             if (expectedPastDue.isNotEmpty &&
                 expectedPastDue != actualPastDue) {
-              mismatches.add('[$excelVg] pastDue: '
-                  'expected=$expectedPastDue actual=$actualPastDue');
+              mismatches.add(
+                '[$excelVg] pastDue: '
+                'expected=$expectedPastDue actual=$actualPastDue',
+              );
             }
           }
         }

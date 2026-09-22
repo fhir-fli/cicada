@@ -1,0 +1,12 @@
+include: package:very_good_analysis/analysis_options.yaml
+
+# very_good_analysis already sets strict-casts, strict-inference and
+# strict-raw-types. Added 2026-09-22 (family hardening); this package had no
+# options file, so nothing was linted and 4 dynamic-typed errors hid in lib/.
+linter:
+  rules:
+    avoid_positional_boolean_parameters: false
+    always_put_required_named_parameters_first: false
+    document_ignores: false
+    comment_references: false
+    public_member_api_docs: false

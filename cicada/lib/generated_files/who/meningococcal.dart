@@ -1,81 +1,79 @@
-// ignore_for_file: prefer_single_quotes, always_specify_types
-
-import '../../cicada.dart';
+import 'package:cicada/cicada.dart';
 
 final AntigenSupportingData whoMeningococcal = AntigenSupportingData.fromJson({
-  "targetDisease": "Meningococcal",
-  "vaccineGroup": "Meningococcal",
-  "series": [
+  'targetDisease': 'Meningococcal',
+  'vaccineGroup': 'Meningococcal',
+  'series': [
     {
-      "seriesName": "WHO MenA conjugate 1-dose series",
-      "targetDisease": "Meningococcal",
-      "vaccineGroup": "Meningococcal",
-      "seriesType": "Risk",
-      "selectSeries": {
-        "defaultSeries": "No",
-        "productPath": "No",
-        "seriesGroupName": "Increased Risk",
-        "seriesGroup": "1",
-        "seriesPriority": "A",
-        "seriesPreference": "1"
+      'seriesName': 'WHO MenA conjugate 1-dose series',
+      'targetDisease': 'Meningococcal',
+      'vaccineGroup': 'Meningococcal',
+      'seriesType': 'Risk',
+      'selectSeries': {
+        'defaultSeries': 'No',
+        'productPath': 'No',
+        'seriesGroupName': 'Increased Risk',
+        'seriesGroup': '1',
+        'seriesPriority': 'A',
+        'seriesPreference': '1',
       },
-      "indication": [
+      'indication': [
         {
-          "observationCode": {
-            "text": "Lives in meningitis belt",
-            "code": "1010"
-          }
-        }
+          'observationCode': {
+            'text': 'Lives in meningitis belt',
+            'code': '1010',
+          },
+        },
       ],
-      "seriesDose": [
+      'seriesDose': [
         {
-          "doseNumber": "Dose 1",
-          "age": [
+          'doseNumber': 'Dose 1',
+          'age': [
             {
-              "absMinAge": "9 months",
-              "minAge": "9 months",
-              "earliestRecAge": "9 months"
-            }
+              'absMinAge': '9 months',
+              'minAge': '9 months',
+              'earliestRecAge': '9 months',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "MenA conjugate (MenAfriVac)",
-              "cvx": "163",
-              "beginAge": "9 months",
-              "forecastVaccineType": "Y"
+              'vaccineType': 'MenA conjugate (MenAfriVac)',
+              'cvx': '163',
+              'beginAge': '9 months',
+              'forecastVaccineType': 'Y',
             },
             {
-              "vaccineType": "Meningococcal ACWY",
-              "cvx": "108",
-              "beginAge": "9 months",
-              "forecastVaccineType": "N"
-            }
+              'vaccineType': 'Meningococcal ACWY',
+              'cvx': '108',
+              'beginAge': '9 months',
+              'forecastVaccineType': 'N',
+            },
           ],
-          "allowableVaccine": [
+          'allowableVaccine': [
             {
-              "vaccineType": "MenA conjugate (MenAfriVac)",
-              "cvx": "163",
-              "beginAge": "9 months"
+              'vaccineType': 'MenA conjugate (MenAfriVac)',
+              'cvx': '163',
+              'beginAge': '9 months',
             },
             {
-              "vaccineType": "Meningococcal ACWY",
-              "cvx": "108",
-              "beginAge": "9 months"
+              'vaccineType': 'Meningococcal ACWY',
+              'cvx': '108',
+              'beginAge': '9 months',
             },
             {
-              "vaccineType": "Meningococcal ACWY (Menactra)",
-              "cvx": "114",
-              "beginAge": "9 months"
+              'vaccineType': 'Meningococcal ACWY (Menactra)',
+              'cvx': '114',
+              'beginAge': '9 months',
             },
             {
-              "vaccineType": "Meningococcal ACWY (Menveo)",
-              "cvx": "136",
-              "beginAge": "2 months"
-            }
+              'vaccineType': 'Meningococcal ACWY (Menveo)',
+              'cvx': '136',
+              'beginAge': '2 months',
+            },
           ],
-          "recurringDose": "No"
-        }
-      ]
-    }
-  ]
+          'recurringDose': 'No',
+        },
+      ],
+    },
+  ],
 });

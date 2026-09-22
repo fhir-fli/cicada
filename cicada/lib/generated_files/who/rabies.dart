@@ -1,84 +1,100 @@
-// ignore_for_file: prefer_single_quotes, always_specify_types
-
-import '../../cicada.dart';
+import 'package:cicada/cicada.dart';
 
 final AntigenSupportingData whoRabies = AntigenSupportingData.fromJson({
-  "targetDisease": "Rabies",
-  "vaccineGroup": "Rabies",
-  "series": [
+  'targetDisease': 'Rabies',
+  'vaccineGroup': 'Rabies',
+  'series': [
     {
-      "seriesName": "WHO Rabies pre-exposure 2-dose series",
-      "targetDisease": "Rabies",
-      "vaccineGroup": "Rabies",
-      "seriesType": "Risk",
-      "selectSeries": {
-        "defaultSeries": "No",
-        "productPath": "No",
-        "seriesGroupName": "Increased Risk",
-        "seriesGroup": "1",
-        "seriesPriority": "A",
-        "seriesPreference": "1"
+      'seriesName': 'WHO Rabies pre-exposure 2-dose series',
+      'targetDisease': 'Rabies',
+      'vaccineGroup': 'Rabies',
+      'seriesType': 'Risk',
+      'selectSeries': {
+        'defaultSeries': 'No',
+        'productPath': 'No',
+        'seriesGroupName': 'Increased Risk',
+        'seriesGroup': '1',
+        'seriesPriority': 'A',
+        'seriesPreference': '1',
       },
-      "indication": [
+      'indication': [
         {
-          "observationCode": {
-            "text": "High risk of rabies exposure",
-            "code": "1015"
-          }
-        }
+          'observationCode': {
+            'text': 'High risk of rabies exposure',
+            'code': '1015',
+          },
+        },
       ],
-      "seriesDose": [
+      'seriesDose': [
         {
-          "doseNumber": "Dose 1",
-          "preferableVaccine": [
+          'doseNumber': 'Dose 1',
+          'preferableVaccine': [
             {
-              "vaccineType": "Rabies, IM",
-              "cvx": "18",
-              "forecastVaccineType": "Y"
+              'vaccineType': 'Rabies, IM',
+              'cvx': '18',
+              'forecastVaccineType': 'Y',
             },
             {
-              "vaccineType": "Rabies, ID",
-              "cvx": "40",
-              "forecastVaccineType": "N"
-            }
+              'vaccineType': 'Rabies, ID',
+              'cvx': '40',
+              'forecastVaccineType': 'N',
+            },
           ],
-          "allowableVaccine": [
-            {"vaccineType": "Rabies, IM", "cvx": "18"},
-            {"vaccineType": "Rabies, ID", "cvx": "40"},
-            {"vaccineType": "Rabies, unspecified", "cvx": "90"}
+          'allowableVaccine': [
+            {
+              'vaccineType': 'Rabies, IM',
+              'cvx': '18',
+            },
+            {
+              'vaccineType': 'Rabies, ID',
+              'cvx': '40',
+            },
+            {
+              'vaccineType': 'Rabies, unspecified',
+              'cvx': '90',
+            },
           ],
-          "recurringDose": "No"
+          'recurringDose': 'No',
         },
         {
-          "doseNumber": "Dose 2",
-          "interval": [
+          'doseNumber': 'Dose 2',
+          'interval': [
             {
-              "fromPrevious": "Y",
-              "absMinInt": "7 days",
-              "minInt": "7 days",
-              "earliestRecInt": "7 days"
-            }
+              'fromPrevious': 'Y',
+              'absMinInt': '7 days',
+              'minInt': '7 days',
+              'earliestRecInt': '7 days',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "Rabies, IM",
-              "cvx": "18",
-              "forecastVaccineType": "Y"
+              'vaccineType': 'Rabies, IM',
+              'cvx': '18',
+              'forecastVaccineType': 'Y',
             },
             {
-              "vaccineType": "Rabies, ID",
-              "cvx": "40",
-              "forecastVaccineType": "N"
-            }
+              'vaccineType': 'Rabies, ID',
+              'cvx': '40',
+              'forecastVaccineType': 'N',
+            },
           ],
-          "allowableVaccine": [
-            {"vaccineType": "Rabies, IM", "cvx": "18"},
-            {"vaccineType": "Rabies, ID", "cvx": "40"},
-            {"vaccineType": "Rabies, unspecified", "cvx": "90"}
+          'allowableVaccine': [
+            {
+              'vaccineType': 'Rabies, IM',
+              'cvx': '18',
+            },
+            {
+              'vaccineType': 'Rabies, ID',
+              'cvx': '40',
+            },
+            {
+              'vaccineType': 'Rabies, unspecified',
+              'cvx': '90',
+            },
           ],
-          "recurringDose": "No"
-        }
-      ]
-    }
-  ]
+          'recurringDose': 'No',
+        },
+      ],
+    },
+  ],
 });

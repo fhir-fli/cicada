@@ -7,6 +7,11 @@
 import 'package:cicada/cicada.dart';
 import 'package:excel/excel.dart';
 
+const _defaultOverview =
+    'The Observation Code is the identifier the antigen workbooks use for an '
+    'indication or contraindication. The coded values are the SNOMED, CVX and '
+    'PHIN VS codes a patient record may carry for it.';
+
 class ScheduleWorkbookWriter {
   ScheduleWorkbookWriter({this.overview = const []});
 
@@ -17,21 +22,27 @@ class ScheduleWorkbookWriter {
   /// Observations", "CVX to Antigen Map", "Live Virus Conflicts", "Vaccine
   /// Group", "Vaccine Group to Antigen Map").
   Map<String, Excel> write(ScheduleSupportingData data) => {
-        'Coded Observations': _codedObservations(data.observations),
-        'CVX to Antigen Map': _cvxToAntigenMap(data.cvxToAntigenMap),
-        'Live Virus Conflicts': _liveVirusConflicts(data.liveVirusConflicts),
-        'Vaccine Group': _vaccineGroups(data.vaccineGroups),
-        'Vaccine Group to Antigen Map':
-            _vaccineGroupToAntigenMap(data.vaccineGroupToAntigenMap),
-      };
+    'Coded Observations': _codedObservations(data.observations),
+    'CVX to Antigen Map': _cvxToAntigenMap(data.cvxToAntigenMap),
+    'Live Virus Conflicts': _liveVirusConflicts(data.liveVirusConflicts),
+    'Vaccine Group': _vaccineGroups(data.vaccineGroups),
+    'Vaccine Group to Antigen Map': _vaccineGroupToAntigenMap(
+      data.vaccineGroupToAntigenMap,
+    ),
+  };
 
   Excel _codedObservations(VaxObservations? obs) {
     final excel = Excel.createExcel();
     final sheet = excel['Conditions'];
     _add(sheet, [
-      'Observation Code', 'Observation Title', 'Indication Text Description',
-      'Contraindication Text Description', 'Clarifying Text', 'SNOMED (Code)',
-      'CVX (Code)', 'PHIN VS (Code)',
+      'Observation Code',
+      'Observation Title',
+      'Indication Text Description',
+      'Contraindication Text Description',
+      'Clarifying Text',
+      'SNOMED (Code)',
+      'CVX (Code)',
+      'PHIN VS (Code)',
     ]);
     for (final o in obs?.observation ?? const <VaxObservation>[]) {
       final values = o.codedValues?.codedValue ?? const <CodedValue>[];
@@ -41,24 +52,24 @@ class ScheduleWorkbookWriter {
             ? 'n/a'
             : v.map((c) => _codeText(c.text, c.code)).join('; ');
       }
+
       _add(sheet, [
-        _na(o.observationCode), _na(o.observationTitle), _na(o.indicationText),
-        _na(o.contraindicationText), _na(o.clarifyingText), bySystem('SNOMED'),
-        bySystem('CVX'), bySystem('CDCPHINVS'),
+        _na(o.observationCode),
+        _na(o.observationTitle),
+        _na(o.indicationText),
+        _na(o.contraindicationText),
+        _na(o.clarifyingText),
+        bySystem('SNOMED'),
+        bySystem('CVX'),
+        bySystem('CDCPHINVS'),
       ]);
     }
     _changeHistory(excel);
     final ov = excel['Overview'];
-    final lines = overview.isEmpty
-        ? [
-            'The Observation Code is the identifier the antigen workbooks use '
-                'for an indication or contraindication. The coded values are the '
-                'SNOMED, CVX and PHIN VS codes a patient record may carry for it.',
-          ]
-        : overview;
+    final lines = overview.isEmpty ? [_defaultOverview] : overview;
     var first = true;
     for (final l in lines) {
-      _add(ov, [first ? 'Overview' : '', l]);
+      _add(ov, [if (first) 'Overview' else '', l]);
       _add(ov, const []);
       first = false;
     }
@@ -70,14 +81,20 @@ class ScheduleWorkbookWriter {
     final excel = Excel.createExcel();
     final sheet = excel['CVX to Antigen Map'];
     _add(sheet, [
-      'CVX Code', 'Short Description', 'Antigen', 'Association Begin Age',
+      'CVX Code',
+      'Short Description',
+      'Antigen',
+      'Association Begin Age',
       'Association End Age',
     ]);
     for (final m in map?.cvxMap ?? const <CvxMap>[]) {
       for (final a in m.association ?? const <Association>[]) {
         _add(sheet, [
-          _na(m.cvx), _na(m.shortDescription), _na(a.antigen),
-          _na(a.associationBeginAge), _na(a.associationEndAge),
+          _na(m.cvx),
+          _na(m.shortDescription),
+          _na(a.antigen),
+          _na(a.associationBeginAge),
+          _na(a.associationEndAge),
         ]);
       }
     }
@@ -90,15 +107,19 @@ class ScheduleWorkbookWriter {
     final excel = Excel.createExcel();
     final sheet = excel['Live Virus Conflicts'];
     _add(sheet, [
-      'Previous Vaccine Type (CVX)', 'Current Vaccine Type (CVX)',
-      'Conflict Begin Interval', 'Minimum Conflict End Interval',
+      'Previous Vaccine Type (CVX)',
+      'Current Vaccine Type (CVX)',
+      'Conflict Begin Interval',
+      'Minimum Conflict End Interval',
       'Conflict End Interval',
     ]);
-    for (final c in conflicts?.liveVirusConflict ?? const <LiveVirusConflict>[]) {
+    for (final c
+        in conflicts?.liveVirusConflict ?? const <LiveVirusConflict>[]) {
       _add(sheet, [
         _codeText(c.previous?.vaccineType, c.previous?.cvx),
         _codeText(c.current?.vaccineType, c.current?.cvx),
-        _na(c.conflictBeginInterval), _na(c.minConflictEndInterval),
+        _na(c.conflictBeginInterval),
+        _na(c.minConflictEndInterval),
         _na(c.conflictEndInterval),
       ]);
     }
@@ -137,7 +158,11 @@ class ScheduleWorkbookWriter {
     final sheet = excel['Change History'];
     _add(sheet, ['Version', 'n/a', 'Publication Date: n/a']);
     _add(sheet, [
-      'Change', 'Change #', 'Area', 'Previous Values', 'Change',
+      'Change',
+      'Change #',
+      'Area',
+      'Previous Values',
+      'Change',
       'Reason for Change',
     ]);
   }

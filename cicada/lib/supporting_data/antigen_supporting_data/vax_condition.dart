@@ -1,4 +1,4 @@
-import '../../cicada.dart';
+import 'package:cicada/cicada.dart';
 
 class VaxCondition {
   VaxCondition({
@@ -16,6 +16,26 @@ class VaxCondition {
     this.seriesGroups,
   });
 
+  factory VaxCondition.fromJson(Map<String, dynamic> json) {
+    return VaxCondition(
+      conditionID: json['conditionID'] as String?,
+      conditionType: json['conditionType'] as String?,
+      startDate: json['startDate'] as String?,
+      endDate: json['endDate'] as String?,
+      beginAge: json['beginAge'] as String?,
+      endAge: json['endAge'] as String?,
+      interval: json['interval'] as String?,
+      doseCount: json['doseCount'] as String?,
+      doseType:
+          json['doseType'] == null
+              ? null
+              : DoseType.fromJson(json['doseType'] as String),
+      doseCountLogic: json['doseCountLogic'] as String?,
+      vaccineTypes: json['vaccineTypes'] as String?,
+      seriesGroups: json['seriesGroups'] as String?,
+    );
+  }
+
   final String? conditionID;
   final String? conditionType;
   final String? startDate;
@@ -28,25 +48,6 @@ class VaxCondition {
   final String? doseCountLogic;
   final String? vaccineTypes;
   final String? seriesGroups;
-
-  factory VaxCondition.fromJson(Map<String, dynamic> json) {
-    return VaxCondition(
-      conditionID: json['conditionID'] as String?,
-      conditionType: json['conditionType'] as String?,
-      startDate: json['startDate'] as String?,
-      endDate: json['endDate'] as String?,
-      beginAge: json['beginAge'] as String?,
-      endAge: json['endAge'] as String?,
-      interval: json['interval'] as String?,
-      doseCount: json['doseCount'] as String?,
-      doseType: json['doseType'] == null
-          ? null
-          : DoseType.fromJson(json['doseType'] as String),
-      doseCountLogic: json['doseCountLogic'] as String?,
-      vaccineTypes: json['vaccineTypes'] as String?,
-      seriesGroups: json['seriesGroups'] as String?,
-    );
-  }
 
   Map<String, dynamic> toJson() {
     return {

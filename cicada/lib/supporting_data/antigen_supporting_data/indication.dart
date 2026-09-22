@@ -1,4 +1,4 @@
-import 'observation_code.dart';
+import 'package:cicada/supporting_data/antigen_supporting_data/observation_code.dart';
 
 class Indication {
   Indication({
@@ -9,24 +9,26 @@ class Indication {
     this.guidance,
   });
 
-  final ObservationCode? observationCode;
-  final String? description;
-  final String? beginAge;
-  final String? endAge;
-  final String? guidance;
-
   factory Indication.fromJson(Map<String, dynamic> json) {
     return Indication(
-      observationCode: json['observationCode'] == null
-          ? null
-          : ObservationCode.fromJson(
-              json['observationCode'] as Map<String, dynamic>),
+      observationCode:
+          json['observationCode'] == null
+              ? null
+              : ObservationCode.fromJson(
+                json['observationCode'] as Map<String, dynamic>,
+              ),
       description: json['description'] as String?,
       beginAge: json['beginAge'] as String?,
       endAge: json['endAge'] as String?,
       guidance: json['guidance'] as String?,
     );
   }
+
+  final ObservationCode? observationCode;
+  final String? description;
+  final String? beginAge;
+  final String? endAge;
+  final String? guidance;
 
   Map<String, dynamic> toJson() {
     return {

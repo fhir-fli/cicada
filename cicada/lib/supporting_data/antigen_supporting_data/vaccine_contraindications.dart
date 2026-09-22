@@ -1,18 +1,21 @@
-import '../../cicada.dart';
+import 'package:cicada/cicada.dart';
 
 class VaccineContraindications {
   VaccineContraindications({this.contraindication});
 
-  final List<VaccineContraindication>? contraindication;
-
   factory VaccineContraindications.fromJson(Map<String, dynamic> json) {
     return VaccineContraindications(
-      contraindication: (json['contraindication'] as List<dynamic>?)
-          ?.map((e) =>
-              VaccineContraindication.fromJson(e as Map<String, dynamic>))
-          .toList(),
+      contraindication:
+          (json['contraindication'] as List<dynamic>?)
+              ?.map(
+                (e) =>
+                    VaccineContraindication.fromJson(e as Map<String, dynamic>),
+              )
+              .toList(),
     );
   }
+
+  final List<VaccineContraindication>? contraindication;
 
   Map<String, dynamic> toJson() {
     return {
@@ -32,10 +35,9 @@ class VaccineContraindications {
     if (contraindication == null) {
       return null;
     } else {
-      final List<int> codes = contraindication!
-          .map((VaccineContraindication e) => e.codeAsInt ?? -1)
-          .toList();
-      codes.removeWhere((int element) => element == -1);
+      final codes =
+          contraindication!.map((e) => e.codeAsInt ?? -1).toList()
+            ..removeWhere((element) => element == -1);
       return codes;
     }
   }
@@ -50,23 +52,24 @@ class VaccineContraindication {
     this.contraindicatedVaccine,
   });
 
-  final String? observationCode;
-  final String? observationTitle;
-  final String? contraindicationText;
-  final String? contraindicationGuidance;
-  final List<Vaccine>? contraindicatedVaccine;
-
   factory VaccineContraindication.fromJson(Map<String, dynamic> json) {
     return VaccineContraindication(
       observationCode: json['observationCode'] as String?,
       observationTitle: json['observationTitle'] as String?,
       contraindicationText: json['contraindicationText'] as String?,
       contraindicationGuidance: json['contraindicationGuidance'] as String?,
-      contraindicatedVaccine: (json['contraindicatedVaccine'] as List<dynamic>?)
-          ?.map((e) => Vaccine.fromJson(e as Map<String, dynamic>))
-          .toList(),
+      contraindicatedVaccine:
+          (json['contraindicatedVaccine'] as List<dynamic>?)
+              ?.map((e) => Vaccine.fromJson(e as Map<String, dynamic>))
+              .toList(),
     );
   }
+
+  final String? observationCode;
+  final String? observationTitle;
+  final String? contraindicationText;
+  final String? contraindicationGuidance;
+  final List<Vaccine>? contraindicatedVaccine;
 
   Map<String, dynamic> toJson() {
     return {

@@ -1,6 +1,7 @@
 import 'dart:io';
-import 'package:excel/excel.dart';
+
 import 'package:cicada/cicada.dart';
+import 'package:excel/excel.dart';
 
 /// A parser that reads an Excel file (Antigen Supporting Data)
 /// and constructs an [AntigenSupportingData] object.
@@ -28,13 +29,17 @@ class AntigenSheetParser {
       final rows = _fillLabels(
         sheet.rows
             .map(
-              (row) => row
-                  .map(
-                    (cell) =>
-                        cell?.value?.toString().replaceAll('\n', ' ').trim() ??
-                        '',
-                  )
-                  .toList(),
+              (row) =>
+                  row
+                      .map(
+                        (cell) =>
+                            cell?.value
+                                ?.toString()
+                                .replaceAll('\n', ' ')
+                                .trim() ??
+                            '',
+                      )
+                      .toList(),
             )
             .toList(),
         sheetName,
@@ -89,12 +94,13 @@ class AntigenSheetParser {
         final singleSeries = _parseSeriesRows(rows);
 
         // Combine with any existing series
-        final existingSeries = data.series?.toList() ?? <Series>[];
-        existingSeries.add(singleSeries);
+        final existingSeries =
+            (data.series?.toList() ?? <Series>[])..add(singleSeries);
 
         data = data.copyWith(series: existingSeries);
 
-        // Optionally, copy disease and vaccineGroup from the series if not yet set
+        // Optionally, copy disease and vaccineGroup from the series if not
+        // yet set
         data = data.copyWith(
           targetDisease: data.targetDisease ?? singleSeries.targetDisease,
           vaccineGroup: data.vaccineGroup ?? singleSeries.vaccineGroup,
@@ -223,27 +229,25 @@ class AntigenSheetParser {
           final (code, text) = _extractCodeAndText(col1);
 
           final existingList =
-              imm.clinicalHistory?.toList() ?? <ClinicalHistory>[];
-          existingList.add(
-            ClinicalHistory(guidelineCode: code, guidelineTitle: text),
-          );
+              (imm.clinicalHistory?.toList() ?? <ClinicalHistory>[])..add(
+                ClinicalHistory(guidelineCode: code, guidelineTitle: text),
+              );
           imm = imm.copyWith(clinicalHistory: existingList);
         }
       }
-      // If the row says "Birth Date Immunity" => parse birth date, country, exclusion condition
+      // If the row says "Birth Date Immunity" => parse birth date, country,
+      // exclusion condition
       else if (firstCell == 'Birth Date Immunity') {
         final date = row.length > 1 ? row[1] : '';
         final country = row.length > 2 ? row[2] : '';
         // If there's no dateOfBirth yet, initialize it
         var dob = imm.dateOfBirth?.copyWith();
-        if (dob == null) {
-          dob = DateOfBirth(
-            immunityBirthDate: date,
-            birthCountry:
-                country.contains('n/a') || country.isEmpty ? null : country,
-            exclusion: const [],
-          );
-        }
+        dob ??= DateOfBirth(
+          immunityBirthDate: date,
+          birthCountry:
+              country.contains('n/a') || country.isEmpty ? null : country,
+          exclusion: const [],
+        );
 
         // Possibly parse exclusion in row[3]
         if (row.length > 3 &&
@@ -251,13 +255,13 @@ class AntigenSheetParser {
             !row[3].contains('n/a') &&
             !row[3].contains('Immunity Exclusion Condition')) {
           final (exclusionCode, exclusionTitle) = _extractCodeAndText(row[3]);
-          final exclusions = dob.exclusion?.toList() ?? <Exclusion>[];
-          exclusions.add(
-            Exclusion(
-              exclusionCode: exclusionCode,
-              exclusionTitle: exclusionTitle,
-            ),
-          );
+          final exclusions =
+              (dob.exclusion?.toList() ?? <Exclusion>[])..add(
+                Exclusion(
+                  exclusionCode: exclusionCode,
+                  exclusionTitle: exclusionTitle,
+                ),
+              );
           dob = dob.copyWith(exclusion: exclusions);
           imm = imm.copyWith(dateOfBirth: dob);
         }
@@ -272,12 +276,13 @@ class AntigenSheetParser {
   /// -----------------------------------------------------------
   Contraindications _parseContraindicationsRows(List<List<String>> rows) {
     // Initialize with empty lists
-    var contras = Contraindications();
+    final contras = Contraindications();
 
     // Temporary storage for all "antigen" contraindications
     final antigenList = <GroupContraindication>[];
 
-    // We’ll use a map to collect all “vaccine” contraindications keyed by observationCode.
+    // We’ll use a map to collect all “vaccine” contraindications keyed by
+    // observationCode.
     // This ensures multiple rows with the same code get merged into one object.
     final vaccineContraMap = <String, VaccineContraindication>{};
 
@@ -291,12 +296,9 @@ class AntigenSheetParser {
       if (firstCell.contains('Antigen Contraindication') && row.length > 1) {
         final (code, text) = _extractCodeAndText(row[1]);
         final desc = row.length > 2 ? row[2] : '';
-        final guidance =
-            (row.length > 3 ? _nullIfNA(row[3]) : null);
-        final beginAge =
-            (row.length > 4 ? _nullIfNA(row[4]) : null);
-        final endAge =
-            (row.length > 5 ? _nullIfNA(row[5]) : null);
+        final guidance = (row.length > 3 ? _nullIfNA(row[3]) : null);
+        final beginAge = (row.length > 4 ? _nullIfNA(row[4]) : null);
+        final endAge = (row.length > 5 ? _nullIfNA(row[5]) : null);
 
         // Avoid adding a dummy item if 'Code' or 'n/a'
         if (code.isNotEmpty && code != 'Code') {
@@ -320,33 +322,29 @@ class AntigenSheetParser {
           row.length > 1) {
         final (code, text) = _extractCodeAndText(row[1]);
         final desc = row.length > 2 ? row[2] : '';
-        final guidance =
-            (row.length > 3 ? _nullIfNA(row[3]) : null);
+        final guidance = (row.length > 3 ? _nullIfNA(row[3]) : null);
 
-        // If you store "vaccineType" and "cvx" in columns [4] and [5], for example:
+        // If you store "vaccineType" and "cvx" in columns [4] and [5], for
+        // example:
         final (cvx, vaccineType) =
             row.length > 4 ? _extractCodeAndText(row[4].trim()) : (null, null);
 
         // Retrieve any existing 'VaccineContraindication' with the same code
         var existingContra = vaccineContraMap[code];
-        if (existingContra == null) {
-          existingContra = VaccineContraindication(
-            observationCode: code,
-            observationTitle: text,
-            contraindicationText: desc,
-            contraindicationGuidance:
-                guidance == null || guidance.isEmpty ? null : guidance,
-            contraindicatedVaccine: const [],
-          );
-        }
+        existingContra ??= VaccineContraindication(
+          observationCode: code,
+          observationTitle: text,
+          contraindicationText: desc,
+          contraindicationGuidance:
+              guidance == null || guidance.isEmpty ? null : guidance,
+          contraindicatedVaccine: const [],
+        );
 
         // If the row has a non-empty vaccineType/cvx, attach it as a new 'contraindicatedVaccine'
         if ((vaccineType?.isNotEmpty ?? false) &&
             !vaccineType!.contains('n/a')) {
-          final beginAge =
-              (row.length > 5 ? _nullIfNA(row[5]) : null);
-          final endAge =
-              (row.length > 6 ? _nullIfNA(row[6]) : null);
+          final beginAge = (row.length > 5 ? _nullIfNA(row[5]) : null);
+          final endAge = (row.length > 6 ? _nullIfNA(row[6]) : null);
           final newVac = Vaccine(
             vaccineType: vaccineType,
             cvx: cvx,
@@ -354,8 +352,8 @@ class AntigenSheetParser {
             endAge: endAge,
           );
           final updatedVacList =
-              existingContra.contraindicatedVaccine?.toList() ?? <Vaccine>[];
-          updatedVacList.add(newVac);
+              (existingContra.contraindicatedVaccine?.toList() ?? <Vaccine>[])
+                ..add(newVac);
 
           // Overwrite the existing entry in the map
           existingContra = existingContra.copyWith(
@@ -374,16 +372,16 @@ class AntigenSheetParser {
     final vaccineContraList = vaccineContraMap.values.toList();
 
     // Combine them back into 'contras'
-    contras = contras.copyWith(
-      vaccineGroup: antigenList.isEmpty
-          ? null
-          : VaccineGroupContraindications(contraindication: antigenList),
-      vaccine: vaccineContraList.isEmpty
-          ? null
-          : VaccineContraindications(contraindication: vaccineContraList),
+    return contras.copyWith(
+      vaccineGroup:
+          antigenList.isEmpty
+              ? null
+              : VaccineGroupContraindications(contraindication: antigenList),
+      vaccine:
+          vaccineContraList.isEmpty
+              ? null
+              : VaccineContraindications(contraindication: vaccineContraList),
     );
-
-    return contras;
   }
 
   /// Helper to parse code+text from a string like "Allergic reaction (187)"
@@ -402,19 +400,20 @@ class AntigenSheetParser {
   ///         4) Helper: Parse a "Series" tab (rows)
   /// -----------------------------------------------------------
   Series _parseSeriesRows(List<List<String>> rows) {
-    // We'll accumulate data in a mutable local Series, but it's declared final in Cicada,
+    // We'll accumulate data in a mutable local Series, but it's declared
+    // final in Cicada,
     // so we reassign with .copyWith each time we update.
     var series = Series();
 
     // We'll keep track of the "current dose" while we parse
     // to attach intervals/vaccines. We store them in a local list,
     // then copy them back into the series each time.
-    List<SeriesDose> doseList = [];
+    final doseList = <SeriesDose>[];
 
     // Pointers to the "current" dose object
     SeriesDose? currentDose;
 
-    var skipMap = <String, ConditionalSkip>{};
+    final skipMap = <String, ConditionalSkip>{};
 
     for (var i = 0; i < rows.length; i++) {
       final row = rows[i];
@@ -431,9 +430,10 @@ class AntigenSheetParser {
         series = series.copyWith(vaccineGroup: row[1]);
       } else if (firstCell == 'Series Type' && row.length > 1) {
         // Example: standard, risk, etc. Adjust as needed
-        final st = row[1].isNotEmpty && !row[1].contains('n/a')
-            ? SeriesType.fromString(row[1])
-            : null;
+        final st =
+            row[1].isNotEmpty && !row[1].contains('n/a')
+                ? SeriesType.fromString(row[1])
+                : null;
         series = series.copyWith(seriesType: st);
       } else if (firstCell == 'Equivalent Series Groups' && row.length > 1) {
         if (!row[1].contains('n/a')) {
@@ -448,8 +448,7 @@ class AntigenSheetParser {
         final text = row[1];
         if (text.isNotEmpty && text != 'n/a' && text != 'Text') {
           final adminGuidance =
-              series.seriesAdminGuidance?.toList() ?? <String>[];
-          adminGuidance.add(text);
+              (series.seriesAdminGuidance?.toList() ?? <String>[])..add(text);
           series = series.copyWith(seriesAdminGuidance: adminGuidance);
         }
       }
@@ -467,8 +466,9 @@ class AntigenSheetParser {
       }
       // 4.d) Select Patient Series lines
       else if (firstCell.contains('Select Patient Series') && row.length > 7) {
-        // row[1] => defaultSeries, row[2] => productPath, row[3] => seriesGroupName,
-        // row[4] => seriesGroup, row[5] => seriesPriority, row[6] => seriesPreference,
+        // row[1] => defaultSeries, row[2] => productPath,
+        // row[3] => seriesGroupName, row[4] => seriesGroup,
+        // row[5] => seriesPriority, row[6] => seriesPreference,
         // row[7] => minAgeToStart, row[8] => maxAgeToStart, etc.
         final newSelectSeries = SelectSeries(
           defaultSeries: Binary.fromJson(row[1]),
@@ -485,17 +485,14 @@ class AntigenSheetParser {
       // 4.e) Indication lines
       else if (firstCell == 'Indication' && row.length > 1) {
         // row[1] => "Observation (Code)"
-        // row[2] => description, row[3] => beginAge, row[4] => endAge, row[5] => guidance
+        // row[2] => description, row[3] => beginAge, row[4] => endAge,
+        // row[5] => guidance
         final obsCell = row[1];
         final (code, text) = _extractCodeAndText(obsCell);
-        final desc =
-            (row.length > 2 ? _nullIfNA(row[2]) : null);
-        final beginAge =
-            (row.length > 3 ? _nullIfNA(row[3]) : null);
-        final endAge =
-            (row.length > 4 ? _nullIfNA(row[4]) : null);
-        final guidance =
-            (row.length > 5 ? _nullIfNA(row[5]) : null);
+        final desc = (row.length > 2 ? _nullIfNA(row[2]) : null);
+        final beginAge = (row.length > 3 ? _nullIfNA(row[3]) : null);
+        final endAge = (row.length > 4 ? _nullIfNA(row[4]) : null);
+        final guidance = (row.length > 5 ? _nullIfNA(row[5]) : null);
 
         final existingInd = series.indication?.toList() ?? [];
         if (code == 'Code' || code.isEmpty) {
@@ -523,7 +520,7 @@ class AntigenSheetParser {
         }
 
         // Start a new SeriesDose
-        var newDose = SeriesDose(doseNumber: DoseNumber.fromString(row[1]));
+        final newDose = SeriesDose(doseNumber: DoseNumber.fromString(row[1]));
         doseList.add(newDose);
         currentDose = newDose;
       }
@@ -537,12 +534,14 @@ class AntigenSheetParser {
             earliestRecAge: _nullIfNA(row[3]),
             latestRecAge: _nullIfNA(row[4]),
             maxAge: _nullIfNA(row[5]),
-            effectiveDate: _nullIfNA(
-              row.length > 6 ? row[6] : '',
-            )?.simplifyDate,
-            cessationDate: _nullIfNA(
-              row.length > 7 ? row[7] : '',
-            )?.simplifyDate,
+            effectiveDate:
+                _nullIfNA(
+                  row.length > 6 ? row[6] : '',
+                )?.simplifyDate,
+            cessationDate:
+                _nullIfNA(
+                  row.length > 7 ? row[7] : '',
+                )?.simplifyDate,
           );
           // Replace the current dose with an updated copy
           final updatedAges = currentDose.age?.toList() ?? <VaxAge>[];
@@ -562,32 +561,36 @@ class AntigenSheetParser {
                 )?.contains('From Immediate Previous Dose Administered?') ??
                 false)) {
           final obsString = _nullIfNA(row.length > 4 ? row[4] : '');
-          final (code, text) = obsString == null || obsString.isEmpty
-              ? (null, null)
-              : _extractCodeAndText(obsString);
+          final (code, text) =
+              obsString == null || obsString.isEmpty
+                  ? (null, null)
+                  : _extractCodeAndText(obsString);
           final newInterval = Interval(
             fromPrevious: _nullIfNA(row[1]),
             fromTargetDose: int.tryParse(row[2]),
             fromMostRecent: _nullIfNA(row[3]),
-            fromRelevantObs: code == null && text == null
-                ? null
-                : ObservationCode(code: code, text: text),
+            fromRelevantObs:
+                code == null && text == null
+                    ? null
+                    : ObservationCode(code: code, text: text),
             absMinInt: _nullIfNA(row.length > 5 ? row[5] : ''),
             minInt: _nullIfNA(row.length > 6 ? row[6] : ''),
             earliestRecInt: _nullIfNA(row.length > 7 ? row[7] : ''),
             latestRecInt: _nullIfNA(row.length > 8 ? row[8] : ''),
             intervalPriority: _nullIfNA(row.length > 9 ? row[9] : ''),
-            effectiveDate: _nullIfNA(
-              row.length > 10 ? row[10] : '',
-            )?.simplifyDate,
-            cessationDate: _nullIfNA(
-              row.length > 11 ? row[11] : '',
-            )?.simplifyDate,
+            effectiveDate:
+                _nullIfNA(
+                  row.length > 10 ? row[10] : '',
+                )?.simplifyDate,
+            cessationDate:
+                _nullIfNA(
+                  row.length > 11 ? row[11] : '',
+                )?.simplifyDate,
           );
           if (!newInterval.isEmpty()) {
             final updatedPrefInt =
-                currentDose.preferableInterval?.toList() ?? <Interval>[];
-            updatedPrefInt.add(newInterval);
+                (currentDose.preferableInterval?.toList() ?? <Interval>[])
+                  ..add(newInterval);
             currentDose = currentDose.copyWith(
               preferableInterval: updatedPrefInt,
             );
@@ -628,21 +631,23 @@ class AntigenSheetParser {
             cvx: cvxCode,
             beginAge: _nullIfNA(row.length > 2 ? row[2] : ''),
             endAge: _nullIfNA(row.length > 3 ? row[3] : ''),
-            tradeName: tradeName == null ||
-                    tradeName.isEmpty ||
-                    tradeName.contains('n/a')
-                ? null
-                : tradeName,
-            mvx: mvxCode == null || mvxCode.isEmpty || mvxCode.contains('n/a')
-                ? null
-                : mvxCode,
+            tradeName:
+                tradeName == null ||
+                        tradeName.isEmpty ||
+                        tradeName.contains('n/a')
+                    ? null
+                    : tradeName,
+            mvx:
+                mvxCode == null || mvxCode.isEmpty || mvxCode.contains('n/a')
+                    ? null
+                    : mvxCode,
             volume: _nullIfNA(row.length > 5 ? row[5] : ''),
             forecastVaccineType: _nullIfNA(row.length > 6 ? row[6] : ''),
           );
 
           final existingPrefVac =
-              currentDose.preferableVaccine?.toList() ?? <Vaccine>[];
-          existingPrefVac.add(vac);
+              (currentDose.preferableVaccine?.toList() ?? <Vaccine>[])
+                ..add(vac);
           currentDose = currentDose.copyWith(
             preferableVaccine: existingPrefVac,
           );
@@ -663,8 +668,7 @@ class AntigenSheetParser {
             endAge: _nullIfNA(row.length > 3 ? row[3] : ''),
           );
           final existingAllVac =
-              currentDose.allowableVaccine?.toList() ?? <Vaccine>[];
-          existingAllVac.add(vac);
+              (currentDose.allowableVaccine?.toList() ?? <Vaccine>[])..add(vac);
           currentDose = currentDose.copyWith(allowableVaccine: existingAllVac);
           doseList[doseList.length - 1] = currentDose;
         }
@@ -678,8 +682,8 @@ class AntigenSheetParser {
             !vaccineType.contains('n/a')) {
           final vac = Vaccine(vaccineType: vaccineType, cvx: cvxCode);
           final existingInvVac =
-              currentDose.inadvertentVaccine?.toList() ?? <Vaccine>[];
-          existingInvVac.add(vac);
+              (currentDose.inadvertentVaccine?.toList() ?? <Vaccine>[])
+                ..add(vac);
           currentDose = currentDose.copyWith(
             inadvertentVaccine: existingInvVac,
           );
@@ -707,8 +711,7 @@ class AntigenSheetParser {
             final effectiveDate = row.length > 5 ? _nullIfNA(row[5]) : null;
             final cessationDate = row.length > 6 ? _nullIfNA(row[6]) : null;
 
-            final condLogic =
-                (row.length > 7 ? _nullIfNA(row[7]) : null);
+            final condLogic = (row.length > 7 ? _nullIfNA(row[7]) : null);
 
             // Condition-level fields
             final condID =
@@ -719,56 +722,66 @@ class AntigenSheetParser {
                 (row.length > 9 && row[9].isNotEmpty && !row[9].contains('n/a'))
                     ? row[9]
                     : null;
-            final startDate = (row.length > 10 &&
-                    row[10].isNotEmpty &&
-                    !row[10].contains('n/a'))
-                ? row[10]
-                : null;
-            final endDate = (row.length > 11 &&
-                    row[11].isNotEmpty &&
-                    !row[11].contains('n/a'))
-                ? row[11]
-                : null;
-            final beginAge = (row.length > 12 &&
-                    row[12].isNotEmpty &&
-                    !row[12].contains('n/a'))
-                ? row[12]
-                : null;
-            final endAge = (row.length > 13 &&
-                    row[13].isNotEmpty &&
-                    !row[13].contains('n/a'))
-                ? row[13]
-                : null;
-            final interval = (row.length > 14 &&
-                    row[14].isNotEmpty &&
-                    !row[14].contains('n/a'))
-                ? row[14]
-                : null;
-            final doseCount = (row.length > 15 &&
-                    row[15].isNotEmpty &&
-                    !row[15].contains('n/a'))
-                ? row[15]
-                : null;
-            final doseType = (row.length > 16 &&
-                    row[16].isNotEmpty &&
-                    !row[16].contains('n/a'))
-                ? DoseType.fromJson(row[16])
-                : null;
-            final doseCountLogic = (row.length > 17 &&
-                    row[17].isNotEmpty &&
-                    !row[17].contains('n/a'))
-                ? row[17]
-                : null;
-            final vaccineTypes = (row.length > 18 &&
-                    row[18].isNotEmpty &&
-                    !row[18].contains('n/a'))
-                ? row[18]
-                : null;
-            final seriesGroups = (row.length > 19 &&
-                    row[19].isNotEmpty &&
-                    !row[19].contains('n/a'))
-                ? row[19]
-                : null;
+            final startDate =
+                (row.length > 10 &&
+                        row[10].isNotEmpty &&
+                        !row[10].contains('n/a'))
+                    ? row[10]
+                    : null;
+            final endDate =
+                (row.length > 11 &&
+                        row[11].isNotEmpty &&
+                        !row[11].contains('n/a'))
+                    ? row[11]
+                    : null;
+            final beginAge =
+                (row.length > 12 &&
+                        row[12].isNotEmpty &&
+                        !row[12].contains('n/a'))
+                    ? row[12]
+                    : null;
+            final endAge =
+                (row.length > 13 &&
+                        row[13].isNotEmpty &&
+                        !row[13].contains('n/a'))
+                    ? row[13]
+                    : null;
+            final interval =
+                (row.length > 14 &&
+                        row[14].isNotEmpty &&
+                        !row[14].contains('n/a'))
+                    ? row[14]
+                    : null;
+            final doseCount =
+                (row.length > 15 &&
+                        row[15].isNotEmpty &&
+                        !row[15].contains('n/a'))
+                    ? row[15]
+                    : null;
+            final doseType =
+                (row.length > 16 &&
+                        row[16].isNotEmpty &&
+                        !row[16].contains('n/a'))
+                    ? DoseType.fromJson(row[16])
+                    : null;
+            final doseCountLogic =
+                (row.length > 17 &&
+                        row[17].isNotEmpty &&
+                        !row[17].contains('n/a'))
+                    ? row[17]
+                    : null;
+            final vaccineTypes =
+                (row.length > 18 &&
+                        row[18].isNotEmpty &&
+                        !row[18].contains('n/a'))
+                    ? row[18]
+                    : null;
+            final seriesGroups =
+                (row.length > 19 &&
+                        row[19].isNotEmpty &&
+                        !row[19].contains('n/a'))
+                    ? row[19]
+                    : null;
 
             // Build a single VaxCondition object if condID/condType are valid
             VaxCondition? newCondition;
@@ -792,55 +805,58 @@ class AntigenSheetParser {
             }
 
             // Prepare a dictionary key that uniquely identifies a single skip:
-            // If you might have multiple sets under the same (skipContext, setLogic),
+            // If you might have multiple sets under the same (skipContext,
+            // setLogic),
             // also include setId in the key:
             final skipKey = '${skipContext?.name}|$setLogic';
 
             // Check if we already have a ConditionalSkip for this key
             var existingSkip = skipMap[skipKey];
-            if (existingSkip == null) {
-              // Create a new empty skip
-              existingSkip = ConditionalSkip(
-                context: skipContext,
-                setLogic: setLogic,
-                set_: [],
-              );
-            }
+            existingSkip ??= ConditionalSkip(
+              context: skipContext,
+              setLogic: setLogic,
+              set_: [],
+            );
 
             // Inside that skip, find (or create) the correct VaxSet by setId
             final existingSets = existingSkip.set_?.toList() ?? <VaxSet>[];
             VaxSet? targetSet = existingSets.firstWhere(
               (s) => s.setID == setId,
-              orElse: () => VaxSet(
-                setID: setId,
-                setDescription: setDesc,
-                effectiveDate: effectiveDate?.simplifyDate,
-                cessationDate: cessationDate?.simplifyDate,
-                conditionLogic: condLogic,
-                condition: const [],
-              ),
+              orElse:
+                  () => VaxSet(
+                    setID: setId,
+                    setDescription: setDesc,
+                    effectiveDate: effectiveDate?.simplifyDate,
+                    cessationDate: cessationDate?.simplifyDate,
+                    conditionLogic: condLogic,
+                    condition: const [],
+                  ),
             );
 
-            // If we newly created targetSet from orElse, we should add it to the list
+            // If we newly created targetSet from orElse, we should add it to
+            // the list
             if (!existingSets.contains(targetSet)) {
               existingSets.add(targetSet);
             }
 
-            // If setDescription or conditionLogic are blank on the first row, fill them from the row
+            // If setDescription or conditionLogic are blank on the first row,
+            // fill them from the row
             targetSet = targetSet.copyWith(
-              setDescription: targetSet.setDescription?.isNotEmpty == true
-                  ? targetSet.setDescription
-                  : setDesc,
-              conditionLogic: targetSet.conditionLogic?.isNotEmpty == true
-                  ? targetSet.conditionLogic
-                  : condLogic,
+              setDescription:
+                  targetSet.setDescription?.isNotEmpty == true
+                      ? targetSet.setDescription
+                      : setDesc,
+              conditionLogic:
+                  targetSet.conditionLogic?.isNotEmpty == true
+                      ? targetSet.conditionLogic
+                      : condLogic,
             );
 
             // Add the new condition if we have one
             if (newCondition != null) {
               final condList =
-                  targetSet.condition?.toList() ?? <VaxCondition>[];
-              condList.add(newCondition);
+                  (targetSet.condition?.toList() ?? <VaxCondition>[])
+                    ..add(newCondition);
               targetSet = targetSet.copyWith(condition: condList);
             }
 
@@ -894,8 +910,7 @@ class AntigenSheetParser {
     }
 
     // After the loop, put the final doseList into the series
-    series = series.copyWith(seriesDose: doseList);
-    return series;
+    return series.copyWith(seriesDose: doseList);
   }
 
   /// -----------------------------------------------------------

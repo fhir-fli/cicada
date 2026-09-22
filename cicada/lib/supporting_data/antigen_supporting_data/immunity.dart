@@ -1,5 +1,5 @@
-import 'clinical_history.dart';
-import 'date_of_birth.dart';
+import 'package:cicada/supporting_data/antigen_supporting_data/clinical_history.dart';
+import 'package:cicada/supporting_data/antigen_supporting_data/date_of_birth.dart';
 
 class Immunity {
   Immunity({
@@ -7,19 +7,23 @@ class Immunity {
     this.dateOfBirth,
   });
 
-  final List<ClinicalHistory>? clinicalHistory;
-  final DateOfBirth? dateOfBirth;
-
   factory Immunity.fromJson(Map<String, dynamic> json) {
     return Immunity(
-      clinicalHistory: (json['clinicalHistory'] as List<dynamic>?)
-          ?.map((e) => ClinicalHistory.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      dateOfBirth: json['dateOfBirth'] == null
-          ? null
-          : DateOfBirth.fromJson(json['dateOfBirth'] as Map<String, dynamic>),
+      clinicalHistory:
+          (json['clinicalHistory'] as List<dynamic>?)
+              ?.map((e) => ClinicalHistory.fromJson(e as Map<String, dynamic>))
+              .toList(),
+      dateOfBirth:
+          json['dateOfBirth'] == null
+              ? null
+              : DateOfBirth.fromJson(
+                json['dateOfBirth'] as Map<String, dynamic>,
+              ),
     );
   }
+
+  final List<ClinicalHistory>? clinicalHistory;
+  final DateOfBirth? dateOfBirth;
 
   Map<String, dynamic> toJson() {
     return {

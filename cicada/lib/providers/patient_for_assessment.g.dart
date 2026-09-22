@@ -14,16 +14,16 @@ final patientForAssessmentProvider = PatientForAssessmentFamily._();
 
 final class PatientForAssessmentProvider
     extends $NotifierProvider<PatientForAssessment, VaxPatient> {
-  PatientForAssessmentProvider._(
-      {required PatientForAssessmentFamily super.from,
-      required Parameters super.argument})
-      : super(
-          retry: null,
-          name: r'patientForAssessmentProvider',
-          isAutoDispose: true,
-          dependencies: null,
-          $allTransitiveDependencies: null,
-        );
+  PatientForAssessmentProvider._({
+    required PatientForAssessmentFamily super.from,
+    required Parameters super.argument,
+  }) : super(
+         retry: null,
+         name: r'patientForAssessmentProvider',
+         isAutoDispose: true,
+         dependencies: null,
+         $allTransitiveDependencies: null,
+       );
 
   @override
   String debugGetCreateSourceHash() => _$patientForAssessmentHash();
@@ -63,21 +63,25 @@ String _$patientForAssessmentHash() =>
 
 final class PatientForAssessmentFamily extends $Family
     with
-        $ClassFamilyOverride<PatientForAssessment, VaxPatient, VaxPatient,
-            VaxPatient, Parameters> {
+        $ClassFamilyOverride<
+          PatientForAssessment,
+          VaxPatient,
+          VaxPatient,
+          VaxPatient,
+          Parameters
+        > {
   PatientForAssessmentFamily._()
-      : super(
-          retry: null,
-          name: r'patientForAssessmentProvider',
-          dependencies: null,
-          $allTransitiveDependencies: null,
-          isAutoDispose: true,
-        );
+    : super(
+        retry: null,
+        name: r'patientForAssessmentProvider',
+        dependencies: null,
+        $allTransitiveDependencies: null,
+        isAutoDispose: true,
+      );
 
   PatientForAssessmentProvider call(
     Parameters parameters,
-  ) =>
-      PatientForAssessmentProvider._(argument: parameters, from: this);
+  ) => PatientForAssessmentProvider._(argument: parameters, from: this);
 
   @override
   String toString() => r'patientForAssessmentProvider';
@@ -94,12 +98,19 @@ abstract class _$PatientForAssessment extends $Notifier<VaxPatient> {
   @override
   WhenComplete runBuild() {
     final ref = this.ref as $Ref<VaxPatient, VaxPatient>;
-    final element = ref.element as $ClassProviderElement<
-        AnyNotifier<VaxPatient, VaxPatient>, VaxPatient, Object?, Object?>;
+    final element =
+        ref.element
+            as $ClassProviderElement<
+              AnyNotifier<VaxPatient, VaxPatient>,
+              VaxPatient,
+              Object?,
+              Object?
+            >;
     return element.handleCreate(
-        ref,
-        () => build(
-              _$args,
-            ));
+      ref,
+      () => build(
+        _$args,
+      ),
+    );
   }
 }

@@ -1,6 +1,7 @@
 import 'dart:io';
-import 'package:excel/excel.dart';
+
 import 'package:cicada/cicada.dart';
+import 'package:excel/excel.dart';
 
 /// A parser that reads a single Excel file for one piece of the
 /// Schedule Supporting Data, then merges it into an existing
@@ -20,8 +21,10 @@ class ScheduleSheetParser {
   /// The [path] filename determines which parse logic we use:
   ///  - If it contains "Coded Observations" -> parse "Conditions" tab
   ///  - If it contains "CVX to Antigen Map" -> parse "CVX to Antigen Map" tab
-  ///  - If it contains "Live Virus Conflicts" -> parse "Live Virus Conflicts" tab
-  ///  - If it contains "Vaccine Group to Antigen Map" -> parse "Vaccine Group to Antigen Map" tab
+  ///  - If it contains "Live Virus Conflicts" -> parse the "Live Virus
+  ///    Conflicts" tab
+  ///  - If it contains "Vaccine Group to Antigen Map" -> parse the "Vaccine
+  ///    Group to Antigen Map" tab
   ///  - If it contains "Vaccine Group" -> parse "Vaccine Groups" tab
   ///
   /// If the filename doesn't match, we just return [oldScheduleData] unchanged.
@@ -40,31 +43,33 @@ class ScheduleSheetParser {
     final lower = path.toLowerCase();
     if (lower.contains('coded observations')) {
       // We'll parse the "Conditions" tab
-      final tabName = 'Conditions';
+      const tabName = 'Conditions';
       if (excel.tables.keys.contains(tabName)) {
         final sheet = excel.tables[tabName]!;
         final rows = _sheetToRows(sheet);
         final obsList = _parseConditionsTab(rows);
         partial = partial.copyWith(
-          observations: partial.observations?.copyWith(observation: obsList) ??
+          observations:
+              partial.observations?.copyWith(observation: obsList) ??
               VaxObservations(observation: obsList),
         );
       }
     } else if (lower.contains('cvx to antigen map')) {
       // We'll parse the "CVX to Antigen Map" tab
-      final tabName = 'CVX to Antigen Map';
+      const tabName = 'CVX to Antigen Map';
       if (excel.tables.keys.contains(tabName)) {
         final sheet = excel.tables[tabName]!;
         final rows = _sheetToRows(sheet);
         final cvxList = _parseCvxToAntigenMapTab(rows);
         partial = partial.copyWith(
-          cvxToAntigenMap: partial.cvxToAntigenMap?.copyWith(cvxMap: cvxList) ??
+          cvxToAntigenMap:
+              partial.cvxToAntigenMap?.copyWith(cvxMap: cvxList) ??
               CvxToAntigenMap(cvxMap: cvxList),
         );
       }
     } else if (lower.contains('live virus conflicts')) {
       // We'll parse the "Live Virus Conflicts" tab
-      final tabName = 'Live Virus Conflicts';
+      const tabName = 'Live Virus Conflicts';
       if (excel.tables.keys.contains(tabName)) {
         final sheet = excel.tables[tabName]!;
         final rows = _sheetToRows(sheet);
@@ -73,13 +78,14 @@ class ScheduleSheetParser {
       }
     } else if (lower.contains('vaccine group to antigen map')) {
       // We'll parse the "Vaccine Group to Antigen Map" tab
-      final tabName = 'Vaccine Group to Antigen Map';
+      const tabName = 'Vaccine Group to Antigen Map';
       if (excel.tables.keys.contains(tabName)) {
         final sheet = excel.tables[tabName]!;
         final rows = _sheetToRows(sheet);
         final groupMaps = _parseVaccineGroupToAntigenMapTab(rows);
         partial = partial.copyWith(
-          vaccineGroupToAntigenMap: partial.vaccineGroupToAntigenMap?.copyWith(
+          vaccineGroupToAntigenMap:
+              partial.vaccineGroupToAntigenMap?.copyWith(
                 vaccineGroupMap: groupMaps,
               ) ??
               VaccineGroupToAntigenMap(vaccineGroupMap: groupMaps),
@@ -88,7 +94,7 @@ class ScheduleSheetParser {
     } else if (lower.contains('vaccine group') &&
         !lower.contains('antigen map')) {
       // We'll parse the "Vaccine Groups" tab
-      final tabName = 'Vaccine Groups';
+      const tabName = 'Vaccine Groups';
       if (excel.tables.keys.contains(tabName)) {
         final sheet = excel.tables[tabName]!;
         final rows = _sheetToRows(sheet);
@@ -97,23 +103,27 @@ class ScheduleSheetParser {
       }
     } else {
       // If filename doesn't match any known pattern, do nothing
-      print('parseFile: $path does not match a known schedule file type.');
+      stdout.writeln(
+        'parseFile: $path does not match a known schedule file type.',
+      );
     }
 
     // 3) Merge partial data into oldScheduleData
     return _mergeSchedules(oldScheduleData, partial);
   }
 
-  /// Utility to convert an Excel sheet to a List<List<String>> of row data
+  /// Utility to convert an Excel sheet to a `List<List<String>>` of row data
   List<List<String>> _sheetToRows(Sheet sheet) {
     return sheet.rows
         .map(
-          (row) => row
-              .map(
-                (cell) =>
-                    cell?.value?.toString().replaceAll('\n', ' ').trim() ?? '',
-              )
-              .toList(),
+          (row) =>
+              row
+                  .map(
+                    (cell) =>
+                        cell?.value?.toString().replaceAll('\n', ' ').trim() ??
+                        '',
+                  )
+                  .toList(),
         )
         .toList();
   }
@@ -134,7 +144,7 @@ class ScheduleSheetParser {
     if (rows.isEmpty) return obsList;
 
     // Assume first row might be headers, so start from row 1
-    for (int i = 1; i < rows.length; i++) {
+    for (var i = 1; i < rows.length; i++) {
       final row = rows[i];
       if (row.isEmpty) continue;
 
@@ -189,9 +199,10 @@ class ScheduleSheetParser {
         contraindicationText:
             contra.isNotEmpty && contra != 'n/a' ? contra : null,
         clarifyingText: clarify.isNotEmpty && clarify != 'n/a' ? clarify : null,
-        codedValues: codedValues.isNotEmpty
-            ? CodedValues(codedValue: codedValues)
-            : null,
+        codedValues:
+            codedValues.isNotEmpty
+                ? CodedValues(codedValue: codedValues)
+                : null,
       );
 
       obsList.add(observation);
@@ -213,7 +224,7 @@ class ScheduleSheetParser {
     final cvxList = <CvxMap>[];
     if (rows.isEmpty) return cvxList;
 
-    for (int i = 1; i < rows.length; i++) {
+    for (var i = 1; i < rows.length; i++) {
       final row = rows[i];
       if (row.isEmpty) continue;
 
@@ -241,16 +252,16 @@ class ScheduleSheetParser {
         );
       } else {
         final existing = cvxList[cvxIndex];
-        final assoc = existing.association?.toList() ?? <Association>[];
-        assoc.add(
-          Association(
-            antigen: antigenVal,
-            associationBeginAge:
-                beginAge == null || beginAge == 'n/a' ? null : beginAge,
-            associationEndAge:
-                endAge == null || endAge == 'n/a' ? null : endAge,
-          ),
-        );
+        final assoc =
+            (existing.association?.toList() ?? <Association>[])..add(
+              Association(
+                antigen: antigenVal,
+                associationBeginAge:
+                    beginAge == null || beginAge == 'n/a' ? null : beginAge,
+                associationEndAge:
+                    endAge == null || endAge == 'n/a' ? null : endAge,
+              ),
+            );
 
         final updated = existing.copyWith(association: assoc);
         cvxList[cvxIndex] = updated;
@@ -273,7 +284,7 @@ class ScheduleSheetParser {
     final list = <LiveVirusConflict>[];
     if (rows.isEmpty) return LiveVirusConflicts(liveVirusConflict: list);
 
-    for (int i = 1; i < rows.length; i++) {
+    for (var i = 1; i < rows.length; i++) {
       final row = rows[i];
       if (row.isEmpty) continue;
 
@@ -284,14 +295,16 @@ class ScheduleSheetParser {
       final minEnd = row.length > 3 ? row[3].trim() : '';
       final endInt = row.length > 4 ? row[4].trim() : '';
 
-      final previousVac = previousType.isEmpty && previousCvx.isEmpty
-          ? null
-          : Vaccine(vaccineType: previousType, cvx: previousCvx);
+      final previousVac =
+          previousType.isEmpty && previousCvx.isEmpty
+              ? null
+              : Vaccine(vaccineType: previousType, cvx: previousCvx);
       Vaccine(vaccineType: previousType, cvx: previousCvx);
-      final currentVac = (currentType == null || currentType.isEmpty) &&
-              (currentCvx == null || currentCvx.isEmpty)
-          ? null
-          : Vaccine(vaccineType: currentType, cvx: currentCvx);
+      final currentVac =
+          (currentType == null || currentType.isEmpty) &&
+                  (currentCvx == null || currentCvx.isEmpty)
+              ? null
+              : Vaccine(vaccineType: currentType, cvx: currentCvx);
 
       list.add(
         LiveVirusConflict(
@@ -319,7 +332,7 @@ class ScheduleSheetParser {
     final list = <VaccineGroupMap>[];
     if (rows.isEmpty) return list;
 
-    for (int i = 1; i < rows.length; i++) {
+    for (var i = 1; i < rows.length; i++) {
       final row = rows[i];
       if (row.isEmpty) continue;
 
@@ -335,8 +348,7 @@ class ScheduleSheetParser {
         list.add(existing);
       }
 
-      final antList = existing.antigen?.toList() ?? <String>[];
-      antList.add(antigen);
+      final antList = (existing.antigen?.toList() ?? <String>[])..add(antigen);
 
       final updated = existing.copyWith(antigen: antList);
       final idx = list.indexOf(existing);
@@ -357,7 +369,7 @@ class ScheduleSheetParser {
     final list = <VaccineGroup>[];
     if (rows.isEmpty) return VaccineGroups(vaccineGroup: list);
 
-    for (int i = 1; i < rows.length; i++) {
+    for (var i = 1; i < rows.length; i++) {
       final row = rows[i];
       if (row.isEmpty) continue;
 

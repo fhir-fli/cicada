@@ -11,8 +11,13 @@ List<String> jsonDiff(dynamic a, dynamic b, [String path = '']) {
   } else if (a is List && b is List) {
     final n = a.length > b.length ? a.length : b.length;
     for (var i = 0; i < n; i++) {
-      out.addAll(jsonDiff(
-          i < a.length ? a[i] : null, i < b.length ? b[i] : null, '$path[$i]'));
+      out.addAll(
+        jsonDiff(
+          i < a.length ? a[i] : null,
+          i < b.length ? b[i] : null,
+          '$path[$i]',
+        ),
+      );
     }
   } else if (a != b && !_sameNumber(a, b)) {
     out.add('$path: ${_short(a)} -> ${_short(b)}');

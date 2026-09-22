@@ -1,4 +1,4 @@
-import '../../cicada.dart';
+import 'package:cicada/cicada.dart';
 
 class SelectSeries {
   SelectSeries({
@@ -12,6 +12,31 @@ class SelectSeries {
     this.maxAgeToStart,
   });
 
+  factory SelectSeries.fromJson(Map<String, dynamic> json) {
+    return SelectSeries(
+      defaultSeries:
+          json['defaultSeries'] == null
+              ? null
+              : Binary.fromJson(json['defaultSeries'] as String),
+      productPath:
+          json['productPath'] == null
+              ? null
+              : Binary.fromJson(json['productPath'] as String),
+      seriesGroupName: json['seriesGroupName'] as String?,
+      seriesGroup: json['seriesGroup'] as String?,
+      seriesPriority:
+          json['seriesPriority'] == null
+              ? null
+              : SeriesPriority.fromJson(json['seriesPriority'] as String),
+      seriesPreference:
+          json['seriesPreference'] == null
+              ? null
+              : SeriesPreference.fromJson(json['seriesPreference'] as String),
+      minAgeToStart: json['minAgeToStart'] as String?,
+      maxAgeToStart: json['maxAgeToStart'] as String?,
+    );
+  }
+
   final Binary? defaultSeries;
   final Binary? productPath;
   final String? seriesGroupName;
@@ -20,27 +45,6 @@ class SelectSeries {
   final SeriesPreference? seriesPreference;
   final String? minAgeToStart;
   final String? maxAgeToStart;
-
-  factory SelectSeries.fromJson(Map<String, dynamic> json) {
-    return SelectSeries(
-      defaultSeries: json['defaultSeries'] == null
-          ? null
-          : Binary.fromJson(json['defaultSeries'] as String),
-      productPath: json['productPath'] == null
-          ? null
-          : Binary.fromJson(json['productPath'] as String),
-      seriesGroupName: json['seriesGroupName'] as String?,
-      seriesGroup: json['seriesGroup'] as String?,
-      seriesPriority: json['seriesPriority'] == null
-          ? null
-          : SeriesPriority.fromJson(json['seriesPriority'] as String),
-      seriesPreference: json['seriesPreference'] == null
-          ? null
-          : SeriesPreference.fromJson(json['seriesPreference'] as String),
-      minAgeToStart: json['minAgeToStart'] as String?,
-      maxAgeToStart: json['maxAgeToStart'] as String?,
-    );
-  }
 
   Map<String, dynamic> toJson() {
     return {

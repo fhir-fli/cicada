@@ -1,4 +1,4 @@
-import '../../cicada.dart';
+import 'package:cicada/cicada.dart';
 
 export 'cvx_to_antigen_map.dart';
 export 'live_virus_conflicts.dart';
@@ -15,36 +15,46 @@ class ScheduleSupportingData {
     this.observations,
   });
 
+  factory ScheduleSupportingData.fromJson(Map<String, dynamic> json) {
+    return ScheduleSupportingData(
+      liveVirusConflicts:
+          json['liveVirusConflicts'] == null
+              ? null
+              : LiveVirusConflicts.fromJson(
+                json['liveVirusConflicts'] as Map<String, dynamic>,
+              ),
+      vaccineGroups:
+          json['vaccineGroups'] == null
+              ? null
+              : VaccineGroups.fromJson(
+                json['vaccineGroups'] as Map<String, dynamic>,
+              ),
+      vaccineGroupToAntigenMap:
+          json['vaccineGroupToAntigenMap'] == null
+              ? null
+              : VaccineGroupToAntigenMap.fromJson(
+                json['vaccineGroupToAntigenMap'] as Map<String, dynamic>,
+              ),
+      cvxToAntigenMap:
+          json['cvxToAntigenMap'] == null
+              ? null
+              : CvxToAntigenMap.fromJson(
+                json['cvxToAntigenMap'] as Map<String, dynamic>,
+              ),
+      observations:
+          json['observations'] == null
+              ? null
+              : VaxObservations.fromJson(
+                json['observations'] as Map<String, dynamic>,
+              ),
+    );
+  }
+
   final LiveVirusConflicts? liveVirusConflicts;
   final VaccineGroups? vaccineGroups;
   final VaccineGroupToAntigenMap? vaccineGroupToAntigenMap;
   final CvxToAntigenMap? cvxToAntigenMap;
   final VaxObservations? observations;
-
-  factory ScheduleSupportingData.fromJson(Map<String, dynamic> json) {
-    return ScheduleSupportingData(
-      liveVirusConflicts: json['liveVirusConflicts'] == null
-          ? null
-          : LiveVirusConflicts.fromJson(
-              json['liveVirusConflicts'] as Map<String, dynamic>),
-      vaccineGroups: json['vaccineGroups'] == null
-          ? null
-          : VaccineGroups.fromJson(
-              json['vaccineGroups'] as Map<String, dynamic>),
-      vaccineGroupToAntigenMap: json['vaccineGroupToAntigenMap'] == null
-          ? null
-          : VaccineGroupToAntigenMap.fromJson(
-              json['vaccineGroupToAntigenMap'] as Map<String, dynamic>),
-      cvxToAntigenMap: json['cvxToAntigenMap'] == null
-          ? null
-          : CvxToAntigenMap.fromJson(
-              json['cvxToAntigenMap'] as Map<String, dynamic>),
-      observations: json['observations'] == null
-          ? null
-          : VaxObservations.fromJson(
-              json['observations'] as Map<String, dynamic>),
-    );
-  }
 
   ScheduleSupportingData copyWith({
     LiveVirusConflicts? liveVirusConflicts,

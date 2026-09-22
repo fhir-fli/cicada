@@ -7,8 +7,8 @@ void main() {
   final xmlDir = Directory(supportDir);
   Directory(supportDir.replaceAll('XML', 'JSON')).createSync(recursive: true);
   final xmlFiles = xmlDir.listSync().where(
-        (file) => file.path.endsWith('.xml'),
-      );
+    (file) => file.path.endsWith('.xml'),
+  );
 
   // Create an instance of Xml2Json.
   final transformer = Xml2Json();
@@ -61,8 +61,9 @@ void main() {
     final finalJson = ensureKeysAreLists(cleanedJson, keysToAlwaysList);
 
     // Write the resulting JSON to a new file.
-    final outputPath =
-        file.path.replaceAll('.xml', '.json').replaceAll('XML', 'JSON');
+    final outputPath = file.path
+        .replaceAll('.xml', '.json')
+        .replaceAll('XML', 'JSON');
     File(outputPath).writeAsStringSync(jsonPrettyPrint(finalJson), flush: true);
   }
 }
@@ -83,33 +84,36 @@ dynamic removeNulls(dynamic data, bool isScheduleData) {
     });
     return pruned.isEmpty ? null : pruned;
   } else if (data is List) {
-    final finalList = data
-        .map((item) => removeNulls(item, isScheduleData))
-        .where((item) => item != null)
-        .toList();
+    final finalList =
+        data
+            .map((item) => removeNulls(item, isScheduleData))
+            .where((item) => item != null)
+            .toList();
     if (finalList.isEmpty) {
       return null;
     }
     return finalList;
   } else if (data is String) {
-    data = data.trim().replaceAll('\\\\n', '\r ');
-    if (data == 'valid') {
-      data = 'Valid';
+    String? text = data.trim().replaceAll(r'\\n', '\r ');
+    if (text == 'valid') {
+      text = 'Valid';
     }
-    if (data.contains('https://') && data.endsWith('\r ')) {
-      data = data.substring(0, data.length - 2);
+    if (text.contains('https://') && text.endsWith('\r ')) {
+      text = text.substring(0, text.length - 2);
     }
-    if (data == "n/a\r ") {
-      data = null;
+    if (text == 'n/a\r ') {
+      text = null;
     }
-    if (data is String && data.contains('?50')) {
-      data = data.replaceAll('?50', '≤50');
+    if (text != null && text.contains('?50')) {
+      text = text.replaceAll('?50', '≤50');
     }
     final datePattern = RegExp(r'^\d{8}$');
-    if (data is String && datePattern.hasMatch(data) && !isScheduleData) {
-      data =
-          '${data.substring(0, 4)}-${data.substring(4, 6)}-${data.substring(6, 8)}';
+    if (text != null && datePattern.hasMatch(text) && !isScheduleData) {
+      text =
+          '${text.substring(0, 4)}-${text.substring(4, 6)}-'
+          '${text.substring(6, 8)}';
     }
+    return text;
   }
   return data;
 }
@@ -117,19 +121,23 @@ dynamic removeNulls(dynamic data, bool isScheduleData) {
 /// Auto-detect the Version_* directory containing [subdir] (e.g. 'XML').
 String _findVersionSubdir(String subdir) {
   final baseDir = Directory('cicada_generator/lib');
-  final matches = baseDir
-      .listSync()
-      .whereType<Directory>()
-      .where((d) =>
-          d.path.split('/').last.startsWith('Version_') &&
-          Directory('${d.path}/$subdir').existsSync())
-      .toList();
+  final matches =
+      baseDir
+          .listSync()
+          .whereType<Directory>()
+          .where(
+            (d) =>
+                d.path.split('/').last.startsWith('Version_') &&
+                Directory('${d.path}/$subdir').existsSync(),
+          )
+          .toList();
   if (matches.isEmpty) {
     throw StateError('No Version_* directory with $subdir/ found');
   }
   if (matches.length > 1) {
     throw StateError(
-        'Multiple Version_* directories with $subdir/ found: ${matches.map((d) => d.path).join(', ')}');
+      'Multiple Version_* directories with $subdir/ found: ${matches.map((d) => d.path).join(', ')}',
+    );
   }
   return '${matches.first.path}/$subdir';
 }
@@ -142,9 +150,11 @@ dynamic ensureKeysAreLists(
   List<String> keysToAlwaysList, [
   String? parentKey,
 ]) {
-  // Define a helper function to decide if a key's value should be forced to be a list.
+  // Define a helper function to decide if a key's value should be forced to
+  // be a list.
   bool shouldEnsureAsList(String key, String? parentKey) {
-    // Special case: if key is "interval" and its immediate parent is "condition",
+    // Special case: if key is "interval" and its immediate parent is
+    // "condition",
     // do not force wrap the value in a list.
     if (key == 'interval' && parentKey == 'condition') {
       return false;
@@ -160,10 +170,12 @@ dynamic ensureKeysAreLists(
   if (data is Map<String, dynamic>) {
     final updated = <String, dynamic>{};
     data.forEach((key, value) {
-      // Recurse into the value, passing the current key as the parentKey for its children.
+      // Recurse into the value, passing the current key as the parentKey for
+      // its children.
       var processedValue = ensureKeysAreLists(value, keysToAlwaysList, key);
 
-      // If this key should be forced into a list, and the value is not already one, wrap it.
+      // If this key should be forced into a list, and the value is not
+      // already one, wrap it.
       if (shouldEnsureAsList(key, parentKey)) {
         if (processedValue is! List) {
           processedValue = [processedValue];

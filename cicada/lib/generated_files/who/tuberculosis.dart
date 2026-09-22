@@ -1,48 +1,50 @@
-// ignore_for_file: prefer_single_quotes, always_specify_types
-
-import '../../cicada.dart';
+import 'package:cicada/cicada.dart';
 
 final AntigenSupportingData whoTuberculosis = AntigenSupportingData.fromJson({
-  "targetDisease": "Tuberculosis",
-  "vaccineGroup": "BCG",
-  "series": [
+  'targetDisease': 'Tuberculosis',
+  'vaccineGroup': 'BCG',
+  'series': [
     {
-      "seriesName": "WHO Tuberculosis 1-dose series",
-      "targetDisease": "Tuberculosis",
-      "vaccineGroup": "BCG",
-      "seriesType": "Standard",
-      "selectSeries": {
-        "defaultSeries": "Yes",
-        "productPath": "No",
-        "seriesGroupName": "Standard",
-        "seriesGroup": "1",
-        "seriesPriority": "A",
-        "seriesPreference": "1"
+      'seriesName': 'WHO Tuberculosis 1-dose series',
+      'targetDisease': 'Tuberculosis',
+      'vaccineGroup': 'BCG',
+      'seriesType': 'Standard',
+      'selectSeries': {
+        'defaultSeries': 'Yes',
+        'productPath': 'No',
+        'seriesGroupName': 'Standard',
+        'seriesGroup': '1',
+        'seriesPriority': 'A',
+        'seriesPreference': '1',
       },
-      "seriesDose": [
+      'seriesDose': [
         {
-          "doseNumber": "Dose 1",
-          "age": [
+          'doseNumber': 'Dose 1',
+          'age': [
             {
-              "absMinAge": "0 days",
-              "minAge": "0 days",
-              "earliestRecAge": "0 days"
-            }
+              'absMinAge': '0 days',
+              'minAge': '0 days',
+              'earliestRecAge': '0 days',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "BCG",
-              "cvx": "19",
-              "beginAge": "0 days",
-              "forecastVaccineType": "Y"
-            }
+              'vaccineType': 'BCG',
+              'cvx': '19',
+              'beginAge': '0 days',
+              'forecastVaccineType': 'Y',
+            },
           ],
-          "allowableVaccine": [
-            {"vaccineType": "BCG", "cvx": "19", "beginAge": "0 days"}
+          'allowableVaccine': [
+            {
+              'vaccineType': 'BCG',
+              'cvx': '19',
+              'beginAge': '0 days',
+            },
           ],
-          "recurringDose": "No"
-        }
-      ]
-    }
-  ]
+          'recurringDose': 'No',
+        },
+      ],
+    },
+  ],
 });

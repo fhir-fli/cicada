@@ -1,166 +1,178 @@
-// ignore_for_file: prefer_single_quotes, always_specify_types
-
-import '../../cicada.dart';
+import 'package:cicada/cicada.dart';
 
 final AntigenSupportingData whoHepa = AntigenSupportingData.fromJson({
-  "targetDisease": "HepA",
-  "vaccineGroup": "HepA",
-  "series": [
+  'targetDisease': 'HepA',
+  'vaccineGroup': 'HepA',
+  'series': [
     {
-      "seriesName": "WHO HepA single-dose series",
-      "targetDisease": "HepA",
-      "vaccineGroup": "HepA",
-      "seriesType": "Risk",
-      "selectSeries": {
-        "defaultSeries": "No",
-        "productPath": "No",
-        "seriesGroupName": "Increased Risk",
-        "seriesGroup": "1",
-        "seriesPriority": "A",
-        "seriesPreference": "1"
+      'seriesName': 'WHO HepA single-dose series',
+      'targetDisease': 'HepA',
+      'vaccineGroup': 'HepA',
+      'seriesType': 'Risk',
+      'selectSeries': {
+        'defaultSeries': 'No',
+        'productPath': 'No',
+        'seriesGroupName': 'Increased Risk',
+        'seriesGroup': '1',
+        'seriesPriority': 'A',
+        'seriesPreference': '1',
       },
-      "indication": [
+      'indication': [
         {
-          "observationCode": {
-            "text": "Lives in HepA intermediate/high endemicity area",
-            "code": "1027"
+          'observationCode': {
+            'text': 'Lives in HepA intermediate/high endemicity area',
+            'code': '1027',
           },
-          "description":
-              "Patient lives in a hepatitis A intermediate or high endemicity area"
-        }
+          'description':
+              'Patient lives in a hepatitis A intermediate or high '
+              'endemicity area',
+        },
       ],
-      "seriesDose": [
+      'seriesDose': [
         {
-          "doseNumber": "Dose 1",
-          "age": [
+          'doseNumber': 'Dose 1',
+          'age': [
             {
-              "absMinAge": "12 months",
-              "minAge": "12 months",
-              "earliestRecAge": "12 months"
-            }
-          ],
-          "preferableVaccine": [
-            {
-              "vaccineType": "HepA, pediatric/adolescent",
-              "cvx": "83",
-              "beginAge": "12 months",
-              "forecastVaccineType": "Y"
-            }
-          ],
-          "allowableVaccine": [
-            {
-              "vaccineType": "HepA, pediatric/adolescent",
-              "cvx": "83",
-              "beginAge": "12 months"
+              'absMinAge': '12 months',
+              'minAge': '12 months',
+              'earliestRecAge': '12 months',
             },
-            {"vaccineType": "HepA, adult", "cvx": "52", "beginAge": "19 years"},
-            {
-              "vaccineType": "HepA-HepB (Twinrix)",
-              "cvx": "104",
-              "beginAge": "18 years"
-            }
           ],
-          "recurringDose": "No"
-        }
-      ]
+          'preferableVaccine': [
+            {
+              'vaccineType': 'HepA, pediatric/adolescent',
+              'cvx': '83',
+              'beginAge': '12 months',
+              'forecastVaccineType': 'Y',
+            },
+          ],
+          'allowableVaccine': [
+            {
+              'vaccineType': 'HepA, pediatric/adolescent',
+              'cvx': '83',
+              'beginAge': '12 months',
+            },
+            {
+              'vaccineType': 'HepA, adult',
+              'cvx': '52',
+              'beginAge': '19 years',
+            },
+            {
+              'vaccineType': 'HepA-HepB (Twinrix)',
+              'cvx': '104',
+              'beginAge': '18 years',
+            },
+          ],
+          'recurringDose': 'No',
+        },
+      ],
     },
     {
-      "seriesName": "WHO HepA 2-dose series",
-      "targetDisease": "HepA",
-      "vaccineGroup": "HepA",
-      "seriesType": "Risk",
-      "selectSeries": {
-        "defaultSeries": "No",
-        "productPath": "No",
-        "seriesGroupName": "Increased Risk",
-        "seriesGroup": "1",
-        "seriesPriority": "A",
-        "seriesPreference": "2"
+      'seriesName': 'WHO HepA 2-dose series',
+      'targetDisease': 'HepA',
+      'vaccineGroup': 'HepA',
+      'seriesType': 'Risk',
+      'selectSeries': {
+        'defaultSeries': 'No',
+        'productPath': 'No',
+        'seriesGroupName': 'Increased Risk',
+        'seriesGroup': '1',
+        'seriesPriority': 'A',
+        'seriesPreference': '2',
       },
-      "indication": [
+      'indication': [
         {
-          "observationCode": {
-            "text": "Lives in HepA intermediate/high endemicity area",
-            "code": "1027"
+          'observationCode': {
+            'text': 'Lives in HepA intermediate/high endemicity area',
+            'code': '1027',
           },
-          "description":
-              "Patient lives in a hepatitis A intermediate or high endemicity area"
-        }
+          'description':
+              'Patient lives in a hepatitis A intermediate or high '
+              'endemicity area',
+        },
       ],
-      "seriesDose": [
+      'seriesDose': [
         {
-          "doseNumber": "Dose 1",
-          "age": [
+          'doseNumber': 'Dose 1',
+          'age': [
             {
-              "absMinAge": "12 months",
-              "minAge": "12 months",
-              "earliestRecAge": "12 months"
-            }
-          ],
-          "preferableVaccine": [
-            {
-              "vaccineType": "HepA, pediatric/adolescent",
-              "cvx": "83",
-              "beginAge": "12 months",
-              "forecastVaccineType": "Y"
-            }
-          ],
-          "allowableVaccine": [
-            {
-              "vaccineType": "HepA, pediatric/adolescent",
-              "cvx": "83",
-              "beginAge": "12 months"
+              'absMinAge': '12 months',
+              'minAge': '12 months',
+              'earliestRecAge': '12 months',
             },
-            {"vaccineType": "HepA, adult", "cvx": "52", "beginAge": "19 years"},
-            {
-              "vaccineType": "HepA-HepB (Twinrix)",
-              "cvx": "104",
-              "beginAge": "18 years"
-            }
           ],
-          "recurringDose": "No"
+          'preferableVaccine': [
+            {
+              'vaccineType': 'HepA, pediatric/adolescent',
+              'cvx': '83',
+              'beginAge': '12 months',
+              'forecastVaccineType': 'Y',
+            },
+          ],
+          'allowableVaccine': [
+            {
+              'vaccineType': 'HepA, pediatric/adolescent',
+              'cvx': '83',
+              'beginAge': '12 months',
+            },
+            {
+              'vaccineType': 'HepA, adult',
+              'cvx': '52',
+              'beginAge': '19 years',
+            },
+            {
+              'vaccineType': 'HepA-HepB (Twinrix)',
+              'cvx': '104',
+              'beginAge': '18 years',
+            },
+          ],
+          'recurringDose': 'No',
         },
         {
-          "doseNumber": "Dose 2",
-          "age": [
+          'doseNumber': 'Dose 2',
+          'age': [
             {
-              "absMinAge": "18 months",
-              "minAge": "18 months",
-              "earliestRecAge": "18 months"
-            }
-          ],
-          "interval": [
-            {
-              "fromPrevious": "Y",
-              "absMinInt": "6 months",
-              "minInt": "6 months",
-              "earliestRecInt": "6 months"
-            }
-          ],
-          "preferableVaccine": [
-            {
-              "vaccineType": "HepA, pediatric/adolescent",
-              "cvx": "83",
-              "beginAge": "12 months",
-              "forecastVaccineType": "Y"
-            }
-          ],
-          "allowableVaccine": [
-            {
-              "vaccineType": "HepA, pediatric/adolescent",
-              "cvx": "83",
-              "beginAge": "12 months"
+              'absMinAge': '18 months',
+              'minAge': '18 months',
+              'earliestRecAge': '18 months',
             },
-            {"vaccineType": "HepA, adult", "cvx": "52", "beginAge": "19 years"},
-            {
-              "vaccineType": "HepA-HepB (Twinrix)",
-              "cvx": "104",
-              "beginAge": "18 years"
-            }
           ],
-          "recurringDose": "No"
-        }
-      ]
-    }
-  ]
+          'interval': [
+            {
+              'fromPrevious': 'Y',
+              'absMinInt': '6 months',
+              'minInt': '6 months',
+              'earliestRecInt': '6 months',
+            },
+          ],
+          'preferableVaccine': [
+            {
+              'vaccineType': 'HepA, pediatric/adolescent',
+              'cvx': '83',
+              'beginAge': '12 months',
+              'forecastVaccineType': 'Y',
+            },
+          ],
+          'allowableVaccine': [
+            {
+              'vaccineType': 'HepA, pediatric/adolescent',
+              'cvx': '83',
+              'beginAge': '12 months',
+            },
+            {
+              'vaccineType': 'HepA, adult',
+              'cvx': '52',
+              'beginAge': '19 years',
+            },
+            {
+              'vaccineType': 'HepA-HepB (Twinrix)',
+              'cvx': '104',
+              'beginAge': '18 years',
+            },
+          ],
+          'recurringDose': 'No',
+        },
+      ],
+    },
+  ],
 });

@@ -1,287 +1,365 @@
-// ignore_for_file: prefer_single_quotes, always_specify_types
-
-import '../../cicada.dart';
+import 'package:cicada/cicada.dart';
 
 final AntigenSupportingData whoDiphtheria = AntigenSupportingData.fromJson({
-  "targetDisease": "Diphtheria",
-  "vaccineGroup": "DTP",
-  "series": [
+  'targetDisease': 'Diphtheria',
+  'vaccineGroup': 'DTP',
+  'series': [
     {
-      "seriesName": "WHO Diphtheria 6-dose series",
-      "targetDisease": "Diphtheria",
-      "vaccineGroup": "DTP",
-      "seriesType": "Standard",
-      "selectSeries": {
-        "defaultSeries": "Yes",
-        "productPath": "No",
-        "seriesGroupName": "Standard",
-        "seriesGroup": "1",
-        "seriesPriority": "A",
-        "seriesPreference": "1"
+      'seriesName': 'WHO Diphtheria 6-dose series',
+      'targetDisease': 'Diphtheria',
+      'vaccineGroup': 'DTP',
+      'seriesType': 'Standard',
+      'selectSeries': {
+        'defaultSeries': 'Yes',
+        'productPath': 'No',
+        'seriesGroupName': 'Standard',
+        'seriesGroup': '1',
+        'seriesPriority': 'A',
+        'seriesPreference': '1',
       },
-      "seriesDose": [
+      'seriesDose': [
         {
-          "doseNumber": "Dose 1",
-          "age": [
+          'doseNumber': 'Dose 1',
+          'age': [
             {
-              "absMinAge": "6 weeks",
-              "minAge": "6 weeks",
-              "earliestRecAge": "6 weeks"
-            }
+              'absMinAge': '6 weeks',
+              'minAge': '6 weeks',
+              'earliestRecAge': '6 weeks',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "DTP-HepB-Hib (Pentavalent)",
-              "cvx": "198",
-              "beginAge": "6 weeks",
-              "forecastVaccineType": "Y"
+              'vaccineType': 'DTP-HepB-Hib (Pentavalent)',
+              'cvx': '198',
+              'beginAge': '6 weeks',
+              'forecastVaccineType': 'Y',
             },
             {
-              "vaccineType": "DTP",
-              "cvx": "01",
-              "beginAge": "6 weeks",
-              "forecastVaccineType": "N"
+              'vaccineType': 'DTP',
+              'cvx': '01',
+              'beginAge': '6 weeks',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "DTaP",
-              "cvx": "20",
-              "beginAge": "6 weeks",
-              "forecastVaccineType": "N"
-            }
+              'vaccineType': 'DTaP',
+              'cvx': '20',
+              'beginAge': '6 weeks',
+              'forecastVaccineType': 'N',
+            },
           ],
-          "allowableVaccine": [
-            {"vaccineType": "DTP", "cvx": "01", "beginAge": "6 weeks"},
-            {"vaccineType": "DTaP", "cvx": "20", "beginAge": "6 weeks"},
+          'allowableVaccine': [
             {
-              "vaccineType": "DTP-HepB-Hib",
-              "cvx": "198",
-              "beginAge": "6 weeks"
+              'vaccineType': 'DTP',
+              'cvx': '01',
+              'beginAge': '6 weeks',
             },
             {
-              "vaccineType": "DTaP-IPV/Hib",
-              "cvx": "120",
-              "beginAge": "6 weeks"
+              'vaccineType': 'DTaP',
+              'cvx': '20',
+              'beginAge': '6 weeks',
             },
-            {"vaccineType": "DTaP-IPV", "cvx": "130", "beginAge": "6 weeks"}
+            {
+              'vaccineType': 'DTP-HepB-Hib',
+              'cvx': '198',
+              'beginAge': '6 weeks',
+            },
+            {
+              'vaccineType': 'DTaP-IPV/Hib',
+              'cvx': '120',
+              'beginAge': '6 weeks',
+            },
+            {
+              'vaccineType': 'DTaP-IPV',
+              'cvx': '130',
+              'beginAge': '6 weeks',
+            },
           ],
-          "recurringDose": "No"
+          'recurringDose': 'No',
         },
         {
-          "doseNumber": "Dose 2",
-          "age": [
+          'doseNumber': 'Dose 2',
+          'age': [
             {
-              "absMinAge": "10 weeks",
-              "minAge": "10 weeks",
-              "earliestRecAge": "10 weeks"
-            }
+              'absMinAge': '10 weeks',
+              'minAge': '10 weeks',
+              'earliestRecAge': '10 weeks',
+            },
           ],
-          "interval": [
+          'interval': [
             {
-              "fromPrevious": "Y",
-              "absMinInt": "4 weeks",
-              "minInt": "4 weeks",
-              "earliestRecInt": "4 weeks"
-            }
+              'fromPrevious': 'Y',
+              'absMinInt': '4 weeks',
+              'minInt': '4 weeks',
+              'earliestRecInt': '4 weeks',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "DTP-HepB-Hib (Pentavalent)",
-              "cvx": "198",
-              "beginAge": "6 weeks",
-              "forecastVaccineType": "Y"
-            }
+              'vaccineType': 'DTP-HepB-Hib (Pentavalent)',
+              'cvx': '198',
+              'beginAge': '6 weeks',
+              'forecastVaccineType': 'Y',
+            },
           ],
-          "allowableVaccine": [
-            {"vaccineType": "DTP", "cvx": "01", "beginAge": "6 weeks"},
-            {"vaccineType": "DTaP", "cvx": "20", "beginAge": "6 weeks"},
+          'allowableVaccine': [
             {
-              "vaccineType": "DTP-HepB-Hib",
-              "cvx": "198",
-              "beginAge": "6 weeks"
+              'vaccineType': 'DTP',
+              'cvx': '01',
+              'beginAge': '6 weeks',
             },
             {
-              "vaccineType": "DTaP-IPV/Hib",
-              "cvx": "120",
-              "beginAge": "6 weeks"
+              'vaccineType': 'DTaP',
+              'cvx': '20',
+              'beginAge': '6 weeks',
             },
-            {"vaccineType": "DTaP-IPV", "cvx": "130", "beginAge": "6 weeks"}
+            {
+              'vaccineType': 'DTP-HepB-Hib',
+              'cvx': '198',
+              'beginAge': '6 weeks',
+            },
+            {
+              'vaccineType': 'DTaP-IPV/Hib',
+              'cvx': '120',
+              'beginAge': '6 weeks',
+            },
+            {
+              'vaccineType': 'DTaP-IPV',
+              'cvx': '130',
+              'beginAge': '6 weeks',
+            },
           ],
-          "recurringDose": "No"
+          'recurringDose': 'No',
         },
         {
-          "doseNumber": "Dose 3",
-          "age": [
+          'doseNumber': 'Dose 3',
+          'age': [
             {
-              "absMinAge": "14 weeks",
-              "minAge": "14 weeks",
-              "earliestRecAge": "14 weeks"
-            }
+              'absMinAge': '14 weeks',
+              'minAge': '14 weeks',
+              'earliestRecAge': '14 weeks',
+            },
           ],
-          "interval": [
+          'interval': [
             {
-              "fromPrevious": "Y",
-              "absMinInt": "4 weeks",
-              "minInt": "4 weeks",
-              "earliestRecInt": "4 weeks"
-            }
+              'fromPrevious': 'Y',
+              'absMinInt': '4 weeks',
+              'minInt': '4 weeks',
+              'earliestRecInt': '4 weeks',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "DTP-HepB-Hib (Pentavalent)",
-              "cvx": "198",
-              "beginAge": "6 weeks",
-              "forecastVaccineType": "Y"
-            }
+              'vaccineType': 'DTP-HepB-Hib (Pentavalent)',
+              'cvx': '198',
+              'beginAge': '6 weeks',
+              'forecastVaccineType': 'Y',
+            },
           ],
-          "allowableVaccine": [
-            {"vaccineType": "DTP", "cvx": "01", "beginAge": "6 weeks"},
-            {"vaccineType": "DTaP", "cvx": "20", "beginAge": "6 weeks"},
+          'allowableVaccine': [
             {
-              "vaccineType": "DTP-HepB-Hib",
-              "cvx": "198",
-              "beginAge": "6 weeks"
+              'vaccineType': 'DTP',
+              'cvx': '01',
+              'beginAge': '6 weeks',
             },
             {
-              "vaccineType": "DTaP-IPV/Hib",
-              "cvx": "120",
-              "beginAge": "6 weeks"
+              'vaccineType': 'DTaP',
+              'cvx': '20',
+              'beginAge': '6 weeks',
             },
-            {"vaccineType": "DTaP-IPV", "cvx": "130", "beginAge": "6 weeks"}
+            {
+              'vaccineType': 'DTP-HepB-Hib',
+              'cvx': '198',
+              'beginAge': '6 weeks',
+            },
+            {
+              'vaccineType': 'DTaP-IPV/Hib',
+              'cvx': '120',
+              'beginAge': '6 weeks',
+            },
+            {
+              'vaccineType': 'DTaP-IPV',
+              'cvx': '130',
+              'beginAge': '6 weeks',
+            },
           ],
-          "recurringDose": "No"
+          'recurringDose': 'No',
         },
         {
-          "doseNumber": "Dose 4",
-          "age": [
+          'doseNumber': 'Dose 4',
+          'age': [
             {
-              "absMinAge": "12 months",
-              "minAge": "12 months",
-              "earliestRecAge": "12 months",
-              "latestRecAge": "23 months"
-            }
+              'absMinAge': '12 months',
+              'minAge': '12 months',
+              'earliestRecAge': '12 months',
+              'latestRecAge': '23 months',
+            },
           ],
-          "interval": [
+          'interval': [
             {
-              "fromPrevious": "Y",
-              "absMinInt": "6 months",
-              "minInt": "6 months",
-              "earliestRecInt": "6 months"
-            }
+              'fromPrevious': 'Y',
+              'absMinInt': '6 months',
+              'minInt': '6 months',
+              'earliestRecInt': '6 months',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "DTP",
-              "cvx": "01",
-              "beginAge": "12 months",
-              "forecastVaccineType": "Y"
+              'vaccineType': 'DTP',
+              'cvx': '01',
+              'beginAge': '12 months',
+              'forecastVaccineType': 'Y',
             },
             {
-              "vaccineType": "DTaP",
-              "cvx": "20",
-              "beginAge": "12 months",
-              "forecastVaccineType": "N"
-            }
+              'vaccineType': 'DTaP',
+              'cvx': '20',
+              'beginAge': '12 months',
+              'forecastVaccineType': 'N',
+            },
           ],
-          "allowableVaccine": [
-            {"vaccineType": "DTP", "cvx": "01", "beginAge": "6 weeks"},
-            {"vaccineType": "DTaP", "cvx": "20", "beginAge": "6 weeks"},
-            {"vaccineType": "DTP-HepB-Hib", "cvx": "198", "beginAge": "6 weeks"}
+          'allowableVaccine': [
+            {
+              'vaccineType': 'DTP',
+              'cvx': '01',
+              'beginAge': '6 weeks',
+            },
+            {
+              'vaccineType': 'DTaP',
+              'cvx': '20',
+              'beginAge': '6 weeks',
+            },
+            {
+              'vaccineType': 'DTP-HepB-Hib',
+              'cvx': '198',
+              'beginAge': '6 weeks',
+            },
           ],
-          "recurringDose": "No"
+          'recurringDose': 'No',
         },
         {
-          "doseNumber": "Dose 5",
-          "age": [
+          'doseNumber': 'Dose 5',
+          'age': [
             {
-              "absMinAge": "4 years",
-              "minAge": "4 years",
-              "earliestRecAge": "4 years",
-              "latestRecAge": "7 years"
-            }
+              'absMinAge': '4 years',
+              'minAge': '4 years',
+              'earliestRecAge': '4 years',
+              'latestRecAge': '7 years',
+            },
           ],
-          "interval": [
+          'interval': [
             {
-              "fromPrevious": "Y",
-              "absMinInt": "6 months",
-              "minInt": "6 months",
-              "earliestRecInt": "3 years"
-            }
+              'fromPrevious': 'Y',
+              'absMinInt': '6 months',
+              'minInt': '6 months',
+              'earliestRecInt': '3 years',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "DTP",
-              "cvx": "01",
-              "beginAge": "4 years",
-              "forecastVaccineType": "Y"
+              'vaccineType': 'DTP',
+              'cvx': '01',
+              'beginAge': '4 years',
+              'forecastVaccineType': 'Y',
             },
             {
-              "vaccineType": "DTaP",
-              "cvx": "20",
-              "beginAge": "4 years",
-              "forecastVaccineType": "N"
+              'vaccineType': 'DTaP',
+              'cvx': '20',
+              'beginAge': '4 years',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "Td",
-              "cvx": "138",
-              "beginAge": "4 years",
-              "forecastVaccineType": "N"
-            }
+              'vaccineType': 'Td',
+              'cvx': '138',
+              'beginAge': '4 years',
+              'forecastVaccineType': 'N',
+            },
           ],
-          "allowableVaccine": [
-            {"vaccineType": "DTP", "cvx": "01", "beginAge": "6 weeks"},
-            {"vaccineType": "DTaP", "cvx": "20", "beginAge": "6 weeks"},
-            {"vaccineType": "Td", "cvx": "138", "beginAge": "4 years"},
-            {"vaccineType": "Td adult", "cvx": "09", "beginAge": "7 years"},
-            {"vaccineType": "Tdap", "cvx": "115", "beginAge": "4 years"}
+          'allowableVaccine': [
+            {
+              'vaccineType': 'DTP',
+              'cvx': '01',
+              'beginAge': '6 weeks',
+            },
+            {
+              'vaccineType': 'DTaP',
+              'cvx': '20',
+              'beginAge': '6 weeks',
+            },
+            {
+              'vaccineType': 'Td',
+              'cvx': '138',
+              'beginAge': '4 years',
+            },
+            {
+              'vaccineType': 'Td adult',
+              'cvx': '09',
+              'beginAge': '7 years',
+            },
+            {
+              'vaccineType': 'Tdap',
+              'cvx': '115',
+              'beginAge': '4 years',
+            },
           ],
-          "recurringDose": "No"
+          'recurringDose': 'No',
         },
         {
-          "doseNumber": "Dose 6",
-          "age": [
+          'doseNumber': 'Dose 6',
+          'age': [
             {
-              "absMinAge": "9 years",
-              "minAge": "9 years",
-              "earliestRecAge": "9 years",
-              "latestRecAge": "15 years"
-            }
+              'absMinAge': '9 years',
+              'minAge': '9 years',
+              'earliestRecAge': '9 years',
+              'latestRecAge': '15 years',
+            },
           ],
-          "interval": [
+          'interval': [
             {
-              "fromPrevious": "Y",
-              "absMinInt": "6 months",
-              "minInt": "6 months",
-              "earliestRecInt": "5 years"
-            }
+              'fromPrevious': 'Y',
+              'absMinInt': '6 months',
+              'minInt': '6 months',
+              'earliestRecInt': '5 years',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "Td",
-              "cvx": "138",
-              "beginAge": "7 years",
-              "forecastVaccineType": "Y"
+              'vaccineType': 'Td',
+              'cvx': '138',
+              'beginAge': '7 years',
+              'forecastVaccineType': 'Y',
             },
             {
-              "vaccineType": "Td adult",
-              "cvx": "09",
-              "beginAge": "7 years",
-              "forecastVaccineType": "N"
+              'vaccineType': 'Td adult',
+              'cvx': '09',
+              'beginAge': '7 years',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "Tdap",
-              "cvx": "115",
-              "beginAge": "7 years",
-              "forecastVaccineType": "N"
-            }
+              'vaccineType': 'Tdap',
+              'cvx': '115',
+              'beginAge': '7 years',
+              'forecastVaccineType': 'N',
+            },
           ],
-          "allowableVaccine": [
-            {"vaccineType": "Td", "cvx": "138", "beginAge": "7 years"},
-            {"vaccineType": "Td adult", "cvx": "09", "beginAge": "7 years"},
-            {"vaccineType": "Tdap", "cvx": "115", "beginAge": "7 years"}
+          'allowableVaccine': [
+            {
+              'vaccineType': 'Td',
+              'cvx': '138',
+              'beginAge': '7 years',
+            },
+            {
+              'vaccineType': 'Td adult',
+              'cvx': '09',
+              'beginAge': '7 years',
+            },
+            {
+              'vaccineType': 'Tdap',
+              'cvx': '115',
+              'beginAge': '7 years',
+            },
           ],
-          "recurringDose": "No"
-        }
-      ]
-    }
-  ]
+          'recurringDose': 'No',
+        },
+      ],
+    },
+  ],
 });

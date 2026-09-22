@@ -1,6 +1,4 @@
-// ignore_for_file: invalid_annotation_target
-
-import '../../cicada.dart';
+import 'package:cicada/cicada.dart';
 
 class ConditionalSkip {
   ConditionalSkip({
@@ -9,21 +7,23 @@ class ConditionalSkip {
     this.set_,
   });
 
+  factory ConditionalSkip.fromJson(Map<String, dynamic> json) {
+    return ConditionalSkip(
+      context:
+          json['context'] == null
+              ? null
+              : SkipContext.fromJson(json['context'] as String),
+      setLogic: json['setLogic'] as String?,
+      set_:
+          (json['set'] as List<dynamic>?)
+              ?.map((e) => VaxSet.fromJson(e as Map<String, dynamic>))
+              .toList(),
+    );
+  }
+
   final SkipContext? context;
   final String? setLogic;
   final List<VaxSet>? set_;
-
-  factory ConditionalSkip.fromJson(Map<String, dynamic> json) {
-    return ConditionalSkip(
-      context: json['context'] == null
-          ? null
-          : SkipContext.fromJson(json['context'] as String),
-      setLogic: json['setLogic'] as String?,
-      set_: (json['set'] as List<dynamic>?)
-          ?.map((e) => VaxSet.fromJson(e as Map<String, dynamic>))
-          .toList(),
-    );
-  }
 
   Map<String, dynamic> toJson() {
     return {

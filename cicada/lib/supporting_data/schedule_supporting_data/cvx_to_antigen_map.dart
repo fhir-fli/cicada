@@ -1,15 +1,16 @@
 class CvxToAntigenMap {
   CvxToAntigenMap({this.cvxMap});
 
-  final List<CvxMap>? cvxMap;
-
   factory CvxToAntigenMap.fromJson(Map<String, dynamic> json) {
     return CvxToAntigenMap(
-      cvxMap: (json['cvxMap'] as List<dynamic>?)
-          ?.map((e) => CvxMap.fromJson(e as Map<String, dynamic>))
-          .toList(),
+      cvxMap:
+          (json['cvxMap'] as List<dynamic>?)
+              ?.map((e) => CvxMap.fromJson(e as Map<String, dynamic>))
+              .toList(),
     );
   }
+
+  final List<CvxMap>? cvxMap;
 
   CvxToAntigenMap copyWith({
     List<CvxMap>? cvxMap,
@@ -33,19 +34,20 @@ class CvxMap {
     this.association,
   });
 
-  final String? cvx;
-  final String? shortDescription;
-  final List<Association>? association;
-
   factory CvxMap.fromJson(Map<String, dynamic> json) {
     return CvxMap(
       cvx: json['cvx'] as String?,
       shortDescription: json['shortDescription'] as String?,
-      association: (json['association'] as List<dynamic>?)
-          ?.map((e) => Association.fromJson(e as Map<String, dynamic>))
-          .toList(),
+      association:
+          (json['association'] as List<dynamic>?)
+              ?.map((e) => Association.fromJson(e as Map<String, dynamic>))
+              .toList(),
     );
   }
+
+  final String? cvx;
+  final String? shortDescription;
+  final List<Association>? association;
 
   CvxMap copyWith({
     String? cvx,
@@ -76,17 +78,17 @@ class Association {
     this.associationEndAge,
   });
 
-  final String? antigen;
-  final String? associationBeginAge;
-  final String? associationEndAge;
-
   factory Association.fromJson(Map<String, dynamic> json) {
     return Association(
-      antigen: json['antigen'],
+      antigen: json['antigen'] as String?,
       associationBeginAge: json['associationBeginAge'] as String?,
       associationEndAge: json['associationEndAge'] as String?,
     );
   }
+
+  final String? antigen;
+  final String? associationBeginAge;
+  final String? associationEndAge;
 
   Map<String, dynamic> toJson() {
     return {

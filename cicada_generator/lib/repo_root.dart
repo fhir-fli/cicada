@@ -15,7 +15,7 @@ String get repoRoot {
   Directory? dir;
   try {
     dir = File.fromUri(Platform.script).parent;
-  } catch (_) {
+  } on Object catch (_) {
     dir = Directory.current;
   }
   for (var d = dir; d.path != d.parent.path; d = d.parent) {

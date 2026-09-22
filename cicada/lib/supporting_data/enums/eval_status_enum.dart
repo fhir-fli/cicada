@@ -1,22 +1,22 @@
 enum EvalStatus {
   valid,
 
-  not_valid,
+  notValid,
 
   extraneous,
 
-  sub_standard;
+  subStandard;
 
   static EvalStatus? fromString(String? string) {
     switch (string) {
       case 'Valid':
         return EvalStatus.valid;
       case 'Not Valid':
-        return EvalStatus.not_valid;
+        return EvalStatus.notValid;
       case 'Extraneous':
         return EvalStatus.extraneous;
       case 'Substandard':
-        return EvalStatus.sub_standard;
+        return EvalStatus.subStandard;
       default:
         return null;
     }
@@ -30,11 +30,11 @@ enum EvalStatus {
     switch (this) {
       case EvalStatus.valid:
         return 'Valid';
-      case EvalStatus.not_valid:
+      case EvalStatus.notValid:
         return 'Not Valid';
       case EvalStatus.extraneous:
         return 'Extraneous';
-      case EvalStatus.sub_standard:
+      case EvalStatus.subStandard:
         return 'Substandard';
     }
   }

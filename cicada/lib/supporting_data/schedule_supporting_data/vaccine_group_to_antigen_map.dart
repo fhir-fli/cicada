@@ -1,15 +1,16 @@
 class VaccineGroupToAntigenMap {
   VaccineGroupToAntigenMap({this.vaccineGroupMap});
 
-  final List<VaccineGroupMap>? vaccineGroupMap;
-
   factory VaccineGroupToAntigenMap.fromJson(Map<String, dynamic> json) {
     return VaccineGroupToAntigenMap(
-      vaccineGroupMap: (json['vaccineGroupMap'] as List<dynamic>?)
-          ?.map((e) => VaccineGroupMap.fromJson(e as Map<String, dynamic>))
-          .toList(),
+      vaccineGroupMap:
+          (json['vaccineGroupMap'] as List<dynamic>?)
+              ?.map((e) => VaccineGroupMap.fromJson(e as Map<String, dynamic>))
+              .toList(),
     );
   }
+
+  final List<VaccineGroupMap>? vaccineGroupMap;
 
   VaccineGroupToAntigenMap copyWith({
     List<VaccineGroupMap>? vaccineGroupMap,
@@ -30,9 +31,6 @@ class VaccineGroupToAntigenMap {
 class VaccineGroupMap {
   VaccineGroupMap({this.name, this.antigen});
 
-  final String? name;
-  final List<String>? antigen;
-
   factory VaccineGroupMap.fromJson(Map<String, dynamic> json) {
     return VaccineGroupMap(
       name: json['name'] as String?,
@@ -40,6 +38,9 @@ class VaccineGroupMap {
           (json['antigen'] as List<dynamic>?)?.map((e) => e as String).toList(),
     );
   }
+
+  final String? name;
+  final List<String>? antigen;
 
   VaccineGroupMap copyWith({
     String? name,

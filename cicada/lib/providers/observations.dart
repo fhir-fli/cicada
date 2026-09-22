@@ -1,7 +1,6 @@
 // ignore_for_file: use_setters_to_change_properties
+import 'package:cicada/cicada.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
-
-import '../cicada.dart';
 
 part 'observations.g.dart';
 

@@ -10,15 +10,6 @@ class Vaccine {
     this.forecastVaccineType,
   });
 
-  final String? vaccineType;
-  final String? cvx;
-  final String? beginAge;
-  final String? endAge;
-  final String? tradeName;
-  final String? mvx;
-  final String? volume;
-  final String? forecastVaccineType;
-
   factory Vaccine.fromJson(Map<String, dynamic> json) {
     return Vaccine(
       vaccineType: json['vaccineType'] as String?,
@@ -31,6 +22,15 @@ class Vaccine {
       forecastVaccineType: json['forecastVaccineType'] as String?,
     );
   }
+
+  final String? vaccineType;
+  final String? cvx;
+  final String? beginAge;
+  final String? endAge;
+  final String? tradeName;
+  final String? mvx;
+  final String? volume;
+  final String? forecastVaccineType;
 
   Map<String, dynamic> toJson() {
     return {

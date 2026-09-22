@@ -1,9 +1,11 @@
+import 'package:cicada/cicada.dart';
 import 'package:fhir_r4/fhir_r4.dart';
-import '../cicada.dart';
 
 String? cvxFromImmunization(Immunization immunization) =>
     codeFromImmunization(
-        immunization, FhirUri('http://hl7.org/fhir/sid/cvx')) ??
+      immunization,
+      FhirUri('http://hl7.org/fhir/sid/cvx'),
+    ) ??
     // vaccineCode is bound to CVX in the US (US Core / ImmDS IG). Accept the
     // first code when the system URI is absent — real-world callers (including
     // FITS) often omit it.
@@ -11,13 +13,18 @@ String? cvxFromImmunization(Immunization immunization) =>
 
 String? mvxFromImmunization(Immunization immunization) =>
     codeFromImmunization(
-        immunization, FhirUri('http://hl7.org/fhir/sid/mvx')) ??
+      immunization,
+      FhirUri('http://hl7.org/fhir/sid/mvx'),
+    ) ??
     codeFromImmunization(
-        immunization, FhirUri('http://terminology.hl7.org/NamingSystem/MVX'));
+      immunization,
+      FhirUri('http://terminology.hl7.org/NamingSystem/MVX'),
+    );
 
 String? codeFromImmunization(Immunization immunization, FhirUri url) {
-  final int? index = immunization.vaccineCode.coding?.indexWhere(
-      (Coding element) => element.system == url && element.code != null);
+  final index = immunization.vaccineCode.coding?.indexWhere(
+    (element) => element.system == url && element.code != null,
+  );
   if (index == null || index == -1) {
     return null;
   } else {
@@ -27,13 +34,17 @@ String? codeFromImmunization(Immunization immunization, FhirUri url) {
 
 EvalReason? subpotentReason(Immunization immunization) {
   int? codingIndex;
-  final int? subpotentIndex = immunization.subpotentReason
-      ?.indexWhere((CodeableConcept codeableConcept) {
-    codingIndex = codeableConcept.coding?.indexWhere((Coding coding) =>
-        coding.system ==
-            FhirUri(
-                'http://terminology.hl7.org/CodeSystem/immunization-subpotent-reason') &&
-        (coding.display != null || coding.code != null));
+  final subpotentIndex = immunization.subpotentReason?.indexWhere((
+    codeableConcept,
+  ) {
+    codingIndex = codeableConcept.coding?.indexWhere(
+      (coding) =>
+          coding.system ==
+              FhirUri(
+                'http://terminology.hl7.org/CodeSystem/immunization-subpotent-reason',
+              ) &&
+          (coding.display != null || coding.code != null),
+    );
     return !(codingIndex == null || codingIndex == -1);
   });
   if (subpotentIndex == null ||
@@ -43,18 +54,27 @@ EvalReason? subpotentReason(Immunization immunization) {
     return null;
   } else {
     if (immunization
-            .subpotentReason![subpotentIndex].coding![codingIndex!].code !=
+            .subpotentReason![subpotentIndex]
+            .coding![codingIndex!]
+            .code !=
         null) {
-      final EvalReason? evalReason = EvalReason.fromCode(immunization
-          .subpotentReason![subpotentIndex]
-          .coding![codingIndex!]
-          .code
-          ?.valueString);
+      final evalReason = EvalReason.fromCode(
+        immunization
+            .subpotentReason![subpotentIndex]
+            .coding![codingIndex!]
+            .code
+            ?.valueString,
+      );
       if (evalReason != null) {
         return evalReason;
       } else {
-        return EvalReason.fromJson(immunization.subpotentReason![subpotentIndex]
-            .coding![codingIndex!].display!.valueString);
+        return EvalReason.fromJson(
+          immunization
+              .subpotentReason![subpotentIndex]
+              .coding![codingIndex!]
+              .display!
+              .valueString,
+        );
       }
     } else {
       return null;

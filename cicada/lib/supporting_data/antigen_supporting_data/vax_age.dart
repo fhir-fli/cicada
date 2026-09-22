@@ -9,14 +9,6 @@ class VaxAge {
     this.cessationDate,
   });
 
-  final String? absMinAge;
-  final String? minAge;
-  final String? earliestRecAge;
-  final String? latestRecAge;
-  final String? maxAge;
-  final String? effectiveDate;
-  final String? cessationDate;
-
   factory VaxAge.fromJson(Map<String, dynamic> json) {
     return VaxAge(
       absMinAge: json['absMinAge'] as String?,
@@ -28,6 +20,14 @@ class VaxAge {
       cessationDate: json['cessationDate'] as String?,
     );
   }
+
+  final String? absMinAge;
+  final String? minAge;
+  final String? earliestRecAge;
+  final String? latestRecAge;
+  final String? maxAge;
+  final String? effectiveDate;
+  final String? cessationDate;
 
   Map<String, dynamic> toJson() {
     return {

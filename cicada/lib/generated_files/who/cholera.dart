@@ -1,137 +1,135 @@
-// ignore_for_file: prefer_single_quotes, always_specify_types
-
-import '../../cicada.dart';
+import 'package:cicada/cicada.dart';
 
 final AntigenSupportingData whoCholera = AntigenSupportingData.fromJson({
-  "targetDisease": "Cholera",
-  "vaccineGroup": "Cholera",
-  "series": [
+  'targetDisease': 'Cholera',
+  'vaccineGroup': 'Cholera',
+  'series': [
     {
-      "seriesName": "WHO Cholera single-dose series",
-      "targetDisease": "Cholera",
-      "vaccineGroup": "Cholera",
-      "seriesType": "Risk",
-      "selectSeries": {
-        "defaultSeries": "No",
-        "productPath": "No",
-        "seriesGroupName": "Increased Risk",
-        "seriesGroup": "1",
-        "seriesPriority": "A",
-        "seriesPreference": "1"
+      'seriesName': 'WHO Cholera single-dose series',
+      'targetDisease': 'Cholera',
+      'vaccineGroup': 'Cholera',
+      'seriesType': 'Risk',
+      'selectSeries': {
+        'defaultSeries': 'No',
+        'productPath': 'No',
+        'seriesGroupName': 'Increased Risk',
+        'seriesGroup': '1',
+        'seriesPriority': 'A',
+        'seriesPreference': '1',
       },
-      "indication": [
+      'indication': [
         {
-          "observationCode": {
-            "text": "Lives in or traveling to cholera endemic/outbreak area",
-            "code": "1013"
-          }
-        }
+          'observationCode': {
+            'text': 'Lives in or traveling to cholera endemic/outbreak area',
+            'code': '1013',
+          },
+        },
       ],
-      "seriesDose": [
+      'seriesDose': [
         {
-          "doseNumber": "Dose 1",
-          "age": [
+          'doseNumber': 'Dose 1',
+          'age': [
             {
-              "absMinAge": "1 year",
-              "minAge": "1 year",
-              "earliestRecAge": "1 year"
-            }
+              'absMinAge': '1 year',
+              'minAge': '1 year',
+              'earliestRecAge': '1 year',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "Cholera, oral (BivWC)",
-              "cvx": "26",
-              "beginAge": "1 year",
-              "forecastVaccineType": "Y"
-            }
+              'vaccineType': 'Cholera, oral (BivWC)',
+              'cvx': '26',
+              'beginAge': '1 year',
+              'forecastVaccineType': 'Y',
+            },
           ],
-          "allowableVaccine": [
+          'allowableVaccine': [
             {
-              "vaccineType": "Cholera, oral (BivWC)",
-              "cvx": "26",
-              "beginAge": "1 year"
-            }
+              'vaccineType': 'Cholera, oral (BivWC)',
+              'cvx': '26',
+              'beginAge': '1 year',
+            },
           ],
-          "recurringDose": "No"
-        }
-      ]
+          'recurringDose': 'No',
+        },
+      ],
     },
     {
-      "seriesName": "WHO Cholera oral 2-dose series",
-      "targetDisease": "Cholera",
-      "vaccineGroup": "Cholera",
-      "seriesType": "Risk",
-      "selectSeries": {
-        "defaultSeries": "No",
-        "productPath": "No",
-        "seriesGroupName": "Increased Risk",
-        "seriesGroup": "1",
-        "seriesPriority": "A",
-        "seriesPreference": "2"
+      'seriesName': 'WHO Cholera oral 2-dose series',
+      'targetDisease': 'Cholera',
+      'vaccineGroup': 'Cholera',
+      'seriesType': 'Risk',
+      'selectSeries': {
+        'defaultSeries': 'No',
+        'productPath': 'No',
+        'seriesGroupName': 'Increased Risk',
+        'seriesGroup': '1',
+        'seriesPriority': 'A',
+        'seriesPreference': '2',
       },
-      "indication": [
+      'indication': [
         {
-          "observationCode": {
-            "text": "Lives in or traveling to cholera endemic/outbreak area",
-            "code": "1013"
-          }
-        }
+          'observationCode': {
+            'text': 'Lives in or traveling to cholera endemic/outbreak area',
+            'code': '1013',
+          },
+        },
       ],
-      "seriesDose": [
+      'seriesDose': [
         {
-          "doseNumber": "Dose 1",
-          "age": [
+          'doseNumber': 'Dose 1',
+          'age': [
             {
-              "absMinAge": "1 year",
-              "minAge": "1 year",
-              "earliestRecAge": "1 year"
-            }
+              'absMinAge': '1 year',
+              'minAge': '1 year',
+              'earliestRecAge': '1 year',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "Cholera, oral (BivWC)",
-              "cvx": "26",
-              "beginAge": "1 year",
-              "forecastVaccineType": "Y"
-            }
+              'vaccineType': 'Cholera, oral (BivWC)',
+              'cvx': '26',
+              'beginAge': '1 year',
+              'forecastVaccineType': 'Y',
+            },
           ],
-          "allowableVaccine": [
+          'allowableVaccine': [
             {
-              "vaccineType": "Cholera, oral (BivWC)",
-              "cvx": "26",
-              "beginAge": "1 year"
-            }
+              'vaccineType': 'Cholera, oral (BivWC)',
+              'cvx': '26',
+              'beginAge': '1 year',
+            },
           ],
-          "recurringDose": "No"
+          'recurringDose': 'No',
         },
         {
-          "doseNumber": "Dose 2",
-          "interval": [
+          'doseNumber': 'Dose 2',
+          'interval': [
             {
-              "fromPrevious": "Y",
-              "absMinInt": "2 weeks",
-              "minInt": "2 weeks",
-              "earliestRecInt": "2 weeks"
-            }
+              'fromPrevious': 'Y',
+              'absMinInt': '2 weeks',
+              'minInt': '2 weeks',
+              'earliestRecInt': '2 weeks',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "Cholera, oral (BivWC)",
-              "cvx": "26",
-              "beginAge": "1 year",
-              "forecastVaccineType": "Y"
-            }
+              'vaccineType': 'Cholera, oral (BivWC)',
+              'cvx': '26',
+              'beginAge': '1 year',
+              'forecastVaccineType': 'Y',
+            },
           ],
-          "allowableVaccine": [
+          'allowableVaccine': [
             {
-              "vaccineType": "Cholera, oral (BivWC)",
-              "cvx": "26",
-              "beginAge": "1 year"
-            }
+              'vaccineType': 'Cholera, oral (BivWC)',
+              'cvx': '26',
+              'beginAge': '1 year',
+            },
           ],
-          "recurringDose": "No"
-        }
-      ]
-    }
-  ]
+          'recurringDose': 'No',
+        },
+      ],
+    },
+  ],
 });

@@ -64,18 +64,14 @@ class VaccineRecommendationCategory {
   final String? additionalMaterial;
 
   Map<String, dynamic> toJson() => {
-        if (worksheetName != null) 'worksheetName': worksheetName,
-        if (seriesName != null) 'seriesName': seriesName,
-        if (patientBeginAge != null) 'patientBeginAge': patientBeginAge,
-        if (patientEndAge != null) 'patientEndAge': patientEndAge,
-        if (forecastTargetDose != null)
-          'forecastTargetDose': forecastTargetDose,
-        if (includedIndication != null)
-          'includedIndication': includedIndication,
-        if (excludedIndication != null)
-          'excludedIndication': excludedIndication,
-        if (category != null) 'category': category,
-        if (additionalMaterial != null)
-          'additionalMaterial': additionalMaterial,
-      };
+    if (worksheetName != null) 'worksheetName': worksheetName,
+    if (seriesName != null) 'seriesName': seriesName,
+    if (patientBeginAge != null) 'patientBeginAge': patientBeginAge,
+    if (patientEndAge != null) 'patientEndAge': patientEndAge,
+    if (forecastTargetDose != null) 'forecastTargetDose': forecastTargetDose,
+    if (includedIndication != null) 'includedIndication': includedIndication,
+    if (excludedIndication != null) 'excludedIndication': excludedIndication,
+    if (category != null) 'category': category,
+    if (additionalMaterial != null) 'additionalMaterial': additionalMaterial,
+  };
 }

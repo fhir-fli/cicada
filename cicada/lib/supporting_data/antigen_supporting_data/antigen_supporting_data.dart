@@ -1,4 +1,4 @@
-import '../../cicada.dart';
+import 'package:cicada/cicada.dart';
 
 export 'clinical_history.dart';
 export 'conditional_skip.dart';
@@ -14,9 +14,9 @@ export 'select_series.dart';
 export 'series.dart';
 export 'series_dose.dart';
 export 'vaccine.dart';
-export 'vaccine_recommendation_category.dart';
 export 'vaccine_contraindications.dart';
 export 'vaccine_group_contraindications.dart';
+export 'vaccine_recommendation_category.dart';
 export 'vax_age.dart';
 export 'vax_condition.dart';
 export 'vax_set.dart';
@@ -31,6 +31,37 @@ class AntigenSupportingData {
     this.vaccineRecommendationCategory,
   });
 
+  factory AntigenSupportingData.fromJson(Map<String, dynamic> oldJson) {
+    final json =
+        (oldJson['antigenSupportingData'] as Map<String, dynamic>?) ?? oldJson;
+    return AntigenSupportingData(
+      targetDisease: json['targetDisease'] as String?,
+      vaccineGroup: json['vaccineGroup'] as String?,
+      immunity:
+          json['immunity'] == null
+              ? null
+              : Immunity.fromJson(json['immunity'] as Map<String, dynamic>),
+      contraindications:
+          json['contraindications'] == null
+              ? null
+              : Contraindications.fromJson(
+                json['contraindications'] as Map<String, dynamic>,
+              ),
+      series:
+          (json['series'] as List<dynamic>?)
+              ?.map((e) => Series.fromJson(e as Map<String, dynamic>))
+              .toList(),
+      vaccineRecommendationCategory:
+          (json['vaccineRecommendationCategory'] as List<dynamic>?)
+              ?.map(
+                (e) => VaccineRecommendationCategory.fromJson(
+                  e as Map<String, dynamic>,
+                ),
+              )
+              .toList(),
+    );
+  }
+
   final String? targetDisease;
   final String? vaccineGroup;
   final Immunity? immunity;
@@ -40,29 +71,6 @@ class AntigenSupportingData {
   /// The "Vaccine Recommendation Category" worksheet, new in 4.65. Null for
   /// data generated before it existed (the WHO workbooks, for now).
   final List<VaccineRecommendationCategory>? vaccineRecommendationCategory;
-
-  factory AntigenSupportingData.fromJson(Map<String, dynamic> oldJson) {
-    final json = oldJson['antigenSupportingData'] ?? oldJson;
-    return AntigenSupportingData(
-      targetDisease: json['targetDisease'] as String?,
-      vaccineGroup: json['vaccineGroup'] as String?,
-      immunity: json['immunity'] == null
-          ? null
-          : Immunity.fromJson(json['immunity'] as Map<String, dynamic>),
-      contraindications: json['contraindications'] == null
-          ? null
-          : Contraindications.fromJson(
-              json['contraindications'] as Map<String, dynamic>),
-      series: (json['series'] as List<dynamic>?)
-          ?.map((e) => Series.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      vaccineRecommendationCategory: (json['vaccineRecommendationCategory']
-              as List<dynamic>?)
-          ?.map((e) =>
-              VaccineRecommendationCategory.fromJson(e as Map<String, dynamic>))
-          .toList(),
-    );
-  }
 
   Map<String, dynamic> toJson() {
     return {

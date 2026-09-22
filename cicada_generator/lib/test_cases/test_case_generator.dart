@@ -1,9 +1,9 @@
 import 'dart:convert';
 import 'dart:io';
 
+import 'package:cicada/cicada.dart';
 import 'package:excel/excel.dart';
 import 'package:fhir_r4/fhir_r4.dart';
-import 'package:cicada/cicada.dart';
 
 /// Which observation column style the Excel uses.
 enum ObservationStyle {
@@ -45,41 +45,51 @@ Future<void> main() async {
   final healthyPath = _findExcel('cdsi-healthy-childhood-and-adult-test-cases');
   if (healthyPath == null) {
     throw StateError(
-        'No cdsi-healthy-childhood-and-adult-test-cases-*.xlsx found');
+      'No cdsi-healthy-childhood-and-adult-test-cases-*.xlsx found',
+    );
   }
-  print('Using healthy test case file: $healthyPath');
-  await _generateTestCases(TestCaseConfig(
-    excelPath: healthyPath,
-    sheetName: 'FITS Exported TestCases',
-    observationStyle: ObservationStyle.medHistory,
-    ndjsonPath: 'cicada_generator/lib/test_cases/test_cases.ndjson',
-    testNdjsonPath: 'cicada/test/healthyTestCases.ndjson',
-    dosesDartPath: 'cicada/lib/generated_files/test_doses.dart',
-    forecastsDartPath: 'cicada/lib/generated_files/test_forecasts.dart',
-    dosesJsonPath: 'cicada_generator/lib/test_cases/test_doses.json',
-    label: 'healthy',
-  ));
+  stdout.writeln('Using healthy test case file: $healthyPath');
+  await _generateTestCases(
+    TestCaseConfig(
+      excelPath: healthyPath,
+      sheetName: 'FITS Exported TestCases',
+      observationStyle: ObservationStyle.medHistory,
+      ndjsonPath: 'cicada_generator/lib/test_cases/test_cases.ndjson',
+      testNdjsonPath: 'cicada/test/healthyTestCases.ndjson',
+      dosesDartPath: 'cicada/lib/generated_files/test_doses.dart',
+      forecastsDartPath: 'cicada/lib/generated_files/test_forecasts.dart',
+      dosesJsonPath: 'cicada_generator/lib/test_cases/test_doses.json',
+      label: 'healthy',
+    ),
+  );
 
   // Underlying conditions test cases
-  final conditionPath =
-      _findExcel('CDSi-underlying-conditions-test-cases', caseSensitive: false);
+  final conditionPath = _findExcel(
+    'CDSi-underlying-conditions-test-cases',
+    caseSensitive: false,
+  );
   if (conditionPath != null) {
-    print('\nUsing condition test case file: $conditionPath');
-    await _generateTestCases(TestCaseConfig(
-      excelPath: conditionPath,
-      sheetName: 'Underlying Condition Test Cases',
-      observationStyle: ObservationStyle.observationCode,
-      ndjsonPath: 'cicada_generator/lib/test_cases/condition_test_cases.ndjson',
-      testNdjsonPath: 'cicada/test/conditionTestCases.ndjson',
-      dosesDartPath: 'cicada/lib/generated_files/test_condition_doses.dart',
-      forecastsDartPath:
-          'cicada/lib/generated_files/test_condition_forecasts.dart',
-      dosesJsonPath:
-          'cicada_generator/lib/test_cases/condition_test_doses.json',
-      label: 'condition',
-    ));
+    stdout.writeln('\nUsing condition test case file: $conditionPath');
+    await _generateTestCases(
+      TestCaseConfig(
+        excelPath: conditionPath,
+        sheetName: 'Underlying Condition Test Cases',
+        observationStyle: ObservationStyle.observationCode,
+        ndjsonPath:
+            'cicada_generator/lib/test_cases/condition_test_cases.ndjson',
+        testNdjsonPath: 'cicada/test/conditionTestCases.ndjson',
+        dosesDartPath: 'cicada/lib/generated_files/test_condition_doses.dart',
+        forecastsDartPath:
+            'cicada/lib/generated_files/test_condition_forecasts.dart',
+        dosesJsonPath:
+            'cicada_generator/lib/test_cases/condition_test_doses.json',
+        label: 'condition',
+      ),
+    );
   } else {
-    print('\nNo underlying conditions test case Excel found — skipping.');
+    stdout.writeln(
+      '\nNo underlying conditions test case Excel found — skipping.',
+    );
   }
 }
 
@@ -87,18 +97,21 @@ Future<void> main() async {
 /// Returns null if [required] is false and nothing found.
 String? _findExcel(String nameFragment, {bool caseSensitive = true}) {
   final dir = Directory('cicada_generator/lib/test_cases');
-  final matches = dir.listSync().whereType<File>().where((f) {
-    final name = f.path.split('/').last;
-    if (caseSensitive) {
-      return name.contains(nameFragment) && name.endsWith('.xlsx');
-    }
-    return name.toLowerCase().contains(nameFragment.toLowerCase()) &&
-        name.endsWith('.xlsx');
-  }).toList();
+  final matches =
+      dir.listSync().whereType<File>().where((f) {
+        final name = f.path.split('/').last;
+        if (caseSensitive) {
+          return name.contains(nameFragment) && name.endsWith('.xlsx');
+        }
+        return name.toLowerCase().contains(nameFragment.toLowerCase()) &&
+            name.endsWith('.xlsx');
+      }).toList();
   if (matches.isEmpty) return null;
   if (matches.length > 1) {
-    throw StateError('Multiple "$nameFragment" files found: '
-        '${matches.map((f) => f.path).join(', ')}');
+    throw StateError(
+      'Multiple "$nameFragment" files found: '
+      '${matches.map((f) => f.path).join(', ')}',
+    );
   }
   return matches.first.path;
 }
@@ -114,9 +127,9 @@ Future<void> _generateTestCases(TestCaseConfig config) async {
       sheet.rows.first.map((cell) => cell?.value?.toString() ?? '').toList();
 
   // Containers for output
-  final Map<String, List<Map<String, dynamic>>> testDoses = {};
-  final Map<String, List<Map<String, String>>> testForecasts = {};
-  final List<Parameters> parametersList = [];
+  final testDoses = <String, List<Map<String, dynamic>>>{};
+  final testForecasts = <String, List<Map<String, String>>>{};
+  final parametersList = <Parameters>[];
 
   // Process each data row
   for (final row in sheet.rows.skip(1)) {
@@ -132,8 +145,9 @@ Future<void> _generateTestCases(TestCaseConfig config) async {
     // `case-N`, found no expectations under that name, and asserted nothing —
     // 439 of the 777 condition "tests" were no-ops, and the headline 752/777
     // counted every one of them as a pass.
-    if (row.every((c) =>
-        c == null || c.value == null || c.value.toString().trim().isEmpty)) {
+    if (row.every(
+      (c) => c == null || c.value == null || c.value.toString().trim().isEmpty,
+    )) {
       continue;
     }
 
@@ -288,21 +302,32 @@ Future<void> _generateTestCases(TestCaseConfig config) async {
 
   // Write NDJSON to test directory
   await File(config.testNdjsonPath).writeAsString(ndjson);
-  print('Wrote ${config.testNdjsonPath} '
-      '(${parametersList.length} cases)');
+  stdout.writeln(
+    'Wrote ${config.testNdjsonPath} '
+    '(${parametersList.length} cases)',
+  );
 
   // Generate test_doses.dart
   _writeTestDosesDart(testDoses, config.dosesDartPath, config.label);
-  print('Wrote ${config.dosesDartPath} '
-      '(${testDoses.length} patients)');
+  stdout.writeln(
+    'Wrote ${config.dosesDartPath} '
+    '(${testDoses.length} patients)',
+  );
 
   // Generate test_forecasts.dart
   _writeTestForecastsDart(
-      testForecasts, config.forecastsDartPath, config.label);
-  final totalForecasts =
-      testForecasts.values.fold<int>(0, (sum, list) => sum + list.length);
-  print('Wrote ${config.forecastsDartPath} '
-      '(${testForecasts.length} patients, $totalForecasts forecasts)');
+    testForecasts,
+    config.forecastsDartPath,
+    config.label,
+  );
+  final totalForecasts = testForecasts.values.fold<int>(
+    0,
+    (sum, list) => sum + list.length,
+  );
+  stdout.writeln(
+    'Wrote ${config.forecastsDartPath} '
+    '(${testForecasts.length} patients, $totalForecasts forecasts)',
+  );
 }
 
 /// Parse Med_History_Text / Med_History_Code columns (healthy Excel style).
@@ -313,16 +338,18 @@ void _parseMedHistoryObservations(
   Patient patient,
 ) {
   final obsTextCols = headers.where((h) => h == 'Med_History_Text');
-  for (var textCol in obsTextCols) {
+  for (final textCol in obsTextCols) {
     final textVal = rowMap[textCol]?.toString() ?? '';
     final codeVal = rowMap['Med_History_Code']?.toString() ?? '';
     if (textVal.isNotEmpty) {
-      conditions.add(_buildConditionFromObsCode(
-        codeVal,
-        textVal,
-        null,
-        patient,
-      ));
+      conditions.add(
+        _buildConditionFromObsCode(
+          codeVal,
+          textVal,
+          null,
+          patient,
+        ),
+      );
     }
   }
 }
@@ -339,16 +366,19 @@ void _parseObservationCodeColumns(
     if (codeVal.isEmpty && textVal.isEmpty) continue;
 
     final dateVal = rowMap['Observation_Date_$idx'];
-    final dateStr = dateVal != null && dateVal.toString().isNotEmpty
-        ? dateVal.toString().substring(0, 10)
-        : null;
+    final dateStr =
+        dateVal != null && dateVal.toString().isNotEmpty
+            ? dateVal.toString().substring(0, 10)
+            : null;
 
-    conditions.add(_buildConditionFromObsCode(
-      codeVal,
-      textVal,
-      dateStr,
-      patient,
-    ));
+    conditions.add(
+      _buildConditionFromObsCode(
+        codeVal,
+        textVal,
+        dateStr,
+        patient,
+      ),
+    );
   }
 }
 
@@ -392,7 +422,7 @@ Condition _buildConditionFromObsCode(
             .map(
               (cv) => Coding(
                 system: FhirUri('http://snomed.info/sct'),
-                code: FhirCode(cv.code!),
+                code: FhirCode(cv.code),
                 display: cv.text?.toFhirString,
               ),
             ),
@@ -409,9 +439,10 @@ void _writeTestDosesDart(
   String label,
 ) {
   final varName = label == 'healthy' ? 'testDoses' : 'testConditionDoses';
-  final sb = StringBuffer();
-  sb.writeln('final Map<String, List<Map<String, Object>>> $varName =');
-  sb.writeln('    <String, List<Map<String, Object>>>{');
+  final sb =
+      StringBuffer()
+        ..writeln('final Map<String, List<Map<String, Object>>> $varName =')
+        ..writeln('    <String, List<Map<String, Object>>>{');
 
   final patientIds = testDoses.keys.toList()..sort();
   for (final patientId in patientIds) {
@@ -464,8 +495,9 @@ void _writeDoseEntry(StringBuffer sb, Map<String, dynamic> dose) {
   for (final key in orderedKeys) {
     if (!dose.containsKey(key) || dose[key] == null) continue;
     final value = dose[key];
-    sb.write("      '$key': ");
-    sb.writeln('${_dartLiteral(value)},');
+    sb
+      ..write("      '$key': ")
+      ..writeln('${_dartLiteral(value)},');
   }
 }
 
@@ -475,8 +507,9 @@ String _dartLiteral(dynamic value) {
   if (value is bool) return '$value';
   if (value is List) {
     if (value.every((e) => e is String)) {
-      final items =
-          value.map((e) => "'${_escapeString(e as String)}'").join(', ');
+      final items = value
+          .map((e) => "'${_escapeString(e as String)}'")
+          .join(', ');
       return '<String>[$items]';
     }
     return '$value';
@@ -484,7 +517,7 @@ String _dartLiteral(dynamic value) {
   return "'$value'";
 }
 
-String _escapeString(String s) => s.replaceAll("'", "\\'");
+String _escapeString(String s) => s.replaceAll("'", r"\'");
 
 /// Extracts a date string in yyyy-MM-dd format from a cell value.
 String _extractDateStr(dynamic value) {
@@ -510,9 +543,10 @@ void _writeTestForecastsDart(
 ) {
   final varName =
       label == 'healthy' ? 'testForecasts' : 'testConditionForecasts';
-  final sb = StringBuffer();
-  sb.writeln('final Map<String, List<Map<String, String>>> $varName =');
-  sb.writeln('    <String, List<Map<String, String>>>{');
+  final sb =
+      StringBuffer()
+        ..writeln('final Map<String, List<Map<String, String>>> $varName =')
+        ..writeln('    <String, List<Map<String, String>>>{');
 
   final patientIds = testForecasts.keys.toList()..sort();
   for (final patientId in patientIds) {
@@ -553,12 +587,13 @@ Patient _buildPatient(Map<String, dynamic> row) {
     id: row['CDC_Test_ID'].toString().trim().toFhirString,
     name: [HumanName(family: row['Test_Case_Name']?.toString().toFhirString)],
     birthDate: dob.isNotEmpty ? FhirDate.fromString(dob) : null,
-    gender: genderVal.toLowerCase().contains('f')
-        ? AdministrativeGender.female
-        : genderVal.toLowerCase().contains('t')
+    gender:
+        genderVal.toLowerCase().contains('f')
+            ? AdministrativeGender.female
+            : genderVal.toLowerCase().contains('t')
             ? AdministrativeGender('transgender')
             : genderVal.toLowerCase().contains('m')
-                ? AdministrativeGender.male
-                : AdministrativeGender.unknown,
+            ? AdministrativeGender.male
+            : AdministrativeGender.unknown,
   );
 }

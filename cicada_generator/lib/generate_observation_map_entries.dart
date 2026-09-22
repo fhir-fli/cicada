@@ -3,13 +3,13 @@ import 'dart:io';
 import 'package:cicada/cicada.dart';
 
 Future<void> main() async {
-  final VaxObservations? observations = scheduleSupportingData.observations;
-  String snomedEntries = '';
-  String cvxEntries = '';
-  String phinvadsEntries = '';
+  final observations = scheduleSupportingData.observations;
+  var snomedEntries = '';
+  var cvxEntries = '';
+  var phinvadsEntries = '';
   for (final observation in observations?.observation ?? <VaxObservation>[]) {
     if (observation.codedValues != null) {
-      for (final CodedValue codedValue
+      for (final codedValue
           in observation.codedValues?.codedValue ?? <CodedValue>[]) {
         if (codedValue.codeSystem == 'SNOMED') {
           snomedEntries += '''

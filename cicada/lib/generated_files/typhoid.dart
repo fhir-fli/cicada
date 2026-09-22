@@ -1,322 +1,416 @@
-// ignore_for_file: prefer_single_quotes, always_specify_types
+// ignore_for_file: no_adjacent_strings_in_list
+// Generated data: long strings are split into adjacent literals so
+// no line passes 80 columns; a serializer cannot drop a comma.
 
-import '../cicada.dart';
+import 'package:cicada/cicada.dart';
 
 final AntigenSupportingData typhoid = AntigenSupportingData.fromJson({
-  "targetDisease": "Typhoid",
-  "vaccineGroup": "Typhoid",
-  "contraindications": {
-    "vaccineGroup": {
-      "contraindication": [
+  'targetDisease': 'Typhoid',
+  'vaccineGroup': 'Typhoid',
+  'contraindications': {
+    'vaccineGroup': {
+      'contraindication': [
         {
-          "observationCode": "029",
-          "observationTitle": "Acute gastroenteritis",
-          "contraindicationText":
-              "Do not vaccinate if the patient has acute gastroenteritis."
+          'observationCode': '029',
+          'observationTitle': 'Acute gastroenteritis',
+          'contraindicationText':
+              'Do not vaccinate if the patient has acute gastroenteritis.',
         },
         {
-          "observationCode": "030",
-          "observationTitle": "Acute febrile illness",
-          "contraindicationText":
-              "Do not vaccinate if the patient has acute febrile illness."
+          'observationCode': '030',
+          'observationTitle': 'Acute febrile illness',
+          'contraindicationText':
+              'Do not vaccinate if the patient has acute febrile illness.',
         },
         {
-          "observationCode": "080",
-          "observationTitle": "Adverse reaction to vaccine component",
-          "contraindicationText":
-              "Do not vaccinate if the patient has had an adverse reaction to a vaccine component."
+          'observationCode': '080',
+          'observationTitle': 'Adverse reaction to vaccine component',
+          'contraindicationText':
+              'Do not vaccinate if the patient has had an adverse reaction '
+              'to a vaccine component.',
         },
         {
-          "observationCode": "084",
-          "observationTitle":
-              "Severe allergic reaction after previous dose of Typhoid",
-          "contraindicationText":
-              "Do not vaccinate if the patient has had a severe allergic reaction after a previous dose of Typhoid vaccine."
-        }
-      ]
+          'observationCode': '084',
+          'observationTitle':
+              'Severe allergic reaction after previous dose of Typhoid',
+          'contraindicationText':
+              'Do not vaccinate if the patient has had a severe allergic '
+              'reaction after a previous dose of Typhoid vaccine.',
+        },
+      ],
     },
-    "vaccine": {
-      "contraindication": [
+    'vaccine': {
+      'contraindication': [
         {
-          "observationCode": "035",
-          "observationTitle":
-              "Antimicrobial or antimalarial taken within 72 hours",
-          "contraindicationText":
-              "Do not vaccinate with live attenuated typhoid virus (Ty21a) if the patient has taken antimicrobial or antimalarial medications  within the previous 72 hours.",
-          "contraindicatedVaccine": [
-            {"vaccineType": "Typhoid oral, live, attenuated", "cvx": "25"}
-          ]
+          'observationCode': '035',
+          'observationTitle':
+              'Antimicrobial or antimalarial taken within 72 hours',
+          'contraindicationText':
+              'Do not vaccinate with live attenuated typhoid virus (Ty21a) '
+              'if the patient has taken antimicrobial or antimalarial '
+              'medications  within the previous 72 hours.',
+          'contraindicatedVaccine': [
+            {
+              'vaccineType': 'Typhoid oral, live, attenuated',
+              'cvx': '25',
+            },
+          ],
         },
         {
-          "observationCode": "145",
-          "observationTitle":
-              "B-lymphocyte [humoral] - Severe antibody deficiencies",
-          "contraindicationText":
-              "Do not vaccinate with live attenuated typhoid virus (Ty21a) if the patient has severe B-lymphocyte (humoral) - antibody deficiencies (e.g., X-linked agammaglobulinemia and common variable immunodeficiency).",
-          "contraindicatedVaccine": [
-            {"vaccineType": "Typhoid oral, live, attenuated", "cvx": "25"}
-          ]
+          'observationCode': '145',
+          'observationTitle':
+              'B-lymphocyte [humoral] - Severe antibody deficiencies',
+          'contraindicationText':
+              'Do not vaccinate with live attenuated typhoid virus (Ty21a) '
+              'if the patient has severe B-lymphocyte (humoral) - antibody '
+              'deficiencies (e.g., X-linked agammaglobulinemia and common '
+              'variable immunodeficiency).',
+          'contraindicatedVaccine': [
+            {
+              'vaccineType': 'Typhoid oral, live, attenuated',
+              'cvx': '25',
+            },
+          ],
         },
         {
-          "observationCode": "147",
-          "observationTitle":
-              "T-lymphocyte [cell-mediated and humoral] - Complete defects",
-          "contraindicationText":
-              "Do not vaccinate with live attenuated typhoid virus (Ty21a) if the patient has complete cell-mediated or humoral T-lymphocyte defects (e.g., severe combined immunodeficiency [SCID] disease, complete DiGeorge syndrome).",
-          "contraindicatedVaccine": [
-            {"vaccineType": "Typhoid oral, live, attenuated", "cvx": "25"}
-          ]
+          'observationCode': '147',
+          'observationTitle':
+              'T-lymphocyte [cell-mediated and humoral] - Complete defects',
+          'contraindicationText':
+              'Do not vaccinate with live attenuated typhoid virus (Ty21a) '
+              'if the patient has complete cell-mediated or humoral '
+              'T-lymphocyte defects (e.g., severe combined '
+              'immunodeficiency [SCID] disease, complete DiGeorge '
+              'syndrome).',
+          'contraindicatedVaccine': [
+            {
+              'vaccineType': 'Typhoid oral, live, attenuated',
+              'cvx': '25',
+            },
+          ],
         },
         {
-          "observationCode": "148",
-          "observationTitle":
-              "T-lymphocyte [cell-mediated and humoral] - Partial defects",
-          "contraindicationText":
-              "Do not vaccinate with live attenuated typhoid virus (Ty21a) if the patient has partial cell-mediated or humoral T-lymphocyte defects (e.g., most patients with DiGeorge syndrome, Wiskott-Aldrich syndrome, ataxia- telangiectasia).",
-          "contraindicatedVaccine": [
-            {"vaccineType": "Typhoid oral, live, attenuated", "cvx": "25"}
-          ]
+          'observationCode': '148',
+          'observationTitle':
+              'T-lymphocyte [cell-mediated and humoral] - Partial defects',
+          'contraindicationText':
+              'Do not vaccinate with live attenuated typhoid virus (Ty21a) '
+              'if the patient has partial cell-mediated or humoral '
+              'T-lymphocyte defects (e.g., most patients with DiGeorge '
+              'syndrome, Wiskott-Aldrich syndrome, ataxia- telangiectasia).',
+          'contraindicatedVaccine': [
+            {
+              'vaccineType': 'Typhoid oral, live, attenuated',
+              'cvx': '25',
+            },
+          ],
         },
         {
-          "observationCode": "149",
-          "observationTitle":
-              "T-lymphocyte [cell-mediated and humoral] - interferon-gamma/Interleukin 12 axis deficiencies",
-          "contraindicationText":
-              "Do not vaccinate with live attenuated typhoid virus (Ty21a) if the patient has T-lymphocyte [cell-mediated and humoral] - interferon-gamma/Interleukin 12 axis deficiencies.",
-          "contraindicatedVaccine": [
-            {"vaccineType": "Typhoid oral, live, attenuated", "cvx": "25"}
-          ]
+          'observationCode': '149',
+          'observationTitle':
+              'T-lymphocyte [cell-mediated and humoral] - '
+              'interferon-gamma/Interleukin 12 axis deficiencies',
+          'contraindicationText':
+              'Do not vaccinate with live attenuated typhoid virus (Ty21a) '
+              'if the patient has T-lymphocyte [cell-mediated and humoral] '
+              '- interferon-gamma/Interleukin 12 axis deficiencies.',
+          'contraindicatedVaccine': [
+            {
+              'vaccineType': 'Typhoid oral, live, attenuated',
+              'cvx': '25',
+            },
+          ],
         },
         {
-          "observationCode": "150",
-          "observationTitle":
-              "T-lymphocyte [cell-mediated and humoral] - interferon-gamma or interferon-alpha",
-          "contraindicationText":
-              "Do not vaccinate with live attenuated typhoid virus (Ty21a) if the patient has cell-mediated or humoral T-lymphocyte defects related to interferon-gamma or interferon-alpha",
-          "contraindicatedVaccine": [
-            {"vaccineType": "Typhoid oral, live, attenuated", "cvx": "25"}
-          ]
+          'observationCode': '150',
+          'observationTitle':
+              'T-lymphocyte [cell-mediated and humoral] - interferon-gamma '
+              'or interferon-alpha',
+          'contraindicationText':
+              'Do not vaccinate with live attenuated typhoid virus (Ty21a) '
+              'if the patient has cell-mediated or humoral T-lymphocyte '
+              'defects related to interferon-gamma or interferon-alpha',
+          'contraindicatedVaccine': [
+            {
+              'vaccineType': 'Typhoid oral, live, attenuated',
+              'cvx': '25',
+            },
+          ],
         },
         {
-          "observationCode": "152",
-          "observationTitle":
-              "Phagocytic function - Chronic granulomatous disease",
-          "contraindicationText":
-              "Do not vaccinate with live attenuated typhoid virus (Ty21a) if the patient has phagocytic function - chronic granulomatous disease.",
-          "contraindicatedVaccine": [
-            {"vaccineType": "Typhoid oral, live, attenuated", "cvx": "25"}
-          ]
+          'observationCode': '152',
+          'observationTitle':
+              'Phagocytic function - Chronic granulomatous disease',
+          'contraindicationText':
+              'Do not vaccinate with live attenuated typhoid virus (Ty21a) '
+              'if the patient has phagocytic function - chronic '
+              'granulomatous disease.',
+          'contraindicatedVaccine': [
+            {
+              'vaccineType': 'Typhoid oral, live, attenuated',
+              'cvx': '25',
+            },
+          ],
         },
         {
-          "observationCode": "153",
-          "observationTitle":
-              "Phagocytic function - Leukocyte adhesion defect, and myeloperoxidase deficiency",
-          "contraindicationText":
-              "Do not vaccinate with live attenuated typhoid virus (Ty21a) if the patient has a phagocytic function defect (e.g. leukocyte adhesion defect and myeloperoxidase deficiency).",
-          "contraindicatedVaccine": [
-            {"vaccineType": "Typhoid oral, live, attenuated", "cvx": "25"}
-          ]
+          'observationCode': '153',
+          'observationTitle':
+              'Phagocytic function - Leukocyte adhesion defect, and '
+              'myeloperoxidase deficiency',
+          'contraindicationText':
+              'Do not vaccinate with live attenuated typhoid virus (Ty21a) '
+              'if the patient has a phagocytic function defect (e.g. '
+              'leukocyte adhesion defect and myeloperoxidase deficiency).',
+          'contraindicatedVaccine': [
+            {
+              'vaccineType': 'Typhoid oral, live, attenuated',
+              'cvx': '25',
+            },
+          ],
         },
         {
-          "observationCode": "154",
-          "observationTitle": "HIV/AIDS - severely immunocompromised",
-          "contraindicationText":
-              "Do not vaccinate with live attenuated typhoid virus (Ty21a) if the patient has HIV/AIDS and is severely immunocompromised (See the CDC general recommendations for a definition of \"severely immunocompromised\").",
-          "contraindicatedVaccine": [
-            {"vaccineType": "Typhoid oral, live, attenuated", "cvx": "25"}
-          ]
+          'observationCode': '154',
+          'observationTitle': 'HIV/AIDS - severely immunocompromised',
+          'contraindicationText':
+              'Do not vaccinate with live attenuated typhoid virus (Ty21a) '
+              'if the patient has HIV/AIDS and is severely '
+              'immunocompromised (See the CDC general recommendations for '
+              'a definition of "severely immunocompromised").',
+          'contraindicatedVaccine': [
+            {
+              'vaccineType': 'Typhoid oral, live, attenuated',
+              'cvx': '25',
+            },
+          ],
         },
         {
-          "observationCode": "156",
-          "observationTitle": "Generalized malignant neoplasm",
-          "contraindicationText":
-              "Do not vaccinate with live attenuated typhoid virus (Ty21a) if the patient has generalized malignant neoplasm.",
-          "contraindicatedVaccine": [
-            {"vaccineType": "Typhoid oral, live, attenuated", "cvx": "25"}
-          ]
+          'observationCode': '156',
+          'observationTitle': 'Generalized malignant neoplasm',
+          'contraindicationText':
+              'Do not vaccinate with live attenuated typhoid virus (Ty21a) '
+              'if the patient has generalized malignant neoplasm.',
+          'contraindicatedVaccine': [
+            {
+              'vaccineType': 'Typhoid oral, live, attenuated',
+              'cvx': '25',
+            },
+          ],
         },
         {
-          "observationCode": "157",
-          "observationTitle": "Solid organ transplantation",
-          "contraindicationText":
-              "Do not vaccinate with live attenuated typhoid virus (Ty21a) if the patient received a solid organ transplant.",
-          "contraindicationGuidance":
-              "Certain immunosuppressive medications are administered to prevent solid organ transplant rejection. Live vaccines should be withheld for 2 months following discontinuation of anti-rejection therapies in patients with a solid organ transplant.",
-          "contraindicatedVaccine": [
-            {"vaccineType": "Typhoid oral, live, attenuated", "cvx": "25"}
-          ]
+          'observationCode': '157',
+          'observationTitle': 'Solid organ transplantation',
+          'contraindicationText':
+              'Do not vaccinate with live attenuated typhoid virus (Ty21a) '
+              'if the patient received a solid organ transplant.',
+          'contraindicationGuidance':
+              'Certain immunosuppressive medications are administered to '
+              'prevent solid organ transplant rejection. Live vaccines '
+              'should be withheld for 2 months following discontinuation '
+              'of anti-rejection therapies in patients with a solid organ '
+              'transplant.',
+          'contraindicatedVaccine': [
+            {
+              'vaccineType': 'Typhoid oral, live, attenuated',
+              'cvx': '25',
+            },
+          ],
         },
         {
-          "observationCode": "158",
-          "observationTitle": "Immunosuppressive therapy",
-          "contraindicationText":
-              "Do not vaccinate with live attenuated typhoid virus (Ty21a) if the patient is undergoing immunosuppressive therapy. Immunosuppressive medications include those given to prevent solid organ transplant rejection, human immune mediators like interleukins and colony-stimulating factors, immune modulators like levamisol and BCG bladder-tumor therapy, and medicines like tumor necrosis factor alpha inhibitors and anti-B cell antibodies.",
-          "contraindicatedVaccine": [
-            {"vaccineType": "Typhoid oral, live, attenuated", "cvx": "25"}
-          ]
+          'observationCode': '158',
+          'observationTitle': 'Immunosuppressive therapy',
+          'contraindicationText':
+              'Do not vaccinate with live attenuated typhoid virus (Ty21a) '
+              'if the patient is undergoing immunosuppressive therapy. '
+              'Immunosuppressive medications include those given to '
+              'prevent solid organ transplant rejection, human immune '
+              'mediators like interleukins and colony-stimulating factors, '
+              'immune modulators like levamisol and BCG bladder-tumor '
+              'therapy, and medicines like tumor necrosis factor alpha '
+              'inhibitors and anti-B cell antibodies.',
+          'contraindicatedVaccine': [
+            {
+              'vaccineType': 'Typhoid oral, live, attenuated',
+              'cvx': '25',
+            },
+          ],
         },
         {
-          "observationCode": "159",
-          "observationTitle": "Radiation therapy",
-          "contraindicationText":
-              "Do not vaccinate with live attenuated typhoid virus (Ty21a) if the patient is undergoing radiation therapy.",
-          "contraindicatedVaccine": [
-            {"vaccineType": "Typhoid oral, live, attenuated", "cvx": "25"}
-          ]
-        }
-      ]
-    }
+          'observationCode': '159',
+          'observationTitle': 'Radiation therapy',
+          'contraindicationText':
+              'Do not vaccinate with live attenuated typhoid virus (Ty21a) '
+              'if the patient is undergoing radiation therapy.',
+          'contraindicatedVaccine': [
+            {
+              'vaccineType': 'Typhoid oral, live, attenuated',
+              'cvx': '25',
+            },
+          ],
+        },
+      ],
+    },
   },
-  "series": [
+  'series': [
     {
-      "seriesName": "Typhoid risk series",
-      "targetDisease": "Typhoid",
-      "vaccineGroup": "Typhoid",
-      "seriesAdminGuidance": [
-        "Primary vaccination with live-attenuated Ty21a vaccine consists of one enteric-coated capsule taken on alternate days (day 0, 2, 4, and 6), for a total of four capsules. The capsules must be kept refrigerated (not frozen). Each capsule should be taken with cool water no warmer than 98.6 F (37.0 C), approximately 1 hour before a meal. All doses should be completed at least 1 week before potential exposure."
+      'seriesName': 'Typhoid risk series',
+      'targetDisease': 'Typhoid',
+      'vaccineGroup': 'Typhoid',
+      'seriesAdminGuidance': [
+        'Primary vaccination with live-attenuated Ty21a vaccine '
+            'consists of one enteric-coated capsule taken on alternate '
+            'days (day 0, 2, 4, and 6), for a total of four capsules. The '
+            'capsules must be kept refrigerated (not frozen). Each capsule '
+            'should be taken with cool water no warmer than 98.6 F (37.0 '
+            'C), approximately 1 hour before a meal. All doses should be '
+            'completed at least 1 week before potential exposure.',
       ],
-      "seriesType": "Risk",
-      "selectSeries": {
-        "defaultSeries": "No",
-        "productPath": "No",
-        "seriesGroupName": "Increased Risk",
-        "seriesGroup": "1",
-        "seriesPriority": "A",
-        "seriesPreference": "1",
-        "minAgeToStart": "2 years"
+      'seriesType': 'Risk',
+      'selectSeries': {
+        'defaultSeries': 'No',
+        'productPath': 'No',
+        'seriesGroupName': 'Increased Risk',
+        'seriesGroup': '1',
+        'seriesPriority': 'A',
+        'seriesPreference': '1',
+        'minAgeToStart': '2 years',
       },
-      "indication": [
+      'indication': [
         {
-          "observationCode": {
-            "text":
-                "Microbiology laboratorians who work frequently with S. typhi",
-            "code": "051"
+          'observationCode': {
+            'text':
+                'Microbiology laboratorians who work frequently with S. '
+                'typhi',
+            'code': '051',
           },
-          "description":
-              "Administer to persons who are microbiology laboratorians who work frequently with S. typhi.",
-          "beginAge": "18 years"
+          'description':
+              'Administer to persons who are microbiology laboratorians '
+              'who work frequently with S. typhi.',
+          'beginAge': '18 years',
         },
         {
-          "observationCode": {
-            "text": "Intimate exposure to a documented S. typhi carrier",
-            "code": "072"
+          'observationCode': {
+            'text': 'Intimate exposure to a documented S. typhi carrier',
+            'code': '072',
           },
-          "description":
-              "Administer to persons who have intimate exposure to a documented S. typhi carrier.",
-          "beginAge": "2 years"
+          'description':
+              'Administer to persons who have intimate exposure to a '
+              'documented S. typhi carrier.',
+          'beginAge': '2 years',
         },
         {
-          "observationCode": {
-            "text":
-                "Travel to areas in which there is a recognized risk of exposure to S. typhi",
-            "code": "163"
+          'observationCode': {
+            'text':
+                'Travel to areas in which there is a recognized risk of '
+                'exposure to S. typhi',
+            'code': '163',
           },
-          "description":
-              "Administer to persons who travel to areas in which there is a recognized risk of exposure to S. typhi.",
-          "beginAge": "2 years"
-        }
+          'description':
+              'Administer to persons who travel to areas in which there is '
+              'a recognized risk of exposure to S. typhi.',
+          'beginAge': '2 years',
+        },
       ],
-      "seriesDose": [
+      'seriesDose': [
         {
-          "doseNumber": "Dose 1",
-          "age": [
+          'doseNumber': 'Dose 1',
+          'age': [
             {
-              "absMinAge": "2 years - 4 days",
-              "minAge": "2 years",
-              "earliestRecAge": "2 years"
-            }
+              'absMinAge': '2 years - 4 days',
+              'minAge': '2 years',
+              'earliestRecAge': '2 years',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "Typhoid oral, live, attenuated",
-              "cvx": "25",
-              "beginAge": "6 years",
-              "forecastVaccineType": "N"
+              'vaccineType': 'Typhoid oral, live, attenuated',
+              'cvx': '25',
+              'beginAge': '6 years',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "Typhoid capsular polysaccharide",
-              "cvx": "101",
-              "beginAge": "2 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
-            }
+              'vaccineType': 'Typhoid capsular polysaccharide',
+              'cvx': '101',
+              'beginAge': '2 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
+            },
           ],
-          "allowableVaccine": [
+          'allowableVaccine': [
             {
-              "vaccineType": "Typhoid oral, live, attenuated",
-              "cvx": "25",
-              "beginAge": "6 years - 4 days"
+              'vaccineType': 'Typhoid oral, live, attenuated',
+              'cvx': '25',
+              'beginAge': '6 years - 4 days',
             },
             {
-              "vaccineType": "Typhoid capsular polysaccharide",
-              "cvx": "101",
-              "beginAge": "2 years - 4 days"
-            }
+              'vaccineType': 'Typhoid capsular polysaccharide',
+              'cvx': '101',
+              'beginAge': '2 years - 4 days',
+            },
           ],
-          "recurringDose": "No"
+          'recurringDose': 'No',
         },
         {
-          "doseNumber": "Dose 2",
-          "interval": [
+          'doseNumber': 'Dose 2',
+          'interval': [
             {
-              "fromPrevious": "N",
-              "fromMostRecent": "25",
-              "absMinInt": "0 days",
-              "minInt": "5 years",
-              "earliestRecInt": "5 years"
+              'fromPrevious': 'N',
+              'fromMostRecent': '25',
+              'absMinInt': '0 days',
+              'minInt': '5 years',
+              'earliestRecInt': '5 years',
             },
             {
-              "fromPrevious": "N",
-              "fromMostRecent": "101",
-              "absMinInt": "0 days",
-              "minInt": "2 years",
-              "earliestRecInt": "2 years"
-            }
+              'fromPrevious': 'N',
+              'fromMostRecent': '101',
+              'absMinInt': '0 days',
+              'minInt': '2 years',
+              'earliestRecInt': '2 years',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "Typhoid oral, live, attenuated",
-              "cvx": "25",
-              "beginAge": "6 years",
-              "forecastVaccineType": "N"
+              'vaccineType': 'Typhoid oral, live, attenuated',
+              'cvx': '25',
+              'beginAge': '6 years',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "Typhoid capsular polysaccharide",
-              "cvx": "101",
-              "beginAge": "2 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
-            }
+              'vaccineType': 'Typhoid capsular polysaccharide',
+              'cvx': '101',
+              'beginAge': '2 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
+            },
           ],
-          "allowableVaccine": [
+          'allowableVaccine': [
             {
-              "vaccineType": "Typhoid oral, live, attenuated",
-              "cvx": "25",
-              "beginAge": "6 years - 4 days"
+              'vaccineType': 'Typhoid oral, live, attenuated',
+              'cvx': '25',
+              'beginAge': '6 years - 4 days',
             },
             {
-              "vaccineType": "Typhoid capsular polysaccharide",
-              "cvx": "101",
-              "beginAge": "2 years - 4 days"
-            }
+              'vaccineType': 'Typhoid capsular polysaccharide',
+              'cvx': '101',
+              'beginAge': '2 years - 4 days',
+            },
           ],
-          "recurringDose": "Yes"
-        }
-      ]
-    }
+          'recurringDose': 'Yes',
+        },
+      ],
+    },
   ],
-  "vaccineRecommendationCategory": [
+  'vaccineRecommendationCategory': [
     {
-      "worksheetName": "Risk series",
-      "seriesName": "Typhoid risk series",
-      "patientBeginAge": "2 years",
-      "patientEndAge": "n/a",
-      "forecastTargetDose": "Any",
-      "includedIndication": "Any",
-      "excludedIndication": "n/a",
-      "category": "High-Risk",
-      "additionalMaterial":
-          "https://www.cdc.gov/typhoid-fever/prevention/index.html"
-    }
-  ]
+      'worksheetName': 'Risk series',
+      'seriesName': 'Typhoid risk series',
+      'patientBeginAge': '2 years',
+      'patientEndAge': 'n/a',
+      'forecastTargetDose': 'Any',
+      'includedIndication': 'Any',
+      'excludedIndication': 'n/a',
+      'category': 'High-Risk',
+      'additionalMaterial':
+          'https://www.cdc.gov/typhoid-fever/prevention/index.html',
+    },
+  ],
 });

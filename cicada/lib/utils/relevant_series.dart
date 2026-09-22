@@ -1,4 +1,4 @@
-import '../cicada.dart';
+import 'package:cicada/cicada.dart';
 
 /// Table 5-5: which of an antigen's series are relevant patient series.
 ///
@@ -9,12 +9,14 @@ List<Series> relevantSeries(
   VaxPatient patient,
   List<Series> oldSeries,
 ) {
-  final List<Series> series = oldSeries.toList();
-  series.retainWhere((Series element) =>
-      element.requiredGender == null ||
-      element.requiredGender!.isEmpty ||
-      element.requiredGender!.contains(patient.gender) ||
-      _pregnancyOutranksGender(element, patient));
+  final series =
+      oldSeries.toList()..retainWhere(
+        (element) =>
+            element.requiredGender == null ||
+            element.requiredGender!.isEmpty ||
+            element.requiredGender!.contains(patient.gender) ||
+            _pregnancyOutranksGender(element, patient),
+      );
 
   List<Indication> applicable(Series s, {required bool requireBeginAge}) =>
       applicableIndications(patient, s, requireBeginAge: requireBeginAge);
@@ -30,8 +32,7 @@ List<Series> relevantSeries(
     return false;
   }
 
-  final List<Series> strict =
-      series.where((Series s) => keep(s, requireBeginAge: true)).toList();
+  final strict = series.where((s) => keep(s, requireBeginAge: true)).toList();
   if (strict.isNotEmpty) {
     return strict;
   }
@@ -49,8 +50,7 @@ List<Series> relevantSeries(
   /// endemic is told to come back on their ninth birthday (`2022-UC-0001` at 8
   /// years 11 months and `2022-UC-0005` at 8 years 7 months — two deliberate
   /// cases, both dated to the birthday), where the engine said nothing at all.
-  final List<Series> relaxed =
-      series.where((Series s) => keep(s, requireBeginAge: false)).toList();
+  final relaxed = series.where((s) => keep(s, requireBeginAge: false)).toList();
   return relaxed;
 }
 
@@ -66,12 +66,13 @@ List<Indication> applicableIndications(
   Series s, {
   required bool requireBeginAge,
 }) {
-  final List<Indication> indications = s.indication ?? <Indication>[];
-  return indications.where((Indication ind) {
-    final String? code = ind.observationCode?.code;
+  final indications = s.indication ?? <Indication>[];
+  return indications.where((ind) {
+    final code = ind.observationCode?.code;
     if (code == null || code.isEmpty) return false;
     if (patient.observations.codeIndex(code) == -1) return false;
-    final bool beforeEnd = patient.assessmentDate <
+    final beforeEnd =
+        patient.assessmentDate <
         patient.birthdate.changeNullable(ind.endAge, true)!;
     if (!requireBeginAge) return beforeEnd;
     return patient.birthdate.changeNullable(ind.beginAge, false)! <=
@@ -109,11 +110,14 @@ List<Indication> applicableIndications(
 /// Committee Opinion 718). Reported to CDC as finding 8.
 bool _pregnancyOutranksGender(Series series, VaxPatient patient) {
   const pregnantObservation = '007';
-  final bool gated = series.indication?.any(
-          (Indication i) => i.observationCode?.code == pregnantObservation) ??
+  final gated =
+      series.indication?.any(
+        (i) => i.observationCode?.code == pregnantObservation,
+      ) ??
       false;
   if (!gated) return false;
   return patient.observations.observation?.any(
-          (VaxObservation o) => o.observationCode == pregnantObservation) ??
+        (o) => o.observationCode == pregnantObservation,
+      ) ??
       false;
 }

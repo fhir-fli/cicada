@@ -1,24 +1,24 @@
-import '../cicada.dart';
+import 'package:cicada/cicada.dart';
 
 /// Adds a single immunization
 List<String> antigensFromCvx(String? cvx) {
   if (cvx == null) {
     return <String>[];
   } else {
-    final List<String> diseases = <String>[];
+    final diseases = <String>[];
 
     /// Make sure there's a matching CVX code in the CvxMap
-    final int? cvxIndex = activeScheduleData.cvxToAntigenMap?.cvxMap
-        ?.indexWhere((CvxMap element) =>
-            element.cvx != null &&
-            int.tryParse(element.cvx!) == int.tryParse(cvx) &&
-            int.tryParse(cvx) != null);
+    final cvxIndex = activeScheduleData.cvxToAntigenMap?.cvxMap?.indexWhere(
+      (element) =>
+          element.cvx != null &&
+          int.tryParse(element.cvx!) == int.tryParse(cvx) &&
+          int.tryParse(cvx) != null,
+    );
 
     /// If we find an index for that code in the supporting data
     if (cvxIndex != null && cvxIndex != -1) {
       /// Select the appropriate entry
-      final CvxMap cvxEntry =
-          activeScheduleData.cvxToAntigenMap!.cvxMap![cvxIndex];
+      final cvxEntry = activeScheduleData.cvxToAntigenMap!.cvxMap![cvxIndex];
 
       /// As lon as we find some associations
       if (cvxEntry.association != null && cvxEntry.association!.isNotEmpty) {
@@ -30,7 +30,7 @@ List<String> antigensFromCvx(String? cvx) {
       }
     }
 
-    diseases.retainWhere((String element) => element != '');
+    diseases.retainWhere((element) => element != '');
     return diseases;
   }
 }

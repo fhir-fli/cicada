@@ -1,17 +1,18 @@
-import '../../cicada.dart';
+import 'package:cicada/cicada.dart';
 
 class VaccineGroups {
   VaccineGroups({this.vaccineGroup});
 
-  final List<VaccineGroup>? vaccineGroup;
-
   factory VaccineGroups.fromJson(Map<String, dynamic> json) {
     return VaccineGroups(
-      vaccineGroup: (json['vaccineGroup'] as List<dynamic>?)
-          ?.map((e) => VaccineGroup.fromJson(e as Map<String, dynamic>))
-          .toList(),
+      vaccineGroup:
+          (json['vaccineGroup'] as List<dynamic>?)
+              ?.map((e) => VaccineGroup.fromJson(e as Map<String, dynamic>))
+              .toList(),
     );
   }
+
+  final List<VaccineGroup>? vaccineGroup;
 
   VaccineGroups copyWith({
     List<VaccineGroup>? vaccineGroup,
@@ -35,17 +36,18 @@ class VaccineGroup {
     this.administerFullVaccineGroup,
   });
 
-  final String? name;
-  final Binary? administerFullVaccineGroup;
-
   factory VaccineGroup.fromJson(Map<String, dynamic> json) {
     return VaccineGroup(
       name: json['name'] as String?,
-      administerFullVaccineGroup: json['administerFullVaccineGroup'] == null
-          ? null
-          : Binary.fromJson(json['administerFullVaccineGroup'] as String),
+      administerFullVaccineGroup:
+          json['administerFullVaccineGroup'] == null
+              ? null
+              : Binary.fromJson(json['administerFullVaccineGroup'] as String),
     );
   }
+
+  final String? name;
+  final Binary? administerFullVaccineGroup;
 
   VaccineGroup copyWith({
     String? name,

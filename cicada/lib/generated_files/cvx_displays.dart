@@ -215,9 +215,11 @@ const Map<String, String> cvxDisplays = <String, String>{
   '213': 'SARS-COV-2 (COVID-19) vaccine, UNSPECIFIED',
   '214': 'Ebola, unspecified',
   '215':
-      'Pneumococcal conjugate PCV15, polysaccharide CRM197 conjugate, adjuvant, PF',
+      'Pneumococcal conjugate PCV15, polysaccharide CRM197 conjugate, '
+      'adjuvant, PF',
   '216':
-      'Pneumococcal conjugate PCV20, polysaccharide CRM197 conjugate, adjuvant, PF',
+      'Pneumococcal conjugate PCV20, polysaccharide CRM197 conjugate, '
+      'adjuvant, PF',
   '217': 'COVID-19, mRNA, LNP-S, PF, 30 mcg/0.3 mL dose, tris-sucrose',
   '218': 'COVID-19, mRNA, LNP-S, PF, 10 mcg/0.2 mL dose, tris-sucrose',
   '219': 'COVID-19, mRNA, LNP-S, PF, 3 mcg/0.2 mL dose, tris-sucrose',
@@ -231,17 +233,20 @@ const Map<String, String> cvxDisplays = <String, String>{
   '227': 'COVID-19, mRNA, LNP-S, PF, pediatric 50 mcg/0.5 mL dose',
   '228': 'COVID-19, mRNA, LNP-S, PF, pediatric 25 mcg/0.25 mL dose',
   '229':
-      'COVID-19, mRNA, LNP-S, bivalent, PF, 50 mcg/0.5 mL or 25mcg/0.25 mL dose',
+      'COVID-19, mRNA, LNP-S, bivalent, PF, 50 mcg/0.5 mL or 25mcg/0.25 mL '
+      'dose',
   '230': 'COVID-19, mRNA, LNP-S, bivalent, PF, 10 mcg/0.2 mL',
   '231': 'influenza, Southern Hemisphere, high-dose, quadrivalent',
   '300': 'COVID-19, mRNA, LNP-S, bivalent, PF, 30 mcg/0.3 mL dose',
   '301': 'COVID-19, mRNA, LNP-S, bivalent, PF, 10 mcg/0.2 mL dose',
   '302': 'COVID-19, mRNA, LNP-S, bivalent, PF, 3 mcg/0.2 mL dose',
   '303':
-      'RSV, recombinant, protein subunit RSVpreF, adjuvant reconstituted, 0.5 mL, PF',
+      'RSV, recombinant, protein subunit RSVpreF, adjuvant reconstituted, '
+      '0.5 mL, PF',
   '304': 'Respiratory syncytial virus (RSV), unspecified',
   '305':
-      'RSV, bivalent, protein subunit RSVpreF, diluent reconstituted, 0.5 mL, PF',
+      'RSV, bivalent, protein subunit RSVpreF, diluent reconstituted, 0.5 '
+      'mL, PF',
   '306': 'RSV, mAb, nirsevimab-alip, 0.5 mL, neonate to 24 months',
   '307': 'RSV, mAb, nirsevimab-alip, 1 mL, neonate to 24 months',
   '308': 'COVID-19, mRNA, LNP-S, PF, tris-sucrose, 3 mcg/0.3 mL',
@@ -277,11 +282,14 @@ const Map<String, String> cvxDisplays = <String, String>{
   '504': 'COVID-19 VVnr Non-US Vaccine (Sputnik Light)',
   '505': 'COVID-19 VVnr Non-US Vaccine (Sputnik V)',
   '506':
-      'COVID-19 VVnr Non-US Vaccine (CanSino Biological Inc./Beijing Institute of Biotechnology',
+      'COVID-19 VVnr Non-US Vaccine (CanSino Biological Inc./Beijing '
+      'Institute of Biotechnology',
   '507':
-      'COVID-19 PS Non-US Vaccine (Anhui Zhifei Longcom Biopharm + Inst of Micro, Chinese Acad of Sciences)',
+      'COVID-19 PS Non-US Vaccine (Anhui Zhifei Longcom Biopharm + Inst of '
+      'Micro, Chinese Acad of Sciences)',
   '508':
-      'COVID-19 PS Non-US Vaccine (Jiangsu Province Centers for Disease Control and Prevention)',
+      'COVID-19 PS Non-US Vaccine (Jiangsu Province Centers for Disease '
+      'Control and Prevention)',
   '509': 'COVID-19 PS Non-US Vaccine (EpiVacCorona)',
   '510': 'COVID-19 IV Non-US Vaccine (BIBP, Sinopharm)',
   '511': 'COVID-19 IV Non-US Vaccine (CoronaVac, Sinovac)',
@@ -291,14 +299,17 @@ const Map<String, String> cvxDisplays = <String, String>{
   '514': 'SARS-COV-2 COVID-19 DNA Non-US Vaccine (Zydus Cadila, ZyCoV-D)',
   '515': 'SARS-COV-2 COVID-19 PS Non-US Vaccine (Medigen, MVC-COV1901)',
   '516':
-      'COV-2 COVID-19 Inactivated Non-US Vaccine Product (Minhai Biotechnology Co, KCONVAC)',
+      'COV-2 COVID-19 Inactivated Non-US Vaccine Product (Minhai '
+      'Biotechnology Co, KCONVAC)',
   '517':
       'SARS-COV-2 COVID-19 PS Non-US Vaccine (Biological E Limited, Corbevax)',
   '518': 'COVID-19 Inactivated, Non-US Vaccine (VLA2001, Valneva)',
   '519':
-      'COVID-19 mRNA, bivalent, original/Omicron BA.1, Non-US Vaccine (Spikevax Bivalent), Moderna',
+      'COVID-19 mRNA, bivalent, original/Omicron BA.1, Non-US Vaccine '
+      '(Spikevax Bivalent), Moderna',
   '520':
-      'COVID-19 mRNA, bivalent, original/Omicron BA.1, Non-US Vaccine Product, Pfizer-BioNTech',
+      'COVID-19 mRNA, bivalent, original/Omicron BA.1, Non-US Vaccine '
+      'Product, Pfizer-BioNTech',
   '521': 'COVID-19 SP, protein-based, adjuvanted (VidPrevtyn Beta), Sanofi-GSK',
   '801': 'AS03 Adjuvant',
   '998': 'no vaccine administered',

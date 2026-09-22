@@ -20,22 +20,23 @@ final seriesGroupCompleteProvider = SeriesGroupCompleteProvider._();
 /// antigen has a multiple series of vaccines that can provide immunity.
 /// These series are put into groups. This provider tracks the completion
 /// of each series group.
-final class SeriesGroupCompleteProvider extends $NotifierProvider<
-    SeriesGroupComplete, Map<String, Map<String, bool>>> {
+final class SeriesGroupCompleteProvider
+    extends
+        $NotifierProvider<SeriesGroupComplete, Map<String, Map<String, bool>>> {
   /// This provider is used to track the completion of a series group. Each
   /// antigen has a multiple series of vaccines that can provide immunity.
   /// These series are put into groups. This provider tracks the completion
   /// of each series group.
   SeriesGroupCompleteProvider._()
-      : super(
-          from: null,
-          argument: null,
-          retry: null,
-          name: r'seriesGroupCompleteProvider',
-          isAutoDispose: true,
-          dependencies: null,
-          $allTransitiveDependencies: null,
-        );
+    : super(
+        from: null,
+        argument: null,
+        retry: null,
+        name: r'seriesGroupCompleteProvider',
+        isAutoDispose: true,
+        dependencies: null,
+        $allTransitiveDependencies: null,
+      );
 
   @override
   String debugGetCreateSourceHash() => _$seriesGroupCompleteHash();
@@ -48,8 +49,9 @@ final class SeriesGroupCompleteProvider extends $NotifierProvider<
   Override overrideWithValue(Map<String, Map<String, bool>> value) {
     return $ProviderOverride(
       origin: this,
-      providerOverride:
-          $SyncValueProvider<Map<String, Map<String, bool>>>(value),
+      providerOverride: $SyncValueProvider<Map<String, Map<String, bool>>>(
+        value,
+      ),
     );
   }
 }
@@ -68,14 +70,23 @@ abstract class _$SeriesGroupComplete
   @$mustCallSuper
   @override
   WhenComplete runBuild() {
-    final ref = this.ref
-        as $Ref<Map<String, Map<String, bool>>, Map<String, Map<String, bool>>>;
-    final element = ref.element as $ClassProviderElement<
-        AnyNotifier<Map<String, Map<String, bool>>,
-            Map<String, Map<String, bool>>>,
-        Map<String, Map<String, bool>>,
-        Object?,
-        Object?>;
+    final ref =
+        this.ref
+            as $Ref<
+              Map<String, Map<String, bool>>,
+              Map<String, Map<String, bool>>
+            >;
+    final element =
+        ref.element
+            as $ClassProviderElement<
+              AnyNotifier<
+                Map<String, Map<String, bool>>,
+                Map<String, Map<String, bool>>
+              >,
+              Map<String, Map<String, bool>>,
+              Object?,
+              Object?
+            >;
     return element.handleCreate(ref, build);
   }
 }

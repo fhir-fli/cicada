@@ -17,10 +17,9 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:cicada/cicada.dart';
+import 'package:cicada_generator/repo_root.dart';
 import 'package:collection/collection.dart';
 import 'package:fhir_r4/fhir_r4.dart';
-
-import 'repo_root.dart';
 
 late File log;
 
@@ -30,31 +29,33 @@ void say(String line) {
 }
 
 Parameters? findCase(String id) {
-  for (final String path in <String>[
+  for (final path in <String>[
     repoPath('cicada/test/healthyTestCases.ndjson'),
     repoPath('cicada/test/conditionTestCases.ndjson'),
   ]) {
-    final File file = File(path);
+    final file = File(path);
     if (!file.existsSync()) continue;
-    for (final String line in file.readAsLinesSync()) {
+    for (final line in file.readAsLinesSync()) {
       if (line.trim().isEmpty) continue;
-      final Map<String, dynamic> decoded =
-          jsonDecode(line) as Map<String, dynamic>;
+      final decoded = jsonDecode(line) as Map<String, dynamic>;
       for (final dynamic p
           in (decoded['parameter'] as List<dynamic>? ?? <dynamic>[])) {
-        final Map<String, dynamic> param = p as Map<String, dynamic>;
+        final param = p as Map<String, dynamic>;
         if (param.containsKey('resource')) {
-          final Map<String, dynamic> r =
-              param['resource'] as Map<String, dynamic>;
+          final r = param['resource'] as Map<String, dynamic>;
           if (r['resourceType'] == 'Immunization' && !r.containsKey('status')) {
             r['status'] = 'completed';
           }
         }
       }
-      final Parameters params = Parameters.fromJson(decoded);
-      final Patient? patient = params.parameter
-          ?.firstWhereOrNull((ParametersParameter e) => e.resource is Patient)
-          ?.resource as Patient?;
+      final params = Parameters.fromJson(decoded);
+      final patient =
+          params.parameter
+                  ?.firstWhereOrNull(
+                    (e) => e.resource is Patient,
+                  )
+                  ?.resource
+              as Patient?;
       if (patient?.id?.toString() == id) {
         say('case found in $path');
         return params;
@@ -69,23 +70,25 @@ void main(List<String> args) {
     stdout.writeln('usage: trace_case.dart <caseId> [subjectFilter]');
     exit(64);
   }
-  final String id = args.first;
-  final String? filter = args.length > 1 ? args[1] : null;
+  final id = args.first;
+  final filter = args.length > 1 ? args[1] : null;
 
   log = File(repoPath('scratch/trace-$id.txt'));
   log.parent.createSync(recursive: true);
   log.writeAsStringSync('');
 
-  say('CDSi trace for $id'
-      '${filter == null ? "" : "  (subject filter: $filter)"}');
+  say(
+    'CDSi trace for $id'
+    '${filter == null ? "" : "  (subject filter: $filter)"}',
+  );
 
-  final Parameters? params = findCase(id);
+  final params = findCase(id);
   if (params == null) {
     say('no such case in either test-case file');
     exit(1);
   }
 
-  final ForecastTrace trace = ForecastTrace.begin();
+  final trace = ForecastTrace.begin();
   final result = evaluateForForecast(params);
   ForecastTrace.end();
 
@@ -99,20 +102,25 @@ void main(List<String> args) {
 
   say('──────────── final vaccine group forecasts');
   if (result.vaccineGroupForecasts.isEmpty) say('  none');
-  result.vaccineGroupForecasts
-      .forEach((String groupName, List<VaccineGroupForecast> fs) {
+  result.vaccineGroupForecasts.forEach((
+    groupName,
+    fs,
+  ) {
     if (filter != null &&
         !groupName.toLowerCase().contains(filter.toLowerCase())) {
       return;
     }
     // A group can carry a risk forecast and a standard one. Trace both.
-    for (final VaccineGroupForecast f in fs) {
-      final String kind = fs.length == 1
-          ? ''
-          : (f.isRiskForecast ? '  [risk]' : '  [standard]');
+    for (final f in fs) {
+      final kind =
+          fs.length == 1
+              ? ''
+              : (f.isRiskForecast ? '  [risk]' : '  [standard]');
       say('  $groupName$kind  status=${f.status}  dose#=${f.doseNumber}');
-      say('      earliest=${f.earliestDate}  recommended=${f.recommendedDate}  '
-          'pastDue=${f.pastDueDate}');
+      say(
+        '      earliest=${f.earliestDate}  recommended=${f.recommendedDate}  '
+        'pastDue=${f.pastDueDate}',
+      );
     }
   });
 

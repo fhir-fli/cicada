@@ -2,25 +2,26 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:args/args.dart';
+import 'package:cicada/cicada.dart';
 import 'package:shelf/shelf.dart';
 import 'package:shelf/shelf_io.dart' as shelf_io;
 import 'package:shelf_router/shelf_router.dart';
 
-import 'package:cicada/cicada.dart';
-
 void main(List<String> args) async {
   final parser = ArgParser()..addOption('port', abbr: 'p', defaultsTo: '8080');
   final results = parser.parse(args);
-  final port =
-      int.parse(Platform.environment['PORT'] ?? results['port'] as String);
+  final port = int.parse(
+    Platform.environment['PORT'] ?? results['port'] as String,
+  );
 
-  final router = Router()
-    ..post(r'/$immds-forecast', _handleForecast)
-    ..post(r'/$immds-forecast-who', _handleForecastWho)
-    ..post('/', _handleForecast)
-    ..post('/<anything|.*>', _handleForecast)
-    ..get('/metadata', _handleMetadata)
-    ..get('/', _handleRoot);
+  final router =
+      Router()
+        ..post(r'/$immds-forecast', _handleForecast)
+        ..post(r'/$immds-forecast-who', _handleForecastWho)
+        ..post('/', _handleForecast)
+        ..post('/<anything|.*>', _handleForecast)
+        ..get('/metadata', _handleMetadata)
+        ..get('/', _handleRoot);
 
   final handler = const Pipeline()
       .addMiddleware(_logRequests())
@@ -28,7 +29,7 @@ void main(List<String> args) async {
       .addHandler(router.call);
 
   final server = await shelf_io.serve(handler, InternetAddress.anyIPv4, port);
-  print('Cicada ImmDS server listening on port ${server.port}');
+  stdout.writeln('Cicada ImmDS server listening on port ${server.port}');
 }
 
 /// POST /$immds-forecast — run the CDC forecasting engine.
@@ -44,7 +45,7 @@ Future<Response> _handleForecastWho(Request request) =>
 Future<Response> _runForecast(Request request, ForecastMode mode) async {
   try {
     final body = await request.readAsString();
-    print('  Body length: ${body.length} (mode: ${mode.name})');
+    stdout.writeln('  Body length: ${body.length} (mode: ${mode.name})');
 
     if (body.isEmpty) {
       return _operationOutcome('No request body provided', 400);
@@ -61,14 +62,18 @@ Future<Response> _runForecast(Request request, ForecastMode mode) async {
     if (isXmlInput) {
       try {
         json = fhirXmlToJson(body);
-        print('  XML→JSON: resourceType=${json['resourceType']}');
-      } catch (e) {
+        stdout.writeln('  XML→JSON: resourceType=${json['resourceType']}');
+      } on Exception catch (e) {
         return _operationOutcome('XML parse error: $e', 400);
       }
     } else {
       try {
-        json = jsonDecode(body) as Map<String, dynamic>;
-      } catch (e) {
+        final decoded = jsonDecode(body);
+        if (decoded is! Map<String, dynamic>) {
+          return _operationOutcome('Body must be a JSON object', 400);
+        }
+        json = decoded;
+      } on FormatException catch (e) {
         return _operationOutcome('Invalid JSON: $e', 400);
       }
     }
@@ -81,29 +86,30 @@ Future<Response> _runForecast(Request request, ForecastMode mode) async {
     if (wantsXml) {
       try {
         final xmlResponse = fhirJsonToXml(outputJson);
-        print('  Response XML length: ${xmlResponse.length}');
+        stdout.writeln('  Response XML length: ${xmlResponse.length}');
         _logOnce('request', body);
         _logOnce('response', xmlResponse);
-        final xmlContentType = accept.contains('fhir')
-            ? 'application/fhir+xml'
-            : 'application/xml';
+        final xmlContentType =
+            accept.contains('fhir')
+                ? 'application/fhir+xml'
+                : 'application/xml';
         return Response.ok(
           xmlResponse,
           headers: {'content-type': xmlContentType},
         );
-      } catch (e) {
-        print('  JSON→XML conversion failed: $e, returning JSON');
+      } on Exception catch (e) {
+        stdout.writeln('  JSON→XML conversion failed: $e, returning JSON');
       }
     }
 
     final jsonResponse = jsonEncode(outputJson);
-    print('  Response JSON length: ${jsonResponse.length}');
+    stdout.writeln('  Response JSON length: ${jsonResponse.length}');
     return Response.ok(
       jsonResponse,
       headers: {'content-type': 'application/fhir+json'},
     );
-  } catch (e, st) {
-    print('Error processing forecast: $e\n$st');
+  } on Exception catch (e, st) {
+    stdout.writeln('Error processing forecast: $e\n$st');
     return _operationOutcome('Internal error: $e', 500);
   }
 }
@@ -173,10 +179,11 @@ Response _handleRoot(Request request) {
 Middleware _logRequests() {
   return (Handler innerHandler) {
     return (Request request) async {
-      print('${request.method} ${request.requestedUri}');
-      print('  Headers: ${request.headers}');
+      stdout
+        ..writeln('${request.method} ${request.requestedUri}')
+        ..writeln('  Headers: ${request.headers}');
       final response = await innerHandler(request);
-      print('  -> ${response.statusCode}');
+      stdout.writeln('  -> ${response.statusCode}');
       return response;
     };
   };
@@ -212,10 +219,13 @@ void _logOnce(String label, String content) {
     final dir = Directory('$repoRoot/fits-capture')
       ..createSync(recursive: true);
     final stamp = DateTime.now().toIso8601String().replaceAll(':', '-');
-    File('${dir.path}/${stamp}_${_logCount}_$label.xml')
-        .writeAsStringSync(content);
+    File(
+      '${dir.path}/${stamp}_${_logCount}_$label.xml',
+    ).writeAsStringSync(content);
     if (label == 'response') _logCount++;
-  } catch (_) {}
+  } on FileSystemException catch (e) {
+    stderr.writeln('fits-capture write failed: $e');
+  }
 }
 
 /// Return a FHIR OperationOutcome error response

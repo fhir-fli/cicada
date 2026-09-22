@@ -1,4 +1,4 @@
-import '../cicada.dart';
+import 'package:cicada/cicada.dart';
 
 /// Selects between CDC (CDSi) and WHO immunization supporting data.
 enum ForecastMode { cdc, who }
@@ -27,7 +27,8 @@ ScheduleSupportingData get activeScheduleData =>
         : scheduleSupportingData;
 
 /// Returns multi-antigen vaccine groups derived from the active schedule data.
-/// A multi-antigen group is any vaccine group that maps to more than one antigen.
+/// A multi-antigen group is any vaccine group that maps to more than one
+/// antigen.
 Map<String, List<String>> get activeMultiAntigenGroups {
   final vgMap = activeScheduleData.vaccineGroupToAntigenMap?.vaccineGroupMap;
   if (vgMap == null) return {};

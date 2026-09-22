@@ -1,243 +1,313 @@
-// ignore_for_file: prefer_single_quotes, always_specify_types
-
-import '../../cicada.dart';
+import 'package:cicada/cicada.dart';
 
 final AntigenSupportingData whoPneumococcal = AntigenSupportingData.fromJson({
-  "targetDisease": "Pneumococcal",
-  "vaccineGroup": "PCV",
-  "series": [
+  'targetDisease': 'Pneumococcal',
+  'vaccineGroup': 'PCV',
+  'series': [
     {
-      "seriesName": "WHO Pneumococcal 2+1 series",
-      "targetDisease": "Pneumococcal",
-      "vaccineGroup": "PCV",
-      "seriesType": "Standard",
-      "selectSeries": {
-        "defaultSeries": "Yes",
-        "productPath": "No",
-        "seriesGroupName": "Standard",
-        "seriesGroup": "1",
-        "seriesPriority": "A",
-        "seriesPreference": "1"
+      'seriesName': 'WHO Pneumococcal 2+1 series',
+      'targetDisease': 'Pneumococcal',
+      'vaccineGroup': 'PCV',
+      'seriesType': 'Standard',
+      'selectSeries': {
+        'defaultSeries': 'Yes',
+        'productPath': 'No',
+        'seriesGroupName': 'Standard',
+        'seriesGroup': '1',
+        'seriesPriority': 'A',
+        'seriesPreference': '1',
       },
-      "seriesDose": [
+      'seriesDose': [
         {
-          "doseNumber": "Dose 1",
-          "age": [
+          'doseNumber': 'Dose 1',
+          'age': [
             {
-              "absMinAge": "6 weeks",
-              "minAge": "6 weeks",
-              "earliestRecAge": "6 weeks"
-            }
+              'absMinAge': '6 weeks',
+              'minAge': '6 weeks',
+              'earliestRecAge': '6 weeks',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "PCV13",
-              "cvx": "133",
-              "beginAge": "6 weeks",
-              "forecastVaccineType": "Y"
+              'vaccineType': 'PCV13',
+              'cvx': '133',
+              'beginAge': '6 weeks',
+              'forecastVaccineType': 'Y',
             },
             {
-              "vaccineType": "PCV15",
-              "cvx": "152",
-              "beginAge": "6 weeks",
-              "forecastVaccineType": "N"
-            }
+              'vaccineType': 'PCV15',
+              'cvx': '152',
+              'beginAge': '6 weeks',
+              'forecastVaccineType': 'N',
+            },
           ],
-          "allowableVaccine": [
-            {"vaccineType": "PCV13", "cvx": "133", "beginAge": "6 weeks"},
-            {"vaccineType": "PCV15", "cvx": "152", "beginAge": "6 weeks"},
-            {"vaccineType": "PCV20", "cvx": "215", "beginAge": "6 weeks"},
+          'allowableVaccine': [
             {
-              "vaccineType": "Pneumococcal conjugate, unspecified",
-              "cvx": "152",
-              "beginAge": "6 weeks"
-            }
+              'vaccineType': 'PCV13',
+              'cvx': '133',
+              'beginAge': '6 weeks',
+            },
+            {
+              'vaccineType': 'PCV15',
+              'cvx': '152',
+              'beginAge': '6 weeks',
+            },
+            {
+              'vaccineType': 'PCV20',
+              'cvx': '215',
+              'beginAge': '6 weeks',
+            },
+            {
+              'vaccineType': 'Pneumococcal conjugate, unspecified',
+              'cvx': '152',
+              'beginAge': '6 weeks',
+            },
           ],
-          "recurringDose": "No"
+          'recurringDose': 'No',
         },
         {
-          "doseNumber": "Dose 2",
-          "age": [
+          'doseNumber': 'Dose 2',
+          'age': [
             {
-              "absMinAge": "14 weeks",
-              "minAge": "14 weeks",
-              "earliestRecAge": "14 weeks"
-            }
+              'absMinAge': '14 weeks',
+              'minAge': '14 weeks',
+              'earliestRecAge': '14 weeks',
+            },
           ],
-          "interval": [
+          'interval': [
             {
-              "fromPrevious": "Y",
-              "absMinInt": "4 weeks",
-              "minInt": "8 weeks",
-              "earliestRecInt": "8 weeks"
-            }
+              'fromPrevious': 'Y',
+              'absMinInt': '4 weeks',
+              'minInt': '8 weeks',
+              'earliestRecInt': '8 weeks',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "PCV13",
-              "cvx": "133",
-              "beginAge": "6 weeks",
-              "forecastVaccineType": "Y"
+              'vaccineType': 'PCV13',
+              'cvx': '133',
+              'beginAge': '6 weeks',
+              'forecastVaccineType': 'Y',
             },
             {
-              "vaccineType": "PCV15",
-              "cvx": "152",
-              "beginAge": "6 weeks",
-              "forecastVaccineType": "N"
-            }
+              'vaccineType': 'PCV15',
+              'cvx': '152',
+              'beginAge': '6 weeks',
+              'forecastVaccineType': 'N',
+            },
           ],
-          "allowableVaccine": [
-            {"vaccineType": "PCV13", "cvx": "133", "beginAge": "6 weeks"},
-            {"vaccineType": "PCV15", "cvx": "152", "beginAge": "6 weeks"},
-            {"vaccineType": "PCV20", "cvx": "215", "beginAge": "6 weeks"}
+          'allowableVaccine': [
+            {
+              'vaccineType': 'PCV13',
+              'cvx': '133',
+              'beginAge': '6 weeks',
+            },
+            {
+              'vaccineType': 'PCV15',
+              'cvx': '152',
+              'beginAge': '6 weeks',
+            },
+            {
+              'vaccineType': 'PCV20',
+              'cvx': '215',
+              'beginAge': '6 weeks',
+            },
           ],
-          "recurringDose": "No"
+          'recurringDose': 'No',
         },
         {
-          "doseNumber": "Dose 3",
-          "age": [
+          'doseNumber': 'Dose 3',
+          'age': [
             {
-              "absMinAge": "9 months",
-              "minAge": "9 months",
-              "earliestRecAge": "9 months",
-              "latestRecAge": "18 months"
-            }
+              'absMinAge': '9 months',
+              'minAge': '9 months',
+              'earliestRecAge': '9 months',
+              'latestRecAge': '18 months',
+            },
           ],
-          "interval": [
+          'interval': [
             {
-              "fromPrevious": "Y",
-              "absMinInt": "4 weeks",
-              "minInt": "4 months",
-              "earliestRecInt": "4 months"
-            }
+              'fromPrevious': 'Y',
+              'absMinInt': '4 weeks',
+              'minInt': '4 months',
+              'earliestRecInt': '4 months',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "PCV13",
-              "cvx": "133",
-              "beginAge": "6 weeks",
-              "forecastVaccineType": "Y"
+              'vaccineType': 'PCV13',
+              'cvx': '133',
+              'beginAge': '6 weeks',
+              'forecastVaccineType': 'Y',
             },
             {
-              "vaccineType": "PCV15",
-              "cvx": "152",
-              "beginAge": "6 weeks",
-              "forecastVaccineType": "N"
-            }
+              'vaccineType': 'PCV15',
+              'cvx': '152',
+              'beginAge': '6 weeks',
+              'forecastVaccineType': 'N',
+            },
           ],
-          "allowableVaccine": [
-            {"vaccineType": "PCV13", "cvx": "133", "beginAge": "6 weeks"},
-            {"vaccineType": "PCV15", "cvx": "152", "beginAge": "6 weeks"},
-            {"vaccineType": "PCV20", "cvx": "215", "beginAge": "6 weeks"}
+          'allowableVaccine': [
+            {
+              'vaccineType': 'PCV13',
+              'cvx': '133',
+              'beginAge': '6 weeks',
+            },
+            {
+              'vaccineType': 'PCV15',
+              'cvx': '152',
+              'beginAge': '6 weeks',
+            },
+            {
+              'vaccineType': 'PCV20',
+              'cvx': '215',
+              'beginAge': '6 weeks',
+            },
           ],
-          "recurringDose": "No"
-        }
-      ]
+          'recurringDose': 'No',
+        },
+      ],
     },
     {
-      "seriesName": "WHO Pneumococcal 3+0 series",
-      "targetDisease": "Pneumococcal",
-      "vaccineGroup": "PCV",
-      "seriesType": "Standard",
-      "equivalentSeriesGroups": "1",
-      "selectSeries": {
-        "defaultSeries": "No",
-        "productPath": "No",
-        "seriesGroupName": "Standard",
-        "seriesGroup": "2",
-        "seriesPriority": "A",
-        "seriesPreference": "2"
+      'seriesName': 'WHO Pneumococcal 3+0 series',
+      'targetDisease': 'Pneumococcal',
+      'vaccineGroup': 'PCV',
+      'seriesType': 'Standard',
+      'equivalentSeriesGroups': '1',
+      'selectSeries': {
+        'defaultSeries': 'No',
+        'productPath': 'No',
+        'seriesGroupName': 'Standard',
+        'seriesGroup': '2',
+        'seriesPriority': 'A',
+        'seriesPreference': '2',
       },
-      "seriesDose": [
+      'seriesDose': [
         {
-          "doseNumber": "Dose 1",
-          "age": [
+          'doseNumber': 'Dose 1',
+          'age': [
             {
-              "absMinAge": "6 weeks",
-              "minAge": "6 weeks",
-              "earliestRecAge": "6 weeks"
-            }
+              'absMinAge': '6 weeks',
+              'minAge': '6 weeks',
+              'earliestRecAge': '6 weeks',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "PCV13",
-              "cvx": "133",
-              "beginAge": "6 weeks",
-              "forecastVaccineType": "Y"
-            }
+              'vaccineType': 'PCV13',
+              'cvx': '133',
+              'beginAge': '6 weeks',
+              'forecastVaccineType': 'Y',
+            },
           ],
-          "allowableVaccine": [
-            {"vaccineType": "PCV13", "cvx": "133", "beginAge": "6 weeks"},
-            {"vaccineType": "PCV15", "cvx": "152", "beginAge": "6 weeks"},
-            {"vaccineType": "PCV20", "cvx": "215", "beginAge": "6 weeks"}
+          'allowableVaccine': [
+            {
+              'vaccineType': 'PCV13',
+              'cvx': '133',
+              'beginAge': '6 weeks',
+            },
+            {
+              'vaccineType': 'PCV15',
+              'cvx': '152',
+              'beginAge': '6 weeks',
+            },
+            {
+              'vaccineType': 'PCV20',
+              'cvx': '215',
+              'beginAge': '6 weeks',
+            },
           ],
-          "recurringDose": "No"
+          'recurringDose': 'No',
         },
         {
-          "doseNumber": "Dose 2",
-          "age": [
+          'doseNumber': 'Dose 2',
+          'age': [
             {
-              "absMinAge": "10 weeks",
-              "minAge": "10 weeks",
-              "earliestRecAge": "10 weeks"
-            }
+              'absMinAge': '10 weeks',
+              'minAge': '10 weeks',
+              'earliestRecAge': '10 weeks',
+            },
           ],
-          "interval": [
+          'interval': [
             {
-              "fromPrevious": "Y",
-              "absMinInt": "4 weeks",
-              "minInt": "4 weeks",
-              "earliestRecInt": "4 weeks"
-            }
+              'fromPrevious': 'Y',
+              'absMinInt': '4 weeks',
+              'minInt': '4 weeks',
+              'earliestRecInt': '4 weeks',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "PCV13",
-              "cvx": "133",
-              "beginAge": "6 weeks",
-              "forecastVaccineType": "Y"
-            }
+              'vaccineType': 'PCV13',
+              'cvx': '133',
+              'beginAge': '6 weeks',
+              'forecastVaccineType': 'Y',
+            },
           ],
-          "allowableVaccine": [
-            {"vaccineType": "PCV13", "cvx": "133", "beginAge": "6 weeks"},
-            {"vaccineType": "PCV15", "cvx": "152", "beginAge": "6 weeks"},
-            {"vaccineType": "PCV20", "cvx": "215", "beginAge": "6 weeks"}
+          'allowableVaccine': [
+            {
+              'vaccineType': 'PCV13',
+              'cvx': '133',
+              'beginAge': '6 weeks',
+            },
+            {
+              'vaccineType': 'PCV15',
+              'cvx': '152',
+              'beginAge': '6 weeks',
+            },
+            {
+              'vaccineType': 'PCV20',
+              'cvx': '215',
+              'beginAge': '6 weeks',
+            },
           ],
-          "recurringDose": "No"
+          'recurringDose': 'No',
         },
         {
-          "doseNumber": "Dose 3",
-          "age": [
+          'doseNumber': 'Dose 3',
+          'age': [
             {
-              "absMinAge": "14 weeks",
-              "minAge": "14 weeks",
-              "earliestRecAge": "14 weeks"
-            }
+              'absMinAge': '14 weeks',
+              'minAge': '14 weeks',
+              'earliestRecAge': '14 weeks',
+            },
           ],
-          "interval": [
+          'interval': [
             {
-              "fromPrevious": "Y",
-              "absMinInt": "4 weeks",
-              "minInt": "4 weeks",
-              "earliestRecInt": "4 weeks"
-            }
+              'fromPrevious': 'Y',
+              'absMinInt': '4 weeks',
+              'minInt': '4 weeks',
+              'earliestRecInt': '4 weeks',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "PCV13",
-              "cvx": "133",
-              "beginAge": "6 weeks",
-              "forecastVaccineType": "Y"
-            }
+              'vaccineType': 'PCV13',
+              'cvx': '133',
+              'beginAge': '6 weeks',
+              'forecastVaccineType': 'Y',
+            },
           ],
-          "allowableVaccine": [
-            {"vaccineType": "PCV13", "cvx": "133", "beginAge": "6 weeks"},
-            {"vaccineType": "PCV15", "cvx": "152", "beginAge": "6 weeks"},
-            {"vaccineType": "PCV20", "cvx": "215", "beginAge": "6 weeks"}
+          'allowableVaccine': [
+            {
+              'vaccineType': 'PCV13',
+              'cvx': '133',
+              'beginAge': '6 weeks',
+            },
+            {
+              'vaccineType': 'PCV15',
+              'cvx': '152',
+              'beginAge': '6 weeks',
+            },
+            {
+              'vaccineType': 'PCV20',
+              'cvx': '215',
+              'beginAge': '6 weeks',
+            },
           ],
-          "recurringDose": "No"
-        }
-      ]
-    }
-  ]
+          'recurringDose': 'No',
+        },
+      ],
+    },
+  ],
 });

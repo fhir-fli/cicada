@@ -19,11 +19,12 @@ const String seriesTypeExtUrl =
 /// alongside standard=Complete.
 /// Every recommendation in the ImmDS response Parameters.
 List<ImmunizationRecommendationRecommendation> _recommendationsOf(
-    Parameters response) {
+  Parameters response,
+) {
   return response.parameter
-          ?.map((ParametersParameter p) => p.resource)
+          ?.map((p) => p.resource)
           .whereType<ImmunizationRecommendation>()
-          .expand((ImmunizationRecommendation r) => r.recommendation)
+          .expand((r) => r.recommendation)
           .toList() ??
       <ImmunizationRecommendationRecommendation>[];
 }
@@ -33,7 +34,7 @@ void main() {
 
   setUpAll(() {
     Map<String, dynamic>? found;
-    for (final String line
+    for (final line
         in File('test/conditionTestCases.ndjson').readAsLinesSync()) {
       if (line.trim().isEmpty) continue;
       final decoded = jsonDecode(line) as Map<String, dynamic>;
@@ -55,59 +56,81 @@ void main() {
   });
 
   String? seriesTypeOf(ImmunizationRecommendationRecommendation r) {
-    final ext = r.extension_
-        ?.where((FhirExtension e) => e.url.valueString == seriesTypeExtUrl);
+    final ext = r.extension_?.where(
+      (e) => e.url.valueString == seriesTypeExtUrl,
+    );
     if (ext == null || ext.isEmpty) return null;
     return ext.first.valueCodeableConcept?.coding?.first.code?.valueString;
   }
 
-  test('a doubled vaccine group returns two distinguishable recommendations',
-      () {
-    final result = evaluateForForecast(params);
-    final mmr = result.vaccineGroupForecasts['MMR'];
-    expect(mmr, isNotNull);
-    expect(mmr!.length, 2,
-        reason: 'MMR should carry a risk and a standard forecast');
+  test(
+    'a doubled vaccine group returns two distinguishable recommendations',
+    () {
+      final result = evaluateForForecast(params);
+      final mmr = result.vaccineGroupForecasts['MMR'];
+      expect(mmr, isNotNull);
+      expect(
+        mmr!.length,
+        2,
+        reason: 'MMR should carry a risk and a standard forecast',
+      );
 
-    final response = buildImmdsResponse(result);
-    final recs = _recommendationsOf(response)
-        .where((r) => r.targetDisease?.text?.valueString == 'MMR')
-        .toList();
-    expect(recs.length, 2, reason: 'both forecasts must reach the response');
+      final response = buildImmdsResponse(result);
+      final recs =
+          _recommendationsOf(
+            response,
+          ).where((r) => r.targetDisease?.text?.valueString == 'MMR').toList();
+      expect(recs.length, 2, reason: 'both forecasts must reach the response');
 
-    final types = recs.map(seriesTypeOf).toList();
-    expect(types, containsAll(<String>['risk', 'standard']),
-        reason: 'the two MMR recommendations must be told apart by '
-            'the series-type extension, got $types');
+      final types = recs.map(seriesTypeOf).toList();
+      expect(
+        types,
+        containsAll(<String>['risk', 'standard']),
+        reason:
+            'the two MMR recommendations must be told apart by '
+            'the series-type extension, got $types',
+      );
 
-    // The distinction has to be load-bearing: the two disagree on status.
-    final statuses = recs
-        .map((r) => r.forecastStatus.coding?.first.display?.valueString)
-        .toSet();
-    expect(statuses.length, 2,
-        reason: 'this case is only a useful test while the two statuses '
-            'differ; got $statuses');
-  });
+      // The distinction has to be load-bearing: the two disagree on status.
+      final statuses =
+          recs
+              .map((r) => r.forecastStatus.coding?.first.display?.valueString)
+              .toSet();
+      expect(
+        statuses.length,
+        2,
+        reason:
+            'this case is only a useful test while the two statuses '
+            'differ; got $statuses',
+      );
+    },
+  );
 
   test('a risk recommendation names the condition that triggered it', () {
     final response = buildImmdsResponse(evaluateForForecast(params));
-    final risk = _recommendationsOf(response)
-        .where((r) => seriesTypeOf(r) == 'risk')
-        .toList();
+    final risk =
+        _recommendationsOf(
+          response,
+        ).where((r) => seriesTypeOf(r) == 'risk').toList();
     expect(risk, isNotEmpty, reason: 'this case has a risk forecast');
 
     for (final r in risk) {
-      final info = r.supportingPatientInformation;
-      expect(info, isNotNull,
-          reason: 'a risk series applies because of a patient observation '
-              '(CDSi Table 5-4); the recommendation must say which');
-      expect(info!, isNotEmpty);
+      final info = r.supportingPatientInformation ?? const <Reference>[];
+      expect(
+        info,
+        isNotEmpty,
+        reason:
+            'a risk series applies because of a patient observation '
+            '(CDSi Table 5-4); the recommendation must say which',
+      );
       // CDC's test resources carry no id, so the Reference identifies the
       // condition by display. Either form has to name something.
       for (final ref in info) {
         expect(
-            ref.reference?.valueString ?? ref.display?.valueString, isNotNull,
-            reason: 'an empty Reference identifies nothing');
+          ref.reference?.valueString ?? ref.display?.valueString,
+          isNotNull,
+          reason: 'an empty Reference identifies nothing',
+        );
       }
     }
   });
@@ -116,18 +139,26 @@ void main() {
     final response = buildImmdsResponse(evaluateForForecast(params));
     for (final r in _recommendationsOf(response)) {
       if (seriesTypeOf(r) == 'risk') continue;
-      expect(r.supportingPatientInformation, isNull,
-          reason: 'a standard series needs no indication, so pointing at '
-              'patient information would assert a link that does not exist');
+      expect(
+        r.supportingPatientInformation,
+        isNull,
+        reason:
+            'a standard series needs no indication, so pointing at '
+            'patient information would assert a link that does not exist',
+      );
     }
   });
 
   test('every recommendation carries a series type', () {
     final response = buildImmdsResponse(evaluateForForecast(params));
     for (final r in _recommendationsOf(response)) {
-      expect(seriesTypeOf(r), isNotNull,
-          reason: 'recommendation for '
-              '${r.targetDisease?.text?.valueString} has no series type');
+      expect(
+        seriesTypeOf(r),
+        isNotNull,
+        reason:
+            'recommendation for '
+            '${r.targetDisease?.text?.valueString} has no series type',
+      );
     }
   });
 }

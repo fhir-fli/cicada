@@ -1,7 +1,7 @@
 export 'forecast/forecast.dart';
 export 'forecast/forecast_mode.dart';
-export 'forecast/vaccine_recommendation_category.dart';
 export 'forecast/immds_response.dart';
+export 'forecast/vaccine_recommendation_category.dart';
 export 'generated_files/generated_supporting_data.dart';
 export 'generated_files/who/who_generated_supporting_data.dart';
 export 'models/models.dart';

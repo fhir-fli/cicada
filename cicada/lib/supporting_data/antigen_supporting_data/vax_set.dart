@@ -1,4 +1,4 @@
-import '../../cicada.dart';
+import 'package:cicada/cicada.dart';
 
 class VaxSet {
   VaxSet({
@@ -10,13 +10,6 @@ class VaxSet {
     this.condition,
   });
 
-  final String? setID;
-  final String? setDescription;
-  final String? effectiveDate;
-  final String? cessationDate;
-  final String? conditionLogic;
-  final List<VaxCondition>? condition;
-
   factory VaxSet.fromJson(Map<String, dynamic> json) {
     return VaxSet(
       setID: json['setID'] as String?,
@@ -24,11 +17,19 @@ class VaxSet {
       effectiveDate: json['effectiveDate'] as String?,
       cessationDate: json['cessationDate'] as String?,
       conditionLogic: json['conditionLogic'] as String?,
-      condition: (json['condition'] as List<dynamic>?)
-          ?.map((e) => VaxCondition.fromJson(e as Map<String, dynamic>))
-          .toList(),
+      condition:
+          (json['condition'] as List<dynamic>?)
+              ?.map((e) => VaxCondition.fromJson(e as Map<String, dynamic>))
+              .toList(),
     );
   }
+
+  final String? setID;
+  final String? setDescription;
+  final String? effectiveDate;
+  final String? cessationDate;
+  final String? conditionLogic;
+  final List<VaxCondition>? condition;
 
   Map<String, dynamic> toJson() {
     return {

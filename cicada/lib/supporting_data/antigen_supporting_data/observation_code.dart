@@ -4,15 +4,15 @@ class ObservationCode {
     this.code,
   });
 
-  final String? text;
-  final String? code;
-
   factory ObservationCode.fromJson(Map<String, dynamic> json) {
     return ObservationCode(
       text: json['text'] as String?,
       code: json['code'] as String?,
     );
   }
+
+  final String? text;
+  final String? code;
 
   Map<String, dynamic> toJson() {
     return {

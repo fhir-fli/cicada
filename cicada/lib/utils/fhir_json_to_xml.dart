@@ -32,7 +32,10 @@ String fhirJsonToXml(Map<String, dynamic> json) {
 /// Add child XML elements to [parent] based on [json] fields, using
 /// [fhirTypeName] for type context lookup in [fhirFieldMap].
 void _addChildren(
-    XmlElement parent, Map<String, dynamic> json, String fhirTypeName) {
+  XmlElement parent,
+  Map<String, dynamic> json,
+  String fhirTypeName,
+) {
   final typeFields = fhirFieldMap[fhirTypeName];
 
   for (final entry in json.entries) {
@@ -42,30 +45,39 @@ void _addChildren(
     if (key == 'resourceType') continue;
     if (key.startsWith('_')) continue;
 
-    final FhirField? fieldDef = typeFields?[key];
+    final fieldDef = typeFields?[key];
     final underscoreValue = json['_$key'];
 
     if (value is List) {
-      final List? underscoreList =
-          underscoreValue is List ? underscoreValue : null;
-      for (int i = 0; i < value.length; i++) {
+      final underscoreList = underscoreValue is List ? underscoreValue : null;
+      for (var i = 0; i < value.length; i++) {
         final item = value[i];
-        final usItem = underscoreList != null && i < underscoreList.length
-            ? underscoreList[i]
-            : null;
+        final usItem =
+            underscoreList != null && i < underscoreList.length
+                ? underscoreList[i]
+                : null;
         _addElement(parent, key, item, fieldDef, underscoreValue: usItem);
       }
     } else {
-      _addElement(parent, key, value, fieldDef,
-          underscoreValue: underscoreValue);
+      _addElement(
+        parent,
+        key,
+        value,
+        fieldDef,
+        underscoreValue: underscoreValue,
+      );
     }
   }
 }
 
 /// Add a single XML element to [parent] for a JSON key/value pair.
 void _addElement(
-    XmlElement parent, String key, dynamic value, FhirField? fieldDef,
-    {dynamic underscoreValue}) {
+  XmlElement parent,
+  String key,
+  dynamic value,
+  FhirField? fieldDef, {
+  dynamic underscoreValue,
+}) {
   if (value == null && underscoreValue == null) return;
 
   // Narrative div — parse XHTML string and embed directly.
@@ -75,11 +87,11 @@ void _addElement(
       for (final node in parsed.children) {
         parent.children.add(node.copy());
       }
-    } catch (_) {
+    } on XmlException catch (_) {
       final div = XmlElement(XmlName('div'), [
         XmlAttribute(XmlName('xmlns'), _xhtmlNs),
       ]);
-      div.children.add(XmlText(value.toString()));
+      div.children.add(XmlText(value));
       parent.children.add(div);
     }
     return;

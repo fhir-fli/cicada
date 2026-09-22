@@ -1,6 +1,5 @@
+import 'package:cicada/cicada.dart';
 import 'package:fhir_r4/fhir_r4.dart';
-
-import '../cicada.dart';
 
 Period periodOfCondition(Condition condition, VaxDate birthdate) {
   VaxDate? startDate;
@@ -8,17 +7,19 @@ Period periodOfCondition(Condition condition, VaxDate birthdate) {
 
   /// Check to see if it's active, if it is, then we know we don't have to look
   /// for an end time
-  final int? activeIndex = condition.clinicalStatus?.coding?.indexWhere((Coding
-          element) =>
-      element.system ==
-          FhirUri('http://terminology.hl7.org/CodeSystem/condition-clinical') &&
-      element.code.toString().toLowerCase() == 'active');
+  final activeIndex = condition.clinicalStatus?.coding?.indexWhere(
+    (element) =>
+        element.system ==
+            FhirUri(
+              'http://terminology.hl7.org/CodeSystem/condition-clinical',
+            ) &&
+        element.code.toString().toLowerCase() == 'active',
+  );
 
   /// If there's a valid onsetDateTime it's easy
   if (condition.onsetDateTime?.valueDateTime != null) {
     startDate = VaxDate.fromDateTime(condition.onsetDateTime!.valueDateTime!);
   }
-
   /// If it's an age, we have to look through the age Object
   else if (condition.onsetAge != null) {
     startDate = dateFromAge(birthdate, condition.onsetAge!);
@@ -29,8 +30,9 @@ Period periodOfCondition(Condition condition, VaxDate birthdate) {
       startDate = dateFromQuantity(birthdate, condition.onsetRange!.high!);
     }
   } else if (condition.onsetString?.valueString != null) {
-    final fhirDateTime =
-        FhirDateTime.tryParse(condition.onsetString!.valueString);
+    final fhirDateTime = FhirDateTime.tryParse(
+      condition.onsetString!.valueString,
+    );
     if (fhirDateTime?.valueDateTime != null) {
       startDate = VaxDate.fromDateTime(fhirDateTime!.valueDateTime!);
     }
@@ -39,10 +41,10 @@ Period periodOfCondition(Condition condition, VaxDate birthdate) {
   if (activeIndex == null || activeIndex == -1) {
     /// If there's a valid abatementDateTime it's easy
     if (condition.abatementDateTime?.valueDateTime != null) {
-      endDate =
-          VaxDate.fromDateTime(condition.abatementDateTime!.valueDateTime!);
+      endDate = VaxDate.fromDateTime(
+        condition.abatementDateTime!.valueDateTime!,
+      );
     }
-
     /// If it's an age, we have to look through the age Object
     else if (condition.abatementAge != null) {
       endDate = dateFromAge(birthdate, condition.abatementAge!);
@@ -56,7 +58,8 @@ Period periodOfCondition(Condition condition, VaxDate birthdate) {
       if (FhirDateTime.tryParse(condition.abatementString!.valueString) !=
           null) {
         endDate = VaxDate.fromDateTime(
-            FhirDateTime.tryParse(condition.abatementString)!.valueDateTime!);
+          FhirDateTime.tryParse(condition.abatementString)!.valueDateTime!,
+        );
       }
     }
   }
@@ -69,11 +72,11 @@ Period periodOfCondition(Condition condition, VaxDate birthdate) {
 
 VaxDate? dateFromAge(VaxDate birthdate, Age age) {
   /// Ensure it has a numerical value
-  final double? value = age.value?.valueDouble;
+  final value = age.value?.valueDouble;
   if (value != null) {
     /// Ensure the units are not null
     if (age.unit != null) {
-      final String unit = age.unit!.toLowerCase();
+      final unit = age.unit!.toLowerCase();
       if (unit == 'year' || unit == 'years' || unit == 'a' || unit == 'y') {
         return birthdate.change('$value years');
       } else if (unit == 'month' || unit == 'months' || unit == 'm') {
@@ -88,11 +91,11 @@ VaxDate? dateFromAge(VaxDate birthdate, Age age) {
 
 VaxDate? dateFromQuantity(VaxDate birthdate, Quantity quantity) {
   /// Ensure it has a numerical value
-  final double? value = quantity.value?.valueDouble;
+  final value = quantity.value?.valueDouble;
   if (value != null) {
     /// Ensure the units are not null
     if (quantity.unit != null) {
-      final String unit = quantity.unit!.toLowerCase();
+      final unit = quantity.unit!.toLowerCase();
       if (unit == 'year' || unit == 'years' || unit == 'a' || unit == 'y') {
         return birthdate.change('$value years');
       } else if (unit == 'month' || unit == 'months' || unit == 'm') {

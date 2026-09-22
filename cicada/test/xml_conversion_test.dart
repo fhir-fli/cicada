@@ -1,8 +1,8 @@
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:fhir_r4/fhir_r4.dart';
 import 'package:cicada/cicada.dart';
+import 'package:fhir_r4/fhir_r4.dart';
 import 'package:test/test.dart';
 
 /// Load the first N test cases from the NDJSON file.
@@ -67,15 +67,16 @@ void main() {
 
       // Find the recommendation parameter
       final recParam = params.firstWhere(
-          (p) => (p as Map)['name'] == 'recommendation',
-          orElse: () => null);
+        (p) => (p as Map)['name'] == 'recommendation',
+        orElse: () => null,
+      );
       expect(recParam, isNotNull, reason: 'recommendation parameter missing');
       final recResource = (recParam as Map)['resource'] as Map<String, dynamic>;
       expect(recResource['resourceType'], 'ImmunizationRecommendation');
 
       // Verify recommendation array exists
-      expect(recResource['recommendation'], isA<List>());
-      expect((recResource['recommendation'] as List), isNotEmpty);
+      expect(recResource['recommendation'], isA<List<dynamic>>());
+      expect(recResource['recommendation'] as List<dynamic>, isNotEmpty);
     });
 
     test('forecast output survives roundtrip (with doses)', () {
@@ -96,16 +97,22 @@ void main() {
           params.where((p) => (p as Map)['name'] == 'recommendation').toList();
 
       // With-doses case should have evaluations
-      expect(evalParams, isNotEmpty,
-          reason: 'expected evaluation parameters for case with doses');
+      expect(
+        evalParams,
+        isNotEmpty,
+        reason: 'expected evaluation parameters for case with doses',
+      );
       expect(recParams.length, 1);
 
       // Verify evaluation structure survives
       for (final ep in evalParams) {
         final resource = (ep as Map)['resource'] as Map<String, dynamic>;
         expect(resource['resourceType'], 'ImmunizationEvaluation');
-        expect(resource['doseStatus'], isNotNull,
-            reason: 'doseStatus lost in roundtrip');
+        expect(
+          resource['doseStatus'],
+          isNotNull,
+          reason: 'doseStatus lost in roundtrip',
+        );
       }
     });
 
@@ -118,15 +125,17 @@ void main() {
       final roundtrippedJson = fhirXmlToJson(xml);
 
       // Extract recommendation dates from original
-      final origRec = (originalJson['parameter'] as List)
-          .firstWhere((p) => (p as Map)['name'] == 'recommendation');
+      final origRec = (originalJson['parameter'] as List<dynamic>).firstWhere(
+        (p) => (p as Map)['name'] == 'recommendation',
+      );
       final origRecResource =
           (origRec as Map)['resource'] as Map<String, dynamic>;
       final origDate = origRecResource['date'];
 
       // Extract from roundtripped
-      final rtRec = (roundtrippedJson['parameter'] as List)
-          .firstWhere((p) => (p as Map)['name'] == 'recommendation');
+      final rtRec = (roundtrippedJson['parameter'] as List<dynamic>).firstWhere(
+        (p) => (p as Map)['name'] == 'recommendation',
+      );
       final rtRecResource = (rtRec as Map)['resource'] as Map<String, dynamic>;
       final rtDate = rtRecResource['date'];
 
@@ -137,7 +146,8 @@ void main() {
   group('XML -> JSON for FITS-style input', () {
     test('simple Parameters with Patient converts correctly', () {
       // Build a minimal FHIR Parameters XML like FITS would send
-      const xmlInput = '''<?xml version="1.0" encoding="UTF-8"?>
+      const xmlInput = '''
+<?xml version="1.0" encoding="UTF-8"?>
 <Parameters xmlns="http://hl7.org/fhir">
   <parameter>
     <name value="Patient"/>
@@ -167,7 +177,8 @@ void main() {
     });
 
     test('Parameters with Patient and Immunization converts correctly', () {
-      const xmlInput = '''<?xml version="1.0" encoding="UTF-8"?>
+      const xmlInput = '''
+<?xml version="1.0" encoding="UTF-8"?>
 <Parameters xmlns="http://hl7.org/fhir">
   <parameter>
     <name value="Patient"/>
@@ -213,7 +224,7 @@ void main() {
 
       // Check vaccineCode coding
       final vaccineCode = immResource['vaccineCode'] as Map<String, dynamic>;
-      final coding = (vaccineCode['coding'] as List).first as Map;
+      final coding = (vaccineCode['coding'] as List<dynamic>).first as Map;
       expect(coding['system'], 'http://hl7.org/fhir/sid/cvx');
       expect(coding['code'], '110');
     });
@@ -263,8 +274,11 @@ void main() {
       final params = finalJson['parameter'] as List;
       final evalCount =
           params.where((p) => (p as Map)['name'] == 'evaluation').length;
-      expect(evalCount, greaterThan(0),
-          reason: 'evaluations should survive full pipeline');
+      expect(
+        evalCount,
+        greaterThan(0),
+        reason: 'evaluations should survive full pipeline',
+      );
     });
   });
 
@@ -287,7 +301,8 @@ void main() {
 
   group('fhirXmlToJson edge cases', () {
     test('handles minimal Parameters', () {
-      const xml = '''<?xml version="1.0" encoding="UTF-8"?>
+      const xml = '''
+<?xml version="1.0" encoding="UTF-8"?>
 <Parameters xmlns="http://hl7.org/fhir"/>''';
 
       final json = fhirXmlToJson(xml);

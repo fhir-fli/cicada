@@ -1,9 +1,11 @@
 import 'dart:convert';
+import 'dart:io';
 import 'package:cicada/forecast/forecast.dart';
 import 'package:cicada/utils/fhir_xml_to_json.dart';
 
 void main() {
-  const xml = '''<?xml version="1.0" encoding="UTF-8"?>
+  const xml = '''
+<?xml version="1.0" encoding="UTF-8"?>
 <Parameters xmlns="http://hl7.org/fhir">
   <parameter>
     <name value="assessmentDate"/>
@@ -46,6 +48,6 @@ void main() {
 
   final json = fhirXmlToJson(xml);
   final output = forecastFromMap(json);
-  final encoder = JsonEncoder.withIndent('  ');
-  print(encoder.convert(output.toJson()));
+  const encoder = JsonEncoder.withIndent('  ');
+  stdout.writeln(encoder.convert(output.toJson()));
 }

@@ -1,374 +1,417 @@
-// ignore_for_file: prefer_single_quotes, always_specify_types
+// ignore_for_file: no_adjacent_strings_in_list
+// Generated data: long strings are split into adjacent literals so
+// no line passes 80 columns; a serializer cannot drop a comma.
 
-import '../cicada.dart';
+import 'package:cicada/cicada.dart';
 
-final AntigenSupportingData japaneseEncephalitis =
-    AntigenSupportingData.fromJson({
-  "targetDisease": "Japanese Encephalitis",
-  "vaccineGroup": "Japanese Encephalitis",
-  "contraindications": {
-    "vaccineGroup": {
-      "contraindication": [
+final AntigenSupportingData
+japaneseEncephalitis = AntigenSupportingData.fromJson({
+  'targetDisease': 'Japanese Encephalitis',
+  'vaccineGroup': 'Japanese Encephalitis',
+  'contraindications': {
+    'vaccineGroup': {
+      'contraindication': [
         {
-          "observationCode": "080",
-          "observationTitle": "Adverse reaction to vaccine component",
-          "contraindicationText":
-              "Do not vaccinate if the patient has had an adverse reaction to a vaccine component."
+          'observationCode': '080',
+          'observationTitle': 'Adverse reaction to vaccine component',
+          'contraindicationText':
+              'Do not vaccinate if the patient has had an adverse reaction '
+              'to a vaccine component.',
         },
         {
-          "observationCode": "082",
-          "observationTitle":
-              "Severe allergic reaction after previous dose of Japanese Encephalitis",
-          "contraindicationText":
-              "Do not vaccinate if the patient has had a severe allergic reaction after a previous dose of Japanese Encephalitis vaccine."
+          'observationCode': '082',
+          'observationTitle':
+              'Severe allergic reaction after previous dose of Japanese '
+              'Encephalitis',
+          'contraindicationText':
+              'Do not vaccinate if the patient has had a severe allergic '
+              'reaction after a previous dose of Japanese Encephalitis '
+              'vaccine.',
         },
         {
-          "observationCode": "115",
-          "observationTitle": "Severe allergic reaction to protamine sulfate",
-          "contraindicationText":
-              "Do not vaccinate if the patient has had a severe allergic reaction to protamine sulfate."
-        }
-      ]
-    }
+          'observationCode': '115',
+          'observationTitle': 'Severe allergic reaction to protamine sulfate',
+          'contraindicationText':
+              'Do not vaccinate if the patient has had a severe allergic '
+              'reaction to protamine sulfate.',
+        },
+      ],
+    },
   },
-  "series": [
+  'series': [
     {
-      "seriesName": "Japanese Encephalitis risk 2-dose series",
-      "targetDisease": "Japanese Encephalitis",
-      "vaccineGroup": "Japanese Encephalitis",
-      "seriesAdminGuidance": [
-        "For adults and children, a booster dose (i.e., third dose) should be given on or after 1 year after completion of the primary JE-VC series if ongoing exposure or reexposure to JE virus is expected",
-        "JE vaccination should be considered for shorter-term (e.g., less than 1 month) travel with an increased risk for JE on the basis of planned travel duration, season, location, activities, and accommodations. See JE recommendation box 2 for more detailed information. (https://www.cdc.gov/mmwr/volumes/68/rr/rr6802a1.htm#B2_down)",
-        "JE vaccination should be considered for travel to a JE-endemic area but uncertain of specific duration of travel, destination, or activities.",
-        "Endemic Area and transmission season is determined by country.  Refer to the yellow book for a definition of the transmission season: https://www.cdc.gov/yellow-book/hcp/travel-associated-infections-diseases/yellow-fever.html"
+      'seriesName': 'Japanese Encephalitis risk 2-dose series',
+      'targetDisease': 'Japanese Encephalitis',
+      'vaccineGroup': 'Japanese Encephalitis',
+      'seriesAdminGuidance': [
+        'For adults and children, a booster dose (i.e., third dose) '
+            'should be given on or after 1 year after completion of the '
+            'primary JE-VC series if ongoing exposure or reexposure to JE '
+            'virus is expected',
+        'JE vaccination should be considered for shorter-term (e.g., '
+            'less than 1 month) travel with an increased risk for JE on '
+            'the basis of planned travel duration, season, location, '
+            'activities, and accommodations. See JE recommendation box 2 '
+            'for more detailed information. '
+            '(https://www.cdc.gov/mmwr/volumes/68/rr/rr6802a1.htm#B2_down)',
+        'JE vaccination should be considered for travel to a '
+            'JE-endemic area but uncertain of specific duration of travel, '
+            'destination, or activities.',
+        'Endemic Area and transmission season is determined by '
+            'country.  Refer to the yellow book for a definition of the '
+            'transmission season: '
+            'https://www.cdc.gov/yellow-book/hcp/travel-associated-infections-diseases/yellow-fever.html',
       ],
-      "seriesType": "Risk",
-      "selectSeries": {
-        "defaultSeries": "No",
-        "productPath": "No",
-        "seriesGroupName": "Increased Risk",
-        "seriesGroup": "1",
-        "seriesPriority": "A",
-        "seriesPreference": "1",
-        "minAgeToStart": "2 months"
+      'seriesType': 'Risk',
+      'selectSeries': {
+        'defaultSeries': 'No',
+        'productPath': 'No',
+        'seriesGroupName': 'Increased Risk',
+        'seriesGroup': '1',
+        'seriesPriority': 'A',
+        'seriesPreference': '1',
+        'minAgeToStart': '2 months',
       },
-      "indication": [
+      'indication': [
         {
-          "observationCode": {
-            "text":
-                "Longer-term (e.g., 1 month or more) travel to a JE-endemic area",
-            "code": "165"
+          'observationCode': {
+            'text':
+                'Longer-term (e.g., 1 month or more) travel to a '
+                'JE-endemic area',
+            'code': '165',
           },
-          "description":
-              "Administer to persons who plan for longer-term (e.g., ≥ 1 month) travel to JE-endemic areas.",
-          "beginAge": "2 months"
+          'description':
+              'Administer to persons who plan for longer-term (e.g., ≥ 1 '
+              'month) travel to JE-endemic areas.',
+          'beginAge': '2 months',
         },
         {
-          "observationCode": {
-            "text": "Moving to JE-endemic country to take up residence",
-            "code": "173"
+          'observationCode': {
+            'text': 'Moving to JE-endemic country to take up residence',
+            'code': '173',
           },
-          "description":
-              "Administer to persons who plan to move to JE-endemic countries to take up residence.",
-          "beginAge": "2 months"
+          'description':
+              'Administer to persons who plan to move to JE-endemic '
+              'countries to take up residence.',
+          'beginAge': '2 months',
         },
         {
-          "observationCode": {
-            "text": "Frequent travel to JE-endemic areas",
-            "code": "174"
+          'observationCode': {
+            'text': 'Frequent travel to JE-endemic areas',
+            'code': '174',
           },
-          "description":
-              "Administer to persons who frequently travel to JE-endemic areas.",
-          "beginAge": "2 months"
-        }
+          'description':
+              'Administer to persons who frequently travel to JE-endemic '
+              'areas.',
+          'beginAge': '2 months',
+        },
       ],
-      "seriesDose": [
+      'seriesDose': [
         {
-          "doseNumber": "Dose 1",
-          "age": [
+          'doseNumber': 'Dose 1',
+          'age': [
             {
-              "absMinAge": "2 months - 4 days",
-              "minAge": "2 months",
-              "earliestRecAge": "2 months"
-            }
+              'absMinAge': '2 months - 4 days',
+              'minAge': '2 months',
+              'earliestRecAge': '2 months',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "Japanese Encephalitis, VC",
-              "cvx": "134",
-              "beginAge": "2 months",
-              "endAge": "3 years",
-              "volume": "0.25",
-              "forecastVaccineType": "N"
+              'vaccineType': 'Japanese Encephalitis, VC',
+              'cvx': '134',
+              'beginAge': '2 months',
+              'endAge': '3 years',
+              'volume': '0.25',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "Japanese Encephalitis, VC",
-              "cvx": "134",
-              "beginAge": "3 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
-            }
+              'vaccineType': 'Japanese Encephalitis, VC',
+              'cvx': '134',
+              'beginAge': '3 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
+            },
           ],
-          "allowableVaccine": [
+          'allowableVaccine': [
             {
-              "vaccineType": "Japanese Encephalitis, VC",
-              "cvx": "134",
-              "beginAge": "2 months - 4 days"
-            }
+              'vaccineType': 'Japanese Encephalitis, VC',
+              'cvx': '134',
+              'beginAge': '2 months - 4 days',
+            },
           ],
-          "recurringDose": "No"
+          'recurringDose': 'No',
         },
         {
-          "doseNumber": "Dose 2",
-          "interval": [
+          'doseNumber': 'Dose 2',
+          'interval': [
             {
-              "fromPrevious": "Y",
-              "absMinInt": "4 weeks - 4 days",
-              "minInt": "4 weeks",
-              "earliestRecInt": "4 weeks"
-            }
+              'fromPrevious': 'Y',
+              'absMinInt': '4 weeks - 4 days',
+              'minInt': '4 weeks',
+              'earliestRecInt': '4 weeks',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "Japanese Encephalitis, VC",
-              "cvx": "134",
-              "beginAge": "2 months",
-              "endAge": "3 years",
-              "volume": "0.25",
-              "forecastVaccineType": "N"
+              'vaccineType': 'Japanese Encephalitis, VC',
+              'cvx': '134',
+              'beginAge': '2 months',
+              'endAge': '3 years',
+              'volume': '0.25',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "Japanese Encephalitis, VC",
-              "cvx": "134",
-              "beginAge": "3 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
-            }
+              'vaccineType': 'Japanese Encephalitis, VC',
+              'cvx': '134',
+              'beginAge': '3 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
+            },
           ],
-          "allowableVaccine": [
+          'allowableVaccine': [
             {
-              "vaccineType": "Japanese Encephalitis, VC",
-              "cvx": "134",
-              "beginAge": "2 months - 4 days"
-            }
+              'vaccineType': 'Japanese Encephalitis, VC',
+              'cvx': '134',
+              'beginAge': '2 months - 4 days',
+            },
           ],
-          "recurringDose": "No"
+          'recurringDose': 'No',
         },
         {
-          "doseNumber": "Dose 3",
-          "interval": [
+          'doseNumber': 'Dose 3',
+          'interval': [
             {
-              "fromPrevious": "Y",
-              "absMinInt": "12 months - 4 days",
-              "minInt": "12 months",
-              "earliestRecInt": "12 months"
-            }
+              'fromPrevious': 'Y',
+              'absMinInt': '12 months - 4 days',
+              'minInt': '12 months',
+              'earliestRecInt': '12 months',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "Japanese Encephalitis, VC",
-              "cvx": "134",
-              "beginAge": "2 months",
-              "endAge": "3 years",
-              "volume": "0.25",
-              "forecastVaccineType": "N"
+              'vaccineType': 'Japanese Encephalitis, VC',
+              'cvx': '134',
+              'beginAge': '2 months',
+              'endAge': '3 years',
+              'volume': '0.25',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "Japanese Encephalitis, VC",
-              "cvx": "134",
-              "beginAge": "3 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
-            }
+              'vaccineType': 'Japanese Encephalitis, VC',
+              'cvx': '134',
+              'beginAge': '3 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
+            },
           ],
-          "allowableVaccine": [
+          'allowableVaccine': [
             {
-              "vaccineType": "Japanese Encephalitis, VC",
-              "cvx": "134",
-              "beginAge": "2 months - 4 days"
-            }
+              'vaccineType': 'Japanese Encephalitis, VC',
+              'cvx': '134',
+              'beginAge': '2 months - 4 days',
+            },
           ],
-          "recurringDose": "No"
-        }
-      ]
+          'recurringDose': 'No',
+        },
+      ],
     },
     {
-      "seriesName": "Japanese Encephalitis risk 2-dose series 18-65 years",
-      "targetDisease": "Japanese Encephalitis",
-      "vaccineGroup": "Japanese Encephalitis",
-      "seriesAdminGuidance": [
-        "For adults and children, a booster dose (i.e., third dose) should be given on or after 1 year after completion of the primary JE-VC series if ongoing exposure or reexposure to JE virus is expected",
-        "JE vaccination should be considered for shorter-term (e.g., less than 1 month) travel with an increased risk for JE on the basis of planned travel duration, season, location, activities, and accommodations. See JE recommendation box 2 for more detailed information. (https://www.cdc.gov/mmwr/volumes/68/rr/rr6802a1.htm#B2_down)",
-        "JE vaccination should be considered for travel to a JE-endemic area but uncertain of specific duration of travel, destination, or activities.",
-        "Endemic Area and transmission season is determined by country.  Refer to the yellow book for a definition of the transmission season: https://www.cdc.gov/yellow-book/hcp/travel-associated-infections-diseases/yellow-fever.html"
+      'seriesName': 'Japanese Encephalitis risk 2-dose series 18-65 years',
+      'targetDisease': 'Japanese Encephalitis',
+      'vaccineGroup': 'Japanese Encephalitis',
+      'seriesAdminGuidance': [
+        'For adults and children, a booster dose (i.e., third dose) '
+            'should be given on or after 1 year after completion of the '
+            'primary JE-VC series if ongoing exposure or reexposure to JE '
+            'virus is expected',
+        'JE vaccination should be considered for shorter-term (e.g., '
+            'less than 1 month) travel with an increased risk for JE on '
+            'the basis of planned travel duration, season, location, '
+            'activities, and accommodations. See JE recommendation box 2 '
+            'for more detailed information. '
+            '(https://www.cdc.gov/mmwr/volumes/68/rr/rr6802a1.htm#B2_down)',
+        'JE vaccination should be considered for travel to a '
+            'JE-endemic area but uncertain of specific duration of travel, '
+            'destination, or activities.',
+        'Endemic Area and transmission season is determined by '
+            'country.  Refer to the yellow book for a definition of the '
+            'transmission season: '
+            'https://www.cdc.gov/yellow-book/hcp/travel-associated-infections-diseases/yellow-fever.html',
       ],
-      "seriesType": "Risk",
-      "selectSeries": {
-        "defaultSeries": "No",
-        "productPath": "No",
-        "seriesGroupName": "Increased Risk",
-        "seriesGroup": "1",
-        "seriesPriority": "A",
-        "seriesPreference": "1",
-        "minAgeToStart": "18 years",
-        "maxAgeToStart": "66 years"
+      'seriesType': 'Risk',
+      'selectSeries': {
+        'defaultSeries': 'No',
+        'productPath': 'No',
+        'seriesGroupName': 'Increased Risk',
+        'seriesGroup': '1',
+        'seriesPriority': 'A',
+        'seriesPreference': '1',
+        'minAgeToStart': '18 years',
+        'maxAgeToStart': '66 years',
       },
-      "indication": [
+      'indication': [
         {
-          "observationCode": {
-            "text":
-                "Longer-term (e.g., 1 month or more) travel to a JE-endemic area",
-            "code": "165"
+          'observationCode': {
+            'text':
+                'Longer-term (e.g., 1 month or more) travel to a '
+                'JE-endemic area',
+            'code': '165',
           },
-          "description":
-              "Administer to persons who plan for longer-term (e.g., ≥ 1 month) travel to JE-endemic areas.",
-          "beginAge": "18 years",
-          "endAge": "66 years"
+          'description':
+              'Administer to persons who plan for longer-term (e.g., ≥ 1 '
+              'month) travel to JE-endemic areas.',
+          'beginAge': '18 years',
+          'endAge': '66 years',
         },
         {
-          "observationCode": {
-            "text": "Moving to JE-endemic country to take up residence",
-            "code": "173"
+          'observationCode': {
+            'text': 'Moving to JE-endemic country to take up residence',
+            'code': '173',
           },
-          "description":
-              "Administer to persons who plan to move to JE-endemic countries to take up residence.",
-          "beginAge": "18 years",
-          "endAge": "66 years"
+          'description':
+              'Administer to persons who plan to move to JE-endemic '
+              'countries to take up residence.',
+          'beginAge': '18 years',
+          'endAge': '66 years',
         },
         {
-          "observationCode": {
-            "text": "Frequent travel to JE-endemic areas",
-            "code": "174"
+          'observationCode': {
+            'text': 'Frequent travel to JE-endemic areas',
+            'code': '174',
           },
-          "description":
-              "Administer to persons who frequently travel to JE-endemic areas.",
-          "beginAge": "18 years",
-          "endAge": "66 years"
-        }
+          'description':
+              'Administer to persons who frequently travel to JE-endemic '
+              'areas.',
+          'beginAge': '18 years',
+          'endAge': '66 years',
+        },
       ],
-      "seriesDose": [
+      'seriesDose': [
         {
-          "doseNumber": "Dose 1",
-          "age": [
+          'doseNumber': 'Dose 1',
+          'age': [
             {
-              "absMinAge": "18 years - 4 days",
-              "minAge": "18 years",
-              "earliestRecAge": "18 years"
-            }
+              'absMinAge': '18 years - 4 days',
+              'minAge': '18 years',
+              'earliestRecAge': '18 years',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "Japanese Encephalitis, VC",
-              "cvx": "134",
-              "beginAge": "3 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
-            }
+              'vaccineType': 'Japanese Encephalitis, VC',
+              'cvx': '134',
+              'beginAge': '3 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
+            },
           ],
-          "allowableVaccine": [
+          'allowableVaccine': [
             {
-              "vaccineType": "Japanese Encephalitis, VC",
-              "cvx": "134",
-              "beginAge": "2 months - 4 days"
-            }
+              'vaccineType': 'Japanese Encephalitis, VC',
+              'cvx': '134',
+              'beginAge': '2 months - 4 days',
+            },
           ],
-          "recurringDose": "No"
+          'recurringDose': 'No',
         },
         {
-          "doseNumber": "Dose 2",
-          "age": [
-            {"maxAge": "66 years"}
-          ],
-          "interval": [
+          'doseNumber': 'Dose 2',
+          'age': [
             {
-              "fromPrevious": "Y",
-              "absMinInt": "7 days",
-              "minInt": "7 days",
-              "earliestRecInt": "7 days",
-              "latestRecInt": "28 days"
-            }
+              'maxAge': '66 years',
+            },
           ],
-          "preferableVaccine": [
+          'interval': [
             {
-              "vaccineType": "Japanese Encephalitis, VC",
-              "cvx": "134",
-              "beginAge": "3 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
-            }
+              'fromPrevious': 'Y',
+              'absMinInt': '7 days',
+              'minInt': '7 days',
+              'earliestRecInt': '7 days',
+              'latestRecInt': '28 days',
+            },
           ],
-          "allowableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "Japanese Encephalitis, VC",
-              "cvx": "134",
-              "beginAge": "2 months - 4 days"
-            }
+              'vaccineType': 'Japanese Encephalitis, VC',
+              'cvx': '134',
+              'beginAge': '3 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
+            },
           ],
-          "recurringDose": "No"
+          'allowableVaccine': [
+            {
+              'vaccineType': 'Japanese Encephalitis, VC',
+              'cvx': '134',
+              'beginAge': '2 months - 4 days',
+            },
+          ],
+          'recurringDose': 'No',
         },
         {
-          "doseNumber": "Dose 3",
-          "interval": [
+          'doseNumber': 'Dose 3',
+          'interval': [
             {
-              "fromPrevious": "Y",
-              "absMinInt": "12 months - 4 days",
-              "minInt": "12 months",
-              "earliestRecInt": "12 months"
-            }
+              'fromPrevious': 'Y',
+              'absMinInt': '12 months - 4 days',
+              'minInt': '12 months',
+              'earliestRecInt': '12 months',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "Japanese Encephalitis, VC",
-              "cvx": "134",
-              "beginAge": "2 months",
-              "endAge": "3 years",
-              "volume": "0.25",
-              "forecastVaccineType": "N"
+              'vaccineType': 'Japanese Encephalitis, VC',
+              'cvx': '134',
+              'beginAge': '2 months',
+              'endAge': '3 years',
+              'volume': '0.25',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "Japanese Encephalitis, VC",
-              "cvx": "134",
-              "beginAge": "3 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
-            }
+              'vaccineType': 'Japanese Encephalitis, VC',
+              'cvx': '134',
+              'beginAge': '3 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
+            },
           ],
-          "allowableVaccine": [
+          'allowableVaccine': [
             {
-              "vaccineType": "Japanese Encephalitis, VC",
-              "cvx": "134",
-              "beginAge": "2 months - 4 days"
-            }
+              'vaccineType': 'Japanese Encephalitis, VC',
+              'cvx': '134',
+              'beginAge': '2 months - 4 days',
+            },
           ],
-          "recurringDose": "No"
-        }
-      ]
-    }
+          'recurringDose': 'No',
+        },
+      ],
+    },
   ],
-  "vaccineRecommendationCategory": [
+  'vaccineRecommendationCategory': [
     {
-      "worksheetName": "Risk 2-dose",
-      "seriesName": "Japanese Encephalitis risk 2-dose series",
-      "patientBeginAge": "2 months",
-      "patientEndAge": "n/a",
-      "forecastTargetDose": "Any",
-      "includedIndication": "Any",
-      "excludedIndication": "n/a",
-      "category": "High-Risk",
-      "additionalMaterial":
-          "https://www.cdc.gov/japanese-encephalitis/hcp/vaccine/index.html"
+      'worksheetName': 'Risk 2-dose',
+      'seriesName': 'Japanese Encephalitis risk 2-dose series',
+      'patientBeginAge': '2 months',
+      'patientEndAge': 'n/a',
+      'forecastTargetDose': 'Any',
+      'includedIndication': 'Any',
+      'excludedIndication': 'n/a',
+      'category': 'High-Risk',
+      'additionalMaterial':
+          'https://www.cdc.gov/japanese-encephalitis/hcp/vaccine/index.html',
     },
     {
-      "worksheetName": "Risk 2-dose 18-65",
-      "seriesName": "Japanese Encephalitis risk 2-dose series 18-65 years",
-      "patientBeginAge": "18 years",
-      "patientEndAge": "66 years",
-      "forecastTargetDose": "Any",
-      "includedIndication": "Any",
-      "excludedIndication": "n/a",
-      "category": "High-Risk",
-      "additionalMaterial":
-          "https://www.cdc.gov/japanese-encephalitis/hcp/vaccine/index.html"
-    }
-  ]
+      'worksheetName': 'Risk 2-dose 18-65',
+      'seriesName': 'Japanese Encephalitis risk 2-dose series 18-65 years',
+      'patientBeginAge': '18 years',
+      'patientEndAge': '66 years',
+      'forecastTargetDose': 'Any',
+      'includedIndication': 'Any',
+      'excludedIndication': 'n/a',
+      'category': 'High-Risk',
+      'additionalMaterial':
+          'https://www.cdc.gov/japanese-encephalitis/hcp/vaccine/index.html',
+    },
+  ],
 });

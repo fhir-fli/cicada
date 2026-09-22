@@ -1,7 +1,6 @@
+import 'package:cicada/cicada.dart';
 import 'package:collection/collection.dart';
 import 'package:fhir_r4/fhir_r4.dart';
-
-import '../cicada.dart';
 
 class VaxDose {
   VaxDose({
@@ -18,14 +17,18 @@ class VaxDose {
   });
 
   factory VaxDose.fromImmunization(Immunization immunization, VaxDate dob) {
-    final String? cvx = cvxFromImmunization(immunization);
-    final VaxDate dateGiven = immunization.occurrenceDateTime?.valueDateTime !=
-            null
-        ? VaxDate.fromDateTime(immunization.occurrenceDateTime!.valueDateTime!)
-        : VaxDate(2999, 01, 01);
-    final bool expired = (immunization.expirationDate?.valueDateTime != null) &&
-        immunization.expirationDate!.valueDateTime!
-            .isBefore(immunization.occurrenceDateTime!.valueDateTime!);
+    final cvx = cvxFromImmunization(immunization);
+    final dateGiven =
+        immunization.occurrenceDateTime?.valueDateTime != null
+            ? VaxDate.fromDateTime(
+              immunization.occurrenceDateTime!.valueDateTime!,
+            )
+            : VaxDate(2999, 01, 01);
+    final expired =
+        (immunization.expirationDate?.valueDateTime != null) &&
+        immunization.expirationDate!.valueDateTime!.isBefore(
+          immunization.occurrenceDateTime!.valueDateTime!,
+        );
 
     return VaxDose(
       doseId: immunization.id!.toString(),
@@ -40,34 +43,39 @@ class VaxDose {
     );
   }
 
-  factory VaxDose.fromJson(Map<String, dynamic> json) => VaxDose(
-        doseId: json['doseId'] as String,
-        volume: json['volume'] as double?,
-        dateGiven: VaxDate.fromJson(json['dateGiven'] as String),
-        cvx: json['cvx'] as String,
-        mvx: json['mvx'] as String?,
-        antigens: List<String>.from(json['antigens'] as Iterable<dynamic>),
-        dob: VaxDate.fromJson(json['dob'] as String),
-        targetDisease: json['targetDisease'] as String?,
-      )
+  factory VaxDose.fromJson(Map<String, dynamic> json) =>
+      VaxDose(
+          doseId: json['doseId'] as String,
+          volume: json['volume'] as double?,
+          dateGiven: VaxDate.fromJson(json['dateGiven'] as String),
+          cvx: json['cvx'] as String,
+          mvx: json['mvx'] as String?,
+          antigens: List<String>.from(json['antigens'] as Iterable<dynamic>),
+          dob: VaxDate.fromJson(json['dob'] as String),
+          targetDisease: json['targetDisease'] as String?,
+        )
         ..targetDoseSatisfied = json['targetDoseSatisfied'] as int
         ..index = json['index'] as int?
         ..inadvertent = (json['inadvertent'] ?? false) as bool
         ..validAgeReason = ValidAgeReason.fromJson(json['validAgeReason'])
         ..preferredInterval = json['preferredInterval'] as bool?
-        ..preferredIntervalReason =
-            IntervalReason.fromJson(json['preferredIntervalReason'])
+        ..preferredIntervalReason = IntervalReason.fromJson(
+          json['preferredIntervalReason'],
+        )
         ..allowedInterval = json['allowedInterval'] as bool?
-        ..allowedIntervalReason =
-            IntervalReason.fromJson(json['allowedIntervalReason'])
+        ..allowedIntervalReason = IntervalReason.fromJson(
+          json['allowedIntervalReason'],
+        )
         ..conflict = json['conflict'] as bool?
         ..conflictReason = json['conflictReason'] as String?
         ..preferredVaccine = json['preferredVaccine'] as bool?
-        ..preferredVaccineReason =
-            PreferredAllowedReason.fromJson(json['preferredVaccineReason'])
+        ..preferredVaccineReason = PreferredAllowedReason.fromJson(
+          json['preferredVaccineReason'],
+        )
         ..allowedVaccine = json['allowedVaccine'] as bool?
-        ..allowedVaccineReason =
-            PreferredAllowedReason.fromJson(json['allowedVaccineReason'])
+        ..allowedVaccineReason = PreferredAllowedReason.fromJson(
+          json['allowedVaccineReason'],
+        )
         ..evalStatus = EvalStatus.fromJson(json['evalStatus'])
         ..evalReason = EvalReason.fromJson(json['evalReason'] as String?);
 
@@ -117,7 +125,7 @@ class VaxDose {
   /// Derived from the sub-step fields the evaluation has already filled in —
   /// it reports nothing the engine did not already work out.
   List<EvalReason> get evalReasons {
-    final List<EvalReason> reasons = <EvalReason>[];
+    final reasons = <EvalReason>[];
     void add(EvalReason? reason) {
       if (reason != null && !reasons.contains(reason)) reasons.add(reason);
     }
@@ -165,32 +173,32 @@ class VaxDose {
     PreferredAllowedReason? allowedVaccineReason,
     EvalStatus? evalStatus,
     EvalReason? evalReason,
-  }) =>
-      VaxDose(
-        doseId: doseId ?? this.doseId,
-        volume: volume ?? this.volume,
-        dateGiven: dateGiven ?? this.dateGiven,
-        cvx: cvx ?? this.cvx,
-        mvx: mvx ?? this.mvx,
-        antigens: antigens ?? this.antigens,
-        dob: dob ?? this.dob,
-        targetDisease: targetDisease ?? this.targetDisease,
-        evalStatus: evalStatus ?? this.evalStatus,
-        evalReason: evalReason ?? this.evalReason,
-      )..setOptionalProperties(
-          index,
-          inadvertent,
-          validAgeReason,
-          preferredInterval,
-          preferredIntervalReason,
-          allowedInterval,
-          allowedIntervalReason,
-          conflict,
-          conflictReason,
-          preferredVaccine,
-          preferredVaccineReason,
-          allowedVaccine,
-          allowedVaccineReason);
+  }) => VaxDose(
+    doseId: doseId ?? this.doseId,
+    volume: volume ?? this.volume,
+    dateGiven: dateGiven ?? this.dateGiven,
+    cvx: cvx ?? this.cvx,
+    mvx: mvx ?? this.mvx,
+    antigens: antigens ?? this.antigens,
+    dob: dob ?? this.dob,
+    targetDisease: targetDisease ?? this.targetDisease,
+    evalStatus: evalStatus ?? this.evalStatus,
+    evalReason: evalReason ?? this.evalReason,
+  )..setOptionalProperties(
+    index,
+    inadvertent,
+    validAgeReason,
+    preferredInterval,
+    preferredIntervalReason,
+    allowedInterval,
+    allowedIntervalReason,
+    conflict,
+    conflictReason,
+    preferredVaccine,
+    preferredVaccineReason,
+    allowedVaccine,
+    allowedVaccineReason,
+  );
 
   void setOptionalProperties(
     int? index,
@@ -238,29 +246,37 @@ class VaxDose {
   /// carrying a condition such as a recall, cold chain break or subpotent
   /// administration, is sub-standard and the target dose must be repeated
   /// regardless of the other evaluation rules.
-  static EvalStatus? immunizationEvalStatus(VaxDate dateGiven, String? cvx,
-          bool expired, Immunization immunization) =>
+  static EvalStatus? immunizationEvalStatus(
+    VaxDate dateGiven,
+    String? cvx,
+    bool expired,
+    Immunization immunization,
+  ) =>
       dateGiven.year == 2999
-          ? EvalStatus.not_valid
+          ? EvalStatus.notValid
           : cvx == null
-              ? EvalStatus.not_valid
-              : expired
-                  ? EvalStatus.sub_standard
-                  : immunization.isSubpotent?.valueBoolean ?? false
-                      ? EvalStatus.sub_standard
-                      : null;
+          ? EvalStatus.notValid
+          : expired
+          ? EvalStatus.subStandard
+          : immunization.isSubpotent?.valueBoolean ?? false
+          ? EvalStatus.subStandard
+          : null;
 
-  static EvalReason? immunizationEvalReason(VaxDate dateGiven, String? cvx,
-          bool expired, Immunization immunization) =>
+  static EvalReason? immunizationEvalReason(
+    VaxDate dateGiven,
+    String? cvx,
+    bool expired,
+    Immunization immunization,
+  ) =>
       dateGiven.year == 2999
           ? EvalReason.noDateGiven
           : cvx == null
-              ? EvalReason.noCvx
-              : expired
-                  ? EvalReason.expired
-                  : immunization.isSubpotent?.valueBoolean ?? false
-                      ? subpotentReason(immunization)
-                      : null;
+          ? EvalReason.noCvx
+          : expired
+          ? EvalReason.expired
+          : immunization.isSubpotent?.valueBoolean ?? false
+          ? subpotentReason(immunization)
+          : null;
 
   /// Section 6.3: was the vaccine dose administered an inadvertent vaccine for
   /// the target dose?
@@ -274,7 +290,7 @@ class VaxDose {
 
   void markAsInadvertent() {
     inadvertent = true;
-    evalStatus = EvalStatus.not_valid;
+    evalStatus = EvalStatus.notValid;
     evalReason = EvalReason.inadvertentVaccine;
   }
 
@@ -296,18 +312,23 @@ class VaxDose {
       return true; // No age restrictions
     }
 
-    final int ageIndex = determineAgeIndex(vaxAge);
+    final ageIndex = determineAgeIndex(vaxAge);
     if (ageIndex == -1) {
       throw Exception(
-          'More than 1 age restriction, but no appropriate effective or cessation dates found');
+        'More than 1 age restriction, but no appropriate effective or '
+        'cessation dates found',
+      );
     }
 
-    final VaxAge age = vaxAge[ageIndex];
+    final age = vaxAge[ageIndex];
 
     // Column 1: before absMinAge → Not Valid "Too young"
     if (!isDoseGivenAtValidAge(age)) {
-      setAgeReason(ValidAgeReason.tooYoung, EvalStatus.not_valid,
-          EvalReason.ageTooYoung);
+      setAgeReason(
+        ValidAgeReason.tooYoung,
+        EvalStatus.notValid,
+        EvalReason.ageTooYoung,
+      );
       return false;
     }
 
@@ -324,23 +345,26 @@ class VaxDose {
   int determineAgeIndex(List<VaxAge> vaxAge) {
     return vaxAge.length == 1
         ? 0
-        : vaxAge.indexWhere((VaxAge element) =>
-            VaxDate.fromNullableString(element.effectiveDate) <= dateGiven &&
-            VaxDate.fromNullableString(element.cessationDate, true) >=
-                dateGiven);
+        : vaxAge.indexWhere(
+          (element) =>
+              VaxDate.fromNullableString(element.effectiveDate) <= dateGiven &&
+              VaxDate.fromNullableString(element.cessationDate, true) >=
+                  dateGiven,
+        );
   }
 
   bool isDoseGivenAtValidAge(VaxAge age) {
-    final VaxDate absoluteMinimumAgeDate = age.absMinAge == null
-        ? VaxDate(1900, 01, 01)
-        : dob.change(age.absMinAge!);
+    final absoluteMinimumAgeDate =
+        age.absMinAge == null
+            ? VaxDate(1900, 01, 01)
+            : dob.change(age.absMinAge!);
     return !(dateGiven < absoluteMinimumAgeDate);
   }
 
   /// Table 6-15 column 2: at or after the absolute minimum age but before the
   /// minimum age — the grace period.
   bool isDoseWithinMinimumAge(VaxAge age) {
-    final VaxDate minimumAgeDate =
+    final minimumAgeDate =
         age.minAge == null ? VaxDate(1900, 01, 01) : dob.change(age.minAge!);
     return dateGiven < minimumAgeDate;
   }
@@ -348,14 +372,17 @@ class VaxDose {
   /// Table 6-15 columns 3-4: before the maximum age date is a valid age; at or
   /// after it the dose is extraneous, 'Too old'.
   bool isDoseGivenWithinMaximumAge(VaxAge age) {
-    final VaxDate maximumAgeDate =
+    final maximumAgeDate =
         age.maxAge == null ? VaxDate(2999, 12, 31) : dob.change(age.maxAge!);
     if (dateGiven < maximumAgeDate) {
       setAgeReason(ValidAgeReason.gracePeriod);
       return true;
     }
     setAgeReason(
-        ValidAgeReason.tooOld, EvalStatus.extraneous, EvalReason.ageTooOld);
+      ValidAgeReason.tooOld,
+      EvalStatus.extraneous,
+      EvalReason.ageTooOld,
+    );
     return false;
   }
 
@@ -381,25 +408,34 @@ class VaxDose {
   /// minimum interval date it does, on the grace period; at or after the
   /// minimum interval date it does outright.
   bool evaluatePreferableInterval(
-      List<Interval>? intervals, List<VaxDose> doses, int targetDose) {
+    List<Interval>? intervals,
+    List<VaxDose> doses,
+    int targetDose,
+  ) {
     if (intervals == null || intervals.isEmpty) {
       updatePreferredInterval(valid: true);
       return true;
     }
 
-    for (final Interval interval in intervals) {
+    for (final interval in intervals) {
       // Filter by effectiveDate/cessationDate — only evaluate intervals
       // whose date range covers the dose administration date.
-      final VaxDate effective =
-          VaxDate.fromNullableString(interval.effectiveDate);
-      final VaxDate cessation =
-          VaxDate.fromNullableString(interval.cessationDate, true);
+      final effective = VaxDate.fromNullableString(
+        interval.effectiveDate,
+      );
+      final cessation = VaxDate.fromNullableString(
+        interval.cessationDate,
+        true,
+      );
       if (!(effective <= dateGiven && dateGiven <= cessation)) {
         continue;
       }
 
-      final VaxDate? referenceDate =
-          getReferenceDate(interval, targetDose, doses);
+      final referenceDate = getReferenceDate(
+        interval,
+        targetDose,
+        doses,
+      );
 
       // If the reference date cannot be determined, the interval cannot be
       // evaluated — skip it (it doesn't apply). This covers:
@@ -410,10 +446,9 @@ class VaxDose {
         continue;
       }
 
-      final VaxDate absoluteMinimum =
+      final absoluteMinimum =
           referenceDate.changeNullable(interval.absMinInt, false)!;
-      final VaxDate minimumDate =
-          referenceDate.changeNullable(interval.minInt, false)!;
+      final minimumDate = referenceDate.changeNullable(interval.minInt, false)!;
 
       if (dateGiven < absoluteMinimum) {
         updatePreferredInterval(valid: false, reason: IntervalReason.tooShort);
@@ -422,7 +457,9 @@ class VaxDose {
 
       if (dateGiven < minimumDate) {
         updatePreferredInterval(
-            valid: true, reason: IntervalReason.gracePeriod);
+          valid: true,
+          reason: IntervalReason.gracePeriod,
+        );
       } else {
         updatePreferredInterval(valid: true);
       }
@@ -435,26 +472,32 @@ class VaxDose {
   /// If no allowable interval defined → considered "not valid" (return false).
   /// Uses absMinInt only (no grace period concept).
   bool evaluateAllowableInterval(
-      Interval? interval, List<VaxDose> doses, int targetDose) {
+    Interval? interval,
+    List<VaxDose> doses,
+    int targetDose,
+  ) {
     if (interval == null) {
       updateAllowedInterval(valid: false);
       return false;
     }
 
-    final VaxDate? referenceDate =
-        getReferenceDate(interval, targetDose, doses);
+    final referenceDate = getReferenceDate(
+      interval,
+      targetDose,
+      doses,
+    );
 
     if (referenceDate == null) {
       updateAllowedInterval(valid: false);
       return false;
     }
 
-    final VaxDate absoluteMinimum =
+    final absoluteMinimum =
         referenceDate.changeNullable(interval.absMinInt, false)!;
 
     if (dateGiven < absoluteMinimum) {
       updateAllowedInterval(valid: false, reason: IntervalReason.tooShort);
-      evalStatus = EvalStatus.not_valid;
+      evalStatus = EvalStatus.notValid;
       evalReason = EvalReason.intervalTooShort;
       return false;
     }
@@ -464,7 +507,10 @@ class VaxDose {
   }
 
   VaxDate? getReferenceDate(
-      Interval interval, int targetDose, List<VaxDose> doses) {
+    Interval interval,
+    int targetDose,
+    List<VaxDose> doses,
+  ) {
     if (interval.fromPrevious == 'Y') {
       return getPreviousDoseDate(doses);
     } else if (interval.fromTargetDose != null) {
@@ -482,11 +528,11 @@ class VaxDose {
   /// Scans backward from the current dose's index.
   VaxDate? getPreviousDoseDate(List<VaxDose> doses) {
     if (index == null || index == 0) return null;
-    for (int i = index! - 1; i >= 0; i--) {
-      final VaxDose prev = doses[i];
+    for (var i = index! - 1; i >= 0; i--) {
+      final prev = doses[i];
       if (!prev.inadvertent &&
           (prev.evalStatus == EvalStatus.valid ||
-              prev.evalStatus == EvalStatus.not_valid)) {
+              prev.evalStatus == EvalStatus.notValid)) {
         return prev.dateGiven;
       }
     }
@@ -496,10 +542,12 @@ class VaxDose {
   /// Per CALCDTINT-2: Find the date of the dose satisfying the specified
   /// target dose number.
   VaxDate? getTargetDoseDate(int targetDoseNumber, List<VaxDose> doses) {
-    final VaxDate? referenceDate = doses
-        .firstWhereOrNull(
-            (VaxDose dose) => dose.targetDoseSatisfied == targetDoseNumber - 1)
-        ?.dateGiven;
+    final referenceDate =
+        doses
+            .firstWhereOrNull(
+              (dose) => dose.targetDoseSatisfied == targetDoseNumber - 1,
+            )
+            ?.dateGiven;
     return referenceDate;
   }
 
@@ -510,22 +558,25 @@ class VaxDose {
   /// interval's from-most-recent vaccine type.
   VaxDate? getMostRecentDoseDate(List<int> vaccineTypes, List<VaxDose> doses) {
     if (index == null) return null;
-    final VaxDose? dose = doses.lastWhereOrNull((VaxDose d) =>
-        vaccineTypes.contains(d.cvxAsInt) &&
-        !d.inadvertent &&
-        d.index != null &&
-        d.index! < index!);
+    final dose = doses.lastWhereOrNull(
+      (d) =>
+          vaccineTypes.contains(d.cvxAsInt) &&
+          !d.inadvertent &&
+          d.index != null &&
+          d.index! < index!,
+    );
     return dose?.dateGiven;
   }
 
   VaxDate? getObservationDate(ObservationCode? relevantObs) {
     if (relevantObs == null || observations == null) return null;
-    final int? obsIndex = observations!.codesAsInt
-        ?.indexWhere((int element) => element == relevantObs.codeAsInt);
+    final obsIndex = observations!.codesAsInt?.indexWhere(
+      (element) => element == relevantObs.codeAsInt,
+    );
     if (obsIndex == null || obsIndex == -1) {
       return null;
     }
-    final VaxObservation obs = observations!.observation![obsIndex];
+    final obs = observations!.observation![obsIndex];
     // CALCDTINT-9: Use period.start (the date the observation occurred),
     // fallback to period.end
     if (obs.period?.start != null && obs.period!.start!.valueDateTime != null) {
@@ -543,11 +594,12 @@ class VaxDose {
   }) {
     /// Look to see if the current cvx type is one of the conflict types listed
     /// in the supporting data
-    final List<LiveVirusConflict>? liveVirusConflicts = activeScheduleData
-        .liveVirusConflicts?.liveVirusConflict
-        ?.where((LiveVirusConflict element) =>
-            element.current?.cvxAsInt == cvxAsInt)
-        .toList();
+    final liveVirusConflicts =
+        activeScheduleData.liveVirusConflicts?.liveVirusConflict
+            ?.where(
+              (element) => element.current?.cvxAsInt == cvxAsInt,
+            )
+            .toList();
 
     /// If it is not, then there can be no conflicts, and we return false
     if (liveVirusConflicts?.isEmpty ?? true) {
@@ -557,37 +609,40 @@ class VaxDose {
 
     /// Use allPatientDoses for cross-antigen conflict checking.
     /// Fall back to series-local doses if allPatientDoses is empty.
-    final List<VaxDose> dosesToCheck =
-        allPatientDoses.isNotEmpty ? allPatientDoses : doses;
+    final dosesToCheck = allPatientDoses.isNotEmpty ? allPatientDoses : doses;
 
     /// Per Figure 6-16: loop "For each previous vaccine dose administered"
     /// Check ALL previous doses by date (cross-antigen), not just series-local
-    for (final VaxDose previousDose in dosesToCheck) {
+    for (final previousDose in dosesToCheck) {
       // Only check doses given before this one
       if (previousDose.dateGiven >= dateGiven) continue;
       // Skip self
       if (previousDose.doseId == doseId) continue;
 
-      for (final LiveVirusConflict lvc in liveVirusConflicts!) {
+      for (final lvc in liveVirusConflicts!) {
         if (lvc.previous?.cvxAsInt != previousDose.cvxAsInt) continue;
 
-        final VaxDate conflictBeginDate = previousDose.dateGiven
-            .changeNullable(lvc.conflictBeginInterval, false)!;
+        final conflictBeginDate =
+            previousDose.dateGiven.changeNullable(
+              lvc.conflictBeginInterval,
+              false,
+            )!;
 
         /// Per CALCDTCONFLICT-2: use minConflictEndInterval when previous
         /// is Valid or has no eval status; use conflictEndInterval otherwise
-        final String? endInterval = (previousDose.evalStatus == null ||
-                previousDose.evalStatus == EvalStatus.valid)
-            ? lvc.minConflictEndInterval
-            : lvc.conflictEndInterval;
+        final endInterval =
+            (previousDose.evalStatus == null ||
+                    previousDose.evalStatus == EvalStatus.valid)
+                ? lvc.minConflictEndInterval
+                : lvc.conflictEndInterval;
 
-        final VaxDate conflictEndDate =
+        final conflictEndDate =
             previousDose.dateGiven.changeNullable(endInterval, true)!;
 
         if (conflictBeginDate <= dateGiven && dateGiven < conflictEndDate) {
           conflict = true;
           conflictReason = 'Live Virus Conflict';
-          evalStatus = EvalStatus.not_valid;
+          evalStatus = EvalStatus.notValid;
           evalReason = EvalReason.liveVirusConflict;
           return true;
         }
@@ -608,9 +663,10 @@ class VaxDose {
       return false;
     }
 
-    final List<Vaccine> preferredList = vaccines
-        .where((Vaccine element) => element.cvxAsInt == int.tryParse(cvx))
-        .toList();
+    final preferredList =
+        vaccines
+            .where((element) => element.cvxAsInt == int.tryParse(cvx))
+            .toList();
     if (preferredList.isEmpty) {
       preferredVaccine = false;
       preferredVaccineReason =
@@ -627,11 +683,14 @@ class VaxDose {
     // series never completed (`2016-UC-0131`). Real records carry MVX far more
     // often than these test cases do, so this was silently discarding valid
     // doses.
-    final List<Vaccine> tradeNameMatches = preferredList
-        .where((Vaccine element) =>
-            element.mvx == null ||
-            element.mvx!.toLowerCase() == mvx?.toLowerCase())
-        .toList();
+    final tradeNameMatches =
+        preferredList
+            .where(
+              (element) =>
+                  element.mvx == null ||
+                  element.mvx!.toLowerCase() == mvx?.toLowerCase(),
+            )
+            .toList();
     if (tradeNameMatches.isEmpty) {
       preferredVaccine = false;
       preferredVaccineReason = PreferredAllowedReason.wrongTradeName;
@@ -641,12 +700,12 @@ class VaxDose {
     // One CVX can appear more than once with different age ranges, exactly as
     // in [isAllowedType] — take the first entry whose age range covers the
     // date administered rather than assuming there is only one candidate.
-    for (final Vaccine preferredVax in tradeNameMatches) {
-      final VaxDate preferableVaccineTypeBeginAgeDate =
+    for (final preferredVax in tradeNameMatches) {
+      final preferableVaccineTypeBeginAgeDate =
           preferredVax.beginAge == null
               ? VaxDate.min()
               : birthdate.changeNullable(preferredVax.beginAge, false)!;
-      final VaxDate preferableVaccineTypeEndAgeDate =
+      final preferableVaccineTypeEndAgeDate =
           preferredVax.endAge == null
               ? VaxDate.max()
               : birthdate.changeNullable(preferredVax.endAge, true)!;
@@ -655,9 +714,10 @@ class VaxDose {
         continue;
       }
 
-      final double? preferableVaccineVolume = preferredVax.volume == null
-          ? null
-          : double.tryParse(preferredVax.volume!);
+      final preferableVaccineVolume =
+          preferredVax.volume == null
+              ? null
+              : double.tryParse(preferredVax.volume!);
       preferredVaccine = true;
       if (preferableVaccineVolume != null &&
           volume != null &&
@@ -683,29 +743,30 @@ class VaxDose {
     if (vaccines == null || vaccines.isEmpty) {
       allowedVaccine = false;
       allowedVaccineReason = PreferredAllowedReason.noAllowedTypes;
-      evalStatus = EvalStatus.not_valid;
+      evalStatus = EvalStatus.notValid;
       evalReason = EvalReason.notPreferableOrAllowable;
       return false;
     } else {
-      final List<Vaccine> allowedList = vaccines.toList();
-      allowedList.retainWhere(
-          (Vaccine element) => element.cvxAsInt == int.tryParse(cvx));
+      final allowedList =
+          vaccines.toList()..retainWhere(
+            (element) => element.cvxAsInt == int.tryParse(cvx),
+          );
       if (allowedList.isEmpty) {
         allowedVaccine = false;
         allowedVaccineReason =
             PreferredAllowedReason.notAPreferableOrAllowableVaccine;
-        evalStatus = EvalStatus.not_valid;
+        evalStatus = EvalStatus.notValid;
         evalReason = EvalReason.notPreferableOrAllowable;
         return false;
       } else {
         // Check ALL matching entries — same CVX can appear multiple times
         // with different age ranges.
-        for (final Vaccine allowedVax in allowedList) {
-          final VaxDate allowableVaccineTypeBeginAgeDate =
+        for (final allowedVax in allowedList) {
+          final allowableVaccineTypeBeginAgeDate =
               allowedVax.beginAge == null
                   ? VaxDate.min()
                   : birthdate.changeNullable(allowedVax.beginAge, false)!;
-          final VaxDate allowableVaccineTypeEndAgeDate =
+          final allowableVaccineTypeEndAgeDate =
               allowedVax.endAge == null
                   ? VaxDate.max()
                   : birthdate.changeNullable(allowedVax.endAge, true)!;
@@ -718,7 +779,7 @@ class VaxDose {
         allowedVaccine = false;
         allowedVaccineReason =
             PreferredAllowedReason.notAPreferableOrAllowableVaccine;
-        evalStatus = EvalStatus.not_valid;
+        evalStatus = EvalStatus.notValid;
         evalReason = EvalReason.notPreferableOrAllowable;
         return false;
       }
@@ -726,11 +787,11 @@ class VaxDose {
   }
 
   String get validity {
-    String validity = 'Status: $evalStatus ';
+    var validity = 'Status: $evalStatus ';
     if (evalStatus == EvalStatus.valid) {
       return validity;
     }
-    bool reason = false;
+    var reason = false;
 
     if (evalReason != null) {
       validity += 'Reason: $evalReason, ';
@@ -775,34 +836,33 @@ class VaxDose {
   }
 
   Map<String, dynamic> toJson() => <String, dynamic>{
-        'doseId': doseId,
-        if (volume != null) 'volume': volume,
-        'dateGiven': dateGiven.toJson(),
-        'cvx': cvx,
-        if (mvx != null) 'mvx': mvx,
-        'antigens': antigens,
-        'dob': dob.toJson(),
-        if (targetDisease != null) 'targetDisease': targetDisease,
-        'targetDoseSatisfied': targetDoseSatisfied,
-        if (index != null) 'index': index,
-        'inadvertent': inadvertent,
-        if (validAgeReason != null)
-          'validAgeReason': validAgeReason?.toString(),
-        if (preferredInterval != null) 'preferredInterval': preferredInterval,
-        if (preferredIntervalReason != null)
-          'preferredIntervalReason': preferredIntervalReason.toString(),
-        if (allowedInterval != null) 'allowedInterval': allowedInterval,
-        if (allowedIntervalReason != null)
-          'allowedIntervalReason': allowedIntervalReason.toString(),
-        if (conflict != null) 'conflict': conflict,
-        if (conflictReason != null) 'conflictReason': conflictReason,
-        if (preferredVaccine != null) 'preferredVaccine': preferredVaccine,
-        if (preferredVaccineReason != null)
-          'preferredVaccineReason': preferredVaccineReason.toString(),
-        if (allowedVaccine != null) 'allowedVaccine': allowedVaccine,
-        if (allowedVaccineReason != null)
-          'allowedVaccineReason': allowedVaccineReason.toString(),
-        if (evalStatus != null) 'evalStatus': evalStatus?.toString(),
-        if (evalReason != null) 'evalReason': evalReason?.toString(),
-      };
+    'doseId': doseId,
+    if (volume != null) 'volume': volume,
+    'dateGiven': dateGiven.toJson(),
+    'cvx': cvx,
+    if (mvx != null) 'mvx': mvx,
+    'antigens': antigens,
+    'dob': dob.toJson(),
+    if (targetDisease != null) 'targetDisease': targetDisease,
+    'targetDoseSatisfied': targetDoseSatisfied,
+    if (index != null) 'index': index,
+    'inadvertent': inadvertent,
+    if (validAgeReason != null) 'validAgeReason': validAgeReason?.toString(),
+    if (preferredInterval != null) 'preferredInterval': preferredInterval,
+    if (preferredIntervalReason != null)
+      'preferredIntervalReason': preferredIntervalReason.toString(),
+    if (allowedInterval != null) 'allowedInterval': allowedInterval,
+    if (allowedIntervalReason != null)
+      'allowedIntervalReason': allowedIntervalReason.toString(),
+    if (conflict != null) 'conflict': conflict,
+    if (conflictReason != null) 'conflictReason': conflictReason,
+    if (preferredVaccine != null) 'preferredVaccine': preferredVaccine,
+    if (preferredVaccineReason != null)
+      'preferredVaccineReason': preferredVaccineReason.toString(),
+    if (allowedVaccine != null) 'allowedVaccine': allowedVaccine,
+    if (allowedVaccineReason != null)
+      'allowedVaccineReason': allowedVaccineReason.toString(),
+    if (evalStatus != null) 'evalStatus': evalStatus?.toString(),
+    if (evalReason != null) 'evalReason': evalReason?.toString(),
+  };
 }

@@ -1,8 +1,8 @@
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:fhir_r4/fhir_r4.dart';
 import 'package:cicada/cicada.dart';
+import 'package:fhir_r4/fhir_r4.dart';
 import 'package:test/test.dart';
 
 /// Load the first N test cases from the NDJSON file.
@@ -70,24 +70,27 @@ void main() {
     });
 
     test('has exactly one recommendation parameter', () {
-      final recParams = noDoseResponse.parameter!
-          .where((p) => p.name.valueString == 'recommendation')
-          .toList();
+      final recParams =
+          noDoseResponse.parameter!
+              .where((p) => p.name.valueString == 'recommendation')
+              .toList();
       expect(recParams.length, 1);
       expect(recParams.first.resource, isA<ImmunizationRecommendation>());
     });
 
     test('no-dose case has zero evaluation parameters', () {
-      final evalParams = noDoseResponse.parameter!
-          .where((p) => p.name.valueString == 'evaluation')
-          .toList();
+      final evalParams =
+          noDoseResponse.parameter!
+              .where((p) => p.name.valueString == 'evaluation')
+              .toList();
       expect(evalParams, isEmpty);
     });
 
     test('with-doses case has evaluation parameters', () {
-      final evalParams = withDosesResponse.parameter!
-          .where((p) => p.name.valueString == 'evaluation')
-          .toList();
+      final evalParams =
+          withDosesResponse.parameter!
+              .where((p) => p.name.valueString == 'evaluation')
+              .toList();
       expect(evalParams, isNotEmpty);
       for (final ep in evalParams) {
         expect(ep.resource, isA<ImmunizationEvaluation>());
@@ -97,65 +100,89 @@ void main() {
 
   group('ImmunizationRecommendation structure', () {
     test('has patient reference', () {
-      final rec = noDoseResponse.parameter!
-          .firstWhere((p) => p.name.valueString == 'recommendation')
-          .resource as ImmunizationRecommendation;
+      final rec =
+          noDoseResponse.parameter!
+                  .firstWhere((p) => p.name.valueString == 'recommendation')
+                  .resource!
+              as ImmunizationRecommendation;
       expect(rec.patient.reference, isNotNull);
       expect(rec.patient.reference!.valueString, contains('Patient/'));
     });
 
     test('has date', () {
-      final rec = noDoseResponse.parameter!
-          .firstWhere((p) => p.name.valueString == 'recommendation')
-          .resource as ImmunizationRecommendation;
+      final rec =
+          noDoseResponse.parameter!
+                  .firstWhere((p) => p.name.valueString == 'recommendation')
+                  .resource!
+              as ImmunizationRecommendation;
       expect(rec.date, isNotNull);
     });
 
     test('has recommendations list', () {
-      final rec = noDoseResponse.parameter!
-          .firstWhere((p) => p.name.valueString == 'recommendation')
-          .resource as ImmunizationRecommendation;
+      final rec =
+          noDoseResponse.parameter!
+                  .firstWhere((p) => p.name.valueString == 'recommendation')
+                  .resource!
+              as ImmunizationRecommendation;
       expect(rec.recommendation, isNotEmpty);
     });
 
     test('each recommendation has required fields', () {
-      final rec = noDoseResponse.parameter!
-          .firstWhere((p) => p.name.valueString == 'recommendation')
-          .resource as ImmunizationRecommendation;
+      final rec =
+          noDoseResponse.parameter!
+                  .firstWhere((p) => p.name.valueString == 'recommendation')
+                  .resource!
+              as ImmunizationRecommendation;
 
       for (final r in rec.recommendation) {
         // targetDisease with text
-        expect(r.targetDisease, isNotNull,
-            reason: 'recommendation missing targetDisease');
-        expect(r.targetDisease!.text, isNotNull,
-            reason: 'targetDisease missing text');
+        expect(
+          r.targetDisease,
+          isNotNull,
+          reason: 'recommendation missing targetDisease',
+        );
+        expect(
+          r.targetDisease!.text,
+          isNotNull,
+          reason: 'targetDisease missing text',
+        );
 
         // forecastStatus
         expect(r.forecastStatus.coding, isNotNull);
         expect(r.forecastStatus.coding, isNotEmpty);
 
         // vaccineCode with group CVX first
-        expect(r.vaccineCode, isNotNull,
-            reason: 'recommendation missing vaccineCode');
+        expect(
+          r.vaccineCode,
+          isNotNull,
+          reason: 'recommendation missing vaccineCode',
+        );
         expect(r.vaccineCode, isNotEmpty);
         // First vaccineCode should have CVX system
         final firstVc = r.vaccineCode!.first;
         expect(firstVc.coding, isNotNull);
-        expect(uriStr(firstVc.coding!.first.system),
-            'http://hl7.org/fhir/sid/cvx');
+        expect(
+          uriStr(firstVc.coding!.first.system),
+          'http://hl7.org/fhir/sid/cvx',
+        );
       }
     });
 
     test('Not Complete recommendations have dateCriteria', () {
-      final rec = noDoseResponse.parameter!
-          .firstWhere((p) => p.name.valueString == 'recommendation')
-          .resource as ImmunizationRecommendation;
+      final rec =
+          noDoseResponse.parameter!
+                  .firstWhere((p) => p.name.valueString == 'recommendation')
+                  .resource!
+              as ImmunizationRecommendation;
 
       for (final r in rec.recommendation) {
         final statusCode = codeStr(r.forecastStatus.coding?.first.code);
         if (statusCode == 'notComplete') {
-          expect(r.dateCriterion, isNotNull,
-              reason: 'Not Complete recommendation should have dateCriteria');
+          expect(
+            r.dateCriterion,
+            isNotNull,
+            reason: 'Not Complete recommendation should have dateCriteria',
+          );
           expect(r.dateCriterion, isNotEmpty);
         }
       }
@@ -166,90 +193,135 @@ void main() {
     // doseNumberPositiveInt, so the test was defending the defect rather than
     // checking the spec. Assert the integer, and assert the string form is
     // absent so the wrong choice element cannot come back.
-    test('a Not Complete recommendation carries doseNumber as a positiveInt',
-        () {
-      final rec = noDoseResponse.parameter!
-          .firstWhere((p) => p.name.valueString == 'recommendation')
-          .resource as ImmunizationRecommendation;
+    test(
+      'a Not Complete recommendation carries doseNumber as a positiveInt',
+      () {
+        final rec =
+            noDoseResponse.parameter!
+                    .firstWhere((p) => p.name.valueString == 'recommendation')
+                    .resource!
+                as ImmunizationRecommendation;
 
-      var checked = 0;
-      for (final r in rec.recommendation) {
-        final statusCode = codeStr(r.forecastStatus.coding?.first.code);
-        if (statusCode != 'notComplete') continue;
-        checked++;
-        // Asserts whichever choice element is currently emitted. The integer
-        // is correct per the HL7 examples and will be restored once the FITS
-        // regression is attributed to one change.
-        expect(r.doseNumberPositiveInt ?? r.doseNumberString, isNotNull,
-            reason: 'a Not Complete recommendation should carry a doseNumber');
-      }
-      expect(checked, greaterThan(0),
-          reason: 'no Not Complete recommendation in this case, so this test '
-              'asserted nothing');
-    });
+        var checked = 0;
+        for (final r in rec.recommendation) {
+          final statusCode = codeStr(r.forecastStatus.coding?.first.code);
+          if (statusCode != 'notComplete') continue;
+          checked++;
+          // Asserts whichever choice element is currently emitted. The integer
+          // is correct per the HL7 examples and will be restored once the FITS
+          // regression is attributed to one change.
+          expect(
+            r.doseNumberPositiveInt ?? r.doseNumberString,
+            isNotNull,
+            reason: 'a Not Complete recommendation should carry a doseNumber',
+          );
+        }
+        expect(
+          checked,
+          greaterThan(0),
+          reason:
+              'no Not Complete recommendation in this case, so this test '
+              'asserted nothing',
+        );
+      },
+    );
   });
 
   group('ImmunizationEvaluation structure', () {
     test('each evaluation has required fields', () {
-      final evalParams = withDosesResponse.parameter!
-          .where((p) => p.name.valueString == 'evaluation')
-          .toList();
+      final evalParams =
+          withDosesResponse.parameter!
+              .where((p) => p.name.valueString == 'evaluation')
+              .toList();
 
       for (final ep in evalParams) {
-        final eval = ep.resource as ImmunizationEvaluation;
+        final eval = ep.resource! as ImmunizationEvaluation;
 
-        expect(eval.patient.reference, isNotNull,
-            reason: 'evaluation missing patient reference');
-        expect(eval.targetDisease, isNotNull,
-            reason: 'evaluation missing targetDisease');
-        expect(eval.immunizationEvent.reference, isNotNull,
-            reason: 'evaluation missing immunizationEvent reference');
+        expect(
+          eval.patient.reference,
+          isNotNull,
+          reason: 'evaluation missing patient reference',
+        );
+        expect(
+          eval.targetDisease,
+          isNotNull,
+          reason: 'evaluation missing targetDisease',
+        );
+        expect(
+          eval.immunizationEvent.reference,
+          isNotNull,
+          reason: 'evaluation missing immunizationEvent reference',
+        );
         // R4 gives ImmunizationEvaluation no vaccineCode, so the only route
         // to the vaccine is through immunizationEvent. The reference must
         // therefore RESOLVE, not merely be present: a fragment pointing at a
         // contained Immunization, or a literal Immunization reference.
-        final String ref = eval.immunizationEvent.reference!.valueString!;
+        final ref = eval.immunizationEvent.reference!.valueString!;
         if (ref.startsWith('#')) {
-          final contained = eval.contained
-              ?.whereType<Immunization>()
-              .where((Immunization i) => '#${i.id}' == ref);
-          expect(contained, isNotNull,
-              reason: 'fragment $ref with no contained resources');
-          expect(contained!.length, 1,
-              reason: 'fragment $ref resolves to no contained Immunization');
-          expect(contained.first.vaccineCode.coding, isNotNull,
-              reason: 'the contained Immunization must carry the vaccine code, '
-                  'which is the only place a CVX exists for an evaluation');
+          final contained = eval.contained?.whereType<Immunization>().where(
+            (i) => '#${i.id}' == ref,
+          );
+          expect(
+            contained,
+            isNotNull,
+            reason: 'fragment $ref with no contained resources',
+          );
+          expect(
+            contained!.length,
+            1,
+            reason: 'fragment $ref resolves to no contained Immunization',
+          );
+          expect(
+            contained.first.vaccineCode.coding,
+            isNotNull,
+            reason:
+                'the contained Immunization must carry the vaccine code, '
+                'which is the only place a CVX exists for an evaluation',
+          );
         } else {
-          expect(ref, contains('Immunization/'),
-              reason: 'immunizationEvent should reference an Immunization');
+          expect(
+            ref,
+            contains('Immunization/'),
+            reason: 'immunizationEvent should reference an Immunization',
+          );
         }
         expect(eval.doseStatus.coding, isNotNull);
         // First coding is CDSi-compatible, second is HL7 standard
-        final hl7DoseStatus = eval.doseStatus.coding!.where((c) =>
-            uriStr(c.system) ==
-            'http://terminology.hl7.org/CodeSystem/immunization-evaluation-dose-status');
-        expect(hl7DoseStatus, isNotEmpty,
-            reason: 'doseStatus should have HL7 standard coding');
+        final hl7DoseStatus = eval.doseStatus.coding!.where(
+          (c) =>
+              uriStr(c.system) ==
+              'http://terminology.hl7.org/CodeSystem/immunization-evaluation-dose-status',
+        );
+        expect(
+          hl7DoseStatus,
+          isNotEmpty,
+          reason: 'doseStatus should have HL7 standard coding',
+        );
       }
     });
 
     test('not-valid evaluations have doseStatusReason', () {
-      final evalParams = withDosesResponse.parameter!
-          .where((p) => p.name.valueString == 'evaluation')
-          .toList();
+      final evalParams =
+          withDosesResponse.parameter!
+              .where((p) => p.name.valueString == 'evaluation')
+              .toList();
 
       for (final ep in evalParams) {
-        final eval = ep.resource as ImmunizationEvaluation;
+        final eval = ep.resource! as ImmunizationEvaluation;
         final statusCode = codeStr(eval.doseStatus.coding?.first.code);
         if (statusCode == 'Not Valid' ||
             statusCode == 'Extraneous' ||
             statusCode == 'Sub standard') {
-          expect(eval.doseStatusReason, isNotNull,
-              reason: 'notvalid evaluation should have doseStatusReason');
+          expect(
+            eval.doseStatusReason,
+            isNotNull,
+            reason: 'notvalid evaluation should have doseStatusReason',
+          );
           expect(eval.doseStatusReason, isNotEmpty);
-          expect(uriStr(eval.doseStatusReason!.first.coding?.first.system),
-              'http://hl7.org/fhir/us/immds/CodeSystem/StatusReason');
+          expect(
+            uriStr(eval.doseStatusReason!.first.coding?.first.system),
+            'http://hl7.org/fhir/us/immds/CodeSystem/StatusReason',
+          );
         }
       }
     });
@@ -257,9 +329,11 @@ void main() {
 
   group('Code system mappings', () {
     test('forecastStatus has CDSi, HL7, and LOINC codings', () {
-      final rec = noDoseResponse.parameter!
-          .firstWhere((p) => p.name.valueString == 'recommendation')
-          .resource as ImmunizationRecommendation;
+      final rec =
+          noDoseResponse.parameter!
+                  .firstWhere((p) => p.name.valueString == 'recommendation')
+                  .resource!
+              as ImmunizationRecommendation;
 
       const cdsiSystem =
           'http://hl7.org/fhir/us/immds/CodeSystem/ForecastStatus';
@@ -280,7 +354,8 @@ void main() {
         'overdue',
         'immune',
         'contraindicated',
-        'seriescomplete', // 'complete' is retired in THO 2.0.0, read from its CodeSystem json
+        // 'complete' is retired in THO 2.0.0, read from its CodeSystem json
+        'seriescomplete',
         'agedout',
       };
       final loincCodes = {
@@ -298,69 +373,101 @@ void main() {
 
         // First coding should be CDSi-compatible
         final cdsiCoding = codings.where((c) => uriStr(c.system) == cdsiSystem);
-        expect(cdsiCoding, isNotEmpty,
-            reason: 'forecastStatus should have CDSi coding');
-        expect(cdsiCodes, contains(codeStr(cdsiCoding.first.code)),
-            reason: 'CDSi code "${codeStr(cdsiCoding.first.code)}" '
-                'not valid');
+        expect(
+          cdsiCoding,
+          isNotEmpty,
+          reason: 'forecastStatus should have CDSi coding',
+        );
+        expect(
+          cdsiCodes,
+          contains(codeStr(cdsiCoding.first.code)),
+          reason:
+              'CDSi code "${codeStr(cdsiCoding.first.code)}" '
+              'not valid',
+        );
 
         // Should have LOINC coding
-        final loincCoding =
-            codings.where((c) => uriStr(c.system) == 'http://loinc.org');
-        expect(loincCoding, isNotEmpty,
-            reason: 'forecastStatus should have LOINC coding');
-        expect(loincCodes, contains(codeStr(loincCoding.first.code)),
-            reason: 'LOINC code "${codeStr(loincCoding.first.code)}" '
-                'not in LL940-8');
+        final loincCoding = codings.where(
+          (c) => uriStr(c.system) == 'http://loinc.org',
+        );
+        expect(
+          loincCoding,
+          isNotEmpty,
+          reason: 'forecastStatus should have LOINC coding',
+        );
+        expect(
+          loincCodes,
+          contains(codeStr(loincCoding.first.code)),
+          reason:
+              'LOINC code "${codeStr(loincCoding.first.code)}" '
+              'not in LL940-8',
+        );
 
         // For statuses with an HL7 standard code, verify it
         final hl7Coding = codings.where((c) => uriStr(c.system) == hl7System);
         if (hl7Coding.isNotEmpty) {
-          expect(hl7Codes, contains(codeStr(hl7Coding.first.code)),
-              reason: 'HL7 code "${codeStr(hl7Coding.first.code)}" not valid');
+          expect(
+            hl7Codes,
+            contains(codeStr(hl7Coding.first.code)),
+            reason: 'HL7 code "${codeStr(hl7Coding.first.code)}" not valid',
+          );
         }
       }
     });
 
     test('targetDisease uses SNOMED CT system', () {
-      final rec = noDoseResponse.parameter!
-          .firstWhere((p) => p.name.valueString == 'recommendation')
-          .resource as ImmunizationRecommendation;
+      final rec =
+          noDoseResponse.parameter!
+                  .firstWhere((p) => p.name.valueString == 'recommendation')
+                  .resource!
+              as ImmunizationRecommendation;
 
       for (final r in rec.recommendation) {
         if (r.targetDisease?.coding != null &&
             r.targetDisease!.coding!.isNotEmpty) {
           for (final coding in r.targetDisease!.coding!) {
-            expect(uriStr(coding.system), 'http://snomed.info/sct',
-                reason: 'targetDisease should use SNOMED CT');
-            expect(coding.code, isNotNull,
-                reason: 'SNOMED coding should have a code');
+            expect(
+              uriStr(coding.system),
+              'http://snomed.info/sct',
+              reason: 'targetDisease should use SNOMED CT',
+            );
+            expect(
+              coding.code,
+              isNotNull,
+              reason: 'SNOMED coding should have a code',
+            );
           }
         }
       }
     });
 
     test('vaccineCode uses CVX system', () {
-      final rec = noDoseResponse.parameter!
-          .firstWhere((p) => p.name.valueString == 'recommendation')
-          .resource as ImmunizationRecommendation;
+      final rec =
+          noDoseResponse.parameter!
+                  .firstWhere((p) => p.name.valueString == 'recommendation')
+                  .resource!
+              as ImmunizationRecommendation;
 
       for (final r in rec.recommendation) {
         if (r.vaccineCode != null) {
           for (final vc in r.vaccineCode!) {
             expect(vc.coding, isNotNull);
             expect(
-                uriStr(vc.coding!.first.system), 'http://hl7.org/fhir/sid/cvx',
-                reason: 'vaccineCode should use CVX system');
+              uriStr(vc.coding!.first.system),
+              'http://hl7.org/fhir/sid/cvx',
+              reason: 'vaccineCode should use CVX system',
+            );
           }
         }
       }
     });
 
     test('dateCriterion uses LOINC codes', () {
-      final rec = noDoseResponse.parameter!
-          .firstWhere((p) => p.name.valueString == 'recommendation')
-          .resource as ImmunizationRecommendation;
+      final rec =
+          noDoseResponse.parameter!
+                  .firstWhere((p) => p.name.valueString == 'recommendation')
+                  .resource!
+              as ImmunizationRecommendation;
 
       final validLoincCodes = {'30981-5', '30980-7', '59778-1', '59777-3'};
 
@@ -369,13 +476,23 @@ void main() {
           for (final dc in r.dateCriterion!) {
             expect(dc.code.coding, isNotNull);
             final coding = dc.code.coding!.first;
-            expect(uriStr(coding.system), 'http://loinc.org',
-                reason: 'dateCriterion should use LOINC');
-            expect(validLoincCodes, contains(codeStr(coding.code)),
-                reason: 'dateCriterion LOINC code "${codeStr(coding.code)}" '
-                    'not valid');
-            expect(dc.value, isNotNull,
-                reason: 'dateCriterion must have a value');
+            expect(
+              uriStr(coding.system),
+              'http://loinc.org',
+              reason: 'dateCriterion should use LOINC',
+            );
+            expect(
+              validLoincCodes,
+              contains(codeStr(coding.code)),
+              reason:
+                  'dateCriterion LOINC code "${codeStr(coding.code)}" '
+                  'not valid',
+            );
+            expect(
+              dc.value,
+              isNotNull,
+              reason: 'dateCriterion must have a value',
+            );
           }
         }
       }
@@ -384,18 +501,26 @@ void main() {
 
   group('Sentinel date filtering', () {
     test('VaxDate.min() and VaxDate.max() are excluded from output', () {
-      final rec = noDoseResponse.parameter!
-          .firstWhere((p) => p.name.valueString == 'recommendation')
-          .resource as ImmunizationRecommendation;
+      final rec =
+          noDoseResponse.parameter!
+                  .firstWhere((p) => p.name.valueString == 'recommendation')
+                  .resource!
+              as ImmunizationRecommendation;
 
       for (final r in rec.recommendation) {
         if (r.dateCriterion != null) {
           for (final dc in r.dateCriterion!) {
             final dateStr = dc.value.toString();
-            expect(dateStr, isNot(contains('1900')),
-                reason: 'sentinel VaxDate.min() leaked into output');
-            expect(dateStr, isNot(contains('2999')),
-                reason: 'sentinel VaxDate.max() leaked into output');
+            expect(
+              dateStr,
+              isNot(contains('1900')),
+              reason: 'sentinel VaxDate.min() leaked into output',
+            );
+            expect(
+              dateStr,
+              isNot(contains('2999')),
+              reason: 'sentinel VaxDate.max() leaked into output',
+            );
           }
         }
       }
@@ -404,9 +529,11 @@ void main() {
 
   group('Vaccine group CVX mapping', () {
     test('all vaccine groups have a group-level CVX code first', () {
-      final rec = noDoseResponse.parameter!
-          .firstWhere((p) => p.name.valueString == 'recommendation')
-          .resource as ImmunizationRecommendation;
+      final rec =
+          noDoseResponse.parameter!
+                  .firstWhere((p) => p.name.valueString == 'recommendation')
+                  .resource!
+              as ImmunizationRecommendation;
 
       // The known group CVX codes from the _vaccineGroupCvx map
       // (CDC official: https://www2a.cdc.gov/vaccines/iis/iisstandards/vaccines.asp?rpt=vg)
@@ -441,10 +568,14 @@ void main() {
       for (final r in rec.recommendation) {
         if (r.vaccineCode != null && r.vaccineCode!.isNotEmpty) {
           final firstCode = codeStr(r.vaccineCode!.first.coding!.first.code);
-          expect(knownGroupCvx, contains(firstCode),
-              reason: 'First vaccineCode "$firstCode" for '
-                  '"${r.targetDisease?.text?.valueString}" '
-                  'should be a group-level CVX');
+          expect(
+            knownGroupCvx,
+            contains(firstCode),
+            reason:
+                'First vaccineCode "$firstCode" for '
+                '"${r.targetDisease?.text?.valueString}" '
+                'should be a group-level CVX',
+          );
         }
       }
     });
@@ -459,18 +590,21 @@ void main() {
 
       // Verify key structural elements survive
       expect(roundtripped.parameter, isNotNull);
-      final recParam = roundtripped.parameter!
-          .firstWhere((p) => p.name.valueString == 'recommendation');
+      final recParam = roundtripped.parameter!.firstWhere(
+        (p) => p.name.valueString == 'recommendation',
+      );
       expect(recParam.resource, isA<ImmunizationRecommendation>());
 
-      final rec = recParam.resource as ImmunizationRecommendation;
+      final rec = recParam.resource! as ImmunizationRecommendation;
       expect(
-          rec.recommendation.length,
-          (noDoseResponse.parameter!
-                  .firstWhere((p) => p.name.valueString == 'recommendation')
-                  .resource as ImmunizationRecommendation)
-              .recommendation
-              .length);
+        rec.recommendation.length,
+        (noDoseResponse.parameter!
+                    .firstWhere((p) => p.name.valueString == 'recommendation')
+                    .resource!
+                as ImmunizationRecommendation)
+            .recommendation
+            .length,
+      );
     });
   });
 
@@ -482,16 +616,15 @@ void main() {
     // once and R4 types doseStatusReason 0..*, so all of them belong there.
     test('every evaluation reason on a dose reaches doseStatusReason', () {
       final cases = _loadFirstN('test/healthyTestCases.ndjson', 300);
-      int multiReasonDosesChecked = 0;
+      var multiReasonDosesChecked = 0;
 
       for (final parameters in cases) {
-        final ForecastResult result = evaluateForForecast(parameters);
-        final Parameters response = buildImmdsResponse(result);
+        final result = evaluateForForecast(parameters);
+        final response = buildImmdsResponse(result);
 
         // Key on (dose, target disease): one dose of a multi-antigen product
         // produces an evaluation per antigen, and they share an id.
-        final Map<String, ImmunizationEvaluation> byDoseAndDisease =
-            <String, ImmunizationEvaluation>{};
+        final byDoseAndDisease = <String, ImmunizationEvaluation>{};
         for (final p in response.parameter ?? <ParametersParameter>[]) {
           if (p.name.valueString == 'evaluation' &&
               p.resource is ImmunizationEvaluation) {
@@ -507,25 +640,31 @@ void main() {
             // The same physical dose exists in every series of the group, with
             // its own evaluation state. buildImmdsResponse evaluates the
             // prioritized series, so compare against that one.
-            final series = group.prioritizedSeries.isNotEmpty
-                ? group.prioritizedSeries.first
-                : (group.series.isNotEmpty ? group.series.first : null);
+            final series =
+                group.prioritizedSeries.isNotEmpty
+                    ? group.prioritizedSeries.first
+                    : (group.series.isNotEmpty ? group.series.first : null);
             if (series != null) {
               for (final dose in series.doses) {
                 if (dose.evalStatus == null) continue;
-                final int expected = <EvalReason>{
-                  if (dose.evalReason != null) dose.evalReason!,
-                  ...dose.evalReasons,
-                }.length;
+                final expected =
+                    <EvalReason>{
+                      if (dose.evalReason != null) dose.evalReason!,
+                      ...dose.evalReasons,
+                    }.length;
                 if (expected <= 1) continue;
-                final e = byDoseAndDisease[
-                    'Immunization/${dose.doseId}|${antigen.targetDisease}'];
+                final e =
+                    byDoseAndDisease['Immunization/${dose.doseId}|${antigen.targetDisease}'];
                 if (e == null) continue;
                 multiReasonDosesChecked++;
-                expect(e.doseStatusReason?.length, expected,
-                    reason: 'dose ${dose.doseId} carries $expected evaluation '
-                        'reasons; the evaluation emitted '
-                        '${e.doseStatusReason?.length}');
+                expect(
+                  e.doseStatusReason?.length,
+                  expected,
+                  reason:
+                      'dose ${dose.doseId} carries $expected evaluation '
+                      'reasons; the evaluation emitted '
+                      '${e.doseStatusReason?.length}',
+                );
               }
             }
           }
@@ -534,45 +673,59 @@ void main() {
 
       // Without this the test passes vacuously if the corpus stops producing
       // multi-reason doses.
-      expect(multiReasonDosesChecked, greaterThan(0),
-          reason: 'no dose with more than one evaluation reason was checked, '
-              'so this test proved nothing');
+      expect(
+        multiReasonDosesChecked,
+        greaterThan(0),
+        reason:
+            'no dose with more than one evaluation reason was checked, '
+            'so this test proved nothing',
+      );
     });
 
     test('a forecast reason the engine set is emitted', () {
       final cases = _loadFirstN('test/healthyTestCases.ndjson', 300);
-      int checked = 0;
+      var checked = 0;
 
       for (final parameters in cases) {
-        final ForecastResult result = evaluateForForecast(parameters);
-        final Parameters response = buildImmdsResponse(result);
-        final rec = response.parameter!
-            .firstWhere((p) => p.name.valueString == 'recommendation')
-            .resource! as ImmunizationRecommendation;
+        final result = evaluateForForecast(parameters);
+        final response = buildImmdsResponse(result);
+        final rec =
+            response.parameter!
+                    .firstWhere((p) => p.name.valueString == 'recommendation')
+                    .resource!
+                as ImmunizationRecommendation;
 
         // Set-based, not counted: forecastReason is 0..* and a recommendation
         // can also carry the shared-decision qualifier, so a count comparison
         // would fail for a reason that is not a loss. What must hold is that
         // every reason the engine set appears somewhere in the response.
-        final Set<String> setByEngine = result.vaccineGroupForecasts.values
-            .expand((List<VaccineGroupForecast> l) => l)
-            .map((VaccineGroupForecast f) => f.forecastReason?.toString())
-            .whereType<String>()
-            .toSet();
-        final Set<String> emitted = rec.recommendation
-            .expand((r) => r.forecastReason ?? <CodeableConcept>[])
-            .map((CodeableConcept c) => c.text?.valueString)
-            .whereType<String>()
-            .toSet();
-        for (final String reason in setByEngine) {
-          expect(emitted, contains(reason),
-              reason: 'the engine set "$reason" and it was not emitted');
+        final setByEngine =
+            result.vaccineGroupForecasts.values
+                .expand((l) => l)
+                .map((f) => f.forecastReason?.toString())
+                .whereType<String>()
+                .toSet();
+        final emitted =
+            rec.recommendation
+                .expand((r) => r.forecastReason ?? <CodeableConcept>[])
+                .map((c) => c.text?.valueString)
+                .whereType<String>()
+                .toSet();
+        for (final reason in setByEngine) {
+          expect(
+            emitted,
+            contains(reason),
+            reason: 'the engine set "$reason" and it was not emitted',
+          );
         }
         checked += setByEngine.length;
       }
 
-      expect(checked, greaterThan(0),
-          reason: 'no forecast reason was checked, so this proved nothing');
+      expect(
+        checked,
+        greaterThan(0),
+        reason: 'no forecast reason was checked, so this proved nothing',
+      );
     });
   });
 
@@ -609,9 +762,11 @@ void main() {
         });
 
     List<String> reasonCodes(Parameters response, String group) {
-      final rec = response.parameter!
-          .firstWhere((p) => p.name.valueString == 'recommendation')
-          .resource! as ImmunizationRecommendation;
+      final rec =
+          response.parameter!
+                  .firstWhere((p) => p.name.valueString == 'recommendation')
+                  .resource!
+              as ImmunizationRecommendation;
       for (final r in rec.recommendation) {
         if (r.targetDisease?.text?.valueString != group) continue;
         return (r.forecastReason ?? <CodeableConcept>[])
@@ -626,42 +781,53 @@ void main() {
     // influenza series returns Complete after one dose, and without this a
     // consumer cannot tell that from complete for good, so a patient who had
     // this year's flu shot reads as permanently done.
-    test('a completed influenza series reports the ImmDS seasonalComplete code',
-        () {
-      final response = buildImmdsResponse(
-          evaluateForForecast(caseFor(dob: '1990-01-01', cvx: '141')));
-      expect(reasonCodes(response, 'Influenza'), contains('seasonalComplete'));
-    });
+    test(
+      'a completed influenza series reports the ImmDS seasonalComplete code',
+      () {
+        final response = buildImmdsResponse(
+          evaluateForForecast(caseFor(dob: '1990-01-01', cvx: '141')),
+        );
+        expect(
+          reasonCodes(response, 'Influenza'),
+          contains('seasonalComplete'),
+        );
+      },
+    );
 
     // The control: a non-seasonal series must NOT claim it.
     test('a completed HepA series does not', () {
       final response = buildImmdsResponse(
-          evaluateForForecast(caseFor(dob: '1990-01-01', cvx: '52')));
+        evaluateForForecast(caseFor(dob: '1990-01-01', cvx: '52')),
+      );
       expect(
-          reasonCodes(response, 'HepA'), isNot(contains('seasonalComplete')));
+        reasonCodes(response, 'HepA'),
+        isNot(contains('seasonalComplete')),
+      );
     });
   });
 
   group('shared clinical decision-making', () {
     Parameters noDoses(String dob) => Parameters.fromJson(<String, dynamic>{
-          'resourceType': 'Parameters',
-          'parameter': <Map<String, dynamic>>[
-            {'name': 'assessmentDate', 'valueDate': '2026-01-15'},
-            {
-              'name': 'patient',
-              'resource': {
-                'resourceType': 'Patient',
-                'id': '1',
-                'birthDate': dob,
-              },
-            },
-          ],
-        });
+      'resourceType': 'Parameters',
+      'parameter': <Map<String, dynamic>>[
+        {'name': 'assessmentDate', 'valueDate': '2026-01-15'},
+        {
+          'name': 'patient',
+          'resource': {
+            'resourceType': 'Patient',
+            'id': '1',
+            'birthDate': dob,
+          },
+        },
+      ],
+    });
 
     List<String> codesFor(Parameters response, String group) {
-      final rec = response.parameter!
-          .firstWhere((p) => p.name.valueString == 'recommendation')
-          .resource! as ImmunizationRecommendation;
+      final rec =
+          response.parameter!
+                  .firstWhere((p) => p.name.valueString == 'recommendation')
+                  .resource!
+              as ImmunizationRecommendation;
       return rec.recommendation
           .where((r) => r.targetDisease?.text?.valueString == group)
           .expand((r) => r.forecastReason ?? <CodeableConcept>[])
@@ -675,20 +841,26 @@ void main() {
     // alert cannot tell it from a routine gap and reports the patient overdue
     // for a conversation.
     test('a 17-year-old MenB forecast carries the shared-decision code', () {
-      final response =
-          buildImmdsResponse(evaluateForForecast(noDoses('2008-06-01')));
-      expect(codesFor(response, 'Meningococcal B'),
-          contains('shared-clinical-decision-making'));
+      final response = buildImmdsResponse(
+        evaluateForForecast(noDoses('2008-06-01')),
+      );
+      expect(
+        codesFor(response, 'Meningococcal B'),
+        contains('shared-clinical-decision-making'),
+      );
     });
 
     // The control: a 13-year-old is in HPV's routine range, so the code must
     // not appear. This also proves the guidance prose, which mentions SCDM on
     // every HPV series, is not what is being read.
     test('a 13-year-old HPV forecast does not', () {
-      final response =
-          buildImmdsResponse(evaluateForForecast(noDoses('2012-06-01')));
-      expect(codesFor(response, 'HPV'),
-          isNot(contains('shared-clinical-decision-making')));
+      final response = buildImmdsResponse(
+        evaluateForForecast(noDoses('2012-06-01')),
+      );
+      expect(
+        codesFor(response, 'HPV'),
+        isNot(contains('shared-clinical-decision-making')),
+      );
     });
 
     // CDC's own guidance, structured: "Shared clinical decision-making (SCDM)
@@ -696,75 +868,84 @@ void main() {
     // persons 27-45 years of age." Routine below 27, so the flag is scoped to
     // the band rather than set on the series.
     test('a 30-year-old HPV forecast does', () {
-      final response =
-          buildImmdsResponse(evaluateForForecast(noDoses('1995-06-01')));
-      expect(codesFor(response, 'HPV'),
-          contains('shared-clinical-decision-making'));
+      final response = buildImmdsResponse(
+        evaluateForForecast(noDoses('1995-06-01')),
+      );
+      expect(
+        codesFor(response, 'HPV'),
+        contains('shared-clinical-decision-making'),
+      );
     });
 
     // The upper edge: 46 is outside the band.
     test('a 46-year-old HPV forecast does not', () {
-      final response =
-          buildImmdsResponse(evaluateForForecast(noDoses('1979-06-01')));
-      expect(codesFor(response, 'HPV'),
-          isNot(contains('shared-clinical-decision-making')));
+      final response = buildImmdsResponse(
+        evaluateForForecast(noDoses('1979-06-01')),
+      );
+      expect(
+        codesFor(response, 'HPV'),
+        isNot(contains('shared-clinical-decision-making')),
+      );
     });
   });
 
   group('impossible dose dates', () {
-    Parameters withDose(
-            {required String dob,
-            required String given,
-            String assessment = '2026-01-15'}) =>
-        Parameters.fromJson(<String, dynamic>{
-          'resourceType': 'Parameters',
-          'parameter': <Map<String, dynamic>>[
-            {'name': 'assessmentDate', 'valueDate': assessment},
-            {
-              'name': 'patient',
-              'resource': {
-                'resourceType': 'Patient',
-                'id': '1',
-                'birthDate': dob,
-              },
+    Parameters withDose({
+      required String dob,
+      required String given,
+      String assessment = '2026-01-15',
+    }) => Parameters.fromJson(<String, dynamic>{
+      'resourceType': 'Parameters',
+      'parameter': <Map<String, dynamic>>[
+        {'name': 'assessmentDate', 'valueDate': assessment},
+        {
+          'name': 'patient',
+          'resource': {
+            'resourceType': 'Patient',
+            'id': '1',
+            'birthDate': dob,
+          },
+        },
+        {
+          'name': 'immunization',
+          'resource': {
+            'resourceType': 'Immunization',
+            'id': '1',
+            'status': 'completed',
+            'vaccineCode': {
+              'coding': [
+                {'code': '52'},
+              ],
             },
-            {
-              'name': 'immunization',
-              'resource': {
-                'resourceType': 'Immunization',
-                'id': '1',
-                'status': 'completed',
-                'vaccineCode': {
-                  'coding': [
-                    {'code': '52'},
-                  ],
-                },
-                'patient': {'reference': 'Patient/1'},
-                'occurrenceDateTime': given,
-              },
-            },
-          ],
-        });
+            'patient': {'reference': 'Patient/1'},
+            'occurrenceDateTime': given,
+          },
+        },
+      ],
+    });
 
-    List<String> outcomeCodes(Parameters response) => response.parameter!
-        .where((p) => p.name.valueString == 'outcome')
-        .map((p) => p.resource! as OperationOutcome)
-        .expand((o) => o.issue)
-        .expand((i) => i.details?.coding ?? <Coding>[])
-        .map((c) => c.code?.toString() ?? '')
-        .toList();
+    List<String> outcomeCodes(Parameters response) =>
+        response.parameter!
+            .where((p) => p.name.valueString == 'outcome')
+            .map((p) => p.resource! as OperationOutcome)
+            .expand((o) => o.issue)
+            .expand((i) => i.details?.coding ?? <Coding>[])
+            .map((c) => c.code?.toString() ?? '')
+            .toList();
 
-    int evaluationCount(Parameters response) => response.parameter!
-        .where((p) => p.name.valueString == 'evaluation')
-        .length;
+    int evaluationCount(Parameters response) =>
+        response.parameter!
+            .where((p) => p.name.valueString == 'evaluation')
+            .length;
 
     // CDSi evaluates a "vaccine dose administered". A dose dated before birth
     // was not administered to this patient, so it cannot be evaluated. Before
     // this it came back Not Valid, Too Young, which reads as a schedule
     // problem and points a clinician at repeating the injection.
     test('a dose before the date of birth is reported, not evaluated', () {
-      final response = buildImmdsResponse(evaluateForForecast(
-          withDose(dob: '2025-01-01', given: '2024-06-01')));
+      final response = buildImmdsResponse(
+        evaluateForForecast(withDose(dob: '2025-01-01', given: '2024-06-01')),
+      );
       expect(outcomeCodes(response), contains('dose-before-birth'));
       expect(evaluationCount(response), 0);
     });
@@ -775,96 +956,111 @@ void main() {
     // filter on doses. CDC healthy cases 2026-0043, -0050, -0052 and -0060
     // expect such a dose Valid. It is evaluated, and the response notes it.
     test('a dose after the assessment date is evaluated, and noted', () {
-      final response = buildImmdsResponse(evaluateForForecast(
-          withDose(dob: '2020-01-01', given: '2027-09-01')));
+      final response = buildImmdsResponse(
+        evaluateForForecast(withDose(dob: '2020-01-01', given: '2027-09-01')),
+      );
       expect(outcomeCodes(response), contains('dose-after-assessment'));
       expect(evaluationCount(response), greaterThan(0));
-      final severities = response.parameter!
-          .where((p) => p.name.valueString == 'outcome')
-          .map((p) => p.resource! as OperationOutcome)
-          .expand((o) => o.issue)
-          .where((i) =>
-              i.details?.coding
-                  ?.any((c) => c.code?.toString() == 'dose-after-assessment') ??
-              false)
-          .map((i) => i.severity)
-          .toList();
+      final severities =
+          response.parameter!
+              .where((p) => p.name.valueString == 'outcome')
+              .map((p) => p.resource! as OperationOutcome)
+              .expand((o) => o.issue)
+              .where(
+                (i) =>
+                    i.details?.coding?.any(
+                      (c) => c.code?.toString() == 'dose-after-assessment',
+                    ) ??
+                    false,
+              )
+              .map((i) => i.severity)
+              .toList();
       expect(severities, <IssueSeverity>[IssueSeverity.information]);
     });
 
     // The control: an ordinary dose is evaluated and raises nothing.
     test('a dose between those two is evaluated and raises no outcome', () {
-      final response = buildImmdsResponse(evaluateForForecast(
-          withDose(dob: '2020-01-01', given: '2025-06-01')));
+      final response = buildImmdsResponse(
+        evaluateForForecast(withDose(dob: '2020-01-01', given: '2025-06-01')),
+      );
       expect(outcomeCodes(response), isEmpty);
       expect(evaluationCount(response), greaterThan(0));
     });
   });
 
   group('same-day duplicate', () {
-    Parameters twoDoses(String cvx1, String cvx2,
-            {String dob = '2020-01-01', String given = '2025-06-01'}) =>
-        Parameters.fromJson(<String, dynamic>{
-          'resourceType': 'Parameters',
-          'parameter': <Map<String, dynamic>>[
-            {'name': 'assessmentDate', 'valueDate': '2026-01-15'},
-            {
-              'name': 'patient',
-              'resource': {
-                'resourceType': 'Patient',
-                'id': '1',
-                'birthDate': dob,
+    Parameters twoDoses(
+      String cvx1,
+      String cvx2, {
+      String dob = '2020-01-01',
+      String given = '2025-06-01',
+    }) => Parameters.fromJson(<String, dynamic>{
+      'resourceType': 'Parameters',
+      'parameter': <Map<String, dynamic>>[
+        {'name': 'assessmentDate', 'valueDate': '2026-01-15'},
+        {
+          'name': 'patient',
+          'resource': {
+            'resourceType': 'Patient',
+            'id': '1',
+            'birthDate': dob,
+          },
+        },
+        for (final MapEntry<int, String> e
+            in <String>[cvx1, cvx2].asMap().entries)
+          {
+            'name': 'immunization',
+            'resource': {
+              'resourceType': 'Immunization',
+              'id': '${e.key + 1}',
+              'status': 'completed',
+              'vaccineCode': {
+                'coding': [
+                  {'code': e.value},
+                ],
               },
+              'patient': {'reference': 'Patient/1'},
+              'occurrenceDateTime': given,
             },
-            for (final MapEntry<int, String> e
-                in <String>[cvx1, cvx2].asMap().entries)
-              {
-                'name': 'immunization',
-                'resource': {
-                  'resourceType': 'Immunization',
-                  'id': '${e.key + 1}',
-                  'status': 'completed',
-                  'vaccineCode': {
-                    'coding': [
-                      {'code': e.value},
-                    ],
-                  },
-                  'patient': {'reference': 'Patient/1'},
-                  'occurrenceDateTime': given,
-                },
-              },
-          ],
-        });
+          },
+      ],
+    });
 
-    List<String> codes(Parameters response) => response.parameter!
-        .where((p) => p.name.valueString == 'outcome')
-        .map((p) => p.resource! as OperationOutcome)
-        .expand((o) => o.issue)
-        .expand((i) => i.details?.coding ?? <Coding>[])
-        .map((c) => c.code?.toString() ?? '')
-        .toList();
+    List<String> codes(Parameters response) =>
+        response.parameter!
+            .where((p) => p.name.valueString == 'outcome')
+            .map((p) => p.resource! as OperationOutcome)
+            .expand((o) => o.issue)
+            .expand((i) => i.details?.coding ?? <Coding>[])
+            .map((c) => c.code?.toString() ?? '')
+            .toList();
 
     // The same product twice on one day.
     test('two identical doses on one day are reported', () {
       expect(
-          codes(buildImmdsResponse(evaluateForForecast(twoDoses('52', '52')))),
-          contains('duplicate-same-day'));
+        codes(buildImmdsResponse(evaluateForForecast(twoDoses('52', '52')))),
+        contains('duplicate-same-day'),
+      );
     });
 
     // The case that actually happens: Pediarix and Pentacel are different CVX
     // codes that both carry diphtheria, tetanus, pertussis and polio, so a
     // check comparing products would see nothing.
     test('Pediarix and Pentacel on one day are reported', () {
-      final List<String> found = codes(buildImmdsResponse(
-          evaluateForForecast(twoDoses('110', '120', dob: '2025-01-01'))));
+      final found = codes(
+        buildImmdsResponse(
+          evaluateForForecast(twoDoses('110', '120', dob: '2025-01-01')),
+        ),
+      );
       expect(found, contains('duplicate-same-day'));
     });
 
     // The control: two vaccines sharing no antigen are not a duplicate.
     test('two unrelated vaccines on one day are not', () {
       expect(
-          codes(buildImmdsResponse(evaluateForForecast(twoDoses('52', '21')))),
-          isNot(contains('duplicate-same-day')));
+        codes(buildImmdsResponse(evaluateForForecast(twoDoses('52', '21')))),
+        isNot(contains('duplicate-same-day')),
+      );
     });
   });
 
@@ -890,9 +1086,9 @@ void main() {
         },
       });
       return observationsFromConditions(
-              <Condition>[condition], VaxDate(2020, 1, 1))
-          .map((VaxObservation o) => o.observationCode ?? '')
-          .toList();
+        <Condition>[condition],
+        VaxDate(2020, 1, 1),
+      ).map((o) => o.observationCode ?? '').toList();
     }
 
     // 16360009 Delta beta thalassemia is a descendant of 40108008 Thalassemia,
@@ -903,10 +1099,12 @@ void main() {
 
     // 44218004 Implantation of cochlear electrode is a descendant of
     // 359612003, which CDSi codes to observation 011, cochlear implants.
-    test('a specific cochlear implantation matches the implant observation',
-        () {
-      expect(observationCodesFor('44218004'), contains('011'));
-    });
+    test(
+      'a specific cochlear implantation matches the implant observation',
+      () {
+        expect(observationCodesFor('44218004'), contains('011'));
+      },
+    );
 
     // The listed concept itself must still match, by the exact path.
     test('the listed concept itself still matches', () {
@@ -1009,10 +1207,12 @@ void main() {
       return false;
     }
 
-    test('a pregnant patient recorded as male still gets the Tdap risk series',
-        () {
-      expect(pertussisRiskSelected('male'), isTrue);
-    });
+    test(
+      'a pregnant patient recorded as male still gets the Tdap risk series',
+      () {
+        expect(pertussisRiskSelected('male'), isTrue);
+      },
+    );
 
     test('a pregnant patient recorded as female gets it too', () {
       expect(pertussisRiskSelected('female'), isTrue);

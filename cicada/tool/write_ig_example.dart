@@ -28,15 +28,17 @@ const String profile =
     'http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/cicada-immunization-recommendation';
 
 void main(List<String> args) {
-  final outPath = args.isNotEmpty
-      ? args.first
-      : '../cicada_ig/input/resources/ImmunizationRecommendation-$exampleId.json';
+  final outPath =
+      args.isNotEmpty
+          ? args.first
+          : '../cicada_ig/input/resources/ImmunizationRecommendation-$exampleId.json';
 
-  final line = File('test/conditionTestCases.ndjson')
-      .readAsLinesSync()
-      .firstWhere((l) => l.contains('"$caseId"'));
+  final line = File(
+    'test/conditionTestCases.ndjson',
+  ).readAsLinesSync().firstWhere((l) => l.contains('"$caseId"'));
   final decoded = jsonDecode(line) as Map<String, dynamic>;
-  // Same normalisation the test suite applies: CDC rows omit Immunization.status.
+  // Same normalisation the test suite applies: CDC rows omit
+  // Immunization.status.
   for (final p in decoded['parameter'] as List<dynamic>) {
     final param = p as Map<String, dynamic>;
     final resource = param['resource'] as Map<String, dynamic>?;
@@ -49,9 +51,11 @@ void main(List<String> args) {
 
   final result = evaluateForForecast(Parameters.fromJson(decoded));
   final response = buildImmdsResponse(result);
-  final rec = response.parameter!
-      .firstWhere((p) => p.name.valueString == 'recommendation')
-      .resource! as ImmunizationRecommendation;
+  final rec =
+      response.parameter!
+              .firstWhere((p) => p.name.valueString == 'recommendation')
+              .resource!
+          as ImmunizationRecommendation;
 
   final out = rec.copyWith(
     id: exampleId.toFhirString,
@@ -60,14 +64,17 @@ void main(List<String> args) {
   );
   final json = const JsonEncoder.withIndent('  ').convert(out.toJson());
   File(outPath).writeAsStringSync('$json\n');
-  stdout.writeln('wrote ${out.recommendation.length} recommendations to $outPath');
+  stdout.writeln(
+    'wrote ${out.recommendation.length} recommendations to $outPath',
+  );
   if (args.isNotEmpty) return;
 
   const sd = 'http://fhirfli.dev/fhir/ig/cicada/StructureDefinition';
-  final dir = '../cicada_ig/input/resources';
+  const dir = '../cicada_ig/input/resources';
   void write(String name, Map<String, dynamic> j) {
-    File('$dir/$name.json').writeAsStringSync(
-        '${const JsonEncoder.withIndent('  ').convert(j)}\n');
+    File(
+      '$dir/$name.json',
+    ).writeAsStringSync('${const JsonEncoder.withIndent('  ').convert(j)}\n');
     stdout.writeln('wrote $name');
   }
 
@@ -77,14 +84,18 @@ void main(List<String> args) {
     if (r == null) continue;
     switch (r['resourceType']) {
       case 'Patient':
-        r['meta'] = {'profile': ['$sd/vax-patient']};
+        r['meta'] = {
+          'profile': ['$sd/vax-patient'],
+        };
         write('Patient-${r['id']}', r);
       case 'Immunization':
         // CDC's ids carry an underscore, which the FHIR id pattern
         // [A-Za-z0-9\-\.]{1,64} does not allow; the evaluations below refer
         // to the renamed id.
         r['id'] = (r['id'] as String).replaceAll('_', '-');
-        r['meta'] = {'profile': ['$sd/vax-dose']};
+        r['meta'] = {
+          'profile': ['$sd/vax-dose'],
+        };
         write('Immunization-${r['id']}', r);
       case 'Condition':
         final codings = (r['code'] as Map)['coding'] as List;
@@ -98,7 +109,9 @@ void main(List<String> args) {
           }
         }
         r['id'] = '2016-UC-0032-${code['code']}';
-        r['meta'] = {'profile': ['$sd/VaccineConditionFhir']};
+        r['meta'] = {
+          'profile': ['$sd/VaccineConditionFhir'],
+        };
         r['subject'] = {'reference': 'Patient/2016-UC-0032'};
         write('Condition-${r['id']}', r);
     }

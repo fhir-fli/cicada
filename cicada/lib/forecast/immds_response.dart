@@ -1,6 +1,5 @@
+import 'package:cicada/cicada.dart';
 import 'package:fhir_r4/fhir_r4.dart';
-
-import '../cicada.dart';
 
 /// CDC official vaccine group CVX codes.
 ///
@@ -62,7 +61,7 @@ const _diseaseSnomed = <String, (String, String)>{
   // editions, checked 2026-09-07 for all 29 codes here; it was the only one.
   'Diphtheria': (
     '397430003',
-    'Diphtheria caused by Corynebacterium diphtheriae'
+    'Diphtheria caused by Corynebacterium diphtheriae',
   ),
   'Pertussis': ('27836007', 'Pertussis'),
   'Tetanus': ('76902006', 'Tetanus'),
@@ -77,7 +76,7 @@ const _diseaseSnomed = <String, (String, String)>{
   'Meningococcal B': (
     '1354584007',
     'Meningococcal infectious disease caused by Neisseria meningitidis '
-        'serogroup B'
+        'serogroup B',
   ),
   'Measles': ('14189004', 'Measles'),
   'Mumps': ('36989005', 'Mumps'),
@@ -104,15 +103,21 @@ const _diseaseSnomed = <String, (String, String)>{
 /// antigens from CVX, so we name the system we already relied on. Fills a blank
 /// only; never rewrites a system the caller supplied.
 Immunization _withCvxSystem(Immunization immunization) => immunization.copyWith(
-      vaccineCode: CodeableConcept(
-        text: immunization.vaccineCode.text,
-        coding: immunization.vaccineCode.coding
-            ?.map((Coding c) => c.system == null
-                ? c.copyWith(system: 'http://hl7.org/fhir/sid/cvx'.toFhirUri)
-                : c)
+  vaccineCode: CodeableConcept(
+    text: immunization.vaccineCode.text,
+    coding:
+        immunization.vaccineCode.coding
+            ?.map(
+              (c) =>
+                  c.system == null
+                      ? c.copyWith(
+                        system: 'http://hl7.org/fhir/sid/cvx'.toFhirUri,
+                      )
+                      : c,
+            )
             .toList(),
-      ),
-    );
+  ),
+);
 
 /// Converts a [ForecastResult] into a FHIR [Parameters] resource conforming
 /// to the ImmDS IG `$immds-forecast` operation output.
@@ -121,7 +126,7 @@ Immunization _withCvxSystem(Immunization immunization) => immunization.copyWith(
 ///   - `evaluation` (0..*): [ImmunizationEvaluation] per dose per antigen
 ///   - `recommendation` (1..1): [ImmunizationRecommendation] with forecast
 Parameters buildImmdsResponse(ForecastResult result) {
-  final List<ParametersParameter> outParams = [];
+  final outParams = <ParametersParameter>[];
 
   // Echo each administered Immunization back as a top-level parameter.
   //
@@ -134,7 +139,7 @@ Parameters buildImmdsResponse(ForecastResult result) {
   //
   // The parameter name mirrors the input parameter (`immunization`), since the
   // operation defines no output name to use.
-  for (final Immunization immunization in result.patient.immunizations) {
+  for (final immunization in result.patient.immunizations) {
     if (immunization.id == null) continue;
     // A caller may send vaccineCode as a bare code with no system; FITS does.
     // R4 gives ImmunizationEvaluation no vaccineCode, so a reader wanting the
@@ -142,37 +147,45 @@ Parameters buildImmdsResponse(ForecastResult result) {
     // cannot be recognised as CVX. We resolved this dose's antigens from CVX,
     // so name the system we already relied on. Fills a blank only; never
     // rewrites a system the caller supplied.
-    outParams.add(ParametersParameter(
-      name: 'immunization'.toFhirString,
-      resource: _withCvxSystem(immunization),
-    ));
+    outParams.add(
+      ParametersParameter(
+        name: 'immunization'.toFhirString,
+        resource: _withCvxSystem(immunization),
+      ),
+    );
   }
 
   // Build ImmunizationEvaluation resources (one per evaluated dose per series)
   final evaluations = _buildEvaluations(result);
   for (final eval in evaluations) {
-    outParams.add(ParametersParameter(
-      name: 'evaluation'.toFhirString,
-      resource: eval,
-    ));
+    outParams.add(
+      ParametersParameter(
+        name: 'evaluation'.toFhirString,
+        resource: eval,
+      ),
+    );
   }
 
   // Doses whose dates cannot describe an administration, reported rather than
   // dropped.
-  final OperationOutcome? outcome = _implausibleDoseOutcome(result);
+  final outcome = _implausibleDoseOutcome(result);
   if (outcome != null) {
-    outParams.add(ParametersParameter(
-      name: 'outcome'.toFhirString,
-      resource: outcome,
-    ));
+    outParams.add(
+      ParametersParameter(
+        name: 'outcome'.toFhirString,
+        resource: outcome,
+      ),
+    );
   }
 
   // Build ImmunizationRecommendation resource (one per patient)
   final recommendation = _buildRecommendation(result);
-  outParams.add(ParametersParameter(
-    name: 'recommendation'.toFhirString,
-    resource: recommendation,
-  ));
+  outParams.add(
+    ParametersParameter(
+      name: 'recommendation'.toFhirString,
+      resource: recommendation,
+    ),
+  );
 
   return Parameters(parameter: outParams);
 }
@@ -187,56 +200,58 @@ Parameters buildImmdsResponse(ForecastResult result) {
 /// are saying the record cannot be read as an administration. The Immunization
 /// itself still travels back in its own parameter, so nothing is dropped.
 OperationOutcome? _implausibleDoseOutcome(ForecastResult result) {
-  final List<ImplausibleDose> bad = result.patient.implausibleDoses;
-  final List<OperationOutcomeIssue> issues = <OperationOutcomeIssue>[
+  final bad = result.patient.implausibleDoses;
+  final issues = <OperationOutcomeIssue>[
     ..._sameDayIssues(result),
     ..._afterAssessmentIssues(result),
   ];
   if (bad.isEmpty && issues.isEmpty) return null;
 
-  final VaxDate dob = result.patient.birthdate;
+  final dob = result.patient.birthdate;
 
-  issues.addAll(bad.map((ImplausibleDose entry) {
-    final (String code, String detail) = switch (entry.reason) {
-      ImplausibleDoseReason.beforeBirth => (
+  issues.addAll(
+    bad.map((entry) {
+      final (String code, String detail) = switch (entry.reason) {
+        ImplausibleDoseReason.beforeBirth => (
           'dose-before-birth',
           'Immunization/${entry.dose.doseId} is dated '
               '${entry.dose.dateGiven}, before the patient date of birth '
               '$dob. It was not evaluated. Check the birth date, the '
               'administration date, and that the record belongs to this '
-              'patient.'
+              'patient.',
         ),
-    };
-    // Shape taken from the published R4 examples, diffed both directions:
-    // operationoutcome-example.json, -validationfail, -searchfail, -allok,
-    // -exception and -break-the-glass. Every one carries the human sentence
-    // in `details.text`, and break-the-glass carries a coding beside it, so
-    // the code and the sentence travel together there. `diagnostics` in
-    // their examples holds a technical location, not the message, so it is
-    // left empty. `expression` points at the element at fault, as
-    // -validationfail and -searchfail do.
-    return OperationOutcomeIssue(
-      severity: IssueSeverity.warning,
-      // `value` is defined "An element or header value is invalid."
-      // (issue-type CodeSystem, R4B valuesets.json, read 2026-09-21). The
-      // older note here said fhir_r4 0.9.0 lacked `business-rule`; 0.12.0,
-      // which this package resolves, has IssueType.businessRule. Which of
-      // the two fits a dose before birth is not re-decided here.
-      code: IssueType.value_,
-      details: CodeableConcept(
-        coding: <Coding>[
-          Coding(
-            system: '$_cicadaCs/data-integrity'.toFhirUri,
-            code: code.toFhirCode,
-          ),
+      };
+      // Shape taken from the published R4 examples, diffed both directions:
+      // operationoutcome-example.json, -validationfail, -searchfail, -allok,
+      // -exception and -break-the-glass. Every one carries the human sentence
+      // in `details.text`, and break-the-glass carries a coding beside it, so
+      // the code and the sentence travel together there. `diagnostics` in
+      // their examples holds a technical location, not the message, so it is
+      // left empty. `expression` points at the element at fault, as
+      // -validationfail and -searchfail do.
+      return OperationOutcomeIssue(
+        severity: IssueSeverity.warning,
+        // `value` is defined "An element or header value is invalid."
+        // (issue-type CodeSystem, R4B valuesets.json, read 2026-09-21). The
+        // older note here said fhir_r4 0.9.0 lacked `business-rule`; 0.12.0,
+        // which this package resolves, has IssueType.businessRule. Which of
+        // the two fits a dose before birth is not re-decided here.
+        code: IssueType.value_,
+        details: CodeableConcept(
+          coding: <Coding>[
+            Coding(
+              system: '$_cicadaCs/data-integrity'.toFhirUri,
+              code: code.toFhirCode,
+            ),
+          ],
+          text: detail.toFhirString,
+        ),
+        expression: <FhirString>[
+          _immunizationPath(entry.dose.doseId),
         ],
-        text: detail.toFhirString,
-      ),
-      expression: <FhirString>[
-        _immunizationPath(entry.dose.doseId),
-      ],
-    );
-  }));
+      );
+    }),
+  );
 
   return OperationOutcome(issue: issues);
 }
@@ -253,26 +268,29 @@ OperationOutcome? _implausibleDoseOutcome(ForecastResult result) {
 /// Severity `information` with code `informational`, as the published R4
 /// example operationoutcome-example-allok.json pairs them.
 List<OperationOutcomeIssue> _afterAssessmentIssues(ForecastResult result) {
-  final VaxDate assessment = result.patient.assessmentDate;
+  final assessment = result.patient.assessmentDate;
   return result.patient.dosesAfterAssessment
-      .map((VaxDose dose) => OperationOutcomeIssue(
-            severity: IssueSeverity.information,
-            code: IssueType.informational,
-            details: CodeableConcept(
-              coding: <Coding>[
-                Coding(
-                  system: '$_cicadaCs/data-integrity'.toFhirUri,
-                  code: 'dose-after-assessment'.toFhirCode,
-                ),
-              ],
-              text: ('Immunization/${dose.doseId} is dated ${dose.dateGiven}, '
-                      'after the assessment date $assessment. It was '
-                      'evaluated and counted. Check both dates if this was '
-                      'not intended.')
-                  .toFhirString,
-            ),
-            expression: <FhirString>[_immunizationPath(dose.doseId)],
-          ))
+      .map(
+        (dose) => OperationOutcomeIssue(
+          severity: IssueSeverity.information,
+          code: IssueType.informational,
+          details: CodeableConcept(
+            coding: <Coding>[
+              Coding(
+                system: '$_cicadaCs/data-integrity'.toFhirUri,
+                code: 'dose-after-assessment'.toFhirCode,
+              ),
+            ],
+            text:
+                'Immunization/${dose.doseId} is dated ${dose.dateGiven}, '
+                        'after the assessment date $assessment. It was '
+                        'evaluated and counted. Check both dates if this was '
+                        'not intended.'
+                    .toFhirString,
+          ),
+          expression: <FhirString>[_immunizationPath(dose.doseId)],
+        ),
+      )
       .toList();
 }
 
@@ -296,49 +314,58 @@ FhirString _immunizationPath(String doseId) =>
 /// happens on a ward. The engine already evaluates per antigen, so the two
 /// doses sit side by side there.
 List<OperationOutcomeIssue> _sameDayIssues(ForecastResult result) {
-  final List<OperationOutcomeIssue> issues = <OperationOutcomeIssue>[];
+  final issues = <OperationOutcomeIssue>[];
 
-  for (final VaxAntigen antigen in result.agMap.values) {
+  for (final antigen in result.agMap.values) {
     // One series per antigen is enough: every series of a group holds the same
     // administered doses, so reading them all would report each clash twice.
-    final VaxSeries? series = antigen.groups.values
-        .expand((VaxGroup g) =>
-            g.prioritizedSeries.isNotEmpty ? g.prioritizedSeries : g.series)
-        .firstOrNull;
+    final series =
+        antigen.groups.values
+            .expand(
+              (g) =>
+                  g.prioritizedSeries.isNotEmpty
+                      ? g.prioritizedSeries
+                      : g.series,
+            )
+            .firstOrNull;
     if (series == null) continue;
 
-    final Map<String, List<VaxDose>> byDate = <String, List<VaxDose>>{};
-    for (final VaxDose dose in series.doses) {
+    final byDate = <String, List<VaxDose>>{};
+    for (final dose in series.doses) {
       if (dose.evalStatus == null) continue;
       (byDate['${dose.dateGiven}'] ??= <VaxDose>[]).add(dose);
     }
 
-    for (final MapEntry<String, List<VaxDose>> day in byDate.entries) {
+    for (final day in byDate.entries) {
       if (day.value.length < 2) continue;
-      final String ids = day.value.map((VaxDose d) => d.doseId).join(', ');
-      final String cvxs =
-          day.value.map((VaxDose d) => 'CVX ${d.cvx}').toSet().join(' and ');
-      issues.add(OperationOutcomeIssue(
-        severity: IssueSeverity.warning,
-        code: IssueType.duplicate,
-        details: CodeableConcept(
-          coding: <Coding>[
-            Coding(
-              system: '$_cicadaCs/data-integrity'.toFhirUri,
-              code: 'duplicate-same-day'.toFhirCode,
-            ),
-          ],
-          text: '${day.value.length} doses covering ${antigen.targetDisease} '
-                  'were administered on ${day.key}: $ids, $cvxs. Each is '
-                  'evaluated on its own merits. If these are one injection '
-                  'recorded twice, or one product recorded alongside a '
-                  'combination containing it, the duplicate should be removed '
-                  'rather than the patient revaccinated.'
-              .toFhirString,
+      final ids = day.value.map((d) => d.doseId).join(', ');
+      final cvxs = day.value.map((d) => 'CVX ${d.cvx}').toSet().join(' and ');
+      issues.add(
+        OperationOutcomeIssue(
+          severity: IssueSeverity.warning,
+          code: IssueType.duplicate,
+          details: CodeableConcept(
+            coding: <Coding>[
+              Coding(
+                system: '$_cicadaCs/data-integrity'.toFhirUri,
+                code: 'duplicate-same-day'.toFhirCode,
+              ),
+            ],
+            text:
+                '${day.value.length} doses covering ${antigen.targetDisease} '
+                        'were administered on ${day.key}: $ids, $cvxs. Each is '
+                        'evaluated on its own merits. If these are one '
+                        'injection '
+                        'recorded twice, or one product recorded alongside a '
+                        'combination containing it, the duplicate should be '
+                        'removed '
+                        'rather than the patient revaccinated.'
+                    .toFhirString,
+          ),
+          expression:
+              day.value.map((d) => _immunizationPath(d.doseId)).toList(),
         ),
-        expression:
-            day.value.map((VaxDose d) => _immunizationPath(d.doseId)).toList(),
-      ));
+      );
     }
   }
   return issues;
@@ -351,7 +378,7 @@ List<OperationOutcomeIssue> _sameDayIssues(ForecastResult result) {
 /// administered dose per vaccine group (multi-antigen groups like MMR would
 /// otherwise produce duplicate evaluations for Measles, Mumps, Rubella).
 List<ImmunizationEvaluation> _buildEvaluations(ForecastResult result) {
-  final List<ImmunizationEvaluation> evaluations = [];
+  final evaluations = <ImmunizationEvaluation>[];
   final patientRef =
       'Patient/${result.patient.patient.id ?? 'unknown'}'.toFhirString;
   final seen = <String>{};
@@ -359,9 +386,10 @@ List<ImmunizationEvaluation> _buildEvaluations(ForecastResult result) {
   for (final antigen in result.agMap.values) {
     for (final group in antigen.groups.values) {
       // Use the best/prioritized series for evaluations
-      final series = group.prioritizedSeries.isNotEmpty
-          ? group.prioritizedSeries.first
-          : (group.series.isNotEmpty ? group.series.first : null);
+      final series =
+          group.prioritizedSeries.isNotEmpty
+              ? group.prioritizedSeries.first
+              : (group.series.isNotEmpty ? group.series.first : null);
       if (series == null) continue;
 
       for (final dose in series.doses) {
@@ -389,83 +417,96 @@ List<ImmunizationEvaluation> _buildEvaluations(ForecastResult result) {
         if (seen.contains(key)) continue;
         seen.add(key);
 
-        evaluations.add(ImmunizationEvaluation(
-          // The ImmDS example carries an id and a profile claim; we carried
-          // neither. A consumer that indexes resources by id had nothing to
-          // index. The id is derived from the dose so it is stable per dose.
-          // Unique per (dose, disease): one dose evaluated against several
-          // antigens produces several evaluations, and they shared this id.
-          id: 'eval-${dose.doseId}-${_idToken(antigen.targetDisease)}'
-              .toFhirString,
-          meta: FhirMeta(profile: <FhirCanonical>[
-            'http://hl7.org/fhir/us/immds/StructureDefinition/immds-immunizationevaluation'
-                .toFhirCanonical,
-          ]),
-          status: ImmunizationEvaluationStatusCodes.completed,
-          patient: Reference(reference: patientRef),
-          // R4: "The date the evaluation of the vaccine administration event
-          // was performed" — the assessment date, not the date of the dose.
-          // The ImmDS example agrees: date 2020-05-26 against an immunization
-          // that occurred 2020-04-28.
-          //
-          // Measured against NIST FITS 1.4.6: FITS only builds an evaluation
-          // candidate when this field equals the dose's administration date.
-          // We ran it both ways. Under the dose date every event produced a
-          // `[CHECKING AGAINST]` line; under the assessment date events with
-          // doses before it produced none. But the candidate FITS then builds
-          // carries no vaccine either way, so it matches nothing and the score
-          // is 0% under both. The deviation buys nothing, so we send what the
-          // specification and the published example say.
-          date: result.patient.assessmentDate.toFhirDateTime(),
-          targetDisease: _evalTargetDisease(antigen.targetDisease),
-          // Literal reference, as all four R4 ImmunizationEvaluation examples
-          // use (`Immunization/example`); none uses a fragment. The
-          // Immunization it names travels back as its own top-level
-          // `immunization` parameter, so the reference resolves within the
-          // response.
-          //
-          // A contained Immunization reached by `#fragment` was tried against
-          // NIST FITS 1.4.6 with the date filter satisfied, so the candidate
-          // was genuinely built, and the candidate's vaccine was still null.
-          // Neither route reaches FITS, so we send the example's form.
-          immunizationEvent: Reference(
-            reference: 'Immunization/${dose.doseId}'.toFhirString,
+        evaluations.add(
+          ImmunizationEvaluation(
+            // The ImmDS example carries an id and a profile claim; we carried
+            // neither. A consumer that indexes resources by id had nothing to
+            // index. The id is derived from the dose so it is stable per dose.
+            // Unique per (dose, disease): one dose evaluated against several
+            // antigens produces several evaluations, and they shared this id.
+            id:
+                'eval-${dose.doseId}-${_idToken(antigen.targetDisease)}'
+                    .toFhirString,
+            meta: FhirMeta(
+              profile: <FhirCanonical>[
+                'http://hl7.org/fhir/us/immds/StructureDefinition/immds-immunizationevaluation'
+                    .toFhirCanonical,
+              ],
+            ),
+            status: ImmunizationEvaluationStatusCodes.completed,
+            patient: Reference(reference: patientRef),
+            // R4: "The date the evaluation of the vaccine administration event
+            // was performed" — the assessment date, not the date of the dose.
+            // The ImmDS example agrees: date 2020-05-26 against an immunization
+            // that occurred 2020-04-28.
+            //
+            // Measured against NIST FITS 1.4.6: FITS only builds an evaluation
+            // candidate when this field equals the dose's administration date.
+            // We ran it both ways. Under the dose date every event produced a
+            // `[CHECKING AGAINST]` line; under the assessment date events with
+            // doses before it produced none. But the candidate FITS then builds
+            // carries no vaccine either way, so it matches nothing and the
+            // score
+            // is 0% under both. The deviation buys nothing, so we send what the
+            // specification and the published example say.
+            date: result.patient.assessmentDate.toFhirDateTime(),
+            targetDisease: _evalTargetDisease(antigen.targetDisease),
+            // Literal reference, as all four R4 ImmunizationEvaluation examples
+            // use (`Immunization/example`); none uses a fragment. The
+            // Immunization it names travels back as its own top-level
+            // `immunization` parameter, so the reference resolves within the
+            // response.
+            //
+            // A contained Immunization reached by `#fragment` was tried against
+            // NIST FITS 1.4.6 with the date filter satisfied, so the candidate
+            // was genuinely built, and the candidate's vaccine was still null.
+            // Neither route reaches FITS, so we send the example's form.
+            immunizationEvent: Reference(
+              reference: 'Immunization/${dose.doseId}'.toFhirString,
+            ),
+            doseStatus: _mapDoseStatus(dose.evalStatus!),
+            // R4 types doseStatusReason 0..*, and CDSi Table 6-31 can set
+            // several reasons on one dose. VaxDose.evalReasons is the full set
+            // the evaluation worked out, and the suites assert against it; we
+            // used to emit only the singular evalReason, so the caller saw one
+            // of them. Send all of them, primary first.
+            doseStatusReason: () {
+              final reasons = <EvalReason>[
+                if (dose.evalReason != null) dose.evalReason!,
+                ...dose.evalReasons.where(
+                  (r) => r != dose.evalReason,
+                ),
+              ];
+              return reasons.isEmpty
+                  ? null
+                  : reasons.map(_mapDoseStatusReason).toList();
+            }(),
+            series: series.series.seriesName?.toFhirString,
+            doseNumberPositiveInt:
+                dose.targetDoseSatisfied >= 0
+                    ? (dose.targetDoseSatisfied + 1).toFhirPositiveInt
+                    : null,
+            // seriesDoses[x] is a count. The ImmDS example uses
+            // seriesDosesPositiveInt; we were sending seriesDosesString, a
+            // different choice element, so a reader looking for the integer
+            // found nothing. positiveInt cannot be 0, so omit when there are
+            // no doses defined.
+            seriesDosesPositiveInt:
+                (series.series.seriesDose?.length ?? 0) > 0
+                    ? series.series.seriesDose!.length.toFhirPositiveInt
+                    : null,
+            extension_:
+                <FhirExtension?>[
+                  _versionExt(),
+                  if (series.evaluatedTargetDose[dose.targetDoseSatisfied] !=
+                      null)
+                    _targetDoseStatusExt(
+                      series.evaluatedTargetDose[dose.targetDoseSatisfied]!,
+                    ),
+                  _evaluationDetailExt(dose),
+                ].whereType<FhirExtension>().toList(),
           ),
-          doseStatus: _mapDoseStatus(dose.evalStatus!),
-          // R4 types doseStatusReason 0..*, and CDSi Table 6-31 can set
-          // several reasons on one dose. VaxDose.evalReasons is the full set
-          // the evaluation worked out, and the suites assert against it; we
-          // used to emit only the singular evalReason, so the caller saw one
-          // of them. Send all of them, primary first.
-          doseStatusReason: () {
-            final List<EvalReason> reasons = <EvalReason>[
-              if (dose.evalReason != null) dose.evalReason!,
-              ...dose.evalReasons.where((EvalReason r) => r != dose.evalReason),
-            ];
-            return reasons.isEmpty
-                ? null
-                : reasons.map(_mapDoseStatusReason).toList();
-          }(),
-          series: series.series.seriesName?.toFhirString,
-          doseNumberPositiveInt: dose.targetDoseSatisfied >= 0
-              ? (dose.targetDoseSatisfied + 1).toFhirPositiveInt
-              : null,
-          // seriesDoses[x] is a count. The ImmDS example uses
-          // seriesDosesPositiveInt; we were sending seriesDosesString, a
-          // different choice element, so a reader looking for the integer
-          // found nothing. positiveInt cannot be 0, so omit when there are
-          // no doses defined.
-          seriesDosesPositiveInt: (series.series.seriesDose?.length ?? 0) > 0
-              ? series.series.seriesDose!.length.toFhirPositiveInt
-              : null,
-          extension_: <FhirExtension?>[
-            _versionExt(),
-            if (series.evaluatedTargetDose[dose.targetDoseSatisfied] != null)
-              _targetDoseStatusExt(
-                  series.evaluatedTargetDose[dose.targetDoseSatisfied]!),
-            _evaluationDetailExt(dose),
-          ].whereType<FhirExtension>().toList(),
-        ));
+        );
       }
     }
   }
@@ -485,7 +526,7 @@ String _idToken(String name) => name
 /// CDC's description (if any) as the text. A code the CVX release does not
 /// carry keeps the description as its display, so nothing is lost.
 CodeableConcept _cvxConcept(String cvx, String? description) {
-  final String? display = cvxDisplays[cvx] ?? description;
+  final display = cvxDisplays[cvx] ?? description;
   return CodeableConcept(
     coding: [
       Coding(
@@ -506,10 +547,11 @@ FhirExtension? _recommendationCategoryExt(VaxSeries s, VaxPatient patient) {
   final antigen = activeAntigenMap[s.targetDisease];
   final seriesName = s.series.seriesName;
   if (antigen == null || seriesName == null) return null;
-  final codes = (patient.observations.observation ?? const <VaxObservation>[])
-      .map((o) => o.observationCode)
-      .whereType<String>()
-      .toSet();
+  final codes =
+      (patient.observations.observation ?? const <VaxObservation>[])
+          .map((o) => o.observationCode)
+          .whereType<String>()
+          .toSet();
   final r = determineVaccineRecommendationCategory(
     antigen: antigen,
     seriesName: seriesName,
@@ -539,15 +581,17 @@ FhirExtension? _recommendationCategoryExt(VaxSeries s, VaxPatient patient) {
       ),
       FhirExtension(
         url: 'category'.toFhirString,
-        valueCodeableConcept: CodeableConcept(coding: [
-          Coding(
-            system:
-                'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-recommendation-category'
-                    .toFhirUri,
-            code: code.toFhirCode,
-            display: r.category.toFhirString,
-          ),
-        ]),
+        valueCodeableConcept: CodeableConcept(
+          coding: [
+            Coding(
+              system:
+                  'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-recommendation-category'
+                      .toFhirUri,
+              code: code.toFhirCode,
+              display: r.category.toFhirString,
+            ),
+          ],
+        ),
       ),
       for (final url in r.material)
         FhirExtension(
@@ -576,7 +620,7 @@ FhirExtension? _recommendationCategoryExt(VaxSeries s, VaxPatient patient) {
 /// CVX now travels on the contained Immunization, which is the only element
 /// R4 gives it, so there is nothing left for a CVX to do here.
 CodeableConcept _evalTargetDisease(String targetDisease) {
-  final List<Coding> codings = [];
+  final codings = <Coding>[];
   final snomed = _diseaseSnomed[targetDisease];
   // No CVX here. R4 defines this as the vaccine preventable DISEASE, and
   // both the R4 and ImmDS bindings are SNOMED disease concepts with no CVX
@@ -585,11 +629,13 @@ CodeableConcept _evalTargetDisease(String targetDisease) {
   // it changed no FITS result, so a vaccine code in a disease element is all
   // it bought.
   if (snomed != null) {
-    codings.add(Coding(
-      system: 'http://snomed.info/sct'.toFhirUri,
-      code: snomed.$1.toFhirCode,
-      display: snomed.$2.toFhirString,
-    ));
+    codings.add(
+      Coding(
+        system: 'http://snomed.info/sct'.toFhirUri,
+        code: snomed.$1.toFhirCode,
+        display: snomed.$2.toFhirString,
+      ),
+    );
   }
   return CodeableConcept(
     coding: codings.isNotEmpty ? codings : null,
@@ -605,89 +651,109 @@ ImmunizationRecommendation _buildRecommendation(ForecastResult result) {
   final assessmentDate = result.patient.assessmentDate;
   // VaxDate extends DateTime, so completed years is the year difference less
   // one when the birthday has not come round yet in the assessment year.
-  final VaxDate dob = result.patient.birthdate;
-  final int ageInYears = assessmentDate.year -
+  final dob = result.patient.birthdate;
+  final ageInYears =
+      assessmentDate.year -
       dob.year -
       ((assessmentDate.month < dob.month ||
               (assessmentDate.month == dob.month &&
                   assessmentDate.day < dob.day))
           ? 1
           : 0);
-  final List<ImmunizationRecommendationRecommendation> recommendations = [];
+  final recommendations = <ImmunizationRecommendationRecommendation>[];
 
   // A vaccine group can carry more than one forecast: FORECASTVG-1 scopes a
   // forecast to a series group, and a group may hold both a standard and a risk
   // series group. Each becomes its own recommendation.
-  for (final vgf in result.vaccineGroupForecasts.values
-      .expand((List<VaccineGroupForecast> l) => l)) {
-    final List<ImmunizationRecommendationDateCriterion> dateCriteria = [];
+  for (final vgf in result.vaccineGroupForecasts.values.expand(
+    (l) => l,
+  )) {
+    final dateCriteria = <ImmunizationRecommendationDateCriterion>[];
 
     // Earliest date (LOINC 30981-5)
     if (vgf.earliestDate != null && !_isSentinel(vgf.earliestDate!)) {
-      dateCriteria.add(ImmunizationRecommendationDateCriterion(
-        code: CodeableConcept(coding: [
-          Coding(
-            system: 'http://loinc.org'.toFhirUri,
-            code: '30981-5'.toFhirCode,
-            display: 'Earliest date to give'.toFhirString,
+      dateCriteria.add(
+        ImmunizationRecommendationDateCriterion(
+          code: CodeableConcept(
+            coding: [
+              Coding(
+                system: 'http://loinc.org'.toFhirUri,
+                code: '30981-5'.toFhirCode,
+                display: 'Earliest date to give'.toFhirString,
+              ),
+            ],
           ),
-        ]),
-        value: vgf.earliestDate!.toFhirDateTime(),
-      ));
+          value: vgf.earliestDate!.toFhirDateTime(),
+        ),
+      );
     }
 
     // Recommended date (LOINC 30980-7)
     if (vgf.recommendedDate != null && !_isSentinel(vgf.recommendedDate!)) {
-      dateCriteria.add(ImmunizationRecommendationDateCriterion(
-        code: CodeableConcept(coding: [
-          Coding(
-            system: 'http://loinc.org'.toFhirUri,
-            code: '30980-7'.toFhirCode,
-            display: 'Date vaccine due'.toFhirString,
+      dateCriteria.add(
+        ImmunizationRecommendationDateCriterion(
+          code: CodeableConcept(
+            coding: [
+              Coding(
+                system: 'http://loinc.org'.toFhirUri,
+                code: '30980-7'.toFhirCode,
+                display: 'Date vaccine due'.toFhirString,
+              ),
+            ],
           ),
-        ]),
-        value: vgf.recommendedDate!.toFhirDateTime(),
-      ));
+          value: vgf.recommendedDate!.toFhirDateTime(),
+        ),
+      );
     }
 
     // Past due date (LOINC 59778-1)
     if (vgf.pastDueDate != null && !_isSentinel(vgf.pastDueDate!)) {
-      dateCriteria.add(ImmunizationRecommendationDateCriterion(
-        code: CodeableConcept(coding: [
-          Coding(
-            system: 'http://loinc.org'.toFhirUri,
-            code: '59778-1'.toFhirCode,
-            display: 'Date when overdue for immunization'.toFhirString,
+      dateCriteria.add(
+        ImmunizationRecommendationDateCriterion(
+          code: CodeableConcept(
+            coding: [
+              Coding(
+                system: 'http://loinc.org'.toFhirUri,
+                code: '59778-1'.toFhirCode,
+                display: 'Date when overdue for immunization'.toFhirString,
+              ),
+            ],
           ),
-        ]),
-        value: vgf.pastDueDate!.toFhirDateTime(),
-      ));
+          value: vgf.pastDueDate!.toFhirDateTime(),
+        ),
+      );
     }
 
     // Latest date (LOINC 59777-3)
     if (vgf.latestDate != null && !_isSentinel(vgf.latestDate!)) {
-      dateCriteria.add(ImmunizationRecommendationDateCriterion(
-        code: CodeableConcept(coding: [
-          Coding(
-            system: 'http://loinc.org'.toFhirUri,
-            code: '59777-3'.toFhirCode,
-            display: 'Latest date to give immunization'.toFhirString,
+      dateCriteria.add(
+        ImmunizationRecommendationDateCriterion(
+          code: CodeableConcept(
+            coding: [
+              Coding(
+                system: 'http://loinc.org'.toFhirUri,
+                code: '59777-3'.toFhirCode,
+                display: 'Latest date to give immunization'.toFhirString,
+              ),
+            ],
           ),
-        ]),
-        value: vgf.latestDate!.toFhirDateTime(),
-      ));
+          value: vgf.latestDate!.toFhirDateTime(),
+        ),
+      );
     }
 
     // Build targetDisease with SNOMED coding for each antigen in the group
-    final List<Coding> diseaseCodings = [];
+    final diseaseCodings = <Coding>[];
     for (final antigenName in vgf.antigenNames) {
       final snomed = _diseaseSnomed[antigenName];
       if (snomed != null) {
-        diseaseCodings.add(Coding(
-          system: 'http://snomed.info/sct'.toFhirUri,
-          code: snomed.$1.toFhirCode,
-          display: snomed.$2.toFhirString,
-        ));
+        diseaseCodings.add(
+          Coding(
+            system: 'http://snomed.info/sct'.toFhirUri,
+            code: snomed.$1.toFhirCode,
+            display: snomed.$2.toFhirString,
+          ),
+        );
       }
     }
 
@@ -700,17 +766,18 @@ ImmunizationRecommendation _buildRecommendation(ForecastResult result) {
     // (generated_files/cvx_displays.dart); the IG publisher validates it and
     // reports anything else as "Wrong Display Name". CDC's short product name
     // ("PCV15") and the hand-written group name go in CodeableConcept.text.
-    final List<CodeableConcept> vaccineCodeList = [];
+    final vaccineCodeList = <CodeableConcept>[];
     final groupCvx = _vaccineGroupCvx[vgf.vaccineGroupName];
     if (groupCvx != null) {
       vaccineCodeList.add(_cvxConcept(groupCvx.$1, groupCvx.$2));
     }
-    for (int i = 0; i < vgf.forecastCvxCodes.length; i++) {
-      final String cvx = vgf.forecastCvxCodes[i];
+    for (var i = 0; i < vgf.forecastCvxCodes.length; i++) {
+      final cvx = vgf.forecastCvxCodes[i];
       if (groupCvx != null && cvx == groupCvx.$1) continue;
-      final String? description = i < vgf.forecastVaccineDescriptions.length
-          ? vgf.forecastVaccineDescriptions[i]
-          : null;
+      final description =
+          i < vgf.forecastVaccineDescriptions.length
+              ? vgf.forecastVaccineDescriptions[i]
+              : null;
       vaccineCodeList.add(_cvxConcept(cvx, description));
     }
 
@@ -718,137 +785,157 @@ ImmunizationRecommendation _buildRecommendation(ForecastResult result) {
     // these products because a vaccine contraindication applied to this
     // patient; saying which ones is the difference between "contraindicated"
     // and a clinician knowing what not to give.
-    final List<CodeableConcept> contraindicatedList = vgf
-        .contraindicatedCvxCodes
-        .map((String cvx) => _cvxConcept(cvx, null))
-        .toList();
+    final contraindicatedList =
+        vgf.contraindicatedCvxCodes
+            .map((cvx) => _cvxConcept(cvx, null))
+            .toList();
 
     // Determine due vs overdue for Not Complete status
-    final isOverdue = vgf.status == SeriesStatus.notComplete &&
+    final isOverdue =
+        vgf.status == SeriesStatus.notComplete &&
         vgf.pastDueDate != null &&
         !_isSentinel(vgf.pastDueDate!) &&
         assessmentDate.isAfter(vgf.pastDueDate!);
 
-    recommendations.add(ImmunizationRecommendationRecommendation(
-      targetDisease: CodeableConcept(
-        coding: diseaseCodings.isNotEmpty ? diseaseCodings : null,
-        text: vgf.vaccineGroupName.toFhirString,
-      ),
-      vaccineCode: vaccineCodeList.isNotEmpty ? vaccineCodeList : null,
-      contraindicatedVaccineCode:
-          contraindicatedList.isNotEmpty ? contraindicatedList : null,
-      forecastStatus: _mapForecastStatus(vgf.status, isOverdue: isOverdue),
-      // Why the engine forecast this. The reason was computed on the series
-      // and thrown away, so a reader saw "Not Complete, due <date>" with no
-      // statement of why, and "Immune" with no statement of what made the
-      // patient immune.
-      // 0..*, so the series' own reason and the shared-decision qualifier can
-      // both travel: a series can be Not Complete AND recommended only by
-      // shared clinical decision-making.
-      forecastReason: () {
-        final List<CodeableConcept> reasons = <CodeableConcept>[
-          if (vgf.forecastReason != null)
-            _mapForecastReason(vgf.forecastReason!),
-          if (_isSharedDecisionSeries(vgf, ageInYears))
-            _mapForecastReason(ForecastReason.sharedClinicalDecisionMaking),
-        ];
-        return reasons.isEmpty ? null : reasons;
-      }(),
-      dateCriterion: dateCriteria.isNotEmpty ? dateCriteria : null,
-      // 🛑 doseNumberString, deliberately, do not "fix" this to positiveInt.
-      //
-      // R4 types this element `doseNumber[x] : positiveInt|string`, so BOTH
-      // are conformant, and HL7's examples are explicitly "not a normative
-      // part of the specification". Switching to doseNumberPositiveInt was
-      // measured against NIST FITS as the ONLY change in a run: every
-      // criterion went from scoring to 0%, including Series Status and the
-      // dates, so FITS stops reading the recommendation entirely. Reverting it
-      // alone restored the scores.
-      doseNumberString: vgf.status == SeriesStatus.notComplete
-          ? vgf.doseNumber?.toString().toFhirString
-          : null,
-      // description is 0..1 and unbound. The CDSi supporting data carries
-      // administrative guidance per series, which the engine accumulated and
-      // never sent. It is written for the person giving the vaccine, so it
-      // leads; the antigen list follows it.
-      description: () {
-        final List<String> parts = <String>[
-          if (vgf.administrativeGuidance != null &&
-              vgf.administrativeGuidance!.isNotEmpty)
-            vgf.administrativeGuidance!,
-          if (vgf.antigenNames.length > 1)
-            'Antigens: ${vgf.antigenNames.join(", ")}',
-        ];
-        return parts.isEmpty ? null : parts.join('\n').toFhirString;
-      }(),
-      // The series group this forecast is scoped to (CDSi FORECASTVG-1).
-      // Core element: "One possible path to achieve presumed immunity against
-      // a disease - within the context of an authority."
-      // Only when there genuinely is one series. A multi-antigen group blends
-      // several, and `series` is 0..1 and means a path to immunity, not a
-      // category — the series GROUP name does not belong here. The coded
-      // standard/risk distinction is carried by the extension below instead.
-      series: vgf.seriesName?.toFhirString,
-      // The patient information that made this series apply: the Condition or
-      // Observation carrying the risk indication (CDSi Table 5-4). "Patient
-      // Information that supports the status and recommendation."
-      supportingPatientInformation: vgf.supportingReferences.isEmpty
-          ? null
-          : vgf.supportingReferences
-              .map((SupportingResource r) => Reference(
-                    reference: r.reference?.toFhirString,
-                    display: r.display?.toFhirString,
-                  ))
-              .toList(),
-      // Which pathway this recommendation describes. A vaccine group can yield
-      // both a standard and a risk recommendation for the same target disease,
-      // and nothing in core FHIR or the US ImmDS IG distinguishes them.
-      extension_: <FhirExtension?>[
-        _versionExt(),
-        _dosesRemainingExt(vgf),
-        // The series group this forecast is scoped to (FORECASTVG-1). `series`
-        // 0..1 already names the series; core FHIR has nowhere for the group,
-        // and it was computed and dropped.
-        if (vgf.seriesGroupName != null)
-          FhirExtension(
-            url:
-                'http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/series-group-ext'
-                    .toFhirString,
-            valueString: vgf.seriesGroupName!.toFhirString,
-          ),
-        // Which antigens in this group actually need the dose. A multi-antigen
-        // group forecasts as one recommendation, so without this the caller
-        // cannot tell whether all of MMR is due or only the measles component.
-        for (final String antigenName in vgf.antigensNeedingDose)
-          FhirExtension(
-            url:
-                'http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/antigen-needing-dose-ext'
-                    .toFhirString,
-            valueString: antigenName.toFhirString,
-          ),
-        for (final VaxSeries s in vgf.contributingSeries) _seriesDetailExt(s),
-        // CDC's vaccine recommendation category (Routine, High-Risk, SCDM),
-        // decided per Best Patient Series after the forecast, from the
-        // "Vaccine Recommendation Category" worksheet new in 4.65. One
-        // extension per contributing series that has a category; a series
-        // that is not Not Complete, or matches no row, has none.
-        for (final VaxSeries s in vgf.contributingSeries)
-          _recommendationCategoryExt(s, result.patient),
-        FhirExtension(
-          url:
-              'http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/series-type-ext'
-                  .toFhirString,
-          valueCodeableConcept: CodeableConcept(coding: [
-            Coding(
-              system: 'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/series-type'
-                  .toFhirUri,
-              code: (vgf.isRiskForecast ? 'risk' : 'standard').toFhirCode,
-              display: (vgf.isRiskForecast ? 'Risk' : 'Standard').toFhirString,
-            ),
-          ]),
+    recommendations.add(
+      ImmunizationRecommendationRecommendation(
+        targetDisease: CodeableConcept(
+          coding: diseaseCodings.isNotEmpty ? diseaseCodings : null,
+          text: vgf.vaccineGroupName.toFhirString,
         ),
-      ].whereType<FhirExtension>().toList(),
-    ));
+        vaccineCode: vaccineCodeList.isNotEmpty ? vaccineCodeList : null,
+        contraindicatedVaccineCode:
+            contraindicatedList.isNotEmpty ? contraindicatedList : null,
+        forecastStatus: _mapForecastStatus(vgf.status, isOverdue: isOverdue),
+        // Why the engine forecast this. The reason was computed on the series
+        // and thrown away, so a reader saw "Not Complete, due <date>" with no
+        // statement of why, and "Immune" with no statement of what made the
+        // patient immune.
+        // 0..*, so the series' own reason and the shared-decision qualifier can
+        // both travel: a series can be Not Complete AND recommended only by
+        // shared clinical decision-making.
+        forecastReason: () {
+          final reasons = <CodeableConcept>[
+            if (vgf.forecastReason != null)
+              _mapForecastReason(vgf.forecastReason!),
+            if (_isSharedDecisionSeries(vgf, ageInYears))
+              _mapForecastReason(ForecastReason.sharedClinicalDecisionMaking),
+          ];
+          return reasons.isEmpty ? null : reasons;
+        }(),
+        dateCriterion: dateCriteria.isNotEmpty ? dateCriteria : null,
+        // 🛑 doseNumberString, deliberately, do not "fix" this to positiveInt.
+        //
+        // R4 types this element `doseNumber[x] : positiveInt|string`, so BOTH
+        // are conformant, and HL7's examples are explicitly "not a normative
+        // part of the specification". Switching to doseNumberPositiveInt was
+        // measured against NIST FITS as the ONLY change in a run: every
+        // criterion went from scoring to 0%, including Series Status and the
+        // dates, so FITS stops reading the recommendation entirely. Reverting
+        // it
+        // alone restored the scores.
+        doseNumberString:
+            vgf.status == SeriesStatus.notComplete
+                ? vgf.doseNumber?.toString().toFhirString
+                : null,
+        // description is 0..1 and unbound. The CDSi supporting data carries
+        // administrative guidance per series, which the engine accumulated and
+        // never sent. It is written for the person giving the vaccine, so it
+        // leads; the antigen list follows it.
+        description: () {
+          final parts = <String>[
+            if (vgf.administrativeGuidance != null &&
+                vgf.administrativeGuidance!.isNotEmpty)
+              vgf.administrativeGuidance!,
+            if (vgf.antigenNames.length > 1)
+              'Antigens: ${vgf.antigenNames.join(", ")}',
+          ];
+          return parts.isEmpty ? null : parts.join('\n').toFhirString;
+        }(),
+        // The series group this forecast is scoped to (CDSi FORECASTVG-1).
+        // Core element: "One possible path to achieve presumed immunity against
+        // a disease - within the context of an authority."
+        // Only when there genuinely is one series. A multi-antigen group blends
+        // several, and `series` is 0..1 and means a path to immunity, not a
+        // category — the series GROUP name does not belong here. The coded
+        // standard/risk distinction is carried by the extension below instead.
+        series: vgf.seriesName?.toFhirString,
+        // The patient information that made this series apply: the Condition or
+        // Observation carrying the risk indication (CDSi Table 5-4). "Patient
+        // Information that supports the status and recommendation."
+        supportingPatientInformation:
+            vgf.supportingReferences.isEmpty
+                ? null
+                : vgf.supportingReferences
+                    .map(
+                      (r) => Reference(
+                        reference: r.reference?.toFhirString,
+                        display: r.display?.toFhirString,
+                      ),
+                    )
+                    .toList(),
+        // Which pathway this recommendation describes. A vaccine group can
+        // yield both a standard and a risk recommendation for the same target
+        // disease,
+        // and nothing in core FHIR or the US ImmDS IG distinguishes them.
+        extension_:
+            <FhirExtension?>[
+              _versionExt(),
+              _dosesRemainingExt(vgf),
+              // The series group this forecast is scoped to (FORECASTVG-1).
+              // `series` 0..1 already names the series; core FHIR has nowhere
+              // for the group,
+              // and it was computed and dropped.
+              if (vgf.seriesGroupName != null)
+                FhirExtension(
+                  url:
+                      'http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/series-group-ext'
+                          .toFhirString,
+                  valueString: vgf.seriesGroupName!.toFhirString,
+                ),
+              // Which antigens in this group actually need the dose. A
+              // multi-antigen group forecasts as one recommendation, so without
+              // this the caller cannot tell whether all of MMR is due or only
+              // the measles component.
+              for (final String antigenName in vgf.antigensNeedingDose)
+                FhirExtension(
+                  url:
+                      'http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/antigen-needing-dose-ext'
+                          .toFhirString,
+                  valueString: antigenName.toFhirString,
+                ),
+              for (final VaxSeries s in vgf.contributingSeries)
+                _seriesDetailExt(s),
+              // CDC's vaccine recommendation category (Routine, High-Risk,
+              // SCDM),
+              // decided per Best Patient Series after the forecast, from the
+              // "Vaccine Recommendation Category" worksheet new in 4.65. One
+              // extension per contributing series that has a category; a series
+              // that is not Not Complete, or matches no row, has none.
+              for (final VaxSeries s in vgf.contributingSeries)
+                _recommendationCategoryExt(s, result.patient),
+              FhirExtension(
+                url:
+                    'http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/series-type-ext'
+                        .toFhirString,
+                valueCodeableConcept: CodeableConcept(
+                  coding: [
+                    Coding(
+                      system:
+                          'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/series-type'
+                              .toFhirUri,
+                      code:
+                          (vgf.isRiskForecast ? 'risk' : 'standard').toFhirCode,
+                      display:
+                          (vgf.isRiskForecast ? 'Risk' : 'Standard')
+                              .toFhirString,
+                    ),
+                  ],
+                ),
+              ),
+            ].whereType<FhirExtension>().toList(),
+      ),
+    );
   }
 
   return ImmunizationRecommendation(
@@ -874,10 +961,10 @@ CodeableConcept _mapDoseStatus(EvalStatus status) {
   const cicadaSystem =
       'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/EvalStatus';
 
-  final String hl7Code = status == EvalStatus.valid ? 'valid' : 'notvalid';
-  final String hl7Display = status == EvalStatus.valid ? 'Valid' : 'Not Valid';
+  final hl7Code = status == EvalStatus.valid ? 'valid' : 'notvalid';
+  final hl7Display = status == EvalStatus.valid ? 'Valid' : 'Not Valid';
 
-  final List<Coding> codings = [
+  final codings = <Coding>[
     Coding(
       system: hl7System.toFhirUri,
       code: hl7Code.toFhirCode,
@@ -887,11 +974,13 @@ CodeableConcept _mapDoseStatus(EvalStatus status) {
 
   // Add Cicada-specific code for extraneous (no standard equivalent)
   if (status == EvalStatus.extraneous) {
-    codings.add(Coding(
-      system: cicadaSystem.toFhirUri,
-      code: 'extraneous'.toFhirCode,
-      display: 'Extraneous'.toFhirString,
-    ));
+    codings.add(
+      Coding(
+        system: cicadaSystem.toFhirUri,
+        code: 'extraneous'.toFhirCode,
+        display: 'Extraneous'.toFhirString,
+      ),
+    );
   }
 
   return CodeableConcept(coding: codings);
@@ -909,9 +998,9 @@ CodeableConcept _mapDoseStatusReason(EvalReason reason) {
     EvalReason.ageTooYoung => ('tooyoung', 'Too Young'),
     EvalReason.inadvertentVaccine => ('inappropriate', 'Inappropriate Vaccine'),
     EvalReason.notPreferableOrAllowable => (
-        'inappropriate',
-        'Not a Preferable or Allowable Vaccine'
-      ),
+      'inappropriate',
+      'Not a Preferable or Allowable Vaccine',
+    ),
     EvalReason.notRecommendedVolume => ('quantity', 'Quantity'),
     EvalReason.partialDose => ('quantity', 'Partial Dose'),
     EvalReason.coldChainBreak => ('storage', 'Cold Chain Break'),
@@ -920,20 +1009,22 @@ CodeableConcept _mapDoseStatusReason(EvalReason reason) {
     EvalReason.intervalTooShort => ('toosoon', 'Too Soon'),
     EvalReason.liveVirusConflict => ('productconflict', 'Product Conflict'),
     EvalReason.seriesAlreadyCompleted => (
-        'notevaluated',
-        'Series Already Completed'
-      ),
+      'notevaluated',
+      'Series Already Completed',
+    ),
     EvalReason.noDateGiven => ('notevaluated', 'No Date Given'),
     EvalReason.noCvx => ('notevaluated', 'No CVX Code'),
   };
 
-  return CodeableConcept(coding: [
-    Coding(
-      system: system.toFhirUri,
-      code: code.toFhirCode,
-      display: display.toFhirString,
-    ),
-  ]);
+  return CodeableConcept(
+    coding: [
+      Coding(
+        system: system.toFhirUri,
+        code: code.toFhirCode,
+        display: display.toFhirString,
+      ),
+    ],
+  );
 }
 
 const _cicadaSd = 'http://fhirfli.dev/fhir/ig/cicada/StructureDefinition';
@@ -944,7 +1035,9 @@ FhirExtension? _dateExt(String url, VaxDate? date) =>
     date == null || _isSentinel(date)
         ? null
         : FhirExtension(
-            url: url.toFhirString, valueDateTime: date.toFhirDateTime());
+          url: url.toFhirString,
+          valueDateTime: date.toFhirDateTime(),
+        );
 
 /// The CDSi target dose status this dose satisfied.
 ///
@@ -953,20 +1046,22 @@ FhirExtension? _dateExt(String url, VaxDate? date) =>
 /// from it was leaving, so a skipped target dose and a satisfied one read the
 /// same to a caller.
 FhirExtension _targetDoseStatusExt(TargetDoseStatus status) {
-  final String code = switch (status) {
+  final code = switch (status) {
     TargetDoseStatus.satisfied => 'satisfied',
     TargetDoseStatus.skipped => 'skipped',
     TargetDoseStatus.notSatisfied => 'not-satisfied',
   };
   return FhirExtension(
     url: '$_cicadaSd/target-dose-status-ext'.toFhirString,
-    valueCodeableConcept: CodeableConcept(coding: <Coding>[
-      Coding(
-        system: '$_cicadaCs/target-dose-status'.toFhirUri,
-        code: code.toFhirCode,
-        display: status.toString().toFhirString,
-      ),
-    ]),
+    valueCodeableConcept: CodeableConcept(
+      coding: <Coding>[
+        Coding(
+          system: '$_cicadaCs/target-dose-status'.toFhirUri,
+          code: code.toFhirCode,
+          display: status.toString().toFhirString,
+        ),
+      ],
+    ),
   );
 }
 
@@ -982,7 +1077,7 @@ FhirExtension? _evaluationDetailExt(VaxDose dose) {
   FhirExtension codeExt(String url, String value) =>
       FhirExtension(url: url.toFhirString, valueString: value.toFhirString);
 
-  final List<FhirExtension> parts = <FhirExtension>[
+  final parts = <FhirExtension>[
     if (dose.inadvertent) boolExt('inadvertent', true),
     if (dose.validAgeReason != null)
       codeExt('validAgeReason', dose.validAgeReason!.toString()),
@@ -990,7 +1085,9 @@ FhirExtension? _evaluationDetailExt(VaxDose dose) {
       boolExt('preferredInterval', dose.preferredInterval!),
     if (dose.preferredIntervalReason != null)
       codeExt(
-          'preferredIntervalReason', dose.preferredIntervalReason!.toString()),
+        'preferredIntervalReason',
+        dose.preferredIntervalReason!.toString(),
+      ),
     if (dose.allowedInterval != null)
       boolExt('allowedInterval', dose.allowedInterval!),
     if (dose.allowedIntervalReason != null)
@@ -1002,7 +1099,9 @@ FhirExtension? _evaluationDetailExt(VaxDose dose) {
       boolExt('preferredVaccine', dose.preferredVaccine!),
     if (dose.preferredVaccineReason != null)
       codeExt(
-          'preferredVaccineReason', dose.preferredVaccineReason!.toString()),
+        'preferredVaccineReason',
+        dose.preferredVaccineReason!.toString(),
+      ),
     if (dose.allowedVaccine != null)
       boolExt('allowedVaccine', dose.allowedVaccine!),
     if (dose.allowedVaccineReason != null)
@@ -1012,9 +1111,9 @@ FhirExtension? _evaluationDetailExt(VaxDose dose) {
   return parts.isEmpty
       ? null
       : FhirExtension(
-          url: '$_cicadaSd/evaluation-detail-ext'.toFhirString,
-          extension_: parts,
-        );
+        url: '$_cicadaSd/evaluation-detail-ext'.toFhirString,
+        extension_: parts,
+      );
 }
 
 /// One contributing series: its own status, its own four dates, and the
@@ -1025,7 +1124,7 @@ FhirExtension? _evaluationDetailExt(VaxDose dose) {
 /// way to see whether age or interval drove it, and a group covered by several
 /// series reported one answer for all of them.
 FhirExtension _seriesDetailExt(VaxSeries series) {
-  final List<FhirExtension?> parts = <FhirExtension?>[
+  final parts = <FhirExtension?>[
     if (series.series.seriesName != null)
       FhirExtension(
         url: 'seriesName'.toFhirString,
@@ -1059,12 +1158,18 @@ FhirExtension _seriesDetailExt(VaxSeries series) {
     _dateExt('maximumAgeDate', series.maximumAgeDate),
     _dateExt('earliestRecommendedAgeDate', series.earliestRecommendedAgeDate),
     _dateExt('latestRecommendedAgeDate', series.latestRecommendedAgeDate),
-    _dateExt('earliestRecommendedIntervalDate',
-        series.earliestRecommendedIntervalDate),
     _dateExt(
-        'latestRecommendedIntervalDate', series.latestRecommendedIntervalDate),
-    _dateExt('seasonalRecommendationStartDate',
-        series.seasonalRecommendationStartDate),
+      'earliestRecommendedIntervalDate',
+      series.earliestRecommendedIntervalDate,
+    ),
+    _dateExt(
+      'latestRecommendedIntervalDate',
+      series.latestRecommendedIntervalDate,
+    ),
+    _dateExt(
+      'seasonalRecommendationStartDate',
+      series.seasonalRecommendationStartDate,
+    ),
   ];
 
   return FhirExtension(
@@ -1080,18 +1185,18 @@ FhirExtension _seriesDetailExt(VaxSeries series) {
 /// `dataSourceType`. Parameters is not a DomainResource and carries no
 /// extension, so the stamp goes on each evaluation and on the recommendation.
 FhirExtension _versionExt() => FhirExtension(
-      url: '$_cicadaSd/engine-version-ext'.toFhirString,
-      extension_: <FhirExtension>[
-        FhirExtension(
-          url: 'engine'.toFhirString,
-          valueString: 'cicada/$cicadaEngineVersion'.toFhirString,
-        ),
-        FhirExtension(
-          url: 'supportingData'.toFhirString,
-          valueString: 'CDSi $cdsiSupportingDataVersion'.toFhirString,
-        ),
-      ],
-    );
+  url: '$_cicadaSd/engine-version-ext'.toFhirString,
+  extension_: <FhirExtension>[
+    FhirExtension(
+      url: 'engine'.toFhirString,
+      valueString: 'cicada/$cicadaEngineVersion'.toFhirString,
+    ),
+    FhirExtension(
+      url: 'supportingData'.toFhirString,
+      valueString: 'CDSi $cdsiSupportingDataVersion'.toFhirString,
+    ),
+  ],
+);
 
 /// Doses left in the series after the one being forecast.
 ///
@@ -1100,22 +1205,21 @@ FhirExtension _versionExt() => FhirExtension(
 /// doseNumber let a reader subtract, but they cannot tell them it never ends.
 FhirExtension? _dosesRemainingExt(VaccineGroupForecast vgf) {
   if (vgf.contributingSeries.isEmpty) return null;
-  final VaxSeries series = vgf.contributingSeries.first;
-  final List<SeriesDose> doses =
-      series.series.seriesDose ?? const <SeriesDose>[];
+  final series = vgf.contributingSeries.first;
+  final doses = series.series.seriesDose ?? const <SeriesDose>[];
   if (doses.isEmpty) return null;
 
   // `Binary` is ambiguous here: fhir_r4 exports a Binary resource too.
-  final bool recurring = doses.last.recurringDose?.toString() == 'Yes';
+  final recurring = doses.last.recurringDose?.toString() == 'Yes';
   if (recurring) {
     return FhirExtension(
       url: '$_cicadaSd/doses-remaining-ext'.toFhirString,
       valueString: 'Recurring'.toFhirString,
     );
   }
-  final int? next = vgf.doseNumber;
+  final next = vgf.doseNumber;
   if (next == null) return null;
-  final int remaining = doses.length - next + 1;
+  final remaining = doses.length - next + 1;
   if (remaining < 0) return null;
   return FhirExtension(
     url: '$_cicadaSd/doses-remaining-ext'.toFhirString,
@@ -1128,8 +1232,10 @@ FhirExtension? _dosesRemainingExt(VaccineGroupForecast vgf) {
 /// Case-insensitive and hyphen-tolerant on purpose: the supporting data writes
 /// it both ways — "Shared Clinical Decision Making" on the MenB series and
 /// "shared clinical decision-making" on the COVID-19 ones.
-final RegExp _scdmSeriesName =
-    RegExp(r'shared\s+clinical\s+decision[-\s]?making', caseSensitive: false);
+final RegExp _scdmSeriesName = RegExp(
+  r'shared\s+clinical\s+decision[-\s]?making',
+  caseSensitive: false,
+);
 
 /// True when every patient this series applies to is an SCDM patient.
 ///
@@ -1139,8 +1245,9 @@ final RegExp _scdmSeriesName =
 /// SCDM attribute in the data to read. Their prose travels in
 /// `recommendation.description` instead.
 bool _isSharedDecisionSeries(VaccineGroupForecast vgf, int ageInYears) {
-  if (vgf.contributingSeries.any((VaxSeries s) =>
-          _scdmSeriesName.hasMatch(s.series.seriesName ?? '')) ||
+  if (vgf.contributingSeries.any(
+        (s) => _scdmSeriesName.hasMatch(s.series.seriesName ?? ''),
+      ) ||
       _scdmSeriesName.hasMatch(vgf.seriesName ?? '')) {
     return true;
   }
@@ -1181,58 +1288,61 @@ CodeableConcept _mapForecastReason(ForecastReason reason) {
   const cicadaSystem =
       'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/forecast-reason';
 
-  final (String code, String? immdsCode, String? immdsDisplay) =
-      switch (reason) {
+  final (
+    String code,
+    String? immdsCode,
+    String? immdsDisplay,
+  ) = switch (reason) {
     ForecastReason.patientSeriesIsComplete => (
-        'series-complete',
-        'complete',
-        'Complete'
-      ),
+      'series-complete',
+      'complete',
+      'Complete',
+    ),
     ForecastReason.notRecommendedAtThisTimeDueToPastImmunizationHistory => (
-        'not-recommended-history',
-        'notRecommended',
-        'Not Recommended'
-      ),
+      'not-recommended-history',
+      'notRecommended',
+      'Not Recommended',
+    ),
     ForecastReason.patientHasExceededTheMaximumAge => (
-        'exceeded-maximum-age',
-        'maximumAge',
-        'Maximum Age Exceeded'
-      ),
+      'exceeded-maximum-age',
+      'maximumAge',
+      'Maximum Age Exceeded',
+    ),
     ForecastReason.pastSeasonalRecommendationEndDate => (
-        'past-seasonal-end',
-        'seasonalPast',
-        'Seasonal End Date Passed'
-      ),
+      'past-seasonal-end',
+      'seasonalPast',
+      'Seasonal End Date Passed',
+    ),
     ForecastReason.patientHasEvidenceOfImmunity => (
-        'evidence-of-immunity',
-        null,
-        null
-      ),
+      'evidence-of-immunity',
+      null,
+      null,
+    ),
     ForecastReason.patientHasAContraindication => (
-        'contraindication',
-        null,
-        null
-      ),
+      'contraindication',
+      null,
+      null,
+    ),
     ForecastReason.patientIsUnableToFinishTheSeriesPriorToTheMaximumAge => (
-        'cannot-finish-before-maximum-age',
-        null,
-        null
-      ),
+      'cannot-finish-before-maximum-age',
+      null,
+      null,
+    ),
     ForecastReason.patientHasNotReachedTheMinimumAgeToStart => (
-        'below-minimum-age-to-start',
-        null,
-        null
-      ),
+      'below-minimum-age-to-start',
+      null,
+      null,
+    ),
     ForecastReason.completeForTheSeason => (
-        'complete-for-the-season',
-        'seasonalComplete',
-        'Complete for the Season'
-      ),
+      'complete-for-the-season',
+      'seasonalComplete',
+      'Complete for the Season',
+    ),
     ForecastReason.sharedClinicalDecisionMaking => (
-        'shared-clinical-decision-making',
-        null,
-        null
-      ),
+      'shared-clinical-decision-making',
+      null,
+      null,
+    ),
   };
 
   return CodeableConcept(
@@ -1260,18 +1370,21 @@ CodeableConcept _mapForecastReason(ForecastReason reason) {
 ///    (FITS parses `getCoding().get(0).getCode()` case-insensitively)
 /// 2. HL7 standard: `http://terminology.hl7.org/CodeSystem/immunization-recommendation-status`
 ///    Codes: due, overdue, immune, contraindicated, complete, agedout
-/// 3. LOINC answer list LL940-8 for LOINC 59783-1 "Status in immunization series"
+/// 3. LOINC answer list LL940-8 for LOINC 59783-1 "Status in immunization
+///    series"
 ///
 /// For [SeriesStatus.notComplete], pass [isOverdue] = true when the assessment
 /// date is past the past due date to distinguish `due` from `overdue`.
-CodeableConcept _mapForecastStatus(SeriesStatus status,
-    {bool isOverdue = false}) {
+CodeableConcept _mapForecastStatus(
+  SeriesStatus status, {
+  bool isOverdue = false,
+}) {
   const cdsiSystem = 'http://hl7.org/fhir/us/immds/CodeSystem/ForecastStatus';
   const hl7System =
       'http://terminology.hl7.org/CodeSystem/immunization-recommendation-status';
   const loincSystem = 'http://loinc.org';
 
-  final List<Coding> codings = [];
+  final codings = <Coding>[];
 
   // Primary: the ImmDS ForecastStatus CodeSystem (hl7.fhir.us.immds 1.0.0).
   // Its codes are camelCase and its displays are the CDSi status text; the
@@ -1287,11 +1400,13 @@ CodeableConcept _mapForecastStatus(SeriesStatus status,
     SeriesStatus.agedOut => ('agedOut', 'Aged Out'),
     SeriesStatus.notRecommended => ('notRecommended', 'Not Recommended'),
   };
-  codings.add(Coding(
-    system: cdsiSystem.toFhirUri,
-    code: cdsiCode.toFhirCode,
-    display: cdsiDisplay.toFhirString,
-  ));
+  codings.add(
+    Coding(
+      system: cdsiSystem.toFhirUri,
+      code: cdsiCode.toFhirCode,
+      display: cdsiDisplay.toFhirString,
+    ),
+  );
 
   // Secondary: HL7 standard code (where a standard code exists)
   switch (status) {
@@ -1302,31 +1417,45 @@ CodeableConcept _mapForecastStatus(SeriesStatus status,
       // display "Series Complete", has the identical definition text, "The
       // patient is fully protected and no further doses are recommended."
       // The IG publisher flagged the retired code on every Complete forecast.
-      codings.add(Coding(
+      codings.add(
+        Coding(
           system: hl7System.toFhirUri,
           code: 'seriescomplete'.toFhirCode,
-          display: 'Series Complete'.toFhirString));
+          display: 'Series Complete'.toFhirString,
+        ),
+      );
     case SeriesStatus.immune:
-      codings.add(Coding(
+      codings.add(
+        Coding(
           system: hl7System.toFhirUri,
           code: 'immune'.toFhirCode,
-          display: 'Immune'.toFhirString));
+          display: 'Immune'.toFhirString,
+        ),
+      );
     case SeriesStatus.contraindicated:
-      codings.add(Coding(
+      codings.add(
+        Coding(
           system: hl7System.toFhirUri,
           code: 'contraindicated'.toFhirCode,
-          display: 'Contraindicated'.toFhirString));
+          display: 'Contraindicated'.toFhirString,
+        ),
+      );
     case SeriesStatus.notComplete:
-      codings.add(Coding(
-        system: hl7System.toFhirUri,
-        code: isOverdue ? 'overdue'.toFhirCode : 'due'.toFhirCode,
-        display: isOverdue ? 'Overdue'.toFhirString : 'Due'.toFhirString,
-      ));
+      codings.add(
+        Coding(
+          system: hl7System.toFhirUri,
+          code: isOverdue ? 'overdue'.toFhirCode : 'due'.toFhirCode,
+          display: isOverdue ? 'Overdue'.toFhirString : 'Due'.toFhirString,
+        ),
+      );
     case SeriesStatus.agedOut:
-      codings.add(Coding(
+      codings.add(
+        Coding(
           system: hl7System.toFhirUri,
           code: 'agedout'.toFhirCode,
-          display: 'Aged Out'.toFhirString));
+          display: 'Aged Out'.toFhirString,
+        ),
+      );
     case SeriesStatus.notRecommended:
       break; // No HL7 standard code exists
   }
@@ -1336,34 +1465,37 @@ CodeableConcept _mapForecastStatus(SeriesStatus status,
   // rejects an abbreviated display as "Wrong Display Name".
   final (String laCode, String laDisplay) = switch (status) {
     SeriesStatus.complete => (
-        'LA13421-5',
-        'Complete - all required doses have been received to meet the '
-            'requirements for a particular vaccine group.'
-      ),
-    SeriesStatus.notComplete => isOverdue
-        ? (
+      'LA13421-5',
+      'Complete - all required doses have been received to meet the '
+          'requirements for a particular vaccine group.',
+    ),
+    SeriesStatus.notComplete =>
+      isOverdue
+          ? (
             'LA13423-1',
-            'Overdue - person is late getting the next dose in the series.'
+            'Overdue - person is late getting the next dose in the series.',
           )
-        : (
+          : (
             'LA13422-3',
             'On schedule - person is not overdue for a given dose in the '
-                'series. Includes a person too young to start the series.'
+                'series. Includes a person too young to start the series.',
           ),
     SeriesStatus.immune => ('LA27183-5', 'Immune'),
     SeriesStatus.contraindicated => ('LA4216-3', 'Contraindicated'),
     SeriesStatus.notRecommended => ('LA4695-8', 'Not Recommended'),
     SeriesStatus.agedOut => (
-        'LA13424-9',
-        'Too old - cannot complete the series because the latest age for '
-            'receiving dose has passed.'
-      ),
+      'LA13424-9',
+      'Too old - cannot complete the series because the latest age for '
+          'receiving dose has passed.',
+    ),
   };
-  codings.add(Coding(
-    system: loincSystem.toFhirUri,
-    code: laCode.toFhirCode,
-    display: laDisplay.toFhirString,
-  ));
+  codings.add(
+    Coding(
+      system: loincSystem.toFhirUri,
+      code: laCode.toFhirCode,
+      display: laDisplay.toFhirString,
+    ),
+  );
 
   return CodeableConcept(coding: codings);
 }

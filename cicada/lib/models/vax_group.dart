@@ -1,6 +1,5 @@
+import 'package:cicada/cicada.dart';
 import 'package:collection/collection.dart';
-
-import '../cicada.dart';
 
 class VaxGroup {
   VaxGroup({
@@ -13,22 +12,22 @@ class VaxGroup {
   });
 
   void newSeries(Series newSeries) => series.add(
-        VaxSeries(
-          targetDisease: targetDisease,
-          series: newSeries,
-          assessmentDate: assessmentDate,
-          dob: dob,
-        ),
-      );
+    VaxSeries(
+      targetDisease: targetDisease,
+      series: newSeries,
+      assessmentDate: assessmentDate,
+      dob: dob,
+    ),
+  );
 
   void newDose(VaxDose dose) {
-    for (final VaxSeries singleSeries in series) {
+    for (final singleSeries in series) {
       singleSeries.doses.add(dose.copyWith());
     }
   }
 
   void evaluate() {
-    for (final VaxSeries singleSeries in series) {
+    for (final singleSeries in series) {
       singleSeries.evaluate();
     }
   }
@@ -39,10 +38,12 @@ class VaxGroup {
   /// second branch is the fallback below: a group in which everything is
   /// contraindicated still has to produce a best patient series.
   List<VaxSeries> getRelevantSeries(List<VaxSeries> series) {
-    final List<VaxSeries> relevantSeries = series
-        .where((VaxSeries element) =>
-            element.seriesStatus != SeriesStatus.contraindicated)
-        .toList();
+    final relevantSeries =
+        series
+            .where(
+              (element) => element.seriesStatus != SeriesStatus.contraindicated,
+            )
+            .toList();
     return relevantSeries.isEmpty ? series.toList() : relevantSeries;
   }
 
@@ -52,7 +53,7 @@ class VaxGroup {
   /// before the maximum age to start, standard series where the group has no
   /// valid doses and no default series, and complete Evaluation Only series.
   List<VaxSeries> getScorableSeries(List<VaxSeries> relevantSeries) {
-    final Set<VaxSeries> scorableSeries = <VaxSeries>{};
+    final scorableSeries = <VaxSeries>{};
 
     /// All the following are true for the relevant patient series:
     /// o The relevant patient series tracks an antigen series with a series
@@ -62,28 +63,34 @@ class VaxGroup {
     ///   any relevant patient series that tracks an antigen series that
     ///   belongs to the same series group as the relevant patient series.
     /// o It is a candidate scorable patient series.
-    final List<VaxSeries> riskSeries = relevantSeries
-        .where(
-            (VaxSeries element) => element.series.seriesType == SeriesType.risk)
-        .toList();
+    final riskSeries =
+        relevantSeries
+            .where(
+              (element) => element.series.seriesType == SeriesType.risk,
+            )
+            .toList();
     if (riskSeries.isNotEmpty) {
       riskSeries.sortByCompare(
-          (VaxSeries element) => element.series.selectSeries?.seriesPriority,
-          (SeriesPriority? a, SeriesPriority? b) =>
-              (a?.index ?? 5).compareTo(b?.index ?? 5));
-      riskSeries.retainWhere((VaxSeries element) =>
-          element.series.selectSeries?.seriesPriority ==
-          riskSeries.first.series.selectSeries?.seriesPriority);
+        (element) => element.series.selectSeries?.seriesPriority,
+        (a, b) => (a?.index ?? 5).compareTo(b?.index ?? 5),
+      );
+      riskSeries.retainWhere(
+        (element) =>
+            element.series.selectSeries?.seriesPriority ==
+            riskSeries.first.series.selectSeries?.seriesPriority,
+      );
       scorableSeries.addAll(riskSeries);
     }
 
     /// All the following are true for the relevant patient series:
     /// o The relevant patient series tracks an antigen series with a series
     ///   type of 'Standard.'
-    final List<VaxSeries> standardSeries = relevantSeries
-        .where((VaxSeries element) =>
-            element.series.seriesType == SeriesType.standard)
-        .toList();
+    final standardSeries =
+        relevantSeries
+            .where(
+              (element) => element.series.seriesType == SeriesType.standard,
+            )
+            .toList();
     if (standardSeries.isNotEmpty) {
       /// o The relevant patient series includes a target dose evaluating at
       ///   least one vaccine dose administered with an evaluation status of
@@ -92,18 +99,27 @@ class VaxGroup {
       ///   'Valid' associated with the relevant patient series has a date
       ///   administered before the maximum age to start date.
       /// o It is a candidate scorable patient series.
-      final List<VaxSeries> validDosesSeries = standardSeries
-          .where((VaxSeries element) => element.evaluatedDoses
-              .any((VaxDose dose) => dose.evalStatus == EvalStatus.valid))
-          .toList();
+      final validDosesSeries =
+          standardSeries
+              .where(
+                (element) => element.evaluatedDoses.any(
+                  (dose) => dose.evalStatus == EvalStatus.valid,
+                ),
+              )
+              .toList();
       if (validDosesSeries.isNotEmpty) {
-        validDosesSeries.retainWhere((VaxSeries series) =>
-            series.evaluatedDoses
-                .firstWhere(
-                    (VaxDose dose) => dose.evalStatus == EvalStatus.valid)
-                .dateGiven <
-            dob.changeNullable(
-                series.series.selectSeries?.maxAgeToStart, true)!);
+        validDosesSeries.retainWhere(
+          (series) =>
+              series.evaluatedDoses
+                  .firstWhere(
+                    (dose) => dose.evalStatus == EvalStatus.valid,
+                  )
+                  .dateGiven <
+              dob.changeNullable(
+                series.series.selectSeries?.maxAgeToStart,
+                true,
+              )!,
+        );
         scorableSeries.addAll(validDosesSeries);
       }
       // When no valid-dose series survive (either none had valid doses,
@@ -113,10 +129,13 @@ class VaxGroup {
         ///   in the series group.
         /// o There is no default patient series for the series group.
         /// o It is a candidate scorable patient series.
-        final List<VaxSeries> defaultSeries = standardSeries
-            .where((VaxSeries element) =>
-                element.series.selectSeries?.defaultSeries == Binary.yes)
-            .toList();
+        final defaultSeries =
+            standardSeries
+                .where(
+                  (element) =>
+                      element.series.selectSeries?.defaultSeries == Binary.yes,
+                )
+                .toList();
         if (defaultSeries.isEmpty) {
           scorableSeries.addAll(standardSeries);
         }
@@ -126,10 +145,11 @@ class VaxGroup {
     /// o The relevant patient series tracks an antigen series with a series
     ///   type of 'Evaluation Only'
     /// o The relevant patient series is a complete patient series.
-    final Iterable<VaxSeries> competedEvaluationOnlySeries =
-        relevantSeries.where((VaxSeries element) =>
-            element.series.seriesType == SeriesType.evaluationOnly &&
-            element.seriesStatus == SeriesStatus.complete);
+    final competedEvaluationOnlySeries = relevantSeries.where(
+      (element) =>
+          element.series.seriesType == SeriesType.evaluationOnly &&
+          element.seriesStatus == SeriesStatus.complete,
+    );
     scorableSeries.addAll(competedEvaluationOnlySeries);
     return scorableSeries.toList();
   }
@@ -137,37 +157,50 @@ class VaxGroup {
   /// Section 8.2 / Table 8-3: is there a single prioritized patient series in
   /// this series group?
   VaxSeries? getPrioritizedSeries(
-      List<VaxSeries> scorableSeries, List<VaxSeries> series) {
+    List<VaxSeries> scorableSeries,
+    List<VaxSeries> series,
+  ) {
     if (scorableSeries.isEmpty) {
-      final List<VaxSeries> defaultSeries = series
-          .where((VaxSeries element) =>
-              element.series.selectSeries?.defaultSeries == Binary.yes)
-          .toList();
+      final defaultSeries =
+          series
+              .where(
+                (element) =>
+                    element.series.selectSeries?.defaultSeries == Binary.yes,
+              )
+              .toList();
       if (defaultSeries.isNotEmpty) {
         return defaultSeries.first;
       }
     } else if (scorableSeries.length == 1) {
       return scorableSeries.first;
     } else {
-      final List<VaxSeries> completeSeries = scorableSeries
-          .where((VaxSeries element) =>
-              element.seriesStatus == SeriesStatus.complete)
-          .toList();
+      final completeSeries =
+          scorableSeries
+              .where(
+                (element) => element.seriesStatus == SeriesStatus.complete,
+              )
+              .toList();
       if (completeSeries.length == 1) {
         return completeSeries.first;
       } else if (completeSeries.isEmpty) {
-        final Iterable<VaxSeries> inProcessSeries = scorableSeries.where(
-            (VaxSeries element) =>
-                element.evaluatedTargetDose.values
-                    .contains(TargetDoseStatus.satisfied) &&
-                element.seriesStatus == SeriesStatus.notComplete);
+        final inProcessSeries = scorableSeries.where(
+          (element) =>
+              element.evaluatedTargetDose.values.contains(
+                TargetDoseStatus.satisfied,
+              ) &&
+              element.seriesStatus == SeriesStatus.notComplete,
+        );
         if (inProcessSeries.length == 1) {
           return inProcessSeries.first;
         } else if (inProcessSeries.isEmpty) {
-          final List<VaxSeries> defaultSeries = scorableSeries
-              .where((VaxSeries element) =>
-                  element.series.selectSeries?.defaultSeries == Binary.yes)
-              .toList();
+          final defaultSeries =
+              scorableSeries
+                  .where(
+                    (element) =>
+                        element.series.selectSeries?.defaultSeries ==
+                        Binary.yes,
+                  )
+                  .toList();
           if (defaultSeries.isNotEmpty) {
             return defaultSeries.first;
           }
@@ -182,12 +215,15 @@ class VaxGroup {
   List<VaxSeries> scoreCompleteSeries(List<VaxSeries> completeSeries) {
     /// Find what is the maximum number of valid doses in a series
     /// While we're at it, count how many series have that many doses
-    int maxNumberOfValidDoses = 0;
-    int numberOfSeriesWithMaxValidDoses = 0;
-    for (final VaxSeries series in completeSeries) {
-      final int numberOfValidDosesForSeries = series.evaluatedDoses
-          .where((VaxDose element) => element.evalStatus == EvalStatus.valid)
-          .length;
+    var maxNumberOfValidDoses = 0;
+    var numberOfSeriesWithMaxValidDoses = 0;
+    for (final series in completeSeries) {
+      final numberOfValidDosesForSeries =
+          series.evaluatedDoses
+              .where(
+                (element) => element.evalStatus == EvalStatus.valid,
+              )
+              .length;
       if (numberOfValidDosesForSeries > maxNumberOfValidDoses) {
         maxNumberOfValidDoses = numberOfValidDosesForSeries;
         numberOfSeriesWithMaxValidDoses = 1;
@@ -196,9 +232,10 @@ class VaxGroup {
       }
     }
 
-    for (final VaxSeries series in completeSeries) {
-      final Iterable<VaxDose> validDoses = series.evaluatedDoses
-          .where((VaxDose element) => element.evalStatus == EvalStatus.valid);
+    for (final series in completeSeries) {
+      final validDoses = series.evaluatedDoses.where(
+        (element) => element.evalStatus == EvalStatus.valid,
+      );
 
       /// If this series is a series with the maximum number of valid doses
       if (validDoses.length == maxNumberOfValidDoses) {
@@ -224,33 +261,39 @@ class VaxGroup {
   List<VaxSeries> scoreInProcessSeries(List<VaxSeries> inProcessSeries) {
     /// Find what is the maximum number of valid doses in a series
     /// While we're at it, count how many series have that many doses
-    int numberOfProductSeriesWithAllValidDoses = 0;
-    int numberOfCompletableSeries = 0;
-    int maxNumberOfValidDoses = 0;
-    int numberOfSeriesWithMaxValidDoses = 0;
-    int minNumDosesToCompleteASeries = 99;
-    int numberOfSeriesClosestToCompletion = 0;
-    VaxDate earliestFinishDate = VaxDate.max();
-    int numberOfSeriesWithEarliestFinishDate = 0;
+    var numberOfProductSeriesWithAllValidDoses = 0;
+    var numberOfCompletableSeries = 0;
+    var maxNumberOfValidDoses = 0;
+    var numberOfSeriesWithMaxValidDoses = 0;
+    var minNumDosesToCompleteASeries = 99;
+    var numberOfSeriesClosestToCompletion = 0;
+    var earliestFinishDate = VaxDate.max();
+    var numberOfSeriesWithEarliestFinishDate = 0;
 
-    for (final VaxSeries series in inProcessSeries) {
-      final int numberOfValidDosesForSeries = series.evaluatedDoses
-          .where((VaxDose element) => element.evalStatus == EvalStatus.valid)
-          .length;
+    for (final series in inProcessSeries) {
+      final numberOfValidDosesForSeries =
+          series.evaluatedDoses
+              .where(
+                (element) => element.evalStatus == EvalStatus.valid,
+              )
+              .length;
 
       /// A scorable patient series is a product patient series and has all
       /// valid doses.
       /// A patient series must be considered a product patient series if the
       /// product path flag is 'Y' for the select patient series.
       /// "All valid doses" means every dose evaluated in the series (valid
-      /// or not_valid) received a Valid status. We check against doses (all
+      /// or notValid) received a Valid status. We check against doses (all
       /// administered doses distributed to the series), not evaluatedDoses
       /// (which only contains valid doses by construction).
-      final int totalEvaluatedDoses = series.doses
-          .where((VaxDose d) =>
-              d.evalStatus == EvalStatus.valid ||
-              d.evalStatus == EvalStatus.not_valid)
-          .length;
+      final totalEvaluatedDoses =
+          series.doses
+              .where(
+                (d) =>
+                    d.evalStatus == EvalStatus.valid ||
+                    d.evalStatus == EvalStatus.notValid,
+              )
+              .length;
       if (series.series.selectSeries?.productPath == Binary.yes &&
           totalEvaluatedDoses > 0 &&
           numberOfValidDosesForSeries == totalEvaluatedDoses) {
@@ -261,19 +304,22 @@ class VaxGroup {
       /// calculated as the earliest date of the patient series forecast made
       /// from the scorable patient series plus the latest minimum interval from
       /// the remaining target dose(s).
-      VaxDate? forecastFinishDate = series.candidateEarliestDate;
+      var forecastFinishDate = series.candidateEarliestDate;
       if (forecastFinishDate != null) {
-        for (int i = series.targetDose;
-            i < (series.series.seriesDose?.length ?? 0);
-            i++) {
+        for (
+          var i = series.targetDose;
+          i < (series.series.seriesDose?.length ?? 0);
+          i++
+        ) {
           forecastFinishDate = forecastFinishDate!.change(
-              series.series.seriesDose?[i].allowableInterval?.minInt ??
-                  '0 days');
+            series.series.seriesDose?[i].allowableInterval?.minInt ?? '0 days',
+          );
         }
 
         /// A patient series must be considered completable if the forecast
-        /// finish date is less than the maximum age date of the last target dose.
-        final VaxDate maxAgeDateLastTargetDose = series.series.maxAgeDate(dob);
+        /// finish date is less than the maximum age date of the last target
+        /// dose.
+        final maxAgeDateLastTargetDose = series.series.maxAgeDate(dob);
 
         if (forecastFinishDate! < maxAgeDateLastTargetDose) {
           numberOfCompletableSeries++;
@@ -303,7 +349,7 @@ class VaxGroup {
       /// A patient series must be the considered the closest to completion if
       /// the number of not satisfied target doses is less than the number of
       /// not satisfied target doses in all other patient series.
-      final int minDosesForSeriesToComplete =
+      final minDosesForSeriesToComplete =
           (series.series.seriesDose?.length ?? 99) - series.targetDose - 1;
       if (minDosesForSeriesToComplete < minNumDosesToCompleteASeries) {
         minNumDosesToCompleteASeries = minDosesForSeriesToComplete;
@@ -313,17 +359,24 @@ class VaxGroup {
       }
     }
 
-    for (final VaxSeries series in inProcessSeries) {
-      final int numberOfValidDosesForSeries = series.evaluatedDoses
-          .where((VaxDose element) => element.evalStatus == EvalStatus.valid)
-          .length;
+    for (final series in inProcessSeries) {
+      final numberOfValidDosesForSeries =
+          series.evaluatedDoses
+              .where(
+                (element) => element.evalStatus == EvalStatus.valid,
+              )
+              .length;
 
-      /// A scorable patient series is a product patient series and has all valid doses.
-      final int totalEvalDoses = series.doses
-          .where((VaxDose d) =>
-              d.evalStatus == EvalStatus.valid ||
-              d.evalStatus == EvalStatus.not_valid)
-          .length;
+      /// A scorable patient series is a product patient series and has all
+      /// valid doses.
+      final totalEvalDoses =
+          series.doses
+              .where(
+                (d) =>
+                    d.evalStatus == EvalStatus.valid ||
+                    d.evalStatus == EvalStatus.notValid,
+              )
+              .length;
       if (series.series.selectSeries?.productPath == Binary.yes &&
           totalEvalDoses > 0 &&
           numberOfValidDosesForSeries == totalEvalDoses) {
@@ -334,16 +387,18 @@ class VaxGroup {
         series.score -= 2;
       }
 
-      VaxDate? forecastFinishDate = series.candidateEarliestDate;
+      var forecastFinishDate = series.candidateEarliestDate;
       if (forecastFinishDate != null) {
-        for (int i = series.targetDose;
-            i < (series.series.seriesDose?.length ?? 0);
-            i++) {
+        for (
+          var i = series.targetDose;
+          i < (series.series.seriesDose?.length ?? 0);
+          i++
+        ) {
           forecastFinishDate = forecastFinishDate!.change(
-              series.series.seriesDose?[i].allowableInterval?.minInt ??
-                  '0 days');
+            series.series.seriesDose?[i].allowableInterval?.minInt ?? '0 days',
+          );
         }
-        final VaxDate maxAgeDateLastTargetDose = series.series.maxAgeDate(dob);
+        final maxAgeDateLastTargetDose = series.series.maxAgeDate(dob);
 
         /// A scorable patient series is completable.
         if (forecastFinishDate! < maxAgeDateLastTargetDose) {
@@ -364,7 +419,7 @@ class VaxGroup {
         }
 
         /// A scorable patient series is closest to completion.
-        final int missingDoses =
+        final missingDoses =
             (series.series.seriesDose?.length ?? 99) - series.targetDose - 1;
         if (missingDoses == minNumDosesToCompleteASeries) {
           if (numberOfSeriesClosestToCompletion == 1) {
@@ -390,19 +445,22 @@ class VaxGroup {
 
   /// Section 8.6, No Valid Doses.
   List<VaxSeries> scoreZeroValidDosesSeries(
-      List<VaxSeries> zeroValidDosesSeries) {
-    VaxDate earliestStartDate = VaxDate.max();
-    int numberOfSeriesWithEarliestStartDate = 0;
-    int numberOfCompletableSeries = 0;
-    int numberOfProductSeries = 0;
-    for (final VaxSeries series in zeroValidDosesSeries) {
+    List<VaxSeries> zeroValidDosesSeries,
+  ) {
+    var earliestStartDate = VaxDate.max();
+    var numberOfSeriesWithEarliestStartDate = 0;
+    var numberOfCompletableSeries = 0;
+    var numberOfProductSeries = 0;
+    for (final series in zeroValidDosesSeries) {
       /// A scorable patient series can start earliest.
       /// A patient series must be considered start earliest if the start date
-      /// is before the start date for all other patient series with a start date.
+      /// is before the start date for all other patient series with a start
+      /// date.
       if (series.series.seriesDose?.first.seasonalRecommendation?.startDate !=
           null) {
-        final VaxDate startDate = VaxDate.fromJson(
-            series.series.seriesDose!.first.seasonalRecommendation!.startDate!);
+        final startDate = VaxDate.fromJson(
+          series.series.seriesDose!.first.seasonalRecommendation!.startDate!,
+        );
         if (startDate < earliestStartDate) {
           earliestStartDate = startDate;
           numberOfSeriesWithEarliestStartDate = 1;
@@ -412,16 +470,18 @@ class VaxGroup {
       }
 
       /// A scorable patient series is completable.
-      VaxDate? forecastFinishDate = series.candidateEarliestDate;
+      var forecastFinishDate = series.candidateEarliestDate;
       if (forecastFinishDate != null) {
-        for (int i = series.targetDose;
-            i < (series.series.seriesDose?.length ?? 0);
-            i++) {
+        for (
+          var i = series.targetDose;
+          i < (series.series.seriesDose?.length ?? 0);
+          i++
+        ) {
           forecastFinishDate = forecastFinishDate!.change(
-              series.series.seriesDose?[i].allowableInterval?.minInt ??
-                  '0 days');
+            series.series.seriesDose?[i].allowableInterval?.minInt ?? '0 days',
+          );
         }
-        final VaxDate maxAgeDateLastTargetDose = series.series.maxAgeDate(dob);
+        final maxAgeDateLastTargetDose = series.series.maxAgeDate(dob);
 
         /// A scorable patient series is completable.
         /// A patient series must be considered completable if the forecast
@@ -439,14 +499,16 @@ class VaxGroup {
       }
     }
 
-    for (final VaxSeries series in zeroValidDosesSeries) {
+    for (final series in zeroValidDosesSeries) {
       /// A scorable patient series can start earliest.
       /// A patient series must be considered start earliest if the start date
-      /// is before the start date for all other patient series with a start date.
+      /// is before the start date for all other patient series with a start
+      /// date.
       if (series.series.seriesDose?.first.seasonalRecommendation?.startDate !=
           null) {
-        final VaxDate startDate = VaxDate.fromJson(
-            series.series.seriesDose!.first.seasonalRecommendation!.startDate!);
+        final startDate = VaxDate.fromJson(
+          series.series.seriesDose!.first.seasonalRecommendation!.startDate!,
+        );
         if (startDate == earliestStartDate) {
           if (numberOfSeriesWithEarliestStartDate == 1) {
             series.score += 1;
@@ -459,16 +521,18 @@ class VaxGroup {
       }
 
       /// A scorable patient series is completable.
-      VaxDate? forecastFinishDate = series.candidateEarliestDate;
+      var forecastFinishDate = series.candidateEarliestDate;
       if (forecastFinishDate != null) {
-        for (int i = series.targetDose;
-            i < (series.series.seriesDose?.length ?? 0);
-            i++) {
+        for (
+          var i = series.targetDose;
+          i < (series.series.seriesDose?.length ?? 0);
+          i++
+        ) {
           forecastFinishDate = forecastFinishDate!.change(
-              series.series.seriesDose?[i].allowableInterval?.minInt ??
-                  '0 days');
+            series.series.seriesDose?[i].allowableInterval?.minInt ?? '0 days',
+          );
         }
-        final VaxDate maxAgeDateLastTargetDose = series.series.maxAgeDate(dob);
+        final maxAgeDateLastTargetDose = series.series.maxAgeDate(dob);
 
         /// A scorable patient series is completable.
         /// A patient series must be considered completable if the forecast
@@ -502,14 +566,16 @@ class VaxGroup {
     List<VaccineContraindication> vaccineContraindications,
   ) {
     this.evidenceOfImmunity = evidenceOfImmunity;
-    for (final VaxSeries element in series) {
+    for (final element in series) {
       element.forecast(vaccineContraindications, evidenceOfImmunity);
     }
 
-    final List<VaxSeries> relevantSeries = getRelevantSeries(series);
-    final List<VaxSeries> scorableSeries = getScorableSeries(relevantSeries);
-    final VaxSeries? tempPrioritizedSeries =
-        getPrioritizedSeries(scorableSeries, series);
+    final relevantSeries = getRelevantSeries(series);
+    final scorableSeries = getScorableSeries(relevantSeries);
+    final tempPrioritizedSeries = getPrioritizedSeries(
+      scorableSeries,
+      series,
+    );
     if (tempPrioritizedSeries != null) {
       prioritizedSeries.add(tempPrioritizedSeries);
     } else {
@@ -521,30 +587,38 @@ class VaxGroup {
   /// Section 8.3: classify scorable patient series — complete, in process, or
   /// zero valid doses — before scoring within each class.
   void classifyScorableSeries(List<VaxSeries> scorableSeries) {
-    final List<VaxSeries> completeScorableSeries = scorableSeries
-        .where((VaxSeries element) =>
-            element.seriesStatus == SeriesStatus.complete)
-        .toList();
-    final List<VaxSeries> scoredSeries = <VaxSeries>[];
+    final completeScorableSeries =
+        scorableSeries
+            .where(
+              (element) => element.seriesStatus == SeriesStatus.complete,
+            )
+            .toList();
+    final scoredSeries = <VaxSeries>[];
     if (completeScorableSeries.length == 1) {
       scoredSeries.add(completeScorableSeries.first);
     } else if (completeScorableSeries.length >= 2) {
       scoredSeries.addAll(scoreCompleteSeries(completeScorableSeries));
     } else {
-      final List<VaxSeries> inProcessSeries = scorableSeries
-          .where((VaxSeries element) =>
-              element.evaluatedTargetDose.values
-                  .contains(TargetDoseStatus.satisfied) &&
-              element.seriesStatus == SeriesStatus.notComplete)
-          .toList();
+      final inProcessSeries =
+          scorableSeries
+              .where(
+                (element) =>
+                    element.evaluatedTargetDose.values.contains(
+                      TargetDoseStatus.satisfied,
+                    ) &&
+                    element.seriesStatus == SeriesStatus.notComplete,
+              )
+              .toList();
       if (inProcessSeries.length == 1) {
         scoredSeries.add(inProcessSeries.first);
       } else if (inProcessSeries.length >= 2) {
         scoredSeries.addAll(scoreInProcessSeries(inProcessSeries));
       } else {
-        scoredSeries.addAll(scoreZeroValidDosesSeries(scorableSeries
-            .where((VaxSeries element) => element.targetDose == 0)
-            .toList()));
+        scoredSeries.addAll(
+          scoreZeroValidDosesSeries(
+            scorableSeries.where((element) => element.targetDose == 0).toList(),
+          ),
+        );
       }
     }
 
@@ -555,24 +629,27 @@ class VaxGroup {
 
   /// Section 8.7, Select Prioritized Patient Series.
   void prioritizedScoredSeries(List<VaxSeries> scoredSeries) {
-    int highestScore = -99;
-    for (final VaxSeries series in scoredSeries) {
+    var highestScore = -99;
+    for (final series in scoredSeries) {
       if (series.score > highestScore) {
         highestScore = series.score;
       }
     }
-    scoredSeries
-        .retainWhere((VaxSeries element) => element.score == highestScore);
+    scoredSeries.retainWhere(
+      (element) => element.score == highestScore,
+    );
     if (scoredSeries.length != 1) {
-      int preference = 10;
-      for (final VaxSeries series in scoredSeries) {
+      var preference = 10;
+      for (final series in scoredSeries) {
         if ((series.series.selectSeries?.seriesPriority?.index ?? 10) <
             preference) {
           preference = series.series.selectSeries!.seriesPriority!.index;
         }
       }
-      scoredSeries.retainWhere((VaxSeries element) =>
-          element.series.selectSeries!.seriesPriority!.index == preference);
+      scoredSeries.retainWhere(
+        (element) =>
+            element.series.selectSeries!.seriesPriority!.index == preference,
+      );
       prioritizedSeries.addAll(scoredSeries);
     } else {
       prioritizedSeries.add(scoredSeries.first);

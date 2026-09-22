@@ -15,15 +15,15 @@ final operationOutcomesProvider = OperationOutcomesProvider._();
 final class OperationOutcomesProvider
     extends $NotifierProvider<OperationOutcomes, List<OperationOutcomes>> {
   OperationOutcomesProvider._()
-      : super(
-          from: null,
-          argument: null,
-          retry: null,
-          name: r'operationOutcomesProvider',
-          isAutoDispose: true,
-          dependencies: null,
-          $allTransitiveDependencies: null,
-        );
+    : super(
+        from: null,
+        argument: null,
+        retry: null,
+        name: r'operationOutcomesProvider',
+        isAutoDispose: true,
+        dependencies: null,
+        $allTransitiveDependencies: null,
+      );
 
   @override
   String debugGetCreateSourceHash() => _$operationOutcomesHash();
@@ -50,11 +50,14 @@ abstract class _$OperationOutcomes extends $Notifier<List<OperationOutcomes>> {
   WhenComplete runBuild() {
     final ref =
         this.ref as $Ref<List<OperationOutcomes>, List<OperationOutcomes>>;
-    final element = ref.element as $ClassProviderElement<
-        AnyNotifier<List<OperationOutcomes>, List<OperationOutcomes>>,
-        List<OperationOutcomes>,
-        Object?,
-        Object?>;
+    final element =
+        ref.element
+            as $ClassProviderElement<
+              AnyNotifier<List<OperationOutcomes>, List<OperationOutcomes>>,
+              List<OperationOutcomes>,
+              Object?,
+              Object?
+            >;
     return element.handleCreate(ref, build);
   }
 }

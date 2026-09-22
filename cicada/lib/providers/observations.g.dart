@@ -15,15 +15,15 @@ final observationsProvider = ObservationsProvider._();
 final class ObservationsProvider
     extends $NotifierProvider<Observations, VaxObservations> {
   ObservationsProvider._()
-      : super(
-          from: null,
-          argument: null,
-          retry: null,
-          name: r'observationsProvider',
-          isAutoDispose: true,
-          dependencies: null,
-          $allTransitiveDependencies: null,
-        );
+    : super(
+        from: null,
+        argument: null,
+        retry: null,
+        name: r'observationsProvider',
+        isAutoDispose: true,
+        dependencies: null,
+        $allTransitiveDependencies: null,
+      );
 
   @override
   String debugGetCreateSourceHash() => _$observationsHash();
@@ -49,11 +49,14 @@ abstract class _$Observations extends $Notifier<VaxObservations> {
   @override
   WhenComplete runBuild() {
     final ref = this.ref as $Ref<VaxObservations, VaxObservations>;
-    final element = ref.element as $ClassProviderElement<
-        AnyNotifier<VaxObservations, VaxObservations>,
-        VaxObservations,
-        Object?,
-        Object?>;
+    final element =
+        ref.element
+            as $ClassProviderElement<
+              AnyNotifier<VaxObservations, VaxObservations>,
+              VaxObservations,
+              Object?,
+              Object?
+            >;
     return element.handleCreate(ref, build);
   }
 }

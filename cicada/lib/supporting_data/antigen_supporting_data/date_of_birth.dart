@@ -1,4 +1,4 @@
-import 'exclusion.dart';
+import 'package:cicada/supporting_data/antigen_supporting_data/exclusion.dart';
 
 class DateOfBirth {
   DateOfBirth({
@@ -7,19 +7,20 @@ class DateOfBirth {
     this.exclusion,
   });
 
-  final String? immunityBirthDate;
-  final String? birthCountry;
-  final List<Exclusion>? exclusion;
-
   factory DateOfBirth.fromJson(Map<String, dynamic> json) {
     return DateOfBirth(
       immunityBirthDate: json['immunityBirthDate'] as String?,
       birthCountry: json['birthCountry'] as String?,
-      exclusion: (json['exclusion'] as List<dynamic>?)
-          ?.map((e) => Exclusion.fromJson(e as Map<String, dynamic>))
-          .toList(),
+      exclusion:
+          (json['exclusion'] as List<dynamic>?)
+              ?.map((e) => Exclusion.fromJson(e as Map<String, dynamic>))
+              .toList(),
     );
   }
+
+  final String? immunityBirthDate;
+  final String? birthCountry;
+  final List<Exclusion>? exclusion;
 
   Map<String, dynamic> toJson() {
     return {

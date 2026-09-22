@@ -1,6 +1,5 @@
+import 'package:cicada/cicada.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
-
-import '../cicada.dart';
 
 part 'series_group_complete.g.dart';
 
@@ -12,9 +11,8 @@ part 'series_group_complete.g.dart';
 class SeriesGroupComplete extends _$SeriesGroupComplete {
   @override
   Map<String, Map<String, bool>> build() {
-    final Map<String, Map<String, bool>> buildMap =
-        <String, Map<String, bool>>{};
-    for (final AntigenSupportingData ag in antigenSupportingData) {
+    final buildMap = <String, Map<String, bool>>{};
+    for (final ag in antigenSupportingData) {
       if (ag.targetDisease != null) {
         buildMap[ag.targetDisease!] = <String, bool>{};
       }

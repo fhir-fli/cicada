@@ -56,6 +56,27 @@ def fetch(system):
     return items, version
 
 
+
+def dart_string(text, indent):
+    """A single-quoted Dart literal, split into adjacent literals at spaces
+    when the line would pass 80 columns (very_good_analysis
+    lines_longer_than_80_chars); dart format lays the pieces out and the
+    compiler joins them."""
+    room = 80 - indent - 4 - 2 - 2
+    if len(text) <= room or " " not in text:
+        return f"'{text}'"
+    pieces, rest = [], text
+    while len(rest) > room:
+        cut = rest.rfind(" ", 0, room)
+        if cut <= 0:
+            cut = rest.find(" ")
+        if cut <= 0:
+            break
+        pieces.append(rest[: cut + 1])
+        rest = rest[cut + 1 :]
+    pieces.append(rest)
+    return " ".join(f"'{p}'" for p in pieces)
+
 def write(name, system, items, version):
     tsv = pathlib.Path(__file__).resolve().parent / f"{name}_displays.tsv"
     dart = ROOT / "cicada" / "lib" / "generated_files" / f"{name}_displays.dart"
@@ -72,7 +93,7 @@ def write(name, system, items, version):
         for c in sorted(items, key=key):
             code, disp = c["code"], (c.get("display") or "").replace("'", "\\'")
             t.write(f"{code}\t{c.get('display')}\n")
-            d.write(f"  '{code}': '{disp}',\n")
+            d.write(f"  '{code}': {dart_string(disp, indent=2)},\n")
             t.flush(); d.flush()
             print(name, code, disp, flush=True)
         d.write("};\n")
@@ -80,6 +101,18 @@ def write(name, system, items, version):
     print(f"wrote {len(items)} {up} displays ({version}) to {dart}", flush=True)
 
 
-for name, system in (("cvx", "http://hl7.org/fhir/sid/cvx"), ("mvx", "http://hl7.org/fhir/sid/mvx")):
-    items, version = fetch(system)
-    write(name, system, items, version)
+def items_from_tsv(name):
+    """The last fetch's rows, so the Dart can be re-emitted (e.g. after a
+    change to dart_string) without asking tx.fhir.org again: --from-tsv."""
+    tsv = pathlib.Path(__file__).resolve().parent / f"{name}_displays.tsv"
+    lines = tsv.read_text().splitlines()
+    version = lines[0].split(",")[0].split()[-1]
+    items = [{"code": c, "display": d} for c, d in (l.split("\t", 1) for l in lines[2:])]
+    return items, version
+
+
+if __name__ == "__main__":
+    from_tsv = "--from-tsv" in sys.argv
+    for name, system in (("cvx", "http://hl7.org/fhir/sid/cvx"), ("mvx", "http://hl7.org/fhir/sid/mvx")):
+        items, version = items_from_tsv(name) if from_tsv else fetch(system)
+        write(name, system, items, version)

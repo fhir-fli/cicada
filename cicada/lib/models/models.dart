@@ -1,5 +1,5 @@
-export '01_vax_patient.dart';
-export '02_vax_antigen.dart';
-export '03_vax_group.dart';
-export '04_vax_series.dart';
-export '05_vax_dose.dart';
+export 'vax_antigen.dart';
+export 'vax_dose.dart';
+export 'vax_group.dart';
+export 'vax_patient.dart';
+export 'vax_series.dart';

@@ -1,6 +1,5 @@
+import 'package:cicada/cicada.dart';
 import 'package:fhir_r4/fhir_r4.dart';
-
-import '../cicada.dart';
 
 /// The patient's recorded administrative sex, as CDSi's `requiredGender` reads
 /// it.
@@ -27,7 +26,7 @@ import '../cicada.dart';
 /// observation 075, a risk indication for mpox vaccination, which the engine
 /// matches like any other coded observation.
 Gender genderFromPatient(Patient patient) {
-  final String? g = patient.gender?.toString().toLowerCase();
+  final g = patient.gender?.toString().toLowerCase();
   if (g == 'f' || g == 'female') return Gender.female;
   if (g == 'm' || g == 'male') return Gender.male;
   return Gender.unknown;

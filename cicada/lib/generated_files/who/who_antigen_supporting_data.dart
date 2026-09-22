@@ -1,27 +1,28 @@
-import 'rabies.dart';
-import 'japanese_encephalitis.dart';
-import 'rubella.dart';
-import 'influenza.dart';
-import 'hib.dart';
-import 'hpv.dart';
-import 'pertussis.dart';
-import 'tetanus.dart';
-import 'meningococcal.dart';
-import 'pneumococcal.dart';
-import 'rotavirus.dart';
-import 'cholera.dart';
-import 'diphtheria.dart';
-import 'mumps.dart';
-import 'typhoid.dart';
-import 'hepa.dart';
-import 'polio.dart';
-import 'measles.dart';
-import 'covid_19.dart';
-import 'yellow_fever.dart';
-import 'hepb.dart';
-import 'tuberculosis.dart';
+import 'package:cicada/cicada.dart';
+import 'package:cicada/generated_files/who/cholera.dart';
+import 'package:cicada/generated_files/who/covid_19.dart';
+import 'package:cicada/generated_files/who/diphtheria.dart';
+import 'package:cicada/generated_files/who/hepa.dart';
+import 'package:cicada/generated_files/who/hepb.dart';
+import 'package:cicada/generated_files/who/hib.dart';
+import 'package:cicada/generated_files/who/hpv.dart';
+import 'package:cicada/generated_files/who/influenza.dart';
+import 'package:cicada/generated_files/who/japanese_encephalitis.dart';
+import 'package:cicada/generated_files/who/measles.dart';
+import 'package:cicada/generated_files/who/meningococcal.dart';
+import 'package:cicada/generated_files/who/mumps.dart';
+import 'package:cicada/generated_files/who/pertussis.dart';
+import 'package:cicada/generated_files/who/pneumococcal.dart';
+import 'package:cicada/generated_files/who/polio.dart';
+import 'package:cicada/generated_files/who/rabies.dart';
+import 'package:cicada/generated_files/who/rotavirus.dart';
+import 'package:cicada/generated_files/who/rubella.dart';
+import 'package:cicada/generated_files/who/tetanus.dart';
+import 'package:cicada/generated_files/who/tuberculosis.dart';
+import 'package:cicada/generated_files/who/typhoid.dart';
+import 'package:cicada/generated_files/who/yellow_fever.dart';
 
-final whoAntigenSupportingData = [
+final List<AntigenSupportingData> whoAntigenSupportingData = [
   whoRabies,
   whoJapaneseEncephalitis,
   whoRubella,
@@ -46,7 +47,7 @@ final whoAntigenSupportingData = [
   whoTuberculosis,
 ];
 
-final whoAntigenSupportingDataMap = {
+final Map<String, AntigenSupportingData> whoAntigenSupportingDataMap = {
   'Rabies': whoRabies,
   'Japanese Encephalitis': whoJapaneseEncephalitis,
   'Rubella': whoRubella,

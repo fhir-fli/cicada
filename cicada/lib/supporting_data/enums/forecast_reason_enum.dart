@@ -26,7 +26,7 @@ enum ForecastReason {
   /// status is unchanged and this reason says which kind of Not Complete it
   /// is.
   ///
-  /// Added because "Not Complete, due <next season>" and "Not Complete, due
+  /// Added because "Not Complete, due `<next season>`" and "Not Complete, due
   /// now" are the same output to an alert or a quality measure, so a patient
   /// who has had this year's influenza dose reads as a gap for the rest of the
   /// season. ACIP defines influenza and RSV recommendations by season
@@ -107,7 +107,8 @@ enum ForecastReason {
       case patientHasExceededTheMaximumAge:
         return 'Patient has exceeded the maximum age';
       case patientIsUnableToFinishTheSeriesPriorToTheMaximumAge:
-        return 'Patient is unable to finish the series prior to the maximum age';
+        return 'Patient is unable to finish the series prior to the maximum '
+            'age';
       case patientHasNotReachedTheMinimumAgeToStart:
         return 'Patient has not reached the minimum age to start';
       case completeForTheSeason:

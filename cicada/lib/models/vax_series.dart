@@ -1,6 +1,5 @@
+import 'package:cicada/cicada.dart';
 import 'package:collection/collection.dart';
-
-import '../cicada.dart';
 
 class VaxSeries {
   VaxSeries({
@@ -11,8 +10,9 @@ class VaxSeries {
   });
 
   VaxDose? get lastCompleted {
-    final int index = evaluatedDoses
-        .lastIndexWhere((VaxDose element) => element.targetDoseSatisfied != -1);
+    final index = evaluatedDoses.lastIndexWhere(
+      (element) => element.targetDoseSatisfied != -1,
+    );
     return index == -1 ? null : evaluatedDoses[index];
   }
 
@@ -41,20 +41,23 @@ class VaxSeries {
   /// relevant patient series with a patient series status of 'Complete'. A
   /// conditional skip whose `context` is `Both` is asked during evaluation as
   /// well as during forecasting, so that status has to exist by the time
-  /// evaluation runs; it was previously written only in [determineForecastNeed],
+  /// evaluation runs; it was previously written only in
+  /// [determineForecastNeed],
   /// which runs after every antigen is evaluated, leaving the condition unable
   /// to be met during the evaluation pass at all.
   ///
   /// A patient series is 'Complete' when every target dose is satisfied, which
   /// is what is tested here.
   void _recordSeriesGroupCompletion() {
-    final bool anyNotSatisfied = evaluatedTargetDose.values
-        .any((TargetDoseStatus s) => s == TargetDoseStatus.notSatisfied);
-    final bool anySatisfied = evaluatedTargetDose.values
-        .any((TargetDoseStatus s) => s == TargetDoseStatus.satisfied);
+    final anyNotSatisfied = evaluatedTargetDose.values.any(
+      (s) => s == TargetDoseStatus.notSatisfied,
+    );
+    final anySatisfied = evaluatedTargetDose.values.any(
+      (s) => s == TargetDoseStatus.satisfied,
+    );
     if (!anyNotSatisfied && anySatisfied) {
       seriesGroupCompletion[targetDisease]?[seriesGroupKey] = true;
-      final VaxDate? completedOn = lastCompleted?.dateGiven;
+      final completedOn = lastCompleted?.dateGiven;
       if (completedOn != null) {
         seriesGroupCompletionDate[targetDisease]?[seriesGroupKey] = completedOn;
       }
@@ -64,22 +67,23 @@ class VaxSeries {
   /// Per Figure 4-6 / Step 6b: any dose that was never matched to a target
   /// dose should be marked extraneous.
   void markExtraneousDoses() {
-    for (final VaxDose dose in doses) {
+    for (final dose in doses) {
       if (dose.evalStatus == null) {
-        dose.evalStatus = EvalStatus.extraneous;
-        dose.evalReason = EvalReason.seriesAlreadyCompleted;
+        dose
+          ..evalStatus = EvalStatus.extraneous
+          ..evalReason = EvalReason.seriesAlreadyCompleted;
       }
     }
   }
 
   void setUnsatisfiedDoses() {
-    for (int i = targetDose; i < (series.seriesDose?.length ?? 0); i++) {
+    for (var i = targetDose; i < (series.seriesDose?.length ?? 0); i++) {
       evaluatedTargetDose[i] = TargetDoseStatus.notSatisfied;
     }
   }
 
   void indexDoses() {
-    for (int i = 0; i < doses.length; i++) {
+    for (var i = 0; i < doses.length; i++) {
       doses[i].index = i;
       doses[i].observations = observations;
     }
@@ -89,7 +93,7 @@ class VaxSeries {
   /// next unevaluated dose against each in turn. Step 5a keeps a satisfied
   /// recurring target dose in play, which is the inner loop.
   void evaluateSeriesDoses() {
-    for (final SeriesDose seriesDose in series.seriesDose ?? <SeriesDose>[]) {
+    for (final seriesDose in series.seriesDose ?? <SeriesDose>[]) {
       if (evaluatedDoses.length == doses.length) {
         break;
       } else {
@@ -97,7 +101,7 @@ class VaxSeries {
         // For recurring doses (e.g., Influenza), keep matching additional
         // doses against the same target dose instead of moving on.
         if (seriesDose.recurringDose == Binary.yes) {
-          int prev = -1;
+          var prev = -1;
           while (prev != evaluatedDoses.length &&
               evaluatedDoses.length < doses.length) {
             prev = evaluatedDoses.length;
@@ -111,8 +115,8 @@ class VaxSeries {
   /// Chapter 6 step 2: take the next antigen administered record that has not
   /// yet been evaluated, in ascending date order.
   void evaluateNextDose(SeriesDose seriesDose) {
-    for (int i = evaluatedDoses.length; i < doses.length; i++) {
-      final VaxDose dose = doses[i];
+    for (var i = evaluatedDoses.length; i < doses.length; i++) {
+      final dose = doses[i];
       if (dose.evalStatus != null) {
         continue;
       } else {
@@ -163,14 +167,14 @@ class VaxSeries {
   /// fewer, and every later step inherits that. [verdict] names the component
   /// that decided it — age, interval, vaccine type — so the trace says which.
   void _traceDose(VaxDose dose, String verdict) => ForecastTrace.current?.log(
-        '6 dose evaluation',
-        '$targetDisease / ${series.seriesName}',
-        'dose=${dose.doseId} given=${dose.dateGiven} '
-            'targetDose=${targetDose + 1} $verdict',
-      );
+    '6 dose evaluation',
+    '$targetDisease / ${series.seriesName}',
+    'dose=${dose.doseId} given=${dose.dateGiven} '
+        'targetDose=${targetDose + 1} $verdict',
+  );
 
   bool evaluateDoseValidity(SeriesDose seriesDose, VaxDose dose) {
-    final bool inadvertent = dose.isInadvertent(seriesDose);
+    final inadvertent = dose.isInadvertent(seriesDose);
     if (inadvertent) {
       _traceDose(dose, 'not counted: inadvertent');
       return false;
@@ -178,16 +182,22 @@ class VaxSeries {
 
     // Per Table 6-31: evaluate ALL remaining components, then combine.
     // 6.4 Evaluate Age
-    final bool ageOk = dose.isValidByAge(seriesDose.age, targetDose);
+    final ageOk = dose.isValidByAge(seriesDose.age, targetDose);
 
     // 6.5/6.6 Evaluate Interval (preferable then allowable)
-    final bool preferableOk = dose.evaluatePreferableInterval(
-        seriesDose.preferableInterval, doses, targetDose);
-    final bool allowableOk = preferableOk
-        ? true
-        : dose.evaluateAllowableInterval(
-            seriesDose.allowableInterval, doses, targetDose);
-    final bool intervalOk = preferableOk || allowableOk;
+    final preferableOk = dose.evaluatePreferableInterval(
+      seriesDose.preferableInterval,
+      doses,
+      targetDose,
+    );
+    final allowableOk =
+        preferableOk ||
+        dose.evaluateAllowableInterval(
+          seriesDose.allowableInterval,
+          doses,
+          targetDose,
+        );
+    final intervalOk = preferableOk || allowableOk;
 
     if (!ageOk && !intervalOk) {
       // Both fail. Table 6-31 sets the status "with evaluation reasons",
@@ -206,7 +216,7 @@ class VaxSeries {
 
     // Interval-only failure
     if (!intervalOk) {
-      dose.evalStatus ??= EvalStatus.not_valid;
+      dose.evalStatus ??= EvalStatus.notValid;
       dose.evalReason ??= EvalReason.intervalTooShort;
       _traceDose(dose, 'not counted: interval');
       return false;
@@ -223,21 +233,25 @@ class VaxSeries {
       _traceDose(dose, 'counted: preferable vaccine');
       return true;
     }
-    final bool allowedType =
-        dose.isAllowedType(seriesDose.allowableVaccine, dob);
+    final allowedType = dose.isAllowedType(
+      seriesDose.allowableVaccine,
+      dob,
+    );
     _traceDose(
-        dose,
-        allowedType
-            ? 'counted: allowable vaccine'
-            : 'not counted: vaccine type is neither preferable nor allowable');
+      dose,
+      allowedType
+          ? 'counted: allowable vaccine'
+          : 'not counted: vaccine type is neither preferable nor allowable',
+    );
     return allowedType;
   }
 
   /// Table 6-31: the target dose is satisfied and the evaluation status is
   /// 'Valid'. Step 4a then pushes on to the next target dose.
   void markDoseValid(SeriesDose seriesDose, VaxDose dose) {
-    dose.evalStatus = EvalStatus.valid;
-    dose.targetDoseSatisfied = targetDose;
+    dose
+      ..evalStatus = EvalStatus.valid
+      ..targetDoseSatisfied = targetDose;
     evaluatedDoses.add(dose);
     evaluatedTargetDose[targetDose] = TargetDoseStatus.satisfied;
     updateTargetDose(seriesDose);
@@ -278,7 +292,7 @@ class VaxSeries {
     /// the group answered Not Complete where CDSi says Aged Out
     /// (`2023-0034`). Not Recommended is dismissed by 8.14 the same way Aged
     /// Out is, which leaves the aged-out infant series to speak for the group.
-    final String? minAgeToStart = series.selectSeries?.minAgeToStart;
+    final minAgeToStart = series.selectSeries?.minAgeToStart;
     if (minAgeToStart != null &&
         evaluatedDoses.isEmpty &&
         assessmentDate < dob.change(minAgeToStart)) {
@@ -290,7 +304,8 @@ class VaxSeries {
 
     evaluateConditionalSkip(assessmentDate: assessmentDate);
     determineContraindications(
-        vaccineContraindications: vaccineContraindications);
+      vaccineContraindications: vaccineContraindications,
+    );
     determineForecastNeed(evidenceOfImmunity);
     ForecastTrace.current?.log(
       '7 forecast need',
@@ -299,7 +314,7 @@ class VaxSeries {
           'another=$shouldRecieveAnotherDose reason=$forecastReason',
     );
     if (shouldRecieveAnotherDose) {
-      int currentTargetDose = -1;
+      var currentTargetDose = -1;
       while (currentTargetDose != targetDose) {
         // When conditional skip advanced targetDose on a previous
         // iteration, recompute candidateEarliestDate for the new
@@ -325,7 +340,7 @@ class VaxSeries {
   void evaluateConditionalSkip({VaxDate? assessmentDate}) {
     assessmentDate ??= VaxDate.now();
     while (targetDose < (series.seriesDose?.length ?? 0)) {
-      final SeriesDose seriesDose = series.seriesDose![targetDose];
+      final seriesDose = series.seriesDose![targetDose];
 
       // Don't overwrite already satisfied doses — advance past them
       if (evaluatedTargetDose[targetDose] == TargetDoseStatus.satisfied) {
@@ -360,44 +375,58 @@ class VaxSeries {
   /// Table 6-11: can the target dose be skipped? A conditional skip applies in
   /// the context it declares — evaluation, forecast, or both.
   bool canSkip(
-          SeriesDose seriesDose, SkipContext skipContext, VaxDate evalDate) =>
-      seriesDose.conditionalSkip?.any((ConditionalSkip conditionalSkip) =>
-          (conditionalSkip.context == SkipContext.both ||
-              conditionalSkip.context == skipContext) &&
-          evaluateSkipCondition(conditionalSkip, skipContext, evalDate)) ??
+    SeriesDose seriesDose,
+    SkipContext skipContext,
+    VaxDate evalDate,
+  ) =>
+      seriesDose.conditionalSkip?.any(
+        (conditionalSkip) =>
+            (conditionalSkip.context == SkipContext.both ||
+                conditionalSkip.context == skipContext) &&
+            evaluateSkipCondition(conditionalSkip, skipContext, evalDate),
+      ) ??
       false;
 
   /// Table 6-11: how many sets were met, against the skip's set logic.
-  bool evaluateSkipCondition(ConditionalSkip conditionalSkip,
-      SkipContext skipContext, VaxDate evalDate) {
-    final bool andLogic = conditionalSkip.setLogic?.toLowerCase() == 'and';
-    final List<bool> results = conditionalSkip.set_
-            ?.map((VaxSet set) => skipSet(set, skipContext, evalDate))
+  bool evaluateSkipCondition(
+    ConditionalSkip conditionalSkip,
+    SkipContext skipContext,
+    VaxDate evalDate,
+  ) {
+    final andLogic = conditionalSkip.setLogic?.toLowerCase() == 'and';
+    final results =
+        conditionalSkip.set_
+            ?.map((set) => skipSet(set, skipContext, evalDate))
             .toList() ??
         <bool>[];
-    return andLogic
-        ? results.every((bool res) => res)
-        : results.any((bool res) => res);
+    return andLogic ? results.every((res) => res) : results.any((res) => res);
   }
 
   /// Table 6-10: is the conditional skip set met? How many conditions were
   /// met, against the set's condition logic.
   bool skipSet(VaxSet set_, SkipContext skipContext, VaxDate evalDate) {
-    final bool andLogic = set_.conditionLogic?.toLowerCase() == 'and';
-    final List<bool> conditionResults = set_.condition
-            ?.map((VaxCondition condition) =>
-                evaluateCondition(condition, evalDate, set_, skipContext))
+    final andLogic = set_.conditionLogic?.toLowerCase() == 'and';
+    final conditionResults =
+        set_.condition
+            ?.map(
+              (condition) =>
+                  evaluateCondition(condition, evalDate, set_, skipContext),
+            )
             .toList() ??
         <bool>[];
     return andLogic
-        ? conditionResults.every((bool res) => res)
-        : conditionResults.any((bool res) => res);
+        ? conditionResults.every((res) => res)
+        : conditionResults.any((res) => res);
   }
 
   /// Dispatch by conditional skip condition type: Table 6-6 age, Table 6-7
   /// completed series, Table 6-8 interval, Table 6-9 vaccine count.
-  bool evaluateCondition(VaxCondition condition, VaxDate evalDate, VaxSet set_,
-      SkipContext skipContext) {
+  bool evaluateCondition(
+    VaxCondition condition,
+    VaxDate evalDate,
+    VaxSet set_,
+    SkipContext skipContext,
+  ) {
     switch (condition.conditionType?.toLowerCase()) {
       case 'age':
         return skipByAge(condition, evalDate);
@@ -417,10 +446,10 @@ class VaxSeries {
   }
 
   bool skipByAge(VaxCondition condition, VaxDate evalDate) {
-    final VaxDate conditionalSkipBeginAgeDate =
+    final conditionalSkipBeginAgeDate =
         dob.changeNullable(condition.beginAge, false)!;
 
-    final VaxDate conditionalSkipEndAgeDate =
+    final conditionalSkipEndAgeDate =
         dob.changeNullable(condition.endAge, true)!;
 
     return evalDate >= conditionalSkipBeginAgeDate &&
@@ -455,7 +484,7 @@ class VaxSeries {
   /// which is completion recorded during the forecast pass, where there is no
   /// satisfying dose to date it by.
   bool skipByCompletedSeries(VaxCondition condition, VaxDate evalDate) {
-    final VaxDate? completedOn =
+    final completedOn =
         seriesGroupCompletionDate[targetDisease]?[condition.seriesGroups];
     if (completedOn != null) {
       return evalDate >= completedOn;
@@ -470,26 +499,41 @@ class VaxSeries {
     if (targetDose == 0) {
       return false;
     } else {
-      final VaxDate conditionalSkipIntervalDate =
+      final conditionalSkipIntervalDate =
           lastCompleted!.dateGiven.changeNullable(condition.interval, true)!;
       return evalDate >= conditionalSkipIntervalDate;
     }
   }
 
   bool skipByCountDateAndAge(
-      VaxCondition condition, VaxDate referenceDate, SkipContext skipContext) {
-    final VaxDate? startDate = condition.startDate == null
-        ? dob.changeNullable(condition.beginAge, false)
-        : VaxDate.fromString(condition.startDate!, true);
-    final VaxDate? endDate = condition.endDate == null
-        ? dob.changeNullable(condition.endAge, true)
-        : VaxDate.fromString(condition.endDate!);
-    final VaxDate? ageEndDate = dob.changeNullable(condition.endAge, true);
-    final List<int> types = parseTypes(condition.vaccineTypes);
-    final int totalCount = countVaccinesDateAndAge(types, startDate, endDate,
-        ageEndDate, condition.doseType, referenceDate, skipContext);
+    VaxCondition condition,
+    VaxDate referenceDate,
+    SkipContext skipContext,
+  ) {
+    final startDate =
+        condition.startDate == null
+            ? dob.changeNullable(condition.beginAge, false)
+            : VaxDate.fromString(condition.startDate!, true);
+    final endDate =
+        condition.endDate == null
+            ? dob.changeNullable(condition.endAge, true)
+            : VaxDate.fromString(condition.endDate!);
+    final ageEndDate = dob.changeNullable(condition.endAge, true);
+    final types = parseTypes(condition.vaccineTypes);
+    final totalCount = countVaccinesDateAndAge(
+      types,
+      startDate,
+      endDate,
+      ageEndDate,
+      condition.doseType,
+      referenceDate,
+      skipContext,
+    );
     return evaluateCountLogic(
-        totalCount, condition.doseCountLogic, condition.doseCount);
+      totalCount,
+      condition.doseCountLogic,
+      condition.doseCount,
+    );
   }
 
   /// The doses a conditional skip counts, per CONDSKIP-1.
@@ -525,96 +569,142 @@ class VaxSeries {
   ///
   /// A 'Valid' count still comes from this series' evaluated doses: "valid"
   /// has no meaning except with respect to a patient series.
-  List<VaxDose> conditionalSkipSource(List<int> types, DoseType? doseType,
-      VaxDate referenceDate, SkipContext skipContext) {
+  List<VaxDose> conditionalSkipSource(
+    List<int> types,
+    DoseType? doseType,
+    VaxDate referenceDate,
+    SkipContext skipContext,
+  ) {
     if (doseType != DoseType.total || allPatientDoses.isEmpty) {
       return evaluatedDoses;
     }
-    final bool evaluating = skipContext == SkipContext.evaluation;
+    final evaluating = skipContext == SkipContext.evaluation;
     return allPatientDoses
-        .where((VaxDose dose) =>
-            (evaluating
-                ? dose.dateGiven < referenceDate
-                : dose.dateGiven <= referenceDate) &&
-            (types.isNotEmpty ||
-                dose.antigens.any((String antigen) =>
-                    antigen.toLowerCase() == targetDisease.toLowerCase())))
+        .where(
+          (dose) =>
+              (evaluating
+                  ? dose.dateGiven < referenceDate
+                  : dose.dateGiven <= referenceDate) &&
+              (types.isNotEmpty ||
+                  dose.antigens.any(
+                    (antigen) =>
+                        antigen.toLowerCase() == targetDisease.toLowerCase(),
+                  )),
+        )
         .toList();
   }
 
   /// CONDSKIP-1 with both an age window and a date window (Table 6-9).
   int countVaccinesDateAndAge(
-      List<int> types,
-      VaxDate? startDate,
-      VaxDate? endDate,
-      VaxDate? ageEndDate,
-      DoseType? doseType,
-      VaxDate referenceDate,
-      SkipContext skipContext) {
-    final List<VaxDose> source =
-        conditionalSkipSource(types, doseType, referenceDate, skipContext);
+    List<int> types,
+    VaxDate? startDate,
+    VaxDate? endDate,
+    VaxDate? ageEndDate,
+    DoseType? doseType,
+    VaxDate referenceDate,
+    SkipContext skipContext,
+  ) {
+    final source = conditionalSkipSource(
+      types,
+      doseType,
+      referenceDate,
+      skipContext,
+    );
     return source
-        .where((VaxDose dose) =>
-            (types.isEmpty || types.contains(dose.cvxAsInt)) &&
-            (startDate == null || dose.dateGiven >= startDate) &&
-            (endDate == null || dose.dateGiven <= endDate) &&
-            (ageEndDate == null || dose.dateGiven < ageEndDate) &&
-            (doseType == DoseType.total ||
-                (doseType == DoseType.valid &&
-                    dose.evalStatus == EvalStatus.valid)))
+        .where(
+          (dose) =>
+              (types.isEmpty || types.contains(dose.cvxAsInt)) &&
+              (startDate == null || dose.dateGiven >= startDate) &&
+              (endDate == null || dose.dateGiven <= endDate) &&
+              (ageEndDate == null || dose.dateGiven < ageEndDate) &&
+              (doseType == DoseType.total ||
+                  (doseType == DoseType.valid &&
+                      dose.evalStatus == EvalStatus.valid)),
+        )
         .length;
   }
 
   /// Table 6-9: vaccine count by age, or by date.
-  bool skipByCount(VaxCondition condition, VaxDate refDate, bool byAge,
-      VaxDate referenceDate, SkipContext skipContext) {
-    final VaxDate? startDate = byAge
-        ? dob.changeNullable(condition.beginAge, false)
-        : condition.startDate == null
+  bool skipByCount(
+    VaxCondition condition,
+    VaxDate refDate,
+    bool byAge,
+    VaxDate referenceDate,
+    SkipContext skipContext,
+  ) {
+    final startDate =
+        byAge
+            ? dob.changeNullable(condition.beginAge, false)
+            : condition.startDate == null
             ? null
             : VaxDate.fromString(condition.startDate!, true);
-    final VaxDate? endDate = byAge
-        ? dob.changeNullable(condition.endAge, true)
-        : condition.endDate == null
+    final endDate =
+        byAge
+            ? dob.changeNullable(condition.endAge, true)
+            : condition.endDate == null
             ? null
             : VaxDate.fromString(condition.endDate!);
-    final List<int> types = parseTypes(condition.vaccineTypes);
-    final int totalCount = countVaccines(types, startDate, endDate,
-        condition.doseType, referenceDate, skipContext);
+    final types = parseTypes(condition.vaccineTypes);
+    final totalCount = countVaccines(
+      types,
+      startDate,
+      endDate,
+      condition.doseType,
+      referenceDate,
+      skipContext,
+    );
     return evaluateCountLogic(
-        totalCount, condition.doseCountLogic, condition.doseCount);
+      totalCount,
+      condition.doseCountLogic,
+      condition.doseCount,
+    );
   }
 
   List<int> parseTypes(String? vaccineTypes) {
     return vaccineTypes
             ?.split(';')
-            .map((String e) => int.tryParse(e.trim()))
+            .map((e) => int.tryParse(e.trim()))
             .whereType<int>()
             .toList() ??
         <int>[];
   }
 
   /// CONDSKIP-1: the count of conditional doses administered.
-  int countVaccines(List<int> types, VaxDate? startDate, VaxDate? endDate,
-      DoseType? doseType, VaxDate referenceDate, SkipContext skipContext) {
-    final List<VaxDose> source =
-        conditionalSkipSource(types, doseType, referenceDate, skipContext);
+  int countVaccines(
+    List<int> types,
+    VaxDate? startDate,
+    VaxDate? endDate,
+    DoseType? doseType,
+    VaxDate referenceDate,
+    SkipContext skipContext,
+  ) {
+    final source = conditionalSkipSource(
+      types,
+      doseType,
+      referenceDate,
+      skipContext,
+    );
     return source
-        .where((VaxDose dose) =>
-            (types.isEmpty || types.contains(dose.cvxAsInt)) &&
-            (startDate == null || dose.dateGiven >= startDate) &&
-            (endDate == null || dose.dateGiven <= endDate) &&
-            (doseType == DoseType.total ||
-                (doseType == DoseType.valid &&
-                    dose.evalStatus == EvalStatus.valid)))
+        .where(
+          (dose) =>
+              (types.isEmpty || types.contains(dose.cvxAsInt)) &&
+              (startDate == null || dose.dateGiven >= startDate) &&
+              (endDate == null || dose.dateGiven <= endDate) &&
+              (doseType == DoseType.total ||
+                  (doseType == DoseType.valid &&
+                      dose.evalStatus == EvalStatus.valid)),
+        )
         .length;
   }
 
   /// Table 6-9: the dose count logic — greater than, equal to, or less than
   /// the conditional skip dose count.
   bool evaluateCountLogic(
-      int actualCount, String? logic, String? requiredCountStr) {
-    final int requiredCount = int.tryParse(requiredCountStr ?? '0') ?? 0;
+    int actualCount,
+    String? logic,
+    String? requiredCountStr,
+  ) {
+    final requiredCount = int.tryParse(requiredCountStr ?? '0') ?? 0;
     switch (logic?.toLowerCase()) {
       case 'greater':
         return actualCount > requiredCount;
@@ -636,11 +726,14 @@ class VaxSeries {
   /// Returns only ages whose date range covers [date].
   List<VaxAge> _filterAges(List<VaxAge>? ages, VaxDate date) {
     if (ages == null || ages.isEmpty) return <VaxAge>[];
-    final List<VaxAge> filtered = ages
-        .where((VaxAge a) =>
-            VaxDate.fromNullableString(a.effectiveDate) <= date &&
-            date <= VaxDate.fromNullableString(a.cessationDate, true))
-        .toList();
+    final filtered =
+        ages
+            .where(
+              (a) =>
+                  VaxDate.fromNullableString(a.effectiveDate) <= date &&
+                  date <= VaxDate.fromNullableString(a.cessationDate, true),
+            )
+            .toList();
     // If only one age entry and no effectiveDate/cessationDate, it always
     // applies (common case: most antigens have a single age entry).
     if (filtered.isEmpty && ages.length == 1) return ages;
@@ -651,11 +744,14 @@ class VaxSeries {
   /// Returns only intervals whose date range covers [date].
   List<Interval> _filterIntervals(List<Interval>? intervals, VaxDate date) {
     if (intervals == null || intervals.isEmpty) return <Interval>[];
-    final List<Interval> filtered = intervals
-        .where((Interval i) =>
-            VaxDate.fromNullableString(i.effectiveDate) <= date &&
-            date <= VaxDate.fromNullableString(i.cessationDate, true))
-        .toList();
+    final filtered =
+        intervals
+            .where(
+              (i) =>
+                  VaxDate.fromNullableString(i.effectiveDate) <= date &&
+                  date <= VaxDate.fromNullableString(i.cessationDate, true),
+            )
+            .toList();
     // If only one interval entry with no effectiveDate/cessationDate,
     // it always applies.
     if (filtered.isEmpty && intervals.length == 1) return intervals;
@@ -665,11 +761,11 @@ class VaxSeries {
   /// Get the last dose with evalStatus Valid or Not Valid (not inadvertent).
   /// This is the correct reference dose per CALCDTINT-1.
   VaxDose? _getLastValidOrNotValidDose() {
-    for (int i = doses.length - 1; i >= 0; i--) {
-      final VaxDose d = doses[i];
+    for (var i = doses.length - 1; i >= 0; i--) {
+      final d = doses[i];
       if (!d.inadvertent &&
           (d.evalStatus == EvalStatus.valid ||
-              d.evalStatus == EvalStatus.not_valid)) {
+              d.evalStatus == EvalStatus.notValid)) {
         return d;
       }
     }
@@ -678,24 +774,27 @@ class VaxSeries {
 
   /// Get reference dose date for a forecast interval.
   /// Mirrors VaxDose.getReferenceDate() but operates at series level for
-  /// forecast context (includes not_valid doses per CALCDTINT-1).
+  /// forecast context (includes notValid doses per CALCDTINT-1).
   VaxDate? _getReferenceDateForForecast(Interval interval) {
     if (interval.fromPrevious == 'Y') {
       // Last dose with evalStatus Valid or Not Valid, not inadvertent
       return _getLastValidOrNotValidDose()?.dateGiven;
     } else if (interval.fromTargetDose != null) {
       return doses
-          .firstWhereOrNull((VaxDose d) =>
-              d.targetDoseSatisfied == interval.fromTargetDose! - 1)
+          .firstWhereOrNull(
+            (d) => d.targetDoseSatisfied == interval.fromTargetDose! - 1,
+          )
           ?.dateGiven;
     } else if (interval.fromMostRecent != null) {
-      final List<int> types = interval.mostRecent ?? <int>[];
+      final types = interval.mostRecent ?? <int>[];
       return doses
-          .lastWhereOrNull((VaxDose d) =>
-              types.contains(d.cvxAsInt) &&
-              !d.inadvertent &&
-              (d.evalStatus == EvalStatus.valid ||
-                  d.evalStatus == EvalStatus.not_valid))
+          .lastWhereOrNull(
+            (d) =>
+                types.contains(d.cvxAsInt) &&
+                !d.inadvertent &&
+                (d.evalStatus == EvalStatus.valid ||
+                    d.evalStatus == EvalStatus.notValid),
+          )
           ?.dateGiven;
     } else if (interval.fromRelevantObs != null) {
       // CALCDTINT-9: Use observation date of the most recent active patient
@@ -709,10 +808,11 @@ class VaxSeries {
   /// patient observation matching the given observation code.
   VaxDate? _getObservationDateForForecast(ObservationCode? relevantObs) {
     if (relevantObs == null) return null;
-    final int? obsIndex = observations.codesAsInt
-        ?.indexWhere((int element) => element == relevantObs.codeAsInt);
+    final obsIndex = observations.codesAsInt?.indexWhere(
+      (element) => element == relevantObs.codeAsInt,
+    );
     if (obsIndex == null || obsIndex == -1) return null;
-    final VaxObservation obs = observations.observation![obsIndex];
+    final obs = observations.observation![obsIndex];
     // Use period.start (the date the observation occurred), fallback to end
     if (obs.period?.start != null && obs.period!.start!.valueDateTime != null) {
       return VaxDate.fromDateTime(obs.period!.start!.valueDateTime!);
@@ -731,15 +831,18 @@ class VaxSeries {
   /// conditional skip advances targetDose.
   void _computeCandidateEarliestDate() {
     if (targetDose >= (series.seriesDose?.length ?? 0)) return;
-    final SeriesDose seriesDose = series.seriesDose![targetDose];
+    final seriesDose = series.seriesDose![targetDose];
 
     // Filter ages by effectiveDate/cessationDate
-    final List<VaxAge> filteredAges =
-        _filterAges(seriesDose.age, assessmentDate);
+    final filteredAges = _filterAges(
+      seriesDose.age,
+      assessmentDate,
+    );
 
-    final VaxDate maximumAgeDate = filteredAges.firstOrNull?.maxAge == null
-        ? VaxDate.max()
-        : dob.change(filteredAges.first.maxAge!);
+    final maximumAgeDate =
+        filteredAges.firstOrNull?.maxAge == null
+            ? VaxDate.max()
+            : dob.change(filteredAges.first.maxAge!);
 
     if (assessmentDate >= maximumAgeDate) {
       shouldRecieveAnotherDose = false;
@@ -750,25 +853,29 @@ class VaxSeries {
 
     /// The candidate earliest date must be the latest of the following dates:
     /// • Minimum age date
-    candidateEarliestDate = filteredAges.firstOrNull?.minAge == null
-        ? dob
-        : dob.change(filteredAges.first.minAge!);
+    candidateEarliestDate =
+        filteredAges.firstOrNull?.minAge == null
+            ? dob
+            : dob.change(filteredAges.first.minAge!);
 
     // Filter intervals by effectiveDate/cessationDate
-    final List<Interval> filteredIntervals =
-        _filterIntervals(seriesDose.preferableInterval, assessmentDate);
+    final filteredIntervals = _filterIntervals(
+      seriesDose.preferableInterval,
+      assessmentDate,
+    );
 
     /// • Latest of all minimum interval dates
     /// Per CALCDTINT-1: reference dose includes Valid or Not Valid
     /// (not inadvertent). Each interval resolves its own reference
     /// via fromPrevious/fromTargetDose/fromMostRecent.
-    for (final Interval interval in filteredIntervals) {
-      final VaxDate? refDate = _getReferenceDateForForecast(interval);
+    for (final interval in filteredIntervals) {
+      final refDate = _getReferenceDateForForecast(interval);
       if (refDate != null && interval.minInt != null) {
-        final VaxDate intervalDate = refDate.change(interval.minInt!);
-        candidateEarliestDate = candidateEarliestDate! > intervalDate
-            ? candidateEarliestDate
-            : intervalDate;
+        final intervalDate = refDate.change(interval.minInt!);
+        candidateEarliestDate =
+            candidateEarliestDate! > intervalDate
+                ? candidateEarliestDate
+                : intervalDate;
       }
     }
 
@@ -778,17 +885,20 @@ class VaxSeries {
     _applyLiveVirusConflictDates(seriesDose);
 
     /// • Seasonal recommendation start date
-    final VaxDate seasonalRecommendationStartDate = VaxDate.fromNullableString(
-        seriesDose.seasonalRecommendation?.startDate);
+    final seasonalRecommendationStartDate = VaxDate.fromNullableString(
+      seriesDose.seasonalRecommendation?.startDate,
+    );
     candidateEarliestDate =
         candidateEarliestDate! > seasonalRecommendationStartDate
             ? candidateEarliestDate
             : seasonalRecommendationStartDate;
 
     /// • Latest of all dates administered of any inadvertent administration
-    final VaxDate lastDateInadvertentAdministered = doses
-            .lastWhereOrNull((VaxDose element) =>
-                element.evalReason == EvalReason.inadvertentVaccine)
+    final lastDateInadvertentAdministered =
+        doses
+            .lastWhereOrNull(
+              (element) => element.evalReason == EvalReason.inadvertentVaccine,
+            )
             ?.dateGiven ??
         VaxDate.min();
     candidateEarliestDate =
@@ -798,18 +908,20 @@ class VaxSeries {
 
     /// • Date administered of the most recent vaccine dose
     ///   administered (Valid or Not Valid, not inadvertent)
-    final VaxDate lastDateAdministered =
+    final lastDateAdministered =
         _getLastValidOrNotValidDose()?.dateGiven ?? VaxDate.min();
-    candidateEarliestDate = candidateEarliestDate! > lastDateAdministered
-        ? candidateEarliestDate
-        : lastDateAdministered;
+    candidateEarliestDate =
+        candidateEarliestDate! > lastDateAdministered
+            ? candidateEarliestDate
+            : lastDateAdministered;
 
     /// • Minimum age date (using filtered ages)
-    final VaxDate minimumAgeDate =
+    final minimumAgeDate =
         dob.changeNullable(filteredAges.firstOrNull?.minAge, false)!;
-    candidateEarliestDate = candidateEarliestDate! > minimumAgeDate
-        ? candidateEarliestDate
-        : minimumAgeDate;
+    candidateEarliestDate =
+        candidateEarliestDate! > minimumAgeDate
+            ? candidateEarliestDate
+            : minimumAgeDate;
 
     /// If the candidateEarliestDate is after or the same as the
     /// maximum age date
@@ -832,24 +944,26 @@ class VaxSeries {
   /// copies), so we don't filter by evalStatus — any administered dose
   /// can cause a live virus conflict for forecast purposes.
   void _applyLiveVirusConflictDates(SeriesDose seriesDose) {
-    final List<VaxDose> dosesToCheck =
-        allPatientDoses.isNotEmpty ? allPatientDoses : doses;
-    for (int i = dosesToCheck.length - 1; i >= 0; i--) {
-      final VaxDose dose = dosesToCheck[i];
-      final List<LiveVirusConflict>? liveVirusConflicts = activeScheduleData
-          .liveVirusConflicts?.liveVirusConflict
-          ?.where((LiveVirusConflict element) =>
-              element.previous?.cvxAsInt == dose.cvxAsInt)
-          .toList();
+    final dosesToCheck = allPatientDoses.isNotEmpty ? allPatientDoses : doses;
+    for (var i = dosesToCheck.length - 1; i >= 0; i--) {
+      final dose = dosesToCheck[i];
+      final liveVirusConflicts =
+          activeScheduleData.liveVirusConflicts?.liveVirusConflict
+              ?.where(
+                (element) => element.previous?.cvxAsInt == dose.cvxAsInt,
+              )
+              .toList();
       if (liveVirusConflicts?.isNotEmpty ?? false) {
-        for (final LiveVirusConflict conflict in liveVirusConflicts!) {
-          final Vaccine? preferredConflict = seriesDose.preferableVaccine
-              ?.firstWhereOrNull((Vaccine element) =>
-                  element.cvxAsInt == conflict.current?.cvxAsInt);
+        for (final conflict in liveVirusConflicts!) {
+          final preferredConflict = seriesDose.preferableVaccine
+              ?.firstWhereOrNull(
+                (element) => element.cvxAsInt == conflict.current?.cvxAsInt,
+              );
           if (preferredConflict != null &&
               conflict.conflictEndInterval != null) {
-            final VaxDate forecastConflictEndDate =
-                dose.dateGiven.change(conflict.conflictEndInterval!);
+            final forecastConflictEndDate = dose.dateGiven.change(
+              conflict.conflictEndInterval!,
+            );
             candidateEarliestDate =
                 candidateEarliestDate! > forecastConflictEndDate
                     ? candidateEarliestDate
@@ -869,61 +983,71 @@ class VaxSeries {
     if (targetDose != series.seriesDose?.length) {
       assessmentDate ??= VaxDate.now();
       // Work on copies so we don't mutate the original supporting data.
-      final List<Vaccine> preferableVaccines =
+      final preferableVaccines =
           series.seriesDose?[targetDose].preferableVaccine?.toList() ??
-              <Vaccine>[];
-      final List<Vaccine> allowableVaccines =
+          <Vaccine>[];
+      final allowableVaccines =
           series.seriesDose?[targetDose].allowableVaccine?.toList() ??
-              <Vaccine>[];
+          <Vaccine>[];
 
       /// Check each of the contraindications (we already ensured they apply
       /// to the patient in a previous step)
-      final List<VaxObservation> currentObservations =
-          observations.observation?.toList() ?? <VaxObservation>[];
-      // TODO(Dokotela): if there's no date associated with an observation, do
-      // we assume it's active and apply it? Currently, we do.
-      /// We check and see which of the patient's observations are applicable for
-      /// the given assessmentDate
-      currentObservations.retainWhere((VaxObservation element) =>
-          VaxDate.fromNullableDateTime(
-                  element.period?.start?.valueDateTime, false) <=
-              assessmentDate! &&
-          assessmentDate <
-              VaxDate.fromNullableDateTime(
-                  element.period?.end?.valueDateTime, true));
+      // TODO(Dokotela): if there's no date associated with an observation,
+      // do we assume it's active and apply it? Currently, we do.
+      // We check and see which of the patient's observations are applicable
+      // for the given assessmentDate
+      final currentObservations =
+          (observations.observation?.toList() ?? <VaxObservation>[])
+            ..retainWhere(
+              (element) =>
+                  VaxDate.fromNullableDateTime(
+                        element.period?.start?.valueDateTime,
+                        false,
+                      ) <=
+                      assessmentDate! &&
+                  assessmentDate <
+                      VaxDate.fromNullableDateTime(
+                        element.period?.end?.valueDateTime,
+                        true,
+                      ),
+            );
 
       /// Get the list of the ints associated with the observations
-      final List<int> obsInts = currentObservations
-          .map((VaxObservation e) => e.codeAsInt ?? -1)
-          .toList();
-      obsInts.removeWhere((int element) => element == -1);
+      final obsInts =
+          currentObservations.map((e) => e.codeAsInt ?? -1).toList()
+            ..removeWhere((element) => element == -1);
 
-      /// We remove any contraindications that are not applicable, by ensuring that
-      /// their code appears in the list of current observations of the patient
-      final Iterable<VaccineContraindication> currentContraindications =
-          vaccineContraindications.where((VaccineContraindication element) =>
-              obsInts.contains(element.codeAsInt));
-      final Set<Vaccine> contraindicatedVaccines = currentContraindications
-          .expand((VaccineContraindication element) =>
-              element.contraindicatedVaccine ?? <Vaccine>[])
-          .toSet();
+      /// We remove any contraindications that are not applicable, by ensuring
+      /// that their code appears in the list of current observations of the
+      /// patient
+      final currentContraindications = vaccineContraindications.where(
+        (element) => obsInts.contains(element.codeAsInt),
+      );
+      final contraindicatedVaccines =
+          currentContraindications
+              .expand(
+                (element) => element.contraindicatedVaccine ?? <Vaccine>[],
+              )
+              .toSet();
 
-      for (final Vaccine vaccineContraindication in contraindicatedVaccines) {
+      for (final vaccineContraindication in contraindicatedVaccines) {
         /// If the dates are appropriate to apply to a patient, we note that
         /// this dose is contraindicated, and stop checking
         if (dob.changeNullable(vaccineContraindication.beginAge, false)! <=
                 assessmentDate &&
             assessmentDate <
                 dob.changeNullable(vaccineContraindication.endAge, true)!) {
-          final int? removedCvx = vaccineContraindication.cvxAsInt;
+          final removedCvx = vaccineContraindication.cvxAsInt;
           if (removedCvx != null &&
               !contraindicatedCvxCodes.contains('$removedCvx')) {
             contraindicatedCvxCodes.add('$removedCvx');
           }
-          preferableVaccines.removeWhere((Vaccine element) =>
-              element.cvxAsInt == vaccineContraindication.cvxAsInt);
-          allowableVaccines.removeWhere((Vaccine element) =>
-              element.cvxAsInt == vaccineContraindication.cvxAsInt);
+          preferableVaccines.removeWhere(
+            (element) => element.cvxAsInt == vaccineContraindication.cvxAsInt,
+          );
+          allowableVaccines.removeWhere(
+            (element) => element.cvxAsInt == vaccineContraindication.cvxAsInt,
+          );
           // Series is only contraindicated when ALL usable vaccines
           // (preferable + allowable) are removed.
           if (preferableVaccines.isEmpty && allowableVaccines.isEmpty) {
@@ -942,33 +1066,33 @@ class VaxSeries {
       seriesStatus = SeriesStatus.immune;
       forecastReason = ForecastReason.patientHasEvidenceOfImmunity;
     } else
-
     /// If the series is contraindicated
     if (isContraindicated || seriesStatus == SeriesStatus.contraindicated) {
       shouldRecieveAnotherDose = false;
       seriesStatus = SeriesStatus.contraindicated;
       forecastReason = ForecastReason.patientHasAContraindication;
     } else {
-      /// does the patient have at least one target dose status of 'Not Satisfied'
-      final TargetDoseStatus? notSatisfied = evaluatedTargetDose.values
-          .firstWhereOrNull((TargetDoseStatus element) =>
-              element == TargetDoseStatus.notSatisfied);
+      /// does the patient have at least one target dose status of
+      /// 'Not Satisfied'
+      final notSatisfied = evaluatedTargetDose.values.firstWhereOrNull(
+        (element) => element == TargetDoseStatus.notSatisfied,
+      );
 
       /// if no doses with a 'Not Satisfied' status were found
       if (notSatisfied == null) {
         /// check if there are any doses with a status of 'Satisfied'
-        final TargetDoseStatus? satisfied = evaluatedTargetDose.values
-            .firstWhereOrNull((TargetDoseStatus element) =>
-                element == TargetDoseStatus.satisfied);
+        final satisfied = evaluatedTargetDose.values.firstWhereOrNull(
+          (element) => element == TargetDoseStatus.satisfied,
+        );
 
         /// If there are not, then this series is not recommended
         if (satisfied == null) {
           shouldRecieveAnotherDose = false;
           seriesStatus = SeriesStatus.notRecommended;
-          forecastReason = ForecastReason
-              .notRecommendedAtThisTimeDueToPastImmunizationHistory;
+          forecastReason =
+              ForecastReason
+                  .notRecommendedAtThisTimeDueToPastImmunizationHistory;
         }
-
         ///If there are, then this is considered a completed series
         /// — unless the current target dose is a recurring dose that was
         /// already satisfied. Chapter 6 step 5a: satisfying a recurring target
@@ -977,7 +1101,7 @@ class VaxSeries {
         /// is not complete; the next occurrence is still owed (e.g. the
         /// decennial Td booster, the yearly influenza dose).
         else {
-          final SeriesDose? currentSeriesDose =
+          final currentSeriesDose =
               targetDose < (series.seriesDose?.length ?? 0)
                   ? series.seriesDose![targetDose]
                   : null;
@@ -991,10 +1115,11 @@ class VaxSeries {
             // shot" stops reading as an open gap.
             //
             // Deliberate deviation, see ForecastReason.completeForTheSeason.
-            final VaxDate? seasonEnd = VaxDate.fromNullableString(
-                currentSeriesDose?.seasonalRecommendation?.endDate, true);
-            if (seasonEnd != null &&
-                assessmentDate <= seasonEnd &&
+            final seasonEnd = VaxDate.fromNullableString(
+              currentSeriesDose?.seasonalRecommendation?.endDate,
+              true,
+            );
+            if (assessmentDate <= seasonEnd &&
                 candidateEarliestDate != null &&
                 candidateEarliestDate! > seasonEnd) {
               forecastReason = ForecastReason.completeForTheSeason;
@@ -1009,14 +1134,14 @@ class VaxSeries {
             // currentSeriesDose is null once the collection is exhausted,
             // which is the ordinary way a series completes, so fall back to
             // the last dose to ask whether this series is seasonal at all.
-            final SeriesDose? seasonalSource =
+            final seasonalSource =
                 currentSeriesDose ?? series.seriesDose?.lastOrNull;
             forecastReason =
                 seasonalSource?.seasonalRecommendation?.endDate != null
                     ? ForecastReason.completeForTheSeason
                     : ForecastReason.patientSeriesIsComplete;
             seriesGroupCompletion[targetDisease]?[seriesGroupKey] = true;
-            final VaxDate? completedOn = lastCompleted?.dateGiven;
+            final completedOn = lastCompleted?.dateGiven;
             if (completedOn != null) {
               seriesGroupCompletionDate[targetDisease]?[seriesGroupKey] =
                   completedOn;
@@ -1024,13 +1149,13 @@ class VaxSeries {
           }
         }
       }
-
       /// If the patient DOES have at least one does that is 'Not Satisfied'
       else {
-        final SeriesDose? seriesDose = series.seriesDose?[targetDose];
-        final VaxDate seasonalRecommendationEndDate =
-            VaxDate.fromNullableString(
-                seriesDose?.seasonalRecommendation?.endDate, true);
+        final seriesDose = series.seriesDose?[targetDose];
+        final seasonalRecommendationEndDate = VaxDate.fromNullableString(
+          seriesDose?.seasonalRecommendation?.endDate,
+          true,
+        );
 
         /// If the assessment date is after seasonal recommendation end date
         if (assessmentDate > seasonalRecommendationEndDate) {
@@ -1045,37 +1170,43 @@ class VaxSeries {
   }
 
   void generateForecast() {
-    final SeriesDose? seriesDose = series.seriesDose?[targetDose];
+    final seriesDose = series.seriesDose?[targetDose];
     if (seriesDose != null) {
-      final VaxAge? age = seriesDose.age?.firstWhereOrNull((VaxAge element) =>
-          VaxDate.fromNullableString(element.effectiveDate) <= assessmentDate &&
-          assessmentDate <=
-              VaxDate.fromNullableString(element.cessationDate, true));
+      final age = seriesDose.age?.firstWhereOrNull(
+        (element) =>
+            VaxDate.fromNullableString(element.effectiveDate) <=
+                assessmentDate &&
+            assessmentDate <=
+                VaxDate.fromNullableString(element.cessationDate, true),
+      );
       minimumAgeDate = dob.changeNullable(age?.minAge);
       earliestRecommendedAgeDate = dob.changeNullable(age?.earliestRecAge);
       latestRecommendedAgeDate = dob.changeNullable(age?.latestRecAge);
       maximumAgeDate = dob.changeNullable(age?.maxAge);
 
       // Only intervals in force at the assessment date.
-      final List<Interval> filteredIntervals =
-          _filterIntervals(seriesDose.preferableInterval, assessmentDate);
+      final filteredIntervals = _filterIntervals(
+        seriesDose.preferableInterval,
+        assessmentDate,
+      );
 
       // CALCDTINT-1: each interval resolves its own reference dose, and the
       // interval runs from that dose's date administered — never from dob.
-      final List<VaxDate> earliestRecIntDates = <VaxDate>[];
-      final List<VaxDate> latestRecIntDates = <VaxDate>[];
-      for (final Interval interval in filteredIntervals) {
-        final VaxDate? refDate = _getReferenceDateForForecast(interval);
+      final earliestRecIntDates = <VaxDate>[];
+      final latestRecIntDates = <VaxDate>[];
+      for (final interval in filteredIntervals) {
+        final refDate = _getReferenceDateForForecast(interval);
         if (refDate != null) {
-          final VaxDate? earliest =
-              refDate.changeNullable(interval.earliestRecInt);
+          final earliest = refDate.changeNullable(
+            interval.earliestRecInt,
+          );
           if (earliest != null) earliestRecIntDates.add(earliest);
-          final VaxDate? latest = refDate.changeNullable(interval.latestRecInt);
+          final latest = refDate.changeNullable(interval.latestRecInt);
           if (latest != null) latestRecIntDates.add(latest);
         }
       }
       earliestRecIntDates.sort();
-      latestRecIntDates.sort((VaxDate a, VaxDate b) => b.compareTo(a));
+      latestRecIntDates.sort((a, b) => b.compareTo(a));
       // FORECASTDT-2: "the latest of all earliest recommended interval dates"
       // when there is no earliest recommended age date. FORECASTDT-3 takes the
       // latest of the latest recommended interval dates, minus one day.
@@ -1085,36 +1216,38 @@ class VaxSeries {
           latestRecIntDates.isEmpty ? null : latestRecIntDates.first;
       // TODO(Dokotela): Latest Conflict End Interval Date
       seasonalRecommendationStartDate = VaxDate.fromNullableString(
-          seriesDose.seasonalRecommendation?.startDate);
-      final VaxDate? earliestDate = candidateEarliestDate;
-      final VaxDate? unadjustedRecommendedDate = earliestRecommendedAgeDate ??
+        seriesDose.seasonalRecommendation?.startDate,
+      );
+      final earliestDate = candidateEarliestDate;
+      final unadjustedRecommendedDate =
+          earliestRecommendedAgeDate ??
           earliestRecommendedIntervalDate ??
           earliestDate;
-      final VaxDate? unadjustedPastDueDate =
+      final unadjustedPastDueDate =
           latestRecommendedAgeDate?.change('-1 day') ??
-              latestRecommendedIntervalDate?.change('-1 day');
+          latestRecommendedIntervalDate?.change('-1 day');
       latestDate = maximumAgeDate?.change('-1 day');
       adjustedRecommendedDate =
           earliestDate == null && unadjustedRecommendedDate == null
               ? null
               : earliestDate == null
-                  ? unadjustedRecommendedDate
-                  : unadjustedRecommendedDate == null
-                      ? earliestDate
-                      : earliestDate > unadjustedRecommendedDate
-                          ? earliestDate
-                          : unadjustedRecommendedDate;
+              ? unadjustedRecommendedDate
+              : unadjustedRecommendedDate == null
+              ? earliestDate
+              : earliestDate > unadjustedRecommendedDate
+              ? earliestDate
+              : unadjustedRecommendedDate;
       adjustedPastDueDate =
           earliestDate == null && unadjustedPastDueDate == null
               ? null
               : earliestDate == null
-                  ? unadjustedPastDueDate
-                  : unadjustedPastDueDate == null
-                      ? earliestDate
-                      : earliestDate > unadjustedPastDueDate
-                          ? earliestDate
-                          : unadjustedPastDueDate;
-      // TODO(Dokotela)
+              ? unadjustedPastDueDate
+              : unadjustedPastDueDate == null
+              ? earliestDate
+              : earliestDate > unadjustedPastDueDate
+              ? earliestDate
+              : unadjustedPastDueDate;
+      // TODO(Dokotela): add the administrative guidance below.
       // • Administrative guidance pertaining to any indication for which there
       //   is an active patient observation for the patient.
       // • Administrative guidance pertaining to any contraindication for which
@@ -1122,15 +1255,13 @@ class VaxSeries {
       administrativeGuidance += series.seriesAdminGuidance?.join('\n') ?? '';
 
       /// A recommended series dose, must be a preferable vaccine
-      final List<Vaccine>? preferableVaccines =
-          seriesDose.preferableVaccine?.toList();
-      preferableVaccines?.retainWhere((Vaccine element) {
+      final preferableVaccines = seriesDose.preferableVaccine?.toList();
+      preferableVaccines?.retainWhere((element) {
         /// The forecast vaccine type of the dose is 'Y'
         if (element.forecastVaccineType != 'Y') {
           return false;
         }
         // TODO(Dokotela): - check contraindications
-
         /// The earliest date of the patient series forecast is on or after the
         /// preferable vaccine type begin age date and before the preferable
         /// vaccine type end age date of the series dose vaccine.

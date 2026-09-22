@@ -3,15 +3,18 @@ import 'package:cicada/cicada.dart';
 class LiveVirusConflicts {
   LiveVirusConflicts({this.liveVirusConflict});
 
-  final List<LiveVirusConflict>? liveVirusConflict;
-
   factory LiveVirusConflicts.fromJson(Map<String, dynamic> json) {
     return LiveVirusConflicts(
-      liveVirusConflict: (json['liveVirusConflict'] as List<dynamic>?)
-          ?.map((e) => LiveVirusConflict.fromJson(e as Map<String, dynamic>))
-          .toList(),
+      liveVirusConflict:
+          (json['liveVirusConflict'] as List<dynamic>?)
+              ?.map(
+                (e) => LiveVirusConflict.fromJson(e as Map<String, dynamic>),
+              )
+              .toList(),
     );
   }
+
+  final List<LiveVirusConflict>? liveVirusConflict;
 
   LiveVirusConflicts copyWith({
     List<LiveVirusConflict>? liveVirusConflict,
@@ -38,25 +41,27 @@ class LiveVirusConflict {
     this.conflictEndInterval,
   });
 
-  final Vaccine? previous;
-  final Vaccine? current;
-  final String? conflictBeginInterval;
-  final String? minConflictEndInterval;
-  final String? conflictEndInterval;
-
   factory LiveVirusConflict.fromJson(Map<String, dynamic> json) {
     return LiveVirusConflict(
-      previous: json['previous'] == null
-          ? null
-          : Vaccine.fromJson(json['previous'] as Map<String, dynamic>),
-      current: json['current'] == null
-          ? null
-          : Vaccine.fromJson(json['current'] as Map<String, dynamic>),
+      previous:
+          json['previous'] == null
+              ? null
+              : Vaccine.fromJson(json['previous'] as Map<String, dynamic>),
+      current:
+          json['current'] == null
+              ? null
+              : Vaccine.fromJson(json['current'] as Map<String, dynamic>),
       conflictBeginInterval: json['conflictBeginInterval'] as String?,
       minConflictEndInterval: json['minConflictEndInterval'] as String?,
       conflictEndInterval: json['conflictEndInterval'] as String?,
     );
   }
+
+  final Vaccine? previous;
+  final Vaccine? current;
+  final String? conflictBeginInterval;
+  final String? minConflictEndInterval;
+  final String? conflictEndInterval;
 
   LiveVirusConflict copyWith({
     Vaccine? previous,

@@ -1,16 +1,19 @@
 class VaccineGroupContraindications {
   VaccineGroupContraindications({this.contraindication});
 
-  final List<GroupContraindication>? contraindication;
-
   factory VaccineGroupContraindications.fromJson(Map<String, dynamic> json) {
     return VaccineGroupContraindications(
-      contraindication: (json['contraindication'] as List<dynamic>?)
-          ?.map(
-              (e) => GroupContraindication.fromJson(e as Map<String, dynamic>))
-          .toList(),
+      contraindication:
+          (json['contraindication'] as List<dynamic>?)
+              ?.map(
+                (e) =>
+                    GroupContraindication.fromJson(e as Map<String, dynamic>),
+              )
+              .toList(),
     );
   }
+
+  final List<GroupContraindication>? contraindication;
 
   Map<String, dynamic> toJson() {
     return {
@@ -30,10 +33,9 @@ class VaccineGroupContraindications {
     if (contraindication == null) {
       return null;
     } else {
-      final List<int> codes = contraindication!
-          .map((GroupContraindication e) => e.codeAsInt ?? -1)
-          .toList();
-      codes.removeWhere((int element) => element == -1);
+      final codes =
+          contraindication!.map((e) => e.codeAsInt ?? -1).toList()
+            ..removeWhere((element) => element == -1);
       return codes;
     }
   }
@@ -49,13 +51,6 @@ class GroupContraindication {
     this.endAge,
   });
 
-  final String? observationCode;
-  final String? observationTitle;
-  final String? contraindicationText;
-  final String? contraindicationGuidance;
-  final String? beginAge;
-  final String? endAge;
-
   factory GroupContraindication.fromJson(Map<String, dynamic> json) {
     return GroupContraindication(
       observationCode: json['observationCode'] as String?,
@@ -66,6 +61,13 @@ class GroupContraindication {
       endAge: json['endAge'] as String?,
     );
   }
+
+  final String? observationCode;
+  final String? observationTitle;
+  final String? contraindicationText;
+  final String? contraindicationGuidance;
+  final String? beginAge;
+  final String? endAge;
 
   Map<String, dynamic> toJson() {
     return {

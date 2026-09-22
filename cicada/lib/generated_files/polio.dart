@@ -1,3729 +1,4334 @@
-// ignore_for_file: prefer_single_quotes, always_specify_types
+// ignore_for_file: no_adjacent_strings_in_list
+// Generated data: long strings are split into adjacent literals so
+// no line passes 80 columns; a serializer cannot drop a comma.
 
-import '../cicada.dart';
+import 'package:cicada/cicada.dart';
 
 final AntigenSupportingData polio = AntigenSupportingData.fromJson({
-  "targetDisease": "Polio",
-  "vaccineGroup": "Polio",
-  "contraindications": {
-    "vaccineGroup": {
-      "contraindication": [
+  'targetDisease': 'Polio',
+  'vaccineGroup': 'Polio',
+  'contraindications': {
+    'vaccineGroup': {
+      'contraindication': [
         {
-          "observationCode": "081",
-          "observationTitle":
-              "Severe allergic reaction after previous dose of Polio",
-          "contraindicationText":
-              "Do not vaccinate if the patient has had a severe allergic reaction after a previous dose of Polio vaccine."
+          'observationCode': '081',
+          'observationTitle':
+              'Severe allergic reaction after previous dose of Polio',
+          'contraindicationText':
+              'Do not vaccinate if the patient has had a severe allergic '
+              'reaction after a previous dose of Polio vaccine.',
         },
         {
-          "observationCode": "080",
-          "observationTitle": "Adverse reaction to vaccine component",
-          "contraindicationText":
-              "Do not vaccinate if the patient has had an adverse reaction to a vaccine component."
+          'observationCode': '080',
+          'observationTitle': 'Adverse reaction to vaccine component',
+          'contraindicationText':
+              'Do not vaccinate if the patient has had an adverse reaction '
+              'to a vaccine component.',
         },
         {
-          "observationCode": "107",
-          "observationTitle": "Severe allergic reaction to neomycin",
-          "contraindicationText":
-              "Do not vaccinate if the patient has had a severe allergic reaction to neomycin."
+          'observationCode': '107',
+          'observationTitle': 'Severe allergic reaction to neomycin',
+          'contraindicationText':
+              'Do not vaccinate if the patient has had a severe allergic '
+              'reaction to neomycin.',
         },
         {
-          "observationCode": "108",
-          "observationTitle": "Severe allergic reaction to streptomycin",
-          "contraindicationText":
-              "Do not vaccinate if the patient has had a severe allergic reaction to streptomycin."
+          'observationCode': '108',
+          'observationTitle': 'Severe allergic reaction to streptomycin',
+          'contraindicationText':
+              'Do not vaccinate if the patient has had a severe allergic '
+              'reaction to streptomycin.',
         },
         {
-          "observationCode": "109",
-          "observationTitle": "Severe allergic reaction to polymyxin B",
-          "contraindicationText":
-              "Do not vaccinate if the patient has had a severe allergic reaction to polymyxin B."
+          'observationCode': '109',
+          'observationTitle': 'Severe allergic reaction to polymyxin B',
+          'contraindicationText':
+              'Do not vaccinate if the patient has had a severe allergic '
+              'reaction to polymyxin B.',
         },
         {
-          "observationCode": "111",
-          "observationTitle":
-              "Hypersensitivity to the preservative 2-phenoxyethanol",
-          "contraindicationText":
-              "Do not vaccinate if the patient has a hypersensitivity to the preservative 2-phenoxyethanol."
-        }
-      ]
+          'observationCode': '111',
+          'observationTitle':
+              'Hypersensitivity to the preservative 2-phenoxyethanol',
+          'contraindicationText':
+              'Do not vaccinate if the patient has a hypersensitivity to '
+              'the preservative 2-phenoxyethanol.',
+        },
+      ],
     },
-    "vaccine": {
-      "contraindication": [
+    'vaccine': {
+      'contraindication': [
         {
-          "observationCode": "076",
-          "observationTitle": "Progressive neurologic disorder",
-          "contraindicationText":
-              "Do not vaccinate if the patient has progressive neurologic disorder until a treatment regimen has been\r established and the condition has stabilized.",
-          "contraindicatedVaccine": [
-            {"vaccineType": "DTaP-HepB-IPV", "cvx": "110"},
-            {"vaccineType": "DTaP-Hib-IPV", "cvx": "120"},
-            {"vaccineType": "DTaP-IPV", "cvx": "130"},
-            {"vaccineType": "DTaP-IPV-Hib-HepB", "cvx": "146"}
-          ]
+          'observationCode': '076',
+          'observationTitle': 'Progressive neurologic disorder',
+          'contraindicationText':
+              'Do not vaccinate if the patient has progressive neurologic '
+              'disorder until a treatment regimen has been\r established '
+              'and the condition has stabilized.',
+          'contraindicatedVaccine': [
+            {
+              'vaccineType': 'DTaP-HepB-IPV',
+              'cvx': '110',
+            },
+            {
+              'vaccineType': 'DTaP-Hib-IPV',
+              'cvx': '120',
+            },
+            {
+              'vaccineType': 'DTaP-IPV',
+              'cvx': '130',
+            },
+            {
+              'vaccineType': 'DTaP-IPV-Hib-HepB',
+              'cvx': '146',
+            },
+          ],
         },
         {
-          "observationCode": "079",
-          "observationTitle":
-              "Encephalopathy not attributable to another identifiable cause within 7 days of administration of a previous dose of Tdap, DTP, or DTaP vaccine",
-          "contraindicationText":
-              "Do not vaccinate if the patient has had encephalopathy not attributable to another identifiable cause within 7 days of administration of a previous dose of Tdap, DTP, or DTaP vaccine.",
-          "contraindicatedVaccine": [
-            {"vaccineType": "DTaP-HepB-IPV", "cvx": "110"},
-            {"vaccineType": "DTaP-Hib-IPV", "cvx": "120"},
-            {"vaccineType": "DTaP-IPV", "cvx": "130"},
-            {"vaccineType": "DTaP-IPV-Hib-HepB", "cvx": "146"}
-          ]
+          'observationCode': '079',
+          'observationTitle':
+              'Encephalopathy not attributable to another identifiable '
+              'cause within 7 days of administration of a previous dose of '
+              'Tdap, DTP, or DTaP vaccine',
+          'contraindicationText':
+              'Do not vaccinate if the patient has had encephalopathy not '
+              'attributable to another identifiable cause within 7 days of '
+              'administration of a previous dose of Tdap, DTP, or DTaP '
+              'vaccine.',
+          'contraindicatedVaccine': [
+            {
+              'vaccineType': 'DTaP-HepB-IPV',
+              'cvx': '110',
+            },
+            {
+              'vaccineType': 'DTaP-Hib-IPV',
+              'cvx': '120',
+            },
+            {
+              'vaccineType': 'DTaP-IPV',
+              'cvx': '130',
+            },
+            {
+              'vaccineType': 'DTaP-IPV-Hib-HepB',
+              'cvx': '146',
+            },
+          ],
         },
         {
-          "observationCode": "086",
-          "observationTitle":
-              "Severe allergic reaction after previous dose of Pertussis",
-          "contraindicationText":
-              "Do not vaccinate if the patient has had a severe allergic reaction after a previous dose of Pertussis vaccine.",
-          "contraindicatedVaccine": [
-            {"vaccineType": "DTaP-HepB-IPV", "cvx": "110"},
-            {"vaccineType": "DTaP-Hib-IPV", "cvx": "120"},
-            {"vaccineType": "DTaP-IPV", "cvx": "130"},
-            {"vaccineType": "DTaP-IPV-Hib-HepB", "cvx": "146"}
-          ]
+          'observationCode': '086',
+          'observationTitle':
+              'Severe allergic reaction after previous dose of Pertussis',
+          'contraindicationText':
+              'Do not vaccinate if the patient has had a severe allergic '
+              'reaction after a previous dose of Pertussis vaccine.',
+          'contraindicatedVaccine': [
+            {
+              'vaccineType': 'DTaP-HepB-IPV',
+              'cvx': '110',
+            },
+            {
+              'vaccineType': 'DTaP-Hib-IPV',
+              'cvx': '120',
+            },
+            {
+              'vaccineType': 'DTaP-IPV',
+              'cvx': '130',
+            },
+            {
+              'vaccineType': 'DTaP-IPV-Hib-HepB',
+              'cvx': '146',
+            },
+          ],
         },
         {
-          "observationCode": "087",
-          "observationTitle":
-              "Severe allergic reaction after previous dose of Diphtheria",
-          "contraindicationText":
-              "Do not vaccinate if the patient has had a severe allergic reaction after a previous dose of Diphtheria vaccine.",
-          "contraindicatedVaccine": [
-            {"vaccineType": "DTaP-HepB-IPV", "cvx": "110"},
-            {"vaccineType": "DTaP-Hib-IPV", "cvx": "120"},
-            {"vaccineType": "DTaP-IPV", "cvx": "130"},
-            {"vaccineType": "DTaP-IPV-Hib-HepB", "cvx": "146"}
-          ]
+          'observationCode': '087',
+          'observationTitle':
+              'Severe allergic reaction after previous dose of Diphtheria',
+          'contraindicationText':
+              'Do not vaccinate if the patient has had a severe allergic '
+              'reaction after a previous dose of Diphtheria vaccine.',
+          'contraindicatedVaccine': [
+            {
+              'vaccineType': 'DTaP-HepB-IPV',
+              'cvx': '110',
+            },
+            {
+              'vaccineType': 'DTaP-Hib-IPV',
+              'cvx': '120',
+            },
+            {
+              'vaccineType': 'DTaP-IPV',
+              'cvx': '130',
+            },
+            {
+              'vaccineType': 'DTaP-IPV-Hib-HepB',
+              'cvx': '146',
+            },
+          ],
         },
         {
-          "observationCode": "088",
-          "observationTitle":
-              "Severe allergic reaction after previous dose of Tetanus",
-          "contraindicationText":
-              "Do not vaccinate if the patient has had a severe allergic reaction after a previous dose of Tetanus vaccine.",
-          "contraindicatedVaccine": [
-            {"vaccineType": "DTaP-HepB-IPV", "cvx": "110"},
-            {"vaccineType": "DTaP-Hib-IPV", "cvx": "120"},
-            {"vaccineType": "DTaP-IPV", "cvx": "130"},
-            {"vaccineType": "DTaP-IPV-Hib-HepB", "cvx": "146"}
-          ]
+          'observationCode': '088',
+          'observationTitle':
+              'Severe allergic reaction after previous dose of Tetanus',
+          'contraindicationText':
+              'Do not vaccinate if the patient has had a severe allergic '
+              'reaction after a previous dose of Tetanus vaccine.',
+          'contraindicatedVaccine': [
+            {
+              'vaccineType': 'DTaP-HepB-IPV',
+              'cvx': '110',
+            },
+            {
+              'vaccineType': 'DTaP-Hib-IPV',
+              'cvx': '120',
+            },
+            {
+              'vaccineType': 'DTaP-IPV',
+              'cvx': '130',
+            },
+            {
+              'vaccineType': 'DTaP-IPV-Hib-HepB',
+              'cvx': '146',
+            },
+          ],
         },
         {
-          "observationCode": "097",
-          "observationTitle":
-              "Severe allergic reaction after previous dose of Hepatitis B",
-          "contraindicationText":
-              "Do not vaccinate if the patient has had a severe allergic reaction after a previous dose of Hepatitis B vaccine.",
-          "contraindicatedVaccine": [
-            {"vaccineType": "DTaP-HepB-IPV", "cvx": "110"},
-            {"vaccineType": "DTaP-IPV-Hib-HepB", "cvx": "146"}
-          ]
+          'observationCode': '097',
+          'observationTitle':
+              'Severe allergic reaction after previous dose of Hepatitis B',
+          'contraindicationText':
+              'Do not vaccinate if the patient has had a severe allergic '
+              'reaction after a previous dose of Hepatitis B vaccine.',
+          'contraindicatedVaccine': [
+            {
+              'vaccineType': 'DTaP-HepB-IPV',
+              'cvx': '110',
+            },
+            {
+              'vaccineType': 'DTaP-IPV-Hib-HepB',
+              'cvx': '146',
+            },
+          ],
         },
         {
-          "observationCode": "098",
-          "observationTitle":
-              "Severe allergic reaction after previous dose of Hib",
-          "contraindicationText":
-              "Do not vaccinate if the patient has had a severe allergic reaction after a previous dose of Hib vaccine.",
-          "contraindicatedVaccine": [
-            {"vaccineType": "DTaP-Hib-IPV", "cvx": "120"},
-            {"vaccineType": "DTaP-IPV-Hib-HepB", "cvx": "146"}
-          ]
+          'observationCode': '098',
+          'observationTitle':
+              'Severe allergic reaction after previous dose of Hib',
+          'contraindicationText':
+              'Do not vaccinate if the patient has had a severe allergic '
+              'reaction after a previous dose of Hib vaccine.',
+          'contraindicatedVaccine': [
+            {
+              'vaccineType': 'DTaP-Hib-IPV',
+              'cvx': '120',
+            },
+            {
+              'vaccineType': 'DTaP-IPV-Hib-HepB',
+              'cvx': '146',
+            },
+          ],
         },
         {
-          "observationCode": "110",
-          "observationTitle": "Hypersensitivity to yeast",
-          "contraindicationText":
-              "Do not vaccinate if the patient has a hypersensitivity to yeast.",
-          "contraindicatedVaccine": [
-            {"vaccineType": "DTaP-HepB-IPV", "cvx": "110"},
-            {"vaccineType": "DTaP-IPV-Hib-HepB", "cvx": "146"}
-          ]
-        }
-      ]
-    }
+          'observationCode': '110',
+          'observationTitle': 'Hypersensitivity to yeast',
+          'contraindicationText':
+              'Do not vaccinate if the patient has a hypersensitivity to '
+              'yeast.',
+          'contraindicatedVaccine': [
+            {
+              'vaccineType': 'DTaP-HepB-IPV',
+              'cvx': '110',
+            },
+            {
+              'vaccineType': 'DTaP-IPV-Hib-HepB',
+              'cvx': '146',
+            },
+          ],
+        },
+      ],
+    },
   },
-  "series": [
+  'series': [
     {
-      "seriesName": "Polio 4-dose series",
-      "targetDisease": "Polio",
-      "vaccineGroup": "Polio",
-      "seriesAdminGuidance": [
-        "When evaluating doses of oral polio vaccine (OPV) on or after 4/1/2016, only documentation specifying receipt of trivalent vaccine (tOPV) constitutes proof of vaccination according to the U.S. polio vaccination recommendations. Proper documentation of which OPV vaccine was received is critical to validation of records against U.S. vaccination recommendations.",
-        "Persons who received 4 doses of IPV before August 7, 2009 can be considered fully vaccinated for polio, regardless of age of the last dose, and it is not necessary to routinely administer an additional dose for these persons. If they are at increased risk of poliovirus exposure, they should be offered a single lifetime booster dose of IPV."
+      'seriesName': 'Polio 4-dose series',
+      'targetDisease': 'Polio',
+      'vaccineGroup': 'Polio',
+      'seriesAdminGuidance': [
+        'When evaluating doses of oral polio vaccine (OPV) on or after '
+            '4/1/2016, only documentation specifying receipt of trivalent '
+            'vaccine (tOPV) constitutes proof of vaccination according to '
+            'the U.S. polio vaccination recommendations. Proper '
+            'documentation of which OPV vaccine was received is critical '
+            'to validation of records against U.S. vaccination '
+            'recommendations.',
+        'Persons who received 4 doses of IPV before August 7, 2009 can '
+            'be considered fully vaccinated for polio, regardless of age '
+            'of the last dose, and it is not necessary to routinely '
+            'administer an additional dose for these persons. If they are '
+            'at increased risk of poliovirus exposure, they should be '
+            'offered a single lifetime booster dose of IPV.',
       ],
-      "seriesType": "Standard",
-      "equivalentSeriesGroups": "2",
-      "selectSeries": {
-        "defaultSeries": "Yes",
-        "productPath": "No",
-        "seriesGroupName": "Standard",
-        "seriesGroup": "1",
-        "seriesPriority": "A",
-        "seriesPreference": "1"
+      'seriesType': 'Standard',
+      'equivalentSeriesGroups': '2',
+      'selectSeries': {
+        'defaultSeries': 'Yes',
+        'productPath': 'No',
+        'seriesGroupName': 'Standard',
+        'seriesGroup': '1',
+        'seriesPriority': 'A',
+        'seriesPreference': '1',
       },
-      "seriesDose": [
+      'seriesDose': [
         {
-          "doseNumber": "Dose 1",
-          "age": [
+          'doseNumber': 'Dose 1',
+          'age': [
             {
-              "absMinAge": "6 weeks - 4 days",
-              "minAge": "6 weeks",
-              "earliestRecAge": "2 months",
-              "latestRecAge": "3 months + 4 weeks",
-              "maxAge": "18 years"
-            }
+              'absMinAge': '6 weeks - 4 days',
+              'minAge': '6 weeks',
+              'earliestRecAge': '2 months',
+              'latestRecAge': '3 months + 4 weeks',
+              'maxAge': '18 years',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "IPV",
-              "cvx": "10",
-              "beginAge": "6 weeks",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType': 'IPV',
+              'cvx': '10',
+              'beginAge': '6 weeks',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "DTaP-HepB-IPV",
-              "cvx": "110",
-              "beginAge": "6 weeks",
-              "endAge": "7 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType': 'DTaP-HepB-IPV',
+              'cvx': '110',
+              'beginAge': '6 weeks',
+              'endAge': '7 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "DTaP-Hib-IPV",
-              "cvx": "120",
-              "beginAge": "6 weeks",
-              "endAge": "5 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType': 'DTaP-Hib-IPV',
+              'cvx': '120',
+              'beginAge': '6 weeks',
+              'endAge': '5 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB",
-              "cvx": "146",
-              "beginAge": "6 weeks",
-              "endAge": "5 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
-            }
+              'vaccineType': 'DTaP-IPV-Hib-HepB',
+              'cvx': '146',
+              'beginAge': '6 weeks',
+              'endAge': '5 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
+            },
           ],
-          "allowableVaccine": [
+          'allowableVaccine': [
             {
-              "vaccineType": "OPV trivalent",
-              "cvx": "02",
-              "beginAge": "6 weeks - 4 days"
-            },
-            {"vaccineType": "IPV", "cvx": "10", "beginAge": "6 weeks - 4 days"},
-            {
-              "vaccineType": "Polio, Unspecified Formulation",
-              "cvx": "89",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'OPV trivalent',
+              'cvx': '02',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-HepB-IPV",
-              "cvx": "110",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'IPV',
+              'cvx': '10',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-Hib-IPV",
-              "cvx": "120",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'Polio, Unspecified Formulation',
+              'cvx': '89',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-IPV",
-              "cvx": "130",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'DTaP-HepB-IPV',
+              'cvx': '110',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB, Historical",
-              "cvx": "132",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'DTaP-Hib-IPV',
+              'cvx': '120',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB",
-              "cvx": "146",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'DTaP-IPV',
+              'cvx': '130',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib",
-              "cvx": "170",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'DTaP-IPV-Hib-HepB, Historical',
+              'cvx': '132',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DT, IPV adsorbed",
-              "cvx": "195",
-              "beginAge": "6 years - 4 days"
-            }
+              'vaccineType': 'DTaP-IPV-Hib-HepB',
+              'cvx': '146',
+              'beginAge': '6 weeks - 4 days',
+            },
+            {
+              'vaccineType': 'DTaP-IPV-Hib',
+              'cvx': '170',
+              'beginAge': '6 weeks - 4 days',
+            },
+            {
+              'vaccineType': 'DT, IPV adsorbed',
+              'cvx': '195',
+              'beginAge': '6 years - 4 days',
+            },
           ],
-          "inadvertentVaccine": [
-            {"vaccineType": "OPV bivalent", "cvx": "178"},
-            {"vaccineType": "OPV, monovalent, unspecified", "cvx": "179"},
-            {"vaccineType": "OPV, Unspecified", "cvx": "182"}
+          'inadvertentVaccine': [
+            {
+              'vaccineType': 'OPV bivalent',
+              'cvx': '178',
+            },
+            {
+              'vaccineType': 'OPV, monovalent, unspecified',
+              'cvx': '179',
+            },
+            {
+              'vaccineType': 'OPV, Unspecified',
+              'cvx': '182',
+            },
           ],
-          "recurringDose": "No"
+          'recurringDose': 'No',
         },
         {
-          "doseNumber": "Dose 2",
-          "age": [
+          'doseNumber': 'Dose 2',
+          'age': [
             {
-              "absMinAge": "10 weeks - 4 days",
-              "minAge": "10 weeks",
-              "earliestRecAge": "4 months",
-              "latestRecAge": "5 months + 4 weeks"
-            }
+              'absMinAge': '10 weeks - 4 days',
+              'minAge': '10 weeks',
+              'earliestRecAge': '4 months',
+              'latestRecAge': '5 months + 4 weeks',
+            },
           ],
-          "interval": [
+          'interval': [
             {
-              "fromPrevious": "Y",
-              "absMinInt": "4 weeks - 4 days",
-              "minInt": "4 weeks",
-              "earliestRecInt": "8 weeks",
-              "latestRecInt": "13 weeks"
-            }
+              'fromPrevious': 'Y',
+              'absMinInt': '4 weeks - 4 days',
+              'minInt': '4 weeks',
+              'earliestRecInt': '8 weeks',
+              'latestRecInt': '13 weeks',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "IPV",
-              "cvx": "10",
-              "beginAge": "6 weeks",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType': 'IPV',
+              'cvx': '10',
+              'beginAge': '6 weeks',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "DTaP-HepB-IPV",
-              "cvx": "110",
-              "beginAge": "6 weeks",
-              "endAge": "7 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType': 'DTaP-HepB-IPV',
+              'cvx': '110',
+              'beginAge': '6 weeks',
+              'endAge': '7 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "DTaP-Hib-IPV",
-              "cvx": "120",
-              "beginAge": "6 weeks",
-              "endAge": "5 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType': 'DTaP-Hib-IPV',
+              'cvx': '120',
+              'beginAge': '6 weeks',
+              'endAge': '5 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB",
-              "cvx": "146",
-              "beginAge": "6 weeks",
-              "endAge": "5 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
-            }
+              'vaccineType': 'DTaP-IPV-Hib-HepB',
+              'cvx': '146',
+              'beginAge': '6 weeks',
+              'endAge': '5 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
+            },
           ],
-          "allowableVaccine": [
+          'allowableVaccine': [
             {
-              "vaccineType": "OPV trivalent",
-              "cvx": "02",
-              "beginAge": "6 weeks - 4 days"
-            },
-            {"vaccineType": "IPV", "cvx": "10", "beginAge": "6 weeks - 4 days"},
-            {
-              "vaccineType": "Polio, Unspecified Formulation",
-              "cvx": "89",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'OPV trivalent',
+              'cvx': '02',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-HepB-IPV",
-              "cvx": "110",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'IPV',
+              'cvx': '10',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-Hib-IPV",
-              "cvx": "120",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'Polio, Unspecified Formulation',
+              'cvx': '89',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-IPV",
-              "cvx": "130",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'DTaP-HepB-IPV',
+              'cvx': '110',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB, Historical",
-              "cvx": "132",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'DTaP-Hib-IPV',
+              'cvx': '120',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB",
-              "cvx": "146",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'DTaP-IPV',
+              'cvx': '130',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib",
-              "cvx": "170",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'DTaP-IPV-Hib-HepB, Historical',
+              'cvx': '132',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DT, IPV adsorbed",
-              "cvx": "195",
-              "beginAge": "6 years - 4 days"
-            }
+              'vaccineType': 'DTaP-IPV-Hib-HepB',
+              'cvx': '146',
+              'beginAge': '6 weeks - 4 days',
+            },
+            {
+              'vaccineType': 'DTaP-IPV-Hib',
+              'cvx': '170',
+              'beginAge': '6 weeks - 4 days',
+            },
+            {
+              'vaccineType': 'DT, IPV adsorbed',
+              'cvx': '195',
+              'beginAge': '6 years - 4 days',
+            },
           ],
-          "inadvertentVaccine": [
-            {"vaccineType": "OPV bivalent", "cvx": "178"},
-            {"vaccineType": "OPV, monovalent, unspecified", "cvx": "179"},
-            {"vaccineType": "OPV, Unspecified", "cvx": "182"}
+          'inadvertentVaccine': [
+            {
+              'vaccineType': 'OPV bivalent',
+              'cvx': '178',
+            },
+            {
+              'vaccineType': 'OPV, monovalent, unspecified',
+              'cvx': '179',
+            },
+            {
+              'vaccineType': 'OPV, Unspecified',
+              'cvx': '182',
+            },
           ],
-          "recurringDose": "No"
+          'recurringDose': 'No',
         },
         {
-          "doseNumber": "Dose 3",
-          "age": [
+          'doseNumber': 'Dose 3',
+          'age': [
             {
-              "absMinAge": "14 weeks - 4 days",
-              "minAge": "14 weeks",
-              "earliestRecAge": "6 months",
-              "latestRecAge": "19 months + 4 weeks"
-            }
+              'absMinAge': '14 weeks - 4 days',
+              'minAge': '14 weeks',
+              'earliestRecAge': '6 months',
+              'latestRecAge': '19 months + 4 weeks',
+            },
           ],
-          "interval": [
+          'interval': [
             {
-              "fromPrevious": "Y",
-              "absMinInt": "4 weeks - 4 days",
-              "minInt": "4 weeks",
-              "earliestRecInt": "8 weeks",
-              "latestRecInt": "15 months + 4 weeks"
-            }
+              'fromPrevious': 'Y',
+              'absMinInt': '4 weeks - 4 days',
+              'minInt': '4 weeks',
+              'earliestRecInt': '8 weeks',
+              'latestRecInt': '15 months + 4 weeks',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "IPV",
-              "cvx": "10",
-              "beginAge": "6 weeks",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType': 'IPV',
+              'cvx': '10',
+              'beginAge': '6 weeks',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "DTaP-HepB-IPV",
-              "cvx": "110",
-              "beginAge": "6 weeks",
-              "endAge": "7 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType': 'DTaP-HepB-IPV',
+              'cvx': '110',
+              'beginAge': '6 weeks',
+              'endAge': '7 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "DTaP-Hib-IPV",
-              "cvx": "120",
-              "beginAge": "6 weeks",
-              "endAge": "5 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType': 'DTaP-Hib-IPV',
+              'cvx': '120',
+              'beginAge': '6 weeks',
+              'endAge': '5 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB",
-              "cvx": "146",
-              "beginAge": "6 weeks",
-              "endAge": "5 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
-            }
+              'vaccineType': 'DTaP-IPV-Hib-HepB',
+              'cvx': '146',
+              'beginAge': '6 weeks',
+              'endAge': '5 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
+            },
           ],
-          "allowableVaccine": [
+          'allowableVaccine': [
             {
-              "vaccineType": "OPV trivalent",
-              "cvx": "02",
-              "beginAge": "6 weeks - 4 days"
-            },
-            {"vaccineType": "IPV", "cvx": "10", "beginAge": "6 weeks - 4 days"},
-            {
-              "vaccineType": "Polio, Unspecified Formulation",
-              "cvx": "89",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'OPV trivalent',
+              'cvx': '02',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-HepB-IPV",
-              "cvx": "110",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'IPV',
+              'cvx': '10',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-Hib-IPV",
-              "cvx": "120",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'Polio, Unspecified Formulation',
+              'cvx': '89',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-IPV",
-              "cvx": "130",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'DTaP-HepB-IPV',
+              'cvx': '110',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB, Historical",
-              "cvx": "132",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'DTaP-Hib-IPV',
+              'cvx': '120',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB",
-              "cvx": "146",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'DTaP-IPV',
+              'cvx': '130',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib",
-              "cvx": "170",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'DTaP-IPV-Hib-HepB, Historical',
+              'cvx': '132',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DT, IPV adsorbed",
-              "cvx": "195",
-              "beginAge": "6 years - 4 days"
-            }
+              'vaccineType': 'DTaP-IPV-Hib-HepB',
+              'cvx': '146',
+              'beginAge': '6 weeks - 4 days',
+            },
+            {
+              'vaccineType': 'DTaP-IPV-Hib',
+              'cvx': '170',
+              'beginAge': '6 weeks - 4 days',
+            },
+            {
+              'vaccineType': 'DT, IPV adsorbed',
+              'cvx': '195',
+              'beginAge': '6 years - 4 days',
+            },
           ],
-          "inadvertentVaccine": [
-            {"vaccineType": "OPV bivalent", "cvx": "178"},
-            {"vaccineType": "OPV, monovalent, unspecified", "cvx": "179"},
-            {"vaccineType": "OPV, Unspecified", "cvx": "182"}
-          ],
-          "conditionalSkip": [
+          'inadvertentVaccine': [
             {
-              "context": "Evaluation",
-              "setLogic": "OR",
-              "set": [
+              'vaccineType': 'OPV bivalent',
+              'cvx': '178',
+            },
+            {
+              'vaccineType': 'OPV, monovalent, unspecified',
+              'cvx': '179',
+            },
+            {
+              'vaccineType': 'OPV, Unspecified',
+              'cvx': '182',
+            },
+          ],
+          'conditionalSkip': [
+            {
+              'context': 'Evaluation',
+              'setLogic': 'OR',
+              'set': [
                 {
-                  "setID": "1",
-                  "setDescription":
-                      "Target Dose is not required if current dose was administered on or after 4 years of age",
-                  "condition": [
+                  'setID': '1',
+                  'setDescription':
+                      'Target Dose is not required if current dose was '
+                      'administered on or after 4 years of age',
+                  'condition': [
                     {
-                      "conditionID": "1",
-                      "conditionType": "Age",
-                      "beginAge": "4 years"
-                    }
-                  ]
+                      'conditionID': '1',
+                      'conditionType': 'Age',
+                      'beginAge': '4 years',
+                    },
+                  ],
                 },
                 {
-                  "setID": "2",
-                  "setDescription":
-                      "Target Dose is not required if the current dose was administered on or after 4 years - 4 days of age AND at least 6 months - 4 days from the previous dose.",
-                  "conditionLogic": "AND",
-                  "condition": [
+                  'setID': '2',
+                  'setDescription':
+                      'Target Dose is not required if the current dose was '
+                      'administered on or after 4 years - 4 days of age '
+                      'AND at least 6 months - 4 days from the previous '
+                      'dose.',
+                  'conditionLogic': 'AND',
+                  'condition': [
                     {
-                      "conditionID": "1",
-                      "conditionType": "Age",
-                      "beginAge": "4 years - 4 days"
+                      'conditionID': '1',
+                      'conditionType': 'Age',
+                      'beginAge': '4 years - 4 days',
                     },
                     {
-                      "conditionID": "2",
-                      "conditionType": "Interval",
-                      "interval": "6 months - 4 days"
-                    }
-                  ]
-                }
-              ]
+                      'conditionID': '2',
+                      'conditionType': 'Interval',
+                      'interval': '6 months - 4 days',
+                    },
+                  ],
+                },
+              ],
             },
             {
-              "context": "Forecast",
-              "setLogic": "n/a",
-              "set": [
+              'context': 'Forecast',
+              'setLogic': 'n/a',
+              'set': [
                 {
-                  "setID": "3",
-                  "setDescription":
-                      "Target Dose is not required for those who are 4 years of age or older.",
-                  "condition": [
+                  'setID': '3',
+                  'setDescription':
+                      'Target Dose is not required for those who are 4 '
+                      'years of age or older.',
+                  'condition': [
                     {
-                      "conditionID": "1",
-                      "conditionType": "Age",
-                      "beginAge": "4 years"
-                    }
-                  ]
-                }
-              ]
-            }
+                      'conditionID': '1',
+                      'conditionType': 'Age',
+                      'beginAge': '4 years',
+                    },
+                  ],
+                },
+              ],
+            },
           ],
-          "recurringDose": "No"
+          'recurringDose': 'No',
         },
         {
-          "doseNumber": "Dose 4",
-          "age": [
+          'doseNumber': 'Dose 4',
+          'age': [
             {
-              "absMinAge": "18 weeks - 4 days",
-              "minAge": "18 weeks",
-              "earliestRecAge": "4 years",
-              "latestRecAge": "7 years + 4 weeks",
-              "cessationDate": "2009-08-06"
+              'absMinAge': '18 weeks - 4 days',
+              'minAge': '18 weeks',
+              'earliestRecAge': '4 years',
+              'latestRecAge': '7 years + 4 weeks',
+              'cessationDate': '2009-08-06',
             },
             {
-              "absMinAge": "4 years - 4 days",
-              "minAge": "4 years",
-              "earliestRecAge": "4 years",
-              "latestRecAge": "7 years + 4 weeks",
-              "effectiveDate": "2009-08-07"
-            }
+              'absMinAge': '4 years - 4 days',
+              'minAge': '4 years',
+              'earliestRecAge': '4 years',
+              'latestRecAge': '7 years + 4 weeks',
+              'effectiveDate': '2009-08-07',
+            },
           ],
-          "interval": [
+          'interval': [
             {
-              "fromPrevious": "Y",
-              "absMinInt": "4 weeks - 4 days",
-              "minInt": "4 weeks",
-              "earliestRecInt": "3 years",
-              "latestRecInt": "6 years + 4 weeks",
-              "cessationDate": "2009-08-06"
+              'fromPrevious': 'Y',
+              'absMinInt': '4 weeks - 4 days',
+              'minInt': '4 weeks',
+              'earliestRecInt': '3 years',
+              'latestRecInt': '6 years + 4 weeks',
+              'cessationDate': '2009-08-06',
             },
             {
-              "fromPrevious": "Y",
-              "absMinInt": "6 months - 4 days",
-              "minInt": "6 months",
-              "earliestRecInt": "3 years",
-              "latestRecInt": "6 years + 4 weeks",
-              "effectiveDate": "2009-08-07"
-            }
+              'fromPrevious': 'Y',
+              'absMinInt': '6 months - 4 days',
+              'minInt': '6 months',
+              'earliestRecInt': '3 years',
+              'latestRecInt': '6 years + 4 weeks',
+              'effectiveDate': '2009-08-07',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "IPV",
-              "cvx": "10",
-              "beginAge": "6 weeks",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType': 'IPV',
+              'cvx': '10',
+              'beginAge': '6 weeks',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "DTaP-HepB-IPV",
-              "cvx": "110",
-              "beginAge": "6 weeks",
-              "endAge": "7 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType': 'DTaP-HepB-IPV',
+              'cvx': '110',
+              'beginAge': '6 weeks',
+              'endAge': '7 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "DTaP-Hib-IPV",
-              "cvx": "120",
-              "beginAge": "6 weeks",
-              "endAge": "5 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType': 'DTaP-Hib-IPV',
+              'cvx': '120',
+              'beginAge': '6 weeks',
+              'endAge': '5 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "DTaP-IPV",
-              "cvx": "130",
-              "beginAge": "4 years",
-              "endAge": "7 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
-            }
+              'vaccineType': 'DTaP-IPV',
+              'cvx': '130',
+              'beginAge': '4 years',
+              'endAge': '7 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
+            },
           ],
-          "allowableVaccine": [
+          'allowableVaccine': [
             {
-              "vaccineType": "OPV trivalent",
-              "cvx": "02",
-              "beginAge": "6 weeks - 4 days"
-            },
-            {"vaccineType": "IPV", "cvx": "10", "beginAge": "6 weeks - 4 days"},
-            {
-              "vaccineType": "Polio, Unspecified Formulation",
-              "cvx": "89",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'OPV trivalent',
+              'cvx': '02',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-HepB-IPV",
-              "cvx": "110",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'IPV',
+              'cvx': '10',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-Hib-IPV",
-              "cvx": "120",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'Polio, Unspecified Formulation',
+              'cvx': '89',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-IPV",
-              "cvx": "130",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'DTaP-HepB-IPV',
+              'cvx': '110',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB, Historical",
-              "cvx": "132",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'DTaP-Hib-IPV',
+              'cvx': '120',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB",
-              "cvx": "146",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'DTaP-IPV',
+              'cvx': '130',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib",
-              "cvx": "170",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'DTaP-IPV-Hib-HepB, Historical',
+              'cvx': '132',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DT, IPV adsorbed",
-              "cvx": "195",
-              "beginAge": "6 years - 4 days"
-            }
+              'vaccineType': 'DTaP-IPV-Hib-HepB',
+              'cvx': '146',
+              'beginAge': '6 weeks - 4 days',
+            },
+            {
+              'vaccineType': 'DTaP-IPV-Hib',
+              'cvx': '170',
+              'beginAge': '6 weeks - 4 days',
+            },
+            {
+              'vaccineType': 'DT, IPV adsorbed',
+              'cvx': '195',
+              'beginAge': '6 years - 4 days',
+            },
           ],
-          "inadvertentVaccine": [
-            {"vaccineType": "OPV bivalent", "cvx": "178"},
-            {"vaccineType": "OPV, monovalent, unspecified", "cvx": "179"},
-            {"vaccineType": "OPV, Unspecified", "cvx": "182"}
+          'inadvertentVaccine': [
+            {
+              'vaccineType': 'OPV bivalent',
+              'cvx': '178',
+            },
+            {
+              'vaccineType': 'OPV, monovalent, unspecified',
+              'cvx': '179',
+            },
+            {
+              'vaccineType': 'OPV, Unspecified',
+              'cvx': '182',
+            },
           ],
-          "recurringDose": "No"
-        }
-      ]
+          'recurringDose': 'No',
+        },
+      ],
     },
     {
-      "seriesName": "Polio 5-dose series",
-      "targetDisease": "Polio",
-      "vaccineGroup": "Polio",
-      "seriesAdminGuidance": [
-        "When evaluating doses of oral polio vaccine (OPV) on or after 4/1/2016, only documentation specifying receipt of trivalent vaccine (tOPV) constitutes proof of vaccination according to the U.S. polio vaccination recommendations. Proper documentation of which OPV vaccine was received is critical to validation of records against U.S. vaccination recommendations.",
-        "Persons who received 4 doses of IPV before August 7, 2009 can be considered fully vaccinated for polio, regardless of age of the last dose, and it is not necessary to routinely administer an additional dose for these persons. If they are at increased risk of poliovirus exposure, they should be offered a single lifetime booster dose of IPV."
+      'seriesName': 'Polio 5-dose series',
+      'targetDisease': 'Polio',
+      'vaccineGroup': 'Polio',
+      'seriesAdminGuidance': [
+        'When evaluating doses of oral polio vaccine (OPV) on or after '
+            '4/1/2016, only documentation specifying receipt of trivalent '
+            'vaccine (tOPV) constitutes proof of vaccination according to '
+            'the U.S. polio vaccination recommendations. Proper '
+            'documentation of which OPV vaccine was received is critical '
+            'to validation of records against U.S. vaccination '
+            'recommendations.',
+        'Persons who received 4 doses of IPV before August 7, 2009 can '
+            'be considered fully vaccinated for polio, regardless of age '
+            'of the last dose, and it is not necessary to routinely '
+            'administer an additional dose for these persons. If they are '
+            'at increased risk of poliovirus exposure, they should be '
+            'offered a single lifetime booster dose of IPV.',
       ],
-      "seriesType": "Standard",
-      "equivalentSeriesGroups": "2",
-      "selectSeries": {
-        "defaultSeries": "No",
-        "productPath": "No",
-        "seriesGroupName": "Standard",
-        "seriesGroup": "1",
-        "seriesPriority": "A",
-        "seriesPreference": "2"
+      'seriesType': 'Standard',
+      'equivalentSeriesGroups': '2',
+      'selectSeries': {
+        'defaultSeries': 'No',
+        'productPath': 'No',
+        'seriesGroupName': 'Standard',
+        'seriesGroup': '1',
+        'seriesPriority': 'A',
+        'seriesPreference': '2',
       },
-      "seriesDose": [
+      'seriesDose': [
         {
-          "doseNumber": "Dose 1",
-          "age": [
+          'doseNumber': 'Dose 1',
+          'age': [
             {
-              "absMinAge": "6 weeks - 4 days",
-              "minAge": "6 weeks",
-              "earliestRecAge": "2 months",
-              "latestRecAge": "3 months + 4 weeks",
-              "maxAge": "18 years"
-            }
+              'absMinAge': '6 weeks - 4 days',
+              'minAge': '6 weeks',
+              'earliestRecAge': '2 months',
+              'latestRecAge': '3 months + 4 weeks',
+              'maxAge': '18 years',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "IPV",
-              "cvx": "10",
-              "beginAge": "6 weeks",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType': 'IPV',
+              'cvx': '10',
+              'beginAge': '6 weeks',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "DTaP-HepB-IPV",
-              "cvx": "110",
-              "beginAge": "6 weeks",
-              "endAge": "7 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType': 'DTaP-HepB-IPV',
+              'cvx': '110',
+              'beginAge': '6 weeks',
+              'endAge': '7 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "DTaP-Hib-IPV",
-              "cvx": "120",
-              "beginAge": "6 weeks",
-              "endAge": "5 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType': 'DTaP-Hib-IPV',
+              'cvx': '120',
+              'beginAge': '6 weeks',
+              'endAge': '5 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB",
-              "cvx": "146",
-              "beginAge": "6 weeks",
-              "endAge": "5 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
-            }
+              'vaccineType': 'DTaP-IPV-Hib-HepB',
+              'cvx': '146',
+              'beginAge': '6 weeks',
+              'endAge': '5 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
+            },
           ],
-          "allowableVaccine": [
+          'allowableVaccine': [
             {
-              "vaccineType": "OPV trivalent",
-              "cvx": "02",
-              "beginAge": "6 weeks - 4 days"
-            },
-            {"vaccineType": "IPV", "cvx": "10", "beginAge": "6 weeks - 4 days"},
-            {
-              "vaccineType": "Polio, Unspecified Formulation",
-              "cvx": "89",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'OPV trivalent',
+              'cvx': '02',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-HepB-IPV",
-              "cvx": "110",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'IPV',
+              'cvx': '10',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-Hib-IPV",
-              "cvx": "120",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'Polio, Unspecified Formulation',
+              'cvx': '89',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-IPV",
-              "cvx": "130",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'DTaP-HepB-IPV',
+              'cvx': '110',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB, Historical",
-              "cvx": "132",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'DTaP-Hib-IPV',
+              'cvx': '120',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB",
-              "cvx": "146",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'DTaP-IPV',
+              'cvx': '130',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib",
-              "cvx": "170",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'DTaP-IPV-Hib-HepB, Historical',
+              'cvx': '132',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DT, IPV adsorbed",
-              "cvx": "195",
-              "beginAge": "6 years - 4 days"
-            }
+              'vaccineType': 'DTaP-IPV-Hib-HepB',
+              'cvx': '146',
+              'beginAge': '6 weeks - 4 days',
+            },
+            {
+              'vaccineType': 'DTaP-IPV-Hib',
+              'cvx': '170',
+              'beginAge': '6 weeks - 4 days',
+            },
+            {
+              'vaccineType': 'DT, IPV adsorbed',
+              'cvx': '195',
+              'beginAge': '6 years - 4 days',
+            },
           ],
-          "inadvertentVaccine": [
-            {"vaccineType": "OPV bivalent", "cvx": "178"},
-            {"vaccineType": "OPV, monovalent, unspecified", "cvx": "179"},
-            {"vaccineType": "OPV, Unspecified", "cvx": "182"}
+          'inadvertentVaccine': [
+            {
+              'vaccineType': 'OPV bivalent',
+              'cvx': '178',
+            },
+            {
+              'vaccineType': 'OPV, monovalent, unspecified',
+              'cvx': '179',
+            },
+            {
+              'vaccineType': 'OPV, Unspecified',
+              'cvx': '182',
+            },
           ],
-          "recurringDose": "No"
+          'recurringDose': 'No',
         },
         {
-          "doseNumber": "Dose 2",
-          "age": [
+          'doseNumber': 'Dose 2',
+          'age': [
             {
-              "absMinAge": "10 weeks - 4 days",
-              "minAge": "10 weeks",
-              "earliestRecAge": "4 months",
-              "latestRecAge": "5 months + 4 weeks"
-            }
+              'absMinAge': '10 weeks - 4 days',
+              'minAge': '10 weeks',
+              'earliestRecAge': '4 months',
+              'latestRecAge': '5 months + 4 weeks',
+            },
           ],
-          "interval": [
+          'interval': [
             {
-              "fromPrevious": "Y",
-              "absMinInt": "4 weeks - 4 days",
-              "minInt": "4 weeks",
-              "earliestRecInt": "8 weeks",
-              "latestRecInt": "13 weeks"
-            }
+              'fromPrevious': 'Y',
+              'absMinInt': '4 weeks - 4 days',
+              'minInt': '4 weeks',
+              'earliestRecInt': '8 weeks',
+              'latestRecInt': '13 weeks',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "IPV",
-              "cvx": "10",
-              "beginAge": "6 weeks",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType': 'IPV',
+              'cvx': '10',
+              'beginAge': '6 weeks',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "DTaP-HepB-IPV",
-              "cvx": "110",
-              "beginAge": "6 weeks",
-              "endAge": "7 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType': 'DTaP-HepB-IPV',
+              'cvx': '110',
+              'beginAge': '6 weeks',
+              'endAge': '7 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "DTaP-Hib-IPV",
-              "cvx": "120",
-              "beginAge": "6 weeks",
-              "endAge": "5 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType': 'DTaP-Hib-IPV',
+              'cvx': '120',
+              'beginAge': '6 weeks',
+              'endAge': '5 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB",
-              "cvx": "146",
-              "beginAge": "6 weeks",
-              "endAge": "5 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
-            }
+              'vaccineType': 'DTaP-IPV-Hib-HepB',
+              'cvx': '146',
+              'beginAge': '6 weeks',
+              'endAge': '5 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
+            },
           ],
-          "allowableVaccine": [
+          'allowableVaccine': [
             {
-              "vaccineType": "OPV trivalent",
-              "cvx": "02",
-              "beginAge": "6 weeks - 4 days"
-            },
-            {"vaccineType": "IPV", "cvx": "10", "beginAge": "6 weeks - 4 days"},
-            {
-              "vaccineType": "Polio, Unspecified Formulation",
-              "cvx": "89",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'OPV trivalent',
+              'cvx': '02',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-HepB-IPV",
-              "cvx": "110",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'IPV',
+              'cvx': '10',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-Hib-IPV",
-              "cvx": "120",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'Polio, Unspecified Formulation',
+              'cvx': '89',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-IPV",
-              "cvx": "130",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'DTaP-HepB-IPV',
+              'cvx': '110',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB, Historical",
-              "cvx": "132",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'DTaP-Hib-IPV',
+              'cvx': '120',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB",
-              "cvx": "146",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'DTaP-IPV',
+              'cvx': '130',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib",
-              "cvx": "170",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'DTaP-IPV-Hib-HepB, Historical',
+              'cvx': '132',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DT, IPV adsorbed",
-              "cvx": "195",
-              "beginAge": "6 years - 4 days"
-            }
+              'vaccineType': 'DTaP-IPV-Hib-HepB',
+              'cvx': '146',
+              'beginAge': '6 weeks - 4 days',
+            },
+            {
+              'vaccineType': 'DTaP-IPV-Hib',
+              'cvx': '170',
+              'beginAge': '6 weeks - 4 days',
+            },
+            {
+              'vaccineType': 'DT, IPV adsorbed',
+              'cvx': '195',
+              'beginAge': '6 years - 4 days',
+            },
           ],
-          "inadvertentVaccine": [
-            {"vaccineType": "OPV bivalent", "cvx": "178"},
-            {"vaccineType": "OPV, monovalent, unspecified", "cvx": "179"},
-            {"vaccineType": "OPV, Unspecified", "cvx": "182"}
+          'inadvertentVaccine': [
+            {
+              'vaccineType': 'OPV bivalent',
+              'cvx': '178',
+            },
+            {
+              'vaccineType': 'OPV, monovalent, unspecified',
+              'cvx': '179',
+            },
+            {
+              'vaccineType': 'OPV, Unspecified',
+              'cvx': '182',
+            },
           ],
-          "recurringDose": "No"
+          'recurringDose': 'No',
         },
         {
-          "doseNumber": "Dose 3",
-          "age": [
+          'doseNumber': 'Dose 3',
+          'age': [
             {
-              "absMinAge": "14 weeks - 4 days",
-              "minAge": "14 weeks",
-              "earliestRecAge": "6 months",
-              "latestRecAge": "19 months + 4 weeks"
-            }
+              'absMinAge': '14 weeks - 4 days',
+              'minAge': '14 weeks',
+              'earliestRecAge': '6 months',
+              'latestRecAge': '19 months + 4 weeks',
+            },
           ],
-          "interval": [
+          'interval': [
             {
-              "fromPrevious": "Y",
-              "absMinInt": "4 weeks - 4 days",
-              "minInt": "4 weeks",
-              "earliestRecInt": "8 weeks",
-              "latestRecInt": "15 months + 4 weeks"
-            }
+              'fromPrevious': 'Y',
+              'absMinInt': '4 weeks - 4 days',
+              'minInt': '4 weeks',
+              'earliestRecInt': '8 weeks',
+              'latestRecInt': '15 months + 4 weeks',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "IPV",
-              "cvx": "10",
-              "beginAge": "6 weeks",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType': 'IPV',
+              'cvx': '10',
+              'beginAge': '6 weeks',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "DTaP-HepB-IPV",
-              "cvx": "110",
-              "beginAge": "6 weeks",
-              "endAge": "7 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType': 'DTaP-HepB-IPV',
+              'cvx': '110',
+              'beginAge': '6 weeks',
+              'endAge': '7 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "DTaP-Hib-IPV",
-              "cvx": "120",
-              "beginAge": "6 weeks",
-              "endAge": "5 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType': 'DTaP-Hib-IPV',
+              'cvx': '120',
+              'beginAge': '6 weeks',
+              'endAge': '5 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB",
-              "cvx": "146",
-              "beginAge": "6 weeks",
-              "endAge": "5 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
-            }
+              'vaccineType': 'DTaP-IPV-Hib-HepB',
+              'cvx': '146',
+              'beginAge': '6 weeks',
+              'endAge': '5 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
+            },
           ],
-          "allowableVaccine": [
+          'allowableVaccine': [
             {
-              "vaccineType": "OPV trivalent",
-              "cvx": "02",
-              "beginAge": "6 weeks - 4 days"
-            },
-            {"vaccineType": "IPV", "cvx": "10", "beginAge": "6 weeks - 4 days"},
-            {
-              "vaccineType": "Polio, Unspecified Formulation",
-              "cvx": "89",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'OPV trivalent',
+              'cvx': '02',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-HepB-IPV",
-              "cvx": "110",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'IPV',
+              'cvx': '10',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-Hib-IPV",
-              "cvx": "120",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'Polio, Unspecified Formulation',
+              'cvx': '89',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-IPV",
-              "cvx": "130",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'DTaP-HepB-IPV',
+              'cvx': '110',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB, Historical",
-              "cvx": "132",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'DTaP-Hib-IPV',
+              'cvx': '120',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB",
-              "cvx": "146",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'DTaP-IPV',
+              'cvx': '130',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib",
-              "cvx": "170",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'DTaP-IPV-Hib-HepB, Historical',
+              'cvx': '132',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DT, IPV adsorbed",
-              "cvx": "195",
-              "beginAge": "6 years - 4 days"
-            }
+              'vaccineType': 'DTaP-IPV-Hib-HepB',
+              'cvx': '146',
+              'beginAge': '6 weeks - 4 days',
+            },
+            {
+              'vaccineType': 'DTaP-IPV-Hib',
+              'cvx': '170',
+              'beginAge': '6 weeks - 4 days',
+            },
+            {
+              'vaccineType': 'DT, IPV adsorbed',
+              'cvx': '195',
+              'beginAge': '6 years - 4 days',
+            },
           ],
-          "inadvertentVaccine": [
-            {"vaccineType": "OPV bivalent", "cvx": "178"},
-            {"vaccineType": "OPV, monovalent, unspecified", "cvx": "179"},
-            {"vaccineType": "OPV, Unspecified", "cvx": "182"}
-          ],
-          "conditionalSkip": [
+          'inadvertentVaccine': [
             {
-              "context": "Evaluation",
-              "setLogic": "OR",
-              "set": [
+              'vaccineType': 'OPV bivalent',
+              'cvx': '178',
+            },
+            {
+              'vaccineType': 'OPV, monovalent, unspecified',
+              'cvx': '179',
+            },
+            {
+              'vaccineType': 'OPV, Unspecified',
+              'cvx': '182',
+            },
+          ],
+          'conditionalSkip': [
+            {
+              'context': 'Evaluation',
+              'setLogic': 'OR',
+              'set': [
                 {
-                  "setID": "1",
-                  "setDescription":
-                      "Target Dose is not required if current dose was administered on or after 4 years of age",
-                  "condition": [
+                  'setID': '1',
+                  'setDescription':
+                      'Target Dose is not required if current dose was '
+                      'administered on or after 4 years of age',
+                  'condition': [
                     {
-                      "conditionID": "1",
-                      "conditionType": "Age",
-                      "beginAge": "4 years"
-                    }
-                  ]
+                      'conditionID': '1',
+                      'conditionType': 'Age',
+                      'beginAge': '4 years',
+                    },
+                  ],
                 },
                 {
-                  "setID": "2",
-                  "setDescription":
-                      "Target Dose is not required if the current dose was administered on or after 4 years - 4 days of age AND at least 6 months - 4 days from the previous dose.",
-                  "conditionLogic": "AND",
-                  "condition": [
+                  'setID': '2',
+                  'setDescription':
+                      'Target Dose is not required if the current dose was '
+                      'administered on or after 4 years - 4 days of age '
+                      'AND at least 6 months - 4 days from the previous '
+                      'dose.',
+                  'conditionLogic': 'AND',
+                  'condition': [
                     {
-                      "conditionID": "1",
-                      "conditionType": "Age",
-                      "beginAge": "4 years - 4 days"
+                      'conditionID': '1',
+                      'conditionType': 'Age',
+                      'beginAge': '4 years - 4 days',
                     },
                     {
-                      "conditionID": "2",
-                      "conditionType": "Interval",
-                      "interval": "6 months - 4 days"
-                    }
-                  ]
-                }
-              ]
+                      'conditionID': '2',
+                      'conditionType': 'Interval',
+                      'interval': '6 months - 4 days',
+                    },
+                  ],
+                },
+              ],
             },
             {
-              "context": "Forecast",
-              "setLogic": "n/a",
-              "set": [
+              'context': 'Forecast',
+              'setLogic': 'n/a',
+              'set': [
                 {
-                  "setID": "3",
-                  "setDescription":
-                      "Target Dose is not required for those who are 4 years of age or older.",
-                  "condition": [
+                  'setID': '3',
+                  'setDescription':
+                      'Target Dose is not required for those who are 4 '
+                      'years of age or older.',
+                  'condition': [
                     {
-                      "conditionID": "1",
-                      "conditionType": "Age",
-                      "beginAge": "4 years"
-                    }
-                  ]
-                }
-              ]
-            }
+                      'conditionID': '1',
+                      'conditionType': 'Age',
+                      'beginAge': '4 years',
+                    },
+                  ],
+                },
+              ],
+            },
           ],
-          "recurringDose": "No"
+          'recurringDose': 'No',
         },
         {
-          "doseNumber": "Dose 4",
-          "interval": [
+          'doseNumber': 'Dose 4',
+          'interval': [
             {
-              "fromPrevious": "Y",
-              "absMinInt": "0 days",
-              "minInt": "0 days",
-              "earliestRecInt": "0 days"
-            }
+              'fromPrevious': 'Y',
+              'absMinInt': '0 days',
+              'minInt': '0 days',
+              'earliestRecInt': '0 days',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "IPV",
-              "cvx": "10",
-              "beginAge": "6 weeks",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType': 'IPV',
+              'cvx': '10',
+              'beginAge': '6 weeks',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "DTaP-HepB-IPV",
-              "cvx": "110",
-              "beginAge": "6 weeks",
-              "endAge": "7 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType': 'DTaP-HepB-IPV',
+              'cvx': '110',
+              'beginAge': '6 weeks',
+              'endAge': '7 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "DTaP-Hib-IPV",
-              "cvx": "120",
-              "beginAge": "6 weeks",
-              "endAge": "5 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType': 'DTaP-Hib-IPV',
+              'cvx': '120',
+              'beginAge': '6 weeks',
+              'endAge': '5 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "DTaP-IPV",
-              "cvx": "130",
-              "beginAge": "4 years",
-              "endAge": "7 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType': 'DTaP-IPV',
+              'cvx': '130',
+              'beginAge': '4 years',
+              'endAge': '7 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB",
-              "cvx": "146",
-              "beginAge": "6 weeks",
-              "endAge": "5 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
-            }
+              'vaccineType': 'DTaP-IPV-Hib-HepB',
+              'cvx': '146',
+              'beginAge': '6 weeks',
+              'endAge': '5 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
+            },
           ],
-          "allowableVaccine": [
+          'allowableVaccine': [
             {
-              "vaccineType": "OPV trivalent",
-              "cvx": "02",
-              "beginAge": "6 weeks - 4 days"
-            },
-            {"vaccineType": "IPV", "cvx": "10", "beginAge": "6 weeks - 4 days"},
-            {
-              "vaccineType": "Polio, Unspecified Formulation",
-              "cvx": "89",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'OPV trivalent',
+              'cvx': '02',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-HepB-IPV",
-              "cvx": "110",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'IPV',
+              'cvx': '10',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-Hib-IPV",
-              "cvx": "120",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'Polio, Unspecified Formulation',
+              'cvx': '89',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-IPV",
-              "cvx": "130",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'DTaP-HepB-IPV',
+              'cvx': '110',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB, Historical",
-              "cvx": "132",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'DTaP-Hib-IPV',
+              'cvx': '120',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB",
-              "cvx": "146",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'DTaP-IPV',
+              'cvx': '130',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib",
-              "cvx": "170",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'DTaP-IPV-Hib-HepB, Historical',
+              'cvx': '132',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DT, IPV adsorbed",
-              "cvx": "195",
-              "beginAge": "6 years - 4 days"
-            }
+              'vaccineType': 'DTaP-IPV-Hib-HepB',
+              'cvx': '146',
+              'beginAge': '6 weeks - 4 days',
+            },
+            {
+              'vaccineType': 'DTaP-IPV-Hib',
+              'cvx': '170',
+              'beginAge': '6 weeks - 4 days',
+            },
+            {
+              'vaccineType': 'DT, IPV adsorbed',
+              'cvx': '195',
+              'beginAge': '6 years - 4 days',
+            },
           ],
-          "inadvertentVaccine": [
-            {"vaccineType": "OPV bivalent", "cvx": "178"},
-            {"vaccineType": "OPV, monovalent, unspecified", "cvx": "179"},
-            {"vaccineType": "OPV, Unspecified", "cvx": "182"}
-          ],
-          "conditionalSkip": [
+          'inadvertentVaccine': [
             {
-              "context": "Both",
-              "setLogic": "n/a",
-              "set": [
+              'vaccineType': 'OPV bivalent',
+              'cvx': '178',
+            },
+            {
+              'vaccineType': 'OPV, monovalent, unspecified',
+              'cvx': '179',
+            },
+            {
+              'vaccineType': 'OPV, Unspecified',
+              'cvx': '182',
+            },
+          ],
+          'conditionalSkip': [
+            {
+              'context': 'Both',
+              'setLogic': 'n/a',
+              'set': [
                 {
-                  "setID": "1",
-                  "setDescription":
-                      "Target Dose is not required for those who are 4 years of age or older.",
-                  "condition": [
+                  'setID': '1',
+                  'setDescription':
+                      'Target Dose is not required for those who are 4 '
+                      'years of age or older.',
+                  'condition': [
                     {
-                      "conditionID": "1",
-                      "conditionType": "Age",
-                      "beginAge": "4 years"
-                    }
-                  ]
-                }
-              ]
-            }
+                      'conditionID': '1',
+                      'conditionType': 'Age',
+                      'beginAge': '4 years',
+                    },
+                  ],
+                },
+              ],
+            },
           ],
-          "recurringDose": "No"
+          'recurringDose': 'No',
         },
         {
-          "doseNumber": "Dose 5",
-          "age": [
+          'doseNumber': 'Dose 5',
+          'age': [
             {
-              "absMinAge": "4 years - 4 days",
-              "minAge": "4 years",
-              "earliestRecAge": "4 years",
-              "latestRecAge": "7 years + 4 weeks"
-            }
+              'absMinAge': '4 years - 4 days',
+              'minAge': '4 years',
+              'earliestRecAge': '4 years',
+              'latestRecAge': '7 years + 4 weeks',
+            },
           ],
-          "interval": [
+          'interval': [
             {
-              "fromPrevious": "Y",
-              "absMinInt": "6 months - 4 days",
-              "minInt": "6 months",
-              "earliestRecInt": "3 years",
-              "latestRecInt": "6 years + 4 weeks"
-            }
+              'fromPrevious': 'Y',
+              'absMinInt': '6 months - 4 days',
+              'minInt': '6 months',
+              'earliestRecInt': '3 years',
+              'latestRecInt': '6 years + 4 weeks',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "IPV",
-              "cvx": "10",
-              "beginAge": "6 weeks",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType': 'IPV',
+              'cvx': '10',
+              'beginAge': '6 weeks',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "DTaP-HepB-IPV",
-              "cvx": "110",
-              "beginAge": "6 weeks",
-              "endAge": "7 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType': 'DTaP-HepB-IPV',
+              'cvx': '110',
+              'beginAge': '6 weeks',
+              'endAge': '7 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "DTaP-Hib-IPV",
-              "cvx": "120",
-              "beginAge": "6 weeks",
-              "endAge": "5 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType': 'DTaP-Hib-IPV',
+              'cvx': '120',
+              'beginAge': '6 weeks',
+              'endAge': '5 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "DTaP-IPV",
-              "cvx": "130",
-              "beginAge": "4 years",
-              "endAge": "7 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
-            }
+              'vaccineType': 'DTaP-IPV',
+              'cvx': '130',
+              'beginAge': '4 years',
+              'endAge': '7 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
+            },
           ],
-          "allowableVaccine": [
+          'allowableVaccine': [
             {
-              "vaccineType": "OPV trivalent",
-              "cvx": "02",
-              "beginAge": "6 weeks - 4 days"
-            },
-            {"vaccineType": "IPV", "cvx": "10", "beginAge": "6 weeks - 4 days"},
-            {
-              "vaccineType": "Polio, Unspecified Formulation",
-              "cvx": "89",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'OPV trivalent',
+              'cvx': '02',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-HepB-IPV",
-              "cvx": "110",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'IPV',
+              'cvx': '10',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-Hib-IPV",
-              "cvx": "120",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'Polio, Unspecified Formulation',
+              'cvx': '89',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-IPV",
-              "cvx": "130",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'DTaP-HepB-IPV',
+              'cvx': '110',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB, Historical",
-              "cvx": "132",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'DTaP-Hib-IPV',
+              'cvx': '120',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB",
-              "cvx": "146",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'DTaP-IPV',
+              'cvx': '130',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib",
-              "cvx": "170",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'DTaP-IPV-Hib-HepB, Historical',
+              'cvx': '132',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DT, IPV adsorbed",
-              "cvx": "195",
-              "beginAge": "6 years - 4 days"
-            }
+              'vaccineType': 'DTaP-IPV-Hib-HepB',
+              'cvx': '146',
+              'beginAge': '6 weeks - 4 days',
+            },
+            {
+              'vaccineType': 'DTaP-IPV-Hib',
+              'cvx': '170',
+              'beginAge': '6 weeks - 4 days',
+            },
+            {
+              'vaccineType': 'DT, IPV adsorbed',
+              'cvx': '195',
+              'beginAge': '6 years - 4 days',
+            },
           ],
-          "inadvertentVaccine": [
-            {"vaccineType": "OPV bivalent", "cvx": "178"},
-            {"vaccineType": "OPV, monovalent, unspecified", "cvx": "179"},
-            {"vaccineType": "OPV, Unspecified", "cvx": "182"}
+          'inadvertentVaccine': [
+            {
+              'vaccineType': 'OPV bivalent',
+              'cvx': '178',
+            },
+            {
+              'vaccineType': 'OPV, monovalent, unspecified',
+              'cvx': '179',
+            },
+            {
+              'vaccineType': 'OPV, Unspecified',
+              'cvx': '182',
+            },
           ],
-          "recurringDose": "No"
-        }
-      ]
+          'recurringDose': 'No',
+        },
+      ],
     },
     {
-      "seriesName": "Polio adult catch-up series",
-      "targetDisease": "Polio",
-      "vaccineGroup": "Polio",
-      "seriesAdminGuidance": [
-        "Adults (aged > 18 years) who are known or suspected to be unvaccinated or incompletely vaccinated against polio should complete a primary vaccination series with IPV.",
-        "In general, unless there are specific reasons to believe they were not vaccinated, most adults who were born and raised in the United States can assume they were vaccinated against polio as children. Polio vaccination has been part of the routine childhood immunization schedule for decades and is still part of the routine childhood immunization schedule. Adults who received any childhood vaccines almost certainly were vaccinated for polio."
+      'seriesName': 'Polio adult catch-up series',
+      'targetDisease': 'Polio',
+      'vaccineGroup': 'Polio',
+      'seriesAdminGuidance': [
+        'Adults (aged > 18 years) who are known or suspected to be '
+            'unvaccinated or incompletely vaccinated against polio should '
+            'complete a primary vaccination series with IPV.',
+        'In general, unless there are specific reasons to believe they '
+            'were not vaccinated, most adults who were born and raised in '
+            'the United States can assume they were vaccinated against '
+            'polio as children. Polio vaccination has been part of the '
+            'routine childhood immunization schedule for decades and is '
+            'still part of the routine childhood immunization schedule. '
+            'Adults who received any childhood vaccines almost certainly '
+            'were vaccinated for polio.',
       ],
-      "seriesType": "Standard",
-      "equivalentSeriesGroups": "2",
-      "selectSeries": {
-        "defaultSeries": "No",
-        "productPath": "No",
-        "seriesGroupName": "Standard",
-        "seriesGroup": "1",
-        "seriesPriority": "A",
-        "seriesPreference": "3",
-        "minAgeToStart": "18 years"
+      'seriesType': 'Standard',
+      'equivalentSeriesGroups': '2',
+      'selectSeries': {
+        'defaultSeries': 'No',
+        'productPath': 'No',
+        'seriesGroupName': 'Standard',
+        'seriesGroup': '1',
+        'seriesPriority': 'A',
+        'seriesPreference': '3',
+        'minAgeToStart': '18 years',
       },
-      "seriesDose": [
+      'seriesDose': [
         {
-          "doseNumber": "Dose 1",
-          "age": [
+          'doseNumber': 'Dose 1',
+          'age': [
             {
-              "absMinAge": "18 years - 4 days",
-              "minAge": "18 years",
-              "earliestRecAge": "18 years"
-            }
+              'absMinAge': '18 years - 4 days',
+              'minAge': '18 years',
+              'earliestRecAge': '18 years',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "IPV",
-              "cvx": "10",
-              "beginAge": "6 weeks",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
-            }
+              'vaccineType': 'IPV',
+              'cvx': '10',
+              'beginAge': '6 weeks',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
+            },
           ],
-          "allowableVaccine": [
+          'allowableVaccine': [
             {
-              "vaccineType": "OPV trivalent",
-              "cvx": "02",
-              "beginAge": "6 weeks - 4 days"
-            },
-            {"vaccineType": "IPV", "cvx": "10", "beginAge": "6 weeks - 4 days"},
-            {
-              "vaccineType": "Polio, Unspecified Formulation",
-              "cvx": "89",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'OPV trivalent',
+              'cvx': '02',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-HepB-IPV",
-              "cvx": "110",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'IPV',
+              'cvx': '10',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-Hib-IPV",
-              "cvx": "120",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'Polio, Unspecified Formulation',
+              'cvx': '89',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-IPV",
-              "cvx": "130",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'DTaP-HepB-IPV',
+              'cvx': '110',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB, Historical",
-              "cvx": "132",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'DTaP-Hib-IPV',
+              'cvx': '120',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB",
-              "cvx": "146",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'DTaP-IPV',
+              'cvx': '130',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib",
-              "cvx": "170",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'DTaP-IPV-Hib-HepB, Historical',
+              'cvx': '132',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DT, IPV adsorbed",
-              "cvx": "195",
-              "beginAge": "6 years - 4 days"
-            }
+              'vaccineType': 'DTaP-IPV-Hib-HepB',
+              'cvx': '146',
+              'beginAge': '6 weeks - 4 days',
+            },
+            {
+              'vaccineType': 'DTaP-IPV-Hib',
+              'cvx': '170',
+              'beginAge': '6 weeks - 4 days',
+            },
+            {
+              'vaccineType': 'DT, IPV adsorbed',
+              'cvx': '195',
+              'beginAge': '6 years - 4 days',
+            },
           ],
-          "inadvertentVaccine": [
-            {"vaccineType": "OPV bivalent", "cvx": "178"},
-            {"vaccineType": "OPV, monovalent, unspecified", "cvx": "179"},
-            {"vaccineType": "OPV, Unspecified", "cvx": "182"}
+          'inadvertentVaccine': [
+            {
+              'vaccineType': 'OPV bivalent',
+              'cvx': '178',
+            },
+            {
+              'vaccineType': 'OPV, monovalent, unspecified',
+              'cvx': '179',
+            },
+            {
+              'vaccineType': 'OPV, Unspecified',
+              'cvx': '182',
+            },
           ],
-          "recurringDose": "No"
+          'recurringDose': 'No',
         },
         {
-          "doseNumber": "Dose 2",
-          "age": [
+          'doseNumber': 'Dose 2',
+          'age': [
             {
-              "absMinAge": "18 years - 4 days",
-              "minAge": "18 years",
-              "earliestRecAge": "18 years"
-            }
+              'absMinAge': '18 years - 4 days',
+              'minAge': '18 years',
+              'earliestRecAge': '18 years',
+            },
           ],
-          "interval": [
+          'interval': [
             {
-              "fromPrevious": "Y",
-              "absMinInt": "4 weeks - 4 days",
-              "minInt": "4 weeks",
-              "earliestRecInt": "4 weeks",
-              "latestRecInt": "8 weeks"
-            }
+              'fromPrevious': 'Y',
+              'absMinInt': '4 weeks - 4 days',
+              'minInt': '4 weeks',
+              'earliestRecInt': '4 weeks',
+              'latestRecInt': '8 weeks',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "IPV",
-              "cvx": "10",
-              "beginAge": "6 weeks",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
-            }
+              'vaccineType': 'IPV',
+              'cvx': '10',
+              'beginAge': '6 weeks',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
+            },
           ],
-          "allowableVaccine": [
+          'allowableVaccine': [
             {
-              "vaccineType": "OPV trivalent",
-              "cvx": "02",
-              "beginAge": "6 weeks - 4 days"
-            },
-            {"vaccineType": "IPV", "cvx": "10", "beginAge": "6 weeks - 4 days"},
-            {
-              "vaccineType": "Polio, Unspecified Formulation",
-              "cvx": "89",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'OPV trivalent',
+              'cvx': '02',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-HepB-IPV",
-              "cvx": "110",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'IPV',
+              'cvx': '10',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-Hib-IPV",
-              "cvx": "120",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'Polio, Unspecified Formulation',
+              'cvx': '89',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-IPV",
-              "cvx": "130",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'DTaP-HepB-IPV',
+              'cvx': '110',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB, Historical",
-              "cvx": "132",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'DTaP-Hib-IPV',
+              'cvx': '120',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB",
-              "cvx": "146",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'DTaP-IPV',
+              'cvx': '130',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib",
-              "cvx": "170",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'DTaP-IPV-Hib-HepB, Historical',
+              'cvx': '132',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DT, IPV adsorbed",
-              "cvx": "195",
-              "beginAge": "6 years - 4 days"
-            }
+              'vaccineType': 'DTaP-IPV-Hib-HepB',
+              'cvx': '146',
+              'beginAge': '6 weeks - 4 days',
+            },
+            {
+              'vaccineType': 'DTaP-IPV-Hib',
+              'cvx': '170',
+              'beginAge': '6 weeks - 4 days',
+            },
+            {
+              'vaccineType': 'DT, IPV adsorbed',
+              'cvx': '195',
+              'beginAge': '6 years - 4 days',
+            },
           ],
-          "inadvertentVaccine": [
-            {"vaccineType": "OPV bivalent", "cvx": "178"},
-            {"vaccineType": "OPV, monovalent, unspecified", "cvx": "179"},
-            {"vaccineType": "OPV, Unspecified", "cvx": "182"}
+          'inadvertentVaccine': [
+            {
+              'vaccineType': 'OPV bivalent',
+              'cvx': '178',
+            },
+            {
+              'vaccineType': 'OPV, monovalent, unspecified',
+              'cvx': '179',
+            },
+            {
+              'vaccineType': 'OPV, Unspecified',
+              'cvx': '182',
+            },
           ],
-          "recurringDose": "No"
+          'recurringDose': 'No',
         },
         {
-          "doseNumber": "Dose 3",
-          "age": [
+          'doseNumber': 'Dose 3',
+          'age': [
             {
-              "absMinAge": "18 years - 4 days",
-              "minAge": "18 years",
-              "earliestRecAge": "18 years"
-            }
+              'absMinAge': '18 years - 4 days',
+              'minAge': '18 years',
+              'earliestRecAge': '18 years',
+            },
           ],
-          "interval": [
+          'interval': [
             {
-              "fromPrevious": "Y",
-              "absMinInt": "6 months - 4 days",
-              "minInt": "6 months",
-              "earliestRecInt": "6 months",
-              "latestRecInt": "12 months"
-            }
+              'fromPrevious': 'Y',
+              'absMinInt': '6 months - 4 days',
+              'minInt': '6 months',
+              'earliestRecInt': '6 months',
+              'latestRecInt': '12 months',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "IPV",
-              "cvx": "10",
-              "beginAge": "6 weeks",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
-            }
+              'vaccineType': 'IPV',
+              'cvx': '10',
+              'beginAge': '6 weeks',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
+            },
           ],
-          "allowableVaccine": [
+          'allowableVaccine': [
             {
-              "vaccineType": "OPV trivalent",
-              "cvx": "02",
-              "beginAge": "6 weeks - 4 days"
-            },
-            {"vaccineType": "IPV", "cvx": "10", "beginAge": "6 weeks - 4 days"},
-            {
-              "vaccineType": "Polio, Unspecified Formulation",
-              "cvx": "89",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'OPV trivalent',
+              'cvx': '02',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-HepB-IPV",
-              "cvx": "110",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'IPV',
+              'cvx': '10',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-Hib-IPV",
-              "cvx": "120",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'Polio, Unspecified Formulation',
+              'cvx': '89',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-IPV",
-              "cvx": "130",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'DTaP-HepB-IPV',
+              'cvx': '110',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB, Historical",
-              "cvx": "132",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'DTaP-Hib-IPV',
+              'cvx': '120',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB",
-              "cvx": "146",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'DTaP-IPV',
+              'cvx': '130',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib",
-              "cvx": "170",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'DTaP-IPV-Hib-HepB, Historical',
+              'cvx': '132',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DT, IPV adsorbed",
-              "cvx": "195",
-              "beginAge": "6 years - 4 days"
-            }
+              'vaccineType': 'DTaP-IPV-Hib-HepB',
+              'cvx': '146',
+              'beginAge': '6 weeks - 4 days',
+            },
+            {
+              'vaccineType': 'DTaP-IPV-Hib',
+              'cvx': '170',
+              'beginAge': '6 weeks - 4 days',
+            },
+            {
+              'vaccineType': 'DT, IPV adsorbed',
+              'cvx': '195',
+              'beginAge': '6 years - 4 days',
+            },
           ],
-          "inadvertentVaccine": [
-            {"vaccineType": "OPV bivalent", "cvx": "178"},
-            {"vaccineType": "OPV, monovalent, unspecified", "cvx": "179"},
-            {"vaccineType": "OPV, Unspecified", "cvx": "182"}
+          'inadvertentVaccine': [
+            {
+              'vaccineType': 'OPV bivalent',
+              'cvx': '178',
+            },
+            {
+              'vaccineType': 'OPV, monovalent, unspecified',
+              'cvx': '179',
+            },
+            {
+              'vaccineType': 'OPV, Unspecified',
+              'cvx': '182',
+            },
           ],
-          "recurringDose": "No"
-        }
-      ]
+          'recurringDose': 'No',
+        },
+      ],
     },
     {
-      "seriesName": "Polio fIPV series",
-      "targetDisease": "Polio",
-      "vaccineGroup": "Polio",
-      "seriesAdminGuidance": [
-        "For people who received fractional (1/5 full dose) IPV administered intradermally outside of the U.S., 2 fractional doses of IPV (fIPV) should be considered valid and counted as 1 full intramuscular dose of IPV towards the U.S. vaccination schedule.",
-        "When evaluating doses of oral polio vaccine (OPV) on or after 4/1/2016, only documentation specifying receipt of trivalent vaccine (tOPV) constitutes proof of vaccination according to the U.S. polio vaccination recommendations. Proper documentation of which OPV vaccine was received is critical to validation of records against U.S. vaccination recommendations.",
-        "Persons who received 4 doses of IPV before August 7, 2009 can be considered fully vaccinated for polio, regardless of age of the last dose, and it is not necessary to routinely administer an additional dose for these persons. If they are at increased risk of poliovirus exposure, they should be offered a single lifetime booster dose of IPV."
+      'seriesName': 'Polio fIPV series',
+      'targetDisease': 'Polio',
+      'vaccineGroup': 'Polio',
+      'seriesAdminGuidance': [
+        'For people who received fractional (1/5 full dose) IPV '
+            'administered intradermally outside of the U.S., 2 fractional '
+            'doses of IPV (fIPV) should be considered valid and counted as '
+            '1 full intramuscular dose of IPV towards the U.S. vaccination '
+            'schedule.',
+        'When evaluating doses of oral polio vaccine (OPV) on or after '
+            '4/1/2016, only documentation specifying receipt of trivalent '
+            'vaccine (tOPV) constitutes proof of vaccination according to '
+            'the U.S. polio vaccination recommendations. Proper '
+            'documentation of which OPV vaccine was received is critical '
+            'to validation of records against U.S. vaccination '
+            'recommendations.',
+        'Persons who received 4 doses of IPV before August 7, 2009 can '
+            'be considered fully vaccinated for polio, regardless of age '
+            'of the last dose, and it is not necessary to routinely '
+            'administer an additional dose for these persons. If they are '
+            'at increased risk of poliovirus exposure, they should be '
+            'offered a single lifetime booster dose of IPV.',
       ],
-      "seriesType": "Standard",
-      "equivalentSeriesGroups": "2",
-      "selectSeries": {
-        "defaultSeries": "No",
-        "productPath": "No",
-        "seriesGroupName": "Standard",
-        "seriesGroup": "1",
-        "seriesPriority": "A",
-        "seriesPreference": "4"
+      'seriesType': 'Standard',
+      'equivalentSeriesGroups': '2',
+      'selectSeries': {
+        'defaultSeries': 'No',
+        'productPath': 'No',
+        'seriesGroupName': 'Standard',
+        'seriesGroup': '1',
+        'seriesPriority': 'A',
+        'seriesPreference': '4',
       },
-      "seriesDose": [
+      'seriesDose': [
         {
-          "doseNumber": "Dose 1",
-          "age": [
+          'doseNumber': 'Dose 1',
+          'age': [
             {
-              "absMinAge": "6 weeks - 4 days",
-              "minAge": "6 weeks",
-              "maxAge": "18 years"
-            }
+              'absMinAge': '6 weeks - 4 days',
+              'minAge': '6 weeks',
+              'maxAge': '18 years',
+            },
           ],
-          "allowableVaccine": [
+          'allowableVaccine': [
             {
-              "vaccineType": "Poliovirus, inactivated, fractional-dose (fIPV)",
-              "cvx": "324",
-              "beginAge": "6 weeks - 4 days"
-            }
+              'vaccineType': 'Poliovirus, inactivated, fractional-dose (fIPV)',
+              'cvx': '324',
+              'beginAge': '6 weeks - 4 days',
+            },
           ],
-          "inadvertentVaccine": [
-            {"vaccineType": "OPV bivalent", "cvx": "178"},
-            {"vaccineType": "OPV, monovalent, unspecified", "cvx": "179"},
-            {"vaccineType": "OPV, Unspecified", "cvx": "182"}
+          'inadvertentVaccine': [
+            {
+              'vaccineType': 'OPV bivalent',
+              'cvx': '178',
+            },
+            {
+              'vaccineType': 'OPV, monovalent, unspecified',
+              'cvx': '179',
+            },
+            {
+              'vaccineType': 'OPV, Unspecified',
+              'cvx': '182',
+            },
           ],
-          "recurringDose": "No"
+          'recurringDose': 'No',
         },
         {
-          "doseNumber": "Dose 2",
-          "age": [
+          'doseNumber': 'Dose 2',
+          'age': [
             {
-              "absMinAge": "6 weeks - 4 days",
-              "minAge": "6 weeks",
-              "earliestRecAge": "2 months",
-              "latestRecAge": "3 months + 4 weeks",
-              "maxAge": "18 years"
-            }
+              'absMinAge': '6 weeks - 4 days',
+              'minAge': '6 weeks',
+              'earliestRecAge': '2 months',
+              'latestRecAge': '3 months + 4 weeks',
+              'maxAge': '18 years',
+            },
           ],
-          "interval": [
+          'interval': [
             {
-              "fromPrevious": "Y",
-              "absMinInt": "4 weeks - 4 days",
-              "minInt": "4 weeks",
-              "earliestRecInt": "8 weeks",
-              "latestRecInt": "13 weeks"
-            }
+              'fromPrevious': 'Y',
+              'absMinInt': '4 weeks - 4 days',
+              'minInt': '4 weeks',
+              'earliestRecInt': '8 weeks',
+              'latestRecInt': '13 weeks',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "IPV",
-              "cvx": "10",
-              "beginAge": "6 weeks",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType': 'IPV',
+              'cvx': '10',
+              'beginAge': '6 weeks',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "DTaP-HepB-IPV",
-              "cvx": "110",
-              "beginAge": "6 weeks",
-              "endAge": "7 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType': 'DTaP-HepB-IPV',
+              'cvx': '110',
+              'beginAge': '6 weeks',
+              'endAge': '7 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "DTaP-Hib-IPV",
-              "cvx": "120",
-              "beginAge": "6 weeks",
-              "endAge": "5 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType': 'DTaP-Hib-IPV',
+              'cvx': '120',
+              'beginAge': '6 weeks',
+              'endAge': '5 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB",
-              "cvx": "146",
-              "beginAge": "6 weeks",
-              "endAge": "5 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
-            }
+              'vaccineType': 'DTaP-IPV-Hib-HepB',
+              'cvx': '146',
+              'beginAge': '6 weeks',
+              'endAge': '5 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
+            },
           ],
-          "allowableVaccine": [
+          'allowableVaccine': [
             {
-              "vaccineType": "OPV trivalent",
-              "cvx": "02",
-              "beginAge": "6 weeks - 4 days"
-            },
-            {"vaccineType": "IPV", "cvx": "10", "beginAge": "6 weeks - 4 days"},
-            {
-              "vaccineType": "Polio, Unspecified Formulation",
-              "cvx": "89",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'OPV trivalent',
+              'cvx': '02',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-HepB-IPV",
-              "cvx": "110",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'IPV',
+              'cvx': '10',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-Hib-IPV",
-              "cvx": "120",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'Polio, Unspecified Formulation',
+              'cvx': '89',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-IPV",
-              "cvx": "130",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'DTaP-HepB-IPV',
+              'cvx': '110',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB, Historical",
-              "cvx": "132",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'DTaP-Hib-IPV',
+              'cvx': '120',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB",
-              "cvx": "146",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'DTaP-IPV',
+              'cvx': '130',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib",
-              "cvx": "170",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'DTaP-IPV-Hib-HepB, Historical',
+              'cvx': '132',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DT, IPV adsorbed",
-              "cvx": "195",
-              "beginAge": "6 years - 4 days"
+              'vaccineType': 'DTaP-IPV-Hib-HepB',
+              'cvx': '146',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "Poliovirus, inactivated, fractional-dose (fIPV)",
-              "cvx": "324",
-              "beginAge": "6 weeks - 4 days"
-            }
+              'vaccineType': 'DTaP-IPV-Hib',
+              'cvx': '170',
+              'beginAge': '6 weeks - 4 days',
+            },
+            {
+              'vaccineType': 'DT, IPV adsorbed',
+              'cvx': '195',
+              'beginAge': '6 years - 4 days',
+            },
+            {
+              'vaccineType': 'Poliovirus, inactivated, fractional-dose (fIPV)',
+              'cvx': '324',
+              'beginAge': '6 weeks - 4 days',
+            },
           ],
-          "inadvertentVaccine": [
-            {"vaccineType": "OPV bivalent", "cvx": "178"},
-            {"vaccineType": "OPV, monovalent, unspecified", "cvx": "179"},
-            {"vaccineType": "OPV, Unspecified", "cvx": "182"}
+          'inadvertentVaccine': [
+            {
+              'vaccineType': 'OPV bivalent',
+              'cvx': '178',
+            },
+            {
+              'vaccineType': 'OPV, monovalent, unspecified',
+              'cvx': '179',
+            },
+            {
+              'vaccineType': 'OPV, Unspecified',
+              'cvx': '182',
+            },
           ],
-          "recurringDose": "No"
+          'recurringDose': 'No',
         },
         {
-          "doseNumber": "Dose 3",
-          "age": [
+          'doseNumber': 'Dose 3',
+          'age': [
             {
-              "absMinAge": "10 weeks - 4 days",
-              "minAge": "10 weeks",
-              "earliestRecAge": "4 months",
-              "latestRecAge": "5 months + 4 weeks"
-            }
+              'absMinAge': '10 weeks - 4 days',
+              'minAge': '10 weeks',
+              'earliestRecAge': '4 months',
+              'latestRecAge': '5 months + 4 weeks',
+            },
           ],
-          "interval": [
+          'interval': [
             {
-              "fromPrevious": "Y",
-              "absMinInt": "4 weeks - 4 days",
-              "minInt": "4 weeks",
-              "earliestRecInt": "8 weeks",
-              "latestRecInt": "13 weeks"
-            }
+              'fromPrevious': 'Y',
+              'absMinInt': '4 weeks - 4 days',
+              'minInt': '4 weeks',
+              'earliestRecInt': '8 weeks',
+              'latestRecInt': '13 weeks',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "IPV",
-              "cvx": "10",
-              "beginAge": "6 weeks",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType': 'IPV',
+              'cvx': '10',
+              'beginAge': '6 weeks',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "DTaP-HepB-IPV",
-              "cvx": "110",
-              "beginAge": "6 weeks",
-              "endAge": "7 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType': 'DTaP-HepB-IPV',
+              'cvx': '110',
+              'beginAge': '6 weeks',
+              'endAge': '7 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "DTaP-Hib-IPV",
-              "cvx": "120",
-              "beginAge": "6 weeks",
-              "endAge": "5 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType': 'DTaP-Hib-IPV',
+              'cvx': '120',
+              'beginAge': '6 weeks',
+              'endAge': '5 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB",
-              "cvx": "146",
-              "beginAge": "6 weeks",
-              "endAge": "5 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
-            }
+              'vaccineType': 'DTaP-IPV-Hib-HepB',
+              'cvx': '146',
+              'beginAge': '6 weeks',
+              'endAge': '5 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
+            },
           ],
-          "allowableVaccine": [
+          'allowableVaccine': [
             {
-              "vaccineType": "OPV trivalent",
-              "cvx": "02",
-              "beginAge": "6 weeks - 4 days"
-            },
-            {"vaccineType": "IPV", "cvx": "10", "beginAge": "6 weeks - 4 days"},
-            {
-              "vaccineType": "Polio, Unspecified Formulation",
-              "cvx": "89",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'OPV trivalent',
+              'cvx': '02',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-HepB-IPV",
-              "cvx": "110",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'IPV',
+              'cvx': '10',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-Hib-IPV",
-              "cvx": "120",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'Polio, Unspecified Formulation',
+              'cvx': '89',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-IPV",
-              "cvx": "130",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'DTaP-HepB-IPV',
+              'cvx': '110',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB, Historical",
-              "cvx": "132",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'DTaP-Hib-IPV',
+              'cvx': '120',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB",
-              "cvx": "146",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'DTaP-IPV',
+              'cvx': '130',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib",
-              "cvx": "170",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'DTaP-IPV-Hib-HepB, Historical',
+              'cvx': '132',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DT, IPV adsorbed",
-              "cvx": "195",
-              "beginAge": "6 years - 4 days"
-            }
+              'vaccineType': 'DTaP-IPV-Hib-HepB',
+              'cvx': '146',
+              'beginAge': '6 weeks - 4 days',
+            },
+            {
+              'vaccineType': 'DTaP-IPV-Hib',
+              'cvx': '170',
+              'beginAge': '6 weeks - 4 days',
+            },
+            {
+              'vaccineType': 'DT, IPV adsorbed',
+              'cvx': '195',
+              'beginAge': '6 years - 4 days',
+            },
           ],
-          "inadvertentVaccine": [
-            {"vaccineType": "OPV bivalent", "cvx": "178"},
-            {"vaccineType": "OPV, monovalent, unspecified", "cvx": "179"},
-            {"vaccineType": "OPV, Unspecified", "cvx": "182"}
+          'inadvertentVaccine': [
+            {
+              'vaccineType': 'OPV bivalent',
+              'cvx': '178',
+            },
+            {
+              'vaccineType': 'OPV, monovalent, unspecified',
+              'cvx': '179',
+            },
+            {
+              'vaccineType': 'OPV, Unspecified',
+              'cvx': '182',
+            },
           ],
-          "recurringDose": "No"
+          'recurringDose': 'No',
         },
         {
-          "doseNumber": "Dose 4",
-          "age": [
+          'doseNumber': 'Dose 4',
+          'age': [
             {
-              "absMinAge": "14 weeks - 4 days",
-              "minAge": "14 weeks",
-              "earliestRecAge": "6 months",
-              "latestRecAge": "19 months + 4 weeks"
-            }
+              'absMinAge': '14 weeks - 4 days',
+              'minAge': '14 weeks',
+              'earliestRecAge': '6 months',
+              'latestRecAge': '19 months + 4 weeks',
+            },
           ],
-          "interval": [
+          'interval': [
             {
-              "fromPrevious": "Y",
-              "absMinInt": "4 weeks - 4 days",
-              "minInt": "4 weeks",
-              "earliestRecInt": "8 weeks",
-              "latestRecInt": "15 months + 4 weeks"
-            }
+              'fromPrevious': 'Y',
+              'absMinInt': '4 weeks - 4 days',
+              'minInt': '4 weeks',
+              'earliestRecInt': '8 weeks',
+              'latestRecInt': '15 months + 4 weeks',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "IPV",
-              "cvx": "10",
-              "beginAge": "6 weeks",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType': 'IPV',
+              'cvx': '10',
+              'beginAge': '6 weeks',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "DTaP-HepB-IPV",
-              "cvx": "110",
-              "beginAge": "6 weeks",
-              "endAge": "7 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType': 'DTaP-HepB-IPV',
+              'cvx': '110',
+              'beginAge': '6 weeks',
+              'endAge': '7 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "DTaP-Hib-IPV",
-              "cvx": "120",
-              "beginAge": "6 weeks",
-              "endAge": "5 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType': 'DTaP-Hib-IPV',
+              'cvx': '120',
+              'beginAge': '6 weeks',
+              'endAge': '5 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB",
-              "cvx": "146",
-              "beginAge": "6 weeks",
-              "endAge": "5 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
-            }
+              'vaccineType': 'DTaP-IPV-Hib-HepB',
+              'cvx': '146',
+              'beginAge': '6 weeks',
+              'endAge': '5 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
+            },
           ],
-          "allowableVaccine": [
+          'allowableVaccine': [
             {
-              "vaccineType": "OPV trivalent",
-              "cvx": "02",
-              "beginAge": "6 weeks - 4 days"
-            },
-            {"vaccineType": "IPV", "cvx": "10", "beginAge": "6 weeks - 4 days"},
-            {
-              "vaccineType": "Polio, Unspecified Formulation",
-              "cvx": "89",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'OPV trivalent',
+              'cvx': '02',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-HepB-IPV",
-              "cvx": "110",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'IPV',
+              'cvx': '10',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-Hib-IPV",
-              "cvx": "120",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'Polio, Unspecified Formulation',
+              'cvx': '89',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-IPV",
-              "cvx": "130",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'DTaP-HepB-IPV',
+              'cvx': '110',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB, Historical",
-              "cvx": "132",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'DTaP-Hib-IPV',
+              'cvx': '120',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB",
-              "cvx": "146",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'DTaP-IPV',
+              'cvx': '130',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib",
-              "cvx": "170",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'DTaP-IPV-Hib-HepB, Historical',
+              'cvx': '132',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DT, IPV adsorbed",
-              "cvx": "195",
-              "beginAge": "6 years - 4 days"
-            }
+              'vaccineType': 'DTaP-IPV-Hib-HepB',
+              'cvx': '146',
+              'beginAge': '6 weeks - 4 days',
+            },
+            {
+              'vaccineType': 'DTaP-IPV-Hib',
+              'cvx': '170',
+              'beginAge': '6 weeks - 4 days',
+            },
+            {
+              'vaccineType': 'DT, IPV adsorbed',
+              'cvx': '195',
+              'beginAge': '6 years - 4 days',
+            },
           ],
-          "inadvertentVaccine": [
-            {"vaccineType": "OPV bivalent", "cvx": "178"},
-            {"vaccineType": "OPV, monovalent, unspecified", "cvx": "179"},
-            {"vaccineType": "OPV, Unspecified", "cvx": "182"}
-          ],
-          "conditionalSkip": [
+          'inadvertentVaccine': [
             {
-              "context": "Evaluation",
-              "setLogic": "OR",
-              "set": [
+              'vaccineType': 'OPV bivalent',
+              'cvx': '178',
+            },
+            {
+              'vaccineType': 'OPV, monovalent, unspecified',
+              'cvx': '179',
+            },
+            {
+              'vaccineType': 'OPV, Unspecified',
+              'cvx': '182',
+            },
+          ],
+          'conditionalSkip': [
+            {
+              'context': 'Evaluation',
+              'setLogic': 'OR',
+              'set': [
                 {
-                  "setID": "1",
-                  "setDescription":
-                      "Target Dose is not required if current dose was administered on or after 4 years of age",
-                  "condition": [
+                  'setID': '1',
+                  'setDescription':
+                      'Target Dose is not required if current dose was '
+                      'administered on or after 4 years of age',
+                  'condition': [
                     {
-                      "conditionID": "1",
-                      "conditionType": "Age",
-                      "beginAge": "4 years"
-                    }
-                  ]
+                      'conditionID': '1',
+                      'conditionType': 'Age',
+                      'beginAge': '4 years',
+                    },
+                  ],
                 },
                 {
-                  "setID": "2",
-                  "setDescription":
-                      "Target Dose is not required if the current dose was administered on or after 4 years - 4 days of age AND at least 6 months - 4 days from the previous dose.",
-                  "conditionLogic": "AND",
-                  "condition": [
+                  'setID': '2',
+                  'setDescription':
+                      'Target Dose is not required if the current dose was '
+                      'administered on or after 4 years - 4 days of age '
+                      'AND at least 6 months - 4 days from the previous '
+                      'dose.',
+                  'conditionLogic': 'AND',
+                  'condition': [
                     {
-                      "conditionID": "1",
-                      "conditionType": "Age",
-                      "beginAge": "4 years - 4 days"
+                      'conditionID': '1',
+                      'conditionType': 'Age',
+                      'beginAge': '4 years - 4 days',
                     },
                     {
-                      "conditionID": "2",
-                      "conditionType": "Interval",
-                      "interval": "6 months - 4 days"
-                    }
-                  ]
-                }
-              ]
+                      'conditionID': '2',
+                      'conditionType': 'Interval',
+                      'interval': '6 months - 4 days',
+                    },
+                  ],
+                },
+              ],
             },
             {
-              "context": "Forecast",
-              "setLogic": "n/a",
-              "set": [
+              'context': 'Forecast',
+              'setLogic': 'n/a',
+              'set': [
                 {
-                  "setID": "3",
-                  "setDescription":
-                      "Target Dose is not required for those who are 4 years of age or older.",
-                  "condition": [
+                  'setID': '3',
+                  'setDescription':
+                      'Target Dose is not required for those who are 4 '
+                      'years of age or older.',
+                  'condition': [
                     {
-                      "conditionID": "1",
-                      "conditionType": "Age",
-                      "beginAge": "4 years"
-                    }
-                  ]
-                }
-              ]
-            }
+                      'conditionID': '1',
+                      'conditionType': 'Age',
+                      'beginAge': '4 years',
+                    },
+                  ],
+                },
+              ],
+            },
           ],
-          "recurringDose": "No"
+          'recurringDose': 'No',
         },
         {
-          "doseNumber": "Dose 5",
-          "age": [
+          'doseNumber': 'Dose 5',
+          'age': [
             {
-              "absMinAge": "18 weeks - 4 days",
-              "minAge": "18 weeks",
-              "earliestRecAge": "4 years",
-              "latestRecAge": "7 years + 4 weeks",
-              "cessationDate": "2009-08-06"
+              'absMinAge': '18 weeks - 4 days',
+              'minAge': '18 weeks',
+              'earliestRecAge': '4 years',
+              'latestRecAge': '7 years + 4 weeks',
+              'cessationDate': '2009-08-06',
             },
             {
-              "absMinAge": "4 years - 4 days",
-              "minAge": "4 years",
-              "earliestRecAge": "4 years",
-              "latestRecAge": "7 years + 4 weeks",
-              "effectiveDate": "2009-08-07"
-            }
+              'absMinAge': '4 years - 4 days',
+              'minAge': '4 years',
+              'earliestRecAge': '4 years',
+              'latestRecAge': '7 years + 4 weeks',
+              'effectiveDate': '2009-08-07',
+            },
           ],
-          "interval": [
+          'interval': [
             {
-              "fromPrevious": "Y",
-              "absMinInt": "4 weeks - 4 days",
-              "minInt": "4 weeks",
-              "earliestRecInt": "3 years",
-              "latestRecInt": "6 years + 4 weeks",
-              "cessationDate": "2009-08-06"
+              'fromPrevious': 'Y',
+              'absMinInt': '4 weeks - 4 days',
+              'minInt': '4 weeks',
+              'earliestRecInt': '3 years',
+              'latestRecInt': '6 years + 4 weeks',
+              'cessationDate': '2009-08-06',
             },
             {
-              "fromPrevious": "Y",
-              "absMinInt": "6 months - 4 days",
-              "minInt": "6 months",
-              "earliestRecInt": "3 years",
-              "latestRecInt": "6 years + 4 weeks",
-              "effectiveDate": "2009-08-07"
-            }
+              'fromPrevious': 'Y',
+              'absMinInt': '6 months - 4 days',
+              'minInt': '6 months',
+              'earliestRecInt': '3 years',
+              'latestRecInt': '6 years + 4 weeks',
+              'effectiveDate': '2009-08-07',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "IPV",
-              "cvx": "10",
-              "beginAge": "6 weeks",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType': 'IPV',
+              'cvx': '10',
+              'beginAge': '6 weeks',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "DTaP-HepB-IPV",
-              "cvx": "110",
-              "beginAge": "6 weeks",
-              "endAge": "7 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType': 'DTaP-HepB-IPV',
+              'cvx': '110',
+              'beginAge': '6 weeks',
+              'endAge': '7 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "DTaP-Hib-IPV",
-              "cvx": "120",
-              "beginAge": "6 weeks",
-              "endAge": "5 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType': 'DTaP-Hib-IPV',
+              'cvx': '120',
+              'beginAge': '6 weeks',
+              'endAge': '5 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "DTaP-IPV",
-              "cvx": "130",
-              "beginAge": "4 years",
-              "endAge": "7 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
-            }
+              'vaccineType': 'DTaP-IPV',
+              'cvx': '130',
+              'beginAge': '4 years',
+              'endAge': '7 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
+            },
           ],
-          "allowableVaccine": [
+          'allowableVaccine': [
             {
-              "vaccineType": "OPV trivalent",
-              "cvx": "02",
-              "beginAge": "6 weeks - 4 days"
-            },
-            {"vaccineType": "IPV", "cvx": "10", "beginAge": "6 weeks - 4 days"},
-            {
-              "vaccineType": "Polio, Unspecified Formulation",
-              "cvx": "89",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'OPV trivalent',
+              'cvx': '02',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-HepB-IPV",
-              "cvx": "110",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'IPV',
+              'cvx': '10',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-Hib-IPV",
-              "cvx": "120",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'Polio, Unspecified Formulation',
+              'cvx': '89',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-IPV",
-              "cvx": "130",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'DTaP-HepB-IPV',
+              'cvx': '110',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB, Historical",
-              "cvx": "132",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'DTaP-Hib-IPV',
+              'cvx': '120',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB",
-              "cvx": "146",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'DTaP-IPV',
+              'cvx': '130',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib",
-              "cvx": "170",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'DTaP-IPV-Hib-HepB, Historical',
+              'cvx': '132',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DT, IPV adsorbed",
-              "cvx": "195",
-              "beginAge": "6 years - 4 days"
-            }
+              'vaccineType': 'DTaP-IPV-Hib-HepB',
+              'cvx': '146',
+              'beginAge': '6 weeks - 4 days',
+            },
+            {
+              'vaccineType': 'DTaP-IPV-Hib',
+              'cvx': '170',
+              'beginAge': '6 weeks - 4 days',
+            },
+            {
+              'vaccineType': 'DT, IPV adsorbed',
+              'cvx': '195',
+              'beginAge': '6 years - 4 days',
+            },
           ],
-          "inadvertentVaccine": [
-            {"vaccineType": "OPV bivalent", "cvx": "178"},
-            {"vaccineType": "OPV, monovalent, unspecified", "cvx": "179"},
-            {"vaccineType": "OPV, Unspecified", "cvx": "182"}
+          'inadvertentVaccine': [
+            {
+              'vaccineType': 'OPV bivalent',
+              'cvx': '178',
+            },
+            {
+              'vaccineType': 'OPV, monovalent, unspecified',
+              'cvx': '179',
+            },
+            {
+              'vaccineType': 'OPV, Unspecified',
+              'cvx': '182',
+            },
           ],
-          "recurringDose": "No"
-        }
-      ]
+          'recurringDose': 'No',
+        },
+      ],
     },
     {
-      "seriesName": "Polio fIPV secondary series",
-      "targetDisease": "Polio",
-      "vaccineGroup": "Polio",
-      "seriesAdminGuidance": [
-        "For people who received fractional (1/5 full dose) IPV administered intradermally outside of the U.S., 2 fractional doses of IPV (fIPV) should be considered valid and counted as 1 full intramuscular dose of IPV towards the U.S. vaccination schedule.",
-        "When evaluating doses of oral polio vaccine (OPV) on or after 4/1/2016, only documentation specifying receipt of trivalent vaccine (tOPV) constitutes proof of vaccination according to the U.S. polio vaccination recommendations. Proper documentation of which OPV vaccine was received is critical to validation of records against U.S. vaccination recommendations.",
-        "Persons who received 4 doses of IPV before August 7, 2009 can be considered fully vaccinated for polio, regardless of age of the last dose, and it is not necessary to routinely administer an additional dose for these persons. If they are at increased risk of poliovirus exposure, they should be offered a single lifetime booster dose of IPV."
+      'seriesName': 'Polio fIPV secondary series',
+      'targetDisease': 'Polio',
+      'vaccineGroup': 'Polio',
+      'seriesAdminGuidance': [
+        'For people who received fractional (1/5 full dose) IPV '
+            'administered intradermally outside of the U.S., 2 fractional '
+            'doses of IPV (fIPV) should be considered valid and counted as '
+            '1 full intramuscular dose of IPV towards the U.S. vaccination '
+            'schedule.',
+        'When evaluating doses of oral polio vaccine (OPV) on or after '
+            '4/1/2016, only documentation specifying receipt of trivalent '
+            'vaccine (tOPV) constitutes proof of vaccination according to '
+            'the U.S. polio vaccination recommendations. Proper '
+            'documentation of which OPV vaccine was received is critical '
+            'to validation of records against U.S. vaccination '
+            'recommendations.',
+        'Persons who received 4 doses of IPV before August 7, 2009 can '
+            'be considered fully vaccinated for polio, regardless of age '
+            'of the last dose, and it is not necessary to routinely '
+            'administer an additional dose for these persons. If they are '
+            'at increased risk of poliovirus exposure, they should be '
+            'offered a single lifetime booster dose of IPV.',
       ],
-      "seriesType": "Standard",
-      "equivalentSeriesGroups": "2",
-      "selectSeries": {
-        "defaultSeries": "No",
-        "productPath": "No",
-        "seriesGroupName": "Standard",
-        "seriesGroup": "1",
-        "seriesPriority": "A",
-        "seriesPreference": "5"
+      'seriesType': 'Standard',
+      'equivalentSeriesGroups': '2',
+      'selectSeries': {
+        'defaultSeries': 'No',
+        'productPath': 'No',
+        'seriesGroupName': 'Standard',
+        'seriesGroup': '1',
+        'seriesPriority': 'A',
+        'seriesPreference': '5',
       },
-      "seriesDose": [
+      'seriesDose': [
         {
-          "doseNumber": "Dose 1",
-          "age": [
+          'doseNumber': 'Dose 1',
+          'age': [
             {
-              "absMinAge": "6 weeks - 4 days",
-              "minAge": "6 weeks",
-              "maxAge": "18 years"
-            }
+              'absMinAge': '6 weeks - 4 days',
+              'minAge': '6 weeks',
+              'maxAge': '18 years',
+            },
           ],
-          "allowableVaccine": [
+          'allowableVaccine': [
             {
-              "vaccineType": "Poliovirus, inactivated, fractional-dose (fIPV)",
-              "cvx": "324",
-              "beginAge": "6 weeks - 4 days"
-            }
+              'vaccineType': 'Poliovirus, inactivated, fractional-dose (fIPV)',
+              'cvx': '324',
+              'beginAge': '6 weeks - 4 days',
+            },
           ],
-          "inadvertentVaccine": [
-            {"vaccineType": "OPV bivalent", "cvx": "178"},
-            {"vaccineType": "OPV, monovalent, unspecified", "cvx": "179"},
-            {"vaccineType": "OPV, Unspecified", "cvx": "182"}
+          'inadvertentVaccine': [
+            {
+              'vaccineType': 'OPV bivalent',
+              'cvx': '178',
+            },
+            {
+              'vaccineType': 'OPV, monovalent, unspecified',
+              'cvx': '179',
+            },
+            {
+              'vaccineType': 'OPV, Unspecified',
+              'cvx': '182',
+            },
           ],
-          "recurringDose": "No"
+          'recurringDose': 'No',
         },
         {
-          "doseNumber": "Dose 2",
-          "age": [
+          'doseNumber': 'Dose 2',
+          'age': [
             {
-              "absMinAge": "6 weeks - 4 days",
-              "minAge": "6 weeks",
-              "earliestRecAge": "2 months",
-              "latestRecAge": "3 months + 4 weeks",
-              "maxAge": "18 years"
-            }
+              'absMinAge': '6 weeks - 4 days',
+              'minAge': '6 weeks',
+              'earliestRecAge': '2 months',
+              'latestRecAge': '3 months + 4 weeks',
+              'maxAge': '18 years',
+            },
           ],
-          "interval": [
+          'interval': [
             {
-              "fromPrevious": "Y",
-              "absMinInt": "4 weeks - 4 days",
-              "minInt": "4 weeks",
-              "earliestRecInt": "8 weeks",
-              "latestRecInt": "13 weeks"
-            }
+              'fromPrevious': 'Y',
+              'absMinInt': '4 weeks - 4 days',
+              'minInt': '4 weeks',
+              'earliestRecInt': '8 weeks',
+              'latestRecInt': '13 weeks',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "IPV",
-              "cvx": "10",
-              "beginAge": "6 weeks",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType': 'IPV',
+              'cvx': '10',
+              'beginAge': '6 weeks',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "DTaP-HepB-IPV",
-              "cvx": "110",
-              "beginAge": "6 weeks",
-              "endAge": "7 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType': 'DTaP-HepB-IPV',
+              'cvx': '110',
+              'beginAge': '6 weeks',
+              'endAge': '7 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "DTaP-Hib-IPV",
-              "cvx": "120",
-              "beginAge": "6 weeks",
-              "endAge": "5 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType': 'DTaP-Hib-IPV',
+              'cvx': '120',
+              'beginAge': '6 weeks',
+              'endAge': '5 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB",
-              "cvx": "146",
-              "beginAge": "6 weeks",
-              "endAge": "5 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
-            }
+              'vaccineType': 'DTaP-IPV-Hib-HepB',
+              'cvx': '146',
+              'beginAge': '6 weeks',
+              'endAge': '5 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
+            },
           ],
-          "allowableVaccine": [
+          'allowableVaccine': [
             {
-              "vaccineType": "OPV trivalent",
-              "cvx": "02",
-              "beginAge": "6 weeks - 4 days"
-            },
-            {"vaccineType": "IPV", "cvx": "10", "beginAge": "6 weeks - 4 days"},
-            {
-              "vaccineType": "Polio, Unspecified Formulation",
-              "cvx": "89",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'OPV trivalent',
+              'cvx': '02',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-HepB-IPV",
-              "cvx": "110",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'IPV',
+              'cvx': '10',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-Hib-IPV",
-              "cvx": "120",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'Polio, Unspecified Formulation',
+              'cvx': '89',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-IPV",
-              "cvx": "130",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'DTaP-HepB-IPV',
+              'cvx': '110',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB, Historical",
-              "cvx": "132",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'DTaP-Hib-IPV',
+              'cvx': '120',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB",
-              "cvx": "146",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'DTaP-IPV',
+              'cvx': '130',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib",
-              "cvx": "170",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'DTaP-IPV-Hib-HepB, Historical',
+              'cvx': '132',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DT, IPV adsorbed",
-              "cvx": "195",
-              "beginAge": "6 years - 4 days"
+              'vaccineType': 'DTaP-IPV-Hib-HepB',
+              'cvx': '146',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "Poliovirus, inactivated, fractional-dose (fIPV)",
-              "cvx": "324",
-              "beginAge": "6 weeks - 4 days"
-            }
+              'vaccineType': 'DTaP-IPV-Hib',
+              'cvx': '170',
+              'beginAge': '6 weeks - 4 days',
+            },
+            {
+              'vaccineType': 'DT, IPV adsorbed',
+              'cvx': '195',
+              'beginAge': '6 years - 4 days',
+            },
+            {
+              'vaccineType': 'Poliovirus, inactivated, fractional-dose (fIPV)',
+              'cvx': '324',
+              'beginAge': '6 weeks - 4 days',
+            },
           ],
-          "inadvertentVaccine": [
-            {"vaccineType": "OPV bivalent", "cvx": "178"},
-            {"vaccineType": "OPV, monovalent, unspecified", "cvx": "179"},
-            {"vaccineType": "OPV, Unspecified", "cvx": "182"}
+          'inadvertentVaccine': [
+            {
+              'vaccineType': 'OPV bivalent',
+              'cvx': '178',
+            },
+            {
+              'vaccineType': 'OPV, monovalent, unspecified',
+              'cvx': '179',
+            },
+            {
+              'vaccineType': 'OPV, Unspecified',
+              'cvx': '182',
+            },
           ],
-          "recurringDose": "No"
+          'recurringDose': 'No',
         },
         {
-          "doseNumber": "Dose 3",
-          "age": [
+          'doseNumber': 'Dose 3',
+          'age': [
             {
-              "absMinAge": "10 weeks - 4 days",
-              "minAge": "10 weeks",
-              "earliestRecAge": "4 months",
-              "latestRecAge": "5 months + 4 weeks"
-            }
+              'absMinAge': '10 weeks - 4 days',
+              'minAge': '10 weeks',
+              'earliestRecAge': '4 months',
+              'latestRecAge': '5 months + 4 weeks',
+            },
           ],
-          "interval": [
+          'interval': [
             {
-              "fromPrevious": "Y",
-              "absMinInt": "4 weeks - 4 days",
-              "minInt": "4 weeks",
-              "earliestRecInt": "8 weeks",
-              "latestRecInt": "13 weeks"
-            }
+              'fromPrevious': 'Y',
+              'absMinInt': '4 weeks - 4 days',
+              'minInt': '4 weeks',
+              'earliestRecInt': '8 weeks',
+              'latestRecInt': '13 weeks',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "IPV",
-              "cvx": "10",
-              "beginAge": "6 weeks",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType': 'IPV',
+              'cvx': '10',
+              'beginAge': '6 weeks',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "DTaP-HepB-IPV",
-              "cvx": "110",
-              "beginAge": "6 weeks",
-              "endAge": "7 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType': 'DTaP-HepB-IPV',
+              'cvx': '110',
+              'beginAge': '6 weeks',
+              'endAge': '7 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "DTaP-Hib-IPV",
-              "cvx": "120",
-              "beginAge": "6 weeks",
-              "endAge": "5 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType': 'DTaP-Hib-IPV',
+              'cvx': '120',
+              'beginAge': '6 weeks',
+              'endAge': '5 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB",
-              "cvx": "146",
-              "beginAge": "6 weeks",
-              "endAge": "5 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
-            }
+              'vaccineType': 'DTaP-IPV-Hib-HepB',
+              'cvx': '146',
+              'beginAge': '6 weeks',
+              'endAge': '5 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
+            },
           ],
-          "allowableVaccine": [
+          'allowableVaccine': [
             {
-              "vaccineType": "OPV trivalent",
-              "cvx": "02",
-              "beginAge": "6 weeks - 4 days"
-            },
-            {"vaccineType": "IPV", "cvx": "10", "beginAge": "6 weeks - 4 days"},
-            {
-              "vaccineType": "Polio, Unspecified Formulation",
-              "cvx": "89",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'OPV trivalent',
+              'cvx': '02',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-HepB-IPV",
-              "cvx": "110",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'IPV',
+              'cvx': '10',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-Hib-IPV",
-              "cvx": "120",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'Polio, Unspecified Formulation',
+              'cvx': '89',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-IPV",
-              "cvx": "130",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'DTaP-HepB-IPV',
+              'cvx': '110',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB, Historical",
-              "cvx": "132",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'DTaP-Hib-IPV',
+              'cvx': '120',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB",
-              "cvx": "146",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'DTaP-IPV',
+              'cvx': '130',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib",
-              "cvx": "170",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'DTaP-IPV-Hib-HepB, Historical',
+              'cvx': '132',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DT, IPV adsorbed",
-              "cvx": "195",
-              "beginAge": "6 years - 4 days"
-            }
+              'vaccineType': 'DTaP-IPV-Hib-HepB',
+              'cvx': '146',
+              'beginAge': '6 weeks - 4 days',
+            },
+            {
+              'vaccineType': 'DTaP-IPV-Hib',
+              'cvx': '170',
+              'beginAge': '6 weeks - 4 days',
+            },
+            {
+              'vaccineType': 'DT, IPV adsorbed',
+              'cvx': '195',
+              'beginAge': '6 years - 4 days',
+            },
           ],
-          "inadvertentVaccine": [
-            {"vaccineType": "OPV bivalent", "cvx": "178"},
-            {"vaccineType": "OPV, monovalent, unspecified", "cvx": "179"},
-            {"vaccineType": "OPV, Unspecified", "cvx": "182"}
+          'inadvertentVaccine': [
+            {
+              'vaccineType': 'OPV bivalent',
+              'cvx': '178',
+            },
+            {
+              'vaccineType': 'OPV, monovalent, unspecified',
+              'cvx': '179',
+            },
+            {
+              'vaccineType': 'OPV, Unspecified',
+              'cvx': '182',
+            },
           ],
-          "recurringDose": "No"
+          'recurringDose': 'No',
         },
         {
-          "doseNumber": "Dose 4",
-          "age": [
+          'doseNumber': 'Dose 4',
+          'age': [
             {
-              "absMinAge": "14 weeks - 4 days",
-              "minAge": "14 weeks",
-              "earliestRecAge": "6 months",
-              "latestRecAge": "19 months + 4 weeks"
-            }
+              'absMinAge': '14 weeks - 4 days',
+              'minAge': '14 weeks',
+              'earliestRecAge': '6 months',
+              'latestRecAge': '19 months + 4 weeks',
+            },
           ],
-          "interval": [
+          'interval': [
             {
-              "fromPrevious": "Y",
-              "absMinInt": "4 weeks - 4 days",
-              "minInt": "4 weeks",
-              "earliestRecInt": "8 weeks",
-              "latestRecInt": "15 months + 4 weeks"
-            }
+              'fromPrevious': 'Y',
+              'absMinInt': '4 weeks - 4 days',
+              'minInt': '4 weeks',
+              'earliestRecInt': '8 weeks',
+              'latestRecInt': '15 months + 4 weeks',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "IPV",
-              "cvx": "10",
-              "beginAge": "6 weeks",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType': 'IPV',
+              'cvx': '10',
+              'beginAge': '6 weeks',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "DTaP-HepB-IPV",
-              "cvx": "110",
-              "beginAge": "6 weeks",
-              "endAge": "7 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType': 'DTaP-HepB-IPV',
+              'cvx': '110',
+              'beginAge': '6 weeks',
+              'endAge': '7 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "DTaP-Hib-IPV",
-              "cvx": "120",
-              "beginAge": "6 weeks",
-              "endAge": "5 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType': 'DTaP-Hib-IPV',
+              'cvx': '120',
+              'beginAge': '6 weeks',
+              'endAge': '5 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB",
-              "cvx": "146",
-              "beginAge": "6 weeks",
-              "endAge": "5 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
-            }
+              'vaccineType': 'DTaP-IPV-Hib-HepB',
+              'cvx': '146',
+              'beginAge': '6 weeks',
+              'endAge': '5 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
+            },
           ],
-          "allowableVaccine": [
+          'allowableVaccine': [
             {
-              "vaccineType": "OPV trivalent",
-              "cvx": "02",
-              "beginAge": "6 weeks - 4 days"
-            },
-            {"vaccineType": "IPV", "cvx": "10", "beginAge": "6 weeks - 4 days"},
-            {
-              "vaccineType": "Polio, Unspecified Formulation",
-              "cvx": "89",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'OPV trivalent',
+              'cvx': '02',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-HepB-IPV",
-              "cvx": "110",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'IPV',
+              'cvx': '10',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-Hib-IPV",
-              "cvx": "120",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'Polio, Unspecified Formulation',
+              'cvx': '89',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-IPV",
-              "cvx": "130",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'DTaP-HepB-IPV',
+              'cvx': '110',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB, Historical",
-              "cvx": "132",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'DTaP-Hib-IPV',
+              'cvx': '120',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB",
-              "cvx": "146",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'DTaP-IPV',
+              'cvx': '130',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib",
-              "cvx": "170",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'DTaP-IPV-Hib-HepB, Historical',
+              'cvx': '132',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DT, IPV adsorbed",
-              "cvx": "195",
-              "beginAge": "6 years - 4 days"
-            }
+              'vaccineType': 'DTaP-IPV-Hib-HepB',
+              'cvx': '146',
+              'beginAge': '6 weeks - 4 days',
+            },
+            {
+              'vaccineType': 'DTaP-IPV-Hib',
+              'cvx': '170',
+              'beginAge': '6 weeks - 4 days',
+            },
+            {
+              'vaccineType': 'DT, IPV adsorbed',
+              'cvx': '195',
+              'beginAge': '6 years - 4 days',
+            },
           ],
-          "inadvertentVaccine": [
-            {"vaccineType": "OPV bivalent", "cvx": "178"},
-            {"vaccineType": "OPV, monovalent, unspecified", "cvx": "179"},
-            {"vaccineType": "OPV, Unspecified", "cvx": "182"}
-          ],
-          "conditionalSkip": [
+          'inadvertentVaccine': [
             {
-              "context": "Evaluation",
-              "setLogic": "OR",
-              "set": [
+              'vaccineType': 'OPV bivalent',
+              'cvx': '178',
+            },
+            {
+              'vaccineType': 'OPV, monovalent, unspecified',
+              'cvx': '179',
+            },
+            {
+              'vaccineType': 'OPV, Unspecified',
+              'cvx': '182',
+            },
+          ],
+          'conditionalSkip': [
+            {
+              'context': 'Evaluation',
+              'setLogic': 'OR',
+              'set': [
                 {
-                  "setID": "1",
-                  "setDescription":
-                      "Target Dose is not required if current dose was administered on or after 4 years of age",
-                  "condition": [
+                  'setID': '1',
+                  'setDescription':
+                      'Target Dose is not required if current dose was '
+                      'administered on or after 4 years of age',
+                  'condition': [
                     {
-                      "conditionID": "1",
-                      "conditionType": "Age",
-                      "beginAge": "4 years"
-                    }
-                  ]
+                      'conditionID': '1',
+                      'conditionType': 'Age',
+                      'beginAge': '4 years',
+                    },
+                  ],
                 },
                 {
-                  "setID": "2",
-                  "setDescription":
-                      "Target Dose is not required if the current dose was administered on or after 4 years - 4 days of age AND at least 6 months - 4 days from the previous dose.",
-                  "conditionLogic": "AND",
-                  "condition": [
+                  'setID': '2',
+                  'setDescription':
+                      'Target Dose is not required if the current dose was '
+                      'administered on or after 4 years - 4 days of age '
+                      'AND at least 6 months - 4 days from the previous '
+                      'dose.',
+                  'conditionLogic': 'AND',
+                  'condition': [
                     {
-                      "conditionID": "1",
-                      "conditionType": "Age",
-                      "beginAge": "4 years - 4 days"
+                      'conditionID': '1',
+                      'conditionType': 'Age',
+                      'beginAge': '4 years - 4 days',
                     },
                     {
-                      "conditionID": "2",
-                      "conditionType": "Interval",
-                      "interval": "6 months - 4 days"
-                    }
-                  ]
-                }
-              ]
+                      'conditionID': '2',
+                      'conditionType': 'Interval',
+                      'interval': '6 months - 4 days',
+                    },
+                  ],
+                },
+              ],
             },
             {
-              "context": "Forecast",
-              "setLogic": "n/a",
-              "set": [
+              'context': 'Forecast',
+              'setLogic': 'n/a',
+              'set': [
                 {
-                  "setID": "3",
-                  "setDescription":
-                      "Target Dose is not required for those who are 4 years of age or older.",
-                  "condition": [
+                  'setID': '3',
+                  'setDescription':
+                      'Target Dose is not required for those who are 4 '
+                      'years of age or older.',
+                  'condition': [
                     {
-                      "conditionID": "1",
-                      "conditionType": "Age",
-                      "beginAge": "4 years"
-                    }
-                  ]
-                }
-              ]
-            }
+                      'conditionID': '1',
+                      'conditionType': 'Age',
+                      'beginAge': '4 years',
+                    },
+                  ],
+                },
+              ],
+            },
           ],
-          "recurringDose": "No"
+          'recurringDose': 'No',
         },
         {
-          "doseNumber": "Dose 5",
-          "interval": [
+          'doseNumber': 'Dose 5',
+          'interval': [
             {
-              "fromPrevious": "Y",
-              "absMinInt": "0 days",
-              "minInt": "0 days",
-              "earliestRecInt": "0 days"
-            }
+              'fromPrevious': 'Y',
+              'absMinInt': '0 days',
+              'minInt': '0 days',
+              'earliestRecInt': '0 days',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "IPV",
-              "cvx": "10",
-              "beginAge": "6 weeks",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType': 'IPV',
+              'cvx': '10',
+              'beginAge': '6 weeks',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "DTaP-HepB-IPV",
-              "cvx": "110",
-              "beginAge": "6 weeks",
-              "endAge": "7 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType': 'DTaP-HepB-IPV',
+              'cvx': '110',
+              'beginAge': '6 weeks',
+              'endAge': '7 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "DTaP-Hib-IPV",
-              "cvx": "120",
-              "beginAge": "6 weeks",
-              "endAge": "5 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType': 'DTaP-Hib-IPV',
+              'cvx': '120',
+              'beginAge': '6 weeks',
+              'endAge': '5 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "DTaP-IPV",
-              "cvx": "130",
-              "beginAge": "4 years",
-              "endAge": "7 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType': 'DTaP-IPV',
+              'cvx': '130',
+              'beginAge': '4 years',
+              'endAge': '7 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB",
-              "cvx": "146",
-              "beginAge": "6 weeks",
-              "endAge": "5 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
-            }
+              'vaccineType': 'DTaP-IPV-Hib-HepB',
+              'cvx': '146',
+              'beginAge': '6 weeks',
+              'endAge': '5 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
+            },
           ],
-          "allowableVaccine": [
+          'allowableVaccine': [
             {
-              "vaccineType": "OPV trivalent",
-              "cvx": "02",
-              "beginAge": "6 weeks - 4 days"
-            },
-            {"vaccineType": "IPV", "cvx": "10", "beginAge": "6 weeks - 4 days"},
-            {
-              "vaccineType": "Polio, Unspecified Formulation",
-              "cvx": "89",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'OPV trivalent',
+              'cvx': '02',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-HepB-IPV",
-              "cvx": "110",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'IPV',
+              'cvx': '10',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-Hib-IPV",
-              "cvx": "120",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'Polio, Unspecified Formulation',
+              'cvx': '89',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-IPV",
-              "cvx": "130",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'DTaP-HepB-IPV',
+              'cvx': '110',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB, Historical",
-              "cvx": "132",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'DTaP-Hib-IPV',
+              'cvx': '120',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB",
-              "cvx": "146",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'DTaP-IPV',
+              'cvx': '130',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib",
-              "cvx": "170",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'DTaP-IPV-Hib-HepB, Historical',
+              'cvx': '132',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DT, IPV adsorbed",
-              "cvx": "195",
-              "beginAge": "6 years - 4 days"
-            }
+              'vaccineType': 'DTaP-IPV-Hib-HepB',
+              'cvx': '146',
+              'beginAge': '6 weeks - 4 days',
+            },
+            {
+              'vaccineType': 'DTaP-IPV-Hib',
+              'cvx': '170',
+              'beginAge': '6 weeks - 4 days',
+            },
+            {
+              'vaccineType': 'DT, IPV adsorbed',
+              'cvx': '195',
+              'beginAge': '6 years - 4 days',
+            },
           ],
-          "inadvertentVaccine": [
-            {"vaccineType": "OPV bivalent", "cvx": "178"},
-            {"vaccineType": "OPV, monovalent, unspecified", "cvx": "179"},
-            {"vaccineType": "OPV, Unspecified", "cvx": "182"}
-          ],
-          "conditionalSkip": [
+          'inadvertentVaccine': [
             {
-              "context": "Both",
-              "setLogic": "n/a",
-              "set": [
+              'vaccineType': 'OPV bivalent',
+              'cvx': '178',
+            },
+            {
+              'vaccineType': 'OPV, monovalent, unspecified',
+              'cvx': '179',
+            },
+            {
+              'vaccineType': 'OPV, Unspecified',
+              'cvx': '182',
+            },
+          ],
+          'conditionalSkip': [
+            {
+              'context': 'Both',
+              'setLogic': 'n/a',
+              'set': [
                 {
-                  "setID": "1",
-                  "setDescription":
-                      "Target Dose is not required for those who are 4 years of age or older.",
-                  "condition": [
+                  'setID': '1',
+                  'setDescription':
+                      'Target Dose is not required for those who are 4 '
+                      'years of age or older.',
+                  'condition': [
                     {
-                      "conditionID": "1",
-                      "conditionType": "Age",
-                      "beginAge": "4 years"
-                    }
-                  ]
-                }
-              ]
-            }
+                      'conditionID': '1',
+                      'conditionType': 'Age',
+                      'beginAge': '4 years',
+                    },
+                  ],
+                },
+              ],
+            },
           ],
-          "recurringDose": "No"
+          'recurringDose': 'No',
         },
         {
-          "doseNumber": "Dose 6",
-          "age": [
+          'doseNumber': 'Dose 6',
+          'age': [
             {
-              "absMinAge": "4 years - 4 days",
-              "minAge": "4 years",
-              "earliestRecAge": "4 years",
-              "latestRecAge": "7 years + 4 weeks"
-            }
+              'absMinAge': '4 years - 4 days',
+              'minAge': '4 years',
+              'earliestRecAge': '4 years',
+              'latestRecAge': '7 years + 4 weeks',
+            },
           ],
-          "interval": [
+          'interval': [
             {
-              "fromPrevious": "Y",
-              "absMinInt": "6 months - 4 days",
-              "minInt": "6 months",
-              "earliestRecInt": "3 years",
-              "latestRecInt": "6 years + 4 weeks"
-            }
+              'fromPrevious': 'Y',
+              'absMinInt': '6 months - 4 days',
+              'minInt': '6 months',
+              'earliestRecInt': '3 years',
+              'latestRecInt': '6 years + 4 weeks',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "IPV",
-              "cvx": "10",
-              "beginAge": "6 weeks",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType': 'IPV',
+              'cvx': '10',
+              'beginAge': '6 weeks',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "DTaP-HepB-IPV",
-              "cvx": "110",
-              "beginAge": "6 weeks",
-              "endAge": "7 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType': 'DTaP-HepB-IPV',
+              'cvx': '110',
+              'beginAge': '6 weeks',
+              'endAge': '7 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "DTaP-Hib-IPV",
-              "cvx": "120",
-              "beginAge": "6 weeks",
-              "endAge": "5 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType': 'DTaP-Hib-IPV',
+              'cvx': '120',
+              'beginAge': '6 weeks',
+              'endAge': '5 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "DTaP-IPV",
-              "cvx": "130",
-              "beginAge": "4 years",
-              "endAge": "7 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
-            }
+              'vaccineType': 'DTaP-IPV',
+              'cvx': '130',
+              'beginAge': '4 years',
+              'endAge': '7 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
+            },
           ],
-          "allowableVaccine": [
+          'allowableVaccine': [
             {
-              "vaccineType": "OPV trivalent",
-              "cvx": "02",
-              "beginAge": "6 weeks - 4 days"
-            },
-            {"vaccineType": "IPV", "cvx": "10", "beginAge": "6 weeks - 4 days"},
-            {
-              "vaccineType": "Polio, Unspecified Formulation",
-              "cvx": "89",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'OPV trivalent',
+              'cvx': '02',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-HepB-IPV",
-              "cvx": "110",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'IPV',
+              'cvx': '10',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-Hib-IPV",
-              "cvx": "120",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'Polio, Unspecified Formulation',
+              'cvx': '89',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-IPV",
-              "cvx": "130",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'DTaP-HepB-IPV',
+              'cvx': '110',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB, Historical",
-              "cvx": "132",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'DTaP-Hib-IPV',
+              'cvx': '120',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB",
-              "cvx": "146",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'DTaP-IPV',
+              'cvx': '130',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib",
-              "cvx": "170",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'DTaP-IPV-Hib-HepB, Historical',
+              'cvx': '132',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DT, IPV adsorbed",
-              "cvx": "195",
-              "beginAge": "6 years - 4 days"
-            }
+              'vaccineType': 'DTaP-IPV-Hib-HepB',
+              'cvx': '146',
+              'beginAge': '6 weeks - 4 days',
+            },
+            {
+              'vaccineType': 'DTaP-IPV-Hib',
+              'cvx': '170',
+              'beginAge': '6 weeks - 4 days',
+            },
+            {
+              'vaccineType': 'DT, IPV adsorbed',
+              'cvx': '195',
+              'beginAge': '6 years - 4 days',
+            },
           ],
-          "inadvertentVaccine": [
-            {"vaccineType": "OPV bivalent", "cvx": "178"},
-            {"vaccineType": "OPV, monovalent, unspecified", "cvx": "179"},
-            {"vaccineType": "OPV, Unspecified", "cvx": "182"}
+          'inadvertentVaccine': [
+            {
+              'vaccineType': 'OPV bivalent',
+              'cvx': '178',
+            },
+            {
+              'vaccineType': 'OPV, monovalent, unspecified',
+              'cvx': '179',
+            },
+            {
+              'vaccineType': 'OPV, Unspecified',
+              'cvx': '182',
+            },
           ],
-          "recurringDose": "No"
-        }
-      ]
+          'recurringDose': 'No',
+        },
+      ],
     },
     {
-      "seriesName": "Polio risk childhood series",
-      "targetDisease": "Polio",
-      "vaccineGroup": "Polio",
-      "seriesAdminGuidance": [
-        "When evaluating doses of oral polio vaccine (OPV) on or after 4/1/2016, only documentation specifying receipt of trivalent vaccine (tOPV) constitutes proof of vaccination according to the U.S. polio vaccination recommendations. Proper documentation of which OPV vaccine was received is critical to validation of records against U.S. vaccination recommendations."
+      'seriesName': 'Polio risk childhood series',
+      'targetDisease': 'Polio',
+      'vaccineGroup': 'Polio',
+      'seriesAdminGuidance': [
+        'When evaluating doses of oral polio vaccine (OPV) on or after '
+            '4/1/2016, only documentation specifying receipt of trivalent '
+            'vaccine (tOPV) constitutes proof of vaccination according to '
+            'the U.S. polio vaccination recommendations. Proper '
+            'documentation of which OPV vaccine was received is critical '
+            'to validation of records against U.S. vaccination '
+            'recommendations.',
       ],
-      "seriesType": "Risk",
-      "equivalentSeriesGroups": "1",
-      "selectSeries": {
-        "defaultSeries": "No",
-        "productPath": "No",
-        "seriesGroupName": "Increased Risk",
-        "seriesGroup": "2",
-        "seriesPriority": "A",
-        "seriesPreference": "1",
-        "maxAgeToStart": "18 years"
+      'seriesType': 'Risk',
+      'equivalentSeriesGroups': '1',
+      'selectSeries': {
+        'defaultSeries': 'No',
+        'productPath': 'No',
+        'seriesGroupName': 'Increased Risk',
+        'seriesGroup': '2',
+        'seriesPriority': 'A',
+        'seriesPreference': '1',
+        'maxAgeToStart': '18 years',
       },
-      "indication": [
+      'indication': [
         {
-          "observationCode": {
-            "text":
-                "Travel to areas or countries where polio is epidemic or endemic",
-            "code": "143"
+          'observationCode': {
+            'text':
+                'Travel to areas or countries where polio is epidemic or '
+                'endemic',
+            'code': '143',
           },
-          "description":
-              "Administer to travelers to areas or countries where polio is epidemic or endemic.",
-          "endAge": "18 years"
-        }
+          'description':
+              'Administer to travelers to areas or countries where polio '
+              'is epidemic or endemic.',
+          'endAge': '18 years',
+        },
       ],
-      "seriesDose": [
+      'seriesDose': [
         {
-          "doseNumber": "Dose 1",
-          "age": [
+          'doseNumber': 'Dose 1',
+          'age': [
             {
-              "absMinAge": "6 weeks - 4 days",
-              "minAge": "6 weeks",
-              "earliestRecAge": "6 weeks",
-              "maxAge": "18 years"
-            }
+              'absMinAge': '6 weeks - 4 days',
+              'minAge': '6 weeks',
+              'earliestRecAge': '6 weeks',
+              'maxAge': '18 years',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "IPV",
-              "cvx": "10",
-              "beginAge": "6 weeks",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType': 'IPV',
+              'cvx': '10',
+              'beginAge': '6 weeks',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "DTaP-HepB-IPV",
-              "cvx": "110",
-              "beginAge": "6 weeks",
-              "endAge": "7 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType': 'DTaP-HepB-IPV',
+              'cvx': '110',
+              'beginAge': '6 weeks',
+              'endAge': '7 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "DTaP-Hib-IPV",
-              "cvx": "120",
-              "beginAge": "6 weeks",
-              "endAge": "5 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType': 'DTaP-Hib-IPV',
+              'cvx': '120',
+              'beginAge': '6 weeks',
+              'endAge': '5 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB",
-              "cvx": "146",
-              "beginAge": "6 weeks",
-              "endAge": "5 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
-            }
+              'vaccineType': 'DTaP-IPV-Hib-HepB',
+              'cvx': '146',
+              'beginAge': '6 weeks',
+              'endAge': '5 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
+            },
           ],
-          "allowableVaccine": [
+          'allowableVaccine': [
             {
-              "vaccineType": "OPV trivalent",
-              "cvx": "02",
-              "beginAge": "6 weeks - 4 days"
-            },
-            {"vaccineType": "IPV", "cvx": "10", "beginAge": "6 weeks - 4 days"},
-            {
-              "vaccineType": "Polio, Unspecified Formulation",
-              "cvx": "89",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'OPV trivalent',
+              'cvx': '02',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-HepB-IPV",
-              "cvx": "110",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'IPV',
+              'cvx': '10',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-Hib-IPV",
-              "cvx": "120",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'Polio, Unspecified Formulation',
+              'cvx': '89',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-IPV",
-              "cvx": "130",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'DTaP-HepB-IPV',
+              'cvx': '110',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB, Historical",
-              "cvx": "132",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'DTaP-Hib-IPV',
+              'cvx': '120',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB",
-              "cvx": "146",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'DTaP-IPV',
+              'cvx': '130',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib",
-              "cvx": "170",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'DTaP-IPV-Hib-HepB, Historical',
+              'cvx': '132',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DT, IPV adsorbed",
-              "cvx": "195",
-              "beginAge": "6 years - 4 days"
-            }
+              'vaccineType': 'DTaP-IPV-Hib-HepB',
+              'cvx': '146',
+              'beginAge': '6 weeks - 4 days',
+            },
+            {
+              'vaccineType': 'DTaP-IPV-Hib',
+              'cvx': '170',
+              'beginAge': '6 weeks - 4 days',
+            },
+            {
+              'vaccineType': 'DT, IPV adsorbed',
+              'cvx': '195',
+              'beginAge': '6 years - 4 days',
+            },
           ],
-          "inadvertentVaccine": [
-            {"vaccineType": "OPV bivalent", "cvx": "178"},
-            {"vaccineType": "OPV, monovalent, unspecified", "cvx": "179"},
-            {"vaccineType": "OPV, Unspecified", "cvx": "182"}
+          'inadvertentVaccine': [
+            {
+              'vaccineType': 'OPV bivalent',
+              'cvx': '178',
+            },
+            {
+              'vaccineType': 'OPV, monovalent, unspecified',
+              'cvx': '179',
+            },
+            {
+              'vaccineType': 'OPV, Unspecified',
+              'cvx': '182',
+            },
           ],
-          "recurringDose": "No"
+          'recurringDose': 'No',
         },
         {
-          "doseNumber": "Dose 2",
-          "interval": [
+          'doseNumber': 'Dose 2',
+          'interval': [
             {
-              "fromPrevious": "Y",
-              "absMinInt": "4 weeks - 4 days",
-              "minInt": "4 weeks",
-              "earliestRecInt": "4 weeks"
-            }
+              'fromPrevious': 'Y',
+              'absMinInt': '4 weeks - 4 days',
+              'minInt': '4 weeks',
+              'earliestRecInt': '4 weeks',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "IPV",
-              "cvx": "10",
-              "beginAge": "6 weeks",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType': 'IPV',
+              'cvx': '10',
+              'beginAge': '6 weeks',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "DTaP-HepB-IPV",
-              "cvx": "110",
-              "beginAge": "6 weeks",
-              "endAge": "7 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType': 'DTaP-HepB-IPV',
+              'cvx': '110',
+              'beginAge': '6 weeks',
+              'endAge': '7 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "DTaP-Hib-IPV",
-              "cvx": "120",
-              "beginAge": "6 weeks",
-              "endAge": "5 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType': 'DTaP-Hib-IPV',
+              'cvx': '120',
+              'beginAge': '6 weeks',
+              'endAge': '5 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB",
-              "cvx": "146",
-              "beginAge": "6 weeks",
-              "endAge": "5 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
-            }
+              'vaccineType': 'DTaP-IPV-Hib-HepB',
+              'cvx': '146',
+              'beginAge': '6 weeks',
+              'endAge': '5 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
+            },
           ],
-          "allowableVaccine": [
+          'allowableVaccine': [
             {
-              "vaccineType": "OPV trivalent",
-              "cvx": "02",
-              "beginAge": "6 weeks - 4 days"
-            },
-            {"vaccineType": "IPV", "cvx": "10", "beginAge": "6 weeks - 4 days"},
-            {
-              "vaccineType": "Polio, Unspecified Formulation",
-              "cvx": "89",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'OPV trivalent',
+              'cvx': '02',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-HepB-IPV",
-              "cvx": "110",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'IPV',
+              'cvx': '10',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-Hib-IPV",
-              "cvx": "120",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'Polio, Unspecified Formulation',
+              'cvx': '89',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-IPV",
-              "cvx": "130",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'DTaP-HepB-IPV',
+              'cvx': '110',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB, Historical",
-              "cvx": "132",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'DTaP-Hib-IPV',
+              'cvx': '120',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB",
-              "cvx": "146",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'DTaP-IPV',
+              'cvx': '130',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib",
-              "cvx": "170",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'DTaP-IPV-Hib-HepB, Historical',
+              'cvx': '132',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DT, IPV adsorbed",
-              "cvx": "195",
-              "beginAge": "6 years - 4 days"
-            }
+              'vaccineType': 'DTaP-IPV-Hib-HepB',
+              'cvx': '146',
+              'beginAge': '6 weeks - 4 days',
+            },
+            {
+              'vaccineType': 'DTaP-IPV-Hib',
+              'cvx': '170',
+              'beginAge': '6 weeks - 4 days',
+            },
+            {
+              'vaccineType': 'DT, IPV adsorbed',
+              'cvx': '195',
+              'beginAge': '6 years - 4 days',
+            },
           ],
-          "inadvertentVaccine": [
-            {"vaccineType": "OPV bivalent", "cvx": "178"},
-            {"vaccineType": "OPV, monovalent, unspecified", "cvx": "179"},
-            {"vaccineType": "OPV, Unspecified", "cvx": "182"}
+          'inadvertentVaccine': [
+            {
+              'vaccineType': 'OPV bivalent',
+              'cvx': '178',
+            },
+            {
+              'vaccineType': 'OPV, monovalent, unspecified',
+              'cvx': '179',
+            },
+            {
+              'vaccineType': 'OPV, Unspecified',
+              'cvx': '182',
+            },
           ],
-          "recurringDose": "No"
+          'recurringDose': 'No',
         },
         {
-          "doseNumber": "Dose 3",
-          "interval": [
+          'doseNumber': 'Dose 3',
+          'interval': [
             {
-              "fromPrevious": "Y",
-              "absMinInt": "4 weeks - 4 days",
-              "minInt": "4 weeks",
-              "earliestRecInt": "4 weeks"
-            }
+              'fromPrevious': 'Y',
+              'absMinInt': '4 weeks - 4 days',
+              'minInt': '4 weeks',
+              'earliestRecInt': '4 weeks',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "IPV",
-              "cvx": "10",
-              "beginAge": "6 weeks",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType': 'IPV',
+              'cvx': '10',
+              'beginAge': '6 weeks',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "DTaP-HepB-IPV",
-              "cvx": "110",
-              "beginAge": "6 weeks",
-              "endAge": "7 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType': 'DTaP-HepB-IPV',
+              'cvx': '110',
+              'beginAge': '6 weeks',
+              'endAge': '7 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "DTaP-Hib-IPV",
-              "cvx": "120",
-              "beginAge": "6 weeks",
-              "endAge": "5 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType': 'DTaP-Hib-IPV',
+              'cvx': '120',
+              'beginAge': '6 weeks',
+              'endAge': '5 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB",
-              "cvx": "146",
-              "beginAge": "6 weeks",
-              "endAge": "5 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
-            }
+              'vaccineType': 'DTaP-IPV-Hib-HepB',
+              'cvx': '146',
+              'beginAge': '6 weeks',
+              'endAge': '5 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
+            },
           ],
-          "allowableVaccine": [
+          'allowableVaccine': [
             {
-              "vaccineType": "OPV trivalent",
-              "cvx": "02",
-              "beginAge": "6 weeks - 4 days"
-            },
-            {"vaccineType": "IPV", "cvx": "10", "beginAge": "6 weeks - 4 days"},
-            {
-              "vaccineType": "Polio, Unspecified Formulation",
-              "cvx": "89",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'OPV trivalent',
+              'cvx': '02',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-HepB-IPV",
-              "cvx": "110",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'IPV',
+              'cvx': '10',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-Hib-IPV",
-              "cvx": "120",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'Polio, Unspecified Formulation',
+              'cvx': '89',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-IPV",
-              "cvx": "130",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'DTaP-HepB-IPV',
+              'cvx': '110',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB, Historical",
-              "cvx": "132",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'DTaP-Hib-IPV',
+              'cvx': '120',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB",
-              "cvx": "146",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'DTaP-IPV',
+              'cvx': '130',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib",
-              "cvx": "170",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'DTaP-IPV-Hib-HepB, Historical',
+              'cvx': '132',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DT, IPV adsorbed",
-              "cvx": "195",
-              "beginAge": "6 years - 4 days"
-            }
+              'vaccineType': 'DTaP-IPV-Hib-HepB',
+              'cvx': '146',
+              'beginAge': '6 weeks - 4 days',
+            },
+            {
+              'vaccineType': 'DTaP-IPV-Hib',
+              'cvx': '170',
+              'beginAge': '6 weeks - 4 days',
+            },
+            {
+              'vaccineType': 'DT, IPV adsorbed',
+              'cvx': '195',
+              'beginAge': '6 years - 4 days',
+            },
           ],
-          "inadvertentVaccine": [
-            {"vaccineType": "OPV bivalent", "cvx": "178"},
-            {"vaccineType": "OPV, monovalent, unspecified", "cvx": "179"},
-            {"vaccineType": "OPV, Unspecified", "cvx": "182"}
+          'inadvertentVaccine': [
+            {
+              'vaccineType': 'OPV bivalent',
+              'cvx': '178',
+            },
+            {
+              'vaccineType': 'OPV, monovalent, unspecified',
+              'cvx': '179',
+            },
+            {
+              'vaccineType': 'OPV, Unspecified',
+              'cvx': '182',
+            },
           ],
-          "recurringDose": "No"
+          'recurringDose': 'No',
         },
         {
-          "doseNumber": "Dose 4",
-          "interval": [
+          'doseNumber': 'Dose 4',
+          'interval': [
             {
-              "fromPrevious": "Y",
-              "absMinInt": "6 months - 4 days",
-              "minInt": "6 months",
-              "earliestRecInt": "6 months"
-            }
+              'fromPrevious': 'Y',
+              'absMinInt': '6 months - 4 days',
+              'minInt': '6 months',
+              'earliestRecInt': '6 months',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "IPV",
-              "cvx": "10",
-              "beginAge": "6 weeks",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType': 'IPV',
+              'cvx': '10',
+              'beginAge': '6 weeks',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "DTaP-HepB-IPV",
-              "cvx": "110",
-              "beginAge": "6 weeks",
-              "endAge": "7 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType': 'DTaP-HepB-IPV',
+              'cvx': '110',
+              'beginAge': '6 weeks',
+              'endAge': '7 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "DTaP-Hib-IPV",
-              "cvx": "120",
-              "beginAge": "6 weeks",
-              "endAge": "5 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType': 'DTaP-Hib-IPV',
+              'cvx': '120',
+              'beginAge': '6 weeks',
+              'endAge': '5 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "DTaP-IPV",
-              "cvx": "130",
-              "beginAge": "4 years",
-              "endAge": "7 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
-            }
+              'vaccineType': 'DTaP-IPV',
+              'cvx': '130',
+              'beginAge': '4 years',
+              'endAge': '7 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
+            },
           ],
-          "allowableVaccine": [
+          'allowableVaccine': [
             {
-              "vaccineType": "OPV trivalent",
-              "cvx": "02",
-              "beginAge": "6 weeks - 4 days"
-            },
-            {"vaccineType": "IPV", "cvx": "10", "beginAge": "6 weeks - 4 days"},
-            {
-              "vaccineType": "Polio, Unspecified Formulation",
-              "cvx": "89",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'OPV trivalent',
+              'cvx': '02',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-HepB-IPV",
-              "cvx": "110",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'IPV',
+              'cvx': '10',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-Hib-IPV",
-              "cvx": "120",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'Polio, Unspecified Formulation',
+              'cvx': '89',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-IPV",
-              "cvx": "130",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'DTaP-HepB-IPV',
+              'cvx': '110',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB, Historical",
-              "cvx": "132",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'DTaP-Hib-IPV',
+              'cvx': '120',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB",
-              "cvx": "146",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'DTaP-IPV',
+              'cvx': '130',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib",
-              "cvx": "170",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'DTaP-IPV-Hib-HepB, Historical',
+              'cvx': '132',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DT, IPV adsorbed",
-              "cvx": "195",
-              "beginAge": "6 years - 4 days"
-            }
+              'vaccineType': 'DTaP-IPV-Hib-HepB',
+              'cvx': '146',
+              'beginAge': '6 weeks - 4 days',
+            },
+            {
+              'vaccineType': 'DTaP-IPV-Hib',
+              'cvx': '170',
+              'beginAge': '6 weeks - 4 days',
+            },
+            {
+              'vaccineType': 'DT, IPV adsorbed',
+              'cvx': '195',
+              'beginAge': '6 years - 4 days',
+            },
           ],
-          "inadvertentVaccine": [
-            {"vaccineType": "OPV bivalent", "cvx": "178"},
-            {"vaccineType": "OPV, monovalent, unspecified", "cvx": "179"},
-            {"vaccineType": "OPV, Unspecified", "cvx": "182"}
-          ],
-          "conditionalSkip": [
+          'inadvertentVaccine': [
             {
-              "context": "Both",
-              "setLogic": "n/a",
-              "set": [
+              'vaccineType': 'OPV bivalent',
+              'cvx': '178',
+            },
+            {
+              'vaccineType': 'OPV, monovalent, unspecified',
+              'cvx': '179',
+            },
+            {
+              'vaccineType': 'OPV, Unspecified',
+              'cvx': '182',
+            },
+          ],
+          'conditionalSkip': [
+            {
+              'context': 'Both',
+              'setLogic': 'n/a',
+              'set': [
                 {
-                  "setID": "1",
-                  "setDescription":
-                      "Target Dose is not required for those who are 4 years of age or older.",
-                  "condition": [
+                  'setID': '1',
+                  'setDescription':
+                      'Target Dose is not required for those who are 4 '
+                      'years of age or older.',
+                  'condition': [
                     {
-                      "conditionID": "1",
-                      "conditionType": "Age",
-                      "beginAge": "4 years - 4 days"
-                    }
-                  ]
-                }
-              ]
-            }
+                      'conditionID': '1',
+                      'conditionType': 'Age',
+                      'beginAge': '4 years - 4 days',
+                    },
+                  ],
+                },
+              ],
+            },
           ],
-          "recurringDose": "No"
+          'recurringDose': 'No',
         },
         {
-          "doseNumber": "Dose 5",
-          "age": [
+          'doseNumber': 'Dose 5',
+          'age': [
             {
-              "absMinAge": "4 years - 4 days",
-              "minAge": "4 years",
-              "earliestRecAge": "4 years"
-            }
+              'absMinAge': '4 years - 4 days',
+              'minAge': '4 years',
+              'earliestRecAge': '4 years',
+            },
           ],
-          "interval": [
+          'interval': [
             {
-              "fromPrevious": "Y",
-              "absMinInt": "6 months - 4 days",
-              "minInt": "6 months",
-              "earliestRecInt": "6 months"
-            }
+              'fromPrevious': 'Y',
+              'absMinInt': '6 months - 4 days',
+              'minInt': '6 months',
+              'earliestRecInt': '6 months',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "IPV",
-              "cvx": "10",
-              "beginAge": "6 weeks",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType': 'IPV',
+              'cvx': '10',
+              'beginAge': '6 weeks',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "DTaP-HepB-IPV",
-              "cvx": "110",
-              "beginAge": "6 weeks",
-              "endAge": "7 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType': 'DTaP-HepB-IPV',
+              'cvx': '110',
+              'beginAge': '6 weeks',
+              'endAge': '7 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "DTaP-Hib-IPV",
-              "cvx": "120",
-              "beginAge": "6 weeks",
-              "endAge": "5 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType': 'DTaP-Hib-IPV',
+              'cvx': '120',
+              'beginAge': '6 weeks',
+              'endAge': '5 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "DTaP-IPV",
-              "cvx": "130",
-              "beginAge": "4 years",
-              "endAge": "7 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
-            }
+              'vaccineType': 'DTaP-IPV',
+              'cvx': '130',
+              'beginAge': '4 years',
+              'endAge': '7 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
+            },
           ],
-          "allowableVaccine": [
+          'allowableVaccine': [
             {
-              "vaccineType": "OPV trivalent",
-              "cvx": "02",
-              "beginAge": "6 weeks - 4 days"
-            },
-            {"vaccineType": "IPV", "cvx": "10", "beginAge": "6 weeks - 4 days"},
-            {
-              "vaccineType": "Polio, Unspecified Formulation",
-              "cvx": "89",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'OPV trivalent',
+              'cvx': '02',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-HepB-IPV",
-              "cvx": "110",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'IPV',
+              'cvx': '10',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-Hib-IPV",
-              "cvx": "120",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'Polio, Unspecified Formulation',
+              'cvx': '89',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-IPV",
-              "cvx": "130",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'DTaP-HepB-IPV',
+              'cvx': '110',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB, Historical",
-              "cvx": "132",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'DTaP-Hib-IPV',
+              'cvx': '120',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB",
-              "cvx": "146",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'DTaP-IPV',
+              'cvx': '130',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib",
-              "cvx": "170",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'DTaP-IPV-Hib-HepB, Historical',
+              'cvx': '132',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DT, IPV adsorbed",
-              "cvx": "195",
-              "beginAge": "6 years - 4 days"
-            }
+              'vaccineType': 'DTaP-IPV-Hib-HepB',
+              'cvx': '146',
+              'beginAge': '6 weeks - 4 days',
+            },
+            {
+              'vaccineType': 'DTaP-IPV-Hib',
+              'cvx': '170',
+              'beginAge': '6 weeks - 4 days',
+            },
+            {
+              'vaccineType': 'DT, IPV adsorbed',
+              'cvx': '195',
+              'beginAge': '6 years - 4 days',
+            },
           ],
-          "inadvertentVaccine": [
-            {"vaccineType": "OPV bivalent", "cvx": "178"},
-            {"vaccineType": "OPV, monovalent, unspecified", "cvx": "179"},
-            {"vaccineType": "OPV, Unspecified", "cvx": "182"}
+          'inadvertentVaccine': [
+            {
+              'vaccineType': 'OPV bivalent',
+              'cvx': '178',
+            },
+            {
+              'vaccineType': 'OPV, monovalent, unspecified',
+              'cvx': '179',
+            },
+            {
+              'vaccineType': 'OPV, Unspecified',
+              'cvx': '182',
+            },
           ],
-          "recurringDose": "No"
-        }
-      ]
+          'recurringDose': 'No',
+        },
+      ],
     },
     {
-      "seriesName": "Polio risk adult series",
-      "targetDisease": "Polio",
-      "vaccineGroup": "Polio",
-      "seriesAdminGuidance": [
-        "When evaluating doses of oral polio vaccine (OPV) on or after 4/1/2016, only documentation specifying receipt of trivalent vaccine (tOPV) constitutes proof of vaccination according to the U.S. polio vaccination recommendations. Proper documentation of which OPV vaccine was received is critical to validation of records against U.S. vaccination recommendations.",
-        "When there is not enough time to give three doses of IPV according to the recommended intervals, then an accelerated schedule of 3 doses at least 4 weeks apart can be used. If the accelerated schedule cannot be completed before the situation that puts someone at increased risk of exposure, the remaining doses should be given as soon as possible."
+      'seriesName': 'Polio risk adult series',
+      'targetDisease': 'Polio',
+      'vaccineGroup': 'Polio',
+      'seriesAdminGuidance': [
+        'When evaluating doses of oral polio vaccine (OPV) on or after '
+            '4/1/2016, only documentation specifying receipt of trivalent '
+            'vaccine (tOPV) constitutes proof of vaccination according to '
+            'the U.S. polio vaccination recommendations. Proper '
+            'documentation of which OPV vaccine was received is critical '
+            'to validation of records against U.S. vaccination '
+            'recommendations.',
+        'When there is not enough time to give three doses of IPV '
+            'according to the recommended intervals, then an accelerated '
+            'schedule of 3 doses at least 4 weeks apart can be used. If '
+            'the accelerated schedule cannot be completed before the '
+            'situation that puts someone at increased risk of exposure, '
+            'the remaining doses should be given as soon as possible.',
       ],
-      "seriesType": "Risk",
-      "selectSeries": {
-        "defaultSeries": "No",
-        "productPath": "No",
-        "seriesGroupName": "Increased Risk",
-        "seriesGroup": "2",
-        "seriesPriority": "A",
-        "seriesPreference": "2",
-        "minAgeToStart": "18 years"
+      'seriesType': 'Risk',
+      'selectSeries': {
+        'defaultSeries': 'No',
+        'productPath': 'No',
+        'seriesGroupName': 'Increased Risk',
+        'seriesGroup': '2',
+        'seriesPriority': 'A',
+        'seriesPreference': '2',
+        'minAgeToStart': '18 years',
       },
-      "indication": [
+      'indication': [
         {
-          "observationCode": {
-            "text":
-                "Laboratory workers who handle specimens that might contain polioviruses",
-            "code": "054"
+          'observationCode': {
+            'text':
+                'Laboratory workers who handle specimens that might '
+                'contain polioviruses',
+            'code': '054',
           },
-          "description":
-              "Administer to laboratory workers who handle specimens that might contain polioviruses.",
-          "beginAge": "18 years"
+          'description':
+              'Administer to laboratory workers who handle specimens that '
+              'might contain polioviruses.',
+          'beginAge': '18 years',
         },
         {
-          "observationCode": {
-            "text":
-                "Health-care workers who have close contact with patients who might be excreting wild polioviruses",
-            "code": "056"
+          'observationCode': {
+            'text':
+                'Health-care workers who have close contact with patients '
+                'who might be excreting wild polioviruses',
+            'code': '056',
           },
-          "description":
-              "Administer to health-care workers who have close contact with patients who might be excreting wild polioviruses.",
-          "beginAge": "18 years"
+          'description':
+              'Administer to health-care workers who have close contact '
+              'with patients who might be excreting wild polioviruses.',
+          'beginAge': '18 years',
         },
         {
-          "observationCode": {
-            "text":
-                "Travel to areas or countries where polio is epidemic or endemic",
-            "code": "143"
+          'observationCode': {
+            'text':
+                'Travel to areas or countries where polio is epidemic or '
+                'endemic',
+            'code': '143',
           },
-          "description":
-              "Administer to travelers to areas or countries where polio is epidemic or endemic.",
-          "beginAge": "18 years"
-        }
+          'description':
+              'Administer to travelers to areas or countries where polio '
+              'is epidemic or endemic.',
+          'beginAge': '18 years',
+        },
       ],
-      "seriesDose": [
+      'seriesDose': [
         {
-          "doseNumber": "Dose 1",
-          "age": [
+          'doseNumber': 'Dose 1',
+          'age': [
             {
-              "absMinAge": "18 years - 4 days",
-              "minAge": "18 years",
-              "earliestRecAge": "18 years"
-            }
+              'absMinAge': '18 years - 4 days',
+              'minAge': '18 years',
+              'earliestRecAge': '18 years',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "IPV",
-              "cvx": "10",
-              "beginAge": "6 weeks",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
-            }
+              'vaccineType': 'IPV',
+              'cvx': '10',
+              'beginAge': '6 weeks',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
+            },
           ],
-          "allowableVaccine": [
+          'allowableVaccine': [
             {
-              "vaccineType": "OPV trivalent",
-              "cvx": "02",
-              "beginAge": "6 weeks - 4 days"
-            },
-            {"vaccineType": "IPV", "cvx": "10", "beginAge": "6 weeks - 4 days"},
-            {
-              "vaccineType": "Polio, Unspecified Formulation",
-              "cvx": "89",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'OPV trivalent',
+              'cvx': '02',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-HepB-IPV",
-              "cvx": "110",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'IPV',
+              'cvx': '10',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-Hib-IPV",
-              "cvx": "120",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'Polio, Unspecified Formulation',
+              'cvx': '89',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-IPV",
-              "cvx": "130",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'DTaP-HepB-IPV',
+              'cvx': '110',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB, Historical",
-              "cvx": "132",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'DTaP-Hib-IPV',
+              'cvx': '120',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB",
-              "cvx": "146",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'DTaP-IPV',
+              'cvx': '130',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib",
-              "cvx": "170",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'DTaP-IPV-Hib-HepB, Historical',
+              'cvx': '132',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DT, IPV adsorbed",
-              "cvx": "195",
-              "beginAge": "6 years - 4 days"
-            }
+              'vaccineType': 'DTaP-IPV-Hib-HepB',
+              'cvx': '146',
+              'beginAge': '6 weeks - 4 days',
+            },
+            {
+              'vaccineType': 'DTaP-IPV-Hib',
+              'cvx': '170',
+              'beginAge': '6 weeks - 4 days',
+            },
+            {
+              'vaccineType': 'DT, IPV adsorbed',
+              'cvx': '195',
+              'beginAge': '6 years - 4 days',
+            },
           ],
-          "inadvertentVaccine": [
-            {"vaccineType": "OPV bivalent", "cvx": "178"},
-            {"vaccineType": "OPV, monovalent, unspecified", "cvx": "179"},
-            {"vaccineType": "OPV, Unspecified", "cvx": "182"}
-          ],
-          "conditionalSkip": [
+          'inadvertentVaccine': [
             {
-              "context": "Both",
-              "setLogic": "n/a",
-              "set": [
+              'vaccineType': 'OPV bivalent',
+              'cvx': '178',
+            },
+            {
+              'vaccineType': 'OPV, monovalent, unspecified',
+              'cvx': '179',
+            },
+            {
+              'vaccineType': 'OPV, Unspecified',
+              'cvx': '182',
+            },
+          ],
+          'conditionalSkip': [
+            {
+              'context': 'Both',
+              'setLogic': 'n/a',
+              'set': [
                 {
-                  "setID": "1",
-                  "setDescription":
-                      "Dose is not required if the patient has received a complete standard series of vaccinations",
-                  "condition": [
+                  'setID': '1',
+                  'setDescription':
+                      'Dose is not required if the patient has received a '
+                      'complete standard series of vaccinations',
+                  'condition': [
                     {
-                      "conditionID": "1",
-                      "conditionType": "Completed Series",
-                      "seriesGroups": "1"
-                    }
-                  ]
-                }
-              ]
-            }
+                      'conditionID': '1',
+                      'conditionType': 'Completed Series',
+                      'seriesGroups': '1',
+                    },
+                  ],
+                },
+              ],
+            },
           ],
-          "recurringDose": "No"
+          'recurringDose': 'No',
         },
         {
-          "doseNumber": "Dose 2",
-          "age": [
+          'doseNumber': 'Dose 2',
+          'age': [
             {
-              "absMinAge": "18 years - 4 days",
-              "minAge": "18 years",
-              "earliestRecAge": "18 years"
-            }
+              'absMinAge': '18 years - 4 days',
+              'minAge': '18 years',
+              'earliestRecAge': '18 years',
+            },
           ],
-          "interval": [
+          'interval': [
             {
-              "fromPrevious": "Y",
-              "absMinInt": "4 weeks - 4 days",
-              "minInt": "4 weeks",
-              "earliestRecInt": "4 weeks",
-              "latestRecInt": "8 weeks"
-            }
+              'fromPrevious': 'Y',
+              'absMinInt': '4 weeks - 4 days',
+              'minInt': '4 weeks',
+              'earliestRecInt': '4 weeks',
+              'latestRecInt': '8 weeks',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "IPV",
-              "cvx": "10",
-              "beginAge": "6 weeks",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
-            }
+              'vaccineType': 'IPV',
+              'cvx': '10',
+              'beginAge': '6 weeks',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
+            },
           ],
-          "allowableVaccine": [
+          'allowableVaccine': [
             {
-              "vaccineType": "OPV trivalent",
-              "cvx": "02",
-              "beginAge": "6 weeks - 4 days"
-            },
-            {"vaccineType": "IPV", "cvx": "10", "beginAge": "6 weeks - 4 days"},
-            {
-              "vaccineType": "Polio, Unspecified Formulation",
-              "cvx": "89",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'OPV trivalent',
+              'cvx': '02',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-HepB-IPV",
-              "cvx": "110",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'IPV',
+              'cvx': '10',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-Hib-IPV",
-              "cvx": "120",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'Polio, Unspecified Formulation',
+              'cvx': '89',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-IPV",
-              "cvx": "130",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'DTaP-HepB-IPV',
+              'cvx': '110',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB, Historical",
-              "cvx": "132",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'DTaP-Hib-IPV',
+              'cvx': '120',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB",
-              "cvx": "146",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'DTaP-IPV',
+              'cvx': '130',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib",
-              "cvx": "170",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'DTaP-IPV-Hib-HepB, Historical',
+              'cvx': '132',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DT, IPV adsorbed",
-              "cvx": "195",
-              "beginAge": "6 years - 4 days"
-            }
+              'vaccineType': 'DTaP-IPV-Hib-HepB',
+              'cvx': '146',
+              'beginAge': '6 weeks - 4 days',
+            },
+            {
+              'vaccineType': 'DTaP-IPV-Hib',
+              'cvx': '170',
+              'beginAge': '6 weeks - 4 days',
+            },
+            {
+              'vaccineType': 'DT, IPV adsorbed',
+              'cvx': '195',
+              'beginAge': '6 years - 4 days',
+            },
           ],
-          "inadvertentVaccine": [
-            {"vaccineType": "OPV bivalent", "cvx": "178"},
-            {"vaccineType": "OPV, monovalent, unspecified", "cvx": "179"},
-            {"vaccineType": "OPV, Unspecified", "cvx": "182"}
-          ],
-          "conditionalSkip": [
+          'inadvertentVaccine': [
             {
-              "context": "Both",
-              "setLogic": "n/a",
-              "set": [
+              'vaccineType': 'OPV bivalent',
+              'cvx': '178',
+            },
+            {
+              'vaccineType': 'OPV, monovalent, unspecified',
+              'cvx': '179',
+            },
+            {
+              'vaccineType': 'OPV, Unspecified',
+              'cvx': '182',
+            },
+          ],
+          'conditionalSkip': [
+            {
+              'context': 'Both',
+              'setLogic': 'n/a',
+              'set': [
                 {
-                  "setID": "1",
-                  "setDescription":
-                      "Dose is not required if the patient has received a complete standard series of vaccinations",
-                  "condition": [
+                  'setID': '1',
+                  'setDescription':
+                      'Dose is not required if the patient has received a '
+                      'complete standard series of vaccinations',
+                  'condition': [
                     {
-                      "conditionID": "1",
-                      "conditionType": "Completed Series",
-                      "seriesGroups": "1"
-                    }
-                  ]
-                }
-              ]
-            }
+                      'conditionID': '1',
+                      'conditionType': 'Completed Series',
+                      'seriesGroups': '1',
+                    },
+                  ],
+                },
+              ],
+            },
           ],
-          "recurringDose": "No"
+          'recurringDose': 'No',
         },
         {
-          "doseNumber": "Dose 3",
-          "age": [
+          'doseNumber': 'Dose 3',
+          'age': [
             {
-              "absMinAge": "18 years - 4 days",
-              "minAge": "18 years",
-              "earliestRecAge": "18 years"
-            }
+              'absMinAge': '18 years - 4 days',
+              'minAge': '18 years',
+              'earliestRecAge': '18 years',
+            },
           ],
-          "interval": [
+          'interval': [
             {
-              "fromPrevious": "Y",
-              "absMinInt": "4 weeks - 4 days",
-              "minInt": "6 months",
-              "earliestRecInt": "6 months",
-              "latestRecInt": "12 months"
-            }
+              'fromPrevious': 'Y',
+              'absMinInt': '4 weeks - 4 days',
+              'minInt': '6 months',
+              'earliestRecInt': '6 months',
+              'latestRecInt': '12 months',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "IPV",
-              "cvx": "10",
-              "beginAge": "6 weeks",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
-            }
+              'vaccineType': 'IPV',
+              'cvx': '10',
+              'beginAge': '6 weeks',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
+            },
           ],
-          "allowableVaccine": [
+          'allowableVaccine': [
             {
-              "vaccineType": "OPV trivalent",
-              "cvx": "02",
-              "beginAge": "6 weeks - 4 days"
-            },
-            {"vaccineType": "IPV", "cvx": "10", "beginAge": "6 weeks - 4 days"},
-            {
-              "vaccineType": "Polio, Unspecified Formulation",
-              "cvx": "89",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'OPV trivalent',
+              'cvx': '02',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-HepB-IPV",
-              "cvx": "110",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'IPV',
+              'cvx': '10',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-Hib-IPV",
-              "cvx": "120",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'Polio, Unspecified Formulation',
+              'cvx': '89',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-IPV",
-              "cvx": "130",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'DTaP-HepB-IPV',
+              'cvx': '110',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB, Historical",
-              "cvx": "132",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'DTaP-Hib-IPV',
+              'cvx': '120',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB",
-              "cvx": "146",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'DTaP-IPV',
+              'cvx': '130',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib",
-              "cvx": "170",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'DTaP-IPV-Hib-HepB, Historical',
+              'cvx': '132',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "DT, IPV adsorbed",
-              "cvx": "195",
-              "beginAge": "6 years - 4 days"
-            }
+              'vaccineType': 'DTaP-IPV-Hib-HepB',
+              'cvx': '146',
+              'beginAge': '6 weeks - 4 days',
+            },
+            {
+              'vaccineType': 'DTaP-IPV-Hib',
+              'cvx': '170',
+              'beginAge': '6 weeks - 4 days',
+            },
+            {
+              'vaccineType': 'DT, IPV adsorbed',
+              'cvx': '195',
+              'beginAge': '6 years - 4 days',
+            },
           ],
-          "inadvertentVaccine": [
-            {"vaccineType": "OPV bivalent", "cvx": "178"},
-            {"vaccineType": "OPV, monovalent, unspecified", "cvx": "179"},
-            {"vaccineType": "OPV, Unspecified", "cvx": "182"}
+          'inadvertentVaccine': [
+            {
+              'vaccineType': 'OPV bivalent',
+              'cvx': '178',
+            },
+            {
+              'vaccineType': 'OPV, monovalent, unspecified',
+              'cvx': '179',
+            },
+            {
+              'vaccineType': 'OPV, Unspecified',
+              'cvx': '182',
+            },
           ],
-          "recurringDose": "No"
-        }
-      ]
-    }
+          'recurringDose': 'No',
+        },
+      ],
+    },
   ],
-  "vaccineRecommendationCategory": [
+  'vaccineRecommendationCategory': [
     {
-      "worksheetName": "4-dose",
-      "seriesName": "Polio 4-dose series",
-      "patientBeginAge": "0 days",
-      "patientEndAge": "n/a",
-      "forecastTargetDose": "Any",
-      "includedIndication": "n/a",
-      "excludedIndication": "n/a",
-      "category": "Routine",
-      "additionalMaterial":
-          "https://www.cdc.gov/polio/hcp/vaccine-considerations/index.html"
+      'worksheetName': '4-dose',
+      'seriesName': 'Polio 4-dose series',
+      'patientBeginAge': '0 days',
+      'patientEndAge': 'n/a',
+      'forecastTargetDose': 'Any',
+      'includedIndication': 'n/a',
+      'excludedIndication': 'n/a',
+      'category': 'Routine',
+      'additionalMaterial':
+          'https://www.cdc.gov/polio/hcp/vaccine-considerations/index.html',
     },
     {
-      "worksheetName": "5-dose",
-      "seriesName": "Polio 5-dose series",
-      "patientBeginAge": "0 days",
-      "patientEndAge": "n/a",
-      "forecastTargetDose": "Any",
-      "includedIndication": "n/a",
-      "excludedIndication": "n/a",
-      "category": "Routine",
-      "additionalMaterial":
-          "https://www.cdc.gov/polio/hcp/vaccine-considerations/index.html"
+      'worksheetName': '5-dose',
+      'seriesName': 'Polio 5-dose series',
+      'patientBeginAge': '0 days',
+      'patientEndAge': 'n/a',
+      'forecastTargetDose': 'Any',
+      'includedIndication': 'n/a',
+      'excludedIndication': 'n/a',
+      'category': 'Routine',
+      'additionalMaterial':
+          'https://www.cdc.gov/polio/hcp/vaccine-considerations/index.html',
     },
     {
-      "worksheetName": "Adult Catch-up",
-      "seriesName": "Polio adult catch-up series",
-      "patientBeginAge": "0 days",
-      "patientEndAge": "n/a",
-      "forecastTargetDose": "Any",
-      "includedIndication": "n/a",
-      "excludedIndication": "n/a",
-      "category": "Routine",
-      "additionalMaterial":
-          "https://www.cdc.gov/polio/hcp/vaccine-considerations/index.html"
+      'worksheetName': 'Adult Catch-up',
+      'seriesName': 'Polio adult catch-up series',
+      'patientBeginAge': '0 days',
+      'patientEndAge': 'n/a',
+      'forecastTargetDose': 'Any',
+      'includedIndication': 'n/a',
+      'excludedIndication': 'n/a',
+      'category': 'Routine',
+      'additionalMaterial':
+          'https://www.cdc.gov/polio/hcp/vaccine-considerations/index.html',
     },
     {
-      "worksheetName": "fIPV",
-      "seriesName": "Polio fIPV series",
-      "patientBeginAge": "0 days",
-      "patientEndAge": "n/a",
-      "forecastTargetDose": "Any",
-      "includedIndication": "n/a",
-      "excludedIndication": "n/a",
-      "category": "Routine",
-      "additionalMaterial":
-          "https://www.cdc.gov/polio/hcp/vaccine-considerations/index.html"
+      'worksheetName': 'fIPV',
+      'seriesName': 'Polio fIPV series',
+      'patientBeginAge': '0 days',
+      'patientEndAge': 'n/a',
+      'forecastTargetDose': 'Any',
+      'includedIndication': 'n/a',
+      'excludedIndication': 'n/a',
+      'category': 'Routine',
+      'additionalMaterial':
+          'https://www.cdc.gov/polio/hcp/vaccine-considerations/index.html',
     },
     {
-      "worksheetName": "fIPV Secondary",
-      "seriesName": "Polio fIPV secondary series",
-      "patientBeginAge": "0 days",
-      "patientEndAge": "n/a",
-      "forecastTargetDose": "Any",
-      "includedIndication": "n/a",
-      "excludedIndication": "n/a",
-      "category": "Routine",
-      "additionalMaterial":
-          "https://www.cdc.gov/polio/hcp/vaccine-considerations/index.html"
+      'worksheetName': 'fIPV Secondary',
+      'seriesName': 'Polio fIPV secondary series',
+      'patientBeginAge': '0 days',
+      'patientEndAge': 'n/a',
+      'forecastTargetDose': 'Any',
+      'includedIndication': 'n/a',
+      'excludedIndication': 'n/a',
+      'category': 'Routine',
+      'additionalMaterial':
+          'https://www.cdc.gov/polio/hcp/vaccine-considerations/index.html',
     },
     {
-      "worksheetName": "Risk childhood",
-      "seriesName": "Polio risk childhood series",
-      "patientBeginAge": "0 days",
-      "patientEndAge": "18 years",
-      "forecastTargetDose": "Any",
-      "includedIndication": "Any",
-      "excludedIndication": "n/a",
-      "category": "High-Risk",
-      "additionalMaterial":
-          "https://www.cdc.gov/polio/hcp/vaccine-considerations/index.html"
+      'worksheetName': 'Risk childhood',
+      'seriesName': 'Polio risk childhood series',
+      'patientBeginAge': '0 days',
+      'patientEndAge': '18 years',
+      'forecastTargetDose': 'Any',
+      'includedIndication': 'Any',
+      'excludedIndication': 'n/a',
+      'category': 'High-Risk',
+      'additionalMaterial':
+          'https://www.cdc.gov/polio/hcp/vaccine-considerations/index.html',
     },
     {
-      "worksheetName": "Risk adult",
-      "seriesName": "Polio risk adult series",
-      "patientBeginAge": "18 years",
-      "patientEndAge": "n/a",
-      "forecastTargetDose": "Any",
-      "includedIndication": "Any",
-      "excludedIndication": "n/a",
-      "category": "High-Risk",
-      "additionalMaterial":
-          "https://www.cdc.gov/polio/hcp/vaccine-considerations/index.html"
-    }
-  ]
+      'worksheetName': 'Risk adult',
+      'seriesName': 'Polio risk adult series',
+      'patientBeginAge': '18 years',
+      'patientEndAge': 'n/a',
+      'forecastTargetDose': 'Any',
+      'includedIndication': 'Any',
+      'excludedIndication': 'n/a',
+      'category': 'High-Risk',
+      'additionalMaterial':
+          'https://www.cdc.gov/polio/hcp/vaccine-considerations/index.html',
+    },
+  ],
 });

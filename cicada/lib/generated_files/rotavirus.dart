@@ -1,662 +1,711 @@
-// ignore_for_file: prefer_single_quotes, always_specify_types
+// ignore_for_file: no_adjacent_strings_in_list
+// Generated data: long strings are split into adjacent literals so
+// no line passes 80 columns; a serializer cannot drop a comma.
 
-import '../cicada.dart';
+import 'package:cicada/cicada.dart';
 
 final AntigenSupportingData rotavirus = AntigenSupportingData.fromJson({
-  "targetDisease": "Rotavirus",
-  "vaccineGroup": "Rotavirus",
-  "contraindications": {
-    "vaccineGroup": {
-      "contraindication": [
+  'targetDisease': 'Rotavirus',
+  'vaccineGroup': 'Rotavirus',
+  'contraindications': {
+    'vaccineGroup': {
+      'contraindication': [
         {
-          "observationCode": "013",
-          "observationTitle": "Severe Combined Immunodeficiency [SCID]",
-          "contraindicationText":
-              "Do not vaccinate if the patient has Severe Combined Immunodeficiency [SCID]."
+          'observationCode': '013',
+          'observationTitle': 'Severe Combined Immunodeficiency [SCID]',
+          'contraindicationText':
+              'Do not vaccinate if the patient has Severe Combined '
+              'Immunodeficiency [SCID].',
         },
         {
-          "observationCode": "028",
-          "observationTitle": "Intussusception",
-          "contraindicationText":
-              "Do not vaccinate if the patient has intussusception."
+          'observationCode': '028',
+          'observationTitle': 'Intussusception',
+          'contraindicationText':
+              'Do not vaccinate if the patient has intussusception.',
         },
         {
-          "observationCode": "080",
-          "observationTitle": "Adverse reaction to vaccine component",
-          "contraindicationText":
-              "Do not vaccinate if the patient has had an adverse reaction to a vaccine component."
+          'observationCode': '080',
+          'observationTitle': 'Adverse reaction to vaccine component',
+          'contraindicationText':
+              'Do not vaccinate if the patient has had an adverse reaction '
+              'to a vaccine component.',
         },
         {
-          "observationCode": "083",
-          "observationTitle":
-              "Severe allergic reaction after previous dose of Rotavirus",
-          "contraindicationText":
-              "Do not vaccinate if the patient has had a severe allergic reaction after a previous dose of Rotavirus vaccine."
-        }
-      ]
+          'observationCode': '083',
+          'observationTitle':
+              'Severe allergic reaction after previous dose of Rotavirus',
+          'contraindicationText':
+              'Do not vaccinate if the patient has had a severe allergic '
+              'reaction after a previous dose of Rotavirus vaccine.',
+        },
+      ],
     },
-    "vaccine": {
-      "contraindication": [
+    'vaccine': {
+      'contraindication': [
         {
-          "observationCode": "104",
-          "observationTitle": "Allergic reaction to latex",
-          "contraindicationText":
-              "Do not vaccinate with Rotarix if the patient has an allergy to latex.",
-          "contraindicatedVaccine": [
-            {"vaccineType": "Rotavirus, monovalent", "cvx": "119"}
-          ]
-        }
-      ]
-    }
+          'observationCode': '104',
+          'observationTitle': 'Allergic reaction to latex',
+          'contraindicationText':
+              'Do not vaccinate with Rotarix if the patient has an allergy '
+              'to latex.',
+          'contraindicatedVaccine': [
+            {
+              'vaccineType': 'Rotavirus, monovalent',
+              'cvx': '119',
+            },
+          ],
+        },
+      ],
+    },
   },
-  "series": [
+  'series': [
     {
-      "seriesName": "Rotavirus 3-dose series",
-      "targetDisease": "Rotavirus",
-      "vaccineGroup": "Rotavirus",
-      "seriesAdminGuidance": [
-        "For children with known or suspected altered immunocompetence, ACIP advises consultation with an immunologist or infectious diseases specialist before administration of rotavirus vaccine.  Children who are immunocompromised because of congenital immunodeficiency, or hematopoietic stem cell or solid organ transplantation sometimes experience severe, prolonged, and even fatal wild-type rotavirus gastroenteritis."
+      'seriesName': 'Rotavirus 3-dose series',
+      'targetDisease': 'Rotavirus',
+      'vaccineGroup': 'Rotavirus',
+      'seriesAdminGuidance': [
+        'For children with known or suspected altered '
+            'immunocompetence, ACIP advises consultation with an '
+            'immunologist or infectious diseases specialist before '
+            'administration of rotavirus vaccine.  Children who are '
+            'immunocompromised because of congenital immunodeficiency, or '
+            'hematopoietic stem cell or solid organ transplantation '
+            'sometimes experience severe, prolonged, and even fatal '
+            'wild-type rotavirus gastroenteritis.',
       ],
-      "seriesType": "Standard",
-      "selectSeries": {
-        "defaultSeries": "Yes",
-        "productPath": "No",
-        "seriesGroupName": "Standard",
-        "seriesGroup": "1",
-        "seriesPriority": "A",
-        "seriesPreference": "1"
+      'seriesType': 'Standard',
+      'selectSeries': {
+        'defaultSeries': 'Yes',
+        'productPath': 'No',
+        'seriesGroupName': 'Standard',
+        'seriesGroup': '1',
+        'seriesPriority': 'A',
+        'seriesPreference': '1',
       },
-      "seriesDose": [
+      'seriesDose': [
         {
-          "doseNumber": "Dose 1",
-          "age": [
+          'doseNumber': 'Dose 1',
+          'age': [
             {
-              "absMinAge": "6 weeks - 4 days",
-              "minAge": "6 weeks",
-              "earliestRecAge": "2 months",
-              "maxAge": "15 weeks"
-            }
+              'absMinAge': '6 weeks - 4 days',
+              'minAge': '6 weeks',
+              'earliestRecAge': '2 months',
+              'maxAge': '15 weeks',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "Rotavirus, pentavalent",
-              "cvx": "116",
-              "beginAge": "6 weeks",
-              "endAge": "8 months + 1 day",
-              "volume": "2",
-              "forecastVaccineType": "N"
+              'vaccineType': 'Rotavirus, pentavalent',
+              'cvx': '116',
+              'beginAge': '6 weeks',
+              'endAge': '8 months + 1 day',
+              'volume': '2',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "Rotavirus, monovalent",
-              "cvx": "119",
-              "beginAge": "6 weeks",
-              "endAge": "8 months + 1 day",
-              "volume": "1",
-              "forecastVaccineType": "N"
-            }
+              'vaccineType': 'Rotavirus, monovalent',
+              'cvx': '119',
+              'beginAge': '6 weeks',
+              'endAge': '8 months + 1 day',
+              'volume': '1',
+              'forecastVaccineType': 'N',
+            },
           ],
-          "allowableVaccine": [
+          'allowableVaccine': [
             {
-              "vaccineType": "Rotavirus, tetravalent",
-              "cvx": "74",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'Rotavirus, tetravalent',
+              'cvx': '74',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "Rotavirus, pentavalent",
-              "cvx": "116",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'Rotavirus, pentavalent',
+              'cvx': '116',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "Rotavirus, monovalent",
-              "cvx": "119",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'Rotavirus, monovalent',
+              'cvx': '119',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "Rotavirus, unspecified formulation",
-              "cvx": "122",
-              "beginAge": "6 weeks - 4 days"
-            }
+              'vaccineType': 'Rotavirus, unspecified formulation',
+              'cvx': '122',
+              'beginAge': '6 weeks - 4 days',
+            },
           ],
-          "recurringDose": "No"
+          'recurringDose': 'No',
         },
         {
-          "doseNumber": "Dose 2",
-          "age": [
+          'doseNumber': 'Dose 2',
+          'age': [
             {
-              "absMinAge": "10 weeks - 4 days",
-              "minAge": "10 weeks",
-              "earliestRecAge": "4 months",
-              "latestRecAge": "5 months + 4 weeks",
-              "maxAge": "8 months + 1 day"
-            }
+              'absMinAge': '10 weeks - 4 days',
+              'minAge': '10 weeks',
+              'earliestRecAge': '4 months',
+              'latestRecAge': '5 months + 4 weeks',
+              'maxAge': '8 months + 1 day',
+            },
           ],
-          "interval": [
+          'interval': [
             {
-              "fromPrevious": "Y",
-              "absMinInt": "4 weeks - 4 days",
-              "minInt": "4 weeks",
-              "earliestRecInt": "8 weeks",
-              "latestRecInt": "13 weeks"
-            }
+              'fromPrevious': 'Y',
+              'absMinInt': '4 weeks - 4 days',
+              'minInt': '4 weeks',
+              'earliestRecInt': '8 weeks',
+              'latestRecInt': '13 weeks',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "Rotavirus, pentavalent",
-              "cvx": "116",
-              "beginAge": "6 weeks",
-              "endAge": "8 months + 1 day",
-              "volume": "2",
-              "forecastVaccineType": "N"
+              'vaccineType': 'Rotavirus, pentavalent',
+              'cvx': '116',
+              'beginAge': '6 weeks',
+              'endAge': '8 months + 1 day',
+              'volume': '2',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "Rotavirus, monovalent",
-              "cvx": "119",
-              "beginAge": "6 weeks",
-              "endAge": "8 months + 1 day",
-              "volume": "1",
-              "forecastVaccineType": "N"
-            }
+              'vaccineType': 'Rotavirus, monovalent',
+              'cvx': '119',
+              'beginAge': '6 weeks',
+              'endAge': '8 months + 1 day',
+              'volume': '1',
+              'forecastVaccineType': 'N',
+            },
           ],
-          "allowableVaccine": [
+          'allowableVaccine': [
             {
-              "vaccineType": "Rotavirus, tetravalent",
-              "cvx": "74",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'Rotavirus, tetravalent',
+              'cvx': '74',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "Rotavirus, pentavalent",
-              "cvx": "116",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'Rotavirus, pentavalent',
+              'cvx': '116',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "Rotavirus, monovalent",
-              "cvx": "119",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'Rotavirus, monovalent',
+              'cvx': '119',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "Rotavirus, unspecified formulation",
-              "cvx": "122",
-              "beginAge": "6 weeks - 4 days"
-            }
+              'vaccineType': 'Rotavirus, unspecified formulation',
+              'cvx': '122',
+              'beginAge': '6 weeks - 4 days',
+            },
           ],
-          "recurringDose": "No"
+          'recurringDose': 'No',
         },
         {
-          "doseNumber": "Dose 3",
-          "age": [
+          'doseNumber': 'Dose 3',
+          'age': [
             {
-              "absMinAge": "14 weeks - 4 days",
-              "minAge": "14 weeks",
-              "earliestRecAge": "6 months",
-              "latestRecAge": "7 months + 4 weeks",
-              "maxAge": "8 months + 1 day"
-            }
+              'absMinAge': '14 weeks - 4 days',
+              'minAge': '14 weeks',
+              'earliestRecAge': '6 months',
+              'latestRecAge': '7 months + 4 weeks',
+              'maxAge': '8 months + 1 day',
+            },
           ],
-          "interval": [
+          'interval': [
             {
-              "fromPrevious": "Y",
-              "absMinInt": "4 weeks - 4 days",
-              "minInt": "4 weeks",
-              "earliestRecInt": "8 weeks",
-              "latestRecInt": "13 weeks"
-            }
+              'fromPrevious': 'Y',
+              'absMinInt': '4 weeks - 4 days',
+              'minInt': '4 weeks',
+              'earliestRecInt': '8 weeks',
+              'latestRecInt': '13 weeks',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "Rotavirus, pentavalent",
-              "cvx": "116",
-              "beginAge": "6 weeks",
-              "endAge": "8 months + 1 day",
-              "volume": "2",
-              "forecastVaccineType": "N"
+              'vaccineType': 'Rotavirus, pentavalent',
+              'cvx': '116',
+              'beginAge': '6 weeks',
+              'endAge': '8 months + 1 day',
+              'volume': '2',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "Rotavirus, monovalent",
-              "cvx": "119",
-              "beginAge": "6 weeks",
-              "endAge": "8 months + 1 day",
-              "volume": "1",
-              "forecastVaccineType": "N"
-            }
+              'vaccineType': 'Rotavirus, monovalent',
+              'cvx': '119',
+              'beginAge': '6 weeks',
+              'endAge': '8 months + 1 day',
+              'volume': '1',
+              'forecastVaccineType': 'N',
+            },
           ],
-          "allowableVaccine": [
+          'allowableVaccine': [
             {
-              "vaccineType": "Rotavirus, tetravalent",
-              "cvx": "74",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'Rotavirus, tetravalent',
+              'cvx': '74',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "Rotavirus, pentavalent",
-              "cvx": "116",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'Rotavirus, pentavalent',
+              'cvx': '116',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "Rotavirus, monovalent",
-              "cvx": "119",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'Rotavirus, monovalent',
+              'cvx': '119',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "Rotavirus, unspecified formulation",
-              "cvx": "122",
-              "beginAge": "6 weeks - 4 days"
-            }
+              'vaccineType': 'Rotavirus, unspecified formulation',
+              'cvx': '122',
+              'beginAge': '6 weeks - 4 days',
+            },
           ],
-          "recurringDose": "No"
-        }
-      ]
+          'recurringDose': 'No',
+        },
+      ],
     },
     {
-      "seriesName": "Rotavirus late start at 15 weeks 3-dose series",
-      "targetDisease": "Rotavirus",
-      "vaccineGroup": "Rotavirus",
-      "seriesAdminGuidance": [
-        "For children with known or suspected altered immunocompetence, ACIP advises consultation with an immunologist or infectious diseases specialist before administration of rotavirus vaccine.  Children who are immunocompromised because of congenital immunodeficiency, or hematopoietic stem cell or solid organ transplantation sometimes experience severe, prolonged, and even fatal wild-type rotavirus gastroenteritis.",
-        "Vaccination should not be initiated for infants age 15 weeks 0 days or older because there are insufficient data on the safety of dose #1 in older infants. Infants for whom the first dose of rotavirus vaccine was inadvertently administered at age 15 weeks or older should receive the remaining doses of the series at the routinely recommended intervals."
+      'seriesName': 'Rotavirus late start at 15 weeks 3-dose series',
+      'targetDisease': 'Rotavirus',
+      'vaccineGroup': 'Rotavirus',
+      'seriesAdminGuidance': [
+        'For children with known or suspected altered '
+            'immunocompetence, ACIP advises consultation with an '
+            'immunologist or infectious diseases specialist before '
+            'administration of rotavirus vaccine.  Children who are '
+            'immunocompromised because of congenital immunodeficiency, or '
+            'hematopoietic stem cell or solid organ transplantation '
+            'sometimes experience severe, prolonged, and even fatal '
+            'wild-type rotavirus gastroenteritis.',
+        'Vaccination should not be initiated for infants age 15 weeks '
+            '0 days or older because there are insufficient data on the '
+            'safety of dose #1 in older infants. Infants for whom the '
+            'first dose of rotavirus vaccine was inadvertently '
+            'administered at age 15 weeks or older should receive the '
+            'remaining doses of the series at the routinely recommended '
+            'intervals.',
       ],
-      "seriesType": "Standard",
-      "selectSeries": {
-        "defaultSeries": "No",
-        "productPath": "No",
-        "seriesGroupName": "Standard",
-        "seriesGroup": "1",
-        "seriesPriority": "A",
-        "seriesPreference": "3"
+      'seriesType': 'Standard',
+      'selectSeries': {
+        'defaultSeries': 'No',
+        'productPath': 'No',
+        'seriesGroupName': 'Standard',
+        'seriesGroup': '1',
+        'seriesPriority': 'A',
+        'seriesPreference': '3',
       },
-      "seriesDose": [
+      'seriesDose': [
         {
-          "doseNumber": "Dose 1",
-          "age": [
+          'doseNumber': 'Dose 1',
+          'age': [
             {
-              "absMinAge": "15 weeks",
-              "minAge": "15 weeks",
-              "maxAge": "8 months + 1 day"
-            }
+              'absMinAge': '15 weeks',
+              'minAge': '15 weeks',
+              'maxAge': '8 months + 1 day',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "Rotavirus, pentavalent",
-              "cvx": "116",
-              "beginAge": "6 weeks",
-              "endAge": "8 months + 1 day",
-              "volume": "2",
-              "forecastVaccineType": "N"
+              'vaccineType': 'Rotavirus, pentavalent',
+              'cvx': '116',
+              'beginAge': '6 weeks',
+              'endAge': '8 months + 1 day',
+              'volume': '2',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "Rotavirus, monovalent",
-              "cvx": "119",
-              "beginAge": "6 weeks",
-              "endAge": "8 months + 1 day",
-              "volume": "1",
-              "forecastVaccineType": "N"
-            }
+              'vaccineType': 'Rotavirus, monovalent',
+              'cvx': '119',
+              'beginAge': '6 weeks',
+              'endAge': '8 months + 1 day',
+              'volume': '1',
+              'forecastVaccineType': 'N',
+            },
           ],
-          "allowableVaccine": [
+          'allowableVaccine': [
             {
-              "vaccineType": "Rotavirus, tetravalent",
-              "cvx": "74",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'Rotavirus, tetravalent',
+              'cvx': '74',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "Rotavirus, pentavalent",
-              "cvx": "116",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'Rotavirus, pentavalent',
+              'cvx': '116',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "Rotavirus, monovalent",
-              "cvx": "119",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'Rotavirus, monovalent',
+              'cvx': '119',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "Rotavirus, unspecified formulation",
-              "cvx": "122",
-              "beginAge": "6 weeks - 4 days"
-            }
+              'vaccineType': 'Rotavirus, unspecified formulation',
+              'cvx': '122',
+              'beginAge': '6 weeks - 4 days',
+            },
           ],
-          "recurringDose": "No"
+          'recurringDose': 'No',
         },
         {
-          "doseNumber": "Dose 2",
-          "age": [
+          'doseNumber': 'Dose 2',
+          'age': [
             {
-              "earliestRecAge": "4 months",
-              "latestRecAge": "5 months + 4 weeks",
-              "maxAge": "8 months + 1 day"
-            }
+              'earliestRecAge': '4 months',
+              'latestRecAge': '5 months + 4 weeks',
+              'maxAge': '8 months + 1 day',
+            },
           ],
-          "interval": [
+          'interval': [
             {
-              "fromPrevious": "Y",
-              "absMinInt": "4 weeks - 4 days",
-              "minInt": "4 weeks",
-              "earliestRecInt": "4 weeks",
-              "latestRecInt": "13 weeks"
-            }
+              'fromPrevious': 'Y',
+              'absMinInt': '4 weeks - 4 days',
+              'minInt': '4 weeks',
+              'earliestRecInt': '4 weeks',
+              'latestRecInt': '13 weeks',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "Rotavirus, pentavalent",
-              "cvx": "116",
-              "beginAge": "6 weeks",
-              "endAge": "8 months + 1 day",
-              "volume": "2",
-              "forecastVaccineType": "N"
+              'vaccineType': 'Rotavirus, pentavalent',
+              'cvx': '116',
+              'beginAge': '6 weeks',
+              'endAge': '8 months + 1 day',
+              'volume': '2',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "Rotavirus, monovalent",
-              "cvx": "119",
-              "beginAge": "6 weeks",
-              "endAge": "8 months + 1 day",
-              "volume": "1",
-              "forecastVaccineType": "N"
-            }
+              'vaccineType': 'Rotavirus, monovalent',
+              'cvx': '119',
+              'beginAge': '6 weeks',
+              'endAge': '8 months + 1 day',
+              'volume': '1',
+              'forecastVaccineType': 'N',
+            },
           ],
-          "allowableVaccine": [
+          'allowableVaccine': [
             {
-              "vaccineType": "Rotavirus, tetravalent",
-              "cvx": "74",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'Rotavirus, tetravalent',
+              'cvx': '74',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "Rotavirus, pentavalent",
-              "cvx": "116",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'Rotavirus, pentavalent',
+              'cvx': '116',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "Rotavirus, monovalent",
-              "cvx": "119",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'Rotavirus, monovalent',
+              'cvx': '119',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "Rotavirus, unspecified formulation",
-              "cvx": "122",
-              "beginAge": "6 weeks - 4 days"
-            }
+              'vaccineType': 'Rotavirus, unspecified formulation',
+              'cvx': '122',
+              'beginAge': '6 weeks - 4 days',
+            },
           ],
-          "recurringDose": "No"
+          'recurringDose': 'No',
         },
         {
-          "doseNumber": "Dose 3",
-          "age": [
+          'doseNumber': 'Dose 3',
+          'age': [
             {
-              "earliestRecAge": "6 months",
-              "latestRecAge": "7 months + 4 weeks",
-              "maxAge": "8 months + 1 day"
-            }
+              'earliestRecAge': '6 months',
+              'latestRecAge': '7 months + 4 weeks',
+              'maxAge': '8 months + 1 day',
+            },
           ],
-          "interval": [
+          'interval': [
             {
-              "fromPrevious": "Y",
-              "absMinInt": "4 weeks - 4 days",
-              "minInt": "4 weeks",
-              "earliestRecInt": "8 weeks",
-              "latestRecInt": "13 weeks"
-            }
+              'fromPrevious': 'Y',
+              'absMinInt': '4 weeks - 4 days',
+              'minInt': '4 weeks',
+              'earliestRecInt': '8 weeks',
+              'latestRecInt': '13 weeks',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "Rotavirus, pentavalent",
-              "cvx": "116",
-              "beginAge": "6 weeks",
-              "endAge": "8 months + 1 day",
-              "volume": "2",
-              "forecastVaccineType": "N"
+              'vaccineType': 'Rotavirus, pentavalent',
+              'cvx': '116',
+              'beginAge': '6 weeks',
+              'endAge': '8 months + 1 day',
+              'volume': '2',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "Rotavirus, monovalent",
-              "cvx": "119",
-              "beginAge": "6 weeks",
-              "endAge": "8 months + 1 day",
-              "volume": "1",
-              "forecastVaccineType": "N"
-            }
+              'vaccineType': 'Rotavirus, monovalent',
+              'cvx': '119',
+              'beginAge': '6 weeks',
+              'endAge': '8 months + 1 day',
+              'volume': '1',
+              'forecastVaccineType': 'N',
+            },
           ],
-          "allowableVaccine": [
+          'allowableVaccine': [
             {
-              "vaccineType": "Rotavirus, tetravalent",
-              "cvx": "74",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'Rotavirus, tetravalent',
+              'cvx': '74',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "Rotavirus, pentavalent",
-              "cvx": "116",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'Rotavirus, pentavalent',
+              'cvx': '116',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "Rotavirus, monovalent",
-              "cvx": "119",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType': 'Rotavirus, monovalent',
+              'cvx': '119',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType": "Rotavirus, unspecified formulation",
-              "cvx": "122",
-              "beginAge": "6 weeks - 4 days"
-            }
+              'vaccineType': 'Rotavirus, unspecified formulation',
+              'cvx': '122',
+              'beginAge': '6 weeks - 4 days',
+            },
           ],
-          "recurringDose": "No"
-        }
-      ]
+          'recurringDose': 'No',
+        },
+      ],
     },
     {
-      "seriesName": "Rotavirus 2-dose series",
-      "targetDisease": "Rotavirus",
-      "vaccineGroup": "Rotavirus",
-      "seriesAdminGuidance": [
-        "For children with known or suspected altered immunocompetence, ACIP advises consultation with an immunologist or infectious diseases specialist before administration of rotavirus vaccine.  Children who are immunocompromised because of congenital immunodeficiency, or hematopoietic stem cell or solid organ transplantation sometimes experience severe, prolonged, and even fatal wild-type rotavirus gastroenteritis."
+      'seriesName': 'Rotavirus 2-dose series',
+      'targetDisease': 'Rotavirus',
+      'vaccineGroup': 'Rotavirus',
+      'seriesAdminGuidance': [
+        'For children with known or suspected altered '
+            'immunocompetence, ACIP advises consultation with an '
+            'immunologist or infectious diseases specialist before '
+            'administration of rotavirus vaccine.  Children who are '
+            'immunocompromised because of congenital immunodeficiency, or '
+            'hematopoietic stem cell or solid organ transplantation '
+            'sometimes experience severe, prolonged, and even fatal '
+            'wild-type rotavirus gastroenteritis.',
       ],
-      "seriesType": "Standard",
-      "selectSeries": {
-        "defaultSeries": "No",
-        "productPath": "Yes",
-        "seriesGroupName": "Standard",
-        "seriesGroup": "1",
-        "seriesPriority": "A",
-        "seriesPreference": "2"
+      'seriesType': 'Standard',
+      'selectSeries': {
+        'defaultSeries': 'No',
+        'productPath': 'Yes',
+        'seriesGroupName': 'Standard',
+        'seriesGroup': '1',
+        'seriesPriority': 'A',
+        'seriesPreference': '2',
       },
-      "seriesDose": [
+      'seriesDose': [
         {
-          "doseNumber": "Dose 1",
-          "age": [
+          'doseNumber': 'Dose 1',
+          'age': [
             {
-              "absMinAge": "6 weeks - 4 days",
-              "minAge": "6 weeks",
-              "earliestRecAge": "2 months",
-              "maxAge": "15 weeks"
-            }
+              'absMinAge': '6 weeks - 4 days',
+              'minAge': '6 weeks',
+              'earliestRecAge': '2 months',
+              'maxAge': '15 weeks',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "Rotavirus, monovalent",
-              "cvx": "119",
-              "beginAge": "6 weeks",
-              "endAge": "8 months + 1 day",
-              "volume": "1",
-              "forecastVaccineType": "Y"
-            }
+              'vaccineType': 'Rotavirus, monovalent',
+              'cvx': '119',
+              'beginAge': '6 weeks',
+              'endAge': '8 months + 1 day',
+              'volume': '1',
+              'forecastVaccineType': 'Y',
+            },
           ],
-          "allowableVaccine": [
+          'allowableVaccine': [
             {
-              "vaccineType": "Rotavirus, monovalent",
-              "cvx": "119",
-              "beginAge": "6 weeks - 4 days"
-            }
+              'vaccineType': 'Rotavirus, monovalent',
+              'cvx': '119',
+              'beginAge': '6 weeks - 4 days',
+            },
           ],
-          "recurringDose": "No"
+          'recurringDose': 'No',
         },
         {
-          "doseNumber": "Dose 2",
-          "age": [
+          'doseNumber': 'Dose 2',
+          'age': [
             {
-              "absMinAge": "10 weeks - 4 days",
-              "minAge": "10 weeks",
-              "earliestRecAge": "4 months",
-              "latestRecAge": "5 months + 4 weeks",
-              "maxAge": "8 months + 1 day"
-            }
+              'absMinAge': '10 weeks - 4 days',
+              'minAge': '10 weeks',
+              'earliestRecAge': '4 months',
+              'latestRecAge': '5 months + 4 weeks',
+              'maxAge': '8 months + 1 day',
+            },
           ],
-          "interval": [
+          'interval': [
             {
-              "fromPrevious": "Y",
-              "absMinInt": "4 weeks - 4 days",
-              "minInt": "4 weeks",
-              "earliestRecInt": "8 weeks",
-              "latestRecInt": "13 weeks"
-            }
+              'fromPrevious': 'Y',
+              'absMinInt': '4 weeks - 4 days',
+              'minInt': '4 weeks',
+              'earliestRecInt': '8 weeks',
+              'latestRecInt': '13 weeks',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "Rotavirus, monovalent",
-              "cvx": "119",
-              "beginAge": "6 weeks",
-              "endAge": "8 months + 1 day",
-              "volume": "1",
-              "forecastVaccineType": "Y"
-            }
+              'vaccineType': 'Rotavirus, monovalent',
+              'cvx': '119',
+              'beginAge': '6 weeks',
+              'endAge': '8 months + 1 day',
+              'volume': '1',
+              'forecastVaccineType': 'Y',
+            },
           ],
-          "allowableVaccine": [
+          'allowableVaccine': [
             {
-              "vaccineType": "Rotavirus, monovalent",
-              "cvx": "119",
-              "beginAge": "6 weeks - 4 days"
-            }
+              'vaccineType': 'Rotavirus, monovalent',
+              'cvx': '119',
+              'beginAge': '6 weeks - 4 days',
+            },
           ],
-          "recurringDose": "No"
-        }
-      ]
+          'recurringDose': 'No',
+        },
+      ],
     },
     {
-      "seriesName": "Rotavirus late start at 15 weeks 2-dose series",
-      "targetDisease": "Rotavirus",
-      "vaccineGroup": "Rotavirus",
-      "seriesAdminGuidance": [
-        "For children with known or suspected altered immunocompetence, ACIP advises consultation with an immunologist or infectious diseases specialist before administration of rotavirus vaccine.  Children who are immunocompromised because of congenital immunodeficiency, or hematopoietic stem cell or solid organ transplantation sometimes experience severe, prolonged, and even fatal wild-type rotavirus gastroenteritis.",
-        "Vaccination should not be initiated for infants age 15 weeks 0 days or older because there are insufficient data on the safety of dose #1 in older infants. Infants for whom the first dose of rotavirus vaccine was inadvertently administered at age 15 weeks or older should receive the remaining doses of the series at the routinely recommended intervals."
+      'seriesName': 'Rotavirus late start at 15 weeks 2-dose series',
+      'targetDisease': 'Rotavirus',
+      'vaccineGroup': 'Rotavirus',
+      'seriesAdminGuidance': [
+        'For children with known or suspected altered '
+            'immunocompetence, ACIP advises consultation with an '
+            'immunologist or infectious diseases specialist before '
+            'administration of rotavirus vaccine.  Children who are '
+            'immunocompromised because of congenital immunodeficiency, or '
+            'hematopoietic stem cell or solid organ transplantation '
+            'sometimes experience severe, prolonged, and even fatal '
+            'wild-type rotavirus gastroenteritis.',
+        'Vaccination should not be initiated for infants age 15 weeks '
+            '0 days or older because there are insufficient data on the '
+            'safety of dose #1 in older infants. Infants for whom the '
+            'first dose of rotavirus vaccine was inadvertently '
+            'administered at age 15 weeks or older should receive the '
+            'remaining doses of the series at the routinely recommended '
+            'intervals.',
       ],
-      "seriesType": "Standard",
-      "selectSeries": {
-        "defaultSeries": "No",
-        "productPath": "Yes",
-        "seriesGroupName": "Standard",
-        "seriesGroup": "1",
-        "seriesPriority": "A",
-        "seriesPreference": "4"
+      'seriesType': 'Standard',
+      'selectSeries': {
+        'defaultSeries': 'No',
+        'productPath': 'Yes',
+        'seriesGroupName': 'Standard',
+        'seriesGroup': '1',
+        'seriesPriority': 'A',
+        'seriesPreference': '4',
       },
-      "seriesDose": [
+      'seriesDose': [
         {
-          "doseNumber": "Dose 1",
-          "age": [
+          'doseNumber': 'Dose 1',
+          'age': [
             {
-              "absMinAge": "15 weeks",
-              "minAge": "15 weeks",
-              "maxAge": "8 months + 1 day"
-            }
+              'absMinAge': '15 weeks',
+              'minAge': '15 weeks',
+              'maxAge': '8 months + 1 day',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "Rotavirus, monovalent",
-              "cvx": "119",
-              "beginAge": "6 weeks",
-              "endAge": "8 months + 1 day",
-              "volume": "1",
-              "forecastVaccineType": "Y"
-            }
+              'vaccineType': 'Rotavirus, monovalent',
+              'cvx': '119',
+              'beginAge': '6 weeks',
+              'endAge': '8 months + 1 day',
+              'volume': '1',
+              'forecastVaccineType': 'Y',
+            },
           ],
-          "allowableVaccine": [
+          'allowableVaccine': [
             {
-              "vaccineType": "Rotavirus, monovalent",
-              "cvx": "119",
-              "beginAge": "6 weeks - 4 days"
-            }
+              'vaccineType': 'Rotavirus, monovalent',
+              'cvx': '119',
+              'beginAge': '6 weeks - 4 days',
+            },
           ],
-          "recurringDose": "No"
+          'recurringDose': 'No',
         },
         {
-          "doseNumber": "Dose 2",
-          "age": [
+          'doseNumber': 'Dose 2',
+          'age': [
             {
-              "earliestRecAge": "4 months",
-              "latestRecAge": "5 months + 4 weeks",
-              "maxAge": "8 months + 1 day"
-            }
+              'earliestRecAge': '4 months',
+              'latestRecAge': '5 months + 4 weeks',
+              'maxAge': '8 months + 1 day',
+            },
           ],
-          "interval": [
+          'interval': [
             {
-              "fromPrevious": "Y",
-              "absMinInt": "4 weeks - 4 days",
-              "minInt": "4 weeks",
-              "earliestRecInt": "8 weeks",
-              "latestRecInt": "13 weeks"
-            }
+              'fromPrevious': 'Y',
+              'absMinInt': '4 weeks - 4 days',
+              'minInt': '4 weeks',
+              'earliestRecInt': '8 weeks',
+              'latestRecInt': '13 weeks',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "Rotavirus, monovalent",
-              "cvx": "119",
-              "beginAge": "6 weeks",
-              "endAge": "8 months + 1 day",
-              "volume": "1",
-              "forecastVaccineType": "Y"
-            }
+              'vaccineType': 'Rotavirus, monovalent',
+              'cvx': '119',
+              'beginAge': '6 weeks',
+              'endAge': '8 months + 1 day',
+              'volume': '1',
+              'forecastVaccineType': 'Y',
+            },
           ],
-          "allowableVaccine": [
+          'allowableVaccine': [
             {
-              "vaccineType": "Rotavirus, monovalent",
-              "cvx": "119",
-              "beginAge": "6 weeks - 4 days"
-            }
+              'vaccineType': 'Rotavirus, monovalent',
+              'cvx': '119',
+              'beginAge': '6 weeks - 4 days',
+            },
           ],
-          "recurringDose": "No"
-        }
-      ]
-    }
+          'recurringDose': 'No',
+        },
+      ],
+    },
   ],
-  "vaccineRecommendationCategory": [
+  'vaccineRecommendationCategory': [
     {
-      "worksheetName": "3-dose",
-      "seriesName": "Rotavirus 3-dose series",
-      "patientBeginAge": "0 days",
-      "patientEndAge": "n/a",
-      "forecastTargetDose": "Any",
-      "includedIndication": "n/a",
-      "excludedIndication": "n/a",
-      "category": "Routine",
-      "additionalMaterial":
-          "https://www.cdc.gov/rotavirus/hcp/vaccine-considerations/index.html"
+      'worksheetName': '3-dose',
+      'seriesName': 'Rotavirus 3-dose series',
+      'patientBeginAge': '0 days',
+      'patientEndAge': 'n/a',
+      'forecastTargetDose': 'Any',
+      'includedIndication': 'n/a',
+      'excludedIndication': 'n/a',
+      'category': 'Routine',
+      'additionalMaterial':
+          'https://www.cdc.gov/rotavirus/hcp/vaccine-considerations/index.html',
     },
     {
-      "worksheetName": "Late start at 15 weeks 3-dose",
-      "seriesName": "Rotavirus late start at 15 weeks 3-dose series",
-      "patientBeginAge": "0 days",
-      "patientEndAge": "n/a",
-      "forecastTargetDose": "Any",
-      "includedIndication": "n/a",
-      "excludedIndication": "n/a",
-      "category": "Routine",
-      "additionalMaterial":
-          "https://www.cdc.gov/rotavirus/hcp/vaccine-considerations/index.html"
+      'worksheetName': 'Late start at 15 weeks 3-dose',
+      'seriesName': 'Rotavirus late start at 15 weeks 3-dose series',
+      'patientBeginAge': '0 days',
+      'patientEndAge': 'n/a',
+      'forecastTargetDose': 'Any',
+      'includedIndication': 'n/a',
+      'excludedIndication': 'n/a',
+      'category': 'Routine',
+      'additionalMaterial':
+          'https://www.cdc.gov/rotavirus/hcp/vaccine-considerations/index.html',
     },
     {
-      "worksheetName": "2-dose",
-      "seriesName": "Rotavirus 2-dose series",
-      "patientBeginAge": "0 days",
-      "patientEndAge": "n/a",
-      "forecastTargetDose": "Any",
-      "includedIndication": "n/a",
-      "excludedIndication": "n/a",
-      "category": "Routine",
-      "additionalMaterial":
-          "https://www.cdc.gov/rotavirus/hcp/vaccine-considerations/index.html"
+      'worksheetName': '2-dose',
+      'seriesName': 'Rotavirus 2-dose series',
+      'patientBeginAge': '0 days',
+      'patientEndAge': 'n/a',
+      'forecastTargetDose': 'Any',
+      'includedIndication': 'n/a',
+      'excludedIndication': 'n/a',
+      'category': 'Routine',
+      'additionalMaterial':
+          'https://www.cdc.gov/rotavirus/hcp/vaccine-considerations/index.html',
     },
     {
-      "worksheetName": "Late start at 15 weeks 2-dose",
-      "seriesName": "Rotavirus late start at 15 weeks 2-dose series",
-      "patientBeginAge": "0 days",
-      "patientEndAge": "n/a",
-      "forecastTargetDose": "Any",
-      "includedIndication": "n/a",
-      "excludedIndication": "n/a",
-      "category": "Routine",
-      "additionalMaterial":
-          "https://www.cdc.gov/rotavirus/hcp/vaccine-considerations/index.html"
-    }
-  ]
+      'worksheetName': 'Late start at 15 weeks 2-dose',
+      'seriesName': 'Rotavirus late start at 15 weeks 2-dose series',
+      'patientBeginAge': '0 days',
+      'patientEndAge': 'n/a',
+      'forecastTargetDose': 'Any',
+      'includedIndication': 'n/a',
+      'excludedIndication': 'n/a',
+      'category': 'Routine',
+      'additionalMaterial':
+          'https://www.cdc.gov/rotavirus/hcp/vaccine-considerations/index.html',
+    },
+  ],
 });

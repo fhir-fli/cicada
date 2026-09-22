@@ -23,12 +23,11 @@ import 'package:cicada/generated_files/test_condition_doses.dart';
 import 'package:cicada/generated_files/test_condition_forecasts.dart';
 import 'package:cicada/generated_files/test_doses.dart';
 import 'package:cicada/generated_files/test_forecasts.dart';
+import 'package:cicada_generator/cdc_row_collapse.dart';
+import 'package:cicada_generator/repo_root.dart';
 import 'package:collection/collection.dart';
 import 'package:excel/excel.dart';
 import 'package:fhir_r4/fhir_r4.dart';
-import 'package:cicada_generator/cdc_row_collapse.dart';
-
-import 'repo_root.dart';
 
 late File out;
 
@@ -61,9 +60,11 @@ Map<String, Parameters> loadCases(String path) {
       }
     }
     final params = Parameters.fromJson(decoded);
-    final patient = params.parameter
-        ?.firstWhereOrNull((e) => e.resource is Patient)
-        ?.resource as Patient?;
+    final patient =
+        params.parameter
+                ?.firstWhereOrNull((e) => e.resource is Patient)
+                ?.resource
+            as Patient?;
     final id = patient?.id?.toString();
     if (id != null) cases[id] = params;
   }
@@ -106,19 +107,31 @@ const groupMap = <String, String>{
 /// with itself rather than with CDC.
 bool inconsistent(VaxDose dose) {
   if (dose.evalReason == EvalReason.ageTooYoung &&
-      dose.validAgeReason != ValidAgeReason.tooYoung) return true;
+      dose.validAgeReason != ValidAgeReason.tooYoung) {
+    return true;
+  }
   if (dose.evalReason == EvalReason.ageTooOld &&
-      dose.validAgeReason != ValidAgeReason.tooOld) return true;
+      dose.validAgeReason != ValidAgeReason.tooOld) {
+    return true;
+  }
   if (dose.evalReason == EvalReason.intervalTooShort &&
       dose.allowedIntervalReason != IntervalReason.tooShort &&
-      dose.preferredIntervalReason != IntervalReason.tooShort) return true;
-  if (dose.evalReason == EvalReason.liveVirusConflict && dose.conflict != true)
+      dose.preferredIntervalReason != IntervalReason.tooShort) {
     return true;
+  }
+  if (dose.evalReason == EvalReason.liveVirusConflict &&
+      dose.conflict != true) {
+    return true;
+  }
   if (dose.evalReason == EvalReason.notPreferableOrAllowable &&
-      dose.allowedVaccine != false) return true;
+      dose.allowedVaccine != false) {
+    return true;
+  }
   if (dose.evalStatus == EvalStatus.valid) {
     if (dose.validAgeReason == ValidAgeReason.tooYoung ||
-        dose.validAgeReason == ValidAgeReason.tooOld) return true;
+        dose.validAgeReason == ValidAgeReason.tooOld) {
+      return true;
+    }
     if (dose.conflict == true) return true;
     if (dose.allowedVaccine == false) return true;
   }
@@ -148,21 +161,22 @@ bool disagrees(
     var foundReasonMatch = false;
     var sawInconsistency = false;
 
-    result.agMap.forEach((String antigenName, VaxAntigen antigen) {
+    result.agMap.forEach((antigenName, antigen) {
       if (!expected.antigens
-          .map((String s) => s.toLowerCase())
+          .map((s) => s.toLowerCase())
           .contains(antigenName.toLowerCase())) {
         return;
       }
-      antigen.groups.forEach((String _, VaxGroup group) {
+      antigen.groups.forEach((_, group) {
         for (final series in group.series) {
           if (expectedSeriesType != null && series.series.seriesType != null) {
             final actualType =
                 series.series.seriesType.toString().toLowerCase();
             if (actualType != expectedSeriesType) continue;
           }
-          final actual = series.doses
-              .firstWhereOrNull((VaxDose d) => d.doseId == expected.doseId);
+          final actual = series.doses.firstWhereOrNull(
+            (d) => d.doseId == expected.doseId,
+          );
           if (actual == null || actual.evalStatus == null) continue;
           foundAnyEval = true;
           if (inconsistent(actual)) sawInconsistency = true;
@@ -195,7 +209,8 @@ bool disagrees(
       in expectedForecasts[id] ?? const <Map<String, String>>[]) {
     final excelGroup = expected['vaccineGroup']!.trim();
     final forecast = collapseForComparison(
-        result.vaccineGroupForecasts[groupMap[excelGroup] ?? excelGroup]);
+      result.vaccineGroupForecasts[groupMap[excelGroup] ?? excelGroup],
+    );
     if (forecast == null) return true;
     if (expected['seriesStatus']!.toLowerCase() !=
         forecast.status.toString().toLowerCase()) {
@@ -236,9 +251,10 @@ List<String> disagreeingIds(
   Map<String, List<Map<String, Object>>> expectedDoses,
 ) =>
     cases.entries
-        .where((MapEntry<String, Parameters> e) =>
-            disagrees(e.key, e.value, expectedForecasts, expectedDoses))
-        .map((MapEntry<String, Parameters> e) => e.key)
+        .where(
+          (e) => disagrees(e.key, e.value, expectedForecasts, expectedDoses),
+        )
+        .map((e) => e.key)
         .toList();
 
 void emit(
@@ -295,13 +311,16 @@ void emit(
     final result = evaluateForForecast(params);
     final excelGroup = cell(row, groupCol);
     final f = collapseForComparison(
-        result.vaccineGroupForecasts[groupMap[excelGroup] ?? excelGroup]);
+      result.vaccineGroupForecasts[groupMap[excelGroup] ?? excelGroup],
+    );
     if (f == null) {
       say('**cicada produces no forecast for $excelGroup.**\n');
     } else {
-      say('**cicada answers:** status `${f.status}`, forecast #`${f.doseNumber}`'
-          ', earliest `${f.earliestDate}`, recommended `${f.recommendedDate}`'
-          ', past due `${f.pastDueDate}`.\n');
+      say(
+        '**cicada answers:** status `${f.status}`, '
+        'forecast #`${f.doseNumber}`, earliest `${f.earliestDate}`, '
+        'recommended `${f.recommendedDate}`, past due `${f.pastDueDate}`.\n',
+      );
     }
   }
 }
@@ -312,35 +331,49 @@ void main() {
 
   say('# CDSi test cases where cicada disagrees with the CDC data');
   say('');
-  say('cicada implements the CDSi logic specification v4.6 against supporting '
-      'data 4.65-508 (August 2026). Each case below is printed as CDC '
-      'published it — every populated column of their row — followed by what '
-      'cicada answers. The question is which answer is clinically correct.');
+  say(
+    'cicada implements the CDSi logic specification v4.6 against supporting '
+    'data 4.65-508 (August 2026). Each case below is printed as CDC '
+    'published it — every populated column of their row — followed by what '
+    'cicada answers. The question is which answer is clinically correct.',
+  );
   say('');
-  say('**Version note.** The healthy cases are v4.46 (August 2026) and match '
-      'the supporting data. The underlying-conditions cases are v4.6 '
-      '(September 2025) and predate it, so some of those disagreements may be '
-      'the two documents describing different seasons or thresholds rather '
-      'than an error by either side — the RSV ones especially: the shipped '
-      'data carries only the 2025-26 season (infant series opens 2025-10-01, '
-      'maternal 2025-09-01) while those cases were written against 2023-24.');
+  say(
+    '**Version note.** The healthy cases are v4.46 (August 2026) and match '
+    'the supporting data. The underlying-conditions cases are v4.6 '
+    '(September 2025) and predate it, so some of those disagreements may be '
+    'the two documents describing different seasons or thresholds rather '
+    'than an error by either side — the RSV ones especially: the shipped '
+    'data carries only the 2025-26 season (infant series opens 2025-10-01, '
+    'maternal 2025-09-01) while those cases were written against 2023-24.',
+  );
   say('');
 
   final healthyNdjson = repoPath('cicada/test/healthyTestCases.ndjson');
   final conditionNdjson = repoPath('cicada/test/conditionTestCases.ndjson');
 
-  final healthyIds =
-      disagreeingIds(loadCases(healthyNdjson), testForecasts, testDoses);
+  final healthyIds = disagreeingIds(
+    loadCases(healthyNdjson),
+    testForecasts,
+    testDoses,
+  );
   final conditionIds = disagreeingIds(
-      loadCases(conditionNdjson), testConditionForecasts, testConditionDoses);
-  stdout.writeln('${healthyIds.length} healthy and ${conditionIds.length} '
-      'underlying-conditions cases disagree');
+    loadCases(conditionNdjson),
+    testConditionForecasts,
+    testConditionDoses,
+  );
+  stdout.writeln(
+    '${healthyIds.length} healthy and ${conditionIds.length} '
+    'underlying-conditions cases disagree',
+  );
 
   emit(
     'Healthy childhood and adult cases (v4.46 — versions match, so these are '
         'the sharpest)',
-    repoPath('cicada_generator/lib/test_cases/'
-        'cdsi-healthy-childhood-and-adult-test-cases-v4.46.xlsx'),
+    repoPath(
+      'cicada_generator/lib/test_cases/'
+      'cdsi-healthy-childhood-and-adult-test-cases-v4.46.xlsx',
+    ),
     'FITS Exported TestCases',
     healthyNdjson,
     54,
@@ -349,8 +382,10 @@ void main() {
 
   emit(
     'Underlying-conditions cases (v4.6 — predate the supporting data)',
-    repoPath('cicada_generator/lib/test_cases/'
-        'CDSi-underlying-conditions-test-cases-v4.6.xlsx'),
+    repoPath(
+      'cicada_generator/lib/test_cases/'
+      'CDSi-underlying-conditions-test-cases-v4.6.xlsx',
+    ),
     'Underlying Condition Test Cases',
     conditionNdjson,
     68,

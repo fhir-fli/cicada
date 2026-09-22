@@ -42,7 +42,8 @@ const Map<String, String> mvxDisplays = <String, String>{
   'IUS': 'Immuno-U.S., Inc.',
   'JNJ': 'Johnson and Johnson',
   'JPN':
-      'The Research Foundation for Microbial Diseases of Osaka University (BIKEN)',
+      'The Research Foundation for Microbial Diseases of Osaka University '
+      '(BIKEN)',
   'JSN': 'Janssen',
   'KED': 'Kedrion Biopharma',
   'KGC': 'Korea Green Cross Corporation',

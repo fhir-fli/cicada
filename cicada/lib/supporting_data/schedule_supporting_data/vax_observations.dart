@@ -3,15 +3,16 @@ import 'package:fhir_r4/fhir_r4.dart';
 class VaxObservations {
   VaxObservations({this.observation});
 
-  final List<VaxObservation>? observation;
-
   factory VaxObservations.fromJson(Map<String, dynamic> json) {
     return VaxObservations(
-      observation: (json['observation'] as List<dynamic>?)
-          ?.map((e) => VaxObservation.fromJson(e as Map<String, dynamic>))
-          .toList(),
+      observation:
+          (json['observation'] as List<dynamic>?)
+              ?.map((e) => VaxObservation.fromJson(e as Map<String, dynamic>))
+              .toList(),
     );
   }
+
+  final List<VaxObservation>? observation;
 
   VaxObservations copyWith({
     List<VaxObservation>? observation,
@@ -32,19 +33,19 @@ class VaxObservations {
     if (observation == null) {
       return null;
     } else {
-      final List<int> codes =
-          observation!.map((VaxObservation e) => e.codeAsInt ?? -1).toList();
-      codes.removeWhere((int element) => element == -1);
+      final codes =
+          observation!.map((e) => e.codeAsInt ?? -1).toList()
+            ..removeWhere((element) => element == -1);
       return codes;
     }
   }
 
   int codeIndex(String code) {
-    final List<int>? codes = codesAsInt;
+    final codes = codesAsInt;
     if (codes == null) {
       return -1;
     } else {
-      final int? codeInt = int.tryParse(code);
+      final codeInt = int.tryParse(code);
       if (codeInt == null) {
         return -1;
       } else {
@@ -66,15 +67,6 @@ class VaxObservation {
     this.period,
   });
 
-  final String? observationCode;
-  final String? observationTitle;
-  final String? group;
-  final String? indicationText;
-  final String? contraindicationText;
-  final String? clarifyingText;
-  final CodedValues? codedValues;
-  final Period? period;
-
   factory VaxObservation.fromJson(Map<String, dynamic> json) {
     return VaxObservation(
       observationCode: json['observationCode'] as String?,
@@ -83,14 +75,27 @@ class VaxObservation {
       indicationText: json['indicationText'] as String?,
       contraindicationText: json['contraindicationText'] as String?,
       clarifyingText: json['clarifyingText'] as String?,
-      codedValues: json['codedValues'] == null
-          ? null
-          : CodedValues.fromJson(json['codedValues'] as Map<String, dynamic>),
-      period: json['period'] == null
-          ? null
-          : Period.fromJson(json['period'] as Map<String, dynamic>),
+      codedValues:
+          json['codedValues'] == null
+              ? null
+              : CodedValues.fromJson(
+                json['codedValues'] as Map<String, dynamic>,
+              ),
+      period:
+          json['period'] == null
+              ? null
+              : Period.fromJson(json['period'] as Map<String, dynamic>),
     );
   }
+
+  final String? observationCode;
+  final String? observationTitle;
+  final String? group;
+  final String? indicationText;
+  final String? contraindicationText;
+  final String? clarifyingText;
+  final CodedValues? codedValues;
+  final Period? period;
 
   VaxObservation copyWith({
     String? observationCode,
@@ -135,15 +140,16 @@ class VaxObservation {
 class CodedValues {
   CodedValues({this.codedValue});
 
-  final List<CodedValue>? codedValue;
-
   factory CodedValues.fromJson(Map<String, dynamic> json) {
     return CodedValues(
-      codedValue: (json['codedValue'] as List<dynamic>?)
-          ?.map((e) => CodedValue.fromJson(e as Map<String, dynamic>))
-          .toList(),
+      codedValue:
+          (json['codedValue'] as List<dynamic>?)
+              ?.map((e) => CodedValue.fromJson(e as Map<String, dynamic>))
+              .toList(),
     );
   }
+
+  final List<CodedValue>? codedValue;
 
   Map<String, dynamic> toJson() {
     return {
@@ -160,10 +166,6 @@ class CodedValue {
     this.text,
   });
 
-  final String? code;
-  final String? codeSystem;
-  final String? text;
-
   factory CodedValue.fromJson(Map<String, dynamic> json) {
     return CodedValue(
       code: json['code'] as String?,
@@ -171,6 +173,10 @@ class CodedValue {
       text: json['text'] as String?,
     );
   }
+
+  final String? code;
+  final String? codeSystem;
+  final String? text;
 
   Map<String, dynamic> toJson() {
     return {

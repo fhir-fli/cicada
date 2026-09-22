@@ -1,6 +1,5 @@
+import 'package:cicada/cicada.dart';
 import 'package:fhir_r4/fhir_r4.dart';
-
-import '../cicada.dart';
 
 /// A resource that asserted a CDSi observation, as a FHIR Reference can carry
 /// it: a literal reference when the resource had an id, a display otherwise.
@@ -57,21 +56,20 @@ class VaxPatient {
     Map<String, Set<SupportingResource>>? observationSources,
     List<ImplausibleDose>? implausibleDoses,
     List<VaxDose>? dosesAfterAssessment,
-  }) =>
-      VaxPatient(
-        assessmentDate: assessmentDate ?? this.assessmentDate,
-        birthdate: birthdate ?? this.birthdate,
-        patient: patient ?? this.patient,
-        gender: gender ?? this.gender,
-        immunizations: immunizations ?? this.immunizations,
-        conditions: conditions ?? this.conditions,
-        observations: observations ?? this.observations,
-        allergies: allergies ?? this.allergies,
-        pastDoses: pastDoses ?? this.pastDoses,
-        observationSources: observationSources ?? this.observationSources,
-        implausibleDoses: implausibleDoses ?? this.implausibleDoses,
-        dosesAfterAssessment: dosesAfterAssessment ?? this.dosesAfterAssessment,
-      );
+  }) => VaxPatient(
+    assessmentDate: assessmentDate ?? this.assessmentDate,
+    birthdate: birthdate ?? this.birthdate,
+    patient: patient ?? this.patient,
+    gender: gender ?? this.gender,
+    immunizations: immunizations ?? this.immunizations,
+    conditions: conditions ?? this.conditions,
+    observations: observations ?? this.observations,
+    allergies: allergies ?? this.allergies,
+    pastDoses: pastDoses ?? this.pastDoses,
+    observationSources: observationSources ?? this.observationSources,
+    implausibleDoses: implausibleDoses ?? this.implausibleDoses,
+    dosesAfterAssessment: dosesAfterAssessment ?? this.dosesAfterAssessment,
+  );
 
   final VaxDate assessmentDate;
   final VaxDate birthdate;

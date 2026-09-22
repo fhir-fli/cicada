@@ -1,198 +1,244 @@
-// ignore_for_file: prefer_single_quotes, always_specify_types
-
-import '../../cicada.dart';
+import 'package:cicada/cicada.dart';
 
 final AntigenSupportingData whoRubella = AntigenSupportingData.fromJson({
-  "targetDisease": "Rubella",
-  "vaccineGroup": "MR",
-  "series": [
+  'targetDisease': 'Rubella',
+  'vaccineGroup': 'MR',
+  'series': [
     {
-      "seriesName": "WHO Rubella 2-dose series (9-month schedule)",
-      "targetDisease": "Rubella",
-      "vaccineGroup": "MR",
-      "seriesType": "Standard",
-      "selectSeries": {
-        "defaultSeries": "Yes",
-        "productPath": "No",
-        "seriesGroupName": "Standard",
-        "seriesGroup": "1",
-        "seriesPriority": "A",
-        "seriesPreference": "1"
+      'seriesName': 'WHO Rubella 2-dose series (9-month schedule)',
+      'targetDisease': 'Rubella',
+      'vaccineGroup': 'MR',
+      'seriesType': 'Standard',
+      'selectSeries': {
+        'defaultSeries': 'Yes',
+        'productPath': 'No',
+        'seriesGroupName': 'Standard',
+        'seriesGroup': '1',
+        'seriesPriority': 'A',
+        'seriesPreference': '1',
       },
-      "seriesDose": [
+      'seriesDose': [
         {
-          "doseNumber": "Dose 1",
-          "age": [
+          'doseNumber': 'Dose 1',
+          'age': [
             {
-              "absMinAge": "6 months",
-              "minAge": "9 months",
-              "earliestRecAge": "9 months"
-            }
+              'absMinAge': '6 months',
+              'minAge': '9 months',
+              'earliestRecAge': '9 months',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "Measles/Rubella (MR)",
-              "cvx": "04",
-              "beginAge": "6 months",
-              "forecastVaccineType": "Y"
+              'vaccineType': 'Measles/Rubella (MR)',
+              'cvx': '04',
+              'beginAge': '6 months',
+              'forecastVaccineType': 'Y',
             },
             {
-              "vaccineType": "MMR",
-              "cvx": "03",
-              "beginAge": "6 months",
-              "forecastVaccineType": "N"
-            }
-          ],
-          "allowableVaccine": [
-            {
-              "vaccineType": "Measles/Rubella (MR)",
-              "cvx": "04",
-              "beginAge": "6 months"
+              'vaccineType': 'MMR',
+              'cvx': '03',
+              'beginAge': '6 months',
+              'forecastVaccineType': 'N',
             },
-            {"vaccineType": "MMR", "cvx": "03", "beginAge": "6 months"},
-            {"vaccineType": "Rubella", "cvx": "06", "beginAge": "6 months"},
-            {"vaccineType": "MMRV", "cvx": "94", "beginAge": "12 months"}
           ],
-          "recurringDose": "No"
+          'allowableVaccine': [
+            {
+              'vaccineType': 'Measles/Rubella (MR)',
+              'cvx': '04',
+              'beginAge': '6 months',
+            },
+            {
+              'vaccineType': 'MMR',
+              'cvx': '03',
+              'beginAge': '6 months',
+            },
+            {
+              'vaccineType': 'Rubella',
+              'cvx': '06',
+              'beginAge': '6 months',
+            },
+            {
+              'vaccineType': 'MMRV',
+              'cvx': '94',
+              'beginAge': '12 months',
+            },
+          ],
+          'recurringDose': 'No',
         },
         {
-          "doseNumber": "Dose 2",
-          "age": [
+          'doseNumber': 'Dose 2',
+          'age': [
             {
-              "absMinAge": "10 months",
-              "minAge": "15 months",
-              "earliestRecAge": "15 months"
-            }
+              'absMinAge': '10 months',
+              'minAge': '15 months',
+              'earliestRecAge': '15 months',
+            },
           ],
-          "interval": [
+          'interval': [
             {
-              "fromPrevious": "Y",
-              "absMinInt": "4 weeks",
-              "minInt": "4 weeks",
-              "earliestRecInt": "6 months"
-            }
+              'fromPrevious': 'Y',
+              'absMinInt': '4 weeks',
+              'minInt': '4 weeks',
+              'earliestRecInt': '6 months',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "Measles/Rubella (MR)",
-              "cvx": "04",
-              "beginAge": "6 months",
-              "forecastVaccineType": "Y"
+              'vaccineType': 'Measles/Rubella (MR)',
+              'cvx': '04',
+              'beginAge': '6 months',
+              'forecastVaccineType': 'Y',
             },
             {
-              "vaccineType": "MMR",
-              "cvx": "03",
-              "beginAge": "6 months",
-              "forecastVaccineType": "N"
-            }
-          ],
-          "allowableVaccine": [
-            {
-              "vaccineType": "Measles/Rubella (MR)",
-              "cvx": "04",
-              "beginAge": "6 months"
+              'vaccineType': 'MMR',
+              'cvx': '03',
+              'beginAge': '6 months',
+              'forecastVaccineType': 'N',
             },
-            {"vaccineType": "MMR", "cvx": "03", "beginAge": "6 months"},
-            {"vaccineType": "Rubella", "cvx": "06", "beginAge": "6 months"},
-            {"vaccineType": "MMRV", "cvx": "94", "beginAge": "12 months"}
           ],
-          "recurringDose": "No"
-        }
-      ]
+          'allowableVaccine': [
+            {
+              'vaccineType': 'Measles/Rubella (MR)',
+              'cvx': '04',
+              'beginAge': '6 months',
+            },
+            {
+              'vaccineType': 'MMR',
+              'cvx': '03',
+              'beginAge': '6 months',
+            },
+            {
+              'vaccineType': 'Rubella',
+              'cvx': '06',
+              'beginAge': '6 months',
+            },
+            {
+              'vaccineType': 'MMRV',
+              'cvx': '94',
+              'beginAge': '12 months',
+            },
+          ],
+          'recurringDose': 'No',
+        },
+      ],
     },
     {
-      "seriesName": "WHO Rubella 2-dose series (12-month schedule)",
-      "targetDisease": "Rubella",
-      "vaccineGroup": "MR",
-      "seriesType": "Standard",
-      "selectSeries": {
-        "defaultSeries": "Yes",
-        "productPath": "No",
-        "seriesGroupName": "Standard",
-        "seriesGroup": "1",
-        "seriesPriority": "A",
-        "seriesPreference": "2"
+      'seriesName': 'WHO Rubella 2-dose series (12-month schedule)',
+      'targetDisease': 'Rubella',
+      'vaccineGroup': 'MR',
+      'seriesType': 'Standard',
+      'selectSeries': {
+        'defaultSeries': 'Yes',
+        'productPath': 'No',
+        'seriesGroupName': 'Standard',
+        'seriesGroup': '1',
+        'seriesPriority': 'A',
+        'seriesPreference': '2',
       },
-      "seriesDose": [
+      'seriesDose': [
         {
-          "doseNumber": "Dose 1",
-          "age": [
+          'doseNumber': 'Dose 1',
+          'age': [
             {
-              "absMinAge": "6 months",
-              "minAge": "12 months",
-              "earliestRecAge": "12 months"
-            }
+              'absMinAge': '6 months',
+              'minAge': '12 months',
+              'earliestRecAge': '12 months',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "Measles/Rubella (MR)",
-              "cvx": "04",
-              "beginAge": "6 months",
-              "forecastVaccineType": "Y"
+              'vaccineType': 'Measles/Rubella (MR)',
+              'cvx': '04',
+              'beginAge': '6 months',
+              'forecastVaccineType': 'Y',
             },
             {
-              "vaccineType": "MMR",
-              "cvx": "03",
-              "beginAge": "6 months",
-              "forecastVaccineType": "N"
-            }
-          ],
-          "allowableVaccine": [
-            {
-              "vaccineType": "Measles/Rubella (MR)",
-              "cvx": "04",
-              "beginAge": "6 months"
+              'vaccineType': 'MMR',
+              'cvx': '03',
+              'beginAge': '6 months',
+              'forecastVaccineType': 'N',
             },
-            {"vaccineType": "MMR", "cvx": "03", "beginAge": "6 months"},
-            {"vaccineType": "Rubella", "cvx": "06", "beginAge": "6 months"},
-            {"vaccineType": "MMRV", "cvx": "94", "beginAge": "12 months"}
           ],
-          "recurringDose": "No"
+          'allowableVaccine': [
+            {
+              'vaccineType': 'Measles/Rubella (MR)',
+              'cvx': '04',
+              'beginAge': '6 months',
+            },
+            {
+              'vaccineType': 'MMR',
+              'cvx': '03',
+              'beginAge': '6 months',
+            },
+            {
+              'vaccineType': 'Rubella',
+              'cvx': '06',
+              'beginAge': '6 months',
+            },
+            {
+              'vaccineType': 'MMRV',
+              'cvx': '94',
+              'beginAge': '12 months',
+            },
+          ],
+          'recurringDose': 'No',
         },
         {
-          "doseNumber": "Dose 2",
-          "age": [
+          'doseNumber': 'Dose 2',
+          'age': [
             {
-              "absMinAge": "13 months",
-              "minAge": "4 years",
-              "earliestRecAge": "4 years"
-            }
+              'absMinAge': '13 months',
+              'minAge': '4 years',
+              'earliestRecAge': '4 years',
+            },
           ],
-          "interval": [
+          'interval': [
             {
-              "fromPrevious": "Y",
-              "absMinInt": "4 weeks",
-              "minInt": "4 weeks",
-              "earliestRecInt": "3 years"
-            }
+              'fromPrevious': 'Y',
+              'absMinInt': '4 weeks',
+              'minInt': '4 weeks',
+              'earliestRecInt': '3 years',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "Measles/Rubella (MR)",
-              "cvx": "04",
-              "beginAge": "6 months",
-              "forecastVaccineType": "Y"
+              'vaccineType': 'Measles/Rubella (MR)',
+              'cvx': '04',
+              'beginAge': '6 months',
+              'forecastVaccineType': 'Y',
             },
             {
-              "vaccineType": "MMR",
-              "cvx": "03",
-              "beginAge": "6 months",
-              "forecastVaccineType": "N"
-            }
-          ],
-          "allowableVaccine": [
-            {
-              "vaccineType": "Measles/Rubella (MR)",
-              "cvx": "04",
-              "beginAge": "6 months"
+              'vaccineType': 'MMR',
+              'cvx': '03',
+              'beginAge': '6 months',
+              'forecastVaccineType': 'N',
             },
-            {"vaccineType": "MMR", "cvx": "03", "beginAge": "6 months"},
-            {"vaccineType": "Rubella", "cvx": "06", "beginAge": "6 months"},
-            {"vaccineType": "MMRV", "cvx": "94", "beginAge": "12 months"}
           ],
-          "recurringDose": "No"
-        }
-      ]
-    }
-  ]
+          'allowableVaccine': [
+            {
+              'vaccineType': 'Measles/Rubella (MR)',
+              'cvx': '04',
+              'beginAge': '6 months',
+            },
+            {
+              'vaccineType': 'MMR',
+              'cvx': '03',
+              'beginAge': '6 months',
+            },
+            {
+              'vaccineType': 'Rubella',
+              'cvx': '06',
+              'beginAge': '6 months',
+            },
+            {
+              'vaccineType': 'MMRV',
+              'cvx': '94',
+              'beginAge': '12 months',
+            },
+          ],
+          'recurringDose': 'No',
+        },
+      ],
+    },
+  ],
 });

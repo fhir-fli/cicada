@@ -1,4 +1,4 @@
-import '../../cicada.dart';
+import 'package:cicada/cicada.dart';
 
 class Series {
   Series({
@@ -14,6 +14,47 @@ class Series {
     this.seriesDose,
   });
 
+  factory Series.fromJson(Map<String, dynamic> json) {
+    return Series(
+      seriesName: json['seriesName'] as String?,
+      targetDisease: json['targetDisease'] as String?,
+      vaccineGroup: json['vaccineGroup'] as String?,
+      seriesAdminGuidance:
+          (json['seriesAdminGuidance'] as List<dynamic>?)
+              ?.map((e) => e as String)
+              .toList(),
+      seriesType:
+          json['seriesType'] == null
+              ? null
+              : SeriesType.fromJson(json['seriesType'] as String),
+      equivalentSeriesGroups:
+          json['equivalentSeriesGroups'] == null
+              ? null
+              : EquivalentSeriesGroups.fromJson(
+                json['equivalentSeriesGroups'] as String,
+              ),
+      requiredGender:
+          (json['requiredGender'] as List<dynamic>?)
+              ?.map((e) => Gender.fromJson(e as String))
+              .whereType<Gender>()
+              .toList(),
+      selectSeries:
+          json['selectSeries'] == null
+              ? null
+              : SelectSeries.fromJson(
+                json['selectSeries'] as Map<String, dynamic>,
+              ),
+      indication:
+          (json['indication'] as List<dynamic>?)
+              ?.map((e) => Indication.fromJson(e as Map<String, dynamic>))
+              .toList(),
+      seriesDose:
+          (json['seriesDose'] as List<dynamic>?)
+              ?.map((e) => SeriesDose.fromJson(e as Map<String, dynamic>))
+              .toList(),
+    );
+  }
+
   final String? seriesName;
   final String? targetDisease;
   final String? vaccineGroup;
@@ -24,37 +65,6 @@ class Series {
   final SelectSeries? selectSeries;
   final List<Indication>? indication;
   final List<SeriesDose>? seriesDose;
-
-  factory Series.fromJson(Map<String, dynamic> json) {
-    return Series(
-      seriesName: json['seriesName'] as String?,
-      targetDisease: json['targetDisease'] as String?,
-      vaccineGroup: json['vaccineGroup'] as String?,
-      seriesAdminGuidance: (json['seriesAdminGuidance'] as List<dynamic>?)
-          ?.map((e) => e as String)
-          .toList(),
-      seriesType: json['seriesType'] == null
-          ? null
-          : SeriesType.fromJson(json['seriesType'] as String),
-      equivalentSeriesGroups: json['equivalentSeriesGroups'] == null
-          ? null
-          : EquivalentSeriesGroups.fromJson(
-              json['equivalentSeriesGroups'] as String),
-      requiredGender: (json['requiredGender'] as List<dynamic>?)
-          ?.map((e) => Gender.fromJson(e as String))
-          .whereType<Gender>()
-          .toList(),
-      selectSeries: json['selectSeries'] == null
-          ? null
-          : SelectSeries.fromJson(json['selectSeries'] as Map<String, dynamic>),
-      indication: (json['indication'] as List<dynamic>?)
-          ?.map((e) => Indication.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      seriesDose: (json['seriesDose'] as List<dynamic>?)
-          ?.map((e) => SeriesDose.fromJson(e as Map<String, dynamic>))
-          .toList(),
-    );
-  }
 
   Map<String, dynamic> toJson() {
     return {
@@ -103,7 +113,8 @@ class Series {
     );
   }
 
-  VaxDate maxAgeDate(VaxDate date) => seriesDose?.isNotEmpty == true
-      ? seriesDose!.last.maxAgeDate(date)
-      : VaxDate.max();
+  VaxDate maxAgeDate(VaxDate date) =>
+      seriesDose?.isNotEmpty == true
+          ? seriesDose!.last.maxAgeDate(date)
+          : VaxDate.max();
 }

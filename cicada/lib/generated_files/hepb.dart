@@ -1,6619 +1,7343 @@
-// ignore_for_file: prefer_single_quotes, always_specify_types
+// ignore_for_file: no_adjacent_strings_in_list
+// Generated data: long strings are split into adjacent literals so
+// no line passes 80 columns; a serializer cannot drop a comma.
 
-import '../cicada.dart';
+import 'package:cicada/cicada.dart';
 
 final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
-  "targetDisease": "HepB",
-  "vaccineGroup": "HepB",
-  "immunity": {
-    "clinicalHistory": [
+  'targetDisease': 'HepB',
+  'vaccineGroup': 'HepB',
+  'immunity': {
+    'clinicalHistory': [
       {
-        "guidelineCode": "019",
-        "guidelineTitle":
-            "Laboratory Evidence of Immunity or confirmation of Hepatitis B disease"
-      }
-    ]
+        'guidelineCode': '019',
+        'guidelineTitle':
+            'Laboratory Evidence of Immunity or confirmation of Hepatitis '
+            'B disease',
+      },
+    ],
   },
-  "contraindications": {
-    "vaccineGroup": {
-      "contraindication": [
+  'contraindications': {
+    'vaccineGroup': {
+      'contraindication': [
         {
-          "observationCode": "097",
-          "observationTitle":
-              "Severe allergic reaction after previous dose of Hepatitis B",
-          "contraindicationText":
-              "Do not vaccinate if the patient has had a severe allergic reaction after a previous dose of Hepatitis B vaccine."
+          'observationCode': '097',
+          'observationTitle':
+              'Severe allergic reaction after previous dose of Hepatitis B',
+          'contraindicationText':
+              'Do not vaccinate if the patient has had a severe allergic '
+              'reaction after a previous dose of Hepatitis B vaccine.',
         },
         {
-          "observationCode": "080",
-          "observationTitle": "Adverse reaction to vaccine component",
-          "contraindicationText":
-              "Do not vaccinate if the patient has had an adverse reaction to a vaccine component."
+          'observationCode': '080',
+          'observationTitle': 'Adverse reaction to vaccine component',
+          'contraindicationText':
+              'Do not vaccinate if the patient has had an adverse reaction '
+              'to a vaccine component.',
         },
         {
-          "observationCode": "110",
-          "observationTitle": "Hypersensitivity to yeast",
-          "contraindicationText":
-              "Do not vaccinate if the patient has a hypersensitivity to yeast."
-        }
-      ]
+          'observationCode': '110',
+          'observationTitle': 'Hypersensitivity to yeast',
+          'contraindicationText':
+              'Do not vaccinate if the patient has a hypersensitivity to '
+              'yeast.',
+        },
+      ],
     },
-    "vaccine": {
-      "contraindication": [
+    'vaccine': {
+      'contraindication': [
         {
-          "observationCode": "076",
-          "observationTitle": "Progressive neurologic disorder",
-          "contraindicationText":
-              "Do not vaccinate if the patient has progressive neurologic disorder until a treatment regimen has been\r established and the condition has stabilized.",
-          "contraindicatedVaccine": [
-            {"vaccineType": "DTaP-HepB-IPV", "cvx": "110"},
-            {"vaccineType": "DTaP-IPV-Hib-HepB", "cvx": "146"}
-          ]
+          'observationCode': '076',
+          'observationTitle': 'Progressive neurologic disorder',
+          'contraindicationText':
+              'Do not vaccinate if the patient has progressive neurologic '
+              'disorder until a treatment regimen has been\r established '
+              'and the condition has stabilized.',
+          'contraindicatedVaccine': [
+            {
+              'vaccineType': 'DTaP-HepB-IPV',
+              'cvx': '110',
+            },
+            {
+              'vaccineType': 'DTaP-IPV-Hib-HepB',
+              'cvx': '146',
+            },
+          ],
         },
         {
-          "observationCode": "079",
-          "observationTitle":
-              "Encephalopathy not attributable to another identifiable cause within 7 days of administration of a previous dose of Tdap, DTP, or DTaP vaccine",
-          "contraindicationText":
-              "Do not vaccinate if the patient has had encephalopathy not attributable to another identifiable cause within 7 days of administration of a previous dose of Tdap, DTP, or DTaP vaccine.",
-          "contraindicatedVaccine": [
-            {"vaccineType": "DTaP-HepB-IPV", "cvx": "110"},
-            {"vaccineType": "DTaP-IPV-Hib-HepB", "cvx": "146"}
-          ]
+          'observationCode': '079',
+          'observationTitle':
+              'Encephalopathy not attributable to another identifiable '
+              'cause within 7 days of administration of a previous dose of '
+              'Tdap, DTP, or DTaP vaccine',
+          'contraindicationText':
+              'Do not vaccinate if the patient has had encephalopathy not '
+              'attributable to another identifiable cause within 7 days of '
+              'administration of a previous dose of Tdap, DTP, or DTaP '
+              'vaccine.',
+          'contraindicatedVaccine': [
+            {
+              'vaccineType': 'DTaP-HepB-IPV',
+              'cvx': '110',
+            },
+            {
+              'vaccineType': 'DTaP-IPV-Hib-HepB',
+              'cvx': '146',
+            },
+          ],
         },
         {
-          "observationCode": "081",
-          "observationTitle":
-              "Severe allergic reaction after previous dose of Polio",
-          "contraindicationText":
-              "Do not vaccinate if the patient has had a severe allergic reaction after a previous dose of Polio vaccine.",
-          "contraindicatedVaccine": [
-            {"vaccineType": "DTaP-HepB-IPV", "cvx": "110"},
-            {"vaccineType": "DTaP-IPV-Hib-HepB", "cvx": "146"}
-          ]
+          'observationCode': '081',
+          'observationTitle':
+              'Severe allergic reaction after previous dose of Polio',
+          'contraindicationText':
+              'Do not vaccinate if the patient has had a severe allergic '
+              'reaction after a previous dose of Polio vaccine.',
+          'contraindicatedVaccine': [
+            {
+              'vaccineType': 'DTaP-HepB-IPV',
+              'cvx': '110',
+            },
+            {
+              'vaccineType': 'DTaP-IPV-Hib-HepB',
+              'cvx': '146',
+            },
+          ],
         },
         {
-          "observationCode": "086",
-          "observationTitle":
-              "Severe allergic reaction after previous dose of Pertussis",
-          "contraindicationText":
-              "Do not vaccinate if the patient has had a severe allergic reaction after a previous dose of Pertussis vaccine.",
-          "contraindicatedVaccine": [
-            {"vaccineType": "DTaP-HepB-IPV", "cvx": "110"},
-            {"vaccineType": "DTaP-IPV-Hib-HepB", "cvx": "146"}
-          ]
+          'observationCode': '086',
+          'observationTitle':
+              'Severe allergic reaction after previous dose of Pertussis',
+          'contraindicationText':
+              'Do not vaccinate if the patient has had a severe allergic '
+              'reaction after a previous dose of Pertussis vaccine.',
+          'contraindicatedVaccine': [
+            {
+              'vaccineType': 'DTaP-HepB-IPV',
+              'cvx': '110',
+            },
+            {
+              'vaccineType': 'DTaP-IPV-Hib-HepB',
+              'cvx': '146',
+            },
+          ],
         },
         {
-          "observationCode": "087",
-          "observationTitle":
-              "Severe allergic reaction after previous dose of Diphtheria",
-          "contraindicationText":
-              "Do not vaccinate if the patient has had a severe allergic reaction after a previous dose of Diphtheria vaccine.",
-          "contraindicatedVaccine": [
-            {"vaccineType": "DTaP-HepB-IPV", "cvx": "110"},
-            {"vaccineType": "DTaP-IPV-Hib-HepB", "cvx": "146"}
-          ]
+          'observationCode': '087',
+          'observationTitle':
+              'Severe allergic reaction after previous dose of Diphtheria',
+          'contraindicationText':
+              'Do not vaccinate if the patient has had a severe allergic '
+              'reaction after a previous dose of Diphtheria vaccine.',
+          'contraindicatedVaccine': [
+            {
+              'vaccineType': 'DTaP-HepB-IPV',
+              'cvx': '110',
+            },
+            {
+              'vaccineType': 'DTaP-IPV-Hib-HepB',
+              'cvx': '146',
+            },
+          ],
         },
         {
-          "observationCode": "088",
-          "observationTitle":
-              "Severe allergic reaction after previous dose of Tetanus",
-          "contraindicationText":
-              "Do not vaccinate if the patient has had a severe allergic reaction after a previous dose of Tetanus vaccine.",
-          "contraindicatedVaccine": [
-            {"vaccineType": "DTaP-HepB-IPV", "cvx": "110"},
-            {"vaccineType": "DTaP-IPV-Hib-HepB", "cvx": "146"}
-          ]
+          'observationCode': '088',
+          'observationTitle':
+              'Severe allergic reaction after previous dose of Tetanus',
+          'contraindicationText':
+              'Do not vaccinate if the patient has had a severe allergic '
+              'reaction after a previous dose of Tetanus vaccine.',
+          'contraindicatedVaccine': [
+            {
+              'vaccineType': 'DTaP-HepB-IPV',
+              'cvx': '110',
+            },
+            {
+              'vaccineType': 'DTaP-IPV-Hib-HepB',
+              'cvx': '146',
+            },
+          ],
         },
         {
-          "observationCode": "096",
-          "observationTitle":
-              "Severe allergic reaction after previous dose of Hepatitis A",
-          "contraindicationText":
-              "Do not vaccinate if the patient has had a severe allergic reaction after a previous dose of Hepatitis A vaccine.",
-          "contraindicatedVaccine": [
-            {"vaccineType": "HepA-HepB", "cvx": "104"}
-          ]
+          'observationCode': '096',
+          'observationTitle':
+              'Severe allergic reaction after previous dose of Hepatitis A',
+          'contraindicationText':
+              'Do not vaccinate if the patient has had a severe allergic '
+              'reaction after a previous dose of Hepatitis A vaccine.',
+          'contraindicatedVaccine': [
+            {
+              'vaccineType': 'HepA-HepB',
+              'cvx': '104',
+            },
+          ],
         },
         {
-          "observationCode": "098",
-          "observationTitle":
-              "Severe allergic reaction after previous dose of Hib",
-          "contraindicationText":
-              "Do not vaccinate if the patient has had a severe allergic reaction after a previous dose of Hib vaccine.",
-          "contraindicatedVaccine": [
-            {"vaccineType": "DTaP-IPV-Hib-HepB", "cvx": "146"}
-          ]
+          'observationCode': '098',
+          'observationTitle':
+              'Severe allergic reaction after previous dose of Hib',
+          'contraindicationText':
+              'Do not vaccinate if the patient has had a severe allergic '
+              'reaction after a previous dose of Hib vaccine.',
+          'contraindicatedVaccine': [
+            {
+              'vaccineType': 'DTaP-IPV-Hib-HepB',
+              'cvx': '146',
+            },
+          ],
         },
         {
-          "observationCode": "107",
-          "observationTitle": "Severe allergic reaction to neomycin",
-          "contraindicationText":
-              "Do not vaccinate if the patient has had a severe allergic reaction to neomycin.",
-          "contraindicatedVaccine": [
-            {"vaccineType": "HepA-HepB", "cvx": "104"},
-            {"vaccineType": "DTaP-HepB-IPV", "cvx": "110"},
-            {"vaccineType": "DTaP-IPV-Hib-HepB", "cvx": "146"}
-          ]
+          'observationCode': '107',
+          'observationTitle': 'Severe allergic reaction to neomycin',
+          'contraindicationText':
+              'Do not vaccinate if the patient has had a severe allergic '
+              'reaction to neomycin.',
+          'contraindicatedVaccine': [
+            {
+              'vaccineType': 'HepA-HepB',
+              'cvx': '104',
+            },
+            {
+              'vaccineType': 'DTaP-HepB-IPV',
+              'cvx': '110',
+            },
+            {
+              'vaccineType': 'DTaP-IPV-Hib-HepB',
+              'cvx': '146',
+            },
+          ],
         },
         {
-          "observationCode": "108",
-          "observationTitle": "Severe allergic reaction to streptomycin",
-          "contraindicationText":
-              "Do not vaccinate if the patient has had a severe allergic reaction to streptomycin.",
-          "contraindicatedVaccine": [
-            {"vaccineType": "DTaP-HepB-IPV", "cvx": "110"},
-            {"vaccineType": "DTaP-IPV-Hib-HepB", "cvx": "146"}
-          ]
+          'observationCode': '108',
+          'observationTitle': 'Severe allergic reaction to streptomycin',
+          'contraindicationText':
+              'Do not vaccinate if the patient has had a severe allergic '
+              'reaction to streptomycin.',
+          'contraindicatedVaccine': [
+            {
+              'vaccineType': 'DTaP-HepB-IPV',
+              'cvx': '110',
+            },
+            {
+              'vaccineType': 'DTaP-IPV-Hib-HepB',
+              'cvx': '146',
+            },
+          ],
         },
         {
-          "observationCode": "109",
-          "observationTitle": "Severe allergic reaction to polymyxin B",
-          "contraindicationText":
-              "Do not vaccinate if the patient has had a severe allergic reaction to polymyxin B.",
-          "contraindicatedVaccine": [
-            {"vaccineType": "DTaP-HepB-IPV", "cvx": "110"},
-            {"vaccineType": "DTaP-IPV-Hib-HepB", "cvx": "146"}
-          ]
+          'observationCode': '109',
+          'observationTitle': 'Severe allergic reaction to polymyxin B',
+          'contraindicationText':
+              'Do not vaccinate if the patient has had a severe allergic '
+              'reaction to polymyxin B.',
+          'contraindicatedVaccine': [
+            {
+              'vaccineType': 'DTaP-HepB-IPV',
+              'cvx': '110',
+            },
+            {
+              'vaccineType': 'DTaP-IPV-Hib-HepB',
+              'cvx': '146',
+            },
+          ],
         },
         {
-          "observationCode": "111",
-          "observationTitle":
-              "Hypersensitivity to the preservative 2-phenoxyethanol",
-          "contraindicationText":
-              "Do not vaccinate if the patient has a hypersensitivity to the preservative 2-phenoxyethanol.",
-          "contraindicatedVaccine": [
-            {"vaccineType": "DTaP-HepB-IPV", "cvx": "110"},
-            {"vaccineType": "DTaP-IPV-Hib-HepB", "cvx": "146"}
-          ]
+          'observationCode': '111',
+          'observationTitle':
+              'Hypersensitivity to the preservative 2-phenoxyethanol',
+          'contraindicationText':
+              'Do not vaccinate if the patient has a hypersensitivity to '
+              'the preservative 2-phenoxyethanol.',
+          'contraindicatedVaccine': [
+            {
+              'vaccineType': 'DTaP-HepB-IPV',
+              'cvx': '110',
+            },
+            {
+              'vaccineType': 'DTaP-IPV-Hib-HepB',
+              'cvx': '146',
+            },
+          ],
         },
         {
-          "observationCode": "112",
-          "observationTitle": "Hypersensitivity to alum",
-          "contraindicationText":
-              "Do not vaccinate if the patient has a hypersensitivity to alum.",
-          "contraindicatedVaccine": [
-            {"vaccineType": "HepA-HepB", "cvx": "104"}
-          ]
-        }
-      ]
-    }
+          'observationCode': '112',
+          'observationTitle': 'Hypersensitivity to alum',
+          'contraindicationText':
+              'Do not vaccinate if the patient has a hypersensitivity to '
+              'alum.',
+          'contraindicatedVaccine': [
+            {
+              'vaccineType': 'HepA-HepB',
+              'cvx': '104',
+            },
+          ],
+        },
+      ],
+    },
   },
-  "series": [
+  'series': [
     {
-      "seriesName": "HepB 3-dose series",
-      "targetDisease": "HepB",
-      "vaccineGroup": "HepB",
-      "seriesAdminGuidance": [
-        "Anyone age 60 years or older who does not meet risk-based recommendations may still receive Hepatitis B vaccination."
+      'seriesName': 'HepB 3-dose series',
+      'targetDisease': 'HepB',
+      'vaccineGroup': 'HepB',
+      'seriesAdminGuidance': [
+        'Anyone age 60 years or older who does not meet risk-based '
+            'recommendations may still receive Hepatitis B vaccination.',
       ],
-      "seriesType": "Standard",
-      "equivalentSeriesGroups": "2",
-      "selectSeries": {
-        "defaultSeries": "Yes",
-        "productPath": "No",
-        "seriesGroupName": "Standard",
-        "seriesGroup": "1",
-        "seriesPriority": "A",
-        "seriesPreference": "1",
-        "maxAgeToStart": "19 years"
+      'seriesType': 'Standard',
+      'equivalentSeriesGroups': '2',
+      'selectSeries': {
+        'defaultSeries': 'Yes',
+        'productPath': 'No',
+        'seriesGroupName': 'Standard',
+        'seriesGroup': '1',
+        'seriesPriority': 'A',
+        'seriesPreference': '1',
+        'maxAgeToStart': '19 years',
       },
-      "seriesDose": [
+      'seriesDose': [
         {
-          "doseNumber": "Dose 1",
-          "age": [
+          'doseNumber': 'Dose 1',
+          'age': [
             {
-              "absMinAge": "0 days",
-              "minAge": "0 days",
-              "earliestRecAge": "0 days",
-              "latestRecAge": "4 weeks"
-            }
+              'absMinAge': '0 days',
+              'minAge': '0 days',
+              'earliestRecAge': '0 days',
+              'latestRecAge': '4 weeks',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "Hep B, Adol/peds",
-              "cvx": "08",
-              "beginAge": "0 days",
-              "endAge": "20 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType': 'Hep B, Adol/peds',
+              'cvx': '08',
+              'beginAge': '0 days',
+              'endAge': '20 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "Hep B, Adult",
-              "cvx": "43",
-              "beginAge": "20 years",
-              "volume": "1",
-              "forecastVaccineType": "N"
+              'vaccineType': 'Hep B, Adult',
+              'cvx': '43',
+              'beginAge': '20 years',
+              'volume': '1',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "Hep B, Dialysis",
-              "cvx": "44",
-              "beginAge": "20 years",
-              "volume": "1",
-              "forecastVaccineType": "N"
+              'vaccineType': 'Hep B, Dialysis',
+              'cvx': '44',
+              'beginAge': '20 years',
+              'volume': '1',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "DTaP-HepB-IPV",
-              "cvx": "110",
-              "beginAge": "6 weeks",
-              "endAge": "7 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType': 'DTaP-HepB-IPV',
+              'cvx': '110',
+              'beginAge': '6 weeks',
+              'endAge': '7 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB",
-              "cvx": "146",
-              "beginAge": "6 weeks",
-              "endAge": "5 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType': 'DTaP-IPV-Hib-HepB',
+              'cvx': '146',
+              'beginAge': '6 weeks',
+              'endAge': '5 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "Hep B, adjuvanted",
-              "cvx": "189",
-              "beginAge": "18 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
-            }
+              'vaccineType': 'Hep B, adjuvanted',
+              'cvx': '189',
+              'beginAge': '18 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
+            },
           ],
-          "allowableVaccine": [
+          'allowableVaccine': [
             {
-              "vaccineType": "Hep B, Adol/peds",
-              "cvx": "08",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'Hep B, Adol/peds',
+              'cvx': '08',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "Hep B, Adol/high risk infant",
-              "cvx": "42",
-              "beginAge": "0 days",
-              "endAge": "20 years"
-            },
-            {"vaccineType": "Hep B, Adult", "cvx": "43", "beginAge": "0 days"},
-            {
-              "vaccineType": "Hep B, Dialysis",
-              "cvx": "44",
-              "beginAge": "0 days"
+              'vaccineType': 'Hep B, Adol/high risk infant',
+              'cvx': '42',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "Hep B, Unspecified Formulation",
-              "cvx": "45",
-              "beginAge": "0 days"
+              'vaccineType': 'Hep B, Adult',
+              'cvx': '43',
+              'beginAge': '0 days',
             },
             {
-              "vaccineType": "Hib-HepB",
-              "cvx": "51",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'Hep B, Dialysis',
+              'cvx': '44',
+              'beginAge': '0 days',
             },
             {
-              "vaccineType": "DTP-Hib-HepB",
-              "cvx": "102",
-              "beginAge": "0 days",
-              "endAge": "20 years"
-            },
-            {"vaccineType": "HepA-HepB", "cvx": "104", "beginAge": "0 days"},
-            {
-              "vaccineType": "DTaP-HepB-IPV",
-              "cvx": "110",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'Hep B, Unspecified Formulation',
+              'cvx': '45',
+              'beginAge': '0 days',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB, historical",
-              "cvx": "132",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'Hib-HepB',
+              'cvx': '51',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB",
-              "cvx": "146",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'DTP-Hib-HepB',
+              'cvx': '102',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "Hep B, adjuvanted",
-              "cvx": "189",
-              "beginAge": "18 years - 4 days"
+              'vaccineType': 'HepA-HepB',
+              'cvx': '104',
+              'beginAge': '0 days',
             },
             {
-              "vaccineType": "Hep A-Hep B, pediatric/adolescent",
-              "cvx": "193",
-              "beginAge": "0 days",
-              "endAge": "18 years"
+              'vaccineType': 'DTaP-HepB-IPV',
+              'cvx': '110',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "DTP-HepB-Hib Pentavalent Non-US",
-              "cvx": "198",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'DTaP-IPV-Hib-HepB, historical',
+              'cvx': '132',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "HepB recombinant, 3-antigen, Al(OH)3",
-              "cvx": "220",
-              "beginAge": "18 years - 4 days"
-            }
+              'vaccineType': 'DTaP-IPV-Hib-HepB',
+              'cvx': '146',
+              'beginAge': '0 days',
+              'endAge': '20 years',
+            },
+            {
+              'vaccineType': 'Hep B, adjuvanted',
+              'cvx': '189',
+              'beginAge': '18 years - 4 days',
+            },
+            {
+              'vaccineType': 'Hep A-Hep B, pediatric/adolescent',
+              'cvx': '193',
+              'beginAge': '0 days',
+              'endAge': '18 years',
+            },
+            {
+              'vaccineType': 'DTP-HepB-Hib Pentavalent Non-US',
+              'cvx': '198',
+              'beginAge': '0 days',
+              'endAge': '20 years',
+            },
+            {
+              'vaccineType': 'HepB recombinant, 3-antigen, Al(OH)3',
+              'cvx': '220',
+              'beginAge': '18 years - 4 days',
+            },
           ],
-          "recurringDose": "No"
+          'recurringDose': 'No',
         },
         {
-          "doseNumber": "Dose 2",
-          "age": [
+          'doseNumber': 'Dose 2',
+          'age': [
             {
-              "absMinAge": "4 weeks - 4 days",
-              "minAge": "4 weeks",
-              "earliestRecAge": "1 month",
-              "latestRecAge": "3 months + 4 weeks"
-            }
+              'absMinAge': '4 weeks - 4 days',
+              'minAge': '4 weeks',
+              'earliestRecAge': '1 month',
+              'latestRecAge': '3 months + 4 weeks',
+            },
           ],
-          "interval": [
+          'interval': [
             {
-              "fromPrevious": "Y",
-              "absMinInt": "4 weeks - 4 days",
-              "minInt": "4 weeks",
-              "earliestRecInt": "4 weeks",
-              "latestRecInt": "5 months + 4 weeks"
-            }
+              'fromPrevious': 'Y',
+              'absMinInt': '4 weeks - 4 days',
+              'minInt': '4 weeks',
+              'earliestRecInt': '4 weeks',
+              'latestRecInt': '5 months + 4 weeks',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "Hep B, Adol/peds",
-              "cvx": "08",
-              "beginAge": "0 days",
-              "endAge": "20 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType': 'Hep B, Adol/peds',
+              'cvx': '08',
+              'beginAge': '0 days',
+              'endAge': '20 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "Hep B, Adult",
-              "cvx": "43",
-              "beginAge": "20 years",
-              "volume": "1",
-              "forecastVaccineType": "N"
+              'vaccineType': 'Hep B, Adult',
+              'cvx': '43',
+              'beginAge': '20 years',
+              'volume': '1',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "Hep B, Dialysis",
-              "cvx": "44",
-              "beginAge": "20 years",
-              "volume": "1",
-              "forecastVaccineType": "N"
+              'vaccineType': 'Hep B, Dialysis',
+              'cvx': '44',
+              'beginAge': '20 years',
+              'volume': '1',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "DTaP-HepB-IPV",
-              "cvx": "110",
-              "beginAge": "6 weeks",
-              "endAge": "7 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType': 'DTaP-HepB-IPV',
+              'cvx': '110',
+              'beginAge': '6 weeks',
+              'endAge': '7 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB",
-              "cvx": "146",
-              "beginAge": "6 weeks",
-              "endAge": "5 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType': 'DTaP-IPV-Hib-HepB',
+              'cvx': '146',
+              'beginAge': '6 weeks',
+              'endAge': '5 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "Hep B, adjuvanted",
-              "cvx": "189",
-              "beginAge": "18 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
-            }
+              'vaccineType': 'Hep B, adjuvanted',
+              'cvx': '189',
+              'beginAge': '18 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
+            },
           ],
-          "allowableVaccine": [
+          'allowableVaccine': [
             {
-              "vaccineType": "Hep B, Adol/peds",
-              "cvx": "08",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'Hep B, Adol/peds',
+              'cvx': '08',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "Hep B, Adol/high risk infant",
-              "cvx": "42",
-              "beginAge": "0 days",
-              "endAge": "20 years"
-            },
-            {"vaccineType": "Hep B, Adult", "cvx": "43", "beginAge": "0 days"},
-            {
-              "vaccineType": "Hep B, Dialysis",
-              "cvx": "44",
-              "beginAge": "0 days"
+              'vaccineType': 'Hep B, Adol/high risk infant',
+              'cvx': '42',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "Hep B, Unspecified Formulation",
-              "cvx": "45",
-              "beginAge": "0 days"
+              'vaccineType': 'Hep B, Adult',
+              'cvx': '43',
+              'beginAge': '0 days',
             },
             {
-              "vaccineType": "Hib-HepB",
-              "cvx": "51",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'Hep B, Dialysis',
+              'cvx': '44',
+              'beginAge': '0 days',
             },
             {
-              "vaccineType": "DTP-Hib-HepB",
-              "cvx": "102",
-              "beginAge": "0 days",
-              "endAge": "20 years"
-            },
-            {"vaccineType": "HepA-HepB", "cvx": "104", "beginAge": "0 days"},
-            {
-              "vaccineType": "DTaP-HepB-IPV",
-              "cvx": "110",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'Hep B, Unspecified Formulation',
+              'cvx': '45',
+              'beginAge': '0 days',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB, historical",
-              "cvx": "132",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'Hib-HepB',
+              'cvx': '51',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB",
-              "cvx": "146",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'DTP-Hib-HepB',
+              'cvx': '102',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "Hep B, adjuvanted",
-              "cvx": "189",
-              "beginAge": "18 years - 4 days"
+              'vaccineType': 'HepA-HepB',
+              'cvx': '104',
+              'beginAge': '0 days',
             },
             {
-              "vaccineType": "Hep A-Hep B, pediatric/adolescent",
-              "cvx": "193",
-              "beginAge": "0 days",
-              "endAge": "18 years"
+              'vaccineType': 'DTaP-HepB-IPV',
+              'cvx': '110',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "DTP-HepB-Hib Pentavalent Non-US",
-              "cvx": "198",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'DTaP-IPV-Hib-HepB, historical',
+              'cvx': '132',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "HepB recombinant, 3-antigen, Al(OH)3",
-              "cvx": "220",
-              "beginAge": "18 years - 4 days"
-            }
+              'vaccineType': 'DTaP-IPV-Hib-HepB',
+              'cvx': '146',
+              'beginAge': '0 days',
+              'endAge': '20 years',
+            },
+            {
+              'vaccineType': 'Hep B, adjuvanted',
+              'cvx': '189',
+              'beginAge': '18 years - 4 days',
+            },
+            {
+              'vaccineType': 'Hep A-Hep B, pediatric/adolescent',
+              'cvx': '193',
+              'beginAge': '0 days',
+              'endAge': '18 years',
+            },
+            {
+              'vaccineType': 'DTP-HepB-Hib Pentavalent Non-US',
+              'cvx': '198',
+              'beginAge': '0 days',
+              'endAge': '20 years',
+            },
+            {
+              'vaccineType': 'HepB recombinant, 3-antigen, Al(OH)3',
+              'cvx': '220',
+              'beginAge': '18 years - 4 days',
+            },
           ],
-          "recurringDose": "No"
+          'recurringDose': 'No',
         },
         {
-          "doseNumber": "Dose 3",
-          "age": [
+          'doseNumber': 'Dose 3',
+          'age': [
             {
-              "absMinAge": "24 weeks - 4 days",
-              "minAge": "24 weeks",
-              "earliestRecAge": "6 months",
-              "latestRecAge": "19 months + 4 weeks"
-            }
+              'absMinAge': '24 weeks - 4 days',
+              'minAge': '24 weeks',
+              'earliestRecAge': '6 months',
+              'latestRecAge': '19 months + 4 weeks',
+            },
           ],
-          "interval": [
+          'interval': [
             {
-              "fromPrevious": "Y",
-              "absMinInt": "8 weeks - 4 days",
-              "minInt": "8 weeks",
-              "earliestRecInt": "8 weeks",
-              "latestRecInt": "18 months + 4 weeks"
+              'fromPrevious': 'Y',
+              'absMinInt': '8 weeks - 4 days',
+              'minInt': '8 weeks',
+              'earliestRecInt': '8 weeks',
+              'latestRecInt': '18 months + 4 weeks',
             },
             {
-              "fromPrevious": "N",
-              "fromTargetDose": "1",
-              "absMinInt": "16 weeks - 4 days",
-              "minInt": "16 weeks"
-            }
+              'fromPrevious': 'N',
+              'fromTargetDose': '1',
+              'absMinInt': '16 weeks - 4 days',
+              'minInt': '16 weeks',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "Hep B, Adol/peds",
-              "cvx": "08",
-              "beginAge": "0 days",
-              "endAge": "20 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType': 'Hep B, Adol/peds',
+              'cvx': '08',
+              'beginAge': '0 days',
+              'endAge': '20 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "Hep B, Adult",
-              "cvx": "43",
-              "beginAge": "20 years",
-              "volume": "1",
-              "forecastVaccineType": "N"
+              'vaccineType': 'Hep B, Adult',
+              'cvx': '43',
+              'beginAge': '20 years',
+              'volume': '1',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "Hep B, Dialysis",
-              "cvx": "44",
-              "beginAge": "20 years",
-              "volume": "1",
-              "forecastVaccineType": "N"
+              'vaccineType': 'Hep B, Dialysis',
+              'cvx': '44',
+              'beginAge': '20 years',
+              'volume': '1',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "DTaP-HepB-IPV",
-              "cvx": "110",
-              "beginAge": "6 weeks",
-              "endAge": "7 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType': 'DTaP-HepB-IPV',
+              'cvx': '110',
+              'beginAge': '6 weeks',
+              'endAge': '7 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB",
-              "cvx": "146",
-              "beginAge": "6 weeks",
-              "endAge": "5 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType': 'DTaP-IPV-Hib-HepB',
+              'cvx': '146',
+              'beginAge': '6 weeks',
+              'endAge': '5 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "Hep B, adjuvanted",
-              "cvx": "189",
-              "beginAge": "18 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
-            }
+              'vaccineType': 'Hep B, adjuvanted',
+              'cvx': '189',
+              'beginAge': '18 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
+            },
           ],
-          "allowableVaccine": [
+          'allowableVaccine': [
             {
-              "vaccineType": "Hep B, Adol/peds",
-              "cvx": "08",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'Hep B, Adol/peds',
+              'cvx': '08',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "Hep B, Adol/high risk infant",
-              "cvx": "42",
-              "beginAge": "0 days",
-              "endAge": "20 years"
-            },
-            {"vaccineType": "Hep B, Adult", "cvx": "43", "beginAge": "0 days"},
-            {
-              "vaccineType": "Hep B, Dialysis",
-              "cvx": "44",
-              "beginAge": "0 days"
+              'vaccineType': 'Hep B, Adol/high risk infant',
+              'cvx': '42',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "Hep B, Unspecified Formulation",
-              "cvx": "45",
-              "beginAge": "0 days"
+              'vaccineType': 'Hep B, Adult',
+              'cvx': '43',
+              'beginAge': '0 days',
             },
             {
-              "vaccineType": "Hib-HepB",
-              "cvx": "51",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'Hep B, Dialysis',
+              'cvx': '44',
+              'beginAge': '0 days',
             },
             {
-              "vaccineType": "DTP-Hib-HepB",
-              "cvx": "102",
-              "beginAge": "0 days",
-              "endAge": "20 years"
-            },
-            {"vaccineType": "HepA-HepB", "cvx": "104", "beginAge": "0 days"},
-            {
-              "vaccineType": "DTaP-HepB-IPV",
-              "cvx": "110",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'Hep B, Unspecified Formulation',
+              'cvx': '45',
+              'beginAge': '0 days',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB, historical",
-              "cvx": "132",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'Hib-HepB',
+              'cvx': '51',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB",
-              "cvx": "146",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'DTP-Hib-HepB',
+              'cvx': '102',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "Hep B, adjuvanted",
-              "cvx": "189",
-              "beginAge": "18 years - 4 days"
+              'vaccineType': 'HepA-HepB',
+              'cvx': '104',
+              'beginAge': '0 days',
             },
             {
-              "vaccineType": "Hep A-Hep B, pediatric/adolescent",
-              "cvx": "193",
-              "beginAge": "0 days",
-              "endAge": "18 years"
+              'vaccineType': 'DTaP-HepB-IPV',
+              'cvx': '110',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "DTP-HepB-Hib Pentavalent Non-US",
-              "cvx": "198",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'DTaP-IPV-Hib-HepB, historical',
+              'cvx': '132',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "HepB recombinant, 3-antigen, Al(OH)3",
-              "cvx": "220",
-              "beginAge": "18 years - 4 days"
-            }
+              'vaccineType': 'DTaP-IPV-Hib-HepB',
+              'cvx': '146',
+              'beginAge': '0 days',
+              'endAge': '20 years',
+            },
+            {
+              'vaccineType': 'Hep B, adjuvanted',
+              'cvx': '189',
+              'beginAge': '18 years - 4 days',
+            },
+            {
+              'vaccineType': 'Hep A-Hep B, pediatric/adolescent',
+              'cvx': '193',
+              'beginAge': '0 days',
+              'endAge': '18 years',
+            },
+            {
+              'vaccineType': 'DTP-HepB-Hib Pentavalent Non-US',
+              'cvx': '198',
+              'beginAge': '0 days',
+              'endAge': '20 years',
+            },
+            {
+              'vaccineType': 'HepB recombinant, 3-antigen, Al(OH)3',
+              'cvx': '220',
+              'beginAge': '18 years - 4 days',
+            },
           ],
-          "recurringDose": "No"
-        }
-      ]
+          'recurringDose': 'No',
+        },
+      ],
     },
     {
-      "seriesName": "HepB 4-dose series",
-      "targetDisease": "HepB",
-      "vaccineGroup": "HepB",
-      "seriesAdminGuidance": [
-        "Anyone age 60 years or older who does not meet risk-based recommendations may still receive Hepatitis B vaccination."
+      'seriesName': 'HepB 4-dose series',
+      'targetDisease': 'HepB',
+      'vaccineGroup': 'HepB',
+      'seriesAdminGuidance': [
+        'Anyone age 60 years or older who does not meet risk-based '
+            'recommendations may still receive Hepatitis B vaccination.',
       ],
-      "seriesType": "Standard",
-      "equivalentSeriesGroups": "2",
-      "selectSeries": {
-        "defaultSeries": "No",
-        "productPath": "No",
-        "seriesGroupName": "Standard",
-        "seriesGroup": "1",
-        "seriesPriority": "A",
-        "seriesPreference": "2",
-        "maxAgeToStart": "19 years"
+      'seriesType': 'Standard',
+      'equivalentSeriesGroups': '2',
+      'selectSeries': {
+        'defaultSeries': 'No',
+        'productPath': 'No',
+        'seriesGroupName': 'Standard',
+        'seriesGroup': '1',
+        'seriesPriority': 'A',
+        'seriesPreference': '2',
+        'maxAgeToStart': '19 years',
       },
-      "seriesDose": [
+      'seriesDose': [
         {
-          "doseNumber": "Dose 1",
-          "age": [
+          'doseNumber': 'Dose 1',
+          'age': [
             {
-              "absMinAge": "0 days",
-              "minAge": "0 days",
-              "earliestRecAge": "0 days",
-              "latestRecAge": "4 weeks"
-            }
+              'absMinAge': '0 days',
+              'minAge': '0 days',
+              'earliestRecAge': '0 days',
+              'latestRecAge': '4 weeks',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "Hep B, Adol/peds",
-              "cvx": "08",
-              "beginAge": "0 days",
-              "endAge": "20 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType': 'Hep B, Adol/peds',
+              'cvx': '08',
+              'beginAge': '0 days',
+              'endAge': '20 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "DTaP-HepB-IPV",
-              "cvx": "110",
-              "beginAge": "6 weeks",
-              "endAge": "7 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType': 'DTaP-HepB-IPV',
+              'cvx': '110',
+              'beginAge': '6 weeks',
+              'endAge': '7 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB",
-              "cvx": "146",
-              "beginAge": "6 weeks",
-              "endAge": "5 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType': 'DTaP-IPV-Hib-HepB',
+              'cvx': '146',
+              'beginAge': '6 weeks',
+              'endAge': '5 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "Hep B, adjuvanted",
-              "cvx": "189",
-              "beginAge": "18 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
-            }
+              'vaccineType': 'Hep B, adjuvanted',
+              'cvx': '189',
+              'beginAge': '18 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
+            },
           ],
-          "allowableVaccine": [
+          'allowableVaccine': [
             {
-              "vaccineType": "Hep B, Adol/peds",
-              "cvx": "08",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'Hep B, Adol/peds',
+              'cvx': '08',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "Hep B, Adol/high risk infant",
-              "cvx": "42",
-              "beginAge": "0 days",
-              "endAge": "20 years"
-            },
-            {"vaccineType": "Hep B, Adult", "cvx": "43", "beginAge": "0 days"},
-            {
-              "vaccineType": "Hep B, Dialysis",
-              "cvx": "44",
-              "beginAge": "0 days"
+              'vaccineType': 'Hep B, Adol/high risk infant',
+              'cvx': '42',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "Hep B, Unspecified Formulation",
-              "cvx": "45",
-              "beginAge": "0 days"
+              'vaccineType': 'Hep B, Adult',
+              'cvx': '43',
+              'beginAge': '0 days',
             },
             {
-              "vaccineType": "Hib-HepB",
-              "cvx": "51",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'Hep B, Dialysis',
+              'cvx': '44',
+              'beginAge': '0 days',
             },
             {
-              "vaccineType": "DTP-Hib-HepB",
-              "cvx": "102",
-              "beginAge": "0 days",
-              "endAge": "20 years"
-            },
-            {"vaccineType": "HepA-HepB", "cvx": "104", "beginAge": "0 days"},
-            {
-              "vaccineType": "DTaP-HepB-IPV",
-              "cvx": "110",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'Hep B, Unspecified Formulation',
+              'cvx': '45',
+              'beginAge': '0 days',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB, historical",
-              "cvx": "132",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'Hib-HepB',
+              'cvx': '51',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB",
-              "cvx": "146",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'DTP-Hib-HepB',
+              'cvx': '102',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "Hep B, adjuvanted",
-              "cvx": "189",
-              "beginAge": "18 years - 4 days"
+              'vaccineType': 'HepA-HepB',
+              'cvx': '104',
+              'beginAge': '0 days',
             },
             {
-              "vaccineType": "Hep A-Hep B, pediatric/adolescent",
-              "cvx": "193",
-              "beginAge": "0 days",
-              "endAge": "18 years"
+              'vaccineType': 'DTaP-HepB-IPV',
+              'cvx': '110',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "DTP-HepB-Hib Pentavalent Non-US",
-              "cvx": "198",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'DTaP-IPV-Hib-HepB, historical',
+              'cvx': '132',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "HepB recombinant, 3-antigen, Al(OH)3",
-              "cvx": "220",
-              "beginAge": "18 years - 4 days"
-            }
+              'vaccineType': 'DTaP-IPV-Hib-HepB',
+              'cvx': '146',
+              'beginAge': '0 days',
+              'endAge': '20 years',
+            },
+            {
+              'vaccineType': 'Hep B, adjuvanted',
+              'cvx': '189',
+              'beginAge': '18 years - 4 days',
+            },
+            {
+              'vaccineType': 'Hep A-Hep B, pediatric/adolescent',
+              'cvx': '193',
+              'beginAge': '0 days',
+              'endAge': '18 years',
+            },
+            {
+              'vaccineType': 'DTP-HepB-Hib Pentavalent Non-US',
+              'cvx': '198',
+              'beginAge': '0 days',
+              'endAge': '20 years',
+            },
+            {
+              'vaccineType': 'HepB recombinant, 3-antigen, Al(OH)3',
+              'cvx': '220',
+              'beginAge': '18 years - 4 days',
+            },
           ],
-          "recurringDose": "No"
+          'recurringDose': 'No',
         },
         {
-          "doseNumber": "Dose 2",
-          "age": [
+          'doseNumber': 'Dose 2',
+          'age': [
             {
-              "absMinAge": "4 weeks - 4 days",
-              "minAge": "4 weeks",
-              "earliestRecAge": "1 month",
-              "latestRecAge": "3 months + 4 weeks"
-            }
+              'absMinAge': '4 weeks - 4 days',
+              'minAge': '4 weeks',
+              'earliestRecAge': '1 month',
+              'latestRecAge': '3 months + 4 weeks',
+            },
           ],
-          "interval": [
+          'interval': [
             {
-              "fromPrevious": "Y",
-              "absMinInt": "4 weeks - 4 days",
-              "minInt": "4 weeks",
-              "earliestRecInt": "4 weeks",
-              "latestRecInt": "5 months + 4 weeks"
-            }
+              'fromPrevious': 'Y',
+              'absMinInt': '4 weeks - 4 days',
+              'minInt': '4 weeks',
+              'earliestRecInt': '4 weeks',
+              'latestRecInt': '5 months + 4 weeks',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "Hep B, Adol/peds",
-              "cvx": "08",
-              "beginAge": "0 days",
-              "endAge": "20 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType': 'Hep B, Adol/peds',
+              'cvx': '08',
+              'beginAge': '0 days',
+              'endAge': '20 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "DTaP-HepB-IPV",
-              "cvx": "110",
-              "beginAge": "6 weeks",
-              "endAge": "7 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType': 'DTaP-HepB-IPV',
+              'cvx': '110',
+              'beginAge': '6 weeks',
+              'endAge': '7 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB",
-              "cvx": "146",
-              "beginAge": "6 weeks",
-              "endAge": "5 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType': 'DTaP-IPV-Hib-HepB',
+              'cvx': '146',
+              'beginAge': '6 weeks',
+              'endAge': '5 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "Hep B, adjuvanted",
-              "cvx": "189",
-              "beginAge": "18 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
-            }
+              'vaccineType': 'Hep B, adjuvanted',
+              'cvx': '189',
+              'beginAge': '18 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
+            },
           ],
-          "allowableVaccine": [
+          'allowableVaccine': [
             {
-              "vaccineType": "Hep B, Adol/peds",
-              "cvx": "08",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'Hep B, Adol/peds',
+              'cvx': '08',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "Hep B, Adol/high risk infant",
-              "cvx": "42",
-              "beginAge": "0 days",
-              "endAge": "20 years"
-            },
-            {"vaccineType": "Hep B, Adult", "cvx": "43", "beginAge": "0 days"},
-            {
-              "vaccineType": "Hep B, Dialysis",
-              "cvx": "44",
-              "beginAge": "0 days"
+              'vaccineType': 'Hep B, Adol/high risk infant',
+              'cvx': '42',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "Hep B, Unspecified Formulation",
-              "cvx": "45",
-              "beginAge": "0 days"
+              'vaccineType': 'Hep B, Adult',
+              'cvx': '43',
+              'beginAge': '0 days',
             },
             {
-              "vaccineType": "Hib-HepB",
-              "cvx": "51",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'Hep B, Dialysis',
+              'cvx': '44',
+              'beginAge': '0 days',
             },
             {
-              "vaccineType": "DTP-Hib-HepB",
-              "cvx": "102",
-              "beginAge": "0 days",
-              "endAge": "20 years"
-            },
-            {"vaccineType": "HepA-HepB", "cvx": "104", "beginAge": "0 days"},
-            {
-              "vaccineType": "DTaP-HepB-IPV",
-              "cvx": "110",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'Hep B, Unspecified Formulation',
+              'cvx': '45',
+              'beginAge': '0 days',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB, historical",
-              "cvx": "132",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'Hib-HepB',
+              'cvx': '51',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB",
-              "cvx": "146",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'DTP-Hib-HepB',
+              'cvx': '102',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "Hep B, adjuvanted",
-              "cvx": "189",
-              "beginAge": "18 years - 4 days"
+              'vaccineType': 'HepA-HepB',
+              'cvx': '104',
+              'beginAge': '0 days',
             },
             {
-              "vaccineType": "Hep A-Hep B, pediatric/adolescent",
-              "cvx": "193",
-              "beginAge": "0 days",
-              "endAge": "18 years"
+              'vaccineType': 'DTaP-HepB-IPV',
+              'cvx': '110',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "DTP-HepB-Hib Pentavalent Non-US",
-              "cvx": "198",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'DTaP-IPV-Hib-HepB, historical',
+              'cvx': '132',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "HepB recombinant, 3-antigen, Al(OH)3",
-              "cvx": "220",
-              "beginAge": "18 years - 4 days"
-            }
+              'vaccineType': 'DTaP-IPV-Hib-HepB',
+              'cvx': '146',
+              'beginAge': '0 days',
+              'endAge': '20 years',
+            },
+            {
+              'vaccineType': 'Hep B, adjuvanted',
+              'cvx': '189',
+              'beginAge': '18 years - 4 days',
+            },
+            {
+              'vaccineType': 'Hep A-Hep B, pediatric/adolescent',
+              'cvx': '193',
+              'beginAge': '0 days',
+              'endAge': '18 years',
+            },
+            {
+              'vaccineType': 'DTP-HepB-Hib Pentavalent Non-US',
+              'cvx': '198',
+              'beginAge': '0 days',
+              'endAge': '20 years',
+            },
+            {
+              'vaccineType': 'HepB recombinant, 3-antigen, Al(OH)3',
+              'cvx': '220',
+              'beginAge': '18 years - 4 days',
+            },
           ],
-          "recurringDose": "No"
+          'recurringDose': 'No',
         },
         {
-          "doseNumber": "Dose 3",
-          "interval": [
+          'doseNumber': 'Dose 3',
+          'interval': [
             {
-              "fromPrevious": "Y",
-              "absMinInt": "0 days",
-              "minInt": "0 days",
-              "earliestRecInt": "0 days"
-            }
+              'fromPrevious': 'Y',
+              'absMinInt': '0 days',
+              'minInt': '0 days',
+              'earliestRecInt': '0 days',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "Hep B, Adol/peds",
-              "cvx": "08",
-              "beginAge": "0 days",
-              "endAge": "20 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType': 'Hep B, Adol/peds',
+              'cvx': '08',
+              'beginAge': '0 days',
+              'endAge': '20 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "DTaP-HepB-IPV",
-              "cvx": "110",
-              "beginAge": "6 weeks",
-              "endAge": "7 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType': 'DTaP-HepB-IPV',
+              'cvx': '110',
+              'beginAge': '6 weeks',
+              'endAge': '7 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB",
-              "cvx": "146",
-              "beginAge": "6 weeks",
-              "endAge": "5 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType': 'DTaP-IPV-Hib-HepB',
+              'cvx': '146',
+              'beginAge': '6 weeks',
+              'endAge': '5 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "Hep B, adjuvanted",
-              "cvx": "189",
-              "beginAge": "18 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
-            }
+              'vaccineType': 'Hep B, adjuvanted',
+              'cvx': '189',
+              'beginAge': '18 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
+            },
           ],
-          "allowableVaccine": [
+          'allowableVaccine': [
             {
-              "vaccineType": "Hep B, Adol/peds",
-              "cvx": "08",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'Hep B, Adol/peds',
+              'cvx': '08',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "Hep B, Adol/high risk infant",
-              "cvx": "42",
-              "beginAge": "0 days",
-              "endAge": "20 years"
-            },
-            {"vaccineType": "Hep B, Adult", "cvx": "43", "beginAge": "0 days"},
-            {
-              "vaccineType": "Hep B, Dialysis",
-              "cvx": "44",
-              "beginAge": "0 days"
+              'vaccineType': 'Hep B, Adol/high risk infant',
+              'cvx': '42',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "Hep B, Unspecified Formulation",
-              "cvx": "45",
-              "beginAge": "0 days"
+              'vaccineType': 'Hep B, Adult',
+              'cvx': '43',
+              'beginAge': '0 days',
             },
             {
-              "vaccineType": "Hib-HepB",
-              "cvx": "51",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'Hep B, Dialysis',
+              'cvx': '44',
+              'beginAge': '0 days',
             },
             {
-              "vaccineType": "DTP-Hib-HepB",
-              "cvx": "102",
-              "beginAge": "0 days",
-              "endAge": "20 years"
-            },
-            {"vaccineType": "HepA-HepB", "cvx": "104", "beginAge": "0 days"},
-            {
-              "vaccineType": "DTaP-HepB-IPV",
-              "cvx": "110",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'Hep B, Unspecified Formulation',
+              'cvx': '45',
+              'beginAge': '0 days',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB, historical",
-              "cvx": "132",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'Hib-HepB',
+              'cvx': '51',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB",
-              "cvx": "146",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'DTP-Hib-HepB',
+              'cvx': '102',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "Hep B, adjuvanted",
-              "cvx": "189",
-              "beginAge": "18 years - 4 days"
+              'vaccineType': 'HepA-HepB',
+              'cvx': '104',
+              'beginAge': '0 days',
             },
             {
-              "vaccineType": "Hep A-Hep B, pediatric/adolescent",
-              "cvx": "193",
-              "beginAge": "0 days",
-              "endAge": "18 years"
+              'vaccineType': 'DTaP-HepB-IPV',
+              'cvx': '110',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "DTP-HepB-Hib Pentavalent Non-US",
-              "cvx": "198",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'DTaP-IPV-Hib-HepB, historical',
+              'cvx': '132',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "HepB recombinant, 3-antigen, Al(OH)3",
-              "cvx": "220",
-              "beginAge": "18 years - 4 days"
-            }
+              'vaccineType': 'DTaP-IPV-Hib-HepB',
+              'cvx': '146',
+              'beginAge': '0 days',
+              'endAge': '20 years',
+            },
+            {
+              'vaccineType': 'Hep B, adjuvanted',
+              'cvx': '189',
+              'beginAge': '18 years - 4 days',
+            },
+            {
+              'vaccineType': 'Hep A-Hep B, pediatric/adolescent',
+              'cvx': '193',
+              'beginAge': '0 days',
+              'endAge': '18 years',
+            },
+            {
+              'vaccineType': 'DTP-HepB-Hib Pentavalent Non-US',
+              'cvx': '198',
+              'beginAge': '0 days',
+              'endAge': '20 years',
+            },
+            {
+              'vaccineType': 'HepB recombinant, 3-antigen, Al(OH)3',
+              'cvx': '220',
+              'beginAge': '18 years - 4 days',
+            },
           ],
-          "recurringDose": "No"
+          'recurringDose': 'No',
         },
         {
-          "doseNumber": "Dose 4",
-          "age": [
+          'doseNumber': 'Dose 4',
+          'age': [
             {
-              "absMinAge": "24 weeks - 4 days",
-              "minAge": "24 weeks",
-              "earliestRecAge": "6 months",
-              "latestRecAge": "19 months + 4 weeks"
-            }
+              'absMinAge': '24 weeks - 4 days',
+              'minAge': '24 weeks',
+              'earliestRecAge': '6 months',
+              'latestRecAge': '19 months + 4 weeks',
+            },
           ],
-          "interval": [
+          'interval': [
             {
-              "fromPrevious": "N",
-              "fromTargetDose": "2",
-              "absMinInt": "8 weeks - 4 days",
-              "minInt": "8 weeks"
+              'fromPrevious': 'N',
+              'fromTargetDose': '2',
+              'absMinInt': '8 weeks - 4 days',
+              'minInt': '8 weeks',
             },
             {
-              "fromPrevious": "N",
-              "fromTargetDose": "1",
-              "absMinInt": "16 weeks - 4 days",
-              "minInt": "16 weeks"
-            }
+              'fromPrevious': 'N',
+              'fromTargetDose': '1',
+              'absMinInt': '16 weeks - 4 days',
+              'minInt': '16 weeks',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "Hep B, Adol/peds",
-              "cvx": "08",
-              "beginAge": "0 days",
-              "endAge": "20 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType': 'Hep B, Adol/peds',
+              'cvx': '08',
+              'beginAge': '0 days',
+              'endAge': '20 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "DTaP-HepB-IPV",
-              "cvx": "110",
-              "beginAge": "6 weeks",
-              "endAge": "7 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType': 'DTaP-HepB-IPV',
+              'cvx': '110',
+              'beginAge': '6 weeks',
+              'endAge': '7 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB",
-              "cvx": "146",
-              "beginAge": "6 weeks",
-              "endAge": "5 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType': 'DTaP-IPV-Hib-HepB',
+              'cvx': '146',
+              'beginAge': '6 weeks',
+              'endAge': '5 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "Hep B, adjuvanted",
-              "cvx": "189",
-              "beginAge": "18 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
-            }
+              'vaccineType': 'Hep B, adjuvanted',
+              'cvx': '189',
+              'beginAge': '18 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
+            },
           ],
-          "allowableVaccine": [
+          'allowableVaccine': [
             {
-              "vaccineType": "Hep B, Adol/peds",
-              "cvx": "08",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'Hep B, Adol/peds',
+              'cvx': '08',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "Hep B, Adol/high risk infant",
-              "cvx": "42",
-              "beginAge": "0 days",
-              "endAge": "20 years"
-            },
-            {"vaccineType": "Hep B, Adult", "cvx": "43", "beginAge": "0 days"},
-            {
-              "vaccineType": "Hep B, Dialysis",
-              "cvx": "44",
-              "beginAge": "0 days"
+              'vaccineType': 'Hep B, Adol/high risk infant',
+              'cvx': '42',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "Hep B, Unspecified Formulation",
-              "cvx": "45",
-              "beginAge": "0 days"
+              'vaccineType': 'Hep B, Adult',
+              'cvx': '43',
+              'beginAge': '0 days',
             },
             {
-              "vaccineType": "Hib-HepB",
-              "cvx": "51",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'Hep B, Dialysis',
+              'cvx': '44',
+              'beginAge': '0 days',
             },
             {
-              "vaccineType": "DTP-Hib-HepB",
-              "cvx": "102",
-              "beginAge": "0 days",
-              "endAge": "20 years"
-            },
-            {"vaccineType": "HepA-HepB", "cvx": "104", "beginAge": "0 days"},
-            {
-              "vaccineType": "DTaP-HepB-IPV",
-              "cvx": "110",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'Hep B, Unspecified Formulation',
+              'cvx': '45',
+              'beginAge': '0 days',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB, historical",
-              "cvx": "132",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'Hib-HepB',
+              'cvx': '51',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB",
-              "cvx": "146",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'DTP-Hib-HepB',
+              'cvx': '102',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "Hep B, adjuvanted",
-              "cvx": "189",
-              "beginAge": "18 years - 4 days"
+              'vaccineType': 'HepA-HepB',
+              'cvx': '104',
+              'beginAge': '0 days',
             },
             {
-              "vaccineType": "Hep A-Hep B, pediatric/adolescent",
-              "cvx": "193",
-              "beginAge": "0 days",
-              "endAge": "18 years"
+              'vaccineType': 'DTaP-HepB-IPV',
+              'cvx': '110',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "DTP-HepB-Hib Pentavalent Non-US",
-              "cvx": "198",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'DTaP-IPV-Hib-HepB, historical',
+              'cvx': '132',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "HepB recombinant, 3-antigen, Al(OH)3",
-              "cvx": "220",
-              "beginAge": "18 years - 4 days"
-            }
+              'vaccineType': 'DTaP-IPV-Hib-HepB',
+              'cvx': '146',
+              'beginAge': '0 days',
+              'endAge': '20 years',
+            },
+            {
+              'vaccineType': 'Hep B, adjuvanted',
+              'cvx': '189',
+              'beginAge': '18 years - 4 days',
+            },
+            {
+              'vaccineType': 'Hep A-Hep B, pediatric/adolescent',
+              'cvx': '193',
+              'beginAge': '0 days',
+              'endAge': '18 years',
+            },
+            {
+              'vaccineType': 'DTP-HepB-Hib Pentavalent Non-US',
+              'cvx': '198',
+              'beginAge': '0 days',
+              'endAge': '20 years',
+            },
+            {
+              'vaccineType': 'HepB recombinant, 3-antigen, Al(OH)3',
+              'cvx': '220',
+              'beginAge': '18 years - 4 days',
+            },
           ],
-          "recurringDose": "No"
-        }
-      ]
+          'recurringDose': 'No',
+        },
+      ],
     },
     {
-      "seriesName": "HepB adolescent 2-dose series",
-      "targetDisease": "HepB",
-      "vaccineGroup": "HepB",
-      "seriesAdminGuidance": [
-        "Anyone age 60 years or older who does not meet risk-based recommendations may still receive Hepatitis B vaccination."
+      'seriesName': 'HepB adolescent 2-dose series',
+      'targetDisease': 'HepB',
+      'vaccineGroup': 'HepB',
+      'seriesAdminGuidance': [
+        'Anyone age 60 years or older who does not meet risk-based '
+            'recommendations may still receive Hepatitis B vaccination.',
       ],
-      "seriesType": "Standard",
-      "equivalentSeriesGroups": "2",
-      "selectSeries": {
-        "defaultSeries": "No",
-        "productPath": "No",
-        "seriesGroupName": "Standard",
-        "seriesGroup": "1",
-        "seriesPriority": "A",
-        "seriesPreference": "3",
-        "maxAgeToStart": "16 years - 4 months"
+      'seriesType': 'Standard',
+      'equivalentSeriesGroups': '2',
+      'selectSeries': {
+        'defaultSeries': 'No',
+        'productPath': 'No',
+        'seriesGroupName': 'Standard',
+        'seriesGroup': '1',
+        'seriesPriority': 'A',
+        'seriesPreference': '3',
+        'maxAgeToStart': '16 years - 4 months',
       },
-      "seriesDose": [
+      'seriesDose': [
         {
-          "doseNumber": "Dose 1",
-          "age": [
+          'doseNumber': 'Dose 1',
+          'age': [
             {
-              "absMinAge": "11 years - 4 days",
-              "minAge": "11 years",
-              "earliestRecAge": "11 years"
-            }
+              'absMinAge': '11 years - 4 days',
+              'minAge': '11 years',
+              'earliestRecAge': '11 years',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "Hep B, Adult",
-              "cvx": "43",
-              "tradeName": "RECOMBIVAX ADULT",
-              "mvx": "MSD",
-              "volume": "1",
-              "forecastVaccineType": "Y"
-            }
+              'vaccineType': 'Hep B, Adult',
+              'cvx': '43',
+              'tradeName': 'RECOMBIVAX ADULT',
+              'mvx': 'MSD',
+              'volume': '1',
+              'forecastVaccineType': 'Y',
+            },
           ],
-          "recurringDose": "No"
+          'recurringDose': 'No',
         },
         {
-          "doseNumber": "Dose 2",
-          "age": [
-            {"maxAge": "16 years"}
-          ],
-          "interval": [
+          'doseNumber': 'Dose 2',
+          'age': [
             {
-              "fromPrevious": "Y",
-              "absMinInt": "4 months - 4 days",
-              "minInt": "4 months",
-              "earliestRecInt": "4 months",
-              "latestRecInt": "7 months + 4 weeks"
-            }
+              'maxAge': '16 years',
+            },
           ],
-          "preferableVaccine": [
+          'interval': [
             {
-              "vaccineType": "Hep B, Adult",
-              "cvx": "43",
-              "tradeName": "RECOMBIVAX ADULT",
-              "mvx": "MSD",
-              "volume": "1",
-              "forecastVaccineType": "Y"
-            }
+              'fromPrevious': 'Y',
+              'absMinInt': '4 months - 4 days',
+              'minInt': '4 months',
+              'earliestRecInt': '4 months',
+              'latestRecInt': '7 months + 4 weeks',
+            },
           ],
-          "recurringDose": "No"
-        }
-      ]
+          'preferableVaccine': [
+            {
+              'vaccineType': 'Hep B, Adult',
+              'cvx': '43',
+              'tradeName': 'RECOMBIVAX ADULT',
+              'mvx': 'MSD',
+              'volume': '1',
+              'forecastVaccineType': 'Y',
+            },
+          ],
+          'recurringDose': 'No',
+        },
+      ],
     },
     {
-      "seriesName": "HepB 19+ 3-dose series",
-      "targetDisease": "HepB",
-      "vaccineGroup": "HepB",
-      "seriesAdminGuidance": [
-        "Anyone age 60 years or older who does not meet risk-based recommendations may still receive Hepatitis B vaccination.",
-        "Providers should vaccinate pregnant persons needing HepB vaccination with Engerix-B, Heplisav-B, Recombivax HB, or Twinrix."
+      'seriesName': 'HepB 19+ 3-dose series',
+      'targetDisease': 'HepB',
+      'vaccineGroup': 'HepB',
+      'seriesAdminGuidance': [
+        'Anyone age 60 years or older who does not meet risk-based '
+            'recommendations may still receive Hepatitis B vaccination.',
+        'Providers should vaccinate pregnant persons needing HepB '
+            'vaccination with Engerix-B, Heplisav-B, Recombivax HB, or '
+            'Twinrix.',
       ],
-      "seriesType": "Standard",
-      "equivalentSeriesGroups": "2",
-      "selectSeries": {
-        "defaultSeries": "No",
-        "productPath": "No",
-        "seriesGroupName": "Standard",
-        "seriesGroup": "1",
-        "seriesPriority": "A",
-        "seriesPreference": "4"
+      'seriesType': 'Standard',
+      'equivalentSeriesGroups': '2',
+      'selectSeries': {
+        'defaultSeries': 'No',
+        'productPath': 'No',
+        'seriesGroupName': 'Standard',
+        'seriesGroup': '1',
+        'seriesPriority': 'A',
+        'seriesPreference': '4',
       },
-      "seriesDose": [
+      'seriesDose': [
         {
-          "doseNumber": "Dose 1",
-          "age": [
+          'doseNumber': 'Dose 1',
+          'age': [
             {
-              "absMinAge": "19 years",
-              "minAge": "19 years",
-              "earliestRecAge": "19 years"
-            }
+              'absMinAge': '19 years',
+              'minAge': '19 years',
+              'earliestRecAge': '19 years',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "Hep B, Adol/peds",
-              "cvx": "08",
-              "beginAge": "0 days",
-              "endAge": "20 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType': 'Hep B, Adol/peds',
+              'cvx': '08',
+              'beginAge': '0 days',
+              'endAge': '20 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "Hep B, Adult",
-              "cvx": "43",
-              "beginAge": "20 years",
-              "volume": "1",
-              "forecastVaccineType": "N"
+              'vaccineType': 'Hep B, Adult',
+              'cvx': '43',
+              'beginAge': '20 years',
+              'volume': '1',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "Hep B, Dialysis",
-              "cvx": "44",
-              "beginAge": "20 years",
-              "volume": "1",
-              "forecastVaccineType": "N"
+              'vaccineType': 'Hep B, Dialysis',
+              'cvx': '44',
+              'beginAge': '20 years',
+              'volume': '1',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "Hep B, adjuvanted",
-              "cvx": "189",
-              "beginAge": "18 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
-            }
+              'vaccineType': 'Hep B, adjuvanted',
+              'cvx': '189',
+              'beginAge': '18 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
+            },
           ],
-          "allowableVaccine": [
+          'allowableVaccine': [
             {
-              "vaccineType": "Hep B, Adol/peds",
-              "cvx": "08",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'Hep B, Adol/peds',
+              'cvx': '08',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "Hep B, Adol/high risk infant",
-              "cvx": "42",
-              "beginAge": "0 days",
-              "endAge": "20 years"
-            },
-            {"vaccineType": "Hep B, Adult", "cvx": "43", "beginAge": "0 days"},
-            {
-              "vaccineType": "Hep B, Dialysis",
-              "cvx": "44",
-              "beginAge": "0 days"
+              'vaccineType': 'Hep B, Adol/high risk infant',
+              'cvx': '42',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "Hep B, Unspecified Formulation",
-              "cvx": "45",
-              "beginAge": "0 days"
+              'vaccineType': 'Hep B, Adult',
+              'cvx': '43',
+              'beginAge': '0 days',
             },
             {
-              "vaccineType": "Hib-HepB",
-              "cvx": "51",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'Hep B, Dialysis',
+              'cvx': '44',
+              'beginAge': '0 days',
             },
             {
-              "vaccineType": "DTP-Hib-HepB",
-              "cvx": "102",
-              "beginAge": "0 days",
-              "endAge": "20 years"
-            },
-            {"vaccineType": "HepA-HepB", "cvx": "104", "beginAge": "0 days"},
-            {
-              "vaccineType": "DTaP-HepB-IPV",
-              "cvx": "110",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'Hep B, Unspecified Formulation',
+              'cvx': '45',
+              'beginAge': '0 days',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB, historical",
-              "cvx": "132",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'Hib-HepB',
+              'cvx': '51',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB",
-              "cvx": "146",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'DTP-Hib-HepB',
+              'cvx': '102',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "Hep B, adjuvanted",
-              "cvx": "189",
-              "beginAge": "18 years - 4 days"
+              'vaccineType': 'HepA-HepB',
+              'cvx': '104',
+              'beginAge': '0 days',
             },
             {
-              "vaccineType": "DTP-HepB-Hib Pentavalent Non-US",
-              "cvx": "198",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'DTaP-HepB-IPV',
+              'cvx': '110',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "HepB recombinant, 3-antigen, Al(OH)3",
-              "cvx": "220",
-              "beginAge": "18 years - 4 days"
-            }
+              'vaccineType': 'DTaP-IPV-Hib-HepB, historical',
+              'cvx': '132',
+              'beginAge': '0 days',
+              'endAge': '20 years',
+            },
+            {
+              'vaccineType': 'DTaP-IPV-Hib-HepB',
+              'cvx': '146',
+              'beginAge': '0 days',
+              'endAge': '20 years',
+            },
+            {
+              'vaccineType': 'Hep B, adjuvanted',
+              'cvx': '189',
+              'beginAge': '18 years - 4 days',
+            },
+            {
+              'vaccineType': 'DTP-HepB-Hib Pentavalent Non-US',
+              'cvx': '198',
+              'beginAge': '0 days',
+              'endAge': '20 years',
+            },
+            {
+              'vaccineType': 'HepB recombinant, 3-antigen, Al(OH)3',
+              'cvx': '220',
+              'beginAge': '18 years - 4 days',
+            },
           ],
-          "recurringDose": "No"
+          'recurringDose': 'No',
         },
         {
-          "doseNumber": "Dose 2",
-          "interval": [
+          'doseNumber': 'Dose 2',
+          'interval': [
             {
-              "fromPrevious": "Y",
-              "absMinInt": "4 weeks - 4 days",
-              "minInt": "4 weeks",
-              "earliestRecInt": "4 weeks"
-            }
+              'fromPrevious': 'Y',
+              'absMinInt': '4 weeks - 4 days',
+              'minInt': '4 weeks',
+              'earliestRecInt': '4 weeks',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "Hep B, Adol/peds",
-              "cvx": "08",
-              "beginAge": "0 days",
-              "endAge": "20 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType': 'Hep B, Adol/peds',
+              'cvx': '08',
+              'beginAge': '0 days',
+              'endAge': '20 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "Hep B, Adult",
-              "cvx": "43",
-              "beginAge": "20 years",
-              "volume": "1",
-              "forecastVaccineType": "N"
+              'vaccineType': 'Hep B, Adult',
+              'cvx': '43',
+              'beginAge': '20 years',
+              'volume': '1',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "Hep B, Dialysis",
-              "cvx": "44",
-              "beginAge": "20 years",
-              "volume": "1",
-              "forecastVaccineType": "N"
+              'vaccineType': 'Hep B, Dialysis',
+              'cvx': '44',
+              'beginAge': '20 years',
+              'volume': '1',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "Hep B, adjuvanted",
-              "cvx": "189",
-              "beginAge": "18 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
-            }
+              'vaccineType': 'Hep B, adjuvanted',
+              'cvx': '189',
+              'beginAge': '18 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
+            },
           ],
-          "allowableVaccine": [
+          'allowableVaccine': [
             {
-              "vaccineType": "Hep B, Adol/peds",
-              "cvx": "08",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'Hep B, Adol/peds',
+              'cvx': '08',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "Hep B, Adol/high risk infant",
-              "cvx": "42",
-              "beginAge": "0 days",
-              "endAge": "20 years"
-            },
-            {"vaccineType": "Hep B, Adult", "cvx": "43", "beginAge": "0 days"},
-            {
-              "vaccineType": "Hep B, Dialysis",
-              "cvx": "44",
-              "beginAge": "0 days"
+              'vaccineType': 'Hep B, Adol/high risk infant',
+              'cvx': '42',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "Hep B, Unspecified Formulation",
-              "cvx": "45",
-              "beginAge": "0 days"
+              'vaccineType': 'Hep B, Adult',
+              'cvx': '43',
+              'beginAge': '0 days',
             },
             {
-              "vaccineType": "Hib-HepB",
-              "cvx": "51",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'Hep B, Dialysis',
+              'cvx': '44',
+              'beginAge': '0 days',
             },
             {
-              "vaccineType": "DTP-Hib-HepB",
-              "cvx": "102",
-              "beginAge": "0 days",
-              "endAge": "20 years"
-            },
-            {"vaccineType": "HepA-HepB", "cvx": "104", "beginAge": "0 days"},
-            {
-              "vaccineType": "DTaP-HepB-IPV",
-              "cvx": "110",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'Hep B, Unspecified Formulation',
+              'cvx': '45',
+              'beginAge': '0 days',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB, historical",
-              "cvx": "132",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'Hib-HepB',
+              'cvx': '51',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB",
-              "cvx": "146",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'DTP-Hib-HepB',
+              'cvx': '102',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "Hep B, adjuvanted",
-              "cvx": "189",
-              "beginAge": "18 years - 4 days"
+              'vaccineType': 'HepA-HepB',
+              'cvx': '104',
+              'beginAge': '0 days',
             },
             {
-              "vaccineType": "DTP-HepB-Hib Pentavalent Non-US",
-              "cvx": "198",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'DTaP-HepB-IPV',
+              'cvx': '110',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "HepB recombinant, 3-antigen, Al(OH)3",
-              "cvx": "220",
-              "beginAge": "18 years - 4 days"
-            }
+              'vaccineType': 'DTaP-IPV-Hib-HepB, historical',
+              'cvx': '132',
+              'beginAge': '0 days',
+              'endAge': '20 years',
+            },
+            {
+              'vaccineType': 'DTaP-IPV-Hib-HepB',
+              'cvx': '146',
+              'beginAge': '0 days',
+              'endAge': '20 years',
+            },
+            {
+              'vaccineType': 'Hep B, adjuvanted',
+              'cvx': '189',
+              'beginAge': '18 years - 4 days',
+            },
+            {
+              'vaccineType': 'DTP-HepB-Hib Pentavalent Non-US',
+              'cvx': '198',
+              'beginAge': '0 days',
+              'endAge': '20 years',
+            },
+            {
+              'vaccineType': 'HepB recombinant, 3-antigen, Al(OH)3',
+              'cvx': '220',
+              'beginAge': '18 years - 4 days',
+            },
           ],
-          "recurringDose": "No"
+          'recurringDose': 'No',
         },
         {
-          "doseNumber": "Dose 3",
-          "interval": [
+          'doseNumber': 'Dose 3',
+          'interval': [
             {
-              "fromPrevious": "Y",
-              "absMinInt": "8 weeks - 4 days",
-              "minInt": "8 weeks"
+              'fromPrevious': 'Y',
+              'absMinInt': '8 weeks - 4 days',
+              'minInt': '8 weeks',
             },
             {
-              "fromPrevious": "N",
-              "fromTargetDose": "1",
-              "absMinInt": "16 weeks - 4 days",
-              "minInt": "16 weeks",
-              "earliestRecInt": "6 months"
-            }
+              'fromPrevious': 'N',
+              'fromTargetDose': '1',
+              'absMinInt': '16 weeks - 4 days',
+              'minInt': '16 weeks',
+              'earliestRecInt': '6 months',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "Hep B, Adol/peds",
-              "cvx": "08",
-              "beginAge": "0 days",
-              "endAge": "20 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType': 'Hep B, Adol/peds',
+              'cvx': '08',
+              'beginAge': '0 days',
+              'endAge': '20 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "Hep B, Adult",
-              "cvx": "43",
-              "beginAge": "20 years",
-              "volume": "1",
-              "forecastVaccineType": "N"
+              'vaccineType': 'Hep B, Adult',
+              'cvx': '43',
+              'beginAge': '20 years',
+              'volume': '1',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "Hep B, Dialysis",
-              "cvx": "44",
-              "beginAge": "20 years",
-              "volume": "1",
-              "forecastVaccineType": "N"
+              'vaccineType': 'Hep B, Dialysis',
+              'cvx': '44',
+              'beginAge': '20 years',
+              'volume': '1',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "Hep B, adjuvanted",
-              "cvx": "189",
-              "beginAge": "18 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
-            }
+              'vaccineType': 'Hep B, adjuvanted',
+              'cvx': '189',
+              'beginAge': '18 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
+            },
           ],
-          "allowableVaccine": [
+          'allowableVaccine': [
             {
-              "vaccineType": "Hep B, Adol/peds",
-              "cvx": "08",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'Hep B, Adol/peds',
+              'cvx': '08',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "Hep B, Adol/high risk infant",
-              "cvx": "42",
-              "beginAge": "0 days",
-              "endAge": "20 years"
-            },
-            {"vaccineType": "Hep B, Adult", "cvx": "43", "beginAge": "0 days"},
-            {
-              "vaccineType": "Hep B, Dialysis",
-              "cvx": "44",
-              "beginAge": "0 days"
+              'vaccineType': 'Hep B, Adol/high risk infant',
+              'cvx': '42',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "Hep B, Unspecified Formulation",
-              "cvx": "45",
-              "beginAge": "0 days"
+              'vaccineType': 'Hep B, Adult',
+              'cvx': '43',
+              'beginAge': '0 days',
             },
             {
-              "vaccineType": "Hib-HepB",
-              "cvx": "51",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'Hep B, Dialysis',
+              'cvx': '44',
+              'beginAge': '0 days',
             },
             {
-              "vaccineType": "DTP-Hib-HepB",
-              "cvx": "102",
-              "beginAge": "0 days",
-              "endAge": "20 years"
-            },
-            {"vaccineType": "HepA-HepB", "cvx": "104", "beginAge": "0 days"},
-            {
-              "vaccineType": "DTaP-HepB-IPV",
-              "cvx": "110",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'Hep B, Unspecified Formulation',
+              'cvx': '45',
+              'beginAge': '0 days',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB, historical",
-              "cvx": "132",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'Hib-HepB',
+              'cvx': '51',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB",
-              "cvx": "146",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'DTP-Hib-HepB',
+              'cvx': '102',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "Hep B, adjuvanted",
-              "cvx": "189",
-              "beginAge": "18 years - 4 days"
+              'vaccineType': 'HepA-HepB',
+              'cvx': '104',
+              'beginAge': '0 days',
             },
             {
-              "vaccineType": "DTP-HepB-Hib Pentavalent Non-US",
-              "cvx": "198",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'DTaP-HepB-IPV',
+              'cvx': '110',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "HepB recombinant, 3-antigen, Al(OH)3",
-              "cvx": "220",
-              "beginAge": "18 years - 4 days"
-            }
+              'vaccineType': 'DTaP-IPV-Hib-HepB, historical',
+              'cvx': '132',
+              'beginAge': '0 days',
+              'endAge': '20 years',
+            },
+            {
+              'vaccineType': 'DTaP-IPV-Hib-HepB',
+              'cvx': '146',
+              'beginAge': '0 days',
+              'endAge': '20 years',
+            },
+            {
+              'vaccineType': 'Hep B, adjuvanted',
+              'cvx': '189',
+              'beginAge': '18 years - 4 days',
+            },
+            {
+              'vaccineType': 'DTP-HepB-Hib Pentavalent Non-US',
+              'cvx': '198',
+              'beginAge': '0 days',
+              'endAge': '20 years',
+            },
+            {
+              'vaccineType': 'HepB recombinant, 3-antigen, Al(OH)3',
+              'cvx': '220',
+              'beginAge': '18 years - 4 days',
+            },
           ],
-          "recurringDose": "No"
-        }
-      ]
+          'recurringDose': 'No',
+        },
+      ],
     },
     {
-      "seriesName": "HepB 19+ 4-dose series",
-      "targetDisease": "HepB",
-      "vaccineGroup": "HepB",
-      "seriesAdminGuidance": [
-        "Anyone age 60 years or older who does not meet risk-based recommendations may still receive Hepatitis B vaccination.",
-        "Providers should vaccinate pregnant persons needing HepB vaccination with Engerix-B, Heplisav-B, Recombivax HB, or Twinrix."
+      'seriesName': 'HepB 19+ 4-dose series',
+      'targetDisease': 'HepB',
+      'vaccineGroup': 'HepB',
+      'seriesAdminGuidance': [
+        'Anyone age 60 years or older who does not meet risk-based '
+            'recommendations may still receive Hepatitis B vaccination.',
+        'Providers should vaccinate pregnant persons needing HepB '
+            'vaccination with Engerix-B, Heplisav-B, Recombivax HB, or '
+            'Twinrix.',
       ],
-      "seriesType": "Standard",
-      "equivalentSeriesGroups": "2",
-      "selectSeries": {
-        "defaultSeries": "No",
-        "productPath": "No",
-        "seriesGroupName": "Standard",
-        "seriesGroup": "1",
-        "seriesPriority": "A",
-        "seriesPreference": "5"
+      'seriesType': 'Standard',
+      'equivalentSeriesGroups': '2',
+      'selectSeries': {
+        'defaultSeries': 'No',
+        'productPath': 'No',
+        'seriesGroupName': 'Standard',
+        'seriesGroup': '1',
+        'seriesPriority': 'A',
+        'seriesPreference': '5',
       },
-      "seriesDose": [
+      'seriesDose': [
         {
-          "doseNumber": "Dose 1",
-          "age": [
+          'doseNumber': 'Dose 1',
+          'age': [
             {
-              "absMinAge": "19 years",
-              "minAge": "19 years",
-              "earliestRecAge": "19 years"
-            }
+              'absMinAge': '19 years',
+              'minAge': '19 years',
+              'earliestRecAge': '19 years',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "Hep B, Adol/peds",
-              "cvx": "08",
-              "beginAge": "0 days",
-              "endAge": "20 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType': 'Hep B, Adol/peds',
+              'cvx': '08',
+              'beginAge': '0 days',
+              'endAge': '20 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "Hep B, Adult",
-              "cvx": "43",
-              "beginAge": "20 years",
-              "volume": "1",
-              "forecastVaccineType": "N"
+              'vaccineType': 'Hep B, Adult',
+              'cvx': '43',
+              'beginAge': '20 years',
+              'volume': '1',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "Hep B, Dialysis",
-              "cvx": "44",
-              "beginAge": "20 years",
-              "volume": "1",
-              "forecastVaccineType": "N"
+              'vaccineType': 'Hep B, Dialysis',
+              'cvx': '44',
+              'beginAge': '20 years',
+              'volume': '1',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "Hep B, adjuvanted",
-              "cvx": "189",
-              "beginAge": "18 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
-            }
+              'vaccineType': 'Hep B, adjuvanted',
+              'cvx': '189',
+              'beginAge': '18 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
+            },
           ],
-          "allowableVaccine": [
+          'allowableVaccine': [
             {
-              "vaccineType": "Hep B, Adol/peds",
-              "cvx": "08",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'Hep B, Adol/peds',
+              'cvx': '08',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "Hep B, Adol/high risk infant",
-              "cvx": "42",
-              "beginAge": "0 days",
-              "endAge": "20 years"
-            },
-            {"vaccineType": "Hep B, Adult", "cvx": "43", "beginAge": "0 days"},
-            {
-              "vaccineType": "Hep B, Dialysis",
-              "cvx": "44",
-              "beginAge": "0 days"
+              'vaccineType': 'Hep B, Adol/high risk infant',
+              'cvx': '42',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "Hep B, Unspecified Formulation",
-              "cvx": "45",
-              "beginAge": "0 days"
+              'vaccineType': 'Hep B, Adult',
+              'cvx': '43',
+              'beginAge': '0 days',
             },
             {
-              "vaccineType": "Hib-HepB",
-              "cvx": "51",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'Hep B, Dialysis',
+              'cvx': '44',
+              'beginAge': '0 days',
             },
             {
-              "vaccineType": "DTP-Hib-HepB",
-              "cvx": "102",
-              "beginAge": "0 days",
-              "endAge": "20 years"
-            },
-            {"vaccineType": "HepA-HepB", "cvx": "104", "beginAge": "0 days"},
-            {
-              "vaccineType": "DTaP-HepB-IPV",
-              "cvx": "110",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'Hep B, Unspecified Formulation',
+              'cvx': '45',
+              'beginAge': '0 days',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB, historical",
-              "cvx": "132",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'Hib-HepB',
+              'cvx': '51',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB",
-              "cvx": "146",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'DTP-Hib-HepB',
+              'cvx': '102',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "Hep B, adjuvanted",
-              "cvx": "189",
-              "beginAge": "18 years - 4 days"
+              'vaccineType': 'HepA-HepB',
+              'cvx': '104',
+              'beginAge': '0 days',
             },
             {
-              "vaccineType": "DTP-HepB-Hib Pentavalent Non-US",
-              "cvx": "198",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'DTaP-HepB-IPV',
+              'cvx': '110',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "HepB recombinant, 3-antigen, Al(OH)3",
-              "cvx": "220",
-              "beginAge": "18 years - 4 days"
-            }
+              'vaccineType': 'DTaP-IPV-Hib-HepB, historical',
+              'cvx': '132',
+              'beginAge': '0 days',
+              'endAge': '20 years',
+            },
+            {
+              'vaccineType': 'DTaP-IPV-Hib-HepB',
+              'cvx': '146',
+              'beginAge': '0 days',
+              'endAge': '20 years',
+            },
+            {
+              'vaccineType': 'Hep B, adjuvanted',
+              'cvx': '189',
+              'beginAge': '18 years - 4 days',
+            },
+            {
+              'vaccineType': 'DTP-HepB-Hib Pentavalent Non-US',
+              'cvx': '198',
+              'beginAge': '0 days',
+              'endAge': '20 years',
+            },
+            {
+              'vaccineType': 'HepB recombinant, 3-antigen, Al(OH)3',
+              'cvx': '220',
+              'beginAge': '18 years - 4 days',
+            },
           ],
-          "recurringDose": "No"
+          'recurringDose': 'No',
         },
         {
-          "doseNumber": "Dose 2",
-          "interval": [
+          'doseNumber': 'Dose 2',
+          'interval': [
             {
-              "fromPrevious": "Y",
-              "absMinInt": "4 weeks - 4 days",
-              "minInt": "4 weeks",
-              "earliestRecInt": "4 weeks"
-            }
+              'fromPrevious': 'Y',
+              'absMinInt': '4 weeks - 4 days',
+              'minInt': '4 weeks',
+              'earliestRecInt': '4 weeks',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "Hep B, Adol/peds",
-              "cvx": "08",
-              "beginAge": "0 days",
-              "endAge": "20 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType': 'Hep B, Adol/peds',
+              'cvx': '08',
+              'beginAge': '0 days',
+              'endAge': '20 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "Hep B, Adult",
-              "cvx": "43",
-              "beginAge": "20 years",
-              "volume": "1",
-              "forecastVaccineType": "N"
+              'vaccineType': 'Hep B, Adult',
+              'cvx': '43',
+              'beginAge': '20 years',
+              'volume': '1',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "Hep B, Dialysis",
-              "cvx": "44",
-              "beginAge": "20 years",
-              "volume": "1",
-              "forecastVaccineType": "N"
+              'vaccineType': 'Hep B, Dialysis',
+              'cvx': '44',
+              'beginAge': '20 years',
+              'volume': '1',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "Hep B, adjuvanted",
-              "cvx": "189",
-              "beginAge": "18 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
-            }
+              'vaccineType': 'Hep B, adjuvanted',
+              'cvx': '189',
+              'beginAge': '18 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
+            },
           ],
-          "allowableVaccine": [
+          'allowableVaccine': [
             {
-              "vaccineType": "Hep B, Adol/peds",
-              "cvx": "08",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'Hep B, Adol/peds',
+              'cvx': '08',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "Hep B, Adol/high risk infant",
-              "cvx": "42",
-              "beginAge": "0 days",
-              "endAge": "20 years"
-            },
-            {"vaccineType": "Hep B, Adult", "cvx": "43", "beginAge": "0 days"},
-            {
-              "vaccineType": "Hep B, Dialysis",
-              "cvx": "44",
-              "beginAge": "0 days"
+              'vaccineType': 'Hep B, Adol/high risk infant',
+              'cvx': '42',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "Hep B, Unspecified Formulation",
-              "cvx": "45",
-              "beginAge": "0 days"
+              'vaccineType': 'Hep B, Adult',
+              'cvx': '43',
+              'beginAge': '0 days',
             },
             {
-              "vaccineType": "Hib-HepB",
-              "cvx": "51",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'Hep B, Dialysis',
+              'cvx': '44',
+              'beginAge': '0 days',
             },
             {
-              "vaccineType": "DTP-Hib-HepB",
-              "cvx": "102",
-              "beginAge": "0 days",
-              "endAge": "20 years"
-            },
-            {"vaccineType": "HepA-HepB", "cvx": "104", "beginAge": "0 days"},
-            {
-              "vaccineType": "DTaP-HepB-IPV",
-              "cvx": "110",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'Hep B, Unspecified Formulation',
+              'cvx': '45',
+              'beginAge': '0 days',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB, historical",
-              "cvx": "132",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'Hib-HepB',
+              'cvx': '51',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB",
-              "cvx": "146",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'DTP-Hib-HepB',
+              'cvx': '102',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "Hep B, adjuvanted",
-              "cvx": "189",
-              "beginAge": "18 years - 4 days"
+              'vaccineType': 'HepA-HepB',
+              'cvx': '104',
+              'beginAge': '0 days',
             },
             {
-              "vaccineType": "DTP-HepB-Hib Pentavalent Non-US",
-              "cvx": "198",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'DTaP-HepB-IPV',
+              'cvx': '110',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "HepB recombinant, 3-antigen, Al(OH)3",
-              "cvx": "220",
-              "beginAge": "18 years - 4 days"
-            }
+              'vaccineType': 'DTaP-IPV-Hib-HepB, historical',
+              'cvx': '132',
+              'beginAge': '0 days',
+              'endAge': '20 years',
+            },
+            {
+              'vaccineType': 'DTaP-IPV-Hib-HepB',
+              'cvx': '146',
+              'beginAge': '0 days',
+              'endAge': '20 years',
+            },
+            {
+              'vaccineType': 'Hep B, adjuvanted',
+              'cvx': '189',
+              'beginAge': '18 years - 4 days',
+            },
+            {
+              'vaccineType': 'DTP-HepB-Hib Pentavalent Non-US',
+              'cvx': '198',
+              'beginAge': '0 days',
+              'endAge': '20 years',
+            },
+            {
+              'vaccineType': 'HepB recombinant, 3-antigen, Al(OH)3',
+              'cvx': '220',
+              'beginAge': '18 years - 4 days',
+            },
           ],
-          "recurringDose": "No"
+          'recurringDose': 'No',
         },
         {
-          "doseNumber": "Dose 3",
-          "interval": [
+          'doseNumber': 'Dose 3',
+          'interval': [
             {
-              "fromPrevious": "Y",
-              "absMinInt": "0 days",
-              "minInt": "0 days",
-              "earliestRecInt": "0 days"
-            }
+              'fromPrevious': 'Y',
+              'absMinInt': '0 days',
+              'minInt': '0 days',
+              'earliestRecInt': '0 days',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "Hep B, Adol/peds",
-              "cvx": "08",
-              "beginAge": "0 days",
-              "endAge": "20 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType': 'Hep B, Adol/peds',
+              'cvx': '08',
+              'beginAge': '0 days',
+              'endAge': '20 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "Hep B, Adult",
-              "cvx": "43",
-              "beginAge": "20 years",
-              "volume": "1",
-              "forecastVaccineType": "N"
+              'vaccineType': 'Hep B, Adult',
+              'cvx': '43',
+              'beginAge': '20 years',
+              'volume': '1',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "Hep B, Dialysis",
-              "cvx": "44",
-              "beginAge": "20 years",
-              "volume": "1",
-              "forecastVaccineType": "N"
+              'vaccineType': 'Hep B, Dialysis',
+              'cvx': '44',
+              'beginAge': '20 years',
+              'volume': '1',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "Hep B, adjuvanted",
-              "cvx": "189",
-              "beginAge": "18 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
-            }
+              'vaccineType': 'Hep B, adjuvanted',
+              'cvx': '189',
+              'beginAge': '18 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
+            },
           ],
-          "allowableVaccine": [
+          'allowableVaccine': [
             {
-              "vaccineType": "Hep B, Adol/peds",
-              "cvx": "08",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'Hep B, Adol/peds',
+              'cvx': '08',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "Hep B, Adol/high risk infant",
-              "cvx": "42",
-              "beginAge": "0 days",
-              "endAge": "20 years"
-            },
-            {"vaccineType": "Hep B, Adult", "cvx": "43", "beginAge": "0 days"},
-            {
-              "vaccineType": "Hep B, Dialysis",
-              "cvx": "44",
-              "beginAge": "0 days"
+              'vaccineType': 'Hep B, Adol/high risk infant',
+              'cvx': '42',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "Hep B, Unspecified Formulation",
-              "cvx": "45",
-              "beginAge": "0 days"
+              'vaccineType': 'Hep B, Adult',
+              'cvx': '43',
+              'beginAge': '0 days',
             },
             {
-              "vaccineType": "Hib-HepB",
-              "cvx": "51",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'Hep B, Dialysis',
+              'cvx': '44',
+              'beginAge': '0 days',
             },
             {
-              "vaccineType": "DTP-Hib-HepB",
-              "cvx": "102",
-              "beginAge": "0 days",
-              "endAge": "20 years"
-            },
-            {"vaccineType": "HepA-HepB", "cvx": "104", "beginAge": "0 days"},
-            {
-              "vaccineType": "DTaP-HepB-IPV",
-              "cvx": "110",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'Hep B, Unspecified Formulation',
+              'cvx': '45',
+              'beginAge': '0 days',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB, historical",
-              "cvx": "132",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'Hib-HepB',
+              'cvx': '51',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB",
-              "cvx": "146",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'DTP-Hib-HepB',
+              'cvx': '102',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "Hep B, adjuvanted",
-              "cvx": "189",
-              "beginAge": "18 years - 4 days"
+              'vaccineType': 'HepA-HepB',
+              'cvx': '104',
+              'beginAge': '0 days',
             },
             {
-              "vaccineType": "DTP-HepB-Hib Pentavalent Non-US",
-              "cvx": "198",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'DTaP-HepB-IPV',
+              'cvx': '110',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "HepB recombinant, 3-antigen, Al(OH)3",
-              "cvx": "220",
-              "beginAge": "18 years - 4 days"
-            }
+              'vaccineType': 'DTaP-IPV-Hib-HepB, historical',
+              'cvx': '132',
+              'beginAge': '0 days',
+              'endAge': '20 years',
+            },
+            {
+              'vaccineType': 'DTaP-IPV-Hib-HepB',
+              'cvx': '146',
+              'beginAge': '0 days',
+              'endAge': '20 years',
+            },
+            {
+              'vaccineType': 'Hep B, adjuvanted',
+              'cvx': '189',
+              'beginAge': '18 years - 4 days',
+            },
+            {
+              'vaccineType': 'DTP-HepB-Hib Pentavalent Non-US',
+              'cvx': '198',
+              'beginAge': '0 days',
+              'endAge': '20 years',
+            },
+            {
+              'vaccineType': 'HepB recombinant, 3-antigen, Al(OH)3',
+              'cvx': '220',
+              'beginAge': '18 years - 4 days',
+            },
           ],
-          "recurringDose": "No"
+          'recurringDose': 'No',
         },
         {
-          "doseNumber": "Dose 4",
-          "interval": [
+          'doseNumber': 'Dose 4',
+          'interval': [
             {
-              "fromPrevious": "N",
-              "fromTargetDose": "2",
-              "absMinInt": "8 weeks - 4 days",
-              "minInt": "8 weeks"
+              'fromPrevious': 'N',
+              'fromTargetDose': '2',
+              'absMinInt': '8 weeks - 4 days',
+              'minInt': '8 weeks',
             },
             {
-              "fromPrevious": "N",
-              "fromTargetDose": "1",
-              "absMinInt": "16 weeks - 4 days",
-              "minInt": "16 weeks",
-              "earliestRecInt": "6 months"
-            }
+              'fromPrevious': 'N',
+              'fromTargetDose': '1',
+              'absMinInt': '16 weeks - 4 days',
+              'minInt': '16 weeks',
+              'earliestRecInt': '6 months',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "Hep B, Adol/peds",
-              "cvx": "08",
-              "beginAge": "0 days",
-              "endAge": "20 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType': 'Hep B, Adol/peds',
+              'cvx': '08',
+              'beginAge': '0 days',
+              'endAge': '20 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "Hep B, Adult",
-              "cvx": "43",
-              "beginAge": "20 years",
-              "volume": "1",
-              "forecastVaccineType": "N"
+              'vaccineType': 'Hep B, Adult',
+              'cvx': '43',
+              'beginAge': '20 years',
+              'volume': '1',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "Hep B, Dialysis",
-              "cvx": "44",
-              "beginAge": "20 years",
-              "volume": "1",
-              "forecastVaccineType": "N"
+              'vaccineType': 'Hep B, Dialysis',
+              'cvx': '44',
+              'beginAge': '20 years',
+              'volume': '1',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "Hep B, adjuvanted",
-              "cvx": "189",
-              "beginAge": "18 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
-            }
+              'vaccineType': 'Hep B, adjuvanted',
+              'cvx': '189',
+              'beginAge': '18 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
+            },
           ],
-          "allowableVaccine": [
+          'allowableVaccine': [
             {
-              "vaccineType": "Hep B, Adol/peds",
-              "cvx": "08",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'Hep B, Adol/peds',
+              'cvx': '08',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "Hep B, Adol/high risk infant",
-              "cvx": "42",
-              "beginAge": "0 days",
-              "endAge": "20 years"
-            },
-            {"vaccineType": "Hep B, Adult", "cvx": "43", "beginAge": "0 days"},
-            {
-              "vaccineType": "Hep B, Dialysis",
-              "cvx": "44",
-              "beginAge": "0 days"
+              'vaccineType': 'Hep B, Adol/high risk infant',
+              'cvx': '42',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "Hep B, Unspecified Formulation",
-              "cvx": "45",
-              "beginAge": "0 days"
+              'vaccineType': 'Hep B, Adult',
+              'cvx': '43',
+              'beginAge': '0 days',
             },
             {
-              "vaccineType": "Hib-HepB",
-              "cvx": "51",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'Hep B, Dialysis',
+              'cvx': '44',
+              'beginAge': '0 days',
             },
             {
-              "vaccineType": "DTP-Hib-HepB",
-              "cvx": "102",
-              "beginAge": "0 days",
-              "endAge": "20 years"
-            },
-            {"vaccineType": "HepA-HepB", "cvx": "104", "beginAge": "0 days"},
-            {
-              "vaccineType": "DTaP-HepB-IPV",
-              "cvx": "110",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'Hep B, Unspecified Formulation',
+              'cvx': '45',
+              'beginAge': '0 days',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB, historical",
-              "cvx": "132",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'Hib-HepB',
+              'cvx': '51',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB",
-              "cvx": "146",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'DTP-Hib-HepB',
+              'cvx': '102',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "Hep B, adjuvanted",
-              "cvx": "189",
-              "beginAge": "18 years - 4 days"
+              'vaccineType': 'HepA-HepB',
+              'cvx': '104',
+              'beginAge': '0 days',
             },
             {
-              "vaccineType": "DTP-HepB-Hib Pentavalent Non-US",
-              "cvx": "198",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'DTaP-HepB-IPV',
+              'cvx': '110',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "HepB recombinant, 3-antigen, Al(OH)3",
-              "cvx": "220",
-              "beginAge": "18 years - 4 days"
-            }
+              'vaccineType': 'DTaP-IPV-Hib-HepB, historical',
+              'cvx': '132',
+              'beginAge': '0 days',
+              'endAge': '20 years',
+            },
+            {
+              'vaccineType': 'DTaP-IPV-Hib-HepB',
+              'cvx': '146',
+              'beginAge': '0 days',
+              'endAge': '20 years',
+            },
+            {
+              'vaccineType': 'Hep B, adjuvanted',
+              'cvx': '189',
+              'beginAge': '18 years - 4 days',
+            },
+            {
+              'vaccineType': 'DTP-HepB-Hib Pentavalent Non-US',
+              'cvx': '198',
+              'beginAge': '0 days',
+              'endAge': '20 years',
+            },
+            {
+              'vaccineType': 'HepB recombinant, 3-antigen, Al(OH)3',
+              'cvx': '220',
+              'beginAge': '18 years - 4 days',
+            },
           ],
-          "recurringDose": "No"
-        }
-      ]
+          'recurringDose': 'No',
+        },
+      ],
     },
     {
-      "seriesName": "HepB Heplisav-B 2-dose series",
-      "targetDisease": "HepB",
-      "vaccineGroup": "HepB",
-      "seriesAdminGuidance": [
-        "Anyone age 60 years or older who does not meet risk-based recommendations may still receive Hepatitis B vaccination.",
-        "Providers should vaccinate pregnant persons needing HepB vaccination with Engerix-B, Heplisav-B, Recombivax HB, or Twinrix."
+      'seriesName': 'HepB Heplisav-B 2-dose series',
+      'targetDisease': 'HepB',
+      'vaccineGroup': 'HepB',
+      'seriesAdminGuidance': [
+        'Anyone age 60 years or older who does not meet risk-based '
+            'recommendations may still receive Hepatitis B vaccination.',
+        'Providers should vaccinate pregnant persons needing HepB '
+            'vaccination with Engerix-B, Heplisav-B, Recombivax HB, or '
+            'Twinrix.',
       ],
-      "seriesType": "Standard",
-      "equivalentSeriesGroups": "2",
-      "selectSeries": {
-        "defaultSeries": "No",
-        "productPath": "Yes",
-        "seriesGroupName": "Standard",
-        "seriesGroup": "1",
-        "seriesPriority": "A",
-        "seriesPreference": "6",
-        "minAgeToStart": "18 years"
+      'seriesType': 'Standard',
+      'equivalentSeriesGroups': '2',
+      'selectSeries': {
+        'defaultSeries': 'No',
+        'productPath': 'Yes',
+        'seriesGroupName': 'Standard',
+        'seriesGroup': '1',
+        'seriesPriority': 'A',
+        'seriesPreference': '6',
+        'minAgeToStart': '18 years',
       },
-      "seriesDose": [
+      'seriesDose': [
         {
-          "doseNumber": "Dose 1",
-          "age": [
+          'doseNumber': 'Dose 1',
+          'age': [
             {
-              "absMinAge": "18 years - 4 days",
-              "minAge": "18 years",
-              "earliestRecAge": "18 years"
-            }
+              'absMinAge': '18 years - 4 days',
+              'minAge': '18 years',
+              'earliestRecAge': '18 years',
+            },
           ],
-          "interval": [
-            {"fromPrevious": "Y", "absMinInt": "0 days", "minInt": "0 days"}
-          ],
-          "preferableVaccine": [
+          'interval': [
             {
-              "vaccineType": "HepB-CpG",
-              "cvx": "189",
-              "beginAge": "18 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
-            }
+              'fromPrevious': 'Y',
+              'absMinInt': '0 days',
+              'minInt': '0 days',
+            },
           ],
-          "allowableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "HepB-CpG",
-              "cvx": "189",
-              "beginAge": "18 years - 4 days"
-            }
+              'vaccineType': 'HepB-CpG',
+              'cvx': '189',
+              'beginAge': '18 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
+            },
           ],
-          "recurringDose": "No"
+          'allowableVaccine': [
+            {
+              'vaccineType': 'HepB-CpG',
+              'cvx': '189',
+              'beginAge': '18 years - 4 days',
+            },
+          ],
+          'recurringDose': 'No',
         },
         {
-          "doseNumber": "Dose 2",
-          "interval": [
+          'doseNumber': 'Dose 2',
+          'interval': [
             {
-              "fromPrevious": "Y",
-              "absMinInt": "4 weeks - 4 days",
-              "minInt": "4 weeks",
-              "earliestRecInt": "4 weeks",
-              "latestRecInt": "8 weeks"
-            }
+              'fromPrevious': 'Y',
+              'absMinInt': '4 weeks - 4 days',
+              'minInt': '4 weeks',
+              'earliestRecInt': '4 weeks',
+              'latestRecInt': '8 weeks',
+            },
           ],
-          "allowableInterval": {
-            "fromPrevious": "N",
-            "fromTargetDose": "1",
-            "absMinInt": "4 weeks - 4 days"
+          'allowableInterval': {
+            'fromPrevious': 'N',
+            'fromTargetDose': '1',
+            'absMinInt': '4 weeks - 4 days',
           },
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "HepB-CpG",
-              "cvx": "189",
-              "beginAge": "18 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
-            }
+              'vaccineType': 'HepB-CpG',
+              'cvx': '189',
+              'beginAge': '18 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
+            },
           ],
-          "allowableVaccine": [
+          'allowableVaccine': [
             {
-              "vaccineType": "HepB-CpG",
-              "cvx": "189",
-              "beginAge": "18 years - 4 days"
-            }
+              'vaccineType': 'HepB-CpG',
+              'cvx': '189',
+              'beginAge': '18 years - 4 days',
+            },
           ],
-          "recurringDose": "No"
-        }
-      ]
+          'recurringDose': 'No',
+        },
+      ],
     },
     {
-      "seriesName": "HepB Heplisav-B secondary 4-dose series",
-      "targetDisease": "HepB",
-      "vaccineGroup": "HepB",
-      "seriesAdminGuidance": [
-        "Anyone age 60 years or older who does not meet risk-based recommendations may still receive Hepatitis B vaccination.",
-        "Providers should vaccinate pregnant persons needing HepB vaccination with Engerix-B, Heplisav-B, Recombivax HB, or Twinrix."
+      'seriesName': 'HepB Heplisav-B secondary 4-dose series',
+      'targetDisease': 'HepB',
+      'vaccineGroup': 'HepB',
+      'seriesAdminGuidance': [
+        'Anyone age 60 years or older who does not meet risk-based '
+            'recommendations may still receive Hepatitis B vaccination.',
+        'Providers should vaccinate pregnant persons needing HepB '
+            'vaccination with Engerix-B, Heplisav-B, Recombivax HB, or '
+            'Twinrix.',
       ],
-      "seriesType": "Standard",
-      "equivalentSeriesGroups": "2",
-      "selectSeries": {
-        "defaultSeries": "No",
-        "productPath": "No",
-        "seriesGroupName": "Standard",
-        "seriesGroup": "1",
-        "seriesPriority": "A",
-        "seriesPreference": "7"
+      'seriesType': 'Standard',
+      'equivalentSeriesGroups': '2',
+      'selectSeries': {
+        'defaultSeries': 'No',
+        'productPath': 'No',
+        'seriesGroupName': 'Standard',
+        'seriesGroup': '1',
+        'seriesPriority': 'A',
+        'seriesPreference': '7',
       },
-      "seriesDose": [
+      'seriesDose': [
         {
-          "doseNumber": "Dose 1",
-          "age": [
-            {"absMinAge": "0 days", "minAge": "0 days"}
+          'doseNumber': 'Dose 1',
+          'age': [
+            {
+              'absMinAge': '0 days',
+              'minAge': '0 days',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "Hep B, Adol/peds",
-              "cvx": "08",
-              "beginAge": "0 days",
-              "endAge": "20 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType': 'Hep B, Adol/peds',
+              'cvx': '08',
+              'beginAge': '0 days',
+              'endAge': '20 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "Hep B, Adult",
-              "cvx": "43",
-              "beginAge": "20 years",
-              "volume": "1",
-              "forecastVaccineType": "N"
+              'vaccineType': 'Hep B, Adult',
+              'cvx': '43',
+              'beginAge': '20 years',
+              'volume': '1',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "Hep B, Dialysis",
-              "cvx": "44",
-              "beginAge": "20 years",
-              "volume": "1",
-              "forecastVaccineType": "N"
+              'vaccineType': 'Hep B, Dialysis',
+              'cvx': '44',
+              'beginAge': '20 years',
+              'volume': '1',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "DTaP-HepB-IPV",
-              "cvx": "110",
-              "beginAge": "6 weeks",
-              "endAge": "7 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType': 'DTaP-HepB-IPV',
+              'cvx': '110',
+              'beginAge': '6 weeks',
+              'endAge': '7 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB",
-              "cvx": "146",
-              "beginAge": "6 weeks",
-              "endAge": "5 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
-            }
+              'vaccineType': 'DTaP-IPV-Hib-HepB',
+              'cvx': '146',
+              'beginAge': '6 weeks',
+              'endAge': '5 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
+            },
           ],
-          "allowableVaccine": [
+          'allowableVaccine': [
             {
-              "vaccineType": "Hep B, Adol/peds",
-              "cvx": "08",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'Hep B, Adol/peds',
+              'cvx': '08',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "Hep B, Adol/high risk infant",
-              "cvx": "42",
-              "beginAge": "0 days",
-              "endAge": "20 years"
-            },
-            {"vaccineType": "Hep B, Adult", "cvx": "43", "beginAge": "0 days"},
-            {
-              "vaccineType": "Hep B, Dialysis",
-              "cvx": "44",
-              "beginAge": "0 days"
+              'vaccineType': 'Hep B, Adol/high risk infant',
+              'cvx': '42',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "Hep B, Unspecified Formulation",
-              "cvx": "45",
-              "beginAge": "0 days"
+              'vaccineType': 'Hep B, Adult',
+              'cvx': '43',
+              'beginAge': '0 days',
             },
             {
-              "vaccineType": "Hib-HepB",
-              "cvx": "51",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'Hep B, Dialysis',
+              'cvx': '44',
+              'beginAge': '0 days',
             },
             {
-              "vaccineType": "DTP-Hib-HepB",
-              "cvx": "102",
-              "beginAge": "0 days",
-              "endAge": "20 years"
-            },
-            {"vaccineType": "HepA-HepB", "cvx": "104", "beginAge": "0 days"},
-            {
-              "vaccineType": "DTaP-HepB-IPV",
-              "cvx": "110",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'Hep B, Unspecified Formulation',
+              'cvx': '45',
+              'beginAge': '0 days',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB, historical",
-              "cvx": "132",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'Hib-HepB',
+              'cvx': '51',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB",
-              "cvx": "146",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'DTP-Hib-HepB',
+              'cvx': '102',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "Hep A-Hep B, pediatric/adolescent",
-              "cvx": "193",
-              "beginAge": "0 days",
-              "endAge": "18 years"
+              'vaccineType': 'HepA-HepB',
+              'cvx': '104',
+              'beginAge': '0 days',
             },
             {
-              "vaccineType": "DTP-HepB-Hib Pentavalent Non-US",
-              "cvx": "198",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'DTaP-HepB-IPV',
+              'cvx': '110',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "HepB recombinant, 3-antigen, Al(OH)3",
-              "cvx": "220",
-              "beginAge": "18 years - 4 days"
-            }
+              'vaccineType': 'DTaP-IPV-Hib-HepB, historical',
+              'cvx': '132',
+              'beginAge': '0 days',
+              'endAge': '20 years',
+            },
+            {
+              'vaccineType': 'DTaP-IPV-Hib-HepB',
+              'cvx': '146',
+              'beginAge': '0 days',
+              'endAge': '20 years',
+            },
+            {
+              'vaccineType': 'Hep A-Hep B, pediatric/adolescent',
+              'cvx': '193',
+              'beginAge': '0 days',
+              'endAge': '18 years',
+            },
+            {
+              'vaccineType': 'DTP-HepB-Hib Pentavalent Non-US',
+              'cvx': '198',
+              'beginAge': '0 days',
+              'endAge': '20 years',
+            },
+            {
+              'vaccineType': 'HepB recombinant, 3-antigen, Al(OH)3',
+              'cvx': '220',
+              'beginAge': '18 years - 4 days',
+            },
           ],
-          "recurringDose": "No"
+          'recurringDose': 'No',
         },
         {
-          "doseNumber": "Dose 2",
-          "age": [
+          'doseNumber': 'Dose 2',
+          'age': [
             {
-              "absMinAge": "18 years - 4 days",
-              "minAge": "18 years",
-              "earliestRecAge": "18 years"
-            }
+              'absMinAge': '18 years - 4 days',
+              'minAge': '18 years',
+              'earliestRecAge': '18 years',
+            },
           ],
-          "interval": [
-            {"fromPrevious": "Y", "absMinInt": "0 days", "minInt": "0 days"}
-          ],
-          "preferableVaccine": [
+          'interval': [
             {
-              "vaccineType": "HepB-CpG",
-              "cvx": "189",
-              "beginAge": "18 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
-            }
+              'fromPrevious': 'Y',
+              'absMinInt': '0 days',
+              'minInt': '0 days',
+            },
           ],
-          "allowableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "HepB-CpG",
-              "cvx": "189",
-              "beginAge": "18 years - 4 days"
-            }
+              'vaccineType': 'HepB-CpG',
+              'cvx': '189',
+              'beginAge': '18 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
+            },
           ],
-          "recurringDose": "No"
+          'allowableVaccine': [
+            {
+              'vaccineType': 'HepB-CpG',
+              'cvx': '189',
+              'beginAge': '18 years - 4 days',
+            },
+          ],
+          'recurringDose': 'No',
         },
         {
-          "doseNumber": "Dose 3",
-          "interval": [
+          'doseNumber': 'Dose 3',
+          'interval': [
             {
-              "fromPrevious": "Y",
-              "absMinInt": "4 weeks - 4 days",
-              "minInt": "4 weeks"
-            }
+              'fromPrevious': 'Y',
+              'absMinInt': '4 weeks - 4 days',
+              'minInt': '4 weeks',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "Hep B, Adol/peds",
-              "cvx": "08",
-              "beginAge": "0 days",
-              "endAge": "20 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType': 'Hep B, Adol/peds',
+              'cvx': '08',
+              'beginAge': '0 days',
+              'endAge': '20 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "Hep B, Adult",
-              "cvx": "43",
-              "beginAge": "20 years",
-              "volume": "1",
-              "forecastVaccineType": "N"
+              'vaccineType': 'Hep B, Adult',
+              'cvx': '43',
+              'beginAge': '20 years',
+              'volume': '1',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "Hep B, Dialysis",
-              "cvx": "44",
-              "beginAge": "20 years",
-              "volume": "1",
-              "forecastVaccineType": "N"
+              'vaccineType': 'Hep B, Dialysis',
+              'cvx': '44',
+              'beginAge': '20 years',
+              'volume': '1',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "HepB-CpG",
-              "cvx": "189",
-              "beginAge": "18 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
-            }
+              'vaccineType': 'HepB-CpG',
+              'cvx': '189',
+              'beginAge': '18 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
+            },
           ],
-          "allowableVaccine": [
+          'allowableVaccine': [
             {
-              "vaccineType": "Hep B, Adol/peds",
-              "cvx": "08",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'Hep B, Adol/peds',
+              'cvx': '08',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "Hep B, Adol/high risk infant",
-              "cvx": "42",
-              "beginAge": "0 days",
-              "endAge": "20 years"
-            },
-            {"vaccineType": "Hep B, Adult", "cvx": "43", "beginAge": "0 days"},
-            {
-              "vaccineType": "Hep B, Dialysis",
-              "cvx": "44",
-              "beginAge": "0 days"
+              'vaccineType': 'Hep B, Adol/high risk infant',
+              'cvx': '42',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "Hep B, Unspecified Formulation",
-              "cvx": "45",
-              "beginAge": "0 days"
+              'vaccineType': 'Hep B, Adult',
+              'cvx': '43',
+              'beginAge': '0 days',
             },
             {
-              "vaccineType": "Hib-HepB",
-              "cvx": "51",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'Hep B, Dialysis',
+              'cvx': '44',
+              'beginAge': '0 days',
             },
             {
-              "vaccineType": "DTP-Hib-HepB",
-              "cvx": "102",
-              "beginAge": "0 days",
-              "endAge": "20 years"
-            },
-            {"vaccineType": "HepA-HepB", "cvx": "104", "beginAge": "0 days"},
-            {
-              "vaccineType": "DTaP-HepB-IPV",
-              "cvx": "110",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'Hep B, Unspecified Formulation',
+              'cvx': '45',
+              'beginAge': '0 days',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB, historical",
-              "cvx": "132",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'Hib-HepB',
+              'cvx': '51',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB",
-              "cvx": "146",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'DTP-Hib-HepB',
+              'cvx': '102',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "HepB-CpG",
-              "cvx": "189",
-              "beginAge": "18 years - 4 days"
+              'vaccineType': 'HepA-HepB',
+              'cvx': '104',
+              'beginAge': '0 days',
             },
             {
-              "vaccineType": "DTP-HepB-Hib Pentavalent Non-US",
-              "cvx": "198",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'DTaP-HepB-IPV',
+              'cvx': '110',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "HepB recombinant, 3-antigen, Al(OH)3",
-              "cvx": "220",
-              "beginAge": "18 years - 4 days"
-            }
+              'vaccineType': 'DTaP-IPV-Hib-HepB, historical',
+              'cvx': '132',
+              'beginAge': '0 days',
+              'endAge': '20 years',
+            },
+            {
+              'vaccineType': 'DTaP-IPV-Hib-HepB',
+              'cvx': '146',
+              'beginAge': '0 days',
+              'endAge': '20 years',
+            },
+            {
+              'vaccineType': 'HepB-CpG',
+              'cvx': '189',
+              'beginAge': '18 years - 4 days',
+            },
+            {
+              'vaccineType': 'DTP-HepB-Hib Pentavalent Non-US',
+              'cvx': '198',
+              'beginAge': '0 days',
+              'endAge': '20 years',
+            },
+            {
+              'vaccineType': 'HepB recombinant, 3-antigen, Al(OH)3',
+              'cvx': '220',
+              'beginAge': '18 years - 4 days',
+            },
           ],
-          "recurringDose": "No"
+          'recurringDose': 'No',
         },
         {
-          "doseNumber": "Dose 4",
-          "interval": [
+          'doseNumber': 'Dose 4',
+          'interval': [
             {
-              "fromPrevious": "N",
-              "fromTargetDose": "2",
-              "absMinInt": "8 weeks - 4 days",
-              "minInt": "8 weeks"
+              'fromPrevious': 'N',
+              'fromTargetDose': '2',
+              'absMinInt': '8 weeks - 4 days',
+              'minInt': '8 weeks',
             },
             {
-              "fromPrevious": "N",
-              "fromTargetDose": "1",
-              "absMinInt": "16 weeks - 4 days",
-              "minInt": "16 weeks"
-            }
+              'fromPrevious': 'N',
+              'fromTargetDose': '1',
+              'absMinInt': '16 weeks - 4 days',
+              'minInt': '16 weeks',
+            },
           ],
-          "allowableInterval": {
-            "fromPrevious": "N",
-            "fromTargetDose": "2",
-            "absMinInt": "4 weeks - 4 days"
+          'allowableInterval': {
+            'fromPrevious': 'N',
+            'fromTargetDose': '2',
+            'absMinInt': '4 weeks - 4 days',
           },
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "HepB-CpG",
-              "cvx": "189",
-              "beginAge": "18 years",
-              "volume": "0.5",
-              "forecastVaccineType": "Y"
-            }
+              'vaccineType': 'HepB-CpG',
+              'cvx': '189',
+              'beginAge': '18 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'Y',
+            },
           ],
-          "allowableVaccine": [
+          'allowableVaccine': [
             {
-              "vaccineType": "HepB-CpG",
-              "cvx": "189",
-              "beginAge": "18 years - 4 days"
-            }
+              'vaccineType': 'HepB-CpG',
+              'cvx': '189',
+              'beginAge': '18 years - 4 days',
+            },
           ],
-          "conditionalSkip": [
+          'conditionalSkip': [
             {
-              "context": "Both",
-              "setLogic": "n/a",
-              "set": [
+              'context': 'Both',
+              'setLogic': 'n/a',
+              'set': [
                 {
-                  "setID": "1",
-                  "setDescription":
-                      "Dose can be skipped once two doses of Heplisav-B are administered.",
-                  "condition": [
+                  'setID': '1',
+                  'setDescription':
+                      'Dose can be skipped once two doses of Heplisav-B '
+                      'are administered.',
+                  'condition': [
                     {
-                      "conditionID": "1",
-                      "conditionType": "Vaccine Count by Age",
-                      "beginAge": "18 years - 4 days",
-                      "doseCount": "1",
-                      "doseType": "Total",
-                      "doseCountLogic": "greater than",
-                      "vaccineTypes": "189"
-                    }
-                  ]
-                }
-              ]
-            }
+                      'conditionID': '1',
+                      'conditionType': 'Vaccine Count by Age',
+                      'beginAge': '18 years - 4 days',
+                      'doseCount': '1',
+                      'doseType': 'Total',
+                      'doseCountLogic': 'greater than',
+                      'vaccineTypes': '189',
+                    },
+                  ],
+                },
+              ],
+            },
           ],
-          "recurringDose": "No"
-        }
-      ]
+          'recurringDose': 'No',
+        },
+      ],
     },
     {
-      "seriesName": "HepB Heplisav-B tertiary 4-dose series",
-      "targetDisease": "HepB",
-      "vaccineGroup": "HepB",
-      "seriesAdminGuidance": [
-        "Anyone age 60 years or older who does not meet risk-based recommendations may still receive Hepatitis B vaccination.",
-        "Providers should vaccinate pregnant persons needing HepB vaccination with Engerix-B, Heplisav-B, Recombivax HB, or Twinrix."
+      'seriesName': 'HepB Heplisav-B tertiary 4-dose series',
+      'targetDisease': 'HepB',
+      'vaccineGroup': 'HepB',
+      'seriesAdminGuidance': [
+        'Anyone age 60 years or older who does not meet risk-based '
+            'recommendations may still receive Hepatitis B vaccination.',
+        'Providers should vaccinate pregnant persons needing HepB '
+            'vaccination with Engerix-B, Heplisav-B, Recombivax HB, or '
+            'Twinrix.',
       ],
-      "seriesType": "Standard",
-      "equivalentSeriesGroups": "2",
-      "selectSeries": {
-        "defaultSeries": "No",
-        "productPath": "No",
-        "seriesGroupName": "Standard",
-        "seriesGroup": "1",
-        "seriesPriority": "A",
-        "seriesPreference": "8"
+      'seriesType': 'Standard',
+      'equivalentSeriesGroups': '2',
+      'selectSeries': {
+        'defaultSeries': 'No',
+        'productPath': 'No',
+        'seriesGroupName': 'Standard',
+        'seriesGroup': '1',
+        'seriesPriority': 'A',
+        'seriesPreference': '8',
       },
-      "seriesDose": [
+      'seriesDose': [
         {
-          "doseNumber": "Dose 1",
-          "age": [
+          'doseNumber': 'Dose 1',
+          'age': [
             {
-              "absMinAge": "18 years - 4 days",
-              "minAge": "18 years",
-              "earliestRecAge": "18 years"
-            }
+              'absMinAge': '18 years - 4 days',
+              'minAge': '18 years',
+              'earliestRecAge': '18 years',
+            },
           ],
-          "interval": [
-            {"fromPrevious": "Y", "absMinInt": "0 days", "minInt": "0 days"}
-          ],
-          "preferableVaccine": [
+          'interval': [
             {
-              "vaccineType": "HepB-CpG",
-              "cvx": "189",
-              "beginAge": "18 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
-            }
+              'fromPrevious': 'Y',
+              'absMinInt': '0 days',
+              'minInt': '0 days',
+            },
           ],
-          "allowableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "HepB-CpG",
-              "cvx": "189",
-              "beginAge": "18 years - 4 days"
-            }
+              'vaccineType': 'HepB-CpG',
+              'cvx': '189',
+              'beginAge': '18 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
+            },
           ],
-          "recurringDose": "No"
+          'allowableVaccine': [
+            {
+              'vaccineType': 'HepB-CpG',
+              'cvx': '189',
+              'beginAge': '18 years - 4 days',
+            },
+          ],
+          'recurringDose': 'No',
         },
         {
-          "doseNumber": "Dose 2",
-          "interval": [
+          'doseNumber': 'Dose 2',
+          'interval': [
             {
-              "fromPrevious": "Y",
-              "absMinInt": "4 weeks - 4 days",
-              "minInt": "4 weeks"
-            }
+              'fromPrevious': 'Y',
+              'absMinInt': '4 weeks - 4 days',
+              'minInt': '4 weeks',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "Hep B, Adol/peds",
-              "cvx": "08",
-              "beginAge": "0 days",
-              "endAge": "20 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType': 'Hep B, Adol/peds',
+              'cvx': '08',
+              'beginAge': '0 days',
+              'endAge': '20 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "Hep B, Adult",
-              "cvx": "43",
-              "beginAge": "20 years",
-              "volume": "1",
-              "forecastVaccineType": "N"
+              'vaccineType': 'Hep B, Adult',
+              'cvx': '43',
+              'beginAge': '20 years',
+              'volume': '1',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "Hep B, Dialysis",
-              "cvx": "44",
-              "beginAge": "20 years",
-              "volume": "1",
-              "forecastVaccineType": "N"
-            }
+              'vaccineType': 'Hep B, Dialysis',
+              'cvx': '44',
+              'beginAge': '20 years',
+              'volume': '1',
+              'forecastVaccineType': 'N',
+            },
           ],
-          "allowableVaccine": [
+          'allowableVaccine': [
             {
-              "vaccineType": "Hep B, Adol/peds",
-              "cvx": "08",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'Hep B, Adol/peds',
+              'cvx': '08',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "Hep B, Adol/high risk infant",
-              "cvx": "42",
-              "beginAge": "0 days",
-              "endAge": "20 years"
-            },
-            {"vaccineType": "Hep B, Adult", "cvx": "43", "beginAge": "0 days"},
-            {
-              "vaccineType": "Hep B, Dialysis",
-              "cvx": "44",
-              "beginAge": "0 days"
+              'vaccineType': 'Hep B, Adol/high risk infant',
+              'cvx': '42',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "Hep B, Unspecified Formulation",
-              "cvx": "45",
-              "beginAge": "0 days"
+              'vaccineType': 'Hep B, Adult',
+              'cvx': '43',
+              'beginAge': '0 days',
             },
             {
-              "vaccineType": "Hib-HepB",
-              "cvx": "51",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'Hep B, Dialysis',
+              'cvx': '44',
+              'beginAge': '0 days',
             },
             {
-              "vaccineType": "DTP-Hib-HepB",
-              "cvx": "102",
-              "beginAge": "0 days",
-              "endAge": "20 years"
-            },
-            {"vaccineType": "HepA-HepB", "cvx": "104", "beginAge": "0 days"},
-            {
-              "vaccineType": "DTaP-HepB-IPV",
-              "cvx": "110",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'Hep B, Unspecified Formulation',
+              'cvx': '45',
+              'beginAge': '0 days',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB, historical",
-              "cvx": "132",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'Hib-HepB',
+              'cvx': '51',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB",
-              "cvx": "146",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'DTP-Hib-HepB',
+              'cvx': '102',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "DTP-HepB-Hib Pentavalent Non-US",
-              "cvx": "198",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'HepA-HepB',
+              'cvx': '104',
+              'beginAge': '0 days',
             },
             {
-              "vaccineType": "HepB recombinant, 3-antigen, Al(OH)3",
-              "cvx": "220",
-              "beginAge": "18 years - 4 days"
-            }
+              'vaccineType': 'DTaP-HepB-IPV',
+              'cvx': '110',
+              'beginAge': '0 days',
+              'endAge': '20 years',
+            },
+            {
+              'vaccineType': 'DTaP-IPV-Hib-HepB, historical',
+              'cvx': '132',
+              'beginAge': '0 days',
+              'endAge': '20 years',
+            },
+            {
+              'vaccineType': 'DTaP-IPV-Hib-HepB',
+              'cvx': '146',
+              'beginAge': '0 days',
+              'endAge': '20 years',
+            },
+            {
+              'vaccineType': 'DTP-HepB-Hib Pentavalent Non-US',
+              'cvx': '198',
+              'beginAge': '0 days',
+              'endAge': '20 years',
+            },
+            {
+              'vaccineType': 'HepB recombinant, 3-antigen, Al(OH)3',
+              'cvx': '220',
+              'beginAge': '18 years - 4 days',
+            },
           ],
-          "recurringDose": "No"
+          'recurringDose': 'No',
         },
         {
-          "doseNumber": "Dose 3",
-          "interval": [
+          'doseNumber': 'Dose 3',
+          'interval': [
             {
-              "fromPrevious": "Y",
-              "absMinInt": "4 weeks - 4 days",
-              "minInt": "4 weeks"
-            }
+              'fromPrevious': 'Y',
+              'absMinInt': '4 weeks - 4 days',
+              'minInt': '4 weeks',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "Hep B, Adol/peds",
-              "cvx": "08",
-              "beginAge": "0 days",
-              "endAge": "20 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType': 'Hep B, Adol/peds',
+              'cvx': '08',
+              'beginAge': '0 days',
+              'endAge': '20 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "Hep B, Adult",
-              "cvx": "43",
-              "beginAge": "20 years",
-              "volume": "1",
-              "forecastVaccineType": "N"
+              'vaccineType': 'Hep B, Adult',
+              'cvx': '43',
+              'beginAge': '20 years',
+              'volume': '1',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "Hep B, Dialysis",
-              "cvx": "44",
-              "beginAge": "20 years",
-              "volume": "1",
-              "forecastVaccineType": "N"
+              'vaccineType': 'Hep B, Dialysis',
+              'cvx': '44',
+              'beginAge': '20 years',
+              'volume': '1',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "HepB-CpG",
-              "cvx": "189",
-              "beginAge": "18 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
-            }
+              'vaccineType': 'HepB-CpG',
+              'cvx': '189',
+              'beginAge': '18 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
+            },
           ],
-          "allowableVaccine": [
+          'allowableVaccine': [
             {
-              "vaccineType": "Hep B, Adol/peds",
-              "cvx": "08",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'Hep B, Adol/peds',
+              'cvx': '08',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "Hep B, Adol/high risk infant",
-              "cvx": "42",
-              "beginAge": "0 days",
-              "endAge": "20 years"
-            },
-            {"vaccineType": "Hep B, Adult", "cvx": "43", "beginAge": "0 days"},
-            {
-              "vaccineType": "Hep B, Dialysis",
-              "cvx": "44",
-              "beginAge": "0 days"
+              'vaccineType': 'Hep B, Adol/high risk infant',
+              'cvx': '42',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "Hep B, Unspecified Formulation",
-              "cvx": "45",
-              "beginAge": "0 days"
+              'vaccineType': 'Hep B, Adult',
+              'cvx': '43',
+              'beginAge': '0 days',
             },
             {
-              "vaccineType": "Hib-HepB",
-              "cvx": "51",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'Hep B, Dialysis',
+              'cvx': '44',
+              'beginAge': '0 days',
             },
             {
-              "vaccineType": "DTP-Hib-HepB",
-              "cvx": "102",
-              "beginAge": "0 days",
-              "endAge": "20 years"
-            },
-            {"vaccineType": "HepA-HepB", "cvx": "104", "beginAge": "0 days"},
-            {
-              "vaccineType": "DTaP-HepB-IPV",
-              "cvx": "110",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'Hep B, Unspecified Formulation',
+              'cvx': '45',
+              'beginAge': '0 days',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB, historical",
-              "cvx": "132",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'Hib-HepB',
+              'cvx': '51',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB",
-              "cvx": "146",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'DTP-Hib-HepB',
+              'cvx': '102',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "HepB-CpG",
-              "cvx": "189",
-              "beginAge": "18 years - 4 days"
+              'vaccineType': 'HepA-HepB',
+              'cvx': '104',
+              'beginAge': '0 days',
             },
             {
-              "vaccineType": "DTP-HepB-Hib Pentavalent Non-US",
-              "cvx": "198",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'DTaP-HepB-IPV',
+              'cvx': '110',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "HepB recombinant, 3-antigen, Al(OH)3",
-              "cvx": "220",
-              "beginAge": "18 years - 4 days"
-            }
+              'vaccineType': 'DTaP-IPV-Hib-HepB, historical',
+              'cvx': '132',
+              'beginAge': '0 days',
+              'endAge': '20 years',
+            },
+            {
+              'vaccineType': 'DTaP-IPV-Hib-HepB',
+              'cvx': '146',
+              'beginAge': '0 days',
+              'endAge': '20 years',
+            },
+            {
+              'vaccineType': 'HepB-CpG',
+              'cvx': '189',
+              'beginAge': '18 years - 4 days',
+            },
+            {
+              'vaccineType': 'DTP-HepB-Hib Pentavalent Non-US',
+              'cvx': '198',
+              'beginAge': '0 days',
+              'endAge': '20 years',
+            },
+            {
+              'vaccineType': 'HepB recombinant, 3-antigen, Al(OH)3',
+              'cvx': '220',
+              'beginAge': '18 years - 4 days',
+            },
           ],
-          "recurringDose": "No"
+          'recurringDose': 'No',
         },
         {
-          "doseNumber": "Dose 4",
-          "interval": [
+          'doseNumber': 'Dose 4',
+          'interval': [
             {
-              "fromPrevious": "Y",
-              "absMinInt": "0 days",
-              "minInt": "4 weeks",
-              "earliestRecInt": "4 weeks",
-              "latestRecInt": "8 weeks"
-            }
+              'fromPrevious': 'Y',
+              'absMinInt': '0 days',
+              'minInt': '4 weeks',
+              'earliestRecInt': '4 weeks',
+              'latestRecInt': '8 weeks',
+            },
           ],
-          "allowableInterval": {
-            "fromPrevious": "N",
-            "fromTargetDose": "1",
-            "absMinInt": "4 weeks - 4 days"
+          'allowableInterval': {
+            'fromPrevious': 'N',
+            'fromTargetDose': '1',
+            'absMinInt': '4 weeks - 4 days',
           },
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "HepB-CpG",
-              "cvx": "189",
-              "beginAge": "18 years",
-              "volume": "0.5",
-              "forecastVaccineType": "Y"
-            }
+              'vaccineType': 'HepB-CpG',
+              'cvx': '189',
+              'beginAge': '18 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'Y',
+            },
           ],
-          "allowableVaccine": [
+          'allowableVaccine': [
             {
-              "vaccineType": "HepB-CpG",
-              "cvx": "189",
-              "beginAge": "18 years - 4 days"
-            }
+              'vaccineType': 'HepB-CpG',
+              'cvx': '189',
+              'beginAge': '18 years - 4 days',
+            },
           ],
-          "conditionalSkip": [
+          'conditionalSkip': [
             {
-              "context": "Both",
-              "setLogic": "n/a",
-              "set": [
+              'context': 'Both',
+              'setLogic': 'n/a',
+              'set': [
                 {
-                  "setID": "1",
-                  "setDescription":
-                      "Dose can be skipped once two doses of Heplisav-B are administered.",
-                  "condition": [
+                  'setID': '1',
+                  'setDescription':
+                      'Dose can be skipped once two doses of Heplisav-B '
+                      'are administered.',
+                  'condition': [
                     {
-                      "conditionID": "1",
-                      "conditionType": "Vaccine Count by Age",
-                      "beginAge": "18 years - 4 days",
-                      "doseCount": "1",
-                      "doseType": "Total",
-                      "doseCountLogic": "greater than",
-                      "vaccineTypes": "189"
-                    }
-                  ]
-                }
-              ]
-            }
+                      'conditionID': '1',
+                      'conditionType': 'Vaccine Count by Age',
+                      'beginAge': '18 years - 4 days',
+                      'doseCount': '1',
+                      'doseType': 'Total',
+                      'doseCountLogic': 'greater than',
+                      'vaccineTypes': '189',
+                    },
+                  ],
+                },
+              ],
+            },
           ],
-          "recurringDose": "No"
-        }
-      ]
+          'recurringDose': 'No',
+        },
+      ],
     },
     {
-      "seriesName": "HepB Twinrix 3 Dose Series",
-      "targetDisease": "HepB",
-      "vaccineGroup": "HepB",
-      "seriesAdminGuidance": [
-        "Anyone age 60 years or older who does not meet risk-based recommendations may still receive Hepatitis B vaccination.",
-        "Providers should vaccinate pregnant persons needing HepB vaccination with Engerix-B, Heplisav-B, Recombivax HB, or Twinrix."
+      'seriesName': 'HepB Twinrix 3 Dose Series',
+      'targetDisease': 'HepB',
+      'vaccineGroup': 'HepB',
+      'seriesAdminGuidance': [
+        'Anyone age 60 years or older who does not meet risk-based '
+            'recommendations may still receive Hepatitis B vaccination.',
+        'Providers should vaccinate pregnant persons needing HepB '
+            'vaccination with Engerix-B, Heplisav-B, Recombivax HB, or '
+            'Twinrix.',
       ],
-      "seriesType": "Standard",
-      "equivalentSeriesGroups": "2",
-      "selectSeries": {
-        "defaultSeries": "No",
-        "productPath": "Yes",
-        "seriesGroupName": "Standard",
-        "seriesGroup": "1",
-        "seriesPriority": "A",
-        "seriesPreference": "9"
+      'seriesType': 'Standard',
+      'equivalentSeriesGroups': '2',
+      'selectSeries': {
+        'defaultSeries': 'No',
+        'productPath': 'Yes',
+        'seriesGroupName': 'Standard',
+        'seriesGroup': '1',
+        'seriesPriority': 'A',
+        'seriesPreference': '9',
       },
-      "seriesDose": [
+      'seriesDose': [
         {
-          "doseNumber": "Dose 1",
-          "age": [
+          'doseNumber': 'Dose 1',
+          'age': [
             {
-              "absMinAge": "18 years - 4 days",
-              "minAge": "18 years",
-              "earliestRecAge": "18 years"
-            }
+              'absMinAge': '18 years - 4 days',
+              'minAge': '18 years',
+              'earliestRecAge': '18 years',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "HepA-HepB",
-              "cvx": "104",
-              "beginAge": "18 years",
-              "volume": "1",
-              "forecastVaccineType": "Y"
-            }
+              'vaccineType': 'HepA-HepB',
+              'cvx': '104',
+              'beginAge': '18 years',
+              'volume': '1',
+              'forecastVaccineType': 'Y',
+            },
           ],
-          "allowableVaccine": [
+          'allowableVaccine': [
             {
-              "vaccineType": "HepA-HepB",
-              "cvx": "104",
-              "beginAge": "18 years - 4 days"
-            }
+              'vaccineType': 'HepA-HepB',
+              'cvx': '104',
+              'beginAge': '18 years - 4 days',
+            },
           ],
-          "recurringDose": "No"
+          'recurringDose': 'No',
         },
         {
-          "doseNumber": "Dose 2",
-          "interval": [
+          'doseNumber': 'Dose 2',
+          'interval': [
             {
-              "fromPrevious": "Y",
-              "absMinInt": "4 weeks - 4 days",
-              "minInt": "4 weeks",
-              "earliestRecInt": "4 weeks"
-            }
+              'fromPrevious': 'Y',
+              'absMinInt': '4 weeks - 4 days',
+              'minInt': '4 weeks',
+              'earliestRecInt': '4 weeks',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "HepA-HepB",
-              "cvx": "104",
-              "beginAge": "18 years",
-              "volume": "1",
-              "forecastVaccineType": "Y"
-            }
+              'vaccineType': 'HepA-HepB',
+              'cvx': '104',
+              'beginAge': '18 years',
+              'volume': '1',
+              'forecastVaccineType': 'Y',
+            },
           ],
-          "allowableVaccine": [
+          'allowableVaccine': [
             {
-              "vaccineType": "HepA-HepB",
-              "cvx": "104",
-              "beginAge": "18 years - 4 days"
-            }
+              'vaccineType': 'HepA-HepB',
+              'cvx': '104',
+              'beginAge': '18 years - 4 days',
+            },
           ],
-          "recurringDose": "No"
+          'recurringDose': 'No',
         },
         {
-          "doseNumber": "Dose 3",
-          "interval": [
+          'doseNumber': 'Dose 3',
+          'interval': [
             {
-              "fromPrevious": "Y",
-              "absMinInt": "5 months - 4 days",
-              "minInt": "5 months",
-              "earliestRecInt": "5 months"
+              'fromPrevious': 'Y',
+              'absMinInt': '5 months - 4 days',
+              'minInt': '5 months',
+              'earliestRecInt': '5 months',
             },
             {
-              "fromPrevious": "N",
-              "fromTargetDose": "1",
-              "absMinInt": "6 months - 4 days",
-              "minInt": "6 months",
-              "earliestRecInt": "6 months"
-            }
+              'fromPrevious': 'N',
+              'fromTargetDose': '1',
+              'absMinInt': '6 months - 4 days',
+              'minInt': '6 months',
+              'earliestRecInt': '6 months',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "HepA-HepB",
-              "cvx": "104",
-              "beginAge": "18 years",
-              "volume": "1",
-              "forecastVaccineType": "Y"
-            }
+              'vaccineType': 'HepA-HepB',
+              'cvx': '104',
+              'beginAge': '18 years',
+              'volume': '1',
+              'forecastVaccineType': 'Y',
+            },
           ],
-          "allowableVaccine": [
-            {"vaccineType": "Hep B, Adult", "cvx": "43", "beginAge": "0 days"},
+          'allowableVaccine': [
             {
-              "vaccineType": "HepA-HepB",
-              "cvx": "104",
-              "beginAge": "18 years - 4 days"
+              'vaccineType': 'Hep B, Adult',
+              'cvx': '43',
+              'beginAge': '0 days',
             },
             {
-              "vaccineType": "HepB recombinant, 3-antigen, Al(OH)3",
-              "cvx": "220",
-              "beginAge": "18 years - 4 days"
-            }
+              'vaccineType': 'HepA-HepB',
+              'cvx': '104',
+              'beginAge': '18 years - 4 days',
+            },
+            {
+              'vaccineType': 'HepB recombinant, 3-antigen, Al(OH)3',
+              'cvx': '220',
+              'beginAge': '18 years - 4 days',
+            },
           ],
-          "recurringDose": "No"
-        }
-      ]
+          'recurringDose': 'No',
+        },
+      ],
     },
     {
-      "seriesName": "HepB Twinrix 4-dose series",
-      "targetDisease": "HepB",
-      "vaccineGroup": "HepB",
-      "seriesAdminGuidance": [
-        "Anyone age 60 years or older who does not meet risk-based recommendations may still receive Hepatitis B vaccination.",
-        "Providers should vaccinate pregnant persons needing HepB vaccination with Engerix-B, Heplisav-B, Recombivax HB, or Twinrix."
+      'seriesName': 'HepB Twinrix 4-dose series',
+      'targetDisease': 'HepB',
+      'vaccineGroup': 'HepB',
+      'seriesAdminGuidance': [
+        'Anyone age 60 years or older who does not meet risk-based '
+            'recommendations may still receive Hepatitis B vaccination.',
+        'Providers should vaccinate pregnant persons needing HepB '
+            'vaccination with Engerix-B, Heplisav-B, Recombivax HB, or '
+            'Twinrix.',
       ],
-      "seriesType": "Standard",
-      "equivalentSeriesGroups": "2",
-      "selectSeries": {
-        "defaultSeries": "No",
-        "productPath": "Yes",
-        "seriesGroupName": "Standard",
-        "seriesGroup": "1",
-        "seriesPriority": "A",
-        "maxAgeToStart": "60 years"
+      'seriesType': 'Standard',
+      'equivalentSeriesGroups': '2',
+      'selectSeries': {
+        'defaultSeries': 'No',
+        'productPath': 'Yes',
+        'seriesGroupName': 'Standard',
+        'seriesGroup': '1',
+        'seriesPriority': 'A',
+        'maxAgeToStart': '60 years',
       },
-      "seriesDose": [
+      'seriesDose': [
         {
-          "doseNumber": "Dose 1",
-          "age": [
+          'doseNumber': 'Dose 1',
+          'age': [
             {
-              "absMinAge": "18 years - 4 days",
-              "minAge": "18 years",
-              "earliestRecAge": "18 years",
-              "maxAge": "60 years"
-            }
+              'absMinAge': '18 years - 4 days',
+              'minAge': '18 years',
+              'earliestRecAge': '18 years',
+              'maxAge': '60 years',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "HepA-HepB",
-              "cvx": "104",
-              "beginAge": "18 years",
-              "volume": "1",
-              "forecastVaccineType": "Y"
-            }
+              'vaccineType': 'HepA-HepB',
+              'cvx': '104',
+              'beginAge': '18 years',
+              'volume': '1',
+              'forecastVaccineType': 'Y',
+            },
           ],
-          "allowableVaccine": [
+          'allowableVaccine': [
             {
-              "vaccineType": "HepA-HepB",
-              "cvx": "104",
-              "beginAge": "18 years - 4 days"
-            }
+              'vaccineType': 'HepA-HepB',
+              'cvx': '104',
+              'beginAge': '18 years - 4 days',
+            },
           ],
-          "recurringDose": "No"
+          'recurringDose': 'No',
         },
         {
-          "doseNumber": "Dose 2",
-          "interval": [
+          'doseNumber': 'Dose 2',
+          'interval': [
             {
-              "fromPrevious": "Y",
-              "absMinInt": "7 days",
-              "minInt": "7 days",
-              "earliestRecInt": "7 days"
-            }
+              'fromPrevious': 'Y',
+              'absMinInt': '7 days',
+              'minInt': '7 days',
+              'earliestRecInt': '7 days',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "HepA-HepB",
-              "cvx": "104",
-              "beginAge": "18 years",
-              "volume": "1",
-              "forecastVaccineType": "Y"
-            }
+              'vaccineType': 'HepA-HepB',
+              'cvx': '104',
+              'beginAge': '18 years',
+              'volume': '1',
+              'forecastVaccineType': 'Y',
+            },
           ],
-          "allowableVaccine": [
+          'allowableVaccine': [
             {
-              "vaccineType": "HepA-HepB",
-              "cvx": "104",
-              "beginAge": "18 years - 4 days"
-            }
+              'vaccineType': 'HepA-HepB',
+              'cvx': '104',
+              'beginAge': '18 years - 4 days',
+            },
           ],
-          "recurringDose": "No"
+          'recurringDose': 'No',
         },
         {
-          "doseNumber": "Dose 3",
-          "interval": [
+          'doseNumber': 'Dose 3',
+          'interval': [
             {
-              "fromPrevious": "Y",
-              "absMinInt": "14 days",
-              "minInt": "14 days",
-              "earliestRecInt": "14 days",
-              "latestRecInt": "23 days"
-            }
+              'fromPrevious': 'Y',
+              'absMinInt': '14 days',
+              'minInt': '14 days',
+              'earliestRecInt': '14 days',
+              'latestRecInt': '23 days',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "HepA-HepB",
-              "cvx": "104",
-              "beginAge": "18 years",
-              "volume": "1",
-              "forecastVaccineType": "Y"
-            }
+              'vaccineType': 'HepA-HepB',
+              'cvx': '104',
+              'beginAge': '18 years',
+              'volume': '1',
+              'forecastVaccineType': 'Y',
+            },
           ],
-          "allowableVaccine": [
+          'allowableVaccine': [
             {
-              "vaccineType": "HepA-HepB",
-              "cvx": "104",
-              "beginAge": "18 years - 4 days"
-            }
+              'vaccineType': 'HepA-HepB',
+              'cvx': '104',
+              'beginAge': '18 years - 4 days',
+            },
           ],
-          "recurringDose": "No"
+          'recurringDose': 'No',
         },
         {
-          "doseNumber": "Dose 4",
-          "interval": [
+          'doseNumber': 'Dose 4',
+          'interval': [
             {
-              "fromPrevious": "N",
-              "fromTargetDose": "1",
-              "absMinInt": "12 months - 4 days",
-              "minInt": "12 months",
-              "earliestRecInt": "12 months"
-            }
+              'fromPrevious': 'N',
+              'fromTargetDose': '1',
+              'absMinInt': '12 months - 4 days',
+              'minInt': '12 months',
+              'earliestRecInt': '12 months',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "HepA-HepB",
-              "cvx": "104",
-              "beginAge": "18 years",
-              "volume": "1",
-              "forecastVaccineType": "Y"
-            }
+              'vaccineType': 'HepA-HepB',
+              'cvx': '104',
+              'beginAge': '18 years',
+              'volume': '1',
+              'forecastVaccineType': 'Y',
+            },
           ],
-          "allowableVaccine": [
-            {"vaccineType": "Hep B, Adult", "cvx": "43", "beginAge": "0 days"},
+          'allowableVaccine': [
             {
-              "vaccineType": "HepA-HepB",
-              "cvx": "104",
-              "beginAge": "18 years - 4 days"
+              'vaccineType': 'Hep B, Adult',
+              'cvx': '43',
+              'beginAge': '0 days',
             },
             {
-              "vaccineType": "HepB recombinant, 3-antigen, Al(OH)3",
-              "cvx": "220",
-              "beginAge": "18 years - 4 days"
-            }
+              'vaccineType': 'HepA-HepB',
+              'cvx': '104',
+              'beginAge': '18 years - 4 days',
+            },
+            {
+              'vaccineType': 'HepB recombinant, 3-antigen, Al(OH)3',
+              'cvx': '220',
+              'beginAge': '18 years - 4 days',
+            },
           ],
-          "recurringDose": "No"
-        }
-      ]
+          'recurringDose': 'No',
+        },
+      ],
     },
     {
-      "seriesName": "HepB risk 3-dose series",
-      "targetDisease": "HepB",
-      "vaccineGroup": "HepB",
-      "seriesAdminGuidance": [
-        "Anyone age 60 years or older who does not meet risk-based recommendations may still receive Hepatitis B vaccination."
+      'seriesName': 'HepB risk 3-dose series',
+      'targetDisease': 'HepB',
+      'vaccineGroup': 'HepB',
+      'seriesAdminGuidance': [
+        'Anyone age 60 years or older who does not meet risk-based '
+            'recommendations may still receive Hepatitis B vaccination.',
       ],
-      "seriesType": "Risk",
-      "equivalentSeriesGroups": "1",
-      "selectSeries": {
-        "defaultSeries": "No",
-        "productPath": "No",
-        "seriesGroupName": "Increased Risk",
-        "seriesGroup": "2",
-        "seriesPriority": "B",
-        "seriesPreference": "1",
-        "minAgeToStart": "60 years"
+      'seriesType': 'Risk',
+      'equivalentSeriesGroups': '1',
+      'selectSeries': {
+        'defaultSeries': 'No',
+        'productPath': 'No',
+        'seriesGroupName': 'Increased Risk',
+        'seriesGroup': '2',
+        'seriesPriority': 'B',
+        'seriesPreference': '1',
+        'minAgeToStart': '60 years',
       },
-      "indication": [
+      'indication': [
         {
-          "observationCode": {
-            "text": "Hepatitis C virus infection",
-            "code": "005"
+          'observationCode': {
+            'text': 'Hepatitis C virus infection',
+            'code': '005',
           },
-          "description":
-              "Administer to persons with a hepatitis C virus infection.",
-          "beginAge": "60 years"
+          'description':
+              'Administer to persons with a hepatitis C virus infection.',
+          'beginAge': '60 years',
         },
         {
-          "observationCode": {"text": "Diabetes", "code": "014"},
-          "description": "Administer to persons who have diabetes.",
-          "beginAge": "60 years",
-          "guidance":
-              "Administer to persons who have diabetes at the discretion of the treating clinician."
-        },
-        {
-          "observationCode": {"text": "Chronic liver disease", "code": "015"},
-          "description":
-              "Administer to persons who have chronic liver disease.",
-          "beginAge": "60 years",
-          "guidance":
-              "Includes, but is not limited to persons with hepatitis C virus (HCV) infection, cirrhosis, fatty liver disease, alcoholic liver disease, autoimmune hepatitis, or an alanine aminotransferase (ALT) or aspartate aminotransferase (AST) level persistently greater than twice the upper limit of normal"
-        },
-        {
-          "observationCode": {"text": "Dialysis patient", "code": "032"},
-          "description":
-              "Administer to persons on maintenance dialysis, including incenter or home hemodialysis and peritoneal dialysis, and persons who are predialysis",
-          "beginAge": "60 years"
-        },
-        {
-          "observationCode": {
-            "text": "Men who have sex with men",
-            "code": "036"
+          'observationCode': {
+            'text': 'Diabetes',
+            'code': '014',
           },
-          "description": "Administer to men who have sex with men.",
-          "beginAge": "60 years"
+          'description': 'Administer to persons who have diabetes.',
+          'beginAge': '60 years',
+          'guidance':
+              'Administer to persons who have diabetes at the discretion '
+              'of the treating clinician.',
         },
         {
-          "observationCode": {
-            "text": "Not in a long-term, mutually monogamous relationship",
-            "code": "037"
+          'observationCode': {
+            'text': 'Chronic liver disease',
+            'code': '015',
           },
-          "description":
-              "Administer to persons not in a long-term, mutually monogamous relationship.",
-          "beginAge": "60 years"
+          'description':
+              'Administer to persons who have chronic liver disease.',
+          'beginAge': '60 years',
+          'guidance':
+              'Includes, but is not limited to persons with hepatitis C '
+              'virus (HCV) infection, cirrhosis, fatty liver disease, '
+              'alcoholic liver disease, autoimmune hepatitis, or an '
+              'alanine aminotransferase (ALT) or aspartate '
+              'aminotransferase (AST) level persistently greater than '
+              'twice the upper limit of normal',
         },
         {
-          "observationCode": {
-            "text":
-                "Sex partner of Hepatitis B surface antigen-positive persons",
-            "code": "038"
+          'observationCode': {
+            'text': 'Dialysis patient',
+            'code': '032',
           },
-          "description":
-              "Administer to persons who are a sex partner of a Hepatitis B surface antigen-positive person.",
-          "beginAge": "60 years"
+          'description':
+              'Administer to persons on maintenance dialysis, including '
+              'incenter or home hemodialysis and peritoneal dialysis, and '
+              'persons who are predialysis',
+          'beginAge': '60 years',
         },
         {
-          "observationCode": {
-            "text": "Receives treatment for STD",
-            "code": "039"
+          'observationCode': {
+            'text': 'Men who have sex with men',
+            'code': '036',
           },
-          "description": "Administer to persons who receive treatment for STD.",
-          "beginAge": "60 years"
+          'description': 'Administer to men who have sex with men.',
+          'beginAge': '60 years',
         },
         {
-          "observationCode": {
-            "text": "Illicit injection drug use",
-            "code": "041"
+          'observationCode': {
+            'text': 'Not in a long-term, mutually monogamous relationship',
+            'code': '037',
           },
-          "description":
-              "Administer to persons who use illicit injection drugs.",
-          "beginAge": "60 years"
+          'description':
+              'Administer to persons not in a long-term, mutually '
+              'monogamous relationship.',
+          'beginAge': '60 years',
         },
         {
-          "observationCode": {"text": "Health care personnel", "code": "055"},
-          "description": "Administer to healthcare personnel.",
-          "beginAge": "60 years"
-        },
-        {
-          "observationCode": {
-            "text":
-                "Public safety worker exposed to blood or infection body fluids",
-            "code": "057"
+          'observationCode': {
+            'text':
+                'Sex partner of Hepatitis B surface antigen-positive '
+                'persons',
+            'code': '038',
           },
-          "description":
-              "Administer to public safety workers exposed to blood or infection body fluids",
-          "beginAge": "60 years"
+          'description':
+              'Administer to persons who are a sex partner of a Hepatitis '
+              'B surface antigen-positive person.',
+          'beginAge': '60 years',
         },
         {
-          "observationCode": {
-            "text":
-                "Staff of institution for persons with developmental disabilities",
-            "code": "058"
+          'observationCode': {
+            'text': 'Receives treatment for STD',
+            'code': '039',
           },
-          "description":
-              "Administer to staff of institution for persons with developmental disabilities",
-          "beginAge": "60 years"
+          'description': 'Administer to persons who receive treatment for STD.',
+          'beginAge': '60 years',
         },
         {
-          "observationCode": {
-            "text":
-                "Client of institution for persons with developmental disabilities",
-            "code": "065"
+          'observationCode': {
+            'text': 'Illicit injection drug use',
+            'code': '041',
           },
-          "description":
-              "Administer to persons who are a client of institution for persons with developmental disabilities.",
-          "beginAge": "60 years"
+          'description':
+              'Administer to persons who use illicit injection drugs.',
+          'beginAge': '60 years',
         },
         {
-          "observationCode": {
-            "text": "In correctional facility",
-            "code": "069"
+          'observationCode': {
+            'text': 'Health care personnel',
+            'code': '055',
           },
-          "description":
-              "Administer to persons who are in a correctional facility.",
-          "beginAge": "60 years"
+          'description': 'Administer to healthcare personnel.',
+          'beginAge': '60 years',
         },
         {
-          "observationCode": {
-            "text":
-                "Household contact with hepatitis B surface antigen-positive persons",
-            "code": "071"
+          'observationCode': {
+            'text':
+                'Public safety worker exposed to blood or infection body '
+                'fluids',
+            'code': '057',
           },
-          "description":
-              "Administer to persons who have household contact with hepatitis B surface antigen-positive persons.",
-          "beginAge": "60 years"
+          'description':
+              'Administer to public safety workers exposed to blood or '
+              'infection body fluids',
+          'beginAge': '60 years',
         },
         {
-          "observationCode": {
-            "text": "HIV/AIDS - severely immunocompromised",
-            "code": "154"
+          'observationCode': {
+            'text':
+                'Staff of institution for persons with developmental '
+                'disabilities',
+            'code': '058',
           },
-          "description":
-              "Administer to persons who have HIV/AIDS and are severely immunocompromised [See the CDC general recommendations for a definition of \"severely immunocompromised\"].",
-          "beginAge": "60 years"
+          'description':
+              'Administer to staff of institution for persons with '
+              'developmental disabilities',
+          'beginAge': '60 years',
         },
         {
-          "observationCode": {
-            "text": "HIV/AIDS - not severely immunocompromised",
-            "code": "155"
+          'observationCode': {
+            'text':
+                'Client of institution for persons with developmental '
+                'disabilities',
+            'code': '065',
           },
-          "description":
-              "Administer to persons who have HIV/AIDS and are not severely immunocompromised [See the CDC general recommendations for a definition of \"severely immunocompromised\"].",
-          "beginAge": "60 years"
+          'description':
+              'Administer to persons who are a client of institution for '
+              'persons with developmental disabilities.',
+          'beginAge': '60 years',
         },
         {
-          "observationCode": {
-            "text":
-                "Travel to countries with high or intermediate prevalence of chronic HBV infection",
-            "code": "166"
+          'observationCode': {
+            'text': 'In correctional facility',
+            'code': '069',
           },
-          "description":
-              "Administered to persons who travel to countries with high or intermediate prevalence of chronic HBV infection.",
-          "beginAge": "60 years"
+          'description':
+              'Administer to persons who are in a correctional facility.',
+          'beginAge': '60 years',
         },
         {
-          "observationCode": {"text": "HIV Infection", "code": "186"},
-          "description": "Administer to persons with HIV Infection",
-          "beginAge": "60 years"
-        }
+          'observationCode': {
+            'text':
+                'Household contact with hepatitis B surface '
+                'antigen-positive persons',
+            'code': '071',
+          },
+          'description':
+              'Administer to persons who have household contact with '
+              'hepatitis B surface antigen-positive persons.',
+          'beginAge': '60 years',
+        },
+        {
+          'observationCode': {
+            'text': 'HIV/AIDS - severely immunocompromised',
+            'code': '154',
+          },
+          'description':
+              'Administer to persons who have HIV/AIDS and are severely '
+              'immunocompromised [See the CDC general recommendations for '
+              'a definition of "severely immunocompromised"].',
+          'beginAge': '60 years',
+        },
+        {
+          'observationCode': {
+            'text': 'HIV/AIDS - not severely immunocompromised',
+            'code': '155',
+          },
+          'description':
+              'Administer to persons who have HIV/AIDS and are not '
+              'severely immunocompromised [See the CDC general '
+              'recommendations for a definition of "severely '
+              'immunocompromised"].',
+          'beginAge': '60 years',
+        },
+        {
+          'observationCode': {
+            'text':
+                'Travel to countries with high or intermediate prevalence '
+                'of chronic HBV infection',
+            'code': '166',
+          },
+          'description':
+              'Administered to persons who travel to countries with high '
+              'or intermediate prevalence of chronic HBV infection.',
+          'beginAge': '60 years',
+        },
+        {
+          'observationCode': {
+            'text': 'HIV Infection',
+            'code': '186',
+          },
+          'description': 'Administer to persons with HIV Infection',
+          'beginAge': '60 years',
+        },
       ],
-      "seriesDose": [
+      'seriesDose': [
         {
-          "doseNumber": "Dose 1",
-          "age": [
+          'doseNumber': 'Dose 1',
+          'age': [
             {
-              "absMinAge": "0 days",
-              "minAge": "60 years",
-              "earliestRecAge": "60 years"
-            }
+              'absMinAge': '0 days',
+              'minAge': '60 years',
+              'earliestRecAge': '60 years',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "Hep B, Adult",
-              "cvx": "43",
-              "beginAge": "20 years",
-              "volume": "1",
-              "forecastVaccineType": "N"
-            }
+              'vaccineType': 'Hep B, Adult',
+              'cvx': '43',
+              'beginAge': '20 years',
+              'volume': '1',
+              'forecastVaccineType': 'N',
+            },
           ],
-          "allowableVaccine": [
+          'allowableVaccine': [
             {
-              "vaccineType": "Hep B, Adol/peds",
-              "cvx": "08",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'Hep B, Adol/peds',
+              'cvx': '08',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "Hep B, Adol/high risk infant",
-              "cvx": "42",
-              "beginAge": "0 days",
-              "endAge": "20 years"
-            },
-            {"vaccineType": "Hep B, Adult", "cvx": "43", "beginAge": "0 days"},
-            {
-              "vaccineType": "Hep B, Dialysis",
-              "cvx": "44",
-              "beginAge": "0 days"
+              'vaccineType': 'Hep B, Adol/high risk infant',
+              'cvx': '42',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "Hep B, Unspecified Formulation",
-              "cvx": "45",
-              "beginAge": "0 days"
+              'vaccineType': 'Hep B, Adult',
+              'cvx': '43',
+              'beginAge': '0 days',
             },
             {
-              "vaccineType": "Hib-HepB",
-              "cvx": "51",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'Hep B, Dialysis',
+              'cvx': '44',
+              'beginAge': '0 days',
             },
             {
-              "vaccineType": "DTP-Hib-HepB",
-              "cvx": "102",
-              "beginAge": "0 days",
-              "endAge": "20 years"
-            },
-            {"vaccineType": "HepA-HepB", "cvx": "104", "beginAge": "0 days"},
-            {
-              "vaccineType": "DTaP-HepB-IPV",
-              "cvx": "110",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'Hep B, Unspecified Formulation',
+              'cvx': '45',
+              'beginAge': '0 days',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB, historical",
-              "cvx": "132",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'Hib-HepB',
+              'cvx': '51',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB",
-              "cvx": "146",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'DTP-Hib-HepB',
+              'cvx': '102',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "Hep B, adjuvanted",
-              "cvx": "189",
-              "beginAge": "18 years - 4 days"
+              'vaccineType': 'HepA-HepB',
+              'cvx': '104',
+              'beginAge': '0 days',
             },
             {
-              "vaccineType": "Hep A-Hep B, pediatric/adolescent",
-              "cvx": "193",
-              "beginAge": "0 days",
-              "endAge": "18 years"
+              'vaccineType': 'DTaP-HepB-IPV',
+              'cvx': '110',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "DTP-HepB-Hib Pentavalent Non-US",
-              "cvx": "198",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'DTaP-IPV-Hib-HepB, historical',
+              'cvx': '132',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "HepB recombinant, 3-antigen, Al(OH)3",
-              "cvx": "220",
-              "beginAge": "18 years - 4 days"
-            }
+              'vaccineType': 'DTaP-IPV-Hib-HepB',
+              'cvx': '146',
+              'beginAge': '0 days',
+              'endAge': '20 years',
+            },
+            {
+              'vaccineType': 'Hep B, adjuvanted',
+              'cvx': '189',
+              'beginAge': '18 years - 4 days',
+            },
+            {
+              'vaccineType': 'Hep A-Hep B, pediatric/adolescent',
+              'cvx': '193',
+              'beginAge': '0 days',
+              'endAge': '18 years',
+            },
+            {
+              'vaccineType': 'DTP-HepB-Hib Pentavalent Non-US',
+              'cvx': '198',
+              'beginAge': '0 days',
+              'endAge': '20 years',
+            },
+            {
+              'vaccineType': 'HepB recombinant, 3-antigen, Al(OH)3',
+              'cvx': '220',
+              'beginAge': '18 years - 4 days',
+            },
           ],
-          "recurringDose": "No"
+          'recurringDose': 'No',
         },
         {
-          "doseNumber": "Dose 2",
-          "interval": [
+          'doseNumber': 'Dose 2',
+          'interval': [
             {
-              "fromPrevious": "Y",
-              "absMinInt": "4 weeks - 4 days",
-              "minInt": "4 weeks",
-              "earliestRecInt": "4 weeks"
-            }
+              'fromPrevious': 'Y',
+              'absMinInt': '4 weeks - 4 days',
+              'minInt': '4 weeks',
+              'earliestRecInt': '4 weeks',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "Hep B, Adult",
-              "cvx": "43",
-              "beginAge": "20 years",
-              "volume": "1",
-              "forecastVaccineType": "N"
-            }
+              'vaccineType': 'Hep B, Adult',
+              'cvx': '43',
+              'beginAge': '20 years',
+              'volume': '1',
+              'forecastVaccineType': 'N',
+            },
           ],
-          "allowableVaccine": [
+          'allowableVaccine': [
             {
-              "vaccineType": "Hep B, Adol/peds",
-              "cvx": "08",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'Hep B, Adol/peds',
+              'cvx': '08',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "Hep B, Adol/high risk infant",
-              "cvx": "42",
-              "beginAge": "0 days",
-              "endAge": "20 years"
-            },
-            {"vaccineType": "Hep B, Adult", "cvx": "43", "beginAge": "0 days"},
-            {
-              "vaccineType": "Hep B, Dialysis",
-              "cvx": "44",
-              "beginAge": "0 days"
+              'vaccineType': 'Hep B, Adol/high risk infant',
+              'cvx': '42',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "Hep B, Unspecified Formulation",
-              "cvx": "45",
-              "beginAge": "0 days"
+              'vaccineType': 'Hep B, Adult',
+              'cvx': '43',
+              'beginAge': '0 days',
             },
             {
-              "vaccineType": "Hib-HepB",
-              "cvx": "51",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'Hep B, Dialysis',
+              'cvx': '44',
+              'beginAge': '0 days',
             },
             {
-              "vaccineType": "DTP-Hib-HepB",
-              "cvx": "102",
-              "beginAge": "0 days",
-              "endAge": "20 years"
-            },
-            {"vaccineType": "HepA-HepB", "cvx": "104", "beginAge": "0 days"},
-            {
-              "vaccineType": "DTaP-HepB-IPV",
-              "cvx": "110",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'Hep B, Unspecified Formulation',
+              'cvx': '45',
+              'beginAge': '0 days',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB, historical",
-              "cvx": "132",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'Hib-HepB',
+              'cvx': '51',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB",
-              "cvx": "146",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'DTP-Hib-HepB',
+              'cvx': '102',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "Hep B, adjuvanted",
-              "cvx": "189",
-              "beginAge": "18 years - 4 days"
+              'vaccineType': 'HepA-HepB',
+              'cvx': '104',
+              'beginAge': '0 days',
             },
             {
-              "vaccineType": "Hep A-Hep B, pediatric/adolescent",
-              "cvx": "193",
-              "beginAge": "0 days",
-              "endAge": "18 years"
+              'vaccineType': 'DTaP-HepB-IPV',
+              'cvx': '110',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "DTP-HepB-Hib Pentavalent Non-US",
-              "cvx": "198",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'DTaP-IPV-Hib-HepB, historical',
+              'cvx': '132',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "HepB recombinant, 3-antigen, Al(OH)3",
-              "cvx": "220",
-              "beginAge": "18 years - 4 days"
-            }
+              'vaccineType': 'DTaP-IPV-Hib-HepB',
+              'cvx': '146',
+              'beginAge': '0 days',
+              'endAge': '20 years',
+            },
+            {
+              'vaccineType': 'Hep B, adjuvanted',
+              'cvx': '189',
+              'beginAge': '18 years - 4 days',
+            },
+            {
+              'vaccineType': 'Hep A-Hep B, pediatric/adolescent',
+              'cvx': '193',
+              'beginAge': '0 days',
+              'endAge': '18 years',
+            },
+            {
+              'vaccineType': 'DTP-HepB-Hib Pentavalent Non-US',
+              'cvx': '198',
+              'beginAge': '0 days',
+              'endAge': '20 years',
+            },
+            {
+              'vaccineType': 'HepB recombinant, 3-antigen, Al(OH)3',
+              'cvx': '220',
+              'beginAge': '18 years - 4 days',
+            },
           ],
-          "recurringDose": "No"
+          'recurringDose': 'No',
         },
         {
-          "doseNumber": "Dose 3",
-          "interval": [
+          'doseNumber': 'Dose 3',
+          'interval': [
             {
-              "fromPrevious": "Y",
-              "absMinInt": "8 weeks - 4 days",
-              "minInt": "8 weeks"
+              'fromPrevious': 'Y',
+              'absMinInt': '8 weeks - 4 days',
+              'minInt': '8 weeks',
             },
             {
-              "fromPrevious": "N",
-              "fromTargetDose": "1",
-              "absMinInt": "16 weeks - 4 days",
-              "minInt": "16 weeks",
-              "earliestRecInt": "6 months"
-            }
+              'fromPrevious': 'N',
+              'fromTargetDose': '1',
+              'absMinInt': '16 weeks - 4 days',
+              'minInt': '16 weeks',
+              'earliestRecInt': '6 months',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "Hep B, Adult",
-              "cvx": "43",
-              "beginAge": "20 years",
-              "volume": "1",
-              "forecastVaccineType": "N"
-            }
+              'vaccineType': 'Hep B, Adult',
+              'cvx': '43',
+              'beginAge': '20 years',
+              'volume': '1',
+              'forecastVaccineType': 'N',
+            },
           ],
-          "allowableVaccine": [
+          'allowableVaccine': [
             {
-              "vaccineType": "Hep B, Adol/peds",
-              "cvx": "08",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'Hep B, Adol/peds',
+              'cvx': '08',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "Hep B, Adol/high risk infant",
-              "cvx": "42",
-              "beginAge": "0 days",
-              "endAge": "20 years"
-            },
-            {"vaccineType": "Hep B, Adult", "cvx": "43", "beginAge": "0 days"},
-            {
-              "vaccineType": "Hep B, Dialysis",
-              "cvx": "44",
-              "beginAge": "0 days"
+              'vaccineType': 'Hep B, Adol/high risk infant',
+              'cvx': '42',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "Hep B, Unspecified Formulation",
-              "cvx": "45",
-              "beginAge": "0 days"
+              'vaccineType': 'Hep B, Adult',
+              'cvx': '43',
+              'beginAge': '0 days',
             },
             {
-              "vaccineType": "Hib-HepB",
-              "cvx": "51",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'Hep B, Dialysis',
+              'cvx': '44',
+              'beginAge': '0 days',
             },
             {
-              "vaccineType": "DTP-Hib-HepB",
-              "cvx": "102",
-              "beginAge": "0 days",
-              "endAge": "20 years"
-            },
-            {"vaccineType": "HepA-HepB", "cvx": "104", "beginAge": "0 days"},
-            {
-              "vaccineType": "DTaP-HepB-IPV",
-              "cvx": "110",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'Hep B, Unspecified Formulation',
+              'cvx': '45',
+              'beginAge': '0 days',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB, historical",
-              "cvx": "132",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'Hib-HepB',
+              'cvx': '51',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB",
-              "cvx": "146",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'DTP-Hib-HepB',
+              'cvx': '102',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "Hep B, adjuvanted",
-              "cvx": "189",
-              "beginAge": "18 years - 4 days"
+              'vaccineType': 'HepA-HepB',
+              'cvx': '104',
+              'beginAge': '0 days',
             },
             {
-              "vaccineType": "Hep A-Hep B, pediatric/adolescent",
-              "cvx": "193",
-              "beginAge": "0 days",
-              "endAge": "18 years"
+              'vaccineType': 'DTaP-HepB-IPV',
+              'cvx': '110',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "DTP-HepB-Hib Pentavalent Non-US",
-              "cvx": "198",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'DTaP-IPV-Hib-HepB, historical',
+              'cvx': '132',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "HepB recombinant, 3-antigen, Al(OH)3",
-              "cvx": "220",
-              "beginAge": "18 years - 4 days"
-            }
+              'vaccineType': 'DTaP-IPV-Hib-HepB',
+              'cvx': '146',
+              'beginAge': '0 days',
+              'endAge': '20 years',
+            },
+            {
+              'vaccineType': 'Hep B, adjuvanted',
+              'cvx': '189',
+              'beginAge': '18 years - 4 days',
+            },
+            {
+              'vaccineType': 'Hep A-Hep B, pediatric/adolescent',
+              'cvx': '193',
+              'beginAge': '0 days',
+              'endAge': '18 years',
+            },
+            {
+              'vaccineType': 'DTP-HepB-Hib Pentavalent Non-US',
+              'cvx': '198',
+              'beginAge': '0 days',
+              'endAge': '20 years',
+            },
+            {
+              'vaccineType': 'HepB recombinant, 3-antigen, Al(OH)3',
+              'cvx': '220',
+              'beginAge': '18 years - 4 days',
+            },
           ],
-          "recurringDose": "No"
-        }
-      ]
+          'recurringDose': 'No',
+        },
+      ],
     },
     {
-      "seriesName": "HepB risk Heplisav-B 2-dose series",
-      "targetDisease": "HepB",
-      "vaccineGroup": "HepB",
-      "seriesAdminGuidance": [
-        "Anyone age 60 years or older who does not meet risk-based recommendations may still receive Hepatitis B vaccination."
+      'seriesName': 'HepB risk Heplisav-B 2-dose series',
+      'targetDisease': 'HepB',
+      'vaccineGroup': 'HepB',
+      'seriesAdminGuidance': [
+        'Anyone age 60 years or older who does not meet risk-based '
+            'recommendations may still receive Hepatitis B vaccination.',
       ],
-      "seriesType": "Risk",
-      "equivalentSeriesGroups": "1",
-      "selectSeries": {
-        "defaultSeries": "No",
-        "productPath": "Yes",
-        "seriesGroupName": "Increased Risk",
-        "seriesGroup": "2",
-        "seriesPriority": "B",
-        "seriesPreference": "2",
-        "minAgeToStart": "60 years"
+      'seriesType': 'Risk',
+      'equivalentSeriesGroups': '1',
+      'selectSeries': {
+        'defaultSeries': 'No',
+        'productPath': 'Yes',
+        'seriesGroupName': 'Increased Risk',
+        'seriesGroup': '2',
+        'seriesPriority': 'B',
+        'seriesPreference': '2',
+        'minAgeToStart': '60 years',
       },
-      "indication": [
+      'indication': [
         {
-          "observationCode": {
-            "text": "Hepatitis C virus infection",
-            "code": "005"
+          'observationCode': {
+            'text': 'Hepatitis C virus infection',
+            'code': '005',
           },
-          "description":
-              "Administer to persons with a hepatitis C virus infection.",
-          "beginAge": "60 years"
+          'description':
+              'Administer to persons with a hepatitis C virus infection.',
+          'beginAge': '60 years',
         },
         {
-          "observationCode": {"text": "Diabetes", "code": "014"},
-          "description": "Administer to persons who have diabetes.",
-          "beginAge": "60 years",
-          "guidance":
-              "Administer to persons who have diabetes at the discretion of the treating clinician."
-        },
-        {
-          "observationCode": {"text": "Chronic liver disease", "code": "015"},
-          "description":
-              "Administer to persons who have chronic liver disease.",
-          "beginAge": "60 years",
-          "guidance":
-              "Includes, but is not limited to persons with hepatitis C virus (HCV) infection, cirrhosis, fatty liver disease, alcoholic liver disease, autoimmune hepatitis, or an alanine aminotransferase (ALT) or aspartate aminotransferase (AST) level persistently greater than twice the upper limit of normal"
-        },
-        {
-          "observationCode": {"text": "Dialysis patient", "code": "032"},
-          "description":
-              "Administer to persons on maintenance dialysis, including incenter or home hemodialysis and peritoneal dialysis, and persons who are predialysis",
-          "beginAge": "60 years"
-        },
-        {
-          "observationCode": {
-            "text": "Men who have sex with men",
-            "code": "036"
+          'observationCode': {
+            'text': 'Diabetes',
+            'code': '014',
           },
-          "description": "Administer to men who have sex with men.",
-          "beginAge": "60 years"
+          'description': 'Administer to persons who have diabetes.',
+          'beginAge': '60 years',
+          'guidance':
+              'Administer to persons who have diabetes at the discretion '
+              'of the treating clinician.',
         },
         {
-          "observationCode": {
-            "text": "Not in a long-term, mutually monogamous relationship",
-            "code": "037"
+          'observationCode': {
+            'text': 'Chronic liver disease',
+            'code': '015',
           },
-          "description":
-              "Administer to persons not in a long-term, mutually monogamous relationship.",
-          "beginAge": "60 years"
+          'description':
+              'Administer to persons who have chronic liver disease.',
+          'beginAge': '60 years',
+          'guidance':
+              'Includes, but is not limited to persons with hepatitis C '
+              'virus (HCV) infection, cirrhosis, fatty liver disease, '
+              'alcoholic liver disease, autoimmune hepatitis, or an '
+              'alanine aminotransferase (ALT) or aspartate '
+              'aminotransferase (AST) level persistently greater than '
+              'twice the upper limit of normal',
         },
         {
-          "observationCode": {
-            "text":
-                "Sex partner of Hepatitis B surface antigen-positive persons",
-            "code": "038"
+          'observationCode': {
+            'text': 'Dialysis patient',
+            'code': '032',
           },
-          "description":
-              "Administer to persons who are a sex partner of a Hepatitis B surface antigen-positive person.",
-          "beginAge": "60 years"
+          'description':
+              'Administer to persons on maintenance dialysis, including '
+              'incenter or home hemodialysis and peritoneal dialysis, and '
+              'persons who are predialysis',
+          'beginAge': '60 years',
         },
         {
-          "observationCode": {
-            "text": "Receives treatment for STD",
-            "code": "039"
+          'observationCode': {
+            'text': 'Men who have sex with men',
+            'code': '036',
           },
-          "description": "Administer to persons who receive treatment for STD.",
-          "beginAge": "60 years"
+          'description': 'Administer to men who have sex with men.',
+          'beginAge': '60 years',
         },
         {
-          "observationCode": {
-            "text": "Illicit injection drug use",
-            "code": "041"
+          'observationCode': {
+            'text': 'Not in a long-term, mutually monogamous relationship',
+            'code': '037',
           },
-          "description":
-              "Administer to persons who use illicit injection drugs.",
-          "beginAge": "60 years"
+          'description':
+              'Administer to persons not in a long-term, mutually '
+              'monogamous relationship.',
+          'beginAge': '60 years',
         },
         {
-          "observationCode": {"text": "Health care personnel", "code": "055"},
-          "description": "Administer to healthcare personnel.",
-          "beginAge": "60 years"
-        },
-        {
-          "observationCode": {
-            "text":
-                "Public safety worker exposed to blood or infection body fluids",
-            "code": "057"
+          'observationCode': {
+            'text':
+                'Sex partner of Hepatitis B surface antigen-positive '
+                'persons',
+            'code': '038',
           },
-          "description":
-              "Administer to public safety workers exposed to blood or infection body fluids",
-          "beginAge": "60 years"
+          'description':
+              'Administer to persons who are a sex partner of a Hepatitis '
+              'B surface antigen-positive person.',
+          'beginAge': '60 years',
         },
         {
-          "observationCode": {
-            "text":
-                "Staff of institution for persons with developmental disabilities",
-            "code": "058"
+          'observationCode': {
+            'text': 'Receives treatment for STD',
+            'code': '039',
           },
-          "description":
-              "Administer to staff of institution for persons with developmental disabilities",
-          "beginAge": "60 years"
+          'description': 'Administer to persons who receive treatment for STD.',
+          'beginAge': '60 years',
         },
         {
-          "observationCode": {
-            "text":
-                "Client of institution for persons with developmental disabilities",
-            "code": "065"
+          'observationCode': {
+            'text': 'Illicit injection drug use',
+            'code': '041',
           },
-          "description":
-              "Administer to persons who are a client of institution for persons with developmental disabilities.",
-          "beginAge": "60 years"
+          'description':
+              'Administer to persons who use illicit injection drugs.',
+          'beginAge': '60 years',
         },
         {
-          "observationCode": {
-            "text": "In correctional facility",
-            "code": "069"
+          'observationCode': {
+            'text': 'Health care personnel',
+            'code': '055',
           },
-          "description":
-              "Administer to persons who are in a correctional facility.",
-          "beginAge": "60 years"
+          'description': 'Administer to healthcare personnel.',
+          'beginAge': '60 years',
         },
         {
-          "observationCode": {
-            "text":
-                "Household contact with hepatitis B surface antigen-positive persons",
-            "code": "071"
+          'observationCode': {
+            'text':
+                'Public safety worker exposed to blood or infection body '
+                'fluids',
+            'code': '057',
           },
-          "description":
-              "Administer to persons who have household contact with hepatitis B surface antigen-positive persons.",
-          "beginAge": "60 years"
+          'description':
+              'Administer to public safety workers exposed to blood or '
+              'infection body fluids',
+          'beginAge': '60 years',
         },
         {
-          "observationCode": {
-            "text": "HIV/AIDS - severely immunocompromised",
-            "code": "154"
+          'observationCode': {
+            'text':
+                'Staff of institution for persons with developmental '
+                'disabilities',
+            'code': '058',
           },
-          "description":
-              "Administer to persons who have HIV/AIDS and are severely immunocompromised [See the CDC general recommendations for a definition of \"severely immunocompromised\"].",
-          "beginAge": "60 years"
+          'description':
+              'Administer to staff of institution for persons with '
+              'developmental disabilities',
+          'beginAge': '60 years',
         },
         {
-          "observationCode": {
-            "text": "HIV/AIDS - not severely immunocompromised",
-            "code": "155"
+          'observationCode': {
+            'text':
+                'Client of institution for persons with developmental '
+                'disabilities',
+            'code': '065',
           },
-          "description":
-              "Administer to persons who have HIV/AIDS and are not severely immunocompromised [See the CDC general recommendations for a definition of \"severely immunocompromised\"].",
-          "beginAge": "60 years"
+          'description':
+              'Administer to persons who are a client of institution for '
+              'persons with developmental disabilities.',
+          'beginAge': '60 years',
         },
         {
-          "observationCode": {
-            "text":
-                "Travel to countries with high or intermediate prevalence of chronic HBV infection",
-            "code": "166"
+          'observationCode': {
+            'text': 'In correctional facility',
+            'code': '069',
           },
-          "description":
-              "Administered to persons who travel to countries with high or intermediate prevalence of chronic HBV infection.",
-          "beginAge": "60 years"
+          'description':
+              'Administer to persons who are in a correctional facility.',
+          'beginAge': '60 years',
         },
         {
-          "observationCode": {"text": "HIV Infection", "code": "186"},
-          "description": "Administer to persons with HIV Infection",
-          "beginAge": "60 years"
-        }
+          'observationCode': {
+            'text':
+                'Household contact with hepatitis B surface '
+                'antigen-positive persons',
+            'code': '071',
+          },
+          'description':
+              'Administer to persons who have household contact with '
+              'hepatitis B surface antigen-positive persons.',
+          'beginAge': '60 years',
+        },
+        {
+          'observationCode': {
+            'text': 'HIV/AIDS - severely immunocompromised',
+            'code': '154',
+          },
+          'description':
+              'Administer to persons who have HIV/AIDS and are severely '
+              'immunocompromised [See the CDC general recommendations for '
+              'a definition of "severely immunocompromised"].',
+          'beginAge': '60 years',
+        },
+        {
+          'observationCode': {
+            'text': 'HIV/AIDS - not severely immunocompromised',
+            'code': '155',
+          },
+          'description':
+              'Administer to persons who have HIV/AIDS and are not '
+              'severely immunocompromised [See the CDC general '
+              'recommendations for a definition of "severely '
+              'immunocompromised"].',
+          'beginAge': '60 years',
+        },
+        {
+          'observationCode': {
+            'text':
+                'Travel to countries with high or intermediate prevalence '
+                'of chronic HBV infection',
+            'code': '166',
+          },
+          'description':
+              'Administered to persons who travel to countries with high '
+              'or intermediate prevalence of chronic HBV infection.',
+          'beginAge': '60 years',
+        },
+        {
+          'observationCode': {
+            'text': 'HIV Infection',
+            'code': '186',
+          },
+          'description': 'Administer to persons with HIV Infection',
+          'beginAge': '60 years',
+        },
       ],
-      "seriesDose": [
+      'seriesDose': [
         {
-          "doseNumber": "Dose 1",
-          "age": [
+          'doseNumber': 'Dose 1',
+          'age': [
             {
-              "absMinAge": "18 years - 4 days",
-              "minAge": "60 years",
-              "earliestRecAge": "60 years"
-            }
+              'absMinAge': '18 years - 4 days',
+              'minAge': '60 years',
+              'earliestRecAge': '60 years',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "HepB-CpG",
-              "cvx": "189",
-              "beginAge": "18 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
-            }
+              'vaccineType': 'HepB-CpG',
+              'cvx': '189',
+              'beginAge': '18 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
+            },
           ],
-          "allowableVaccine": [
+          'allowableVaccine': [
             {
-              "vaccineType": "HepB-CpG",
-              "cvx": "189",
-              "beginAge": "18 years - 4 days"
-            }
+              'vaccineType': 'HepB-CpG',
+              'cvx': '189',
+              'beginAge': '18 years - 4 days',
+            },
           ],
-          "recurringDose": "No"
+          'recurringDose': 'No',
         },
         {
-          "doseNumber": "Dose 2",
-          "interval": [
+          'doseNumber': 'Dose 2',
+          'interval': [
             {
-              "fromPrevious": "Y",
-              "absMinInt": "4 weeks - 4 days",
-              "minInt": "4 weeks",
-              "earliestRecInt": "4 weeks",
-              "latestRecInt": "8 weeks"
-            }
+              'fromPrevious': 'Y',
+              'absMinInt': '4 weeks - 4 days',
+              'minInt': '4 weeks',
+              'earliestRecInt': '4 weeks',
+              'latestRecInt': '8 weeks',
+            },
           ],
-          "allowableInterval": {
-            "fromPrevious": "N",
-            "fromTargetDose": "1",
-            "absMinInt": "4 weeks - 4 days"
+          'allowableInterval': {
+            'fromPrevious': 'N',
+            'fromTargetDose': '1',
+            'absMinInt': '4 weeks - 4 days',
           },
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "HepB-CpG",
-              "cvx": "189",
-              "beginAge": "18 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
-            }
+              'vaccineType': 'HepB-CpG',
+              'cvx': '189',
+              'beginAge': '18 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
+            },
           ],
-          "allowableVaccine": [
+          'allowableVaccine': [
             {
-              "vaccineType": "HepB-CpG",
-              "cvx": "189",
-              "beginAge": "18 years - 4 days"
-            }
+              'vaccineType': 'HepB-CpG',
+              'cvx': '189',
+              'beginAge': '18 years - 4 days',
+            },
           ],
-          "recurringDose": "No"
-        }
-      ]
+          'recurringDose': 'No',
+        },
+      ],
     },
     {
-      "seriesName": "HepB risk Heplisav-B secondary 4-dose series",
-      "targetDisease": "HepB",
-      "vaccineGroup": "HepB",
-      "seriesAdminGuidance": [
-        "Anyone age 60 years or older who does not meet risk-based recommendations may still receive Hepatitis B vaccination."
+      'seriesName': 'HepB risk Heplisav-B secondary 4-dose series',
+      'targetDisease': 'HepB',
+      'vaccineGroup': 'HepB',
+      'seriesAdminGuidance': [
+        'Anyone age 60 years or older who does not meet risk-based '
+            'recommendations may still receive Hepatitis B vaccination.',
       ],
-      "seriesType": "Risk",
-      "equivalentSeriesGroups": "1",
-      "selectSeries": {
-        "defaultSeries": "No",
-        "productPath": "No",
-        "seriesGroupName": "Increased Risk",
-        "seriesGroup": "2",
-        "seriesPriority": "B",
-        "seriesPreference": "3",
-        "minAgeToStart": "60 years"
+      'seriesType': 'Risk',
+      'equivalentSeriesGroups': '1',
+      'selectSeries': {
+        'defaultSeries': 'No',
+        'productPath': 'No',
+        'seriesGroupName': 'Increased Risk',
+        'seriesGroup': '2',
+        'seriesPriority': 'B',
+        'seriesPreference': '3',
+        'minAgeToStart': '60 years',
       },
-      "indication": [
+      'indication': [
         {
-          "observationCode": {
-            "text": "Hepatitis C virus infection",
-            "code": "005"
+          'observationCode': {
+            'text': 'Hepatitis C virus infection',
+            'code': '005',
           },
-          "description":
-              "Administer to persons with a hepatitis C virus infection.",
-          "beginAge": "60 years"
+          'description':
+              'Administer to persons with a hepatitis C virus infection.',
+          'beginAge': '60 years',
         },
         {
-          "observationCode": {"text": "Diabetes", "code": "014"},
-          "description": "Administer to persons who have diabetes.",
-          "beginAge": "60 years",
-          "guidance":
-              "Administer to persons who have diabetes at the discretion of the treating clinician."
-        },
-        {
-          "observationCode": {"text": "Chronic liver disease", "code": "015"},
-          "description":
-              "Administer to persons who have chronic liver disease.",
-          "beginAge": "60 years",
-          "guidance":
-              "Includes, but is not limited to persons with hepatitis C virus (HCV) infection, cirrhosis, fatty liver disease, alcoholic liver disease, autoimmune hepatitis, or an alanine aminotransferase (ALT) or aspartate aminotransferase (AST) level persistently greater than twice the upper limit of normal"
-        },
-        {
-          "observationCode": {"text": "Dialysis patient", "code": "032"},
-          "description":
-              "Administer to persons on maintenance dialysis, including incenter or home hemodialysis and peritoneal dialysis, and persons who are predialysis",
-          "beginAge": "60 years"
-        },
-        {
-          "observationCode": {
-            "text": "Men who have sex with men",
-            "code": "036"
+          'observationCode': {
+            'text': 'Diabetes',
+            'code': '014',
           },
-          "description": "Administer to men who have sex with men.",
-          "beginAge": "60 years"
+          'description': 'Administer to persons who have diabetes.',
+          'beginAge': '60 years',
+          'guidance':
+              'Administer to persons who have diabetes at the discretion '
+              'of the treating clinician.',
         },
         {
-          "observationCode": {
-            "text": "Not in a long-term, mutually monogamous relationship",
-            "code": "037"
+          'observationCode': {
+            'text': 'Chronic liver disease',
+            'code': '015',
           },
-          "description":
-              "Administer to persons not in a long-term, mutually monogamous relationship.",
-          "beginAge": "60 years"
+          'description':
+              'Administer to persons who have chronic liver disease.',
+          'beginAge': '60 years',
+          'guidance':
+              'Includes, but is not limited to persons with hepatitis C '
+              'virus (HCV) infection, cirrhosis, fatty liver disease, '
+              'alcoholic liver disease, autoimmune hepatitis, or an '
+              'alanine aminotransferase (ALT) or aspartate '
+              'aminotransferase (AST) level persistently greater than '
+              'twice the upper limit of normal',
         },
         {
-          "observationCode": {
-            "text":
-                "Sex partner of Hepatitis B surface antigen-positive persons",
-            "code": "038"
+          'observationCode': {
+            'text': 'Dialysis patient',
+            'code': '032',
           },
-          "description":
-              "Administer to persons who are a sex partner of a Hepatitis B surface antigen-positive person.",
-          "beginAge": "60 years"
+          'description':
+              'Administer to persons on maintenance dialysis, including '
+              'incenter or home hemodialysis and peritoneal dialysis, and '
+              'persons who are predialysis',
+          'beginAge': '60 years',
         },
         {
-          "observationCode": {
-            "text": "Receives treatment for STD",
-            "code": "039"
+          'observationCode': {
+            'text': 'Men who have sex with men',
+            'code': '036',
           },
-          "description": "Administer to persons who receive treatment for STD.",
-          "beginAge": "60 years"
+          'description': 'Administer to men who have sex with men.',
+          'beginAge': '60 years',
         },
         {
-          "observationCode": {
-            "text": "Illicit injection drug use",
-            "code": "041"
+          'observationCode': {
+            'text': 'Not in a long-term, mutually monogamous relationship',
+            'code': '037',
           },
-          "description":
-              "Administer to persons who use illicit injection drugs.",
-          "beginAge": "60 years"
+          'description':
+              'Administer to persons not in a long-term, mutually '
+              'monogamous relationship.',
+          'beginAge': '60 years',
         },
         {
-          "observationCode": {"text": "Health care personnel", "code": "055"},
-          "description": "Administer to healthcare personnel.",
-          "beginAge": "60 years"
-        },
-        {
-          "observationCode": {
-            "text":
-                "Public safety worker exposed to blood or infection body fluids",
-            "code": "057"
+          'observationCode': {
+            'text':
+                'Sex partner of Hepatitis B surface antigen-positive '
+                'persons',
+            'code': '038',
           },
-          "description":
-              "Administer to public safety workers exposed to blood or infection body fluids",
-          "beginAge": "60 years"
+          'description':
+              'Administer to persons who are a sex partner of a Hepatitis '
+              'B surface antigen-positive person.',
+          'beginAge': '60 years',
         },
         {
-          "observationCode": {
-            "text":
-                "Staff of institution for persons with developmental disabilities",
-            "code": "058"
+          'observationCode': {
+            'text': 'Receives treatment for STD',
+            'code': '039',
           },
-          "description":
-              "Administer to staff of institution for persons with developmental disabilities",
-          "beginAge": "60 years"
+          'description': 'Administer to persons who receive treatment for STD.',
+          'beginAge': '60 years',
         },
         {
-          "observationCode": {
-            "text":
-                "Client of institution for persons with developmental disabilities",
-            "code": "065"
+          'observationCode': {
+            'text': 'Illicit injection drug use',
+            'code': '041',
           },
-          "description":
-              "Administer to persons who are a client of institution for persons with developmental disabilities.",
-          "beginAge": "60 years"
+          'description':
+              'Administer to persons who use illicit injection drugs.',
+          'beginAge': '60 years',
         },
         {
-          "observationCode": {
-            "text": "In correctional facility",
-            "code": "069"
+          'observationCode': {
+            'text': 'Health care personnel',
+            'code': '055',
           },
-          "description":
-              "Administer to persons who are in a correctional facility.",
-          "beginAge": "60 years"
+          'description': 'Administer to healthcare personnel.',
+          'beginAge': '60 years',
         },
         {
-          "observationCode": {
-            "text":
-                "Household contact with hepatitis B surface antigen-positive persons",
-            "code": "071"
+          'observationCode': {
+            'text':
+                'Public safety worker exposed to blood or infection body '
+                'fluids',
+            'code': '057',
           },
-          "description":
-              "Administer to persons who have household contact with hepatitis B surface antigen-positive persons.",
-          "beginAge": "60 years"
+          'description':
+              'Administer to public safety workers exposed to blood or '
+              'infection body fluids',
+          'beginAge': '60 years',
         },
         {
-          "observationCode": {
-            "text": "HIV/AIDS - severely immunocompromised",
-            "code": "154"
+          'observationCode': {
+            'text':
+                'Staff of institution for persons with developmental '
+                'disabilities',
+            'code': '058',
           },
-          "description":
-              "Administer to persons who have HIV/AIDS and are severely immunocompromised [See the CDC general recommendations for a definition of \"severely immunocompromised\"].",
-          "beginAge": "60 years"
+          'description':
+              'Administer to staff of institution for persons with '
+              'developmental disabilities',
+          'beginAge': '60 years',
         },
         {
-          "observationCode": {
-            "text": "HIV/AIDS - not severely immunocompromised",
-            "code": "155"
+          'observationCode': {
+            'text':
+                'Client of institution for persons with developmental '
+                'disabilities',
+            'code': '065',
           },
-          "description":
-              "Administer to persons who have HIV/AIDS and are not severely immunocompromised [See the CDC general recommendations for a definition of \"severely immunocompromised\"].",
-          "beginAge": "60 years"
+          'description':
+              'Administer to persons who are a client of institution for '
+              'persons with developmental disabilities.',
+          'beginAge': '60 years',
         },
         {
-          "observationCode": {
-            "text":
-                "Travel to countries with high or intermediate prevalence of chronic HBV infection",
-            "code": "166"
+          'observationCode': {
+            'text': 'In correctional facility',
+            'code': '069',
           },
-          "description":
-              "Administered to persons who travel to countries with high or intermediate prevalence of chronic HBV infection.",
-          "beginAge": "60 years"
+          'description':
+              'Administer to persons who are in a correctional facility.',
+          'beginAge': '60 years',
         },
         {
-          "observationCode": {"text": "HIV Infection", "code": "186"},
-          "description": "Administer to persons with HIV Infection",
-          "beginAge": "60 years"
-        }
+          'observationCode': {
+            'text':
+                'Household contact with hepatitis B surface '
+                'antigen-positive persons',
+            'code': '071',
+          },
+          'description':
+              'Administer to persons who have household contact with '
+              'hepatitis B surface antigen-positive persons.',
+          'beginAge': '60 years',
+        },
+        {
+          'observationCode': {
+            'text': 'HIV/AIDS - severely immunocompromised',
+            'code': '154',
+          },
+          'description':
+              'Administer to persons who have HIV/AIDS and are severely '
+              'immunocompromised [See the CDC general recommendations for '
+              'a definition of "severely immunocompromised"].',
+          'beginAge': '60 years',
+        },
+        {
+          'observationCode': {
+            'text': 'HIV/AIDS - not severely immunocompromised',
+            'code': '155',
+          },
+          'description':
+              'Administer to persons who have HIV/AIDS and are not '
+              'severely immunocompromised [See the CDC general '
+              'recommendations for a definition of "severely '
+              'immunocompromised"].',
+          'beginAge': '60 years',
+        },
+        {
+          'observationCode': {
+            'text':
+                'Travel to countries with high or intermediate prevalence '
+                'of chronic HBV infection',
+            'code': '166',
+          },
+          'description':
+              'Administered to persons who travel to countries with high '
+              'or intermediate prevalence of chronic HBV infection.',
+          'beginAge': '60 years',
+        },
+        {
+          'observationCode': {
+            'text': 'HIV Infection',
+            'code': '186',
+          },
+          'description': 'Administer to persons with HIV Infection',
+          'beginAge': '60 years',
+        },
       ],
-      "seriesDose": [
+      'seriesDose': [
         {
-          "doseNumber": "Dose 1",
-          "age": [
+          'doseNumber': 'Dose 1',
+          'age': [
             {
-              "absMinAge": "0 days",
-              "minAge": "60 years",
-              "earliestRecAge": "60 years"
-            }
+              'absMinAge': '0 days',
+              'minAge': '60 years',
+              'earliestRecAge': '60 years',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "Hep B, Adol/peds",
-              "cvx": "08",
-              "beginAge": "0 days",
-              "endAge": "20 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType': 'Hep B, Adol/peds',
+              'cvx': '08',
+              'beginAge': '0 days',
+              'endAge': '20 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "Hep B, Adult",
-              "cvx": "43",
-              "beginAge": "20 years",
-              "volume": "1",
-              "forecastVaccineType": "N"
+              'vaccineType': 'Hep B, Adult',
+              'cvx': '43',
+              'beginAge': '20 years',
+              'volume': '1',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "Hep B, Dialysis",
-              "cvx": "44",
-              "beginAge": "20 years",
-              "volume": "1",
-              "forecastVaccineType": "N"
+              'vaccineType': 'Hep B, Dialysis',
+              'cvx': '44',
+              'beginAge': '20 years',
+              'volume': '1',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "DTaP-HepB-IPV",
-              "cvx": "110",
-              "beginAge": "6 weeks",
-              "endAge": "7 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType': 'DTaP-HepB-IPV',
+              'cvx': '110',
+              'beginAge': '6 weeks',
+              'endAge': '7 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB",
-              "cvx": "146",
-              "beginAge": "6 weeks",
-              "endAge": "5 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
-            }
+              'vaccineType': 'DTaP-IPV-Hib-HepB',
+              'cvx': '146',
+              'beginAge': '6 weeks',
+              'endAge': '5 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
+            },
           ],
-          "allowableVaccine": [
+          'allowableVaccine': [
             {
-              "vaccineType": "Hep B, Adol/peds",
-              "cvx": "08",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'Hep B, Adol/peds',
+              'cvx': '08',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "Hep B, Adol/high risk infant",
-              "cvx": "42",
-              "beginAge": "0 days",
-              "endAge": "20 years"
-            },
-            {"vaccineType": "Hep B, Adult", "cvx": "43", "beginAge": "0 days"},
-            {
-              "vaccineType": "Hep B, Dialysis",
-              "cvx": "44",
-              "beginAge": "0 days"
+              'vaccineType': 'Hep B, Adol/high risk infant',
+              'cvx': '42',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "Hep B, Unspecified Formulation",
-              "cvx": "45",
-              "beginAge": "0 days"
+              'vaccineType': 'Hep B, Adult',
+              'cvx': '43',
+              'beginAge': '0 days',
             },
             {
-              "vaccineType": "Hib-HepB",
-              "cvx": "51",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'Hep B, Dialysis',
+              'cvx': '44',
+              'beginAge': '0 days',
             },
             {
-              "vaccineType": "DTP-Hib-HepB",
-              "cvx": "102",
-              "beginAge": "0 days",
-              "endAge": "20 years"
-            },
-            {"vaccineType": "HepA-HepB", "cvx": "104", "beginAge": "0 days"},
-            {
-              "vaccineType": "DTaP-HepB-IPV",
-              "cvx": "110",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'Hep B, Unspecified Formulation',
+              'cvx': '45',
+              'beginAge': '0 days',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB, historical",
-              "cvx": "132",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'Hib-HepB',
+              'cvx': '51',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB",
-              "cvx": "146",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'DTP-Hib-HepB',
+              'cvx': '102',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "Hep A-Hep B, pediatric/adolescent",
-              "cvx": "193",
-              "beginAge": "0 days",
-              "endAge": "18 years"
+              'vaccineType': 'HepA-HepB',
+              'cvx': '104',
+              'beginAge': '0 days',
             },
             {
-              "vaccineType": "DTP-HepB-Hib Pentavalent Non-US",
-              "cvx": "198",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'DTaP-HepB-IPV',
+              'cvx': '110',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "HepB recombinant, 3-antigen, Al(OH)3",
-              "cvx": "220",
-              "beginAge": "18 years - 4 days"
-            }
+              'vaccineType': 'DTaP-IPV-Hib-HepB, historical',
+              'cvx': '132',
+              'beginAge': '0 days',
+              'endAge': '20 years',
+            },
+            {
+              'vaccineType': 'DTaP-IPV-Hib-HepB',
+              'cvx': '146',
+              'beginAge': '0 days',
+              'endAge': '20 years',
+            },
+            {
+              'vaccineType': 'Hep A-Hep B, pediatric/adolescent',
+              'cvx': '193',
+              'beginAge': '0 days',
+              'endAge': '18 years',
+            },
+            {
+              'vaccineType': 'DTP-HepB-Hib Pentavalent Non-US',
+              'cvx': '198',
+              'beginAge': '0 days',
+              'endAge': '20 years',
+            },
+            {
+              'vaccineType': 'HepB recombinant, 3-antigen, Al(OH)3',
+              'cvx': '220',
+              'beginAge': '18 years - 4 days',
+            },
           ],
-          "recurringDose": "No"
+          'recurringDose': 'No',
         },
         {
-          "doseNumber": "Dose 2",
-          "age": [
+          'doseNumber': 'Dose 2',
+          'age': [
             {
-              "absMinAge": "18 years - 4 days",
-              "minAge": "60 years",
-              "earliestRecAge": "60 years"
-            }
+              'absMinAge': '18 years - 4 days',
+              'minAge': '60 years',
+              'earliestRecAge': '60 years',
+            },
           ],
-          "interval": [
-            {"fromPrevious": "Y", "absMinInt": "0 days", "minInt": "0 days"}
-          ],
-          "preferableVaccine": [
+          'interval': [
             {
-              "vaccineType": "HepB-CpG",
-              "cvx": "189",
-              "beginAge": "18 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
-            }
+              'fromPrevious': 'Y',
+              'absMinInt': '0 days',
+              'minInt': '0 days',
+            },
           ],
-          "allowableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "HepB-CpG",
-              "cvx": "189",
-              "beginAge": "18 years - 4 days"
-            }
+              'vaccineType': 'HepB-CpG',
+              'cvx': '189',
+              'beginAge': '18 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
+            },
           ],
-          "recurringDose": "No"
+          'allowableVaccine': [
+            {
+              'vaccineType': 'HepB-CpG',
+              'cvx': '189',
+              'beginAge': '18 years - 4 days',
+            },
+          ],
+          'recurringDose': 'No',
         },
         {
-          "doseNumber": "Dose 3",
-          "interval": [
+          'doseNumber': 'Dose 3',
+          'interval': [
             {
-              "fromPrevious": "Y",
-              "absMinInt": "4 weeks - 4 days",
-              "minInt": "4 weeks"
-            }
+              'fromPrevious': 'Y',
+              'absMinInt': '4 weeks - 4 days',
+              'minInt': '4 weeks',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "Hep B, Adult",
-              "cvx": "43",
-              "beginAge": "20 years",
-              "volume": "1",
-              "forecastVaccineType": "N"
+              'vaccineType': 'Hep B, Adult',
+              'cvx': '43',
+              'beginAge': '20 years',
+              'volume': '1',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "Hep B, Dialysis",
-              "cvx": "44",
-              "beginAge": "20 years",
-              "volume": "1",
-              "forecastVaccineType": "N"
+              'vaccineType': 'Hep B, Dialysis',
+              'cvx': '44',
+              'beginAge': '20 years',
+              'volume': '1',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "HepB-CpG",
-              "cvx": "189",
-              "beginAge": "18 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
-            }
+              'vaccineType': 'HepB-CpG',
+              'cvx': '189',
+              'beginAge': '18 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
+            },
           ],
-          "allowableVaccine": [
+          'allowableVaccine': [
             {
-              "vaccineType": "Hep B, Adol/peds",
-              "cvx": "08",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'Hep B, Adol/peds',
+              'cvx': '08',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "Hep B, Adol/high risk infant",
-              "cvx": "42",
-              "beginAge": "0 days",
-              "endAge": "20 years"
-            },
-            {"vaccineType": "Hep B, Adult", "cvx": "43", "beginAge": "0 days"},
-            {
-              "vaccineType": "Hep B, Dialysis",
-              "cvx": "44",
-              "beginAge": "0 days"
+              'vaccineType': 'Hep B, Adol/high risk infant',
+              'cvx': '42',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "Hep B, Unspecified Formulation",
-              "cvx": "45",
-              "beginAge": "0 days"
+              'vaccineType': 'Hep B, Adult',
+              'cvx': '43',
+              'beginAge': '0 days',
             },
             {
-              "vaccineType": "Hib-HepB",
-              "cvx": "51",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'Hep B, Dialysis',
+              'cvx': '44',
+              'beginAge': '0 days',
             },
             {
-              "vaccineType": "DTP-Hib-HepB",
-              "cvx": "102",
-              "beginAge": "0 days",
-              "endAge": "20 years"
-            },
-            {"vaccineType": "HepA-HepB", "cvx": "104", "beginAge": "0 days"},
-            {
-              "vaccineType": "DTaP-HepB-IPV",
-              "cvx": "110",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'Hep B, Unspecified Formulation',
+              'cvx': '45',
+              'beginAge': '0 days',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB, historical",
-              "cvx": "132",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'Hib-HepB',
+              'cvx': '51',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB",
-              "cvx": "146",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'DTP-Hib-HepB',
+              'cvx': '102',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "HepB-CpG",
-              "cvx": "189",
-              "beginAge": "18 years - 4 days"
+              'vaccineType': 'HepA-HepB',
+              'cvx': '104',
+              'beginAge': '0 days',
             },
             {
-              "vaccineType": "DTP-HepB-Hib Pentavalent Non-US",
-              "cvx": "198",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'DTaP-HepB-IPV',
+              'cvx': '110',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "HepB recombinant, 3-antigen, Al(OH)3",
-              "cvx": "220",
-              "beginAge": "18 years - 4 days"
-            }
+              'vaccineType': 'DTaP-IPV-Hib-HepB, historical',
+              'cvx': '132',
+              'beginAge': '0 days',
+              'endAge': '20 years',
+            },
+            {
+              'vaccineType': 'DTaP-IPV-Hib-HepB',
+              'cvx': '146',
+              'beginAge': '0 days',
+              'endAge': '20 years',
+            },
+            {
+              'vaccineType': 'HepB-CpG',
+              'cvx': '189',
+              'beginAge': '18 years - 4 days',
+            },
+            {
+              'vaccineType': 'DTP-HepB-Hib Pentavalent Non-US',
+              'cvx': '198',
+              'beginAge': '0 days',
+              'endAge': '20 years',
+            },
+            {
+              'vaccineType': 'HepB recombinant, 3-antigen, Al(OH)3',
+              'cvx': '220',
+              'beginAge': '18 years - 4 days',
+            },
           ],
-          "recurringDose": "No"
+          'recurringDose': 'No',
         },
         {
-          "doseNumber": "Dose 4",
-          "interval": [
+          'doseNumber': 'Dose 4',
+          'interval': [
             {
-              "fromPrevious": "N",
-              "fromTargetDose": "2",
-              "absMinInt": "8 weeks - 4 days",
-              "minInt": "8 weeks"
+              'fromPrevious': 'N',
+              'fromTargetDose': '2',
+              'absMinInt': '8 weeks - 4 days',
+              'minInt': '8 weeks',
             },
             {
-              "fromPrevious": "N",
-              "fromTargetDose": "1",
-              "absMinInt": "16 weeks - 4 days",
-              "minInt": "16 weeks"
-            }
+              'fromPrevious': 'N',
+              'fromTargetDose': '1',
+              'absMinInt': '16 weeks - 4 days',
+              'minInt': '16 weeks',
+            },
           ],
-          "allowableInterval": {
-            "fromPrevious": "N",
-            "fromTargetDose": "2",
-            "absMinInt": "4 weeks - 4 days"
+          'allowableInterval': {
+            'fromPrevious': 'N',
+            'fromTargetDose': '2',
+            'absMinInt': '4 weeks - 4 days',
           },
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "HepB-CpG",
-              "cvx": "189",
-              "beginAge": "18 years",
-              "volume": "0.5",
-              "forecastVaccineType": "Y"
-            }
+              'vaccineType': 'HepB-CpG',
+              'cvx': '189',
+              'beginAge': '18 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'Y',
+            },
           ],
-          "allowableVaccine": [
+          'allowableVaccine': [
             {
-              "vaccineType": "HepB-CpG",
-              "cvx": "189",
-              "beginAge": "18 years - 4 days"
-            }
+              'vaccineType': 'HepB-CpG',
+              'cvx': '189',
+              'beginAge': '18 years - 4 days',
+            },
           ],
-          "conditionalSkip": [
+          'conditionalSkip': [
             {
-              "context": "Both",
-              "setLogic": "n/a",
-              "set": [
+              'context': 'Both',
+              'setLogic': 'n/a',
+              'set': [
                 {
-                  "setID": "1",
-                  "setDescription":
-                      "Dose can be skipped once two doses of Heplisav-B are administered.",
-                  "condition": [
+                  'setID': '1',
+                  'setDescription':
+                      'Dose can be skipped once two doses of Heplisav-B '
+                      'are administered.',
+                  'condition': [
                     {
-                      "conditionID": "1",
-                      "conditionType": "Vaccine Count by Age",
-                      "beginAge": "18 years - 4 days",
-                      "doseCount": "1",
-                      "doseType": "Total",
-                      "doseCountLogic": "greater than",
-                      "vaccineTypes": "189"
-                    }
-                  ]
-                }
-              ]
-            }
+                      'conditionID': '1',
+                      'conditionType': 'Vaccine Count by Age',
+                      'beginAge': '18 years - 4 days',
+                      'doseCount': '1',
+                      'doseType': 'Total',
+                      'doseCountLogic': 'greater than',
+                      'vaccineTypes': '189',
+                    },
+                  ],
+                },
+              ],
+            },
           ],
-          "recurringDose": "No"
-        }
-      ]
+          'recurringDose': 'No',
+        },
+      ],
     },
     {
-      "seriesName": "HepB risk Heplisav-B tertiary 4-dose series",
-      "targetDisease": "HepB",
-      "vaccineGroup": "HepB",
-      "seriesAdminGuidance": [
-        "Anyone age 60 years or older who does not meet risk-based recommendations may still receive Hepatitis B vaccination."
+      'seriesName': 'HepB risk Heplisav-B tertiary 4-dose series',
+      'targetDisease': 'HepB',
+      'vaccineGroup': 'HepB',
+      'seriesAdminGuidance': [
+        'Anyone age 60 years or older who does not meet risk-based '
+            'recommendations may still receive Hepatitis B vaccination.',
       ],
-      "seriesType": "Risk",
-      "equivalentSeriesGroups": "1",
-      "selectSeries": {
-        "defaultSeries": "No",
-        "productPath": "No",
-        "seriesGroupName": "Increased Risk",
-        "seriesGroup": "2",
-        "seriesPriority": "B",
-        "seriesPreference": "4",
-        "minAgeToStart": "60 years"
+      'seriesType': 'Risk',
+      'equivalentSeriesGroups': '1',
+      'selectSeries': {
+        'defaultSeries': 'No',
+        'productPath': 'No',
+        'seriesGroupName': 'Increased Risk',
+        'seriesGroup': '2',
+        'seriesPriority': 'B',
+        'seriesPreference': '4',
+        'minAgeToStart': '60 years',
       },
-      "indication": [
+      'indication': [
         {
-          "observationCode": {
-            "text": "Hepatitis C virus infection",
-            "code": "005"
+          'observationCode': {
+            'text': 'Hepatitis C virus infection',
+            'code': '005',
           },
-          "description":
-              "Administer to persons with a hepatitis C virus infection.",
-          "beginAge": "60 years"
+          'description':
+              'Administer to persons with a hepatitis C virus infection.',
+          'beginAge': '60 years',
         },
         {
-          "observationCode": {"text": "Diabetes", "code": "014"},
-          "description": "Administer to persons who have diabetes.",
-          "beginAge": "60 years",
-          "guidance":
-              "Administer to persons who have diabetes at the discretion of the treating clinician."
-        },
-        {
-          "observationCode": {"text": "Chronic liver disease", "code": "015"},
-          "description":
-              "Administer to persons who have chronic liver disease.",
-          "beginAge": "60 years",
-          "guidance":
-              "Includes, but is not limited to persons with hepatitis C virus (HCV) infection, cirrhosis, fatty liver disease, alcoholic liver disease, autoimmune hepatitis, or an alanine aminotransferase (ALT) or aspartate aminotransferase (AST) level persistently greater than twice the upper limit of normal"
-        },
-        {
-          "observationCode": {"text": "Dialysis patient", "code": "032"},
-          "description":
-              "Administer to persons on maintenance dialysis, including incenter or home hemodialysis and peritoneal dialysis, and persons who are predialysis",
-          "beginAge": "60 years"
-        },
-        {
-          "observationCode": {
-            "text": "Men who have sex with men",
-            "code": "036"
+          'observationCode': {
+            'text': 'Diabetes',
+            'code': '014',
           },
-          "description": "Administer to men who have sex with men.",
-          "beginAge": "60 years"
+          'description': 'Administer to persons who have diabetes.',
+          'beginAge': '60 years',
+          'guidance':
+              'Administer to persons who have diabetes at the discretion '
+              'of the treating clinician.',
         },
         {
-          "observationCode": {
-            "text": "Not in a long-term, mutually monogamous relationship",
-            "code": "037"
+          'observationCode': {
+            'text': 'Chronic liver disease',
+            'code': '015',
           },
-          "description":
-              "Administer to persons not in a long-term, mutually monogamous relationship.",
-          "beginAge": "60 years"
+          'description':
+              'Administer to persons who have chronic liver disease.',
+          'beginAge': '60 years',
+          'guidance':
+              'Includes, but is not limited to persons with hepatitis C '
+              'virus (HCV) infection, cirrhosis, fatty liver disease, '
+              'alcoholic liver disease, autoimmune hepatitis, or an '
+              'alanine aminotransferase (ALT) or aspartate '
+              'aminotransferase (AST) level persistently greater than '
+              'twice the upper limit of normal',
         },
         {
-          "observationCode": {
-            "text":
-                "Sex partner of Hepatitis B surface antigen-positive persons",
-            "code": "038"
+          'observationCode': {
+            'text': 'Dialysis patient',
+            'code': '032',
           },
-          "description":
-              "Administer to persons who are a sex partner of a Hepatitis B surface antigen-positive person.",
-          "beginAge": "60 years"
+          'description':
+              'Administer to persons on maintenance dialysis, including '
+              'incenter or home hemodialysis and peritoneal dialysis, and '
+              'persons who are predialysis',
+          'beginAge': '60 years',
         },
         {
-          "observationCode": {
-            "text": "Receives treatment for STD",
-            "code": "039"
+          'observationCode': {
+            'text': 'Men who have sex with men',
+            'code': '036',
           },
-          "description": "Administer to persons who receive treatment for STD.",
-          "beginAge": "60 years"
+          'description': 'Administer to men who have sex with men.',
+          'beginAge': '60 years',
         },
         {
-          "observationCode": {
-            "text": "Illicit injection drug use",
-            "code": "041"
+          'observationCode': {
+            'text': 'Not in a long-term, mutually monogamous relationship',
+            'code': '037',
           },
-          "description":
-              "Administer to persons who use illicit injection drugs.",
-          "beginAge": "60 years"
+          'description':
+              'Administer to persons not in a long-term, mutually '
+              'monogamous relationship.',
+          'beginAge': '60 years',
         },
         {
-          "observationCode": {"text": "Health care personnel", "code": "055"},
-          "description": "Administer to healthcare personnel.",
-          "beginAge": "60 years"
-        },
-        {
-          "observationCode": {
-            "text":
-                "Public safety worker exposed to blood or infection body fluids",
-            "code": "057"
+          'observationCode': {
+            'text':
+                'Sex partner of Hepatitis B surface antigen-positive '
+                'persons',
+            'code': '038',
           },
-          "description":
-              "Administer to public safety workers exposed to blood or infection body fluids",
-          "beginAge": "60 years"
+          'description':
+              'Administer to persons who are a sex partner of a Hepatitis '
+              'B surface antigen-positive person.',
+          'beginAge': '60 years',
         },
         {
-          "observationCode": {
-            "text":
-                "Staff of institution for persons with developmental disabilities",
-            "code": "058"
+          'observationCode': {
+            'text': 'Receives treatment for STD',
+            'code': '039',
           },
-          "description":
-              "Administer to staff of institution for persons with developmental disabilities",
-          "beginAge": "60 years"
+          'description': 'Administer to persons who receive treatment for STD.',
+          'beginAge': '60 years',
         },
         {
-          "observationCode": {
-            "text":
-                "Client of institution for persons with developmental disabilities",
-            "code": "065"
+          'observationCode': {
+            'text': 'Illicit injection drug use',
+            'code': '041',
           },
-          "description":
-              "Administer to persons who are a client of institution for persons with developmental disabilities.",
-          "beginAge": "60 years"
+          'description':
+              'Administer to persons who use illicit injection drugs.',
+          'beginAge': '60 years',
         },
         {
-          "observationCode": {
-            "text": "In correctional facility",
-            "code": "069"
+          'observationCode': {
+            'text': 'Health care personnel',
+            'code': '055',
           },
-          "description":
-              "Administer to persons who are in a correctional facility.",
-          "beginAge": "60 years"
+          'description': 'Administer to healthcare personnel.',
+          'beginAge': '60 years',
         },
         {
-          "observationCode": {
-            "text":
-                "Household contact with hepatitis B surface antigen-positive persons",
-            "code": "071"
+          'observationCode': {
+            'text':
+                'Public safety worker exposed to blood or infection body '
+                'fluids',
+            'code': '057',
           },
-          "description":
-              "Administer to persons who have household contact with hepatitis B surface antigen-positive persons.",
-          "beginAge": "60 years"
+          'description':
+              'Administer to public safety workers exposed to blood or '
+              'infection body fluids',
+          'beginAge': '60 years',
         },
         {
-          "observationCode": {
-            "text": "HIV/AIDS - severely immunocompromised",
-            "code": "154"
+          'observationCode': {
+            'text':
+                'Staff of institution for persons with developmental '
+                'disabilities',
+            'code': '058',
           },
-          "description":
-              "Administer to persons who have HIV/AIDS and are severely immunocompromised [See the CDC general recommendations for a definition of \"severely immunocompromised\"].",
-          "beginAge": "60 years"
+          'description':
+              'Administer to staff of institution for persons with '
+              'developmental disabilities',
+          'beginAge': '60 years',
         },
         {
-          "observationCode": {
-            "text": "HIV/AIDS - not severely immunocompromised",
-            "code": "155"
+          'observationCode': {
+            'text':
+                'Client of institution for persons with developmental '
+                'disabilities',
+            'code': '065',
           },
-          "description":
-              "Administer to persons who have HIV/AIDS and are not severely immunocompromised [See the CDC general recommendations for a definition of \"severely immunocompromised\"].",
-          "beginAge": "60 years"
+          'description':
+              'Administer to persons who are a client of institution for '
+              'persons with developmental disabilities.',
+          'beginAge': '60 years',
         },
         {
-          "observationCode": {
-            "text":
-                "Travel to countries with high or intermediate prevalence of chronic HBV infection",
-            "code": "166"
+          'observationCode': {
+            'text': 'In correctional facility',
+            'code': '069',
           },
-          "description":
-              "Administered to persons who travel to countries with high or intermediate prevalence of chronic HBV infection.",
-          "beginAge": "60 years"
+          'description':
+              'Administer to persons who are in a correctional facility.',
+          'beginAge': '60 years',
         },
         {
-          "observationCode": {"text": "HIV Infection", "code": "186"},
-          "description": "Administer to persons with HIV Infection",
-          "beginAge": "60 years"
-        }
+          'observationCode': {
+            'text':
+                'Household contact with hepatitis B surface '
+                'antigen-positive persons',
+            'code': '071',
+          },
+          'description':
+              'Administer to persons who have household contact with '
+              'hepatitis B surface antigen-positive persons.',
+          'beginAge': '60 years',
+        },
+        {
+          'observationCode': {
+            'text': 'HIV/AIDS - severely immunocompromised',
+            'code': '154',
+          },
+          'description':
+              'Administer to persons who have HIV/AIDS and are severely '
+              'immunocompromised [See the CDC general recommendations for '
+              'a definition of "severely immunocompromised"].',
+          'beginAge': '60 years',
+        },
+        {
+          'observationCode': {
+            'text': 'HIV/AIDS - not severely immunocompromised',
+            'code': '155',
+          },
+          'description':
+              'Administer to persons who have HIV/AIDS and are not '
+              'severely immunocompromised [See the CDC general '
+              'recommendations for a definition of "severely '
+              'immunocompromised"].',
+          'beginAge': '60 years',
+        },
+        {
+          'observationCode': {
+            'text':
+                'Travel to countries with high or intermediate prevalence '
+                'of chronic HBV infection',
+            'code': '166',
+          },
+          'description':
+              'Administered to persons who travel to countries with high '
+              'or intermediate prevalence of chronic HBV infection.',
+          'beginAge': '60 years',
+        },
+        {
+          'observationCode': {
+            'text': 'HIV Infection',
+            'code': '186',
+          },
+          'description': 'Administer to persons with HIV Infection',
+          'beginAge': '60 years',
+        },
       ],
-      "seriesDose": [
+      'seriesDose': [
         {
-          "doseNumber": "Dose 1",
-          "age": [
+          'doseNumber': 'Dose 1',
+          'age': [
             {
-              "absMinAge": "18 years - 4 days",
-              "minAge": "60 years",
-              "earliestRecAge": "60 years"
-            }
+              'absMinAge': '18 years - 4 days',
+              'minAge': '60 years',
+              'earliestRecAge': '60 years',
+            },
           ],
-          "interval": [
-            {"fromPrevious": "Y", "absMinInt": "0 days", "minInt": "0 days"}
-          ],
-          "preferableVaccine": [
+          'interval': [
             {
-              "vaccineType": "HepB-CpG",
-              "cvx": "189",
-              "beginAge": "18 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
-            }
+              'fromPrevious': 'Y',
+              'absMinInt': '0 days',
+              'minInt': '0 days',
+            },
           ],
-          "allowableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "HepB-CpG",
-              "cvx": "189",
-              "beginAge": "18 years - 4 days"
-            }
+              'vaccineType': 'HepB-CpG',
+              'cvx': '189',
+              'beginAge': '18 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
+            },
           ],
-          "recurringDose": "No"
+          'allowableVaccine': [
+            {
+              'vaccineType': 'HepB-CpG',
+              'cvx': '189',
+              'beginAge': '18 years - 4 days',
+            },
+          ],
+          'recurringDose': 'No',
         },
         {
-          "doseNumber": "Dose 2",
-          "interval": [
+          'doseNumber': 'Dose 2',
+          'interval': [
             {
-              "fromPrevious": "Y",
-              "absMinInt": "4 weeks - 4 days",
-              "minInt": "4 weeks"
-            }
+              'fromPrevious': 'Y',
+              'absMinInt': '4 weeks - 4 days',
+              'minInt': '4 weeks',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "Hep B, Adult",
-              "cvx": "43",
-              "beginAge": "20 years",
-              "volume": "1",
-              "forecastVaccineType": "N"
+              'vaccineType': 'Hep B, Adult',
+              'cvx': '43',
+              'beginAge': '20 years',
+              'volume': '1',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "Hep B, Dialysis",
-              "cvx": "44",
-              "beginAge": "20 years",
-              "volume": "1",
-              "forecastVaccineType": "N"
-            }
+              'vaccineType': 'Hep B, Dialysis',
+              'cvx': '44',
+              'beginAge': '20 years',
+              'volume': '1',
+              'forecastVaccineType': 'N',
+            },
           ],
-          "allowableVaccine": [
+          'allowableVaccine': [
             {
-              "vaccineType": "Hep B, Adol/peds",
-              "cvx": "08",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'Hep B, Adol/peds',
+              'cvx': '08',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "Hep B, Adol/high risk infant",
-              "cvx": "42",
-              "beginAge": "0 days",
-              "endAge": "20 years"
-            },
-            {"vaccineType": "Hep B, Adult", "cvx": "43", "beginAge": "0 days"},
-            {
-              "vaccineType": "Hep B, Dialysis",
-              "cvx": "44",
-              "beginAge": "0 days"
+              'vaccineType': 'Hep B, Adol/high risk infant',
+              'cvx': '42',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "Hep B, Unspecified Formulation",
-              "cvx": "45",
-              "beginAge": "0 days"
-            },
-            {"vaccineType": "Hib-HepB", "cvx": "51", "beginAge": "0 days"},
-            {
-              "vaccineType": "DTP-Hib-HepB",
-              "cvx": "102",
-              "beginAge": "0 days",
-              "endAge": "20 years"
-            },
-            {"vaccineType": "HepA-HepB", "cvx": "104", "beginAge": "0 days"},
-            {
-              "vaccineType": "DTaP-HepB-IPV",
-              "cvx": "110",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'Hep B, Adult',
+              'cvx': '43',
+              'beginAge': '0 days',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB, historical",
-              "cvx": "132",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'Hep B, Dialysis',
+              'cvx': '44',
+              'beginAge': '0 days',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB",
-              "cvx": "146",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'Hep B, Unspecified Formulation',
+              'cvx': '45',
+              'beginAge': '0 days',
             },
             {
-              "vaccineType": "DTP-HepB-Hib Pentavalent Non-US",
-              "cvx": "198",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'Hib-HepB',
+              'cvx': '51',
+              'beginAge': '0 days',
             },
             {
-              "vaccineType": "HepB recombinant, 3-antigen, Al(OH)3",
-              "cvx": "220",
-              "beginAge": "18 years - 4 days"
-            }
+              'vaccineType': 'DTP-Hib-HepB',
+              'cvx': '102',
+              'beginAge': '0 days',
+              'endAge': '20 years',
+            },
+            {
+              'vaccineType': 'HepA-HepB',
+              'cvx': '104',
+              'beginAge': '0 days',
+            },
+            {
+              'vaccineType': 'DTaP-HepB-IPV',
+              'cvx': '110',
+              'beginAge': '0 days',
+              'endAge': '20 years',
+            },
+            {
+              'vaccineType': 'DTaP-IPV-Hib-HepB, historical',
+              'cvx': '132',
+              'beginAge': '0 days',
+              'endAge': '20 years',
+            },
+            {
+              'vaccineType': 'DTaP-IPV-Hib-HepB',
+              'cvx': '146',
+              'beginAge': '0 days',
+              'endAge': '20 years',
+            },
+            {
+              'vaccineType': 'DTP-HepB-Hib Pentavalent Non-US',
+              'cvx': '198',
+              'beginAge': '0 days',
+              'endAge': '20 years',
+            },
+            {
+              'vaccineType': 'HepB recombinant, 3-antigen, Al(OH)3',
+              'cvx': '220',
+              'beginAge': '18 years - 4 days',
+            },
           ],
-          "recurringDose": "No"
+          'recurringDose': 'No',
         },
         {
-          "doseNumber": "Dose 3",
-          "interval": [
+          'doseNumber': 'Dose 3',
+          'interval': [
             {
-              "fromPrevious": "Y",
-              "absMinInt": "4 weeks - 4 days",
-              "minInt": "4 weeks"
-            }
+              'fromPrevious': 'Y',
+              'absMinInt': '4 weeks - 4 days',
+              'minInt': '4 weeks',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "Hep B, Adult",
-              "cvx": "43",
-              "beginAge": "20 years",
-              "volume": "1",
-              "forecastVaccineType": "N"
+              'vaccineType': 'Hep B, Adult',
+              'cvx': '43',
+              'beginAge': '20 years',
+              'volume': '1',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "Hep B, Dialysis",
-              "cvx": "44",
-              "beginAge": "20 years",
-              "volume": "1",
-              "forecastVaccineType": "N"
+              'vaccineType': 'Hep B, Dialysis',
+              'cvx': '44',
+              'beginAge': '20 years',
+              'volume': '1',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "HepB-CpG",
-              "cvx": "189",
-              "beginAge": "18 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
-            }
+              'vaccineType': 'HepB-CpG',
+              'cvx': '189',
+              'beginAge': '18 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
+            },
           ],
-          "allowableVaccine": [
+          'allowableVaccine': [
             {
-              "vaccineType": "Hep B, Adol/peds",
-              "cvx": "08",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'Hep B, Adol/peds',
+              'cvx': '08',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "Hep B, Adol/high risk infant",
-              "cvx": "42",
-              "beginAge": "0 days",
-              "endAge": "20 years"
-            },
-            {"vaccineType": "Hep B, Adult", "cvx": "43", "beginAge": "0 days"},
-            {
-              "vaccineType": "Hep B, Dialysis",
-              "cvx": "44",
-              "beginAge": "0 days"
+              'vaccineType': 'Hep B, Adol/high risk infant',
+              'cvx': '42',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "Hep B, Unspecified Formulation",
-              "cvx": "45",
-              "beginAge": "0 days"
+              'vaccineType': 'Hep B, Adult',
+              'cvx': '43',
+              'beginAge': '0 days',
             },
             {
-              "vaccineType": "Hib-HepB",
-              "cvx": "51",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'Hep B, Dialysis',
+              'cvx': '44',
+              'beginAge': '0 days',
             },
             {
-              "vaccineType": "DTP-Hib-HepB",
-              "cvx": "102",
-              "beginAge": "0 days",
-              "endAge": "20 years"
-            },
-            {"vaccineType": "HepA-HepB", "cvx": "104", "beginAge": "0 days"},
-            {
-              "vaccineType": "DTaP-HepB-IPV",
-              "cvx": "110",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'Hep B, Unspecified Formulation',
+              'cvx': '45',
+              'beginAge': '0 days',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB, historical",
-              "cvx": "132",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'Hib-HepB',
+              'cvx': '51',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB",
-              "cvx": "146",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'DTP-Hib-HepB',
+              'cvx': '102',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "HepB-CpG",
-              "cvx": "189",
-              "beginAge": "18 years - 4 days"
+              'vaccineType': 'HepA-HepB',
+              'cvx': '104',
+              'beginAge': '0 days',
             },
             {
-              "vaccineType": "DTP-HepB-Hib Pentavalent Non-US",
-              "cvx": "198",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'DTaP-HepB-IPV',
+              'cvx': '110',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "HepB recombinant, 3-antigen, Al(OH)3",
-              "cvx": "220",
-              "beginAge": "18 years - 4 days"
-            }
+              'vaccineType': 'DTaP-IPV-Hib-HepB, historical',
+              'cvx': '132',
+              'beginAge': '0 days',
+              'endAge': '20 years',
+            },
+            {
+              'vaccineType': 'DTaP-IPV-Hib-HepB',
+              'cvx': '146',
+              'beginAge': '0 days',
+              'endAge': '20 years',
+            },
+            {
+              'vaccineType': 'HepB-CpG',
+              'cvx': '189',
+              'beginAge': '18 years - 4 days',
+            },
+            {
+              'vaccineType': 'DTP-HepB-Hib Pentavalent Non-US',
+              'cvx': '198',
+              'beginAge': '0 days',
+              'endAge': '20 years',
+            },
+            {
+              'vaccineType': 'HepB recombinant, 3-antigen, Al(OH)3',
+              'cvx': '220',
+              'beginAge': '18 years - 4 days',
+            },
           ],
-          "recurringDose": "No"
+          'recurringDose': 'No',
         },
         {
-          "doseNumber": "Dose 4",
-          "interval": [
+          'doseNumber': 'Dose 4',
+          'interval': [
             {
-              "fromPrevious": "Y",
-              "absMinInt": "0 days",
-              "minInt": "4 weeks",
-              "earliestRecInt": "4 weeks",
-              "latestRecInt": "8 weeks"
-            }
+              'fromPrevious': 'Y',
+              'absMinInt': '0 days',
+              'minInt': '4 weeks',
+              'earliestRecInt': '4 weeks',
+              'latestRecInt': '8 weeks',
+            },
           ],
-          "allowableInterval": {
-            "fromPrevious": "N",
-            "fromTargetDose": "1",
-            "absMinInt": "4 weeks - 4 days"
+          'allowableInterval': {
+            'fromPrevious': 'N',
+            'fromTargetDose': '1',
+            'absMinInt': '4 weeks - 4 days',
           },
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "HepB-CpG",
-              "cvx": "189",
-              "beginAge": "18 years",
-              "volume": "0.5",
-              "forecastVaccineType": "Y"
-            }
+              'vaccineType': 'HepB-CpG',
+              'cvx': '189',
+              'beginAge': '18 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'Y',
+            },
           ],
-          "allowableVaccine": [
+          'allowableVaccine': [
             {
-              "vaccineType": "HepB-CpG",
-              "cvx": "189",
-              "beginAge": "18 years - 4 days"
-            }
+              'vaccineType': 'HepB-CpG',
+              'cvx': '189',
+              'beginAge': '18 years - 4 days',
+            },
           ],
-          "conditionalSkip": [
+          'conditionalSkip': [
             {
-              "context": "Both",
-              "setLogic": "n/a",
-              "set": [
+              'context': 'Both',
+              'setLogic': 'n/a',
+              'set': [
                 {
-                  "setID": "1",
-                  "setDescription":
-                      "Dose can be skipped once two doses of Heplisav-B are administered.",
-                  "condition": [
+                  'setID': '1',
+                  'setDescription':
+                      'Dose can be skipped once two doses of Heplisav-B '
+                      'are administered.',
+                  'condition': [
                     {
-                      "conditionID": "1",
-                      "conditionType": "Vaccine Count by Age",
-                      "beginAge": "18 years - 4 days",
-                      "doseCount": "1",
-                      "doseType": "Total",
-                      "doseCountLogic": "greater than",
-                      "vaccineTypes": "189"
-                    }
-                  ]
-                }
-              ]
-            }
+                      'conditionID': '1',
+                      'conditionType': 'Vaccine Count by Age',
+                      'beginAge': '18 years - 4 days',
+                      'doseCount': '1',
+                      'doseType': 'Total',
+                      'doseCountLogic': 'greater than',
+                      'vaccineTypes': '189',
+                    },
+                  ],
+                },
+              ],
+            },
           ],
-          "recurringDose": "No"
-        }
-      ]
+          'recurringDose': 'No',
+        },
+      ],
     },
     {
-      "seriesName": "HepB risk Twinrix 3 Dose Series",
-      "targetDisease": "HepB",
-      "vaccineGroup": "HepB",
-      "seriesAdminGuidance": [
-        "Anyone age 60 years or older who does not meet risk-based recommendations may still receive Hepatitis B vaccination."
+      'seriesName': 'HepB risk Twinrix 3 Dose Series',
+      'targetDisease': 'HepB',
+      'vaccineGroup': 'HepB',
+      'seriesAdminGuidance': [
+        'Anyone age 60 years or older who does not meet risk-based '
+            'recommendations may still receive Hepatitis B vaccination.',
       ],
-      "seriesType": "Risk",
-      "equivalentSeriesGroups": "1",
-      "selectSeries": {
-        "defaultSeries": "No",
-        "productPath": "Yes",
-        "seriesGroupName": "Increased Risk",
-        "seriesGroup": "2",
-        "seriesPriority": "B",
-        "seriesPreference": "5",
-        "minAgeToStart": "60 years"
+      'seriesType': 'Risk',
+      'equivalentSeriesGroups': '1',
+      'selectSeries': {
+        'defaultSeries': 'No',
+        'productPath': 'Yes',
+        'seriesGroupName': 'Increased Risk',
+        'seriesGroup': '2',
+        'seriesPriority': 'B',
+        'seriesPreference': '5',
+        'minAgeToStart': '60 years',
       },
-      "indication": [
+      'indication': [
         {
-          "observationCode": {
-            "text": "Hepatitis C virus infection",
-            "code": "005"
+          'observationCode': {
+            'text': 'Hepatitis C virus infection',
+            'code': '005',
           },
-          "description":
-              "Administer to persons with a hepatitis C virus infection.",
-          "beginAge": "60 years"
+          'description':
+              'Administer to persons with a hepatitis C virus infection.',
+          'beginAge': '60 years',
         },
         {
-          "observationCode": {"text": "Diabetes", "code": "014"},
-          "description": "Administer to persons who have diabetes.",
-          "beginAge": "60 years",
-          "guidance":
-              "Administer to persons who have diabetes at the discretion of the treating clinician."
-        },
-        {
-          "observationCode": {"text": "Chronic liver disease", "code": "015"},
-          "description":
-              "Administer to persons who have chronic liver disease.",
-          "beginAge": "60 years",
-          "guidance":
-              "Includes, but is not limited to persons with hepatitis C virus (HCV) infection, cirrhosis, fatty liver disease, alcoholic liver disease, autoimmune hepatitis, or an alanine aminotransferase (ALT) or aspartate aminotransferase (AST) level persistently greater than twice the upper limit of normal"
-        },
-        {
-          "observationCode": {"text": "Dialysis patient", "code": "032"},
-          "description":
-              "Administer to persons on maintenance dialysis, including incenter or home hemodialysis and peritoneal dialysis, and persons who are predialysis",
-          "beginAge": "60 years"
-        },
-        {
-          "observationCode": {
-            "text": "Men who have sex with men",
-            "code": "036"
+          'observationCode': {
+            'text': 'Diabetes',
+            'code': '014',
           },
-          "description": "Administer to men who have sex with men.",
-          "beginAge": "60 years"
+          'description': 'Administer to persons who have diabetes.',
+          'beginAge': '60 years',
+          'guidance':
+              'Administer to persons who have diabetes at the discretion '
+              'of the treating clinician.',
         },
         {
-          "observationCode": {
-            "text": "Not in a long-term, mutually monogamous relationship",
-            "code": "037"
+          'observationCode': {
+            'text': 'Chronic liver disease',
+            'code': '015',
           },
-          "description":
-              "Administer to persons not in a long-term, mutually monogamous relationship.",
-          "beginAge": "60 years"
+          'description':
+              'Administer to persons who have chronic liver disease.',
+          'beginAge': '60 years',
+          'guidance':
+              'Includes, but is not limited to persons with hepatitis C '
+              'virus (HCV) infection, cirrhosis, fatty liver disease, '
+              'alcoholic liver disease, autoimmune hepatitis, or an '
+              'alanine aminotransferase (ALT) or aspartate '
+              'aminotransferase (AST) level persistently greater than '
+              'twice the upper limit of normal',
         },
         {
-          "observationCode": {
-            "text":
-                "Sex partner of Hepatitis B surface antigen-positive persons",
-            "code": "038"
+          'observationCode': {
+            'text': 'Dialysis patient',
+            'code': '032',
           },
-          "description":
-              "Administer to persons who are a sex partner of a Hepatitis B surface antigen-positive person.",
-          "beginAge": "60 years"
+          'description':
+              'Administer to persons on maintenance dialysis, including '
+              'incenter or home hemodialysis and peritoneal dialysis, and '
+              'persons who are predialysis',
+          'beginAge': '60 years',
         },
         {
-          "observationCode": {
-            "text": "Receives treatment for STD",
-            "code": "039"
+          'observationCode': {
+            'text': 'Men who have sex with men',
+            'code': '036',
           },
-          "description": "Administer to persons who receive treatment for STD.",
-          "beginAge": "60 years"
+          'description': 'Administer to men who have sex with men.',
+          'beginAge': '60 years',
         },
         {
-          "observationCode": {
-            "text": "Illicit injection drug use",
-            "code": "041"
+          'observationCode': {
+            'text': 'Not in a long-term, mutually monogamous relationship',
+            'code': '037',
           },
-          "description":
-              "Administer to persons who use illicit injection drugs.",
-          "beginAge": "60 years"
+          'description':
+              'Administer to persons not in a long-term, mutually '
+              'monogamous relationship.',
+          'beginAge': '60 years',
         },
         {
-          "observationCode": {"text": "Health care personnel", "code": "055"},
-          "description": "Administer to  healthcare personnel.",
-          "beginAge": "60 years"
-        },
-        {
-          "observationCode": {
-            "text":
-                "Public safety worker exposed to blood or infection body fluids",
-            "code": "057"
+          'observationCode': {
+            'text':
+                'Sex partner of Hepatitis B surface antigen-positive '
+                'persons',
+            'code': '038',
           },
-          "description":
-              "Administer to public safety workers exposed to blood or infection body fluids",
-          "beginAge": "60 years"
+          'description':
+              'Administer to persons who are a sex partner of a Hepatitis '
+              'B surface antigen-positive person.',
+          'beginAge': '60 years',
         },
         {
-          "observationCode": {
-            "text":
-                "Staff of institution for persons with developmental disabilities",
-            "code": "058"
+          'observationCode': {
+            'text': 'Receives treatment for STD',
+            'code': '039',
           },
-          "description":
-              "Administer to staff of institution for persons with developmental disabilities",
-          "beginAge": "60 years"
+          'description': 'Administer to persons who receive treatment for STD.',
+          'beginAge': '60 years',
         },
         {
-          "observationCode": {
-            "text":
-                "Client of institution for persons with developmental disabilities",
-            "code": "065"
+          'observationCode': {
+            'text': 'Illicit injection drug use',
+            'code': '041',
           },
-          "description":
-              "Administer to persons who are a client of institution for persons with developmental disabilities.",
-          "beginAge": "60 years"
+          'description':
+              'Administer to persons who use illicit injection drugs.',
+          'beginAge': '60 years',
         },
         {
-          "observationCode": {
-            "text": "In correctional facility",
-            "code": "069"
+          'observationCode': {
+            'text': 'Health care personnel',
+            'code': '055',
           },
-          "description":
-              "Administer to persons who are in a correctional facility.",
-          "beginAge": "60 years"
+          'description': 'Administer to  healthcare personnel.',
+          'beginAge': '60 years',
         },
         {
-          "observationCode": {
-            "text":
-                "Household contact with hepatitis B surface antigen-positive persons",
-            "code": "071"
+          'observationCode': {
+            'text':
+                'Public safety worker exposed to blood or infection body '
+                'fluids',
+            'code': '057',
           },
-          "description":
-              "Administer to persons who have household contact with hepatitis B surface antigen-positive persons.",
-          "beginAge": "60 years"
+          'description':
+              'Administer to public safety workers exposed to blood or '
+              'infection body fluids',
+          'beginAge': '60 years',
         },
         {
-          "observationCode": {
-            "text": "HIV/AIDS - severely immunocompromised",
-            "code": "154"
+          'observationCode': {
+            'text':
+                'Staff of institution for persons with developmental '
+                'disabilities',
+            'code': '058',
           },
-          "description":
-              "Administer to persons who have HIV/AIDS and are severely immunocompromised [See the CDC general recommendations for a definition of \"severely immunocompromised\"].",
-          "beginAge": "60 years"
+          'description':
+              'Administer to staff of institution for persons with '
+              'developmental disabilities',
+          'beginAge': '60 years',
         },
         {
-          "observationCode": {
-            "text": "HIV/AIDS - not severely immunocompromised",
-            "code": "155"
+          'observationCode': {
+            'text':
+                'Client of institution for persons with developmental '
+                'disabilities',
+            'code': '065',
           },
-          "description":
-              "Administer to persons who have HIV/AIDS and are not severely immunocompromised [See the CDC general recommendations for a definition of \"severely immunocompromised\"].",
-          "beginAge": "60 years"
+          'description':
+              'Administer to persons who are a client of institution for '
+              'persons with developmental disabilities.',
+          'beginAge': '60 years',
         },
         {
-          "observationCode": {
-            "text":
-                "Travel to countries with high or intermediate prevalence of chronic HBV infection",
-            "code": "166"
+          'observationCode': {
+            'text': 'In correctional facility',
+            'code': '069',
           },
-          "description":
-              "Administered to persons who travel to countries with high or intermediate prevalence of chronic HBV infection.",
-          "beginAge": "60 years"
+          'description':
+              'Administer to persons who are in a correctional facility.',
+          'beginAge': '60 years',
         },
         {
-          "observationCode": {"text": "HIV Infection", "code": "186"},
-          "description": "Administer to persons with HIV Infection",
-          "beginAge": "60 years"
-        }
+          'observationCode': {
+            'text':
+                'Household contact with hepatitis B surface '
+                'antigen-positive persons',
+            'code': '071',
+          },
+          'description':
+              'Administer to persons who have household contact with '
+              'hepatitis B surface antigen-positive persons.',
+          'beginAge': '60 years',
+        },
+        {
+          'observationCode': {
+            'text': 'HIV/AIDS - severely immunocompromised',
+            'code': '154',
+          },
+          'description':
+              'Administer to persons who have HIV/AIDS and are severely '
+              'immunocompromised [See the CDC general recommendations for '
+              'a definition of "severely immunocompromised"].',
+          'beginAge': '60 years',
+        },
+        {
+          'observationCode': {
+            'text': 'HIV/AIDS - not severely immunocompromised',
+            'code': '155',
+          },
+          'description':
+              'Administer to persons who have HIV/AIDS and are not '
+              'severely immunocompromised [See the CDC general '
+              'recommendations for a definition of "severely '
+              'immunocompromised"].',
+          'beginAge': '60 years',
+        },
+        {
+          'observationCode': {
+            'text':
+                'Travel to countries with high or intermediate prevalence '
+                'of chronic HBV infection',
+            'code': '166',
+          },
+          'description':
+              'Administered to persons who travel to countries with high '
+              'or intermediate prevalence of chronic HBV infection.',
+          'beginAge': '60 years',
+        },
+        {
+          'observationCode': {
+            'text': 'HIV Infection',
+            'code': '186',
+          },
+          'description': 'Administer to persons with HIV Infection',
+          'beginAge': '60 years',
+        },
       ],
-      "seriesDose": [
+      'seriesDose': [
         {
-          "doseNumber": "Dose 1",
-          "age": [
+          'doseNumber': 'Dose 1',
+          'age': [
             {
-              "absMinAge": "18 years - 4 days",
-              "minAge": "60 years",
-              "earliestRecAge": "60 years"
-            }
+              'absMinAge': '18 years - 4 days',
+              'minAge': '60 years',
+              'earliestRecAge': '60 years',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "HepA-HepB",
-              "cvx": "104",
-              "beginAge": "18 years",
-              "volume": "1",
-              "forecastVaccineType": "Y"
-            }
+              'vaccineType': 'HepA-HepB',
+              'cvx': '104',
+              'beginAge': '18 years',
+              'volume': '1',
+              'forecastVaccineType': 'Y',
+            },
           ],
-          "allowableVaccine": [
+          'allowableVaccine': [
             {
-              "vaccineType": "HepA-HepB",
-              "cvx": "104",
-              "beginAge": "18 years - 4 days"
-            }
+              'vaccineType': 'HepA-HepB',
+              'cvx': '104',
+              'beginAge': '18 years - 4 days',
+            },
           ],
-          "recurringDose": "No"
+          'recurringDose': 'No',
         },
         {
-          "doseNumber": "Dose 2",
-          "interval": [
+          'doseNumber': 'Dose 2',
+          'interval': [
             {
-              "fromPrevious": "Y",
-              "absMinInt": "4 weeks - 4 days",
-              "minInt": "4 weeks",
-              "earliestRecInt": "4 weeks"
-            }
+              'fromPrevious': 'Y',
+              'absMinInt': '4 weeks - 4 days',
+              'minInt': '4 weeks',
+              'earliestRecInt': '4 weeks',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "HepA-HepB",
-              "cvx": "104",
-              "beginAge": "18 years",
-              "volume": "1",
-              "forecastVaccineType": "Y"
-            }
+              'vaccineType': 'HepA-HepB',
+              'cvx': '104',
+              'beginAge': '18 years',
+              'volume': '1',
+              'forecastVaccineType': 'Y',
+            },
           ],
-          "allowableVaccine": [
+          'allowableVaccine': [
             {
-              "vaccineType": "HepA-HepB",
-              "cvx": "104",
-              "beginAge": "18 years - 4 days"
-            }
+              'vaccineType': 'HepA-HepB',
+              'cvx': '104',
+              'beginAge': '18 years - 4 days',
+            },
           ],
-          "recurringDose": "No"
+          'recurringDose': 'No',
         },
         {
-          "doseNumber": "Dose 3",
-          "interval": [
+          'doseNumber': 'Dose 3',
+          'interval': [
             {
-              "fromPrevious": "Y",
-              "absMinInt": "5 months - 4 days",
-              "minInt": "5 months",
-              "earliestRecInt": "5 months"
+              'fromPrevious': 'Y',
+              'absMinInt': '5 months - 4 days',
+              'minInt': '5 months',
+              'earliestRecInt': '5 months',
             },
             {
-              "fromPrevious": "N",
-              "fromTargetDose": "1",
-              "absMinInt": "6 months - 4 days",
-              "minInt": "6 months",
-              "earliestRecInt": "6 months"
-            }
+              'fromPrevious': 'N',
+              'fromTargetDose': '1',
+              'absMinInt': '6 months - 4 days',
+              'minInt': '6 months',
+              'earliestRecInt': '6 months',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "HepA-HepB",
-              "cvx": "104",
-              "beginAge": "18 years",
-              "volume": "1",
-              "forecastVaccineType": "Y"
-            }
+              'vaccineType': 'HepA-HepB',
+              'cvx': '104',
+              'beginAge': '18 years',
+              'volume': '1',
+              'forecastVaccineType': 'Y',
+            },
           ],
-          "allowableVaccine": [
-            {"vaccineType": "Hep B, Adult", "cvx": "43", "beginAge": "0 days"},
+          'allowableVaccine': [
             {
-              "vaccineType": "HepA-HepB",
-              "cvx": "104",
-              "beginAge": "18 years - 4 days"
+              'vaccineType': 'Hep B, Adult',
+              'cvx': '43',
+              'beginAge': '0 days',
             },
             {
-              "vaccineType": "HepB recombinant, 3-antigen, Al(OH)3",
-              "cvx": "220",
-              "beginAge": "18 years - 4 days"
-            }
+              'vaccineType': 'HepA-HepB',
+              'cvx': '104',
+              'beginAge': '18 years - 4 days',
+            },
+            {
+              'vaccineType': 'HepB recombinant, 3-antigen, Al(OH)3',
+              'cvx': '220',
+              'beginAge': '18 years - 4 days',
+            },
           ],
-          "recurringDose": "No"
-        }
-      ]
+          'recurringDose': 'No',
+        },
+      ],
     },
     {
-      "seriesName": "HepB risk Twinrix 4-dose series",
-      "targetDisease": "HepB",
-      "vaccineGroup": "HepB",
-      "seriesAdminGuidance": [
-        "Anyone age 60 years or older who does not meet risk-based recommendations may still receive Hepatitis B vaccination."
+      'seriesName': 'HepB risk Twinrix 4-dose series',
+      'targetDisease': 'HepB',
+      'vaccineGroup': 'HepB',
+      'seriesAdminGuidance': [
+        'Anyone age 60 years or older who does not meet risk-based '
+            'recommendations may still receive Hepatitis B vaccination.',
       ],
-      "seriesType": "Risk",
-      "equivalentSeriesGroups": "1",
-      "selectSeries": {
-        "defaultSeries": "No",
-        "productPath": "Yes",
-        "seriesGroupName": "Increased Risk",
-        "seriesGroup": "2",
-        "seriesPriority": "B",
-        "seriesPreference": "6",
-        "minAgeToStart": "60 years"
+      'seriesType': 'Risk',
+      'equivalentSeriesGroups': '1',
+      'selectSeries': {
+        'defaultSeries': 'No',
+        'productPath': 'Yes',
+        'seriesGroupName': 'Increased Risk',
+        'seriesGroup': '2',
+        'seriesPriority': 'B',
+        'seriesPreference': '6',
+        'minAgeToStart': '60 years',
       },
-      "indication": [
+      'indication': [
         {
-          "observationCode": {
-            "text": "Hepatitis C virus infection",
-            "code": "005"
+          'observationCode': {
+            'text': 'Hepatitis C virus infection',
+            'code': '005',
           },
-          "description":
-              "Administer to persons with a hepatitis C virus infection.",
-          "beginAge": "60 years"
+          'description':
+              'Administer to persons with a hepatitis C virus infection.',
+          'beginAge': '60 years',
         },
         {
-          "observationCode": {"text": "Diabetes", "code": "014"},
-          "description": "Administer to persons who have diabetes.",
-          "beginAge": "60 years",
-          "guidance":
-              "Administer to persons who have diabetes at the discretion of the treating clinician."
-        },
-        {
-          "observationCode": {"text": "Chronic liver disease", "code": "015"},
-          "description":
-              "Administer to persons who have chronic liver disease.",
-          "beginAge": "60 years",
-          "guidance":
-              "Includes, but is not limited to persons with hepatitis C virus (HCV) infection, cirrhosis, fatty liver disease, alcoholic liver disease, autoimmune hepatitis, or an alanine aminotransferase (ALT) or aspartate aminotransferase (AST) level persistently greater than twice the upper limit of normal"
-        },
-        {
-          "observationCode": {"text": "Dialysis patient", "code": "032"},
-          "description":
-              "Administer to persons on maintenance dialysis, including incenter or home hemodialysis and peritoneal dialysis, and persons who are predialysis",
-          "beginAge": "60 years"
-        },
-        {
-          "observationCode": {
-            "text": "Men who have sex with men",
-            "code": "036"
+          'observationCode': {
+            'text': 'Diabetes',
+            'code': '014',
           },
-          "description": "Administer to men who have sex with men.",
-          "beginAge": "60 years"
+          'description': 'Administer to persons who have diabetes.',
+          'beginAge': '60 years',
+          'guidance':
+              'Administer to persons who have diabetes at the discretion '
+              'of the treating clinician.',
         },
         {
-          "observationCode": {
-            "text": "Not in a long-term, mutually monogamous relationship",
-            "code": "037"
+          'observationCode': {
+            'text': 'Chronic liver disease',
+            'code': '015',
           },
-          "description":
-              "Administer to persons not in a long-term, mutually monogamous relationship.",
-          "beginAge": "60 years"
+          'description':
+              'Administer to persons who have chronic liver disease.',
+          'beginAge': '60 years',
+          'guidance':
+              'Includes, but is not limited to persons with hepatitis C '
+              'virus (HCV) infection, cirrhosis, fatty liver disease, '
+              'alcoholic liver disease, autoimmune hepatitis, or an '
+              'alanine aminotransferase (ALT) or aspartate '
+              'aminotransferase (AST) level persistently greater than '
+              'twice the upper limit of normal',
         },
         {
-          "observationCode": {
-            "text":
-                "Sex partner of Hepatitis B surface antigen-positive persons",
-            "code": "038"
+          'observationCode': {
+            'text': 'Dialysis patient',
+            'code': '032',
           },
-          "description":
-              "Administer to persons who are a sex partner of a Hepatitis B surface antigen-positive person.",
-          "beginAge": "60 years"
+          'description':
+              'Administer to persons on maintenance dialysis, including '
+              'incenter or home hemodialysis and peritoneal dialysis, and '
+              'persons who are predialysis',
+          'beginAge': '60 years',
         },
         {
-          "observationCode": {
-            "text": "Receives treatment for STD",
-            "code": "039"
+          'observationCode': {
+            'text': 'Men who have sex with men',
+            'code': '036',
           },
-          "description": "Administer to persons who receive treatment for STD.",
-          "beginAge": "60 years"
+          'description': 'Administer to men who have sex with men.',
+          'beginAge': '60 years',
         },
         {
-          "observationCode": {
-            "text": "Illicit injection drug use",
-            "code": "041"
+          'observationCode': {
+            'text': 'Not in a long-term, mutually monogamous relationship',
+            'code': '037',
           },
-          "description":
-              "Administer to persons who use illicit injection drugs.",
-          "beginAge": "60 years"
+          'description':
+              'Administer to persons not in a long-term, mutually '
+              'monogamous relationship.',
+          'beginAge': '60 years',
         },
         {
-          "observationCode": {"text": "Health care personnel", "code": "055"},
-          "description": "Administer to  healthcare personnel.",
-          "beginAge": "60 years"
-        },
-        {
-          "observationCode": {
-            "text":
-                "Public safety worker exposed to blood or infection body fluids",
-            "code": "057"
+          'observationCode': {
+            'text':
+                'Sex partner of Hepatitis B surface antigen-positive '
+                'persons',
+            'code': '038',
           },
-          "description":
-              "Administer to public safety workers exposed to blood or infection body fluids",
-          "beginAge": "60 years"
+          'description':
+              'Administer to persons who are a sex partner of a Hepatitis '
+              'B surface antigen-positive person.',
+          'beginAge': '60 years',
         },
         {
-          "observationCode": {
-            "text":
-                "Staff of institution for persons with developmental disabilities",
-            "code": "058"
+          'observationCode': {
+            'text': 'Receives treatment for STD',
+            'code': '039',
           },
-          "description":
-              "Administer to staff of institution for persons with developmental disabilities",
-          "beginAge": "60 years"
+          'description': 'Administer to persons who receive treatment for STD.',
+          'beginAge': '60 years',
         },
         {
-          "observationCode": {
-            "text":
-                "Client of institution for persons with developmental disabilities",
-            "code": "065"
+          'observationCode': {
+            'text': 'Illicit injection drug use',
+            'code': '041',
           },
-          "description":
-              "Administer to persons who are a client of institution for persons with developmental disabilities.",
-          "beginAge": "60 years"
+          'description':
+              'Administer to persons who use illicit injection drugs.',
+          'beginAge': '60 years',
         },
         {
-          "observationCode": {
-            "text": "In correctional facility",
-            "code": "069"
+          'observationCode': {
+            'text': 'Health care personnel',
+            'code': '055',
           },
-          "description":
-              "Administer to persons who are in a correctional facility.",
-          "beginAge": "60 years"
+          'description': 'Administer to  healthcare personnel.',
+          'beginAge': '60 years',
         },
         {
-          "observationCode": {
-            "text":
-                "Household contact with hepatitis B surface antigen-positive persons",
-            "code": "071"
+          'observationCode': {
+            'text':
+                'Public safety worker exposed to blood or infection body '
+                'fluids',
+            'code': '057',
           },
-          "description":
-              "Administer to persons who have household contact with hepatitis B surface antigen-positive persons.",
-          "beginAge": "60 years"
+          'description':
+              'Administer to public safety workers exposed to blood or '
+              'infection body fluids',
+          'beginAge': '60 years',
         },
         {
-          "observationCode": {
-            "text": "HIV/AIDS - severely immunocompromised",
-            "code": "154"
+          'observationCode': {
+            'text':
+                'Staff of institution for persons with developmental '
+                'disabilities',
+            'code': '058',
           },
-          "description":
-              "Administer to persons who have HIV/AIDS and are severely immunocompromised [See the CDC general recommendations for a definition of \"severely immunocompromised\"].",
-          "beginAge": "60 years"
+          'description':
+              'Administer to staff of institution for persons with '
+              'developmental disabilities',
+          'beginAge': '60 years',
         },
         {
-          "observationCode": {
-            "text": "HIV/AIDS - not severely immunocompromised",
-            "code": "155"
+          'observationCode': {
+            'text':
+                'Client of institution for persons with developmental '
+                'disabilities',
+            'code': '065',
           },
-          "description":
-              "Administer to persons who have HIV/AIDS and are not severely immunocompromised [See the CDC general recommendations for a definition of \"severely immunocompromised\"].",
-          "beginAge": "60 years"
+          'description':
+              'Administer to persons who are a client of institution for '
+              'persons with developmental disabilities.',
+          'beginAge': '60 years',
         },
         {
-          "observationCode": {
-            "text":
-                "Travel to countries with high or intermediate prevalence of chronic HBV infection",
-            "code": "166"
+          'observationCode': {
+            'text': 'In correctional facility',
+            'code': '069',
           },
-          "description":
-              "Administered to persons who travel to countries with high or intermediate prevalence of chronic HBV infection.",
-          "beginAge": "60 years"
+          'description':
+              'Administer to persons who are in a correctional facility.',
+          'beginAge': '60 years',
         },
         {
-          "observationCode": {"text": "HIV Infection", "code": "186"},
-          "description": "Administer to persons with HIV Infection",
-          "beginAge": "60 years"
-        }
+          'observationCode': {
+            'text':
+                'Household contact with hepatitis B surface '
+                'antigen-positive persons',
+            'code': '071',
+          },
+          'description':
+              'Administer to persons who have household contact with '
+              'hepatitis B surface antigen-positive persons.',
+          'beginAge': '60 years',
+        },
+        {
+          'observationCode': {
+            'text': 'HIV/AIDS - severely immunocompromised',
+            'code': '154',
+          },
+          'description':
+              'Administer to persons who have HIV/AIDS and are severely '
+              'immunocompromised [See the CDC general recommendations for '
+              'a definition of "severely immunocompromised"].',
+          'beginAge': '60 years',
+        },
+        {
+          'observationCode': {
+            'text': 'HIV/AIDS - not severely immunocompromised',
+            'code': '155',
+          },
+          'description':
+              'Administer to persons who have HIV/AIDS and are not '
+              'severely immunocompromised [See the CDC general '
+              'recommendations for a definition of "severely '
+              'immunocompromised"].',
+          'beginAge': '60 years',
+        },
+        {
+          'observationCode': {
+            'text':
+                'Travel to countries with high or intermediate prevalence '
+                'of chronic HBV infection',
+            'code': '166',
+          },
+          'description':
+              'Administered to persons who travel to countries with high '
+              'or intermediate prevalence of chronic HBV infection.',
+          'beginAge': '60 years',
+        },
+        {
+          'observationCode': {
+            'text': 'HIV Infection',
+            'code': '186',
+          },
+          'description': 'Administer to persons with HIV Infection',
+          'beginAge': '60 years',
+        },
       ],
-      "seriesDose": [
+      'seriesDose': [
         {
-          "doseNumber": "Dose 1",
-          "age": [
+          'doseNumber': 'Dose 1',
+          'age': [
             {
-              "absMinAge": "18 years - 4 days",
-              "minAge": "60 years",
-              "earliestRecAge": "60 years"
-            }
+              'absMinAge': '18 years - 4 days',
+              'minAge': '60 years',
+              'earliestRecAge': '60 years',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "HepA-HepB",
-              "cvx": "104",
-              "beginAge": "18 years",
-              "volume": "1",
-              "forecastVaccineType": "Y"
-            }
+              'vaccineType': 'HepA-HepB',
+              'cvx': '104',
+              'beginAge': '18 years',
+              'volume': '1',
+              'forecastVaccineType': 'Y',
+            },
           ],
-          "allowableVaccine": [
+          'allowableVaccine': [
             {
-              "vaccineType": "HepA-HepB",
-              "cvx": "104",
-              "beginAge": "18 years - 4 days"
-            }
+              'vaccineType': 'HepA-HepB',
+              'cvx': '104',
+              'beginAge': '18 years - 4 days',
+            },
           ],
-          "recurringDose": "No"
+          'recurringDose': 'No',
         },
         {
-          "doseNumber": "Dose 2",
-          "interval": [
+          'doseNumber': 'Dose 2',
+          'interval': [
             {
-              "fromPrevious": "Y",
-              "absMinInt": "7 days",
-              "minInt": "7 days",
-              "earliestRecInt": "7 days"
-            }
+              'fromPrevious': 'Y',
+              'absMinInt': '7 days',
+              'minInt': '7 days',
+              'earliestRecInt': '7 days',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "HepA-HepB",
-              "cvx": "104",
-              "beginAge": "18 years",
-              "volume": "1",
-              "forecastVaccineType": "Y"
-            }
+              'vaccineType': 'HepA-HepB',
+              'cvx': '104',
+              'beginAge': '18 years',
+              'volume': '1',
+              'forecastVaccineType': 'Y',
+            },
           ],
-          "allowableVaccine": [
+          'allowableVaccine': [
             {
-              "vaccineType": "HepA-HepB",
-              "cvx": "104",
-              "beginAge": "18 years - 4 days"
-            }
+              'vaccineType': 'HepA-HepB',
+              'cvx': '104',
+              'beginAge': '18 years - 4 days',
+            },
           ],
-          "recurringDose": "No"
+          'recurringDose': 'No',
         },
         {
-          "doseNumber": "Dose 3",
-          "interval": [
+          'doseNumber': 'Dose 3',
+          'interval': [
             {
-              "fromPrevious": "Y",
-              "absMinInt": "14 days",
-              "minInt": "14 days",
-              "earliestRecInt": "14 days",
-              "latestRecInt": "23 days"
-            }
+              'fromPrevious': 'Y',
+              'absMinInt': '14 days',
+              'minInt': '14 days',
+              'earliestRecInt': '14 days',
+              'latestRecInt': '23 days',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "HepA-HepB",
-              "cvx": "104",
-              "beginAge": "18 years",
-              "volume": "1",
-              "forecastVaccineType": "Y"
-            }
+              'vaccineType': 'HepA-HepB',
+              'cvx': '104',
+              'beginAge': '18 years',
+              'volume': '1',
+              'forecastVaccineType': 'Y',
+            },
           ],
-          "allowableVaccine": [
+          'allowableVaccine': [
             {
-              "vaccineType": "HepA-HepB",
-              "cvx": "104",
-              "beginAge": "18 years - 4 days"
-            }
+              'vaccineType': 'HepA-HepB',
+              'cvx': '104',
+              'beginAge': '18 years - 4 days',
+            },
           ],
-          "recurringDose": "No"
+          'recurringDose': 'No',
         },
         {
-          "doseNumber": "Dose 4",
-          "interval": [
+          'doseNumber': 'Dose 4',
+          'interval': [
             {
-              "fromPrevious": "N",
-              "fromTargetDose": "1",
-              "absMinInt": "12 months - 4 days",
-              "minInt": "12 months",
-              "earliestRecInt": "12 months"
-            }
+              'fromPrevious': 'N',
+              'fromTargetDose': '1',
+              'absMinInt': '12 months - 4 days',
+              'minInt': '12 months',
+              'earliestRecInt': '12 months',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "HepA-HepB",
-              "cvx": "104",
-              "beginAge": "18 years",
-              "volume": "1",
-              "forecastVaccineType": "Y"
-            }
+              'vaccineType': 'HepA-HepB',
+              'cvx': '104',
+              'beginAge': '18 years',
+              'volume': '1',
+              'forecastVaccineType': 'Y',
+            },
           ],
-          "allowableVaccine": [
-            {"vaccineType": "Hep B, Adult", "cvx": "43", "beginAge": "0 days"},
+          'allowableVaccine': [
             {
-              "vaccineType": "HepA-HepB",
-              "cvx": "104",
-              "beginAge": "18 years - 4 days"
+              'vaccineType': 'Hep B, Adult',
+              'cvx': '43',
+              'beginAge': '0 days',
             },
             {
-              "vaccineType": "HepB recombinant, 3-antigen, Al(OH)3",
-              "cvx": "220",
-              "beginAge": "18 years - 4 days"
-            }
+              'vaccineType': 'HepA-HepB',
+              'cvx': '104',
+              'beginAge': '18 years - 4 days',
+            },
+            {
+              'vaccineType': 'HepB recombinant, 3-antigen, Al(OH)3',
+              'cvx': '220',
+              'beginAge': '18 years - 4 days',
+            },
           ],
-          "recurringDose": "No"
-        }
-      ]
+          'recurringDose': 'No',
+        },
+      ],
     },
     {
-      "seriesName": "HepB risk Dialysis 4-dose series",
-      "targetDisease": "HepB",
-      "vaccineGroup": "HepB",
-      "seriesAdminGuidance": [
-        "Test all vaccinees for anti-HBs 1-2 months after the last primary vaccine dose, to determine their response to the vaccine (adequate response is defined as at least 10 mIU/mL). Patients and staff members who do not respond to the primary vaccine series should be revaccinated with three additional doses and retested for response. No additional series should be administered (i.e., a 3rd full series). The patient should receive yearly boosters starting 1 year after completion of the second series.",
-        "Retest patients who respond to the vaccine annually for anti-HBs. If anti-HBs declines to less than 10 mIU/mL, administer a booster dose of hepatitis B vaccine and continue to retest annually. Retesting immediately after the booster dose is not necessary. For staff members who respond to the vaccine, booster doses of vaccine are not necessary, and periodic serologic testing to monitor antibody concentrations is not recommended",
-        "Routine childhood vaccination against hepatitis B has been recommended since 1991 and routine adolescent vaccination since 1995. Thus, many persons who develop end-stage renal failure will have a history of vaccination against hepatitis B. These persons should have responded to the vaccine when their immune status was normal, but if their anti-HBs levels are less than 10 mIU/mL when they begin dialysis, they should be revaccinated with a complete primary series."
+      'seriesName': 'HepB risk Dialysis 4-dose series',
+      'targetDisease': 'HepB',
+      'vaccineGroup': 'HepB',
+      'seriesAdminGuidance': [
+        'Test all vaccinees for anti-HBs 1-2 months after the last '
+            'primary vaccine dose, to determine their response to the '
+            'vaccine (adequate response is defined as at least 10 mIU/mL). '
+            'Patients and staff members who do not respond to the primary '
+            'vaccine series should be revaccinated with three additional '
+            'doses and retested for response. No additional series should '
+            'be administered (i.e., a 3rd full series). The patient should '
+            'receive yearly boosters starting 1 year after completion of '
+            'the second series.',
+        'Retest patients who respond to the vaccine annually for '
+            'anti-HBs. If anti-HBs declines to less than 10 mIU/mL, '
+            'administer a booster dose of hepatitis B vaccine and continue '
+            'to retest annually. Retesting immediately after the booster '
+            'dose is not necessary. For staff members who respond to the '
+            'vaccine, booster doses of vaccine are not necessary, and '
+            'periodic serologic testing to monitor antibody concentrations '
+            'is not recommended',
+        'Routine childhood vaccination against hepatitis B has been '
+            'recommended since 1991 and routine adolescent vaccination '
+            'since 1995. Thus, many persons who develop end-stage renal '
+            'failure will have a history of vaccination against hepatitis '
+            'B. These persons should have responded to the vaccine when '
+            'their immune status was normal, but if their anti-HBs levels '
+            'are less than 10 mIU/mL when they begin dialysis, they should '
+            'be revaccinated with a complete primary series.',
       ],
-      "seriesType": "Risk",
-      "selectSeries": {
-        "defaultSeries": "Yes",
-        "productPath": "No",
-        "seriesGroupName": "Increased Risk",
-        "seriesGroup": "2",
-        "seriesPriority": "A",
-        "seriesPreference": "1",
-        "minAgeToStart": "20 years"
+      'seriesType': 'Risk',
+      'selectSeries': {
+        'defaultSeries': 'Yes',
+        'productPath': 'No',
+        'seriesGroupName': 'Increased Risk',
+        'seriesGroup': '2',
+        'seriesPriority': 'A',
+        'seriesPreference': '1',
+        'minAgeToStart': '20 years',
       },
-      "indication": [
+      'indication': [
         {
-          "observationCode": {"text": "Dialysis patient", "code": "032"},
-          "description":
-              "Administer to hemodialysis patients and predialysis, peritoneal dialysis, and home dialysis patients",
-          "beginAge": "20 years"
-        }
+          'observationCode': {
+            'text': 'Dialysis patient',
+            'code': '032',
+          },
+          'description':
+              'Administer to hemodialysis patients and predialysis, '
+              'peritoneal dialysis, and home dialysis patients',
+          'beginAge': '20 years',
+        },
       ],
-      "seriesDose": [
+      'seriesDose': [
         {
-          "doseNumber": "Dose 1",
-          "age": [
+          'doseNumber': 'Dose 1',
+          'age': [
             {
-              "absMinAge": "0 days",
-              "minAge": "20 years",
-              "earliestRecAge": "20 years"
-            }
+              'absMinAge': '0 days',
+              'minAge': '20 years',
+              'earliestRecAge': '20 years',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "Hep B, Adult",
-              "cvx": "43",
-              "beginAge": "20 years",
-              "tradeName": "ENGERIX-B ADULT",
-              "mvx": "SKB",
-              "volume": "2",
-              "forecastVaccineType": "N"
-            }
+              'vaccineType': 'Hep B, Adult',
+              'cvx': '43',
+              'beginAge': '20 years',
+              'tradeName': 'ENGERIX-B ADULT',
+              'mvx': 'SKB',
+              'volume': '2',
+              'forecastVaccineType': 'N',
+            },
           ],
-          "allowableVaccine": [
+          'allowableVaccine': [
             {
-              "vaccineType": "Hep B, Adol/peds",
-              "cvx": "08",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'Hep B, Adol/peds',
+              'cvx': '08',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "Hep B, Adol/high risk infant",
-              "cvx": "42",
-              "beginAge": "0 days",
-              "endAge": "20 years"
-            },
-            {"vaccineType": "Hep B, Adult", "cvx": "43", "beginAge": "0 days"},
-            {
-              "vaccineType": "Hep B, Dialysis",
-              "cvx": "44",
-              "beginAge": "0 days"
+              'vaccineType': 'Hep B, Adol/high risk infant',
+              'cvx': '42',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "Hep B, Unspecified Formulation",
-              "cvx": "45",
-              "beginAge": "0 days"
+              'vaccineType': 'Hep B, Adult',
+              'cvx': '43',
+              'beginAge': '0 days',
             },
             {
-              "vaccineType": "Hib-HepB",
-              "cvx": "51",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'Hep B, Dialysis',
+              'cvx': '44',
+              'beginAge': '0 days',
             },
             {
-              "vaccineType": "DTP-Hib-HepB",
-              "cvx": "102",
-              "beginAge": "0 days",
-              "endAge": "20 years"
-            },
-            {"vaccineType": "HepA-HepB", "cvx": "104", "beginAge": "0 days"},
-            {
-              "vaccineType": "DTaP-HepB-IPV",
-              "cvx": "110",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'Hep B, Unspecified Formulation',
+              'cvx': '45',
+              'beginAge': '0 days',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB, historical",
-              "cvx": "132",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'Hib-HepB',
+              'cvx': '51',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB",
-              "cvx": "146",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'DTP-Hib-HepB',
+              'cvx': '102',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "Hep B, adjuvanted",
-              "cvx": "189",
-              "beginAge": "18 years - 4 days"
+              'vaccineType': 'HepA-HepB',
+              'cvx': '104',
+              'beginAge': '0 days',
             },
             {
-              "vaccineType": "Hep A-Hep B, pediatric/adolescent",
-              "cvx": "193",
-              "beginAge": "0 days",
-              "endAge": "18 years"
+              'vaccineType': 'DTaP-HepB-IPV',
+              'cvx': '110',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "DTP-HepB-Hib Pentavalent Non-US",
-              "cvx": "198",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'DTaP-IPV-Hib-HepB, historical',
+              'cvx': '132',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "HepB recombinant, 3-antigen, Al(OH)3",
-              "cvx": "220",
-              "beginAge": "18 years - 4 days"
-            }
+              'vaccineType': 'DTaP-IPV-Hib-HepB',
+              'cvx': '146',
+              'beginAge': '0 days',
+              'endAge': '20 years',
+            },
+            {
+              'vaccineType': 'Hep B, adjuvanted',
+              'cvx': '189',
+              'beginAge': '18 years - 4 days',
+            },
+            {
+              'vaccineType': 'Hep A-Hep B, pediatric/adolescent',
+              'cvx': '193',
+              'beginAge': '0 days',
+              'endAge': '18 years',
+            },
+            {
+              'vaccineType': 'DTP-HepB-Hib Pentavalent Non-US',
+              'cvx': '198',
+              'beginAge': '0 days',
+              'endAge': '20 years',
+            },
+            {
+              'vaccineType': 'HepB recombinant, 3-antigen, Al(OH)3',
+              'cvx': '220',
+              'beginAge': '18 years - 4 days',
+            },
           ],
-          "conditionalSkip": [
+          'conditionalSkip': [
             {
-              "context": "Both",
-              "setLogic": "n/a",
-              "set": [
+              'context': 'Both',
+              'setLogic': 'n/a',
+              'set': [
                 {
-                  "setID": "1",
-                  "setDescription":
-                      "Dose is not required if the patient has received a complete standard series of vaccinations",
-                  "condition": [
+                  'setID': '1',
+                  'setDescription':
+                      'Dose is not required if the patient has received a '
+                      'complete standard series of vaccinations',
+                  'condition': [
                     {
-                      "conditionID": "1",
-                      "conditionType": "Completed Series",
-                      "seriesGroups": "1"
-                    }
-                  ]
-                }
-              ]
-            }
+                      'conditionID': '1',
+                      'conditionType': 'Completed Series',
+                      'seriesGroups': '1',
+                    },
+                  ],
+                },
+              ],
+            },
           ],
-          "recurringDose": "No"
+          'recurringDose': 'No',
         },
         {
-          "doseNumber": "Dose 2",
-          "interval": [
+          'doseNumber': 'Dose 2',
+          'interval': [
             {
-              "fromPrevious": "Y",
-              "absMinInt": "4 weeks - 4 days",
-              "minInt": "4 weeks",
-              "earliestRecInt": "4 weeks"
-            }
+              'fromPrevious': 'Y',
+              'absMinInt': '4 weeks - 4 days',
+              'minInt': '4 weeks',
+              'earliestRecInt': '4 weeks',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "Hep B, Adult",
-              "cvx": "43",
-              "beginAge": "20 years",
-              "tradeName": "ENGERIX-B ADULT",
-              "mvx": "SKB",
-              "volume": "2",
-              "forecastVaccineType": "N"
-            }
+              'vaccineType': 'Hep B, Adult',
+              'cvx': '43',
+              'beginAge': '20 years',
+              'tradeName': 'ENGERIX-B ADULT',
+              'mvx': 'SKB',
+              'volume': '2',
+              'forecastVaccineType': 'N',
+            },
           ],
-          "allowableVaccine": [
+          'allowableVaccine': [
             {
-              "vaccineType": "Hep B, Adol/peds",
-              "cvx": "08",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'Hep B, Adol/peds',
+              'cvx': '08',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "Hep B, Adol/high risk infant",
-              "cvx": "42",
-              "beginAge": "0 days",
-              "endAge": "20 years"
-            },
-            {"vaccineType": "Hep B, Adult", "cvx": "43", "beginAge": "0 days"},
-            {
-              "vaccineType": "Hep B, Dialysis",
-              "cvx": "44",
-              "beginAge": "0 days"
+              'vaccineType': 'Hep B, Adol/high risk infant',
+              'cvx': '42',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "Hep B, Unspecified Formulation",
-              "cvx": "45",
-              "beginAge": "0 days"
+              'vaccineType': 'Hep B, Adult',
+              'cvx': '43',
+              'beginAge': '0 days',
             },
             {
-              "vaccineType": "Hib-HepB",
-              "cvx": "51",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'Hep B, Dialysis',
+              'cvx': '44',
+              'beginAge': '0 days',
             },
             {
-              "vaccineType": "DTP-Hib-HepB",
-              "cvx": "102",
-              "beginAge": "0 days",
-              "endAge": "20 years"
-            },
-            {"vaccineType": "HepA-HepB", "cvx": "104", "beginAge": "0 days"},
-            {
-              "vaccineType": "DTaP-HepB-IPV",
-              "cvx": "110",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'Hep B, Unspecified Formulation',
+              'cvx': '45',
+              'beginAge': '0 days',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB, historical",
-              "cvx": "132",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'Hib-HepB',
+              'cvx': '51',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB",
-              "cvx": "146",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'DTP-Hib-HepB',
+              'cvx': '102',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "Hep B, adjuvanted",
-              "cvx": "189",
-              "beginAge": "18 years - 4 days"
+              'vaccineType': 'HepA-HepB',
+              'cvx': '104',
+              'beginAge': '0 days',
             },
             {
-              "vaccineType": "Hep A-Hep B, pediatric/adolescent",
-              "cvx": "193",
-              "beginAge": "0 days",
-              "endAge": "18 years"
+              'vaccineType': 'DTaP-HepB-IPV',
+              'cvx': '110',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "DTP-HepB-Hib Pentavalent Non-US",
-              "cvx": "198",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'DTaP-IPV-Hib-HepB, historical',
+              'cvx': '132',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "HepB recombinant, 3-antigen, Al(OH)3",
-              "cvx": "220",
-              "beginAge": "18 years - 4 days"
-            }
+              'vaccineType': 'DTaP-IPV-Hib-HepB',
+              'cvx': '146',
+              'beginAge': '0 days',
+              'endAge': '20 years',
+            },
+            {
+              'vaccineType': 'Hep B, adjuvanted',
+              'cvx': '189',
+              'beginAge': '18 years - 4 days',
+            },
+            {
+              'vaccineType': 'Hep A-Hep B, pediatric/adolescent',
+              'cvx': '193',
+              'beginAge': '0 days',
+              'endAge': '18 years',
+            },
+            {
+              'vaccineType': 'DTP-HepB-Hib Pentavalent Non-US',
+              'cvx': '198',
+              'beginAge': '0 days',
+              'endAge': '20 years',
+            },
+            {
+              'vaccineType': 'HepB recombinant, 3-antigen, Al(OH)3',
+              'cvx': '220',
+              'beginAge': '18 years - 4 days',
+            },
           ],
-          "conditionalSkip": [
+          'conditionalSkip': [
             {
-              "context": "Both",
-              "setLogic": "n/a",
-              "set": [
+              'context': 'Both',
+              'setLogic': 'n/a',
+              'set': [
                 {
-                  "setID": "1",
-                  "setDescription":
-                      "Dose is not required if the patient has received a complete standard series of vaccinations",
-                  "condition": [
+                  'setID': '1',
+                  'setDescription':
+                      'Dose is not required if the patient has received a '
+                      'complete standard series of vaccinations',
+                  'condition': [
                     {
-                      "conditionID": "1",
-                      "conditionType": "Completed Series",
-                      "seriesGroups": "1"
-                    }
-                  ]
-                }
-              ]
-            }
+                      'conditionID': '1',
+                      'conditionType': 'Completed Series',
+                      'seriesGroups': '1',
+                    },
+                  ],
+                },
+              ],
+            },
           ],
-          "recurringDose": "No"
+          'recurringDose': 'No',
         },
         {
-          "doseNumber": "Dose 3",
-          "interval": [
+          'doseNumber': 'Dose 3',
+          'interval': [
             {
-              "fromPrevious": "Y",
-              "absMinInt": "4 weeks - 4 days",
-              "minInt": "4 weeks",
-              "earliestRecInt": "4 weeks"
-            }
+              'fromPrevious': 'Y',
+              'absMinInt': '4 weeks - 4 days',
+              'minInt': '4 weeks',
+              'earliestRecInt': '4 weeks',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "Hep B, Adult",
-              "cvx": "43",
-              "beginAge": "20 years",
-              "tradeName": "ENGERIX-B ADULT",
-              "mvx": "SKB",
-              "volume": "2",
-              "forecastVaccineType": "N"
-            }
+              'vaccineType': 'Hep B, Adult',
+              'cvx': '43',
+              'beginAge': '20 years',
+              'tradeName': 'ENGERIX-B ADULT',
+              'mvx': 'SKB',
+              'volume': '2',
+              'forecastVaccineType': 'N',
+            },
           ],
-          "allowableVaccine": [
+          'allowableVaccine': [
             {
-              "vaccineType": "Hep B, Adol/peds",
-              "cvx": "08",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'Hep B, Adol/peds',
+              'cvx': '08',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "Hep B, Adol/high risk infant",
-              "cvx": "42",
-              "beginAge": "0 days",
-              "endAge": "20 years"
-            },
-            {"vaccineType": "Hep B, Adult", "cvx": "43", "beginAge": "0 days"},
-            {
-              "vaccineType": "Hep B, Dialysis",
-              "cvx": "44",
-              "beginAge": "0 days"
+              'vaccineType': 'Hep B, Adol/high risk infant',
+              'cvx': '42',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "Hep B, Unspecified Formulation",
-              "cvx": "45",
-              "beginAge": "0 days"
+              'vaccineType': 'Hep B, Adult',
+              'cvx': '43',
+              'beginAge': '0 days',
             },
             {
-              "vaccineType": "Hib-HepB",
-              "cvx": "51",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'Hep B, Dialysis',
+              'cvx': '44',
+              'beginAge': '0 days',
             },
             {
-              "vaccineType": "DTP-Hib-HepB",
-              "cvx": "102",
-              "beginAge": "0 days",
-              "endAge": "20 years"
-            },
-            {"vaccineType": "HepA-HepB", "cvx": "104", "beginAge": "0 days"},
-            {
-              "vaccineType": "DTaP-HepB-IPV",
-              "cvx": "110",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'Hep B, Unspecified Formulation',
+              'cvx': '45',
+              'beginAge': '0 days',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB, historical",
-              "cvx": "132",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'Hib-HepB',
+              'cvx': '51',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB",
-              "cvx": "146",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'DTP-Hib-HepB',
+              'cvx': '102',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "Hep B, adjuvanted",
-              "cvx": "189",
-              "beginAge": "18 years - 4 days"
+              'vaccineType': 'HepA-HepB',
+              'cvx': '104',
+              'beginAge': '0 days',
             },
             {
-              "vaccineType": "Hep A-Hep B, pediatric/adolescent",
-              "cvx": "193",
-              "beginAge": "0 days",
-              "endAge": "18 years"
+              'vaccineType': 'DTaP-HepB-IPV',
+              'cvx': '110',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "DTP-HepB-Hib Pentavalent Non-US",
-              "cvx": "198",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'DTaP-IPV-Hib-HepB, historical',
+              'cvx': '132',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "HepB recombinant, 3-antigen, Al(OH)3",
-              "cvx": "220",
-              "beginAge": "18 years - 4 days"
-            }
+              'vaccineType': 'DTaP-IPV-Hib-HepB',
+              'cvx': '146',
+              'beginAge': '0 days',
+              'endAge': '20 years',
+            },
+            {
+              'vaccineType': 'Hep B, adjuvanted',
+              'cvx': '189',
+              'beginAge': '18 years - 4 days',
+            },
+            {
+              'vaccineType': 'Hep A-Hep B, pediatric/adolescent',
+              'cvx': '193',
+              'beginAge': '0 days',
+              'endAge': '18 years',
+            },
+            {
+              'vaccineType': 'DTP-HepB-Hib Pentavalent Non-US',
+              'cvx': '198',
+              'beginAge': '0 days',
+              'endAge': '20 years',
+            },
+            {
+              'vaccineType': 'HepB recombinant, 3-antigen, Al(OH)3',
+              'cvx': '220',
+              'beginAge': '18 years - 4 days',
+            },
           ],
-          "conditionalSkip": [
+          'conditionalSkip': [
             {
-              "context": "Both",
-              "setLogic": "OR",
-              "set": [
+              'context': 'Both',
+              'setLogic': 'OR',
+              'set': [
                 {
-                  "setID": "1",
-                  "setDescription":
-                      "Dose is not required if the patient has received a complete standard series of vaccinations",
-                  "condition": [
+                  'setID': '1',
+                  'setDescription':
+                      'Dose is not required if the patient has received a '
+                      'complete standard series of vaccinations',
+                  'condition': [
                     {
-                      "conditionID": "1",
-                      "conditionType": "Completed Series",
-                      "seriesGroups": "1"
-                    }
-                  ]
+                      'conditionID': '1',
+                      'conditionType': 'Completed Series',
+                      'seriesGroups': '1',
+                    },
+                  ],
                 },
                 {
-                  "setID": "2",
-                  "setDescription":
-                      "Dose is not required if patient has received 2 doses of Heplisav-B",
-                  "condition": [
+                  'setID': '2',
+                  'setDescription':
+                      'Dose is not required if patient has received 2 '
+                      'doses of Heplisav-B',
+                  'condition': [
                     {
-                      "conditionID": "1",
-                      "conditionType": "Vaccine Count by Age",
-                      "doseCount": "1",
-                      "doseType": "Valid",
-                      "doseCountLogic": "greater than",
-                      "vaccineTypes": "189"
-                    }
-                  ]
-                }
-              ]
-            }
+                      'conditionID': '1',
+                      'conditionType': 'Vaccine Count by Age',
+                      'doseCount': '1',
+                      'doseType': 'Valid',
+                      'doseCountLogic': 'greater than',
+                      'vaccineTypes': '189',
+                    },
+                  ],
+                },
+              ],
+            },
           ],
-          "recurringDose": "No"
+          'recurringDose': 'No',
         },
         {
-          "doseNumber": "Dose 4",
-          "interval": [
+          'doseNumber': 'Dose 4',
+          'interval': [
             {
-              "fromPrevious": "Y",
-              "absMinInt": "8 weeks - 4 days",
-              "minInt": "8 weeks"
+              'fromPrevious': 'Y',
+              'absMinInt': '8 weeks - 4 days',
+              'minInt': '8 weeks',
             },
             {
-              "fromPrevious": "N",
-              "fromTargetDose": "1",
-              "absMinInt": "16 weeks - 4 days",
-              "minInt": "16 weeks",
-              "earliestRecInt": "6 months"
-            }
+              'fromPrevious': 'N',
+              'fromTargetDose': '1',
+              'absMinInt': '16 weeks - 4 days',
+              'minInt': '16 weeks',
+              'earliestRecInt': '6 months',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "Hep B, Adult",
-              "cvx": "43",
-              "beginAge": "20 years",
-              "tradeName": "ENGERIX-B ADULT",
-              "mvx": "SKB",
-              "volume": "2",
-              "forecastVaccineType": "N"
-            }
+              'vaccineType': 'Hep B, Adult',
+              'cvx': '43',
+              'beginAge': '20 years',
+              'tradeName': 'ENGERIX-B ADULT',
+              'mvx': 'SKB',
+              'volume': '2',
+              'forecastVaccineType': 'N',
+            },
           ],
-          "allowableVaccine": [
+          'allowableVaccine': [
             {
-              "vaccineType": "Hep B, Adol/peds",
-              "cvx": "08",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'Hep B, Adol/peds',
+              'cvx': '08',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "Hep B, Adol/high risk infant",
-              "cvx": "42",
-              "beginAge": "0 days",
-              "endAge": "20 years"
-            },
-            {"vaccineType": "Hep B, Adult", "cvx": "43", "beginAge": "0 days"},
-            {
-              "vaccineType": "Hep B, Dialysis",
-              "cvx": "44",
-              "beginAge": "0 days"
+              'vaccineType': 'Hep B, Adol/high risk infant',
+              'cvx': '42',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "Hep B, Unspecified Formulation",
-              "cvx": "45",
-              "beginAge": "0 days"
+              'vaccineType': 'Hep B, Adult',
+              'cvx': '43',
+              'beginAge': '0 days',
             },
             {
-              "vaccineType": "Hib-HepB",
-              "cvx": "51",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'Hep B, Dialysis',
+              'cvx': '44',
+              'beginAge': '0 days',
             },
             {
-              "vaccineType": "DTP-Hib-HepB",
-              "cvx": "102",
-              "beginAge": "0 days",
-              "endAge": "20 years"
-            },
-            {"vaccineType": "HepA-HepB", "cvx": "104", "beginAge": "0 days"},
-            {
-              "vaccineType": "DTaP-HepB-IPV",
-              "cvx": "110",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'Hep B, Unspecified Formulation',
+              'cvx': '45',
+              'beginAge': '0 days',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB, historical",
-              "cvx": "132",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'Hib-HepB',
+              'cvx': '51',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "DTaP-IPV-Hib-HepB",
-              "cvx": "146",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'DTP-Hib-HepB',
+              'cvx': '102',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "Hep B, adjuvanted",
-              "cvx": "189",
-              "beginAge": "18 years - 4 days"
+              'vaccineType': 'HepA-HepB',
+              'cvx': '104',
+              'beginAge': '0 days',
             },
             {
-              "vaccineType": "Hep A-Hep B, pediatric/adolescent",
-              "cvx": "193",
-              "beginAge": "0 days",
-              "endAge": "18 years"
+              'vaccineType': 'DTaP-HepB-IPV',
+              'cvx': '110',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "DTP-HepB-Hib Pentavalent Non-US",
-              "cvx": "198",
-              "beginAge": "0 days",
-              "endAge": "20 years"
+              'vaccineType': 'DTaP-IPV-Hib-HepB, historical',
+              'cvx': '132',
+              'beginAge': '0 days',
+              'endAge': '20 years',
             },
             {
-              "vaccineType": "HepB recombinant, 3-antigen, Al(OH)3",
-              "cvx": "220",
-              "beginAge": "18 years - 4 days"
-            }
+              'vaccineType': 'DTaP-IPV-Hib-HepB',
+              'cvx': '146',
+              'beginAge': '0 days',
+              'endAge': '20 years',
+            },
+            {
+              'vaccineType': 'Hep B, adjuvanted',
+              'cvx': '189',
+              'beginAge': '18 years - 4 days',
+            },
+            {
+              'vaccineType': 'Hep A-Hep B, pediatric/adolescent',
+              'cvx': '193',
+              'beginAge': '0 days',
+              'endAge': '18 years',
+            },
+            {
+              'vaccineType': 'DTP-HepB-Hib Pentavalent Non-US',
+              'cvx': '198',
+              'beginAge': '0 days',
+              'endAge': '20 years',
+            },
+            {
+              'vaccineType': 'HepB recombinant, 3-antigen, Al(OH)3',
+              'cvx': '220',
+              'beginAge': '18 years - 4 days',
+            },
           ],
-          "conditionalSkip": [
+          'conditionalSkip': [
             {
-              "context": "Both",
-              "setLogic": "OR",
-              "set": [
+              'context': 'Both',
+              'setLogic': 'OR',
+              'set': [
                 {
-                  "setID": "1",
-                  "setDescription":
-                      "Dose is not required if the patient has received a complete standard series of vaccinations",
-                  "condition": [
+                  'setID': '1',
+                  'setDescription':
+                      'Dose is not required if the patient has received a '
+                      'complete standard series of vaccinations',
+                  'condition': [
                     {
-                      "conditionID": "1",
-                      "conditionType": "Completed Series",
-                      "seriesGroups": "1"
-                    }
-                  ]
+                      'conditionID': '1',
+                      'conditionType': 'Completed Series',
+                      'seriesGroups': '1',
+                    },
+                  ],
                 },
                 {
-                  "setID": "2",
-                  "setDescription":
-                      "Dose is not required if patient has received exactly 2 doses of HepB AND both doses were Heplisav-B",
-                  "conditionLogic": "AND",
-                  "condition": [
+                  'setID': '2',
+                  'setDescription':
+                      'Dose is not required if patient has received '
+                      'exactly 2 doses of HepB AND both doses were '
+                      'Heplisav-B',
+                  'conditionLogic': 'AND',
+                  'condition': [
                     {
-                      "conditionID": "1",
-                      "conditionType": "Vaccine Count by Age",
-                      "doseCount": "2",
-                      "doseType": "Valid",
-                      "doseCountLogic": "equal to",
-                      "vaccineTypes":
-                          "08; 42; 43; 44; 45; 51; 102; 104; 110; 132; 146; 189; 198; 220"
+                      'conditionID': '1',
+                      'conditionType': 'Vaccine Count by Age',
+                      'doseCount': '2',
+                      'doseType': 'Valid',
+                      'doseCountLogic': 'equal to',
+                      'vaccineTypes':
+                          '08; 42; 43; 44; 45; 51; 102; 104; 110; 132; '
+                          '146; 189; 198; 220',
                     },
                     {
-                      "conditionID": "2",
-                      "conditionType": "Vaccine Count by Age",
-                      "doseCount": "2",
-                      "doseType": "Valid",
-                      "doseCountLogic": "equal to",
-                      "vaccineTypes": "189"
-                    }
-                  ]
-                }
-              ]
-            }
+                      'conditionID': '2',
+                      'conditionType': 'Vaccine Count by Age',
+                      'doseCount': '2',
+                      'doseType': 'Valid',
+                      'doseCountLogic': 'equal to',
+                      'vaccineTypes': '189',
+                    },
+                  ],
+                },
+              ],
+            },
           ],
-          "recurringDose": "No"
+          'recurringDose': 'No',
         },
         {
-          "doseNumber": "Dose 5",
-          "interval": [
+          'doseNumber': 'Dose 5',
+          'interval': [
             {
-              "fromPrevious": "Y",
-              "absMinInt": "0 days",
-              "minInt": "1 year",
-              "earliestRecInt": "1 year"
-            }
+              'fromPrevious': 'Y',
+              'absMinInt': '0 days',
+              'minInt': '1 year',
+              'earliestRecInt': '1 year',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "Hep B, Adult",
-              "cvx": "43",
-              "beginAge": "20 years",
-              "tradeName": "ENGERIX-B ADULT",
-              "mvx": "SKB",
-              "volume": "2",
-              "forecastVaccineType": "N"
+              'vaccineType': 'Hep B, Adult',
+              'cvx': '43',
+              'beginAge': '20 years',
+              'tradeName': 'ENGERIX-B ADULT',
+              'mvx': 'SKB',
+              'volume': '2',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "Hep B, Dialysis",
-              "cvx": "44",
-              "beginAge": "20 years",
-              "volume": "1",
-              "forecastVaccineType": "N"
+              'vaccineType': 'Hep B, Dialysis',
+              'cvx': '44',
+              'beginAge': '20 years',
+              'volume': '1',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "HepB-CpG",
-              "cvx": "189",
-              "beginAge": "18 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
-            }
+              'vaccineType': 'HepB-CpG',
+              'cvx': '189',
+              'beginAge': '18 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
+            },
           ],
-          "allowableVaccine": [
-            {"vaccineType": "Hep B, Adult", "cvx": "43", "beginAge": "0 days"},
+          'allowableVaccine': [
             {
-              "vaccineType": "Hep B, Dialysis",
-              "cvx": "44",
-              "beginAge": "0 days"
+              'vaccineType': 'Hep B, Adult',
+              'cvx': '43',
+              'beginAge': '0 days',
             },
             {
-              "vaccineType": "HepB-CpG",
-              "cvx": "189",
-              "beginAge": "18 years - 4 days"
-            }
+              'vaccineType': 'Hep B, Dialysis',
+              'cvx': '44',
+              'beginAge': '0 days',
+            },
+            {
+              'vaccineType': 'HepB-CpG',
+              'cvx': '189',
+              'beginAge': '18 years - 4 days',
+            },
           ],
-          "recurringDose": "Yes"
-        }
-      ]
+          'recurringDose': 'Yes',
+        },
+      ],
     },
     {
-      "seriesName": "HepB risk Recombivax 3-dose series",
-      "targetDisease": "HepB",
-      "vaccineGroup": "HepB",
-      "seriesAdminGuidance": [
-        "Test all vaccinees for anti-HBs 1-2 months after the last primary vaccine dose, to determine their response to the vaccine (adequate response is defined as at least 10 mIU/mL). Patients and staff members who do not respond to the primary vaccine series should be revaccinated with three additional doses and retested for response. No additional series should be administered (i.e., a 3rd full series). The patient should receive yearly boosters starting 1 year after completion of the second series.",
-        "Retest patients who respond to the vaccine annually for anti-HBs. If anti-HBs declines to less than 10 mIU/mL, administer a booster dose of hepatitis B vaccine and continue to retest annually. Retesting immediately after the booster dose is not necessary. For staff members who respond to the vaccine, booster doses of vaccine are not necessary, and periodic serologic testing to monitor antibody concentrations is not recommended",
-        "Routine childhood vaccination against hepatitis B has been recommended since 1991 and routine adolescent vaccination since 1995. Thus, many persons who develop end-stage renal failure will have a history of vaccination against hepatitis B. These persons should have responded to the vaccine when their immune status was normal, but if their anti-HBs levels are less than 10 mIU/mL when they begin dialysis, they should be revaccinated with a complete primary series."
+      'seriesName': 'HepB risk Recombivax 3-dose series',
+      'targetDisease': 'HepB',
+      'vaccineGroup': 'HepB',
+      'seriesAdminGuidance': [
+        'Test all vaccinees for anti-HBs 1-2 months after the last '
+            'primary vaccine dose, to determine their response to the '
+            'vaccine (adequate response is defined as at least 10 mIU/mL). '
+            'Patients and staff members who do not respond to the primary '
+            'vaccine series should be revaccinated with three additional '
+            'doses and retested for response. No additional series should '
+            'be administered (i.e., a 3rd full series). The patient should '
+            'receive yearly boosters starting 1 year after completion of '
+            'the second series.',
+        'Retest patients who respond to the vaccine annually for '
+            'anti-HBs. If anti-HBs declines to less than 10 mIU/mL, '
+            'administer a booster dose of hepatitis B vaccine and continue '
+            'to retest annually. Retesting immediately after the booster '
+            'dose is not necessary. For staff members who respond to the '
+            'vaccine, booster doses of vaccine are not necessary, and '
+            'periodic serologic testing to monitor antibody concentrations '
+            'is not recommended',
+        'Routine childhood vaccination against hepatitis B has been '
+            'recommended since 1991 and routine adolescent vaccination '
+            'since 1995. Thus, many persons who develop end-stage renal '
+            'failure will have a history of vaccination against hepatitis '
+            'B. These persons should have responded to the vaccine when '
+            'their immune status was normal, but if their anti-HBs levels '
+            'are less than 10 mIU/mL when they begin dialysis, they should '
+            'be revaccinated with a complete primary series.',
       ],
-      "seriesType": "Risk",
-      "selectSeries": {
-        "defaultSeries": "No",
-        "productPath": "Yes",
-        "seriesGroupName": "Increased Risk",
-        "seriesGroup": "2",
-        "seriesPriority": "A",
-        "seriesPreference": "2",
-        "minAgeToStart": "20 years"
+      'seriesType': 'Risk',
+      'selectSeries': {
+        'defaultSeries': 'No',
+        'productPath': 'Yes',
+        'seriesGroupName': 'Increased Risk',
+        'seriesGroup': '2',
+        'seriesPriority': 'A',
+        'seriesPreference': '2',
+        'minAgeToStart': '20 years',
       },
-      "indication": [
+      'indication': [
         {
-          "observationCode": {"text": "Dialysis patient", "code": "032"},
-          "description":
-              "Administer to hemodialysis patients and predialysis, peritoneal dialysis, and home dialysis patients",
-          "beginAge": "20 years"
-        }
+          'observationCode': {
+            'text': 'Dialysis patient',
+            'code': '032',
+          },
+          'description':
+              'Administer to hemodialysis patients and predialysis, '
+              'peritoneal dialysis, and home dialysis patients',
+          'beginAge': '20 years',
+        },
       ],
-      "seriesDose": [
+      'seriesDose': [
         {
-          "doseNumber": "Dose 1",
-          "age": [
+          'doseNumber': 'Dose 1',
+          'age': [
             {
-              "absMinAge": "0 days",
-              "minAge": "20 years",
-              "earliestRecAge": "20 years"
-            }
+              'absMinAge': '0 days',
+              'minAge': '20 years',
+              'earliestRecAge': '20 years',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "Hep B, Dialysis",
-              "cvx": "44",
-              "beginAge": "20 years",
-              "volume": "1",
-              "forecastVaccineType": "N"
-            }
+              'vaccineType': 'Hep B, Dialysis',
+              'cvx': '44',
+              'beginAge': '20 years',
+              'volume': '1',
+              'forecastVaccineType': 'N',
+            },
           ],
-          "allowableVaccine": [
+          'allowableVaccine': [
             {
-              "vaccineType": "Hep B, Dialysis",
-              "cvx": "44",
-              "beginAge": "0 days"
-            }
+              'vaccineType': 'Hep B, Dialysis',
+              'cvx': '44',
+              'beginAge': '0 days',
+            },
           ],
-          "conditionalSkip": [
+          'conditionalSkip': [
             {
-              "context": "Both",
-              "setLogic": "n/a",
-              "set": [
+              'context': 'Both',
+              'setLogic': 'n/a',
+              'set': [
                 {
-                  "setID": "1",
-                  "setDescription":
-                      "Dose is not required if the patient has received a complete standard series of vaccinations",
-                  "condition": [
+                  'setID': '1',
+                  'setDescription':
+                      'Dose is not required if the patient has received a '
+                      'complete standard series of vaccinations',
+                  'condition': [
                     {
-                      "conditionID": "1",
-                      "conditionType": "Completed Series",
-                      "seriesGroups": "1"
-                    }
-                  ]
-                }
-              ]
-            }
+                      'conditionID': '1',
+                      'conditionType': 'Completed Series',
+                      'seriesGroups': '1',
+                    },
+                  ],
+                },
+              ],
+            },
           ],
-          "recurringDose": "No"
+          'recurringDose': 'No',
         },
         {
-          "doseNumber": "Dose 2",
-          "interval": [
+          'doseNumber': 'Dose 2',
+          'interval': [
             {
-              "fromPrevious": "Y",
-              "absMinInt": "4 weeks - 4 days",
-              "minInt": "4 weeks",
-              "earliestRecInt": "4 weeks"
-            }
+              'fromPrevious': 'Y',
+              'absMinInt': '4 weeks - 4 days',
+              'minInt': '4 weeks',
+              'earliestRecInt': '4 weeks',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "Hep B, Dialysis",
-              "cvx": "44",
-              "beginAge": "20 years",
-              "volume": "1",
-              "forecastVaccineType": "N"
-            }
+              'vaccineType': 'Hep B, Dialysis',
+              'cvx': '44',
+              'beginAge': '20 years',
+              'volume': '1',
+              'forecastVaccineType': 'N',
+            },
           ],
-          "allowableVaccine": [
+          'allowableVaccine': [
             {
-              "vaccineType": "Hep B, Dialysis",
-              "cvx": "44",
-              "beginAge": "0 days"
-            }
+              'vaccineType': 'Hep B, Dialysis',
+              'cvx': '44',
+              'beginAge': '0 days',
+            },
           ],
-          "conditionalSkip": [
+          'conditionalSkip': [
             {
-              "context": "Both",
-              "setLogic": "n/a",
-              "set": [
+              'context': 'Both',
+              'setLogic': 'n/a',
+              'set': [
                 {
-                  "setID": "1",
-                  "setDescription":
-                      "Dose is not required if the patient has received a complete standard series of vaccinations",
-                  "condition": [
+                  'setID': '1',
+                  'setDescription':
+                      'Dose is not required if the patient has received a '
+                      'complete standard series of vaccinations',
+                  'condition': [
                     {
-                      "conditionID": "1",
-                      "conditionType": "Completed Series",
-                      "seriesGroups": "1"
-                    }
-                  ]
-                }
-              ]
-            }
+                      'conditionID': '1',
+                      'conditionType': 'Completed Series',
+                      'seriesGroups': '1',
+                    },
+                  ],
+                },
+              ],
+            },
           ],
-          "recurringDose": "No"
+          'recurringDose': 'No',
         },
         {
-          "doseNumber": "Dose 3",
-          "interval": [
+          'doseNumber': 'Dose 3',
+          'interval': [
             {
-              "fromPrevious": "Y",
-              "absMinInt": "8 weeks - 4 days",
-              "minInt": "8 weeks"
+              'fromPrevious': 'Y',
+              'absMinInt': '8 weeks - 4 days',
+              'minInt': '8 weeks',
             },
             {
-              "fromPrevious": "N",
-              "fromTargetDose": "1",
-              "absMinInt": "16 weeks - 4 days",
-              "minInt": "16 weeks",
-              "earliestRecInt": "6 months"
-            }
+              'fromPrevious': 'N',
+              'fromTargetDose': '1',
+              'absMinInt': '16 weeks - 4 days',
+              'minInt': '16 weeks',
+              'earliestRecInt': '6 months',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "Hep B, Dialysis",
-              "cvx": "44",
-              "beginAge": "20 years",
-              "volume": "1",
-              "forecastVaccineType": "Y"
-            }
+              'vaccineType': 'Hep B, Dialysis',
+              'cvx': '44',
+              'beginAge': '20 years',
+              'volume': '1',
+              'forecastVaccineType': 'Y',
+            },
           ],
-          "allowableVaccine": [
+          'allowableVaccine': [
             {
-              "vaccineType": "Hep B, Dialysis",
-              "cvx": "44",
-              "beginAge": "0 days"
-            }
+              'vaccineType': 'Hep B, Dialysis',
+              'cvx': '44',
+              'beginAge': '0 days',
+            },
           ],
-          "conditionalSkip": [
+          'conditionalSkip': [
             {
-              "context": "Both",
-              "setLogic": "n/a",
-              "set": [
+              'context': 'Both',
+              'setLogic': 'n/a',
+              'set': [
                 {
-                  "setID": "1",
-                  "setDescription":
-                      "Dose is not required if the patient has received a complete standard series of vaccinations",
-                  "condition": [
+                  'setID': '1',
+                  'setDescription':
+                      'Dose is not required if the patient has received a '
+                      'complete standard series of vaccinations',
+                  'condition': [
                     {
-                      "conditionID": "1",
-                      "conditionType": "Completed Series",
-                      "seriesGroups": "1"
-                    }
-                  ]
-                }
-              ]
-            }
+                      'conditionID': '1',
+                      'conditionType': 'Completed Series',
+                      'seriesGroups': '1',
+                    },
+                  ],
+                },
+              ],
+            },
           ],
-          "recurringDose": "No"
+          'recurringDose': 'No',
         },
         {
-          "doseNumber": "Dose 4",
-          "interval": [
+          'doseNumber': 'Dose 4',
+          'interval': [
             {
-              "fromPrevious": "Y",
-              "absMinInt": "0 days",
-              "minInt": "1 year",
-              "earliestRecInt": "1 year"
-            }
+              'fromPrevious': 'Y',
+              'absMinInt': '0 days',
+              'minInt': '1 year',
+              'earliestRecInt': '1 year',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "Hep B, Adult",
-              "cvx": "43",
-              "beginAge": "20 years",
-              "tradeName": "ENGERIX-B ADULT",
-              "mvx": "SKB",
-              "volume": "2",
-              "forecastVaccineType": "N"
+              'vaccineType': 'Hep B, Adult',
+              'cvx': '43',
+              'beginAge': '20 years',
+              'tradeName': 'ENGERIX-B ADULT',
+              'mvx': 'SKB',
+              'volume': '2',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "Hep B, Dialysis",
-              "cvx": "44",
-              "beginAge": "20 years",
-              "volume": "1",
-              "forecastVaccineType": "N"
+              'vaccineType': 'Hep B, Dialysis',
+              'cvx': '44',
+              'beginAge': '20 years',
+              'volume': '1',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType": "HepB-CpG",
-              "cvx": "189",
-              "beginAge": "18 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
-            }
+              'vaccineType': 'HepB-CpG',
+              'cvx': '189',
+              'beginAge': '18 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
+            },
           ],
-          "allowableVaccine": [
-            {"vaccineType": "Hep B, Adult", "cvx": "43", "beginAge": "0 days"},
+          'allowableVaccine': [
             {
-              "vaccineType": "Hep B, Dialysis",
-              "cvx": "44",
-              "beginAge": "0 days"
+              'vaccineType': 'Hep B, Adult',
+              'cvx': '43',
+              'beginAge': '0 days',
             },
             {
-              "vaccineType": "HepB-CpG",
-              "cvx": "189",
-              "beginAge": "18 years - 4 days"
-            }
+              'vaccineType': 'Hep B, Dialysis',
+              'cvx': '44',
+              'beginAge': '0 days',
+            },
+            {
+              'vaccineType': 'HepB-CpG',
+              'cvx': '189',
+              'beginAge': '18 years - 4 days',
+            },
           ],
-          "recurringDose": "Yes"
-        }
-      ]
-    }
+          'recurringDose': 'Yes',
+        },
+      ],
+    },
   ],
-  "vaccineRecommendationCategory": [
+  'vaccineRecommendationCategory': [
     {
-      "worksheetName": "3-dose",
-      "seriesName": "HepB 3-dose series",
-      "patientBeginAge": "0 days",
-      "patientEndAge": "n/a",
-      "forecastTargetDose": "Any",
-      "includedIndication": "n/a",
-      "excludedIndication": "n/a",
-      "category": "Routine",
-      "additionalMaterial":
-          "https://www.cdc.gov/vaccines/hcp/imz-schedules/child-adolescent-notes.html#note-hepb"
+      'worksheetName': '3-dose',
+      'seriesName': 'HepB 3-dose series',
+      'patientBeginAge': '0 days',
+      'patientEndAge': 'n/a',
+      'forecastTargetDose': 'Any',
+      'includedIndication': 'n/a',
+      'excludedIndication': 'n/a',
+      'category': 'Routine',
+      'additionalMaterial':
+          'https://www.cdc.gov/vaccines/hcp/imz-schedules/child-adolescent-notes.html#note-hepb',
     },
     {
-      "worksheetName": "4-dose",
-      "seriesName": "HepB 4-dose series",
-      "patientBeginAge": "0 days",
-      "patientEndAge": "n/a",
-      "forecastTargetDose": "Any",
-      "includedIndication": "n/a",
-      "excludedIndication": "n/a",
-      "category": "Routine",
-      "additionalMaterial":
-          "https://www.cdc.gov/vaccines/hcp/imz-schedules/child-adolescent-notes.html#note-hepb"
+      'worksheetName': '4-dose',
+      'seriesName': 'HepB 4-dose series',
+      'patientBeginAge': '0 days',
+      'patientEndAge': 'n/a',
+      'forecastTargetDose': 'Any',
+      'includedIndication': 'n/a',
+      'excludedIndication': 'n/a',
+      'category': 'Routine',
+      'additionalMaterial':
+          'https://www.cdc.gov/vaccines/hcp/imz-schedules/child-adolescent-notes.html#note-hepb',
     },
     {
-      "worksheetName": "Adolescent 2-dose",
-      "seriesName": "HepB adolescent 2-dose series",
-      "patientBeginAge": "0 days",
-      "patientEndAge": "n/a",
-      "forecastTargetDose": "Any",
-      "includedIndication": "n/a",
-      "excludedIndication": "n/a",
-      "category": "Routine",
-      "additionalMaterial":
-          "https://www.cdc.gov/vaccines/hcp/imz-schedules/child-adolescent-notes.html#note-hepb"
+      'worksheetName': 'Adolescent 2-dose',
+      'seriesName': 'HepB adolescent 2-dose series',
+      'patientBeginAge': '0 days',
+      'patientEndAge': 'n/a',
+      'forecastTargetDose': 'Any',
+      'includedIndication': 'n/a',
+      'excludedIndication': 'n/a',
+      'category': 'Routine',
+      'additionalMaterial':
+          'https://www.cdc.gov/vaccines/hcp/imz-schedules/child-adolescent-notes.html#note-hepb',
     },
     {
-      "worksheetName": "19+ 3-dose",
-      "seriesName": "HepB 19+ 3-dose series",
-      "patientBeginAge": "19 years",
-      "patientEndAge": "60 years",
-      "forecastTargetDose": "Any",
-      "includedIndication": "n/a",
-      "excludedIndication": "n/a",
-      "category": "Routine",
-      "additionalMaterial":
-          "https://www.cdc.gov/vaccines/hcp/imz-schedules/adult-notes.html#note-hepb"
+      'worksheetName': '19+ 3-dose',
+      'seriesName': 'HepB 19+ 3-dose series',
+      'patientBeginAge': '19 years',
+      'patientEndAge': '60 years',
+      'forecastTargetDose': 'Any',
+      'includedIndication': 'n/a',
+      'excludedIndication': 'n/a',
+      'category': 'Routine',
+      'additionalMaterial':
+          'https://www.cdc.gov/vaccines/hcp/imz-schedules/adult-notes.html#note-hepb',
     },
     {
-      "worksheetName": "19+ 3-dose",
-      "seriesName": "HepB 19+ 3-dose series",
-      "patientBeginAge": "60 years",
-      "patientEndAge": "n/a",
-      "forecastTargetDose": "Any",
-      "includedIndication": "n/a",
-      "excludedIndication": "n/a",
-      "category": "SCDM",
-      "additionalMaterial":
-          "https://www.cdc.gov/vaccines/hcp/imz-schedules/adult-notes.html#note-hepb"
+      'worksheetName': '19+ 3-dose',
+      'seriesName': 'HepB 19+ 3-dose series',
+      'patientBeginAge': '60 years',
+      'patientEndAge': 'n/a',
+      'forecastTargetDose': 'Any',
+      'includedIndication': 'n/a',
+      'excludedIndication': 'n/a',
+      'category': 'SCDM',
+      'additionalMaterial':
+          'https://www.cdc.gov/vaccines/hcp/imz-schedules/adult-notes.html#note-hepb',
     },
     {
-      "worksheetName": "19+ 4-dose",
-      "seriesName": "HepB 19+ 4-dose series",
-      "patientBeginAge": "19 years",
-      "patientEndAge": "60 years",
-      "forecastTargetDose": "Any",
-      "includedIndication": "n/a",
-      "excludedIndication": "n/a",
-      "category": "Routine",
-      "additionalMaterial":
-          "https://www.cdc.gov/vaccines/hcp/imz-schedules/adult-notes.html#note-hepb"
+      'worksheetName': '19+ 4-dose',
+      'seriesName': 'HepB 19+ 4-dose series',
+      'patientBeginAge': '19 years',
+      'patientEndAge': '60 years',
+      'forecastTargetDose': 'Any',
+      'includedIndication': 'n/a',
+      'excludedIndication': 'n/a',
+      'category': 'Routine',
+      'additionalMaterial':
+          'https://www.cdc.gov/vaccines/hcp/imz-schedules/adult-notes.html#note-hepb',
     },
     {
-      "worksheetName": "19+ 4-dose",
-      "seriesName": "HepB 19+ 4-dose series",
-      "patientBeginAge": "60 years",
-      "patientEndAge": "n/a",
-      "forecastTargetDose": "Any",
-      "includedIndication": "n/a",
-      "excludedIndication": "n/a",
-      "category": "SCDM",
-      "additionalMaterial":
-          "https://www.cdc.gov/vaccines/hcp/imz-schedules/adult-notes.html#note-hepb"
+      'worksheetName': '19+ 4-dose',
+      'seriesName': 'HepB 19+ 4-dose series',
+      'patientBeginAge': '60 years',
+      'patientEndAge': 'n/a',
+      'forecastTargetDose': 'Any',
+      'includedIndication': 'n/a',
+      'excludedIndication': 'n/a',
+      'category': 'SCDM',
+      'additionalMaterial':
+          'https://www.cdc.gov/vaccines/hcp/imz-schedules/adult-notes.html#note-hepb',
     },
     {
-      "worksheetName": "CpG 2-dose",
-      "seriesName": "HepB Heplisav-B 2-dose series",
-      "patientBeginAge": "18 years",
-      "patientEndAge": "60 years",
-      "forecastTargetDose": "Any",
-      "includedIndication": "n/a",
-      "excludedIndication": "n/a",
-      "category": "Routine",
-      "additionalMaterial":
-          "https://www.cdc.gov/vaccines/hcp/imz-schedules/adult-notes.html#note-hepb"
+      'worksheetName': 'CpG 2-dose',
+      'seriesName': 'HepB Heplisav-B 2-dose series',
+      'patientBeginAge': '18 years',
+      'patientEndAge': '60 years',
+      'forecastTargetDose': 'Any',
+      'includedIndication': 'n/a',
+      'excludedIndication': 'n/a',
+      'category': 'Routine',
+      'additionalMaterial':
+          'https://www.cdc.gov/vaccines/hcp/imz-schedules/adult-notes.html#note-hepb',
     },
     {
-      "worksheetName": "CpG 2-dose",
-      "seriesName": "HepB Heplisav-B 2-dose series",
-      "patientBeginAge": "60 years",
-      "patientEndAge": "n/a",
-      "forecastTargetDose": "Any",
-      "includedIndication": "n/a",
-      "excludedIndication": "n/a",
-      "category": "SCDM",
-      "additionalMaterial":
-          "https://www.cdc.gov/vaccines/hcp/imz-schedules/adult-notes.html#note-hepb"
+      'worksheetName': 'CpG 2-dose',
+      'seriesName': 'HepB Heplisav-B 2-dose series',
+      'patientBeginAge': '60 years',
+      'patientEndAge': 'n/a',
+      'forecastTargetDose': 'Any',
+      'includedIndication': 'n/a',
+      'excludedIndication': 'n/a',
+      'category': 'SCDM',
+      'additionalMaterial':
+          'https://www.cdc.gov/vaccines/hcp/imz-schedules/adult-notes.html#note-hepb',
     },
     {
-      "worksheetName": "HepB-CpG 4-dose Mixed Use",
-      "seriesName": "HepB Heplisav-B secondary 4-dose series",
-      "patientBeginAge": "18 years",
-      "patientEndAge": "60 years",
-      "forecastTargetDose": "Any",
-      "includedIndication": "n/a",
-      "excludedIndication": "n/a",
-      "category": "Routine",
-      "additionalMaterial":
-          "https://www.cdc.gov/vaccines/hcp/imz-schedules/adult-notes.html#note-hepb"
+      'worksheetName': 'HepB-CpG 4-dose Mixed Use',
+      'seriesName': 'HepB Heplisav-B secondary 4-dose series',
+      'patientBeginAge': '18 years',
+      'patientEndAge': '60 years',
+      'forecastTargetDose': 'Any',
+      'includedIndication': 'n/a',
+      'excludedIndication': 'n/a',
+      'category': 'Routine',
+      'additionalMaterial':
+          'https://www.cdc.gov/vaccines/hcp/imz-schedules/adult-notes.html#note-hepb',
     },
     {
-      "worksheetName": "HepB-CpG 4-dose Mixed Use",
-      "seriesName": "HepB Heplisav-B secondary 4-dose series",
-      "patientBeginAge": "60 years",
-      "patientEndAge": "n/a",
-      "forecastTargetDose": "Any",
-      "includedIndication": "n/a",
-      "excludedIndication": "n/a",
-      "category": "SCDM",
-      "additionalMaterial":
-          "https://www.cdc.gov/vaccines/hcp/imz-schedules/adult-notes.html#note-hepb"
+      'worksheetName': 'HepB-CpG 4-dose Mixed Use',
+      'seriesName': 'HepB Heplisav-B secondary 4-dose series',
+      'patientBeginAge': '60 years',
+      'patientEndAge': 'n/a',
+      'forecastTargetDose': 'Any',
+      'includedIndication': 'n/a',
+      'excludedIndication': 'n/a',
+      'category': 'SCDM',
+      'additionalMaterial':
+          'https://www.cdc.gov/vaccines/hcp/imz-schedules/adult-notes.html#note-hepb',
     },
     {
-      "worksheetName": "CpG-HepB 4-dose Mixed Use",
-      "seriesName": "HepB Heplisav-B tertiary 4-dose series",
-      "patientBeginAge": "18 years",
-      "patientEndAge": "60 years",
-      "forecastTargetDose": "Any",
-      "includedIndication": "n/a",
-      "excludedIndication": "n/a",
-      "category": "Routine",
-      "additionalMaterial":
-          "https://www.cdc.gov/vaccines/hcp/imz-schedules/adult-notes.html#note-hepb"
+      'worksheetName': 'CpG-HepB 4-dose Mixed Use',
+      'seriesName': 'HepB Heplisav-B tertiary 4-dose series',
+      'patientBeginAge': '18 years',
+      'patientEndAge': '60 years',
+      'forecastTargetDose': 'Any',
+      'includedIndication': 'n/a',
+      'excludedIndication': 'n/a',
+      'category': 'Routine',
+      'additionalMaterial':
+          'https://www.cdc.gov/vaccines/hcp/imz-schedules/adult-notes.html#note-hepb',
     },
     {
-      "worksheetName": "CpG-HepB 4-dose Mixed Use",
-      "seriesName": "HepB Heplisav-B tertiary 4-dose series",
-      "patientBeginAge": "60 years",
-      "patientEndAge": "n/a",
-      "forecastTargetDose": "Any",
-      "includedIndication": "n/a",
-      "excludedIndication": "n/a",
-      "category": "SCDM",
-      "additionalMaterial":
-          "https://www.cdc.gov/vaccines/hcp/imz-schedules/adult-notes.html#note-hepb"
+      'worksheetName': 'CpG-HepB 4-dose Mixed Use',
+      'seriesName': 'HepB Heplisav-B tertiary 4-dose series',
+      'patientBeginAge': '60 years',
+      'patientEndAge': 'n/a',
+      'forecastTargetDose': 'Any',
+      'includedIndication': 'n/a',
+      'excludedIndication': 'n/a',
+      'category': 'SCDM',
+      'additionalMaterial':
+          'https://www.cdc.gov/vaccines/hcp/imz-schedules/adult-notes.html#note-hepb',
     },
     {
-      "worksheetName": "Twinrix 3-dose",
-      "seriesName": "HepB Twinrix 3 Dose Series",
-      "patientBeginAge": "18 years",
-      "patientEndAge": "60 years",
-      "forecastTargetDose": "Any",
-      "includedIndication": "n/a",
-      "excludedIndication": "n/a",
-      "category": "Routine",
-      "additionalMaterial":
-          "https://www.cdc.gov/vaccines/hcp/imz-schedules/adult-notes.html#note-hepb"
+      'worksheetName': 'Twinrix 3-dose',
+      'seriesName': 'HepB Twinrix 3 Dose Series',
+      'patientBeginAge': '18 years',
+      'patientEndAge': '60 years',
+      'forecastTargetDose': 'Any',
+      'includedIndication': 'n/a',
+      'excludedIndication': 'n/a',
+      'category': 'Routine',
+      'additionalMaterial':
+          'https://www.cdc.gov/vaccines/hcp/imz-schedules/adult-notes.html#note-hepb',
     },
     {
-      "worksheetName": "Twinrix 3-dose",
-      "seriesName": "HepB Twinrix 3 Dose Series",
-      "patientBeginAge": "60 years",
-      "patientEndAge": "n/a",
-      "forecastTargetDose": "Any",
-      "includedIndication": "n/a",
-      "excludedIndication": "n/a",
-      "category": "SCDM",
-      "additionalMaterial":
-          "https://www.cdc.gov/vaccines/hcp/imz-schedules/adult-notes.html#note-hepb"
+      'worksheetName': 'Twinrix 3-dose',
+      'seriesName': 'HepB Twinrix 3 Dose Series',
+      'patientBeginAge': '60 years',
+      'patientEndAge': 'n/a',
+      'forecastTargetDose': 'Any',
+      'includedIndication': 'n/a',
+      'excludedIndication': 'n/a',
+      'category': 'SCDM',
+      'additionalMaterial':
+          'https://www.cdc.gov/vaccines/hcp/imz-schedules/adult-notes.html#note-hepb',
     },
     {
-      "worksheetName": "Twinrix 4-dose",
-      "seriesName": "HepB Twinrix 4-dose series",
-      "patientBeginAge": "18 years",
-      "patientEndAge": "60 years",
-      "forecastTargetDose": "Any",
-      "includedIndication": "n/a",
-      "excludedIndication": "n/a",
-      "category": "Routine",
-      "additionalMaterial":
-          "https://www.cdc.gov/vaccines/hcp/imz-schedules/adult-notes.html#note-hepb"
+      'worksheetName': 'Twinrix 4-dose',
+      'seriesName': 'HepB Twinrix 4-dose series',
+      'patientBeginAge': '18 years',
+      'patientEndAge': '60 years',
+      'forecastTargetDose': 'Any',
+      'includedIndication': 'n/a',
+      'excludedIndication': 'n/a',
+      'category': 'Routine',
+      'additionalMaterial':
+          'https://www.cdc.gov/vaccines/hcp/imz-schedules/adult-notes.html#note-hepb',
     },
     {
-      "worksheetName": "Twinrix 4-dose",
-      "seriesName": "HepB Twinrix 4-dose series",
-      "patientBeginAge": "60 years",
-      "patientEndAge": "n/a",
-      "forecastTargetDose": "Any",
-      "includedIndication": "n/a",
-      "excludedIndication": "n/a",
-      "category": "SCDM",
-      "additionalMaterial":
-          "https://www.cdc.gov/vaccines/hcp/imz-schedules/adult-notes.html#note-hepb"
+      'worksheetName': 'Twinrix 4-dose',
+      'seriesName': 'HepB Twinrix 4-dose series',
+      'patientBeginAge': '60 years',
+      'patientEndAge': 'n/a',
+      'forecastTargetDose': 'Any',
+      'includedIndication': 'n/a',
+      'excludedIndication': 'n/a',
+      'category': 'SCDM',
+      'additionalMaterial':
+          'https://www.cdc.gov/vaccines/hcp/imz-schedules/adult-notes.html#note-hepb',
     },
     {
-      "worksheetName": "Risk 3-dose",
-      "seriesName": "HepB risk 3-dose series",
-      "patientBeginAge": "60 years",
-      "patientEndAge": "n/a",
-      "forecastTargetDose": "Any",
-      "includedIndication": "Any",
-      "excludedIndication": "Diabetes (014)",
-      "category": "High-Risk",
-      "additionalMaterial":
-          "https://www.cdc.gov/vaccines/hcp/imz-schedules/adult-notes.html#note-hepb"
+      'worksheetName': 'Risk 3-dose',
+      'seriesName': 'HepB risk 3-dose series',
+      'patientBeginAge': '60 years',
+      'patientEndAge': 'n/a',
+      'forecastTargetDose': 'Any',
+      'includedIndication': 'Any',
+      'excludedIndication': 'Diabetes (014)',
+      'category': 'High-Risk',
+      'additionalMaterial':
+          'https://www.cdc.gov/vaccines/hcp/imz-schedules/adult-notes.html#note-hepb',
     },
     {
-      "worksheetName": "Risk 3-dose",
-      "seriesName": "HepB risk 3-dose series",
-      "patientBeginAge": "60 years",
-      "patientEndAge": "n/a",
-      "forecastTargetDose": "Any",
-      "includedIndication": "Diabetes (014)",
-      "excludedIndication": "n/a",
-      "category": "SCDM",
-      "additionalMaterial":
-          "https://www.cdc.gov/vaccines/hcp/imz-schedules/adult-notes.html#note-hepb"
+      'worksheetName': 'Risk 3-dose',
+      'seriesName': 'HepB risk 3-dose series',
+      'patientBeginAge': '60 years',
+      'patientEndAge': 'n/a',
+      'forecastTargetDose': 'Any',
+      'includedIndication': 'Diabetes (014)',
+      'excludedIndication': 'n/a',
+      'category': 'SCDM',
+      'additionalMaterial':
+          'https://www.cdc.gov/vaccines/hcp/imz-schedules/adult-notes.html#note-hepb',
     },
     {
-      "worksheetName": "Risk CpG 2-dose",
-      "seriesName": "HepB risk Heplisav-B 2-dose series",
-      "patientBeginAge": "60 years",
-      "patientEndAge": "n/a",
-      "forecastTargetDose": "Any",
-      "includedIndication": "Any",
-      "excludedIndication": "Diabetes (014)",
-      "category": "High-Risk",
-      "additionalMaterial":
-          "https://www.cdc.gov/vaccines/hcp/imz-schedules/adult-notes.html#note-hepb"
+      'worksheetName': 'Risk CpG 2-dose',
+      'seriesName': 'HepB risk Heplisav-B 2-dose series',
+      'patientBeginAge': '60 years',
+      'patientEndAge': 'n/a',
+      'forecastTargetDose': 'Any',
+      'includedIndication': 'Any',
+      'excludedIndication': 'Diabetes (014)',
+      'category': 'High-Risk',
+      'additionalMaterial':
+          'https://www.cdc.gov/vaccines/hcp/imz-schedules/adult-notes.html#note-hepb',
     },
     {
-      "worksheetName": "Risk CpG 2-dose",
-      "seriesName": "HepB risk Heplisav-B 2-dose series",
-      "patientBeginAge": "60 years",
-      "patientEndAge": "n/a",
-      "forecastTargetDose": "Any",
-      "includedIndication": "Diabetes (014)",
-      "excludedIndication": "n/a",
-      "category": "SCDM",
-      "additionalMaterial":
-          "https://www.cdc.gov/vaccines/hcp/imz-schedules/adult-notes.html#note-hepb"
+      'worksheetName': 'Risk CpG 2-dose',
+      'seriesName': 'HepB risk Heplisav-B 2-dose series',
+      'patientBeginAge': '60 years',
+      'patientEndAge': 'n/a',
+      'forecastTargetDose': 'Any',
+      'includedIndication': 'Diabetes (014)',
+      'excludedIndication': 'n/a',
+      'category': 'SCDM',
+      'additionalMaterial':
+          'https://www.cdc.gov/vaccines/hcp/imz-schedules/adult-notes.html#note-hepb',
     },
     {
-      "worksheetName": "Risk HepB-CpG 4-dose Mixed Use",
-      "seriesName": "HepB risk Heplisav-B secondary 4-dose series",
-      "patientBeginAge": "60 years",
-      "patientEndAge": "n/a",
-      "forecastTargetDose": "Any",
-      "includedIndication": "Any",
-      "excludedIndication": "Diabetes (014)",
-      "category": "High-Risk",
-      "additionalMaterial":
-          "https://www.cdc.gov/vaccines/hcp/imz-schedules/adult-notes.html#note-hepb"
+      'worksheetName': 'Risk HepB-CpG 4-dose Mixed Use',
+      'seriesName': 'HepB risk Heplisav-B secondary 4-dose series',
+      'patientBeginAge': '60 years',
+      'patientEndAge': 'n/a',
+      'forecastTargetDose': 'Any',
+      'includedIndication': 'Any',
+      'excludedIndication': 'Diabetes (014)',
+      'category': 'High-Risk',
+      'additionalMaterial':
+          'https://www.cdc.gov/vaccines/hcp/imz-schedules/adult-notes.html#note-hepb',
     },
     {
-      "worksheetName": "Risk HepB-CpG 4-dose Mixed Use",
-      "seriesName": "HepB risk Heplisav-B secondary 4-dose series",
-      "patientBeginAge": "60 years",
-      "patientEndAge": "n/a",
-      "forecastTargetDose": "Any",
-      "includedIndication": "Diabetes (014)",
-      "excludedIndication": "n/a",
-      "category": "SCDM",
-      "additionalMaterial":
-          "https://www.cdc.gov/vaccines/hcp/imz-schedules/adult-notes.html#note-hepb"
+      'worksheetName': 'Risk HepB-CpG 4-dose Mixed Use',
+      'seriesName': 'HepB risk Heplisav-B secondary 4-dose series',
+      'patientBeginAge': '60 years',
+      'patientEndAge': 'n/a',
+      'forecastTargetDose': 'Any',
+      'includedIndication': 'Diabetes (014)',
+      'excludedIndication': 'n/a',
+      'category': 'SCDM',
+      'additionalMaterial':
+          'https://www.cdc.gov/vaccines/hcp/imz-schedules/adult-notes.html#note-hepb',
     },
     {
-      "worksheetName": "Risk CpG-HepB 4-dose Mixed Use",
-      "seriesName": "HepB risk Heplisav-B tertiary 4-dose series",
-      "patientBeginAge": "60 years",
-      "patientEndAge": "n/a",
-      "forecastTargetDose": "Any",
-      "includedIndication": "Any",
-      "excludedIndication": "Diabetes (014)",
-      "category": "High-Risk",
-      "additionalMaterial":
-          "https://www.cdc.gov/vaccines/hcp/imz-schedules/adult-notes.html#note-hepb"
+      'worksheetName': 'Risk CpG-HepB 4-dose Mixed Use',
+      'seriesName': 'HepB risk Heplisav-B tertiary 4-dose series',
+      'patientBeginAge': '60 years',
+      'patientEndAge': 'n/a',
+      'forecastTargetDose': 'Any',
+      'includedIndication': 'Any',
+      'excludedIndication': 'Diabetes (014)',
+      'category': 'High-Risk',
+      'additionalMaterial':
+          'https://www.cdc.gov/vaccines/hcp/imz-schedules/adult-notes.html#note-hepb',
     },
     {
-      "worksheetName": "Risk CpG-HepB 4-dose Mixed Use",
-      "seriesName": "HepB risk Heplisav-B tertiary 4-dose series",
-      "patientBeginAge": "60 years",
-      "patientEndAge": "n/a",
-      "forecastTargetDose": "Any",
-      "includedIndication": "Diabetes (014)",
-      "excludedIndication": "n/a",
-      "category": "SCDM",
-      "additionalMaterial":
-          "https://www.cdc.gov/vaccines/hcp/imz-schedules/adult-notes.html#note-hepb"
+      'worksheetName': 'Risk CpG-HepB 4-dose Mixed Use',
+      'seriesName': 'HepB risk Heplisav-B tertiary 4-dose series',
+      'patientBeginAge': '60 years',
+      'patientEndAge': 'n/a',
+      'forecastTargetDose': 'Any',
+      'includedIndication': 'Diabetes (014)',
+      'excludedIndication': 'n/a',
+      'category': 'SCDM',
+      'additionalMaterial':
+          'https://www.cdc.gov/vaccines/hcp/imz-schedules/adult-notes.html#note-hepb',
     },
     {
-      "worksheetName": "Risk Twinrix 3-dose",
-      "seriesName": "HepB risk Twinrix 3 Dose Series",
-      "patientBeginAge": "60 years",
-      "patientEndAge": "n/a",
-      "forecastTargetDose": "Any",
-      "includedIndication": "Any",
-      "excludedIndication": "Diabetes (014)",
-      "category": "High-Risk",
-      "additionalMaterial":
-          "https://www.cdc.gov/vaccines/hcp/imz-schedules/adult-notes.html#note-hepb"
+      'worksheetName': 'Risk Twinrix 3-dose',
+      'seriesName': 'HepB risk Twinrix 3 Dose Series',
+      'patientBeginAge': '60 years',
+      'patientEndAge': 'n/a',
+      'forecastTargetDose': 'Any',
+      'includedIndication': 'Any',
+      'excludedIndication': 'Diabetes (014)',
+      'category': 'High-Risk',
+      'additionalMaterial':
+          'https://www.cdc.gov/vaccines/hcp/imz-schedules/adult-notes.html#note-hepb',
     },
     {
-      "worksheetName": "Risk Twinrix 3-dose",
-      "seriesName": "HepB risk Twinrix 3 Dose Series",
-      "patientBeginAge": "60 years",
-      "patientEndAge": "n/a",
-      "forecastTargetDose": "Any",
-      "includedIndication": "Diabetes (014)",
-      "excludedIndication": "n/a",
-      "category": "SCDM",
-      "additionalMaterial":
-          "https://www.cdc.gov/vaccines/hcp/imz-schedules/adult-notes.html#note-hepb"
+      'worksheetName': 'Risk Twinrix 3-dose',
+      'seriesName': 'HepB risk Twinrix 3 Dose Series',
+      'patientBeginAge': '60 years',
+      'patientEndAge': 'n/a',
+      'forecastTargetDose': 'Any',
+      'includedIndication': 'Diabetes (014)',
+      'excludedIndication': 'n/a',
+      'category': 'SCDM',
+      'additionalMaterial':
+          'https://www.cdc.gov/vaccines/hcp/imz-schedules/adult-notes.html#note-hepb',
     },
     {
-      "worksheetName": "Risk Twinrix 4-dose",
-      "seriesName": "HepB risk Twinrix 4-dose series",
-      "patientBeginAge": "60 years",
-      "patientEndAge": "n/a",
-      "forecastTargetDose": "Any",
-      "includedIndication": "Any",
-      "excludedIndication": "Diabetes (014)",
-      "category": "High-Risk",
-      "additionalMaterial":
-          "https://www.cdc.gov/vaccines/hcp/imz-schedules/adult-notes.html#note-hepb"
+      'worksheetName': 'Risk Twinrix 4-dose',
+      'seriesName': 'HepB risk Twinrix 4-dose series',
+      'patientBeginAge': '60 years',
+      'patientEndAge': 'n/a',
+      'forecastTargetDose': 'Any',
+      'includedIndication': 'Any',
+      'excludedIndication': 'Diabetes (014)',
+      'category': 'High-Risk',
+      'additionalMaterial':
+          'https://www.cdc.gov/vaccines/hcp/imz-schedules/adult-notes.html#note-hepb',
     },
     {
-      "worksheetName": "Risk Twinrix 4-dose",
-      "seriesName": "HepB risk Twinrix 4-dose series",
-      "patientBeginAge": "60 years",
-      "patientEndAge": "n/a",
-      "forecastTargetDose": "Any",
-      "includedIndication": "Diabetes (014)",
-      "excludedIndication": "n/a",
-      "category": "SCDM",
-      "additionalMaterial":
-          "https://www.cdc.gov/vaccines/hcp/imz-schedules/adult-notes.html#note-hepb"
+      'worksheetName': 'Risk Twinrix 4-dose',
+      'seriesName': 'HepB risk Twinrix 4-dose series',
+      'patientBeginAge': '60 years',
+      'patientEndAge': 'n/a',
+      'forecastTargetDose': 'Any',
+      'includedIndication': 'Diabetes (014)',
+      'excludedIndication': 'n/a',
+      'category': 'SCDM',
+      'additionalMaterial':
+          'https://www.cdc.gov/vaccines/hcp/imz-schedules/adult-notes.html#note-hepb',
     },
     {
-      "worksheetName": "Risk Dialysis 4-dose",
-      "seriesName": "HepB risk Dialysis 4-dose series",
-      "patientBeginAge": "20 years",
-      "patientEndAge": "n/a",
-      "forecastTargetDose": "Any",
-      "includedIndication": "Any",
-      "excludedIndication": "n/a",
-      "category": "High-Risk",
-      "additionalMaterial":
-          "https://www.cdc.gov/vaccines/hcp/imz-schedules/adult-notes.html#note-hepb"
+      'worksheetName': 'Risk Dialysis 4-dose',
+      'seriesName': 'HepB risk Dialysis 4-dose series',
+      'patientBeginAge': '20 years',
+      'patientEndAge': 'n/a',
+      'forecastTargetDose': 'Any',
+      'includedIndication': 'Any',
+      'excludedIndication': 'n/a',
+      'category': 'High-Risk',
+      'additionalMaterial':
+          'https://www.cdc.gov/vaccines/hcp/imz-schedules/adult-notes.html#note-hepb',
     },
     {
-      "worksheetName": "Risk Recombivax 3-dose",
-      "seriesName": "HepB risk Recombivax 3-dose series",
-      "patientBeginAge": "20 years",
-      "patientEndAge": "n/a",
-      "forecastTargetDose": "Any",
-      "includedIndication": "Any",
-      "excludedIndication": "n/a",
-      "category": "High-Risk",
-      "additionalMaterial":
-          "https://www.cdc.gov/vaccines/hcp/imz-schedules/adult-notes.html#note-hepb"
-    }
-  ]
+      'worksheetName': 'Risk Recombivax 3-dose',
+      'seriesName': 'HepB risk Recombivax 3-dose series',
+      'patientBeginAge': '20 years',
+      'patientEndAge': 'n/a',
+      'forecastTargetDose': 'Any',
+      'includedIndication': 'Any',
+      'excludedIndication': 'n/a',
+      'category': 'High-Risk',
+      'additionalMaterial':
+          'https://www.cdc.gov/vaccines/hcp/imz-schedules/adult-notes.html#note-hepb',
+    },
+  ],
 });

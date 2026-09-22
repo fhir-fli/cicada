@@ -1,7 +1,6 @@
+import 'package:cicada/cicada.dart';
 import 'package:fhir_r4/fhir_r4.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
-
-import '../cicada.dart';
 
 part 'patient_for_assessment.g.dart';
 
@@ -9,7 +8,7 @@ part 'patient_for_assessment.g.dart';
 class PatientForAssessment extends _$PatientForAssessment {
   @override
   VaxPatient build(Parameters parameters) {
-    final VaxPatient? patient = patientFromParameters(parameters);
+    final patient = patientFromParameters(parameters);
     if (patient == null) {
       throw Exception('Patient or birthdate not found');
     }
@@ -20,19 +19,18 @@ class PatientForAssessment extends _$PatientForAssessment {
     DateTime? assessmentDate;
     Patient? patient;
     VaxDate? birthdate;
-    final List<Immunization> immunizations = <Immunization>[];
-    final List<Condition> conditions = <Condition>[];
-    final List<AllergyIntolerance> allergies = <AllergyIntolerance>[];
-    final List<VaxDose> pastDoses = <VaxDose>[];
-    final List<ImplausibleDose> implausibleDoses = <ImplausibleDose>[];
-    final List<VaxDose> dosesAfterAssessment = <VaxDose>[];
+    final immunizations = <Immunization>[];
+    final conditions = <Condition>[];
+    final allergies = <AllergyIntolerance>[];
+    final pastDoses = <VaxDose>[];
+    final implausibleDoses = <ImplausibleDose>[];
+    final dosesAfterAssessment = <VaxDose>[];
     // The code alone is not enough: `supportingPatientInformation` has to
     // reference the resource that carried it, so keep the reference with it.
-    final List<({CodeableConcept code, String? reference})> otherResourceCodes =
-        <({CodeableConcept code, String? reference})>[];
+    final otherResourceCodes = <({CodeableConcept code, String? reference})>[];
 
-    parameters.parameter?.forEach((ParametersParameter parameter) {
-      if (parameter.name == 'assessmentDate' &&
+    parameters.parameter?.forEach((parameter) {
+      if (parameter.name.valueString == 'assessmentDate' &&
           (parameter.valueDate?.valueDateTime != null)) {
         assessmentDate = parameter.valueDate!.valueDateTime;
       } else if (parameter.resource != null) {
@@ -40,9 +38,10 @@ class PatientForAssessment extends _$PatientForAssessment {
           case Patient _:
             {
               patient = parameter.resource as Patient?;
-              birthdate = (patient?.birthDate?.valueDateTime != null)
-                  ? VaxDate.fromDateTime(patient!.birthDate!.valueDateTime!)
-                  : null;
+              birthdate =
+                  (patient?.birthDate?.valueDateTime != null)
+                      ? VaxDate.fromDateTime(patient!.birthDate!.valueDateTime!)
+                      : null;
               break;
             }
           case Condition _:
@@ -57,8 +56,7 @@ class PatientForAssessment extends _$PatientForAssessment {
             }
           case Immunization _:
             {
-              final Immunization immunization =
-                  parameter.resource! as Immunization;
+              final immunization = parameter.resource! as Immunization;
               immunizations.add(immunization);
               // Doses are built after the loop, not here. A dose needs the
               // birth date, and the Patient parameter is not guaranteed to
@@ -71,9 +69,10 @@ class PatientForAssessment extends _$PatientForAssessment {
               final observation = parameter.resource! as Observation;
               otherResourceCodes.add((
                 code: observation.code,
-                reference: observation.id == null
-                    ? null
-                    : 'Observation/${observation.id}',
+                reference:
+                    observation.id == null
+                        ? null
+                        : 'Observation/${observation.id}',
               ));
               break;
             }
@@ -97,9 +96,10 @@ class PatientForAssessment extends _$PatientForAssessment {
               if (code != null) {
                 otherResourceCodes.add((
                   code: code,
-                  reference: resource.id == null
-                      ? null
-                      : 'MedicationStatement/${resource.id}',
+                  reference:
+                      resource.id == null
+                          ? null
+                          : 'MedicationStatement/${resource.id}',
                 ));
               }
               break;
@@ -111,9 +111,10 @@ class PatientForAssessment extends _$PatientForAssessment {
               if (code != null) {
                 otherResourceCodes.add((
                   code: code,
-                  reference: resource.id == null
-                      ? null
-                      : 'MedicationRequest/${resource.id}',
+                  reference:
+                      resource.id == null
+                          ? null
+                          : 'MedicationRequest/${resource.id}',
                 ));
               }
               break;
@@ -125,9 +126,10 @@ class PatientForAssessment extends _$PatientForAssessment {
               if (code != null) {
                 otherResourceCodes.add((
                   code: code,
-                  reference: resource.id == null
-                      ? null
-                      : 'MedicationAdministration/${resource.id}',
+                  reference:
+                      resource.id == null
+                          ? null
+                          : 'MedicationAdministration/${resource.id}',
                 ));
               }
               break;
@@ -140,9 +142,11 @@ class PatientForAssessment extends _$PatientForAssessment {
 
     // Fallback: test data encodes assessment date as the parameter name itself
     if (assessmentDate == null) {
-      for (final parameter in parameters.parameter ?? []) {
-        if (parameter.resource == null && parameter.name != null) {
-          final parsed = DateTime.tryParse(parameter.name.toString());
+      for (final parameter
+          in parameters.parameter ?? const <ParametersParameter>[]) {
+        final name = parameter.name.valueString;
+        if (parameter.resource == null && name != null) {
+          final parsed = DateTime.tryParse(name);
           if (parsed != null) {
             assessmentDate = parsed;
             break;
@@ -166,15 +170,18 @@ class PatientForAssessment extends _$PatientForAssessment {
     // assessment date drives forecasting, and "current date" is only its
     // assumed value when empty (Tables 6-4, 7-9). CDC healthy cases 2026-0043,
     // -0050, -0052 and -0060 expect such doses Valid. It is noted, not dropped.
-    final VaxDate effectiveDob = birthdate ?? VaxDate(1900, 1, 1);
-    final VaxDate effectiveAssessment = assessmentDate == null
-        ? VaxDate.now()
-        : VaxDate.fromDateTime(assessmentDate!);
-    for (final Immunization immunization in immunizations) {
-      final VaxDose dose = VaxDose.fromImmunization(immunization, effectiveDob);
+    final effectiveDob = birthdate ?? VaxDate(1900, 1, 1);
+    final effectiveAssessment =
+        assessmentDate == null
+            ? VaxDate.now()
+            : VaxDate.fromDateTime(assessmentDate!);
+    for (final immunization in immunizations) {
+      final dose = VaxDose.fromImmunization(immunization, effectiveDob);
       if (birthdate != null && dose.dateGiven < birthdate!) {
-        implausibleDoses
-            .add((dose: dose, reason: ImplausibleDoseReason.beforeBirth));
+        implausibleDoses.add((
+          dose: dose,
+          reason: ImplausibleDoseReason.beforeBirth,
+        ));
       } else {
         if (dose.dateGiven > effectiveAssessment) {
           dosesAfterAssessment.add(dose);
@@ -190,35 +197,36 @@ class PatientForAssessment extends _$PatientForAssessment {
       return null;
     } else {
       return _createVaxPatient(
-          patient!,
-          assessmentDate,
-          birthdate,
-          conditions,
-          immunizations,
-          allergies,
-          pastDoses,
-          otherResourceCodes,
-          implausibleDoses,
-          dosesAfterAssessment);
+        patient!,
+        assessmentDate,
+        birthdate,
+        conditions,
+        immunizations,
+        allergies,
+        pastDoses,
+        otherResourceCodes,
+        implausibleDoses,
+        dosesAfterAssessment,
+      );
     }
   }
 
   VaxPatient _createVaxPatient(
-      Patient patient,
-      DateTime? assessmentDate,
-      VaxDate? birthdate,
-      List<Condition> conditions,
-      List<Immunization> immunizations,
-      List<AllergyIntolerance> allergies,
-      List<VaxDose> pastDoses,
-      List<({CodeableConcept code, String? reference})> otherResourceCodes,
-      List<ImplausibleDose> implausibleDoses,
-      List<VaxDose> dosesAfterAssessment) {
+    Patient patient,
+    DateTime? assessmentDate,
+    VaxDate? birthdate,
+    List<Condition> conditions,
+    List<Immunization> immunizations,
+    List<AllergyIntolerance> allergies,
+    List<VaxDose> pastDoses,
+    List<({CodeableConcept code, String? reference})> otherResourceCodes,
+    List<ImplausibleDose> implausibleDoses,
+    List<VaxDose> dosesAfterAssessment,
+  ) {
     final bd = birthdate ?? VaxDate(1900, 01, 01);
-    final List<VaxObservation> observations =
-        observationsFromConditions(conditions, bd);
-    // Add observations from AllergyIntolerance resources
-    observations.addAll(observationsFromAllergies(allergies));
+    // Observations from Condition resources, then AllergyIntolerance.
+    final observations = observationsFromConditions(conditions, bd)
+      ..addAll(observationsFromAllergies(allergies));
     // Add observations from Observation, Procedure, Medication* resources
     for (final pair in otherResourceCodes) {
       final obs = observationFromCodeableConcept(pair.code);
@@ -228,41 +236,50 @@ class PatientForAssessment extends _$PatientForAssessment {
     // Which resource asserted each CDSi observation, so a risk-driven
     // recommendation can point at it via supportingPatientInformation.
     // A resource with no id cannot be referenced and is left out.
-    final Map<String, Set<SupportingResource>> observationSources =
-        <String, Set<SupportingResource>>{};
+    final observationSources = <String, Set<SupportingResource>>{};
     void index(VaxObservation? obs, String? reference, CodeableConcept? code) {
-      final String? observationCode = obs?.observationCode;
+      final observationCode = obs?.observationCode;
       if (observationCode == null) return;
-      final String? display = _displayOf(code);
+      final display = _displayOf(code);
       if (reference == null && display == null) return;
-      (observationSources[observationCode] ??= <SupportingResource>{})
-          .add((reference: reference, display: display));
+      (observationSources[observationCode] ??= <SupportingResource>{}).add((
+        reference: reference,
+        display: display,
+      ));
     }
 
-    for (final Condition condition in conditions) {
+    for (final condition in conditions) {
       index(
         observationFromCodeableConcept(condition.code),
         condition.id == null ? null : 'Condition/${condition.id}',
         condition.code,
       );
     }
-    for (final AllergyIntolerance allergy in allergies) {
-      final String? ref =
+    for (final allergy in allergies) {
+      final ref =
           allergy.id == null ? null : 'AllergyIntolerance/${allergy.id}';
       index(observationFromCodeableConcept(allergy.code), ref, allergy.code);
-      for (final reaction in allergy.reaction ?? []) {
-        index(observationFromCodeableConcept(reaction.substance), ref,
-            reaction.substance);
+      for (final reaction
+          in allergy.reaction ?? const <AllergyIntoleranceReaction>[]) {
+        index(
+          observationFromCodeableConcept(reaction.substance),
+          ref,
+          reaction.substance,
+        );
       }
     }
     for (final pair in otherResourceCodes) {
       index(
-          observationFromCodeableConcept(pair.code), pair.reference, pair.code);
+        observationFromCodeableConcept(pair.code),
+        pair.reference,
+        pair.code,
+      );
     }
     return VaxPatient(
-      assessmentDate: assessmentDate == null
-          ? VaxDate.now()
-          : VaxDate.fromDateTime(assessmentDate),
+      assessmentDate:
+          assessmentDate == null
+              ? VaxDate.now()
+              : VaxDate.fromDateTime(assessmentDate),
       birthdate: birthdate ?? VaxDate(1900, 01, 01),
       patient: patient,
       gender: genderFromPatient(patient),
@@ -280,10 +297,10 @@ class PatientForAssessment extends _$PatientForAssessment {
 
 /// Human-readable name for a coded concept, for a Reference that has no target.
 String? _displayOf(CodeableConcept? code) {
-  final String? text = code?.text?.valueString;
+  final text = code?.text?.valueString;
   if (text != null && text.isNotEmpty) return text;
-  for (final Coding coding in code?.coding ?? <Coding>[]) {
-    final String? display = coding.display?.valueString;
+  for (final coding in code?.coding ?? <Coding>[]) {
+    final display = coding.display?.valueString;
     if (display != null && display.isNotEmpty) return display;
   }
   return null;

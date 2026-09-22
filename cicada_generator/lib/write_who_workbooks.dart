@@ -4,7 +4,7 @@
 //   dart run lib/write_who_workbooks.dart          # WHO: write to results/, compare
 //   dart run lib/write_who_workbooks.dart --apply  # ... and replace lib/WHO/antigen
 //   dart run lib/write_who_workbooks.dart --cdc    # round-trip CDC's 30 into results/
-//   ... --schedule [--cdc] [--apply]              # the same for the five schedule workbooks
+//   ... --schedule [--cdc] [--apply]   # the same for the 5 schedule workbooks
 //
 // For every workbook: parse it (AntigenSheetParser), write the model through
 // AntigenWorkbookWriter, parse the written file, and diff the two models as
@@ -15,15 +15,15 @@
 // finishes; exit code is non-zero if any workbook differs.
 import 'dart:io';
 
+import 'package:cicada/cicada.dart';
 import 'package:cicada_generator/antigen_sheet_parser.dart';
 import 'package:cicada_generator/antigen_workbook_writer.dart';
 import 'package:cicada_generator/json_diff.dart';
 import 'package:cicada_generator/repo_root.dart';
 import 'package:cicada_generator/schedule_sheet_parser.dart';
 import 'package:cicada_generator/schedule_workbook_writer.dart';
-import 'package:cicada/cicada.dart';
 
-void main(List<String> args) {
+Future<void> main(List<String> args) async {
   if (args.contains('--schedule')) {
     _schedule(args);
     return;
@@ -41,21 +41,29 @@ void main(List<String> args) {
     sourceDir = Directory(repoPath('cicada_generator/lib/WHO/antigen'));
   }
   final mode = cdc ? 'cdc' : 'who';
-  final outDir = Directory(repoPath('cicada_generator/results/${mode}_roundtrip'))
-    ..createSync(recursive: true);
-  final tsv = File(repoPath('cicada_generator/results/${mode}_roundtrip.tsv'))
-      .openWrite()
-    ..writeln('workbook\tstatus\tdifferences\tfirst');
+  final outDir = Directory(
+    repoPath('cicada_generator/results/${mode}_roundtrip'),
+  )..createSync(recursive: true);
+  final tsv =
+      File(
+          repoPath('cicada_generator/results/${mode}_roundtrip.tsv'),
+        ).openWrite()
+        ..writeln('workbook\tstatus\tdifferences\tfirst');
   final parser = AntigenSheetParser();
   final writer = AntigenWorkbookWriter();
   var failures = 0;
 
-  final files = sourceDir
-      .listSync()
-      .whereType<File>()
-      .where((f) => f.path.endsWith('.xlsx') && (!cdc || f.path.contains('AntigenSupportingData')))
-      .toList()
-    ..sort((a, b) => a.path.compareTo(b.path));
+  final files =
+      sourceDir
+          .listSync()
+          .whereType<File>()
+          .where(
+            (f) =>
+                f.path.endsWith('.xlsx') &&
+                (!cdc || f.path.contains('AntigenSupportingData')),
+          )
+          .toList()
+        ..sort((a, b) => a.path.compareTo(b.path));
   for (final xlsx in files) {
     final name = xlsx.path.split('/').last;
     final written = File('${outDir.path}/$name');
@@ -67,13 +75,18 @@ void main(List<String> args) {
       final after = parser.parseFile(written.path);
       diffs = jsonDiff(before.toJson(), after.toJson());
       status = diffs.isEmpty ? 'MATCH' : 'DIFFERS';
-    } catch (e, st) {
+    } on Object catch (e, st) {
+      // Every failure is recorded per workbook; the run itself goes on.
       status = 'FAILED: $e';
       stdout.writeln(st.toString().split('\n').take(4).join('\n'));
     }
     if (status != 'MATCH') failures++;
-    tsv.writeln('$name\t$status\t${diffs.length}\t${diffs.isEmpty ? '' : diffs.first}');
-    stdout.writeln('$name: $status${diffs.isEmpty ? '' : ' (${diffs.length})'}');
+    tsv.writeln(
+      '$name\t$status\t${diffs.length}\t${diffs.isEmpty ? '' : diffs.first}',
+    );
+    stdout.writeln(
+      '$name: $status${diffs.isEmpty ? '' : ' (${diffs.length})'}',
+    );
     for (final d in diffs.take(6)) {
       stdout.writeln('    $d');
     }
@@ -81,9 +94,11 @@ void main(List<String> args) {
       written.copySync(xlsx.path);
     }
   }
-  tsv.close();
-  stdout.writeln('${files.length} workbooks, $failures not round-tripping'
-      '${apply ? ', matching ones replaced in ${sourceDir.path}' : ''}.');
+  await tsv.close();
+  stdout.writeln(
+    '${files.length} workbooks, $failures not round-tripping'
+    '${apply ? ', matching ones replaced in ${sourceDir.path}' : ''}.',
+  );
   exit(failures == 0 ? 0 : 1);
 }
 
@@ -103,15 +118,21 @@ void _schedule(List<String> args) {
     sourceDir = Directory(repoPath('cicada_generator/lib/WHO/schedule'));
   }
   final mode = cdc ? 'cdc' : 'who';
-  final outDir = Directory(repoPath('cicada_generator/results/${mode}_schedule_roundtrip'))
-    ..createSync(recursive: true);
+  final outDir = Directory(
+    repoPath('cicada_generator/results/${mode}_schedule_roundtrip'),
+  )..createSync(recursive: true);
   final parser = ScheduleSheetParser();
-  final files = sourceDir
-      .listSync()
-      .whereType<File>()
-      .where((f) => f.path.endsWith('.xlsx') && (!cdc || f.path.contains('ScheduleSupportingData')))
-      .toList()
-    ..sort((a, b) => a.path.compareTo(b.path));
+  final files =
+      sourceDir
+          .listSync()
+          .whereType<File>()
+          .where(
+            (f) =>
+                f.path.endsWith('.xlsx') &&
+                (!cdc || f.path.contains('ScheduleSupportingData')),
+          )
+          .toList()
+        ..sort((a, b) => a.path.compareTo(b.path));
   var before = ScheduleSupportingData();
   for (final f in files) {
     before = parser.parseFile(f.path, before);
@@ -130,10 +151,17 @@ void _schedule(List<String> args) {
     after = parser.parseFile(path, after);
   }
   final diffs = jsonDiff(before.toJson(), after.toJson());
-  final tsv = File(repoPath('cicada_generator/results/${mode}_schedule_roundtrip.tsv'))
-    ..writeAsStringSync('workbooks\tstatus\tdifferences\tfirst\n'
-        '${files.length}\t${diffs.isEmpty ? 'MATCH' : 'DIFFERS'}\t${diffs.length}\t${diffs.isEmpty ? '' : diffs.first}\n');
-  stdout.writeln('${files.length} schedule workbooks: ${diffs.isEmpty ? 'MATCH' : 'DIFFERS (${diffs.length})'}');
+  final tsv = File(
+    repoPath('cicada_generator/results/${mode}_schedule_roundtrip.tsv'),
+  )..writeAsStringSync(
+    'workbooks\tstatus\tdifferences\tfirst\n'
+    '${files.length}\t${diffs.isEmpty ? 'MATCH' : 'DIFFERS'}\t'
+    '${diffs.length}\t${diffs.isEmpty ? '' : diffs.first}\n',
+  );
+  stdout.writeln(
+    '${files.length} schedule workbooks: '
+    '${diffs.isEmpty ? 'MATCH' : 'DIFFERS (${diffs.length})'}',
+  );
   for (final d in diffs.take(12)) {
     stdout.writeln('    $d');
   }

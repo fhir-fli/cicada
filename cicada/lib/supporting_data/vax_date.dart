@@ -3,43 +3,47 @@ import 'package:fhir_r4/fhir_r4.dart';
 class VaxDate extends DateTime {
   VaxDate(super.year, super.month, super.day);
 
+  // JSON constructor with format validation and error handling
+  VaxDate.fromJson(String date)
+    : this.fromDateTime(
+        DateTime.tryParse(date) ?? VaxDate.fromYYYYMMDD(date),
+      );
+
+  // Creating a VaxDate from a nullable string with default min or max dates
+  VaxDate.fromNullableString(String? date, [bool useMax = false])
+    : this.fromString(date ?? (useMax ? '2999-12-31' : '1900-01-01'), useMax);
+
   // Now and boundary dates constructors
   VaxDate.now() : super.now();
   VaxDate.min() : super(1900, 1, 1);
   VaxDate.max() : super(2999, 12, 31);
 
   VaxDate.fromDateTime(DateTime dateTime)
-      : super(dateTime.year, dateTime.month, dateTime.day);
+    : super(dateTime.year, dateTime.month, dateTime.day);
 
   VaxDate.fromNullableDateTime(DateTime? dateTime, bool useMax)
-      : super(
-            dateTime?.year ?? (useMax ? 2999 : 1900),
-            dateTime?.month ?? (useMax ? 12 : 1),
-            dateTime?.day ?? (useMax ? 31 : 1));
+    : super(
+        dateTime?.year ?? (useMax ? 2999 : 1900),
+        dateTime?.month ?? (useMax ? 12 : 1),
+        dateTime?.day ?? (useMax ? 31 : 1),
+      );
 
-  // Constructors for creating VaxDate with maximum or minimum values based on a string input
+  // Constructors for creating VaxDate with maximum or minimum values based on
+  // a string input
   VaxDate.fromString(String date, [bool useMax = false])
-      : this._fromParsed(_parseDate(date, useMax));
+    : this._fromParsed(VaxDate._parse(date, useMax));
 
   VaxDate._fromParsed(VaxDate parsed)
-      : super(parsed.year, parsed.month, parsed.day);
+    : super(parsed.year, parsed.month, parsed.day);
 
-  static VaxDate _parseDate(String date, bool useMax) {
+  factory VaxDate._parse(String date, bool useMax) {
     final dt = DateTime.tryParse(date);
     if (dt != null) return VaxDate(dt.year, dt.month, dt.day);
-    return fromYYYYMMDD(date, useMax);
+    return VaxDate.fromYYYYMMDD(date, useMax);
   }
 
-  // JSON constructor with format validation and error handling
-  VaxDate.fromJson(String date)
-      : this.fromDateTime(DateTime.tryParse(date) ?? fromYYYYMMDD(date));
-
-  // Creating a VaxDate from a nullable string with default min or max dates
-  VaxDate.fromNullableString(String? date, [bool useMax = false])
-      : this.fromString(date ?? (useMax ? '2999-12-31' : '1900-01-01'), useMax);
-
-  static VaxDate fromYYYYMMDD(String date, [bool useMax = false]) {
-    List<String> parts = date.split('/');
+  factory VaxDate.fromYYYYMMDD(String date, [bool useMax = false]) {
+    var parts = date.split('/');
     if (parts.length != 3) {
       parts = date.split('-');
     }
@@ -47,23 +51,23 @@ class VaxDate extends DateTime {
       // Detect MM/DD/YYYY vs YYYY/MM/DD by first part length
       if (parts[0].length <= 2) {
         // MM/DD/YYYY format
-        final int month = int.tryParse(parts[0]) ?? (useMax ? 12 : 1);
-        final int day = int.tryParse(parts[1]) ?? (useMax ? 31 : 1);
-        final int year = int.tryParse(parts[2]) ?? (useMax ? 2999 : 1900);
+        final month = int.tryParse(parts[0]) ?? (useMax ? 12 : 1);
+        final day = int.tryParse(parts[1]) ?? (useMax ? 31 : 1);
+        final year = int.tryParse(parts[2]) ?? (useMax ? 2999 : 1900);
         return VaxDate(year, month, day);
       } else {
         // YYYY/MM/DD format
-        final int year = int.tryParse(parts[0]) ?? (useMax ? 2999 : 1900);
-        final int month = int.tryParse(parts[1]) ?? (useMax ? 12 : 1);
-        final int day = int.tryParse(parts[2]) ?? (useMax ? 31 : 1);
+        final year = int.tryParse(parts[0]) ?? (useMax ? 2999 : 1900);
+        final month = int.tryParse(parts[1]) ?? (useMax ? 12 : 1);
+        final day = int.tryParse(parts[2]) ?? (useMax ? 31 : 1);
         return VaxDate(year, month, day);
       }
     } else if (parts.length == 2) {
-      final int year = int.tryParse(parts[0]) ?? (useMax ? 2999 : 1900);
-      final int month = int.tryParse(parts[1]) ?? (useMax ? 12 : 1);
+      final year = int.tryParse(parts[0]) ?? (useMax ? 2999 : 1900);
+      final month = int.tryParse(parts[1]) ?? (useMax ? 12 : 1);
       return VaxDate(year, month, useMax ? 31 : 1);
     } else if (parts.length == 1 && parts[0].isNotEmpty) {
-      final int year = int.tryParse(parts[0]) ?? (useMax ? 2999 : 1900);
+      final year = int.tryParse(parts[0]) ?? (useMax ? 2999 : 1900);
       return VaxDate(year, useMax ? 12 : 1, useMax ? 31 : 1);
     } else {
       return useMax ? VaxDate.max() : VaxDate.min();
@@ -91,26 +95,28 @@ class VaxDate extends DateTime {
 
   /// Parse a CDSi date offset string into (years, months, days) components.
   static ({int years, int months, int days}) _parseOffset(String description) {
-    int years = 0, months = 0, days = 0;
-    int sign = 1;
-    final List<String> parts = description.split(' ');
+    var years = 0;
+    var months = 0;
+    var days = 0;
+    var sign = 1;
+    final parts = description.split(' ');
 
-    for (int i = 0; i < parts.length; i++) {
+    for (var i = 0; i < parts.length; i++) {
       if (parts[i] == '-' || parts[i] == '+') {
         sign = (parts[i] == '-') ? -1 : 1;
         continue;
       }
 
       if (i < parts.length - 1 && int.tryParse(parts[i]) != null) {
-        final int value = int.parse(parts[i]) * sign;
-        final String unit = parts[i + 1].toLowerCase();
+        final value = int.parse(parts[i]) * sign;
+        final unit = parts[i + 1].toLowerCase();
 
         if (unit.contains('year')) {
           years += value;
         } else if (unit.contains('month')) {
           months += value;
         } else if (unit.contains('day') || unit.contains('week')) {
-          final int multiplier = unit.contains('week') ? 7 : 1;
+          final multiplier = unit.contains('week') ? 7 : 1;
           days += value * multiplier;
         }
 
@@ -127,15 +133,14 @@ class VaxDate extends DateTime {
   /// 3. Add weeks/days (CALCDT-3)
   VaxDate _applyOffset(int years, int months, int days) {
     // Step 1: add years and months (use day=1 to let Dart normalize month)
-    final DateTime target = DateTime(year + years, month + months, 1);
-    final int daysInTargetMonth =
-        DateTime(target.year, target.month + 1, 0).day;
+    final target = DateTime(year + years, month + months);
+    final daysInTargetMonth = DateTime(target.year, target.month + 1, 0).day;
 
     // Step 2: CALCDT-5 — if the original day exceeds the target month's
     // length, the date doesn't exist; move to first day of next month
     DateTime newDate;
     if (day > daysInTargetMonth) {
-      newDate = DateTime(target.year, target.month + 1, 1);
+      newDate = DateTime(target.year, target.month + 1);
     } else {
       newDate = DateTime(target.year, target.month, day);
     }
@@ -174,7 +179,6 @@ class VaxDate extends DateTime {
 }
 
 // Utility functions for finding the latest and earliest dates in a list
-VaxDate latestOf(List<VaxDate> dates) =>
-    dates.reduce((VaxDate a, VaxDate b) => a > b ? a : b);
+VaxDate latestOf(List<VaxDate> dates) => dates.reduce((a, b) => a > b ? a : b);
 VaxDate earliestOf(List<VaxDate> dates) =>
-    dates.reduce((VaxDate a, VaxDate b) => a < b ? a : b);
+    dates.reduce((a, b) => a < b ? a : b);

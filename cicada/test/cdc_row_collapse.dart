@@ -27,15 +27,13 @@ import 'package:cicada/cicada.dart';
 VaccineGroupForecast? collapseForComparison(List<VaccineGroupForecast>? all) {
   if (all == null || all.isEmpty) return null;
   if (all.length == 1) return all.first;
-  final VaccineGroupForecast? risk =
-      all.where((VaccineGroupForecast f) => f.isRiskForecast).firstOrNull;
-  final VaccineGroupForecast? standard =
-      all.where((VaccineGroupForecast f) => !f.isRiskForecast).firstOrNull;
+  final risk = all.where((f) => f.isRiskForecast).firstOrNull;
+  final standard = all.where((f) => !f.isRiskForecast).firstOrNull;
   if (risk == null) return standard;
   if (standard == null) return risk;
 
   // A single-antigen vaccine group: CDC's row is the risk one.
-  final Set<String> groupAntigens = <String>{
+  final groupAntigens = <String>{
     ...risk.antigenNames,
     ...standard.antigenNames,
   };
@@ -44,7 +42,8 @@ VaccineGroupForecast? collapseForComparison(List<VaccineGroupForecast>? all) {
   // A multi-antigen group: the risk row, unless the standard pathway still
   // owes a dose for one of the antigens that carry the risk series.
   if (risk.antigensNeedingDose.isNotEmpty) return risk;
-  final bool standardOwesARiskAntigen = risk.antigenNames
-      .any((String a) => standard.antigensNeedingDose.contains(a));
+  final standardOwesARiskAntigen = risk.antigenNames.any(
+    standard.antigensNeedingDose.contains,
+  );
   return standardOwesARiskAntigen ? standard : risk;
 }

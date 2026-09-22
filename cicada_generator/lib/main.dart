@@ -1,9 +1,10 @@
 import 'dart:convert';
 import 'dart:io';
+
 import 'package:cicada/cicada.dart';
 import 'package:cicada_generator/antigen_sheet_parser.dart';
-import 'package:cicada_generator/schedule_sheet_parser.dart';
 import 'package:cicada_generator/repo_root.dart';
+import 'package:cicada_generator/schedule_sheet_parser.dart';
 
 void main(List<String> args) {
   final cdcOnly = args.contains('--cdc');
@@ -18,6 +19,24 @@ void main(List<String> args) {
     _generateCdc();
     _generateWho();
   }
+  _formatGenerated();
+}
+
+/// The emitted files must pass the package's own lint gate
+/// (very_good_analysis) with no ignore_for_file header, so the data is
+/// written as Dart literals by [dartLiteral] and formatted here. Added
+/// 2026-09-22 when the gate first ran on cicada: the old JSON-as-Dart
+/// output carried 34,882 lint hits.
+void _formatGenerated() {
+  final result = Process.runSync(
+    'dart',
+    ['format', repoPath('cicada/lib/generated_files')],
+  );
+  stdout.write(result.stdout);
+  stderr.write(result.stderr);
+  if (result.exitCode != 0) {
+    throw StateError('dart format failed with exit ${result.exitCode}');
+  }
 }
 
 // =============================================================================
@@ -28,7 +47,7 @@ void _generateCdc() {
   // 1) Auto-detect source directory
   final sourceDir = Directory(_findVersionSubdir('Excel'));
   if (!sourceDir.existsSync()) {
-    print("Directory not found: ${sourceDir.path}");
+    stdout.writeln('Directory not found: ${sourceDir.path}');
     return;
   }
 
@@ -46,14 +65,14 @@ void _generateCdc() {
   final scheduleParser = ScheduleSheetParser();
 
   // In case you want to collect them in memory:
-  final List<AntigenSupportingData> allAntigenData = [];
+  final allAntigenData = <AntigenSupportingData>[];
   var scheduleData = ScheduleSupportingData();
 
   // 3) Iterate over files
   for (final fileEntity in sourceDir.listSync()) {
     if (fileEntity is File && fileEntity.path.endsWith('.xlsx')) {
       final filePath = fileEntity.path;
-      print('Processing file: $filePath');
+      stdout.writeln('Processing file: $filePath');
 
       try {
         if (filePath.contains('AntigenSupportingData')) {
@@ -65,15 +84,18 @@ void _generateCdc() {
           // Write JSON
           final jsonPath =
               '${outputDir.path}/${antigenData.targetDisease}.json';
-          File(jsonPath)
-              .writeAsStringSync(jsonPrettyPrint(antigenData.toJson()));
-          print('Wrote $jsonPath');
+          File(
+            jsonPath,
+          ).writeAsStringSync(jsonPrettyPrint(antigenData.toJson()));
+          stdout.writeln('Wrote $jsonPath');
         } else if (filePath.contains('ScheduleSupportingData')) {
           // Parse as schedule
           scheduleData = scheduleParser.parseFile(filePath, scheduleData);
         } else {
           // Possibly a test-cases file or something else
-          print('Unrecognized file (not Antigen nor Schedule): $filePath');
+          stdout.writeln(
+            'Unrecognized file (not Antigen nor Schedule): $filePath',
+          );
         }
       } catch (e) {
         // No fallback. Until 2026-09-06 a parse failure fell back to CDC's
@@ -93,25 +115,28 @@ void _generateCdc() {
   scheduleData = _mergeCrosswalk(scheduleData);
 
   // Correct CDC's own typos before anything downstream reads them.
-  final Map<String, dynamic> scheduleJson =
-      _correctCdcCodes(scheduleData.toJson());
+  final scheduleJson = _correctCdcCodes(
+    scheduleData.toJson(),
+  );
 
   // Write JSON
   final jsonPath = '${outputDir.path}/schedule_supporting_data.json';
   File(jsonPath).writeAsStringSync(jsonPrettyPrint(scheduleJson));
 
+  final scheduleWriter = DartLiteralWriter();
+  final scheduleBody = scheduleWriter.literal(scheduleJson);
   final scheduleSupportingString = '''
-import 'package:cicada/cicada.dart';
+${scheduleWriter.header}import 'package:cicada/cicada.dart';
 
 final scheduleSupportingData = ScheduleSupportingData.fromJson(
-${jsonPrettyPrint(scheduleJson)});
+$scheduleBody);
 ''';
 
   File(
     'cicada/lib/generated_files/schedule_supporting_data.dart',
   ).writeAsStringSync(scheduleSupportingString);
 
-  print('Wrote $jsonPath');
+  stdout.writeln('Wrote $jsonPath');
 
   // Only the antigen JSON becomes a Dart file. The directory also holds the
   // FML map written by generate_observation_map_entries.dart; wrapping that
@@ -120,7 +145,8 @@ ${jsonPrettyPrint(scheduleJson)});
     if (file is File &&
         file.path.endsWith('.json') &&
         !file.path.contains('schedule')) {
-      final fileString = file.readAsStringSync();
+      final fileJson =
+          json.decode(file.readAsStringSync()) as Map<String, dynamic>;
       final fileName = file.path
           .split('/')
           .last
@@ -129,22 +155,23 @@ ${jsonPrettyPrint(scheduleJson)});
           .replaceAll(' ', '_')
           .replaceAll('-', '_');
       final className = snakeCaseToCamelCase(fileName);
+      final writer = DartLiteralWriter();
+      final body = writer.literal(fileJson);
       final dartString = '''
-// ignore_for_file: prefer_single_quotes, always_specify_types
-
-import '../cicada.dart';
+${writer.header}import 'package:cicada/cicada.dart';
 
 final AntigenSupportingData $className = AntigenSupportingData.fromJson(
-$fileString);
+$body);
 ''';
       File(
         'cicada/lib/generated_files/$fileName.dart',
       ).writeAsStringSync(dartString);
-      print('Generated file: ${file.path}');
+      stdout.writeln('Generated file: ${file.path}');
     }
   }
 
-  final antigenOutputString = StringBuffer();
+  final antigenOutputString =
+      StringBuffer()..writeln("import 'package:cicada/cicada.dart';");
   final fileNames = <String>[];
   for (final agData in allAntigenData) {
     fileNames.add(
@@ -154,16 +181,23 @@ $fileString);
           .replaceAll('-', '_'),
     );
   }
-  for (final fileName in fileNames) {
-    antigenOutputString.writeln("import '$fileName.dart';");
+  for (final fileName in fileNames.toList()..sort()) {
+    antigenOutputString.writeln(
+      "import 'package:cicada/generated_files/$fileName.dart';",
+    );
   }
-  antigenOutputString.writeln('\n\nfinal antigenSupportingData = [');
-  final classNames = fileNames.map((e) => snakeCaseToCamelCase(e)).toList();
+  antigenOutputString.writeln(
+    '\nfinal List<AntigenSupportingData> antigenSupportingData = [',
+  );
+  final classNames = fileNames.map(snakeCaseToCamelCase).toList();
   for (final className in classNames) {
     antigenOutputString.writeln('  $className,');
   }
-  antigenOutputString.writeln('];\n');
-  antigenOutputString.writeln('final antigenSupportingDataMap = {');
+  antigenOutputString
+    ..writeln('];\n')
+    ..writeln(
+      'final Map<String, AntigenSupportingData> antigenSupportingDataMap = {',
+    );
   for (final agData in allAntigenData) {
     antigenOutputString.write("  '${agData.targetDisease}': ");
     final className = snakeCaseToCamelCase(
@@ -189,13 +223,14 @@ void _generateWho() {
   final scheduleDir = Directory(repoPath('cicada_generator/lib/WHO/schedule'));
 
   if (!antigenDir.existsSync()) {
-    print('WHO antigen directory not found: ${antigenDir.path}');
+    stdout.writeln('WHO antigen directory not found: ${antigenDir.path}');
     return;
   }
 
   // Create output directories
-  final outputJsonDir =
-      Directory(repoPath('cicada_generator/lib/generated_files/who'));
+  final outputJsonDir = Directory(
+    repoPath('cicada_generator/lib/generated_files/who'),
+  );
   if (outputJsonDir.existsSync()) {
     for (final f in outputJsonDir.listSync()) {
       if (f is File && f.path.endsWith('.json')) f.deleteSync();
@@ -212,42 +247,45 @@ void _generateWho() {
   final antigenParser = AntigenSheetParser();
   final scheduleParser = ScheduleSheetParser();
   // Use a map to deduplicate by targetDisease (xlsx takes precedence over JSON)
-  final Map<String, AntigenSupportingData> antigenByDisease = {};
+  final antigenByDisease = <String, AntigenSupportingData>{};
   var scheduleData = ScheduleSupportingData();
 
   // ---------- Process antigen files ----------
   // Process json first, then xlsx (so xlsx overwrites json for same disease)
-  final files = antigenDir.listSync().whereType<File>().toList()
-    ..sort((a, b) {
-      // json before xlsx so xlsx takes precedence
-      final aIsXlsx = a.path.endsWith('.xlsx') ? 1 : 0;
-      final bIsXlsx = b.path.endsWith('.xlsx') ? 1 : 0;
-      return aIsXlsx.compareTo(bIsXlsx);
-    });
+  final files =
+      antigenDir.listSync().whereType<File>().toList()..sort((a, b) {
+        // json before xlsx so xlsx takes precedence
+        final aIsXlsx = a.path.endsWith('.xlsx') ? 1 : 0;
+        final bIsXlsx = b.path.endsWith('.xlsx') ? 1 : 0;
+        return aIsXlsx.compareTo(bIsXlsx);
+      });
 
   for (final fileEntity in files) {
     final filePath = fileEntity.path;
 
     if (filePath.endsWith('.xlsx')) {
-      print('Processing WHO antigen Excel: $filePath');
+      stdout.writeln('Processing WHO antigen Excel: $filePath');
       try {
         final antigenData = antigenParser.parseFile(filePath);
         final disease = antigenData.targetDisease;
         if (disease != null) {
           antigenByDisease[disease] = antigenData;
           final jsonPath = '${outputJsonDir.path}/$disease.json';
-          File(jsonPath)
-              .writeAsStringSync(jsonPrettyPrint(antigenData.toJson()));
-          print('Wrote $jsonPath');
+          File(
+            jsonPath,
+          ).writeAsStringSync(jsonPrettyPrint(antigenData.toJson()));
+          stdout.writeln('Wrote $jsonPath');
         }
-      } catch (e) {
-        print('ERROR processing $filePath: $e');
+      } on Object catch (e) {
+        stderr.writeln('ERROR processing $filePath: $e');
+        exitCode = 1;
       }
     } else if (filePath.endsWith('.json')) {
-      print('Processing WHO antigen JSON: $filePath');
+      stdout.writeln('Processing WHO antigen JSON: $filePath');
       try {
-        final jsonData = json.decode(File(filePath).readAsStringSync())
-            as Map<String, dynamic>;
+        final jsonData =
+            json.decode(File(filePath).readAsStringSync())
+                as Map<String, dynamic>;
         var antigenData = AntigenSupportingData.fromJson(jsonData);
         if (antigenData.targetDisease == null &&
             antigenData.series != null &&
@@ -261,12 +299,14 @@ void _generateWho() {
         if (disease != null) {
           antigenByDisease[disease] = antigenData;
           final jsonPath = '${outputJsonDir.path}/$disease.json';
-          File(jsonPath)
-              .writeAsStringSync(jsonPrettyPrint(antigenData.toJson()));
-          print('Wrote $jsonPath');
+          File(
+            jsonPath,
+          ).writeAsStringSync(jsonPrettyPrint(antigenData.toJson()));
+          stdout.writeln('Wrote $jsonPath');
         }
-      } catch (e) {
-        print('ERROR processing $filePath: $e');
+      } on Object catch (e) {
+        stderr.writeln('ERROR processing $filePath: $e');
+        exitCode = 1;
       }
     }
   }
@@ -276,40 +316,44 @@ void _generateWho() {
   // ---------- Process schedule files ----------
   if (scheduleDir.existsSync()) {
     // Sort: json first, then xlsx (so xlsx overwrites json)
-    final schedFiles = scheduleDir.listSync().whereType<File>().toList()
-      ..sort((a, b) {
-        final aIsXlsx = a.path.endsWith('.xlsx') ? 1 : 0;
-        final bIsXlsx = b.path.endsWith('.xlsx') ? 1 : 0;
-        return aIsXlsx.compareTo(bIsXlsx);
-      });
+    final schedFiles =
+        scheduleDir.listSync().whereType<File>().toList()..sort((a, b) {
+          final aIsXlsx = a.path.endsWith('.xlsx') ? 1 : 0;
+          final bIsXlsx = b.path.endsWith('.xlsx') ? 1 : 0;
+          return aIsXlsx.compareTo(bIsXlsx);
+        });
     for (final fileEntity in schedFiles) {
       final filePath = fileEntity.path;
 
       if (filePath.endsWith('.xlsx')) {
-        print('Processing WHO schedule Excel: $filePath');
+        stdout.writeln('Processing WHO schedule Excel: $filePath');
         try {
           scheduleData = scheduleParser.parseFile(filePath, scheduleData);
-        } catch (e) {
-          print('ERROR processing $filePath: $e');
+        } on Object catch (e) {
+          stderr.writeln('ERROR processing $filePath: $e');
+          exitCode = 1;
         }
       } else if (filePath.endsWith('.json')) {
-        print('Processing WHO schedule JSON: $filePath');
+        stdout.writeln('Processing WHO schedule JSON: $filePath');
         try {
-          final jsonData = json.decode(File(filePath).readAsStringSync())
-              as Map<String, dynamic>;
+          final jsonData =
+              json.decode(File(filePath).readAsStringSync())
+                  as Map<String, dynamic>;
           final partial = ScheduleSupportingData.fromJson(jsonData);
           scheduleData = ScheduleSupportingData(
             liveVirusConflicts:
                 partial.liveVirusConflicts ?? scheduleData.liveVirusConflicts,
             vaccineGroups: partial.vaccineGroups ?? scheduleData.vaccineGroups,
-            vaccineGroupToAntigenMap: partial.vaccineGroupToAntigenMap ??
+            vaccineGroupToAntigenMap:
+                partial.vaccineGroupToAntigenMap ??
                 scheduleData.vaccineGroupToAntigenMap,
             cvxToAntigenMap:
                 partial.cvxToAntigenMap ?? scheduleData.cvxToAntigenMap,
             observations: partial.observations ?? scheduleData.observations,
           );
-        } catch (e) {
-          print('ERROR processing $filePath: $e');
+        } on Object catch (e) {
+          stderr.writeln('ERROR processing $filePath: $e');
+          exitCode = 1;
         }
       }
     }
@@ -318,28 +362,31 @@ void _generateWho() {
   // ---------- Write schedule Dart ----------
   final scheduleJsonPath =
       '${outputJsonDir.path}/schedule_supporting_data.json';
-  File(scheduleJsonPath)
-      .writeAsStringSync(jsonPrettyPrint(scheduleData.toJson()));
+  File(
+    scheduleJsonPath,
+  ).writeAsStringSync(jsonPrettyPrint(scheduleData.toJson()));
 
+  final scheduleWriter = DartLiteralWriter();
+  final scheduleBody = scheduleWriter.literal(scheduleData.toJson());
   final scheduleDartString = '''
-// ignore_for_file: prefer_single_quotes, always_specify_types
-
-import '../../cicada.dart';
+${scheduleWriter.header}import 'package:cicada/cicada.dart';
 
 final whoScheduleSupportingData = ScheduleSupportingData.fromJson(
-${jsonPrettyPrint(scheduleData.toJson())});
+$scheduleBody);
 ''';
 
-  File('${dartOutputDir.path}/who_schedule_supporting_data.dart')
-      .writeAsStringSync(scheduleDartString);
-  print('Wrote WHO schedule supporting data');
+  File(
+    '${dartOutputDir.path}/who_schedule_supporting_data.dart',
+  ).writeAsStringSync(scheduleDartString);
+  stdout.writeln('Wrote WHO schedule supporting data');
 
   // ---------- Write antigen Dart files ----------
   for (final file in outputJsonDir.listSync()) {
     if (file is File &&
         file.path.endsWith('.json') &&
         !file.path.contains('schedule')) {
-      final fileString = file.readAsStringSync();
+      final fileJson =
+          json.decode(file.readAsStringSync()) as Map<String, dynamic>;
       final fileName = file.path
           .split('/')
           .last
@@ -347,24 +394,27 @@ ${jsonPrettyPrint(scheduleData.toJson())});
           .toLowerCase()
           .replaceAll(' ', '_')
           .replaceAll('-', '_');
+      final camel = snakeCaseToCamelCase(fileName);
       final className =
-          'who${snakeCaseToCamelCase(fileName).replaceRange(0, 1, snakeCaseToCamelCase(fileName)[0].toUpperCase())}';
+          'who${camel.replaceRange(0, 1, camel[0].toUpperCase())}';
+      final writer = DartLiteralWriter();
+      final body = writer.literal(fileJson);
       final dartString = '''
-// ignore_for_file: prefer_single_quotes, always_specify_types
-
-import '../../cicada.dart';
+${writer.header}import 'package:cicada/cicada.dart';
 
 final AntigenSupportingData $className = AntigenSupportingData.fromJson(
-$fileString);
+$body);
 ''';
-      File('${dartOutputDir.path}/$fileName.dart')
-          .writeAsStringSync(dartString);
-      print('Generated WHO file: $fileName.dart');
+      File(
+        '${dartOutputDir.path}/$fileName.dart',
+      ).writeAsStringSync(dartString);
+      stdout.writeln('Generated WHO file: $fileName.dart');
     }
   }
 
   // ---------- Write barrel file ----------
-  final antigenOutputString = StringBuffer();
+  final antigenOutputString =
+      StringBuffer()..writeln("import 'package:cicada/cicada.dart';");
   final fileNames = <String>[];
   for (final agData in allAntigenData) {
     fileNames.add(
@@ -374,36 +424,47 @@ $fileString);
           .replaceAll('-', '_'),
     );
   }
-  for (final fileName in fileNames) {
-    antigenOutputString.writeln("import '$fileName.dart';");
+  for (final fileName in fileNames.toList()..sort()) {
+    antigenOutputString.writeln(
+      "import 'package:cicada/generated_files/who/$fileName.dart';",
+    );
   }
   // Schedule is imported separately; not needed in the barrel file.
 
   // List
-  antigenOutputString.writeln('\n\nfinal whoAntigenSupportingData = [');
-  final classNames = fileNames.map((e) {
-    final camel = snakeCaseToCamelCase(e);
-    return 'who${camel.replaceRange(0, 1, camel[0].toUpperCase())}';
-  }).toList();
+  antigenOutputString.writeln(
+    '\nfinal List<AntigenSupportingData> whoAntigenSupportingData = [',
+  );
+  final classNames =
+      fileNames.map((e) {
+        final camel = snakeCaseToCamelCase(e);
+        return 'who${camel.replaceRange(0, 1, camel[0].toUpperCase())}';
+      }).toList();
   for (final className in classNames) {
     antigenOutputString.writeln('  $className,');
   }
-  antigenOutputString.writeln('];\n');
-
-  // Map
-  antigenOutputString.writeln('final whoAntigenSupportingDataMap = {');
+  antigenOutputString
+    ..writeln('];\n')
+    // Map
+    ..writeln(
+      'final Map<String, AntigenSupportingData> '
+      'whoAntigenSupportingDataMap = {',
+    );
   for (var i = 0; i < allAntigenData.length; i++) {
-    antigenOutputString
-        .writeln("  '${allAntigenData[i].targetDisease}': ${classNames[i]},");
+    antigenOutputString.writeln(
+      "  '${allAntigenData[i].targetDisease}': ${classNames[i]},",
+    );
   }
   antigenOutputString.writeln('};\n');
 
-  File('${dartOutputDir.path}/who_antigen_supporting_data.dart')
-      .writeAsStringSync(antigenOutputString.toString());
+  File(
+    '${dartOutputDir.path}/who_antigen_supporting_data.dart',
+  ).writeAsStringSync(antigenOutputString.toString());
 
-  print('\nWHO generation complete:');
-  print('  ${allAntigenData.length} antigens');
-  print('  Output: ${dartOutputDir.path}/');
+  stdout
+    ..writeln('\nWHO generation complete:')
+    ..writeln('  ${allAntigenData.length} antigens')
+    ..writeln('  Output: ${dartOutputDir.path}/');
 }
 
 // =============================================================================
@@ -413,6 +474,107 @@ $fileString);
 const jsonEncoder = JsonEncoder.withIndent('    ');
 
 String jsonPrettyPrint(Map<String, dynamic> map) => jsonEncoder.convert(map);
+
+/// Renders decoded JSON as a Dart literal: single-quoted strings (double
+/// where the text holds an apostrophe), one entry per line, a trailing
+/// comma on every entry so `dart format` keeps the layout. Maps keep their
+/// key order; numbers, booleans and null print as Dart literals. Anything
+/// else is a defect in the source data.
+///
+/// Strings that would pass 80 columns are split into adjacent literals.
+/// Inside a list that trips `no_adjacent_strings_in_list` (whose purpose is
+/// to catch a missing comma, which a serializer cannot produce), so a file
+/// that needed such a split gets [header] with a scoped ignore_for_file.
+class DartLiteralWriter {
+  bool _splitInList = false;
+
+  String get header =>
+      _splitInList
+          ? '// ignore_for_file: no_adjacent_strings_in_list\n'
+              '// Generated data: long strings are split into adjacent literals so\n'
+              '// no line passes 80 columns; a serializer cannot drop a comma.\n\n'
+          : '';
+
+  String literal(Object? value, [int indent = 0, bool inList = false]) {
+    final pad = '  ' * indent;
+    final inner = '  ' * (indent + 1);
+    if (value == null) return 'null';
+    if (value is bool || value is num) return '$value';
+    if (value is String) {
+      final out = _string(value, indent);
+      if (inList && out.contains("' '") || inList && out.contains('" "')) {
+        _splitInList = true;
+      }
+      return out;
+    }
+    if (value is Map) {
+      if (value.isEmpty) return '<String, dynamic>{}';
+      final sb = StringBuffer('{\n');
+      for (final entry in value.entries) {
+        sb.writeln(
+          '$inner${_string(entry.key as String, indent + 1)}: '
+          '${literal(entry.value, indent + 1)},',
+        );
+      }
+      sb.write('$pad}');
+      return sb.toString();
+    }
+    if (value is List) {
+      if (value.isEmpty) return '<dynamic>[]';
+      final sb = StringBuffer('[\n');
+      for (final item in value) {
+        sb.writeln('$inner${literal(item, indent + 1, true)},');
+      }
+      sb.write('$pad]');
+      return sb.toString();
+    }
+    throw ArgumentError('Cannot render ${value.runtimeType} as a Dart literal');
+  }
+
+  /// A string literal, split into adjacent literals at spaces when it would
+  /// not fit the 80-column lint (`lines_longer_than_80_chars`); `dart format`
+  /// puts each continuation on its own line, indented four more, and the
+  /// compiler joins them. Lines holding a URI are exempt from the lint.
+  static String _string(String s, int indent) {
+    final escaped = s
+        .replaceAll(r'\', r'\\')
+        .replaceAll(r'$', r'\$')
+        .replaceAll('\n', r'\n')
+        .replaceAll('\r', r'\r')
+        .replaceAll('\t', r'\t');
+    // Continuation lines sit 4 columns deeper than the first piece, so size
+    // every piece for the deeper position: 80 minus indent, 4, quotes, ", ".
+    final room = 80 - 2 * (indent + 1) - 4 - 2 - 2;
+    if (escaped.length <= room) return _quote(escaped);
+    // Split after a space, or after ';' / ',' in the CDC's delimited code
+    // lists (e.g. vaccineTypes '01;09;20;…'), which carry no spaces.
+    final sep =
+        escaped.contains(' ')
+            ? ' '
+            : escaped.contains(';')
+            ? ';'
+            : ',';
+    if (!escaped.contains(sep)) return _quote(escaped);
+    final pieces = <String>[];
+    var rest = escaped;
+    while (rest.length > room) {
+      var cut = rest.lastIndexOf(sep, room - 1);
+      if (cut <= 0) cut = rest.indexOf(sep);
+      if (cut <= 0) break;
+      pieces.add(rest.substring(0, cut + 1));
+      rest = rest.substring(cut + 1);
+    }
+    pieces.add(rest);
+    return pieces.map(_quote).join(' ');
+  }
+
+  /// Single quotes, or double where the piece holds an apostrophe and no
+  /// double quote (`prefer_single_quotes` / `avoid_escaping_inner_quotes`).
+  static String _quote(String piece) {
+    if (piece.contains("'") && !piece.contains('"')) return '"$piece"';
+    return "'${piece.replaceAll("'", r"\'")}'";
+  }
+}
 
 String snakeCaseToCamelCase(String snakeCaseString) {
   final parts = snakeCaseString.split('_');
@@ -446,9 +608,10 @@ String snakeCaseToCamelCase(String snakeCaseString) {
 /// the observation coded values parsed from the CDC Excel.
 ScheduleSupportingData _mergeCrosswalk(ScheduleSupportingData data) {
   final crosswalkFile = File(
-      repoPath('cicada_generator/lib/crosswalk/observation_crosswalk.json'));
+    repoPath('cicada_generator/lib/crosswalk/observation_crosswalk.json'),
+  );
   if (!crosswalkFile.existsSync()) {
-    print('No crosswalk file found, skipping merge.');
+    stdout.writeln('No crosswalk file found, skipping merge.');
     return data;
   }
 
@@ -467,8 +630,9 @@ ScheduleSupportingData _mergeCrosswalk(ScheduleSupportingData data) {
       continue;
     }
 
-    final existingCoded =
-        List<CodedValue>.from(obs.codedValues?.codedValue ?? []);
+    final existingCoded = List<CodedValue>.from(
+      obs.codedValues?.codedValue ?? [],
+    );
 
     for (final entry in crosswalkEntry.entries) {
       final codeSystem = entry.key;
@@ -476,17 +640,21 @@ ScheduleSupportingData _mergeCrosswalk(ScheduleSupportingData data) {
       final codes = entry.value as List<dynamic>;
       for (final codeEntry in codes) {
         final codeMap = codeEntry as Map<String, dynamic>;
-        existingCoded.add(CodedValue(
-          code: codeMap['code'] as String?,
-          codeSystem: codeSystem,
-          text: codeMap['text'] as String?,
-        ));
+        existingCoded.add(
+          CodedValue(
+            code: codeMap['code'] as String?,
+            codeSystem: codeSystem,
+            text: codeMap['text'] as String?,
+          ),
+        );
       }
     }
 
-    updatedObs.add(obs.copyWith(
-      codedValues: CodedValues(codedValue: existingCoded),
-    ));
+    updatedObs.add(
+      obs.copyWith(
+        codedValues: CodedValues(codedValue: existingCoded),
+      ),
+    );
   }
 
   return ScheduleSupportingData(
@@ -508,19 +676,23 @@ class AntigenClass {
 /// Auto-detect the Version_* directory containing [subdir] (e.g. 'Excel').
 String _findVersionSubdir(String subdir) {
   final baseDir = Directory('cicada_generator/lib');
-  final matches = baseDir
-      .listSync()
-      .whereType<Directory>()
-      .where((d) =>
-          d.path.split('/').last.startsWith('Version_') &&
-          Directory('${d.path}/$subdir').existsSync())
-      .toList();
+  final matches =
+      baseDir
+          .listSync()
+          .whereType<Directory>()
+          .where(
+            (d) =>
+                d.path.split('/').last.startsWith('Version_') &&
+                Directory('${d.path}/$subdir').existsSync(),
+          )
+          .toList();
   if (matches.isEmpty) {
     throw StateError('No Version_* directory with $subdir/ found');
   }
   if (matches.length > 1) {
     throw StateError(
-        'Multiple Version_* directories with $subdir/ found: ${matches.map((d) => d.path).join(', ')}');
+      'Multiple Version_* directories with $subdir/ found: ${matches.map((d) => d.path).join(', ')}',
+    );
   }
   return '${matches.first.path}/$subdir';
 }
@@ -549,8 +721,8 @@ const List<String> _headerLabels = <String>[
 ];
 
 void _assertParsedNotHeaders(AntigenSupportingData data, String filePath) {
-  final String encoded = jsonPrettyPrint(data.toJson());
-  for (final String label in _headerLabels) {
+  final encoded = jsonPrettyPrint(data.toJson());
+  for (final label in _headerLabels) {
     if (encoded.contains('": "$label"')) {
       throw StateError(
         'Parsed "$label" as a VALUE from $filePath.\n'
@@ -561,7 +733,6 @@ void _assertParsedNotHeaders(AntigenSupportingData data, String filePath) {
     }
   }
 }
-
 
 /// Corrections to codes CDC publishes that exist in no SNOMED edition.
 ///
@@ -586,23 +757,27 @@ const Map<String, String> _cdcCodeCorrections = <String, String>{
 /// supporting data, working on the JSON because the model is immutable.
 Map<String, dynamic> _correctCdcCodes(Map<String, dynamic> json) {
   var corrected = 0;
-  final observations = (json['observations']
-      as Map<String, dynamic>?)?['observation'] as List<dynamic>?;
+  final observations =
+      (json['observations'] as Map<String, dynamic>?)?['observation']
+          as List<dynamic>?;
   for (final o in observations ?? <dynamic>[]) {
     final obs = o as Map<String, dynamic>;
-    final coded = (obs['codedValues'] as Map<String, dynamic>?)?['codedValue']
-        as List<dynamic>?;
+    final coded =
+        (obs['codedValues'] as Map<String, dynamic>?)?['codedValue']
+            as List<dynamic>?;
     for (final c in coded ?? <dynamic>[]) {
       final cv = c as Map<String, dynamic>;
-      final String? fixed = _cdcCodeCorrections[cv['code']];
+      final fixed = _cdcCodeCorrections[cv['code']];
       if (cv['codeSystem'] == 'SNOMED' && fixed != null) {
-        print('  correcting CDC code ${cv['code']} -> $fixed on '
-            'observation ${obs['observationCode']}');
+        stdout.writeln(
+          '  correcting CDC code ${cv['code']} -> $fixed on '
+          'observation ${obs['observationCode']}',
+        );
         cv['code'] = fixed;
         corrected++;
       }
     }
   }
-  print('Applied $corrected CDC code correction(s).');
+  stdout.writeln('Applied $corrected CDC code correction(s).');
   return json;
 }

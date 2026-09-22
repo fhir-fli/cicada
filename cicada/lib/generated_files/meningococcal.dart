@@ -1,2329 +1,2456 @@
-// ignore_for_file: prefer_single_quotes, always_specify_types
+// ignore_for_file: no_adjacent_strings_in_list
+// Generated data: long strings are split into adjacent literals so
+// no line passes 80 columns; a serializer cannot drop a comma.
 
-import '../cicada.dart';
+import 'package:cicada/cicada.dart';
 
 final AntigenSupportingData meningococcal = AntigenSupportingData.fromJson({
-  "targetDisease": "Meningococcal",
-  "vaccineGroup": "Meningococcal",
-  "contraindications": {
-    "vaccineGroup": {
-      "contraindication": [
+  'targetDisease': 'Meningococcal',
+  'vaccineGroup': 'Meningococcal',
+  'contraindications': {
+    'vaccineGroup': {
+      'contraindication': [
         {
-          "observationCode": "095",
-          "observationTitle":
-              "Severe allergic reaction after previous dose of Meningococcal",
-          "contraindicationText":
-              "Do not vaccinate if the patient has had a severe allergic reaction after a previous dose of Meningococcal vaccine."
+          'observationCode': '095',
+          'observationTitle':
+              'Severe allergic reaction after previous dose of '
+              'Meningococcal',
+          'contraindicationText':
+              'Do not vaccinate if the patient has had a severe allergic '
+              'reaction after a previous dose of Meningococcal vaccine.',
         },
         {
-          "observationCode": "080",
-          "observationTitle": "Adverse reaction to vaccine component",
-          "contraindicationText":
-              "Do not vaccinate if the patient has had an adverse reaction to a vaccine component."
-        }
-      ]
+          'observationCode': '080',
+          'observationTitle': 'Adverse reaction to vaccine component',
+          'contraindicationText':
+              'Do not vaccinate if the patient has had an adverse reaction '
+              'to a vaccine component.',
+        },
+      ],
     },
-    "vaccine": {
-      "contraindication": [
+    'vaccine': {
+      'contraindication': [
         {
-          "observationCode": "117",
-          "observationTitle": "Severe allergic reaction to diphtheria toxoid",
-          "contraindicationText":
-              "Do not vaccinate if the patient has had a severe allergic reaction to diphtheria toxoid.",
-          "contraindicatedVaccine": [
-            {"vaccineType": "Meningococcal, MCV4O", "cvx": "136"},
+          'observationCode': '117',
+          'observationTitle': 'Severe allergic reaction to diphtheria toxoid',
+          'contraindicationText':
+              'Do not vaccinate if the patient has had a severe allergic '
+              'reaction to diphtheria toxoid.',
+          'contraindicatedVaccine': [
             {
-              "vaccineType":
-                  "Meningococcal oligosaccharide (MenACWY), (MenB), PF",
-              "cvx": "328"
-            }
-          ]
-        },
-        {
-          "observationCode": "118",
-          "observationTitle": "Severe allergic reaction to tetanus toxoid",
-          "contraindicationText":
-              "Do not vaccinate if the patient has had a severe allergic reaction to tetanus toxoid.",
-          "contraindicatedVaccine": [
-            {
-              "vaccineType":
-                  "Meningococcal Polysaccharide A, C, Y, W-135 TT Conjugate",
-              "cvx": "203"
+              'vaccineType': 'Meningococcal, MCV4O',
+              'cvx': '136',
             },
             {
-              "vaccineType":
-                  "meningococcal polysaccharide (MenACWY-TT conjugate), (MenB), PF",
-              "cvx": "316"
-            }
-          ]
-        }
-      ]
-    }
+              'vaccineType':
+                  'Meningococcal oligosaccharide (MenACWY), (MenB), PF',
+              'cvx': '328',
+            },
+          ],
+        },
+        {
+          'observationCode': '118',
+          'observationTitle': 'Severe allergic reaction to tetanus toxoid',
+          'contraindicationText':
+              'Do not vaccinate if the patient has had a severe allergic '
+              'reaction to tetanus toxoid.',
+          'contraindicatedVaccine': [
+            {
+              'vaccineType':
+                  'Meningococcal Polysaccharide A, C, Y, W-135 TT Conjugate',
+              'cvx': '203',
+            },
+            {
+              'vaccineType':
+                  'meningococcal polysaccharide (MenACWY-TT conjugate), '
+                  '(MenB), PF',
+              'cvx': '316',
+            },
+          ],
+        },
+      ],
+    },
   },
-  "series": [
+  'series': [
     {
-      "seriesName": "Meningococcal ACWY 2-dose series",
-      "targetDisease": "Meningococcal",
-      "vaccineGroup": "Meningococcal",
-      "seriesAdminGuidance": [
-        "Penbraya (MenACWY/MenB - Pfizer) or Penmenvy (MenACWY/MenB - GSK) may be used when both MenACWY and MenB are indicated at the same visit.",
-        "Persons aged 19-21 years who have not received a dose after their 16th birthday can receive a single MenACWY dose as part of catch-up vaccination."
+      'seriesName': 'Meningococcal ACWY 2-dose series',
+      'targetDisease': 'Meningococcal',
+      'vaccineGroup': 'Meningococcal',
+      'seriesAdminGuidance': [
+        'Penbraya (MenACWY/MenB - Pfizer) or Penmenvy (MenACWY/MenB - '
+            'GSK) may be used when both MenACWY and MenB are indicated at '
+            'the same visit.',
+        'Persons aged 19-21 years who have not received a dose after '
+            'their 16th birthday can receive a single MenACWY dose as part '
+            'of catch-up vaccination.',
       ],
-      "seriesType": "Standard",
-      "equivalentSeriesGroups": "2",
-      "selectSeries": {
-        "defaultSeries": "Yes",
-        "productPath": "No",
-        "seriesGroupName": "Standard",
-        "seriesGroup": "1",
-        "seriesPriority": "A",
-        "seriesPreference": "1"
+      'seriesType': 'Standard',
+      'equivalentSeriesGroups': '2',
+      'selectSeries': {
+        'defaultSeries': 'Yes',
+        'productPath': 'No',
+        'seriesGroupName': 'Standard',
+        'seriesGroup': '1',
+        'seriesPriority': 'A',
+        'seriesPreference': '1',
       },
-      "seriesDose": [
+      'seriesDose': [
         {
-          "doseNumber": "Dose 1",
-          "age": [
+          'doseNumber': 'Dose 1',
+          'age': [
             {
-              "absMinAge": "10 years",
-              "minAge": "11 years",
-              "earliestRecAge": "11 years",
-              "latestRecAge": "13 years + 4 weeks",
-              "maxAge": "19 years"
-            }
+              'absMinAge': '10 years',
+              'minAge': '11 years',
+              'earliestRecAge': '11 years',
+              'latestRecAge': '13 years + 4 weeks',
+              'maxAge': '19 years',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "Meningococcal, MCV4O",
-              "cvx": "136",
-              "beginAge": "2 months",
-              "endAge": "56 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType': 'Meningococcal, MCV4O',
+              'cvx': '136',
+              'beginAge': '2 months',
+              'endAge': '56 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType":
-                  "Meningococcal Polysaccharide A, C, Y, W-135 TT Conjugate",
-              "cvx": "203",
-              "beginAge": "2 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
-            }
+              'vaccineType':
+                  'Meningococcal Polysaccharide A, C, Y, W-135 TT Conjugate',
+              'cvx': '203',
+              'beginAge': '2 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
+            },
           ],
-          "allowableVaccine": [
+          'allowableVaccine': [
             {
-              "vaccineType": "Meningococcal ACWY, unspecified",
-              "cvx": "108",
-              "beginAge": "2 months - 4 days"
+              'vaccineType': 'Meningococcal ACWY, unspecified',
+              'cvx': '108',
+              'beginAge': '2 months - 4 days',
             },
             {
-              "vaccineType": "Meningococcal, MCV4P",
-              "cvx": "114",
-              "beginAge": "9 months - 4 days"
+              'vaccineType': 'Meningococcal, MCV4P',
+              'cvx': '114',
+              'beginAge': '9 months - 4 days',
             },
             {
-              "vaccineType": "Meningococcal, MCV4O",
-              "cvx": "136",
-              "beginAge": "2 months - 4 days"
+              'vaccineType': 'Meningococcal, MCV4O',
+              'cvx': '136',
+              'beginAge': '2 months - 4 days',
             },
             {
-              "vaccineType": "MCV4, unspecified",
-              "cvx": "147",
-              "beginAge": "2 months - 4 days"
+              'vaccineType': 'MCV4, unspecified',
+              'cvx': '147',
+              'beginAge': '2 months - 4 days',
             },
             {
-              "vaccineType":
-                  "Meningococcal Polysaccharide A, C, Y, W-135 TT Conjugate",
-              "cvx": "203",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType':
+                  'Meningococcal Polysaccharide A, C, Y, W-135 TT Conjugate',
+              'cvx': '203',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType":
-                  "meningococcal polysaccharide (MenACWY-TT conjugate), (MenB), PF",
-              "cvx": "316",
-              "beginAge": "10 years - 4 days",
-              "endAge": "26 years"
+              'vaccineType':
+                  'meningococcal polysaccharide (MenACWY-TT conjugate), '
+                  '(MenB), PF',
+              'cvx': '316',
+              'beginAge': '10 years - 4 days',
+              'endAge': '26 years',
             },
             {
-              "vaccineType":
-                  "Meningococcal oligosaccharide (MenACWY), (MenB), PF",
-              "cvx": "328",
-              "beginAge": "10 years - 4 days",
-              "endAge": "26 years"
-            }
+              'vaccineType':
+                  'Meningococcal oligosaccharide (MenACWY), (MenB), PF',
+              'cvx': '328',
+              'beginAge': '10 years - 4 days',
+              'endAge': '26 years',
+            },
           ],
-          "conditionalSkip": [
+          'conditionalSkip': [
             {
-              "context": "Evaluation",
-              "setLogic": "n/a",
-              "set": [
+              'context': 'Evaluation',
+              'setLogic': 'n/a',
+              'set': [
                 {
-                  "setID": "1",
-                  "setDescription":
-                      "Target Dose is not needed if the current dose was administered on or after 16 years - 4 days of age",
-                  "condition": [
+                  'setID': '1',
+                  'setDescription':
+                      'Target Dose is not needed if the current dose was '
+                      'administered on or after 16 years - 4 days of age',
+                  'condition': [
                     {
-                      "conditionID": "1",
-                      "conditionType": "Age",
-                      "beginAge": "16 years - 4 days"
-                    }
-                  ]
-                }
-              ]
+                      'conditionID': '1',
+                      'conditionType': 'Age',
+                      'beginAge': '16 years - 4 days',
+                    },
+                  ],
+                },
+              ],
             },
             {
-              "context": "Forecast",
-              "setLogic": "n/a",
-              "set": [
+              'context': 'Forecast',
+              'setLogic': 'n/a',
+              'set': [
                 {
-                  "setID": "2",
-                  "setDescription":
-                      "Target Dose is not required for those who are 16 years of age or older",
-                  "condition": [
+                  'setID': '2',
+                  'setDescription':
+                      'Target Dose is not required for those who are 16 '
+                      'years of age or older',
+                  'condition': [
                     {
-                      "conditionID": "1",
-                      "conditionType": "Age",
-                      "beginAge": "16 years"
-                    }
-                  ]
-                }
-              ]
-            }
+                      'conditionID': '1',
+                      'conditionType': 'Age',
+                      'beginAge': '16 years',
+                    },
+                  ],
+                },
+              ],
+            },
           ],
-          "recurringDose": "No"
+          'recurringDose': 'No',
         },
         {
-          "doseNumber": "Dose 2",
-          "age": [
+          'doseNumber': 'Dose 2',
+          'age': [
             {
-              "absMinAge": "16 years - 4 days",
-              "minAge": "16 years",
-              "earliestRecAge": "16 years",
-              "latestRecAge": "17 years + 4 weeks",
-              "maxAge": "22 years"
-            }
+              'absMinAge': '16 years - 4 days',
+              'minAge': '16 years',
+              'earliestRecAge': '16 years',
+              'latestRecAge': '17 years + 4 weeks',
+              'maxAge': '22 years',
+            },
           ],
-          "interval": [
+          'interval': [
             {
-              "fromPrevious": "N",
-              "fromMostRecent": "316; 328",
-              "absMinInt": "8 weeks - 4 days",
-              "minInt": "6 months",
-              "earliestRecInt": "6 months"
+              'fromPrevious': 'N',
+              'fromMostRecent': '316; 328',
+              'absMinInt': '8 weeks - 4 days',
+              'minInt': '6 months',
+              'earliestRecInt': '6 months',
             },
             {
-              "fromPrevious": "Y",
-              "absMinInt": "8 weeks - 4 days",
-              "minInt": "8 weeks",
-              "earliestRecInt": "4 years",
-              "latestRecInt": "6 years + 4 weeks"
-            }
+              'fromPrevious': 'Y',
+              'absMinInt': '8 weeks - 4 days',
+              'minInt': '8 weeks',
+              'earliestRecInt': '4 years',
+              'latestRecInt': '6 years + 4 weeks',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "Meningococcal, MCV4O",
-              "cvx": "136",
-              "beginAge": "2 months",
-              "endAge": "56 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType': 'Meningococcal, MCV4O',
+              'cvx': '136',
+              'beginAge': '2 months',
+              'endAge': '56 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType":
-                  "Meningococcal Polysaccharide A, C, Y, W-135 TT Conjugate",
-              "cvx": "203",
-              "beginAge": "2 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType':
+                  'Meningococcal Polysaccharide A, C, Y, W-135 TT Conjugate',
+              'cvx': '203',
+              'beginAge': '2 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType":
-                  "meningococcal polysaccharide (MenACWY-TT conjugate), (MenB), PF",
-              "cvx": "316",
-              "beginAge": "10 years",
-              "endAge": "26 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType':
+                  'meningococcal polysaccharide (MenACWY-TT conjugate), '
+                  '(MenB), PF',
+              'cvx': '316',
+              'beginAge': '10 years',
+              'endAge': '26 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType":
-                  "Meningococcal oligosaccharide (MenACWY), (MenB), PF",
-              "cvx": "328",
-              "beginAge": "10 years",
-              "endAge": "26 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
-            }
+              'vaccineType':
+                  'Meningococcal oligosaccharide (MenACWY), (MenB), PF',
+              'cvx': '328',
+              'beginAge': '10 years',
+              'endAge': '26 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
+            },
           ],
-          "allowableVaccine": [
+          'allowableVaccine': [
             {
-              "vaccineType": "Meningococcal ACWY, unspecified",
-              "cvx": "108",
-              "beginAge": "2 months - 4 days"
+              'vaccineType': 'Meningococcal ACWY, unspecified',
+              'cvx': '108',
+              'beginAge': '2 months - 4 days',
             },
             {
-              "vaccineType": "Meningococcal, MCV4P",
-              "cvx": "114",
-              "beginAge": "9 months - 4 days"
+              'vaccineType': 'Meningococcal, MCV4P',
+              'cvx': '114',
+              'beginAge': '9 months - 4 days',
             },
             {
-              "vaccineType": "Meningococcal, MCV4O",
-              "cvx": "136",
-              "beginAge": "2 months - 4 days"
+              'vaccineType': 'Meningococcal, MCV4O',
+              'cvx': '136',
+              'beginAge': '2 months - 4 days',
             },
             {
-              "vaccineType": "MCV4, unspecified",
-              "cvx": "147",
-              "beginAge": "2 months - 4 days"
+              'vaccineType': 'MCV4, unspecified',
+              'cvx': '147',
+              'beginAge': '2 months - 4 days',
             },
             {
-              "vaccineType":
-                  "Meningococcal Polysaccharide A, C, Y, W-135 TT Conjugate",
-              "cvx": "203",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType':
+                  'Meningococcal Polysaccharide A, C, Y, W-135 TT Conjugate',
+              'cvx': '203',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType":
-                  "meningococcal polysaccharide (MenACWY-TT conjugate), (MenB), PF",
-              "cvx": "316",
-              "beginAge": "10 years - 4 days",
-              "endAge": "26 years"
+              'vaccineType':
+                  'meningococcal polysaccharide (MenACWY-TT conjugate), '
+                  '(MenB), PF',
+              'cvx': '316',
+              'beginAge': '10 years - 4 days',
+              'endAge': '26 years',
             },
             {
-              "vaccineType":
-                  "Meningococcal oligosaccharide (MenACWY), (MenB), PF",
-              "cvx": "328",
-              "beginAge": "10 years - 4 days",
-              "endAge": "26 years"
-            }
+              'vaccineType':
+                  'Meningococcal oligosaccharide (MenACWY), (MenB), PF',
+              'cvx': '328',
+              'beginAge': '10 years - 4 days',
+              'endAge': '26 years',
+            },
           ],
-          "recurringDose": "No"
-        }
-      ]
+          'recurringDose': 'No',
+        },
+      ],
     },
     {
-      "seriesName": "Meningococcal ACWY risk 2-23 month",
-      "targetDisease": "Meningococcal",
-      "vaccineGroup": "Meningococcal",
-      "seriesAdminGuidance": [
-        "Penbraya (MenACWY/MenB - Pfizer) or Penmenvy (MenACWY/MenB - GSK) may be used when both MenACWY and MenB are indicated at the same visit."
+      'seriesName': 'Meningococcal ACWY risk 2-23 month',
+      'targetDisease': 'Meningococcal',
+      'vaccineGroup': 'Meningococcal',
+      'seriesAdminGuidance': [
+        'Penbraya (MenACWY/MenB - Pfizer) or Penmenvy (MenACWY/MenB - '
+            'GSK) may be used when both MenACWY and MenB are indicated at '
+            'the same visit.',
       ],
-      "seriesType": "Risk",
-      "selectSeries": {
-        "defaultSeries": "No",
-        "productPath": "No",
-        "seriesGroupName": "Increased Risk",
-        "seriesGroup": "2",
-        "seriesPriority": "A"
+      'seriesType': 'Risk',
+      'selectSeries': {
+        'defaultSeries': 'No',
+        'productPath': 'No',
+        'seriesGroupName': 'Increased Risk',
+        'seriesGroup': '2',
+        'seriesPriority': 'A',
       },
-      "indication": [
+      'indication': [
         {
-          "observationCode": {
-            "text": "Persons at risk during an outbreak",
-            "code": "070"
+          'observationCode': {
+            'text': 'Persons at risk during an outbreak',
+            'code': '070',
           },
-          "description":
-              "Administer to persons identified as at increased risk during a community outbreak attributable to a vaccine serogroup",
-          "beginAge": "2 months"
+          'description':
+              'Administer to persons identified as at increased risk '
+              'during a community outbreak attributable to a vaccine '
+              'serogroup',
+          'beginAge': '2 months',
         },
         {
-          "observationCode": {
-            "text": "Persistent complement, properdin, or factor B deficiency",
-            "code": "151"
+          'observationCode': {
+            'text': 'Persistent complement, properdin, or factor B deficiency',
+            'code': '151',
           },
-          "description":
-              "Administer to persons who have persistent complement deficiencies",
-          "beginAge": "2 months"
+          'description':
+              'Administer to persons who have persistent complement '
+              'deficiencies',
+          'beginAge': '2 months',
         },
         {
-          "observationCode": {
-            "text": "HIV/AIDS - severely immunocompromised",
-            "code": "154"
+          'observationCode': {
+            'text': 'HIV/AIDS - severely immunocompromised',
+            'code': '154',
           },
-          "description":
-              "Administer to persons who have HIV/AIDS and are severely immunocompromised [See the CDC general recommendations for a definition of \"severely immunocompromised\"].",
-          "beginAge": "2 months"
+          'description':
+              'Administer to persons who have HIV/AIDS and are severely '
+              'immunocompromised [See the CDC general recommendations for '
+              'a definition of "severely immunocompromised"].',
+          'beginAge': '2 months',
         },
         {
-          "observationCode": {
-            "text": "HIV/AIDS - not severely immunocompromised",
-            "code": "155"
+          'observationCode': {
+            'text': 'HIV/AIDS - not severely immunocompromised',
+            'code': '155',
           },
-          "description":
-              "Administer to persons who have HIV/AIDS and are not severely immunocompromised [See the CDC general recommendations for a definition of \"severely immunocompromised\"].",
-          "beginAge": "2 months"
+          'description':
+              'Administer to persons who have HIV/AIDS and are not '
+              'severely immunocompromised [See the CDC general '
+              'recommendations for a definition of "severely '
+              'immunocompromised"].',
+          'beginAge': '2 months',
         },
         {
-          "observationCode": {
-            "text": "Anatomical or functional asplenia",
-            "code": "160"
+          'observationCode': {
+            'text': 'Anatomical or functional asplenia',
+            'code': '160',
           },
-          "description":
-              "Administer to persons with anatomic or functional asplenia, including sickle cell disease.",
-          "beginAge": "2 months"
+          'description':
+              'Administer to persons with anatomic or functional asplenia, '
+              'including sickle cell disease.',
+          'beginAge': '2 months',
         },
         {
-          "observationCode": {
-            "text":
-                "Travel to or are residents of countries in which meningococcal disease is hyperendemic or epidemic",
-            "code": "164"
+          'observationCode': {
+            'text':
+                'Travel to or are residents of countries in which '
+                'meningococcal disease is hyperendemic or epidemic',
+            'code': '164',
           },
-          "description":
-              "Administer to persons who travel to or are residents of countries in which meningococcal disease is hyperendemic or epidemic",
-          "beginAge": "2 months"
+          'description':
+              'Administer to persons who travel to or are residents of '
+              'countries in which meningococcal disease is hyperendemic or '
+              'epidemic',
+          'beginAge': '2 months',
         },
         {
-          "observationCode": {"text": "HIV Infection", "code": "186"},
-          "description": "Administer to persons with HIV Infection",
-          "beginAge": "2 months"
+          'observationCode': {
+            'text': 'HIV Infection',
+            'code': '186',
+          },
+          'description': 'Administer to persons with HIV Infection',
+          'beginAge': '2 months',
         },
         {
-          "observationCode": {"text": "Sickle cell disease", "code": "259"},
-          "description": "Administer to persons with sickle cell disease",
-          "beginAge": "2 months"
-        }
+          'observationCode': {
+            'text': 'Sickle cell disease',
+            'code': '259',
+          },
+          'description': 'Administer to persons with sickle cell disease',
+          'beginAge': '2 months',
+        },
       ],
-      "seriesDose": [
+      'seriesDose': [
         {
-          "doseNumber": "Dose 1",
-          "age": [
+          'doseNumber': 'Dose 1',
+          'age': [
             {
-              "absMinAge": "2 months - 4 days",
-              "minAge": "2 months",
-              "earliestRecAge": "2 months"
-            }
+              'absMinAge': '2 months - 4 days',
+              'minAge': '2 months',
+              'earliestRecAge': '2 months',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "Meningococcal, MCV4O",
-              "cvx": "136",
-              "beginAge": "2 months",
-              "endAge": "56 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
-            }
+              'vaccineType': 'Meningococcal, MCV4O',
+              'cvx': '136',
+              'beginAge': '2 months',
+              'endAge': '56 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
+            },
           ],
-          "allowableVaccine": [
+          'allowableVaccine': [
             {
-              "vaccineType": "Meningococcal ACWY, unspecified",
-              "cvx": "108",
-              "beginAge": "2 months - 4 days"
+              'vaccineType': 'Meningococcal ACWY, unspecified',
+              'cvx': '108',
+              'beginAge': '2 months - 4 days',
             },
             {
-              "vaccineType": "Meningococcal, MCV4O",
-              "cvx": "136",
-              "beginAge": "2 months - 4 days"
+              'vaccineType': 'Meningococcal, MCV4O',
+              'cvx': '136',
+              'beginAge': '2 months - 4 days',
             },
             {
-              "vaccineType": "MCV4, unspecified",
-              "cvx": "147",
-              "beginAge": "2 months - 4 days"
+              'vaccineType': 'MCV4, unspecified',
+              'cvx': '147',
+              'beginAge': '2 months - 4 days',
             },
             {
-              "vaccineType":
-                  "Meningococcal Polysaccharide A, C, Y, W-135 TT Conjugate",
-              "cvx": "203",
-              "beginAge": "6 weeks - 4 days"
-            }
+              'vaccineType':
+                  'Meningococcal Polysaccharide A, C, Y, W-135 TT Conjugate',
+              'cvx': '203',
+              'beginAge': '6 weeks - 4 days',
+            },
           ],
-          "conditionalSkip": [
+          'conditionalSkip': [
             {
-              "context": "Both",
-              "setLogic": "n/a",
-              "set": [
+              'context': 'Both',
+              'setLogic': 'n/a',
+              'set': [
                 {
-                  "setID": "1",
-                  "setDescription":
-                      "Dose is not required if patient is currently 7 months of age or older AND no doses were administered prior to age 7 months",
-                  "conditionLogic": "AND",
-                  "condition": [
+                  'setID': '1',
+                  'setDescription':
+                      'Dose is not required if patient is currently 7 '
+                      'months of age or older AND no doses were '
+                      'administered prior to age 7 months',
+                  'conditionLogic': 'AND',
+                  'condition': [
                     {
-                      "conditionID": "1",
-                      "conditionType": "Age",
-                      "beginAge": "7 months"
+                      'conditionID': '1',
+                      'conditionType': 'Age',
+                      'beginAge': '7 months',
                     },
                     {
-                      "conditionID": "2",
-                      "conditionType": "Vaccine Count By Age",
-                      "beginAge": "2 months",
-                      "endAge": "7 months",
-                      "doseCount": "0",
-                      "doseType": "Valid",
-                      "doseCountLogic": "equal to"
-                    }
-                  ]
-                }
-              ]
-            }
+                      'conditionID': '2',
+                      'conditionType': 'Vaccine Count By Age',
+                      'beginAge': '2 months',
+                      'endAge': '7 months',
+                      'doseCount': '0',
+                      'doseType': 'Valid',
+                      'doseCountLogic': 'equal to',
+                    },
+                  ],
+                },
+              ],
+            },
           ],
-          "recurringDose": "No"
+          'recurringDose': 'No',
         },
         {
-          "doseNumber": "Dose 2",
-          "age": [
-            {"earliestRecAge": "4 months"}
+          'doseNumber': 'Dose 2',
+          'age': [
+            {
+              'earliestRecAge': '4 months',
+            },
           ],
-          "interval": [
+          'interval': [
             {
-              "fromPrevious": "Y",
-              "absMinInt": "8 weeks - 4 days",
-              "minInt": "8 weeks",
-              "earliestRecInt": "8 weeks"
-            }
+              'fromPrevious': 'Y',
+              'absMinInt': '8 weeks - 4 days',
+              'minInt': '8 weeks',
+              'earliestRecInt': '8 weeks',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "Meningococcal, MCV4O",
-              "cvx": "136",
-              "beginAge": "2 months",
-              "endAge": "56 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType': 'Meningococcal, MCV4O',
+              'cvx': '136',
+              'beginAge': '2 months',
+              'endAge': '56 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType":
-                  "Meningococcal Polysaccharide A, C, Y, W-135 TT Conjugate",
-              "cvx": "203",
-              "beginAge": "2 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
-            }
+              'vaccineType':
+                  'Meningococcal Polysaccharide A, C, Y, W-135 TT Conjugate',
+              'cvx': '203',
+              'beginAge': '2 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
+            },
           ],
-          "allowableVaccine": [
+          'allowableVaccine': [
             {
-              "vaccineType": "Meningococcal ACWY, unspecified",
-              "cvx": "108",
-              "beginAge": "2 months - 4 days"
+              'vaccineType': 'Meningococcal ACWY, unspecified',
+              'cvx': '108',
+              'beginAge': '2 months - 4 days',
             },
             {
-              "vaccineType": "Meningococcal, MCV4P",
-              "cvx": "114",
-              "beginAge": "9 months - 4 days"
+              'vaccineType': 'Meningococcal, MCV4P',
+              'cvx': '114',
+              'beginAge': '9 months - 4 days',
             },
             {
-              "vaccineType": "Meningococcal, MCV4O",
-              "cvx": "136",
-              "beginAge": "2 months - 4 days"
+              'vaccineType': 'Meningococcal, MCV4O',
+              'cvx': '136',
+              'beginAge': '2 months - 4 days',
             },
             {
-              "vaccineType": "MCV4, unspecified",
-              "cvx": "147",
-              "beginAge": "2 months - 4 days"
+              'vaccineType': 'MCV4, unspecified',
+              'cvx': '147',
+              'beginAge': '2 months - 4 days',
             },
             {
-              "vaccineType":
-                  "Meningococcal Polysaccharide A, C, Y, W-135 TT Conjugate",
-              "cvx": "203",
-              "beginAge": "6 weeks - 4 days"
-            }
+              'vaccineType':
+                  'Meningococcal Polysaccharide A, C, Y, W-135 TT Conjugate',
+              'cvx': '203',
+              'beginAge': '6 weeks - 4 days',
+            },
           ],
-          "conditionalSkip": [
+          'conditionalSkip': [
             {
-              "context": "Both",
-              "setLogic": "n/a",
-              "set": [
+              'context': 'Both',
+              'setLogic': 'n/a',
+              'set': [
                 {
-                  "setID": "1",
-                  "setDescription":
-                      "Dose is not required if patient is currently 7 months of age or older",
-                  "condition": [
+                  'setID': '1',
+                  'setDescription':
+                      'Dose is not required if patient is currently 7 '
+                      'months of age or older',
+                  'condition': [
                     {
-                      "conditionID": "1",
-                      "conditionType": "Age",
-                      "beginAge": "7 months"
-                    }
-                  ]
-                }
-              ]
-            }
+                      'conditionID': '1',
+                      'conditionType': 'Age',
+                      'beginAge': '7 months',
+                    },
+                  ],
+                },
+              ],
+            },
           ],
-          "recurringDose": "No"
+          'recurringDose': 'No',
         },
         {
-          "doseNumber": "Dose 3",
-          "age": [
-            {"earliestRecAge": "6 months"}
+          'doseNumber': 'Dose 3',
+          'age': [
+            {
+              'earliestRecAge': '6 months',
+            },
           ],
-          "interval": [
+          'interval': [
             {
-              "fromPrevious": "Y",
-              "absMinInt": "8 weeks - 4 days",
-              "minInt": "8 weeks",
-              "earliestRecInt": "8 weeks"
-            }
+              'fromPrevious': 'Y',
+              'absMinInt': '8 weeks - 4 days',
+              'minInt': '8 weeks',
+              'earliestRecInt': '8 weeks',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "Meningococcal, MCV4O",
-              "cvx": "136",
-              "beginAge": "2 months",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType': 'Meningococcal, MCV4O',
+              'cvx': '136',
+              'beginAge': '2 months',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType":
-                  "Meningococcal Polysaccharide A, C, Y, W-135 TT Conjugate",
-              "cvx": "203",
-              "beginAge": "2 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
-            }
+              'vaccineType':
+                  'Meningococcal Polysaccharide A, C, Y, W-135 TT Conjugate',
+              'cvx': '203',
+              'beginAge': '2 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
+            },
           ],
-          "allowableVaccine": [
+          'allowableVaccine': [
             {
-              "vaccineType": "Meningococcal ACWY, unspecified",
-              "cvx": "108",
-              "beginAge": "2 months - 4 days"
+              'vaccineType': 'Meningococcal ACWY, unspecified',
+              'cvx': '108',
+              'beginAge': '2 months - 4 days',
             },
             {
-              "vaccineType": "Meningococcal, MCV4P",
-              "cvx": "114",
-              "beginAge": "9 months - 4 days"
+              'vaccineType': 'Meningococcal, MCV4P',
+              'cvx': '114',
+              'beginAge': '9 months - 4 days',
             },
             {
-              "vaccineType": "Meningococcal, MCV4O",
-              "cvx": "136",
-              "beginAge": "2 months - 4 days"
+              'vaccineType': 'Meningococcal, MCV4O',
+              'cvx': '136',
+              'beginAge': '2 months - 4 days',
             },
             {
-              "vaccineType": "MCV4, unspecified",
-              "cvx": "147",
-              "beginAge": "2 months - 4 days"
+              'vaccineType': 'MCV4, unspecified',
+              'cvx': '147',
+              'beginAge': '2 months - 4 days',
             },
             {
-              "vaccineType":
-                  "Meningococcal Polysaccharide A, C, Y, W-135 TT Conjugate",
-              "cvx": "203",
-              "beginAge": "6 weeks - 4 days"
-            }
+              'vaccineType':
+                  'Meningococcal Polysaccharide A, C, Y, W-135 TT Conjugate',
+              'cvx': '203',
+              'beginAge': '6 weeks - 4 days',
+            },
           ],
-          "conditionalSkip": [
+          'conditionalSkip': [
             {
-              "context": "Both",
-              "setLogic": "n/a",
-              "set": [
+              'context': 'Both',
+              'setLogic': 'n/a',
+              'set': [
                 {
-                  "setID": "1",
-                  "setDescription":
-                      "Dose is not required if patient is currently 7 months of age or older",
-                  "condition": [
+                  'setID': '1',
+                  'setDescription':
+                      'Dose is not required if patient is currently 7 '
+                      'months of age or older',
+                  'condition': [
                     {
-                      "conditionID": "1",
-                      "conditionType": "Age",
-                      "beginAge": "7 months"
-                    }
-                  ]
-                }
-              ]
-            }
+                      'conditionID': '1',
+                      'conditionType': 'Age',
+                      'beginAge': '7 months',
+                    },
+                  ],
+                },
+              ],
+            },
           ],
-          "recurringDose": "No"
+          'recurringDose': 'No',
         },
         {
-          "doseNumber": "Dose 4",
-          "age": [
-            {"earliestRecAge": "7 months"}
+          'doseNumber': 'Dose 4',
+          'age': [
+            {
+              'earliestRecAge': '7 months',
+            },
           ],
-          "interval": [
+          'interval': [
             {
-              "fromPrevious": "Y",
-              "absMinInt": "8 weeks - 4 days",
-              "minInt": "8 weeks",
-              "earliestRecInt": "8 weeks"
-            }
+              'fromPrevious': 'Y',
+              'absMinInt': '8 weeks - 4 days',
+              'minInt': '8 weeks',
+              'earliestRecInt': '8 weeks',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "Meningococcal, MCV4O",
-              "cvx": "136",
-              "beginAge": "2 months",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType': 'Meningococcal, MCV4O',
+              'cvx': '136',
+              'beginAge': '2 months',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType":
-                  "Meningococcal Polysaccharide A, C, Y, W-135 TT Conjugate",
-              "cvx": "203",
-              "beginAge": "2 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
-            }
+              'vaccineType':
+                  'Meningococcal Polysaccharide A, C, Y, W-135 TT Conjugate',
+              'cvx': '203',
+              'beginAge': '2 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
+            },
           ],
-          "allowableVaccine": [
+          'allowableVaccine': [
             {
-              "vaccineType": "Meningococcal ACWY, unspecified",
-              "cvx": "108",
-              "beginAge": "2 months - 4 days"
+              'vaccineType': 'Meningococcal ACWY, unspecified',
+              'cvx': '108',
+              'beginAge': '2 months - 4 days',
             },
             {
-              "vaccineType": "Meningococcal, MCV4P",
-              "cvx": "114",
-              "beginAge": "9 months - 4 days"
+              'vaccineType': 'Meningococcal, MCV4P',
+              'cvx': '114',
+              'beginAge': '9 months - 4 days',
             },
             {
-              "vaccineType": "Meningococcal, MCV4O",
-              "cvx": "136",
-              "beginAge": "2 months - 4 days"
+              'vaccineType': 'Meningococcal, MCV4O',
+              'cvx': '136',
+              'beginAge': '2 months - 4 days',
             },
             {
-              "vaccineType": "MCV4, unspecified",
-              "cvx": "147",
-              "beginAge": "2 months - 4 days"
+              'vaccineType': 'MCV4, unspecified',
+              'cvx': '147',
+              'beginAge': '2 months - 4 days',
             },
             {
-              "vaccineType":
-                  "Meningococcal Polysaccharide A, C, Y, W-135 TT Conjugate",
-              "cvx": "203",
-              "beginAge": "6 weeks - 4 days"
-            }
+              'vaccineType':
+                  'Meningococcal Polysaccharide A, C, Y, W-135 TT Conjugate',
+              'cvx': '203',
+              'beginAge': '6 weeks - 4 days',
+            },
           ],
-          "conditionalSkip": [
+          'conditionalSkip': [
             {
-              "context": "Both",
-              "setLogic": "n/a",
-              "set": [
+              'context': 'Both',
+              'setLogic': 'n/a',
+              'set': [
                 {
-                  "setID": "1",
-                  "setDescription":
-                      "Dose is not required if more than 2 doses have been administered between 2 and 7 months OR at least 1 dose on or after 7 months",
-                  "conditionLogic": "OR",
-                  "condition": [
+                  'setID': '1',
+                  'setDescription':
+                      'Dose is not required if more than 2 doses have been '
+                      'administered between 2 and 7 months OR at least 1 '
+                      'dose on or after 7 months',
+                  'conditionLogic': 'OR',
+                  'condition': [
                     {
-                      "conditionID": "1",
-                      "conditionType": "Vaccine Count By Age",
-                      "beginAge": "2 months - 4 days",
-                      "endAge": "7 months",
-                      "doseCount": "2",
-                      "doseType": "Valid",
-                      "doseCountLogic": "greater than"
+                      'conditionID': '1',
+                      'conditionType': 'Vaccine Count By Age',
+                      'beginAge': '2 months - 4 days',
+                      'endAge': '7 months',
+                      'doseCount': '2',
+                      'doseType': 'Valid',
+                      'doseCountLogic': 'greater than',
                     },
                     {
-                      "conditionID": "2",
-                      "conditionType": "Vaccine Count By Age",
-                      "beginAge": "7 months",
-                      "doseCount": "0",
-                      "doseType": "Valid",
-                      "doseCountLogic": "greater than"
-                    }
-                  ]
-                }
-              ]
-            }
+                      'conditionID': '2',
+                      'conditionType': 'Vaccine Count By Age',
+                      'beginAge': '7 months',
+                      'doseCount': '0',
+                      'doseType': 'Valid',
+                      'doseCountLogic': 'greater than',
+                    },
+                  ],
+                },
+              ],
+            },
           ],
-          "recurringDose": "No"
+          'recurringDose': 'No',
         },
         {
-          "doseNumber": "Dose 5",
-          "age": [
+          'doseNumber': 'Dose 5',
+          'age': [
             {
-              "absMinAge": "12 months - 4 days",
-              "minAge": "12 months",
-              "earliestRecAge": "12 months"
-            }
+              'absMinAge': '12 months - 4 days',
+              'minAge': '12 months',
+              'earliestRecAge': '12 months',
+            },
           ],
-          "interval": [
+          'interval': [
             {
-              "fromPrevious": "Y",
-              "absMinInt": "12 weeks - 4 days",
-              "minInt": "12 weeks",
-              "earliestRecInt": "12 weeks"
-            }
+              'fromPrevious': 'Y',
+              'absMinInt': '12 weeks - 4 days',
+              'minInt': '12 weeks',
+              'earliestRecInt': '12 weeks',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "Meningococcal, MCV4O",
-              "cvx": "136",
-              "beginAge": "2 months",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType': 'Meningococcal, MCV4O',
+              'cvx': '136',
+              'beginAge': '2 months',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType":
-                  "Meningococcal Polysaccharide A, C, Y, W-135 TT Conjugate",
-              "cvx": "203",
-              "beginAge": "2 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType':
+                  'Meningococcal Polysaccharide A, C, Y, W-135 TT Conjugate',
+              'cvx': '203',
+              'beginAge': '2 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType":
-                  "meningococcal polysaccharide (MenACWY-TT conjugate), (MenB), PF",
-              "cvx": "316",
-              "beginAge": "10 years",
-              "endAge": "26 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType':
+                  'meningococcal polysaccharide (MenACWY-TT conjugate), '
+                  '(MenB), PF',
+              'cvx': '316',
+              'beginAge': '10 years',
+              'endAge': '26 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType":
-                  "Meningococcal oligosaccharide (MenACWY), (MenB), PF",
-              "cvx": "328",
-              "beginAge": "10 years",
-              "endAge": "26 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
-            }
+              'vaccineType':
+                  'Meningococcal oligosaccharide (MenACWY), (MenB), PF',
+              'cvx': '328',
+              'beginAge': '10 years',
+              'endAge': '26 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
+            },
           ],
-          "allowableVaccine": [
+          'allowableVaccine': [
             {
-              "vaccineType": "Meningococcal ACWY, unspecified",
-              "cvx": "108",
-              "beginAge": "2 months - 4 days"
+              'vaccineType': 'Meningococcal ACWY, unspecified',
+              'cvx': '108',
+              'beginAge': '2 months - 4 days',
             },
             {
-              "vaccineType": "Meningococcal, MCV4P",
-              "cvx": "114",
-              "beginAge": "9 months - 4 days"
+              'vaccineType': 'Meningococcal, MCV4P',
+              'cvx': '114',
+              'beginAge': '9 months - 4 days',
             },
             {
-              "vaccineType": "Meningococcal, MCV4O",
-              "cvx": "136",
-              "beginAge": "2 months - 4 days"
+              'vaccineType': 'Meningococcal, MCV4O',
+              'cvx': '136',
+              'beginAge': '2 months - 4 days',
             },
             {
-              "vaccineType": "MCV4, unspecified",
-              "cvx": "147",
-              "beginAge": "2 months - 4 days"
+              'vaccineType': 'MCV4, unspecified',
+              'cvx': '147',
+              'beginAge': '2 months - 4 days',
             },
             {
-              "vaccineType":
-                  "Meningococcal Polysaccharide A, C, Y, W-135 TT Conjugate",
-              "cvx": "203",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType':
+                  'Meningococcal Polysaccharide A, C, Y, W-135 TT Conjugate',
+              'cvx': '203',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType":
-                  "meningococcal polysaccharide (MenACWY-TT conjugate), (MenB), PF",
-              "cvx": "316",
-              "beginAge": "10 years - 4 days",
-              "endAge": "26 years"
+              'vaccineType':
+                  'meningococcal polysaccharide (MenACWY-TT conjugate), '
+                  '(MenB), PF',
+              'cvx': '316',
+              'beginAge': '10 years - 4 days',
+              'endAge': '26 years',
             },
             {
-              "vaccineType":
-                  "Meningococcal oligosaccharide (MenACWY), (MenB), PF",
-              "cvx": "328",
-              "beginAge": "10 years - 4 days",
-              "endAge": "26 years"
-            }
+              'vaccineType':
+                  'Meningococcal oligosaccharide (MenACWY), (MenB), PF',
+              'cvx': '328',
+              'beginAge': '10 years - 4 days',
+              'endAge': '26 years',
+            },
           ],
-          "recurringDose": "No"
+          'recurringDose': 'No',
         },
         {
-          "doseNumber": "Dose 6",
-          "interval": [
+          'doseNumber': 'Dose 6',
+          'interval': [
             {
-              "fromPrevious": "Y",
-              "absMinInt": "3 years - 4 days",
-              "minInt": "3 years",
-              "earliestRecInt": "3 years"
-            }
+              'fromPrevious': 'Y',
+              'absMinInt': '3 years - 4 days',
+              'minInt': '3 years',
+              'earliestRecInt': '3 years',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "Meningococcal, MCV4O",
-              "cvx": "136",
-              "beginAge": "2 months",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType': 'Meningococcal, MCV4O',
+              'cvx': '136',
+              'beginAge': '2 months',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType":
-                  "Meningococcal Polysaccharide A, C, Y, W-135 TT Conjugate",
-              "cvx": "203",
-              "beginAge": "2 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType':
+                  'Meningococcal Polysaccharide A, C, Y, W-135 TT Conjugate',
+              'cvx': '203',
+              'beginAge': '2 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType":
-                  "meningococcal polysaccharide (MenACWY-TT conjugate), (MenB), PF",
-              "cvx": "316",
-              "beginAge": "10 years",
-              "endAge": "26 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType':
+                  'meningococcal polysaccharide (MenACWY-TT conjugate), '
+                  '(MenB), PF',
+              'cvx': '316',
+              'beginAge': '10 years',
+              'endAge': '26 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType":
-                  "Meningococcal oligosaccharide (MenACWY), (MenB), PF",
-              "cvx": "328",
-              "beginAge": "10 years",
-              "endAge": "26 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
-            }
+              'vaccineType':
+                  'Meningococcal oligosaccharide (MenACWY), (MenB), PF',
+              'cvx': '328',
+              'beginAge': '10 years',
+              'endAge': '26 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
+            },
           ],
-          "allowableVaccine": [
+          'allowableVaccine': [
             {
-              "vaccineType": "Meningococcal ACWY, unspecified",
-              "cvx": "108",
-              "beginAge": "2 months - 4 days"
+              'vaccineType': 'Meningococcal ACWY, unspecified',
+              'cvx': '108',
+              'beginAge': '2 months - 4 days',
             },
             {
-              "vaccineType": "Meningococcal, MCV4P",
-              "cvx": "114",
-              "beginAge": "9 months - 4 days"
+              'vaccineType': 'Meningococcal, MCV4P',
+              'cvx': '114',
+              'beginAge': '9 months - 4 days',
             },
             {
-              "vaccineType": "Meningococcal, MCV4O",
-              "cvx": "136",
-              "beginAge": "2 months - 4 days"
+              'vaccineType': 'Meningococcal, MCV4O',
+              'cvx': '136',
+              'beginAge': '2 months - 4 days',
             },
             {
-              "vaccineType": "MCV4, unspecified",
-              "cvx": "147",
-              "beginAge": "2 months - 4 days"
+              'vaccineType': 'MCV4, unspecified',
+              'cvx': '147',
+              'beginAge': '2 months - 4 days',
             },
             {
-              "vaccineType":
-                  "Meningococcal Polysaccharide A, C, Y, W-135 TT Conjugate",
-              "cvx": "203",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType':
+                  'Meningococcal Polysaccharide A, C, Y, W-135 TT Conjugate',
+              'cvx': '203',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType":
-                  "meningococcal polysaccharide (MenACWY-TT conjugate), (MenB), PF",
-              "cvx": "316",
-              "beginAge": "10 years - 4 days",
-              "endAge": "26 years"
+              'vaccineType':
+                  'meningococcal polysaccharide (MenACWY-TT conjugate), '
+                  '(MenB), PF',
+              'cvx': '316',
+              'beginAge': '10 years - 4 days',
+              'endAge': '26 years',
             },
             {
-              "vaccineType":
-                  "Meningococcal oligosaccharide (MenACWY), (MenB), PF",
-              "cvx": "328",
-              "beginAge": "10 years - 4 days",
-              "endAge": "26 years"
-            }
+              'vaccineType':
+                  'Meningococcal oligosaccharide (MenACWY), (MenB), PF',
+              'cvx': '328',
+              'beginAge': '10 years - 4 days',
+              'endAge': '26 years',
+            },
           ],
-          "conditionalSkip": [
+          'conditionalSkip': [
             {
-              "context": "Both",
-              "setLogic": "n/a",
-              "set": [
+              'context': 'Both',
+              'setLogic': 'n/a',
+              'set': [
                 {
-                  "setID": "1",
-                  "setDescription":
-                      "Dose is not required if the patient has received 1 or more doses after the age of 7 years",
-                  "condition": [
+                  'setID': '1',
+                  'setDescription':
+                      'Dose is not required if the patient has received 1 '
+                      'or more doses after the age of 7 years',
+                  'condition': [
                     {
-                      "conditionID": "1",
-                      "conditionType": "Vaccine Count by Age",
-                      "beginAge": "7 years",
-                      "doseCount": "0",
-                      "doseType": "Valid",
-                      "doseCountLogic": "greater than"
-                    }
-                  ]
-                }
-              ]
-            }
+                      'conditionID': '1',
+                      'conditionType': 'Vaccine Count by Age',
+                      'beginAge': '7 years',
+                      'doseCount': '0',
+                      'doseType': 'Valid',
+                      'doseCountLogic': 'greater than',
+                    },
+                  ],
+                },
+              ],
+            },
           ],
-          "recurringDose": "No"
+          'recurringDose': 'No',
         },
         {
-          "doseNumber": "Dose 7",
-          "interval": [
+          'doseNumber': 'Dose 7',
+          'interval': [
             {
-              "fromPrevious": "Y",
-              "absMinInt": "5 years - 4 days",
-              "minInt": "5 years",
-              "earliestRecInt": "5 years"
-            }
+              'fromPrevious': 'Y',
+              'absMinInt': '5 years - 4 days',
+              'minInt': '5 years',
+              'earliestRecInt': '5 years',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "Meningococcal, MCV4O",
-              "cvx": "136",
-              "beginAge": "2 months",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType': 'Meningococcal, MCV4O',
+              'cvx': '136',
+              'beginAge': '2 months',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType":
-                  "Meningococcal Polysaccharide A, C, Y, W-135 TT Conjugate",
-              "cvx": "203",
-              "beginAge": "2 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType':
+                  'Meningococcal Polysaccharide A, C, Y, W-135 TT Conjugate',
+              'cvx': '203',
+              'beginAge': '2 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType":
-                  "meningococcal polysaccharide (MenACWY-TT conjugate), (MenB), PF",
-              "cvx": "316",
-              "beginAge": "10 years",
-              "endAge": "26 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType':
+                  'meningococcal polysaccharide (MenACWY-TT conjugate), '
+                  '(MenB), PF',
+              'cvx': '316',
+              'beginAge': '10 years',
+              'endAge': '26 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType":
-                  "Meningococcal oligosaccharide (MenACWY), (MenB), PF",
-              "cvx": "328",
-              "beginAge": "10 years",
-              "endAge": "26 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
-            }
+              'vaccineType':
+                  'Meningococcal oligosaccharide (MenACWY), (MenB), PF',
+              'cvx': '328',
+              'beginAge': '10 years',
+              'endAge': '26 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
+            },
           ],
-          "allowableVaccine": [
+          'allowableVaccine': [
             {
-              "vaccineType": "Meningococcal ACWY, unspecified",
-              "cvx": "108",
-              "beginAge": "2 months - 4 days"
+              'vaccineType': 'Meningococcal ACWY, unspecified',
+              'cvx': '108',
+              'beginAge': '2 months - 4 days',
             },
             {
-              "vaccineType": "Meningococcal, MCV4P",
-              "cvx": "114",
-              "beginAge": "9 months - 4 days"
+              'vaccineType': 'Meningococcal, MCV4P',
+              'cvx': '114',
+              'beginAge': '9 months - 4 days',
             },
             {
-              "vaccineType": "Meningococcal, MCV4O",
-              "cvx": "136",
-              "beginAge": "2 months - 4 days"
+              'vaccineType': 'Meningococcal, MCV4O',
+              'cvx': '136',
+              'beginAge': '2 months - 4 days',
             },
             {
-              "vaccineType": "MCV4, unspecified",
-              "cvx": "147",
-              "beginAge": "2 months - 4 days"
+              'vaccineType': 'MCV4, unspecified',
+              'cvx': '147',
+              'beginAge': '2 months - 4 days',
             },
             {
-              "vaccineType":
-                  "Meningococcal Polysaccharide A, C, Y, W-135 TT Conjugate",
-              "cvx": "203",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType':
+                  'Meningococcal Polysaccharide A, C, Y, W-135 TT Conjugate',
+              'cvx': '203',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType":
-                  "meningococcal polysaccharide (MenACWY-TT conjugate), (MenB), PF",
-              "cvx": "316",
-              "beginAge": "10 years - 4 days",
-              "endAge": "26 years"
+              'vaccineType':
+                  'meningococcal polysaccharide (MenACWY-TT conjugate), '
+                  '(MenB), PF',
+              'cvx': '316',
+              'beginAge': '10 years - 4 days',
+              'endAge': '26 years',
             },
             {
-              "vaccineType":
-                  "Meningococcal oligosaccharide (MenACWY), (MenB), PF",
-              "cvx": "328",
-              "beginAge": "10 years - 4 days",
-              "endAge": "26 years"
-            }
+              'vaccineType':
+                  'Meningococcal oligosaccharide (MenACWY), (MenB), PF',
+              'cvx': '328',
+              'beginAge': '10 years - 4 days',
+              'endAge': '26 years',
+            },
           ],
-          "recurringDose": "Yes"
-        }
-      ]
+          'recurringDose': 'Yes',
+        },
+      ],
     },
     {
-      "seriesName": "Meningococcal ACWY risk Hib-MenCY-TT 4-dose series",
-      "targetDisease": "Meningococcal",
-      "vaccineGroup": "Meningococcal",
-      "seriesAdminGuidance": [
-        "Penbraya (MenACWY/MenB - Pfizer) or Penmenvy (MenACWY/MenB - GSK) may be used when both MenACWY and MenB are indicated at the same visit."
+      'seriesName': 'Meningococcal ACWY risk Hib-MenCY-TT 4-dose series',
+      'targetDisease': 'Meningococcal',
+      'vaccineGroup': 'Meningococcal',
+      'seriesAdminGuidance': [
+        'Penbraya (MenACWY/MenB - Pfizer) or Penmenvy (MenACWY/MenB - '
+            'GSK) may be used when both MenACWY and MenB are indicated at '
+            'the same visit.',
       ],
-      "seriesType": "Risk",
-      "selectSeries": {
-        "defaultSeries": "No",
-        "productPath": "Yes",
-        "seriesGroupName": "Increased Risk",
-        "seriesGroup": "2",
-        "seriesPriority": "A",
-        "minAgeToStart": "2 months",
-        "maxAgeToStart": "16 months"
+      'seriesType': 'Risk',
+      'selectSeries': {
+        'defaultSeries': 'No',
+        'productPath': 'Yes',
+        'seriesGroupName': 'Increased Risk',
+        'seriesGroup': '2',
+        'seriesPriority': 'A',
+        'minAgeToStart': '2 months',
+        'maxAgeToStart': '16 months',
       },
-      "indication": [
+      'indication': [
         {
-          "observationCode": {
-            "text": "Persons at risk during an outbreak",
-            "code": "070"
+          'observationCode': {
+            'text': 'Persons at risk during an outbreak',
+            'code': '070',
           },
-          "description":
-              "Administer to persons identified as at increased risk during a community outbreak attributable to a vaccine serogroup",
-          "beginAge": "2 months"
+          'description':
+              'Administer to persons identified as at increased risk '
+              'during a community outbreak attributable to a vaccine '
+              'serogroup',
+          'beginAge': '2 months',
         },
         {
-          "observationCode": {
-            "text": "Persistent complement, properdin, or factor B deficiency",
-            "code": "151"
+          'observationCode': {
+            'text': 'Persistent complement, properdin, or factor B deficiency',
+            'code': '151',
           },
-          "description":
-              "Administer to persons who have persistent complement deficiencies",
-          "beginAge": "2 months"
+          'description':
+              'Administer to persons who have persistent complement '
+              'deficiencies',
+          'beginAge': '2 months',
         },
         {
-          "observationCode": {
-            "text": "Anatomical or functional asplenia",
-            "code": "160"
+          'observationCode': {
+            'text': 'Anatomical or functional asplenia',
+            'code': '160',
           },
-          "description":
-              "Administer to persons with anatomic or functional asplenia, including sickle cell disease.",
-          "beginAge": "2 months"
+          'description':
+              'Administer to persons with anatomic or functional asplenia, '
+              'including sickle cell disease.',
+          'beginAge': '2 months',
         },
         {
-          "observationCode": {"text": "Sickle cell disease", "code": "259"},
-          "description": "Administer to persons with sickle cell disease",
-          "beginAge": "2 months"
-        }
+          'observationCode': {
+            'text': 'Sickle cell disease',
+            'code': '259',
+          },
+          'description': 'Administer to persons with sickle cell disease',
+          'beginAge': '2 months',
+        },
       ],
-      "seriesDose": [
+      'seriesDose': [
         {
-          "doseNumber": "Dose 1",
-          "age": [
+          'doseNumber': 'Dose 1',
+          'age': [
             {
-              "absMinAge": "6 weeks",
-              "minAge": "2 months",
-              "earliestRecAge": "2 months",
-              "maxAge": "19 months"
-            }
+              'absMinAge': '6 weeks',
+              'minAge': '2 months',
+              'earliestRecAge': '2 months',
+              'maxAge': '19 months',
+            },
           ],
-          "allowableVaccine": [
+          'allowableVaccine': [
             {
-              "vaccineType": "Meningococcal C/Y-HIB PRP",
-              "cvx": "148",
-              "beginAge": "6 weeks",
-              "endAge": "19 months"
-            }
+              'vaccineType': 'Meningococcal C/Y-HIB PRP',
+              'cvx': '148',
+              'beginAge': '6 weeks',
+              'endAge': '19 months',
+            },
           ],
-          "recurringDose": "No"
+          'recurringDose': 'No',
         },
         {
-          "doseNumber": "Dose 2",
-          "age": [
-            {"maxAge": "19 months"}
-          ],
-          "interval": [
+          'doseNumber': 'Dose 2',
+          'age': [
             {
-              "fromPrevious": "Y",
-              "absMinInt": "8 weeks - 4 days",
-              "minInt": "8 weeks",
-              "earliestRecInt": "8 weeks"
-            }
+              'maxAge': '19 months',
+            },
           ],
-          "allowableVaccine": [
+          'interval': [
             {
-              "vaccineType": "Meningococcal C/Y-HIB PRP",
-              "cvx": "148",
-              "beginAge": "6 weeks",
-              "endAge": "19 months"
-            }
+              'fromPrevious': 'Y',
+              'absMinInt': '8 weeks - 4 days',
+              'minInt': '8 weeks',
+              'earliestRecInt': '8 weeks',
+            },
           ],
-          "conditionalSkip": [
+          'allowableVaccine': [
             {
-              "context": "Both",
-              "setLogic": "n/a",
-              "set": [
+              'vaccineType': 'Meningococcal C/Y-HIB PRP',
+              'cvx': '148',
+              'beginAge': '6 weeks',
+              'endAge': '19 months',
+            },
+          ],
+          'conditionalSkip': [
+            {
+              'context': 'Both',
+              'setLogic': 'n/a',
+              'set': [
                 {
-                  "setID": "1",
-                  "setDescription":
-                      "Dose is not required for those 19 months or older",
-                  "condition": [
+                  'setID': '1',
+                  'setDescription':
+                      'Dose is not required for those 19 months or older',
+                  'condition': [
                     {
-                      "conditionID": "1",
-                      "conditionType": "Age",
-                      "beginAge": "19 months"
-                    }
-                  ]
-                }
-              ]
-            }
+                      'conditionID': '1',
+                      'conditionType': 'Age',
+                      'beginAge': '19 months',
+                    },
+                  ],
+                },
+              ],
+            },
           ],
-          "recurringDose": "No"
+          'recurringDose': 'No',
         },
         {
-          "doseNumber": "Dose 3",
-          "age": [
-            {"maxAge": "19 months"}
-          ],
-          "interval": [
+          'doseNumber': 'Dose 3',
+          'age': [
             {
-              "fromPrevious": "Y",
-              "absMinInt": "8 weeks - 4 days",
-              "minInt": "8 weeks",
-              "earliestRecInt": "8 weeks"
-            }
+              'maxAge': '19 months',
+            },
           ],
-          "allowableVaccine": [
+          'interval': [
             {
-              "vaccineType": "Meningococcal C/Y-HIB PRP",
-              "cvx": "148",
-              "beginAge": "6 weeks",
-              "endAge": "19 months"
-            }
+              'fromPrevious': 'Y',
+              'absMinInt': '8 weeks - 4 days',
+              'minInt': '8 weeks',
+              'earliestRecInt': '8 weeks',
+            },
           ],
-          "conditionalSkip": [
+          'allowableVaccine': [
             {
-              "context": "Both",
-              "setLogic": "OR",
-              "set": [
+              'vaccineType': 'Meningococcal C/Y-HIB PRP',
+              'cvx': '148',
+              'beginAge': '6 weeks',
+              'endAge': '19 months',
+            },
+          ],
+          'conditionalSkip': [
+            {
+              'context': 'Both',
+              'setLogic': 'OR',
+              'set': [
                 {
-                  "setID": "1",
-                  "setDescription":
-                      "Dose is not required if the patient has received 0 doses before the age of 12 months",
-                  "condition": [
+                  'setID': '1',
+                  'setDescription':
+                      'Dose is not required if the patient has received 0 '
+                      'doses before the age of 12 months',
+                  'condition': [
                     {
-                      "conditionID": "1",
-                      "conditionType": "Vaccine Count by Age",
-                      "beginAge": "6 weeks",
-                      "endAge": "12 months",
-                      "doseCount": "0",
-                      "doseType": "Valid",
-                      "doseCountLogic": "equal to"
-                    }
-                  ]
+                      'conditionID': '1',
+                      'conditionType': 'Vaccine Count by Age',
+                      'beginAge': '6 weeks',
+                      'endAge': '12 months',
+                      'doseCount': '0',
+                      'doseType': 'Valid',
+                      'doseCountLogic': 'equal to',
+                    },
+                  ],
                 },
                 {
-                  "setID": "2",
-                  "setDescription":
-                      "Dose is not required for those 19 months or older",
-                  "condition": [
+                  'setID': '2',
+                  'setDescription':
+                      'Dose is not required for those 19 months or older',
+                  'condition': [
                     {
-                      "conditionID": "1",
-                      "conditionType": "Age",
-                      "beginAge": "19 months"
-                    }
-                  ]
-                }
-              ]
-            }
+                      'conditionID': '1',
+                      'conditionType': 'Age',
+                      'beginAge': '19 months',
+                    },
+                  ],
+                },
+              ],
+            },
           ],
-          "recurringDose": "No"
+          'recurringDose': 'No',
         },
         {
-          "doseNumber": "Dose 4",
-          "age": [
-            {"maxAge": "19 months"}
-          ],
-          "interval": [
+          'doseNumber': 'Dose 4',
+          'age': [
             {
-              "fromPrevious": "Y",
-              "absMinInt": "6 months - 4 days",
-              "minInt": "6 months",
-              "earliestRecInt": "6 months"
-            }
+              'maxAge': '19 months',
+            },
           ],
-          "allowableVaccine": [
+          'interval': [
             {
-              "vaccineType": "Meningococcal C/Y-HIB PRP",
-              "cvx": "148",
-              "beginAge": "6 weeks",
-              "endAge": "19 months"
-            }
+              'fromPrevious': 'Y',
+              'absMinInt': '6 months - 4 days',
+              'minInt': '6 months',
+              'earliestRecInt': '6 months',
+            },
           ],
-          "conditionalSkip": [
+          'allowableVaccine': [
             {
-              "context": "Both",
-              "setLogic": "OR",
-              "set": [
+              'vaccineType': 'Meningococcal C/Y-HIB PRP',
+              'cvx': '148',
+              'beginAge': '6 weeks',
+              'endAge': '19 months',
+            },
+          ],
+          'conditionalSkip': [
+            {
+              'context': 'Both',
+              'setLogic': 'OR',
+              'set': [
                 {
-                  "setID": "1",
-                  "setDescription":
-                      "Dose is not required if the patient has received 0 doses before the age of 12 months",
-                  "condition": [
+                  'setID': '1',
+                  'setDescription':
+                      'Dose is not required if the patient has received 0 '
+                      'doses before the age of 12 months',
+                  'condition': [
                     {
-                      "conditionID": "1",
-                      "conditionType": "Vaccine Count by Age",
-                      "beginAge": "6 weeks",
-                      "endAge": "12 months",
-                      "doseCount": "0",
-                      "doseType": "Valid",
-                      "doseCountLogic": "equal to"
-                    }
-                  ]
+                      'conditionID': '1',
+                      'conditionType': 'Vaccine Count by Age',
+                      'beginAge': '6 weeks',
+                      'endAge': '12 months',
+                      'doseCount': '0',
+                      'doseType': 'Valid',
+                      'doseCountLogic': 'equal to',
+                    },
+                  ],
                 },
                 {
-                  "setID": "2",
-                  "setDescription":
-                      "Dose is not required for those 19 months or older",
-                  "condition": [
+                  'setID': '2',
+                  'setDescription':
+                      'Dose is not required for those 19 months or older',
+                  'condition': [
                     {
-                      "conditionID": "1",
-                      "conditionType": "Age",
-                      "beginAge": "19 months"
-                    }
-                  ]
-                }
-              ]
-            }
+                      'conditionID': '1',
+                      'conditionType': 'Age',
+                      'beginAge': '19 months',
+                    },
+                  ],
+                },
+              ],
+            },
           ],
-          "recurringDose": "No"
+          'recurringDose': 'No',
         },
         {
-          "doseNumber": "Dose 5",
-          "interval": [
+          'doseNumber': 'Dose 5',
+          'interval': [
             {
-              "fromPrevious": "Y",
-              "absMinInt": "3 years - 4 days",
-              "minInt": "3 years",
-              "earliestRecInt": "3 years"
-            }
+              'fromPrevious': 'Y',
+              'absMinInt': '3 years - 4 days',
+              'minInt': '3 years',
+              'earliestRecInt': '3 years',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "Meningococcal, MCV4O",
-              "cvx": "136",
-              "beginAge": "2 months",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType': 'Meningococcal, MCV4O',
+              'cvx': '136',
+              'beginAge': '2 months',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType":
-                  "Meningococcal Polysaccharide A, C, Y, W-135 TT Conjugate",
-              "cvx": "203",
-              "beginAge": "2 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType':
+                  'Meningococcal Polysaccharide A, C, Y, W-135 TT Conjugate',
+              'cvx': '203',
+              'beginAge': '2 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType":
-                  "meningococcal polysaccharide (MenACWY-TT conjugate), (MenB), PF",
-              "cvx": "316",
-              "beginAge": "10 years",
-              "endAge": "26 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType':
+                  'meningococcal polysaccharide (MenACWY-TT conjugate), '
+                  '(MenB), PF',
+              'cvx': '316',
+              'beginAge': '10 years',
+              'endAge': '26 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType":
-                  "Meningococcal oligosaccharide (MenACWY), (MenB), PF",
-              "cvx": "328",
-              "beginAge": "10 years",
-              "endAge": "26 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
-            }
+              'vaccineType':
+                  'Meningococcal oligosaccharide (MenACWY), (MenB), PF',
+              'cvx': '328',
+              'beginAge': '10 years',
+              'endAge': '26 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
+            },
           ],
-          "allowableVaccine": [
+          'allowableVaccine': [
             {
-              "vaccineType": "Meningococcal ACWY, unspecified",
-              "cvx": "108",
-              "beginAge": "2 months - 4 days"
+              'vaccineType': 'Meningococcal ACWY, unspecified',
+              'cvx': '108',
+              'beginAge': '2 months - 4 days',
             },
             {
-              "vaccineType": "Meningococcal, MCV4P",
-              "cvx": "114",
-              "beginAge": "9 months - 4 days"
+              'vaccineType': 'Meningococcal, MCV4P',
+              'cvx': '114',
+              'beginAge': '9 months - 4 days',
             },
             {
-              "vaccineType": "Meningococcal, MCV4O",
-              "cvx": "136",
-              "beginAge": "2 months - 4 days"
+              'vaccineType': 'Meningococcal, MCV4O',
+              'cvx': '136',
+              'beginAge': '2 months - 4 days',
             },
             {
-              "vaccineType": "MCV4, unspecified",
-              "cvx": "147",
-              "beginAge": "2 months - 4 days"
+              'vaccineType': 'MCV4, unspecified',
+              'cvx': '147',
+              'beginAge': '2 months - 4 days',
             },
             {
-              "vaccineType":
-                  "Meningococcal Polysaccharide A, C, Y, W-135 TT Conjugate",
-              "cvx": "203",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType':
+                  'Meningococcal Polysaccharide A, C, Y, W-135 TT Conjugate',
+              'cvx': '203',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType":
-                  "meningococcal polysaccharide (MenACWY-TT conjugate), (MenB), PF",
-              "cvx": "316",
-              "beginAge": "10 years - 4 days",
-              "endAge": "26 years"
+              'vaccineType':
+                  'meningococcal polysaccharide (MenACWY-TT conjugate), '
+                  '(MenB), PF',
+              'cvx': '316',
+              'beginAge': '10 years - 4 days',
+              'endAge': '26 years',
             },
             {
-              "vaccineType":
-                  "Meningococcal oligosaccharide (MenACWY), (MenB), PF",
-              "cvx": "328",
-              "beginAge": "10 years - 4 days",
-              "endAge": "26 years"
-            }
+              'vaccineType':
+                  'Meningococcal oligosaccharide (MenACWY), (MenB), PF',
+              'cvx': '328',
+              'beginAge': '10 years - 4 days',
+              'endAge': '26 years',
+            },
           ],
-          "conditionalSkip": [
+          'conditionalSkip': [
             {
-              "context": "Both",
-              "setLogic": "n/a",
-              "set": [
+              'context': 'Both',
+              'setLogic': 'n/a',
+              'set': [
                 {
-                  "setID": "1",
-                  "setDescription":
-                      "Dose is not required if the patient has received 1 or more doses after the age of 7 years",
-                  "condition": [
+                  'setID': '1',
+                  'setDescription':
+                      'Dose is not required if the patient has received 1 '
+                      'or more doses after the age of 7 years',
+                  'condition': [
                     {
-                      "conditionID": "1",
-                      "conditionType": "Vaccine Count by Age",
-                      "beginAge": "7 years",
-                      "doseCount": "0",
-                      "doseType": "Valid",
-                      "doseCountLogic": "greater than"
-                    }
-                  ]
-                }
-              ]
-            }
+                      'conditionID': '1',
+                      'conditionType': 'Vaccine Count by Age',
+                      'beginAge': '7 years',
+                      'doseCount': '0',
+                      'doseType': 'Valid',
+                      'doseCountLogic': 'greater than',
+                    },
+                  ],
+                },
+              ],
+            },
           ],
-          "recurringDose": "No"
+          'recurringDose': 'No',
         },
         {
-          "doseNumber": "Dose 6",
-          "interval": [
+          'doseNumber': 'Dose 6',
+          'interval': [
             {
-              "fromPrevious": "Y",
-              "absMinInt": "5 years - 4 days",
-              "minInt": "5 years",
-              "earliestRecInt": "5 years"
-            }
+              'fromPrevious': 'Y',
+              'absMinInt': '5 years - 4 days',
+              'minInt': '5 years',
+              'earliestRecInt': '5 years',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "Meningococcal, MCV4O",
-              "cvx": "136",
-              "beginAge": "2 months",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType': 'Meningococcal, MCV4O',
+              'cvx': '136',
+              'beginAge': '2 months',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType":
-                  "Meningococcal Polysaccharide A, C, Y, W-135 TT Conjugate",
-              "cvx": "203",
-              "beginAge": "2 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType':
+                  'Meningococcal Polysaccharide A, C, Y, W-135 TT Conjugate',
+              'cvx': '203',
+              'beginAge': '2 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType":
-                  "meningococcal polysaccharide (MenACWY-TT conjugate), (MenB), PF",
-              "cvx": "316",
-              "beginAge": "10 years",
-              "endAge": "26 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType':
+                  'meningococcal polysaccharide (MenACWY-TT conjugate), '
+                  '(MenB), PF',
+              'cvx': '316',
+              'beginAge': '10 years',
+              'endAge': '26 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType":
-                  "Meningococcal oligosaccharide (MenACWY), (MenB), PF",
-              "cvx": "328",
-              "beginAge": "10 years",
-              "endAge": "26 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
-            }
+              'vaccineType':
+                  'Meningococcal oligosaccharide (MenACWY), (MenB), PF',
+              'cvx': '328',
+              'beginAge': '10 years',
+              'endAge': '26 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
+            },
           ],
-          "allowableVaccine": [
+          'allowableVaccine': [
             {
-              "vaccineType": "Meningococcal ACWY, unspecified",
-              "cvx": "108",
-              "beginAge": "2 months - 4 days"
+              'vaccineType': 'Meningococcal ACWY, unspecified',
+              'cvx': '108',
+              'beginAge': '2 months - 4 days',
             },
             {
-              "vaccineType": "Meningococcal, MCV4P",
-              "cvx": "114",
-              "beginAge": "9 months - 4 days"
+              'vaccineType': 'Meningococcal, MCV4P',
+              'cvx': '114',
+              'beginAge': '9 months - 4 days',
             },
             {
-              "vaccineType": "Meningococcal, MCV4O",
-              "cvx": "136",
-              "beginAge": "2 months - 4 days"
+              'vaccineType': 'Meningococcal, MCV4O',
+              'cvx': '136',
+              'beginAge': '2 months - 4 days',
             },
             {
-              "vaccineType": "MCV4, unspecified",
-              "cvx": "147",
-              "beginAge": "2 months - 4 days"
+              'vaccineType': 'MCV4, unspecified',
+              'cvx': '147',
+              'beginAge': '2 months - 4 days',
             },
             {
-              "vaccineType":
-                  "Meningococcal Polysaccharide A, C, Y, W-135 TT Conjugate",
-              "cvx": "203",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType':
+                  'Meningococcal Polysaccharide A, C, Y, W-135 TT Conjugate',
+              'cvx': '203',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType":
-                  "meningococcal polysaccharide (MenACWY-TT conjugate), (MenB), PF",
-              "cvx": "316",
-              "beginAge": "10 years - 4 days",
-              "endAge": "26 years"
+              'vaccineType':
+                  'meningococcal polysaccharide (MenACWY-TT conjugate), '
+                  '(MenB), PF',
+              'cvx': '316',
+              'beginAge': '10 years - 4 days',
+              'endAge': '26 years',
             },
             {
-              "vaccineType":
-                  "Meningococcal oligosaccharide (MenACWY), (MenB), PF",
-              "cvx": "328",
-              "beginAge": "10 years - 4 days",
-              "endAge": "26 years"
-            }
+              'vaccineType':
+                  'Meningococcal oligosaccharide (MenACWY), (MenB), PF',
+              'cvx': '328',
+              'beginAge': '10 years - 4 days',
+              'endAge': '26 years',
+            },
           ],
-          "recurringDose": "Yes"
-        }
-      ]
+          'recurringDose': 'Yes',
+        },
+      ],
     },
     {
-      "seriesName": "Meningococcal ACWY risk 2-dose series",
-      "targetDisease": "Meningococcal",
-      "vaccineGroup": "Meningococcal",
-      "seriesAdminGuidance": [
-        "Penbraya (MenACWY/MenB - Pfizer) or Penmenvy (MenACWY/MenB - GSK) may be used when both MenACWY and MenB are indicated at the same visit."
+      'seriesName': 'Meningococcal ACWY risk 2-dose series',
+      'targetDisease': 'Meningococcal',
+      'vaccineGroup': 'Meningococcal',
+      'seriesAdminGuidance': [
+        'Penbraya (MenACWY/MenB - Pfizer) or Penmenvy (MenACWY/MenB - '
+            'GSK) may be used when both MenACWY and MenB are indicated at '
+            'the same visit.',
       ],
-      "seriesType": "Risk",
-      "selectSeries": {
-        "defaultSeries": "No",
-        "productPath": "No",
-        "seriesGroupName": "Increased Risk",
-        "seriesGroup": "2",
-        "seriesPriority": "A"
+      'seriesType': 'Risk',
+      'selectSeries': {
+        'defaultSeries': 'No',
+        'productPath': 'No',
+        'seriesGroupName': 'Increased Risk',
+        'seriesGroup': '2',
+        'seriesPriority': 'A',
       },
-      "indication": [
+      'indication': [
         {
-          "observationCode": {
-            "text": "Persistent complement, properdin, or factor B deficiency",
-            "code": "151"
+          'observationCode': {
+            'text': 'Persistent complement, properdin, or factor B deficiency',
+            'code': '151',
           },
-          "description":
-              "Administer to persons who have persistent complement deficiencies",
-          "beginAge": "2 years"
+          'description':
+              'Administer to persons who have persistent complement '
+              'deficiencies',
+          'beginAge': '2 years',
         },
         {
-          "observationCode": {
-            "text": "HIV/AIDS - severely immunocompromised",
-            "code": "154"
+          'observationCode': {
+            'text': 'HIV/AIDS - severely immunocompromised',
+            'code': '154',
           },
-          "description":
-              "Administer to persons who have HIV/AIDS and are severely immunocompromised [See the CDC general recommendations for a definition of \"severely immunocompromised\"].",
-          "beginAge": "2 years"
+          'description':
+              'Administer to persons who have HIV/AIDS and are severely '
+              'immunocompromised [See the CDC general recommendations for '
+              'a definition of "severely immunocompromised"].',
+          'beginAge': '2 years',
         },
         {
-          "observationCode": {
-            "text": "HIV/AIDS - not severely immunocompromised",
-            "code": "155"
+          'observationCode': {
+            'text': 'HIV/AIDS - not severely immunocompromised',
+            'code': '155',
           },
-          "description":
-              "Administer to persons who have HIV/AIDS and are not severely immunocompromised [See the CDC general recommendations for a definition of \"severely immunocompromised\"].",
-          "beginAge": "2 years"
+          'description':
+              'Administer to persons who have HIV/AIDS and are not '
+              'severely immunocompromised [See the CDC general '
+              'recommendations for a definition of "severely '
+              'immunocompromised"].',
+          'beginAge': '2 years',
         },
         {
-          "observationCode": {
-            "text": "Anatomical or functional asplenia",
-            "code": "160"
+          'observationCode': {
+            'text': 'Anatomical or functional asplenia',
+            'code': '160',
           },
-          "description":
-              "Administer to persons with anatomic or functional asplenia, including sickle cell disease.",
-          "beginAge": "2 years"
+          'description':
+              'Administer to persons with anatomic or functional asplenia, '
+              'including sickle cell disease.',
+          'beginAge': '2 years',
         },
         {
-          "observationCode": {"text": "HIV Infection", "code": "186"},
-          "description": "Administer to persons with HIV Infection",
-          "beginAge": "2 years"
+          'observationCode': {
+            'text': 'HIV Infection',
+            'code': '186',
+          },
+          'description': 'Administer to persons with HIV Infection',
+          'beginAge': '2 years',
         },
         {
-          "observationCode": {"text": "Sickle cell disease", "code": "259"},
-          "description": "Administer to persons with sickle cell disease",
-          "beginAge": "2 years"
-        }
+          'observationCode': {
+            'text': 'Sickle cell disease',
+            'code': '259',
+          },
+          'description': 'Administer to persons with sickle cell disease',
+          'beginAge': '2 years',
+        },
       ],
-      "seriesDose": [
+      'seriesDose': [
         {
-          "doseNumber": "Dose 1",
-          "age": [
+          'doseNumber': 'Dose 1',
+          'age': [
             {
-              "absMinAge": "2 years - 4 days",
-              "minAge": "2 years",
-              "earliestRecAge": "2 years"
-            }
+              'absMinAge': '2 years - 4 days',
+              'minAge': '2 years',
+              'earliestRecAge': '2 years',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "Meningococcal, MCV4O",
-              "cvx": "136",
-              "beginAge": "2 months",
-              "endAge": "56 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType': 'Meningococcal, MCV4O',
+              'cvx': '136',
+              'beginAge': '2 months',
+              'endAge': '56 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType":
-                  "Meningococcal Polysaccharide A, C, Y, W-135 TT Conjugate",
-              "cvx": "203",
-              "beginAge": "2 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType':
+                  'Meningococcal Polysaccharide A, C, Y, W-135 TT Conjugate',
+              'cvx': '203',
+              'beginAge': '2 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType":
-                  "meningococcal polysaccharide (MenACWY-TT conjugate), (MenB), PF",
-              "cvx": "316",
-              "beginAge": "10 years",
-              "endAge": "26 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType':
+                  'meningococcal polysaccharide (MenACWY-TT conjugate), '
+                  '(MenB), PF',
+              'cvx': '316',
+              'beginAge': '10 years',
+              'endAge': '26 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType":
-                  "Meningococcal oligosaccharide (MenACWY), (MenB), PF",
-              "cvx": "328",
-              "beginAge": "10 years",
-              "endAge": "26 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
-            }
+              'vaccineType':
+                  'Meningococcal oligosaccharide (MenACWY), (MenB), PF',
+              'cvx': '328',
+              'beginAge': '10 years',
+              'endAge': '26 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
+            },
           ],
-          "allowableVaccine": [
+          'allowableVaccine': [
             {
-              "vaccineType": "Meningococcal ACWY, unspecified",
-              "cvx": "108",
-              "beginAge": "2 months - 4 days"
+              'vaccineType': 'Meningococcal ACWY, unspecified',
+              'cvx': '108',
+              'beginAge': '2 months - 4 days',
             },
             {
-              "vaccineType": "Meningococcal, MCV4P",
-              "cvx": "114",
-              "beginAge": "9 months - 4 days"
+              'vaccineType': 'Meningococcal, MCV4P',
+              'cvx': '114',
+              'beginAge': '9 months - 4 days',
             },
             {
-              "vaccineType": "Meningococcal, MCV4O",
-              "cvx": "136",
-              "beginAge": "2 months - 4 days"
+              'vaccineType': 'Meningococcal, MCV4O',
+              'cvx': '136',
+              'beginAge': '2 months - 4 days',
             },
             {
-              "vaccineType": "MCV4, unspecified",
-              "cvx": "147",
-              "beginAge": "2 months - 4 days"
+              'vaccineType': 'MCV4, unspecified',
+              'cvx': '147',
+              'beginAge': '2 months - 4 days',
             },
             {
-              "vaccineType":
-                  "Meningococcal Polysaccharide A, C, Y, W-135 TT Conjugate",
-              "cvx": "203",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType':
+                  'Meningococcal Polysaccharide A, C, Y, W-135 TT Conjugate',
+              'cvx': '203',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType":
-                  "meningococcal polysaccharide (MenACWY-TT conjugate), (MenB), PF",
-              "cvx": "316",
-              "beginAge": "10 years - 4 days",
-              "endAge": "26 years"
+              'vaccineType':
+                  'meningococcal polysaccharide (MenACWY-TT conjugate), '
+                  '(MenB), PF',
+              'cvx': '316',
+              'beginAge': '10 years - 4 days',
+              'endAge': '26 years',
             },
             {
-              "vaccineType":
-                  "Meningococcal oligosaccharide (MenACWY), (MenB), PF",
-              "cvx": "328",
-              "beginAge": "10 years - 4 days",
-              "endAge": "26 years"
-            }
+              'vaccineType':
+                  'Meningococcal oligosaccharide (MenACWY), (MenB), PF',
+              'cvx': '328',
+              'beginAge': '10 years - 4 days',
+              'endAge': '26 years',
+            },
           ],
-          "recurringDose": "No"
+          'recurringDose': 'No',
         },
         {
-          "doseNumber": "Dose 2",
-          "interval": [
+          'doseNumber': 'Dose 2',
+          'interval': [
             {
-              "fromPrevious": "N",
-              "fromMostRecent": "316; 328",
-              "absMinInt": "8 weeks - 4 days",
-              "minInt": "6 months",
-              "earliestRecInt": "6 months"
+              'fromPrevious': 'N',
+              'fromMostRecent': '316; 328',
+              'absMinInt': '8 weeks - 4 days',
+              'minInt': '6 months',
+              'earliestRecInt': '6 months',
             },
             {
-              "fromPrevious": "Y",
-              "absMinInt": "8 weeks - 4 days",
-              "minInt": "8 weeks",
-              "earliestRecInt": "8 weeks",
-              "latestRecInt": "12 weeks"
-            }
+              'fromPrevious': 'Y',
+              'absMinInt': '8 weeks - 4 days',
+              'minInt': '8 weeks',
+              'earliestRecInt': '8 weeks',
+              'latestRecInt': '12 weeks',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "Meningococcal, MCV4O",
-              "cvx": "136",
-              "beginAge": "2 months",
-              "endAge": "56 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType': 'Meningococcal, MCV4O',
+              'cvx': '136',
+              'beginAge': '2 months',
+              'endAge': '56 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType":
-                  "Meningococcal Polysaccharide A, C, Y, W-135 TT Conjugate",
-              "cvx": "203",
-              "beginAge": "2 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType':
+                  'Meningococcal Polysaccharide A, C, Y, W-135 TT Conjugate',
+              'cvx': '203',
+              'beginAge': '2 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType":
-                  "meningococcal polysaccharide (MenACWY-TT conjugate), (MenB), PF",
-              "cvx": "316",
-              "beginAge": "10 years",
-              "endAge": "26 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType':
+                  'meningococcal polysaccharide (MenACWY-TT conjugate), '
+                  '(MenB), PF',
+              'cvx': '316',
+              'beginAge': '10 years',
+              'endAge': '26 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType":
-                  "Meningococcal oligosaccharide (MenACWY), (MenB), PF",
-              "cvx": "328",
-              "beginAge": "10 years",
-              "endAge": "26 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
-            }
+              'vaccineType':
+                  'Meningococcal oligosaccharide (MenACWY), (MenB), PF',
+              'cvx': '328',
+              'beginAge': '10 years',
+              'endAge': '26 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
+            },
           ],
-          "allowableVaccine": [
+          'allowableVaccine': [
             {
-              "vaccineType": "Meningococcal ACWY, unspecified",
-              "cvx": "108",
-              "beginAge": "2 months - 4 days"
+              'vaccineType': 'Meningococcal ACWY, unspecified',
+              'cvx': '108',
+              'beginAge': '2 months - 4 days',
             },
             {
-              "vaccineType": "Meningococcal, MCV4P",
-              "cvx": "114",
-              "beginAge": "9 months - 4 days"
+              'vaccineType': 'Meningococcal, MCV4P',
+              'cvx': '114',
+              'beginAge': '9 months - 4 days',
             },
             {
-              "vaccineType": "Meningococcal, MCV4O",
-              "cvx": "136",
-              "beginAge": "2 months - 4 days"
+              'vaccineType': 'Meningococcal, MCV4O',
+              'cvx': '136',
+              'beginAge': '2 months - 4 days',
             },
             {
-              "vaccineType": "MCV4, unspecified",
-              "cvx": "147",
-              "beginAge": "2 months - 4 days"
+              'vaccineType': 'MCV4, unspecified',
+              'cvx': '147',
+              'beginAge': '2 months - 4 days',
             },
             {
-              "vaccineType":
-                  "Meningococcal Polysaccharide A, C, Y, W-135 TT Conjugate",
-              "cvx": "203",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType':
+                  'Meningococcal Polysaccharide A, C, Y, W-135 TT Conjugate',
+              'cvx': '203',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType":
-                  "meningococcal polysaccharide (MenACWY-TT conjugate), (MenB), PF",
-              "cvx": "316",
-              "beginAge": "10 years - 4 days",
-              "endAge": "26 years"
+              'vaccineType':
+                  'meningococcal polysaccharide (MenACWY-TT conjugate), '
+                  '(MenB), PF',
+              'cvx': '316',
+              'beginAge': '10 years - 4 days',
+              'endAge': '26 years',
             },
             {
-              "vaccineType":
-                  "Meningococcal oligosaccharide (MenACWY), (MenB), PF",
-              "cvx": "328",
-              "beginAge": "10 years - 4 days",
-              "endAge": "26 years"
-            }
+              'vaccineType':
+                  'Meningococcal oligosaccharide (MenACWY), (MenB), PF',
+              'cvx': '328',
+              'beginAge': '10 years - 4 days',
+              'endAge': '26 years',
+            },
           ],
-          "recurringDose": "No"
+          'recurringDose': 'No',
         },
         {
-          "doseNumber": "Dose 3",
-          "interval": [
+          'doseNumber': 'Dose 3',
+          'interval': [
             {
-              "fromPrevious": "Y",
-              "absMinInt": "3 years - 4 days",
-              "minInt": "3 years",
-              "earliestRecInt": "3 years"
-            }
+              'fromPrevious': 'Y',
+              'absMinInt': '3 years - 4 days',
+              'minInt': '3 years',
+              'earliestRecInt': '3 years',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "Meningococcal, MCV4O",
-              "cvx": "136",
-              "beginAge": "2 months",
-              "endAge": "56 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType': 'Meningococcal, MCV4O',
+              'cvx': '136',
+              'beginAge': '2 months',
+              'endAge': '56 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType":
-                  "Meningococcal Polysaccharide A, C, Y, W-135 TT Conjugate",
-              "cvx": "203",
-              "beginAge": "2 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType':
+                  'Meningococcal Polysaccharide A, C, Y, W-135 TT Conjugate',
+              'cvx': '203',
+              'beginAge': '2 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType":
-                  "meningococcal polysaccharide (MenACWY-TT conjugate), (MenB), PF",
-              "cvx": "316",
-              "beginAge": "10 years",
-              "endAge": "26 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType':
+                  'meningococcal polysaccharide (MenACWY-TT conjugate), '
+                  '(MenB), PF',
+              'cvx': '316',
+              'beginAge': '10 years',
+              'endAge': '26 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType":
-                  "Meningococcal oligosaccharide (MenACWY), (MenB), PF",
-              "cvx": "328",
-              "beginAge": "10 years",
-              "endAge": "26 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
-            }
+              'vaccineType':
+                  'Meningococcal oligosaccharide (MenACWY), (MenB), PF',
+              'cvx': '328',
+              'beginAge': '10 years',
+              'endAge': '26 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
+            },
           ],
-          "allowableVaccine": [
+          'allowableVaccine': [
             {
-              "vaccineType": "Meningococcal ACWY, unspecified",
-              "cvx": "108",
-              "beginAge": "2 months - 4 days"
+              'vaccineType': 'Meningococcal ACWY, unspecified',
+              'cvx': '108',
+              'beginAge': '2 months - 4 days',
             },
             {
-              "vaccineType": "Meningococcal, MCV4P",
-              "cvx": "114",
-              "beginAge": "9 months - 4 days"
+              'vaccineType': 'Meningococcal, MCV4P',
+              'cvx': '114',
+              'beginAge': '9 months - 4 days',
             },
             {
-              "vaccineType": "Meningococcal, MCV4O",
-              "cvx": "136",
-              "beginAge": "2 months - 4 days"
+              'vaccineType': 'Meningococcal, MCV4O',
+              'cvx': '136',
+              'beginAge': '2 months - 4 days',
             },
             {
-              "vaccineType": "MCV4, unspecified",
-              "cvx": "147",
-              "beginAge": "2 months - 4 days"
+              'vaccineType': 'MCV4, unspecified',
+              'cvx': '147',
+              'beginAge': '2 months - 4 days',
             },
             {
-              "vaccineType":
-                  "Meningococcal Polysaccharide A, C, Y, W-135 TT Conjugate",
-              "cvx": "203",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType':
+                  'Meningococcal Polysaccharide A, C, Y, W-135 TT Conjugate',
+              'cvx': '203',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType":
-                  "meningococcal polysaccharide (MenACWY-TT conjugate), (MenB), PF",
-              "cvx": "316",
-              "beginAge": "10 years - 4 days",
-              "endAge": "26 years"
+              'vaccineType':
+                  'meningococcal polysaccharide (MenACWY-TT conjugate), '
+                  '(MenB), PF',
+              'cvx': '316',
+              'beginAge': '10 years - 4 days',
+              'endAge': '26 years',
             },
             {
-              "vaccineType":
-                  "Meningococcal oligosaccharide (MenACWY), (MenB), PF",
-              "cvx": "328",
-              "beginAge": "10 years - 4 days",
-              "endAge": "26 years"
-            }
+              'vaccineType':
+                  'Meningococcal oligosaccharide (MenACWY), (MenB), PF',
+              'cvx': '328',
+              'beginAge': '10 years - 4 days',
+              'endAge': '26 years',
+            },
           ],
-          "conditionalSkip": [
+          'conditionalSkip': [
             {
-              "context": "Both",
-              "setLogic": "n/a",
-              "set": [
+              'context': 'Both',
+              'setLogic': 'n/a',
+              'set': [
                 {
-                  "setID": "1",
-                  "setDescription":
-                      "Dose is not required if the patient has received 1 or more doses after the age of 7 years",
-                  "condition": [
+                  'setID': '1',
+                  'setDescription':
+                      'Dose is not required if the patient has received 1 '
+                      'or more doses after the age of 7 years',
+                  'condition': [
                     {
-                      "conditionID": "1",
-                      "conditionType": "Vaccine Count by Age",
-                      "beginAge": "7 years",
-                      "doseCount": "0",
-                      "doseType": "Valid",
-                      "doseCountLogic": "greater than"
-                    }
-                  ]
-                }
-              ]
-            }
+                      'conditionID': '1',
+                      'conditionType': 'Vaccine Count by Age',
+                      'beginAge': '7 years',
+                      'doseCount': '0',
+                      'doseType': 'Valid',
+                      'doseCountLogic': 'greater than',
+                    },
+                  ],
+                },
+              ],
+            },
           ],
-          "recurringDose": "No"
+          'recurringDose': 'No',
         },
         {
-          "doseNumber": "Dose 4",
-          "interval": [
+          'doseNumber': 'Dose 4',
+          'interval': [
             {
-              "fromPrevious": "Y",
-              "absMinInt": "5 years - 4 days",
-              "minInt": "5 years",
-              "earliestRecInt": "5 years"
-            }
+              'fromPrevious': 'Y',
+              'absMinInt': '5 years - 4 days',
+              'minInt': '5 years',
+              'earliestRecInt': '5 years',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "Meningococcal, MCV4O",
-              "cvx": "136",
-              "beginAge": "2 months",
-              "endAge": "56 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType': 'Meningococcal, MCV4O',
+              'cvx': '136',
+              'beginAge': '2 months',
+              'endAge': '56 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType":
-                  "Meningococcal Polysaccharide A, C, Y, W-135 TT Conjugate",
-              "cvx": "203",
-              "beginAge": "2 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType':
+                  'Meningococcal Polysaccharide A, C, Y, W-135 TT Conjugate',
+              'cvx': '203',
+              'beginAge': '2 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType":
-                  "meningococcal polysaccharide (MenACWY-TT conjugate), (MenB), PF",
-              "cvx": "316",
-              "beginAge": "10 years",
-              "endAge": "26 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType':
+                  'meningococcal polysaccharide (MenACWY-TT conjugate), '
+                  '(MenB), PF',
+              'cvx': '316',
+              'beginAge': '10 years',
+              'endAge': '26 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType":
-                  "Meningococcal oligosaccharide (MenACWY), (MenB), PF",
-              "cvx": "328",
-              "beginAge": "10 years",
-              "endAge": "26 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
-            }
+              'vaccineType':
+                  'Meningococcal oligosaccharide (MenACWY), (MenB), PF',
+              'cvx': '328',
+              'beginAge': '10 years',
+              'endAge': '26 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
+            },
           ],
-          "allowableVaccine": [
+          'allowableVaccine': [
             {
-              "vaccineType": "Meningococcal ACWY, unspecified",
-              "cvx": "108",
-              "beginAge": "2 months - 4 days"
+              'vaccineType': 'Meningococcal ACWY, unspecified',
+              'cvx': '108',
+              'beginAge': '2 months - 4 days',
             },
             {
-              "vaccineType": "Meningococcal, MCV4P",
-              "cvx": "114",
-              "beginAge": "9 months - 4 days"
+              'vaccineType': 'Meningococcal, MCV4P',
+              'cvx': '114',
+              'beginAge': '9 months - 4 days',
             },
             {
-              "vaccineType": "Meningococcal, MCV4O",
-              "cvx": "136",
-              "beginAge": "2 months - 4 days"
+              'vaccineType': 'Meningococcal, MCV4O',
+              'cvx': '136',
+              'beginAge': '2 months - 4 days',
             },
             {
-              "vaccineType": "MCV4, unspecified",
-              "cvx": "147",
-              "beginAge": "2 months - 4 days"
+              'vaccineType': 'MCV4, unspecified',
+              'cvx': '147',
+              'beginAge': '2 months - 4 days',
             },
             {
-              "vaccineType":
-                  "Meningococcal Polysaccharide A, C, Y, W-135 TT Conjugate",
-              "cvx": "203",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType':
+                  'Meningococcal Polysaccharide A, C, Y, W-135 TT Conjugate',
+              'cvx': '203',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType":
-                  "meningococcal polysaccharide (MenACWY-TT conjugate), (MenB), PF",
-              "cvx": "316",
-              "beginAge": "10 years - 4 days",
-              "endAge": "26 years"
+              'vaccineType':
+                  'meningococcal polysaccharide (MenACWY-TT conjugate), '
+                  '(MenB), PF',
+              'cvx': '316',
+              'beginAge': '10 years - 4 days',
+              'endAge': '26 years',
             },
             {
-              "vaccineType":
-                  "Meningococcal oligosaccharide (MenACWY), (MenB), PF",
-              "cvx": "328",
-              "beginAge": "10 years - 4 days",
-              "endAge": "26 years"
-            }
+              'vaccineType':
+                  'Meningococcal oligosaccharide (MenACWY), (MenB), PF',
+              'cvx': '328',
+              'beginAge': '10 years - 4 days',
+              'endAge': '26 years',
+            },
           ],
-          "recurringDose": "Yes"
-        }
-      ]
+          'recurringDose': 'Yes',
+        },
+      ],
     },
     {
-      "seriesName": "Meningococcal ACWY risk 1-dose series",
-      "targetDisease": "Meningococcal",
-      "vaccineGroup": "Meningococcal",
-      "seriesAdminGuidance": [
-        "Persons with HIV infection who are recommended routinely to receive vaccine should receive a 2-dose primary series, administered 8-12 weeks apart, because evidence suggests that persons with HIV do not respond optimally to a single dose.",
-        "Penbraya (MenACWY/MenB - Pfizer) or Penmenvy (MenACWY/MenB - GSK) may be used when both MenACWY and MenB are indicated at the same visit."
+      'seriesName': 'Meningococcal ACWY risk 1-dose series',
+      'targetDisease': 'Meningococcal',
+      'vaccineGroup': 'Meningococcal',
+      'seriesAdminGuidance': [
+        'Persons with HIV infection who are recommended routinely to '
+            'receive vaccine should receive a 2-dose primary series, '
+            'administered 8-12 weeks apart, because evidence suggests that '
+            'persons with HIV do not respond optimally to a single dose.',
+        'Penbraya (MenACWY/MenB - Pfizer) or Penmenvy (MenACWY/MenB - '
+            'GSK) may be used when both MenACWY and MenB are indicated at '
+            'the same visit.',
       ],
-      "seriesType": "Risk",
-      "selectSeries": {
-        "defaultSeries": "No",
-        "productPath": "No",
-        "seriesGroupName": "Increased Risk",
-        "seriesGroup": "2",
-        "seriesPriority": "B",
-        "minAgeToStart": "2 years"
+      'seriesType': 'Risk',
+      'selectSeries': {
+        'defaultSeries': 'No',
+        'productPath': 'No',
+        'seriesGroupName': 'Increased Risk',
+        'seriesGroup': '2',
+        'seriesPriority': 'B',
+        'minAgeToStart': '2 years',
       },
-      "indication": [
+      'indication': [
         {
-          "observationCode": {
-            "text": "College students living in residence halls",
-            "code": "046"
+          'observationCode': {
+            'text': 'College students living in residence halls',
+            'code': '046',
           },
-          "description":
-              "Administer to college students living in residence halls.",
-          "beginAge": "19 years"
+          'description':
+              'Administer to college students living in residence halls.',
+          'beginAge': '19 years',
         },
         {
-          "observationCode": {
-            "text":
-                "Microbiologists routinely exposed to Neisseria meningitidis",
-            "code": "050"
+          'observationCode': {
+            'text':
+                'Microbiologists routinely exposed to Neisseria '
+                'meningitidis',
+            'code': '050',
           },
-          "description":
-              "Administer to microbiologists routinely exposed to Neisseria meningitidis",
-          "beginAge": "19 years"
+          'description':
+              'Administer to microbiologists routinely exposed to '
+              'Neisseria meningitidis',
+          'beginAge': '19 years',
         },
         {
-          "observationCode": {"text": "Military recruits", "code": "064"},
-          "description": "Administer to military recruits.",
-          "beginAge": "19 years"
+          'observationCode': {
+            'text': 'Military recruits',
+            'code': '064',
+          },
+          'description': 'Administer to military recruits.',
+          'beginAge': '19 years',
         },
         {
-          "observationCode": {
-            "text": "Persons at risk during an outbreak",
-            "code": "070"
+          'observationCode': {
+            'text': 'Persons at risk during an outbreak',
+            'code': '070',
           },
-          "description":
-              "Administer to persons identified as at increased risk during a community outbreak attributable to a vaccine serogroup.",
-          "beginAge": "2 years"
+          'description':
+              'Administer to persons identified as at increased risk '
+              'during a community outbreak attributable to a vaccine '
+              'serogroup.',
+          'beginAge': '2 years',
         },
         {
-          "observationCode": {
-            "text":
-                "Travel to or are residents of countries in which meningococcal disease is hyperendemic or epidemic",
-            "code": "164"
+          'observationCode': {
+            'text':
+                'Travel to or are residents of countries in which '
+                'meningococcal disease is hyperendemic or epidemic',
+            'code': '164',
           },
-          "description":
-              "Administer to persons who travel to or are residents of countries in which meningococcal disease is hyperendemic or epidemic.",
-          "beginAge": "2 years"
-        }
+          'description':
+              'Administer to persons who travel to or are residents of '
+              'countries in which meningococcal disease is hyperendemic or '
+              'epidemic.',
+          'beginAge': '2 years',
+        },
       ],
-      "seriesDose": [
+      'seriesDose': [
         {
-          "doseNumber": "Dose 1",
-          "age": [
+          'doseNumber': 'Dose 1',
+          'age': [
             {
-              "absMinAge": "2 years - 4 days",
-              "minAge": "2 years",
-              "earliestRecAge": "2 years"
-            }
+              'absMinAge': '2 years - 4 days',
+              'minAge': '2 years',
+              'earliestRecAge': '2 years',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "Meningococcal, MCV4O",
-              "cvx": "136",
-              "beginAge": "2 months",
-              "endAge": "56 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType': 'Meningococcal, MCV4O',
+              'cvx': '136',
+              'beginAge': '2 months',
+              'endAge': '56 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType":
-                  "Meningococcal Polysaccharide A, C, Y, W-135 TT Conjugate",
-              "cvx": "203",
-              "beginAge": "2 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType':
+                  'Meningococcal Polysaccharide A, C, Y, W-135 TT Conjugate',
+              'cvx': '203',
+              'beginAge': '2 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType":
-                  "meningococcal polysaccharide (MenACWY-TT conjugate), (MenB), PF",
-              "cvx": "316",
-              "beginAge": "10 years",
-              "endAge": "26 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType':
+                  'meningococcal polysaccharide (MenACWY-TT conjugate), '
+                  '(MenB), PF',
+              'cvx': '316',
+              'beginAge': '10 years',
+              'endAge': '26 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType":
-                  "Meningococcal oligosaccharide (MenACWY), (MenB), PF",
-              "cvx": "328",
-              "beginAge": "10 years",
-              "endAge": "26 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
-            }
+              'vaccineType':
+                  'Meningococcal oligosaccharide (MenACWY), (MenB), PF',
+              'cvx': '328',
+              'beginAge': '10 years',
+              'endAge': '26 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
+            },
           ],
-          "allowableVaccine": [
+          'allowableVaccine': [
             {
-              "vaccineType": "Meningococcal ACWY, unspecified",
-              "cvx": "108",
-              "beginAge": "2 months - 4 days"
+              'vaccineType': 'Meningococcal ACWY, unspecified',
+              'cvx': '108',
+              'beginAge': '2 months - 4 days',
             },
             {
-              "vaccineType": "Meningococcal, MPSV4",
-              "cvx": "32",
-              "beginAge": "2 years - 4 days"
+              'vaccineType': 'Meningococcal, MPSV4',
+              'cvx': '32',
+              'beginAge': '2 years - 4 days',
             },
             {
-              "vaccineType": "Meningococcal, MCV4P",
-              "cvx": "114",
-              "beginAge": "9 months - 4 days"
+              'vaccineType': 'Meningococcal, MCV4P',
+              'cvx': '114',
+              'beginAge': '9 months - 4 days',
             },
             {
-              "vaccineType": "Meningococcal, MCV4O",
-              "cvx": "136",
-              "beginAge": "2 months - 4 days"
+              'vaccineType': 'Meningococcal, MCV4O',
+              'cvx': '136',
+              'beginAge': '2 months - 4 days',
             },
             {
-              "vaccineType": "MCV4, unspecified",
-              "cvx": "147",
-              "beginAge": "2 months - 4 days"
+              'vaccineType': 'MCV4, unspecified',
+              'cvx': '147',
+              'beginAge': '2 months - 4 days',
             },
             {
-              "vaccineType":
-                  "Meningococcal Polysaccharide A, C, Y, W-135 TT Conjugate",
-              "cvx": "203",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType':
+                  'Meningococcal Polysaccharide A, C, Y, W-135 TT Conjugate',
+              'cvx': '203',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType":
-                  "meningococcal polysaccharide (MenACWY-TT conjugate), (MenB), PF",
-              "cvx": "316",
-              "beginAge": "10 years - 4 days",
-              "endAge": "26 years"
+              'vaccineType':
+                  'meningococcal polysaccharide (MenACWY-TT conjugate), '
+                  '(MenB), PF',
+              'cvx': '316',
+              'beginAge': '10 years - 4 days',
+              'endAge': '26 years',
             },
             {
-              "vaccineType":
-                  "Meningococcal oligosaccharide (MenACWY), (MenB), PF",
-              "cvx": "328",
-              "beginAge": "10 years - 4 days",
-              "endAge": "26 years"
-            }
+              'vaccineType':
+                  'Meningococcal oligosaccharide (MenACWY), (MenB), PF',
+              'cvx': '328',
+              'beginAge': '10 years - 4 days',
+              'endAge': '26 years',
+            },
           ],
-          "recurringDose": "No"
+          'recurringDose': 'No',
         },
         {
-          "doseNumber": "Dose 2",
-          "interval": [
+          'doseNumber': 'Dose 2',
+          'interval': [
             {
-              "fromPrevious": "Y",
-              "absMinInt": "3 years - 4 days",
-              "minInt": "3 years",
-              "earliestRecInt": "3 years"
-            }
+              'fromPrevious': 'Y',
+              'absMinInt': '3 years - 4 days',
+              'minInt': '3 years',
+              'earliestRecInt': '3 years',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "Meningococcal, MCV4O",
-              "cvx": "136",
-              "beginAge": "2 months",
-              "endAge": "56 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType': 'Meningococcal, MCV4O',
+              'cvx': '136',
+              'beginAge': '2 months',
+              'endAge': '56 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType":
-                  "Meningococcal Polysaccharide A, C, Y, W-135 TT Conjugate",
-              "cvx": "203",
-              "beginAge": "2 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType':
+                  'Meningococcal Polysaccharide A, C, Y, W-135 TT Conjugate',
+              'cvx': '203',
+              'beginAge': '2 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType":
-                  "meningococcal polysaccharide (MenACWY-TT conjugate), (MenB), PF",
-              "cvx": "316",
-              "beginAge": "10 years",
-              "endAge": "26 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType':
+                  'meningococcal polysaccharide (MenACWY-TT conjugate), '
+                  '(MenB), PF',
+              'cvx': '316',
+              'beginAge': '10 years',
+              'endAge': '26 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType":
-                  "Meningococcal oligosaccharide (MenACWY), (MenB), PF",
-              "cvx": "328",
-              "beginAge": "10 years",
-              "endAge": "26 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
-            }
+              'vaccineType':
+                  'Meningococcal oligosaccharide (MenACWY), (MenB), PF',
+              'cvx': '328',
+              'beginAge': '10 years',
+              'endAge': '26 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
+            },
           ],
-          "allowableVaccine": [
+          'allowableVaccine': [
             {
-              "vaccineType": "Meningococcal ACWY, unspecified",
-              "cvx": "108",
-              "beginAge": "2 months - 4 days"
+              'vaccineType': 'Meningococcal ACWY, unspecified',
+              'cvx': '108',
+              'beginAge': '2 months - 4 days',
             },
             {
-              "vaccineType": "Meningococcal, MCV4P",
-              "cvx": "114",
-              "beginAge": "9 months - 4 days"
+              'vaccineType': 'Meningococcal, MCV4P',
+              'cvx': '114',
+              'beginAge': '9 months - 4 days',
             },
             {
-              "vaccineType": "Meningococcal, MCV4O",
-              "cvx": "136",
-              "beginAge": "2 months - 4 days"
+              'vaccineType': 'Meningococcal, MCV4O',
+              'cvx': '136',
+              'beginAge': '2 months - 4 days',
             },
             {
-              "vaccineType": "MCV4, unspecified",
-              "cvx": "147",
-              "beginAge": "2 months - 4 days"
+              'vaccineType': 'MCV4, unspecified',
+              'cvx': '147',
+              'beginAge': '2 months - 4 days',
             },
             {
-              "vaccineType":
-                  "Meningococcal Polysaccharide A, C, Y, W-135 TT Conjugate",
-              "cvx": "203",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType':
+                  'Meningococcal Polysaccharide A, C, Y, W-135 TT Conjugate',
+              'cvx': '203',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType":
-                  "meningococcal polysaccharide (MenACWY-TT conjugate), (MenB), PF",
-              "cvx": "316",
-              "beginAge": "10 years - 4 days",
-              "endAge": "26 years"
+              'vaccineType':
+                  'meningococcal polysaccharide (MenACWY-TT conjugate), '
+                  '(MenB), PF',
+              'cvx': '316',
+              'beginAge': '10 years - 4 days',
+              'endAge': '26 years',
             },
             {
-              "vaccineType":
-                  "Meningococcal oligosaccharide (MenACWY), (MenB), PF",
-              "cvx": "328",
-              "beginAge": "10 years - 4 days",
-              "endAge": "26 years"
-            }
+              'vaccineType':
+                  'Meningococcal oligosaccharide (MenACWY), (MenB), PF',
+              'cvx': '328',
+              'beginAge': '10 years - 4 days',
+              'endAge': '26 years',
+            },
           ],
-          "conditionalSkip": [
+          'conditionalSkip': [
             {
-              "context": "Both",
-              "setLogic": "n/a",
-              "set": [
+              'context': 'Both',
+              'setLogic': 'n/a',
+              'set': [
                 {
-                  "setID": "1",
-                  "setDescription":
-                      "Dose is not required if the patient has received 1 or more doses after the age of 7 years",
-                  "condition": [
+                  'setID': '1',
+                  'setDescription':
+                      'Dose is not required if the patient has received 1 '
+                      'or more doses after the age of 7 years',
+                  'condition': [
                     {
-                      "conditionID": "1",
-                      "conditionType": "Vaccine Count by Age",
-                      "beginAge": "7 years",
-                      "doseCount": "0",
-                      "doseType": "Valid",
-                      "doseCountLogic": "greater than"
-                    }
-                  ]
-                }
-              ]
-            }
+                      'conditionID': '1',
+                      'conditionType': 'Vaccine Count by Age',
+                      'beginAge': '7 years',
+                      'doseCount': '0',
+                      'doseType': 'Valid',
+                      'doseCountLogic': 'greater than',
+                    },
+                  ],
+                },
+              ],
+            },
           ],
-          "recurringDose": "No"
+          'recurringDose': 'No',
         },
         {
-          "doseNumber": "Dose 3",
-          "interval": [
+          'doseNumber': 'Dose 3',
+          'interval': [
             {
-              "fromPrevious": "Y",
-              "absMinInt": "5 years - 4 days",
-              "minInt": "5 years",
-              "earliestRecInt": "5 years"
-            }
+              'fromPrevious': 'Y',
+              'absMinInt': '5 years - 4 days',
+              'minInt': '5 years',
+              'earliestRecInt': '5 years',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "Meningococcal, MCV4O",
-              "cvx": "136",
-              "beginAge": "2 months",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType': 'Meningococcal, MCV4O',
+              'cvx': '136',
+              'beginAge': '2 months',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType":
-                  "Meningococcal Polysaccharide A, C, Y, W-135 TT Conjugate",
-              "cvx": "203",
-              "beginAge": "2 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType':
+                  'Meningococcal Polysaccharide A, C, Y, W-135 TT Conjugate',
+              'cvx': '203',
+              'beginAge': '2 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType":
-                  "meningococcal polysaccharide (MenACWY-TT conjugate), (MenB), PF",
-              "cvx": "316",
-              "beginAge": "10 years",
-              "endAge": "26 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
+              'vaccineType':
+                  'meningococcal polysaccharide (MenACWY-TT conjugate), '
+                  '(MenB), PF',
+              'cvx': '316',
+              'beginAge': '10 years',
+              'endAge': '26 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
             },
             {
-              "vaccineType":
-                  "Meningococcal oligosaccharide (MenACWY), (MenB), PF",
-              "cvx": "328",
-              "beginAge": "10 years",
-              "endAge": "26 years",
-              "volume": "0.5",
-              "forecastVaccineType": "N"
-            }
+              'vaccineType':
+                  'Meningococcal oligosaccharide (MenACWY), (MenB), PF',
+              'cvx': '328',
+              'beginAge': '10 years',
+              'endAge': '26 years',
+              'volume': '0.5',
+              'forecastVaccineType': 'N',
+            },
           ],
-          "allowableVaccine": [
+          'allowableVaccine': [
             {
-              "vaccineType": "Meningococcal ACWY, unspecified",
-              "cvx": "108",
-              "beginAge": "2 months - 4 days"
+              'vaccineType': 'Meningococcal ACWY, unspecified',
+              'cvx': '108',
+              'beginAge': '2 months - 4 days',
             },
             {
-              "vaccineType": "Meningococcal, MCV4P",
-              "cvx": "114",
-              "beginAge": "9 months - 4 days"
+              'vaccineType': 'Meningococcal, MCV4P',
+              'cvx': '114',
+              'beginAge': '9 months - 4 days',
             },
             {
-              "vaccineType": "Meningococcal, MCV4O",
-              "cvx": "136",
-              "beginAge": "2 months - 4 days"
+              'vaccineType': 'Meningococcal, MCV4O',
+              'cvx': '136',
+              'beginAge': '2 months - 4 days',
             },
             {
-              "vaccineType": "MCV4, unspecified",
-              "cvx": "147",
-              "beginAge": "2 months - 4 days"
+              'vaccineType': 'MCV4, unspecified',
+              'cvx': '147',
+              'beginAge': '2 months - 4 days',
             },
             {
-              "vaccineType":
-                  "Meningococcal Polysaccharide A, C, Y, W-135 TT Conjugate",
-              "cvx": "203",
-              "beginAge": "6 weeks - 4 days"
+              'vaccineType':
+                  'Meningococcal Polysaccharide A, C, Y, W-135 TT Conjugate',
+              'cvx': '203',
+              'beginAge': '6 weeks - 4 days',
             },
             {
-              "vaccineType":
-                  "meningococcal polysaccharide (MenACWY-TT conjugate), (MenB), PF",
-              "cvx": "316",
-              "beginAge": "10 years - 4 days",
-              "endAge": "26 years"
+              'vaccineType':
+                  'meningococcal polysaccharide (MenACWY-TT conjugate), '
+                  '(MenB), PF',
+              'cvx': '316',
+              'beginAge': '10 years - 4 days',
+              'endAge': '26 years',
             },
             {
-              "vaccineType":
-                  "Meningococcal oligosaccharide (MenACWY), (MenB), PF",
-              "cvx": "328",
-              "beginAge": "10 years - 4 days",
-              "endAge": "26 years"
-            }
+              'vaccineType':
+                  'Meningococcal oligosaccharide (MenACWY), (MenB), PF',
+              'cvx': '328',
+              'beginAge': '10 years - 4 days',
+              'endAge': '26 years',
+            },
           ],
-          "recurringDose": "Yes"
-        }
-      ]
-    }
+          'recurringDose': 'Yes',
+        },
+      ],
+    },
   ],
-  "vaccineRecommendationCategory": [
+  'vaccineRecommendationCategory': [
     {
-      "worksheetName": "2-dose",
-      "seriesName": "Meningococcal ACWY 2-dose series",
-      "patientBeginAge": "0 days",
-      "patientEndAge": "n/a",
-      "forecastTargetDose": "Any",
-      "includedIndication": "n/a",
-      "excludedIndication": "n/a",
-      "category": "Routine",
-      "additionalMaterial":
-          "https://www.cdc.gov/meningococcal/hcp/vaccine-recommendations/index.html#cdc_generic_section_2-menacwy-vaccination"
+      'worksheetName': '2-dose',
+      'seriesName': 'Meningococcal ACWY 2-dose series',
+      'patientBeginAge': '0 days',
+      'patientEndAge': 'n/a',
+      'forecastTargetDose': 'Any',
+      'includedIndication': 'n/a',
+      'excludedIndication': 'n/a',
+      'category': 'Routine',
+      'additionalMaterial':
+          'https://www.cdc.gov/meningococcal/hcp/vaccine-recommendations/index.html#cdc_generic_section_2-menacwy-vaccination',
     },
     {
-      "worksheetName": "Risk Start 2-23 months",
-      "seriesName": "Meningococcal ACWY risk 2-23 month",
-      "patientBeginAge": "2 months",
-      "patientEndAge": "n/a",
-      "forecastTargetDose": "Any",
-      "includedIndication": "n/a",
-      "excludedIndication": "n/a",
-      "category": "High-Risk",
-      "additionalMaterial":
-          "https://www.cdc.gov/meningococcal/hcp/vaccine-recommendations/index.html#cdc_generic_section_2-menacwy-vaccination"
+      'worksheetName': 'Risk Start 2-23 months',
+      'seriesName': 'Meningococcal ACWY risk 2-23 month',
+      'patientBeginAge': '2 months',
+      'patientEndAge': 'n/a',
+      'forecastTargetDose': 'Any',
+      'includedIndication': 'n/a',
+      'excludedIndication': 'n/a',
+      'category': 'High-Risk',
+      'additionalMaterial':
+          'https://www.cdc.gov/meningococcal/hcp/vaccine-recommendations/index.html#cdc_generic_section_2-menacwy-vaccination',
     },
     {
-      "worksheetName": "Risk Hib-MenCY-TT 4-dose",
-      "seriesName": "Meningococcal ACWY risk Hib-MenCY-TT 4-dose series",
-      "patientBeginAge": "2 months",
-      "patientEndAge": "n/a",
-      "forecastTargetDose": "Any",
-      "includedIndication": "n/a",
-      "excludedIndication": "n/a",
-      "category": "High-Risk",
-      "additionalMaterial":
-          "https://www.cdc.gov/meningococcal/hcp/vaccine-recommendations/index.html#cdc_generic_section_2-menacwy-vaccination"
+      'worksheetName': 'Risk Hib-MenCY-TT 4-dose',
+      'seriesName': 'Meningococcal ACWY risk Hib-MenCY-TT 4-dose series',
+      'patientBeginAge': '2 months',
+      'patientEndAge': 'n/a',
+      'forecastTargetDose': 'Any',
+      'includedIndication': 'n/a',
+      'excludedIndication': 'n/a',
+      'category': 'High-Risk',
+      'additionalMaterial':
+          'https://www.cdc.gov/meningococcal/hcp/vaccine-recommendations/index.html#cdc_generic_section_2-menacwy-vaccination',
     },
     {
-      "worksheetName": "Risk 2-dose",
-      "seriesName": "Meningococcal ACWY risk 2-dose series",
-      "patientBeginAge": "2 years",
-      "patientEndAge": "n/a",
-      "forecastTargetDose": "Any",
-      "includedIndication": "n/a",
-      "excludedIndication": "n/a",
-      "category": "High-Risk",
-      "additionalMaterial":
-          "https://www.cdc.gov/meningococcal/hcp/vaccine-recommendations/index.html#cdc_generic_section_2-menacwy-vaccination"
+      'worksheetName': 'Risk 2-dose',
+      'seriesName': 'Meningococcal ACWY risk 2-dose series',
+      'patientBeginAge': '2 years',
+      'patientEndAge': 'n/a',
+      'forecastTargetDose': 'Any',
+      'includedIndication': 'n/a',
+      'excludedIndication': 'n/a',
+      'category': 'High-Risk',
+      'additionalMaterial':
+          'https://www.cdc.gov/meningococcal/hcp/vaccine-recommendations/index.html#cdc_generic_section_2-menacwy-vaccination',
     },
     {
-      "worksheetName": "Risk 1-dose",
-      "seriesName": "Meningococcal ACWY risk 1-dose series",
-      "patientBeginAge": "2 years",
-      "patientEndAge": "n/a",
-      "forecastTargetDose": "Any",
-      "includedIndication": "n/a",
-      "excludedIndication": "n/a",
-      "category": "High-Risk",
-      "additionalMaterial":
-          "https://www.cdc.gov/meningococcal/hcp/vaccine-recommendations/index.html#cdc_generic_section_2-menacwy-vaccination"
-    }
-  ]
+      'worksheetName': 'Risk 1-dose',
+      'seriesName': 'Meningococcal ACWY risk 1-dose series',
+      'patientBeginAge': '2 years',
+      'patientEndAge': 'n/a',
+      'forecastTargetDose': 'Any',
+      'includedIndication': 'n/a',
+      'excludedIndication': 'n/a',
+      'category': 'High-Risk',
+      'additionalMaterial':
+          'https://www.cdc.gov/meningococcal/hcp/vaccine-recommendations/index.html#cdc_generic_section_2-menacwy-vaccination',
+    },
+  ],
 });

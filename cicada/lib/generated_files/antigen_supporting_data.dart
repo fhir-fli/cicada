@@ -1,35 +1,36 @@
-import 'typhoid.dart';
-import 'dengue.dart';
-import 'mumps.dart';
-import 'japanese_encephalitis.dart';
-import 'pertussis.dart';
-import 'influenza.dart';
-import 'measles.dart';
-import 'hib.dart';
-import 'cholera.dart';
-import 'ebola.dart';
-import 'tetanus.dart';
-import 'chikungunya.dart';
-import 'pneumococcal.dart';
-import 'varicella.dart';
-import 'hepb.dart';
-import 'meningococcal.dart';
-import 'covid_19.dart';
-import 'diphtheria.dart';
-import 'tbe.dart';
-import 'rubella.dart';
-import 'rabies.dart';
-import 'polio.dart';
-import 'zoster.dart';
-import 'hepa.dart';
-import 'yellow_fever.dart';
-import 'rsv.dart';
-import 'hpv.dart';
-import 'meningococcal_b.dart';
-import 'rotavirus.dart';
-import 'orthopoxvirus.dart';
+import 'package:cicada/cicada.dart';
+import 'package:cicada/generated_files/chikungunya.dart';
+import 'package:cicada/generated_files/cholera.dart';
+import 'package:cicada/generated_files/covid_19.dart';
+import 'package:cicada/generated_files/dengue.dart';
+import 'package:cicada/generated_files/diphtheria.dart';
+import 'package:cicada/generated_files/ebola.dart';
+import 'package:cicada/generated_files/hepa.dart';
+import 'package:cicada/generated_files/hepb.dart';
+import 'package:cicada/generated_files/hib.dart';
+import 'package:cicada/generated_files/hpv.dart';
+import 'package:cicada/generated_files/influenza.dart';
+import 'package:cicada/generated_files/japanese_encephalitis.dart';
+import 'package:cicada/generated_files/measles.dart';
+import 'package:cicada/generated_files/meningococcal.dart';
+import 'package:cicada/generated_files/meningococcal_b.dart';
+import 'package:cicada/generated_files/mumps.dart';
+import 'package:cicada/generated_files/orthopoxvirus.dart';
+import 'package:cicada/generated_files/pertussis.dart';
+import 'package:cicada/generated_files/pneumococcal.dart';
+import 'package:cicada/generated_files/polio.dart';
+import 'package:cicada/generated_files/rabies.dart';
+import 'package:cicada/generated_files/rotavirus.dart';
+import 'package:cicada/generated_files/rsv.dart';
+import 'package:cicada/generated_files/rubella.dart';
+import 'package:cicada/generated_files/tbe.dart';
+import 'package:cicada/generated_files/tetanus.dart';
+import 'package:cicada/generated_files/typhoid.dart';
+import 'package:cicada/generated_files/varicella.dart';
+import 'package:cicada/generated_files/yellow_fever.dart';
+import 'package:cicada/generated_files/zoster.dart';
 
-final antigenSupportingData = [
+final List<AntigenSupportingData> antigenSupportingData = [
   typhoid,
   dengue,
   mumps,
@@ -62,7 +63,7 @@ final antigenSupportingData = [
   orthopoxvirus,
 ];
 
-final antigenSupportingDataMap = {
+final Map<String, AntigenSupportingData> antigenSupportingDataMap = {
   'Typhoid': typhoid,
   'Dengue': dengue,
   'Mumps': mumps,

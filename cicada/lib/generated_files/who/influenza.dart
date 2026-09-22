@@ -1,143 +1,149 @@
-// ignore_for_file: prefer_single_quotes, always_specify_types
-
-import '../../cicada.dart';
+import 'package:cicada/cicada.dart';
 
 final AntigenSupportingData whoInfluenza = AntigenSupportingData.fromJson({
-  "targetDisease": "Influenza",
-  "vaccineGroup": "Influenza",
-  "series": [
+  'targetDisease': 'Influenza',
+  'vaccineGroup': 'Influenza',
+  'series': [
     {
-      "seriesName": "WHO Influenza priority group series",
-      "targetDisease": "Influenza",
-      "vaccineGroup": "Influenza",
-      "seriesType": "Risk",
-      "selectSeries": {
-        "defaultSeries": "No",
-        "productPath": "No",
-        "seriesGroupName": "WHO Priority",
-        "seriesGroup": "1",
-        "seriesPriority": "A",
-        "seriesPreference": "1"
+      'seriesName': 'WHO Influenza priority group series',
+      'targetDisease': 'Influenza',
+      'vaccineGroup': 'Influenza',
+      'seriesType': 'Risk',
+      'selectSeries': {
+        'defaultSeries': 'No',
+        'productPath': 'No',
+        'seriesGroupName': 'WHO Priority',
+        'seriesGroup': '1',
+        'seriesPriority': 'A',
+        'seriesPreference': '1',
       },
-      "indication": [
+      'indication': [
         {
-          "observationCode": {"text": "Pregnant", "code": "1023"},
-          "description": "Patient is pregnant"
-        },
-        {
-          "observationCode": {"text": "Healthcare worker", "code": "1020"},
-          "description":
-              "Patient is a healthcare worker with occupational exposure risk"
-        },
-        {
-          "observationCode": {
-            "text": "Immunocompromised individual",
-            "code": "1022"
+          'observationCode': {
+            'text': 'Pregnant',
+            'code': '1023',
           },
-          "description": "Patient is immunocompromised"
+          'description': 'Patient is pregnant',
         },
         {
-          "observationCode": {
-            "text": "Chronic medical condition",
-            "code": "1024"
+          'observationCode': {
+            'text': 'Healthcare worker',
+            'code': '1020',
           },
-          "description":
-              "Patient has a chronic medical condition increasing influenza risk"
+          'description':
+              'Patient is a healthcare worker with occupational exposure '
+              'risk',
         },
         {
-          "observationCode": {
-            "text": "WHO influenza priority - young child",
-            "code": "1025"
+          'observationCode': {
+            'text': 'Immunocompromised individual',
+            'code': '1022',
           },
-          "description": "Child aged 6 months to 5 years (WHO priority group)",
-          "beginAge": "6 months",
-          "endAge": "5 years"
+          'description': 'Patient is immunocompromised',
         },
         {
-          "observationCode": {
-            "text": "WHO influenza priority - older adult",
-            "code": "1026"
+          'observationCode': {
+            'text': 'Chronic medical condition',
+            'code': '1024',
           },
-          "description":
-              "Older adult aged 65 years or older (WHO priority group)",
-          "beginAge": "65 years"
-        }
+          'description':
+              'Patient has a chronic medical condition increasing '
+              'influenza risk',
+        },
+        {
+          'observationCode': {
+            'text': 'WHO influenza priority - young child',
+            'code': '1025',
+          },
+          'description': 'Child aged 6 months to 5 years (WHO priority group)',
+          'beginAge': '6 months',
+          'endAge': '5 years',
+        },
+        {
+          'observationCode': {
+            'text': 'WHO influenza priority - older adult',
+            'code': '1026',
+          },
+          'description':
+              'Older adult aged 65 years or older (WHO priority group)',
+          'beginAge': '65 years',
+        },
       ],
-      "seriesDose": [
+      'seriesDose': [
         {
-          "doseNumber": "Dose 1",
-          "age": [
+          'doseNumber': 'Dose 1',
+          'age': [
             {
-              "absMinAge": "6 months",
-              "minAge": "6 months",
-              "earliestRecAge": "6 months"
-            }
+              'absMinAge': '6 months',
+              'minAge': '6 months',
+              'earliestRecAge': '6 months',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "Influenza, injectable, quadrivalent",
-              "cvx": "150",
-              "beginAge": "6 months",
-              "forecastVaccineType": "Y"
-            }
+              'vaccineType': 'Influenza, injectable, quadrivalent',
+              'cvx': '150',
+              'beginAge': '6 months',
+              'forecastVaccineType': 'Y',
+            },
           ],
-          "allowableVaccine": [
+          'allowableVaccine': [
             {
-              "vaccineType": "Influenza, injectable, quadrivalent",
-              "cvx": "150",
-              "beginAge": "6 months"
+              'vaccineType': 'Influenza, injectable, quadrivalent',
+              'cvx': '150',
+              'beginAge': '6 months',
             },
             {
-              "vaccineType": "Influenza, injectable",
-              "cvx": "141",
-              "beginAge": "6 months"
+              'vaccineType': 'Influenza, injectable',
+              'cvx': '141',
+              'beginAge': '6 months',
             },
             {
-              "vaccineType": "Influenza, live intranasal",
-              "cvx": "149",
-              "beginAge": "2 years"
-            }
+              'vaccineType': 'Influenza, live intranasal',
+              'cvx': '149',
+              'beginAge': '2 years',
+            },
           ],
-          "recurringDose": "No"
+          'recurringDose': 'No',
         },
         {
-          "doseNumber": "Dose 2",
-          "interval": [
+          'doseNumber': 'Dose 2',
+          'interval': [
             {
-              "fromPrevious": "Y",
-              "absMinInt": "4 weeks",
-              "minInt": "4 weeks",
-              "earliestRecInt": "4 weeks"
-            }
+              'fromPrevious': 'Y',
+              'absMinInt': '4 weeks',
+              'minInt': '4 weeks',
+              'earliestRecInt': '4 weeks',
+            },
           ],
-          "preferableVaccine": [
+          'preferableVaccine': [
             {
-              "vaccineType": "Influenza, injectable, quadrivalent",
-              "cvx": "150",
-              "beginAge": "6 months",
-              "forecastVaccineType": "Y"
-            }
+              'vaccineType': 'Influenza, injectable, quadrivalent',
+              'cvx': '150',
+              'beginAge': '6 months',
+              'forecastVaccineType': 'Y',
+            },
           ],
-          "allowableVaccine": [
+          'allowableVaccine': [
             {
-              "vaccineType": "Influenza, injectable, quadrivalent",
-              "cvx": "150",
-              "beginAge": "6 months"
+              'vaccineType': 'Influenza, injectable, quadrivalent',
+              'cvx': '150',
+              'beginAge': '6 months',
             },
             {
-              "vaccineType": "Influenza, injectable",
-              "cvx": "141",
-              "beginAge": "6 months"
+              'vaccineType': 'Influenza, injectable',
+              'cvx': '141',
+              'beginAge': '6 months',
             },
             {
-              "vaccineType": "Influenza, live intranasal",
-              "cvx": "149",
-              "beginAge": "2 years"
-            }
+              'vaccineType': 'Influenza, live intranasal',
+              'cvx': '149',
+              'beginAge': '2 years',
+            },
           ],
-          "recurringDose": "Yes"
-        }
-      ]
-    }
-  ]
+          'recurringDose': 'Yes',
+        },
+      ],
+    },
+  ],
 });

@@ -22,7 +22,10 @@ Map<String, dynamic> fhirXmlToJson(String xmlString) {
 /// Group child elements by name and convert, using [fhirTypeName] to look up
 /// field definitions in [fhirFieldMap] for array detection and child types.
 void _convertChildren(
-    XmlElement parent, Map<String, dynamic> result, String fhirTypeName) {
+  XmlElement parent,
+  Map<String, dynamic> result,
+  String fhirTypeName,
+) {
   final typeFields = fhirFieldMap[fhirTypeName];
 
   final groups = <String, List<XmlElement>>{};
@@ -36,7 +39,8 @@ void _convertChildren(
     final fieldDef = typeFields?[name];
 
     // Use fhirFieldMap if available, fall back to hardcoded sets.
-    final isArray = elements.length > 1 ||
+    final isArray =
+        elements.length > 1 ||
         (fieldDef != null ? fieldDef.isList : _isArrayFallback(name));
 
     // Get the FHIR type for recursing into children.
@@ -54,7 +58,10 @@ void _convertChildren(
 /// Convert a single XML element to its JSON representation.
 /// [fhirTypeName] is the FHIR type of this element (from parent's field def).
 dynamic _convertElement(
-    XmlElement element, String elementName, String? fhirTypeName) {
+  XmlElement element,
+  String elementName,
+  String? fhirTypeName,
+) {
   final name = element.name.local;
 
   // <div> (XHTML narrative) — serialize the entire element as a string.

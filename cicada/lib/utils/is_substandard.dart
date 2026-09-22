@@ -10,16 +10,15 @@ bool isSubstandard(Immunization immunization) {
     if (immunization.isSubpotent?.valueBoolean ?? false) {
       return true;
     }
-
     /// Otherwise, if it has an expiration date
     else if (immunization.expirationDate != null) {
       /// we check if it was expired when it was given, that means, is the
       /// expiration date BEFORE the date it was given (if it is the same
       /// date, we are still going to consider this valid)
       if (immunization.expirationDate != null
-          // &&
-          //     immunization.expirationDate! < immunization.occurrenceDateTime!
-          ) {
+      // &&
+      //     immunization.expirationDate! < immunization.occurrenceDateTime!
+      ) {
         return true;
       } else {
         return false;

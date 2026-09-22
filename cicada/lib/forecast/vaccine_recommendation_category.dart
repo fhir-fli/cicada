@@ -1,4 +1,4 @@
-import '../cicada.dart';
+import 'package:cicada/cicada.dart';
 
 /// The vaccine recommendation category of a Best Patient Series, per CDC's
 /// "Vaccine Recommendation Category Determination" (CDSi supporting data
@@ -55,17 +55,20 @@ VaccineRecommendationCategoryResult? determineVaccineRecommendationCategory({
   required List<Indication> seriesIndications,
 }) {
   if (status != SeriesStatus.notComplete) return null;
-  final rows = (antigen.vaccineRecommendationCategory ?? const [])
-      .where((r) => r.seriesName == seriesName)
-      .toList();
+  final rows =
+      (antigen.vaccineRecommendationCategory ?? const [])
+          .where((r) => r.seriesName == seriesName)
+          .toList();
   if (rows.isEmpty) return null;
 
-  final seriesIndicationCodes = seriesIndications
-      .map((i) => i.observationCode?.code)
-      .whereType<String>()
-      .toSet();
-  final patientSeriesIndications =
-      patientObservationCodes.intersection(seriesIndicationCodes);
+  final seriesIndicationCodes =
+      seriesIndications
+          .map((i) => i.observationCode?.code)
+          .whereType<String>()
+          .toSet();
+  final patientSeriesIndications = patientObservationCodes.intersection(
+    seriesIndicationCodes,
+  );
 
   final matching = <VaccineRecommendationCategory>[];
   for (final row in rows) {
@@ -78,11 +81,12 @@ VaccineRecommendationCategoryResult? determineVaccineRecommendationCategory({
     // Forecast Target Dose: a number, "2; 3; 4", or "Any".
     final dose = _na(row.forecastTargetDose);
     if (dose != null && dose.toLowerCase() != 'any') {
-      final numbers = dose
-          .split(';')
-          .map((s) => int.tryParse(s.trim()))
-          .whereType<int>()
-          .toSet();
+      final numbers =
+          dose
+              .split(';')
+              .map((s) => int.tryParse(s.trim()))
+              .whereType<int>()
+              .toSet();
       if (!numbers.contains(forecastTargetDoseNumber)) continue;
     }
 
@@ -101,7 +105,7 @@ VaccineRecommendationCategoryResult? determineVaccineRecommendationCategory({
   }
   if (matching.isEmpty) return null;
 
-  VaccineRecommendationCategory chosen = matching.first;
+  var chosen = matching.first;
   if (matching.length > 1) {
     // "High-Risk takes priority over SCDM" and "Routine takes priority over
     // SCDM": anything beats SCDM; otherwise the first row stands.
@@ -112,11 +116,12 @@ VaccineRecommendationCategoryResult? determineVaccineRecommendationCategory({
   }
   return VaccineRecommendationCategoryResult(
     category: chosen.category ?? '',
-    material: (_na(chosen.additionalMaterial) ?? '')
-        .split(';')
-        .map((s) => s.trim())
-        .where((s) => s.isNotEmpty)
-        .toList(),
+    material:
+        (_na(chosen.additionalMaterial) ?? '')
+            .split(';')
+            .map((s) => s.trim())
+            .where((s) => s.isNotEmpty)
+            .toList(),
     row: chosen,
   );
 }

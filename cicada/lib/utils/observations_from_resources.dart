@@ -1,6 +1,5 @@
+import 'package:cicada/cicada.dart';
 import 'package:fhir_r4/fhir_r4.dart';
-
-import '../cicada.dart';
 
 /// The system URIs a CDSi observation code may arrive under: the IG's own
 /// CodeSystem canonical, and the CDC page URL the condition test cases used
@@ -30,15 +29,18 @@ const Map<String, String> _fhirSystemToCdsi = {
 /// Iterates all codings on each Condition and matches against all codedValues
 /// on each observation in the schedule supporting data.
 List<VaxObservation> observationsFromConditions(
-    List<Condition> conditions, VaxDate birthdate) {
-  final List<VaxObservation> observations = <VaxObservation>[];
-  for (final Condition condition in conditions) {
-    final VaxObservation? obs = _matchCodingsToObservation(
+  List<Condition> conditions,
+  VaxDate birthdate,
+) {
+  final observations = <VaxObservation>[];
+  for (final condition in conditions) {
+    final obs = _matchCodingsToObservation(
       condition.code?.coding,
     );
     if (obs != null) {
-      observations
-          .add(obs.copyWith(period: periodOfCondition(condition, birthdate)));
+      observations.add(
+        obs.copyWith(period: periodOfCondition(condition, birthdate)),
+      );
     }
   }
   return observations;
@@ -49,12 +51,13 @@ List<VaxObservation> observationsFromConditions(
 /// Checks both [AllergyIntolerance.code] and each
 /// [AllergyIntolerance.reaction.substance] for matching coded values.
 List<VaxObservation> observationsFromAllergies(
-    List<AllergyIntolerance> allergies) {
-  final List<VaxObservation> observations = <VaxObservation>[];
-  final Set<String> seen = {};
-  for (final AllergyIntolerance allergy in allergies) {
+  List<AllergyIntolerance> allergies,
+) {
+  final observations = <VaxObservation>[];
+  final seen = <String>{};
+  for (final allergy in allergies) {
     // Check AllergyIntolerance.code
-    final VaxObservation? obs = _matchCodingsToObservation(
+    final obs = _matchCodingsToObservation(
       allergy.code?.coding,
     );
     if (obs != null && seen.add(obs.observationCode ?? '')) {
@@ -62,8 +65,8 @@ List<VaxObservation> observationsFromAllergies(
     }
     // Check each reaction.substance
     if (allergy.reaction != null) {
-      for (final AllergyIntoleranceReaction reaction in allergy.reaction!) {
-        final VaxObservation? reactionObs = _matchCodingsToObservation(
+      for (final reaction in allergy.reaction!) {
+        final reactionObs = _matchCodingsToObservation(
           reaction.substance?.coding,
         );
         if (reactionObs != null &&
@@ -93,11 +96,11 @@ VaxObservation? _matchCodingsToObservation(List<Coding>? codings) {
   if (allObservations == null || allObservations.isEmpty) return null;
 
   // Check for direct CDSi observation code (bypasses crosswalk)
-  for (final Coding coding in codings) {
-    final String? systemUri = coding.system?.toString();
-    final String? code = coding.code?.toString();
+  for (final coding in codings) {
+    final systemUri = coding.system?.toString();
+    final code = coding.code?.toString();
     if (_cdsiSystemUris.contains(systemUri) && code != null) {
-      for (int i = 0; i < allObservations.length; i++) {
+      for (var i = 0; i < allObservations.length; i++) {
         if (allObservations[i].observationCode == code) {
           return allObservations[i];
         }
@@ -105,18 +108,18 @@ VaxObservation? _matchCodingsToObservation(List<Coding>? codings) {
     }
   }
 
-  for (final Coding coding in codings) {
-    final String? systemUri = coding.system?.toString();
-    final String? code = coding.code?.toString();
+  for (final coding in codings) {
+    final systemUri = coding.system?.toString();
+    final code = coding.code?.toString();
     if (systemUri == null || code == null) continue;
 
-    final String? cdsiSystem = _fhirSystemToCdsi[systemUri];
+    final cdsiSystem = _fhirSystemToCdsi[systemUri];
     if (cdsiSystem == null) continue;
 
-    for (int i = 0; i < allObservations.length; i++) {
+    for (var i = 0; i < allObservations.length; i++) {
       final codedValues = allObservations[i].codedValues?.codedValue;
       if (codedValues == null) continue;
-      for (final CodedValue cv in codedValues) {
+      for (final cv in codedValues) {
         if (cv.codeSystem == cdsiSystem && cv.code == code) {
           return allObservations[i];
         }
@@ -135,15 +138,15 @@ VaxObservation? _matchCodingsToObservation(List<Coding>? codings) {
   //
   // Only SNOMED. The other systems the crosswalk carries are enumerations, not
   // hierarchies, and ICD-10-CM's dotted codes are not a subsumption axis.
-  for (final Coding coding in codings) {
+  for (final coding in codings) {
     if (coding.system?.toString() != _snomedSystemUri) continue;
-    final String? code = coding.code?.toString();
+    final code = coding.code?.toString();
     if (code == null) continue;
-    for (final String ancestor in snomedClosure[code] ?? const <String>[]) {
-      for (int i = 0; i < allObservations.length; i++) {
+    for (final ancestor in snomedClosure[code] ?? const <String>[]) {
+      for (var i = 0; i < allObservations.length; i++) {
         final codedValues = allObservations[i].codedValues?.codedValue;
         if (codedValues == null) continue;
-        for (final CodedValue cv in codedValues) {
+        for (final cv in codedValues) {
           if (cv.codeSystem == 'SNOMED' && cv.code == ancestor) {
             return allObservations[i];
           }

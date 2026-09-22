@@ -1,4 +1,4 @@
-import '../../cicada.dart';
+import 'package:cicada/cicada.dart';
 
 class SeriesDose {
   SeriesDose({
@@ -14,6 +14,57 @@ class SeriesDose {
     this.seasonalRecommendation,
   });
 
+  factory SeriesDose.fromJson(Map<String, dynamic> json) {
+    return SeriesDose(
+      doseNumber:
+          json['doseNumber'] == null
+              ? null
+              : DoseNumber.fromJson(json['doseNumber'] as String),
+      age:
+          json['age'] == null || (json['age'] as List).isEmpty
+              ? null
+              : (json['age'] as List<dynamic>?)
+                  ?.map((e) => VaxAge.fromJson(e as Map<String, dynamic>))
+                  .toList(),
+      preferableInterval:
+          (json['interval'] as List<dynamic>?)
+              ?.map((e) => Interval.fromJson(e as Map<String, dynamic>))
+              .toList(),
+      allowableInterval:
+          json['allowableInterval'] == null
+              ? null
+              : Interval.fromJson(
+                json['allowableInterval'] as Map<String, dynamic>,
+              ),
+      preferableVaccine:
+          (json['preferableVaccine'] as List<dynamic>?)
+              ?.map((e) => Vaccine.fromJson(e as Map<String, dynamic>))
+              .toList(),
+      allowableVaccine:
+          (json['allowableVaccine'] as List<dynamic>?)
+              ?.map((e) => Vaccine.fromJson(e as Map<String, dynamic>))
+              .toList(),
+      inadvertentVaccine:
+          (json['inadvertentVaccine'] as List<dynamic>?)
+              ?.map((e) => Vaccine.fromJson(e as Map<String, dynamic>))
+              .toList(),
+      conditionalSkip:
+          (json['conditionalSkip'] as List<dynamic>?)
+              ?.map((e) => ConditionalSkip.fromJson(e as Map<String, dynamic>))
+              .toList(),
+      recurringDose:
+          json['recurringDose'] == null
+              ? null
+              : Binary.fromJson(json['recurringDose'] as String),
+      seasonalRecommendation:
+          json['seasonalRecommendation'] == null
+              ? null
+              : SeasonalRecommendation.fromJson(
+                json['seasonalRecommendation'] as Map<String, dynamic>,
+              ),
+    );
+  }
+
   final DoseNumber? doseNumber;
   final List<VaxAge>? age;
   final List<Interval>? preferableInterval;
@@ -24,45 +75,6 @@ class SeriesDose {
   final List<ConditionalSkip>? conditionalSkip;
   final Binary? recurringDose;
   final SeasonalRecommendation? seasonalRecommendation;
-
-  factory SeriesDose.fromJson(Map<String, dynamic> json) {
-    return SeriesDose(
-      doseNumber: json['doseNumber'] == null
-          ? null
-          : DoseNumber.fromJson(json['doseNumber'] as String),
-      age: json['age'] == null || (json['age'] as List).isEmpty
-          ? null
-          : (json['age'] as List<dynamic>?)
-              ?.map((e) => VaxAge.fromJson(e as Map<String, dynamic>))
-              .toList(),
-      preferableInterval: (json['interval'] as List<dynamic>?)
-          ?.map((e) => Interval.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      allowableInterval: json['allowableInterval'] == null
-          ? null
-          : Interval.fromJson(
-              json['allowableInterval'] as Map<String, dynamic>),
-      preferableVaccine: (json['preferableVaccine'] as List<dynamic>?)
-          ?.map((e) => Vaccine.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      allowableVaccine: (json['allowableVaccine'] as List<dynamic>?)
-          ?.map((e) => Vaccine.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      inadvertentVaccine: (json['inadvertentVaccine'] as List<dynamic>?)
-          ?.map((e) => Vaccine.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      conditionalSkip: (json['conditionalSkip'] as List<dynamic>?)
-          ?.map((e) => ConditionalSkip.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      recurringDose: json['recurringDose'] == null
-          ? null
-          : Binary.fromJson(json['recurringDose'] as String),
-      seasonalRecommendation: json['seasonalRecommendation'] == null
-          ? null
-          : SeasonalRecommendation.fromJson(
-              json['seasonalRecommendation'] as Map<String, dynamic>),
-    );
-  }
 
   Map<String, dynamic> toJson() {
     return {
@@ -115,28 +127,28 @@ class SeriesDose {
   }
 
   VaxDate maxAgeDate(VaxDate date) {
-    final List<String>? maxAgeList =
-        age?.map((VaxAge e) => e.maxAge).whereType<String>().toList();
+    final maxAgeList = age?.map((e) => e.maxAge).whereType<String>().toList();
 
     if (maxAgeList == null || maxAgeList.isEmpty) {
       return VaxDate.max();
     } else {
-      for (final String maxAge in maxAgeList) {
-        final VaxDate newDate = date.change(maxAge);
-        if (newDate > date) {
-          date = newDate;
+      var latest = date;
+      for (final maxAge in maxAgeList) {
+        final newDate = latest.change(maxAge);
+        if (newDate > latest) {
+          latest = newDate;
         }
       }
-      return date;
+      return latest;
     }
   }
 
   int? inadvertentVaccineIndex(int cvx) {
-    return inadvertentVaccine?.indexWhere((Vaccine element) {
+    return inadvertentVaccine?.indexWhere((element) {
       if (element.cvx == null) {
         return false;
       }
-      final int? parsed = int.tryParse(element.cvx!);
+      final parsed = int.tryParse(element.cvx!);
       return parsed != null && parsed == cvx;
     });
   }

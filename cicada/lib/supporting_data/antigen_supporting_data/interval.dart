@@ -1,4 +1,4 @@
-import '../../cicada.dart';
+import 'package:cicada/cicada.dart';
 
 class Interval {
   Interval({
@@ -15,6 +15,30 @@ class Interval {
     this.cessationDate,
   });
 
+  factory Interval.fromJson(Map<String, dynamic> json) {
+    return Interval(
+      fromPrevious: json['fromPrevious'] as String?,
+      fromTargetDose:
+          json['fromTargetDose'] == null
+              ? null
+              : int.tryParse(json['fromTargetDose'] as String),
+      fromMostRecent: json['fromMostRecent'] as String?,
+      fromRelevantObs:
+          json['fromRelevantObs'] == null
+              ? null
+              : ObservationCode.fromJson(
+                json['fromRelevantObs'] as Map<String, dynamic>,
+              ),
+      absMinInt: json['absMinInt'] as String?,
+      minInt: json['minInt'] as String?,
+      earliestRecInt: json['earliestRecInt'] as String?,
+      latestRecInt: json['latestRecInt'] as String?,
+      intervalPriority: json['intervalPriority'] as String?,
+      effectiveDate: json['effectiveDate'] as String?,
+      cessationDate: json['cessationDate'] as String?,
+    );
+  }
+
   final String? fromPrevious;
   final int? fromTargetDose;
   final String? fromMostRecent;
@@ -26,27 +50,6 @@ class Interval {
   final String? intervalPriority;
   final String? effectiveDate;
   final String? cessationDate;
-
-  factory Interval.fromJson(Map<String, dynamic> json) {
-    return Interval(
-      fromPrevious: json['fromPrevious'] as String?,
-      fromTargetDose: json['fromTargetDose'] == null
-          ? null
-          : int.tryParse(json['fromTargetDose']),
-      fromMostRecent: json['fromMostRecent'] as String?,
-      fromRelevantObs: json['fromRelevantObs'] == null
-          ? null
-          : ObservationCode.fromJson(
-              json['fromRelevantObs'] as Map<String, dynamic>),
-      absMinInt: json['absMinInt'] as String?,
-      minInt: json['minInt'] as String?,
-      earliestRecInt: json['earliestRecInt'] as String?,
-      latestRecInt: json['latestRecInt'] as String?,
-      intervalPriority: json['intervalPriority'] as String?,
-      effectiveDate: json['effectiveDate'] as String?,
-      cessationDate: json['cessationDate'] as String?,
-    );
-  }
 
   Map<String, dynamic> toJson() {
     return {
@@ -68,11 +71,12 @@ class Interval {
     if (fromMostRecent == null) {
       return null;
     } else {
-      final List<int> codes = fromMostRecent!
-          .split(';')
-          .map((String e) => int.tryParse(e.trim()) ?? -1)
-          .toList();
-      codes.removeWhere((int element) => element == -1);
+      final codes =
+          fromMostRecent!
+              .split(';')
+              .map((e) => int.tryParse(e.trim()) ?? -1)
+              .toList()
+            ..removeWhere((element) => element == -1);
       return codes;
     }
   }
