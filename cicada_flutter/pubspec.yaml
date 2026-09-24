@@ -7,11 +7,11 @@ environment:
   sdk: ^3.10.4
 
 dependencies:
-  flutter:
-    sdk: flutter
   cicada:
     path: ../cicada
   fhir_r4: ^0.12.0
+  flutter:
+    sdk: flutter
   flutter_riverpod: ^3.0.0
   intl: ^0.20.0
 

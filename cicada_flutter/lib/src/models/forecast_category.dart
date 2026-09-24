@@ -28,8 +28,7 @@ enum ForecastCategory {
   agedOut,
 
   /// Not recommended for this patient.
-  notRecommended
-  ;
+  notRecommended;
 
   String get displayLabel => switch (this) {
     overdue => 'Overdue',

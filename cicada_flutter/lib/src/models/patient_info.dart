@@ -28,8 +28,7 @@ class PatientInfo {
 
 enum PatientSex {
   male('Male'),
-  female('Female')
-  ;
+  female('Female');
 
   const PatientSex(this.displayName);
   final String displayName;

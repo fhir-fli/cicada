@@ -117,11 +117,9 @@ class _PatientSetupScreenState extends ConsumerState<PatientSetupScreen> {
     ref.read(patientInfoProvider.notifier).value = info;
     ref.read(enteredDosesProvider.notifier).clear();
     ref.read(forecastResultProvider.notifier).clear();
-    unawaited(
-      Navigator.of(context).push(
-        MaterialPageRoute<void>(
-          builder: (_) => const VaccineEntryScreen(),
-        ),
+    Navigator.of(context).push(
+      MaterialPageRoute<void>(
+        builder: (_) => const VaccineEntryScreen(),
       ),
     );
   }

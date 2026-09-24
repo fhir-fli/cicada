@@ -51,8 +51,7 @@ enum VaccineCategory {
   childhood('Childhood'),
   adolescent('Adolescent'),
   adult('Adult'),
-  travel('Travel & Other')
-  ;
+  travel('Travel & Other');
 
   const VaccineCategory(this.displayName);
   final String displayName;

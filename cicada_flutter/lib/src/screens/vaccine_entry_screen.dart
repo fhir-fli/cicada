@@ -148,11 +148,9 @@ class _VaccineEntryScreenState extends ConsumerState<VaccineEntryScreen> {
         doses: doses,
       );
       ref.read(forecastResultProvider.notifier).value = result;
-      unawaited(
-        Navigator.of(context).push(
-          MaterialPageRoute<void>(
-            builder: (_) => const ForecastDashboardScreen(),
-          ),
+      Navigator.of(context).push(
+        MaterialPageRoute<void>(
+          builder: (_) => const ForecastDashboardScreen(),
         ),
       );
     } on Exception catch (e) {

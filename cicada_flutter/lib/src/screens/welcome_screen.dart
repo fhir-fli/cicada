@@ -1,5 +1,3 @@
-import 'dart:async';
-
 import 'package:cicada_flutter/src/models/sample_patients.dart';
 import 'package:cicada_flutter/src/screens/patient_setup_screen.dart';
 import 'package:cicada_flutter/src/screens/vaccine_entry_screen.dart';
@@ -61,11 +59,9 @@ class WelcomeScreen extends ConsumerWidget {
                       ref.read(patientInfoProvider.notifier).clear();
                       ref.read(enteredDosesProvider.notifier).clear();
                       ref.read(forecastResultProvider.notifier).clear();
-                      unawaited(
-                        Navigator.of(context).push(
-                          MaterialPageRoute<void>(
-                            builder: (_) => const PatientSetupScreen(),
-                          ),
+                      Navigator.of(context).push(
+                        MaterialPageRoute<void>(
+                          builder: (_) => const PatientSetupScreen(),
                         ),
                       );
                     },
@@ -140,11 +136,9 @@ class _SamplePatientCard extends ConsumerWidget {
           ref.read(patientInfoProvider.notifier).value = sample.info;
           ref.read(enteredDosesProvider.notifier).value = sample.doses;
           ref.read(forecastResultProvider.notifier).clear();
-          unawaited(
-            Navigator.of(context).push(
-              MaterialPageRoute<void>(
-                builder: (_) => const VaccineEntryScreen(),
-              ),
+          Navigator.of(context).push(
+            MaterialPageRoute<void>(
+              builder: (_) => const VaccineEntryScreen(),
             ),
           );
         },
