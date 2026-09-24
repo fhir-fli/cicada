@@ -3,9 +3,9 @@ implements. Prints the ones that do not. Exit 1 if any."""
 import re, sys
 from pathlib import Path
 
-FILES = ['lib/models/01_vax_patient.dart','lib/models/02_vax_antigen.dart',
-         'lib/models/03_vax_group.dart','lib/models/04_vax_series.dart',
-         'lib/models/05_vax_dose.dart','lib/forecast/forecast.dart',
+FILES = ['lib/models/vax_patient.dart','lib/models/vax_antigen.dart',
+         'lib/models/vax_group.dart','lib/models/vax_series.dart',
+         'lib/models/vax_dose.dart','lib/forecast/forecast.dart',
          'lib/utils/relevant_series.dart']
 SPEC = re.compile(
     r'CONDSKIP-\d|FORECASTDT\w*-\d|FORECASTVG-\d|FORECASTPRIORITY-\d|'

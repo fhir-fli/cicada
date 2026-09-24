@@ -40,8 +40,7 @@ for f in $pkgs; do
     tally=$(grep -aoE '\+[0-9]+( -[0-9]+)?:' "$log" | tail -1 | tr -d ':')
     [ -n "$tally" ] || tally='NO TALLY PARSED - check the run'
     printf '    tests: %s\n' "$tally"
-    grep -aq "Some tests failed" "$log" && \
-      printf '    (cicada carries 26 classified CDC failures)\n'
+    grep -aq "Some tests failed" "$log" && fail=1
     rm -f "$log"
   fi
 done

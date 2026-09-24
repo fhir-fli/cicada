@@ -201,10 +201,19 @@ Both suites compare against CDC's expected results and both must be run before
 and after any engine change — from `cicada/`, with absolute paths:
 
 ```bash
-dart test                            # 26 failures, all classified — run THIS
-dart run test/healthy_test.dart      # 1063 / 1064
-dart run test/condition_test.dart    #  312 /  337
+dart test                            # every case passes — run THIS
+dart run test/healthy_test.dart      # 1064 cases (1 ruled)
+dart run test/condition_test.dart    #  337 cases (25 ruled)
 ```
+
+🔑 **The 26 rows the project has ruled against are in `test/rulings.dart`**,
+each with where the ruling is written (CDSI-OE-ADJUDICATED.md by section,
+CDC-REPORT.md by finding, CDSI-DISPUTED-CASES.md). A ruled case asserts the
+ruling: the engine must differ from CDC's row in exactly the recorded way. If
+it comes to match the row the ruling is stale and the case fails until the
+entry is deleted; a new difference fails as a regression. Nothing is skipped,
+so `dart test` is green and CI (`.github/workflows/ci.yml`) gates on it. Both
+suites share one comparison, `test/cdc_suite.dart`.
 
 🛑 **Run `dart test`, not files by name.** Running only healthy and condition by
 name hid four failures in `forecast_test.dart` — a stale weaker duplicate of
@@ -217,7 +226,7 @@ expectation, asserted nothing and were counted as passes. Fixed in the generator
 
 - **Healthy (v4.46 cases, 4.65-508 data — versions match, so this is the gate).**
   Its 1 failure is `2018-0022`, a dose-**evaluation reason label**, not a forecast.
-🔴 **One of the 26 fails deliberately** — `2016-UC-0198`. Rules that had made them pass existed in **no CDSi
+🔴 **One of the 26 ruled rows is a deliberate non-conformance** — `2016-UC-0198`. Rules that had made them pass existed in **no CDSi
 specification** and were removed. **Do not "fix" them.** Before any engine
 change run `python3 tool_check_spec_citations.py` from `cicada/`: every
 decision-bearing function must name the rule it implements, and it exits

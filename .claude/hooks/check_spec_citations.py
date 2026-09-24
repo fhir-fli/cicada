@@ -13,9 +13,9 @@ import sys
 from pathlib import Path
 
 PKG = Path(__file__).resolve().parents[2] / 'cicada'
-ENGINE = {'lib/models/01_vax_patient.dart', 'lib/models/02_vax_antigen.dart',
-          'lib/models/03_vax_group.dart', 'lib/models/04_vax_series.dart',
-          'lib/models/05_vax_dose.dart', 'lib/forecast/forecast.dart',
+ENGINE = {'lib/models/vax_patient.dart', 'lib/models/vax_antigen.dart',
+          'lib/models/vax_group.dart', 'lib/models/vax_series.dart',
+          'lib/models/vax_dose.dart', 'lib/forecast/forecast.dart',
           'lib/utils/relevant_series.dart'}
 
 

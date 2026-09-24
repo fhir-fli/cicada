@@ -1,128 +1,26 @@
-// Healthy childhood and adult CDSi test cases.
-//
-// Derived by substitution from condition_test.dart so the comparison semantics
-// are identical — only the data sources differ. Before this existed,
-// test/cicada_test.dart ran these 1,064 cases and asserted nothing: it printed
-// each id and warned only when a case produced no recommendation at all. The
-// expected results (testDoses, testForecasts) were generated all along and
-// never read, so "1010/1014 (99.6%)" in CLAUDE.md came from nothing in the
-// repo.
+// The CDSi healthy childhood and adult test cases (v4.46). Comparison
+// semantics live in cdc_suite.dart, shared with condition_test.dart; only the
+// data is here. Before this suite existed, test/cicada_test.dart ran these
+// 1,064 cases and asserted nothing: the expected results were generated all
+// along and never read, so "1010/1014 (99.6%)" in CLAUDE.md came from nothing
+// in the repo.
 //
 // This suite is the one whose cases match the supporting data in version:
 // v4.46 test cases and 4.65-508 data are both August 2026.
 
-import 'dart:convert';
-import 'dart:io';
-
-import 'package:cicada/cicada.dart';
 import 'package:cicada/generated_files/test_doses.dart';
 import 'package:cicada/generated_files/test_forecasts.dart';
-import 'package:collection/collection.dart';
-import 'package:fhir_r4/fhir_r4.dart';
-import 'package:test/test.dart';
 
-import 'cdc_row_collapse.dart';
-
-/// Loads NDJSON test cases, fixing up missing required fields.
-List<Parameters> loadHealthyTestCases(String path) {
-  final lines = File(path).readAsLinesSync();
-  final result = <Parameters>[];
-
-  for (final line in lines) {
-    final trimmed = line.trim();
-    if (trimmed.isEmpty) continue;
-
-    final decoded = jsonDecode(trimmed) as Map<String, dynamic>;
-    final paramList = decoded['parameter'] as List<dynamic>?;
-    if (paramList == null) continue;
-
-    for (final p in paramList) {
-      final param = p as Map<String, dynamic>;
-      if (param.containsKey('resource')) {
-        final resource = param['resource'] as Map<String, dynamic>;
-        if (resource['resourceType'] == 'Immunization' &&
-            !resource.containsKey('status')) {
-          resource['status'] = 'completed';
-        }
-      }
-    }
-
-    result.add(Parameters.fromJson(decoded));
-  }
-
-  return result;
-}
-
-/// Checks internal consistency of dose sub-step fields against evalStatus
-/// and evalReason. Returns a list of violation descriptions (empty = ok).
-List<String> checkDoseConsistency(VaxDose dose) {
-  final violations = <String>[];
-
-  if (dose.evalReason == EvalReason.ageTooYoung &&
-      dose.validAgeReason != ValidAgeReason.tooYoung) {
-    violations.add(
-      'evalReason=ageTooYoung but validAgeReason=${dose.validAgeReason}',
-    );
-  }
-
-  if (dose.evalReason == EvalReason.ageTooOld &&
-      dose.validAgeReason != ValidAgeReason.tooOld) {
-    violations.add(
-      'evalReason=ageTooOld but validAgeReason=${dose.validAgeReason}',
-    );
-  }
-
-  if (dose.evalReason == EvalReason.intervalTooShort &&
-      dose.allowedIntervalReason != IntervalReason.tooShort &&
-      dose.preferredIntervalReason != IntervalReason.tooShort) {
-    violations.add(
-      'evalReason=intervalTooShort but '
-      'allowedIntervalReason=${dose.allowedIntervalReason}, '
-      'preferredIntervalReason=${dose.preferredIntervalReason}',
-    );
-  }
-
-  if (dose.evalReason == EvalReason.liveVirusConflict &&
-      dose.conflict != true) {
-    violations.add(
-      'evalReason=liveVirusConflict but conflict=${dose.conflict}',
-    );
-  }
-
-  if (dose.evalReason == EvalReason.notPreferableOrAllowable &&
-      dose.allowedVaccine != false) {
-    violations.add(
-      'evalReason=notPreferableOrAllowable but '
-      'allowedVaccine=${dose.allowedVaccine}',
-    );
-  }
-
-  if (dose.evalStatus == EvalStatus.valid) {
-    if (dose.validAgeReason == ValidAgeReason.tooYoung ||
-        dose.validAgeReason == ValidAgeReason.tooOld) {
-      violations.add(
-        'evalStatus=valid but validAgeReason=${dose.validAgeReason}',
-      );
-    }
-    if (dose.conflict == true) {
-      violations.add('evalStatus=valid but conflict=true');
-    }
-    if (dose.allowedVaccine == false) {
-      violations.add('evalStatus=valid but allowedVaccine=false');
-    }
-  }
-
-  return violations;
-}
+import 'cdc_suite.dart';
 
 /// Map from the healthy-suite Excel vaccine group labels to engine names.
 ///
 /// The two CDSi workbooks label the same groups differently — conditions says
 /// "DTaP", healthy says "DTAP" — so this cannot be shared with
-/// condition_test.dart. Deriving this test by substitution left it using the
-/// conditions map, every lookup fell through to a key the engine does not
-/// have, and 621 cases reported "no forecast produced". That was the harness,
-/// not the engine.
+/// condition_test.dart. When the healthy suite was first derived from the
+/// conditions one it used the conditions map, every lookup fell through to a
+/// key the engine does not have, and 621 cases reported "no forecast
+/// produced". That was the harness, not the engine.
 const healthyExcelToEngine = <String, String>{
   'DTAP': 'DTaP/Tdap/Td',
   'Td': 'DTaP/Tdap/Td',
@@ -138,230 +36,13 @@ const healthyExcelToEngine = <String, String>{
   // COVID-19, HPV, HepA, HepB, MMR and RSV already match the engine's names.
 };
 
-String _patientId(Parameters parameters, int index) {
-  final patient =
-      parameters.parameter
-              ?.firstWhereOrNull(
-                (e) => e.resource is Patient,
-              )
-              ?.resource
-          as Patient?;
-  final id = patient?.id?.toString();
-  if (id == null || id == 'null') return 'case-$index';
-  return id;
-}
-
 void main() {
-  final allParameters = loadHealthyTestCases('test/healthyTestCases.ndjson');
-
-  group('CDSi healthy childhood and adult test cases', () {
-    test('loaded ${allParameters.length} test cases', () {
-      expect(allParameters.length, 1064);
-    });
-
-    // Same guard as condition_test.dart: a case that matches no expectation key
-    // asserts nothing and passes regardless of what the engine answers. This
-    // suite has never had one, and must not acquire one.
-    test('every case has an id and expectations to be checked against', () {
-      final unusable = <String>[];
-      for (var i = 0; i < allParameters.length; i++) {
-        final id = _patientId(allParameters[i], i);
-        if (id.startsWith('case-')) {
-          unusable.add('index $i has no patient id');
-        } else if (testForecasts[id] == null && testDoses[id] == null) {
-          unusable.add('$id has no expected doses or forecasts');
-        }
-      }
-      expect(
-        unusable,
-        isEmpty,
-        reason:
-            '${unusable.length} of ${allParameters.length} cases assert '
-            'nothing:\n${unusable.take(20).join("\n")}',
-      );
-    });
-
-    for (var i = 0; i < allParameters.length; i++) {
-      final parameters = allParameters[i];
-      final id = _patientId(parameters, i);
-
-      test(id, () {
-        // --- Evaluate ---
-        final result = evaluateForForecast(parameters);
-        final mismatches = <String>[];
-
-        // --- Dose evaluation ---
-        final expectedDoseMaps = testDoses[id];
-        if (expectedDoseMaps != null) {
-          for (final doseMap in expectedDoseMaps) {
-            final expectedDose = VaxDose.fromJson(doseMap);
-            final expectedSeriesType = doseMap['seriesType'] as String?;
-            var foundStatusMatch = false;
-            var foundReasonMatch = false;
-            var foundAnyEval = false;
-            final hasExpectedReason = expectedDose.evalReason != null;
-            final actualReasons = <EvalReason?>{};
-
-            result.agMap.forEach((antigenName, antigen) {
-              if (!expectedDose.antigens
-                  .map((s) => s.toLowerCase())
-                  .contains(antigenName.toLowerCase())) {
-                return;
-              }
-
-              antigen.groups.forEach((groupKey, group) {
-                for (final series in group.series) {
-                  // If expected dose has a seriesType, only match
-                  // against series of that type.
-                  if (expectedSeriesType != null &&
-                      series.series.seriesType != null) {
-                    final actualType =
-                        series.series.seriesType.toString().toLowerCase();
-                    if (actualType != expectedSeriesType) continue;
-                  }
-
-                  final actualDose = series.doses.firstWhereOrNull(
-                    (d) => d.doseId == expectedDose.doseId,
-                  );
-                  if (actualDose == null || actualDose.evalStatus == null) {
-                    continue;
-                  }
-
-                  foundAnyEval = true;
-
-                  // Consistency check
-                  final violations = checkDoseConsistency(actualDose);
-                  for (final v in violations) {
-                    mismatches.add('consistency: ${actualDose.doseId} $v');
-                  }
-
-                  if (actualDose.evalStatus == expectedDose.evalStatus) {
-                    foundStatusMatch = true;
-                    actualReasons.addAll(actualDose.evalReasons);
-                    // Against evalReasons, not evalReason: Table 6-31 sets the
-                    // status "with evaluation reasons", plural, and CDC's
-                    // column holds one of them. A dose failing both the age
-                    // and the interval has both, and which one their row
-                    // records is not something the specification decides.
-                    if (hasExpectedReason &&
-                        actualDose.evalReasons.contains(
-                          expectedDose.evalReason,
-                        )) {
-                      foundReasonMatch = true;
-                    }
-                  }
-                }
-              });
-            });
-
-            final seriesTypeNote =
-                expectedSeriesType == null
-                    ? ''
-                    : 'seriesType=$expectedSeriesType';
-            if (!foundAnyEval && expectedDose.evalStatus != null) {
-              mismatches.add(
-                'dose ${expectedDose.doseId}: '
-                'not found in any evaluated series '
-                '(expected ${expectedDose.evalStatus}'
-                '${seriesTypeNote.isEmpty ? '' : ', $seriesTypeNote'})',
-              );
-            } else if (foundAnyEval && !foundStatusMatch) {
-              mismatches.add(
-                'dose ${expectedDose.doseId}: '
-                'evalStatus expected=${expectedDose.evalStatus} '
-                'reason=${expectedDose.evalReason}'
-                '${seriesTypeNote.isEmpty ? '' : ' $seriesTypeNote'}',
-              );
-            }
-            if (foundAnyEval &&
-                foundStatusMatch &&
-                hasExpectedReason &&
-                !foundReasonMatch) {
-              mismatches.add(
-                'dose ${expectedDose.doseId}: '
-                'evalReason expected=${expectedDose.evalReason} '
-                'actual=${actualReasons.join(",")}',
-              );
-            }
-          }
-        }
-
-        // --- Forecast ---
-        final expectedForecasts = testForecasts[id];
-
-        if (expectedForecasts != null) {
-          for (final expected in expectedForecasts) {
-            final excelVg = expected['vaccineGroup']!.trim();
-            final engineVg = healthyExcelToEngine[excelVg] ?? excelVg;
-
-            final vgForecast = collapseForComparison(
-              result.vaccineGroupForecasts[engineVg],
-            );
-            if (vgForecast == null) {
-              mismatches.add('[$excelVg] no forecast produced');
-              continue;
-            }
-
-            // Series status
-            final expectedStatus = expected['seriesStatus']!.toLowerCase();
-            final actualStatus = vgForecast.status.toString().toLowerCase();
-            if (expectedStatus != actualStatus) {
-              mismatches.add(
-                '[$excelVg] status: '
-                'expected=$expectedStatus actual=$actualStatus',
-              );
-            }
-
-            // Dose number
-            final expectedDoseNum = expected['forecastNum'] ?? '';
-            if (expectedDoseNum.isNotEmpty && expectedDoseNum != '-') {
-              final actualDoseNum = vgForecast.doseNumber?.toString() ?? '';
-              if (expectedDoseNum != actualDoseNum) {
-                mismatches.add(
-                  '[$excelVg] doseNum: '
-                  'expected=$expectedDoseNum actual=$actualDoseNum',
-                );
-              }
-            }
-
-            // Dates
-            final expectedEarliest = expected['earliestDate'] ?? '';
-            final expectedRecommended = expected['recommendedDate'] ?? '';
-            final expectedPastDue = expected['pastDueDate'] ?? '';
-
-            final actualEarliest = vgForecast.earliestDate?.toString() ?? '';
-            final actualRecommended =
-                vgForecast.recommendedDate?.toString() ?? '';
-            final actualPastDue = vgForecast.pastDueDate?.toString() ?? '';
-
-            if (expectedEarliest.isNotEmpty &&
-                expectedEarliest != actualEarliest) {
-              mismatches.add(
-                '[$excelVg] earliest: '
-                'expected=$expectedEarliest actual=$actualEarliest',
-              );
-            }
-            if (expectedRecommended.isNotEmpty &&
-                expectedRecommended != actualRecommended) {
-              mismatches.add(
-                '[$excelVg] recommended: '
-                'expected=$expectedRecommended actual=$actualRecommended',
-              );
-            }
-            if (expectedPastDue.isNotEmpty &&
-                expectedPastDue != actualPastDue) {
-              mismatches.add(
-                '[$excelVg] pastDue: '
-                'expected=$expectedPastDue actual=$actualPastDue',
-              );
-            }
-          }
-        }
-
-        if (mismatches.isNotEmpty) {
-          fail('${mismatches.length} mismatches:\n${mismatches.join('\n')}');
-        }
-      });
-    }
-  });
+  runCdcSuite(
+    name: 'CDSi healthy childhood and adult test cases',
+    casesPath: 'test/healthyTestCases.ndjson',
+    caseCount: 1064,
+    expectedDoses: testDoses,
+    expectedForecasts: testForecasts,
+    excelToEngine: healthyExcelToEngine,
+  );
 }
