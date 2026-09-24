@@ -1,6 +1,7 @@
 // ignore_for_file: no_adjacent_strings_in_list
 // Generated data: long strings are split into adjacent literals so
-// no line passes 80 columns; a serializer cannot drop a comma.
+// no line passes 80 columns; a serializer cannot drop a comma
+// or a space.
 
 import 'package:cicada/cicada.dart';
 
@@ -564,8 +565,7 @@ final AntigenSupportingData mumps = AntigenSupportingData.fromJson({
             'code': '048',
           },
           'description':
-              'Administer to persons who will be travelling '
-              'internationally.',
+              'Administer to persons who will be travelling internationally.',
           'beginAge': '6 months',
           'endAge': '12 months',
         },
@@ -643,8 +643,7 @@ final AntigenSupportingData mumps = AntigenSupportingData.fromJson({
             'code': '048',
           },
           'description':
-              'Administer to persons who will be travelling '
-              'internationally.',
+              'Administer to persons who will be travelling internationally.',
           'beginAge': '18 years',
         },
         {

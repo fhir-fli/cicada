@@ -1,6 +1,7 @@
 // ignore_for_file: no_adjacent_strings_in_list
 // Generated data: long strings are split into adjacent literals so
-// no line passes 80 columns; a serializer cannot drop a comma.
+// no line passes 80 columns; a serializer cannot drop a comma
+// or a space.
 
 import 'package:cicada/cicada.dart';
 
@@ -2691,8 +2692,7 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
         {
           'observationCode': {
             'text':
-                'T-lymphocyte [cell-mediated and humoral] - Complete '
-                'defects',
+                'T-lymphocyte [cell-mediated and humoral] - Complete defects',
             'code': '147',
           },
           'description':
@@ -3849,8 +3849,7 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
         {
           'observationCode': {
             'text':
-                'T-lymphocyte [cell-mediated and humoral] - Complete '
-                'defects',
+                'T-lymphocyte [cell-mediated and humoral] - Complete defects',
             'code': '147',
           },
           'description':
@@ -4341,8 +4340,7 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
         {
           'observationCode': {
             'text':
-                'T-lymphocyte [cell-mediated and humoral] - Complete '
-                'defects',
+                'T-lymphocyte [cell-mediated and humoral] - Complete defects',
             'code': '147',
           },
           'description':
@@ -4803,8 +4801,7 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
         {
           'observationCode': {
             'text':
-                'T-lymphocyte [cell-mediated and humoral] - Complete '
-                'defects',
+                'T-lymphocyte [cell-mediated and humoral] - Complete defects',
             'code': '147',
           },
           'description':
@@ -5172,7 +5169,8 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
       'seriesAdminGuidance': [
         'Adults who have received PCV13 please consult the following '
             'for PCV20, PCV21 or PPSV23 options: '
-            'https://www.cdc.gov/pneumococcal/downloads/Vaccine-Timing-Adults-JobAid.pdf',
+            'https://www.cdc.gov/pneumococcal/downloads/Vaccine-Timing-Adults-JobAid.pdf'
+            '',
         'Adults who have received PCV15 but have not yet completed '
             'PPSV23 series, can complete the series with either 1 dose of '
             'PCV20 or 1 dose of PCV21 if they no longer have access to '
@@ -5686,7 +5684,8 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
       'seriesAdminGuidance': [
         'Adults who have received PCV13 please consult the following '
             'for PCV20, PCV21 or PPSV23 options: '
-            'https://www.cdc.gov/pneumococcal/downloads/Vaccine-Timing-Adults-JobAid.pdf',
+            'https://www.cdc.gov/pneumococcal/downloads/Vaccine-Timing-Adults-JobAid.pdf'
+            '',
         'Based on shared clinical decision-making, 1 dose of PCV20 or '
             'PCV21 may be administered at least 5 years after the last '
             'pneumococcal vaccine dose provided the patient previously '
@@ -6130,7 +6129,8 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
       'seriesAdminGuidance': [
         'Adults who have received PCV13 please consult the following '
             'for PCV20, PCV21 or PPSV23 options: '
-            'https://www.cdc.gov/pneumococcal/downloads/Vaccine-Timing-Adults-JobAid.pdf',
+            'https://www.cdc.gov/pneumococcal/downloads/Vaccine-Timing-Adults-JobAid.pdf'
+            '',
         'When PCV15 is used, the recommended interval between '
             'administration of PCV15 and PPSV23 is on or after 1 year. A '
             'minimum interval of 8 weeks can be considered for adults with '
@@ -6618,7 +6618,8 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
       'seriesAdminGuidance': [
         'Adults who have received PCV13 please consult the following '
             'for PCV20, PCV21 or PPSV23 options: '
-            'https://www.cdc.gov/pneumococcal/downloads/Vaccine-Timing-Adults-JobAid.pdf',
+            'https://www.cdc.gov/pneumococcal/downloads/Vaccine-Timing-Adults-JobAid.pdf'
+            '',
         'Based on shared clinical decision-making, 1 dose of PCV20 or '
             'PCV21 may be administered at least 5 years after the last '
             'pneumococcal vaccine dose provided the patient previously '
@@ -7022,7 +7023,8 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
       'seriesAdminGuidance': [
         'Adults who have received PCV13 please consult the following '
             'for PCV20, PCV21 or PPSV23 options: '
-            'https://www.cdc.gov/pneumococcal/downloads/Vaccine-Timing-Adults-JobAid.pdf',
+            'https://www.cdc.gov/pneumococcal/downloads/Vaccine-Timing-Adults-JobAid.pdf'
+            '',
         'When PCV15 is used, the recommended interval between '
             'administration of PCV15 and PPSV23 is on or after 1 year. A '
             'minimum interval of 8 weeks can be considered for adults with '
@@ -7086,8 +7088,7 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
         {
           'observationCode': {
             'text':
-                'T-lymphocyte [cell-mediated and humoral] - Complete '
-                'defects',
+                'T-lymphocyte [cell-mediated and humoral] - Complete defects',
             'code': '147',
           },
           'description':
@@ -7848,7 +7849,8 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
       'seriesAdminGuidance': [
         'Adults who have received PCV13 please consult the following '
             'for PCV20, PCV21 or PPSV23 options: '
-            'https://www.cdc.gov/pneumococcal/downloads/Vaccine-Timing-Adults-JobAid.pdf',
+            'https://www.cdc.gov/pneumococcal/downloads/Vaccine-Timing-Adults-JobAid.pdf'
+            '',
         'Adults who have received PCV15 but have not yet completed '
             'PPSV23 series, can complete the series with either 1 dose of '
             'PCV20 or 1 dose of PCV21 if they no longer have access to '
@@ -7906,8 +7908,7 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
         {
           'observationCode': {
             'text':
-                'T-lymphocyte [cell-mediated and humoral] - Complete '
-                'defects',
+                'T-lymphocyte [cell-mediated and humoral] - Complete defects',
             'code': '147',
           },
           'description':
@@ -8594,7 +8595,8 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
       'seriesAdminGuidance': [
         'Adults who have received PCV13 please consult the following '
             'for PCV20, PCV21 or PPSV23 options: '
-            'https://www.cdc.gov/pneumococcal/downloads/Vaccine-Timing-Adults-JobAid.pdf',
+            'https://www.cdc.gov/pneumococcal/downloads/Vaccine-Timing-Adults-JobAid.pdf'
+            '',
         'Based on shared clinical decision-making, 1 dose of PCV20 or '
             'PCV21 may be administered at least 5 years after the last '
             'pneumococcal vaccine dose provided the patient previously '
@@ -8648,8 +8650,7 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
         {
           'observationCode': {
             'text':
-                'T-lymphocyte [cell-mediated and humoral] - Complete '
-                'defects',
+                'T-lymphocyte [cell-mediated and humoral] - Complete defects',
             'code': '147',
           },
           'description':
@@ -9419,14 +9420,16 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
       'seriesAdminGuidance': [
         'Adults who have received PCV13 please consult the following '
             'for PCV20, PCV21 or PPSV23 options: '
-            'https://www.cdc.gov/pneumococcal/downloads/Vaccine-Timing-Adults-JobAid.pdf',
+            'https://www.cdc.gov/pneumococcal/downloads/Vaccine-Timing-Adults-JobAid.pdf'
+            '',
         'Based on shared clinical decision-making, 1 dose of PCV20 or '
             'PCV21 may be administered at least 5 years after the last '
             'pneumococcal vaccine dose provided the patient previously '
             'received both PCV13 and PPSV23 with at least one dose of '
             'PPSV23 received on or after 65 years of age. More guidance '
             'can be found here: \r '
-            'https://www.cdc.gov/vaccines/hcp/admin/downloads/job-aid-SCDM-pneumococcal-508.pdf',
+            'https://www.cdc.gov/vaccines/hcp/admin/downloads/job-aid-SCDM-pneumococcal-508.pdf'
+            '',
       ],
       'seriesType': 'Standard',
       'equivalentSeriesGroups': '2',
@@ -9741,14 +9744,16 @@ final AntigenSupportingData pneumococcal = AntigenSupportingData.fromJson({
       'seriesAdminGuidance': [
         'Adults who have received PCV13 please consult the following '
             'for PCV20, PCV21 or PPSV23 options: '
-            'https://www.cdc.gov/pneumococcal/downloads/Vaccine-Timing-Adults-JobAid.pdf',
+            'https://www.cdc.gov/pneumococcal/downloads/Vaccine-Timing-Adults-JobAid.pdf'
+            '',
         'Based on shared clinical decision-making, 1 dose of PCV20 or '
             'PCV21 may be administered at least 5 years after the last '
             'pneumococcal vaccine dose provided the patient previously '
             'received both PCV13 and PPSV23 with at least one dose of '
             'PPSV23 received on or after 65 years of age. More guidance '
             'can be found here: \r '
-            'https://www.cdc.gov/vaccines/hcp/admin/downloads/job-aid-SCDM-pneumococcal-508.pdf',
+            'https://www.cdc.gov/vaccines/hcp/admin/downloads/job-aid-SCDM-pneumococcal-508.pdf'
+            '',
       ],
       'seriesType': 'Standard',
       'equivalentSeriesGroups': '2',

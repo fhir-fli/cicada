@@ -1,6 +1,7 @@
 // ignore_for_file: no_adjacent_strings_in_list
 // Generated data: long strings are split into adjacent literals so
-// no line passes 80 columns; a serializer cannot drop a comma.
+// no line passes 80 columns; a serializer cannot drop a comma
+// or a space.
 
 import 'package:cicada/cicada.dart';
 
@@ -56,7 +57,8 @@ final AntigenSupportingData hpv = AntigenSupportingData.fromJson({
             'informed by the characteristics, values, and preferences of '
             'the individual patient and the clinical discretion of the '
             'healthcare provider. More guidance can be found here: '
-            'https://www.cdc.gov/vaccines/hcp/admin/downloads/ISD-job-aid-SCDM-HPV-shared-clinical-decision-making-HPV.pdf',
+            'https://www.cdc.gov/vaccines/hcp/admin/downloads/ISD-job-aid-SCDM-HPV-shared-clinical-decision-making-HPV.pdf'
+            '',
       ],
       'seriesType': 'Standard',
       'equivalentSeriesGroups': '2',
@@ -191,7 +193,8 @@ final AntigenSupportingData hpv = AntigenSupportingData.fromJson({
             'informed by the characteristics, values, and preferences of '
             'the individual patient and the clinical discretion of the '
             'healthcare provider. More guidance can be found here: '
-            'https://www.cdc.gov/vaccines/hcp/admin/downloads/ISD-job-aid-SCDM-HPV-shared-clinical-decision-making-HPV.pdf',
+            'https://www.cdc.gov/vaccines/hcp/admin/downloads/ISD-job-aid-SCDM-HPV-shared-clinical-decision-making-HPV.pdf'
+            '',
       ],
       'seriesType': 'Standard',
       'equivalentSeriesGroups': '2',
@@ -386,7 +389,8 @@ final AntigenSupportingData hpv = AntigenSupportingData.fromJson({
             'informed by the characteristics, values, and preferences of '
             'the individual patient and the clinical discretion of the '
             'healthcare provider. More guidance can be found here: '
-            'https://www.cdc.gov/vaccines/hcp/admin/downloads/ISD-job-aid-SCDM-HPV-shared-clinical-decision-making-HPV.pdf',
+            'https://www.cdc.gov/vaccines/hcp/admin/downloads/ISD-job-aid-SCDM-HPV-shared-clinical-decision-making-HPV.pdf'
+            '',
       ],
       'seriesType': 'Standard',
       'equivalentSeriesGroups': '2',
@@ -590,7 +594,8 @@ final AntigenSupportingData hpv = AntigenSupportingData.fromJson({
             'informed by the characteristics, values, and preferences of '
             'the individual patient and the clinical discretion of the '
             'healthcare provider. More guidance can be found here: '
-            'https://www.cdc.gov/vaccines/hcp/admin/downloads/ISD-job-aid-SCDM-HPV-shared-clinical-decision-making-HPV.pdf',
+            'https://www.cdc.gov/vaccines/hcp/admin/downloads/ISD-job-aid-SCDM-HPV-shared-clinical-decision-making-HPV.pdf'
+            '',
       ],
       'seriesType': 'Standard',
       'equivalentSeriesGroups': '2',
@@ -726,7 +731,8 @@ final AntigenSupportingData hpv = AntigenSupportingData.fromJson({
             'informed by the characteristics, values, and preferences of '
             'the individual patient and the clinical discretion of the '
             'healthcare provider. More guidance can be found here: '
-            'https://www.cdc.gov/vaccines/hcp/admin/downloads/ISD-job-aid-SCDM-HPV-shared-clinical-decision-making-HPV.pdf',
+            'https://www.cdc.gov/vaccines/hcp/admin/downloads/ISD-job-aid-SCDM-HPV-shared-clinical-decision-making-HPV.pdf'
+            '',
       ],
       'seriesType': 'Standard',
       'equivalentSeriesGroups': '2',
@@ -923,7 +929,8 @@ final AntigenSupportingData hpv = AntigenSupportingData.fromJson({
             'informed by the characteristics, values, and preferences of '
             'the individual patient and the clinical discretion of the '
             'healthcare provider. More guidance can be found here: '
-            'https://www.cdc.gov/vaccines/hcp/admin/downloads/ISD-job-aid-SCDM-HPV-shared-clinical-decision-making-HPV.pdf',
+            'https://www.cdc.gov/vaccines/hcp/admin/downloads/ISD-job-aid-SCDM-HPV-shared-clinical-decision-making-HPV.pdf'
+            '',
       ],
       'seriesType': 'Standard',
       'equivalentSeriesGroups': '2',
@@ -1616,7 +1623,8 @@ final AntigenSupportingData hpv = AntigenSupportingData.fromJson({
             'informed by the characteristics, values, and preferences of '
             'the individual patient and the clinical discretion of the '
             'healthcare provider. More guidance can be found here: '
-            'https://www.cdc.gov/vaccines/hcp/admin/downloads/ISD-job-aid-SCDM-HPV-shared-clinical-decision-making-HPV.pdf',
+            'https://www.cdc.gov/vaccines/hcp/admin/downloads/ISD-job-aid-SCDM-HPV-shared-clinical-decision-making-HPV.pdf'
+            '',
       ],
       'seriesType': 'Risk',
       'requiredGender': [
@@ -1660,8 +1668,7 @@ final AntigenSupportingData hpv = AntigenSupportingData.fromJson({
         {
           'observationCode': {
             'text':
-                'T-lymphocyte [cell-mediated and humoral] - Complete '
-                'defects',
+                'T-lymphocyte [cell-mediated and humoral] - Complete defects',
             'code': '147',
           },
           'description':
@@ -1981,7 +1988,8 @@ final AntigenSupportingData hpv = AntigenSupportingData.fromJson({
             'informed by the characteristics, values, and preferences of '
             'the individual patient and the clinical discretion of the '
             'healthcare provider. More guidance can be found here: '
-            'https://www.cdc.gov/vaccines/hcp/admin/downloads/ISD-job-aid-SCDM-HPV-shared-clinical-decision-making-HPV.pdf',
+            'https://www.cdc.gov/vaccines/hcp/admin/downloads/ISD-job-aid-SCDM-HPV-shared-clinical-decision-making-HPV.pdf'
+            '',
       ],
       'seriesType': 'Risk',
       'requiredGender': [
@@ -2024,8 +2032,7 @@ final AntigenSupportingData hpv = AntigenSupportingData.fromJson({
         {
           'observationCode': {
             'text':
-                'T-lymphocyte [cell-mediated and humoral] - Complete '
-                'defects',
+                'T-lymphocyte [cell-mediated and humoral] - Complete defects',
             'code': '147',
           },
           'description':

@@ -2432,8 +2432,7 @@ final AntigenSupportingData hepa = AntigenSupportingData.fromJson({
             'code': '048',
           },
           'description':
-              'Administer to persons who will be travelling '
-              'internationally.',
+              'Administer to persons who will be travelling internationally.',
           'beginAge': '6 months',
           'endAge': '12 months',
         },

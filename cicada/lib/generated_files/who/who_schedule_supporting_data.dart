@@ -1048,8 +1048,7 @@ final whoScheduleSupportingData = ScheduleSupportingData.fromJson({
         'observationCode': '1012',
         'observationTitle': 'Lives in or traveling to YF endemic area',
         'indicationText':
-            'Patient lives in or is traveling to a Yellow Fever endemic '
-            'area',
+            'Patient lives in or is traveling to a Yellow Fever endemic area',
         'codedValues': {
           'codedValue': [
             {

@@ -1,6 +1,7 @@
 // ignore_for_file: no_adjacent_strings_in_list
 // Generated data: long strings are split into adjacent literals so
-// no line passes 80 columns; a serializer cannot drop a comma.
+// no line passes 80 columns; a serializer cannot drop a comma
+// or a space.
 
 import 'package:cicada/cicada.dart';
 
@@ -3494,8 +3495,7 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
         {
           'observationCode': {
             'text':
-                'Sex partner of Hepatitis B surface antigen-positive '
-                'persons',
+                'Sex partner of Hepatitis B surface antigen-positive persons',
             'code': '038',
           },
           'description':
@@ -4046,8 +4046,7 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
         {
           'observationCode': {
             'text':
-                'Sex partner of Hepatitis B surface antigen-positive '
-                'persons',
+                'Sex partner of Hepatitis B surface antigen-positive persons',
             'code': '038',
           },
           'description':
@@ -4333,8 +4332,7 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
         {
           'observationCode': {
             'text':
-                'Sex partner of Hepatitis B surface antigen-positive '
-                'persons',
+                'Sex partner of Hepatitis B surface antigen-positive persons',
             'code': '038',
           },
           'description':
@@ -4903,8 +4901,7 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
         {
           'observationCode': {
             'text':
-                'Sex partner of Hepatitis B surface antigen-positive '
-                'persons',
+                'Sex partner of Hepatitis B surface antigen-positive persons',
             'code': '038',
           },
           'description':
@@ -5437,8 +5434,7 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
         {
           'observationCode': {
             'text':
-                'Sex partner of Hepatitis B surface antigen-positive '
-                'persons',
+                'Sex partner of Hepatitis B surface antigen-positive persons',
             'code': '038',
           },
           'description':
@@ -5763,8 +5759,7 @@ final AntigenSupportingData hepb = AntigenSupportingData.fromJson({
         {
           'observationCode': {
             'text':
-                'Sex partner of Hepatitis B surface antigen-positive '
-                'persons',
+                'Sex partner of Hepatitis B surface antigen-positive persons',
             'code': '038',
           },
           'description':

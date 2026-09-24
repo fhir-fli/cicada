@@ -120,6 +120,15 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "6.0.0"
+  dart_literal:
+    dependency: "direct main"
+    description:
+      path: "."
+      ref: HEAD
+      resolved-ref: "03e8cc5b001d553c864664d1592098d0cda2dc1c"
+      url: "https://github.com/fhir-fli/dart_literal.git"
+    source: git
+    version: "0.1.4"
   equatable:
     dependency: transitive
     description:

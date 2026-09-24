@@ -1,6 +1,7 @@
 // ignore_for_file: no_adjacent_strings_in_list
 // Generated data: long strings are split into adjacent literals so
-// no line passes 80 columns; a serializer cannot drop a comma.
+// no line passes 80 columns; a serializer cannot drop a comma
+// or a space.
 
 import 'package:cicada/cicada.dart';
 
@@ -60,7 +61,8 @@ japaneseEncephalitis = AntigenSupportingData.fromJson({
         'Endemic Area and transmission season is determined by '
             'country.  Refer to the yellow book for a definition of the '
             'transmission season: '
-            'https://www.cdc.gov/yellow-book/hcp/travel-associated-infections-diseases/yellow-fever.html',
+            'https://www.cdc.gov/yellow-book/hcp/travel-associated-infections-diseases/yellow-fever.html'
+            '',
       ],
       'seriesType': 'Risk',
       'selectSeries': {
@@ -237,7 +239,8 @@ japaneseEncephalitis = AntigenSupportingData.fromJson({
         'Endemic Area and transmission season is determined by '
             'country.  Refer to the yellow book for a definition of the '
             'transmission season: '
-            'https://www.cdc.gov/yellow-book/hcp/travel-associated-infections-diseases/yellow-fever.html',
+            'https://www.cdc.gov/yellow-book/hcp/travel-associated-infections-diseases/yellow-fever.html'
+            '',
       ],
       'seriesType': 'Risk',
       'selectSeries': {

@@ -1,6 +1,7 @@
 // ignore_for_file: no_adjacent_strings_in_list
 // Generated data: long strings are split into adjacent literals so
-// no line passes 80 columns; a serializer cannot drop a comma.
+// no line passes 80 columns; a serializer cannot drop a comma
+// or a space.
 
 import 'package:cicada/cicada.dart';
 
@@ -13,8 +14,7 @@ final AntigenSupportingData meningococcal = AntigenSupportingData.fromJson({
         {
           'observationCode': '095',
           'observationTitle':
-              'Severe allergic reaction after previous dose of '
-              'Meningococcal',
+              'Severe allergic reaction after previous dose of Meningococcal',
           'contraindicationText':
               'Do not vaccinate if the patient has had a severe allergic '
               'reaction after a previous dose of Meningococcal vaccine.',
@@ -2042,8 +2042,7 @@ final AntigenSupportingData meningococcal = AntigenSupportingData.fromJson({
         {
           'observationCode': {
             'text':
-                'Microbiologists routinely exposed to Neisseria '
-                'meningitidis',
+                'Microbiologists routinely exposed to Neisseria meningitidis',
             'code': '050',
           },
           'description':

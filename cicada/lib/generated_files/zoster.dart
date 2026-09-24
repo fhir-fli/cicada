@@ -265,8 +265,7 @@ final AntigenSupportingData zoster = AntigenSupportingData.fromJson({
         {
           'observationCode': {
             'text':
-                'T-lymphocyte [cell-mediated and humoral] - Complete '
-                'defects',
+                'T-lymphocyte [cell-mediated and humoral] - Complete defects',
             'code': '147',
           },
           'description':

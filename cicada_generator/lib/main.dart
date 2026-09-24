@@ -5,6 +5,7 @@ import 'package:cicada/cicada.dart';
 import 'package:cicada_generator/antigen_sheet_parser.dart';
 import 'package:cicada_generator/repo_root.dart';
 import 'package:cicada_generator/schedule_sheet_parser.dart';
+import 'package:dart_literal/dart_literal.dart';
 
 void main(List<String> args) {
   final cdcOnly = args.contains('--cdc');
@@ -474,107 +475,6 @@ $body);
 const jsonEncoder = JsonEncoder.withIndent('    ');
 
 String jsonPrettyPrint(Map<String, dynamic> map) => jsonEncoder.convert(map);
-
-/// Renders decoded JSON as a Dart literal: single-quoted strings (double
-/// where the text holds an apostrophe), one entry per line, a trailing
-/// comma on every entry so `dart format` keeps the layout. Maps keep their
-/// key order; numbers, booleans and null print as Dart literals. Anything
-/// else is a defect in the source data.
-///
-/// Strings that would pass 80 columns are split into adjacent literals.
-/// Inside a list that trips `no_adjacent_strings_in_list` (whose purpose is
-/// to catch a missing comma, which a serializer cannot produce), so a file
-/// that needed such a split gets [header] with a scoped ignore_for_file.
-class DartLiteralWriter {
-  bool _splitInList = false;
-
-  String get header =>
-      _splitInList
-          ? '// ignore_for_file: no_adjacent_strings_in_list\n'
-              '// Generated data: long strings are split into adjacent literals so\n'
-              '// no line passes 80 columns; a serializer cannot drop a comma.\n\n'
-          : '';
-
-  String literal(Object? value, [int indent = 0, bool inList = false]) {
-    final pad = '  ' * indent;
-    final inner = '  ' * (indent + 1);
-    if (value == null) return 'null';
-    if (value is bool || value is num) return '$value';
-    if (value is String) {
-      final out = _string(value, indent);
-      if (inList && out.contains("' '") || inList && out.contains('" "')) {
-        _splitInList = true;
-      }
-      return out;
-    }
-    if (value is Map) {
-      if (value.isEmpty) return '<String, dynamic>{}';
-      final sb = StringBuffer('{\n');
-      for (final entry in value.entries) {
-        sb.writeln(
-          '$inner${_string(entry.key as String, indent + 1)}: '
-          '${literal(entry.value, indent + 1)},',
-        );
-      }
-      sb.write('$pad}');
-      return sb.toString();
-    }
-    if (value is List) {
-      if (value.isEmpty) return '<dynamic>[]';
-      final sb = StringBuffer('[\n');
-      for (final item in value) {
-        sb.writeln('$inner${literal(item, indent + 1, true)},');
-      }
-      sb.write('$pad]');
-      return sb.toString();
-    }
-    throw ArgumentError('Cannot render ${value.runtimeType} as a Dart literal');
-  }
-
-  /// A string literal, split into adjacent literals at spaces when it would
-  /// not fit the 80-column lint (`lines_longer_than_80_chars`); `dart format`
-  /// puts each continuation on its own line, indented four more, and the
-  /// compiler joins them. Lines holding a URI are exempt from the lint.
-  static String _string(String s, int indent) {
-    final escaped = s
-        .replaceAll(r'\', r'\\')
-        .replaceAll(r'$', r'\$')
-        .replaceAll('\n', r'\n')
-        .replaceAll('\r', r'\r')
-        .replaceAll('\t', r'\t');
-    // Continuation lines sit 4 columns deeper than the first piece, so size
-    // every piece for the deeper position: 80 minus indent, 4, quotes, ", ".
-    final room = 80 - 2 * (indent + 1) - 4 - 2 - 2;
-    if (escaped.length <= room) return _quote(escaped);
-    // Split after a space, or after ';' / ',' in the CDC's delimited code
-    // lists (e.g. vaccineTypes '01;09;20;…'), which carry no spaces.
-    final sep =
-        escaped.contains(' ')
-            ? ' '
-            : escaped.contains(';')
-            ? ';'
-            : ',';
-    if (!escaped.contains(sep)) return _quote(escaped);
-    final pieces = <String>[];
-    var rest = escaped;
-    while (rest.length > room) {
-      var cut = rest.lastIndexOf(sep, room - 1);
-      if (cut <= 0) cut = rest.indexOf(sep);
-      if (cut <= 0) break;
-      pieces.add(rest.substring(0, cut + 1));
-      rest = rest.substring(cut + 1);
-    }
-    pieces.add(rest);
-    return pieces.map(_quote).join(' ');
-  }
-
-  /// Single quotes, or double where the piece holds an apostrophe and no
-  /// double quote (`prefer_single_quotes` / `avoid_escaping_inner_quotes`).
-  static String _quote(String piece) {
-    if (piece.contains("'") && !piece.contains('"')) return '"$piece"';
-    return "'${piece.replaceAll("'", r"\'")}'";
-  }
-}
 
 String snakeCaseToCamelCase(String snakeCaseString) {
   final parts = snakeCaseString.split('_');

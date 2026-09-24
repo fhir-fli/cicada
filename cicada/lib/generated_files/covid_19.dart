@@ -1,6 +1,7 @@
 // ignore_for_file: no_adjacent_strings_in_list
 // Generated data: long strings are split into adjacent literals so
-// no line passes 80 columns; a serializer cannot drop a comma.
+// no line passes 80 columns; a serializer cannot drop a comma
+// or a space.
 
 import 'package:cicada/cicada.dart';
 
@@ -81,8 +82,7 @@ final AntigenSupportingData covid19 = AntigenSupportingData.fromJson({
   'series': [
     {
       'seriesName':
-          'COVID-19 start at 6mo-23mo shared clinical decision-making '
-          'series',
+          'COVID-19 start at 6mo-23mo shared clinical decision-making series',
       'targetDisease': 'COVID-19',
       'vaccineGroup': 'COVID-19',
       'seriesAdminGuidance': [
@@ -92,10 +92,12 @@ final AntigenSupportingData covid19 = AntigenSupportingData.fromJson({
             'severe COVID-19 disease and lowest for individuals who are '
             'not at an increased risk according to the CDC list of '
             'COVID-19 risk factors. see '
-            'https://www.cdc.gov/covid/hcp/clinical-care/underlying-conditions.html',
+            'https://www.cdc.gov/covid/hcp/clinical-care/underlying-conditions.html'
+            '',
         'For people who have a history of myocarditis with MIS-C or '
             'MIS-A, see '
-            'https://www.cdc.gov/covid/hcp/vaccine-considerations/special-situations-and-populations.html#cdc_clinical_guidance_recomm_key-covid-19-vaccination-and-mis-c-and-mis-a',
+            'https://www.cdc.gov/covid/hcp/vaccine-considerations/special-situations-and-populations.html#cdc_clinical_guidance_recomm_key-covid-19-vaccination-and-mis-c-and-mis-a'
+            '',
       ],
       'seriesType': 'Standard',
       'equivalentSeriesGroups': '2',
@@ -1333,8 +1335,7 @@ final AntigenSupportingData covid19 = AntigenSupportingData.fromJson({
     },
     {
       'seriesName':
-          'COVID-19 start at 2 years+ shared clinical decision-making '
-          'series',
+          'COVID-19 start at 2 years+ shared clinical decision-making series',
       'targetDisease': 'COVID-19',
       'vaccineGroup': 'COVID-19',
       'seriesAdminGuidance': [
@@ -1344,7 +1345,8 @@ final AntigenSupportingData covid19 = AntigenSupportingData.fromJson({
             'severe COVID-19 disease and lowest for individuals who are '
             'not at an increased risk according to the CDC list of '
             'COVID-19 risk factors. see '
-            'https://www.cdc.gov/covid/hcp/clinical-care/underlying-conditions.html',
+            'https://www.cdc.gov/covid/hcp/clinical-care/underlying-conditions.html'
+            '',
         'The recommended interval for Moderna (mNexspike) is 3 months '
             'after the last dose; however a dose administered at least 2 '
             'months after the last dose should not be repeated. The '
@@ -1352,7 +1354,8 @@ final AntigenSupportingData covid19 = AntigenSupportingData.fromJson({
             'their second dose this season is 6 months.',
         'For people who have a history of myocarditis with MIS-C or '
             'MIS-A, see '
-            'https://www.cdc.gov/covid/hcp/vaccine-considerations/special-situations-and-populations.html#cdc_clinical_guidance_recomm_key-covid-19-vaccination-and-mis-c-and-mis-a',
+            'https://www.cdc.gov/covid/hcp/vaccine-considerations/special-situations-and-populations.html#cdc_clinical_guidance_recomm_key-covid-19-vaccination-and-mis-c-and-mis-a'
+            '',
       ],
       'seriesType': 'Standard',
       'equivalentSeriesGroups': '2',
@@ -1801,10 +1804,12 @@ final AntigenSupportingData covid19 = AntigenSupportingData.fromJson({
             'administered whenever recommended. For more information '
             'regarding interchangeability of COVID-19 vaccines please '
             'visit: '
-            'https://www.cdc.gov/covid/hcp/vaccine-considerations/implementation.html#cdc_clinical_guidance_prevent_key-interchangeability-of-covid-19-vaccines',
+            'https://www.cdc.gov/covid/hcp/vaccine-considerations/implementation.html#cdc_clinical_guidance_prevent_key-interchangeability-of-covid-19-vaccines'
+            '',
         'For people who have a history of myocarditis with MIS-C or '
             'MIS-A, see '
-            'https://www.cdc.gov/covid/hcp/vaccine-considerations/special-situations-and-populations.html#cdc_clinical_guidance_recomm_key-covid-19-vaccination-and-mis-c-and-mis-a',
+            'https://www.cdc.gov/covid/hcp/vaccine-considerations/special-situations-and-populations.html#cdc_clinical_guidance_recomm_key-covid-19-vaccination-and-mis-c-and-mis-a'
+            '',
       ],
       'seriesType': 'Risk',
       'selectSeries': {
@@ -1841,8 +1846,7 @@ final AntigenSupportingData covid19 = AntigenSupportingData.fromJson({
         {
           'observationCode': {
             'text':
-                'T-lymphocyte [cell-mediated and humoral] - Complete '
-                'defects',
+                'T-lymphocyte [cell-mediated and humoral] - Complete defects',
             'code': '147',
           },
           'description':
@@ -2760,10 +2764,12 @@ final AntigenSupportingData covid19 = AntigenSupportingData.fromJson({
             'administered whenever recommended. For more information '
             'regarding interchangeability of COVID-19 vaccines please '
             'visit: '
-            'https://www.cdc.gov/covid/hcp/vaccine-considerations/implementation.html#cdc_clinical_guidance_prevent_key-interchangeability-of-covid-19-vaccines',
+            'https://www.cdc.gov/covid/hcp/vaccine-considerations/implementation.html#cdc_clinical_guidance_prevent_key-interchangeability-of-covid-19-vaccines'
+            '',
         'For people who have a history of myocarditis with MIS-C or '
             'MIS-A, see '
-            'https://www.cdc.gov/covid/hcp/vaccine-considerations/special-situations-and-populations.html#cdc_clinical_guidance_recomm_key-covid-19-vaccination-and-mis-c-and-mis-a',
+            'https://www.cdc.gov/covid/hcp/vaccine-considerations/special-situations-and-populations.html#cdc_clinical_guidance_recomm_key-covid-19-vaccination-and-mis-c-and-mis-a'
+            '',
       ],
       'seriesType': 'Risk',
       'selectSeries': {
@@ -2800,8 +2806,7 @@ final AntigenSupportingData covid19 = AntigenSupportingData.fromJson({
         {
           'observationCode': {
             'text':
-                'T-lymphocyte [cell-mediated and humoral] - Complete '
-                'defects',
+                'T-lymphocyte [cell-mediated and humoral] - Complete defects',
             'code': '147',
           },
           'description':
@@ -3712,10 +3717,12 @@ final AntigenSupportingData covid19 = AntigenSupportingData.fromJson({
             'administered whenever recommended. For more information '
             'regarding interchangeability of COVID-19 vaccines please '
             'visit: '
-            'https://www.cdc.gov/covid/hcp/vaccine-considerations/implementation.html#cdc_clinical_guidance_prevent_key-interchangeability-of-covid-19-vaccines',
+            'https://www.cdc.gov/covid/hcp/vaccine-considerations/implementation.html#cdc_clinical_guidance_prevent_key-interchangeability-of-covid-19-vaccines'
+            '',
         'For people who have a history of myocarditis with MIS-C or '
             'MIS-A, see '
-            'https://www.cdc.gov/covid/hcp/vaccine-considerations/special-situations-and-populations.html#cdc_clinical_guidance_recomm_key-covid-19-vaccination-and-mis-c-and-mis-a',
+            'https://www.cdc.gov/covid/hcp/vaccine-considerations/special-situations-and-populations.html#cdc_clinical_guidance_recomm_key-covid-19-vaccination-and-mis-c-and-mis-a'
+            '',
       ],
       'seriesType': 'Risk',
       'selectSeries': {
@@ -3752,8 +3759,7 @@ final AntigenSupportingData covid19 = AntigenSupportingData.fromJson({
         {
           'observationCode': {
             'text':
-                'T-lymphocyte [cell-mediated and humoral] - Complete '
-                'defects',
+                'T-lymphocyte [cell-mediated and humoral] - Complete defects',
             'code': '147',
           },
           'description':
@@ -4358,10 +4364,12 @@ final AntigenSupportingData covid19 = AntigenSupportingData.fromJson({
             'administered whenever recommended. For more information '
             'regarding interchangeability of COVID-19 vaccines please '
             'visit: '
-            'https://www.cdc.gov/covid/hcp/vaccine-considerations/implementation.html#cdc_clinical_guidance_prevent_key-interchangeability-of-covid-19-vaccines',
+            'https://www.cdc.gov/covid/hcp/vaccine-considerations/implementation.html#cdc_clinical_guidance_prevent_key-interchangeability-of-covid-19-vaccines'
+            '',
         'For people who have a history of myocarditis with MIS-C or '
             'MIS-A, see '
-            'https://www.cdc.gov/covid/hcp/vaccine-considerations/special-situations-and-populations.html#cdc_clinical_guidance_recomm_key-covid-19-vaccination-and-mis-c-and-mis-a',
+            'https://www.cdc.gov/covid/hcp/vaccine-considerations/special-situations-and-populations.html#cdc_clinical_guidance_recomm_key-covid-19-vaccination-and-mis-c-and-mis-a'
+            '',
       ],
       'seriesType': 'Risk',
       'selectSeries': {
@@ -4398,8 +4406,7 @@ final AntigenSupportingData covid19 = AntigenSupportingData.fromJson({
         {
           'observationCode': {
             'text':
-                'T-lymphocyte [cell-mediated and humoral] - Complete '
-                'defects',
+                'T-lymphocyte [cell-mediated and humoral] - Complete defects',
             'code': '147',
           },
           'description':
@@ -5062,10 +5069,12 @@ final AntigenSupportingData covid19 = AntigenSupportingData.fromJson({
             'administered whenever recommended. For more information '
             'regarding interchangeability of COVID-19 vaccines please '
             'visit: '
-            'https://www.cdc.gov/covid/hcp/vaccine-considerations/implementation.html#cdc_clinical_guidance_prevent_key-interchangeability-of-covid-19-vaccines',
+            'https://www.cdc.gov/covid/hcp/vaccine-considerations/implementation.html#cdc_clinical_guidance_prevent_key-interchangeability-of-covid-19-vaccines'
+            '',
         'For people who have a history of myocarditis with MIS-C or '
             'MIS-A, see '
-            'https://www.cdc.gov/covid/hcp/vaccine-considerations/special-situations-and-populations.html#cdc_clinical_guidance_recomm_key-covid-19-vaccination-and-mis-c-and-mis-a',
+            'https://www.cdc.gov/covid/hcp/vaccine-considerations/special-situations-and-populations.html#cdc_clinical_guidance_recomm_key-covid-19-vaccination-and-mis-c-and-mis-a'
+            '',
       ],
       'seriesType': 'Risk',
       'selectSeries': {
@@ -5105,8 +5114,7 @@ final AntigenSupportingData covid19 = AntigenSupportingData.fromJson({
         {
           'observationCode': {
             'text':
-                'T-lymphocyte [cell-mediated and humoral] - Complete '
-                'defects',
+                'T-lymphocyte [cell-mediated and humoral] - Complete defects',
             'code': '147',
           },
           'description':
@@ -6539,10 +6547,12 @@ final AntigenSupportingData covid19 = AntigenSupportingData.fromJson({
             'administered whenever recommended. For more information '
             'regarding interchangeability of COVID-19 vaccines please '
             'visit: '
-            'https://www.cdc.gov/covid/hcp/vaccine-considerations/implementation.html#cdc_clinical_guidance_prevent_key-interchangeability-of-covid-19-vaccines',
+            'https://www.cdc.gov/covid/hcp/vaccine-considerations/implementation.html#cdc_clinical_guidance_prevent_key-interchangeability-of-covid-19-vaccines'
+            '',
         'For people who have a history of myocarditis with MIS-C or '
             'MIS-A, see '
-            'https://www.cdc.gov/covid/hcp/vaccine-considerations/special-situations-and-populations.html#cdc_clinical_guidance_recomm_key-covid-19-vaccination-and-mis-c-and-mis-a',
+            'https://www.cdc.gov/covid/hcp/vaccine-considerations/special-situations-and-populations.html#cdc_clinical_guidance_recomm_key-covid-19-vaccination-and-mis-c-and-mis-a'
+            '',
       ],
       'seriesType': 'Risk',
       'selectSeries': {
@@ -6579,8 +6589,7 @@ final AntigenSupportingData covid19 = AntigenSupportingData.fromJson({
         {
           'observationCode': {
             'text':
-                'T-lymphocyte [cell-mediated and humoral] - Complete '
-                'defects',
+                'T-lymphocyte [cell-mediated and humoral] - Complete defects',
             'code': '147',
           },
           'description':
@@ -7723,14 +7732,17 @@ final AntigenSupportingData covid19 = AntigenSupportingData.fromJson({
             'administered whenever recommended. For more information '
             'regarding interchangeability of COVID-19 vaccines please '
             'visit: '
-            'https://www.cdc.gov/covid/hcp/vaccine-considerations/implementation.html#cdc_clinical_guidance_prevent_key-interchangeability-of-covid-19-vaccines',
+            'https://www.cdc.gov/covid/hcp/vaccine-considerations/implementation.html#cdc_clinical_guidance_prevent_key-interchangeability-of-covid-19-vaccines'
+            '',
         'Additional clinical considerations including boosting '
             'strategies for persons vaccinated outside the U.S. can be '
             'found here: '
-            'https://www.cdc.gov/covid/hcp/vaccine-considerations/special-situations-and-populations.html#cdc_clinical_guidance_section_1-people-who-received-covid-19-vaccine-outside-the-united-states',
+            'https://www.cdc.gov/covid/hcp/vaccine-considerations/special-situations-and-populations.html#cdc_clinical_guidance_section_1-people-who-received-covid-19-vaccine-outside-the-united-states'
+            '',
         'For people who have a history of myocarditis with MIS-C or '
             'MIS-A, see '
-            'https://www.cdc.gov/covid/hcp/vaccine-considerations/special-situations-and-populations.html#cdc_clinical_guidance_recomm_key-covid-19-vaccination-and-mis-c-and-mis-a',
+            'https://www.cdc.gov/covid/hcp/vaccine-considerations/special-situations-and-populations.html#cdc_clinical_guidance_recomm_key-covid-19-vaccination-and-mis-c-and-mis-a'
+            '',
       ],
       'seriesType': 'Risk',
       'selectSeries': {
@@ -7767,8 +7779,7 @@ final AntigenSupportingData covid19 = AntigenSupportingData.fromJson({
         {
           'observationCode': {
             'text':
-                'T-lymphocyte [cell-mediated and humoral] - Complete '
-                'defects',
+                'T-lymphocyte [cell-mediated and humoral] - Complete defects',
             'code': '147',
           },
           'description':
@@ -8810,7 +8821,8 @@ final AntigenSupportingData covid19 = AntigenSupportingData.fromJson({
             'administered whenever recommended. For more information '
             'regarding interchangeability of COVID-19 vaccines please '
             'visit: '
-            'https://www.cdc.gov/covid/hcp/vaccine-considerations/implementation.html#cdc_clinical_guidance_prevent_key-interchangeability-of-covid-19-vaccines',
+            'https://www.cdc.gov/covid/hcp/vaccine-considerations/implementation.html#cdc_clinical_guidance_prevent_key-interchangeability-of-covid-19-vaccines'
+            '',
         'If clinical trial participants have questions about whether '
             'they should receive an additional and/or booster dose outside '
             'of the clinical trial, they should consult with their '
@@ -8821,7 +8833,8 @@ final AntigenSupportingData covid19 = AntigenSupportingData.fromJson({
             'FDA-approved or FDA-authorized COVID-19 vaccine series.',
         'For people who have a history of myocarditis with MIS-C or '
             'MIS-A, see '
-            'https://www.cdc.gov/covid/hcp/vaccine-considerations/special-situations-and-populations.html#cdc_clinical_guidance_recomm_key-covid-19-vaccination-and-mis-c-and-mis-a',
+            'https://www.cdc.gov/covid/hcp/vaccine-considerations/special-situations-and-populations.html#cdc_clinical_guidance_recomm_key-covid-19-vaccination-and-mis-c-and-mis-a'
+            '',
       ],
       'seriesType': 'Risk',
       'selectSeries': {
@@ -8858,8 +8871,7 @@ final AntigenSupportingData covid19 = AntigenSupportingData.fromJson({
         {
           'observationCode': {
             'text':
-                'T-lymphocyte [cell-mediated and humoral] - Complete '
-                'defects',
+                'T-lymphocyte [cell-mediated and humoral] - Complete defects',
             'code': '147',
           },
           'description':
@@ -9697,8 +9709,7 @@ final AntigenSupportingData covid19 = AntigenSupportingData.fromJson({
     {
       'worksheetName': 'Start at 6mo-23mo SCDM',
       'seriesName':
-          'COVID-19 start at 6mo-23mo shared clinical decision-making '
-          'series',
+          'COVID-19 start at 6mo-23mo shared clinical decision-making series',
       'patientBeginAge': '0 days',
       'patientEndAge': 'n/a',
       'forecastTargetDose': 'Any',
@@ -9711,8 +9722,7 @@ final AntigenSupportingData covid19 = AntigenSupportingData.fromJson({
     {
       'worksheetName': 'Start at 2 years+ SCDM',
       'seriesName':
-          'COVID-19 start at 2 years+ shared clinical decision-making '
-          'series',
+          'COVID-19 start at 2 years+ shared clinical decision-making series',
       'patientBeginAge': '0 days',
       'patientEndAge': 'n/a',
       'forecastTargetDose': 'Any',

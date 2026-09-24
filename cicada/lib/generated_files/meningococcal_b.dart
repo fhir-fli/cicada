@@ -1,6 +1,7 @@
 // ignore_for_file: no_adjacent_strings_in_list
 // Generated data: long strings are split into adjacent literals so
-// no line passes 80 columns; a serializer cannot drop a comma.
+// no line passes 80 columns; a serializer cannot drop a comma
+// or a space.
 
 import 'package:cicada/cicada.dart';
 
@@ -78,7 +79,8 @@ final AntigenSupportingData meningococcalB = AntigenSupportingData.fromJson({
             'provide short-term protection against most strains of '
             'serogroup B meningococcal disease. The preferred age for MenB '
             'vaccination is 16-18 years. More guidance can be found here: '
-            'https://www.cdc.gov/vaccines/media/pdfs/2025/03/2024-isd-job-aid-scdm-menb-508-remediated.pdf',
+            'https://www.cdc.gov/vaccines/media/pdfs/2025/03/2024-isd-job-aid-scdm-menb-508-remediated.pdf'
+            '',
         'People desiring more rapid protection against serogroup B '
             '(e.g., students with less than 6 months before college entry) '
             'may receive a 3-dose series (0, 1-2, 6 months) to optimize '
@@ -235,7 +237,8 @@ final AntigenSupportingData meningococcalB = AntigenSupportingData.fromJson({
             'provide short-term protection against most strains of '
             'serogroup B meningococcal disease. The preferred age for MenB '
             'vaccination is 16-18 years. More guidance can be found here: '
-            'https://www.cdc.gov/vaccines/media/pdfs/2025/03/2024-isd-job-aid-scdm-menb-508-remediated.pdf',
+            'https://www.cdc.gov/vaccines/media/pdfs/2025/03/2024-isd-job-aid-scdm-menb-508-remediated.pdf'
+            '',
         'People desiring more rapid protection against serogroup B '
             '(e.g., students with less than 6 months before college entry) '
             'may receive a 3-dose series (0, 1-2, 6 months) to optimize '
@@ -378,7 +381,8 @@ final AntigenSupportingData meningococcalB = AntigenSupportingData.fromJson({
             'provide short-term protection against most strains of '
             'serogroup B meningococcal disease. The preferred age for MenB '
             'vaccination is 16-18 years. More guidance can be found here: '
-            'https://www.cdc.gov/vaccines/media/pdfs/2025/03/2024-isd-job-aid-scdm-menb-508-remediated.pdf',
+            'https://www.cdc.gov/vaccines/media/pdfs/2025/03/2024-isd-job-aid-scdm-menb-508-remediated.pdf'
+            '',
         'People desiring more rapid protection against serogroup B '
             '(e.g., students with less than 6 months before college entry) '
             'may receive a 3-dose series (0, 1-2, 6 months) to optimize '
@@ -575,7 +579,8 @@ final AntigenSupportingData meningococcalB = AntigenSupportingData.fromJson({
             'provide short-term protection against most strains of '
             'serogroup B meningococcal disease. The preferred age for MenB '
             'vaccination is 16-18 years. More guidance can be found here: '
-            'https://www.cdc.gov/vaccines/media/pdfs/2025/03/2024-isd-job-aid-scdm-menb-508-remediated.pdf',
+            'https://www.cdc.gov/vaccines/media/pdfs/2025/03/2024-isd-job-aid-scdm-menb-508-remediated.pdf'
+            '',
         'People desiring more rapid protection against serogroup B '
             '(e.g., students with less than 6 months before college entry) '
             'may receive a 3-dose series (0, 1-2, 6 months) to optimize '
@@ -828,8 +833,7 @@ final AntigenSupportingData meningococcalB = AntigenSupportingData.fromJson({
         {
           'observationCode': {
             'text':
-                'Microbiologists routinely exposed to Neisseria '
-                'meningitidis',
+                'Microbiologists routinely exposed to Neisseria meningitidis',
             'code': '050',
           },
           'description':
@@ -1216,8 +1220,7 @@ final AntigenSupportingData meningococcalB = AntigenSupportingData.fromJson({
         {
           'observationCode': {
             'text':
-                'Microbiologists routinely exposed to Neisseria '
-                'meningitidis',
+                'Microbiologists routinely exposed to Neisseria meningitidis',
             'code': '050',
           },
           'description':

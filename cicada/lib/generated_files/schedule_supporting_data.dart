@@ -9955,8 +9955,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
       {
         'cvx': '202',
         'shortDescription':
-            'Influenza, Southern Hemisphere, quadrivalent, with '
-            'preservative',
+            'Influenza, Southern Hemisphere, quadrivalent, with preservative',
         'association': [
           {
             'antigen': 'Influenza',
@@ -9966,8 +9965,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
       {
         'cvx': '203',
         'shortDescription':
-            'Meningococcal Polysaccharide groups A, C, Y, W-135 TT '
-            'Conjugate',
+            'Meningococcal Polysaccharide groups A, C, Y, W-135 TT Conjugate',
         'association': [
           {
             'antigen': 'Meningococcal',
@@ -10378,8 +10376,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
       {
         'cvx': '316',
         'shortDescription':
-            'meningococcal polysaccharide (MenACWY-TT conjugate), (MenB), '
-            'PF',
+            'meningococcal polysaccharide (MenACWY-TT conjugate), (MenB), PF',
         'association': [
           {
             'antigen': 'Meningococcal',
@@ -10915,8 +10912,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
         'observationCode': '006',
         'observationTitle': 'Receives clotting factor concentrates',
         'indicationText':
-            'Administer to persons who receive clotting factor '
-            'concentrates.',
+            'Administer to persons who receive clotting factor concentrates.',
         'codedValues': {
           'codedValue': [
             {
@@ -11398,8 +11394,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
         'indicationText':
             'Administer to persons who have chronic lung disease.',
         'clarifyingText':
-            'e.g. chronic obstructive lung disease, emphysema but not '
-            'asthma',
+            'e.g. chronic obstructive lung disease, emphysema but not asthma',
         'codedValues': {
           'codedValue': [
             {
@@ -12379,7 +12374,8 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
             'Fever vaccination entry requirement.',
         'clarifyingText':
             'A list of country-specific requirements is available at '
-            'https://www.cdc.gov/yellow-book/hcp/travel-associated-infections-diseases/yellow-fever.html',
+            'https://www.cdc.gov/yellow-book/hcp/travel-associated-infections-diseases/yellow-fever.html'
+            '',
       },
       {
         'observationCode': '046',
@@ -13034,8 +13030,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               'code': 'T50.B95A',
               'codeSystem': 'ICD10CM',
               'text':
-                  'Adverse effect of other viral vaccines, initial '
-                  'encounter',
+                  'Adverse effect of other viral vaccines, initial encounter',
             },
             {
               'code': 'Z88.9',
@@ -13181,8 +13176,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               'code': 'T50.B95A',
               'codeSystem': 'ICD10CM',
               'text':
-                  'Adverse effect of other viral vaccines, initial '
-                  'encounter',
+                  'Adverse effect of other viral vaccines, initial encounter',
             },
             {
               'code': 'Z91.012',
@@ -13236,8 +13230,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               'code': 'T50.B95A',
               'codeSystem': 'ICD10CM',
               'text':
-                  'Adverse effect of other viral vaccines, initial '
-                  'encounter',
+                  'Adverse effect of other viral vaccines, initial encounter',
             },
           ],
         },
@@ -13287,8 +13280,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               'code': 'T50.B95A',
               'codeSystem': 'ICD10CM',
               'text':
-                  'Adverse effect of other viral vaccines, initial '
-                  'encounter',
+                  'Adverse effect of other viral vaccines, initial encounter',
             },
           ],
         },
@@ -13343,8 +13335,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               'code': 'T50.B95A',
               'codeSystem': 'ICD10CM',
               'text':
-                  'Adverse effect of other viral vaccines, initial '
-                  'encounter',
+                  'Adverse effect of other viral vaccines, initial encounter',
             },
           ],
         },
@@ -13456,8 +13447,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               'code': 'T50.B95A',
               'codeSystem': 'ICD10CM',
               'text':
-                  'Adverse effect of other viral vaccines, initial '
-                  'encounter',
+                  'Adverse effect of other viral vaccines, initial encounter',
             },
           ],
         },
@@ -13560,8 +13550,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               'code': 'T50.B95A',
               'codeSystem': 'ICD10CM',
               'text':
-                  'Adverse effect of other viral vaccines, initial '
-                  'encounter',
+                  'Adverse effect of other viral vaccines, initial encounter',
             },
           ],
         },
@@ -13688,8 +13677,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               'code': 'T50.B95A',
               'codeSystem': 'ICD10CM',
               'text':
-                  'Adverse effect of other viral vaccines, initial '
-                  'encounter',
+                  'Adverse effect of other viral vaccines, initial encounter',
             },
           ],
         },
@@ -13821,8 +13809,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               'code': 'T50.B95A',
               'codeSystem': 'ICD10CM',
               'text':
-                  'Adverse effect of other viral vaccines, initial '
-                  'encounter',
+                  'Adverse effect of other viral vaccines, initial encounter',
             },
           ],
         },
@@ -13869,8 +13856,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               'code': 'T50.B95A',
               'codeSystem': 'ICD10CM',
               'text':
-                  'Adverse effect of other viral vaccines, initial '
-                  'encounter',
+                  'Adverse effect of other viral vaccines, initial encounter',
             },
           ],
         },
@@ -13922,8 +13908,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               'code': 'T50.B95A',
               'codeSystem': 'ICD10CM',
               'text':
-                  'Adverse effect of other viral vaccines, initial '
-                  'encounter',
+                  'Adverse effect of other viral vaccines, initial encounter',
             },
           ],
         },
@@ -13973,8 +13958,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               'code': 'T50.B95A',
               'codeSystem': 'ICD10CM',
               'text':
-                  'Adverse effect of other viral vaccines, initial '
-                  'encounter',
+                  'Adverse effect of other viral vaccines, initial encounter',
             },
           ],
         },
@@ -14024,8 +14008,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               'code': 'T50.B95A',
               'codeSystem': 'ICD10CM',
               'text':
-                  'Adverse effect of other viral vaccines, initial '
-                  'encounter',
+                  'Adverse effect of other viral vaccines, initial encounter',
             },
           ],
         },
@@ -14080,8 +14063,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               'code': 'T50.B95A',
               'codeSystem': 'ICD10CM',
               'text':
-                  'Adverse effect of other viral vaccines, initial '
-                  'encounter',
+                  'Adverse effect of other viral vaccines, initial encounter',
             },
           ],
         },
@@ -14136,8 +14118,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               'code': 'T50.B95A',
               'codeSystem': 'ICD10CM',
               'text':
-                  'Adverse effect of other viral vaccines, initial '
-                  'encounter',
+                  'Adverse effect of other viral vaccines, initial encounter',
             },
           ],
         },
@@ -14209,8 +14190,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               'code': 'T50.B95A',
               'codeSystem': 'ICD10CM',
               'text':
-                  'Adverse effect of other viral vaccines, initial '
-                  'encounter',
+                  'Adverse effect of other viral vaccines, initial encounter',
             },
           ],
         },
@@ -14265,8 +14245,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               'code': 'T50.B95A',
               'codeSystem': 'ICD10CM',
               'text':
-                  'Adverse effect of other viral vaccines, initial '
-                  'encounter',
+                  'Adverse effect of other viral vaccines, initial encounter',
             },
           ],
         },
@@ -14351,8 +14330,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               'code': 'T50.B95A',
               'codeSystem': 'ICD10CM',
               'text':
-                  'Adverse effect of other viral vaccines, initial '
-                  'encounter',
+                  'Adverse effect of other viral vaccines, initial encounter',
             },
           ],
         },
@@ -14449,8 +14427,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               'code': 'T50.B95A',
               'codeSystem': 'ICD10CM',
               'text':
-                  'Adverse effect of other viral vaccines, initial '
-                  'encounter',
+                  'Adverse effect of other viral vaccines, initial encounter',
             },
           ],
         },
@@ -14485,8 +14462,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               'code': 'T50.B95A',
               'codeSystem': 'ICD10CM',
               'text':
-                  'Adverse effect of other viral vaccines, initial '
-                  'encounter',
+                  'Adverse effect of other viral vaccines, initial encounter',
             },
           ],
         },
@@ -14521,8 +14497,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               'code': 'T50.B95A',
               'codeSystem': 'ICD10CM',
               'text':
-                  'Adverse effect of other viral vaccines, initial '
-                  'encounter',
+                  'Adverse effect of other viral vaccines, initial encounter',
             },
           ],
         },
@@ -14838,8 +14813,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
         'observationCode': '112',
         'observationTitle': 'Hypersensitivity to alum',
         'contraindicationText':
-            'Do not vaccinate if the patient has a hypersensitivity to '
-            'alum.',
+            'Do not vaccinate if the patient has a hypersensitivity to alum.',
         'clarifyingText': 'AKA potassium aluminum sulfate',
       },
       {
@@ -14950,8 +14924,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
       {
         'observationCode': '116',
         'observationTitle':
-            'Severe allergic reaction after previous dose of Meningococcal '
-            'B',
+            'Severe allergic reaction after previous dose of Meningococcal B',
         'contraindicationText':
             'Do not vaccinate if the patient has had a severe allergic '
             'reaction after a previous dose of Meningococcal B vaccine.',
@@ -15133,8 +15106,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               'code': 'T50.B95A',
               'codeSystem': 'ICD10CM',
               'text':
-                  'Adverse effect of other viral vaccines, initial '
-                  'encounter',
+                  'Adverse effect of other viral vaccines, initial encounter',
             },
           ],
         },
@@ -15409,8 +15381,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
       {
         'observationCode': '143',
         'observationTitle':
-            'Travel to areas or countries where polio is epidemic or '
-            'endemic',
+            'Travel to areas or countries where polio is epidemic or endemic',
         'indicationText':
             'Administer to travelers to areas or countries where polio is '
             'epidemic or endemic.',
@@ -15959,7 +15930,8 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
             'Given that changes in the designation of endemic regions can '
             'occur, travelers and health-care providers should obtain '
             'updated information from CDC, available at '
-            'https://www.cdc.gov/yellow-book/hcp/travel-associated-infections-diseases/yellow-fever.html',
+            'https://www.cdc.gov/yellow-book/hcp/travel-associated-infections-diseases/yellow-fever.html'
+            '',
         'codedValues': {
           'codedValue': [
             {
@@ -15992,8 +15964,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
       {
         'observationCode': '165',
         'observationTitle':
-            'Longer-term (e.g., 1 month or more) travel to a JE-endemic '
-            'area',
+            'Longer-term (e.g., 1 month or more) travel to a JE-endemic area',
         'indicationText':
             'Administer to persons who plan for longer-term (e.g., 1 month '
             'or more) travel to JE-endemic areas.',
@@ -16001,7 +15972,8 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
             'Endemic Area and transmission season is determined by '
             'country.  Refer to the yellow book for a definition of the '
             'transmission season: '
-            'https://www.cdc.gov/yellow-book/hcp/travel-associated-infections-diseases/japanese-encephalitis.html',
+            'https://www.cdc.gov/yellow-book/hcp/travel-associated-infections-diseases/japanese-encephalitis.html'
+            '',
       },
       {
         'observationCode': '166',
@@ -16170,7 +16142,8 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
             'Endemic Area and transmission season is determined by '
             'country.  Refer to the yellow book for a definition of the '
             'transmission season: '
-            'https://www.cdc.gov/yellow-book/hcp/travel-associated-infections-diseases/japanese-encephalitis.html',
+            'https://www.cdc.gov/yellow-book/hcp/travel-associated-infections-diseases/japanese-encephalitis.html'
+            '',
       },
       {
         'observationCode': '174',
@@ -16182,7 +16155,8 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
             'Endemic Area and transmission season is determined by '
             'country.  Refer to the yellow book for a definition of the '
             'transmission season: '
-            'https://www.cdc.gov/yellow-book/hcp/travel-associated-infections-diseases/japanese-encephalitis.html',
+            'https://www.cdc.gov/yellow-book/hcp/travel-associated-infections-diseases/japanese-encephalitis.html'
+            '',
       },
       {
         'observationCode': '175',
@@ -17004,8 +16978,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
         'observationCode': '222',
         'observationTitle': 'Persons who frequently perform animal necropsies',
         'indicationText':
-            'Administer to persons who frequently perform animal '
-            'necropsies.',
+            'Administer to persons who frequently perform animal necropsies.',
         'clarifyingText':
             'For example, biologists who frequently enter bat roosts or '
             'who collect suspected rabies samples.',
@@ -17043,8 +17016,7 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
       {
         'observationCode': '225',
         'observationTitle':
-            'Household contact with history or presence of atopic '
-            'dermatitis',
+            'Household contact with history or presence of atopic dermatitis',
         'contraindicationText':
             'Do not vaccinate if potential vaccinee has a household '
             'contact with history or presence of atopic dermatitis. '
@@ -17404,7 +17376,8 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
             'Endemic Area and transmission season is determined by '
             'country.  Refer to the yellow book for a definition of the '
             'transmission season: '
-            'https://www.cdc.gov/yellow-book/hcp/travel-associated-infections-diseases/tick-borne-encephalitis.html',
+            'https://www.cdc.gov/yellow-book/hcp/travel-associated-infections-diseases/tick-borne-encephalitis.html'
+            '',
       },
       {
         'observationCode': '250',
@@ -17420,7 +17393,8 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
             'Endemic Area and transmission season is determined by '
             'country.  Refer to the yellow book for a definition of the '
             'transmission season: '
-            'https://www.cdc.gov/yellow-book/hcp/travel-associated-infections-diseases/tick-borne-encephalitis.html',
+            'https://www.cdc.gov/yellow-book/hcp/travel-associated-infections-diseases/tick-borne-encephalitis.html'
+            '',
       },
       {
         'observationCode': '251',

@@ -1,6 +1,7 @@
 // ignore_for_file: no_adjacent_strings_in_list
 // Generated data: long strings are split into adjacent literals so
-// no line passes 80 columns; a serializer cannot drop a comma.
+// no line passes 80 columns; a serializer cannot drop a comma
+// or a space.
 
 import 'package:cicada/cicada.dart';
 
@@ -39,7 +40,8 @@ final AntigenSupportingData tbe = AntigenSupportingData.fromJson({
         'Endemic Area and transmission season is determined by '
             'country.  Refer to the yellow book for a definition of the '
             'transmission season: '
-            'https://wwwnc.cdc.gov/travel/yellowbook/2024/infections-diseases/tick-borne-encephalitis',
+            'https://wwwnc.cdc.gov/travel/yellowbook/2024/infections-diseases/tick-borne-encephalitis'
+            '',
       ],
       'seriesType': 'Risk',
       'selectSeries': {
@@ -70,7 +72,8 @@ final AntigenSupportingData tbe = AntigenSupportingData.fromJson({
               'Endemic Area and transmission season is determined by '
               'country.  Refer to the yellow book for a definition of the '
               'transmission season: '
-              'https://wwwnc.cdc.gov/travel/yellowbook/2024/infections-diseases/tick-borne-encephalitis',
+              'https://wwwnc.cdc.gov/travel/yellowbook/2024/infections-diseases/tick-borne-encephalitis'
+              '',
         },
         {
           'observationCode': {
@@ -91,7 +94,8 @@ final AntigenSupportingData tbe = AntigenSupportingData.fromJson({
               'Endemic Area and transmission season is determined by '
               'country.  Refer to the yellow book for a definition of the '
               'transmission season: '
-              'https://wwwnc.cdc.gov/travel/yellowbook/2024/infections-diseases/tick-borne-encephalitis',
+              'https://wwwnc.cdc.gov/travel/yellowbook/2024/infections-diseases/tick-borne-encephalitis'
+              '',
         },
       ],
       'seriesDose': [
@@ -266,7 +270,8 @@ final AntigenSupportingData tbe = AntigenSupportingData.fromJson({
         'Endemic Area and transmission season is determined by '
             'country.  Refer to the yellow book for a definition of the '
             'transmission season: '
-            'https://wwwnc.cdc.gov/travel/yellowbook/2024/infections-diseases/tick-borne-encephalitis',
+            'https://wwwnc.cdc.gov/travel/yellowbook/2024/infections-diseases/tick-borne-encephalitis'
+            '',
       ],
       'seriesType': 'Risk',
       'selectSeries': {
@@ -296,7 +301,8 @@ final AntigenSupportingData tbe = AntigenSupportingData.fromJson({
               'Endemic Area and transmission season is determined by '
               'country.  Refer to the yellow book for a definition of the '
               'transmission season: '
-              'https://wwwnc.cdc.gov/travel/yellowbook/2024/infections-diseases/tick-borne-encephalitis',
+              'https://wwwnc.cdc.gov/travel/yellowbook/2024/infections-diseases/tick-borne-encephalitis'
+              '',
         },
         {
           'observationCode': {
@@ -316,7 +322,8 @@ final AntigenSupportingData tbe = AntigenSupportingData.fromJson({
               'Endemic Area and transmission season is determined by '
               'country.  Refer to the yellow book for a definition of the '
               'transmission season: '
-              'https://wwwnc.cdc.gov/travel/yellowbook/2024/infections-diseases/tick-borne-encephalitis',
+              'https://wwwnc.cdc.gov/travel/yellowbook/2024/infections-diseases/tick-borne-encephalitis'
+              '',
         },
         {
           'observationCode': {
