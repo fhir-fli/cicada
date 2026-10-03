@@ -59,3 +59,6 @@ cicada_generator/results/who_schedule_roundtrip/
 
 # Personal Claude Code permissions, not project config.
 .claude/settings.local.json
+
+# Local path overrides written by gen_ci_overrides.sh; CI writes its own.
+pubspec_overrides.yaml
