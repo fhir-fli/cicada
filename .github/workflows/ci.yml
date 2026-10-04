@@ -30,18 +30,20 @@ jobs:
             echo "::group::$d"
             if grep -q "^  flutter:" "$d/pubspec.yaml"; then bin=flutter; else bin=dart; fi
             if ! (
-              set -e
-              cd "$d"
-              $bin pub get
+              # No `set -e` here: bash ignores errexit inside an `if` condition,
+              # subshell included, so only the last command counted and a format
+              # or analyze failure passed (found 2026-10-04). Each step exits.
+              cd "$d" || exit 1
+              $bin pub get || exit 1
               # The package's own directories only: platform folders hold
               # third-party Dart the formatter must not judge.
               for f in lib test example bin tool; do
                 if [ -d "$f" ]; then
-                  dart format --output=none --set-exit-if-changed "$f"
+                  dart format --output=none --set-exit-if-changed "$f" || exit 1
                 fi
               done
-              $bin analyze
-              if [ -d test ]; then $bin test; fi
+              $bin analyze || exit 1
+              if [ -d test ]; then $bin test || exit 1; fi
             ); then
               failed="${failed} ${d}"
               echo "::error::${d} failed"
