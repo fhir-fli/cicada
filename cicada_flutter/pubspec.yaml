@@ -9,7 +9,7 @@ environment:
 dependencies:
   cicada:
     path: ../cicada
-  fhir_r4: ^0.12.0
+  fhir_r4: ^0.13.0
   flutter:
     sdk: flutter
   flutter_riverpod: ^3.0.0

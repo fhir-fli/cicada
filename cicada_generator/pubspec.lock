@@ -144,30 +144,38 @@ packages:
       relative: true
     source: path
     version: "4.0.6"
+  fhir_bulk:
+    dependency: transitive
+    description:
+      name: fhir_bulk
+      sha256: fad07ef6e6a4ba9eb70f2e5af31402a4c34edd3ad4f4682bd6cae4d11bce4f20
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.13.0"
   fhir_node:
     dependency: transitive
     description:
       name: fhir_node
-      sha256: "904b145b4a967c2b7a94f3b2f9946fd9136bf1e0d3b879a9b191e7a507cf29da"
+      sha256: "3fec7f3d5dcc0e699b42b9f64c292acc794f27caf729811e0f984abd26ca4f95"
       url: "https://pub.dev"
     source: hosted
-    version: "0.6.0"
+    version: "0.6.1"
   fhir_r4:
     dependency: "direct main"
     description:
       name: fhir_r4
-      sha256: "4c3f9931b3d05ed6a3f3169dbeb40bdaeae3af3910acefbacba160a969c0fff0"
+      sha256: b9a17284110c82ad68292cc5f193ebf0ec6806b4ea85747107543b6769414cf6
       url: "https://pub.dev"
     source: hosted
-    version: "0.12.0"
+    version: "0.13.0"
   fhir_r4_bulk:
     dependency: transitive
     description:
       name: fhir_r4_bulk
-      sha256: b2e4f57980a1281ab680faaeaaeae607c7326920c870faa95add80b6d916e30b
+      sha256: "9ffb87b215a97be83a7a5d20a47aa0862e6b90d8034aa255caa44f059ef2c07d"
       url: "https://pub.dev"
     source: hosted
-    version: "0.12.0"
+    version: "0.13.0"
   file:
     dependency: transitive
     description:
