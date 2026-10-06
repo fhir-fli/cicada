@@ -1,0 +1,13 @@
+# Vendored copy of pub's `excel` 4.0.6 with one patch (CICADA-PATCH.md). It is
+# not our code to lint: without this file the analyzer walks up and applies
+# cicada_generator's very_good_analysis rules to it (1,418 style problems in
+# the editor on 2026-10-06). cicada_generator's own options already exclude
+# third_party/**; this file covers the editor, which opens this directory as
+# its own package because it has a pubspec.
+linter:
+  rules: {}
+
+# Upstream code: dart:html is deprecated in current SDKs; not ours to migrate.
+analyzer:
+  errors:
+    deprecated_member_use: ignore
