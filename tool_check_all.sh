@@ -38,7 +38,11 @@ for f in $pkgs; do
     log=$(mktemp)
     ( cd "$dir" && $bin test > "$log" 2>&1 )
     tally=$(grep -aoE '\+[0-9]+( -[0-9]+)?:' "$log" | tail -1 | tr -d ':')
-    [ -n "$tally" ] || tally='NO TALLY PARSED - check the run'
+    # No tally means the run never reached the tests (a pub resolution error,
+    # a compile error in a test). Found 2026-10-06: a malformed local
+    # pubspec_overrides.yaml made `dart test` exit 65 before any test ran, and
+    # this script still printed "all packages analyze clean".
+    if [ -z "$tally" ]; then tally='NO TALLY PARSED - check the run'; fail=1; tail -n 5 "$log"; fi
     printf '    tests: %s\n' "$tally"
     grep -aq "Some tests failed" "$log" && fail=1
     rm -f "$log"
