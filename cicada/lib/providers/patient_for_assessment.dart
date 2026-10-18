@@ -10,7 +10,10 @@ class PatientForAssessment extends _$PatientForAssessment {
   VaxPatient build(Parameters parameters) {
     final patient = patientFromParameters(parameters);
     if (patient == null) {
-      throw Exception('Patient or birthdate not found');
+      throw Exception(
+        'The parameters cannot be assessed: no Patient, a Patient with no '
+        'birthDate, or a dose with no date administered or no id',
+      );
     }
     return patient;
   }
@@ -170,6 +173,35 @@ class PatientForAssessment extends _$PatientForAssessment {
     // assessment date drives forecasting, and "current date" is only its
     // assumed value when empty (Tables 6-4, 7-9). CDC healthy cases 2026-0043,
     // -0050, -0052 and -0060 expect such doses Valid. It is noted, not dropped.
+    // A dose the engine cannot evaluate is refused, not given a date.
+    // CDSi Logic Spec v4.6 Table 3-4 and Table 6-2: Date Administered,
+    // "Assumed Value if Empty" "-" (none); evaluation is anchored on it
+    // (section 3.3). R4B allows Immunization.occurrence[x] to be a string,
+    // and the engine used to put such a dose at 2999-01-01. A dose with no
+    // id cannot be named: R4B ImmunizationEvaluation.immunizationEvent is
+    // 1..1 and the response names each dose by id; the engine used to stop
+    // on a null check (fhirant REVIEW-2026-10-17, phone run).
+    for (final immunization in immunizations) {
+      if (immunization.occurrenceDateTime?.valueDateTime == null) {
+        ref
+            .read(operationOutcomesProvider.notifier)
+            .addError(
+              'Immunization/${immunization.id} has no occurrenceDateTime; '
+              'CDSi assumes no date administered',
+            );
+        return null;
+      }
+      if (immunization.id == null) {
+        ref
+            .read(operationOutcomesProvider.notifier)
+            .addError(
+              'An Immunization has no id; each evaluation names the dose '
+              'it evaluates (ImmunizationEvaluation.immunizationEvent 1..1)',
+            );
+        return null;
+      }
+    }
+
     final effectiveDob = birthdate ?? VaxDate(1900, 1, 1);
     final effectiveAssessment =
         assessmentDate == null
