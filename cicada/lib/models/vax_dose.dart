@@ -18,20 +18,27 @@ class VaxDose {
 
   factory VaxDose.fromImmunization(Immunization immunization, VaxDate dob) {
     final cvx = cvxFromImmunization(immunization);
-    final dateGiven =
-        immunization.occurrenceDateTime?.valueDateTime != null
-            ? VaxDate.fromDateTime(
-              immunization.occurrenceDateTime!.valueDateTime!,
-            )
-            : VaxDate(2999, 01, 01);
+    // CDSi Logic Spec v4.6 Tables 3-4 and 6-2: Date Administered has no
+    // assumed value. This used to substitute 2999-01-01; the patient parser
+    // refuses such a dose before it gets here.
+    final occurrence = immunization.occurrenceDateTime?.valueDateTime;
+    final id = immunization.id;
+    if (occurrence == null || id == null) {
+      throw ArgumentError.value(
+        immunization.id,
+        'immunization',
+        'a dose needs an id and an occurrenceDateTime',
+      );
+    }
+    final dateGiven = VaxDate.fromDateTime(occurrence);
     final expired =
         (immunization.expirationDate?.valueDateTime != null) &&
         immunization.expirationDate!.valueDateTime!.isBefore(
-          immunization.occurrenceDateTime!.valueDateTime!,
+          occurrence,
         );
 
     return VaxDose(
-      doseId: immunization.id!.toString(),
+      doseId: id.toString(),
       volume: parseVolume(immunization.doseQuantity),
       dateGiven: dateGiven,
       cvx: cvx ?? 'none',
