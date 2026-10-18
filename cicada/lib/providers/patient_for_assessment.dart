@@ -53,17 +53,29 @@ class PatientForAssessment extends _$PatientForAssessment {
             }
           case Condition _:
             {
-              conditions.add(parameter.resource! as Condition);
+              final condition = parameter.resource! as Condition;
+              if (_isInvalidAssertion(condition.verificationStatus)) break;
+              conditions.add(condition);
               break;
             }
           case AllergyIntolerance _:
             {
-              allergies.add(parameter.resource! as AllergyIntolerance);
+              final allergy = parameter.resource! as AllergyIntolerance;
+              if (_isInvalidAssertion(allergy.verificationStatus)) break;
+              allergies.add(allergy);
               break;
             }
           case Immunization _:
             {
               final immunization = parameter.resource! as Immunization;
+              // Only a completed immunization is a dose administered.
+              // Quoted from R4B StructureDefinition-Immunization.json, read
+              // 2026-10-18: status is a modifier "because it is a status
+              // element that contains statuses entered-in-error and not-done
+              // which means that the resource should not be treated as
+              // valid". Measured the same day: a not-done MMR counted as a
+              // dose (test/invalid_status_test.dart).
+              if (immunization.status.toString() != 'completed') break;
               immunizations.add(immunization);
               // Doses are built after the loop, not here. A dose needs the
               // birth date, and the Patient parameter is not guaranteed to
@@ -325,6 +337,25 @@ class PatientForAssessment extends _$PatientForAssessment {
     );
   }
 }
+
+/// Whether a Condition or AllergyIntolerance verificationStatus marks the
+/// record as not valid.
+///
+/// Quoted from R4B StructureDefinition-Condition.json, read 2026-10-18:
+/// verificationStatus is a modifier "because the status contains the code
+/// refuted and entered-in-error that mark the Condition as not currently
+/// valid". AllergyIntolerance's verification codes include the same two
+/// (CodeSystem-allergyintolerance-verification.json). Measured the same day:
+/// a refuted asplenia still asserted 160 (test/invalid_status_test.dart).
+///
+/// Unconfirmed, provisional and differential are not excluded here: the
+/// base specification does not mark them invalid.
+bool _isInvalidAssertion(CodeableConcept? verificationStatus) =>
+    (verificationStatus?.coding ?? const <Coding>[]).any(
+      (c) =>
+          c.code?.toString() == 'refuted' ||
+          c.code?.toString() == 'entered-in-error',
+    );
 
 /// Human-readable name for a coded concept, for a Reference that has no target.
 String? _displayOf(CodeableConcept? code) {
