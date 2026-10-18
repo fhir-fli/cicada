@@ -249,6 +249,42 @@
    "target": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes",
    "element": [
     {
+     "code": "38100",
+     "display": "Splenectomy; total (separate procedure)",
+     "target": [
+      {
+       "code": "160",
+       "display": "Anatomical or functional asplenia",
+       "equivalence": "wider",
+       "comment": "Cicada policy."
+      }
+     ]
+    },
+    {
+     "code": "38102",
+     "display": "Splenectomy; total, en bloc for extensive disease, in conjunction with other procedure (List in addition to code for primary procedure)",
+     "target": [
+      {
+       "code": "160",
+       "display": "Anatomical or functional asplenia",
+       "equivalence": "wider",
+       "comment": "Cicada policy."
+      }
+     ]
+    },
+    {
+     "code": "38120",
+     "display": "Laparoscopy, surgical, splenectomy",
+     "target": [
+      {
+       "code": "160",
+       "display": "Anatomical or functional asplenia",
+       "equivalence": "wider",
+       "comment": "Cicada policy."
+      }
+     ]
+    },
+    {
      "code": "69930",
      "display": "Cochlear device implantation",
      "target": [

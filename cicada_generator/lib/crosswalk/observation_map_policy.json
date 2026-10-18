@@ -79,7 +79,12 @@
     "034": [["1191", "Aspirin"]]
   },
   "cpt": {
-    "_comment": "Validated with display against tx.fhir.org 2026-09-03. Splenectomy CPT (38100-38120) sat under 002, 'undergoing ELECTIVE splenectomy', which no completed procedure can establish (see not_from_a_code); whether a completed total splenectomy should assert 160 asplenia is for Grey.",
-    "011": [["69930", "Cochlear device implantation", "equivalent"]]
+    "_comment": "Validated with display against tx.fhir.org 2026-09-03. Splenectomy CPT (38100-38120) sat under 002, 'undergoing ELECTIVE splenectomy', which no completed procedure can establish (see not_from_a_code). Grey, 2026-10-18: a completed total splenectomy asserts 160 asplenia; asplenia is wider than the procedure. 38101 (partial) and 38115 (splenorrhaphy with or without partial splenectomy) leave spleen behind and are not mapped. The engine reads only completed Procedures.",
+    "011": [["69930", "Cochlear device implantation", "equivalent"]],
+    "160": [
+      ["38100", "Splenectomy; total (separate procedure)", "wider"],
+      ["38102", "Splenectomy; total, en bloc for extensive disease, in conjunction with other procedure (List in addition to code for primary procedure)", "wider"],
+      ["38120", "Laparoscopy, surgical, splenectomy", "wider"]
+    ]
   }
 }

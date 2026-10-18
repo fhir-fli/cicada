@@ -100,6 +100,13 @@ class PatientForAssessment extends _$PatientForAssessment {
           case Procedure _:
             {
               final resource = parameter.resource! as Procedure;
+              // Only a completed procedure has happened. R4B
+              // CodeSystem-event-status.json, read 2026-10-18: preparation,
+              // in-progress, on-hold, not-done and stopped have not concluded
+              // ("stopped": terminated "prior to the full completion"), and
+              // status is a modifier for entered-in-error
+              // (StructureDefinition-Procedure.json).
+              if (resource.status.toString() != 'completed') break;
               final code = resource.code;
               if (code != null) {
                 otherResourceCodes.add((

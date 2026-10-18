@@ -73,6 +73,19 @@ Map<String, dynamic> _mmrAllergy(String verification) => {
   'patient': {'reference': 'Patient/p1'},
 };
 
+Map<String, dynamic> _splenectomy(String status, String cpt) => {
+  'resourceType': 'Procedure',
+  'id': 'splenectomy-$status-$cpt',
+  'status': status,
+  'code': {
+    'coding': [
+      {'system': 'http://www.ama-assn.org/go/cpt', 'code': cpt},
+    ],
+  },
+  'subject': {'reference': 'Patient/p1'},
+  'performedDateTime': '2024-03-01',
+};
+
 VaxPatient _run(List<Map<String, dynamic>> resources) {
   final parameters = Parameters.fromJson({
     'resourceType': 'Parameters',
@@ -131,6 +144,35 @@ void main() {
     test('an entered-in-error MMR allergy does not', () {
       expect(
         _observationCodes(_run([_mmrAllergy('entered-in-error')])),
+        isEmpty,
+      );
+    });
+  });
+
+  // R4B CodeSystem-event-status.json: only 'completed' has concluded.
+  group('Procedure.status', () {
+    test('a completed total splenectomy is 160', () {
+      expect(
+        _observationCodes(_run([_splenectomy('completed', '38100')])),
+        contains('160'),
+      );
+    });
+    for (final status in [
+      'preparation',
+      'not-done',
+      'stopped',
+      'entered-in-error',
+    ]) {
+      test('a $status total splenectomy is not', () {
+        expect(
+          _observationCodes(_run([_splenectomy(status, '38100')])),
+          isEmpty,
+        );
+      });
+    }
+    test('a completed partial splenectomy is not', () {
+      expect(
+        _observationCodes(_run([_splenectomy('completed', '38101')])),
         isEmpty,
       );
     });

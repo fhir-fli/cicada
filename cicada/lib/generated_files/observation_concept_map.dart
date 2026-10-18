@@ -52,6 +52,15 @@ observationConceptMap = {
     ],
   },
   'http://www.ama-assn.org/go/cpt': {
+    '38100': [
+      ObservationMapTarget('160', 'wider'),
+    ],
+    '38102': [
+      ObservationMapTarget('160', 'wider'),
+    ],
+    '38120': [
+      ObservationMapTarget('160', 'wider'),
+    ],
     '69930': [
       ObservationMapTarget('011', 'equivalent'),
     ],

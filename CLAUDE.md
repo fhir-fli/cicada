@@ -165,7 +165,12 @@ test cases send CDSi observation codes directly and never reach this path**;
   reason) and Grey's yes/no column in `CROSSWALK-REVIEW.tsv` (repo root).
 - `cicada_generator/lib/main.dart` emits `cicada/lib/generated_files/observation_concept_map.dart`;
   `tool/generate_ig_terminology.py` copies the map into the IG and regenerates the
-  ICD-10/LOINC/CPT value sets from it. Rebuild order: builder → main.dart → IG generator.
+  ICD-10/LOINC/CPT value sets from it. Rebuild order: builder → main.dart → IG generator,
+  all three run by `cicada_generator/tool/rebuild_observation_map.sh`, which fails if the
+  Dart map and the ConceptMap disagree on target count.
+- Unconfirmed, provisional and differential Conditions count (Grey, 2026-10-18); only
+  refuted and entered-in-error are dropped. Only completed Immunizations and Procedures count.
+- A completed total splenectomy (CPT 38100, 38102, 38120) asserts 160 (Grey, 2026-10-18).
 - Cicada handles PHI and **stores none** (Grey, 2026-10-18).
 
 ### ImmDS Server

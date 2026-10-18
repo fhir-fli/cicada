@@ -7,4 +7,7 @@ Title: "Immunization-Relevant Procedures (CPT)"
 Description: "CPT codes that assert a CDSi observation in ConceptMap cdsi-observations."
 * ^experimental = false
 * ^status = #active
+* include http://www.ama-assn.org/go/cpt#38100 "Splenectomy; total (separate procedure)"
+* include http://www.ama-assn.org/go/cpt#38102 "Splenectomy; total, en bloc for extensive disease, in conjunction with other procedure (List in addition to code for primary procedure)"
+* include http://www.ama-assn.org/go/cpt#38120 "Laparoscopy, surgical, splenectomy"
 * include http://www.ama-assn.org/go/cpt#69930 "Cochlear device implantation"
