@@ -195,6 +195,20 @@ class PatientForAssessment extends _$PatientForAssessment {
           .read(operationOutcomesProvider.notifier)
           .addError('No Patient was found in the parameters');
       return null;
+    } else if (birthdate == null) {
+      // CDSi Logic Spec v4.6 Tables 5-2, 6-14 and 7-2: Date of Birth,
+      // "Assumed Value if Empty" "-" (none; Gender's is "Unknown"), and
+      // CALCDTAGE-1..5 (Table 3-6) compute every age date from it. With no
+      // date of birth there is nothing to evaluate or forecast from. The
+      // engine used to substitute 1900-01-01, which no specification names,
+      // and returned a full forecast (fhirant REVIEW-2026-10-17 finding 7).
+      ref
+          .read(operationOutcomesProvider.notifier)
+          .addError(
+            'The Patient has no birthDate; CDSi computes every age '
+            'from the date of birth and assumes none',
+          );
+      return null;
     } else {
       return _createVaxPatient(
         patient!,
