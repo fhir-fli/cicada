@@ -243,28 +243,28 @@ class PatientForAssessment extends _$PatientForAssessment {
       ..addAll(observationsFromAllergies(allergies));
     // Add observations from Observation, Procedure, Medication* resources
     for (final pair in otherResourceCodes) {
-      final obs = observationFromCodeableConcept(pair.code);
-      if (obs != null) observations.add(obs);
+      observations.addAll(observationsFromCodeableConcept(pair.code));
     }
 
     // Which resource asserted each CDSi observation, so a risk-driven
     // recommendation can point at it via supportingPatientInformation.
     // A resource with no id cannot be referenced and is left out.
     final observationSources = <String, Set<SupportingResource>>{};
-    void index(VaxObservation? obs, String? reference, CodeableConcept? code) {
-      final observationCode = obs?.observationCode;
-      if (observationCode == null) return;
+    void index(String? reference, CodeableConcept? code) {
       final display = _displayOf(code);
       if (reference == null && display == null) return;
-      (observationSources[observationCode] ??= <SupportingResource>{}).add((
-        reference: reference,
-        display: display,
-      ));
+      for (final obs in observationsFromCodeableConcept(code)) {
+        final observationCode = obs.observationCode;
+        if (observationCode == null) continue;
+        (observationSources[observationCode] ??= <SupportingResource>{}).add((
+          reference: reference,
+          display: display,
+        ));
+      }
     }
 
     for (final condition in conditions) {
       index(
-        observationFromCodeableConcept(condition.code),
         condition.id == null ? null : 'Condition/${condition.id}',
         condition.code,
       );
@@ -272,22 +272,14 @@ class PatientForAssessment extends _$PatientForAssessment {
     for (final allergy in allergies) {
       final ref =
           allergy.id == null ? null : 'AllergyIntolerance/${allergy.id}';
-      index(observationFromCodeableConcept(allergy.code), ref, allergy.code);
+      index(ref, allergy.code);
       for (final reaction
           in allergy.reaction ?? const <AllergyIntoleranceReaction>[]) {
-        index(
-          observationFromCodeableConcept(reaction.substance),
-          ref,
-          reaction.substance,
-        );
+        index(ref, reaction.substance);
       }
     }
     for (final pair in otherResourceCodes) {
-      index(
-        observationFromCodeableConcept(pair.code),
-        pair.reference,
-        pair.code,
-      );
+      index(pair.reference, pair.code);
     }
     return VaxPatient(
       assessmentDate:
