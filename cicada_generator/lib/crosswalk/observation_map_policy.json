@@ -1,0 +1,85 @@
+{
+  "_comment": [
+    "Hand decisions read by tool/build_observation_concept_map.py. Everything not listed here is derived:",
+    "CDC's own SNOMED/CVX/PHIN VS rows from the Coded Observations sheet, ICD-10-CM rows from NLM's SNOMED CT",
+    "to ICD-10-CM map (tool/derive_icd10_observation_rows.py), and Grey's yes/no in CROSSWALK-REVIEW.tsv.",
+    "Equivalence is ConceptMap R4 equivalence, read target to source: 'equivalent' or 'wider' asserts the",
+    "observation; 'narrower' and 'relatedto' record the link without asserting it (clinical judgement).",
+    "Written 2026-10-18 after the audit in AUDIT-2026-10-18-crosswalk-vs-cdc-titles.tsv."
+  ],
+  "not_from_a_code": {
+    "_comment": "Observations no single chart code can establish. Every row reaching them is graded 'relatedto'.",
+    "002": "Undergoing ELECTIVE splenectomy: a planned procedure; a recorded splenectomy is already asplenia.",
+    "026": "Perinatal HIV, not severely immunosuppressed, AND MMR before antiretroviral therapy: needs timing and CD4.",
+    "033": "Influenza antiviral within the previous 48 hours: needs the administration date, not the drug code.",
+    "034": "LONG-TERM aspirin therapy: an aspirin order or the CDC finding code does not say long-term.",
+    "038": "Sex partner of an HBsAg-positive person: CDC codes are pieces (sexual partners + contact with + HBsAg positive).",
+    "050": "Occupation + 'exposure to' + organism: CDC codes are pieces.",
+    "051": "Occupation + 'exposure to' + organism: CDC codes are pieces.",
+    "052": "Occupation + 'exposure to' + organism: CDC codes are pieces.",
+    "053": "Occupation + 'exposure to' + organism: CDC codes are pieces.",
+    "054": "Occupation + 'exposure to' + organism: CDC codes are pieces.",
+    "056": "Occupation + 'exposure to' + organism: CDC codes are pieces.",
+    "057": "Occupation + 'exposure to' + body fluids: CDC codes are pieces.",
+    "059": "Occupation list + exposure: CDC codes are pieces.",
+    "062": "'Exposure to' + rabies virus: CDC codes are pieces.",
+    "063": "Student + further-education establishment: CDC codes are pieces.",
+    "071": "Household contact with an HBsAg-positive person: CDC codes are pieces (contact with + HBsAg positive).",
+    "132": "A specific transfusion type; CDC's code is any blood product transfusion.",
+    "133": "A specific transfusion type; CDC's code is any blood product transfusion.",
+    "134": "A specific transfusion type; CDC's code is any blood product transfusion.",
+    "154": "AIDS, SEVERELY immunocompromised: severity comes from CD4, not the code CDC shares with 155.",
+    "155": "AIDS, NOT severely immunocompromised: severity comes from CD4, not the code CDC shares with 154."
+  },
+  "code_grades": {
+    "_comment": "Grades for single CDC rows, keyed system|code|observation. Default for a CDC row is 'equivalent'.",
+    "CDCPHINVS|VXC20|*": ["relatedto", "'Allergy to previous dose of THIS vaccine': names no vaccine, so it cannot say which antigen."],
+    "SNOMED|13645005|017": ["wider", "COPD is a chronic lung disease; 214 is the exact observation."],
+    "SNOMED|87433001|017": ["wider", "Emphysema is a chronic lung disease; 215 is the exact observation."],
+    "SNOMED|31323000|147": ["wider", "SCID is a complete T-lymphocyte defect; 013 is the exact observation."]
+  },
+  "loinc": {
+    "_comment": [
+      "Antibody tests are evidence of immunity only when the result is positive. Each row asserts its observation",
+      "only with a positive result: Observation.interpretation POS, DET or RR (v3 ObservationInterpretation;",
+      "WR 'weakly reactive' is below the reliable limit and does not count), or a valueCodeableConcept of",
+      "SNOMED 10828004 Positive, 260373001 Detected or 11214006 Reactive. Codes and displays validated against",
+      "tx.fhir.org 2026-09-03 (observation_crosswalk.json). The 2026-02-06 file filed hepatitis B surface",
+      "antibody under 024 and hepatitis A IgG under 025; they belong to 019 and 018."
+    ],
+    "018": [["32018-4", "Hepatitis A virus IgG Ab [Presence] in Serum"],
+            ["40724-7", "Hepatitis A virus IgG Ab [Presence] in Serum by Immunoassay"],
+            ["22313-1", "Hepatitis A virus IgG Ab [Units/volume] in Serum"]],
+    "019": [["16935-9", "Hepatitis B virus surface Ab [Units/volume] in Serum"],
+            ["22322-2", "Hepatitis B virus surface Ab [Presence] in Serum"],
+            ["10900-9", "Hepatitis B virus surface Ab [Presence] in Serum by Immunoassay"]],
+    "020": [["7962-4", "Measles virus IgG Ab [Units/volume] in Serum"],
+            ["35275-7", "Measles virus IgG Ab [Presence] in Serum by Immunoassay"],
+            ["20479-2", "Measles virus IgG Ab [Presence] in Serum"]],
+    "021": [["7966-5", "Mumps virus IgG Ab [Units/volume] in Serum"],
+            ["6476-6", "Mumps virus IgG Ab [Presence] in Serum by Immunoassay"],
+            ["22415-4", "Mumps virus IgG Ab [Presence] in Serum"]],
+    "022": [["8014-3", "Rubella virus IgG Ab [Units/volume] in Serum"],
+            ["25514-1", "Rubella virus IgG Ab [Presence] in Serum"],
+            ["40667-8", "Rubella virus IgG Ab [Presence] in Serum or Plasma by Immunoassay"]],
+    "023": [["19162-7", "Varicella zoster virus IgG Ab [Presence] in Serum"],
+            ["15410-4", "Varicella zoster virus IgG Ab [Presence] in Serum by Immunoassay"],
+            ["8047-3", "Varicella zoster virus IgG Ab [Units/volume] in Serum"]]
+  },
+  "positive_results": [
+    ["http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation", "POS", "Positive"],
+    ["http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation", "DET", "Detected"],
+    ["http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation", "RR", "Reactive"],
+    ["http://snomed.info/sct", "10828004", "Positive"],
+    ["http://snomed.info/sct", "260373001", "Detected"],
+    ["http://snomed.info/sct", "11214006", "Reactive"]
+  ],
+  "rxnorm": {
+    "_comment": "The 2026-02-06 file put acyclovir (281), famciclovir (68099) and valacyclovir (73645) under 033, INFLUENZA antivirals; CDC lists amantadine, rimantadine, zanamivir and oseltamivir there and has no herpes-antiviral observation, so they are dropped. Aspirin stays as a link: 034 is in not_from_a_code.",
+    "034": [["1191", "Aspirin"]]
+  },
+  "cpt": {
+    "_comment": "Validated with display against tx.fhir.org 2026-09-03. Splenectomy CPT (38100-38120) sat under 002, 'undergoing ELECTIVE splenectomy', which no completed procedure can establish (see not_from_a_code); whether a completed total splenectomy should assert 160 asplenia is for Grey.",
+    "011": [["69930", "Cochlear device implantation", "equivalent"]]
+  }
+}

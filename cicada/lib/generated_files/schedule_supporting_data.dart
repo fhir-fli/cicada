@@ -10754,40 +10754,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
             'if they have not previously received the vaccine.',
         'clarifyingText':
             'Vaccination 14 or more days before splenectomy is suggested',
-        'codedValues': {
-          'codedValue': [
-            {
-              'code': '38100',
-              'codeSystem': 'CPT',
-              'text': 'Splenectomy; total (separate procedure)',
-            },
-            {
-              'code': '38101',
-              'codeSystem': 'CPT',
-              'text': 'Splenectomy; partial (separate procedure)',
-            },
-            {
-              'code': '38102',
-              'codeSystem': 'CPT',
-              'text':
-                  'Splenectomy; total, en bloc for extensive disease, in '
-                  'conjunction with other procedure (List in addition to '
-                  'code for primary procedure)',
-            },
-            {
-              'code': '38115',
-              'codeSystem': 'CPT',
-              'text':
-                  'Repair of ruptured spleen (splenorrhaphy) with or '
-                  'without partial splenectomy',
-            },
-            {
-              'code': '38120',
-              'codeSystem': 'CPT',
-              'text': 'Laparoscopy, surgical, splenectomy',
-            },
-          ],
-        },
       },
       {
         'observationCode': '003',
@@ -10805,33 +10771,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               'code': 'VXC27',
               'codeSystem': 'CDCPHINVS',
               'text': 'Immunodeficiency due to any cause',
-            },
-            {
-              'code': 'D84.9',
-              'codeSystem': 'ICD10CM',
-              'text': 'Immunodeficiency, unspecified',
-            },
-            {
-              'code': 'D83.9',
-              'codeSystem': 'ICD10CM',
-              'text': 'Common variable immunodeficiency, unspecified',
-            },
-            {
-              'code': 'D80.9',
-              'codeSystem': 'ICD10CM',
-              'text':
-                  'Immunodeficiency with predominantly antibody defects, '
-                  'unspecified',
-            },
-            {
-              'code': 'D89.9',
-              'codeSystem': 'ICD10CM',
-              'text': 'Disorder involving the immune mechanism, unspecified',
-            },
-            {
-              'code': 'D84.8',
-              'codeSystem': 'ICD10CM',
-              'text': 'Other specified immunodeficiencies',
             },
           ],
         },
@@ -10855,21 +10794,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               'codeSystem': 'SNOMED',
               'text': 'Transplantation of bone marrow [procedure]',
             },
-            {
-              'code': 'Z94.84',
-              'codeSystem': 'ICD10CM',
-              'text': 'Stem cells transplant status',
-            },
-            {
-              'code': 'T86.00',
-              'codeSystem': 'ICD10CM',
-              'text': 'Unspecified complication of bone marrow transplant',
-            },
-            {
-              'code': 'T86.09',
-              'codeSystem': 'ICD10CM',
-              'text': 'Other complications of bone marrow transplant',
-            },
           ],
         },
       },
@@ -10885,26 +10809,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               'codeSystem': 'SNOMED',
               'text': 'Viral hepatitis type C [disorder]',
             },
-            {
-              'code': 'B18.2',
-              'codeSystem': 'ICD10CM',
-              'text': 'Chronic viral hepatitis C',
-            },
-            {
-              'code': 'B17.10',
-              'codeSystem': 'ICD10CM',
-              'text': 'Acute hepatitis C without hepatic coma',
-            },
-            {
-              'code': 'B17.11',
-              'codeSystem': 'ICD10CM',
-              'text': 'Acute hepatitis C with hepatic coma',
-            },
-            {
-              'code': 'B19.20',
-              'codeSystem': 'ICD10CM',
-              'text': 'Unspecified viral hepatitis C without hepatic coma',
-            },
           ],
         },
       },
@@ -10913,25 +10817,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
         'observationTitle': 'Receives clotting factor concentrates',
         'indicationText':
             'Administer to persons who receive clotting factor concentrates.',
-        'codedValues': {
-          'codedValue': [
-            {
-              'code': 'D66',
-              'codeSystem': 'ICD10CM',
-              'text': 'Hereditary factor VIII deficiency',
-            },
-            {
-              'code': 'D67',
-              'codeSystem': 'ICD10CM',
-              'text': 'Hereditary factor IX deficiency',
-            },
-            {
-              'code': 'D68.2',
-              'codeSystem': 'ICD10CM',
-              'text': 'Hereditary deficiency of other clotting factors',
-            },
-          ],
-        },
       },
       {
         'observationCode': '007',
@@ -10954,32 +10839,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               'code': '255409004',
               'codeSystem': 'SNOMED',
               'text': 'Pregnant woman [person]',
-            },
-            {
-              'code': 'Z33.1',
-              'codeSystem': 'ICD10CM',
-              'text': 'Pregnant state, incidental',
-            },
-            {
-              'code': 'O09.90',
-              'codeSystem': 'ICD10CM',
-              'text':
-                  'Supervision of high risk pregnancy, unspecified, '
-                  'unspecified trimester',
-            },
-            {
-              'code': 'Z34.00',
-              'codeSystem': 'ICD10CM',
-              'text':
-                  'Encounter for supervision of normal first pregnancy, '
-                  'unspecified trimester',
-            },
-            {
-              'code': 'Z34.80',
-              'codeSystem': 'ICD10CM',
-              'text':
-                  'Encounter for supervision of other normal pregnancy, '
-                  'unspecified trimester',
             },
           ],
         },
@@ -11011,11 +10870,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               'codeSystem': 'SNOMED',
               'text': 'Breastfeeding [mother] [observable entity]',
             },
-            {
-              'code': 'Z39.1',
-              'codeSystem': 'ICD10CM',
-              'text': 'Encounter for care and examination of lactating mother',
-            },
           ],
         },
       },
@@ -11032,31 +10886,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               'code': '230744007',
               'codeSystem': 'SNOMED',
               'text': 'Cerebrospinal fluid leak [disorder]',
-            },
-            {
-              'code': 'G96.00',
-              'codeSystem': 'ICD10CM',
-              'text': 'Cerebrospinal fluid leak, unspecified',
-            },
-            {
-              'code': 'G96.01',
-              'codeSystem': 'ICD10CM',
-              'text': 'Cranial cerebrospinal fluid leak, spontaneous',
-            },
-            {
-              'code': 'G96.02',
-              'codeSystem': 'ICD10CM',
-              'text': 'Spinal cerebrospinal fluid leak, spontaneous',
-            },
-            {
-              'code': 'G96.08',
-              'codeSystem': 'ICD10CM',
-              'text': 'Other cranial cerebrospinal fluid leak',
-            },
-            {
-              'code': 'G96.09',
-              'codeSystem': 'ICD10CM',
-              'text': 'Other spinal cerebrospinal fluid leak',
             },
           ],
         },
@@ -11084,16 +10913,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               'codeSystem': 'SNOMED',
               'text': 'Implantation of cochlear prosthetic device [procedure]',
             },
-            {
-              'code': 'Z96.21',
-              'codeSystem': 'ICD10CM',
-              'text': 'Cochlear implant status',
-            },
-            {
-              'code': '69930',
-              'codeSystem': 'CPT',
-              'text': 'Cochlear device implantation',
-            },
           ],
         },
       },
@@ -11107,18 +10926,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
             'Harmonizes with the vaccine-specific statements in '
             'accommodating infants and toddlers with occult heritable '
             'congenital immunodeficiencies.',
-        'codedValues': {
-          'codedValue': [
-            {
-              'code': 'Z83.2',
-              'codeSystem': 'ICD10CM',
-              'text':
-                  'Family history of diseases of the blood and '
-                  'blood-forming organs and certain disorders involving '
-                  'the immune mechanism',
-            },
-          ],
-        },
       },
       {
         'observationCode': '013',
@@ -11133,52 +10940,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               'codeSystem': 'SNOMED',
               'text': 'Severe combined immunodeficiency disease [disorder]',
             },
-            {
-              'code': 'D81.9',
-              'codeSystem': 'ICD10CM',
-              'text': 'Combined immunodeficiency, unspecified',
-            },
-            {
-              'code': 'D81.0',
-              'codeSystem': 'ICD10CM',
-              'text':
-                  'Severe combined immunodeficiency [SCID] with reticular '
-                  'dysgenesis',
-            },
-            {
-              'code': 'D81.1',
-              'codeSystem': 'ICD10CM',
-              'text':
-                  'Severe combined immunodeficiency [SCID] with low T- and '
-                  'B-cell numbers',
-            },
-            {
-              'code': 'D81.2',
-              'codeSystem': 'ICD10CM',
-              'text':
-                  'Severe combined immunodeficiency [SCID] with low or '
-                  'normal B-cell numbers',
-            },
-            {
-              'code': 'D81.3',
-              'codeSystem': 'ICD10CM',
-              'text': 'Adenosine deaminase [ADA] deficiency',
-            },
-            {
-              'code': 'D81.5',
-              'codeSystem': 'ICD10CM',
-              'text': 'Purine nucleoside phosphorylase [PNP] deficiency',
-            },
-            {
-              'code': 'D81.6',
-              'codeSystem': 'ICD10CM',
-              'text': 'Major histocompatibility complex class I deficiency',
-            },
-            {
-              'code': 'D81.7',
-              'codeSystem': 'ICD10CM',
-              'text': 'Major histocompatibility complex class II deficiency',
-            },
           ],
         },
       },
@@ -11192,45 +10953,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               'code': '73211009',
               'codeSystem': 'SNOMED',
               'text': 'Diabetes mellitus [disorder]',
-            },
-            {
-              'code': 'E10.9',
-              'codeSystem': 'ICD10CM',
-              'text': 'Type 1 diabetes mellitus without complications',
-            },
-            {
-              'code': 'E10.65',
-              'codeSystem': 'ICD10CM',
-              'text': 'Type 1 diabetes mellitus with hyperglycemia',
-            },
-            {
-              'code': 'E11.9',
-              'codeSystem': 'ICD10CM',
-              'text': 'Type 2 diabetes mellitus without complications',
-            },
-            {
-              'code': 'E11.65',
-              'codeSystem': 'ICD10CM',
-              'text': 'Type 2 diabetes mellitus with hyperglycemia',
-            },
-            {
-              'code': 'E13.9',
-              'codeSystem': 'ICD10CM',
-              'text': 'Other specified diabetes mellitus without complications',
-            },
-            {
-              'code': 'E08.9',
-              'codeSystem': 'ICD10CM',
-              'text':
-                  'Diabetes mellitus due to underlying condition without '
-                  'complications',
-            },
-            {
-              'code': 'E09.9',
-              'codeSystem': 'ICD10CM',
-              'text':
-                  'Drug or chemical induced diabetes mellitus without '
-                  'complications',
             },
           ],
         },
@@ -11252,46 +10974,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               'code': '19943007',
               'codeSystem': 'SNOMED',
               'text': 'Cirrhosis of liver [disorder]',
-            },
-            {
-              'code': 'K70.30',
-              'codeSystem': 'ICD10CM',
-              'text': 'Alcoholic cirrhosis of liver without ascites',
-            },
-            {
-              'code': 'K70.31',
-              'codeSystem': 'ICD10CM',
-              'text': 'Alcoholic cirrhosis of liver with ascites',
-            },
-            {
-              'code': 'K73.9',
-              'codeSystem': 'ICD10CM',
-              'text': 'Chronic hepatitis, unspecified',
-            },
-            {
-              'code': 'K74.0',
-              'codeSystem': 'ICD10CM',
-              'text': 'Hepatic fibrosis',
-            },
-            {
-              'code': 'K74.60',
-              'codeSystem': 'ICD10CM',
-              'text': 'Unspecified cirrhosis of liver',
-            },
-            {
-              'code': 'K74.69',
-              'codeSystem': 'ICD10CM',
-              'text': 'Other cirrhosis of liver',
-            },
-            {
-              'code': 'K76.0',
-              'codeSystem': 'ICD10CM',
-              'text': 'Fatty (change of) liver, not elsewhere classified',
-            },
-            {
-              'code': 'K76.9',
-              'codeSystem': 'ICD10CM',
-              'text': 'Liver disease, unspecified',
             },
           ],
         },
@@ -11343,48 +11025,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               'codeSystem': 'SNOMED',
               'text': 'Cardiac arrhythmia [disorder]',
             },
-            {
-              'code': 'I25.10',
-              'codeSystem': 'ICD10CM',
-              'text':
-                  'Atherosclerotic heart disease of native coronary artery '
-                  'without angina pectoris',
-            },
-            {
-              'code': 'I25.9',
-              'codeSystem': 'ICD10CM',
-              'text': 'Chronic ischemic heart disease, unspecified',
-            },
-            {
-              'code': 'I50.9',
-              'codeSystem': 'ICD10CM',
-              'text': 'Heart failure, unspecified',
-            },
-            {
-              'code': 'I50.20',
-              'codeSystem': 'ICD10CM',
-              'text': 'Unspecified systolic (congestive) heart failure',
-            },
-            {
-              'code': 'I50.30',
-              'codeSystem': 'ICD10CM',
-              'text': 'Unspecified diastolic (congestive) heart failure',
-            },
-            {
-              'code': 'I42.9',
-              'codeSystem': 'ICD10CM',
-              'text': 'Cardiomyopathy, unspecified',
-            },
-            {
-              'code': 'I42.0',
-              'codeSystem': 'ICD10CM',
-              'text': 'Dilated cardiomyopathy',
-            },
-            {
-              'code': 'Q24.9',
-              'codeSystem': 'ICD10CM',
-              'text': 'Congenital malformation of heart, unspecified',
-            },
           ],
         },
       },
@@ -11427,45 +11067,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               'codeSystem': 'SNOMED',
               'text': 'Chronic disease of respiratory system [disorder]',
             },
-            {
-              'code': 'J44.9',
-              'codeSystem': 'ICD10CM',
-              'text': 'Chronic obstructive pulmonary disease, unspecified',
-            },
-            {
-              'code': 'J44.1',
-              'codeSystem': 'ICD10CM',
-              'text':
-                  'Chronic obstructive pulmonary disease with (acute) '
-                  'exacerbation',
-            },
-            {
-              'code': 'J43.9',
-              'codeSystem': 'ICD10CM',
-              'text': 'Emphysema, unspecified',
-            },
-            {
-              'code': 'J84.9',
-              'codeSystem': 'ICD10CM',
-              'text': 'Interstitial pulmonary disease, unspecified',
-            },
-            {
-              'code': 'J84.10',
-              'codeSystem': 'ICD10CM',
-              'text': 'Pulmonary fibrosis, unspecified',
-            },
-            {
-              'code': 'J47.9',
-              'codeSystem': 'ICD10CM',
-              'text': 'Bronchiectasis, uncomplicated',
-            },
-            {
-              'code': 'P27.1',
-              'codeSystem': 'ICD10CM',
-              'text':
-                  'Bronchopulmonary dysplasia originating in the perinatal '
-                  'period',
-            },
           ],
         },
       },
@@ -11480,26 +11081,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               'code': '278971009',
               'codeSystem': 'SNOMED',
               'text': 'Hepatitis A Immune [Finding]',
-            },
-            {
-              'code': 'D73.0',
-              'codeSystem': 'ICD10CM',
-              'text': 'Hyposplenism',
-            },
-            {
-              'code': 'Q89.01',
-              'codeSystem': 'ICD10CM',
-              'text': 'Asplenia (congenital)',
-            },
-            {
-              'code': 'D73.89',
-              'codeSystem': 'ICD10CM',
-              'text': 'Other diseases of spleen',
-            },
-            {
-              'code': 'Z90.81',
-              'codeSystem': 'ICD10CM',
-              'text': 'Acquired absence of spleen',
             },
           ],
         },
@@ -11516,46 +11097,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               'codeSystem': 'SNOMED',
               'text': 'Hepatitis B Immune [Finding]',
             },
-            {
-              'code': 'N18.1',
-              'codeSystem': 'ICD10CM',
-              'text': 'Chronic kidney disease, stage 1',
-            },
-            {
-              'code': 'N18.2',
-              'codeSystem': 'ICD10CM',
-              'text': 'Chronic kidney disease, stage 2 (mild)',
-            },
-            {
-              'code': 'N18.30',
-              'codeSystem': 'ICD10CM',
-              'text': 'Chronic kidney disease, stage 3 unspecified',
-            },
-            {
-              'code': 'N18.4',
-              'codeSystem': 'ICD10CM',
-              'text': 'Chronic kidney disease, stage 4 (severe)',
-            },
-            {
-              'code': 'N18.5',
-              'codeSystem': 'ICD10CM',
-              'text': 'Chronic kidney disease, stage 5',
-            },
-            {
-              'code': 'N18.6',
-              'codeSystem': 'ICD10CM',
-              'text': 'End stage renal disease',
-            },
-            {
-              'code': 'N18.9',
-              'codeSystem': 'ICD10CM',
-              'text': 'Chronic kidney disease, unspecified',
-            },
-            {
-              'code': 'Z99.2',
-              'codeSystem': 'ICD10CM',
-              'text': 'Dependence on renal dialysis',
-            },
           ],
         },
       },
@@ -11568,21 +11109,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               'code': '371111005',
               'codeSystem': 'SNOMED',
               'text': 'Measles Immune [finding]',
-            },
-            {
-              'code': '7962-4',
-              'codeSystem': 'LOINC',
-              'text': 'Measles virus IgG Ab [Units/volume] in Serum',
-            },
-            {
-              'code': '35275-7',
-              'codeSystem': 'LOINC',
-              'text': 'Measles virus IgG Ab [Presence] in Serum by Immunoassay',
-            },
-            {
-              'code': '20479-2',
-              'codeSystem': 'LOINC',
-              'text': 'Measles virus IgG Ab [Presence] in Serum',
             },
           ],
         },
@@ -11597,21 +11123,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               'codeSystem': 'SNOMED',
               'text': 'Mumps Immune [finding]',
             },
-            {
-              'code': '7966-5',
-              'codeSystem': 'LOINC',
-              'text': 'Mumps virus IgG Ab [Units/volume] in Serum',
-            },
-            {
-              'code': '6476-6',
-              'codeSystem': 'LOINC',
-              'text': 'Mumps virus IgG Ab [Presence] in Serum by Immunoassay',
-            },
-            {
-              'code': '22415-4',
-              'codeSystem': 'LOINC',
-              'text': 'Mumps virus IgG Ab [Presence] in Serum',
-            },
           ],
         },
       },
@@ -11624,23 +11135,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               'code': '278968001',
               'codeSystem': 'SNOMED',
               'text': 'Rubella Immune [finding]',
-            },
-            {
-              'code': '8014-3',
-              'codeSystem': 'LOINC',
-              'text': 'Rubella virus IgG Ab [Units/volume] in Serum',
-            },
-            {
-              'code': '25514-1',
-              'codeSystem': 'LOINC',
-              'text': 'Rubella virus IgG Ab [Presence] in Serum',
-            },
-            {
-              'code': '40667-8',
-              'codeSystem': 'LOINC',
-              'text':
-                  'Rubella virus IgG Ab [Presence] in Serum or Plasma by '
-                  'Immunoassay',
             },
           ],
         },
@@ -11657,23 +11151,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               'codeSystem': 'SNOMED',
               'text': 'Varicella Immune',
             },
-            {
-              'code': '19162-7',
-              'codeSystem': 'LOINC',
-              'text': 'Varicella zoster virus IgG Ab [Presence] in Serum',
-            },
-            {
-              'code': '15410-4',
-              'codeSystem': 'LOINC',
-              'text':
-                  'Varicella zoster virus IgG Ab [Presence] in Serum by '
-                  'Immunoassay',
-            },
-            {
-              'code': '8047-3',
-              'codeSystem': 'LOINC',
-              'text': 'Varicella zoster virus IgG Ab [Units/volume] in Serum',
-            },
           ],
         },
       },
@@ -11689,23 +11166,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               'codeSystem': 'SNOMED',
               'text': 'Varicella [Disorder]',
             },
-            {
-              'code': '16935-9',
-              'codeSystem': 'LOINC',
-              'text': 'Hepatitis B virus surface Ab [Units/volume] in Serum',
-            },
-            {
-              'code': '22322-2',
-              'codeSystem': 'LOINC',
-              'text': 'Hepatitis B virus surface Ab [Presence] in Serum',
-            },
-            {
-              'code': '10900-9',
-              'codeSystem': 'LOINC',
-              'text':
-                  'Hepatitis B virus surface Ab [Presence] in Serum by '
-                  'Immunoassay',
-            },
           ],
         },
       },
@@ -11720,23 +11180,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               'code': '4740000',
               'codeSystem': 'SNOMED',
               'text': 'Herpes Zoster [Disorder]',
-            },
-            {
-              'code': '32018-4',
-              'codeSystem': 'LOINC',
-              'text': 'Hepatitis A virus IgG Ab [Presence] in Serum',
-            },
-            {
-              'code': '40724-7',
-              'codeSystem': 'LOINC',
-              'text':
-                  'Hepatitis A virus IgG Ab [Presence] in Serum by '
-                  'Immunoassay',
-            },
-            {
-              'code': '22313-1',
-              'codeSystem': 'LOINC',
-              'text': 'Hepatitis A virus IgG Ab [Units/volume] in Serum',
             },
           ],
         },
@@ -11764,18 +11207,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               'codeSystem': 'SNOMED',
               'text': 'Antiviral therapy [procedure]',
             },
-            {
-              'code': 'B20',
-              'codeSystem': 'ICD10CM',
-              'text': 'Human immunodeficiency virus [HIV] disease',
-            },
-            {
-              'code': 'Z21',
-              'codeSystem': 'ICD10CM',
-              'text':
-                  'Asymptomatic human immunodeficiency virus [HIV] '
-                  'infection status',
-            },
           ],
         },
       },
@@ -11795,36 +11226,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               'code': '195967001',
               'codeSystem': 'SNOMED',
               'text': 'Asthma [disorder]',
-            },
-            {
-              'code': 'J45.20',
-              'codeSystem': 'ICD10CM',
-              'text': 'Mild intermittent asthma, uncomplicated',
-            },
-            {
-              'code': 'J45.30',
-              'codeSystem': 'ICD10CM',
-              'text': 'Mild persistent asthma, uncomplicated',
-            },
-            {
-              'code': 'J45.40',
-              'codeSystem': 'ICD10CM',
-              'text': 'Moderate persistent asthma, uncomplicated',
-            },
-            {
-              'code': 'J45.50',
-              'codeSystem': 'ICD10CM',
-              'text': 'Severe persistent asthma, uncomplicated',
-            },
-            {
-              'code': 'J45.909',
-              'codeSystem': 'ICD10CM',
-              'text': 'Unspecified asthma, uncomplicated',
-            },
-            {
-              'code': 'J45.998',
-              'codeSystem': 'ICD10CM',
-              'text': 'Other asthma',
             },
           ],
         },
@@ -11855,11 +11256,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               'codeSystem': 'CDCPHINVS',
               'text': 'Previous history of intussusception',
             },
-            {
-              'code': 'K56.1',
-              'codeSystem': 'ICD10CM',
-              'text': 'Intussusception',
-            },
           ],
         },
       },
@@ -11875,26 +11271,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               'codeSystem': 'SNOMED',
               'text': 'Acute gastroenteritis [disorder]',
             },
-            {
-              'code': 'K52.9',
-              'codeSystem': 'ICD10CM',
-              'text': 'Noninfective gastroenteritis and colitis, unspecified',
-            },
-            {
-              'code': 'A09',
-              'codeSystem': 'ICD10CM',
-              'text': 'Infectious gastroenteritis and colitis, unspecified',
-            },
-            {
-              'code': 'A08.0',
-              'codeSystem': 'ICD10CM',
-              'text': 'Rotaviral enteritis',
-            },
-            {
-              'code': 'A08.39',
-              'codeSystem': 'ICD10CM',
-              'text': 'Other viral enteritis',
-            },
           ],
         },
       },
@@ -11903,15 +11279,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
         'observationTitle': 'Acute febrile illness',
         'contraindicationText':
             'Do not vaccinate if the patient has acute febrile illness.',
-        'codedValues': {
-          'codedValue': [
-            {
-              'code': 'R50.9',
-              'codeSystem': 'ICD10CM',
-              'text': 'Fever, unspecified',
-            },
-          ],
-        },
       },
       {
         'observationCode': '031',
@@ -11927,38 +11294,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               'codeSystem': 'SNOMED',
               'text': 'Tuberculosis [disorder]',
             },
-            {
-              'code': 'A15.0',
-              'codeSystem': 'ICD10CM',
-              'text': 'Tuberculosis of lung',
-            },
-            {
-              'code': 'A15.9',
-              'codeSystem': 'ICD10CM',
-              'text': 'Respiratory tuberculosis unspecified',
-            },
-            {
-              'code': 'A18.89',
-              'codeSystem': 'ICD10CM',
-              'text': 'Tuberculosis of other sites',
-            },
-            {
-              'code': 'A19.9',
-              'codeSystem': 'ICD10CM',
-              'text': 'Miliary tuberculosis, unspecified',
-            },
-            {
-              'code': 'R76.11',
-              'codeSystem': 'ICD10CM',
-              'text':
-                  'Nonspecific reaction to tuberculin skin test without '
-                  'active tuberculosis',
-            },
-            {
-              'code': 'Z86.11',
-              'codeSystem': 'ICD10CM',
-              'text': 'Personal history of tuberculosis',
-            },
           ],
         },
       },
@@ -11968,15 +11303,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
         'indicationText':
             'Administer to hemodialysis patients and predialysis, '
             'peritoneal dialysis, and home dialysis patients',
-        'codedValues': {
-          'codedValue': [
-            {
-              'code': 'Z99.2',
-              'codeSystem': 'ICD10CM',
-              'text': 'Dependence on renal dialysis',
-            },
-          ],
-        },
       },
       {
         'observationCode': '033',
@@ -12030,21 +11356,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               'codeSystem': 'SNOMED',
               'text': 'Oseltamivir [product]',
             },
-            {
-              'code': '281',
-              'codeSystem': 'RXNORM',
-              'text': 'Acyclovir',
-            },
-            {
-              'code': '68099',
-              'codeSystem': 'RXNORM',
-              'text': 'famciclovir',
-            },
-            {
-              'code': '73645',
-              'codeSystem': 'RXNORM',
-              'text': 'valACYclovir',
-            },
           ],
         },
       },
@@ -12060,16 +11371,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               'code': '405742008',
               'codeSystem': 'SNOMED',
               'text': 'Aspirin therapy finding [finding]',
-            },
-            {
-              'code': 'Z79.82',
-              'codeSystem': 'ICD10CM',
-              'text': 'Long term (current) use of aspirin',
-            },
-            {
-              'code': '1191',
-              'codeSystem': 'RXNORM',
-              'text': 'Aspirin',
             },
           ],
         },
@@ -12189,27 +11490,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               'codeSystem': 'SNOMED',
               'text': 'Sexually transmitted infectious disease [disorder]',
             },
-            {
-              'code': 'Z11.3',
-              'codeSystem': 'ICD10CM',
-              'text':
-                  'Encounter for screening for infections with a '
-                  'predominantly sexual mode of transmission',
-            },
-            {
-              'code': 'Z11.4',
-              'codeSystem': 'ICD10CM',
-              'text':
-                  'Encounter for screening for human immunodeficiency '
-                  'virus [HIV]',
-            },
-            {
-              'code': 'Z20.2',
-              'codeSystem': 'ICD10CM',
-              'text':
-                  'Contact with and (suspected) exposure to infections '
-                  'with a predominantly sexual mode of transmission',
-            },
           ],
         },
       },
@@ -12229,26 +11509,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               'code': '228366006',
               'codeSystem': 'SNOMED',
               'text': 'Finding relating to drug misuse behavior [finding]',
-            },
-            {
-              'code': 'F19.10',
-              'codeSystem': 'ICD10CM',
-              'text': 'Other psychoactive substance abuse, uncomplicated',
-            },
-            {
-              'code': 'F14.10',
-              'codeSystem': 'ICD10CM',
-              'text': 'Cocaine abuse, uncomplicated',
-            },
-            {
-              'code': 'F11.10',
-              'codeSystem': 'ICD10CM',
-              'text': 'Opioid abuse, uncomplicated',
-            },
-            {
-              'code': 'F16.10',
-              'codeSystem': 'ICD10CM',
-              'text': 'Hallucinogen abuse, uncomplicated',
             },
           ],
         },
@@ -12287,16 +11547,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                   'Deep vein thrombosis of lower extremity due to '
                   'intravenous drug use [disorder]',
             },
-            {
-              'code': 'F11.10',
-              'codeSystem': 'ICD10CM',
-              'text': 'Opioid abuse, uncomplicated',
-            },
-            {
-              'code': 'F19.10',
-              'codeSystem': 'ICD10CM',
-              'text': 'Other psychoactive substance abuse, uncomplicated',
-            },
           ],
         },
       },
@@ -12310,16 +11560,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               'code': '77176002',
               'codeSystem': 'SNOMED',
               'text': 'Smoker [finding]',
-            },
-            {
-              'code': 'F17.210',
-              'codeSystem': 'ICD10CM',
-              'text': 'Nicotine dependence, cigarettes, uncomplicated',
-            },
-            {
-              'code': 'Z72.0',
-              'codeSystem': 'ICD10CM',
-              'text': 'Tobacco use',
             },
           ],
         },
@@ -12339,16 +11579,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               'code': '7200002',
               'codeSystem': 'SNOMED',
               'text': 'Alcoholism [disorder]',
-            },
-            {
-              'code': 'F10.20',
-              'codeSystem': 'ICD10CM',
-              'text': 'Alcohol dependence, uncomplicated',
-            },
-            {
-              'code': 'F10.10',
-              'codeSystem': 'ICD10CM',
-              'text': 'Alcohol abuse, uncomplicated',
             },
           ],
         },
@@ -12820,25 +12050,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
         'indicationText':
             'Administer to persons who are a client of institution for '
             'persons with developmental disabilities.',
-        'codedValues': {
-          'codedValue': [
-            {
-              'code': 'N18.6',
-              'codeSystem': 'ICD10CM',
-              'text': 'End stage renal disease',
-            },
-            {
-              'code': 'N18.5',
-              'codeSystem': 'ICD10CM',
-              'text': 'Chronic kidney disease, stage 5',
-            },
-            {
-              'code': 'N18.9',
-              'codeSystem': 'ICD10CM',
-              'text': 'Chronic kidney disease, unspecified',
-            },
-          ],
-        },
       },
       {
         'observationCode': '066',
@@ -12928,11 +12139,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               'codeSystem': 'SNOMED',
               'text': 'Hepatitis B surface antigen positive [finding]',
             },
-            {
-              'code': 'Z11.59',
-              'codeSystem': 'ICD10CM',
-              'text': 'Encounter for screening for other viral diseases',
-            },
           ],
         },
       },
@@ -13008,11 +12214,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               'codeSystem': 'SNOMED',
               'text': 'Epilepsy [disorder]',
             },
-            {
-              'code': 'G31.9',
-              'codeSystem': 'ICD10CM',
-              'text': 'Degenerative disease of nervous system, unspecified',
-            },
           ],
         },
       },
@@ -13024,23 +12225,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
         'indicationText':
             'Administer to persons who received inactivated or unknown '
             'measles vaccine between 1963-1967.',
-        'codedValues': {
-          'codedValue': [
-            {
-              'code': 'T50.B95A',
-              'codeSystem': 'ICD10CM',
-              'text':
-                  'Adverse effect of other viral vaccines, initial encounter',
-            },
-            {
-              'code': 'Z88.9',
-              'codeSystem': 'ICD10CM',
-              'text':
-                  'Allergy status to unspecified drugs, medicaments and '
-                  'biological substances',
-            },
-          ],
-        },
       },
       {
         'observationCode': '078',
@@ -13172,17 +12356,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                   'Allergy to previous dose of this vaccine or to any of '
                   'its unlisted vaccine components [anaphylactic]',
             },
-            {
-              'code': 'T50.B95A',
-              'codeSystem': 'ICD10CM',
-              'text':
-                  'Adverse effect of other viral vaccines, initial encounter',
-            },
-            {
-              'code': 'Z91.012',
-              'codeSystem': 'ICD10CM',
-              'text': 'Allergy to eggs',
-            },
           ],
         },
       },
@@ -13225,12 +12398,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               'text':
                   'Allergy to previous dose of this vaccine or to any of '
                   'its unlisted vaccine components [anaphylactic]',
-            },
-            {
-              'code': 'T50.B95A',
-              'codeSystem': 'ICD10CM',
-              'text':
-                  'Adverse effect of other viral vaccines, initial encounter',
             },
           ],
         },
@@ -13275,12 +12442,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               'text':
                   'Allergy to previous dose of this vaccine or to any of '
                   'its unlisted vaccine components [anaphylactic]',
-            },
-            {
-              'code': 'T50.B95A',
-              'codeSystem': 'ICD10CM',
-              'text':
-                  'Adverse effect of other viral vaccines, initial encounter',
             },
           ],
         },
@@ -13330,12 +12491,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               'text':
                   'Allergy to previous dose of this vaccine or to any of '
                   'its unlisted vaccine components [anaphylactic]',
-            },
-            {
-              'code': 'T50.B95A',
-              'codeSystem': 'ICD10CM',
-              'text':
-                  'Adverse effect of other viral vaccines, initial encounter',
             },
           ],
         },
@@ -13443,12 +12598,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                   'Allergy to previous dose of this vaccine or to any of '
                   'its unlisted vaccine components [anaphylactic]',
             },
-            {
-              'code': 'T50.B95A',
-              'codeSystem': 'ICD10CM',
-              'text':
-                  'Adverse effect of other viral vaccines, initial encounter',
-            },
           ],
         },
       },
@@ -13537,20 +12686,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               'text':
                   'Allergy to previous dose of this vaccine or to any of '
                   'its unlisted vaccine components [anaphylactic]',
-            },
-            {
-              'code': 'T50.A15A',
-              'codeSystem': 'ICD10CM',
-              'text':
-                  'Adverse effect of pertussis vaccine, including '
-                  'combinations with a pertussis component, initial '
-                  'encounter',
-            },
-            {
-              'code': 'T50.B95A',
-              'codeSystem': 'ICD10CM',
-              'text':
-                  'Adverse effect of other viral vaccines, initial encounter',
             },
           ],
         },
@@ -13665,19 +12800,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               'text':
                   'Allergy to previous dose of this vaccine or to any of '
                   'its unlisted vaccine components [anaphylactic]',
-            },
-            {
-              'code': 'T50.A95A',
-              'codeSystem': 'ICD10CM',
-              'text':
-                  'Adverse effect of other bacterial vaccines, initial '
-                  'encounter',
-            },
-            {
-              'code': 'T50.B95A',
-              'codeSystem': 'ICD10CM',
-              'text':
-                  'Adverse effect of other viral vaccines, initial encounter',
             },
           ],
         },
@@ -13798,19 +12920,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                   'Allergy to previous dose of this vaccine or to any of '
                   'its unlisted vaccine components [anaphylactic]',
             },
-            {
-              'code': 'T50.A95A',
-              'codeSystem': 'ICD10CM',
-              'text':
-                  'Adverse effect of other bacterial vaccines, initial '
-                  'encounter',
-            },
-            {
-              'code': 'T50.B95A',
-              'codeSystem': 'ICD10CM',
-              'text':
-                  'Adverse effect of other viral vaccines, initial encounter',
-            },
           ],
         },
       },
@@ -13851,12 +12960,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               'text':
                   'Allergy to previous dose of this vaccine or to any of '
                   'its unlisted vaccine components [anaphylactic]',
-            },
-            {
-              'code': 'T50.B95A',
-              'codeSystem': 'ICD10CM',
-              'text':
-                  'Adverse effect of other viral vaccines, initial encounter',
             },
           ],
         },
@@ -13904,12 +13007,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                   'Allergy to previous dose of this vaccine or to any of '
                   'its unlisted vaccine components [anaphylactic]',
             },
-            {
-              'code': 'T50.B95A',
-              'codeSystem': 'ICD10CM',
-              'text':
-                  'Adverse effect of other viral vaccines, initial encounter',
-            },
           ],
         },
       },
@@ -13954,12 +13051,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                   'Allergy to previous dose of this vaccine or to any of '
                   'its unlisted vaccine components [anaphylactic]',
             },
-            {
-              'code': 'T50.B95A',
-              'codeSystem': 'ICD10CM',
-              'text':
-                  'Adverse effect of other viral vaccines, initial encounter',
-            },
           ],
         },
       },
@@ -14003,12 +13094,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               'text':
                   'Allergy to previous dose of this vaccine or to any of '
                   'its unlisted vaccine components [anaphylactic]',
-            },
-            {
-              'code': 'T50.B95A',
-              'codeSystem': 'ICD10CM',
-              'text':
-                  'Adverse effect of other viral vaccines, initial encounter',
             },
           ],
         },
@@ -14059,12 +13144,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                   'Allergy to previous dose of this vaccine or to any of '
                   'its unlisted vaccine components [anaphylactic]',
             },
-            {
-              'code': 'T50.B95A',
-              'codeSystem': 'ICD10CM',
-              'text':
-                  'Adverse effect of other viral vaccines, initial encounter',
-            },
           ],
         },
       },
@@ -14113,12 +13192,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               'text':
                   'Allergy to previous dose of this vaccine or to any of '
                   'its unlisted vaccine components [anaphylactic]',
-            },
-            {
-              'code': 'T50.B95A',
-              'codeSystem': 'ICD10CM',
-              'text':
-                  'Adverse effect of other viral vaccines, initial encounter',
             },
           ],
         },
@@ -14186,12 +13259,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                   'Allergy to previous dose of this vaccine or to any of '
                   'its unlisted vaccine components [anaphylactic]',
             },
-            {
-              'code': 'T50.B95A',
-              'codeSystem': 'ICD10CM',
-              'text':
-                  'Adverse effect of other viral vaccines, initial encounter',
-            },
           ],
         },
       },
@@ -14240,12 +13307,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               'text':
                   'Allergy to previous dose of this vaccine or to any of '
                   'its unlisted vaccine components [anaphylactic]',
-            },
-            {
-              'code': 'T50.B95A',
-              'codeSystem': 'ICD10CM',
-              'text':
-                  'Adverse effect of other viral vaccines, initial encounter',
             },
           ],
         },
@@ -14325,12 +13386,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               'text':
                   'Allergy to previous dose of this vaccine or to any of '
                   'its unlisted vaccine components [anaphylactic]',
-            },
-            {
-              'code': 'T50.B95A',
-              'codeSystem': 'ICD10CM',
-              'text':
-                  'Adverse effect of other viral vaccines, initial encounter',
             },
           ],
         },
@@ -14423,12 +13478,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                   'Allergy to previous dose of this vaccine or to any of '
                   'its unlisted vaccine components [anaphylactic]',
             },
-            {
-              'code': 'T50.B95A',
-              'codeSystem': 'ICD10CM',
-              'text':
-                  'Adverse effect of other viral vaccines, initial encounter',
-            },
           ],
         },
       },
@@ -14457,12 +13506,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               'text':
                   'Allergy to previous dose of this vaccine or to any of '
                   'its unlisted vaccine components [anaphylactic]',
-            },
-            {
-              'code': 'T50.B95A',
-              'codeSystem': 'ICD10CM',
-              'text':
-                  'Adverse effect of other viral vaccines, initial encounter',
             },
           ],
         },
@@ -14493,12 +13536,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                   'Allergy to previous dose of this vaccine or to any of '
                   'its unlisted vaccine components [anaphylactic]',
             },
-            {
-              'code': 'T50.B95A',
-              'codeSystem': 'ICD10CM',
-              'text':
-                  'Adverse effect of other viral vaccines, initial encounter',
-            },
           ],
         },
       },
@@ -14518,16 +13555,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               'code': '91930004',
               'codeSystem': 'SNOMED',
               'text': 'Allergy to eggs [disorder]',
-            },
-            {
-              'code': 'Z91.012',
-              'codeSystem': 'ICD10CM',
-              'text': 'Allergy to eggs',
-            },
-            {
-              'code': 'T78.1',
-              'codeSystem': 'ICD10CM',
-              'text': 'Other adverse food reactions, not elsewhere classified',
             },
           ],
         },
@@ -14550,16 +13577,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               'codeSystem': 'SNOMED',
               'text': 'Gelatin allergy [disorder]',
             },
-            {
-              'code': 'T78.1',
-              'codeSystem': 'ICD10CM',
-              'text': 'Other adverse food reactions, not elsewhere classified',
-            },
-            {
-              'code': 'Z91.018',
-              'codeSystem': 'ICD10CM',
-              'text': 'Allergy to other foods',
-            },
           ],
         },
       },
@@ -14569,15 +13586,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
         'contraindicationText':
             'Do not vaccinate if the patient has had a severe allergic '
             'reaction to arginine.',
-        'codedValues': {
-          'codedValue': [
-            {
-              'code': 'T78.40XA',
-              'codeSystem': 'ICD10CM',
-              'text': 'Allergy, unspecified, initial encounter',
-            },
-          ],
-        },
       },
       {
         'observationCode': '104',
@@ -14596,11 +13604,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               'codeSystem': 'SNOMED',
               'text': 'Anaphylaxis due to latex [disorder]',
             },
-            {
-              'code': 'Z91.040',
-              'codeSystem': 'ICD10CM',
-              'text': 'Latex allergy status',
-            },
           ],
         },
       },
@@ -14610,20 +13613,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
         'contraindicationText':
             'Do not vaccinate if the patient has had a severe allergic '
             'reaction to chicken protein.',
-        'codedValues': {
-          'codedValue': [
-            {
-              'code': 'T78.1',
-              'codeSystem': 'ICD10CM',
-              'text': 'Other adverse food reactions, not elsewhere classified',
-            },
-            {
-              'code': 'Z91.018',
-              'codeSystem': 'ICD10CM',
-              'text': 'Allergy to other foods',
-            },
-          ],
-        },
       },
       {
         'observationCode': '106',
@@ -14648,16 +13637,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               'codeSystem': 'SNOMED',
               'text': 'Gentamicin allergy [disorder]',
             },
-            {
-              'code': 'Z88.1',
-              'codeSystem': 'ICD10CM',
-              'text': 'Allergy status to other antibiotic agents',
-            },
-            {
-              'code': 'T36.5X5A',
-              'codeSystem': 'ICD10CM',
-              'text': 'Adverse effect of aminoglycosides, initial encounter',
-            },
           ],
         },
       },
@@ -14678,16 +13657,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               'code': '292927007',
               'codeSystem': 'SNOMED',
               'text': 'Neomycin adverse reaction [disorder]',
-            },
-            {
-              'code': 'Z88.1',
-              'codeSystem': 'ICD10CM',
-              'text': 'Allergy status to other antibiotic agents',
-            },
-            {
-              'code': 'T36.5X5A',
-              'codeSystem': 'ICD10CM',
-              'text': 'Adverse effect of aminoglycosides, initial encounter',
             },
           ],
         },
@@ -14710,16 +13679,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               'codeSystem': 'SNOMED',
               'text': 'Streptomycin adverse reaction [disorder]',
             },
-            {
-              'code': 'Z88.1',
-              'codeSystem': 'ICD10CM',
-              'text': 'Allergy status to other antibiotic agents',
-            },
-            {
-              'code': 'T36.5X5A',
-              'codeSystem': 'ICD10CM',
-              'text': 'Adverse effect of aminoglycosides, initial encounter',
-            },
           ],
         },
       },
@@ -14740,18 +13699,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               'code': '292992006',
               'codeSystem': 'SNOMED',
               'text': 'Polymyxin B adverse reaction [disorder]',
-            },
-            {
-              'code': 'Z88.1',
-              'codeSystem': 'ICD10CM',
-              'text': 'Allergy status to other antibiotic agents',
-            },
-            {
-              'code': 'T36.8X5A',
-              'codeSystem': 'ICD10CM',
-              'text':
-                  'Adverse effect of other systemic antibiotics, initial '
-                  'encounter',
             },
           ],
         },
@@ -14774,16 +13721,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               'codeSystem': 'CDCPHINVS',
               'text': "Allergy to baker's yeast [anaphylactic]",
             },
-            {
-              'code': 'Z91.018',
-              'codeSystem': 'ICD10CM',
-              'text': 'Allergy to other foods',
-            },
-            {
-              'code': 'T78.1',
-              'codeSystem': 'ICD10CM',
-              'text': 'Other adverse food reactions, not elsewhere classified',
-            },
           ],
         },
       },
@@ -14800,11 +13737,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               'code': 'VXC17',
               'codeSystem': 'CDCPHINVS',
               'text': 'Allergy [anaphylactic] to 2-phenoxyethanol',
-            },
-            {
-              'code': 'T78.49XA',
-              'codeSystem': 'ICD10CM',
-              'text': 'Other allergy, initial encounter',
             },
           ],
         },
@@ -14851,11 +13783,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               'text':
                   'Allergy to previous dose of this vaccine or to any of '
                   'its unlisted vaccine components [anaphylactic]',
-            },
-            {
-              'code': 'N18.6',
-              'codeSystem': 'ICD10CM',
-              'text': 'End stage renal disease',
             },
           ],
         },
@@ -14904,20 +13831,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               'codeSystem': 'SNOMED',
               'text': 'Protamine allergy [disorder]',
             },
-            {
-              'code': 'T45.7X5A',
-              'codeSystem': 'ICD10CM',
-              'text':
-                  'Adverse effect of anticoagulant antagonists, vitamin K '
-                  'and other coagulants, initial encounter',
-            },
-            {
-              'code': 'Z88.8',
-              'codeSystem': 'ICD10CM',
-              'text':
-                  'Allergy status to other drugs, medicaments and '
-                  'biological substances',
-            },
           ],
         },
       },
@@ -14959,20 +13872,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                   'Allergy to previous dose of this vaccine or to any of '
                   'its unlisted vaccine components [anaphylactic]',
             },
-            {
-              'code': 'T50.A95A',
-              'codeSystem': 'ICD10CM',
-              'text':
-                  'Adverse effect of other bacterial vaccines, initial '
-                  'encounter',
-            },
-            {
-              'code': 'Z88.8',
-              'codeSystem': 'ICD10CM',
-              'text':
-                  'Allergy status to other drugs, medicaments and '
-                  'biological substances',
-            },
           ],
         },
       },
@@ -14989,24 +13888,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
         'contraindicationText':
             'Do not vaccinate if the patient has had a severe allergic '
             'reaction to tetanus toxoid.',
-        'codedValues': {
-          'codedValue': [
-            {
-              'code': 'T50.A95A',
-              'codeSystem': 'ICD10CM',
-              'text':
-                  'Adverse effect of other bacterial vaccines, initial '
-                  'encounter',
-            },
-            {
-              'code': 'Z88.8',
-              'codeSystem': 'ICD10CM',
-              'text':
-                  'Allergy status to other drugs, medicaments and '
-                  'biological substances',
-            },
-          ],
-        },
       },
       {
         'observationCode': '119',
@@ -15068,11 +13949,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               'codeSystem': 'SNOMED',
               'text': 'Homeless [finding]',
             },
-            {
-              'code': 'Z59.00',
-              'codeSystem': 'ICD10CM',
-              'text': 'Homelessness unspecified',
-            },
           ],
         },
       },
@@ -15096,17 +13972,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               'text':
                   'Allergy to previous dose of this vaccine or to any of '
                   'its unlisted vaccine components [anaphylactic]',
-            },
-            {
-              'code': 'Z91.018',
-              'codeSystem': 'ICD10CM',
-              'text': 'Allergy to other foods',
-            },
-            {
-              'code': 'T50.B95A',
-              'codeSystem': 'ICD10CM',
-              'text':
-                  'Adverse effect of other viral vaccines, initial encounter',
             },
           ],
         },
@@ -15351,32 +14216,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
         'indicationText':
             'Administer to persons traveling to or working in countries '
             'that have high or intermediate endemicity of Hepatitis A.',
-        'codedValues': {
-          'codedValue': [
-            {
-              'code': 'B20',
-              'codeSystem': 'ICD10CM',
-              'text': 'Human immunodeficiency virus [HIV] disease',
-            },
-            {
-              'code': 'Z21',
-              'codeSystem': 'ICD10CM',
-              'text':
-                  'Asymptomatic human immunodeficiency virus [HIV] '
-                  'infection status',
-            },
-            {
-              'code': 'D84.821',
-              'codeSystem': 'ICD10CM',
-              'text': 'Immunodeficiency due to drugs',
-            },
-            {
-              'code': 'D84.9',
-              'codeSystem': 'ICD10CM',
-              'text': 'Immunodeficiency, unspecified',
-            },
-          ],
-        },
       },
       {
         'observationCode': '143',
@@ -15680,18 +14519,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               'codeSystem': 'SNOMED',
               'text': 'Acquired immune deficiency syndrome [disorder]',
             },
-            {
-              'code': 'B20',
-              'codeSystem': 'ICD10CM',
-              'text': 'Human immunodeficiency virus [HIV] disease',
-            },
-            {
-              'code': 'Z21',
-              'codeSystem': 'ICD10CM',
-              'text':
-                  'Asymptomatic human immunodeficiency virus [HIV] '
-                  'infection status',
-            },
           ],
         },
       },
@@ -15703,20 +14530,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
         'contraindicationText':
             'Do not vaccinate if the patient has generalized malignant '
             'neoplasm.',
-        'codedValues': {
-          'codedValue': [
-            {
-              'code': 'C80.0',
-              'codeSystem': 'ICD10CM',
-              'text': 'Disseminated malignant neoplasm, unspecified',
-            },
-            {
-              'code': 'C80.1',
-              'codeSystem': 'ICD10CM',
-              'text': 'Malignant (primary) neoplasm, unspecified',
-            },
-          ],
-        },
       },
       {
         'observationCode': '157',
@@ -15733,31 +14546,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               'code': '313039003',
               'codeSystem': 'SNOMED',
               'text': 'Solid organ transplant [procedure]',
-            },
-            {
-              'code': 'Z94.0',
-              'codeSystem': 'ICD10CM',
-              'text': 'Kidney transplant status',
-            },
-            {
-              'code': 'Z94.1',
-              'codeSystem': 'ICD10CM',
-              'text': 'Heart transplant status',
-            },
-            {
-              'code': 'Z94.2',
-              'codeSystem': 'ICD10CM',
-              'text': 'Lung transplant status',
-            },
-            {
-              'code': 'Z94.4',
-              'codeSystem': 'ICD10CM',
-              'text': 'Liver transplant status',
-            },
-            {
-              'code': 'Z94.9',
-              'codeSystem': 'ICD10CM',
-              'text': 'Transplanted organ and tissue status, unspecified',
             },
           ],
         },
@@ -15795,21 +14583,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               'codeSystem': 'SNOMED',
               'text': 'Immunosuppressive therapy [procedure]',
             },
-            {
-              'code': 'Z79.52',
-              'codeSystem': 'ICD10CM',
-              'text': 'Long term (current) use of systemic steroids',
-            },
-            {
-              'code': 'Z79.899',
-              'codeSystem': 'ICD10CM',
-              'text': 'Other long term (current) drug therapy',
-            },
-            {
-              'code': 'D84.821',
-              'codeSystem': 'ICD10CM',
-              'text': 'Immunodeficiency due to drugs',
-            },
           ],
         },
       },
@@ -15827,11 +14600,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               'code': '53438000',
               'codeSystem': 'SNOMED',
               'text': 'Radiation therapy procedure or service [procedure]',
-            },
-            {
-              'code': 'Z51.0',
-              'codeSystem': 'ICD10CM',
-              'text': 'Encounter for antineoplastic radiation therapy',
             },
           ],
         },
@@ -15855,21 +14623,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               'codeSystem': 'SNOMED',
               'text': 'Asplenia [disorder]',
             },
-            {
-              'code': 'D73.0',
-              'codeSystem': 'ICD10CM',
-              'text': 'Hyposplenism',
-            },
-            {
-              'code': 'Q89.01',
-              'codeSystem': 'ICD10CM',
-              'text': 'Asplenia (congenital)',
-            },
-            {
-              'code': 'Z90.81',
-              'codeSystem': 'ICD10CM',
-              'text': 'Acquired absence of spleen',
-            },
           ],
         },
       },
@@ -15885,36 +14638,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               'code': '709044004',
               'codeSystem': 'SNOMED',
               'text': 'Chronic kidney disease [disorder]',
-            },
-            {
-              'code': 'N18.1',
-              'codeSystem': 'ICD10CM',
-              'text': 'Chronic kidney disease, stage 1',
-            },
-            {
-              'code': 'N18.2',
-              'codeSystem': 'ICD10CM',
-              'text': 'Chronic kidney disease, stage 2 (mild)',
-            },
-            {
-              'code': 'N18.3',
-              'codeSystem': 'ICD10CM',
-              'text': 'Chronic kidney disease, stage 3 (moderate)',
-            },
-            {
-              'code': 'N18.4',
-              'codeSystem': 'ICD10CM',
-              'text': 'Chronic kidney disease, stage 4 (severe)',
-            },
-            {
-              'code': 'N18.5',
-              'codeSystem': 'ICD10CM',
-              'text': 'Chronic kidney disease, stage 5',
-            },
-            {
-              'code': 'N18.9',
-              'codeSystem': 'ICD10CM',
-              'text': 'Chronic kidney disease, unspecified',
             },
           ],
         },
@@ -15932,15 +14655,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
             'updated information from CDC, available at '
             'https://www.cdc.gov/yellow-book/hcp/travel-associated-infections-diseases/yellow-fever.html'
             '',
-        'codedValues': {
-          'codedValue': [
-            {
-              'code': 'N04.9',
-              'codeSystem': 'ICD10CM',
-              'text': 'Nephrotic syndrome with unspecified morphologic changes',
-            },
-          ],
-        },
       },
       {
         'observationCode': '163',
@@ -16014,16 +14728,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               'codeSystem': 'SNOMED',
               'text': 'Chemotherapy [procedure]',
             },
-            {
-              'code': 'Z51.11',
-              'codeSystem': 'ICD10CM',
-              'text': 'Encounter for antineoplastic chemotherapy',
-            },
-            {
-              'code': 'Z51.12',
-              'codeSystem': 'ICD10CM',
-              'text': 'Encounter for antineoplastic immunotherapy',
-            },
           ],
         },
       },
@@ -16053,23 +14757,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               'codeSystem': 'SNOMED',
               'text': 'Sexual assault [event]',
             },
-            {
-              'code': 'Z04.81',
-              'codeSystem': 'ICD10CM',
-              'text':
-                  'Encounter for examination and observation of victim '
-                  'following forced sexual exploitation',
-            },
-            {
-              'code': 'T74.21XA',
-              'codeSystem': 'ICD10CM',
-              'text': 'Adult sexual abuse, confirmed, initial encounter',
-            },
-            {
-              'code': 'T74.22XA',
-              'codeSystem': 'ICD10CM',
-              'text': 'Child sexual abuse, confirmed, initial encounter',
-            },
           ],
         },
       },
@@ -16082,18 +14769,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               'code': '248986005',
               'codeSystem': 'SNOMED',
               'text': 'Estimated date of conception [observable entity]',
-            },
-            {
-              'code': 'Z33.1',
-              'codeSystem': 'ICD10CM',
-              'text': 'Pregnant state, incidental',
-            },
-            {
-              'code': 'Z34.90',
-              'codeSystem': 'ICD10CM',
-              'text':
-                  'Encounter for supervision of normal pregnancy, '
-                  'unspecified, unspecified trimester',
             },
           ],
         },
@@ -16187,25 +14862,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               'codeSystem': 'SNOMED',
               'text': 'Leukemia, disease [disorder]',
             },
-            {
-              'code': 'C95.90',
-              'codeSystem': 'ICD10CM',
-              'text': 'Leukemia, unspecified not having achieved remission',
-            },
-            {
-              'code': 'C91.00',
-              'codeSystem': 'ICD10CM',
-              'text':
-                  'Acute lymphoblastic leukemia not having achieved '
-                  'remission',
-            },
-            {
-              'code': 'C92.00',
-              'codeSystem': 'ICD10CM',
-              'text':
-                  'Acute myeloblastic leukemia, not having achieved '
-                  'remission',
-            },
           ],
         },
       },
@@ -16219,18 +14875,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               'code': '399600009',
               'codeSystem': 'SNOMED',
               'text': 'Lymphoma [finding]',
-            },
-            {
-              'code': 'C85.90',
-              'codeSystem': 'ICD10CM',
-              'text': 'Non-Hodgkin lymphoma, unspecified, unspecified site',
-            },
-            {
-              'code': 'C84.40',
-              'codeSystem': 'ICD10CM',
-              'text':
-                  'Peripheral T-cell lymphoma, not elsewhere classified, '
-                  'unspecified site',
             },
           ],
         },
@@ -16246,11 +14890,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               'codeSystem': 'SNOMED',
               'text': "Hodgkin's disease [disorder]",
             },
-            {
-              'code': 'C81.90',
-              'codeSystem': 'ICD10CM',
-              'text': 'Hodgkin lymphoma, unspecified, unspecified site',
-            },
           ],
         },
       },
@@ -16264,11 +14903,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               'code': '109989006',
               'codeSystem': 'SNOMED',
               'text': 'Multiple myeloma [disorder]',
-            },
-            {
-              'code': 'C90.00',
-              'codeSystem': 'ICD10CM',
-              'text': 'Multiple myeloma not having achieved remission',
             },
           ],
         },
@@ -16289,22 +14923,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
             'Administer to persons working as health care personnel at '
             'federally designated Ebola treatment centers in the United '
             'States',
-        'codedValues': {
-          'codedValue': [
-            {
-              'code': 'B20',
-              'codeSystem': 'ICD10CM',
-              'text': 'Human immunodeficiency virus [HIV] disease',
-            },
-            {
-              'code': 'Z21',
-              'codeSystem': 'ICD10CM',
-              'text':
-                  'Asymptomatic human immunodeficiency virus [HIV] '
-                  'infection status',
-            },
-          ],
-        },
       },
       {
         'observationCode': '184',
@@ -16348,22 +14966,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
         'contraindicationText':
             'Do not vaccinate if the patient has had an immediate allergic '
             'reaction of any severity to polysorbate 80.',
-        'codedValues': {
-          'codedValue': [
-            {
-              'code': 'Z88.8',
-              'codeSystem': 'ICD10CM',
-              'text':
-                  'Allergy status to other drugs, medicaments and '
-                  'biological substances',
-            },
-            {
-              'code': 'T78.49XA',
-              'codeSystem': 'ICD10CM',
-              'text': 'Other allergy, initial encounter',
-            },
-          ],
-        },
       },
       {
         'observationCode': '188',
@@ -16371,22 +14973,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
         'contraindicationText':
             'Do not vaccinate if the patient has known allergy to '
             'Polyethylene glycol [PEG].',
-        'codedValues': {
-          'codedValue': [
-            {
-              'code': 'Z88.8',
-              'codeSystem': 'ICD10CM',
-              'text':
-                  'Allergy status to other drugs, medicaments and '
-                  'biological substances',
-            },
-            {
-              'code': 'T78.49XA',
-              'codeSystem': 'ICD10CM',
-              'text': 'Other allergy, initial encounter',
-            },
-          ],
-        },
       },
       {
         'observationCode': '189',
@@ -16394,20 +14980,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
         'indicationText':
             'Administer to persons receiving active treatment for solid '
             'tumors',
-        'codedValues': {
-          'codedValue': [
-            {
-              'code': 'Z51.11',
-              'codeSystem': 'ICD10CM',
-              'text': 'Encounter for antineoplastic chemotherapy',
-            },
-            {
-              'code': 'C80.1',
-              'codeSystem': 'ICD10CM',
-              'text': 'Malignant (primary) neoplasm, unspecified',
-            },
-          ],
-        },
       },
       {
         'observationCode': '190',
@@ -16415,22 +14987,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
         'indicationText':
             'Administer to persons receiving active treatment for '
             'hematologic malignancies',
-        'codedValues': {
-          'codedValue': [
-            {
-              'code': 'Z51.11',
-              'codeSystem': 'ICD10CM',
-              'text': 'Encounter for antineoplastic chemotherapy',
-            },
-            {
-              'code': 'C96.9',
-              'codeSystem': 'ICD10CM',
-              'text':
-                  'Malignant neoplasm of lymphoid, hematopoietic and '
-                  'related tissue, unspecified',
-            },
-          ],
-        },
       },
       {
         'observationCode': '191',
@@ -16445,11 +15001,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
                   'Chimeric antigen receptor T-cell immunotherapy '
                   '[procedure]',
             },
-            {
-              'code': 'Z94.84',
-              'codeSystem': 'ICD10CM',
-              'text': 'Stem cells transplant status',
-            },
           ],
         },
       },
@@ -16463,15 +15014,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
             'vaccine if the patient has had a severe allergic reaction '
             'after a previous dose of an egg-based IIV or LAIV influenza '
             'vaccine.',
-        'codedValues': {
-          'codedValue': [
-            {
-              'code': 'Z59.3',
-              'codeSystem': 'ICD10CM',
-              'text': 'Problems related to living in residential institution',
-            },
-          ],
-        },
       },
       {
         'observationCode': '193',
@@ -16538,11 +15080,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               'codeSystem': 'SNOMED',
               'text': 'Malignant neoplastic disease [disorder]',
             },
-            {
-              'code': 'C80.1',
-              'codeSystem': 'ICD10CM',
-              'text': 'Malignant (primary) neoplasm, unspecified',
-            },
           ],
         },
       },
@@ -16561,21 +15098,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               'codeSystem': 'SNOMED',
               'text': 'Interstitial lung disease [disorder]',
             },
-            {
-              'code': 'J84.9',
-              'codeSystem': 'ICD10CM',
-              'text': 'Interstitial pulmonary disease, unspecified',
-            },
-            {
-              'code': 'J84.10',
-              'codeSystem': 'ICD10CM',
-              'text': 'Pulmonary fibrosis, unspecified',
-            },
-            {
-              'code': 'J84.89',
-              'codeSystem': 'ICD10CM',
-              'text': 'Other specified interstitial pulmonary diseases',
-            },
           ],
         },
       },
@@ -16589,16 +15111,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               'code': '190905008',
               'codeSystem': 'SNOMED',
               'text': 'cystic fibrosis [disorder]',
-            },
-            {
-              'code': 'E84.0',
-              'codeSystem': 'ICD10CM',
-              'text': 'Cystic fibrosis with pulmonary manifestations',
-            },
-            {
-              'code': 'E84.9',
-              'codeSystem': 'ICD10CM',
-              'text': 'Cystic fibrosis, unspecified',
             },
           ],
         },
@@ -16614,21 +15126,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               'codeSystem': 'SNOMED',
               'text': 'Pulmonary hypertension [disorder]',
             },
-            {
-              'code': 'I27.0',
-              'codeSystem': 'ICD10CM',
-              'text': 'Primary pulmonary hypertension',
-            },
-            {
-              'code': 'I27.20',
-              'codeSystem': 'ICD10CM',
-              'text': 'Pulmonary hypertension, unspecified',
-            },
-            {
-              'code': 'I27.9',
-              'codeSystem': 'ICD10CM',
-              'text': 'Pulmonary heart disease, unspecified',
-            },
           ],
         },
       },
@@ -16643,19 +15140,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               'codeSystem': 'SNOMED',
               'text': 'Dimensia [disorder]',
             },
-            {
-              'code': 'F03.90',
-              'codeSystem': 'ICD10CM',
-              'text':
-                  'Unspecified dementia, unspecified severity, without '
-                  'behavioral disturbance, psychotic disturbance, mood '
-                  'disturbance, and anxiety',
-            },
-            {
-              'code': 'G30.9',
-              'codeSystem': 'ICD10CM',
-              'text': "Alzheimer's disease, unspecified",
-            },
           ],
         },
       },
@@ -16669,11 +15153,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               'code': '41040004',
               'codeSystem': 'SNOMED',
               'text': 'Complete trisomy 21 syndrome [disorder]',
-            },
-            {
-              'code': 'Q90.9',
-              'codeSystem': 'ICD10CM',
-              'text': 'Down syndrome, unspecified',
             },
           ],
         },
@@ -16702,16 +15181,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               'codeSystem': 'SNOMED',
               'text': 'Severe obesity [disorder]',
             },
-            {
-              'code': 'E66.9',
-              'codeSystem': 'ICD10CM',
-              'text': 'Obesity, unspecified',
-            },
-            {
-              'code': 'E66.01',
-              'codeSystem': 'ICD10CM',
-              'text': 'Morbid (severe) obesity due to excess calories',
-            },
           ],
         },
       },
@@ -16725,21 +15194,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               'code': '40108008',
               'codeSystem': 'SNOMED',
               'text': 'Thalassemia [disorder]',
-            },
-            {
-              'code': 'D56.9',
-              'codeSystem': 'ICD10CM',
-              'text': 'Thalassemia, unspecified',
-            },
-            {
-              'code': 'D56.0',
-              'codeSystem': 'ICD10CM',
-              'text': 'Alpha thalassemia',
-            },
-            {
-              'code': 'D56.1',
-              'codeSystem': 'ICD10CM',
-              'text': 'Beta thalassemia',
             },
           ],
         },
@@ -16757,16 +15211,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               'codeSystem': 'SNOMED',
               'text': 'Cerebrovascular disease [disorder]',
             },
-            {
-              'code': 'I67.9',
-              'codeSystem': 'ICD10CM',
-              'text': 'Cerebrovascular disease, unspecified',
-            },
-            {
-              'code': 'I63.9',
-              'codeSystem': 'ICD10CM',
-              'text': 'Cerebral infarction, unspecified',
-            },
           ],
         },
       },
@@ -16776,20 +15220,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
         'indicationText':
             'Administer to persons with substance use disorders (e.g., '
             'alcohol, opioid, cocaine)',
-        'codedValues': {
-          'codedValue': [
-            {
-              'code': 'F19.20',
-              'codeSystem': 'ICD10CM',
-              'text': 'Other psychoactive substance dependence, uncomplicated',
-            },
-            {
-              'code': 'F19.10',
-              'codeSystem': 'ICD10CM',
-              'text': 'Other psychoactive substance abuse, uncomplicated',
-            },
-          ],
-        },
       },
       {
         'observationCode': '208',
@@ -16798,15 +15228,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
         'clarifyingText':
             'Includes mood disorders, depression, and schizophrenia '
             'spectrum disorders.',
-        'codedValues': {
-          'codedValue': [
-            {
-              'code': 'F99',
-              'codeSystem': 'ICD10CM',
-              'text': 'Mental disorder, not otherwise specified',
-            },
-          ],
-        },
       },
       {
         'observationCode': '209',
@@ -16820,22 +15241,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
             'the Janssen COVID-19 vaccine or any other adenovirus-vectored '
             "COVID-19 vaccines (e.g., AstraZeneca's COVID-19 vaccine which "
             'is not authorized or approved in the United States)',
-        'codedValues': {
-          'codedValue': [
-            {
-              'code': 'J44.1',
-              'codeSystem': 'ICD10CM',
-              'text':
-                  'Chronic obstructive pulmonary disease with (acute) '
-                  'exacerbation',
-            },
-            {
-              'code': 'J44.9',
-              'codeSystem': 'ICD10CM',
-              'text': 'Chronic obstructive pulmonary disease, unspecified',
-            },
-          ],
-        },
       },
       {
         'observationCode': '210',
@@ -16906,11 +15311,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               'codeSystem': 'SNOMED',
               'text': 'Pulmonary emphysema [disorder]',
             },
-            {
-              'code': 'J43.9',
-              'codeSystem': 'ICD10CM',
-              'text': 'Emphysema, unspecified',
-            },
           ],
         },
       },
@@ -16923,20 +15323,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
             'Diseases requiring treatment with immunosuppressive drugs, '
             'including long-term systemic corticosteroids and radiation '
             'therapy',
-        'codedValues': {
-          'codedValue': [
-            {
-              'code': 'D84.821',
-              'codeSystem': 'ICD10CM',
-              'text': 'Immunodeficiency due to drugs',
-            },
-            {
-              'code': 'D89.9',
-              'codeSystem': 'ICD10CM',
-              'text': 'Disorder involving the immune mechanism, unspecified',
-            },
-          ],
-        },
       },
       {
         'observationCode': '217',
@@ -16991,20 +15377,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
         'contraindicationText':
             'Do not vaccinate if the patient has had a severe allergic '
             'reaction after a previous dose of vaccinia vaccine.',
-        'codedValues': {
-          'codedValue': [
-            {
-              'code': 'L20.9',
-              'codeSystem': 'ICD10CM',
-              'text': 'Atopic dermatitis, unspecified',
-            },
-            {
-              'code': 'L20.89',
-              'codeSystem': 'ICD10CM',
-              'text': 'Other atopic dermatitis',
-            },
-          ],
-        },
       },
       {
         'observationCode': '224',
@@ -17025,20 +15397,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
             'and others who might have direct contact with the vaccination '
             'site or with potentially contaminated materials (e.g., '
             'dressings or clothing).',
-        'codedValues': {
-          'codedValue': [
-            {
-              'code': 'L26',
-              'codeSystem': 'ICD10CM',
-              'text': 'Exfoliative dermatitis',
-            },
-            {
-              'code': 'L10.9',
-              'codeSystem': 'ICD10CM',
-              'text': 'Pemphigus, unspecified',
-            },
-          ],
-        },
       },
       {
         'observationCode': '226',
@@ -17196,17 +15554,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
             'Administer to healthcare personnel who care for patients '
             'infected with less virulent orthopoxviruses (e.g., Vaccinia '
             'virus or Cowpox virus)',
-        'codedValues': {
-          'codedValue': [
-            {
-              'code': 'Z20.828',
-              'codeSystem': 'ICD10CM',
-              'text':
-                  'Contact with and (suspected) exposure to other viral '
-                  'communicable diseases',
-            },
-          ],
-        },
       },
       {
         'observationCode': '241',
@@ -17232,17 +15579,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
             'multiple partners (or group sex); sex at a commercial sex '
             'venue; or sex in association with an event, venue, or defined '
             'geographic area where mpox transmission is occurring.',
-        'codedValues': {
-          'codedValue': [
-            {
-              'code': 'Z20.828',
-              'codeSystem': 'ICD10CM',
-              'text':
-                  'Contact with and (suspected) exposure to other viral '
-                  'communicable diseases',
-            },
-          ],
-        },
       },
       {
         'observationCode': '243',
@@ -17281,25 +15617,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
         'indicationText': 'Administer to persons with severe immunocompromise.',
         'contraindicationText':
             'Do not vaccinate persons with severe immunocompromise.',
-        'codedValues': {
-          'codedValue': [
-            {
-              'code': 'D84.9',
-              'codeSystem': 'ICD10CM',
-              'text': 'Immunodeficiency, unspecified',
-            },
-            {
-              'code': 'D84.821',
-              'codeSystem': 'ICD10CM',
-              'text': 'Immunodeficiency due to drugs',
-            },
-            {
-              'code': 'D83.9',
-              'codeSystem': 'ICD10CM',
-              'text': 'Common variable immunodeficiency, unspecified',
-            },
-          ],
-        },
       },
       {
         'observationCode': '247',
@@ -17323,20 +15640,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
         'clarifyingText':
             'Includes persons who anticipate experiencing any of the risk '
             'factors.',
-        'codedValues': {
-          'codedValue': [
-            {
-              'code': 'J45.40',
-              'codeSystem': 'ICD10CM',
-              'text': 'Moderate persistent asthma, uncomplicated',
-            },
-            {
-              'code': 'J45.50',
-              'codeSystem': 'ICD10CM',
-              'text': 'Severe persistent asthma, uncomplicated',
-            },
-          ],
-        },
       },
       {
         'observationCode': '248',
@@ -17576,23 +15879,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               'codeSystem': 'SNOMED',
               'text': 'Dissection of infrarenal aorta [disorder]',
             },
-            {
-              'code': 'I25.10',
-              'codeSystem': 'ICD10CM',
-              'text':
-                  'Atherosclerotic heart disease of native coronary artery '
-                  'without angina pectoris',
-            },
-            {
-              'code': 'I51.9',
-              'codeSystem': 'ICD10CM',
-              'text': 'Heart disease, unspecified',
-            },
-            {
-              'code': 'I42.9',
-              'codeSystem': 'ICD10CM',
-              'text': 'Cardiomyopathy, unspecified',
-            },
           ],
         },
       },
@@ -17609,16 +15895,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               'code': '127013003',
               'codeSystem': 'SNOMED',
               'text': 'Disorder of kidney due to diabetes mellitus [disorder]',
-            },
-            {
-              'code': 'E66.01',
-              'codeSystem': 'ICD10CM',
-              'text': 'Morbid (severe) obesity due to excess calories',
-            },
-            {
-              'code': 'E66.2',
-              'codeSystem': 'ICD10CM',
-              'text': 'Morbid (severe) obesity with alveolar hypoventilation',
             },
           ],
         },
@@ -17665,11 +15941,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               'codeSystem': 'SNOMED',
               'text': 'Thalassemia [disorder]',
             },
-            {
-              'code': 'D75.9',
-              'codeSystem': 'ICD10CM',
-              'text': 'Disease of blood and blood-forming organs, unspecified',
-            },
           ],
         },
       },
@@ -17683,16 +15954,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               'code': '417357006',
               'codeSystem': 'SNOMED',
               'text': 'Sickling disorder due to hemoglobin S [disorder]',
-            },
-            {
-              'code': 'D57.1',
-              'codeSystem': 'ICD10CM',
-              'text': 'Sickle-cell disease without crisis',
-            },
-            {
-              'code': 'D57.00',
-              'codeSystem': 'ICD10CM',
-              'text': 'Hb-SS disease with crisis, unspecified',
             },
           ],
         },
@@ -17724,11 +15985,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               'codeSystem': 'SNOMED',
               'text': 'Ineffective airway clearance [finding]',
             },
-            {
-              'code': 'Z59.3',
-              'codeSystem': 'ICD10CM',
-              'text': 'Problems related to living in residential institution',
-            },
           ],
         },
       },
@@ -17757,11 +16013,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               'codeSystem': 'SNOMED',
               'text': 'Frailty [finding]',
             },
-            {
-              'code': 'R54',
-              'codeSystem': 'ICD10CM',
-              'text': 'Age-related physical debility',
-            },
           ],
         },
       },
@@ -17777,27 +16028,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               'code': '230572002',
               'codeSystem': 'SNOMED',
               'text': 'Neuropathy due to diabetes mellitus [disorder]',
-            },
-            {
-              'code': 'E11.40',
-              'codeSystem': 'ICD10CM',
-              'text':
-                  'Type 2 diabetes mellitus with diabetic neuropathy, '
-                  'unspecified',
-            },
-            {
-              'code': 'E10.40',
-              'codeSystem': 'ICD10CM',
-              'text':
-                  'Type 1 diabetes mellitus with diabetic neuropathy, '
-                  'unspecified',
-            },
-            {
-              'code': 'E13.40',
-              'codeSystem': 'ICD10CM',
-              'text':
-                  'Other specified diabetes mellitus with diabetic '
-                  'neuropathy, unspecified',
             },
           ],
         },
@@ -17815,20 +16045,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               'codeSystem': 'SNOMED',
               'text': 'Retinopathy due to diabetes mellitus [disorder]',
             },
-            {
-              'code': 'E11.319',
-              'codeSystem': 'ICD10CM',
-              'text':
-                  'Type 2 diabetes mellitus with unspecified diabetic '
-                  'retinopathy without macular edema',
-            },
-            {
-              'code': 'E10.319',
-              'codeSystem': 'ICD10CM',
-              'text':
-                  'Type 1 diabetes mellitus with unspecified diabetic '
-                  'retinopathy without macular edema',
-            },
           ],
         },
       },
@@ -17838,36 +16054,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
         'indicationText':
             'Administer to persons with diabetes mellitus complicated by '
             'end-organ damage',
-        'codedValues': {
-          'codedValue': [
-            {
-              'code': 'E11.65',
-              'codeSystem': 'ICD10CM',
-              'text': 'Type 2 diabetes mellitus with hyperglycemia',
-            },
-            {
-              'code': 'E11.69',
-              'codeSystem': 'ICD10CM',
-              'text':
-                  'Type 2 diabetes mellitus with other specified '
-                  'complication',
-            },
-            {
-              'code': 'E10.69',
-              'codeSystem': 'ICD10CM',
-              'text':
-                  'Type 1 diabetes mellitus with other specified '
-                  'complication',
-            },
-            {
-              'code': 'E13.69',
-              'codeSystem': 'ICD10CM',
-              'text':
-                  'Other specified diabetes mellitus with other specified '
-                  'complication',
-            },
-          ],
-        },
       },
       {
         'observationCode': '266',
@@ -17882,21 +16068,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               'codeSystem': 'SNOMED',
               'text': 'Diabetic on insulin [finding]',
             },
-            {
-              'code': 'Z79.4',
-              'codeSystem': 'ICD10CM',
-              'text': 'Long term (current) use of insulin',
-            },
-            {
-              'code': 'E10.9',
-              'codeSystem': 'ICD10CM',
-              'text': 'Type 1 diabetes mellitus without complications',
-            },
-            {
-              'code': 'E11.9',
-              'codeSystem': 'ICD10CM',
-              'text': 'Type 2 diabetes mellitus without complications',
-            },
           ],
         },
       },
@@ -17908,15 +16079,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
         'indicationText':
             'Administer to persons with diabetes requiring treatment with '
             'sodium-glucose cotransporter-2 (SGLT2) inhibitor',
-        'codedValues': {
-          'codedValue': [
-            {
-              'code': 'Z94.83',
-              'codeSystem': 'ICD10CM',
-              'text': 'Pancreas transplant status',
-            },
-          ],
-        },
       },
       {
         'observationCode': '268',
@@ -17944,11 +16106,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               'codeSystem': 'SNOMED',
               'text': 'Transplantation [procedure]',
             },
-            {
-              'code': 'Z94.9',
-              'codeSystem': 'ICD10CM',
-              'text': 'Transplanted organ and tissue status, unspecified',
-            },
           ],
         },
       },
@@ -17966,23 +16123,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
               'code': '317',
               'codeSystem': 'CVX',
               'text': 'Chikungunya live attenuated vaccine, 0.5 mL, PF',
-            },
-            {
-              'code': 'D80.9',
-              'codeSystem': 'ICD10CM',
-              'text':
-                  'Immunodeficiency with predominantly antibody defects, '
-                  'unspecified',
-            },
-            {
-              'code': 'D80.1',
-              'codeSystem': 'ICD10CM',
-              'text': 'Nonfamilial hypogammaglobulinemia',
-            },
-            {
-              'code': 'D80.0',
-              'codeSystem': 'ICD10CM',
-              'text': 'Hereditary hypogammaglobulinemia',
             },
           ],
         },
@@ -18030,20 +16170,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
         'indicationText':
             'Administer to persons using an early component complement '
             'inhibitor',
-        'codedValues': {
-          'codedValue': [
-            {
-              'code': 'D84.1',
-              'codeSystem': 'ICD10CM',
-              'text': 'Defects in the complement system',
-            },
-            {
-              'code': 'Z79.899',
-              'codeSystem': 'ICD10CM',
-              'text': 'Other long term (current) drug therapy',
-            },
-          ],
-        },
       },
       {
         'observationCode': '275',
@@ -18066,25 +16192,6 @@ final scheduleSupportingData = ScheduleSupportingData.fromJson({
         'indicationText':
             'Administer to laboratory workers with potential for exposure '
             'to chikungunya virus',
-        'codedValues': {
-          'codedValue': [
-            {
-              'code': 'D58.2',
-              'codeSystem': 'ICD10CM',
-              'text': 'Other hemoglobinopathies',
-            },
-            {
-              'code': 'D56.9',
-              'codeSystem': 'ICD10CM',
-              'text': 'Thalassemia, unspecified',
-            },
-            {
-              'code': 'D57.3',
-              'codeSystem': 'ICD10CM',
-              'text': 'Sickle-cell trait',
-            },
-          ],
-        },
       },
       {
         'observationCode': '278',

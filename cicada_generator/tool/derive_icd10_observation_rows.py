@@ -47,8 +47,11 @@ def cdc_snomed(schedule_path):
     return out
 
 
-def main(schedule_path, meta, out_path):
-    observations = cdc_snomed(schedule_path)
+def derive(observations, meta):
+    """Yield one dict per (observation, ICD-10-CM code) pair that shares a SNOMED source.
+
+    `observations` maps observation code -> (title, set of CDC SNOMED codes).
+    """
     aui_code, names = umls_snomed.snomed_atoms(meta)
     graph = umls_snomed.load_graph(meta, aui_code)
     umls_snomed.check_direction(graph, names)
@@ -56,26 +59,38 @@ def main(schedule_path, meta, out_path):
     sources = umls_snomed.nlm_icd10cm_sources(meta)
     icd_names = umls_snomed.icd10cm_names(meta)
     print(f'{len(sources)} ICD-10-CM codes reached by NLM map', flush=True)
+    for obs_code, (title, listed) in sorted(observations.items()):
+        if not listed:
+            continue
+        s_o = umls_snomed.evidence_closure(listed, inv)
+        for icd in sorted(sources):
+            f_x = sources[icd]
+            inside = f_x & s_o
+            if not inside:
+                continue
+            yield {
+                'observation': obs_code, 'title': title, 'icd10cm': icd,
+                'display': icd_names.get(icd, ''),
+                'grade': 'wider' if inside == f_x else 'narrower',
+                'nlm_sources': len(f_x), 'sources_in_observation': len(inside),
+                'example_outside': '; '.join(
+                    f'{c} {names.get(c, "?")}' for c in sorted(f_x - s_o)[:3]),
+            }
+
+
+COLUMNS = ['observation', 'title', 'icd10cm', 'display', 'grade', 'nlm_sources',
+           'sources_in_observation', 'example_outside']
+
+
+def main(schedule_path, meta, out_path):
     rows = 0
     with open(out_path, 'w', encoding='utf-8', newline='') as f:
-        w = csv.writer(f, delimiter='\t')
-        w.writerow(['observation', 'title', 'icd10cm', 'display', 'grade', 'nlm_sources',
-                    'sources_in_observation', 'example_outside'])
-        for obs_code, (title, listed) in sorted(observations.items()):
-            if not listed:
-                continue
-            s_o = umls_snomed.evidence_closure(listed, inv)
-            for icd in sorted(sources):
-                f_x = sources[icd]
-                inside = f_x & s_o
-                if not inside:
-                    continue
-                grade = 'wider' if inside == f_x else 'narrower'
-                outside = '; '.join(f'{c} {names.get(c, "?")}' for c in sorted(f_x - s_o)[:3])
-                w.writerow([obs_code, title, icd, icd_names.get(icd, ''), grade,
-                            len(f_x), len(inside), outside])
-                f.flush()
-                rows += 1
+        w = csv.DictWriter(f, fieldnames=COLUMNS, delimiter='\t')
+        w.writeheader()
+        for row in derive(cdc_snomed(schedule_path), meta):
+            w.writerow(row)
+            f.flush()
+            rows += 1
     print(f'{rows} rows -> {out_path}', flush=True)
 
 

@@ -27,7 +27,14 @@ class PatientForAssessment extends _$PatientForAssessment {
     final dosesAfterAssessment = <VaxDose>[];
     // The code alone is not enough: `supportingPatientInformation` has to
     // reference the resource that carried it, so keep the reference with it.
-    final otherResourceCodes = <({CodeableConcept code, String? reference})>[];
+    final otherResourceCodes =
+        <
+          ({
+            CodeableConcept code,
+            String? reference,
+            Set<(String, String)> results,
+          })
+        >[];
 
     parameters.parameter?.forEach((parameter) {
       if (parameter.name.valueString == 'assessmentDate' &&
@@ -73,6 +80,8 @@ class PatientForAssessment extends _$PatientForAssessment {
                     observation.id == null
                         ? null
                         : 'Observation/${observation.id}',
+                // A laboratory row counts only with a positive result.
+                results: resultsOfObservation(observation),
               ));
               break;
             }
@@ -85,6 +94,7 @@ class PatientForAssessment extends _$PatientForAssessment {
                   code: code,
                   reference:
                       resource.id == null ? null : 'Procedure/${resource.id}',
+                  results: const <(String, String)>{},
                 ));
               }
               break;
@@ -100,6 +110,7 @@ class PatientForAssessment extends _$PatientForAssessment {
                       resource.id == null
                           ? null
                           : 'MedicationStatement/${resource.id}',
+                  results: const <(String, String)>{},
                 ));
               }
               break;
@@ -115,6 +126,7 @@ class PatientForAssessment extends _$PatientForAssessment {
                       resource.id == null
                           ? null
                           : 'MedicationRequest/${resource.id}',
+                  results: const <(String, String)>{},
                 ));
               }
               break;
@@ -130,6 +142,7 @@ class PatientForAssessment extends _$PatientForAssessment {
                       resource.id == null
                           ? null
                           : 'MedicationAdministration/${resource.id}',
+                  results: const <(String, String)>{},
                 ));
               }
               break;
@@ -233,7 +246,10 @@ class PatientForAssessment extends _$PatientForAssessment {
     List<Immunization> immunizations,
     List<AllergyIntolerance> allergies,
     List<VaxDose> pastDoses,
-    List<({CodeableConcept code, String? reference})> otherResourceCodes,
+    List<
+      ({CodeableConcept code, String? reference, Set<(String, String)> results})
+    >
+    otherResourceCodes,
     List<ImplausibleDose> implausibleDoses,
     List<VaxDose> dosesAfterAssessment,
   ) {
@@ -243,17 +259,26 @@ class PatientForAssessment extends _$PatientForAssessment {
       ..addAll(observationsFromAllergies(allergies));
     // Add observations from Observation, Procedure, Medication* resources
     for (final pair in otherResourceCodes) {
-      observations.addAll(observationsFromCodeableConcept(pair.code));
+      observations.addAll(
+        observationsFromCodeableConcept(pair.code, results: pair.results),
+      );
     }
 
     // Which resource asserted each CDSi observation, so a risk-driven
     // recommendation can point at it via supportingPatientInformation.
     // A resource with no id cannot be referenced and is left out.
     final observationSources = <String, Set<SupportingResource>>{};
-    void index(String? reference, CodeableConcept? code) {
+    void index(
+      String? reference,
+      CodeableConcept? code, {
+      Set<(String, String)> results = const <(String, String)>{},
+    }) {
       final display = _displayOf(code);
       if (reference == null && display == null) return;
-      for (final obs in observationsFromCodeableConcept(code)) {
+      for (final obs in observationsFromCodeableConcept(
+        code,
+        results: results,
+      )) {
         final observationCode = obs.observationCode;
         if (observationCode == null) continue;
         (observationSources[observationCode] ??= <SupportingResource>{}).add((
@@ -279,7 +304,7 @@ class PatientForAssessment extends _$PatientForAssessment {
       }
     }
     for (final pair in otherResourceCodes) {
-      index(pair.reference, pair.code);
+      index(pair.reference, pair.code, results: pair.results);
     }
     return VaxPatient(
       assessmentDate:

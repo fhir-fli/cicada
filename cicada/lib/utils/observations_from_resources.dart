@@ -9,20 +9,50 @@ const _cdsiSystemUris = <String>{
   'https://www.cdc.gov/vaccines/programs/iis/cdsi.html',
 };
 
-/// SNOMED CT, the one system in the crosswalk that is a hierarchy.
+/// SNOMED CT, the one system in the map that is a hierarchy.
 const _snomedSystemUri = 'http://snomed.info/sct';
 
-/// Maps FHIR coding system URIs to CDSi codeSystem identifiers.
-const Map<String, String> _fhirSystemToCdsi = {
-  'http://snomed.info/sct': 'SNOMED',
-  'http://hl7.org/fhir/sid/cvx': 'CVX',
-  'urn:oid:2.16.840.1.114222.4.5.274': 'CDCPHINVS',
-  'http://www.cdc.gov/vaccines/acip': 'CDCPHINVS',
-  'http://hl7.org/fhir/sid/icd-10-cm': 'ICD10CM',
-  'http://loinc.org': 'LOINC',
-  'http://www.nlm.nih.gov/research/umls/rxnorm': 'RXNORM',
-  'http://www.ama-assn.org/go/cpt': 'CPT',
+/// Incoming system URIs that name a system the map keys under another URI.
+/// CDC's PHIN VS codes arrive under either; the map uses the OID.
+const Map<String, String> _systemAliases = {
+  'http://www.cdc.gov/vaccines/acip': 'urn:oid:2.16.840.1.114222.4.5.274',
 };
+
+/// The CDSi coded-value system names WHO's schedule data uses, as FHIR URIs.
+const Map<String, String> _cdsiSystemToFhir = {
+  'SNOMED': 'http://snomed.info/sct',
+  'CVX': 'http://hl7.org/fhir/sid/cvx',
+  'CDCPHINVS': 'urn:oid:2.16.840.1.114222.4.5.274',
+  'ICD10CM': 'http://hl7.org/fhir/sid/icd-10-cm',
+  'LOINC': 'http://loinc.org',
+  'RXNORM': 'http://www.nlm.nih.gov/research/umls/rxnorm',
+  'CPT': 'http://www.ama-assn.org/go/cpt',
+};
+
+/// WHO mode has its own observation numbers (1010-1071) and no ConceptMap,
+/// so its schedule data's own coded values are read as 'equivalent' rows,
+/// which is how they were matched before the map existed.
+final Map<String, Map<String, List<ObservationMapTarget>>> _whoMap = () {
+  final map = <String, Map<String, List<ObservationMapTarget>>>{};
+  for (final obs
+      in whoScheduleSupportingData.observations?.observation ??
+          const <VaxObservation>[]) {
+    final obsCode = obs.observationCode;
+    if (obsCode == null) continue;
+    for (final cv in obs.codedValues?.codedValue ?? const <CodedValue>[]) {
+      final system = _cdsiSystemToFhir[cv.codeSystem];
+      final code = cv.code;
+      if (system == null || code == null) continue;
+      ((map[system] ??= {})[code] ??= []).add(
+        ObservationMapTarget(obsCode, 'equivalent'),
+      );
+    }
+  }
+  return map;
+}();
+
+Map<String, Map<String, List<ObservationMapTarget>>> get _activeMap =>
+    currentForecastMode == ForecastMode.who ? _whoMap : observationConceptMap;
 
 /// Extracts CDSi observations from a list of FHIR Conditions.
 ///
@@ -70,41 +100,83 @@ List<VaxObservation> observationsFromAllergies(
 
 /// Extracts CDSi observations from a [CodeableConcept] (used for
 /// Observation, Procedure, MedicationStatement, etc.).
-List<VaxObservation> observationsFromCodeableConcept(CodeableConcept? code) {
-  return _matchCodingsToObservations(code?.coding);
+///
+/// [results] are the (system, code) results the resource carries, for map
+/// rows that hold only with a result: a laboratory antibody test is evidence
+/// of immunity only when it is positive. See [resultsOfObservation].
+List<VaxObservation> observationsFromCodeableConcept(
+  CodeableConcept? code, {
+  Set<(String, String)> results = const <(String, String)>{},
+}) {
+  return _matchCodingsToObservations(code?.coding, results: results);
 }
 
-/// Core matching: every CDSi observation in [activeScheduleData] that one of
-/// [codings] is filed under, each returned once, in supporting-data order.
+/// The (system, code) results an [Observation] carries for map rows that
+/// depend on one: its interpretation codings and its valueCodeableConcept
+/// codings.
 ///
-/// Why every one and not the first: the spec's patient history holds a SET of
-/// patient observations (Table A-2, DEFPATIENT-008), and CDC's Coded
-/// Observations supporting data files one code under several observations
-/// (46 of its 369 codes in 4.65-508; SNOMED 86406008 HIV infection is under
-/// both 026 and 186). Stopping at the first match kept only the
-/// lowest-numbered one: an ICD-10 B20 HIV patient became 026 "perinatal HIV
-/// vaccinated with MMR before ART" and never 186 "HIV Infection". Measured
-/// 2026-10-18 with tool/probe_crosswalk_keying.dart.
+/// Only a final, amended or corrected Observation has a result to count.
+/// Quoted from R4B CodeSystem-observation-status.json, read 2026-10-18:
+/// preliminary is "an initial or interim observation: data may be incomplete
+/// or unverified"; registered has "no result yet available". Cancelled and
+/// entered-in-error are not results.
+Set<(String, String)> resultsOfObservation(Observation observation) {
+  const reportable = <String>{'final', 'amended', 'corrected'};
+  if (!reportable.contains(observation.status.toString())) {
+    return const <(String, String)>{};
+  }
+  return <(String, String)>{
+    for (final concept in [
+      ...?observation.interpretation,
+      if (observation.valueX is CodeableConcept)
+        observation.valueX! as CodeableConcept,
+    ])
+      for (final coding in concept.coding ?? const <Coding>[])
+        if (coding.system != null && coding.code != null)
+          (coding.system.toString(), coding.code.toString()),
+  };
+}
+
+/// Core matching: every CDSi observation the map asserts for one of
+/// [codings], each returned once, in supporting-data order.
 ///
-/// Three passes, each used only when the one before found nothing:
+/// Every observation, not the first: the patient history holds a SET of
+/// patient observations (logic spec 4.6 Table A-2, DEFPATIENT-008), and one
+/// code can stand for several (SNOMED 13645005 COPD is both 017 chronic lung
+/// disease and 214 COPD). Stopping at the first match kept only the
+/// lowest-numbered one: measured 2026-10-18 with
+/// tool/probe_crosswalk_keying.dart, ICD-10 B20 reached only 026.
+///
+/// A map row asserts only when its grade does (ObservationMapTarget.asserts)
+/// and, for rows that depend on a result, when [results] holds one of them.
+///
+/// Three passes, each used only when the one before asserted nothing:
 /// 1. a direct CDSi observation code (the IG's CodeSystem or CDC's page URL);
-/// 2. an exact code in any system the supporting data carries;
-/// 3. a SNOMED ancestor of the code.
-List<VaxObservation> _matchCodingsToObservations(List<Coding>? codings) {
+/// 2. the map's row for the exact (system, code);
+/// 3. the map's rows for the SNOMED concepts this code falls under.
+List<VaxObservation> _matchCodingsToObservations(
+  List<Coding>? codings, {
+  Set<(String, String)> results = const <(String, String)>{},
+}) {
   if (codings == null || codings.isEmpty) return const <VaxObservation>[];
   final allObservations = activeScheduleData.observations?.observation;
   if (allObservations == null || allObservations.isEmpty) {
     return const <VaxObservation>[];
   }
 
-  // Collects, in supporting-data order, the observations whose coded values
-  // satisfy [matches].
-  List<VaxObservation> where(bool Function(VaxObservation obs) matches) => [
+  // The observations whose codes are in [codes], in supporting-data order.
+  List<VaxObservation> inOrder(Set<String> codes) => [
     for (final obs in allObservations)
-      if (matches(obs)) obs,
+      if (codes.contains(obs.observationCode)) obs,
   ];
 
-  // Pass 1: a direct CDSi observation code bypasses the crosswalk.
+  // The observation codes the map asserts for (system, code).
+  Iterable<String> asserted(String system, String code) =>
+      (_activeMap[system]?[code] ?? const <ObservationMapTarget>[])
+          .where((t) => t.assertsWith(results))
+          .map((t) => t.observationCode);
+
+  // Pass 1: a direct CDSi observation code bypasses the map.
   final direct = <String>{
     for (final coding in codings)
       if (_cdsiSystemUris.contains(coding.system?.toString()) &&
@@ -112,27 +184,22 @@ List<VaxObservation> _matchCodingsToObservations(List<Coding>? codings) {
         coding.code.toString(),
   };
   if (direct.isNotEmpty) {
-    final found = where((obs) => direct.contains(obs.observationCode));
+    final found = inOrder(direct);
     if (found.isNotEmpty) return found;
   }
 
-  // Pass 2: exact (system, code) pairs.
-  final exact = <(String, String)>{
+  // Pass 2: the exact (system, code).
+  final exact = <String>{
     for (final coding in codings)
-      if (_fhirSystemToCdsi[coding.system?.toString()] != null &&
-          coding.code != null)
-        (_fhirSystemToCdsi[coding.system.toString()]!, coding.code.toString()),
+      if (coding.system != null && coding.code != null)
+        ...asserted(
+          _systemAliases[coding.system.toString()] ?? coding.system.toString(),
+          coding.code.toString(),
+        ),
   };
-  if (exact.isNotEmpty) {
-    final found = where(
-      (obs) => (obs.codedValues?.codedValue ?? const []).any(
-        (cv) => exact.contains((cv.codeSystem ?? '', cv.code ?? '')),
-      ),
-    );
-    if (found.isNotEmpty) return found;
-  }
+  if (exact.isNotEmpty) return inOrder(exact);
 
-  // Pass 3: nothing matched exactly. SNOMED is a hierarchy and clinicians
+  // Pass 3: nothing asserted exactly. SNOMED is a hierarchy and clinicians
   // record specific concepts, so try the listed concepts this code falls under.
   //
   // Without this a patient recorded as, say, sickle cell disease does not match
@@ -141,17 +208,14 @@ List<VaxObservation> _matchCodingsToObservations(List<Coding>? codings) {
   // Measured 2026-09-03: 7,975 concepts sit under the 132 listed SNOMED codes
   // that have descendants.
   //
-  // Only SNOMED. The other systems the crosswalk carries are enumerations, not
+  // Only SNOMED. The other systems the map carries are enumerations, not
   // hierarchies, and ICD-10-CM's dotted codes are not a subsumption axis.
-  final ancestors = <String>{
+  final viaAncestors = <String>{
     for (final coding in codings)
       if (coding.system?.toString() == _snomedSystemUri && coding.code != null)
-        ...snomedClosure[coding.code.toString()] ?? const <String>[],
+        for (final ancestor
+            in snomedClosure[coding.code.toString()] ?? const <String>[])
+          ...asserted(_snomedSystemUri, ancestor),
   };
-  if (ancestors.isEmpty) return const <VaxObservation>[];
-  return where(
-    (obs) => (obs.codedValues?.codedValue ?? const []).any(
-      (cv) => cv.codeSystem == 'SNOMED' && ancestors.contains(cv.code),
-    ),
-  );
+  return inOrder(viaAncestors);
 }
