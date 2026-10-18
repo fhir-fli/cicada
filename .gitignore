@@ -62,3 +62,6 @@ cicada_generator/results/who_schedule_roundtrip/
 
 # Local path overrides written by gen_ci_overrides.sh; CI writes its own.
 pubspec_overrides.yaml
+
+# Python bytecode from the generator tools (umls_snomed.py is imported by derive_icd10_observation_rows.py)
+__pycache__/
