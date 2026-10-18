@@ -13,6 +13,18 @@
         "system": "http://www.ama-assn.org/go/cpt",
         "concept": [
           {
+            "code": "38100",
+            "display": "Splenectomy; total (separate procedure)"
+          },
+          {
+            "code": "38102",
+            "display": "Splenectomy; total, en bloc for extensive disease, in conjunction with other procedure (List in addition to code for primary procedure)"
+          },
+          {
+            "code": "38120",
+            "display": "Laparoscopy, surgical, splenectomy"
+          },
+          {
             "code": "69930",
             "display": "Cochlear device implantation"
           }

@@ -453,7 +453,7 @@
     "fshType": "ValueSet",
     "fshFile": "vs_vaccine_condition_codes_cpt.fsh",
     "startLine": 4,
-    "endLine": 10
+    "endLine": 13
   },
   {
     "outputFile": "ValueSet-interval-reason.json",

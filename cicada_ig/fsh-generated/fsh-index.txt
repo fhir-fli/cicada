@@ -55,7 +55,7 @@ ValueSet-eval-reason.json                                     EvalReasonVS      
 ValueSet-eval-status.json                                     EvalStatusVS                       ValueSet    cs_vs_eval_status.fsh                      9 - 15
 ValueSet-forecast-reason-vs.json                              CicadaForecastReasonVS             ValueSet    cicada_response_extensions.fsh             34 - 39
 ValueSet-forecast-status.json                                 ForecastStatusVS                   ValueSet    cs_vs_forecast_status.fsh                  1 - 14
-ValueSet-immunization-procedures-cpt.json                     ImmunizationProceduresCpt          ValueSet    vs_vaccine_condition_codes_cpt.fsh         4 - 10
+ValueSet-immunization-procedures-cpt.json                     ImmunizationProceduresCpt          ValueSet    vs_vaccine_condition_codes_cpt.fsh         4 - 13
 ValueSet-interval-reason.json                                 IntervalReasonVS                   ValueSet    cs_vs_interval_reason.fsh                  11 - 18
 ValueSet-preferred-allowed-reason.json                        PreferredAllowedReasonVS           ValueSet    cs_vs_preferred_allowed_reason.fsh         14 - 24
 ValueSet-procedures.json                                      ImmunizationProceduresSnomed       ValueSet    vs_immunization_procedures_snomed.fsh      1 - 17
