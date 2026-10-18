@@ -13,7 +13,8 @@
 // The publisher only attaches CodeSystems whose content is complete or
 // fragment, so a not-present stub is found locally, never fetched, and
 // never sent. Validation of the ICD-10-CM codes in
-// vaccine-condition-codes-icd10 still happens on the terminology server.
+// vaccine-condition-codes-icd10 and ConceptMap cdsi-observations still happens
+// on the terminology server.
 CodeSystem: Icd10Cm
 Id: icd-10-cm
 Title: "ICD-10-CM (external, content not present)"

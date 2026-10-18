@@ -145,6 +145,29 @@ across all 30 antigens — but the XML is still the fallback, not the source.)
 - **CDC**: Each antigen (measles.dart, hepb.dart, etc.) contains an `AntigenSupportingData` instance. `antigenSupportingDataMap` provides disease-name-keyed lookup. `schedule_supporting_data.dart` contains `scheduleSupportingData`.
 - **WHO**: `generated_files/who/` mirrors the same structure with `who` prefix: `whoAntigenSupportingDataMap`, `whoScheduleSupportingData`. The barrel file is `who_generated_supporting_data.dart`.
 
+### Chart codes → CDSi observations: one graded ConceptMap
+
+🔴 Until 2026-10-18 a hand-typed crosswalk was merged into CDC's coded values:
+21 of its 136 observations held another observation's codes (ICD-10 D73.0
+asplenia → 018 hepatitis A immunity), a LOINC antibody test counted whatever its
+result, and the matcher kept only the first observation a code reached. **CDC's
+test cases send CDSi observation codes directly and never reach this path**;
+`test/observation_concept_map_test.dart` does.
+
+- Source of truth: `cicada_generator/lib/crosswalk/ConceptMap-cdsi-observations.json`
+  (FHIR R4, every row graded; only `equivalent`/`wider` assert). Built by
+  `cicada_generator/tool/build_observation_concept_map.py <schedule.json> <UMLS META>
+  <observation_map_policy.json> <CROSSWALK-REVIEW.tsv> <out.json> <decisions.tsv>`.
+  UMLS is Grey's 2025AB release at `/home/grey/dev/graiai/2025AB/META`.
+- ICD-10-CM rows are derived from NLM's SNOMED CT → ICD-10-CM map
+  (`tool/derive_icd10_observation_rows.py`, `tool/umls_snomed.py`). Never type them by hand.
+- Hand decisions live only in `crosswalk/observation_map_policy.json` (each with a
+  reason) and Grey's yes/no column in `CROSSWALK-REVIEW.tsv` (repo root).
+- `cicada_generator/lib/main.dart` emits `cicada/lib/generated_files/observation_concept_map.dart`;
+  `tool/generate_ig_terminology.py` copies the map into the IG and regenerates the
+  ICD-10/LOINC/CPT value sets from it. Rebuild order: builder → main.dart → IG generator.
+- Cicada handles PHI and **stores none** (Grey, 2026-10-18).
+
 ### ImmDS Server
 
 `bin/server.dart` runs a Shelf HTTP server implementing the ImmDS forecast operations:

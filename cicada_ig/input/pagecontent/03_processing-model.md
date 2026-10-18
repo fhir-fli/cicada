@@ -19,7 +19,7 @@ The engine accepts a FHIR R4 `Parameters` resource containing the patient's demo
 - **Immunization history**: past vaccine doses with dates, CVX codes, and any dose conditions
 - **Observations**: conditions, allergies, procedures, medications, and other clinical data that may affect vaccine recommendations
 
-Observations are mapped to CDSi observation codes via a crosswalk that supports multiple code systems (SNOMED CT, ICD-10-CM, CVX, CDCPHINVS, LOINC, RxNorm, and CPT). These observation codes drive risk series indications, contraindications, evidence of immunity, and conditional skip logic.
+Observations are mapped to CDSi observation codes through the [ConceptMap](ConceptMap-cdsi-observations.html), which covers SNOMED CT, ICD-10-CM, CVX, CDCPHINVS, LOINC, RxNorm and CPT. Only rows graded `equivalent` or `wider` assert an observation; `narrower` and `relatedto` rows need clinical judgement. These observation codes drive risk series indications, contraindications, evidence of immunity, and conditional skip logic.
 
 ### Organize Immunization History
 

@@ -4,7 +4,7 @@
   "name": "ImmunizationProceduresCpt",
   "id": "immunization-procedures-cpt",
   "title": "Immunization-Relevant Procedures (CPT)",
-  "description": "CPT codes for procedures relevant to immunization decision support, including splenectomy and cochlear implant.",
+  "description": "CPT codes that assert a CDSi observation in ConceptMap cdsi-observations.",
   "url": "http://fhirfli.dev/fhir/ig/cicada/ValueSet/immunization-procedures-cpt",
   "experimental": false,
   "compose": {
@@ -13,28 +13,8 @@
         "system": "http://www.ama-assn.org/go/cpt",
         "concept": [
           {
-            "code": "38100",
-            "display": "Splenectomy; total (separate procedure)"
-          },
-          {
-            "code": "38101",
-            "display": "Splenectomy; partial (separate procedure)"
-          },
-          {
-            "code": "38102",
-            "display": "Splenectomy; total, en bloc for extensive disease, in conjunction with other procedure (List in addition to code for primary procedure)"
-          },
-          {
-            "code": "38115",
-            "display": "Repair of ruptured spleen (splenorrhaphy) with or without partial splenectomy"
-          },
-          {
-            "code": "38120",
-            "display": "Laparoscopy, surgical, splenectomy"
-          },
-          {
             "code": "69930",
-            "display": "Cochlear device implantation, with or without mastoidectomy"
+            "display": "Cochlear device implantation"
           }
         ]
       }

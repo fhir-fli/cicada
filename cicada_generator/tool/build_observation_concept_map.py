@@ -49,6 +49,22 @@ SYSTEMS = {
 INTERPRETATION = 'http://hl7.org/fhir/StructureDefinition/Observation#Observation.interpretation'
 VALUE = 'http://hl7.org/fhir/StructureDefinition/Observation#Observation.value[x]'
 
+# CVX's own displays (tool/fetch_cvx_displays.py, from tx.fhir.org). CDC's
+# short product names ('OPV', 'PCV7') are not CVX displays; the IG publisher
+# reported all 56 CVX rows as invalid displays on 2026-10-18.
+CVX_DISPLAYS = Path(__file__).resolve().parent / 'cvx_displays.tsv'
+
+
+def cvx_displays():
+    out = {}
+    with open(CVX_DISPLAYS, encoding='utf-8') as f:
+        for line in f:
+            if line.startswith('#') or line.startswith('code\t'):
+                continue
+            code, _, display = line.rstrip('\n').partition('\t')
+            out[code] = display
+    return out
+
 
 def cdc_observations(schedule_path):
     """observation code -> (title, [(system, code, text)]) for CDC's own systems only."""
@@ -80,6 +96,7 @@ def main(schedule_path, meta, policy_path, review_path, out_map, out_tsv):
     observations = cdc_observations(schedule_path)
     titles = {k: v[0] for k, v in observations.items()}
     decisions = review_decisions(review_path)
+    cvx_names = cvx_displays()
 
     # (system key, code) -> {'display': str, 'targets': [target dicts]}
     elements = defaultdict(lambda: {'display': '', 'targets': []})
@@ -90,6 +107,8 @@ def main(schedule_path, meta, policy_path, review_path, out_map, out_tsv):
     def add(system, code, display, obs, equivalence, source, reason, depends_on=None):
         if obs in not_from and equivalence in ('equivalent', 'wider'):
             equivalence, reason = 'relatedto', f'not from a code: {not_from[obs]}'
+        if system == 'CVX':
+            display = cvx_names[code]
         el = elements[(system, code)]
         el['display'] = el['display'] or display
         target = {'code': obs, 'display': titles.get(obs, ''), 'equivalence': equivalence,
@@ -171,6 +190,18 @@ def main(schedule_path, meta, policy_path, review_path, out_map, out_tsv):
                 add(key.upper(), code, display, obs, equivalence, 'Cicada policy', '')
     log.close()
 
+    # A target may repeat (code, observation, equivalence) only as an
+    # alternative result condition (dependsOn). Anything else is a real
+    # duplicate, and the IG's ignoreWarnings entry for the LOINC alternatives
+    # must not be able to hide one.
+    for (system, code), el in elements.items():
+        seen = set()
+        for target in el['targets']:
+            key = (target['code'], target['equivalence'])
+            if key in seen and 'dependsOn' not in target:
+                raise SystemExit(f'duplicate target {system} {code} -> {key}')
+            seen.add(key)
+
     groups = defaultdict(list)
     for (system, code), el in sorted(elements.items()):
         groups[system].append({'code': code, 'display': el['display'], 'target': el['targets']})
@@ -181,6 +212,8 @@ def main(schedule_path, meta, policy_path, review_path, out_map, out_tsv):
         'name': 'CdsiObservations',
         'title': 'Chart codes to CDSi observations',
         'status': 'draft',
+        'experimental': False,
+        'publisher': 'FHIR-FLI',
         'description': ('Every code system Cicada reads, mapped to CDSi observation codes. '
                         "'equivalent' and 'wider' rows assert the observation; 'narrower' and "
                         "'relatedto' rows link it for clinical judgement and are not asserted. "

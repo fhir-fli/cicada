@@ -84,8 +84,8 @@
     "fshName": "Icd10Cm",
     "fshType": "CodeSystem",
     "fshFile": "cs_icd10cm_stub.fsh",
-    "startLine": 17,
-    "endLine": 25
+    "startLine": 18,
+    "endLine": 26
   },
   {
     "outputFile": "CodeSystem-series-type.json",
@@ -110,22 +110,6 @@
     "fshFile": "cs_vs_vaccine_recommendation_category.fsh",
     "startLine": 1,
     "endLine": 10
-  },
-  {
-    "outputFile": "ConceptMap-Icd10ToCdsiObservation.json",
-    "fshName": "Icd10ToCdsiObservation",
-    "fshType": "Instance",
-    "fshFile": "cm_icd10_to_cdsi.fsh",
-    "startLine": 6,
-    "endLine": 1508
-  },
-  {
-    "outputFile": "ConceptMap-SnomedToCdsiObservation.json",
-    "fshName": "SnomedToCdsiObservation",
-    "fshType": "Instance",
-    "fshFile": "cm_snomed_to_cdsi.fsh",
-    "startLine": 6,
-    "endLine": 1758
   },
   {
     "outputFile": "Medication-vaccine-dtap.json",
@@ -468,8 +452,8 @@
     "fshName": "ImmunizationProceduresCpt",
     "fshType": "ValueSet",
     "fshFile": "vs_vaccine_condition_codes_cpt.fsh",
-    "startLine": 1,
-    "endLine": 20
+    "startLine": 4,
+    "endLine": 10
   },
   {
     "outputFile": "ValueSet-interval-reason.json",
@@ -516,8 +500,8 @@
     "fshName": "VaccineConditionCodesIcd10",
     "fshType": "ValueSet",
     "fshFile": "vs_vaccine_condition_codes_icd10.fsh",
-    "startLine": 1,
-    "endLine": 147
+    "startLine": 4,
+    "endLine": 3566
   },
   {
     "outputFile": "ValueSet-vaccine-condition-codes-snomed.json",
@@ -540,16 +524,8 @@
     "fshName": "VaccineLabEvidenceOfImmunityLoinc",
     "fshType": "ValueSet",
     "fshFile": "vs_vaccine_condition_codes_loinc.fsh",
-    "startLine": 23,
-    "endLine": 59
-  },
-  {
-    "outputFile": "ValueSet-vaccine-medication-codes-rxnorm.json",
-    "fshName": "VaccineMedicationCodesRxnorm",
-    "fshType": "ValueSet",
-    "fshFile": "vs_vaccine_condition_codes_rxnorm.fsh",
-    "startLine": 1,
-    "endLine": 20
+    "startLine": 4,
+    "endLine": 27
   },
   {
     "outputFile": "ValueSet-vaccine-medication-codes-snomed.json",

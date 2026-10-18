@@ -5,6 +5,8 @@
  "name": "CdsiObservations",
  "title": "Chart codes to CDSi observations",
  "status": "draft",
+ "experimental": false,
+ "publisher": "FHIR-FLI",
  "description": "Every code system Cicada reads, mapped to CDSi observation codes. 'equivalent' and 'wider' rows assert the observation; 'narrower' and 'relatedto' rows link it for clinical judgement and are not asserted. Built by cicada_generator/tool/build_observation_concept_map.py.",
  "targetCanonical": "http://fhirfli.dev/fhir/ig/cicada/ValueSet/cdsi-observation-codes-vs",
  "group": [
@@ -290,7 +292,7 @@
     },
     {
      "code": "02",
-     "display": "OPV",
+     "display": "OPV, trivalent",
      "target": [
       {
        "code": "081",
@@ -326,7 +328,7 @@
     },
     {
      "code": "04",
-     "display": "Measles/Rubella",
+     "display": "M/R",
      "target": [
       {
        "code": "091",
@@ -344,7 +346,7 @@
     },
     {
      "code": "05",
-     "display": "Measles",
+     "display": "measles",
      "target": [
       {
        "code": "091",
@@ -356,7 +358,7 @@
     },
     {
      "code": "06",
-     "display": "Rubella",
+     "display": "rubella",
      "target": [
       {
        "code": "093",
@@ -368,7 +370,7 @@
     },
     {
      "code": "07",
-     "display": "Mumps",
+     "display": "mumps",
      "target": [
       {
        "code": "092",
@@ -380,7 +382,7 @@
     },
     {
      "code": "08",
-     "display": "Hep B, Adol/peds",
+     "display": "Hep B, adolescent or pediatric",
      "target": [
       {
        "code": "097",
@@ -392,7 +394,7 @@
     },
     {
      "code": "09",
-     "display": "Td - Adult Adsorbed",
+     "display": "Td (adult), 2 Lf tetanus toxoid, preservative free, adsorbed",
      "target": [
       {
        "code": "087",
@@ -422,7 +424,7 @@
     },
     {
      "code": "100",
-     "display": "PCV7",
+     "display": "pneumococcal conjugate PCV 7",
      "target": [
       {
        "code": "094",
@@ -434,7 +436,7 @@
     },
     {
      "code": "101",
-     "display": "Typhoid capsular polysaccharide",
+     "display": "typhoid, ViCPs",
      "target": [
       {
        "code": "084",
@@ -446,7 +448,7 @@
     },
     {
      "code": "102",
-     "display": "DTP-Hib-HepB",
+     "display": "DTP-Hib-Hep B",
      "target": [
       {
        "code": "086",
@@ -482,7 +484,7 @@
     },
     {
      "code": "104",
-     "display": "HepA-HepB",
+     "display": "Hep A-Hep B",
      "target": [
       {
        "code": "096",
@@ -524,7 +526,7 @@
     },
     {
      "code": "107",
-     "display": "DTaP, Unspecified Formulation",
+     "display": "DTaP, unspecified formulation",
      "target": [
       {
        "code": "086",
@@ -548,7 +550,7 @@
     },
     {
      "code": "108",
-     "display": "Meningococcal ACWY, unspecified",
+     "display": "meningococcal ACWY, unspecified formulation",
      "target": [
       {
        "code": "095",
@@ -560,7 +562,7 @@
     },
     {
      "code": "109",
-     "display": "Pneumococcal, unspecified formulation",
+     "display": "pneumococcal, unspecified formulation",
      "target": [
       {
        "code": "094",
@@ -572,7 +574,7 @@
     },
     {
      "code": "110",
-     "display": "DTaP-HepB-IPV",
+     "display": "DTaP-Hep B-IPV",
      "target": [
       {
        "code": "081",
@@ -608,7 +610,7 @@
     },
     {
      "code": "111",
-     "display": "Influenza, live, intranasal",
+     "display": "Influenza, live, trivalent, intranasal, PF",
      "target": [
       {
        "code": "085",
@@ -620,7 +622,7 @@
     },
     {
      "code": "113",
-     "display": "Td p-free",
+     "display": "Td (adult), 5 Lf tetanus toxoid, preservative free, adsorbed",
      "target": [
       {
        "code": "087",
@@ -638,7 +640,7 @@
     },
     {
      "code": "114",
-     "display": "Meningococcal, MCV4P",
+     "display": "meningococcal MCV4P",
      "target": [
       {
        "code": "095",
@@ -674,7 +676,7 @@
     },
     {
      "code": "116",
-     "display": "Rotavirus, pentavalent",
+     "display": "rotavirus, pentavalent",
      "target": [
       {
        "code": "083",
@@ -686,7 +688,7 @@
     },
     {
      "code": "118",
-     "display": "2vHPV",
+     "display": "HPV, bivalent",
      "target": [
       {
        "code": "090",
@@ -698,7 +700,7 @@
     },
     {
      "code": "119",
-     "display": "Rotavirus, monovalent",
+     "display": "rotavirus, monovalent",
      "target": [
       {
        "code": "083",
@@ -746,7 +748,7 @@
     },
     {
      "code": "121",
-     "display": "Zoster",
+     "display": "zoster live",
      "target": [
       {
        "code": "089",
@@ -764,7 +766,7 @@
     },
     {
      "code": "122",
-     "display": "Rotavirus, unspecified formulation",
+     "display": "rotavirus, unspecified formulation",
      "target": [
       {
        "code": "083",
@@ -776,7 +778,7 @@
     },
     {
      "code": "129",
-     "display": "Japanese Encephalitis, unspecified",
+     "display": "Japanese Encephalitis, unspecified formulation",
      "target": [
       {
        "code": "082",
@@ -788,7 +790,7 @@
     },
     {
      "code": "13",
-     "display": "Tetanus immune globulin",
+     "display": "TIG",
      "target": [
       {
        "code": "125",
@@ -830,7 +832,7 @@
     },
     {
      "code": "132",
-     "display": "DTaP-IPV-Hib-HepB, Historical",
+     "display": "DTaP-IPV-HIB-HEP B, historical",
      "target": [
       {
        "code": "081",
@@ -872,7 +874,7 @@
     },
     {
      "code": "133",
-     "display": "PCV13",
+     "display": "Pneumococcal conjugate PCV 13",
      "target": [
       {
        "code": "094",
@@ -884,7 +886,7 @@
     },
     {
      "code": "134",
-     "display": "Japanese Encephalitis, VC",
+     "display": "Japanese Encephalitis IM",
      "target": [
       {
        "code": "082",
@@ -896,7 +898,7 @@
     },
     {
      "code": "135",
-     "display": "Influenza, high dose seasonal",
+     "display": "Influenza, high-dose, trivalent, PF",
      "target": [
       {
        "code": "085",
@@ -908,7 +910,7 @@
     },
     {
      "code": "136",
-     "display": "Meningococcal, MCV4O",
+     "display": "Meningococcal MCV4O",
      "target": [
       {
        "code": "095",
@@ -920,7 +922,7 @@
     },
     {
      "code": "137",
-     "display": "HPV Unspecified",
+     "display": "HPV, unspecified formulation",
      "target": [
       {
        "code": "090",
@@ -932,7 +934,7 @@
     },
     {
      "code": "138",
-     "display": "Td - Adult",
+     "display": "Td (adult)",
      "target": [
       {
        "code": "087",
@@ -950,7 +952,7 @@
     },
     {
      "code": "139",
-     "display": "Td - Adult Unspecified Formulation",
+     "display": "Td(adult) unspecified formulation",
      "target": [
       {
        "code": "087",
@@ -968,7 +970,7 @@
     },
     {
      "code": "140",
-     "display": "Influenza, injectable preservative free",
+     "display": "Influenza, split virus, trivalent, PF",
      "target": [
       {
        "code": "085",
@@ -980,7 +982,7 @@
     },
     {
      "code": "141",
-     "display": "Influenza, injectable",
+     "display": "Influenza, split virus, trivalent, preservative",
      "target": [
       {
        "code": "085",
@@ -992,7 +994,7 @@
     },
     {
      "code": "144",
-     "display": "Influenza, intradermal, preservative free",
+     "display": "influenza, seasonal, intradermal, preservative free",
      "target": [
       {
        "code": "085",
@@ -1004,7 +1006,7 @@
     },
     {
      "code": "146",
-     "display": "DTaP-IPV-Hib-HepB",
+     "display": "DTaP,IPV,Hib,HepB",
      "target": [
       {
        "code": "081",
@@ -1046,7 +1048,7 @@
     },
     {
      "code": "147",
-     "display": "MCV4, unspecified",
+     "display": "meningococcal MCV4, unspecified formulation",
      "target": [
       {
        "code": "095",
@@ -1076,7 +1078,7 @@
     },
     {
      "code": "149",
-     "display": "influenza, live, intranasal, quadrivalent",
+     "display": "Influenza, live, quadrivalent, intranasal",
      "target": [
       {
        "code": "085",
@@ -1088,7 +1090,7 @@
     },
     {
      "code": "15",
-     "display": "Influenza, split incl. purified surface antigen",
+     "display": "influenza, split (incl. purified surface antigen)",
      "target": [
       {
        "code": "085",
@@ -1100,7 +1102,7 @@
     },
     {
      "code": "150",
-     "display": "influenza, injectable, quadrivalent, preservative free",
+     "display": "Influenza, split virus, quadrivalent, PF",
      "target": [
       {
        "code": "085",
@@ -1136,7 +1138,7 @@
     },
     {
      "code": "153",
-     "display": "Influenza, injectable, MDCK, preservative free",
+     "display": "Influenza, MDCK, trivalent, PF",
      "target": [
       {
        "code": "085",
@@ -1148,7 +1150,7 @@
     },
     {
      "code": "154",
-     "display": "Hepatitis A immune globulin",
+     "display": "Hep A, IG",
      "target": [
       {
        "code": "126",
@@ -1160,7 +1162,7 @@
     },
     {
      "code": "155",
-     "display": "influenza, recombinant, injectable, preservative free",
+     "display": "Influenza, recombinant, trivalent, PF",
      "target": [
       {
        "code": "085",
@@ -1172,7 +1174,7 @@
     },
     {
      "code": "158",
-     "display": "Influenza, injectable, quadrivalent",
+     "display": "Influenza, split virus, quadrivalent, preservative",
      "target": [
       {
        "code": "085",
@@ -1184,7 +1186,7 @@
     },
     {
      "code": "16",
-     "display": "Influenza, whole",
+     "display": "influenza, whole",
      "target": [
       {
        "code": "085",
@@ -1196,7 +1198,7 @@
     },
     {
      "code": "161",
-     "display": "Influenza, injectable, quadrivalent, preservative free, peds",
+     "display": "Influenza, injectable,quadrivalent, preservative free, pediatric",
      "target": [
       {
        "code": "085",
@@ -1208,7 +1210,7 @@
     },
     {
      "code": "162",
-     "display": "Meningococcal B, recombinant",
+     "display": "meningococcal B, recombinant",
      "target": [
       {
        "code": "116",
@@ -1220,7 +1222,7 @@
     },
     {
      "code": "163",
-     "display": "Meningococcal B, OMV",
+     "display": "meningococcal B, OMV",
      "target": [
       {
        "code": "116",
@@ -1232,7 +1234,7 @@
     },
     {
      "code": "164",
-     "display": "Meningococcal B, unspecified",
+     "display": "meningococcal B, unspecified",
      "target": [
       {
        "code": "116",
@@ -1244,7 +1246,7 @@
     },
     {
      "code": "165",
-     "display": "9vHPV",
+     "display": "HPV9",
      "target": [
       {
        "code": "090",
@@ -1256,7 +1258,7 @@
     },
     {
      "code": "166",
-     "display": "Influenza, intradermal, quadrivalent, preservative free",
+     "display": "influenza, intradermal, quadrivalent, preservative free",
      "target": [
       {
        "code": "085",
@@ -1268,7 +1270,7 @@
     },
     {
      "code": "167",
-     "display": "Meningococcal, unknown serogroups",
+     "display": "meningococcal, unknown serogroups",
      "target": [
       {
        "code": "095",
@@ -1280,7 +1282,7 @@
     },
     {
      "code": "17",
-     "display": "Hib unspecified formulation",
+     "display": "Hib, unspecified formulation",
      "target": [
       {
        "code": "098",
@@ -1328,7 +1330,7 @@
     },
     {
      "code": "18",
-     "display": "Rabies, intramuscular injection",
+     "display": "rabies, intramuscular injection",
      "target": [
       {
        "code": "113",
@@ -1340,7 +1342,7 @@
     },
     {
      "code": "187",
-     "display": "Zoster subunit",
+     "display": "zoster recombinant",
      "target": [
       {
        "code": "172",
@@ -1388,7 +1390,7 @@
     },
     {
      "code": "21",
-     "display": "Varicella",
+     "display": "varicella",
      "target": [
       {
        "code": "089",
@@ -1466,7 +1468,7 @@
     },
     {
      "code": "25",
-     "display": "Typhoid oral, live, attenuated",
+     "display": "typhoid, oral",
      "target": [
       {
        "code": "084",
@@ -1496,7 +1498,7 @@
     },
     {
      "code": "28",
-     "display": "DT - Pediatric",
+     "display": "DT (pediatric)",
      "target": [
       {
        "code": "087",
@@ -1514,7 +1516,7 @@
     },
     {
      "code": "30",
-     "display": "Hepatitis B immune globulin",
+     "display": "HBIG",
      "target": [
       {
        "code": "127",
@@ -1538,7 +1540,7 @@
     },
     {
      "code": "32",
-     "display": "Meningococcal, MPSV4",
+     "display": "meningococcal MPSV4",
      "target": [
       {
        "code": "095",
@@ -1550,7 +1552,7 @@
     },
     {
      "code": "33",
-     "display": "PPSV23",
+     "display": "pneumococcal polysaccharide PPV23",
      "target": [
       {
        "code": "094",
@@ -1562,7 +1564,7 @@
     },
     {
      "code": "34",
-     "display": "Rabies immune globulin",
+     "display": "RIG",
      "target": [
       {
        "code": "128",
@@ -1574,7 +1576,7 @@
     },
     {
      "code": "35",
-     "display": "TT",
+     "display": "tetanus toxoid, adsorbed",
      "target": [
       {
        "code": "088",
@@ -1586,7 +1588,7 @@
     },
     {
      "code": "36",
-     "display": "Varicella zoster immune globulin",
+     "display": "VZIG",
      "target": [
       {
        "code": "129",
@@ -1598,7 +1600,7 @@
     },
     {
      "code": "38",
-     "display": "Rubella/Mumps",
+     "display": "rubella/mumps",
      "target": [
       {
        "code": "092",
@@ -1616,7 +1618,7 @@
     },
     {
      "code": "39",
-     "display": "Japanese Encephalitis, MB",
+     "display": "Japanese encephalitis SC",
      "target": [
       {
        "code": "082",
@@ -1628,7 +1630,7 @@
     },
     {
      "code": "40",
-     "display": "Rabies, intradermal injection",
+     "display": "rabies, intradermal injection",
      "target": [
       {
        "code": "113",
@@ -1640,7 +1642,7 @@
     },
     {
      "code": "41",
-     "display": "Typhoid, parenteral",
+     "display": "typhoid, parenteral",
      "target": [
       {
        "code": "084",
@@ -1652,7 +1654,7 @@
     },
     {
      "code": "42",
-     "display": "Hep B, Adol/high risk infant",
+     "display": "Hep B, adolescent/high risk infant",
      "target": [
       {
        "code": "097",
@@ -1664,7 +1666,7 @@
     },
     {
      "code": "43",
-     "display": "Hep B, Adult",
+     "display": "Hep B, adult",
      "target": [
       {
        "code": "097",
@@ -1676,7 +1678,7 @@
     },
     {
      "code": "44",
-     "display": "Hep B, Dialysis",
+     "display": "Hep B, high-dosage, dialysis or IC",
      "target": [
       {
        "code": "097",
@@ -1688,7 +1690,7 @@
     },
     {
      "code": "45",
-     "display": "Hep B, Unspecified Formulation",
+     "display": "Hep B, unspecified formulation",
      "target": [
       {
        "code": "097",
@@ -1700,7 +1702,7 @@
     },
     {
      "code": "46",
-     "display": "PRP-D",
+     "display": "Hib (PRP-D)",
      "target": [
       {
        "code": "098",
@@ -1712,7 +1714,7 @@
     },
     {
      "code": "47",
-     "display": "HbOC",
+     "display": "Hib (HbOC)",
      "target": [
       {
        "code": "098",
@@ -1724,7 +1726,7 @@
     },
     {
      "code": "48",
-     "display": "PRP-T",
+     "display": "Hib (PRP-T)",
      "target": [
       {
        "code": "098",
@@ -1736,7 +1738,7 @@
     },
     {
      "code": "49",
-     "display": "PRP-OMP",
+     "display": "Hib (PRP-OMP)",
      "target": [
       {
        "code": "098",
@@ -1778,7 +1780,7 @@
     },
     {
      "code": "51",
-     "display": "Hib-HepB",
+     "display": "Hib-Hep B",
      "target": [
       {
        "code": "097",
@@ -1808,7 +1810,7 @@
     },
     {
      "code": "53",
-     "display": "Typhoid, parenteral, AKD [U.S. military]",
+     "display": "typhoid, parenteral, AKD (U.S. military)",
      "target": [
       {
        "code": "084",
@@ -1820,7 +1822,7 @@
     },
     {
      "code": "62",
-     "display": "4vHPV",
+     "display": "HPV, quadrivalent",
      "target": [
       {
        "code": "090",
@@ -1832,7 +1834,7 @@
     },
     {
      "code": "74",
-     "display": "Rotavirus, tetravalent",
+     "display": "rotavirus, tetravalent",
      "target": [
       {
        "code": "083",
@@ -1880,7 +1882,7 @@
     },
     {
      "code": "85",
-     "display": "Hep A, Unspecified",
+     "display": "Hep A, unspecified formulation",
      "target": [
       {
        "code": "096",
@@ -1892,7 +1894,7 @@
     },
     {
      "code": "88",
-     "display": "Influenza, Unspecified",
+     "display": "influenza, unspecified formulation",
      "target": [
       {
        "code": "085",
@@ -1904,7 +1906,7 @@
     },
     {
      "code": "89",
-     "display": "Polio, unspecified formulation",
+     "display": "polio, unspecified formulation",
      "target": [
       {
        "code": "081",
@@ -1916,7 +1918,7 @@
     },
     {
      "code": "90",
-     "display": "Rabies, unspecified formulation",
+     "display": "rabies, unspecified formulation",
      "target": [
       {
        "code": "113",
@@ -1928,7 +1930,7 @@
     },
     {
      "code": "91",
-     "display": "Typhoid, unspecified formulation",
+     "display": "typhoid, unspecified formulation",
      "target": [
       {
        "code": "084",

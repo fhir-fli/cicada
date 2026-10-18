@@ -43,3 +43,24 @@ No definition could be found for URL value 'http://fhirfli.dev/fhir/ig/cicada/id
 # Medication resources to the CDSi observation code, and R4 FML has no union
 # type. The paths it uses (code, coding) exist on every one of them.
 %parameter src has no type, so the paths cannot be validated%
+
+# ConceptMap cdsi-observations, LOINC group: a laboratory antibody test asserts
+# laboratory evidence of immunity only with a positive result, and there are
+# six qualifying results (v3 POS, DET, RR; SNOMED Positive, Detected,
+# Reactive). An R4 target's dependsOn entries must all hold, so alternatives
+# are separate targets with the same code and equivalence, which the
+# publisher reports as a repeated relationship (90 on 2026-10-18).
+# tool/build_observation_concept_map.py stops the build if any target repeats
+# WITHOUT a dependsOn, so this cannot hide a real duplicate there; no other
+# ConceptMap in this IG has targets. The file matches message text only.
+A equivalent relationship has already been defined from the code %
+
+# Source code systems the terminology server cannot enumerate, so the
+# publisher checks no source codes in those groups: CDC's PHIN VS
+# (urn:oid:2.16.840.1.114222.4.5.274, VXC codes from CDC's own supporting data),
+# CPT (licensed, carried here as a content-not-present stub; 69930 validated
+# with its display on tx.fhir.org 2026-09-03) and RxNorm (one row, aspirin
+# 1191, which asserts nothing).
+The Source Code System urn:oid:2.16.840.1.114222.4.5.274 is not fully defined and populated, and no sourceScope is specified, so the source code checking will not be performed
+Source Code System http://www.ama-assn.org/go/cpt doesn't have all content (content = not-present), so the source codes cannot be checked
+The Source Code System http://www.nlm.nih.gov/research/umls/rxnorm is not fully defined and populated, and no sourceScope is specified, so the source code checking will not be performed

@@ -11,6 +11,7 @@
 [BeginAge]: StructureDefinition-begin-age.html
 [CdsiObservationCodes]: CodeSystem-cdsi-observation-codes.html
 [CdsiObservationCodesVS]: ValueSet-cdsi-observation-codes-vs.html
+[CdsiObservations]: ConceptMap-cdsi-observations.html
 [DataIntegrityCS]: CodeSystem-data-integrity.html
 [DataIntegrityVS]: ValueSet-data-integrity-vs.html
 [EvalStatusCS]: CodeSystem-EvalStatus.html
@@ -31,9 +32,7 @@
 [EvaluationDetail]: StructureDefinition-evaluation-detail-ext.html
 [ForecastStatusVS]: ValueSet-forecast-status.html
 [Icd10Cm]: CodeSystem-icd-10-cm.html
-[Icd10ToCdsiObservation]: ConceptMap-Icd10ToCdsiObservation.html
 [ProcedureProfile]: StructureDefinition-ProcedureProfile.html
-[VaccineMedicationCodesRxnorm]: ValueSet-vaccine-medication-codes-rxnorm.html
 [ImmunizationProceduresCpt]: ValueSet-immunization-procedures-cpt.html
 [IntervalReasonVS]: ValueSet-interval-reason.html
 [IntervalReasonCS]: CodeSystem-IntervalReason.html
@@ -61,7 +60,6 @@
 [SeriesType]: StructureDefinition-series-type-ext.html
 [SeriesTypeCS]: CodeSystem-series-type.html
 [SeriesTypeVS]: ValueSet-series-type-vs.html
-[SnomedToCdsiObservation]: ConceptMap-SnomedToCdsiObservation.html
 [TargetDoseStatus]: StructureDefinition-target-dose-status-ext.html
 [TargetDoseStatusCS]: CodeSystem-target-dose-status.html
 [TargetDoseStatusVS]: ValueSet-target-dose-status-vs.html
