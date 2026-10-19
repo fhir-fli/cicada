@@ -114,17 +114,75 @@ def evidence_closure(roots, inv):
     return base | _descendants(linked - base, inv['isa'])
 
 
+def icd10cm_codes(meta):
+    """Every ICD-10-CM code in the release (MRCONSO SAB ICD10CM)."""
+    codes = set()
+    with open(f'{meta}/MRCONSO.RRF', encoding='utf-8') as f:
+        for line in f:
+            c = line.split('|')
+            if c[11] == 'ICD10CM':
+                codes.add(c[13])
+    return codes
+
+
+def icd10cm_map_set(meta):
+    """The MAPSETCUI of SNOMEDCT_US's map to ICD-10-CM.
+
+    MRMAP holds two SNOMEDCT_US map sets in 2025AB: C6012685 to ICD10CM_2025
+    and C6012686, the 'SNOMED CT to ICD-10 extended map' to the WHO's
+    ICD10_2016 (MRSAT TOVSAB, read 2026-10-18). Until that day both were read,
+    and 488 WHO-only codes (A15.1, B20.0, I50.0) asserted observations in an
+    ICD-10-CM group. The map set's own MRCONSO atom (TTY XM) names its target.
+    """
+    found = []
+    with open(f'{meta}/MRCONSO.RRF', encoding='utf-8') as f:
+        for line in f:
+            c = line.split('|')
+            if c[11] == 'SNOMEDCT_US' and c[12] == 'XM' and ' to ICD10CM_' in c[14]:
+                found.append(c[0])
+    if len(set(found)) != 1:
+        raise SystemExit(f'expected one SNOMEDCT_US -> ICD10CM map set, found {sorted(set(found))}')
+    return found[0]
+
+
+def _expand_placeholder(code, cm_codes):
+    """NLM writes '?' where ICD-10-CM needs a 7th character (S39.848?).
+
+    A chart carries the full code (S39.848A, ...D, ...S), so a placeholder
+    target stands for every real ICD-10-CM code it matches.
+    """
+    if '?' not in code:
+        return [code]
+    prefix = code.rstrip('?')
+    width = len(code)
+    return sorted(c for c in cm_codes if len(c) == width and c.startswith(prefix))
+
+
 def nlm_icd10cm_sources(meta):
-    """ICD-10-CM code -> SNOMED concepts NLM maps to it unconditionally."""
+    """ICD-10-CM code -> SNOMED concepts NLM maps to it unconditionally.
+
+    Only the ICD-10-CM map set is read, placeholders are expanded, and a
+    target that is not an ICD-10-CM code in this release is refused.
+    """
+    map_set = icd10cm_map_set(meta)
+    cm_codes = icd10cm_codes(meta)
     sources = defaultdict(set)
+    unknown = set()
     with open(f'{meta}/MRMAP.RRF', encoding='utf-8') as f:
         for line in f:
             c = line.split('|')
-            if c[1] != 'SNOMEDCT_US' or c[22] != PROPERLY_CLASSIFIED:
+            if c[0] != map_set or c[22] != PROPERLY_CLASSIFIED:
                 continue
             if c[20] not in UNCONDITIONAL or not c[16]:
                 continue
-            sources[c[16]].add(c[8])
+            expanded = _expand_placeholder(c[16], cm_codes)
+            if not expanded or any(x not in cm_codes for x in expanded):
+                unknown.add(c[16])
+                continue
+            for code in expanded:
+                sources[code].add(c[8])
+    print(f'NLM ICD-10-CM map set {map_set}: {len(sources)} codes; '
+          f'{len(unknown)} targets not in ICD10CM, skipped: {sorted(unknown)[:10]}', flush=True)
     return sources
 
 

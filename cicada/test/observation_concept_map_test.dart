@@ -115,6 +115,22 @@ void main() {
       expect(_codes(_icd10, 'N18.4'), contains('161'));
     });
 
+    // A15.1 is a WHO ICD-10 code, not ICD-10-CM. Until 2026-10-18 the
+    // derivation also read NLM's SNOMED to WHO ICD-10 map set, and A15.1
+    // asserted 031 tuberculosis in the ICD-10-CM group.
+    test('a WHO-only ICD-10 code asserts nothing as ICD-10-CM', () {
+      expect(_codes(_icd10, 'A15.1'), isEmpty);
+    });
+
+    // NLM writes T50.A95? for "any 7th character"; the chart carries
+    // T50.A95A. The expanded code must be in the map (graded, here not
+    // asserting) rather than absent.
+    test('placeholder 7th characters are expanded to real codes', () {
+      expect(_codes(_icd10, 'T50.A95A'), isEmpty);
+      expect(observationConceptMap[_icd10], contains('T50.A95A'));
+      expect(observationConceptMap[_icd10], isNot(contains('T50.A95?')));
+    });
+
     test('HIV disease is never travel, Ebola work or perinatal HIV', () {
       final found = _codes(_icd10, 'B20');
       for (final wrong in ['026', '142', '183']) {

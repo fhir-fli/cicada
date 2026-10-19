@@ -162,7 +162,11 @@ test cases send CDSi observation codes directly and never reach this path**;
 - ICD-10-CM rows are derived from NLM's SNOMED CT → ICD-10-CM map
   (`tool/derive_icd10_observation_rows.py`, `tool/umls_snomed.py`). Never type them by hand.
 - Hand decisions live only in `crosswalk/observation_map_policy.json` (each with a
-  reason) and Grey's yes/no column in `CROSSWALK-REVIEW.tsv` (repo root).
+  reason) and Grey's yes/no column in `CROSSWALK-REVIEW.tsv` (repo root). The sheet is
+  written by `tool/write_review_sheet.py`, which carries the decision and Claude's
+  proposal columns over by (observation, code); the builder reads only the decision.
+- NLM's UMLS MRMAP holds two SNOMEDCT_US map sets (to ICD10CM and to WHO ICD10); only
+  the ICD10CM set is read, and its `?` 7th-character placeholders are expanded to real codes.
 - `cicada_generator/lib/main.dart` emits `cicada/lib/generated_files/observation_concept_map.dart`;
   `tool/generate_ig_terminology.py` copies the map into the IG and regenerates the
   ICD-10/LOINC/CPT value sets from it. Rebuild order: builder → main.dart → IG generator,

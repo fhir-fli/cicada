@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Rebuild the chart-code -> CDSi observation map and everything generated from it,
-# in the order cicada/CLAUDE.md gives: builder -> main.dart -> IG terminology.
+# in the order cicada/CLAUDE.md gives: review sheet -> builder -> main.dart -> IG terminology.
 # Run after any change to observation_map_policy.json or CROSSWALK-REVIEW.tsv.
 #
 # Usage: cicada_generator/tool/rebuild_observation_map.sh [UMLS META dir]
@@ -11,6 +11,10 @@ META="${1:-/home/grey/dev/graiai/2025AB/META}"
 OUT="$ROOT/scratch/observation_map"
 mkdir -p "$OUT"
 cd "$ROOT"
+
+python3 -I cicada_generator/tool/write_review_sheet.py \
+  cicada_generator/lib/generated_files/schedule_supporting_data.json "$META" \
+  cicada_generator/lib/crosswalk/observation_map_policy.json CROSSWALK-REVIEW.tsv
 
 python3 -I cicada_generator/tool/build_observation_concept_map.py \
   cicada_generator/lib/generated_files/schedule_supporting_data.json "$META" \
