@@ -123,10 +123,11 @@ void main() {
     });
 
     // NLM writes T50.A95? for "any 7th character"; the chart carries
-    // T50.A95A. The expanded code must be in the map (graded, here not
-    // asserting) rather than absent.
+    // T50.A95A. The expanded code must be in the map. Its review decision
+    // (2026-10-18): an adverse effect of a vaccine is 080, CDC's "Vaccines
+    // adverse reaction".
     test('placeholder 7th characters are expanded to real codes', () {
-      expect(_codes(_icd10, 'T50.A95A'), isEmpty);
+      expect(_codes(_icd10, 'T50.A95A'), ['080']);
       expect(observationConceptMap[_icd10], contains('T50.A95A'));
       expect(observationConceptMap[_icd10], isNot(contains('T50.A95?')));
     });

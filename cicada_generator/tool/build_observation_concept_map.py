@@ -79,13 +79,14 @@ def cdc_observations(schedule_path):
 
 
 def review_decisions(path):
-    """(observation, icd10cm) -> (answer, ICD-10-CM name), for rows Grey has decided."""
+    """(observation, icd10cm) -> (answer, ICD-10-CM name, who decided), for decided rows."""
     out = {}
     with open(path, encoding='utf-8') as f:
         for row in csv.DictReader(f, delimiter='\t'):
             answer = (row.get('decision (yes/no)') or '').strip().lower()
             if answer in ('yes', 'no'):
-                out[(row['observation'], row['icd10cm'])] = (answer, row['icd10cm name'])
+                who = (row.get('decided by') or '').strip() or 'Grey'
+                out[(row['observation'], row['icd10cm'])] = (answer, row['icd10cm name'], who)
     return out
 
 
@@ -140,9 +141,9 @@ def main(schedule_path, meta, policy_path, review_path, out_map, out_tsv):
             add('ICD10CM', icd, row['display'], obs, 'wider', evidence, 'every one is')
             counts['wider'] += 1
         elif row['sources_in_observation'] * 2 >= row['nlm_sources']:
-            answer = decisions.pop((obs, icd), ('', ''))[0]
+            answer, _, who = decisions.pop((obs, icd), ('', '', ''))
             if answer == 'yes':
-                add('ICD10CM', icd, row['display'], obs, 'wider', evidence, 'reviewed by Grey: yes')
+                add('ICD10CM', icd, row['display'], obs, 'wider', evidence, f'reviewed: yes ({who})')
                 counts['reviewed yes'] += 1
             elif answer == 'no':
                 counts['reviewed no'] += 1
@@ -150,19 +151,19 @@ def main(schedule_path, meta, policy_path, review_path, out_map, out_tsv):
                 add('ICD10CM', icd, row['display'], obs, 'narrower', evidence, 'awaiting review')
                 counts['awaiting review'] += 1
         else:
-            answer = decisions.pop((obs, icd), ('', ''))[0]
+            answer, _, who = decisions.pop((obs, icd), ('', '', ''))
             if answer == 'yes':
-                add('ICD10CM', icd, row['display'], obs, 'wider', evidence, 'reviewed by Grey: yes')
+                add('ICD10CM', icd, row['display'], obs, 'wider', evidence, f'reviewed: yes ({who})')
                 counts['reviewed yes'] += 1
             else:
                 counts['dropped: under half the sources'] += 1
 
     # Reviewed rows the derivation never produced: the hand-typed 2026-02-06
     # file's rows that NLM's map does not confirm. Only a yes adds anything.
-    for (obs, icd), (answer, display) in sorted(decisions.items()):
+    for (obs, icd), (answer, display, who) in sorted(decisions.items()):
         if answer == 'yes':
             add('ICD10CM', icd, display, obs, 'wider', 'Hand-typed 2026-02-06 file',
-                'reviewed by Grey: yes')
+                f'reviewed: yes ({who})')
             counts['reviewed yes (not derived)'] += 1
         else:
             counts['reviewed no'] += 1

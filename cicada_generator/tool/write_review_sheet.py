@@ -41,8 +41,8 @@ OLD_CROSSWALK = '97e46867^:cicada_generator/lib/crosswalk/observation_crosswalk.
 HEADER = ['decision (yes/no)', 'observation', 'observation title', 'icd10cm', 'icd10cm name',
           'SNOMED concepts NLM maps here', 'of which are this observation',
           'examples of the others', 'why it is here',
-          'proposed (Claude)', 'unsure', 'why proposed']
-CARRIED = ('decision (yes/no)', 'proposed (Claude)', 'unsure', 'why proposed')
+          'proposed (Claude)', 'unsure', 'why proposed', 'decided by']
+CARRIED = ('decision (yes/no)', 'proposed (Claude)', 'unsure', 'why proposed', 'decided by')
 PARTIAL = 'NLM map: most, not all, of the SNOMED concepts mapped to this code are this observation'
 MINORITY = 'NLM map: under half of the SNOMED concepts mapped to this code are this observation'
 HAND = 'hand-typed 2026-02-06 file; NLM map does not confirm it'

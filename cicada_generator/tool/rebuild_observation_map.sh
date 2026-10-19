@@ -16,6 +16,10 @@ python3 -I cicada_generator/tool/write_review_sheet.py \
   cicada_generator/lib/generated_files/schedule_supporting_data.json "$META" \
   cicada_generator/lib/crosswalk/observation_map_policy.json CROSSWALK-REVIEW.tsv
 
+# The unsure rows go to OpenEvidence; the question file is rebuilt with the sheet.
+python3 -I cicada_generator/tool/write_oe_code_questions.py CROSSWALK-REVIEW.tsv \
+  CHART-CODE-OE-QUESTIONS.md cicada_generator/lib/crosswalk/oe_policy_questions.md
+
 python3 -I cicada_generator/tool/build_observation_concept_map.py \
   cicada_generator/lib/generated_files/schedule_supporting_data.json "$META" \
   cicada_generator/lib/crosswalk/observation_map_policy.json CROSSWALK-REVIEW.tsv \
