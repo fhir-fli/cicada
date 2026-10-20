@@ -122,14 +122,20 @@ void main() {
       expect(_codes(_icd10, 'A15.1'), isEmpty);
     });
 
-    // NLM writes T50.A95? for "any 7th character"; the chart carries
-    // T50.A95A. The expanded code must be in the map. Its review decision
-    // (2026-10-18): an adverse effect of a vaccine is 080, CDC's "Vaccines
-    // adverse reaction".
+    // NLM writes T80.52X? for "any 7th character"; the chart carries
+    // T80.52XA. The expanded code must be in the map. Anaphylaxis after a
+    // vaccine is 080, "Adverse reaction to vaccine component".
     test('placeholder 7th characters are expanded to real codes', () {
-      expect(_codes(_icd10, 'T50.A95A'), ['080']);
-      expect(observationConceptMap[_icd10], contains('T50.A95A'));
-      expect(observationConceptMap[_icd10], isNot(contains('T50.A95?')));
+      expect(_codes(_icd10, 'T80.52XA'), ['080']);
+      expect(observationConceptMap[_icd10], contains('T80.52XA'));
+      expect(observationConceptMap[_icd10], isNot(contains('T80.52X?')));
+    });
+
+    // 080 contraindicates every vaccine. OpenEvidence 2026-10-19: an adverse
+    // effect of any kind is not a severe allergy to a vaccine component.
+    test('an unspecified vaccine adverse effect is not 080', () {
+      expect(_codes(_icd10, 'T50.A95A'), isEmpty);
+      expect(_codes(_icd10, 'T50.Z95A'), isEmpty);
     });
 
     test('HIV disease is never travel, Ebola work or perinatal HIV', () {

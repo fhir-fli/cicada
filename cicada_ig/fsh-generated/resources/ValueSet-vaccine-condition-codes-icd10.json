@@ -621,6 +621,10 @@
             "display": "Gonococcal infection of eye, unspecified"
           },
           {
+            "code": "A54.31",
+            "display": "Gonococcal conjunctivitis"
+          },
+          {
             "code": "A54.32",
             "display": "Gonococcal iridocyclitis"
           },
@@ -813,8 +817,20 @@
             "display": "Trachoma, unspecified"
           },
           {
+            "code": "A74.0",
+            "display": "Chlamydial conjunctivitis"
+          },
+          {
             "code": "A74.81",
             "display": "Chlamydial peritonitis"
+          },
+          {
+            "code": "A74.89",
+            "display": "Other chlamydial diseases"
+          },
+          {
+            "code": "A74.9",
+            "display": "Chlamydial infection, unspecified"
           },
           {
             "code": "A81.00",
@@ -1057,6 +1073,14 @@
             "display": "Chronic viral hepatitis, unspecified"
           },
           {
+            "code": "B19.10",
+            "display": "Unspecified viral hepatitis B without hepatic coma"
+          },
+          {
+            "code": "B19.11",
+            "display": "Unspecified viral hepatitis B with hepatic coma"
+          },
+          {
             "code": "B19.20",
             "display": "Unspecified viral hepatitis C without hepatic coma"
           },
@@ -1133,6 +1157,10 @@
             "display": "Ascariasis pneumonia"
           },
           {
+            "code": "B85.3",
+            "display": "Phthiriasis"
+          },
+          {
             "code": "B90.0",
             "display": "Sequelae of central nervous system tuberculosis"
           },
@@ -1143,6 +1171,10 @@
           {
             "code": "B97.35",
             "display": "Human immunodeficiency virus, type 2 [HIV 2] as the cause of diseases classified elsewhere"
+          },
+          {
+            "code": "B97.7",
+            "display": "Papillomavirus as the cause of diseases classified elsewhere"
           },
           {
             "code": "C00.0",
@@ -2305,12 +2337,20 @@
             "display": "Squamous cell carcinoma of overlapping sites of skin"
           },
           {
+            "code": "C44.90",
+            "display": "Unspecified malignant neoplasm of skin, unspecified"
+          },
+          {
             "code": "C44.91",
             "display": "Basal cell carcinoma of skin, unspecified"
           },
           {
             "code": "C44.92",
             "display": "Squamous cell carcinoma of skin, unspecified"
+          },
+          {
+            "code": "C44.99",
+            "display": "Other specified malignant neoplasm of skin, unspecified"
           },
           {
             "code": "C45.0",
@@ -4737,8 +4777,16 @@
             "display": "Systemic mastocytosis"
           },
           {
+            "code": "D47.09",
+            "display": "Other mast cell neoplasms of uncertain behavior"
+          },
+          {
             "code": "D47.1",
             "display": "Chronic myeloproliferative disease"
+          },
+          {
+            "code": "D47.2",
+            "display": "Monoclonal gammopathy"
           },
           {
             "code": "D47.3",
@@ -4747,6 +4795,10 @@
           {
             "code": "D47.4",
             "display": "Osteomyelofibrosis"
+          },
+          {
+            "code": "D47.9",
+            "display": "Neoplasm of uncertain behavior of lymphoid, hematopoietic and related tissue, unspecified"
           },
           {
             "code": "D47.Z1",
@@ -4765,6 +4817,14 @@
             "display": "Sideropenic dysphagia"
           },
           {
+            "code": "D51.0",
+            "display": "Vitamin B12 deficiency anemia due to intrinsic factor deficiency"
+          },
+          {
+            "code": "D51.1",
+            "display": "Vitamin B12 deficiency anemia due to selective vitamin B12 malabsorption with proteinuria"
+          },
+          {
             "code": "D51.2",
             "display": "Transcobalamin II deficiency"
           },
@@ -4773,12 +4833,20 @@
             "display": "Anemia due to glucose-6-phosphate dehydrogenase [G6PD] deficiency"
           },
           {
+            "code": "D55.1",
+            "display": "Anemia due to other disorders of glutathione metabolism"
+          },
+          {
             "code": "D55.21",
             "display": "Anemia due to pyruvate kinase deficiency"
           },
           {
             "code": "D55.29",
             "display": "Anemia due to other disorders of glycolytic enzymes"
+          },
+          {
+            "code": "D55.8",
+            "display": "Other anemias due to enzyme disorders"
           },
           {
             "code": "D56.0",
@@ -4893,6 +4961,14 @@
             "display": "Hereditary hemolytic anemia, unspecified"
           },
           {
+            "code": "D59.10",
+            "display": "Autoimmune hemolytic anemia, unspecified"
+          },
+          {
+            "code": "D59.12",
+            "display": "Cold autoimmune hemolytic anemia"
+          },
+          {
             "code": "D59.30",
             "display": "Hemolytic-uremic syndrome, unspecified"
           },
@@ -4945,6 +5021,10 @@
             "display": "Idiopathic aplastic anemia"
           },
           {
+            "code": "D61.82",
+            "display": "Myelophthisis"
+          },
+          {
             "code": "D61.89",
             "display": "Other specified aplastic anemias and other bone marrow failure syndromes"
           },
@@ -4961,8 +5041,32 @@
             "display": "Hereditary sideroblastic anemia"
           },
           {
+            "code": "D64.3",
+            "display": "Other sideroblastic anemias"
+          },
+          {
             "code": "D64.4",
             "display": "Congenital dyserythropoietic anemia"
+          },
+          {
+            "code": "D64.81",
+            "display": "Anemia due to antineoplastic chemotherapy"
+          },
+          {
+            "code": "D69.1",
+            "display": "Qualitative platelet defects"
+          },
+          {
+            "code": "D69.3",
+            "display": "Immune thrombocytopenic purpura"
+          },
+          {
+            "code": "D69.42",
+            "display": "Congenital and hereditary thrombocytopenia purpura"
+          },
+          {
+            "code": "D69.49",
+            "display": "Other primary thrombocytopenia"
           },
           {
             "code": "D69.51",
@@ -4975,6 +5079,14 @@
           {
             "code": "D70.1",
             "display": "Agranulocytosis secondary to cancer chemotherapy"
+          },
+          {
+            "code": "D71.8",
+            "display": "Other functional disorders of polymorphonuclear neutrophils"
+          },
+          {
+            "code": "D72.0",
+            "display": "Genetic anomalies of leukocytes"
           },
           {
             "code": "D72.110",
@@ -5033,12 +5145,36 @@
             "display": "Methemoglobinemia, unspecified"
           },
           {
+            "code": "D75.0",
+            "display": "Familial erythrocytosis"
+          },
+          {
             "code": "D75.81",
             "display": "Myelofibrosis"
           },
           {
+            "code": "D75.89",
+            "display": "Other specified diseases of blood and blood-forming organs"
+          },
+          {
+            "code": "D75.9",
+            "display": "Disease of blood and blood-forming organs, unspecified"
+          },
+          {
+            "code": "D76.1",
+            "display": "Hemophagocytic lymphohistiocytosis"
+          },
+          {
             "code": "D76.2",
             "display": "Hemophagocytic syndrome, infection-associated"
+          },
+          {
+            "code": "D76.3",
+            "display": "Other histiocytosis syndromes"
+          },
+          {
+            "code": "D77",
+            "display": "Other disorders of blood and blood-forming organs in diseases classified elsewhere"
           },
           {
             "code": "D78.81",
@@ -5085,6 +5221,10 @@
             "display": "Nezelof's syndrome"
           },
           {
+            "code": "D81.5",
+            "display": "Purine nucleoside phosphorylase [PNP] deficiency"
+          },
+          {
             "code": "D81.6",
             "display": "Major histocompatibility complex class I deficiency"
           },
@@ -5115,6 +5255,10 @@
           {
             "code": "D83.9",
             "display": "Common variable immunodeficiency, unspecified"
+          },
+          {
+            "code": "D84.1",
+            "display": "Defects in the complement system"
           },
           {
             "code": "D84.8",
@@ -5781,6 +5925,10 @@
             "display": "Oculocutaneous albinism, unspecified"
           },
           {
+            "code": "E70.330",
+            "display": "Chediak-Higashi syndrome"
+          },
+          {
             "code": "E70.331",
             "display": "Hermansky-Pudlak syndrome"
           },
@@ -5793,8 +5941,16 @@
             "display": "Other specified albinism"
           },
           {
+            "code": "E71.548",
+            "display": "Other peroxisomal disorders"
+          },
+          {
             "code": "E74.810",
             "display": "Glucose transporter protein type 1 deficiency"
+          },
+          {
+            "code": "E75.4",
+            "display": "Neuronal ceroid lipofuscinosis"
           },
           {
             "code": "E84.0",
@@ -5821,12 +5977,24 @@
             "display": "Light chain (AL) amyloidosis"
           },
           {
+            "code": "E85.82",
+            "display": "Wild-type transthyretin-related (ATTR) amyloidosis"
+          },
+          {
+            "code": "E88.01",
+            "display": "Alpha-1-antitrypsin deficiency"
+          },
+          {
             "code": "E88.41",
             "display": "MELAS syndrome"
           },
           {
             "code": "E88.42",
             "display": "MERRF syndrome"
+          },
+          {
+            "code": "E88.49",
+            "display": "Other mitochondrial metabolism disorders"
           },
           {
             "code": "E88.810",
@@ -5893,6 +6061,10 @@
             "display": "Alcohol dependence, uncomplicated"
           },
           {
+            "code": "F10.21",
+            "display": "Alcohol dependence, in remission"
+          },
+          {
             "code": "F10.231",
             "display": "Alcohol dependence with withdrawal delirium"
           },
@@ -5921,6 +6093,22 @@
             "display": "Alcohol dependence with unspecified alcohol-induced disorder"
           },
           {
+            "code": "F10.988",
+            "display": "Alcohol use, unspecified with other alcohol-induced disorder"
+          },
+          {
+            "code": "F11.10",
+            "display": "Opioid abuse, uncomplicated"
+          },
+          {
+            "code": "F12.10",
+            "display": "Cannabis abuse, uncomplicated"
+          },
+          {
+            "code": "F13.10",
+            "display": "Sedative, hypnotic or anxiolytic abuse, uncomplicated"
+          },
+          {
             "code": "F13.97",
             "display": "Sedative, hypnotic or anxiolytic use, unspecified with sedative, hypnotic or anxiolytic-induced persisting dementia"
           },
@@ -5933,12 +6121,24 @@
             "display": "Cocaine use, unspecified, uncomplicated"
           },
           {
+            "code": "F15.10",
+            "display": "Other stimulant abuse, uncomplicated"
+          },
+          {
             "code": "F16.10",
             "display": "Hallucinogen abuse, uncomplicated"
           },
           {
+            "code": "F17.200",
+            "display": "Nicotine dependence, unspecified, uncomplicated"
+          },
+          {
             "code": "F17.210",
             "display": "Nicotine dependence, cigarettes, uncomplicated"
+          },
+          {
+            "code": "F18.10",
+            "display": "Inhalant abuse, uncomplicated"
           },
           {
             "code": "F18.97",
@@ -5953,12 +6153,24 @@
             "display": "Other psychoactive substance dependence, uncomplicated"
           },
           {
+            "code": "F19.90",
+            "display": "Other psychoactive substance use, unspecified, uncomplicated"
+          },
+          {
             "code": "F19.939",
             "display": "Other psychoactive substance use, unspecified with withdrawal, unspecified"
           },
           {
             "code": "F19.97",
             "display": "Other psychoactive substance use, unspecified with psychoactive substance-induced persisting dementia"
+          },
+          {
+            "code": "F19.99",
+            "display": "Other psychoactive substance use, unspecified with unspecified psychoactive substance-induced disorder"
+          },
+          {
+            "code": "F99",
+            "display": "Mental disorder, not otherwise specified"
           },
           {
             "code": "G04.02",
@@ -5969,12 +6181,32 @@
             "display": "Intracranial and intraspinal phlebitis and thrombophlebitis"
           },
           {
+            "code": "G10",
+            "display": "Huntington's disease"
+          },
+          {
             "code": "G11.3",
             "display": "Cerebellar ataxia with defective DNA repair"
           },
           {
+            "code": "G11.4",
+            "display": "Hereditary spastic paraplegia"
+          },
+          {
             "code": "G11.5",
             "display": "Hypomyelination - hypogonadotropic hypogonadism - hypodontia"
+          },
+          {
+            "code": "G11.8",
+            "display": "Other hereditary ataxias"
+          },
+          {
+            "code": "G11.9",
+            "display": "Hereditary ataxia, unspecified"
+          },
+          {
+            "code": "G12.9",
+            "display": "Spinal muscular atrophy, unspecified"
           },
           {
             "code": "G13.0",
@@ -6009,8 +6241,16 @@
             "display": "Other frontotemporal neurocognitive disorder"
           },
           {
+            "code": "G31.2",
+            "display": "Degeneration of nervous system due to alcohol"
+          },
+          {
             "code": "G31.83",
             "display": "Neurocognitive disorder with Lewy bodies"
+          },
+          {
+            "code": "G31.89",
+            "display": "Other specified degenerative diseases of nervous system"
           },
           {
             "code": "G31.9",
@@ -6023,6 +6263,10 @@
           {
             "code": "G40.101",
             "display": "Localization-related (focal) (partial) symptomatic epilepsy and epileptic syndromes with simple partial seizures, not intractable, with status epilepticus"
+          },
+          {
+            "code": "G40.119",
+            "display": "Localization-related (focal) (partial) symptomatic epilepsy and epileptic syndromes with simple partial seizures, intractable, without status epilepticus"
           },
           {
             "code": "G40.301",
@@ -6051,6 +6295,10 @@
           {
             "code": "G40.814",
             "display": "Lennox-Gastaut syndrome, intractable, without status epilepticus"
+          },
+          {
+            "code": "G40.822",
+            "display": "Epileptic spasms, not intractable, without status epilepticus"
           },
           {
             "code": "G40.834",
@@ -6139,6 +6387,14 @@
           {
             "code": "G46.4",
             "display": "Cerebellar stroke syndrome"
+          },
+          {
+            "code": "G71.09",
+            "display": "Other specified muscular dystrophies"
+          },
+          {
+            "code": "G72.1",
+            "display": "Alcoholic myopathy"
           },
           {
             "code": "G83.82",
@@ -6565,6 +6821,10 @@
             "display": "Hypertensive heart disease with heart failure"
           },
           {
+            "code": "I11.9",
+            "display": "Hypertensive heart disease without heart failure"
+          },
+          {
             "code": "I12.0",
             "display": "Hypertensive chronic kidney disease with stage 5 chronic kidney disease or end stage renal disease"
           },
@@ -6917,6 +7177,22 @@
             "display": "Eisenmenger's syndrome"
           },
           {
+            "code": "I27.9",
+            "display": "Pulmonary heart disease, unspecified"
+          },
+          {
+            "code": "I28.0",
+            "display": "Arteriovenous fistula of pulmonary vessels"
+          },
+          {
+            "code": "I28.1",
+            "display": "Aneurysm of pulmonary artery"
+          },
+          {
+            "code": "I28.8",
+            "display": "Other diseases of pulmonary vessels"
+          },
+          {
             "code": "I31.0",
             "display": "Chronic adhesive pericarditis"
           },
@@ -6939,6 +7215,10 @@
           {
             "code": "I34.81",
             "display": "Nonrheumatic mitral (valve) annulus calcification"
+          },
+          {
+            "code": "I34.89",
+            "display": "Other nonrheumatic mitral valve disorders"
           },
           {
             "code": "I35.0",
@@ -6967,6 +7247,18 @@
           {
             "code": "I36.8",
             "display": "Other nonrheumatic tricuspid valve disorders"
+          },
+          {
+            "code": "I37.8",
+            "display": "Other nonrheumatic pulmonary valve disorders"
+          },
+          {
+            "code": "I38",
+            "display": "Endocarditis, valve unspecified"
+          },
+          {
+            "code": "I39",
+            "display": "Endocarditis and heart valve disorders in diseases classified elsewhere"
           },
           {
             "code": "I40.0",
@@ -7265,6 +7557,10 @@
             "display": "Cardiac septal defect, acquired"
           },
           {
+            "code": "I51.1",
+            "display": "Rupture of chordae tendineae, not elsewhere classified"
+          },
+          {
             "code": "I51.2",
             "display": "Rupture of papillary muscle, not elsewhere classified"
           },
@@ -7281,8 +7577,24 @@
             "display": "Myocardial degeneration"
           },
           {
+            "code": "I51.7",
+            "display": "Cardiomegaly"
+          },
+          {
             "code": "I51.81",
             "display": "Takotsubo syndrome"
+          },
+          {
+            "code": "I51.89",
+            "display": "Other ill-defined heart diseases"
+          },
+          {
+            "code": "I51.9",
+            "display": "Heart disease, unspecified"
+          },
+          {
+            "code": "I52",
+            "display": "Other heart disorders in diseases classified elsewhere"
           },
           {
             "code": "I60.00",
@@ -8617,6 +8929,10 @@
             "display": "Erythromelalgia"
           },
           {
+            "code": "I73.89",
+            "display": "Other specified peripheral vascular diseases"
+          },
+          {
             "code": "I73.9",
             "display": "Peripheral vascular disease, unspecified"
           },
@@ -8717,6 +9033,10 @@
             "display": "Celiac artery compression syndrome"
           },
           {
+            "code": "I77.70",
+            "display": "Dissection of unspecified artery"
+          },
+          {
             "code": "I77.71",
             "display": "Dissection of carotid artery"
           },
@@ -8763,6 +9083,14 @@
           {
             "code": "I77.819",
             "display": "Aortic ectasia, unspecified site"
+          },
+          {
+            "code": "I77.89",
+            "display": "Other specified disorders of arteries and arterioles"
+          },
+          {
+            "code": "I77.9",
+            "display": "Disorder of arteries and arterioles, unspecified"
           },
           {
             "code": "I79.1",
@@ -9405,6 +9733,10 @@
             "display": "Asymptomatic varicose veins of bilateral lower extremities"
           },
           {
+            "code": "I85.10",
+            "display": "Secondary esophageal varices without bleeding"
+          },
+          {
             "code": "I86.0",
             "display": "Sublingual varices"
           },
@@ -9507,6 +9839,14 @@
           {
             "code": "I97.131",
             "display": "Postprocedural heart failure following other surgery"
+          },
+          {
+            "code": "I97.190",
+            "display": "Other postprocedural cardiac functional disturbances following cardiac surgery"
+          },
+          {
+            "code": "I97.191",
+            "display": "Other postprocedural cardiac functional disturbances following other surgery"
           },
           {
             "code": "I97.2",
@@ -10077,12 +10417,20 @@
             "display": "Compensatory emphysema"
           },
           {
+            "code": "J98.4",
+            "display": "Other disorders of lung"
+          },
+          {
             "code": "K04.6",
             "display": "Periapical abscess with sinus"
           },
           {
             "code": "K05.219",
             "display": "Aggressive periodontitis, localized, unspecified severity"
+          },
+          {
+            "code": "K12.31",
+            "display": "Oral mucositis (ulcerative) due to antineoplastic therapy"
           },
           {
             "code": "K23",
@@ -10229,8 +10577,24 @@
             "display": "Fatty (change of) liver, not elsewhere classified"
           },
           {
+            "code": "K76.1",
+            "display": "Chronic passive congestion of liver"
+          },
+          {
+            "code": "K76.89",
+            "display": "Other specified diseases of liver"
+          },
+          {
+            "code": "K76.9",
+            "display": "Liver disease, unspecified"
+          },
+          {
             "code": "K83.01",
             "display": "Primary sclerosing cholangitis"
+          },
+          {
+            "code": "K86.0",
+            "display": "Alcohol-induced chronic pancreatitis"
           },
           {
             "code": "L03.021",
@@ -10543,6 +10907,14 @@
           {
             "code": "M31.5",
             "display": "Giant cell arteritis with polymyalgia rheumatica"
+          },
+          {
+            "code": "M32.13",
+            "display": "Lung involvement in systemic lupus erythematosus"
+          },
+          {
+            "code": "M33.21",
+            "display": "Polymyositis with respiratory involvement"
           },
           {
             "code": "M34.1",
@@ -11425,8 +11797,20 @@
             "display": "Chronic kidney disease, unspecified"
           },
           {
+            "code": "N19",
+            "display": "Unspecified kidney failure"
+          },
+          {
             "code": "N25.0",
             "display": "Renal osteodystrophy"
+          },
+          {
+            "code": "N25.81",
+            "display": "Secondary hyperparathyroidism of renal origin"
+          },
+          {
+            "code": "N26.9",
+            "display": "Renal sclerosis, unspecified"
           },
           {
             "code": "N34.1",
@@ -11817,6 +12201,10 @@
             "display": "Obesity complicating childbirth"
           },
           {
+            "code": "O99.310",
+            "display": "Alcohol use complicating pregnancy, unspecified trimester"
+          },
+          {
             "code": "O99.314",
             "display": "Alcohol use complicating childbirth"
           },
@@ -12017,12 +12405,20 @@
             "display": "Congenital anemia from fetal blood loss"
           },
           {
+            "code": "P61.4",
+            "display": "Other congenital anemias, not elsewhere classified"
+          },
+          {
             "code": "P70.0",
             "display": "Syndrome of infant of mother with gestational diabetes"
           },
           {
             "code": "P70.1",
             "display": "Syndrome of infant of a diabetic mother"
+          },
+          {
+            "code": "P70.2",
+            "display": "Neonatal diabetes mellitus"
           },
           {
             "code": "P90",
@@ -12381,6 +12777,10 @@
             "display": "Other malformations of cerebral vessels"
           },
           {
+            "code": "Q33.6",
+            "display": "Congenital hypoplasia and dysplasia of lung"
+          },
+          {
             "code": "Q82.2",
             "display": "Congenital cutaneous mastocytosis"
           },
@@ -12391,6 +12791,10 @@
           {
             "code": "Q87.410",
             "display": "Marfan syndrome with aortic dilation"
+          },
+          {
+            "code": "Q89.01",
+            "display": "Asplenia (congenital)"
           },
           {
             "code": "Q90.0",
@@ -12415,6 +12819,10 @@
           {
             "code": "R50.83",
             "display": "Postvaccination fever"
+          },
+          {
+            "code": "R50.9",
+            "display": "Fever, unspecified"
           },
           {
             "code": "R54",
@@ -15069,6 +15477,14 @@
             "display": "Poisoning by other hormone antagonists, intentional self-harm, sequela"
           },
           {
+            "code": "T45.1X5A",
+            "display": "Adverse effect of antineoplastic and immunosuppressive drugs, initial encounter"
+          },
+          {
+            "code": "T45.1X5D",
+            "display": "Adverse effect of antineoplastic and immunosuppressive drugs, subsequent encounter"
+          },
+          {
             "code": "T50.A15A",
             "display": "Adverse effect of pertussis vaccine, including combinations with a pertussis component, initial encounter"
           },
@@ -15091,18 +15507,6 @@
           {
             "code": "T50.A25S",
             "display": "Adverse effect of mixed bacterial vaccines without a pertussis component, sequela"
-          },
-          {
-            "code": "T50.A95A",
-            "display": "Adverse effect of other bacterial vaccines, initial encounter"
-          },
-          {
-            "code": "T50.A95D",
-            "display": "Adverse effect of other bacterial vaccines, subsequent encounter"
-          },
-          {
-            "code": "T50.A95S",
-            "display": "Adverse effect of other bacterial vaccines, sequela"
           },
           {
             "code": "T50.B15A",
@@ -15261,6 +15665,42 @@
             "display": "Anaphylactic reaction due to vaccination, sequela"
           },
           {
+            "code": "T80.82XA",
+            "display": "Complication of immune effector cellular therapy, initial encounter"
+          },
+          {
+            "code": "T80.82XD",
+            "display": "Complication of immune effector cellular therapy, subsequent encounter"
+          },
+          {
+            "code": "T80.82XS",
+            "display": "Complication of immune effector cellular therapy, sequela"
+          },
+          {
+            "code": "T82.111A",
+            "display": "Breakdown (mechanical) of cardiac pulse generator (battery), initial encounter"
+          },
+          {
+            "code": "T82.111D",
+            "display": "Breakdown (mechanical) of cardiac pulse generator (battery), subsequent encounter"
+          },
+          {
+            "code": "T82.111S",
+            "display": "Breakdown (mechanical) of cardiac pulse generator (battery), sequela"
+          },
+          {
+            "code": "T82.198A",
+            "display": "Other mechanical complication of other cardiac electronic device, initial encounter"
+          },
+          {
+            "code": "T82.198D",
+            "display": "Other mechanical complication of other cardiac electronic device, subsequent encounter"
+          },
+          {
+            "code": "T82.198S",
+            "display": "Other mechanical complication of other cardiac electronic device, sequela"
+          },
+          {
             "code": "T82.390A",
             "display": "Other mechanical complication of aortic (bifurcation) graft (replacement), initial encounter"
           },
@@ -15285,6 +15725,18 @@
             "display": "Breakdown (mechanical) of balloon (counterpulsation) device, sequela"
           },
           {
+            "code": "T82.6XXA",
+            "display": "Infection and inflammatory reaction due to cardiac valve prosthesis, initial encounter"
+          },
+          {
+            "code": "T82.6XXD",
+            "display": "Infection and inflammatory reaction due to cardiac valve prosthesis, subsequent encounter"
+          },
+          {
+            "code": "T82.6XXS",
+            "display": "Infection and inflammatory reaction due to cardiac valve prosthesis, sequela"
+          },
+          {
             "code": "T82.827A",
             "display": "Fibrosis due to cardiac prosthetic devices, implants and grafts, initial encounter"
           },
@@ -15295,6 +15747,42 @@
           {
             "code": "T82.827S",
             "display": "Fibrosis due to cardiac prosthetic devices, implants and grafts, sequela"
+          },
+          {
+            "code": "T82.857A",
+            "display": "Stenosis of other cardiac prosthetic devices, implants and grafts, initial encounter"
+          },
+          {
+            "code": "T82.857D",
+            "display": "Stenosis of other cardiac prosthetic devices, implants and grafts, subsequent encounter"
+          },
+          {
+            "code": "T82.857S",
+            "display": "Stenosis of other cardiac prosthetic devices, implants and grafts, sequela"
+          },
+          {
+            "code": "T82.867A",
+            "display": "Thrombosis due to cardiac prosthetic devices, implants and grafts, initial encounter"
+          },
+          {
+            "code": "T82.867D",
+            "display": "Thrombosis due to cardiac prosthetic devices, implants and grafts, subsequent encounter"
+          },
+          {
+            "code": "T82.867S",
+            "display": "Thrombosis due to cardiac prosthetic devices, implants and grafts, sequela"
+          },
+          {
+            "code": "T82.897A",
+            "display": "Other specified complication of cardiac prosthetic devices, implants and grafts, initial encounter"
+          },
+          {
+            "code": "T82.897D",
+            "display": "Other specified complication of cardiac prosthetic devices, implants and grafts, subsequent encounter"
+          },
+          {
+            "code": "T82.897S",
+            "display": "Other specified complication of cardiac prosthetic devices, implants and grafts, sequela"
           },
           {
             "code": "T83.729A",
@@ -15493,6 +15981,10 @@
             "display": "Other complication of kidney transplant"
           },
           {
+            "code": "T86.21",
+            "display": "Heart transplant rejection"
+          },
+          {
             "code": "T86.23",
             "display": "Heart transplant infection"
           },
@@ -15507,6 +15999,10 @@
           {
             "code": "T86.5",
             "display": "Complications of stem cell transplant"
+          },
+          {
+            "code": "T86.810",
+            "display": "Lung transplant rejection"
           },
           {
             "code": "T86.818",
@@ -15601,8 +16097,20 @@
             "display": "Other drowning and submersion, undetermined intent, sequela"
           },
           {
+            "code": "Y83.0",
+            "display": "Surgical operation with transplant of whole organ as the cause of abnormal reaction of the patient, or of later complication, without mention of misadventure at the time of the procedure"
+          },
+          {
             "code": "Y83.1",
             "display": "Surgical operation with implant of artificial internal device as the cause of abnormal reaction of the patient, or of later complication, without mention of misadventure at the time of the procedure"
+          },
+          {
+            "code": "Z04.81",
+            "display": "Encounter for examination and observation of victim following forced sexual exploitation"
+          },
+          {
+            "code": "Z11.3",
+            "display": "Encounter for screening for infections with a predominantly sexual mode of transmission"
           },
           {
             "code": "Z16.23",
@@ -15619,6 +16127,10 @@
           {
             "code": "Z19.2",
             "display": "Hormone resistant malignancy status"
+          },
+          {
+            "code": "Z20.2",
+            "display": "Contact with and (suspected) exposure to infections with a predominantly sexual mode of transmission"
           },
           {
             "code": "Z21",
@@ -15837,8 +16349,28 @@
             "display": "Body mass index [BMI] 40.0-44.9, adult"
           },
           {
+            "code": "Z72.0",
+            "display": "Tobacco use"
+          },
+          {
+            "code": "Z72.52",
+            "display": "High risk homosexual behavior"
+          },
+          {
             "code": "Z79.4",
             "display": "Long term (current) use of insulin"
+          },
+          {
+            "code": "Z79.52",
+            "display": "Long term (current) use of systemic steroids"
+          },
+          {
+            "code": "Z87.74",
+            "display": "Personal history of (corrected) congenital malformations of heart and circulatory system"
+          },
+          {
+            "code": "Z90.81",
+            "display": "Acquired absence of spleen"
           },
           {
             "code": "Z91.012",
@@ -15851,6 +16383,10 @@
           {
             "code": "Z91.040",
             "display": "Latex allergy status"
+          },
+          {
+            "code": "Z91.410",
+            "display": "Personal history of adult physical and sexual abuse"
           },
           {
             "code": "Z94.0",
@@ -15871,6 +16407,10 @@
           {
             "code": "Z94.84",
             "display": "Stem cells transplant status"
+          },
+          {
+            "code": "Z94.9",
+            "display": "Transplanted organ and tissue status, unspecified"
           },
           {
             "code": "Z95.1",

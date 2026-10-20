@@ -3081,8 +3081,8 @@
       {
        "code": "202",
        "display": "Dementia",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 2 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 2 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: dementia is intrinsic to the disease)"
       }
      ]
     },
@@ -3143,18 +3143,6 @@
        "display": "Receives treatment for STD",
        "equivalence": "wider",
        "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. every one is"
-      }
-     ]
-    },
-    {
-     "code": "A50.56",
-     "display": "Late congenital syphilitic osteochondropathy",
-     "target": [
-      {
-       "code": "039",
-       "display": "Receives treatment for STD",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 2 SNOMED concepts mapped here are this observation. awaiting review"
       }
      ]
     },
@@ -3945,8 +3933,8 @@
       {
        "code": "039",
        "display": "Receives treatment for STD",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 6 of 7 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 6 of 7 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: being evaluated or treated for an STI (CDC STI guidelines 2021))"
       }
      ]
     },
@@ -4581,6 +4569,18 @@
      ]
     },
     {
+     "code": "A74.0",
+     "display": "Chlamydial conjunctivitis",
+     "target": [
+      {
+       "code": "039",
+       "display": "Receives treatment for STD",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 3 of 7 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: being evaluated or treated for an STI (CDC STI guidelines 2021))"
+      }
+     ]
+    },
+    {
      "code": "A74.81",
      "display": "Chlamydial peritonitis",
      "target": [
@@ -4593,14 +4593,26 @@
      ]
     },
     {
+     "code": "A74.89",
+     "display": "Other chlamydial diseases",
+     "target": [
+      {
+       "code": "039",
+       "display": "Receives treatment for STD",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 4 of 9 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: being evaluated or treated for an STI (CDC STI guidelines 2021))"
+      }
+     ]
+    },
+    {
      "code": "A74.9",
      "display": "Chlamydial infection, unspecified",
      "target": [
       {
        "code": "039",
        "display": "Receives treatment for STD",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 3 of 6 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 3 of 6 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: being evaluated or treated for an STI (CDC STI guidelines 2021))"
       }
      ]
     },
@@ -5457,14 +5469,26 @@
      ]
     },
     {
+     "code": "B19.10",
+     "display": "Unspecified viral hepatitis B without hepatic coma",
+     "target": [
+      {
+       "code": "015",
+       "display": "Chronic liver disease",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 10 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: ACIP lists hepatitis B infection under chronic liver disease)"
+      }
+     ]
+    },
+    {
      "code": "B19.11",
      "display": "Unspecified viral hepatitis B with hepatic coma",
      "target": [
       {
        "code": "015",
        "display": "Chronic liver disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 2 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 2 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: ACIP lists hepatitis B infection under chronic liver disease)"
       }
      ]
     },
@@ -5505,8 +5529,8 @@
       {
        "code": "039",
        "display": "Receives treatment for STD",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 213 of 230 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 213 of 230 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: HIV is an STI and an ACIP hepatitis A/B indication)"
       },
       {
        "code": "186",
@@ -5537,18 +5561,6 @@
        "display": "Chronic cardiovascular disease",
        "equivalence": "wider",
        "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. every one is"
-      }
-     ]
-    },
-    {
-     "code": "B33.20",
-     "display": "Viral carditis, unspecified",
-     "target": [
-      {
-       "code": "016",
-       "display": "Chronic heart disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 4 of 5 SNOMED concepts mapped here are this observation. awaiting review"
       }
      ]
     },
@@ -5649,18 +5661,6 @@
      ]
     },
     {
-     "code": "B44.81",
-     "display": "Allergic bronchopulmonary aspergillosis",
-     "target": [
-      {
-       "code": "027",
-       "display": "Asthma",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 2 SNOMED concepts mapped here are this observation. awaiting review"
-      }
-     ]
-    },
-    {
      "code": "B51.0",
      "display": "Plasmodium vivax malaria with rupture of spleen",
      "target": [
@@ -5739,6 +5739,18 @@
      ]
     },
     {
+     "code": "B85.3",
+     "display": "Phthiriasis",
+     "target": [
+      {
+       "code": "039",
+       "display": "Receives treatment for STD",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 4 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: being evaluated or treated for an STI (CDC STI guidelines 2021))"
+      }
+     ]
+    },
+    {
      "code": "B90.0",
      "display": "Sequelae of central nervous system tuberculosis",
      "target": [
@@ -5759,18 +5771,6 @@
        "display": "Tuberculosis",
        "equivalence": "wider",
        "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 2 SNOMED concepts mapped here are this observation. every one is"
-      }
-     ]
-    },
-    {
-     "code": "B90.9",
-     "display": "Sequelae of respiratory and unspecified tuberculosis",
-     "target": [
-      {
-       "code": "031",
-       "display": "Tuberculosis",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 3 of 4 SNOMED concepts mapped here are this observation. awaiting review"
       }
      ]
     },
@@ -5799,8 +5799,8 @@
       {
        "code": "039",
        "display": "Receives treatment for STD",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 8 of 14 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 8 of 14 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: being evaluated or treated for an STI (CDC STI guidelines 2021))"
       }
      ]
     },
@@ -7673,12 +7673,6 @@
        "display": "Cancer",
        "equivalence": "wider",
        "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 10 of 16 SNOMED concepts mapped here are this observation. reviewed: yes (Claude, confident proposal, 2026-10-18)"
-      },
-      {
-       "code": "258",
-       "display": "Chronic hematologic disorders",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 10 of 16 SNOMED concepts mapped here are this observation. awaiting review"
       }
      ]
     },
@@ -9357,8 +9351,8 @@
       {
        "code": "198",
        "display": "Cancer",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 21 of 23 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 21 of 23 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: C-coded malignant neoplasm)"
       }
      ]
     },
@@ -9393,8 +9387,8 @@
       {
        "code": "198",
        "display": "Cancer",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 81 of 82 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 81 of 82 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: C-coded malignant neoplasm)"
       }
      ]
     },
@@ -12209,12 +12203,6 @@
        "display": "Cancer",
        "equivalence": "wider",
        "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 16 of 16 SNOMED concepts mapped here are this observation. every one is"
-      },
-      {
-       "code": "258",
-       "display": "Chronic hematologic disorders",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 15 of 16 SNOMED concepts mapped here are this observation. awaiting review"
       }
      ]
     },
@@ -12227,12 +12215,6 @@
        "display": "Cancer",
        "equivalence": "wider",
        "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 9 of 11 SNOMED concepts mapped here are this observation. reviewed: yes (Claude, confident proposal, 2026-10-18)"
-      },
-      {
-       "code": "258",
-       "display": "Chronic hematologic disorders",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 8 of 11 SNOMED concepts mapped here are this observation. awaiting review"
       }
      ]
     },
@@ -14833,12 +14815,6 @@
      "display": "Small cell B-cell lymphoma, lymph nodes of multiple sites",
      "target": [
       {
-       "code": "178",
-       "display": "Leukemia",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 2 SNOMED concepts mapped here are this observation. awaiting review"
-      },
-      {
        "code": "198",
        "display": "Cancer",
        "equivalence": "wider",
@@ -16223,6 +16199,12 @@
        "display": "Cancer",
        "equivalence": "wider",
        "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 14 of 37 SNOMED concepts mapped here are this observation. reviewed: yes (Claude, confident proposal, 2026-10-18)"
+      },
+      {
+       "code": "258",
+       "display": "Chronic hematologic disorders",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 14 of 37 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: persistent primary blood or marrow disorder (Red Book: chronic is 3 months or more))"
       }
      ]
     },
@@ -16281,8 +16263,8 @@
       {
        "code": "258",
        "display": "Chronic hematologic disorders",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 3 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 3 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: persistent primary blood or marrow disorder (Red Book: chronic is 3 months or more))"
       }
      ]
     },
@@ -16377,8 +16359,8 @@
       {
        "code": "258",
        "display": "Chronic hematologic disorders",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 3 of 4 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 3 of 4 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: persistent primary blood or marrow disorder (Red Book: chronic is 3 months or more))"
       }
      ]
     },
@@ -16401,8 +16383,8 @@
       {
        "code": "258",
        "display": "Chronic hematologic disorders",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 41 of 43 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 41 of 43 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: persistent primary blood or marrow disorder (Red Book: chronic is 3 months or more))"
       }
      ]
     },
@@ -16545,8 +16527,8 @@
       {
        "code": "258",
        "display": "Chronic hematologic disorders",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 4 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 4 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: persistent primary blood or marrow disorder (Red Book: chronic is 3 months or more))"
       }
      ]
     },
@@ -16617,8 +16599,8 @@
       {
        "code": "258",
        "display": "Chronic hematologic disorders",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 2 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 2 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: persistent primary blood or marrow disorder (Red Book: chronic is 3 months or more))"
       }
      ]
     },
@@ -17823,8 +17805,8 @@
       {
        "code": "258",
        "display": "Chronic hematologic disorders",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 3 of 4 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 3 of 4 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: persistent primary blood or marrow disorder (Red Book: chronic is 3 months or more))"
       }
      ]
     },
@@ -18051,8 +18033,8 @@
       {
        "code": "198",
        "display": "Cancer",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 4 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 4 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: C-coded malignant neoplasm)"
       },
       {
        "code": "258",
@@ -18249,8 +18231,8 @@
       {
        "code": "258",
        "display": "Chronic hematologic disorders",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 8 of 9 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 8 of 9 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: persistent primary blood or marrow disorder (Red Book: chronic is 3 months or more))"
       }
      ]
     },
@@ -18373,6 +18355,12 @@
      "display": "Unifocal Langerhans-cell histiocytosis",
      "target": [
       {
+       "code": "198",
+       "display": "Cancer",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 9 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: C-coded malignant neoplasm)"
+      },
+      {
        "code": "258",
        "display": "Chronic hematologic disorders",
        "equivalence": "wider",
@@ -18429,8 +18417,8 @@
       {
        "code": "258",
        "display": "Chronic hematologic disorders",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 4 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 4 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: persistent primary blood or marrow disorder (Red Book: chronic is 3 months or more))"
       }
      ]
     },
@@ -18531,18 +18519,6 @@
      ]
     },
     {
-     "code": "D00.08",
-     "display": "Carcinoma in situ of pharynx",
-     "target": [
-      {
-       "code": "198",
-       "display": "Cancer",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 27 of 28 SNOMED concepts mapped here are this observation. awaiting review"
-      }
-     ]
-    },
-    {
      "code": "D03.0",
      "display": "Melanoma in situ of lip",
      "target": [
@@ -18551,18 +18527,6 @@
        "display": "Cancer",
        "equivalence": "wider",
        "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 2 SNOMED concepts mapped here are this observation. every one is"
-      }
-     ]
-    },
-    {
-     "code": "D03.10",
-     "display": "Melanoma in situ of unspecified eyelid, including canthus",
-     "target": [
-      {
-       "code": "198",
-       "display": "Cancer",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 3 SNOMED concepts mapped here are this observation. awaiting review"
       }
      ]
     },
@@ -18795,18 +18759,6 @@
      ]
     },
     {
-     "code": "D03.9",
-     "display": "Melanoma in situ, unspecified",
-     "target": [
-      {
-       "code": "198",
-       "display": "Cancer",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 4 of 8 SNOMED concepts mapped here are this observation. awaiting review"
-      }
-     ]
-    },
-    {
      "code": "D04.0",
      "display": "Carcinoma in situ of skin of lip",
      "target": [
@@ -18815,138 +18767,6 @@
        "display": "Cancer",
        "equivalence": "wider",
        "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 2 SNOMED concepts mapped here are this observation. every one is"
-      }
-     ]
-    },
-    {
-     "code": "D04.111",
-     "display": "Carcinoma in situ of skin of right upper eyelid, including canthus",
-     "target": [
-      {
-       "code": "198",
-       "display": "Cancer",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 2 SNOMED concepts mapped here are this observation. awaiting review"
-      }
-     ]
-    },
-    {
-     "code": "D04.112",
-     "display": "Carcinoma in situ of skin of right lower eyelid, including canthus",
-     "target": [
-      {
-       "code": "198",
-       "display": "Cancer",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 2 SNOMED concepts mapped here are this observation. awaiting review"
-      }
-     ]
-    },
-    {
-     "code": "D04.121",
-     "display": "Carcinoma in situ of skin of left upper eyelid, including canthus",
-     "target": [
-      {
-       "code": "198",
-       "display": "Cancer",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 2 SNOMED concepts mapped here are this observation. awaiting review"
-      }
-     ]
-    },
-    {
-     "code": "D04.122",
-     "display": "Carcinoma in situ of skin of left lower eyelid, including canthus",
-     "target": [
-      {
-       "code": "198",
-       "display": "Cancer",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 2 SNOMED concepts mapped here are this observation. awaiting review"
-      }
-     ]
-    },
-    {
-     "code": "D04.21",
-     "display": "Carcinoma in situ of skin of right ear and external auricular canal",
-     "target": [
-      {
-       "code": "198",
-       "display": "Cancer",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 2 SNOMED concepts mapped here are this observation. awaiting review"
-      }
-     ]
-    },
-    {
-     "code": "D04.22",
-     "display": "Carcinoma in situ of skin of left ear and external auricular canal",
-     "target": [
-      {
-       "code": "198",
-       "display": "Cancer",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 2 SNOMED concepts mapped here are this observation. awaiting review"
-      }
-     ]
-    },
-    {
-     "code": "D04.61",
-     "display": "Carcinoma in situ of skin of right upper limb, including shoulder",
-     "target": [
-      {
-       "code": "198",
-       "display": "Cancer",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 2 SNOMED concepts mapped here are this observation. awaiting review"
-      }
-     ]
-    },
-    {
-     "code": "D04.62",
-     "display": "Carcinoma in situ of skin of left upper limb, including shoulder",
-     "target": [
-      {
-       "code": "198",
-       "display": "Cancer",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 2 SNOMED concepts mapped here are this observation. awaiting review"
-      }
-     ]
-    },
-    {
-     "code": "D04.71",
-     "display": "Carcinoma in situ of skin of right lower limb, including hip",
-     "target": [
-      {
-       "code": "198",
-       "display": "Cancer",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 3 of 4 SNOMED concepts mapped here are this observation. awaiting review"
-      }
-     ]
-    },
-    {
-     "code": "D04.72",
-     "display": "Carcinoma in situ of skin of left lower limb, including hip",
-     "target": [
-      {
-       "code": "198",
-       "display": "Cancer",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 3 of 4 SNOMED concepts mapped here are this observation. awaiting review"
-      }
-     ]
-    },
-    {
-     "code": "D04.9",
-     "display": "Carcinoma in situ of skin, unspecified",
-     "target": [
-      {
-       "code": "198",
-       "display": "Cancer",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 10 of 17 SNOMED concepts mapped here are this observation. awaiting review"
       }
      ]
     },
@@ -18971,30 +18791,6 @@
        "display": "Cancer",
        "equivalence": "wider",
        "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. every one is"
-      }
-     ]
-    },
-    {
-     "code": "D06.9",
-     "display": "Carcinoma in situ of cervix, unspecified",
-     "target": [
-      {
-       "code": "198",
-       "display": "Cancer",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 3 of 4 SNOMED concepts mapped here are this observation. awaiting review"
-      }
-     ]
-    },
-    {
-     "code": "D07.2",
-     "display": "Carcinoma in situ of vagina",
-     "target": [
-      {
-       "code": "198",
-       "display": "Cancer",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 2 SNOMED concepts mapped here are this observation. awaiting review"
       }
      ]
     },
@@ -19055,18 +18851,6 @@
        "display": "Cancer",
        "equivalence": "wider",
        "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 3 of 3 SNOMED concepts mapped here are this observation. every one is"
-      }
-     ]
-    },
-    {
-     "code": "D18.02",
-     "display": "Hemangioma of intracranial structures",
-     "target": [
-      {
-       "code": "206",
-       "display": "Cerebrovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 5 of 7 SNOMED concepts mapped here are this observation. awaiting review"
       }
      ]
     },
@@ -19165,12 +18949,6 @@
      "display": "Refractory anemia with ring sideroblasts",
      "target": [
       {
-       "code": "198",
-       "display": "Cancer",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 2 SNOMED concepts mapped here are this observation. awaiting review"
-      },
-      {
        "code": "258",
        "display": "Chronic hematologic disorders",
        "equivalence": "wider",
@@ -19237,18 +19015,6 @@
      "display": "Myelodysplastic syndrome, unspecified",
      "target": [
       {
-       "code": "178",
-       "display": "Leukemia",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 4 of 8 SNOMED concepts mapped here are this observation. awaiting review"
-      },
-      {
-       "code": "198",
-       "display": "Cancer",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 7 of 8 SNOMED concepts mapped here are this observation. awaiting review"
-      },
-      {
        "code": "258",
        "display": "Chronic hematologic disorders",
        "equivalence": "wider",
@@ -19297,12 +19063,6 @@
      "display": "Other myelodysplastic syndromes",
      "target": [
       {
-       "code": "198",
-       "display": "Cancer",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 6 of 7 SNOMED concepts mapped here are this observation. awaiting review"
-      },
-      {
        "code": "258",
        "display": "Chronic hematologic disorders",
        "equivalence": "wider",
@@ -19347,8 +19107,8 @@
       {
        "code": "258",
        "display": "Chronic hematologic disorders",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 4 of 5 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 4 of 5 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: persistent primary blood or marrow disorder (Red Book: chronic is 3 months or more))"
       }
      ]
     },
@@ -19356,12 +19116,6 @@
      "code": "D47.1",
      "display": "Chronic myeloproliferative disease",
      "target": [
-      {
-       "code": "198",
-       "display": "Cancer",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 4 of 7 SNOMED concepts mapped here are this observation. awaiting review"
-      },
       {
        "code": "258",
        "display": "Chronic hematologic disorders",
@@ -19377,8 +19131,8 @@
       {
        "code": "258",
        "display": "Chronic hematologic disorders",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 21 of 24 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 21 of 24 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: persistent primary blood or marrow disorder (Red Book: chronic is 3 months or more))"
       }
      ]
     },
@@ -19419,8 +19173,8 @@
       {
        "code": "258",
        "display": "Chronic hematologic disorders",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 17 of 18 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 17 of 18 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: persistent primary blood or marrow disorder (Red Book: chronic is 3 months or more))"
       }
      ]
     },
@@ -19497,8 +19251,8 @@
       {
        "code": "258",
        "display": "Chronic hematologic disorders",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 3 of 6 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 3 of 6 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: persistent primary blood or marrow disorder (Red Book: chronic is 3 months or more))"
       }
      ]
     },
@@ -19509,8 +19263,8 @@
       {
        "code": "258",
        "display": "Chronic hematologic disorders",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 4 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 4 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: persistent primary blood or marrow disorder (Red Book: chronic is 3 months or more))"
       }
      ]
     },
@@ -19545,8 +19299,8 @@
       {
        "code": "258",
        "display": "Chronic hematologic disorders",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 3 of 5 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 3 of 5 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: persistent primary blood or marrow disorder (Red Book: chronic is 3 months or more))"
       }
      ]
     },
@@ -19571,6 +19325,18 @@
        "display": "Chronic hematologic disorders",
        "equivalence": "wider",
        "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 5 of 10 SNOMED concepts mapped here are this observation. reviewed: yes (Claude, confident proposal, 2026-10-18)"
+      }
+     ]
+    },
+    {
+     "code": "D55.8",
+     "display": "Other anemias due to enzyme disorders",
+     "target": [
+      {
+       "code": "258",
+       "display": "Chronic hematologic disorders",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 7 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: persistent primary blood or marrow disorder (Red Book: chronic is 3 months or more))"
       }
      ]
     },
@@ -20181,6 +19947,30 @@
      ]
     },
     {
+     "code": "D59.10",
+     "display": "Autoimmune hemolytic anemia, unspecified",
+     "target": [
+      {
+       "code": "258",
+       "display": "Chronic hematologic disorders",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 20 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: persistent primary blood or marrow disorder (Red Book: chronic is 3 months or more))"
+      }
+     ]
+    },
+    {
+     "code": "D59.12",
+     "display": "Cold autoimmune hemolytic anemia",
+     "target": [
+      {
+       "code": "258",
+       "display": "Chronic hematologic disorders",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 9 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: persistent primary blood or marrow disorder (Red Book: chronic is 3 months or more))"
+      }
+     ]
+    },
+    {
      "code": "D59.30",
      "display": "Hemolytic-uremic syndrome, unspecified",
      "target": [
@@ -20238,12 +20028,6 @@
      "code": "D59.39",
      "display": "Other hemolytic-uremic syndrome",
      "target": [
-      {
-       "code": "151",
-       "display": "Persistent complement, properdin, or factor B deficiency",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 3 SNOMED concepts mapped here are this observation. awaiting review"
-      },
       {
        "code": "254",
        "display": "Chronic cardiovascular disease",
@@ -20373,8 +20157,8 @@
       {
        "code": "258",
        "display": "Chronic hematologic disorders",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 2 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 2 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: persistent primary blood or marrow disorder (Red Book: chronic is 3 months or more))"
       }
      ]
     },
@@ -20407,6 +20191,12 @@
      "display": "Anemia in chronic kidney disease",
      "target": [
       {
+       "code": "066",
+       "display": "Chronic renal failure",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 3 of 10 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: documents chronic kidney disease or kidney failure (stage not stated))"
+      },
+      {
        "code": "161",
        "display": "Chronic kidney disease",
        "equivalence": "wider",
@@ -20423,6 +20213,18 @@
        "display": "Chronic hematologic disorders",
        "equivalence": "wider",
        "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 5 of 8 SNOMED concepts mapped here are this observation. reviewed: yes (Claude, confident proposal, 2026-10-18)"
+      }
+     ]
+    },
+    {
+     "code": "D64.3",
+     "display": "Other sideroblastic anemias",
+     "target": [
+      {
+       "code": "258",
+       "display": "Chronic hematologic disorders",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 7 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: persistent primary blood or marrow disorder (Red Book: chronic is 3 months or more))"
       }
      ]
     },
@@ -20445,8 +20247,20 @@
       {
        "code": "168",
        "display": "Chemotherapy",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 2 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 2 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: documents antineoplastic therapy (OpenEvidence: borderline-yes for D64.81, K12.31))"
+      }
+     ]
+    },
+    {
+     "code": "D69.1",
+     "display": "Qualitative platelet defects",
+     "target": [
+      {
+       "code": "258",
+       "display": "Chronic hematologic disorders",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 3 of 51 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: persistent primary blood or marrow disorder (Red Book: chronic is 3 months or more))"
       }
      ]
     },
@@ -20457,8 +20271,32 @@
       {
        "code": "258",
        "display": "Chronic hematologic disorders",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 2 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 2 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: persistent primary blood or marrow disorder (Red Book: chronic is 3 months or more))"
+      }
+     ]
+    },
+    {
+     "code": "D69.42",
+     "display": "Congenital and hereditary thrombocytopenia purpura",
+     "target": [
+      {
+       "code": "258",
+       "display": "Chronic hematologic disorders",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 7 of 22 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: persistent primary blood or marrow disorder (Red Book: chronic is 3 months or more))"
+      }
+     ]
+    },
+    {
+     "code": "D69.49",
+     "display": "Other primary thrombocytopenia",
+     "target": [
+      {
+       "code": "258",
+       "display": "Chronic hematologic disorders",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 11 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: persistent primary blood or marrow disorder (Red Book: chronic is 3 months or more))"
       }
      ]
     },
@@ -20503,16 +20341,22 @@
      "display": "Other functional disorders of polymorphonuclear neutrophils",
      "target": [
       {
-       "code": "152",
-       "display": "Phagocytic function - Chronic granulomatous disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 8 of 15 SNOMED concepts mapped here are this observation. awaiting review"
-      },
+       "code": "258",
+       "display": "Chronic hematologic disorders",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 8 of 15 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: persistent primary blood or marrow disorder (Red Book: chronic is 3 months or more))"
+      }
+     ]
+    },
+    {
+     "code": "D72.0",
+     "display": "Genetic anomalies of leukocytes",
+     "target": [
       {
        "code": "258",
        "display": "Chronic hematologic disorders",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 8 of 15 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 5 of 14 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: persistent primary blood or marrow disorder (Red Book: chronic is 3 months or more))"
       }
      ]
     },
@@ -20559,8 +20403,8 @@
       {
        "code": "258",
        "display": "Chronic hematologic disorders",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 2 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 2 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: persistent primary blood or marrow disorder (Red Book: chronic is 3 months or more))"
       }
      ]
     },
@@ -20585,6 +20429,12 @@
        "display": "Chronic hematologic disorders",
        "equivalence": "wider",
        "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 3 of 3 SNOMED concepts mapped here are this observation. every one is"
+      },
+      {
+       "code": "160",
+       "display": "Anatomical or functional asplenia",
+       "equivalence": "wider",
+       "comment": "Hand-typed 2026-02-06 file. reviewed: yes (OpenEvidence, 2026-10-19: anatomic or functional asplenia)"
       }
      ]
     },
@@ -20649,18 +20499,6 @@
      ]
     },
     {
-     "code": "D73.81",
-     "display": "Neutropenic splenomegaly",
-     "target": [
-      {
-       "code": "258",
-       "display": "Chronic hematologic disorders",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 2 SNOMED concepts mapped here are this observation. awaiting review"
-      }
-     ]
-    },
-    {
      "code": "D73.9",
      "display": "Disease of spleen, unspecified",
      "target": [
@@ -20721,8 +20559,8 @@
       {
        "code": "258",
        "display": "Chronic hematologic disorders",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 3 of 6 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 3 of 6 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: persistent primary blood or marrow disorder (Red Book: chronic is 3 months or more))"
       }
      ]
     },
@@ -20739,14 +20577,26 @@
      ]
     },
     {
-     "code": "D75.84",
-     "display": "Other platelet-activating anti-PF4 disorders",
+     "code": "D75.89",
+     "display": "Other specified diseases of blood and blood-forming organs",
      "target": [
       {
-       "code": "080",
-       "display": "Adverse reaction to vaccine component",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 2 SNOMED concepts mapped here are this observation. awaiting review"
+       "code": "258",
+       "display": "Chronic hematologic disorders",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 21 of 49 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: persistent primary blood or marrow disorder (Red Book: chronic is 3 months or more))"
+      }
+     ]
+    },
+    {
+     "code": "D75.9",
+     "display": "Disease of blood and blood-forming organs, unspecified",
+     "target": [
+      {
+       "code": "258",
+       "display": "Chronic hematologic disorders",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 8 of 29 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: persistent primary blood or marrow disorder (Red Book: chronic is 3 months or more))"
       }
      ]
     },
@@ -20757,8 +20607,8 @@
       {
        "code": "258",
        "display": "Chronic hematologic disorders",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 7 of 8 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 7 of 8 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: persistent primary blood or marrow disorder (Red Book: chronic is 3 months or more))"
       }
      ]
     },
@@ -20775,14 +20625,26 @@
      ]
     },
     {
+     "code": "D76.3",
+     "display": "Other histiocytosis syndromes",
+     "target": [
+      {
+       "code": "258",
+       "display": "Chronic hematologic disorders",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 3 of 29 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: persistent primary blood or marrow disorder (Red Book: chronic is 3 months or more))"
+      }
+     ]
+    },
+    {
      "code": "D77",
      "display": "Other disorders of blood and blood-forming organs in diseases classified elsewhere",
      "target": [
       {
        "code": "258",
        "display": "Chronic hematologic disorders",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 2 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 2 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: persistent primary blood or marrow disorder (Red Book: chronic is 3 months or more))"
       }
      ]
     },
@@ -20979,6 +20841,18 @@
      ]
     },
     {
+     "code": "D81.5",
+     "display": "Purine nucleoside phosphorylase [PNP] deficiency",
+     "target": [
+      {
+       "code": "013",
+       "display": "Severe Combined Immunodeficiency [SCID]",
+       "equivalence": "wider",
+       "comment": "Hand-typed 2026-02-06 file. reviewed: yes (OpenEvidence, 2026-10-19: PNP deficiency is a profound combined T-cell immunodeficiency in the SCID spectrum)"
+      }
+     ]
+    },
+    {
      "code": "D81.6",
      "display": "Major histocompatibility complex class I deficiency",
      "target": [
@@ -21011,24 +20885,6 @@
        "display": "T-lymphocyte [cell-mediated and humoral] - Complete defects",
        "equivalence": "wider",
        "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 5 of 5 SNOMED concepts mapped here are this observation. every one is"
-      }
-     ]
-    },
-    {
-     "code": "D81.9",
-     "display": "Combined immunodeficiency, unspecified",
-     "target": [
-      {
-       "code": "013",
-       "display": "Severe Combined Immunodeficiency [SCID]",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 7 of 11 SNOMED concepts mapped here are this observation. awaiting review"
-      },
-      {
-       "code": "147",
-       "display": "T-lymphocyte [cell-mediated and humoral] - Complete defects",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 7 of 11 SNOMED concepts mapped here are this observation. awaiting review"
       }
      ]
     },
@@ -21113,6 +20969,12 @@
        "display": "Immunocompromised",
        "equivalence": "wider",
        "comment": "Hand-typed 2026-02-06 file. reviewed: yes (Claude, confident proposal, 2026-10-18)"
+      },
+      {
+       "code": "246",
+       "display": "Severe immunocompromise",
+       "equivalence": "wider",
+       "comment": "Hand-typed 2026-02-06 file. reviewed: yes (OpenEvidence, 2026-10-19: immunodeficiency; severity not coded (OpenEvidence: borderline-yes))"
       }
      ]
     },
@@ -21123,8 +20985,8 @@
       {
        "code": "151",
        "display": "Persistent complement, properdin, or factor B deficiency",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 50 of 57 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 50 of 57 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: ICD-10 home of complement component deficiencies)"
       }
      ]
     },
@@ -21155,6 +21017,12 @@
        "display": "Iatrogenic Immunosuppression",
        "equivalence": "wider",
        "comment": "Hand-typed 2026-02-06 file. reviewed: yes (Claude, confident proposal, 2026-10-18)"
+      },
+      {
+       "code": "246",
+       "display": "Severe immunocompromise",
+       "equivalence": "wider",
+       "comment": "Hand-typed 2026-02-06 file. reviewed: yes (OpenEvidence, 2026-10-19: immunodeficiency; severity not coded (OpenEvidence: borderline-yes))"
       }
      ]
     },
@@ -21167,6 +21035,12 @@
        "display": "Immunocompromised",
        "equivalence": "wider",
        "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 32 SNOMED concepts mapped here are this observation. reviewed: yes (Claude, confident proposal, 2026-10-18)"
+      },
+      {
+       "code": "246",
+       "display": "Severe immunocompromise",
+       "equivalence": "wider",
+       "comment": "Hand-typed 2026-02-06 file. reviewed: yes (OpenEvidence, 2026-10-19: immunodeficiency; severity not coded (OpenEvidence: borderline-yes))"
       }
      ]
     },
@@ -21309,18 +21183,6 @@
      ]
     },
     {
-     "code": "D89.839",
-     "display": "Cytokine release syndrome, grade unspecified",
-     "target": [
-      {
-       "code": "191",
-       "display": "Receipt of CAR-T-cell therapy",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 2 SNOMED concepts mapped here are this observation. awaiting review"
-      }
-     ]
-    },
-    {
      "code": "E08.10",
      "display": "Diabetes mellitus due to underlying condition with ketoacidosis without coma",
      "target": [
@@ -21443,6 +21305,12 @@
        "display": "Diabetes",
        "equivalence": "wider",
        "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 6 of 6 SNOMED concepts mapped here are this observation. every one is"
+      },
+      {
+       "code": "066",
+       "display": "Chronic renal failure",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 6 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: documents chronic kidney disease or kidney failure (stage not stated))"
       },
       {
        "code": "161",
@@ -21611,6 +21479,12 @@
        "display": "Diabetes",
        "equivalence": "wider",
        "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 17 of 17 SNOMED concepts mapped here are this observation. every one is"
+      },
+      {
+       "code": "066",
+       "display": "Chronic renal failure",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 17 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: documents chronic kidney disease or kidney failure (stage not stated))"
       },
       {
        "code": "161",
@@ -22253,6 +22127,12 @@
        "display": "Diabetes",
        "equivalence": "wider",
        "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 9 of 9 SNOMED concepts mapped here are this observation. every one is"
+      },
+      {
+       "code": "265",
+       "display": "Diabetes mellitus complicated by end-organ damage",
+       "equivalence": "wider",
+       "comment": "Hand-typed 2026-02-06 file. reviewed: yes (OpenEvidence, 2026-10-19: diabetes with a specified complication (borderline-yes))"
       }
      ]
     },
@@ -22349,6 +22229,12 @@
        "display": "Diabetes",
        "equivalence": "wider",
        "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 17 of 17 SNOMED concepts mapped here are this observation. every one is"
+      },
+      {
+       "code": "066",
+       "display": "Chronic renal failure",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 17 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: documents chronic kidney disease or kidney failure (stage not stated))"
       },
       {
        "code": "161",
@@ -22959,8 +22845,8 @@
       {
        "code": "263",
        "display": "Diabetes mellitus complicated by neuropathy",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 6 of 7 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 6 of 7 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: diabetic neurological complication)"
       }
      ]
     },
@@ -23153,6 +23039,12 @@
        "display": "Diabetes",
        "equivalence": "wider",
        "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 19 of 29 SNOMED concepts mapped here are this observation. reviewed: yes (Claude, confident proposal, 2026-10-18)"
+      },
+      {
+       "code": "265",
+       "display": "Diabetes mellitus complicated by end-organ damage",
+       "equivalence": "wider",
+       "comment": "Hand-typed 2026-02-06 file. reviewed: yes (OpenEvidence, 2026-10-19: diabetes with a specified complication (borderline-yes))"
       }
      ]
     },
@@ -23351,6 +23243,12 @@
        "display": "Diabetes",
        "equivalence": "wider",
        "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 2 SNOMED concepts mapped here are this observation. every one is"
+      },
+      {
+       "code": "265",
+       "display": "Diabetes mellitus complicated by end-organ damage",
+       "equivalence": "wider",
+       "comment": "Hand-typed 2026-02-06 file. reviewed: yes (OpenEvidence, 2026-10-19: diabetes with a specified complication (borderline-yes))"
       }
      ]
     },
@@ -23471,18 +23369,6 @@
        "display": "Cancer",
        "equivalence": "wider",
        "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. every one is"
-      }
-     ]
-    },
-    {
-     "code": "E34.09",
-     "display": "Other carcinoid syndrome",
-     "target": [
-      {
-       "code": "198",
-       "display": "Cancer",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 2 SNOMED concepts mapped here are this observation. awaiting review"
       }
      ]
     },
@@ -23655,8 +23541,8 @@
       {
        "code": "258",
        "display": "Chronic hematologic disorders",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 3 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 3 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: persistent primary blood or marrow disorder (Red Book: chronic is 3 months or more))"
       }
      ]
     },
@@ -23664,12 +23550,6 @@
      "code": "E70.331",
      "display": "Hermansky-Pudlak syndrome",
      "target": [
-      {
-       "code": "199",
-       "display": "Interstitial lung disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 2 SNOMED concepts mapped here are this observation. awaiting review"
-      },
       {
        "code": "254",
        "display": "Chronic cardiovascular disease",
@@ -23715,6 +23595,18 @@
      ]
     },
     {
+     "code": "E71.548",
+     "display": "Other peroxisomal disorders",
+     "target": [
+      {
+       "code": "076",
+       "display": "Progressive neurologic disorder",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 9 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: progressive neurologic or neuromuscular disease)"
+      }
+     ]
+    },
+    {
      "code": "E74.810",
      "display": "Glucose transporter protein type 1 deficiency",
      "target": [
@@ -23723,6 +23615,18 @@
        "display": "Progressive neurologic disorder",
        "equivalence": "wider",
        "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. every one is"
+      }
+     ]
+    },
+    {
+     "code": "E75.4",
+     "display": "Neuronal ceroid lipofuscinosis",
+     "target": [
+      {
+       "code": "202",
+       "display": "Dementia",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 12 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: dementia is intrinsic to the disease)"
       }
      ]
     },
@@ -23811,8 +23715,20 @@
       {
        "code": "016",
        "display": "Chronic heart disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 2 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 2 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: chronic structural/functional heart disease (ACIP; excludes isolated hypertension))"
+      }
+     ]
+    },
+    {
+     "code": "E88.01",
+     "display": "Alpha-1-antitrypsin deficiency",
+     "target": [
+      {
+       "code": "017",
+       "display": "Chronic lung disease",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 4 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: alpha-1-antitrypsin deficiency produces chronic lung disease)"
       }
      ]
     },
@@ -23837,6 +23753,18 @@
        "display": "Progressive neurologic disorder",
        "equivalence": "wider",
        "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. every one is"
+      }
+     ]
+    },
+    {
+     "code": "E88.49",
+     "display": "Other mitochondrial metabolism disorders",
+     "target": [
+      {
+       "code": "076",
+       "display": "Progressive neurologic disorder",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 80 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: progressive neurologic or neuromuscular disease)"
       }
      ]
     },
@@ -23897,12 +23825,6 @@
        "display": "Cerebrovascular disease",
        "equivalence": "wider",
        "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 4 of 4 SNOMED concepts mapped here are this observation. every one is"
-      },
-      {
-       "code": "254",
-       "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 3 of 4 SNOMED concepts mapped here are this observation. awaiting review"
       }
      ]
     },
@@ -24051,6 +23973,18 @@
      ]
     },
     {
+     "code": "F10.21",
+     "display": "Alcohol dependence, in remission",
+     "target": [
+      {
+       "code": "043",
+       "display": "Alcoholism",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 11 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: alcohol use disorder or its sequela)"
+      }
+     ]
+    },
+    {
      "code": "F10.231",
      "display": "Alcohol dependence with withdrawal delirium",
      "target": [
@@ -24135,14 +24069,50 @@
      ]
     },
     {
-     "code": "F11.93",
-     "display": "Opioid use, unspecified with withdrawal",
+     "code": "F10.988",
+     "display": "Alcohol use, unspecified with other alcohol-induced disorder",
+     "target": [
+      {
+       "code": "043",
+       "display": "Alcoholism",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 4 of 25 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: alcohol use disorder or its sequela)"
+      }
+     ]
+    },
+    {
+     "code": "F11.10",
+     "display": "Opioid abuse, uncomplicated",
      "target": [
       {
        "code": "040",
        "display": "Illicit drug use",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 2 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 6 of 14 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: within CDC 2012 definition of illicit drug use)"
+      }
+     ]
+    },
+    {
+     "code": "F12.10",
+     "display": "Cannabis abuse, uncomplicated",
+     "target": [
+      {
+       "code": "040",
+       "display": "Illicit drug use",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 10 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: within CDC 2012 definition of illicit drug use)"
+      }
+     ]
+    },
+    {
+     "code": "F13.10",
+     "display": "Sedative, hypnotic or anxiolytic abuse, uncomplicated",
+     "target": [
+      {
+       "code": "040",
+       "display": "Illicit drug use",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 3 of 19 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: within CDC 2012 definition of illicit drug use)"
       }
      ]
     },
@@ -24183,6 +24153,18 @@
      ]
     },
     {
+     "code": "F15.10",
+     "display": "Other stimulant abuse, uncomplicated",
+     "target": [
+      {
+       "code": "040",
+       "display": "Illicit drug use",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 25 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: within CDC 2012 definition of illicit drug use)"
+      }
+     ]
+    },
+    {
      "code": "F16.10",
      "display": "Hallucinogen abuse, uncomplicated",
      "target": [
@@ -24191,6 +24173,18 @@
        "display": "Illicit drug use",
        "equivalence": "wider",
        "comment": "Hand-typed 2026-02-06 file. reviewed: yes (Claude, confident proposal, 2026-10-18)"
+      }
+     ]
+    },
+    {
+     "code": "F17.200",
+     "display": "Nicotine dependence, unspecified, uncomplicated",
+     "target": [
+      {
+       "code": "042",
+       "display": "Smoke cigarettes",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 13 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: standard marker for the smoking indication (not cigarette-specific))"
       }
      ]
     },
@@ -24213,8 +24207,8 @@
       {
        "code": "040",
        "display": "Illicit drug use",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 5 of 9 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 5 of 9 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: within CDC 2012 definition of illicit drug use)"
       }
      ]
     },
@@ -24237,8 +24231,8 @@
       {
        "code": "040",
        "display": "Illicit drug use",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 29 of 51 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 29 of 51 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: within CDC 2012 definition of illicit drug use)"
       },
       {
        "code": "207",
@@ -24253,10 +24247,28 @@
      "display": "Other psychoactive substance dependence, uncomplicated",
      "target": [
       {
+       "code": "040",
+       "display": "Illicit drug use",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 27 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: within CDC 2012 definition of illicit drug use)"
+      },
+      {
        "code": "207",
        "display": "Substance use disorder",
        "equivalence": "wider",
        "comment": "Hand-typed 2026-02-06 file. reviewed: yes (Claude, confident proposal, 2026-10-18)"
+      }
+     ]
+    },
+    {
+     "code": "F19.90",
+     "display": "Other psychoactive substance use, unspecified, uncomplicated",
+     "target": [
+      {
+       "code": "040",
+       "display": "Illicit drug use",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 10 of 23 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: within CDC 2012 definition of illicit drug use)"
       }
      ]
     },
@@ -24281,6 +24293,30 @@
        "display": "Dementia",
        "equivalence": "wider",
        "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 2 SNOMED concepts mapped here are this observation. every one is"
+      }
+     ]
+    },
+    {
+     "code": "F19.99",
+     "display": "Other psychoactive substance use, unspecified with unspecified psychoactive substance-induced disorder",
+     "target": [
+      {
+       "code": "040",
+       "display": "Illicit drug use",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 7 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: within CDC 2012 definition of illicit drug use)"
+      }
+     ]
+    },
+    {
+     "code": "F99",
+     "display": "Mental disorder, not otherwise specified",
+     "target": [
+      {
+       "code": "208",
+       "display": "Mental Health conditions",
+       "equivalence": "wider",
+       "comment": "Hand-typed 2026-02-06 file. reviewed: yes (OpenEvidence, 2026-10-19: a mental disorder by definition)"
       }
      ]
     },
@@ -24321,8 +24357,8 @@
       {
        "code": "202",
        "display": "Dementia",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 6 of 8 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 6 of 8 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: dementia is intrinsic to the disease)"
       }
      ]
     },
@@ -24339,6 +24375,18 @@
      ]
     },
     {
+     "code": "G11.4",
+     "display": "Hereditary spastic paraplegia",
+     "target": [
+      {
+       "code": "076",
+       "display": "Progressive neurologic disorder",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 111 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: progressive neurologic or neuromuscular disease)"
+      }
+     ]
+    },
+    {
      "code": "G11.5",
      "display": "Hypomyelination - hypogonadotropic hypogonadism - hypodontia",
      "target": [
@@ -24347,6 +24395,42 @@
        "display": "Chronic lung disease",
        "equivalence": "wider",
        "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. every one is"
+      }
+     ]
+    },
+    {
+     "code": "G11.8",
+     "display": "Other hereditary ataxias",
+     "target": [
+      {
+       "code": "076",
+       "display": "Progressive neurologic disorder",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 75 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: progressive neurologic or neuromuscular disease)"
+      }
+     ]
+    },
+    {
+     "code": "G11.9",
+     "display": "Hereditary ataxia, unspecified",
+     "target": [
+      {
+       "code": "076",
+       "display": "Progressive neurologic disorder",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 42 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: progressive neurologic or neuromuscular disease)"
+      }
+     ]
+    },
+    {
+     "code": "G12.9",
+     "display": "Spinal muscular atrophy, unspecified",
+     "target": [
+      {
+       "code": "076",
+       "display": "Progressive neurologic disorder",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 6 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: progressive neurologic or neuromuscular disease)"
       }
      ]
     },
@@ -24447,6 +24531,18 @@
      ]
     },
     {
+     "code": "G31.2",
+     "display": "Degeneration of nervous system due to alcohol",
+     "target": [
+      {
+       "code": "043",
+       "display": "Alcoholism",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 7 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: alcohol use disorder or its sequela)"
+      }
+     ]
+    },
+    {
      "code": "G31.83",
      "display": "Neurocognitive disorder with Lewy bodies",
      "target": [
@@ -24455,6 +24551,18 @@
        "display": "Dementia",
        "equivalence": "wider",
        "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 8 of 8 SNOMED concepts mapped here are this observation. every one is"
+      }
+     ]
+    },
+    {
+     "code": "G31.89",
+     "display": "Other specified degenerative diseases of nervous system",
+     "target": [
+      {
+       "code": "076",
+       "display": "Progressive neurologic disorder",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 73 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: progressive neurologic or neuromuscular disease)"
       }
      ]
     },
@@ -24483,18 +24591,6 @@
      ]
     },
     {
-     "code": "G40.009",
-     "display": "Localization-related (focal) (partial) idiopathic epilepsy and epileptic syndromes with seizures of localized onset, not intractable, without status epilepticus",
-     "target": [
-      {
-       "code": "076",
-       "display": "Progressive neurologic disorder",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 23 of 31 SNOMED concepts mapped here are this observation. awaiting review"
-      }
-     ]
-    },
-    {
      "code": "G40.101",
      "display": "Localization-related (focal) (partial) symptomatic epilepsy and epileptic syndromes with simple partial seizures, not intractable, with status epilepticus",
      "target": [
@@ -24513,20 +24609,8 @@
       {
        "code": "076",
        "display": "Progressive neurologic disorder",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 3 SNOMED concepts mapped here are this observation. awaiting review"
-      }
-     ]
-    },
-    {
-     "code": "G40.209",
-     "display": "Localization-related (focal) (partial) symptomatic epilepsy and epileptic syndromes with complex partial seizures, not intractable, without status epilepticus",
-     "target": [
-      {
-       "code": "076",
-       "display": "Progressive neurologic disorder",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 15 of 17 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 3 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: intractable seizures are a precaution)"
       }
      ]
     },
@@ -24539,18 +24623,6 @@
        "display": "Progressive neurologic disorder",
        "equivalence": "wider",
        "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 4 of 4 SNOMED concepts mapped here are this observation. every one is"
-      }
-     ]
-    },
-    {
-     "code": "G40.309",
-     "display": "Generalized idiopathic epilepsy and epileptic syndromes, not intractable, without status epilepticus",
-     "target": [
-      {
-       "code": "076",
-       "display": "Progressive neurologic disorder",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 23 of 25 SNOMED concepts mapped here are this observation. awaiting review"
       }
      ]
     },
@@ -24579,18 +24651,6 @@
      ]
     },
     {
-     "code": "G40.509",
-     "display": "Epileptic seizures related to external causes, not intractable, without status epilepticus",
-     "target": [
-      {
-       "code": "076",
-       "display": "Progressive neurologic disorder",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 5 of 10 SNOMED concepts mapped here are this observation. awaiting review"
-      }
-     ]
-    },
-    {
      "code": "G40.801",
      "display": "Other epilepsy, not intractable, with status epilepticus",
      "target": [
@@ -24599,18 +24659,6 @@
        "display": "Progressive neurologic disorder",
        "equivalence": "wider",
        "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. every one is"
-      }
-     ]
-    },
-    {
-     "code": "G40.802",
-     "display": "Other epilepsy, not intractable, without status epilepticus",
-     "target": [
-      {
-       "code": "076",
-       "display": "Progressive neurologic disorder",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 28 of 32 SNOMED concepts mapped here are this observation. awaiting review"
       }
      ]
     },
@@ -24657,8 +24705,8 @@
       {
        "code": "076",
        "display": "Progressive neurologic disorder",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 4 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 4 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: infantile spasms are named by ACIP)"
       }
      ]
     },
@@ -24683,18 +24731,6 @@
        "display": "Progressive neurologic disorder",
        "equivalence": "wider",
        "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 3 of 3 SNOMED concepts mapped here are this observation. every one is"
-      }
-     ]
-    },
-    {
-     "code": "G40.909",
-     "display": "Epilepsy, unspecified, not intractable, without status epilepticus",
-     "target": [
-      {
-       "code": "076",
-       "display": "Progressive neurologic disorder",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 62 of 96 SNOMED concepts mapped here are this observation. awaiting review"
       }
      ]
     },
@@ -24845,12 +24881,6 @@
        "display": "Cerebrovascular disease",
        "equivalence": "wider",
        "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 2 SNOMED concepts mapped here are this observation. every one is"
-      },
-      {
-       "code": "254",
-       "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 2 SNOMED concepts mapped here are this observation. awaiting review"
       }
      ]
     },
@@ -24881,12 +24911,6 @@
        "display": "Cerebrovascular disease",
        "equivalence": "wider",
        "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 5 of 6 SNOMED concepts mapped here are this observation. reviewed: yes (Claude, confident proposal, 2026-10-18)"
-      },
-      {
-       "code": "254",
-       "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 4 of 6 SNOMED concepts mapped here are this observation. awaiting review"
       }
      ]
     },
@@ -24993,6 +25017,30 @@
      ]
     },
     {
+     "code": "G71.09",
+     "display": "Other specified muscular dystrophies",
+     "target": [
+      {
+       "code": "076",
+       "display": "Progressive neurologic disorder",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 73 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: progressive neurologic or neuromuscular disease)"
+      }
+     ]
+    },
+    {
+     "code": "G72.1",
+     "display": "Alcoholic myopathy",
+     "target": [
+      {
+       "code": "043",
+       "display": "Alcoholism",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 4 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: alcohol use disorder or its sequela)"
+      }
+     ]
+    },
+    {
      "code": "G83.82",
      "display": "Anterior cord syndrome",
      "target": [
@@ -25011,18 +25059,6 @@
      ]
     },
     {
-     "code": "G89.3",
-     "display": "Neoplasm related pain (acute) (chronic)",
-     "target": [
-      {
-       "code": "198",
-       "display": "Cancer",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 4 of 5 SNOMED concepts mapped here are this observation. awaiting review"
-      }
-     ]
-    },
-    {
      "code": "G90.01",
      "display": "Carotid sinus syncope",
      "target": [
@@ -25037,30 +25073,6 @@
        "display": "Chronic cardiovascular disease",
        "equivalence": "wider",
        "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 3 of 3 SNOMED concepts mapped here are this observation. every one is"
-      }
-     ]
-    },
-    {
-     "code": "G91.2",
-     "display": "(Idiopathic) normal pressure hydrocephalus",
-     "target": [
-      {
-       "code": "202",
-       "display": "Dementia",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 2 SNOMED concepts mapped here are this observation. awaiting review"
-      }
-     ]
-    },
-    {
-     "code": "G93.81",
-     "display": "Temporal sclerosis",
-     "target": [
-      {
-       "code": "076",
-       "display": "Progressive neurologic disorder",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 3 of 5 SNOMED concepts mapped here are this observation. awaiting review"
       }
      ]
     },
@@ -25380,12 +25392,6 @@
      "code": "H34.10",
      "display": "Central retinal artery occlusion, unspecified eye",
      "target": [
-      {
-       "code": "206",
-       "display": "Cerebrovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 2 SNOMED concepts mapped here are this observation. awaiting review"
-      },
       {
        "code": "254",
        "display": "Chronic cardiovascular disease",
@@ -26185,12 +26191,6 @@
      "display": "Acute rheumatic endocarditis",
      "target": [
       {
-       "code": "016",
-       "display": "Chronic heart disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 4 SNOMED concepts mapped here are this observation. awaiting review"
-      },
-      {
        "code": "254",
        "display": "Chronic cardiovascular disease",
        "equivalence": "wider",
@@ -26220,12 +26220,6 @@
      "code": "I01.8",
      "display": "Other acute rheumatic heart disease",
      "target": [
-      {
-       "code": "016",
-       "display": "Chronic heart disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 2 SNOMED concepts mapped here are this observation. awaiting review"
-      },
       {
        "code": "254",
        "display": "Chronic cardiovascular disease",
@@ -26537,6 +26531,12 @@
        "display": "Chronic heart disease",
        "equivalence": "wider",
        "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 3 of 3 SNOMED concepts mapped here are this observation. every one is"
+      },
+      {
+       "code": "254",
+       "display": "Chronic cardiovascular disease",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 3 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: chronic heart disease, cardiac prosthesis or heart transplant)"
       }
      ]
     },
@@ -26643,6 +26643,24 @@
      ]
     },
     {
+     "code": "I11.9",
+     "display": "Hypertensive heart disease without heart failure",
+     "target": [
+      {
+       "code": "016",
+       "display": "Chronic heart disease",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 16 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: hypertensive heart disease is cardiac involvement beyond isolated hypertension (OpenEvidence: borderline-yes))"
+      },
+      {
+       "code": "254",
+       "display": "Chronic cardiovascular disease",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 16 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: chronic heart disease, cardiac prosthesis or heart transplant)"
+      }
+     ]
+    },
+    {
      "code": "I12.0",
      "display": "Hypertensive chronic kidney disease with stage 5 chronic kidney disease or end stage renal disease",
      "target": [
@@ -26655,8 +26673,8 @@
       {
        "code": "114",
        "display": "End stage renal disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 7 of 11 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 7 of 11 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: stage 5 CKD or ESRD)"
       },
       {
        "code": "161",
@@ -26697,8 +26715,8 @@
       {
        "code": "016",
        "display": "Chronic heart disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 16 of 21 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 16 of 21 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: hypertensive heart disease is cardiac involvement beyond isolated hypertension (OpenEvidence: borderline-yes))"
       },
       {
        "code": "161",
@@ -26721,8 +26739,8 @@
       {
        "code": "016",
        "display": "Chronic heart disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 3 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 3 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: hypertensive heart disease is cardiac involvement beyond isolated hypertension (OpenEvidence: borderline-yes))"
       },
       {
        "code": "161",
@@ -26747,24 +26765,6 @@
        "display": "Chronic heart disease",
        "equivalence": "wider",
        "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. every one is"
-      }
-     ]
-    },
-    {
-     "code": "I15.1",
-     "display": "Hypertension secondary to other renal disorders",
-     "target": [
-      {
-       "code": "161",
-       "display": "Chronic kidney disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 15 of 18 SNOMED concepts mapped here are this observation. awaiting review"
-      },
-      {
-       "code": "254",
-       "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 15 of 18 SNOMED concepts mapped here are this observation. awaiting review"
       }
      ]
     },
@@ -27847,6 +27847,12 @@
      "display": "Primary pulmonary hypertension",
      "target": [
       {
+       "code": "016",
+       "display": "Chronic heart disease",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 9 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: chronic structural/functional heart disease (ACIP; excludes isolated hypertension))"
+      },
+      {
        "code": "201",
        "display": "Pulmonary hypertension",
        "equivalence": "wider",
@@ -27924,6 +27930,12 @@
      "code": "I27.22",
      "display": "Pulmonary hypertension due to left heart disease",
      "target": [
+      {
+       "code": "016",
+       "display": "Chronic heart disease",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 3 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: chronic structural/functional heart disease (ACIP; excludes isolated hypertension))"
+      },
       {
        "code": "201",
        "display": "Pulmonary hypertension",
@@ -28009,12 +28021,6 @@
        "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 2 SNOMED concepts mapped here are this observation. every one is"
       },
       {
-       "code": "017",
-       "display": "Chronic lung disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 2 SNOMED concepts mapped here are this observation. awaiting review"
-      },
-      {
        "code": "201",
        "display": "Pulmonary hypertension",
        "equivalence": "wider",
@@ -28067,6 +28073,54 @@
        "display": "Chronic cardiovascular disease",
        "equivalence": "wider",
        "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 2 SNOMED concepts mapped here are this observation. every one is"
+      }
+     ]
+    },
+    {
+     "code": "I27.9",
+     "display": "Pulmonary heart disease, unspecified",
+     "target": [
+      {
+       "code": "201",
+       "display": "Pulmonary hypertension",
+       "equivalence": "wider",
+       "comment": "Hand-typed 2026-02-06 file. reviewed: yes (OpenEvidence, 2026-10-19: unspecified pulmonary heart disease is overwhelmingly pulmonary hypertension (borderline-yes))"
+      }
+     ]
+    },
+    {
+     "code": "I28.0",
+     "display": "Arteriovenous fistula of pulmonary vessels",
+     "target": [
+      {
+       "code": "254",
+       "display": "Chronic cardiovascular disease",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 4 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: chronic cardiac, valvular, pulmonary-vascular or arterial disease (OpenEvidence: borderline-yes))"
+      }
+     ]
+    },
+    {
+     "code": "I28.1",
+     "display": "Aneurysm of pulmonary artery",
+     "target": [
+      {
+       "code": "254",
+       "display": "Chronic cardiovascular disease",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 8 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: chronic cardiac, valvular, pulmonary-vascular or arterial disease (OpenEvidence: borderline-yes))"
+      }
+     ]
+    },
+    {
+     "code": "I28.8",
+     "display": "Other diseases of pulmonary vessels",
+     "target": [
+      {
+       "code": "254",
+       "display": "Chronic cardiovascular disease",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 13 of 48 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: chronic cardiac, valvular, pulmonary-vascular or arterial disease (OpenEvidence: borderline-yes))"
       }
      ]
     },
@@ -28167,6 +28221,24 @@
      ]
     },
     {
+     "code": "I34.89",
+     "display": "Other nonrheumatic mitral valve disorders",
+     "target": [
+      {
+       "code": "016",
+       "display": "Chronic heart disease",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 30 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: chronic structural/functional heart disease (ACIP; excludes isolated hypertension))"
+      },
+      {
+       "code": "254",
+       "display": "Chronic cardiovascular disease",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 6 of 30 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: chronic cardiac, valvular, pulmonary-vascular or arterial disease (OpenEvidence: borderline-yes))"
+      }
+     ]
+    },
+    {
      "code": "I35.0",
      "display": "Nonrheumatic aortic (valve) stenosis",
      "target": [
@@ -28194,6 +28266,12 @@
      "code": "I35.8",
      "display": "Other nonrheumatic aortic valve disorders",
      "target": [
+      {
+       "code": "016",
+       "display": "Chronic heart disease",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 30 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: chronic structural/functional heart disease (ACIP; excludes isolated hypertension))"
+      },
       {
        "code": "254",
        "display": "Chronic cardiovascular disease",
@@ -28251,14 +28329,26 @@
      ]
     },
     {
-     "code": "I38",
-     "display": "Endocarditis, valve unspecified",
+     "code": "I37.8",
+     "display": "Other nonrheumatic pulmonary valve disorders",
      "target": [
       {
        "code": "254",
        "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 41 of 76 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 16 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: chronic cardiac, valvular, pulmonary-vascular or arterial disease (OpenEvidence: borderline-yes))"
+      }
+     ]
+    },
+    {
+     "code": "I38",
+     "display": "Endocarditis, valve unspecified",
+     "target": [
+      {
+       "code": "016",
+       "display": "Chronic heart disease",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 12 of 76 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: chronic structural/functional heart disease (ACIP; excludes isolated hypertension))"
       }
      ]
     },
@@ -28267,10 +28357,16 @@
      "display": "Endocarditis and heart valve disorders in diseases classified elsewhere",
      "target": [
       {
+       "code": "016",
+       "display": "Chronic heart disease",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 4 of 53 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: chronic structural/functional heart disease (ACIP; excludes isolated hypertension))"
+      },
+      {
        "code": "254",
        "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 50 of 53 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 50 of 53 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: chronic cardiac, valvular, pulmonary-vascular or arterial disease (OpenEvidence: borderline-yes))"
       }
      ]
     },
@@ -28587,30 +28683,6 @@
      ]
     },
     {
-     "code": "I44.4",
-     "display": "Left anterior fascicular block",
-     "target": [
-      {
-       "code": "016",
-       "display": "Chronic heart disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 4 SNOMED concepts mapped here are this observation. awaiting review"
-      }
-     ]
-    },
-    {
-     "code": "I44.5",
-     "display": "Left posterior fascicular block",
-     "target": [
-      {
-       "code": "016",
-       "display": "Chronic heart disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 2 SNOMED concepts mapped here are this observation. awaiting review"
-      }
-     ]
-    },
-    {
      "code": "I44.60",
      "display": "Unspecified fascicular block",
      "target": [
@@ -28619,30 +28691,6 @@
        "display": "Chronic heart disease",
        "equivalence": "wider",
        "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. every one is"
-      }
-     ]
-    },
-    {
-     "code": "I44.7",
-     "display": "Left bundle-branch block, unspecified",
-     "target": [
-      {
-       "code": "016",
-       "display": "Chronic heart disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 4 of 6 SNOMED concepts mapped here are this observation. awaiting review"
-      }
-     ]
-    },
-    {
-     "code": "I45.19",
-     "display": "Other right bundle-branch block",
-     "target": [
-      {
-       "code": "016",
-       "display": "Chronic heart disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 3 of 4 SNOMED concepts mapped here are this observation. awaiting review"
       }
      ]
     },
@@ -28787,18 +28835,6 @@
        "display": "Chronic heart disease",
        "equivalence": "wider",
        "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 5 of 5 SNOMED concepts mapped here are this observation. every one is"
-      }
-     ]
-    },
-    {
-     "code": "I46.9",
-     "display": "Cardiac arrest, cause unspecified",
-     "target": [
-      {
-       "code": "016",
-       "display": "Chronic heart disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 12 of 14 SNOMED concepts mapped here are this observation. awaiting review"
       }
      ]
     },
@@ -29055,42 +29091,6 @@
      ]
     },
     {
-     "code": "I49.1",
-     "display": "Atrial premature depolarization",
-     "target": [
-      {
-       "code": "016",
-       "display": "Chronic heart disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 13 of 15 SNOMED concepts mapped here are this observation. awaiting review"
-      }
-     ]
-    },
-    {
-     "code": "I49.2",
-     "display": "Junctional premature depolarization",
-     "target": [
-      {
-       "code": "016",
-       "display": "Chronic heart disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 3 of 5 SNOMED concepts mapped here are this observation. awaiting review"
-      }
-     ]
-    },
-    {
-     "code": "I49.3",
-     "display": "Ventricular premature depolarization",
-     "target": [
-      {
-       "code": "016",
-       "display": "Chronic heart disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 13 of 16 SNOMED concepts mapped here are this observation. awaiting review"
-      }
-     ]
-    },
-    {
      "code": "I49.40",
      "display": "Unspecified premature depolarization",
      "target": [
@@ -29099,18 +29099,6 @@
        "display": "Chronic heart disease",
        "equivalence": "wider",
        "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 2 SNOMED concepts mapped here are this observation. every one is"
-      }
-     ]
-    },
-    {
-     "code": "I49.49",
-     "display": "Other premature depolarization",
-     "target": [
-      {
-       "code": "016",
-       "display": "Chronic heart disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 4 of 6 SNOMED concepts mapped here are this observation. awaiting review"
       }
      ]
     },
@@ -29473,10 +29461,16 @@
      "display": "Rupture of chordae tendineae, not elsewhere classified",
      "target": [
       {
+       "code": "016",
+       "display": "Chronic heart disease",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 7 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: chronic structural/functional heart disease (ACIP; excludes isolated hypertension))"
+      },
+      {
        "code": "254",
        "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 4 of 7 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 4 of 7 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: chronic cardiac, valvular, pulmonary-vascular or arterial disease (OpenEvidence: borderline-yes))"
       }
      ]
     },
@@ -29493,8 +29487,8 @@
       {
        "code": "254",
        "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 5 of 7 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 5 of 7 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: chronic cardiac, valvular, pulmonary-vascular or arterial disease (OpenEvidence: borderline-yes))"
       }
      ]
     },
@@ -29541,14 +29535,14 @@
       {
        "code": "016",
        "display": "Chronic heart disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 26 of 43 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 26 of 43 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: chronic structural/functional heart disease (ACIP; excludes isolated hypertension))"
       },
       {
        "code": "254",
        "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 22 of 43 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 22 of 43 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: chronic cardiac, valvular, pulmonary-vascular or arterial disease (OpenEvidence: borderline-yes))"
       }
      ]
     },
@@ -29561,6 +29555,54 @@
        "display": "Chronic heart disease",
        "equivalence": "wider",
        "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. every one is"
+      }
+     ]
+    },
+    {
+     "code": "I51.89",
+     "display": "Other ill-defined heart diseases",
+     "target": [
+      {
+       "code": "016",
+       "display": "Chronic heart disease",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 29 of 174 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: chronic structural/functional heart disease (ACIP; excludes isolated hypertension))"
+      },
+      {
+       "code": "254",
+       "display": "Chronic cardiovascular disease",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 47 of 174 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: chronic heart disease, cardiac prosthesis or heart transplant)"
+      }
+     ]
+    },
+    {
+     "code": "I51.9",
+     "display": "Heart disease, unspecified",
+     "target": [
+      {
+       "code": "016",
+       "display": "Chronic heart disease",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 3 of 18 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: chronic structural/functional heart disease (ACIP; excludes isolated hypertension))"
+      },
+      {
+       "code": "254",
+       "display": "Chronic cardiovascular disease",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 18 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: chronic heart disease, cardiac prosthesis or heart transplant)"
+      }
+     ]
+    },
+    {
+     "code": "I52",
+     "display": "Other heart disorders in diseases classified elsewhere",
+     "target": [
+      {
+       "code": "254",
+       "display": "Chronic cardiovascular disease",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 8 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: chronic cardiac, valvular, pulmonary-vascular or arterial disease (OpenEvidence: borderline-yes))"
       }
      ]
     },
@@ -29825,12 +29867,6 @@
        "display": "Cerebrovascular disease",
        "equivalence": "wider",
        "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 4 of 5 SNOMED concepts mapped here are this observation. reviewed: yes (Claude, confident proposal, 2026-10-18)"
-      },
-      {
-       "code": "254",
-       "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 3 of 5 SNOMED concepts mapped here are this observation. awaiting review"
       }
      ]
     },
@@ -31025,12 +31061,6 @@
        "display": "Cerebrovascular disease",
        "equivalence": "wider",
        "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 6 of 6 SNOMED concepts mapped here are this observation. every one is"
-      },
-      {
-       "code": "254",
-       "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 5 of 6 SNOMED concepts mapped here are this observation. awaiting review"
       }
      ]
     },
@@ -31169,12 +31199,6 @@
        "display": "Cerebrovascular disease",
        "equivalence": "wider",
        "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 5 of 5 SNOMED concepts mapped here are this observation. every one is"
-      },
-      {
-       "code": "254",
-       "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 4 of 5 SNOMED concepts mapped here are this observation. awaiting review"
       }
      ]
     },
@@ -31571,12 +31595,6 @@
        "display": "Cerebrovascular disease",
        "equivalence": "wider",
        "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 13 of 14 SNOMED concepts mapped here are this observation. reviewed: yes (Claude, confident proposal, 2026-10-18)"
-      },
-      {
-       "code": "254",
-       "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 13 of 14 SNOMED concepts mapped here are this observation. awaiting review"
       }
      ]
     },
@@ -31859,12 +31877,6 @@
        "display": "Cerebrovascular disease",
        "equivalence": "wider",
        "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 13 of 13 SNOMED concepts mapped here are this observation. every one is"
-      },
-      {
-       "code": "254",
-       "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 10 of 13 SNOMED concepts mapped here are this observation. awaiting review"
       }
      ]
     },
@@ -31895,12 +31907,6 @@
        "display": "Cerebrovascular disease",
        "equivalence": "wider",
        "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 30 of 31 SNOMED concepts mapped here are this observation. reviewed: yes (Claude, confident proposal, 2026-10-18)"
-      },
-      {
-       "code": "254",
-       "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 30 of 31 SNOMED concepts mapped here are this observation. awaiting review"
       }
      ]
     },
@@ -31913,12 +31919,6 @@
        "display": "Cerebrovascular disease",
        "equivalence": "wider",
        "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 6 of 6 SNOMED concepts mapped here are this observation. every one is"
-      },
-      {
-       "code": "254",
-       "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 5 of 6 SNOMED concepts mapped here are this observation. awaiting review"
       }
      ]
     },
@@ -31997,12 +31997,6 @@
        "display": "Cerebrovascular disease",
        "equivalence": "wider",
        "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 5 of 6 SNOMED concepts mapped here are this observation. reviewed: yes (Claude, confident proposal, 2026-10-18)"
-      },
-      {
-       "code": "254",
-       "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 4 of 6 SNOMED concepts mapped here are this observation. awaiting review"
       }
      ]
     },
@@ -32297,12 +32291,6 @@
        "display": "Cerebrovascular disease",
        "equivalence": "wider",
        "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 2 SNOMED concepts mapped here are this observation. every one is"
-      },
-      {
-       "code": "254",
-       "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 2 SNOMED concepts mapped here are this observation. awaiting review"
       }
      ]
     },
@@ -32327,12 +32315,6 @@
        "display": "Cerebrovascular disease",
        "equivalence": "wider",
        "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 2 SNOMED concepts mapped here are this observation. every one is"
-      },
-      {
-       "code": "254",
-       "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 2 SNOMED concepts mapped here are this observation. awaiting review"
       }
      ]
     },
@@ -32405,12 +32387,6 @@
        "display": "Cerebrovascular disease",
        "equivalence": "wider",
        "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 2 SNOMED concepts mapped here are this observation. every one is"
-      },
-      {
-       "code": "254",
-       "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 2 SNOMED concepts mapped here are this observation. awaiting review"
       }
      ]
     },
@@ -32447,12 +32423,6 @@
        "display": "Cerebrovascular disease",
        "equivalence": "wider",
        "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 4 of 4 SNOMED concepts mapped here are this observation. every one is"
-      },
-      {
-       "code": "254",
-       "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 4 SNOMED concepts mapped here are this observation. awaiting review"
       }
      ]
     },
@@ -32465,12 +32435,6 @@
        "display": "Cerebrovascular disease",
        "equivalence": "wider",
        "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 2 SNOMED concepts mapped here are this observation. every one is"
-      },
-      {
-       "code": "254",
-       "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 2 SNOMED concepts mapped here are this observation. awaiting review"
       }
      ]
     },
@@ -32483,12 +32447,6 @@
        "display": "Cerebrovascular disease",
        "equivalence": "wider",
        "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 2 SNOMED concepts mapped here are this observation. every one is"
-      },
-      {
-       "code": "254",
-       "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 2 SNOMED concepts mapped here are this observation. awaiting review"
       }
      ]
     },
@@ -32501,12 +32459,6 @@
        "display": "Cerebrovascular disease",
        "equivalence": "wider",
        "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 4 of 4 SNOMED concepts mapped here are this observation. every one is"
-      },
-      {
-       "code": "254",
-       "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 4 SNOMED concepts mapped here are this observation. awaiting review"
       }
      ]
     },
@@ -32531,12 +32483,6 @@
        "display": "Cerebrovascular disease",
        "equivalence": "wider",
        "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 5 of 5 SNOMED concepts mapped here are this observation. every one is"
-      },
-      {
-       "code": "254",
-       "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 3 of 5 SNOMED concepts mapped here are this observation. awaiting review"
       }
      ]
     },
@@ -32549,12 +32495,6 @@
        "display": "Cerebrovascular disease",
        "equivalence": "wider",
        "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 3 of 3 SNOMED concepts mapped here are this observation. every one is"
-      },
-      {
-       "code": "254",
-       "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 3 SNOMED concepts mapped here are this observation. awaiting review"
       }
      ]
     },
@@ -32567,12 +32507,6 @@
        "display": "Cerebrovascular disease",
        "equivalence": "wider",
        "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 4 of 4 SNOMED concepts mapped here are this observation. every one is"
-      },
-      {
-       "code": "254",
-       "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 4 SNOMED concepts mapped here are this observation. awaiting review"
       }
      ]
     },
@@ -32813,12 +32747,6 @@
        "display": "Cerebrovascular disease",
        "equivalence": "wider",
        "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 5 of 5 SNOMED concepts mapped here are this observation. every one is"
-      },
-      {
-       "code": "254",
-       "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 3 of 5 SNOMED concepts mapped here are this observation. awaiting review"
       }
      ]
     },
@@ -34275,8 +34203,8 @@
       {
        "code": "206",
        "display": "Cerebrovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 10 of 12 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 10 of 12 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: carotid arterial disease (borderline-yes))"
       },
       {
        "code": "254",
@@ -34437,8 +34365,8 @@
       {
        "code": "254",
        "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 19 of 28 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 19 of 28 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: chronic cardiac, valvular, pulmonary-vascular or arterial disease (OpenEvidence: borderline-yes))"
       }
      ]
     },
@@ -34719,18 +34647,6 @@
      ]
     },
     {
-     "code": "I77.2",
-     "display": "Rupture of artery",
-     "target": [
-      {
-       "code": "254",
-       "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 24 of 31 SNOMED concepts mapped here are this observation. awaiting review"
-      }
-     ]
-    },
-    {
      "code": "I77.3",
      "display": "Arterial fibromuscular dysplasia",
      "target": [
@@ -34761,8 +34677,8 @@
       {
        "code": "254",
        "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 3 of 5 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 3 of 5 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: chronic cardiac, valvular, pulmonary-vascular or arterial disease (OpenEvidence: borderline-yes))"
       }
      ]
     },
@@ -34935,8 +34851,8 @@
       {
        "code": "254",
        "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 25 of 47 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 25 of 47 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: chronic cardiac, valvular, pulmonary-vascular or arterial disease (OpenEvidence: borderline-yes))"
       }
      ]
     },
@@ -34947,20 +34863,8 @@
       {
        "code": "254",
        "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 15 of 23 SNOMED concepts mapped here are this observation. awaiting review"
-      }
-     ]
-    },
-    {
-     "code": "I78.0",
-     "display": "Hereditary hemorrhagic telangiectasia",
-     "target": [
-      {
-       "code": "254",
-       "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 6 of 7 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 15 of 23 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: chronic cardiac, valvular, pulmonary-vascular or arterial disease (OpenEvidence: borderline-yes))"
       }
      ]
     },
@@ -35313,18 +35217,6 @@
      ]
     },
     {
-     "code": "I80.8",
-     "display": "Phlebitis and thrombophlebitis of other sites",
-     "target": [
-      {
-       "code": "254",
-       "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 26 of 31 SNOMED concepts mapped here are this observation. awaiting review"
-      }
-     ]
-    },
-    {
      "code": "I81",
      "display": "Portal vein thrombosis",
      "target": [
@@ -35333,18 +35225,6 @@
        "display": "Chronic cardiovascular disease",
        "equivalence": "wider",
        "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 6 SNOMED concepts mapped here are this observation. reviewed: yes (Claude, confident proposal, 2026-10-18)"
-      }
-     ]
-    },
-    {
-     "code": "I82.0",
-     "display": "Budd-Chiari syndrome",
-     "target": [
-      {
-       "code": "254",
-       "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 2 SNOMED concepts mapped here are this observation. awaiting review"
       }
      ]
     },
@@ -35405,18 +35285,6 @@
        "display": "Chronic cardiovascular disease",
        "equivalence": "wider",
        "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 4 of 4 SNOMED concepts mapped here are this observation. every one is"
-      }
-     ]
-    },
-    {
-     "code": "I82.409",
-     "display": "Acute embolism and thrombosis of unspecified deep veins of unspecified lower extremity",
-     "target": [
-      {
-       "code": "254",
-       "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 10 of 14 SNOMED concepts mapped here are this observation. awaiting review"
       }
      ]
     },
@@ -35673,18 +35541,6 @@
      ]
     },
     {
-     "code": "I82.493",
-     "display": "Acute embolism and thrombosis of other specified deep vein of lower extremity, bilateral",
-     "target": [
-      {
-       "code": "254",
-       "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 2 SNOMED concepts mapped here are this observation. awaiting review"
-      }
-     ]
-    },
-    {
      "code": "I82.499",
      "display": "Acute embolism and thrombosis of other specified deep vein of unspecified lower extremity",
      "target": [
@@ -35693,18 +35549,6 @@
        "display": "Chronic cardiovascular disease",
        "equivalence": "wider",
        "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 2 SNOMED concepts mapped here are this observation. every one is"
-      }
-     ]
-    },
-    {
-     "code": "I82.4Y9",
-     "display": "Acute embolism and thrombosis of unspecified deep veins of unspecified proximal lower extremity",
-     "target": [
-      {
-       "code": "254",
-       "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 4 SNOMED concepts mapped here are this observation. awaiting review"
       }
      ]
     },
@@ -36951,8 +36795,8 @@
       {
        "code": "015",
        "display": "Chronic liver disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 3 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 3 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: secondary varices indicate portal hypertension, mostly from chronic liver disease)"
       }
      ]
     },
@@ -37273,10 +37117,10 @@
      "display": "Other postprocedural cardiac functional disturbances following cardiac surgery",
      "target": [
       {
-       "code": "016",
-       "display": "Chronic heart disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 3 SNOMED concepts mapped here are this observation. awaiting review"
+       "code": "254",
+       "display": "Chronic cardiovascular disease",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 3 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: chronic cardiac, valvular, pulmonary-vascular or arterial disease (OpenEvidence: borderline-yes))"
       }
      ]
     },
@@ -37285,10 +37129,10 @@
      "display": "Other postprocedural cardiac functional disturbances following other surgery",
      "target": [
       {
-       "code": "016",
-       "display": "Chronic heart disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 9 of 11 SNOMED concepts mapped here are this observation. awaiting review"
+       "code": "254",
+       "display": "Chronic cardiovascular disease",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 4 of 11 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: chronic cardiac, valvular, pulmonary-vascular or arterial disease (OpenEvidence: borderline-yes))"
       }
      ]
     },
@@ -38523,8 +38367,8 @@
       {
        "code": "199",
        "display": "Interstitial lung disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 2 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 2 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: fibrosing or predominantly interstitial lung involvement)"
       }
      ]
     },
@@ -38721,18 +38565,6 @@
      ]
     },
     {
-     "code": "J68.3",
-     "display": "Other acute and subacute respiratory conditions due to chemicals, gases, fumes and vapors",
-     "target": [
-      {
-       "code": "027",
-       "display": "Asthma",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 3 SNOMED concepts mapped here are this observation. awaiting review"
-      }
-     ]
-    },
-    {
      "code": "J68.4",
      "display": "Chronic respiratory conditions due to chemicals, gases, fumes and vapors",
      "target": [
@@ -38741,18 +38573,6 @@
        "display": "Chronic lung disease",
        "equivalence": "wider",
        "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 14 of 14 SNOMED concepts mapped here are this observation. every one is"
-      },
-      {
-       "code": "199",
-       "display": "Interstitial lung disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 7 of 14 SNOMED concepts mapped here are this observation. awaiting review"
-      },
-      {
-       "code": "214",
-       "display": "Chronic obstructive pulmonary disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 9 of 14 SNOMED concepts mapped here are this observation. awaiting review"
       }
      ]
     },
@@ -38765,18 +38585,6 @@
        "display": "Chronic lung disease",
        "equivalence": "wider",
        "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 2 SNOMED concepts mapped here are this observation. every one is"
-      }
-     ]
-    },
-    {
-     "code": "J69.1",
-     "display": "Pneumonitis due to inhalation of oils and essences",
-     "target": [
-      {
-       "code": "199",
-       "display": "Interstitial lung disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 8 of 9 SNOMED concepts mapped here are this observation. awaiting review"
       }
      ]
     },
@@ -39133,6 +38941,12 @@
      "display": "Surfactant mutations of the lung",
      "target": [
       {
+       "code": "017",
+       "display": "Chronic lung disease",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 3 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: chronic lung disease)"
+      },
+      {
        "code": "199",
        "display": "Interstitial lung disease",
        "equivalence": "wider",
@@ -39369,6 +39183,18 @@
      ]
     },
     {
+     "code": "J98.4",
+     "display": "Other disorders of lung",
+     "target": [
+      {
+       "code": "017",
+       "display": "Chronic lung disease",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 4 of 41 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: chronic lung disease)"
+      }
+     ]
+    },
+    {
      "code": "K04.6",
      "display": "Periapical abscess with sinus",
      "target": [
@@ -39399,8 +39225,8 @@
       {
        "code": "168",
        "display": "Chemotherapy",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 3 of 4 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 3 of 4 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: documents antineoplastic therapy (OpenEvidence: borderline-yes for D64.81, K12.31))"
       }
      ]
     },
@@ -39425,18 +39251,6 @@
        "display": "Chronic cardiovascular disease",
        "equivalence": "wider",
        "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. every one is"
-      }
-     ]
-    },
-    {
-     "code": "K55.059",
-     "display": "Acute (reversible) ischemia of intestine, part and extent unspecified",
-     "target": [
-      {
-       "code": "254",
-       "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 9 of 18 SNOMED concepts mapped here are this observation. awaiting review"
       }
      ]
     },
@@ -39489,8 +39303,8 @@
       {
        "code": "043",
        "display": "Alcoholism",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 4 of 5 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 4 of 5 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: alcohol use disorder or its sequela)"
       }
      ]
     },
@@ -39897,8 +39711,32 @@
       {
        "code": "015",
        "display": "Chronic liver disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 3 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 3 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: liver disease within the ACIP chronic liver disease definition)"
+      }
+     ]
+    },
+    {
+     "code": "K76.89",
+     "display": "Other specified diseases of liver",
+     "target": [
+      {
+       "code": "015",
+       "display": "Chronic liver disease",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 40 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: liver disease within the ACIP chronic liver disease definition)"
+      }
+     ]
+    },
+    {
+     "code": "K76.9",
+     "display": "Liver disease, unspecified",
+     "target": [
+      {
+       "code": "015",
+       "display": "Chronic liver disease",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 28 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: liver disease within the ACIP chronic liver disease definition)"
       }
      ]
     },
@@ -39911,6 +39749,18 @@
        "display": "Chronic liver disease",
        "equivalence": "wider",
        "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 2 SNOMED concepts mapped here are this observation. reviewed: yes (Claude, confident proposal, 2026-10-18)"
+      }
+     ]
+    },
+    {
+     "code": "K86.0",
+     "display": "Alcohol-induced chronic pancreatitis",
+     "target": [
+      {
+       "code": "043",
+       "display": "Alcoholism",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 3 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: alcohol use disorder or its sequela)"
       }
      ]
     },
@@ -40817,12 +40667,6 @@
        "display": "Chronic cardiovascular disease",
        "equivalence": "wider",
        "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 6 of 6 SNOMED concepts mapped here are this observation. every one is"
-      },
-      {
-       "code": "258",
-       "display": "Chronic hematologic disorders",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 5 of 6 SNOMED concepts mapped here are this observation. awaiting review"
       }
      ]
     },
@@ -40848,12 +40692,6 @@
      "code": "M31.4",
      "display": "Aortic arch syndrome [Takayasu]",
      "target": [
-      {
-       "code": "206",
-       "display": "Cerebrovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 2 SNOMED concepts mapped here are this observation. awaiting review"
-      },
       {
        "code": "254",
        "display": "Chronic cardiovascular disease",
@@ -40881,32 +40719,14 @@
      ]
     },
     {
-     "code": "M31.6",
-     "display": "Other giant cell arteritis",
+     "code": "M32.13",
+     "display": "Lung involvement in systemic lupus erythematosus",
      "target": [
       {
-       "code": "206",
-       "display": "Cerebrovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 4 of 7 SNOMED concepts mapped here are this observation. awaiting review"
-      },
-      {
-       "code": "254",
-       "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 5 of 7 SNOMED concepts mapped here are this observation. awaiting review"
-      }
-     ]
-    },
-    {
-     "code": "M31.9",
-     "display": "Necrotizing vasculopathy, unspecified",
-     "target": [
-      {
-       "code": "254",
-       "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 3 of 5 SNOMED concepts mapped here are this observation. awaiting review"
+       "code": "199",
+       "display": "Interstitial lung disease",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 4 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: fibrosing or predominantly interstitial lung involvement)"
       }
      ]
     },
@@ -40917,8 +40737,8 @@
       {
        "code": "199",
        "display": "Interstitial lung disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 2 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 2 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: fibrosing or predominantly interstitial lung involvement)"
       }
      ]
     },
@@ -41201,78 +41021,6 @@
        "display": "Obesity",
        "equivalence": "wider",
        "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 4 of 4 SNOMED concepts mapped here are this observation. every one is"
-      }
-     ]
-    },
-    {
-     "code": "M84.50XA",
-     "display": "Pathological fracture in neoplastic disease, unspecified site, initial encounter for fracture",
-     "target": [
-      {
-       "code": "198",
-       "display": "Cancer",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 2 SNOMED concepts mapped here are this observation. awaiting review"
-      }
-     ]
-    },
-    {
-     "code": "M84.50XD",
-     "display": "Pathological fracture in neoplastic disease, unspecified site, subsequent encounter for fracture with routine healing",
-     "target": [
-      {
-       "code": "198",
-       "display": "Cancer",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 2 SNOMED concepts mapped here are this observation. awaiting review"
-      }
-     ]
-    },
-    {
-     "code": "M84.50XG",
-     "display": "Pathological fracture in neoplastic disease, unspecified site, subsequent encounter for fracture with delayed healing",
-     "target": [
-      {
-       "code": "198",
-       "display": "Cancer",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 2 SNOMED concepts mapped here are this observation. awaiting review"
-      }
-     ]
-    },
-    {
-     "code": "M84.50XK",
-     "display": "Pathological fracture in neoplastic disease, unspecified site, subsequent encounter for fracture with nonunion",
-     "target": [
-      {
-       "code": "198",
-       "display": "Cancer",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 2 SNOMED concepts mapped here are this observation. awaiting review"
-      }
-     ]
-    },
-    {
-     "code": "M84.50XP",
-     "display": "Pathological fracture in neoplastic disease, unspecified site, subsequent encounter for fracture with malunion",
-     "target": [
-      {
-       "code": "198",
-       "display": "Cancer",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 2 SNOMED concepts mapped here are this observation. awaiting review"
-      }
-     ]
-    },
-    {
-     "code": "M84.50XS",
-     "display": "Pathological fracture in neoplastic disease, unspecified site, sequela",
-     "target": [
-      {
-       "code": "198",
-       "display": "Cancer",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 2 SNOMED concepts mapped here are this observation. awaiting review"
       }
      ]
     },
@@ -43365,18 +43113,6 @@
      ]
     },
     {
-     "code": "M94.1",
-     "display": "Relapsing polychondritis",
-     "target": [
-      {
-       "code": "017",
-       "display": "Chronic lung disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 3 SNOMED concepts mapped here are this observation. awaiting review"
-      }
-     ]
-    },
-    {
      "code": "N00.7",
      "display": "Acute nephritic syndrome with diffuse crescentic glomerulonephritis",
      "target": [
@@ -43557,18 +43293,6 @@
      ]
     },
     {
-     "code": "N14.19",
-     "display": "Nephropathy induced by other drugs, medicaments and biological substances",
-     "target": [
-      {
-       "code": "161",
-       "display": "Chronic kidney disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 5 of 10 SNOMED concepts mapped here are this observation. awaiting review"
-      }
-     ]
-    },
-    {
      "code": "N18.1",
      "display": "Chronic kidney disease, stage 1",
      "target": [
@@ -43701,6 +43425,18 @@
      ]
     },
     {
+     "code": "N19",
+     "display": "Unspecified kidney failure",
+     "target": [
+      {
+       "code": "066",
+       "display": "Chronic renal failure",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 3 of 29 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: documents chronic kidney disease or kidney failure (stage not stated))"
+      }
+     ]
+    },
+    {
      "code": "N25.0",
      "display": "Renal osteodystrophy",
      "target": [
@@ -43709,6 +43445,30 @@
        "display": "Chronic kidney disease",
        "equivalence": "wider",
        "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 7 of 10 SNOMED concepts mapped here are this observation. reviewed: yes (Claude, confident proposal, 2026-10-18)"
+      }
+     ]
+    },
+    {
+     "code": "N25.81",
+     "display": "Secondary hyperparathyroidism of renal origin",
+     "target": [
+      {
+       "code": "161",
+       "display": "Chronic kidney disease",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 4 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: implies established CKD (kidney transplant recipients are CKD by KDIGO))"
+      }
+     ]
+    },
+    {
+     "code": "N26.9",
+     "display": "Renal sclerosis, unspecified",
+     "target": [
+      {
+       "code": "161",
+       "display": "Chronic kidney disease",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 17 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: implies established CKD (kidney transplant recipients are CKD by KDIGO))"
       }
      ]
     },
@@ -43907,6 +43667,12 @@
        "display": "Chronic kidney disease",
        "equivalence": "wider",
        "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 3 SNOMED concepts mapped here are this observation. reviewed: yes (Claude, confident proposal, 2026-10-18)"
+      },
+      {
+       "code": "254",
+       "display": "Chronic cardiovascular disease",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 3 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: chronic cardiac, valvular, pulmonary-vascular or arterial disease (OpenEvidence: borderline-yes))"
       }
      ]
     },
@@ -43919,6 +43685,12 @@
        "display": "Chronic kidney disease",
        "equivalence": "wider",
        "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 3 SNOMED concepts mapped here are this observation. reviewed: yes (Claude, confident proposal, 2026-10-18)"
+      },
+      {
+       "code": "254",
+       "display": "Chronic cardiovascular disease",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 3 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: chronic cardiac, valvular, pulmonary-vascular or arterial disease (OpenEvidence: borderline-yes))"
       }
      ]
     },
@@ -44063,18 +43835,6 @@
        "display": "Pregnant",
        "equivalence": "wider",
        "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 2 SNOMED concepts mapped here are this observation. every one is"
-      }
-     ]
-    },
-    {
-     "code": "O15.9",
-     "display": "Eclampsia, unspecified as to time period",
-     "target": [
-      {
-       "code": "007",
-       "display": "Pregnant",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 4 SNOMED concepts mapped here are this observation. awaiting review"
       }
      ]
     },
@@ -44601,18 +44361,6 @@
      ]
     },
     {
-     "code": "O87.1",
-     "display": "Deep phlebothrombosis in the puerperium",
-     "target": [
-      {
-       "code": "254",
-       "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 5 of 6 SNOMED concepts mapped here are this observation. awaiting review"
-      }
-     ]
-    },
-    {
      "code": "O87.3",
      "display": "Cerebral venous thrombosis in the puerperium",
      "target": [
@@ -44943,6 +44691,18 @@
      ]
     },
     {
+     "code": "O99.310",
+     "display": "Alcohol use complicating pregnancy, unspecified trimester",
+     "target": [
+      {
+       "code": "043",
+       "display": "Alcoholism",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 3 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: alcohol use disorder or its sequela)"
+      }
+     ]
+    },
+    {
      "code": "O99.314",
      "display": "Alcohol use complicating childbirth",
      "target": [
@@ -45111,18 +44871,6 @@
      ]
     },
     {
-     "code": "P10.8",
-     "display": "Other intracranial lacerations and hemorrhages due to birth injury",
-     "target": [
-      {
-       "code": "206",
-       "display": "Cerebrovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 2 SNOMED concepts mapped here are this observation. awaiting review"
-      }
-     ]
-    },
-    {
      "code": "P15.1",
      "display": "Birth injury to spleen",
      "target": [
@@ -45215,18 +44963,6 @@
        "display": "Interstitial lung disease",
        "equivalence": "wider",
        "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 2 SNOMED concepts mapped here are this observation. every one is"
-      }
-     ]
-    },
-    {
-     "code": "P25.0",
-     "display": "Interstitial emphysema originating in the perinatal period",
-     "target": [
-      {
-       "code": "017",
-       "display": "Chronic lung disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 3 of 5 SNOMED concepts mapped here are this observation. awaiting review"
       }
      ]
     },
@@ -45365,6 +45101,12 @@
        "display": "Chronic heart disease",
        "equivalence": "wider",
        "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 4 of 4 SNOMED concepts mapped here are this observation. every one is"
+      },
+      {
+       "code": "254",
+       "display": "Chronic cardiovascular disease",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 4 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: chronic cardiac, valvular, pulmonary-vascular or arterial disease (OpenEvidence: borderline-yes))"
       }
      ]
     },
@@ -45597,20 +45339,8 @@
       {
        "code": "258",
        "display": "Chronic hematologic disorders",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 4 of 5 SNOMED concepts mapped here are this observation. awaiting review"
-      }
-     ]
-    },
-    {
-     "code": "P61.9",
-     "display": "Perinatal hematological disorder, unspecified",
-     "target": [
-      {
-       "code": "258",
-       "display": "Chronic hematologic disorders",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 2 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 4 of 5 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: persistent primary blood or marrow disorder (Red Book: chronic is 3 months or more))"
       }
      ]
     },
@@ -45645,8 +45375,8 @@
       {
        "code": "014",
        "display": "Diabetes",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 9 of 10 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 9 of 10 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: neonatal diabetes mellitus is diabetes)"
       }
      ]
     },
@@ -45683,18 +45413,6 @@
        "display": "Progressive neurologic disorder",
        "equivalence": "narrower",
        "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 3 of 4 SNOMED concepts mapped here are this observation. awaiting review"
-      }
-     ]
-    },
-    {
-     "code": "P91.819",
-     "display": "Neonatal encephalopathy, unspecified",
-     "target": [
-      {
-       "code": "076",
-       "display": "Progressive neurologic disorder",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 4 SNOMED concepts mapped here are this observation. awaiting review"
       }
      ]
     },
@@ -46387,6 +46105,12 @@
      "display": "Congenital malformation of heart, unspecified",
      "target": [
       {
+       "code": "016",
+       "display": "Chronic heart disease",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 4 of 66 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: chronic structural/functional heart disease (ACIP; excludes isolated hypertension))"
+      },
+      {
        "code": "254",
        "display": "Chronic cardiovascular disease",
        "equivalence": "wider",
@@ -46627,6 +46351,12 @@
      "display": "Other congenital malformations of pulmonary artery",
      "target": [
       {
+       "code": "016",
+       "display": "Chronic heart disease",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 76 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: chronic structural/functional heart disease (ACIP; excludes isolated hypertension))"
+      },
+      {
        "code": "254",
        "display": "Chronic cardiovascular disease",
        "equivalence": "wider",
@@ -46779,18 +46509,6 @@
      ]
     },
     {
-     "code": "Q27.30",
-     "display": "Arteriovenous malformation, site unspecified",
-     "target": [
-      {
-       "code": "254",
-       "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 13 of 15 SNOMED concepts mapped here are this observation. awaiting review"
-      }
-     ]
-    },
-    {
      "code": "Q27.31",
      "display": "Arteriovenous malformation of vessel of upper limb",
      "target": [
@@ -46803,18 +46521,6 @@
      ]
     },
     {
-     "code": "Q27.33",
-     "display": "Arteriovenous malformation of digestive system vessel",
-     "target": [
-      {
-       "code": "254",
-       "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 8 of 9 SNOMED concepts mapped here are this observation. awaiting review"
-      }
-     ]
-    },
-    {
      "code": "Q27.34",
      "display": "Arteriovenous malformation of renal vessel",
      "target": [
@@ -46823,30 +46529,6 @@
        "display": "Chronic cardiovascular disease",
        "equivalence": "wider",
        "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 4 of 4 SNOMED concepts mapped here are this observation. every one is"
-      }
-     ]
-    },
-    {
-     "code": "Q27.39",
-     "display": "Arteriovenous malformation, other site",
-     "target": [
-      {
-       "code": "254",
-       "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 13 of 14 SNOMED concepts mapped here are this observation. awaiting review"
-      }
-     ]
-    },
-    {
-     "code": "Q27.8",
-     "display": "Other specified congenital malformations of peripheral vascular system",
-     "target": [
-      {
-       "code": "254",
-       "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 65 of 111 SNOMED concepts mapped here are this observation. awaiting review"
       }
      ]
     },
@@ -46917,38 +46599,14 @@
      ]
     },
     {
-     "code": "Q28.8",
-     "display": "Other specified congenital malformations of circulatory system",
-     "target": [
-      {
-       "code": "254",
-       "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 39 of 46 SNOMED concepts mapped here are this observation. awaiting review"
-      }
-     ]
-    },
-    {
      "code": "Q33.6",
      "display": "Congenital hypoplasia and dysplasia of lung",
      "target": [
       {
        "code": "017",
        "display": "Chronic lung disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 9 of 15 SNOMED concepts mapped here are this observation. awaiting review"
-      }
-     ]
-    },
-    {
-     "code": "Q44.6",
-     "display": "Cystic disease of liver",
-     "target": [
-      {
-       "code": "015",
-       "display": "Chronic liver disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 4 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 9 of 15 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: chronic lung disease)"
       }
      ]
     },
@@ -46995,20 +46653,8 @@
       {
        "code": "160",
        "display": "Anatomical or functional asplenia",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 7 of 9 SNOMED concepts mapped here are this observation. awaiting review"
-      }
-     ]
-    },
-    {
-     "code": "Q89.09",
-     "display": "Congenital malformations of spleen",
-     "target": [
-      {
-       "code": "258",
-       "display": "Chronic hematologic disorders",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 18 of 19 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 7 of 9 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: anatomic or functional asplenia)"
       }
      ]
     },
@@ -47073,30 +46719,6 @@
      ]
     },
     {
-     "code": "R00.0",
-     "display": "Tachycardia, unspecified",
-     "target": [
-      {
-       "code": "016",
-       "display": "Chronic heart disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 7 of 14 SNOMED concepts mapped here are this observation. awaiting review"
-      }
-     ]
-    },
-    {
-     "code": "R00.1",
-     "display": "Bradycardia, unspecified",
-     "target": [
-      {
-       "code": "016",
-       "display": "Chronic heart disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 13 of 15 SNOMED concepts mapped here are this observation. awaiting review"
-      }
-     ]
-    },
-    {
      "code": "R50.83",
      "display": "Postvaccination fever",
      "target": [
@@ -47109,6 +46731,18 @@
      ]
     },
     {
+     "code": "R50.9",
+     "display": "Fever, unspecified",
+     "target": [
+      {
+       "code": "030",
+       "display": "Acute febrile illness",
+       "equivalence": "wider",
+       "comment": "Hand-typed 2026-02-06 file. reviewed: yes (OpenEvidence, 2026-10-19: documents fever (severity not stated))"
+      }
+     ]
+    },
+    {
      "code": "R54",
      "display": "Age-related physical debility",
      "target": [
@@ -47117,18 +46751,6 @@
        "display": "Frailty",
        "equivalence": "wider",
        "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 6 SNOMED concepts mapped here are this observation. reviewed: yes (Claude, confident proposal, 2026-10-18)"
-      }
-     ]
-    },
-    {
-     "code": "R57.0",
-     "display": "Cardiogenic shock",
-     "target": [
-      {
-       "code": "016",
-       "display": "Chronic heart disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 2 SNOMED concepts mapped here are this observation. awaiting review"
       }
      ]
     },
@@ -55581,6 +55203,42 @@
      ]
     },
     {
+     "code": "T45.1X5A",
+     "display": "Adverse effect of antineoplastic and immunosuppressive drugs, initial encounter",
+     "target": [
+      {
+       "code": "158",
+       "display": "Immunosuppressive therapy",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 107 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: implies current immunosuppressive therapy (dose not coded))"
+      },
+      {
+       "code": "168",
+       "display": "Chemotherapy",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 18 of 107 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: documents antineoplastic therapy (OpenEvidence: borderline-yes for D64.81, K12.31))"
+      }
+     ]
+    },
+    {
+     "code": "T45.1X5D",
+     "display": "Adverse effect of antineoplastic and immunosuppressive drugs, subsequent encounter",
+     "target": [
+      {
+       "code": "158",
+       "display": "Immunosuppressive therapy",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 107 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: implies current immunosuppressive therapy (dose not coded))"
+      },
+      {
+       "code": "168",
+       "display": "Chemotherapy",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 18 of 107 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: documents antineoplastic therapy (OpenEvidence: borderline-yes for D64.81, K12.31))"
+      }
+     ]
+    },
+    {
      "code": "T50.A15A",
      "display": "Adverse effect of pertussis vaccine, including combinations with a pertussis component, initial encounter",
      "target": [
@@ -55679,18 +55337,6 @@
        "display": "Adverse reaction to vaccine component",
        "equivalence": "wider",
        "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 3 of 3 SNOMED concepts mapped here are this observation. every one is"
-      },
-      {
-       "code": "087",
-       "display": "Severe allergic reaction after previous dose of Diphtheria",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 3 SNOMED concepts mapped here are this observation. awaiting review"
-      },
-      {
-       "code": "088",
-       "display": "Severe allergic reaction after previous dose of Tetanus",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 3 SNOMED concepts mapped here are this observation. awaiting review"
       }
      ]
     },
@@ -55703,18 +55349,6 @@
        "display": "Adverse reaction to vaccine component",
        "equivalence": "wider",
        "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 3 of 3 SNOMED concepts mapped here are this observation. every one is"
-      },
-      {
-       "code": "087",
-       "display": "Severe allergic reaction after previous dose of Diphtheria",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 3 SNOMED concepts mapped here are this observation. awaiting review"
-      },
-      {
-       "code": "088",
-       "display": "Severe allergic reaction after previous dose of Tetanus",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 3 SNOMED concepts mapped here are this observation. awaiting review"
       }
      ]
     },
@@ -55727,54 +55361,6 @@
        "display": "Adverse reaction to vaccine component",
        "equivalence": "wider",
        "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 3 of 3 SNOMED concepts mapped here are this observation. every one is"
-      },
-      {
-       "code": "087",
-       "display": "Severe allergic reaction after previous dose of Diphtheria",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 3 SNOMED concepts mapped here are this observation. awaiting review"
-      },
-      {
-       "code": "088",
-       "display": "Severe allergic reaction after previous dose of Tetanus",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 3 SNOMED concepts mapped here are this observation. awaiting review"
-      }
-     ]
-    },
-    {
-     "code": "T50.A95A",
-     "display": "Adverse effect of other bacterial vaccines, initial encounter",
-     "target": [
-      {
-       "code": "080",
-       "display": "Adverse reaction to vaccine component",
-       "equivalence": "wider",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 23 of 28 SNOMED concepts mapped here are this observation. reviewed: yes (Claude, confident proposal, 2026-10-18)"
-      }
-     ]
-    },
-    {
-     "code": "T50.A95D",
-     "display": "Adverse effect of other bacterial vaccines, subsequent encounter",
-     "target": [
-      {
-       "code": "080",
-       "display": "Adverse reaction to vaccine component",
-       "equivalence": "wider",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 23 of 28 SNOMED concepts mapped here are this observation. reviewed: yes (Claude, confident proposal, 2026-10-18)"
-      }
-     ]
-    },
-    {
-     "code": "T50.A95S",
-     "display": "Adverse effect of other bacterial vaccines, sequela",
-     "target": [
-      {
-       "code": "080",
-       "display": "Adverse reaction to vaccine component",
-       "equivalence": "wider",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 23 of 28 SNOMED concepts mapped here are this observation. reviewed: yes (Claude, confident proposal, 2026-10-18)"
       }
      ]
     },
@@ -55847,42 +55433,6 @@
        "display": "Adverse reaction to vaccine component",
        "equivalence": "wider",
        "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 50 of 50 SNOMED concepts mapped here are this observation. every one is"
-      }
-     ]
-    },
-    {
-     "code": "T50.Z95A",
-     "display": "Adverse effect of other vaccines and biological substances, initial encounter",
-     "target": [
-      {
-       "code": "080",
-       "display": "Adverse reaction to vaccine component",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 5 of 9 SNOMED concepts mapped here are this observation. awaiting review"
-      }
-     ]
-    },
-    {
-     "code": "T50.Z95D",
-     "display": "Adverse effect of other vaccines and biological substances, subsequent encounter",
-     "target": [
-      {
-       "code": "080",
-       "display": "Adverse reaction to vaccine component",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 5 of 9 SNOMED concepts mapped here are this observation. awaiting review"
-      }
-     ]
-    },
-    {
-     "code": "T50.Z95S",
-     "display": "Adverse effect of other vaccines and biological substances, sequela",
-     "target": [
-      {
-       "code": "080",
-       "display": "Adverse reaction to vaccine component",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 5 of 9 SNOMED concepts mapped here are this observation. awaiting review"
       }
      ]
     },
@@ -56289,8 +55839,8 @@
       {
        "code": "191",
        "display": "Receipt of CAR-T-cell therapy",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 2 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 2 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: immune effector cellular therapy is overwhelmingly CAR-T (OpenEvidence: borderline-yes))"
       }
      ]
     },
@@ -56301,8 +55851,8 @@
       {
        "code": "191",
        "display": "Receipt of CAR-T-cell therapy",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 2 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 2 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: immune effector cellular therapy is overwhelmingly CAR-T (OpenEvidence: borderline-yes))"
       }
      ]
     },
@@ -56313,8 +55863,80 @@
       {
        "code": "191",
        "display": "Receipt of CAR-T-cell therapy",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 2 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 2 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: immune effector cellular therapy is overwhelmingly CAR-T (OpenEvidence: borderline-yes))"
+      }
+     ]
+    },
+    {
+     "code": "T82.111A",
+     "display": "Breakdown (mechanical) of cardiac pulse generator (battery), initial encounter",
+     "target": [
+      {
+       "code": "016",
+       "display": "Chronic heart disease",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 6 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: implanted cardiac device or prosthesis implies underlying heart disease)"
+      }
+     ]
+    },
+    {
+     "code": "T82.111D",
+     "display": "Breakdown (mechanical) of cardiac pulse generator (battery), subsequent encounter",
+     "target": [
+      {
+       "code": "016",
+       "display": "Chronic heart disease",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 6 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: implanted cardiac device or prosthesis implies underlying heart disease)"
+      }
+     ]
+    },
+    {
+     "code": "T82.111S",
+     "display": "Breakdown (mechanical) of cardiac pulse generator (battery), sequela",
+     "target": [
+      {
+       "code": "016",
+       "display": "Chronic heart disease",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 6 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: implanted cardiac device or prosthesis implies underlying heart disease)"
+      }
+     ]
+    },
+    {
+     "code": "T82.198A",
+     "display": "Other mechanical complication of other cardiac electronic device, initial encounter",
+     "target": [
+      {
+       "code": "016",
+       "display": "Chronic heart disease",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 15 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: implanted cardiac device or prosthesis implies underlying heart disease)"
+      }
+     ]
+    },
+    {
+     "code": "T82.198D",
+     "display": "Other mechanical complication of other cardiac electronic device, subsequent encounter",
+     "target": [
+      {
+       "code": "016",
+       "display": "Chronic heart disease",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 15 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: implanted cardiac device or prosthesis implies underlying heart disease)"
+      }
+     ]
+    },
+    {
+     "code": "T82.198S",
+     "display": "Other mechanical complication of other cardiac electronic device, sequela",
+     "target": [
+      {
+       "code": "016",
+       "display": "Chronic heart disease",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 15 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: implanted cardiac device or prosthesis implies underlying heart disease)"
       }
      ]
     },
@@ -56391,6 +56013,42 @@
      ]
     },
     {
+     "code": "T82.6XXA",
+     "display": "Infection and inflammatory reaction due to cardiac valve prosthesis, initial encounter",
+     "target": [
+      {
+       "code": "254",
+       "display": "Chronic cardiovascular disease",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 6 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: chronic heart disease, cardiac prosthesis or heart transplant)"
+      }
+     ]
+    },
+    {
+     "code": "T82.6XXD",
+     "display": "Infection and inflammatory reaction due to cardiac valve prosthesis, subsequent encounter",
+     "target": [
+      {
+       "code": "254",
+       "display": "Chronic cardiovascular disease",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 6 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: chronic heart disease, cardiac prosthesis or heart transplant)"
+      }
+     ]
+    },
+    {
+     "code": "T82.6XXS",
+     "display": "Infection and inflammatory reaction due to cardiac valve prosthesis, sequela",
+     "target": [
+      {
+       "code": "254",
+       "display": "Chronic cardiovascular disease",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 6 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: chronic heart disease, cardiac prosthesis or heart transplant)"
+      }
+     ]
+    },
+    {
      "code": "T82.827A",
      "display": "Fibrosis due to cardiac prosthetic devices, implants and grafts, initial encounter",
      "target": [
@@ -56427,38 +56085,128 @@
      ]
     },
     {
-     "code": "T82.868A",
-     "display": "Thrombosis due to vascular prosthetic devices, implants and grafts, initial encounter",
+     "code": "T82.857A",
+     "display": "Stenosis of other cardiac prosthetic devices, implants and grafts, initial encounter",
      "target": [
+      {
+       "code": "016",
+       "display": "Chronic heart disease",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 3 of 10 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: implanted cardiac device or prosthesis implies underlying heart disease)"
+      },
       {
        "code": "254",
        "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 18 of 27 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 10 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: chronic heart disease, cardiac prosthesis or heart transplant)"
       }
      ]
     },
     {
-     "code": "T82.868D",
-     "display": "Thrombosis due to vascular prosthetic devices, implants and grafts, subsequent encounter",
+     "code": "T82.857D",
+     "display": "Stenosis of other cardiac prosthetic devices, implants and grafts, subsequent encounter",
      "target": [
+      {
+       "code": "016",
+       "display": "Chronic heart disease",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 3 of 10 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: implanted cardiac device or prosthesis implies underlying heart disease)"
+      },
       {
        "code": "254",
        "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 18 of 27 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 10 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: chronic heart disease, cardiac prosthesis or heart transplant)"
       }
      ]
     },
     {
-     "code": "T82.868S",
-     "display": "Thrombosis due to vascular prosthetic devices, implants and grafts, sequela",
+     "code": "T82.857S",
+     "display": "Stenosis of other cardiac prosthetic devices, implants and grafts, sequela",
+     "target": [
+      {
+       "code": "016",
+       "display": "Chronic heart disease",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 3 of 10 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: implanted cardiac device or prosthesis implies underlying heart disease)"
+      },
+      {
+       "code": "254",
+       "display": "Chronic cardiovascular disease",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 10 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: chronic heart disease, cardiac prosthesis or heart transplant)"
+      }
+     ]
+    },
+    {
+     "code": "T82.867A",
+     "display": "Thrombosis due to cardiac prosthetic devices, implants and grafts, initial encounter",
      "target": [
       {
        "code": "254",
        "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 18 of 27 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 3 of 7 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: chronic heart disease, cardiac prosthesis or heart transplant)"
+      }
+     ]
+    },
+    {
+     "code": "T82.867D",
+     "display": "Thrombosis due to cardiac prosthetic devices, implants and grafts, subsequent encounter",
+     "target": [
+      {
+       "code": "254",
+       "display": "Chronic cardiovascular disease",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 3 of 7 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: chronic heart disease, cardiac prosthesis or heart transplant)"
+      }
+     ]
+    },
+    {
+     "code": "T82.867S",
+     "display": "Thrombosis due to cardiac prosthetic devices, implants and grafts, sequela",
+     "target": [
+      {
+       "code": "254",
+       "display": "Chronic cardiovascular disease",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 3 of 7 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: chronic heart disease, cardiac prosthesis or heart transplant)"
+      }
+     ]
+    },
+    {
+     "code": "T82.897A",
+     "display": "Other specified complication of cardiac prosthetic devices, implants and grafts, initial encounter",
+     "target": [
+      {
+       "code": "254",
+       "display": "Chronic cardiovascular disease",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 6 of 40 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: chronic heart disease, cardiac prosthesis or heart transplant)"
+      }
+     ]
+    },
+    {
+     "code": "T82.897D",
+     "display": "Other specified complication of cardiac prosthetic devices, implants and grafts, subsequent encounter",
+     "target": [
+      {
+       "code": "254",
+       "display": "Chronic cardiovascular disease",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 6 of 40 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: chronic heart disease, cardiac prosthesis or heart transplant)"
+      }
+     ]
+    },
+    {
+     "code": "T82.897S",
+     "display": "Other specified complication of cardiac prosthetic devices, implants and grafts, sequela",
+     "target": [
+      {
+       "code": "254",
+       "display": "Chronic cardiovascular disease",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 6 of 40 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: chronic heart disease, cardiac prosthesis or heart transplant)"
       }
      ]
     },
@@ -56935,12 +56683,6 @@
      "display": "Unspecified complication of bone marrow transplant",
      "target": [
       {
-       "code": "258",
-       "display": "Chronic hematologic disorders",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 2 SNOMED concepts mapped here are this observation. awaiting review"
-      },
-      {
        "code": "004",
        "display": "Recipient of a hematopoietic stem cell transplant",
        "equivalence": "wider",
@@ -57099,6 +56841,24 @@
      ]
     },
     {
+     "code": "T86.21",
+     "display": "Heart transplant rejection",
+     "target": [
+      {
+       "code": "016",
+       "display": "Chronic heart disease",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 7 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: chronic structural/functional heart disease (ACIP; excludes isolated hypertension))"
+      },
+      {
+       "code": "254",
+       "display": "Chronic cardiovascular disease",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 7 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: chronic heart disease, cardiac prosthesis or heart transplant)"
+      }
+     ]
+    },
+    {
      "code": "T86.23",
      "display": "Heart transplant infection",
      "target": [
@@ -57139,12 +56899,6 @@
      "display": "Liver transplant infection",
      "target": [
       {
-       "code": "015",
-       "display": "Chronic liver disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 2 SNOMED concepts mapped here are this observation. awaiting review"
-      },
-      {
        "code": "157",
        "display": "Solid organ transplantation",
        "equivalence": "wider",
@@ -57171,9 +56925,27 @@
      ]
     },
     {
+     "code": "T86.810",
+     "display": "Lung transplant rejection",
+     "target": [
+      {
+       "code": "017",
+       "display": "Chronic lung disease",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 5 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: lung transplant recipient has chronic lung disease (also transplant))"
+      }
+     ]
+    },
+    {
      "code": "T86.818",
      "display": "Other complications of lung transplant",
      "target": [
+      {
+       "code": "017",
+       "display": "Chronic lung disease",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 4 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: lung transplant recipient has chronic lung disease (also transplant))"
+      },
       {
        "code": "157",
        "display": "Solid organ transplantation",
@@ -57321,18 +57093,6 @@
      ]
     },
     {
-     "code": "T86.8409",
-     "display": "Corneal transplant rejection, unspecified eye",
-     "target": [
-      {
-       "code": "269",
-       "display": "Transplantation",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 6 of 7 SNOMED concepts mapped here are this observation. awaiting review"
-      }
-     ]
-    },
-    {
      "code": "T86.8419",
      "display": "Corneal transplant failure, unspecified eye",
      "target": [
@@ -57381,18 +57141,6 @@
      ]
     },
     {
-     "code": "T86.8489",
-     "display": "Other complications of corneal transplant, unspecified eye",
-     "target": [
-      {
-       "code": "269",
-       "display": "Transplantation",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 3 SNOMED concepts mapped here are this observation. awaiting review"
-      }
-     ]
-    },
-    {
      "code": "T86.8491",
      "display": "Unspecified complication of corneal transplant, right eye",
      "target": [
@@ -57413,30 +57161,6 @@
        "display": "Transplantation",
        "equivalence": "wider",
        "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. every one is"
-      }
-     ]
-    },
-    {
-     "code": "T86.8499",
-     "display": "Unspecified complication of corneal transplant, unspecified eye",
-     "target": [
-      {
-       "code": "269",
-       "display": "Transplantation",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 2 SNOMED concepts mapped here are this observation. awaiting review"
-      }
-     ]
-    },
-    {
-     "code": "U07.0",
-     "display": "Vaping-related disorder",
-     "target": [
-      {
-       "code": "199",
-       "display": "Interstitial lung disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 5 of 8 SNOMED concepts mapped here are this observation. awaiting review"
       }
      ]
     },
@@ -57505,16 +57229,10 @@
      "display": "Surgical operation with transplant of whole organ as the cause of abnormal reaction of the patient, or of later complication, without mention of misadventure at the time of the procedure",
      "target": [
       {
-       "code": "157",
-       "display": "Solid organ transplantation",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 3 of 5 SNOMED concepts mapped here are this observation. awaiting review"
-      },
-      {
        "code": "269",
        "display": "Transplantation",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 3 of 5 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 3 of 5 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: whole-organ or unspecified transplant (borderline-yes))"
       }
      ]
     },
@@ -57531,6 +57249,30 @@
      ]
     },
     {
+     "code": "Z04.81",
+     "display": "Encounter for examination and observation of victim following forced sexual exploitation",
+     "target": [
+      {
+       "code": "169",
+       "display": "History of sexual abuse or assault",
+       "equivalence": "wider",
+       "comment": "Hand-typed 2026-02-06 file. reviewed: yes (OpenEvidence, 2026-10-19: documents sexual abuse or assault)"
+      }
+     ]
+    },
+    {
+     "code": "Z11.3",
+     "display": "Encounter for screening for infections with a predominantly sexual mode of transmission",
+     "target": [
+      {
+       "code": "039",
+       "display": "Receives treatment for STD",
+       "equivalence": "wider",
+       "comment": "Hand-typed 2026-02-06 file. reviewed: yes (OpenEvidence, 2026-10-19: being evaluated or treated for an STI (CDC STI guidelines 2021))"
+      }
+     ]
+    },
+    {
      "code": "Z16.23",
      "display": "Resistance to quinolones and fluoroquinolones",
      "target": [
@@ -57539,30 +57281,6 @@
        "display": "Tuberculosis",
        "equivalence": "wider",
        "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. every one is"
-      }
-     ]
-    },
-    {
-     "code": "Z16.341",
-     "display": "Resistance to single antimycobacterial drug",
-     "target": [
-      {
-       "code": "031",
-       "display": "Tuberculosis",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 4 of 5 SNOMED concepts mapped here are this observation. awaiting review"
-      }
-     ]
-    },
-    {
-     "code": "Z16.342",
-     "display": "Resistance to multiple antimycobacterial drugs",
-     "target": [
-      {
-       "code": "031",
-       "display": "Tuberculosis",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 3 of 4 SNOMED concepts mapped here are this observation. awaiting review"
       }
      ]
     },
@@ -57603,9 +57321,27 @@
      ]
     },
     {
+     "code": "Z20.2",
+     "display": "Contact with and (suspected) exposure to infections with a predominantly sexual mode of transmission",
+     "target": [
+      {
+       "code": "039",
+       "display": "Receives treatment for STD",
+       "equivalence": "wider",
+       "comment": "Hand-typed 2026-02-06 file. reviewed: yes (OpenEvidence, 2026-10-19: being evaluated or treated for an STI (CDC STI guidelines 2021))"
+      }
+     ]
+    },
+    {
      "code": "Z21",
      "display": "Asymptomatic human immunodeficiency virus [HIV] infection status",
      "target": [
+      {
+       "code": "039",
+       "display": "Receives treatment for STD",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 4 of 13 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: HIV is an STI and an ACIP hepatitis A/B indication)"
+      },
       {
        "code": "186",
        "display": "HIV Infection",
@@ -58239,18 +57975,6 @@
      ]
     },
     {
-     "code": "Z64.0",
-     "display": "Problems related to unwanted pregnancy",
-     "target": [
-      {
-       "code": "007",
-       "display": "Pregnant",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 6 of 8 SNOMED concepts mapped here are this observation. awaiting review"
-      }
-     ]
-    },
-    {
      "code": "Z68.41",
      "display": "Body mass index [BMI] 40.0-44.9, adult",
      "target": [
@@ -58269,14 +57993,26 @@
      ]
     },
     {
+     "code": "Z72.0",
+     "display": "Tobacco use",
+     "target": [
+      {
+       "code": "042",
+       "display": "Smoke cigarettes",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 20 of 51 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: standard marker for the smoking indication (not cigarette-specific))"
+      }
+     ]
+    },
+    {
      "code": "Z72.52",
      "display": "High risk homosexual behavior",
      "target": [
       {
        "code": "036",
        "display": "Men who have sex with men",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 3 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 3 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: standard MSM marker)"
       }
      ]
     },
@@ -58284,6 +58020,12 @@
      "code": "Z79.4",
      "display": "Long term (current) use of insulin",
      "target": [
+      {
+       "code": "014",
+       "display": "Diabetes",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 7 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: long-term insulin is in practice treated diabetes)"
+      },
       {
        "code": "266",
        "display": "Diabetes requiring treatment with insulin",
@@ -58293,14 +58035,38 @@
      ]
     },
     {
-     "code": "Z86.74",
-     "display": "Personal history of sudden cardiac arrest",
+     "code": "Z79.52",
+     "display": "Long term (current) use of systemic steroids",
      "target": [
       {
-       "code": "016",
-       "display": "Chronic heart disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 2 SNOMED concepts mapped here are this observation. awaiting review"
+       "code": "158",
+       "display": "Immunosuppressive therapy",
+       "equivalence": "wider",
+       "comment": "Hand-typed 2026-02-06 file. reviewed: yes (OpenEvidence, 2026-10-19: implies current immunosuppressive therapy (dose not coded))"
+      }
+     ]
+    },
+    {
+     "code": "Z87.74",
+     "display": "Personal history of (corrected) congenital malformations of heart and circulatory system",
+     "target": [
+      {
+       "code": "254",
+       "display": "Chronic cardiovascular disease",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 20 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: chronic cardiac, valvular, pulmonary-vascular or arterial disease (OpenEvidence: borderline-yes))"
+      }
+     ]
+    },
+    {
+     "code": "Z90.81",
+     "display": "Acquired absence of spleen",
+     "target": [
+      {
+       "code": "160",
+       "display": "Anatomical or functional asplenia",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 6 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: anatomic or functional asplenia)"
       }
      ]
     },
@@ -58341,6 +58107,18 @@
      ]
     },
     {
+     "code": "Z91.410",
+     "display": "Personal history of adult physical and sexual abuse",
+     "target": [
+      {
+       "code": "169",
+       "display": "History of sexual abuse or assault",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 9 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: documents sexual abuse or assault)"
+      }
+     ]
+    },
+    {
      "code": "Z94.0",
      "display": "Kidney transplant status",
      "target": [
@@ -58349,6 +58127,12 @@
        "display": "Solid organ transplantation",
        "equivalence": "wider",
        "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 8 SNOMED concepts mapped here are this observation. reviewed: yes (Claude, confident proposal, 2026-10-18)"
+      },
+      {
+       "code": "161",
+       "display": "Chronic kidney disease",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 8 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: implies established CKD (kidney transplant recipients are CKD by KDIGO))"
       },
       {
        "code": "269",
@@ -58403,6 +58187,18 @@
        "display": "Recipient of a hematopoietic stem cell transplant",
        "equivalence": "wider",
        "comment": "Hand-typed 2026-02-06 file. reviewed: yes (Claude, confident proposal, 2026-10-18)"
+      }
+     ]
+    },
+    {
+     "code": "Z94.9",
+     "display": "Transplanted organ and tissue status, unspecified",
+     "target": [
+      {
+       "code": "269",
+       "display": "Transplantation",
+       "equivalence": "wider",
+       "comment": "Hand-typed 2026-02-06 file. reviewed: yes (OpenEvidence, 2026-10-19: whole-organ or unspecified transplant (borderline-yes))"
       }
      ]
     },

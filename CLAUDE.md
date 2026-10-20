@@ -176,6 +176,17 @@ test cases send CDSi observation codes directly and never reach this path**;
   refuted and entered-in-error are dropped. Only completed Immunizations and Procedures count.
 - A completed total splenectomy (CPT 38100, 38102, 38120) asserts 160 (Grey, 2026-10-18).
 - Cicada handles PHI and **stores none** (Grey, 2026-10-18).
+- The review sheet's unsure rows were answered by OpenEvidence on 2026-10-19 ("decided by"
+  says so on each row). Rulings from that pass:
+  - Z79.82 alone does not establish 034 long-term aspirin; 034 stays never-from-a-code.
+  - Asthma codes are not 017. CDC's pneumococcal data names 017 from age 2 and 027 asthma
+    only from age 19.
+  - 017 chronic lung disease excludes upper-airway disease (sinusitis, rhinitis, tonsillitis).
+  - 254 chronic cardiovascular disease is cardiac and arterial disease. It excludes venous
+    disease, cerebrovascular disease and isolated hypertension.
+  - 080 is a severe allergy to a vaccine component, not any adverse effect.
+  The last three are NOT yet applied to the rows the derivation grades `wider` through
+  CDC's broad SNOMED codes (17097001, 128292002, 400047006, 293104008).
 
 ### ImmDS Server
 
