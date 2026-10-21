@@ -3285,8 +3285,8 @@
       {
        "code": "254",
        "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 2 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 2 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence 2026-10-21 (policy question): chronic inflammatory aortic disease; RSV chronic cardiovascular disease is cardiac plus chronic arterial and aortic disease; only isolated hypertension is excluded (ACIP adult schedule addendum, 2025-07-02))"
       }
      ]
     },
@@ -18585,8 +18585,8 @@
       {
        "code": "254",
        "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence 2026-10-21 (policy question): cardiovascular disease, and diabetes with end-organ damage; RSV chronic cardiovascular disease is cardiac plus chronic arterial and aortic disease; only isolated hypertension is excluded (ACIP adult schedule addendum, 2025-07-02))"
       }
      ]
     },
@@ -20571,8 +20571,8 @@
       {
        "code": "254",
        "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence 2026-10-21 (policy question): cardiovascular disease, and diabetes with end-organ damage; RSV chronic cardiovascular disease is cardiac plus chronic arterial and aortic disease; only isolated hypertension is excluded (ACIP adult schedule addendum, 2025-07-02))"
       }
      ]
     },
@@ -28539,8 +28539,8 @@
       {
        "code": "254",
        "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 7 of 7 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 7 of 7 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence 2026-10-21 (policy question): atherosclerotic cardiovascular disease, the same process as coronary artery disease; RSV chronic cardiovascular disease is cardiac plus chronic arterial and aortic disease; only isolated hypertension is excluded (ACIP adult schedule addendum, 2025-07-02))"
       }
      ]
     },
@@ -28551,8 +28551,8 @@
       {
        "code": "254",
        "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 14 of 14 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 14 of 14 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence 2026-10-21 (policy question): atherosclerotic cardiovascular disease, the same process as coronary artery disease; RSV chronic cardiovascular disease is cardiac plus chronic arterial and aortic disease; only isolated hypertension is excluded (ACIP adult schedule addendum, 2025-07-02))"
       }
      ]
     },
@@ -28563,8 +28563,8 @@
       {
        "code": "254",
        "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 2 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 2 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence 2026-10-21 (policy question): atherosclerotic cardiovascular disease, the same process as coronary artery disease; RSV chronic cardiovascular disease is cardiac plus chronic arterial and aortic disease; only isolated hypertension is excluded (ACIP adult schedule addendum, 2025-07-02))"
       }
      ]
     },
@@ -28575,8 +28575,8 @@
       {
        "code": "254",
        "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 2 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 2 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence 2026-10-21 (policy question): atherosclerotic cardiovascular disease, the same process as coronary artery disease; RSV chronic cardiovascular disease is cardiac plus chronic arterial and aortic disease; only isolated hypertension is excluded (ACIP adult schedule addendum, 2025-07-02))"
       }
      ]
     },
@@ -28587,8 +28587,8 @@
       {
        "code": "254",
        "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 2 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 2 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence 2026-10-21 (policy question): atherosclerotic cardiovascular disease, the same process as coronary artery disease; RSV chronic cardiovascular disease is cardiac plus chronic arterial and aortic disease; only isolated hypertension is excluded (ACIP adult schedule addendum, 2025-07-02))"
       }
      ]
     },
@@ -28599,8 +28599,8 @@
       {
        "code": "254",
        "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 12 of 12 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 12 of 12 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence 2026-10-21 (policy question): atherosclerotic cardiovascular disease, the same process as coronary artery disease; RSV chronic cardiovascular disease is cardiac plus chronic arterial and aortic disease; only isolated hypertension is excluded (ACIP adult schedule addendum, 2025-07-02))"
       }
      ]
     },
@@ -28611,8 +28611,8 @@
       {
        "code": "254",
        "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 12 of 12 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 12 of 12 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence 2026-10-21 (policy question): atherosclerotic cardiovascular disease, the same process as coronary artery disease; RSV chronic cardiovascular disease is cardiac plus chronic arterial and aortic disease; only isolated hypertension is excluded (ACIP adult schedule addendum, 2025-07-02))"
       }
      ]
     },
@@ -28659,8 +28659,8 @@
       {
        "code": "254",
        "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 3 of 3 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 3 of 3 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence 2026-10-21 (policy question): atherosclerotic cardiovascular disease, the same process as coronary artery disease; RSV chronic cardiovascular disease is cardiac plus chronic arterial and aortic disease; only isolated hypertension is excluded (ACIP adult schedule addendum, 2025-07-02))"
       }
      ]
     },
@@ -28683,8 +28683,8 @@
       {
        "code": "254",
        "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence 2026-10-21 (policy question): atherosclerotic cardiovascular disease, the same process as coronary artery disease; RSV chronic cardiovascular disease is cardiac plus chronic arterial and aortic disease; only isolated hypertension is excluded (ACIP adult schedule addendum, 2025-07-02))"
       }
      ]
     },
@@ -28695,8 +28695,8 @@
       {
        "code": "254",
        "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence 2026-10-21 (policy question): atherosclerotic cardiovascular disease, the same process as coronary artery disease; RSV chronic cardiovascular disease is cardiac plus chronic arterial and aortic disease; only isolated hypertension is excluded (ACIP adult schedule addendum, 2025-07-02))"
       }
      ]
     },
@@ -28707,8 +28707,8 @@
       {
        "code": "254",
        "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence 2026-10-21 (policy question): atherosclerotic cardiovascular disease, the same process as coronary artery disease; RSV chronic cardiovascular disease is cardiac plus chronic arterial and aortic disease; only isolated hypertension is excluded (ACIP adult schedule addendum, 2025-07-02))"
       }
      ]
     },
@@ -28719,8 +28719,8 @@
       {
        "code": "254",
        "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 2 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 2 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence 2026-10-21 (policy question): atherosclerotic cardiovascular disease, the same process as coronary artery disease; RSV chronic cardiovascular disease is cardiac plus chronic arterial and aortic disease; only isolated hypertension is excluded (ACIP adult schedule addendum, 2025-07-02))"
       }
      ]
     },
@@ -28731,8 +28731,8 @@
       {
        "code": "254",
        "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence 2026-10-21 (policy question): atherosclerotic cardiovascular disease, the same process as coronary artery disease; RSV chronic cardiovascular disease is cardiac plus chronic arterial and aortic disease; only isolated hypertension is excluded (ACIP adult schedule addendum, 2025-07-02))"
       }
      ]
     },
@@ -28743,8 +28743,8 @@
       {
        "code": "254",
        "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence 2026-10-21 (policy question): atherosclerotic cardiovascular disease, the same process as coronary artery disease; RSV chronic cardiovascular disease is cardiac plus chronic arterial and aortic disease; only isolated hypertension is excluded (ACIP adult schedule addendum, 2025-07-02))"
       }
      ]
     },
@@ -28755,8 +28755,8 @@
       {
        "code": "254",
        "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence 2026-10-21 (policy question): atherosclerotic cardiovascular disease, the same process as coronary artery disease; RSV chronic cardiovascular disease is cardiac plus chronic arterial and aortic disease; only isolated hypertension is excluded (ACIP adult schedule addendum, 2025-07-02))"
       }
      ]
     },
@@ -28767,8 +28767,8 @@
       {
        "code": "254",
        "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence 2026-10-21 (policy question): atherosclerotic cardiovascular disease, the same process as coronary artery disease; RSV chronic cardiovascular disease is cardiac plus chronic arterial and aortic disease; only isolated hypertension is excluded (ACIP adult schedule addendum, 2025-07-02))"
       }
      ]
     },
@@ -28779,8 +28779,8 @@
       {
        "code": "254",
        "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 2 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 2 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence 2026-10-21 (policy question): atherosclerotic cardiovascular disease, the same process as coronary artery disease; RSV chronic cardiovascular disease is cardiac plus chronic arterial and aortic disease; only isolated hypertension is excluded (ACIP adult schedule addendum, 2025-07-02))"
       }
      ]
     },
@@ -28791,8 +28791,8 @@
       {
        "code": "254",
        "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 2 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 2 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence 2026-10-21 (policy question): atherosclerotic cardiovascular disease, the same process as coronary artery disease; RSV chronic cardiovascular disease is cardiac plus chronic arterial and aortic disease; only isolated hypertension is excluded (ACIP adult schedule addendum, 2025-07-02))"
       }
      ]
     },
@@ -28803,8 +28803,8 @@
       {
        "code": "254",
        "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence 2026-10-21 (policy question): atherosclerotic cardiovascular disease, the same process as coronary artery disease; RSV chronic cardiovascular disease is cardiac plus chronic arterial and aortic disease; only isolated hypertension is excluded (ACIP adult schedule addendum, 2025-07-02))"
       }
      ]
     },
@@ -28815,8 +28815,8 @@
       {
        "code": "254",
        "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence 2026-10-21 (policy question): atherosclerotic cardiovascular disease, the same process as coronary artery disease; RSV chronic cardiovascular disease is cardiac plus chronic arterial and aortic disease; only isolated hypertension is excluded (ACIP adult schedule addendum, 2025-07-02))"
       }
      ]
     },
@@ -28827,8 +28827,8 @@
       {
        "code": "254",
        "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence 2026-10-21 (policy question): atherosclerotic cardiovascular disease, the same process as coronary artery disease; RSV chronic cardiovascular disease is cardiac plus chronic arterial and aortic disease; only isolated hypertension is excluded (ACIP adult schedule addendum, 2025-07-02))"
       }
      ]
     },
@@ -28839,8 +28839,8 @@
       {
        "code": "254",
        "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence 2026-10-21 (policy question): atherosclerotic cardiovascular disease, the same process as coronary artery disease; RSV chronic cardiovascular disease is cardiac plus chronic arterial and aortic disease; only isolated hypertension is excluded (ACIP adult schedule addendum, 2025-07-02))"
       }
      ]
     },
@@ -28851,8 +28851,8 @@
       {
        "code": "254",
        "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 2 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 2 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence 2026-10-21 (policy question): atherosclerotic cardiovascular disease, the same process as coronary artery disease; RSV chronic cardiovascular disease is cardiac plus chronic arterial and aortic disease; only isolated hypertension is excluded (ACIP adult schedule addendum, 2025-07-02))"
       }
      ]
     },
@@ -28863,8 +28863,8 @@
       {
        "code": "254",
        "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 2 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 2 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence 2026-10-21 (policy question): atherosclerotic cardiovascular disease, the same process as coronary artery disease; RSV chronic cardiovascular disease is cardiac plus chronic arterial and aortic disease; only isolated hypertension is excluded (ACIP adult schedule addendum, 2025-07-02))"
       }
      ]
     },
@@ -28875,8 +28875,8 @@
       {
        "code": "254",
        "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence 2026-10-21 (policy question): atherosclerotic cardiovascular disease, the same process as coronary artery disease; RSV chronic cardiovascular disease is cardiac plus chronic arterial and aortic disease; only isolated hypertension is excluded (ACIP adult schedule addendum, 2025-07-02))"
       }
      ]
     },
@@ -28887,8 +28887,8 @@
       {
        "code": "254",
        "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 5 of 5 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 5 of 5 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence 2026-10-21 (policy question): atherosclerotic cardiovascular disease, the same process as coronary artery disease; RSV chronic cardiovascular disease is cardiac plus chronic arterial and aortic disease; only isolated hypertension is excluded (ACIP adult schedule addendum, 2025-07-02))"
       }
      ]
     },
@@ -28899,8 +28899,8 @@
       {
        "code": "254",
        "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence 2026-10-21 (policy question): atherosclerotic cardiovascular disease, the same process as coronary artery disease; RSV chronic cardiovascular disease is cardiac plus chronic arterial and aortic disease; only isolated hypertension is excluded (ACIP adult schedule addendum, 2025-07-02))"
       }
      ]
     },
@@ -28911,8 +28911,8 @@
       {
        "code": "254",
        "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence 2026-10-21 (policy question): atherosclerotic cardiovascular disease, the same process as coronary artery disease; RSV chronic cardiovascular disease is cardiac plus chronic arterial and aortic disease; only isolated hypertension is excluded (ACIP adult schedule addendum, 2025-07-02))"
       }
      ]
     },
@@ -28923,8 +28923,8 @@
       {
        "code": "254",
        "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence 2026-10-21 (policy question): atherosclerotic cardiovascular disease, the same process as coronary artery disease; RSV chronic cardiovascular disease is cardiac plus chronic arterial and aortic disease; only isolated hypertension is excluded (ACIP adult schedule addendum, 2025-07-02))"
       }
      ]
     },
@@ -28935,8 +28935,8 @@
       {
        "code": "254",
        "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 2 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 2 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence 2026-10-21 (policy question): atherosclerotic cardiovascular disease, the same process as coronary artery disease; RSV chronic cardiovascular disease is cardiac plus chronic arterial and aortic disease; only isolated hypertension is excluded (ACIP adult schedule addendum, 2025-07-02))"
       }
      ]
     },
@@ -28959,8 +28959,8 @@
       {
        "code": "254",
        "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence 2026-10-21 (policy question): atherosclerotic cardiovascular disease, the same process as coronary artery disease; RSV chronic cardiovascular disease is cardiac plus chronic arterial and aortic disease; only isolated hypertension is excluded (ACIP adult schedule addendum, 2025-07-02))"
       }
      ]
     },
@@ -28971,8 +28971,8 @@
       {
        "code": "254",
        "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence 2026-10-21 (policy question): atherosclerotic cardiovascular disease, the same process as coronary artery disease; RSV chronic cardiovascular disease is cardiac plus chronic arterial and aortic disease; only isolated hypertension is excluded (ACIP adult schedule addendum, 2025-07-02))"
       }
      ]
     },
@@ -28983,8 +28983,8 @@
       {
        "code": "254",
        "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence 2026-10-21 (policy question): atherosclerotic cardiovascular disease, the same process as coronary artery disease; RSV chronic cardiovascular disease is cardiac plus chronic arterial and aortic disease; only isolated hypertension is excluded (ACIP adult schedule addendum, 2025-07-02))"
       }
      ]
     },
@@ -28995,8 +28995,8 @@
       {
        "code": "254",
        "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 3 of 3 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 3 of 3 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence 2026-10-21 (policy question): atherosclerotic cardiovascular disease, the same process as coronary artery disease; RSV chronic cardiovascular disease is cardiac plus chronic arterial and aortic disease; only isolated hypertension is excluded (ACIP adult schedule addendum, 2025-07-02))"
       }
      ]
     },
@@ -29007,8 +29007,8 @@
       {
        "code": "254",
        "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 2 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 2 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence 2026-10-21 (policy question): atherosclerotic cardiovascular disease, the same process as coronary artery disease; RSV chronic cardiovascular disease is cardiac plus chronic arterial and aortic disease; only isolated hypertension is excluded (ACIP adult schedule addendum, 2025-07-02))"
       }
      ]
     },
@@ -29055,8 +29055,8 @@
       {
        "code": "254",
        "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence 2026-10-21 (policy question): atherosclerotic cardiovascular disease, the same process as coronary artery disease; RSV chronic cardiovascular disease is cardiac plus chronic arterial and aortic disease; only isolated hypertension is excluded (ACIP adult schedule addendum, 2025-07-02))"
       }
      ]
     },
@@ -29067,8 +29067,8 @@
       {
        "code": "254",
        "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence 2026-10-21 (policy question): atherosclerotic cardiovascular disease, the same process as coronary artery disease; RSV chronic cardiovascular disease is cardiac plus chronic arterial and aortic disease; only isolated hypertension is excluded (ACIP adult schedule addendum, 2025-07-02))"
       }
      ]
     },
@@ -29079,8 +29079,8 @@
       {
        "code": "254",
        "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence 2026-10-21 (policy question): atherosclerotic cardiovascular disease, the same process as coronary artery disease; RSV chronic cardiovascular disease is cardiac plus chronic arterial and aortic disease; only isolated hypertension is excluded (ACIP adult schedule addendum, 2025-07-02))"
       }
      ]
     },
@@ -29091,8 +29091,8 @@
       {
        "code": "254",
        "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence 2026-10-21 (policy question): atherosclerotic cardiovascular disease, the same process as coronary artery disease; RSV chronic cardiovascular disease is cardiac plus chronic arterial and aortic disease; only isolated hypertension is excluded (ACIP adult schedule addendum, 2025-07-02))"
       }
      ]
     },
@@ -29103,8 +29103,8 @@
       {
        "code": "254",
        "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence 2026-10-21 (policy question): atherosclerotic cardiovascular disease, the same process as coronary artery disease; RSV chronic cardiovascular disease is cardiac plus chronic arterial and aortic disease; only isolated hypertension is excluded (ACIP adult schedule addendum, 2025-07-02))"
       }
      ]
     },
@@ -29115,8 +29115,8 @@
       {
        "code": "254",
        "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence 2026-10-21 (policy question): atherosclerotic cardiovascular disease, the same process as coronary artery disease; RSV chronic cardiovascular disease is cardiac plus chronic arterial and aortic disease; only isolated hypertension is excluded (ACIP adult schedule addendum, 2025-07-02))"
       }
      ]
     },
@@ -29127,8 +29127,8 @@
       {
        "code": "254",
        "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence 2026-10-21 (policy question): atherosclerotic cardiovascular disease, the same process as coronary artery disease; RSV chronic cardiovascular disease is cardiac plus chronic arterial and aortic disease; only isolated hypertension is excluded (ACIP adult schedule addendum, 2025-07-02))"
       }
      ]
     },
@@ -29139,8 +29139,8 @@
       {
        "code": "254",
        "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 2 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 2 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence 2026-10-21 (policy question): atherosclerotic cardiovascular disease, the same process as coronary artery disease; RSV chronic cardiovascular disease is cardiac plus chronic arterial and aortic disease; only isolated hypertension is excluded (ACIP adult schedule addendum, 2025-07-02))"
       }
      ]
     },
@@ -29151,8 +29151,8 @@
       {
        "code": "254",
        "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 2 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 2 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence 2026-10-21 (policy question): atherosclerotic cardiovascular disease, the same process as coronary artery disease; RSV chronic cardiovascular disease is cardiac plus chronic arterial and aortic disease; only isolated hypertension is excluded (ACIP adult schedule addendum, 2025-07-02))"
       }
      ]
     },
@@ -29163,8 +29163,8 @@
       {
        "code": "254",
        "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence 2026-10-21 (policy question): atherosclerotic cardiovascular disease, the same process as coronary artery disease; RSV chronic cardiovascular disease is cardiac plus chronic arterial and aortic disease; only isolated hypertension is excluded (ACIP adult schedule addendum, 2025-07-02))"
       }
      ]
     },
@@ -29175,8 +29175,8 @@
       {
        "code": "254",
        "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence 2026-10-21 (policy question): atherosclerotic cardiovascular disease, the same process as coronary artery disease; RSV chronic cardiovascular disease is cardiac plus chronic arterial and aortic disease; only isolated hypertension is excluded (ACIP adult schedule addendum, 2025-07-02))"
       }
      ]
     },
@@ -29187,8 +29187,8 @@
       {
        "code": "254",
        "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence 2026-10-21 (policy question): atherosclerotic cardiovascular disease, the same process as coronary artery disease; RSV chronic cardiovascular disease is cardiac plus chronic arterial and aortic disease; only isolated hypertension is excluded (ACIP adult schedule addendum, 2025-07-02))"
       }
      ]
     },
@@ -29199,8 +29199,8 @@
       {
        "code": "254",
        "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence 2026-10-21 (policy question): atherosclerotic cardiovascular disease, the same process as coronary artery disease; RSV chronic cardiovascular disease is cardiac plus chronic arterial and aortic disease; only isolated hypertension is excluded (ACIP adult schedule addendum, 2025-07-02))"
       }
      ]
     },
@@ -29211,8 +29211,8 @@
       {
        "code": "254",
        "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence 2026-10-21 (policy question): atherosclerotic cardiovascular disease, the same process as coronary artery disease; RSV chronic cardiovascular disease is cardiac plus chronic arterial and aortic disease; only isolated hypertension is excluded (ACIP adult schedule addendum, 2025-07-02))"
       }
      ]
     },
@@ -29223,8 +29223,8 @@
       {
        "code": "254",
        "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 4 of 4 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 4 of 4 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence 2026-10-21 (policy question): atherosclerotic cardiovascular disease, the same process as coronary artery disease; RSV chronic cardiovascular disease is cardiac plus chronic arterial and aortic disease; only isolated hypertension is excluded (ACIP adult schedule addendum, 2025-07-02))"
       }
      ]
     },
@@ -29235,8 +29235,8 @@
       {
        "code": "254",
        "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 2 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 2 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence 2026-10-21 (policy question): atherosclerotic cardiovascular disease, the same process as coronary artery disease; RSV chronic cardiovascular disease is cardiac plus chronic arterial and aortic disease; only isolated hypertension is excluded (ACIP adult schedule addendum, 2025-07-02))"
       }
      ]
     },
@@ -29247,8 +29247,8 @@
       {
        "code": "254",
        "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence 2026-10-21 (policy question): atherosclerotic cardiovascular disease, the same process as coronary artery disease; RSV chronic cardiovascular disease is cardiac plus chronic arterial and aortic disease; only isolated hypertension is excluded (ACIP adult schedule addendum, 2025-07-02))"
       }
      ]
     },
@@ -29259,8 +29259,8 @@
       {
        "code": "254",
        "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence 2026-10-21 (policy question): atherosclerotic cardiovascular disease, the same process as coronary artery disease; RSV chronic cardiovascular disease is cardiac plus chronic arterial and aortic disease; only isolated hypertension is excluded (ACIP adult schedule addendum, 2025-07-02))"
       }
      ]
     },
@@ -29271,8 +29271,8 @@
       {
        "code": "254",
        "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence 2026-10-21 (policy question): atherosclerotic cardiovascular disease, the same process as coronary artery disease; RSV chronic cardiovascular disease is cardiac plus chronic arterial and aortic disease; only isolated hypertension is excluded (ACIP adult schedule addendum, 2025-07-02))"
       }
      ]
     },
@@ -29283,8 +29283,8 @@
       {
        "code": "254",
        "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 4 of 4 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 4 of 4 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence 2026-10-21 (policy question): atherosclerotic cardiovascular disease, the same process as coronary artery disease; RSV chronic cardiovascular disease is cardiac plus chronic arterial and aortic disease; only isolated hypertension is excluded (ACIP adult schedule addendum, 2025-07-02))"
       }
      ]
     },
@@ -29295,8 +29295,8 @@
       {
        "code": "254",
        "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence 2026-10-21 (policy question): atherosclerotic cardiovascular disease, the same process as coronary artery disease; RSV chronic cardiovascular disease is cardiac plus chronic arterial and aortic disease; only isolated hypertension is excluded (ACIP adult schedule addendum, 2025-07-02))"
       }
      ]
     },
@@ -29355,8 +29355,8 @@
       {
        "code": "254",
        "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 8 of 8 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 8 of 8 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence 2026-10-21 (policy question): chronic aortic disease; RSV chronic cardiovascular disease is cardiac plus chronic arterial and aortic disease; only isolated hypertension is excluded (ACIP adult schedule addendum, 2025-07-02))"
       }
      ]
     },
@@ -29403,8 +29403,8 @@
       {
        "code": "254",
        "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 7 of 7 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 7 of 7 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence 2026-10-21 (policy question): chronic aortic disease; RSV chronic cardiovascular disease is cardiac plus chronic arterial and aortic disease; only isolated hypertension is excluded (ACIP adult schedule addendum, 2025-07-02))"
       }
      ]
     },
@@ -29415,8 +29415,8 @@
       {
        "code": "254",
        "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 3 of 3 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 3 of 3 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence 2026-10-21 (policy question): chronic aortic disease; RSV chronic cardiovascular disease is cardiac plus chronic arterial and aortic disease; only isolated hypertension is excluded (ACIP adult schedule addendum, 2025-07-02))"
       }
      ]
     },
@@ -29439,8 +29439,8 @@
       {
        "code": "254",
        "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 3 of 3 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 3 of 3 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence 2026-10-21 (policy question): chronic aortic disease; RSV chronic cardiovascular disease is cardiac plus chronic arterial and aortic disease; only isolated hypertension is excluded (ACIP adult schedule addendum, 2025-07-02))"
       }
      ]
     },
@@ -29451,8 +29451,8 @@
       {
        "code": "254",
        "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 12 of 12 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 12 of 12 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence 2026-10-21 (policy question): chronic aortic disease; RSV chronic cardiovascular disease is cardiac plus chronic arterial and aortic disease; only isolated hypertension is excluded (ACIP adult schedule addendum, 2025-07-02))"
       }
      ]
     },
@@ -29667,8 +29667,8 @@
       {
        "code": "254",
        "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 2 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 2 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence 2026-10-21 (policy question): chronic aortic disease; RSV chronic cardiovascular disease is cardiac plus chronic arterial and aortic disease; only isolated hypertension is excluded (ACIP adult schedule addendum, 2025-07-02))"
       }
      ]
     },
@@ -29679,8 +29679,8 @@
       {
        "code": "254",
        "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 11 of 11 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 11 of 11 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence 2026-10-21 (policy question): chronic aortic disease; RSV chronic cardiovascular disease is cardiac plus chronic arterial and aortic disease; only isolated hypertension is excluded (ACIP adult schedule addendum, 2025-07-02))"
       }
      ]
     },
@@ -29703,8 +29703,8 @@
       {
        "code": "254",
        "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 13 of 13 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 13 of 13 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence 2026-10-21 (policy question): chronic structural arterial disease, usually atherosclerotic; RSV chronic cardiovascular disease is cardiac plus chronic arterial and aortic disease; only isolated hypertension is excluded (ACIP adult schedule addendum, 2025-07-02))"
       }
      ]
     },
@@ -29715,8 +29715,8 @@
       {
        "code": "254",
        "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 4 of 4 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 4 of 4 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence 2026-10-21 (policy question): chronic structural arterial disease, usually atherosclerotic; RSV chronic cardiovascular disease is cardiac plus chronic arterial and aortic disease; only isolated hypertension is excluded (ACIP adult schedule addendum, 2025-07-02))"
       }
      ]
     },
@@ -29727,8 +29727,8 @@
       {
        "code": "254",
        "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 14 of 14 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 14 of 14 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence 2026-10-21 (policy question): chronic structural arterial disease, usually atherosclerotic; RSV chronic cardiovascular disease is cardiac plus chronic arterial and aortic disease; only isolated hypertension is excluded (ACIP adult schedule addendum, 2025-07-02))"
       }
      ]
     },
@@ -29739,8 +29739,8 @@
       {
        "code": "254",
        "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 20 of 20 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 20 of 20 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence 2026-10-21 (policy question): chronic structural arterial disease, usually atherosclerotic; RSV chronic cardiovascular disease is cardiac plus chronic arterial and aortic disease; only isolated hypertension is excluded (ACIP adult schedule addendum, 2025-07-02))"
       }
      ]
     },
@@ -29859,8 +29859,8 @@
       {
        "code": "254",
        "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence 2026-10-21 (policy question): complication of established atherosclerotic disease; RSV chronic cardiovascular disease is cardiac plus chronic arterial and aortic disease; only isolated hypertension is excluded (ACIP adult schedule addendum, 2025-07-02))"
       }
      ]
     },
@@ -29871,8 +29871,8 @@
       {
        "code": "254",
        "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence 2026-10-21 (policy question): complication of established atherosclerotic disease; RSV chronic cardiovascular disease is cardiac plus chronic arterial and aortic disease; only isolated hypertension is excluded (ACIP adult schedule addendum, 2025-07-02))"
       }
      ]
     },
@@ -29883,8 +29883,8 @@
       {
        "code": "254",
        "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence 2026-10-21 (policy question): complication of established atherosclerotic disease; RSV chronic cardiovascular disease is cardiac plus chronic arterial and aortic disease; only isolated hypertension is excluded (ACIP adult schedule addendum, 2025-07-02))"
       }
      ]
     },
@@ -29895,8 +29895,8 @@
       {
        "code": "254",
        "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence 2026-10-21 (policy question): complication of established atherosclerotic disease; RSV chronic cardiovascular disease is cardiac plus chronic arterial and aortic disease; only isolated hypertension is excluded (ACIP adult schedule addendum, 2025-07-02))"
       }
      ]
     },
@@ -29907,8 +29907,8 @@
       {
        "code": "254",
        "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence 2026-10-21 (policy question): complication of established atherosclerotic disease; RSV chronic cardiovascular disease is cardiac plus chronic arterial and aortic disease; only isolated hypertension is excluded (ACIP adult schedule addendum, 2025-07-02))"
       }
      ]
     },
@@ -29919,8 +29919,8 @@
       {
        "code": "254",
        "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence 2026-10-21 (policy question): complication of established atherosclerotic disease; RSV chronic cardiovascular disease is cardiac plus chronic arterial and aortic disease; only isolated hypertension is excluded (ACIP adult schedule addendum, 2025-07-02))"
       }
      ]
     },
@@ -29931,8 +29931,8 @@
       {
        "code": "254",
        "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence 2026-10-21 (policy question): complication of established atherosclerotic disease; RSV chronic cardiovascular disease is cardiac plus chronic arterial and aortic disease; only isolated hypertension is excluded (ACIP adult schedule addendum, 2025-07-02))"
       }
      ]
     },
@@ -29943,8 +29943,8 @@
       {
        "code": "254",
        "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence 2026-10-21 (policy question): complication of established atherosclerotic disease; RSV chronic cardiovascular disease is cardiac plus chronic arterial and aortic disease; only isolated hypertension is excluded (ACIP adult schedule addendum, 2025-07-02))"
       }
      ]
     },
@@ -29955,8 +29955,8 @@
       {
        "code": "254",
        "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 4 of 4 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 4 of 4 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence 2026-10-21 (policy question): complication of established atherosclerotic disease; RSV chronic cardiovascular disease is cardiac plus chronic arterial and aortic disease; only isolated hypertension is excluded (ACIP adult schedule addendum, 2025-07-02))"
       }
      ]
     },
@@ -29997,18 +29997,6 @@
      ]
     },
     {
-     "code": "I77.4",
-     "display": "Celiac artery compression syndrome",
-     "target": [
-      {
-       "code": "254",
-       "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 2 SNOMED concepts mapped here are this observation. awaiting review"
-      }
-     ]
-    },
-    {
      "code": "I77.70",
      "display": "Dissection of unspecified artery",
      "target": [
@@ -30039,8 +30027,8 @@
       {
        "code": "254",
        "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 5 of 5 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 5 of 5 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence 2026-10-21 (policy question): structural arterial disease, consistent with aortic dissection (lower confidence); RSV chronic cardiovascular disease is cardiac plus chronic arterial and aortic disease; only isolated hypertension is excluded (ACIP adult schedule addendum, 2025-07-02))"
       }
      ]
     },
@@ -30051,8 +30039,8 @@
       {
        "code": "254",
        "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 4 of 4 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 4 of 4 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence 2026-10-21 (policy question): structural arterial disease, consistent with aortic dissection (lower confidence); RSV chronic cardiovascular disease is cardiac plus chronic arterial and aortic disease; only isolated hypertension is excluded (ACIP adult schedule addendum, 2025-07-02))"
       }
      ]
     },
@@ -30087,8 +30075,8 @@
       {
        "code": "254",
        "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 8 of 8 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 8 of 8 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence 2026-10-21 (policy question): structural arterial disease, consistent with aortic dissection (lower confidence); RSV chronic cardiovascular disease is cardiac plus chronic arterial and aortic disease; only isolated hypertension is excluded (ACIP adult schedule addendum, 2025-07-02))"
       }
      ]
     },
@@ -30099,8 +30087,8 @@
       {
        "code": "254",
        "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 9 of 9 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 9 of 9 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence 2026-10-21 (policy question): structural arterial disease, consistent with aortic dissection (lower confidence); RSV chronic cardiovascular disease is cardiac plus chronic arterial and aortic disease; only isolated hypertension is excluded (ACIP adult schedule addendum, 2025-07-02))"
       }
      ]
     },
@@ -30111,8 +30099,8 @@
       {
        "code": "254",
        "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 9 of 9 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 9 of 9 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence 2026-10-21 (policy question): structural arterial disease, consistent with aortic dissection (lower confidence); RSV chronic cardiovascular disease is cardiac plus chronic arterial and aortic disease; only isolated hypertension is excluded (ACIP adult schedule addendum, 2025-07-02))"
       }
      ]
     },
@@ -30123,8 +30111,8 @@
       {
        "code": "254",
        "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 9 of 9 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 9 of 9 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence 2026-10-21 (policy question): chronic aortic dilation below the aneurysm threshold (lowest confidence); RSV chronic cardiovascular disease is cardiac plus chronic arterial and aortic disease; only isolated hypertension is excluded (ACIP adult schedule addendum, 2025-07-02))"
       }
      ]
     },
@@ -30135,8 +30123,8 @@
       {
        "code": "254",
        "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence 2026-10-21 (policy question): chronic aortic dilation below the aneurysm threshold (lowest confidence); RSV chronic cardiovascular disease is cardiac plus chronic arterial and aortic disease; only isolated hypertension is excluded (ACIP adult schedule addendum, 2025-07-02))"
       }
      ]
     },
@@ -30147,8 +30135,8 @@
       {
        "code": "254",
        "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence 2026-10-21 (policy question): chronic aortic dilation below the aneurysm threshold (lowest confidence); RSV chronic cardiovascular disease is cardiac plus chronic arterial and aortic disease; only isolated hypertension is excluded (ACIP adult schedule addendum, 2025-07-02))"
       }
      ]
     },
@@ -30159,8 +30147,8 @@
       {
        "code": "254",
        "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 2 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 2 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence 2026-10-21 (policy question): chronic aortic dilation below the aneurysm threshold (lowest confidence); RSV chronic cardiovascular disease is cardiac plus chronic arterial and aortic disease; only isolated hypertension is excluded (ACIP adult schedule addendum, 2025-07-02))"
       }
      ]
     },
@@ -30195,8 +30183,8 @@
       {
        "code": "254",
        "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 2 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 2 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence 2026-10-21 (policy question): chronic inflammatory aortic disease; RSV chronic cardiovascular disease is cardiac plus chronic arterial and aortic disease; only isolated hypertension is excluded (ACIP adult schedule addendum, 2025-07-02))"
       }
      ]
     },
@@ -32601,8 +32589,8 @@
       {
        "code": "254",
        "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 2 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 2 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence 2026-10-21 (policy question): large-vessel vasculitis of the aorta and its branches; RSV chronic cardiovascular disease is cardiac plus chronic arterial and aortic disease; only isolated hypertension is excluded (ACIP adult schedule addendum, 2025-07-02))"
       }
      ]
     },
@@ -32619,8 +32607,8 @@
       {
        "code": "254",
        "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence 2026-10-21 (policy question): large-vessel vasculitis of the aorta and its branches; RSV chronic cardiovascular disease is cardiac plus chronic arterial and aortic disease; only isolated hypertension is excluded (ACIP adult schedule addendum, 2025-07-02))"
       }
      ]
     },
@@ -36849,8 +36837,8 @@
       {
        "code": "254",
        "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 5 of 5 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 5 of 5 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence 2026-10-21 (policy question): congenital aortic disease; congenital heart disease is a named example; RSV chronic cardiovascular disease is cardiac plus chronic arterial and aortic disease; only isolated hypertension is excluded (ACIP adult schedule addendum, 2025-07-02))"
       }
      ]
     },
@@ -36885,8 +36873,8 @@
       {
        "code": "254",
        "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 3 of 3 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 3 of 3 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence 2026-10-21 (policy question): congenital aortic disease; congenital heart disease is a named example; RSV chronic cardiovascular disease is cardiac plus chronic arterial and aortic disease; only isolated hypertension is excluded (ACIP adult schedule addendum, 2025-07-02))"
       }
      ]
     },
@@ -36897,8 +36885,8 @@
       {
        "code": "254",
        "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 3 of 3 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 3 of 3 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence 2026-10-21 (policy question): congenital aortic disease; congenital heart disease is a named example; RSV chronic cardiovascular disease is cardiac plus chronic arterial and aortic disease; only isolated hypertension is excluded (ACIP adult schedule addendum, 2025-07-02))"
       }
      ]
     },
@@ -36969,8 +36957,8 @@
       {
        "code": "254",
        "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 3 of 3 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 3 of 3 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence 2026-10-21 (policy question): congenital malformation of the great vessels (lower confidence); RSV chronic cardiovascular disease is cardiac plus chronic arterial and aortic disease; only isolated hypertension is excluded (ACIP adult schedule addendum, 2025-07-02))"
       }
      ]
     },
@@ -37047,8 +37035,8 @@
       {
        "code": "254",
        "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 4 of 4 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 4 of 4 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence 2026-10-21 (policy question): structural arterial disease (lower confidence; borderline if the only effect is hypertension); RSV chronic cardiovascular disease is cardiac plus chronic arterial and aortic disease; only isolated hypertension is excluded (ACIP adult schedule addendum, 2025-07-02))"
       }
      ]
     },
@@ -37059,8 +37047,8 @@
       {
        "code": "254",
        "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 8 of 8 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 8 of 8 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence 2026-10-21 (policy question): structural arterial disease (lower confidence; borderline if the only effect is hypertension); RSV chronic cardiovascular disease is cardiac plus chronic arterial and aortic disease; only isolated hypertension is excluded (ACIP adult schedule addendum, 2025-07-02))"
       }
      ]
     },
@@ -37143,8 +37131,8 @@
       {
        "code": "254",
        "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence 2026-10-21 (policy question): congenital aortic disease; congenital heart disease is a named example; RSV chronic cardiovascular disease is cardiac plus chronic arterial and aortic disease; only isolated hypertension is excluded (ACIP adult schedule addendum, 2025-07-02))"
       }
      ]
     },
@@ -39291,8 +39279,8 @@
       {
        "code": "254",
        "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence 2026-10-21 (policy question): an aortic graft shows prior aneurysmal or occlusive aortic disease; RSV chronic cardiovascular disease is cardiac plus chronic arterial and aortic disease; only isolated hypertension is excluded (ACIP adult schedule addendum, 2025-07-02))"
       }
      ]
     },
@@ -39303,8 +39291,8 @@
       {
        "code": "254",
        "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence 2026-10-21 (policy question): an aortic graft shows prior aneurysmal or occlusive aortic disease; RSV chronic cardiovascular disease is cardiac plus chronic arterial and aortic disease; only isolated hypertension is excluded (ACIP adult schedule addendum, 2025-07-02))"
       }
      ]
     },
@@ -39315,8 +39303,8 @@
       {
        "code": "254",
        "display": "Chronic cardiovascular disease",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence 2026-10-21 (policy question): an aortic graft shows prior aneurysmal or occlusive aortic disease; RSV chronic cardiovascular disease is cardiac plus chronic arterial and aortic disease; only isolated hypertension is excluded (ACIP adult schedule addendum, 2025-07-02))"
       }
      ]
     },

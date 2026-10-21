@@ -781,7 +781,7 @@ observationConceptMap = {
     ],
     'A52.02': [
       ObservationMapTarget('039', 'wider'),
-      ObservationMapTarget('254', 'narrower'),
+      ObservationMapTarget('254', 'wider'),
     ],
     'A52.03': [
       ObservationMapTarget('039', 'wider'),
@@ -4491,7 +4491,7 @@ observationConceptMap = {
     ],
     'E08.51': [
       ObservationMapTarget('014', 'wider'),
-      ObservationMapTarget('254', 'narrower'),
+      ObservationMapTarget('254', 'wider'),
     ],
     'E08.69': [
       ObservationMapTarget('014', 'wider'),
@@ -4946,7 +4946,7 @@ observationConceptMap = {
     ],
     'E13.59': [
       ObservationMapTarget('014', 'wider'),
-      ObservationMapTarget('254', 'narrower'),
+      ObservationMapTarget('254', 'wider'),
     ],
     'E13.621': [
       ObservationMapTarget('014', 'wider'),
@@ -6851,25 +6851,25 @@ observationConceptMap = {
       ObservationMapTarget('206', 'wider'),
     ],
     'I70.0': [
-      ObservationMapTarget('254', 'narrower'),
+      ObservationMapTarget('254', 'wider'),
     ],
     'I70.1': [
-      ObservationMapTarget('254', 'narrower'),
+      ObservationMapTarget('254', 'wider'),
     ],
     'I70.201': [
-      ObservationMapTarget('254', 'narrower'),
+      ObservationMapTarget('254', 'wider'),
     ],
     'I70.202': [
-      ObservationMapTarget('254', 'narrower'),
+      ObservationMapTarget('254', 'wider'),
     ],
     'I70.203': [
-      ObservationMapTarget('254', 'narrower'),
+      ObservationMapTarget('254', 'wider'),
     ],
     'I70.208': [
-      ObservationMapTarget('254', 'narrower'),
+      ObservationMapTarget('254', 'wider'),
     ],
     'I70.209': [
-      ObservationMapTarget('254', 'narrower'),
+      ObservationMapTarget('254', 'wider'),
     ],
     'I70.211': [
       ObservationMapTarget('254', 'wider'),
@@ -6881,94 +6881,94 @@ observationConceptMap = {
       ObservationMapTarget('254', 'wider'),
     ],
     'I70.218': [
-      ObservationMapTarget('254', 'narrower'),
+      ObservationMapTarget('254', 'wider'),
     ],
     'I70.219': [
       ObservationMapTarget('254', 'wider'),
     ],
     'I70.221': [
-      ObservationMapTarget('254', 'narrower'),
+      ObservationMapTarget('254', 'wider'),
     ],
     'I70.222': [
-      ObservationMapTarget('254', 'narrower'),
+      ObservationMapTarget('254', 'wider'),
     ],
     'I70.223': [
-      ObservationMapTarget('254', 'narrower'),
+      ObservationMapTarget('254', 'wider'),
     ],
     'I70.228': [
-      ObservationMapTarget('254', 'narrower'),
+      ObservationMapTarget('254', 'wider'),
     ],
     'I70.229': [
-      ObservationMapTarget('254', 'narrower'),
+      ObservationMapTarget('254', 'wider'),
     ],
     'I70.231': [
-      ObservationMapTarget('254', 'narrower'),
+      ObservationMapTarget('254', 'wider'),
     ],
     'I70.232': [
-      ObservationMapTarget('254', 'narrower'),
+      ObservationMapTarget('254', 'wider'),
     ],
     'I70.233': [
-      ObservationMapTarget('254', 'narrower'),
+      ObservationMapTarget('254', 'wider'),
     ],
     'I70.234': [
-      ObservationMapTarget('254', 'narrower'),
+      ObservationMapTarget('254', 'wider'),
     ],
     'I70.235': [
-      ObservationMapTarget('254', 'narrower'),
+      ObservationMapTarget('254', 'wider'),
     ],
     'I70.238': [
-      ObservationMapTarget('254', 'narrower'),
+      ObservationMapTarget('254', 'wider'),
     ],
     'I70.241': [
-      ObservationMapTarget('254', 'narrower'),
+      ObservationMapTarget('254', 'wider'),
     ],
     'I70.242': [
-      ObservationMapTarget('254', 'narrower'),
+      ObservationMapTarget('254', 'wider'),
     ],
     'I70.243': [
-      ObservationMapTarget('254', 'narrower'),
+      ObservationMapTarget('254', 'wider'),
     ],
     'I70.244': [
-      ObservationMapTarget('254', 'narrower'),
+      ObservationMapTarget('254', 'wider'),
     ],
     'I70.245': [
-      ObservationMapTarget('254', 'narrower'),
+      ObservationMapTarget('254', 'wider'),
     ],
     'I70.248': [
-      ObservationMapTarget('254', 'narrower'),
+      ObservationMapTarget('254', 'wider'),
     ],
     'I70.25': [
-      ObservationMapTarget('254', 'narrower'),
+      ObservationMapTarget('254', 'wider'),
     ],
     'I70.261': [
-      ObservationMapTarget('254', 'narrower'),
+      ObservationMapTarget('254', 'wider'),
     ],
     'I70.262': [
-      ObservationMapTarget('254', 'narrower'),
+      ObservationMapTarget('254', 'wider'),
     ],
     'I70.263': [
-      ObservationMapTarget('254', 'narrower'),
+      ObservationMapTarget('254', 'wider'),
     ],
     'I70.268': [
-      ObservationMapTarget('254', 'narrower'),
+      ObservationMapTarget('254', 'wider'),
     ],
     'I70.269': [
       ObservationMapTarget('254', 'wider'),
     ],
     'I70.301': [
-      ObservationMapTarget('254', 'narrower'),
+      ObservationMapTarget('254', 'wider'),
     ],
     'I70.302': [
-      ObservationMapTarget('254', 'narrower'),
+      ObservationMapTarget('254', 'wider'),
     ],
     'I70.303': [
-      ObservationMapTarget('254', 'narrower'),
+      ObservationMapTarget('254', 'wider'),
     ],
     'I70.308': [
-      ObservationMapTarget('254', 'narrower'),
+      ObservationMapTarget('254', 'wider'),
     ],
     'I70.309': [
-      ObservationMapTarget('254', 'narrower'),
+      ObservationMapTarget('254', 'wider'),
     ],
     'I70.311': [
       ObservationMapTarget('254', 'wider'),
@@ -6980,67 +6980,67 @@ observationConceptMap = {
       ObservationMapTarget('254', 'wider'),
     ],
     'I70.321': [
-      ObservationMapTarget('254', 'narrower'),
+      ObservationMapTarget('254', 'wider'),
     ],
     'I70.322': [
-      ObservationMapTarget('254', 'narrower'),
+      ObservationMapTarget('254', 'wider'),
     ],
     'I70.361': [
-      ObservationMapTarget('254', 'narrower'),
+      ObservationMapTarget('254', 'wider'),
     ],
     'I70.362': [
-      ObservationMapTarget('254', 'narrower'),
+      ObservationMapTarget('254', 'wider'),
     ],
     'I70.401': [
-      ObservationMapTarget('254', 'narrower'),
+      ObservationMapTarget('254', 'wider'),
     ],
     'I70.402': [
-      ObservationMapTarget('254', 'narrower'),
+      ObservationMapTarget('254', 'wider'),
     ],
     'I70.403': [
-      ObservationMapTarget('254', 'narrower'),
+      ObservationMapTarget('254', 'wider'),
     ],
     'I70.408': [
-      ObservationMapTarget('254', 'narrower'),
+      ObservationMapTarget('254', 'wider'),
     ],
     'I70.409': [
-      ObservationMapTarget('254', 'narrower'),
+      ObservationMapTarget('254', 'wider'),
     ],
     'I70.461': [
-      ObservationMapTarget('254', 'narrower'),
+      ObservationMapTarget('254', 'wider'),
     ],
     'I70.462': [
-      ObservationMapTarget('254', 'narrower'),
+      ObservationMapTarget('254', 'wider'),
     ],
     'I70.501': [
-      ObservationMapTarget('254', 'narrower'),
+      ObservationMapTarget('254', 'wider'),
     ],
     'I70.502': [
-      ObservationMapTarget('254', 'narrower'),
+      ObservationMapTarget('254', 'wider'),
     ],
     'I70.503': [
-      ObservationMapTarget('254', 'narrower'),
+      ObservationMapTarget('254', 'wider'),
     ],
     'I70.508': [
-      ObservationMapTarget('254', 'narrower'),
+      ObservationMapTarget('254', 'wider'),
     ],
     'I70.509': [
-      ObservationMapTarget('254', 'narrower'),
+      ObservationMapTarget('254', 'wider'),
     ],
     'I70.601': [
-      ObservationMapTarget('254', 'narrower'),
+      ObservationMapTarget('254', 'wider'),
     ],
     'I70.602': [
-      ObservationMapTarget('254', 'narrower'),
+      ObservationMapTarget('254', 'wider'),
     ],
     'I70.603': [
-      ObservationMapTarget('254', 'narrower'),
+      ObservationMapTarget('254', 'wider'),
     ],
     'I70.608': [
-      ObservationMapTarget('254', 'narrower'),
+      ObservationMapTarget('254', 'wider'),
     ],
     'I70.609': [
-      ObservationMapTarget('254', 'narrower'),
+      ObservationMapTarget('254', 'wider'),
     ],
     'I70.613': [
       ObservationMapTarget('254', 'wider'),
@@ -7055,7 +7055,7 @@ observationConceptMap = {
       ObservationMapTarget('254', 'wider'),
     ],
     'I71.00': [
-      ObservationMapTarget('254', 'narrower'),
+      ObservationMapTarget('254', 'wider'),
     ],
     'I71.010': [
       ObservationMapTarget('254', 'wider'),
@@ -7067,19 +7067,19 @@ observationConceptMap = {
       ObservationMapTarget('254', 'wider'),
     ],
     'I71.019': [
-      ObservationMapTarget('254', 'narrower'),
+      ObservationMapTarget('254', 'wider'),
     ],
     'I71.02': [
-      ObservationMapTarget('254', 'narrower'),
+      ObservationMapTarget('254', 'wider'),
     ],
     'I71.03': [
       ObservationMapTarget('254', 'wider'),
     ],
     'I71.10': [
-      ObservationMapTarget('254', 'narrower'),
+      ObservationMapTarget('254', 'wider'),
     ],
     'I71.11': [
-      ObservationMapTarget('254', 'narrower'),
+      ObservationMapTarget('254', 'wider'),
     ],
     'I71.12': [
       ObservationMapTarget('254', 'wider'),
@@ -7133,25 +7133,25 @@ observationConceptMap = {
       ObservationMapTarget('254', 'wider'),
     ],
     'I71.8': [
-      ObservationMapTarget('254', 'narrower'),
+      ObservationMapTarget('254', 'wider'),
     ],
     'I71.9': [
-      ObservationMapTarget('254', 'narrower'),
+      ObservationMapTarget('254', 'wider'),
     ],
     'I72.0': [
       ObservationMapTarget('206', 'wider'),
     ],
     'I72.1': [
-      ObservationMapTarget('254', 'narrower'),
+      ObservationMapTarget('254', 'wider'),
     ],
     'I72.2': [
-      ObservationMapTarget('254', 'narrower'),
+      ObservationMapTarget('254', 'wider'),
     ],
     'I72.3': [
-      ObservationMapTarget('254', 'narrower'),
+      ObservationMapTarget('254', 'wider'),
     ],
     'I72.4': [
-      ObservationMapTarget('254', 'narrower'),
+      ObservationMapTarget('254', 'wider'),
     ],
     'I72.5': [
       ObservationMapTarget('206', 'wider'),
@@ -7181,31 +7181,31 @@ observationConceptMap = {
       ObservationMapTarget('254', 'wider'),
     ],
     'I75.011': [
-      ObservationMapTarget('254', 'narrower'),
+      ObservationMapTarget('254', 'wider'),
     ],
     'I75.012': [
-      ObservationMapTarget('254', 'narrower'),
+      ObservationMapTarget('254', 'wider'),
     ],
     'I75.013': [
-      ObservationMapTarget('254', 'narrower'),
+      ObservationMapTarget('254', 'wider'),
     ],
     'I75.019': [
-      ObservationMapTarget('254', 'narrower'),
+      ObservationMapTarget('254', 'wider'),
     ],
     'I75.021': [
-      ObservationMapTarget('254', 'narrower'),
+      ObservationMapTarget('254', 'wider'),
     ],
     'I75.022': [
-      ObservationMapTarget('254', 'narrower'),
+      ObservationMapTarget('254', 'wider'),
     ],
     'I75.023': [
-      ObservationMapTarget('254', 'narrower'),
+      ObservationMapTarget('254', 'wider'),
     ],
     'I75.029': [
-      ObservationMapTarget('254', 'narrower'),
+      ObservationMapTarget('254', 'wider'),
     ],
     'I75.81': [
-      ObservationMapTarget('254', 'narrower'),
+      ObservationMapTarget('254', 'wider'),
     ],
     'I75.89': [
       ObservationMapTarget('254', 'wider'),
@@ -7216,9 +7216,6 @@ observationConceptMap = {
     'I77.3': [
       ObservationMapTarget('254', 'wider'),
     ],
-    'I77.4': [
-      ObservationMapTarget('254', 'narrower'),
-    ],
     'I77.70': [
       ObservationMapTarget('254', 'wider'),
     ],
@@ -7226,10 +7223,10 @@ observationConceptMap = {
       ObservationMapTarget('206', 'wider'),
     ],
     'I77.72': [
-      ObservationMapTarget('254', 'narrower'),
+      ObservationMapTarget('254', 'wider'),
     ],
     'I77.73': [
-      ObservationMapTarget('254', 'narrower'),
+      ObservationMapTarget('254', 'wider'),
     ],
     'I77.74': [
       ObservationMapTarget('206', 'wider'),
@@ -7238,25 +7235,25 @@ observationConceptMap = {
       ObservationMapTarget('206', 'wider'),
     ],
     'I77.76': [
-      ObservationMapTarget('254', 'narrower'),
+      ObservationMapTarget('254', 'wider'),
     ],
     'I77.77': [
-      ObservationMapTarget('254', 'narrower'),
+      ObservationMapTarget('254', 'wider'),
     ],
     'I77.79': [
-      ObservationMapTarget('254', 'narrower'),
+      ObservationMapTarget('254', 'wider'),
     ],
     'I77.810': [
-      ObservationMapTarget('254', 'narrower'),
+      ObservationMapTarget('254', 'wider'),
     ],
     'I77.811': [
-      ObservationMapTarget('254', 'narrower'),
+      ObservationMapTarget('254', 'wider'),
     ],
     'I77.812': [
-      ObservationMapTarget('254', 'narrower'),
+      ObservationMapTarget('254', 'wider'),
     ],
     'I77.819': [
-      ObservationMapTarget('254', 'narrower'),
+      ObservationMapTarget('254', 'wider'),
     ],
     'I77.89': [
       ObservationMapTarget('254', 'wider'),
@@ -7265,7 +7262,7 @@ observationConceptMap = {
       ObservationMapTarget('254', 'wider'),
     ],
     'I79.1': [
-      ObservationMapTarget('254', 'narrower'),
+      ObservationMapTarget('254', 'wider'),
     ],
     'I81': [
       ObservationMapTarget('254', 'wider'),
@@ -7837,11 +7834,11 @@ observationConceptMap = {
       ObservationMapTarget('198', 'wider'),
     ],
     'M31.4': [
-      ObservationMapTarget('254', 'narrower'),
+      ObservationMapTarget('254', 'wider'),
     ],
     'M31.5': [
       ObservationMapTarget('206', 'wider'),
-      ObservationMapTarget('254', 'narrower'),
+      ObservationMapTarget('254', 'wider'),
     ],
     'M32.13': [
       ObservationMapTarget('199', 'wider'),
@@ -8883,7 +8880,7 @@ observationConceptMap = {
       ObservationMapTarget('254', 'wider'),
     ],
     'Q25.40': [
-      ObservationMapTarget('254', 'narrower'),
+      ObservationMapTarget('254', 'wider'),
     ],
     'Q25.41': [
       ObservationMapTarget('254', 'wider'),
@@ -8892,10 +8889,10 @@ observationConceptMap = {
       ObservationMapTarget('254', 'wider'),
     ],
     'Q25.43': [
-      ObservationMapTarget('254', 'narrower'),
+      ObservationMapTarget('254', 'wider'),
     ],
     'Q25.44': [
-      ObservationMapTarget('254', 'narrower'),
+      ObservationMapTarget('254', 'wider'),
     ],
     'Q25.45': [
       ObservationMapTarget('254', 'wider'),
@@ -8913,7 +8910,7 @@ observationConceptMap = {
       ObservationMapTarget('254', 'wider'),
     ],
     'Q25.72': [
-      ObservationMapTarget('254', 'narrower'),
+      ObservationMapTarget('254', 'wider'),
     ],
     'Q25.79': [
       ObservationMapTarget('016', 'wider'),
@@ -8932,10 +8929,10 @@ observationConceptMap = {
       ObservationMapTarget('254', 'wider'),
     ],
     'Q27.1': [
-      ObservationMapTarget('254', 'narrower'),
+      ObservationMapTarget('254', 'wider'),
     ],
     'Q27.2': [
-      ObservationMapTarget('254', 'narrower'),
+      ObservationMapTarget('254', 'wider'),
     ],
     'Q28.0': [
       ObservationMapTarget('206', 'wider'),
@@ -8956,7 +8953,7 @@ observationConceptMap = {
       ObservationMapTarget('204', 'wider'),
     ],
     'Q87.410': [
-      ObservationMapTarget('254', 'narrower'),
+      ObservationMapTarget('254', 'wider'),
     ],
     'Q89.01': [
       ObservationMapTarget('160', 'wider'),
@@ -9492,13 +9489,13 @@ observationConceptMap = {
       ObservationMapTarget('016', 'wider'),
     ],
     'T82.390A': [
-      ObservationMapTarget('254', 'narrower'),
+      ObservationMapTarget('254', 'wider'),
     ],
     'T82.390D': [
-      ObservationMapTarget('254', 'narrower'),
+      ObservationMapTarget('254', 'wider'),
     ],
     'T82.390S': [
-      ObservationMapTarget('254', 'narrower'),
+      ObservationMapTarget('254', 'wider'),
     ],
     'T82.6XXA': [
       ObservationMapTarget('254', 'wider'),

@@ -206,12 +206,12 @@ test cases send CDSi observation codes directly and never reach this path**;
     Q93.82 Williams are no.
   - 258 is non-malignant chronic blood disease only. Every C code, D45, D46.x, D47.4,
     D47.Z1/Z2/Z9 (neoplasms; they still reach 178/180/181/198) and D50.1 are no.
-  - 102 chronic arterial and aortic rows under 254 (I70-I72, I75, I77, I79.1, E08.51,
-    E13.59, A52.02, M31.4/5, Q25.4x, Q25.72, Q27.1/2, Q87.410, T82.390) were answered
-    yes in one section and no in another (that one used the pneumococcal "chronic heart
-    disease" wording; 254 is RSV only). They are held, decided by "held for policy
-    question", and assert nothing until the question in
-    cicada_generator/lib/crosswalk/oe_policy_questions.md is answered.
+  - 102 chronic arterial and aortic rows under 254 were answered yes in one section and no
+    in another (that one used the pneumococcal "chronic heart disease" wording; 254 is RSV
+    50-74 only). The policy answer, same day: 254 is cardiac plus chronic arterial and
+    aortic disease (ACIP adult schedule addendum 2025-07-02 excludes only isolated
+    hypertension), so 101 are yes; I77.4 celiac artery compression is no. 016 stays
+    heart-only.
 
 ### ImmDS Server
 

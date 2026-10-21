@@ -7873,6 +7873,34 @@
             "display": "Other sequelae following unspecified cerebrovascular disease"
           },
           {
+            "code": "I70.0",
+            "display": "Atherosclerosis of aorta"
+          },
+          {
+            "code": "I70.1",
+            "display": "Atherosclerosis of renal artery"
+          },
+          {
+            "code": "I70.201",
+            "display": "Unspecified atherosclerosis of native arteries of extremities, right leg"
+          },
+          {
+            "code": "I70.202",
+            "display": "Unspecified atherosclerosis of native arteries of extremities, left leg"
+          },
+          {
+            "code": "I70.203",
+            "display": "Unspecified atherosclerosis of native arteries of extremities, bilateral legs"
+          },
+          {
+            "code": "I70.208",
+            "display": "Unspecified atherosclerosis of native arteries of extremities, other extremity"
+          },
+          {
+            "code": "I70.209",
+            "display": "Unspecified atherosclerosis of native arteries of extremities, unspecified extremity"
+          },
+          {
             "code": "I70.211",
             "display": "Atherosclerosis of native arteries of extremities with intermittent claudication, right leg"
           },
@@ -7885,12 +7913,124 @@
             "display": "Atherosclerosis of native arteries of extremities with intermittent claudication, bilateral legs"
           },
           {
+            "code": "I70.218",
+            "display": "Atherosclerosis of native arteries of extremities with intermittent claudication, other extremity"
+          },
+          {
             "code": "I70.219",
             "display": "Atherosclerosis of native arteries of extremities with intermittent claudication, unspecified extremity"
           },
           {
+            "code": "I70.221",
+            "display": "Atherosclerosis of native arteries of extremities with rest pain, right leg"
+          },
+          {
+            "code": "I70.222",
+            "display": "Atherosclerosis of native arteries of extremities with rest pain, left leg"
+          },
+          {
+            "code": "I70.223",
+            "display": "Atherosclerosis of native arteries of extremities with rest pain, bilateral legs"
+          },
+          {
+            "code": "I70.228",
+            "display": "Atherosclerosis of native arteries of extremities with rest pain, other extremity"
+          },
+          {
+            "code": "I70.229",
+            "display": "Atherosclerosis of native arteries of extremities with rest pain, unspecified extremity"
+          },
+          {
+            "code": "I70.231",
+            "display": "Atherosclerosis of native arteries of right leg with ulceration of thigh"
+          },
+          {
+            "code": "I70.232",
+            "display": "Atherosclerosis of native arteries of right leg with ulceration of calf"
+          },
+          {
+            "code": "I70.233",
+            "display": "Atherosclerosis of native arteries of right leg with ulceration of ankle"
+          },
+          {
+            "code": "I70.234",
+            "display": "Atherosclerosis of native arteries of right leg with ulceration of heel and midfoot"
+          },
+          {
+            "code": "I70.235",
+            "display": "Atherosclerosis of native arteries of right leg with ulceration of other part of foot"
+          },
+          {
+            "code": "I70.238",
+            "display": "Atherosclerosis of native arteries of right leg with ulceration of other part of lower leg"
+          },
+          {
+            "code": "I70.241",
+            "display": "Atherosclerosis of native arteries of left leg with ulceration of thigh"
+          },
+          {
+            "code": "I70.242",
+            "display": "Atherosclerosis of native arteries of left leg with ulceration of calf"
+          },
+          {
+            "code": "I70.243",
+            "display": "Atherosclerosis of native arteries of left leg with ulceration of ankle"
+          },
+          {
+            "code": "I70.244",
+            "display": "Atherosclerosis of native arteries of left leg with ulceration of heel and midfoot"
+          },
+          {
+            "code": "I70.245",
+            "display": "Atherosclerosis of native arteries of left leg with ulceration of other part of foot"
+          },
+          {
+            "code": "I70.248",
+            "display": "Atherosclerosis of native arteries of left leg with ulceration of other part of lower leg"
+          },
+          {
+            "code": "I70.25",
+            "display": "Atherosclerosis of native arteries of other extremities with ulceration"
+          },
+          {
+            "code": "I70.261",
+            "display": "Atherosclerosis of native arteries of extremities with gangrene, right leg"
+          },
+          {
+            "code": "I70.262",
+            "display": "Atherosclerosis of native arteries of extremities with gangrene, left leg"
+          },
+          {
+            "code": "I70.263",
+            "display": "Atherosclerosis of native arteries of extremities with gangrene, bilateral legs"
+          },
+          {
+            "code": "I70.268",
+            "display": "Atherosclerosis of native arteries of extremities with gangrene, other extremity"
+          },
+          {
             "code": "I70.269",
             "display": "Atherosclerosis of native arteries of extremities with gangrene, unspecified extremity"
+          },
+          {
+            "code": "I70.301",
+            "display": "Unspecified atherosclerosis of unspecified type of bypass graft(s) of the extremities, right leg"
+          },
+          {
+            "code": "I70.302",
+            "display": "Unspecified atherosclerosis of unspecified type of bypass graft(s) of the extremities, left leg"
+          },
+          {
+            "code": "I70.303",
+            "display": "Unspecified atherosclerosis of unspecified type of bypass graft(s) of the extremities, bilateral legs"
+          },
+          {
+            "code": "I70.308",
+            "display": "Unspecified atherosclerosis of unspecified type of bypass graft(s) of the extremities, other extremity"
+          },
+          {
+            "code": "I70.309",
+            "display": "Unspecified atherosclerosis of unspecified type of bypass graft(s) of the extremities, unspecified extremity"
           },
           {
             "code": "I70.311",
@@ -7903,6 +8043,90 @@
           {
             "code": "I70.313",
             "display": "Atherosclerosis of unspecified type of bypass graft(s) of the extremities with intermittent claudication, bilateral legs"
+          },
+          {
+            "code": "I70.321",
+            "display": "Atherosclerosis of unspecified type of bypass graft(s) of the extremities with rest pain, right leg"
+          },
+          {
+            "code": "I70.322",
+            "display": "Atherosclerosis of unspecified type of bypass graft(s) of the extremities with rest pain, left leg"
+          },
+          {
+            "code": "I70.361",
+            "display": "Atherosclerosis of unspecified type of bypass graft(s) of the extremities with gangrene, right leg"
+          },
+          {
+            "code": "I70.362",
+            "display": "Atherosclerosis of unspecified type of bypass graft(s) of the extremities with gangrene, left leg"
+          },
+          {
+            "code": "I70.401",
+            "display": "Unspecified atherosclerosis of autologous vein bypass graft(s) of the extremities, right leg"
+          },
+          {
+            "code": "I70.402",
+            "display": "Unspecified atherosclerosis of autologous vein bypass graft(s) of the extremities, left leg"
+          },
+          {
+            "code": "I70.403",
+            "display": "Unspecified atherosclerosis of autologous vein bypass graft(s) of the extremities, bilateral legs"
+          },
+          {
+            "code": "I70.408",
+            "display": "Unspecified atherosclerosis of autologous vein bypass graft(s) of the extremities, other extremity"
+          },
+          {
+            "code": "I70.409",
+            "display": "Unspecified atherosclerosis of autologous vein bypass graft(s) of the extremities, unspecified extremity"
+          },
+          {
+            "code": "I70.461",
+            "display": "Atherosclerosis of autologous vein bypass graft(s) of the extremities with gangrene, right leg"
+          },
+          {
+            "code": "I70.462",
+            "display": "Atherosclerosis of autologous vein bypass graft(s) of the extremities with gangrene, left leg"
+          },
+          {
+            "code": "I70.501",
+            "display": "Unspecified atherosclerosis of nonautologous biological bypass graft(s) of the extremities, right leg"
+          },
+          {
+            "code": "I70.502",
+            "display": "Unspecified atherosclerosis of nonautologous biological bypass graft(s) of the extremities, left leg"
+          },
+          {
+            "code": "I70.503",
+            "display": "Unspecified atherosclerosis of nonautologous biological bypass graft(s) of the extremities, bilateral legs"
+          },
+          {
+            "code": "I70.508",
+            "display": "Unspecified atherosclerosis of nonautologous biological bypass graft(s) of the extremities, other extremity"
+          },
+          {
+            "code": "I70.509",
+            "display": "Unspecified atherosclerosis of nonautologous biological bypass graft(s) of the extremities, unspecified extremity"
+          },
+          {
+            "code": "I70.601",
+            "display": "Unspecified atherosclerosis of nonbiological bypass graft(s) of the extremities, right leg"
+          },
+          {
+            "code": "I70.602",
+            "display": "Unspecified atherosclerosis of nonbiological bypass graft(s) of the extremities, left leg"
+          },
+          {
+            "code": "I70.603",
+            "display": "Unspecified atherosclerosis of nonbiological bypass graft(s) of the extremities, bilateral legs"
+          },
+          {
+            "code": "I70.608",
+            "display": "Unspecified atherosclerosis of nonbiological bypass graft(s) of the extremities, other extremity"
+          },
+          {
+            "code": "I70.609",
+            "display": "Unspecified atherosclerosis of nonbiological bypass graft(s) of the extremities, unspecified extremity"
           },
           {
             "code": "I70.613",
@@ -7921,6 +8145,10 @@
             "display": "Generalized atherosclerosis"
           },
           {
+            "code": "I71.00",
+            "display": "Dissection of unspecified site of aorta"
+          },
+          {
             "code": "I71.010",
             "display": "Dissection of ascending aorta"
           },
@@ -7933,8 +8161,24 @@
             "display": "Dissection of descending thoracic aorta"
           },
           {
+            "code": "I71.019",
+            "display": "Dissection of thoracic aorta, unspecified"
+          },
+          {
+            "code": "I71.02",
+            "display": "Dissection of abdominal aorta"
+          },
+          {
             "code": "I71.03",
             "display": "Dissection of thoracoabdominal aorta"
+          },
+          {
+            "code": "I71.10",
+            "display": "Thoracic aortic aneurysm, ruptured, unspecified"
+          },
+          {
+            "code": "I71.11",
+            "display": "Aneurysm of the ascending aorta, ruptured"
           },
           {
             "code": "I71.12",
@@ -8005,8 +8249,32 @@
             "display": "Supraceliac aneurysm of the thoracoabdominal aorta, without rupture"
           },
           {
+            "code": "I71.8",
+            "display": "Aortic aneurysm of unspecified site, ruptured"
+          },
+          {
+            "code": "I71.9",
+            "display": "Aortic aneurysm of unspecified site, without rupture"
+          },
+          {
             "code": "I72.0",
             "display": "Aneurysm of carotid artery"
+          },
+          {
+            "code": "I72.1",
+            "display": "Aneurysm of artery of upper extremity"
+          },
+          {
+            "code": "I72.2",
+            "display": "Aneurysm of renal artery"
+          },
+          {
+            "code": "I72.3",
+            "display": "Aneurysm of iliac artery"
+          },
+          {
+            "code": "I72.4",
+            "display": "Aneurysm of artery of lower extremity"
           },
           {
             "code": "I72.5",
@@ -8045,6 +8313,42 @@
             "display": "Embolism and thrombosis of unspecified artery"
           },
           {
+            "code": "I75.011",
+            "display": "Atheroembolism of right upper extremity"
+          },
+          {
+            "code": "I75.012",
+            "display": "Atheroembolism of left upper extremity"
+          },
+          {
+            "code": "I75.013",
+            "display": "Atheroembolism of bilateral upper extremities"
+          },
+          {
+            "code": "I75.019",
+            "display": "Atheroembolism of unspecified upper extremity"
+          },
+          {
+            "code": "I75.021",
+            "display": "Atheroembolism of right lower extremity"
+          },
+          {
+            "code": "I75.022",
+            "display": "Atheroembolism of left lower extremity"
+          },
+          {
+            "code": "I75.023",
+            "display": "Atheroembolism of bilateral lower extremities"
+          },
+          {
+            "code": "I75.029",
+            "display": "Atheroembolism of unspecified lower extremity"
+          },
+          {
+            "code": "I75.81",
+            "display": "Atheroembolism of kidney"
+          },
+          {
             "code": "I75.89",
             "display": "Atheroembolism of other site"
           },
@@ -8065,6 +8369,14 @@
             "display": "Dissection of carotid artery"
           },
           {
+            "code": "I77.72",
+            "display": "Dissection of iliac artery"
+          },
+          {
+            "code": "I77.73",
+            "display": "Dissection of renal artery"
+          },
+          {
             "code": "I77.74",
             "display": "Dissection of vertebral artery"
           },
@@ -8073,12 +8385,44 @@
             "display": "Dissection of other precerebral arteries"
           },
           {
+            "code": "I77.76",
+            "display": "Dissection of artery of upper extremity"
+          },
+          {
+            "code": "I77.77",
+            "display": "Dissection of artery of lower extremity"
+          },
+          {
+            "code": "I77.79",
+            "display": "Dissection of other specified artery"
+          },
+          {
+            "code": "I77.810",
+            "display": "Thoracic aortic ectasia"
+          },
+          {
+            "code": "I77.811",
+            "display": "Abdominal aortic ectasia"
+          },
+          {
+            "code": "I77.812",
+            "display": "Thoracoabdominal aortic ectasia"
+          },
+          {
+            "code": "I77.819",
+            "display": "Aortic ectasia, unspecified site"
+          },
+          {
             "code": "I77.89",
             "display": "Other specified disorders of arteries and arterioles"
           },
           {
             "code": "I77.9",
             "display": "Disorder of arteries and arterioles, unspecified"
+          },
+          {
+            "code": "I79.1",
+            "display": "Aortitis in diseases classified elsewhere"
           },
           {
             "code": "I81",
@@ -8759,6 +9103,10 @@
           {
             "code": "M31.2",
             "display": "Lethal midline granuloma"
+          },
+          {
+            "code": "M31.4",
+            "display": "Aortic arch syndrome [Takayasu]"
           },
           {
             "code": "M31.5",
@@ -10109,12 +10457,24 @@
             "display": "Supravalvular aortic stenosis"
           },
           {
+            "code": "Q25.40",
+            "display": "Congenital malformation of aorta unspecified"
+          },
+          {
             "code": "Q25.41",
             "display": "Absence and aplasia of aorta"
           },
           {
             "code": "Q25.42",
             "display": "Hypoplasia of aorta"
+          },
+          {
+            "code": "Q25.43",
+            "display": "Congenital aneurysm of aorta"
+          },
+          {
+            "code": "Q25.44",
+            "display": "Congenital dilation of aorta"
           },
           {
             "code": "Q25.45",
@@ -10137,6 +10497,10 @@
             "display": "Coarctation of pulmonary artery"
           },
           {
+            "code": "Q25.72",
+            "display": "Congenital pulmonary arteriovenous malformation"
+          },
+          {
             "code": "Q25.79",
             "display": "Other congenital malformations of pulmonary artery"
           },
@@ -10155,6 +10519,14 @@
           {
             "code": "Q26.4",
             "display": "Anomalous pulmonary venous connection, unspecified"
+          },
+          {
+            "code": "Q27.1",
+            "display": "Congenital renal artery stenosis"
+          },
+          {
+            "code": "Q27.2",
+            "display": "Other congenital malformations of renal artery"
           },
           {
             "code": "Q28.0",
@@ -10179,6 +10551,10 @@
           {
             "code": "Q87.11",
             "display": "Prader-Willi syndrome"
+          },
+          {
+            "code": "Q87.410",
+            "display": "Marfan syndrome with aortic dilation"
           },
           {
             "code": "Q89.01",
@@ -10887,6 +11263,18 @@
           {
             "code": "T82.198S",
             "display": "Other mechanical complication of other cardiac electronic device, sequela"
+          },
+          {
+            "code": "T82.390A",
+            "display": "Other mechanical complication of aortic (bifurcation) graft (replacement), initial encounter"
+          },
+          {
+            "code": "T82.390D",
+            "display": "Other mechanical complication of aortic (bifurcation) graft (replacement), subsequent encounter"
+          },
+          {
+            "code": "T82.390S",
+            "display": "Other mechanical complication of aortic (bifurcation) graft (replacement), sequela"
           },
           {
             "code": "T82.6XXA",

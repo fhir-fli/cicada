@@ -176,11 +176,14 @@ void main() {
         expect(_codes(_icd10, 'F19.939'), isNot(contains('040')));
       });
 
-      // OpenEvidence 2026-10-21 counted chronic arterial disease under 254
-      // in one answer and ruled it out in another. The rows are held for a
-      // policy question and assert nothing until it is answered.
-      test('a held row asserts nothing', () {
-        expect(_codes(_icd10, 'I70.0'), isNot(contains('254')));
+      // OpenEvidence 2026-10-21 (policy question): 254 is the RSV condition,
+      // cardiac plus chronic arterial and aortic disease; the pneumococcal
+      // "chronic heart disease" wording belongs to 016. Celiac artery
+      // compression is external compression, not vessel disease.
+      test('chronic arterial disease is 254, external compression is not', () {
+        expect(_codes(_icd10, 'I70.0'), contains('254'));
+        expect(_codes(_icd10, 'I71.9'), contains('254'));
+        expect(_codes(_icd10, 'I77.4'), isNot(contains('254')));
       });
     });
 
