@@ -17,16 +17,8 @@
             "display": "Typhoid pneumonia"
           },
           {
-            "code": "A01.05",
-            "display": "Typhoid osteomyelitis"
-          },
-          {
             "code": "A02.22",
             "display": "Salmonella pneumonia"
-          },
-          {
-            "code": "A02.24",
-            "display": "Salmonella osteomyelitis"
           },
           {
             "code": "A08.0",
@@ -241,20 +233,8 @@
             "display": "Miliary tuberculosis, unspecified"
           },
           {
-            "code": "A20.0",
-            "display": "Bubonic plague"
-          },
-          {
             "code": "A20.2",
             "display": "Pneumonic plague"
-          },
-          {
-            "code": "A21.0",
-            "display": "Ulceroglandular tularemia"
-          },
-          {
-            "code": "A21.1",
-            "display": "Oculoglandular tularemia"
           },
           {
             "code": "A21.2",
@@ -269,24 +249,12 @@
             "display": "Listerial endocarditis"
           },
           {
-            "code": "A36.81",
-            "display": "Diphtheritic cardiomyopathy"
-          },
-          {
             "code": "A37.01",
             "display": "Whooping cough due to Bordetella pertussis with pneumonia"
           },
           {
             "code": "A37.11",
             "display": "Whooping cough due to Bordetella parapertussis with pneumonia"
-          },
-          {
-            "code": "A38.1",
-            "display": "Scarlet fever with myocarditis"
-          },
-          {
-            "code": "A39.52",
-            "display": "Meningococcal myocarditis"
           },
           {
             "code": "A50.01",
@@ -781,10 +749,6 @@
             "display": "Herpesviral infection of other urogenital tract"
           },
           {
-            "code": "A60.1",
-            "display": "Herpesviral infection of perianal skin and rectum"
-          },
-          {
             "code": "A60.9",
             "display": "Anogenital herpesviral infection, unspecified"
           },
@@ -795,10 +759,6 @@
           {
             "code": "A64",
             "display": "Unspecified sexually transmitted disease"
-          },
-          {
-            "code": "A66.5",
-            "display": "Gangosa"
           },
           {
             "code": "A70",
@@ -845,10 +805,6 @@
             "display": "Other Creutzfeldt-Jakob disease"
           },
           {
-            "code": "A81.1",
-            "display": "Subacute sclerosing panencephalitis"
-          },
-          {
             "code": "A81.81",
             "display": "Kuru"
           },
@@ -863,34 +819,6 @@
           {
             "code": "A81.89",
             "display": "Other atypical virus infections of central nervous system"
-          },
-          {
-            "code": "A88.0",
-            "display": "Enteroviral exanthematous fever [Boston exanthem]"
-          },
-          {
-            "code": "B00.0",
-            "display": "Eczema herpeticum"
-          },
-          {
-            "code": "B00.3",
-            "display": "Herpesviral meningitis"
-          },
-          {
-            "code": "B00.50",
-            "display": "Herpesviral ocular disease, unspecified"
-          },
-          {
-            "code": "B00.53",
-            "display": "Herpesviral conjunctivitis"
-          },
-          {
-            "code": "B00.7",
-            "display": "Disseminated herpesviral disease"
-          },
-          {
-            "code": "B00.82",
-            "display": "Herpes simplex myelitis"
           },
           {
             "code": "B01.11",
@@ -969,78 +897,6 @@
             "display": "Zoster without complications"
           },
           {
-            "code": "B03",
-            "display": "Smallpox"
-          },
-          {
-            "code": "B05.4",
-            "display": "Measles with intestinal complications"
-          },
-          {
-            "code": "B05.81",
-            "display": "Measles keratitis and keratoconjunctivitis"
-          },
-          {
-            "code": "B05.89",
-            "display": "Other measles complications"
-          },
-          {
-            "code": "B06.01",
-            "display": "Rubella encephalitis"
-          },
-          {
-            "code": "B06.02",
-            "display": "Rubella meningitis"
-          },
-          {
-            "code": "B06.09",
-            "display": "Other neurological complications of rubella"
-          },
-          {
-            "code": "B06.81",
-            "display": "Rubella pneumonia"
-          },
-          {
-            "code": "B06.82",
-            "display": "Rubella arthritis"
-          },
-          {
-            "code": "B06.89",
-            "display": "Other rubella complications"
-          },
-          {
-            "code": "B06.9",
-            "display": "Rubella without complication"
-          },
-          {
-            "code": "B08.1",
-            "display": "Molluscum contagiosum"
-          },
-          {
-            "code": "B08.20",
-            "display": "Exanthema subitum [sixth disease], unspecified"
-          },
-          {
-            "code": "B08.21",
-            "display": "Exanthema subitum [sixth disease] due to human herpesvirus 6"
-          },
-          {
-            "code": "B08.22",
-            "display": "Exanthema subitum [sixth disease] due to human herpesvirus 7"
-          },
-          {
-            "code": "B08.3",
-            "display": "Erythema infectiosum [fifth disease]"
-          },
-          {
-            "code": "B08.71",
-            "display": "Tanapox virus disease"
-          },
-          {
-            "code": "B08.72",
-            "display": "Yaba pox virus disease"
-          },
-          {
             "code": "B17.0",
             "display": "Acute delta-(super) infection of hepatitis B carrier"
           },
@@ -1093,26 +949,6 @@
             "display": "Human immunodeficiency virus [HIV] disease"
           },
           {
-            "code": "B26.82",
-            "display": "Mumps myocarditis"
-          },
-          {
-            "code": "B27.01",
-            "display": "Gammaherpesviral mononucleosis with polyneuropathy"
-          },
-          {
-            "code": "B33.21",
-            "display": "Viral endocarditis"
-          },
-          {
-            "code": "B33.22",
-            "display": "Viral myocarditis"
-          },
-          {
-            "code": "B33.24",
-            "display": "Viral cardiomyopathy"
-          },
-          {
             "code": "B38.1",
             "display": "Chronic pulmonary coccidioidomycosis"
           },
@@ -1125,32 +961,12 @@
             "display": "Chronic pulmonary blastomycosis"
           },
           {
-            "code": "B42.1",
-            "display": "Lymphocutaneous sporotrichosis"
-          },
-          {
-            "code": "B44.2",
-            "display": "Tonsillar aspergillosis"
-          },
-          {
-            "code": "B51.0",
-            "display": "Plasmodium vivax malaria with rupture of spleen"
-          },
-          {
-            "code": "B57.0",
-            "display": "Acute Chagas' disease with heart involvement"
-          },
-          {
             "code": "B57.2",
             "display": "Chagas' disease (chronic) with heart involvement"
           },
           {
             "code": "B58.3",
             "display": "Pulmonary toxoplasmosis"
-          },
-          {
-            "code": "B58.81",
-            "display": "Toxoplasma myocarditis"
           },
           {
             "code": "B77.81",
@@ -4697,10 +4513,6 @@
             "display": "Carcinoma in situ of thyroid and other endocrine glands"
           },
           {
-            "code": "D10.4",
-            "display": "Benign neoplasm of tonsil"
-          },
-          {
             "code": "D16.10",
             "display": "Benign neoplasm of short bones of unspecified upper limb"
           },
@@ -4737,10 +4549,6 @@
             "display": "Polycythemia vera"
           },
           {
-            "code": "D46.1",
-            "display": "Refractory anemia with ring sideroblasts"
-          },
-          {
             "code": "D46.20",
             "display": "Refractory anemia with excess of blasts, unspecified"
           },
@@ -4763,14 +4571,6 @@
           {
             "code": "D46.C",
             "display": "Myelodysplastic syndrome with isolated del(5q) chromosomal abnormality"
-          },
-          {
-            "code": "D46.Z",
-            "display": "Other myelodysplastic syndromes"
-          },
-          {
-            "code": "D47.01",
-            "display": "Cutaneous mastocytosis"
           },
           {
             "code": "D47.02",
@@ -4989,10 +4789,6 @@
             "display": "Chronic acquired pure red cell aplasia"
           },
           {
-            "code": "D60.1",
-            "display": "Transient acquired pure red cell aplasia"
-          },
-          {
             "code": "D60.9",
             "display": "Acquired pure red cell aplasia, unspecified"
           },
@@ -5069,10 +4865,6 @@
             "display": "Other primary thrombocytopenia"
           },
           {
-            "code": "D69.51",
-            "display": "Posttransfusion purpura"
-          },
-          {
             "code": "D70.0",
             "display": "Congenital agranulocytosis"
           },
@@ -5109,30 +4901,6 @@
             "display": "Hyposplenism"
           },
           {
-            "code": "D73.1",
-            "display": "Hypersplenism"
-          },
-          {
-            "code": "D73.2",
-            "display": "Chronic congestive splenomegaly"
-          },
-          {
-            "code": "D73.3",
-            "display": "Abscess of spleen"
-          },
-          {
-            "code": "D73.4",
-            "display": "Cyst of spleen"
-          },
-          {
-            "code": "D73.5",
-            "display": "Infarction of spleen"
-          },
-          {
-            "code": "D73.9",
-            "display": "Disease of spleen, unspecified"
-          },
-          {
             "code": "D74.0",
             "display": "Congenital methemoglobinemia"
           },
@@ -5165,20 +4933,12 @@
             "display": "Hemophagocytic lymphohistiocytosis"
           },
           {
-            "code": "D76.2",
-            "display": "Hemophagocytic syndrome, infection-associated"
-          },
-          {
             "code": "D76.3",
             "display": "Other histiocytosis syndromes"
           },
           {
             "code": "D77",
             "display": "Other disorders of blood and blood-forming organs in diseases classified elsewhere"
-          },
-          {
-            "code": "D78.81",
-            "display": "Other intraoperative complications of the spleen"
           },
           {
             "code": "D80.0",
@@ -5237,10 +4997,6 @@
             "display": "Wiskott-Aldrich syndrome"
           },
           {
-            "code": "D82.1",
-            "display": "Di George's syndrome"
-          },
-          {
             "code": "D83.0",
             "display": "Common variable immunodeficiency with predominant abnormalities of B-cell numbers and function"
           },
@@ -5273,24 +5029,12 @@
             "display": "Immunodeficiency, unspecified"
           },
           {
-            "code": "D86.1",
-            "display": "Sarcoidosis of lymph nodes"
-          },
-          {
             "code": "D86.85",
             "display": "Sarcoid myocarditis"
           },
           {
-            "code": "D89.40",
-            "display": "Mast cell activation, unspecified"
-          },
-          {
             "code": "D89.41",
             "display": "Monoclonal mast cell activation syndrome"
-          },
-          {
-            "code": "D89.42",
-            "display": "Idiopathic mast cell activation syndrome"
           },
           {
             "code": "D89.810",
@@ -5849,22 +5593,6 @@
             "display": "Multiple endocrine neoplasia [MEN] type IIA"
           },
           {
-            "code": "E32.0",
-            "display": "Persistent hyperplasia of thymus"
-          },
-          {
-            "code": "E32.1",
-            "display": "Abscess of thymus"
-          },
-          {
-            "code": "E32.8",
-            "display": "Other diseases of thymus"
-          },
-          {
-            "code": "E32.9",
-            "display": "Disease of thymus, unspecified"
-          },
-          {
             "code": "E34.00",
             "display": "Carcinoid syndrome, unspecified"
           },
@@ -5893,38 +5621,6 @@
             "display": "Obesity, unspecified"
           },
           {
-            "code": "E70.30",
-            "display": "Albinism, unspecified"
-          },
-          {
-            "code": "E70.310",
-            "display": "X-linked ocular albinism"
-          },
-          {
-            "code": "E70.311",
-            "display": "Autosomal recessive ocular albinism"
-          },
-          {
-            "code": "E70.319",
-            "display": "Ocular albinism, unspecified"
-          },
-          {
-            "code": "E70.320",
-            "display": "Tyrosinase negative oculocutaneous albinism"
-          },
-          {
-            "code": "E70.321",
-            "display": "Tyrosinase positive oculocutaneous albinism"
-          },
-          {
-            "code": "E70.328",
-            "display": "Other oculocutaneous albinism"
-          },
-          {
-            "code": "E70.329",
-            "display": "Oculocutaneous albinism, unspecified"
-          },
-          {
             "code": "E70.330",
             "display": "Chediak-Higashi syndrome"
           },
@@ -5935,10 +5631,6 @@
           {
             "code": "E70.339",
             "display": "Albinism with hematologic abnormality, unspecified"
-          },
-          {
-            "code": "E70.39",
-            "display": "Other specified albinism"
           },
           {
             "code": "E71.548",
@@ -6157,10 +5849,6 @@
             "display": "Other psychoactive substance use, unspecified, uncomplicated"
           },
           {
-            "code": "F19.939",
-            "display": "Other psychoactive substance use, unspecified with withdrawal, unspecified"
-          },
-          {
             "code": "F19.97",
             "display": "Other psychoactive substance use, unspecified with psychoactive substance-induced persisting dementia"
           },
@@ -6171,10 +5859,6 @@
           {
             "code": "F99",
             "display": "Mental disorder, not otherwise specified"
-          },
-          {
-            "code": "G04.02",
-            "display": "Postimmunization acute disseminated encephalitis, myelitis and encephalomyelitis"
           },
           {
             "code": "G08",
@@ -6191,10 +5875,6 @@
           {
             "code": "G11.4",
             "display": "Hereditary spastic paraplegia"
-          },
-          {
-            "code": "G11.5",
-            "display": "Hypomyelination - hypogonadotropic hypogonadism - hypodontia"
           },
           {
             "code": "G11.8",
@@ -6321,34 +6001,6 @@
             "display": "Lafora progressive myoclonus epilepsy, not intractable, without status epilepticus"
           },
           {
-            "code": "G43.701",
-            "display": "Chronic migraine without aura, not intractable, with status migrainosus"
-          },
-          {
-            "code": "G43.709",
-            "display": "Chronic migraine without aura, not intractable, without status migrainosus"
-          },
-          {
-            "code": "G43.719",
-            "display": "Chronic migraine without aura, intractable, without status migrainosus"
-          },
-          {
-            "code": "G43.C1",
-            "display": "Periodic headache syndromes in child or adult, intractable"
-          },
-          {
-            "code": "G44.049",
-            "display": "Chronic paroxysmal hemicrania, not intractable"
-          },
-          {
-            "code": "G44.51",
-            "display": "Hemicrania continua"
-          },
-          {
-            "code": "G44.59",
-            "display": "Other complicated headache syndrome"
-          },
-          {
             "code": "G45.0",
             "display": "Vertebro-basilar artery syndrome"
           },
@@ -6457,70 +6109,6 @@
             "display": "Postprocedural hematoma of a nervous system organ or structure following other procedure"
           },
           {
-            "code": "H02.851",
-            "display": "Elephantiasis of right upper eyelid"
-          },
-          {
-            "code": "H02.852",
-            "display": "Elephantiasis of right lower eyelid"
-          },
-          {
-            "code": "H02.853",
-            "display": "Elephantiasis of right eye, unspecified eyelid"
-          },
-          {
-            "code": "H02.854",
-            "display": "Elephantiasis of left upper eyelid"
-          },
-          {
-            "code": "H02.855",
-            "display": "Elephantiasis of left lower eyelid"
-          },
-          {
-            "code": "H02.856",
-            "display": "Elephantiasis of left eye, unspecified eyelid"
-          },
-          {
-            "code": "H02.859",
-            "display": "Elephantiasis of unspecified eye, unspecified eyelid"
-          },
-          {
-            "code": "H05.021",
-            "display": "Osteomyelitis of right orbit"
-          },
-          {
-            "code": "H05.022",
-            "display": "Osteomyelitis of left orbit"
-          },
-          {
-            "code": "H05.023",
-            "display": "Osteomyelitis of bilateral orbits"
-          },
-          {
-            "code": "H05.029",
-            "display": "Osteomyelitis of unspecified orbit"
-          },
-          {
-            "code": "H34.00",
-            "display": "Transient retinal artery occlusion, unspecified eye"
-          },
-          {
-            "code": "H34.01",
-            "display": "Transient retinal artery occlusion, right eye"
-          },
-          {
-            "code": "H34.02",
-            "display": "Transient retinal artery occlusion, left eye"
-          },
-          {
-            "code": "H34.03",
-            "display": "Transient retinal artery occlusion, bilateral"
-          },
-          {
-            "code": "H34.10",
-            "display": "Central retinal artery occlusion, unspecified eye"
-          },
-          {
             "code": "H34.11",
             "display": "Central retinal artery occlusion, right eye"
           },
@@ -6531,22 +6119,6 @@
           {
             "code": "H34.13",
             "display": "Central retinal artery occlusion, bilateral"
-          },
-          {
-            "code": "H34.211",
-            "display": "Partial retinal artery occlusion, right eye"
-          },
-          {
-            "code": "H34.212",
-            "display": "Partial retinal artery occlusion, left eye"
-          },
-          {
-            "code": "H34.213",
-            "display": "Partial retinal artery occlusion, bilateral"
-          },
-          {
-            "code": "H34.219",
-            "display": "Partial retinal artery occlusion, unspecified eye"
           },
           {
             "code": "H34.231",
@@ -6565,64 +6137,12 @@
             "display": "Retinal artery branch occlusion, unspecified eye"
           },
           {
-            "code": "H34.8132",
-            "display": "Central retinal vein occlusion, bilateral, stable"
-          },
-          {
             "code": "H34.8190",
             "display": "Central retinal vein occlusion, unspecified eye, with macular edema"
           },
           {
             "code": "H34.8191",
             "display": "Central retinal vein occlusion, unspecified eye, with retinal neovascularization"
-          },
-          {
-            "code": "H34.829",
-            "display": "Venous engorgement, unspecified eye"
-          },
-          {
-            "code": "H34.8332",
-            "display": "Tributary (branch) retinal vein occlusion, bilateral, stable"
-          },
-          {
-            "code": "H34.8391",
-            "display": "Tributary (branch) retinal vein occlusion, unspecified eye, with retinal neovascularization"
-          },
-          {
-            "code": "H34.8392",
-            "display": "Tributary (branch) retinal vein occlusion, unspecified eye, stable"
-          },
-          {
-            "code": "H35.041",
-            "display": "Retinal micro-aneurysms, unspecified, right eye"
-          },
-          {
-            "code": "H35.042",
-            "display": "Retinal micro-aneurysms, unspecified, left eye"
-          },
-          {
-            "code": "H35.043",
-            "display": "Retinal micro-aneurysms, unspecified, bilateral"
-          },
-          {
-            "code": "H35.049",
-            "display": "Retinal micro-aneurysms, unspecified, unspecified eye"
-          },
-          {
-            "code": "H35.071",
-            "display": "Retinal telangiectasis, right eye"
-          },
-          {
-            "code": "H35.072",
-            "display": "Retinal telangiectasis, left eye"
-          },
-          {
-            "code": "H35.073",
-            "display": "Retinal telangiectasis, bilateral"
-          },
-          {
-            "code": "H35.079",
-            "display": "Retinal telangiectasis, unspecified eye"
           },
           {
             "code": "H35.23",
@@ -6675,70 +6195,6 @@
           {
             "code": "H54.8",
             "display": "Legal blindness, as defined in USA"
-          },
-          {
-            "code": "H62.41",
-            "display": "Otitis externa in other diseases classified elsewhere, right ear"
-          },
-          {
-            "code": "H62.42",
-            "display": "Otitis externa in other diseases classified elsewhere, left ear"
-          },
-          {
-            "code": "H66.10",
-            "display": "Chronic tubotympanic suppurative otitis media, unspecified"
-          },
-          {
-            "code": "H66.11",
-            "display": "Chronic tubotympanic suppurative otitis media, right ear"
-          },
-          {
-            "code": "H66.12",
-            "display": "Chronic tubotympanic suppurative otitis media, left ear"
-          },
-          {
-            "code": "H66.13",
-            "display": "Chronic tubotympanic suppurative otitis media, bilateral"
-          },
-          {
-            "code": "H70.011",
-            "display": "Subperiosteal abscess of mastoid, right ear"
-          },
-          {
-            "code": "H70.012",
-            "display": "Subperiosteal abscess of mastoid, left ear"
-          },
-          {
-            "code": "H70.013",
-            "display": "Subperiosteal abscess of mastoid, bilateral"
-          },
-          {
-            "code": "H70.019",
-            "display": "Subperiosteal abscess of mastoid, unspecified ear"
-          },
-          {
-            "code": "I01.0",
-            "display": "Acute rheumatic pericarditis"
-          },
-          {
-            "code": "I01.1",
-            "display": "Acute rheumatic endocarditis"
-          },
-          {
-            "code": "I01.2",
-            "display": "Acute rheumatic myocarditis"
-          },
-          {
-            "code": "I01.8",
-            "display": "Other acute rheumatic heart disease"
-          },
-          {
-            "code": "I01.9",
-            "display": "Acute rheumatic heart disease, unspecified"
-          },
-          {
-            "code": "I02.0",
-            "display": "Rheumatic chorea with heart involvement"
           },
           {
             "code": "I05.0",
@@ -6917,10 +6373,6 @@
             "display": "Acute myocardial infarction, unspecified"
           },
           {
-            "code": "I21.A1",
-            "display": "Myocardial infarction type 2"
-          },
-          {
             "code": "I21.A9",
             "display": "Other myocardial infarction type"
           },
@@ -6975,14 +6427,6 @@
           {
             "code": "I24.0",
             "display": "Acute coronary thrombosis not resulting in myocardial infarction"
-          },
-          {
-            "code": "I24.1",
-            "display": "Dressler's syndrome"
-          },
-          {
-            "code": "I24.81",
-            "display": "Acute coronary microvascular dysfunction"
           },
           {
             "code": "I24.89",
@@ -7269,26 +6713,6 @@
             "display": "Endocarditis and heart valve disorders in diseases classified elsewhere"
           },
           {
-            "code": "I40.0",
-            "display": "Infective myocarditis"
-          },
-          {
-            "code": "I40.1",
-            "display": "Isolated myocarditis"
-          },
-          {
-            "code": "I40.8",
-            "display": "Other acute myocarditis"
-          },
-          {
-            "code": "I40.9",
-            "display": "Acute myocarditis, unspecified"
-          },
-          {
-            "code": "I41",
-            "display": "Myocarditis in diseases classified elsewhere"
-          },
-          {
             "code": "I42.0",
             "display": "Dilated cardiomyopathy"
           },
@@ -7333,10 +6757,6 @@
             "display": "Cardiomyopathy in diseases classified elsewhere"
           },
           {
-            "code": "I44.0",
-            "display": "Atrioventricular block, first degree"
-          },
-          {
             "code": "I44.1",
             "display": "Atrioventricular block, second degree"
           },
@@ -7349,24 +6769,12 @@
             "display": "Unspecified atrioventricular block"
           },
           {
-            "code": "I44.39",
-            "display": "Other atrioventricular block"
-          },
-          {
-            "code": "I44.60",
-            "display": "Unspecified fascicular block"
-          },
-          {
             "code": "I45.2",
             "display": "Bifascicular block"
           },
           {
             "code": "I45.3",
             "display": "Trifascicular block"
-          },
-          {
-            "code": "I45.4",
-            "display": "Nonspecific intraventricular block"
           },
           {
             "code": "I45.5",
@@ -7389,24 +6797,8 @@
             "display": "Conduction disorder, unspecified"
           },
           {
-            "code": "I46.2",
-            "display": "Cardiac arrest due to underlying cardiac condition"
-          },
-          {
-            "code": "I46.8",
-            "display": "Cardiac arrest due to other underlying condition"
-          },
-          {
-            "code": "I47.0",
-            "display": "Re-entry ventricular arrhythmia"
-          },
-          {
             "code": "I47.10",
             "display": "Supraventricular tachycardia, unspecified"
-          },
-          {
-            "code": "I47.11",
-            "display": "Inappropriate sinus tachycardia, so stated"
           },
           {
             "code": "I47.19",
@@ -7415,18 +6807,6 @@
           {
             "code": "I47.20",
             "display": "Ventricular tachycardia, unspecified"
-          },
-          {
-            "code": "I47.21",
-            "display": "Torsades de pointes"
-          },
-          {
-            "code": "I47.29",
-            "display": "Other ventricular tachycardia"
-          },
-          {
-            "code": "I47.9",
-            "display": "Paroxysmal tachycardia, unspecified"
           },
           {
             "code": "I48.0",
@@ -7463,22 +6843,6 @@
           {
             "code": "I48.92",
             "display": "Unspecified atrial flutter"
-          },
-          {
-            "code": "I49.01",
-            "display": "Ventricular fibrillation"
-          },
-          {
-            "code": "I49.02",
-            "display": "Ventricular flutter"
-          },
-          {
-            "code": "I49.40",
-            "display": "Unspecified premature depolarization"
-          },
-          {
-            "code": "I49.5",
-            "display": "Sick sinus syndrome"
           },
           {
             "code": "I49.8",
@@ -7577,20 +6941,12 @@
             "display": "Intracardiac thrombosis, not elsewhere classified"
           },
           {
-            "code": "I51.4",
-            "display": "Myocarditis, unspecified"
-          },
-          {
             "code": "I51.5",
             "display": "Myocardial degeneration"
           },
           {
             "code": "I51.7",
             "display": "Cardiomegaly"
-          },
-          {
-            "code": "I51.81",
-            "display": "Takotsubo syndrome"
           },
           {
             "code": "I51.89",
@@ -8925,18 +8281,6 @@
             "display": "Aneurysm of unspecified site"
           },
           {
-            "code": "I73.00",
-            "display": "Raynaud's syndrome without gangrene"
-          },
-          {
-            "code": "I73.01",
-            "display": "Raynaud's syndrome with gangrene"
-          },
-          {
-            "code": "I73.81",
-            "display": "Erythromelalgia"
-          },
-          {
             "code": "I73.89",
             "display": "Other specified peripheral vascular diseases"
           },
@@ -8945,40 +8289,8 @@
             "display": "Peripheral vascular disease, unspecified"
           },
           {
-            "code": "I74.01",
-            "display": "Saddle embolus of abdominal aorta"
-          },
-          {
-            "code": "I74.09",
-            "display": "Other arterial embolism and thrombosis of abdominal aorta"
-          },
-          {
-            "code": "I74.10",
-            "display": "Embolism and thrombosis of unspecified parts of aorta"
-          },
-          {
-            "code": "I74.11",
-            "display": "Embolism and thrombosis of thoracic aorta"
-          },
-          {
-            "code": "I74.19",
-            "display": "Embolism and thrombosis of other parts of aorta"
-          },
-          {
-            "code": "I74.2",
-            "display": "Embolism and thrombosis of arteries of the upper extremities"
-          },
-          {
             "code": "I74.3",
             "display": "Embolism and thrombosis of arteries of the lower extremities"
-          },
-          {
-            "code": "I74.4",
-            "display": "Embolism and thrombosis of arteries of extremities, unspecified"
-          },
-          {
-            "code": "I74.5",
-            "display": "Embolism and thrombosis of iliac artery"
           },
           {
             "code": "I74.8",
@@ -9035,10 +8347,6 @@
           {
             "code": "I77.3",
             "display": "Arterial fibromuscular dysplasia"
-          },
-          {
-            "code": "I77.4",
-            "display": "Celiac artery compression syndrome"
           },
           {
             "code": "I77.70",
@@ -9105,744 +8413,12 @@
             "display": "Aortitis in diseases classified elsewhere"
           },
           {
-            "code": "I80.00",
-            "display": "Phlebitis and thrombophlebitis of superficial vessels of unspecified lower extremity"
-          },
-          {
-            "code": "I80.01",
-            "display": "Phlebitis and thrombophlebitis of superficial vessels of right lower extremity"
-          },
-          {
-            "code": "I80.02",
-            "display": "Phlebitis and thrombophlebitis of superficial vessels of left lower extremity"
-          },
-          {
-            "code": "I80.03",
-            "display": "Phlebitis and thrombophlebitis of superficial vessels of lower extremities, bilateral"
-          },
-          {
-            "code": "I80.10",
-            "display": "Phlebitis and thrombophlebitis of unspecified femoral vein"
-          },
-          {
-            "code": "I80.11",
-            "display": "Phlebitis and thrombophlebitis of right femoral vein"
-          },
-          {
-            "code": "I80.12",
-            "display": "Phlebitis and thrombophlebitis of left femoral vein"
-          },
-          {
-            "code": "I80.13",
-            "display": "Phlebitis and thrombophlebitis of femoral vein, bilateral"
-          },
-          {
-            "code": "I80.201",
-            "display": "Phlebitis and thrombophlebitis of unspecified deep vessels of right lower extremity"
-          },
-          {
-            "code": "I80.202",
-            "display": "Phlebitis and thrombophlebitis of unspecified deep vessels of left lower extremity"
-          },
-          {
-            "code": "I80.203",
-            "display": "Phlebitis and thrombophlebitis of unspecified deep vessels of lower extremities, bilateral"
-          },
-          {
-            "code": "I80.209",
-            "display": "Phlebitis and thrombophlebitis of unspecified deep vessels of unspecified lower extremity"
-          },
-          {
-            "code": "I80.211",
-            "display": "Phlebitis and thrombophlebitis of right iliac vein"
-          },
-          {
-            "code": "I80.212",
-            "display": "Phlebitis and thrombophlebitis of left iliac vein"
-          },
-          {
-            "code": "I80.213",
-            "display": "Phlebitis and thrombophlebitis of iliac vein, bilateral"
-          },
-          {
-            "code": "I80.219",
-            "display": "Phlebitis and thrombophlebitis of unspecified iliac vein"
-          },
-          {
-            "code": "I80.221",
-            "display": "Phlebitis and thrombophlebitis of right popliteal vein"
-          },
-          {
-            "code": "I80.222",
-            "display": "Phlebitis and thrombophlebitis of left popliteal vein"
-          },
-          {
-            "code": "I80.223",
-            "display": "Phlebitis and thrombophlebitis of popliteal vein, bilateral"
-          },
-          {
-            "code": "I80.229",
-            "display": "Phlebitis and thrombophlebitis of unspecified popliteal vein"
-          },
-          {
-            "code": "I80.231",
-            "display": "Phlebitis and thrombophlebitis of right tibial vein"
-          },
-          {
-            "code": "I80.232",
-            "display": "Phlebitis and thrombophlebitis of left tibial vein"
-          },
-          {
-            "code": "I80.233",
-            "display": "Phlebitis and thrombophlebitis of tibial vein, bilateral"
-          },
-          {
-            "code": "I80.239",
-            "display": "Phlebitis and thrombophlebitis of unspecified tibial vein"
-          },
-          {
-            "code": "I80.241",
-            "display": "Phlebitis and thrombophlebitis of right peroneal vein"
-          },
-          {
-            "code": "I80.242",
-            "display": "Phlebitis and thrombophlebitis of left peroneal vein"
-          },
-          {
-            "code": "I80.299",
-            "display": "Phlebitis and thrombophlebitis of other deep vessels of unspecified lower extremity"
-          },
-          {
-            "code": "I80.3",
-            "display": "Phlebitis and thrombophlebitis of lower extremities, unspecified"
-          },
-          {
             "code": "I81",
             "display": "Portal vein thrombosis"
           },
           {
-            "code": "I82.211",
-            "display": "Chronic embolism and thrombosis of superior vena cava"
-          },
-          {
-            "code": "I82.221",
-            "display": "Chronic embolism and thrombosis of inferior vena cava"
-          },
-          {
-            "code": "I82.401",
-            "display": "Acute embolism and thrombosis of unspecified deep veins of right lower extremity"
-          },
-          {
-            "code": "I82.402",
-            "display": "Acute embolism and thrombosis of unspecified deep veins of left lower extremity"
-          },
-          {
-            "code": "I82.403",
-            "display": "Acute embolism and thrombosis of unspecified deep veins of lower extremity, bilateral"
-          },
-          {
-            "code": "I82.411",
-            "display": "Acute embolism and thrombosis of right femoral vein"
-          },
-          {
-            "code": "I82.412",
-            "display": "Acute embolism and thrombosis of left femoral vein"
-          },
-          {
-            "code": "I82.413",
-            "display": "Acute embolism and thrombosis of femoral vein, bilateral"
-          },
-          {
-            "code": "I82.419",
-            "display": "Acute embolism and thrombosis of unspecified femoral vein"
-          },
-          {
-            "code": "I82.421",
-            "display": "Acute embolism and thrombosis of right iliac vein"
-          },
-          {
-            "code": "I82.422",
-            "display": "Acute embolism and thrombosis of left iliac vein"
-          },
-          {
-            "code": "I82.423",
-            "display": "Acute embolism and thrombosis of iliac vein, bilateral"
-          },
-          {
-            "code": "I82.429",
-            "display": "Acute embolism and thrombosis of unspecified iliac vein"
-          },
-          {
-            "code": "I82.431",
-            "display": "Acute embolism and thrombosis of right popliteal vein"
-          },
-          {
-            "code": "I82.432",
-            "display": "Acute embolism and thrombosis of left popliteal vein"
-          },
-          {
-            "code": "I82.433",
-            "display": "Acute embolism and thrombosis of popliteal vein, bilateral"
-          },
-          {
-            "code": "I82.439",
-            "display": "Acute embolism and thrombosis of unspecified popliteal vein"
-          },
-          {
-            "code": "I82.441",
-            "display": "Acute embolism and thrombosis of right tibial vein"
-          },
-          {
-            "code": "I82.442",
-            "display": "Acute embolism and thrombosis of left tibial vein"
-          },
-          {
-            "code": "I82.443",
-            "display": "Acute embolism and thrombosis of tibial vein, bilateral"
-          },
-          {
-            "code": "I82.449",
-            "display": "Acute embolism and thrombosis of unspecified tibial vein"
-          },
-          {
-            "code": "I82.451",
-            "display": "Acute embolism and thrombosis of right peroneal vein"
-          },
-          {
-            "code": "I82.452",
-            "display": "Acute embolism and thrombosis of left peroneal vein"
-          },
-          {
-            "code": "I82.453",
-            "display": "Acute embolism and thrombosis of peroneal vein, bilateral"
-          },
-          {
-            "code": "I82.491",
-            "display": "Acute embolism and thrombosis of other specified deep vein of right lower extremity"
-          },
-          {
-            "code": "I82.492",
-            "display": "Acute embolism and thrombosis of other specified deep vein of left lower extremity"
-          },
-          {
-            "code": "I82.499",
-            "display": "Acute embolism and thrombosis of other specified deep vein of unspecified lower extremity"
-          },
-          {
-            "code": "I82.4Z1",
-            "display": "Acute embolism and thrombosis of unspecified deep veins of right distal lower extremity"
-          },
-          {
-            "code": "I82.4Z2",
-            "display": "Acute embolism and thrombosis of unspecified deep veins of left distal lower extremity"
-          },
-          {
-            "code": "I82.4Z3",
-            "display": "Acute embolism and thrombosis of unspecified deep veins of distal lower extremity, bilateral"
-          },
-          {
-            "code": "I82.4Z9",
-            "display": "Acute embolism and thrombosis of unspecified deep veins of unspecified distal lower extremity"
-          },
-          {
-            "code": "I82.501",
-            "display": "Chronic embolism and thrombosis of unspecified deep veins of right lower extremity"
-          },
-          {
-            "code": "I82.502",
-            "display": "Chronic embolism and thrombosis of unspecified deep veins of left lower extremity"
-          },
-          {
-            "code": "I82.503",
-            "display": "Chronic embolism and thrombosis of unspecified deep veins of lower extremity, bilateral"
-          },
-          {
-            "code": "I82.509",
-            "display": "Chronic embolism and thrombosis of unspecified deep veins of unspecified lower extremity"
-          },
-          {
-            "code": "I82.511",
-            "display": "Chronic embolism and thrombosis of right femoral vein"
-          },
-          {
-            "code": "I82.512",
-            "display": "Chronic embolism and thrombosis of left femoral vein"
-          },
-          {
-            "code": "I82.513",
-            "display": "Chronic embolism and thrombosis of femoral vein, bilateral"
-          },
-          {
-            "code": "I82.519",
-            "display": "Chronic embolism and thrombosis of unspecified femoral vein"
-          },
-          {
-            "code": "I82.521",
-            "display": "Chronic embolism and thrombosis of right iliac vein"
-          },
-          {
-            "code": "I82.522",
-            "display": "Chronic embolism and thrombosis of left iliac vein"
-          },
-          {
-            "code": "I82.523",
-            "display": "Chronic embolism and thrombosis of iliac vein, bilateral"
-          },
-          {
-            "code": "I82.529",
-            "display": "Chronic embolism and thrombosis of unspecified iliac vein"
-          },
-          {
-            "code": "I82.531",
-            "display": "Chronic embolism and thrombosis of right popliteal vein"
-          },
-          {
-            "code": "I82.532",
-            "display": "Chronic embolism and thrombosis of left popliteal vein"
-          },
-          {
-            "code": "I82.533",
-            "display": "Chronic embolism and thrombosis of popliteal vein, bilateral"
-          },
-          {
-            "code": "I82.539",
-            "display": "Chronic embolism and thrombosis of unspecified popliteal vein"
-          },
-          {
-            "code": "I82.541",
-            "display": "Chronic embolism and thrombosis of right tibial vein"
-          },
-          {
-            "code": "I82.542",
-            "display": "Chronic embolism and thrombosis of left tibial vein"
-          },
-          {
-            "code": "I82.543",
-            "display": "Chronic embolism and thrombosis of tibial vein, bilateral"
-          },
-          {
-            "code": "I82.549",
-            "display": "Chronic embolism and thrombosis of unspecified tibial vein"
-          },
-          {
-            "code": "I82.551",
-            "display": "Chronic embolism and thrombosis of right peroneal vein"
-          },
-          {
-            "code": "I82.552",
-            "display": "Chronic embolism and thrombosis of left peroneal vein"
-          },
-          {
-            "code": "I82.553",
-            "display": "Chronic embolism and thrombosis of peroneal vein, bilateral"
-          },
-          {
-            "code": "I82.591",
-            "display": "Chronic embolism and thrombosis of other specified deep vein of right lower extremity"
-          },
-          {
-            "code": "I82.592",
-            "display": "Chronic embolism and thrombosis of other specified deep vein of left lower extremity"
-          },
-          {
-            "code": "I82.593",
-            "display": "Chronic embolism and thrombosis of other specified deep vein of lower extremity, bilateral"
-          },
-          {
-            "code": "I82.599",
-            "display": "Chronic embolism and thrombosis of other specified deep vein of unspecified lower extremity"
-          },
-          {
-            "code": "I82.5Y1",
-            "display": "Chronic embolism and thrombosis of unspecified deep veins of right proximal lower extremity"
-          },
-          {
-            "code": "I82.5Y2",
-            "display": "Chronic embolism and thrombosis of unspecified deep veins of left proximal lower extremity"
-          },
-          {
-            "code": "I82.5Y3",
-            "display": "Chronic embolism and thrombosis of unspecified deep veins of proximal lower extremity, bilateral"
-          },
-          {
-            "code": "I82.5Y9",
-            "display": "Chronic embolism and thrombosis of unspecified deep veins of unspecified proximal lower extremity"
-          },
-          {
-            "code": "I82.5Z1",
-            "display": "Chronic embolism and thrombosis of unspecified deep veins of right distal lower extremity"
-          },
-          {
-            "code": "I82.5Z2",
-            "display": "Chronic embolism and thrombosis of unspecified deep veins of left distal lower extremity"
-          },
-          {
-            "code": "I82.5Z3",
-            "display": "Chronic embolism and thrombosis of unspecified deep veins of distal lower extremity, bilateral"
-          },
-          {
-            "code": "I82.5Z9",
-            "display": "Chronic embolism and thrombosis of unspecified deep veins of unspecified distal lower extremity"
-          },
-          {
-            "code": "I82.609",
-            "display": "Acute embolism and thrombosis of unspecified veins of unspecified upper extremity"
-          },
-          {
-            "code": "I82.611",
-            "display": "Acute embolism and thrombosis of superficial veins of right upper extremity"
-          },
-          {
-            "code": "I82.612",
-            "display": "Acute embolism and thrombosis of superficial veins of left upper extremity"
-          },
-          {
-            "code": "I82.613",
-            "display": "Acute embolism and thrombosis of superficial veins of upper extremity, bilateral"
-          },
-          {
-            "code": "I82.619",
-            "display": "Acute embolism and thrombosis of superficial veins of unspecified upper extremity"
-          },
-          {
-            "code": "I82.621",
-            "display": "Acute embolism and thrombosis of deep veins of right upper extremity"
-          },
-          {
-            "code": "I82.622",
-            "display": "Acute embolism and thrombosis of deep veins of left upper extremity"
-          },
-          {
-            "code": "I82.623",
-            "display": "Acute embolism and thrombosis of deep veins of upper extremity, bilateral"
-          },
-          {
-            "code": "I82.629",
-            "display": "Acute embolism and thrombosis of deep veins of unspecified upper extremity"
-          },
-          {
-            "code": "I82.711",
-            "display": "Chronic embolism and thrombosis of superficial veins of right upper extremity"
-          },
-          {
-            "code": "I82.712",
-            "display": "Chronic embolism and thrombosis of superficial veins of left upper extremity"
-          },
-          {
-            "code": "I82.713",
-            "display": "Chronic embolism and thrombosis of superficial veins of upper extremity, bilateral"
-          },
-          {
-            "code": "I82.719",
-            "display": "Chronic embolism and thrombosis of superficial veins of unspecified upper extremity"
-          },
-          {
-            "code": "I82.721",
-            "display": "Chronic embolism and thrombosis of deep veins of right upper extremity"
-          },
-          {
-            "code": "I82.722",
-            "display": "Chronic embolism and thrombosis of deep veins of left upper extremity"
-          },
-          {
-            "code": "I82.723",
-            "display": "Chronic embolism and thrombosis of deep veins of upper extremity, bilateral"
-          },
-          {
-            "code": "I82.729",
-            "display": "Chronic embolism and thrombosis of deep veins of unspecified upper extremity"
-          },
-          {
-            "code": "I82.811",
-            "display": "Embolism and thrombosis of superficial veins of right lower extremity"
-          },
-          {
-            "code": "I82.812",
-            "display": "Embolism and thrombosis of superficial veins of left lower extremity"
-          },
-          {
-            "code": "I82.813",
-            "display": "Embolism and thrombosis of superficial veins of lower extremities, bilateral"
-          },
-          {
-            "code": "I82.819",
-            "display": "Embolism and thrombosis of superficial veins of unspecified lower extremity"
-          },
-          {
-            "code": "I82.891",
-            "display": "Chronic embolism and thrombosis of other specified veins"
-          },
-          {
-            "code": "I82.91",
-            "display": "Chronic embolism and thrombosis of unspecified vein"
-          },
-          {
-            "code": "I82.A11",
-            "display": "Acute embolism and thrombosis of right axillary vein"
-          },
-          {
-            "code": "I82.A12",
-            "display": "Acute embolism and thrombosis of left axillary vein"
-          },
-          {
-            "code": "I82.A13",
-            "display": "Acute embolism and thrombosis of axillary vein, bilateral"
-          },
-          {
-            "code": "I82.A19",
-            "display": "Acute embolism and thrombosis of unspecified axillary vein"
-          },
-          {
-            "code": "I82.A21",
-            "display": "Chronic embolism and thrombosis of right axillary vein"
-          },
-          {
-            "code": "I82.A22",
-            "display": "Chronic embolism and thrombosis of left axillary vein"
-          },
-          {
-            "code": "I82.A23",
-            "display": "Chronic embolism and thrombosis of axillary vein, bilateral"
-          },
-          {
-            "code": "I82.A29",
-            "display": "Chronic embolism and thrombosis of unspecified axillary vein"
-          },
-          {
-            "code": "I82.B21",
-            "display": "Chronic embolism and thrombosis of right subclavian vein"
-          },
-          {
-            "code": "I82.B22",
-            "display": "Chronic embolism and thrombosis of left subclavian vein"
-          },
-          {
-            "code": "I82.B23",
-            "display": "Chronic embolism and thrombosis of subclavian vein, bilateral"
-          },
-          {
-            "code": "I82.B29",
-            "display": "Chronic embolism and thrombosis of unspecified subclavian vein"
-          },
-          {
-            "code": "I82.C11",
-            "display": "Acute embolism and thrombosis of right internal jugular vein"
-          },
-          {
-            "code": "I82.C12",
-            "display": "Acute embolism and thrombosis of left internal jugular vein"
-          },
-          {
-            "code": "I82.C13",
-            "display": "Acute embolism and thrombosis of internal jugular vein, bilateral"
-          },
-          {
-            "code": "I82.C19",
-            "display": "Acute embolism and thrombosis of unspecified internal jugular vein"
-          },
-          {
-            "code": "I82.C21",
-            "display": "Chronic embolism and thrombosis of right internal jugular vein"
-          },
-          {
-            "code": "I82.C22",
-            "display": "Chronic embolism and thrombosis of left internal jugular vein"
-          },
-          {
-            "code": "I82.C23",
-            "display": "Chronic embolism and thrombosis of internal jugular vein, bilateral"
-          },
-          {
-            "code": "I82.C29",
-            "display": "Chronic embolism and thrombosis of unspecified internal jugular vein"
-          },
-          {
-            "code": "I83.008",
-            "display": "Varicose veins of unspecified lower extremity with ulcer other part of lower leg"
-          },
-          {
-            "code": "I83.018",
-            "display": "Varicose veins of right lower extremity with ulcer other part of lower leg"
-          },
-          {
-            "code": "I83.028",
-            "display": "Varicose veins of left lower extremity with ulcer other part of lower leg"
-          },
-          {
-            "code": "I83.10",
-            "display": "Varicose veins of unspecified lower extremity with inflammation"
-          },
-          {
-            "code": "I83.202",
-            "display": "Varicose veins of unspecified lower extremity with both ulcer of calf and inflammation"
-          },
-          {
-            "code": "I83.208",
-            "display": "Varicose veins of unspecified lower extremity with both ulcer of other part of lower extremity and inflammation"
-          },
-          {
-            "code": "I83.209",
-            "display": "Varicose veins of unspecified lower extremity with both ulcer of unspecified site and inflammation"
-          },
-          {
-            "code": "I83.211",
-            "display": "Varicose veins of right lower extremity with both ulcer of thigh and inflammation"
-          },
-          {
-            "code": "I83.213",
-            "display": "Varicose veins of right lower extremity with both ulcer of ankle and inflammation"
-          },
-          {
-            "code": "I83.215",
-            "display": "Varicose veins of right lower extremity with both ulcer other part of foot and inflammation"
-          },
-          {
-            "code": "I83.218",
-            "display": "Varicose veins of right lower extremity with both ulcer of other part of lower extremity and inflammation"
-          },
-          {
-            "code": "I83.221",
-            "display": "Varicose veins of left lower extremity with both ulcer of thigh and inflammation"
-          },
-          {
-            "code": "I83.222",
-            "display": "Varicose veins of left lower extremity with both ulcer of calf and inflammation"
-          },
-          {
-            "code": "I83.223",
-            "display": "Varicose veins of left lower extremity with both ulcer of ankle and inflammation"
-          },
-          {
-            "code": "I83.811",
-            "display": "Varicose veins of right lower extremity with pain"
-          },
-          {
-            "code": "I83.812",
-            "display": "Varicose veins of left lower extremity with pain"
-          },
-          {
-            "code": "I83.813",
-            "display": "Varicose veins of bilateral lower extremities with pain"
-          },
-          {
-            "code": "I83.819",
-            "display": "Varicose veins of unspecified lower extremity with pain"
-          },
-          {
-            "code": "I83.91",
-            "display": "Asymptomatic varicose veins of right lower extremity"
-          },
-          {
-            "code": "I83.92",
-            "display": "Asymptomatic varicose veins of left lower extremity"
-          },
-          {
-            "code": "I83.93",
-            "display": "Asymptomatic varicose veins of bilateral lower extremities"
-          },
-          {
             "code": "I85.10",
             "display": "Secondary esophageal varices without bleeding"
-          },
-          {
-            "code": "I86.0",
-            "display": "Sublingual varices"
-          },
-          {
-            "code": "I87.001",
-            "display": "Postthrombotic syndrome without complications of right lower extremity"
-          },
-          {
-            "code": "I87.002",
-            "display": "Postthrombotic syndrome without complications of left lower extremity"
-          },
-          {
-            "code": "I87.003",
-            "display": "Postthrombotic syndrome without complications of bilateral lower extremity"
-          },
-          {
-            "code": "I87.009",
-            "display": "Postthrombotic syndrome without complications of unspecified extremity"
-          },
-          {
-            "code": "I87.011",
-            "display": "Postthrombotic syndrome with ulcer of right lower extremity"
-          },
-          {
-            "code": "I87.012",
-            "display": "Postthrombotic syndrome with ulcer of left lower extremity"
-          },
-          {
-            "code": "I87.019",
-            "display": "Postthrombotic syndrome with ulcer of unspecified lower extremity"
-          },
-          {
-            "code": "I87.309",
-            "display": "Chronic venous hypertension (idiopathic) without complications of unspecified lower extremity"
-          },
-          {
-            "code": "I87.319",
-            "display": "Chronic venous hypertension (idiopathic) with ulcer of unspecified lower extremity"
-          },
-          {
-            "code": "I87.331",
-            "display": "Chronic venous hypertension (idiopathic) with ulcer and inflammation of right lower extremity"
-          },
-          {
-            "code": "I87.332",
-            "display": "Chronic venous hypertension (idiopathic) with ulcer and inflammation of left lower extremity"
-          },
-          {
-            "code": "I87.339",
-            "display": "Chronic venous hypertension (idiopathic) with ulcer and inflammation of unspecified lower extremity"
-          },
-          {
-            "code": "I87.391",
-            "display": "Chronic venous hypertension (idiopathic) with other complications of right lower extremity"
-          },
-          {
-            "code": "I87.392",
-            "display": "Chronic venous hypertension (idiopathic) with other complications of left lower extremity"
-          },
-          {
-            "code": "I87.399",
-            "display": "Chronic venous hypertension (idiopathic) with other complications of unspecified lower extremity"
-          },
-          {
-            "code": "I88.0",
-            "display": "Nonspecific mesenteric lymphadenitis"
-          },
-          {
-            "code": "I88.1",
-            "display": "Chronic lymphadenitis, except mesenteric"
-          },
-          {
-            "code": "I88.8",
-            "display": "Other nonspecific lymphadenitis"
-          },
-          {
-            "code": "I88.9",
-            "display": "Nonspecific lymphadenitis, unspecified"
-          },
-          {
-            "code": "I97.110",
-            "display": "Postprocedural cardiac insufficiency following cardiac surgery"
-          },
-          {
-            "code": "I97.111",
-            "display": "Postprocedural cardiac insufficiency following other surgery"
-          },
-          {
-            "code": "I97.120",
-            "display": "Postprocedural cardiac arrest following cardiac surgery"
-          },
-          {
-            "code": "I97.121",
-            "display": "Postprocedural cardiac arrest following other surgery"
-          },
-          {
-            "code": "I97.130",
-            "display": "Postprocedural heart failure following cardiac surgery"
           },
           {
             "code": "I97.131",
@@ -9857,26 +8433,6 @@
             "display": "Other postprocedural cardiac functional disturbances following other surgery"
           },
           {
-            "code": "I97.2",
-            "display": "Postmastectomy lymphedema syndrome"
-          },
-          {
-            "code": "I97.51",
-            "display": "Accidental puncture and laceration of a circulatory system organ or structure during a circulatory system procedure"
-          },
-          {
-            "code": "I97.710",
-            "display": "Intraoperative cardiac arrest during cardiac surgery"
-          },
-          {
-            "code": "I97.711",
-            "display": "Intraoperative cardiac arrest during other surgery"
-          },
-          {
-            "code": "I97.791",
-            "display": "Other intraoperative cardiac functional disturbances during other surgery"
-          },
-          {
             "code": "I97.810",
             "display": "Intraoperative cerebrovascular infarction during cardiac surgery"
           },
@@ -9887,50 +8443,6 @@
           {
             "code": "I97.820",
             "display": "Postprocedural cerebrovascular infarction following cardiac surgery"
-          },
-          {
-            "code": "J01.01",
-            "display": "Acute recurrent maxillary sinusitis"
-          },
-          {
-            "code": "J01.11",
-            "display": "Acute recurrent frontal sinusitis"
-          },
-          {
-            "code": "J01.21",
-            "display": "Acute recurrent ethmoidal sinusitis"
-          },
-          {
-            "code": "J01.31",
-            "display": "Acute recurrent sphenoidal sinusitis"
-          },
-          {
-            "code": "J01.41",
-            "display": "Acute recurrent pansinusitis"
-          },
-          {
-            "code": "J01.91",
-            "display": "Acute recurrent sinusitis, unspecified"
-          },
-          {
-            "code": "J03.00",
-            "display": "Acute streptococcal tonsillitis, unspecified"
-          },
-          {
-            "code": "J03.01",
-            "display": "Acute recurrent streptococcal tonsillitis"
-          },
-          {
-            "code": "J03.80",
-            "display": "Acute tonsillitis due to other specified organisms"
-          },
-          {
-            "code": "J03.91",
-            "display": "Acute recurrent tonsillitis, unspecified"
-          },
-          {
-            "code": "J11.82",
-            "display": "Influenza due to unidentified influenza virus with myocarditis"
           },
           {
             "code": "J12.1",
@@ -10003,46 +8515,6 @@
           {
             "code": "J16.0",
             "display": "Chlamydial pneumonia"
-          },
-          {
-            "code": "J30.0",
-            "display": "Vasomotor rhinitis"
-          },
-          {
-            "code": "J30.5",
-            "display": "Allergic rhinitis due to food"
-          },
-          {
-            "code": "J31.1",
-            "display": "Chronic nasopharyngitis"
-          },
-          {
-            "code": "J32.8",
-            "display": "Other chronic sinusitis"
-          },
-          {
-            "code": "J35.01",
-            "display": "Chronic tonsillitis"
-          },
-          {
-            "code": "J35.02",
-            "display": "Chronic adenoiditis"
-          },
-          {
-            "code": "J35.03",
-            "display": "Chronic tonsillitis and adenoiditis"
-          },
-          {
-            "code": "J35.3",
-            "display": "Hypertrophy of tonsils with hypertrophy of adenoids"
-          },
-          {
-            "code": "J35.9",
-            "display": "Chronic disease of tonsils and adenoids, unspecified"
-          },
-          {
-            "code": "J37.1",
-            "display": "Chronic laryngotracheitis"
           },
           {
             "code": "J41.0",
@@ -10353,10 +8825,6 @@
             "display": "Lymphangioleiomyomatosis"
           },
           {
-            "code": "J84.82",
-            "display": "Adult pulmonary Langerhans cell histiocytosis"
-          },
-          {
             "code": "J84.83",
             "display": "Surfactant mutations of the lung"
           },
@@ -10369,10 +8837,6 @@
             "display": "Pulmonary interstitial glycogenosis"
           },
           {
-            "code": "J84.843",
-            "display": "Alveolar capillary dysplasia with vein misalignment"
-          },
-          {
             "code": "J84.848",
             "display": "Other interstitial lung diseases of childhood"
           },
@@ -10383,10 +8847,6 @@
           {
             "code": "J84.9",
             "display": "Interstitial pulmonary disease, unspecified"
-          },
-          {
-            "code": "J93.81",
-            "display": "Chronic pneumothorax"
           },
           {
             "code": "J95.4",
@@ -10429,24 +8889,8 @@
             "display": "Other disorders of lung"
           },
           {
-            "code": "K04.6",
-            "display": "Periapical abscess with sinus"
-          },
-          {
-            "code": "K05.219",
-            "display": "Aggressive periodontitis, localized, unspecified severity"
-          },
-          {
             "code": "K12.31",
             "display": "Oral mucositis (ulcerative) due to antineoplastic therapy"
-          },
-          {
-            "code": "K23",
-            "display": "Disorders of esophagus in diseases classified elsewhere"
-          },
-          {
-            "code": "K29.51",
-            "display": "Unspecified chronic gastritis with bleeding"
           },
           {
             "code": "K55.1",
@@ -10605,272 +9049,16 @@
             "display": "Alcohol-induced chronic pancreatitis"
           },
           {
-            "code": "L03.021",
-            "display": "Acute lymphangitis of right finger"
-          },
-          {
-            "code": "L03.022",
-            "display": "Acute lymphangitis of left finger"
-          },
-          {
-            "code": "L03.029",
-            "display": "Acute lymphangitis of unspecified finger"
-          },
-          {
-            "code": "L03.049",
-            "display": "Acute lymphangitis of unspecified toe"
-          },
-          {
-            "code": "L03.121",
-            "display": "Acute lymphangitis of right axilla"
-          },
-          {
-            "code": "L03.122",
-            "display": "Acute lymphangitis of left axilla"
-          },
-          {
-            "code": "L03.123",
-            "display": "Acute lymphangitis of right upper limb"
-          },
-          {
-            "code": "L03.124",
-            "display": "Acute lymphangitis of left upper limb"
-          },
-          {
-            "code": "L03.125",
-            "display": "Acute lymphangitis of right lower limb"
-          },
-          {
-            "code": "L03.126",
-            "display": "Acute lymphangitis of left lower limb"
-          },
-          {
-            "code": "L03.129",
-            "display": "Acute lymphangitis of unspecified part of limb"
-          },
-          {
-            "code": "L03.212",
-            "display": "Acute lymphangitis of face"
-          },
-          {
-            "code": "L03.222",
-            "display": "Acute lymphangitis of neck"
-          },
-          {
-            "code": "L03.321",
-            "display": "Acute lymphangitis of abdominal wall"
-          },
-          {
-            "code": "L03.322",
-            "display": "Acute lymphangitis of back [any part except buttock]"
-          },
-          {
-            "code": "L03.323",
-            "display": "Acute lymphangitis of chest wall"
-          },
-          {
-            "code": "L03.324",
-            "display": "Acute lymphangitis of groin"
-          },
-          {
-            "code": "L03.325",
-            "display": "Acute lymphangitis of perineum"
-          },
-          {
-            "code": "L03.326",
-            "display": "Acute lymphangitis of umbilicus"
-          },
-          {
-            "code": "L03.327",
-            "display": "Acute lymphangitis of buttock"
-          },
-          {
-            "code": "L03.329",
-            "display": "Acute lymphangitis of trunk, unspecified"
-          },
-          {
-            "code": "L03.891",
-            "display": "Acute lymphangitis of head [any part, except face]"
-          },
-          {
-            "code": "L03.91",
-            "display": "Acute lymphangitis, unspecified"
-          },
-          {
-            "code": "L04.0",
-            "display": "Acute lymphadenitis of face, head and neck"
-          },
-          {
-            "code": "L04.1",
-            "display": "Acute lymphadenitis of trunk"
-          },
-          {
-            "code": "L04.2",
-            "display": "Acute lymphadenitis of upper limb"
-          },
-          {
-            "code": "L04.3",
-            "display": "Acute lymphadenitis of lower limb"
-          },
-          {
-            "code": "L04.9",
-            "display": "Acute lymphadenitis, unspecified"
-          },
-          {
-            "code": "L10.0",
-            "display": "Pemphigus vulgaris"
-          },
-          {
-            "code": "L10.1",
-            "display": "Pemphigus vegetans"
-          },
-          {
-            "code": "L10.4",
-            "display": "Pemphigus erythematosus"
-          },
-          {
-            "code": "L41.0",
-            "display": "Pityriasis lichenoides et varioliformis acuta"
-          },
-          {
-            "code": "L41.1",
-            "display": "Pityriasis lichenoides chronica"
-          },
-          {
-            "code": "L41.3",
-            "display": "Small plaque parapsoriasis"
-          },
-          {
-            "code": "L41.4",
-            "display": "Large plaque parapsoriasis"
-          },
-          {
-            "code": "L41.5",
-            "display": "Retiform parapsoriasis"
-          },
-          {
-            "code": "L41.8",
-            "display": "Other parapsoriasis"
-          },
-          {
-            "code": "L41.9",
-            "display": "Parapsoriasis, unspecified"
-          },
-          {
-            "code": "L51.0",
-            "display": "Nonbullous erythema multiforme"
-          },
-          {
-            "code": "L51.1",
-            "display": "Stevens-Johnson syndrome"
-          },
-          {
-            "code": "L51.2",
-            "display": "Toxic epidermal necrolysis [Lyell]"
-          },
-          {
-            "code": "L51.3",
-            "display": "Stevens-Johnson syndrome-toxic epidermal necrolysis overlap syndrome"
-          },
-          {
-            "code": "L51.8",
-            "display": "Other erythema multiforme"
-          },
-          {
-            "code": "L53.1",
-            "display": "Erythema annulare centrifugum"
-          },
-          {
-            "code": "L53.2",
-            "display": "Erythema marginatum"
-          },
-          {
-            "code": "L55.0",
-            "display": "Sunburn of first degree"
-          },
-          {
-            "code": "L55.1",
-            "display": "Sunburn of second degree"
-          },
-          {
-            "code": "L55.2",
-            "display": "Sunburn of third degree"
-          },
-          {
-            "code": "L57.1",
-            "display": "Actinic reticuloid"
-          },
-          {
-            "code": "L76.33",
-            "display": "Postprocedural seroma of skin and subcutaneous tissue following a dermatologic procedure"
-          },
-          {
-            "code": "L81.7",
-            "display": "Pigmented purpuric dermatosis"
-          },
-          {
-            "code": "L94.5",
-            "display": "Poikiloderma vasculare atrophicans"
-          },
-          {
-            "code": "L95.0",
-            "display": "Livedoid vasculitis"
-          },
-          {
-            "code": "L95.1",
-            "display": "Erythema elevatum diutinum"
-          },
-          {
-            "code": "L95.8",
-            "display": "Other vasculitis limited to the skin"
-          },
-          {
-            "code": "L95.9",
-            "display": "Vasculitis limited to the skin, unspecified"
-          },
-          {
             "code": "L97.501",
             "display": "Non-pressure chronic ulcer of other part of unspecified foot limited to breakdown of skin"
-          },
-          {
-            "code": "M05.00",
-            "display": "Felty's syndrome, unspecified site"
           },
           {
             "code": "M05.10",
             "display": "Rheumatoid lung disease with rheumatoid arthritis of unspecified site"
           },
           {
-            "code": "M05.249",
-            "display": "Rheumatoid vasculitis with rheumatoid arthritis of unspecified hand"
-          },
-          {
             "code": "M05.30",
             "display": "Rheumatoid heart disease with rheumatoid arthritis of unspecified site"
-          },
-          {
-            "code": "M14.811",
-            "display": "Arthropathies in other specified diseases classified elsewhere, right shoulder"
-          },
-          {
-            "code": "M14.812",
-            "display": "Arthropathies in other specified diseases classified elsewhere, left shoulder"
-          },
-          {
-            "code": "M14.861",
-            "display": "Arthropathies in other specified diseases classified elsewhere, right knee"
-          },
-          {
-            "code": "M14.862",
-            "display": "Arthropathies in other specified diseases classified elsewhere, left knee"
-          },
-          {
-            "code": "M14.871",
-            "display": "Arthropathies in other specified diseases classified elsewhere, right ankle and foot"
-          },
-          {
-            "code": "M14.872",
-            "display": "Arthropathies in other specified diseases classified elsewhere, left ankle and foot"
           },
           {
             "code": "M25.721",
@@ -10889,10 +9077,6 @@
             "display": "Osteophyte, left hand"
           },
           {
-            "code": "M30.3",
-            "display": "Mucocutaneous lymph node syndrome [Kawasaki]"
-          },
-          {
             "code": "M31.10",
             "display": "Thrombotic microangiopathy, unspecified"
           },
@@ -10909,10 +9093,6 @@
             "display": "Lethal midline granuloma"
           },
           {
-            "code": "M31.4",
-            "display": "Aortic arch syndrome [Takayasu]"
-          },
-          {
             "code": "M31.5",
             "display": "Giant cell arteritis with polymyalgia rheumatica"
           },
@@ -10923,62 +9103,6 @@
           {
             "code": "M33.21",
             "display": "Polymyositis with respiratory involvement"
-          },
-          {
-            "code": "M34.1",
-            "display": "CR(E)ST syndrome"
-          },
-          {
-            "code": "M46.22",
-            "display": "Osteomyelitis of vertebra, cervical region"
-          },
-          {
-            "code": "M46.24",
-            "display": "Osteomyelitis of vertebra, thoracic region"
-          },
-          {
-            "code": "M46.26",
-            "display": "Osteomyelitis of vertebra, lumbar region"
-          },
-          {
-            "code": "M46.28",
-            "display": "Osteomyelitis of vertebra, sacral and sacrococcygeal region"
-          },
-          {
-            "code": "M46.32",
-            "display": "Infection of intervertebral disc (pyogenic), cervical region"
-          },
-          {
-            "code": "M46.33",
-            "display": "Infection of intervertebral disc (pyogenic), cervicothoracic region"
-          },
-          {
-            "code": "M46.34",
-            "display": "Infection of intervertebral disc (pyogenic), thoracic region"
-          },
-          {
-            "code": "M46.35",
-            "display": "Infection of intervertebral disc (pyogenic), thoracolumbar region"
-          },
-          {
-            "code": "M46.36",
-            "display": "Infection of intervertebral disc (pyogenic), lumbar region"
-          },
-          {
-            "code": "M46.37",
-            "display": "Infection of intervertebral disc (pyogenic), lumbosacral region"
-          },
-          {
-            "code": "M46.38",
-            "display": "Infection of intervertebral disc (pyogenic), sacral and sacrococcygeal region"
-          },
-          {
-            "code": "M46.52",
-            "display": "Other infective spondylopathies, cervical region"
-          },
-          {
-            "code": "M46.56",
-            "display": "Other infective spondylopathies, lumbar region"
           },
           {
             "code": "M47.012",
@@ -10999,10 +9123,6 @@
           {
             "code": "M47.019",
             "display": "Anterior spinal artery compression syndromes, site unspecified"
-          },
-          {
-            "code": "M48.9",
-            "display": "Spondylopathy, unspecified"
           },
           {
             "code": "M79.4",
@@ -11417,262 +9537,6 @@
             "display": "Aneurysmal bone cyst, unspecified hand"
           },
           {
-            "code": "M86.00",
-            "display": "Acute hematogenous osteomyelitis, unspecified site"
-          },
-          {
-            "code": "M86.039",
-            "display": "Acute hematogenous osteomyelitis, unspecified radius and ulna"
-          },
-          {
-            "code": "M86.119",
-            "display": "Other acute osteomyelitis, unspecified shoulder"
-          },
-          {
-            "code": "M86.129",
-            "display": "Other acute osteomyelitis, unspecified humerus"
-          },
-          {
-            "code": "M86.139",
-            "display": "Other acute osteomyelitis, unspecified radius and ulna"
-          },
-          {
-            "code": "M86.149",
-            "display": "Other acute osteomyelitis, unspecified hand"
-          },
-          {
-            "code": "M86.159",
-            "display": "Other acute osteomyelitis, unspecified femur"
-          },
-          {
-            "code": "M86.169",
-            "display": "Other acute osteomyelitis, unspecified tibia and fibula"
-          },
-          {
-            "code": "M86.171",
-            "display": "Other acute osteomyelitis, right ankle and foot"
-          },
-          {
-            "code": "M86.172",
-            "display": "Other acute osteomyelitis, left ankle and foot"
-          },
-          {
-            "code": "M86.179",
-            "display": "Other acute osteomyelitis, unspecified ankle and foot"
-          },
-          {
-            "code": "M86.18",
-            "display": "Other acute osteomyelitis, other site"
-          },
-          {
-            "code": "M86.19",
-            "display": "Other acute osteomyelitis, multiple sites"
-          },
-          {
-            "code": "M86.20",
-            "display": "Subacute osteomyelitis, unspecified site"
-          },
-          {
-            "code": "M86.241",
-            "display": "Subacute osteomyelitis, right hand"
-          },
-          {
-            "code": "M86.242",
-            "display": "Subacute osteomyelitis, left hand"
-          },
-          {
-            "code": "M86.249",
-            "display": "Subacute osteomyelitis, unspecified hand"
-          },
-          {
-            "code": "M86.251",
-            "display": "Subacute osteomyelitis, right femur"
-          },
-          {
-            "code": "M86.252",
-            "display": "Subacute osteomyelitis, left femur"
-          },
-          {
-            "code": "M86.259",
-            "display": "Subacute osteomyelitis, unspecified femur"
-          },
-          {
-            "code": "M86.261",
-            "display": "Subacute osteomyelitis, right tibia and fibula"
-          },
-          {
-            "code": "M86.262",
-            "display": "Subacute osteomyelitis, left tibia and fibula"
-          },
-          {
-            "code": "M86.269",
-            "display": "Subacute osteomyelitis, unspecified tibia and fibula"
-          },
-          {
-            "code": "M86.271",
-            "display": "Subacute osteomyelitis, right ankle and foot"
-          },
-          {
-            "code": "M86.272",
-            "display": "Subacute osteomyelitis, left ankle and foot"
-          },
-          {
-            "code": "M86.279",
-            "display": "Subacute osteomyelitis, unspecified ankle and foot"
-          },
-          {
-            "code": "M86.40",
-            "display": "Chronic osteomyelitis with draining sinus, unspecified site"
-          },
-          {
-            "code": "M86.411",
-            "display": "Chronic osteomyelitis with draining sinus, right shoulder"
-          },
-          {
-            "code": "M86.412",
-            "display": "Chronic osteomyelitis with draining sinus, left shoulder"
-          },
-          {
-            "code": "M86.419",
-            "display": "Chronic osteomyelitis with draining sinus, unspecified shoulder"
-          },
-          {
-            "code": "M86.421",
-            "display": "Chronic osteomyelitis with draining sinus, right humerus"
-          },
-          {
-            "code": "M86.422",
-            "display": "Chronic osteomyelitis with draining sinus, left humerus"
-          },
-          {
-            "code": "M86.429",
-            "display": "Chronic osteomyelitis with draining sinus, unspecified humerus"
-          },
-          {
-            "code": "M86.431",
-            "display": "Chronic osteomyelitis with draining sinus, right radius and ulna"
-          },
-          {
-            "code": "M86.432",
-            "display": "Chronic osteomyelitis with draining sinus, left radius and ulna"
-          },
-          {
-            "code": "M86.439",
-            "display": "Chronic osteomyelitis with draining sinus, unspecified radius and ulna"
-          },
-          {
-            "code": "M86.441",
-            "display": "Chronic osteomyelitis with draining sinus, right hand"
-          },
-          {
-            "code": "M86.442",
-            "display": "Chronic osteomyelitis with draining sinus, left hand"
-          },
-          {
-            "code": "M86.449",
-            "display": "Chronic osteomyelitis with draining sinus, unspecified hand"
-          },
-          {
-            "code": "M86.459",
-            "display": "Chronic osteomyelitis with draining sinus, unspecified femur"
-          },
-          {
-            "code": "M86.461",
-            "display": "Chronic osteomyelitis with draining sinus, right tibia and fibula"
-          },
-          {
-            "code": "M86.462",
-            "display": "Chronic osteomyelitis with draining sinus, left tibia and fibula"
-          },
-          {
-            "code": "M86.469",
-            "display": "Chronic osteomyelitis with draining sinus, unspecified tibia and fibula"
-          },
-          {
-            "code": "M86.479",
-            "display": "Chronic osteomyelitis with draining sinus, unspecified ankle and foot"
-          },
-          {
-            "code": "M86.50",
-            "display": "Other chronic hematogenous osteomyelitis, unspecified site"
-          },
-          {
-            "code": "M86.619",
-            "display": "Other chronic osteomyelitis, unspecified shoulder"
-          },
-          {
-            "code": "M86.629",
-            "display": "Other chronic osteomyelitis, unspecified humerus"
-          },
-          {
-            "code": "M86.639",
-            "display": "Other chronic osteomyelitis, unspecified radius and ulna"
-          },
-          {
-            "code": "M86.641",
-            "display": "Other chronic osteomyelitis, right hand"
-          },
-          {
-            "code": "M86.642",
-            "display": "Other chronic osteomyelitis, left hand"
-          },
-          {
-            "code": "M86.649",
-            "display": "Other chronic osteomyelitis, unspecified hand"
-          },
-          {
-            "code": "M86.651",
-            "display": "Other chronic osteomyelitis, right thigh"
-          },
-          {
-            "code": "M86.652",
-            "display": "Other chronic osteomyelitis, left thigh"
-          },
-          {
-            "code": "M86.659",
-            "display": "Other chronic osteomyelitis, unspecified thigh"
-          },
-          {
-            "code": "M86.661",
-            "display": "Other chronic osteomyelitis, right tibia and fibula"
-          },
-          {
-            "code": "M86.662",
-            "display": "Other chronic osteomyelitis, left tibia and fibula"
-          },
-          {
-            "code": "M86.669",
-            "display": "Other chronic osteomyelitis, unspecified tibia and fibula"
-          },
-          {
-            "code": "M86.671",
-            "display": "Other chronic osteomyelitis, right ankle and foot"
-          },
-          {
-            "code": "M86.672",
-            "display": "Other chronic osteomyelitis, left ankle and foot"
-          },
-          {
-            "code": "M86.679",
-            "display": "Other chronic osteomyelitis, unspecified ankle and foot"
-          },
-          {
-            "code": "M86.69",
-            "display": "Other chronic osteomyelitis, multiple sites"
-          },
-          {
-            "code": "M89.621",
-            "display": "Osteopathy after poliomyelitis, right upper arm"
-          },
-          {
-            "code": "M89.622",
-            "display": "Osteopathy after poliomyelitis, left upper arm"
-          },
-          {
-            "code": "M89.629",
-            "display": "Osteopathy after poliomyelitis, unspecified upper arm"
-          },
-          {
             "code": "M90.519",
             "display": "Osteonecrosis in diseases classified elsewhere, unspecified shoulder"
           },
@@ -11707,14 +9571,6 @@
           {
             "code": "N00.7",
             "display": "Acute nephritic syndrome with diffuse crescentic glomerulonephritis"
-          },
-          {
-            "code": "N02.4",
-            "display": "Recurrent and persistent hematuria with diffuse endocapillary proliferative glomerulonephritis"
-          },
-          {
-            "code": "N03.4",
-            "display": "Chronic nephritic syndrome with diffuse endocapillary proliferative glomerulonephritis"
           },
           {
             "code": "N04.0",
@@ -11755,10 +9611,6 @@
           {
             "code": "N04.9",
             "display": "Nephrotic syndrome with unspecified morphologic changes"
-          },
-          {
-            "code": "N07.4",
-            "display": "Hereditary nephropathy, not elsewhere classified with diffuse endocapillary proliferative glomerulonephritis"
           },
           {
             "code": "N14.0",
@@ -11839,14 +9691,6 @@
           {
             "code": "O00.91",
             "display": "Unspecified ectopic pregnancy with intrauterine pregnancy"
-          },
-          {
-            "code": "O03.36",
-            "display": "Cardiac arrest following incomplete spontaneous abortion"
-          },
-          {
-            "code": "O04.86",
-            "display": "Cardiac arrest following (induced) termination of pregnancy"
           },
           {
             "code": "O09.219",
@@ -11937,10 +9781,6 @@
             "display": "Unspecified maternal hypertension, unspecified trimester"
           },
           {
-            "code": "O22.30",
-            "display": "Deep phlebothrombosis in pregnancy, unspecified trimester"
-          },
-          {
             "code": "O22.50",
             "display": "Cerebral venous thrombosis in pregnancy, unspecified trimester"
           },
@@ -12011,10 +9851,6 @@
           {
             "code": "O26.90",
             "display": "Pregnancy related conditions, unspecified, unspecified trimester"
-          },
-          {
-            "code": "O29.119",
-            "display": "Cardiac arrest due to anesthesia during pregnancy, unspecified trimester"
           },
           {
             "code": "O30.009",
@@ -12269,10 +10105,6 @@
             "display": "Subarachnoid hemorrhage due to birth injury"
           },
           {
-            "code": "P15.1",
-            "display": "Birth injury to spleen"
-          },
-          {
             "code": "P23.0",
             "display": "Congenital pneumonia due to viral agent"
           },
@@ -12313,56 +10145,12 @@
             "display": "Other chronic respiratory diseases originating in the perinatal period"
           },
           {
-            "code": "P27.9",
-            "display": "Unspecified chronic respiratory disease originating in the perinatal period"
-          },
-          {
-            "code": "P28.0",
-            "display": "Primary atelectasis of newborn"
-          },
-          {
-            "code": "P28.10",
-            "display": "Unspecified atelectasis of newborn"
-          },
-          {
-            "code": "P28.19",
-            "display": "Other atelectasis of newborn"
-          },
-          {
-            "code": "P28.5",
-            "display": "Respiratory failure of newborn"
-          },
-          {
-            "code": "P28.81",
-            "display": "Respiratory arrest of newborn"
-          },
-          {
             "code": "P29.0",
             "display": "Neonatal cardiac failure"
           },
           {
-            "code": "P29.11",
-            "display": "Neonatal tachycardia"
-          },
-          {
-            "code": "P29.12",
-            "display": "Neonatal bradycardia"
-          },
-          {
             "code": "P29.30",
             "display": "Pulmonary hypertension of newborn"
-          },
-          {
-            "code": "P29.4",
-            "display": "Transient myocardial ischemia in newborn"
-          },
-          {
-            "code": "P29.81",
-            "display": "Cardiac arrest of newborn"
-          },
-          {
-            "code": "P35.0",
-            "display": "Congenital rubella syndrome"
           },
           {
             "code": "P37.0",
@@ -12407,10 +10195,6 @@
           {
             "code": "P52.9",
             "display": "Intracranial (nontraumatic) hemorrhage of newborn, unspecified"
-          },
-          {
-            "code": "P61.3",
-            "display": "Congenital anemia from fetal blood loss"
           },
           {
             "code": "P61.4",
@@ -12721,14 +10505,6 @@
             "display": "Other congenital malformations of other great arteries"
           },
           {
-            "code": "Q26.0",
-            "display": "Congenital stenosis of vena cava"
-          },
-          {
-            "code": "Q26.1",
-            "display": "Persistent left superior vena cava"
-          },
-          {
             "code": "Q26.2",
             "display": "Total anomalous pulmonary venous connection"
           },
@@ -12739,38 +10515,6 @@
           {
             "code": "Q26.4",
             "display": "Anomalous pulmonary venous connection, unspecified"
-          },
-          {
-            "code": "Q26.6",
-            "display": "Portal vein-hepatic artery fistula"
-          },
-          {
-            "code": "Q26.8",
-            "display": "Other congenital malformations of great veins"
-          },
-          {
-            "code": "Q26.9",
-            "display": "Congenital malformation of great vein, unspecified"
-          },
-          {
-            "code": "Q27.0",
-            "display": "Congenital absence and hypoplasia of umbilical artery"
-          },
-          {
-            "code": "Q27.1",
-            "display": "Congenital renal artery stenosis"
-          },
-          {
-            "code": "Q27.2",
-            "display": "Other congenital malformations of renal artery"
-          },
-          {
-            "code": "Q27.31",
-            "display": "Arteriovenous malformation of vessel of upper limb"
-          },
-          {
-            "code": "Q27.34",
-            "display": "Arteriovenous malformation of renal vessel"
           },
           {
             "code": "Q28.0",
@@ -12791,10 +10535,6 @@
           {
             "code": "Q33.6",
             "display": "Congenital hypoplasia and dysplasia of lung"
-          },
-          {
-            "code": "Q82.2",
-            "display": "Congenital cutaneous mastocytosis"
           },
           {
             "code": "Q87.11",
@@ -12825,24 +10565,12 @@
             "display": "Down syndrome, unspecified"
           },
           {
-            "code": "Q93.82",
-            "display": "Williams syndrome"
-          },
-          {
-            "code": "R50.83",
-            "display": "Postvaccination fever"
-          },
-          {
             "code": "R50.9",
             "display": "Fever, unspecified"
           },
           {
             "code": "R54",
             "display": "Age-related physical debility"
-          },
-          {
-            "code": "R59.0",
-            "display": "Localized enlarged lymph nodes"
           },
           {
             "code": "S06.2X5A",
@@ -13289,126 +11017,6 @@
             "display": "Major laceration of unspecified vertebral artery, sequela"
           },
           {
-            "code": "S15.201A",
-            "display": "Unspecified injury of right external jugular vein, initial encounter"
-          },
-          {
-            "code": "S15.201D",
-            "display": "Unspecified injury of right external jugular vein, subsequent encounter"
-          },
-          {
-            "code": "S15.201S",
-            "display": "Unspecified injury of right external jugular vein, sequela"
-          },
-          {
-            "code": "S15.202A",
-            "display": "Unspecified injury of left external jugular vein, initial encounter"
-          },
-          {
-            "code": "S15.202D",
-            "display": "Unspecified injury of left external jugular vein, subsequent encounter"
-          },
-          {
-            "code": "S15.202S",
-            "display": "Unspecified injury of left external jugular vein, sequela"
-          },
-          {
-            "code": "S15.209A",
-            "display": "Unspecified injury of unspecified external jugular vein, initial encounter"
-          },
-          {
-            "code": "S15.209D",
-            "display": "Unspecified injury of unspecified external jugular vein, subsequent encounter"
-          },
-          {
-            "code": "S15.209S",
-            "display": "Unspecified injury of unspecified external jugular vein, sequela"
-          },
-          {
-            "code": "S15.219A",
-            "display": "Minor laceration of unspecified external jugular vein, initial encounter"
-          },
-          {
-            "code": "S15.219D",
-            "display": "Minor laceration of unspecified external jugular vein, subsequent encounter"
-          },
-          {
-            "code": "S15.219S",
-            "display": "Minor laceration of unspecified external jugular vein, sequela"
-          },
-          {
-            "code": "S15.229A",
-            "display": "Major laceration of unspecified external jugular vein, initial encounter"
-          },
-          {
-            "code": "S15.229D",
-            "display": "Major laceration of unspecified external jugular vein, subsequent encounter"
-          },
-          {
-            "code": "S15.229S",
-            "display": "Major laceration of unspecified external jugular vein, sequela"
-          },
-          {
-            "code": "S15.301A",
-            "display": "Unspecified injury of right internal jugular vein, initial encounter"
-          },
-          {
-            "code": "S15.301D",
-            "display": "Unspecified injury of right internal jugular vein, subsequent encounter"
-          },
-          {
-            "code": "S15.301S",
-            "display": "Unspecified injury of right internal jugular vein, sequela"
-          },
-          {
-            "code": "S15.302A",
-            "display": "Unspecified injury of left internal jugular vein, initial encounter"
-          },
-          {
-            "code": "S15.302D",
-            "display": "Unspecified injury of left internal jugular vein, subsequent encounter"
-          },
-          {
-            "code": "S15.302S",
-            "display": "Unspecified injury of left internal jugular vein, sequela"
-          },
-          {
-            "code": "S15.309A",
-            "display": "Unspecified injury of unspecified internal jugular vein, initial encounter"
-          },
-          {
-            "code": "S15.309D",
-            "display": "Unspecified injury of unspecified internal jugular vein, subsequent encounter"
-          },
-          {
-            "code": "S15.309S",
-            "display": "Unspecified injury of unspecified internal jugular vein, sequela"
-          },
-          {
-            "code": "S15.319A",
-            "display": "Minor laceration of unspecified internal jugular vein, initial encounter"
-          },
-          {
-            "code": "S15.319D",
-            "display": "Minor laceration of unspecified internal jugular vein, subsequent encounter"
-          },
-          {
-            "code": "S15.319S",
-            "display": "Minor laceration of unspecified internal jugular vein, sequela"
-          },
-          {
-            "code": "S15.329A",
-            "display": "Major laceration of unspecified internal jugular vein, initial encounter"
-          },
-          {
-            "code": "S15.329D",
-            "display": "Major laceration of unspecified internal jugular vein, subsequent encounter"
-          },
-          {
-            "code": "S15.329S",
-            "display": "Major laceration of unspecified internal jugular vein, sequela"
-          },
-          {
             "code": "S24.131A",
             "display": "Anterior cord syndrome at T1 level of thoracic spinal cord, initial encounter"
           },
@@ -13443,2002 +11051,6 @@
           {
             "code": "S24.134S",
             "display": "Anterior cord syndrome at T11-T12 level of thoracic spinal cord, sequela"
-          },
-          {
-            "code": "S25.00XA",
-            "display": "Unspecified injury of thoracic aorta, initial encounter"
-          },
-          {
-            "code": "S25.00XD",
-            "display": "Unspecified injury of thoracic aorta, subsequent encounter"
-          },
-          {
-            "code": "S25.00XS",
-            "display": "Unspecified injury of thoracic aorta, sequela"
-          },
-          {
-            "code": "S25.01XA",
-            "display": "Minor laceration of thoracic aorta, initial encounter"
-          },
-          {
-            "code": "S25.01XD",
-            "display": "Minor laceration of thoracic aorta, subsequent encounter"
-          },
-          {
-            "code": "S25.01XS",
-            "display": "Minor laceration of thoracic aorta, sequela"
-          },
-          {
-            "code": "S25.02XA",
-            "display": "Major laceration of thoracic aorta, initial encounter"
-          },
-          {
-            "code": "S25.02XD",
-            "display": "Major laceration of thoracic aorta, subsequent encounter"
-          },
-          {
-            "code": "S25.02XS",
-            "display": "Major laceration of thoracic aorta, sequela"
-          },
-          {
-            "code": "S25.09XA",
-            "display": "Other specified injury of thoracic aorta, initial encounter"
-          },
-          {
-            "code": "S25.09XD",
-            "display": "Other specified injury of thoracic aorta, subsequent encounter"
-          },
-          {
-            "code": "S25.09XS",
-            "display": "Other specified injury of thoracic aorta, sequela"
-          },
-          {
-            "code": "S25.101A",
-            "display": "Unspecified injury of right innominate or subclavian artery, initial encounter"
-          },
-          {
-            "code": "S25.101D",
-            "display": "Unspecified injury of right innominate or subclavian artery, subsequent encounter"
-          },
-          {
-            "code": "S25.101S",
-            "display": "Unspecified injury of right innominate or subclavian artery, sequela"
-          },
-          {
-            "code": "S25.102A",
-            "display": "Unspecified injury of left innominate or subclavian artery, initial encounter"
-          },
-          {
-            "code": "S25.102D",
-            "display": "Unspecified injury of left innominate or subclavian artery, subsequent encounter"
-          },
-          {
-            "code": "S25.102S",
-            "display": "Unspecified injury of left innominate or subclavian artery, sequela"
-          },
-          {
-            "code": "S25.109A",
-            "display": "Unspecified injury of unspecified innominate or subclavian artery, initial encounter"
-          },
-          {
-            "code": "S25.109D",
-            "display": "Unspecified injury of unspecified innominate or subclavian artery, subsequent encounter"
-          },
-          {
-            "code": "S25.109S",
-            "display": "Unspecified injury of unspecified innominate or subclavian artery, sequela"
-          },
-          {
-            "code": "S25.111A",
-            "display": "Minor laceration of right innominate or subclavian artery, initial encounter"
-          },
-          {
-            "code": "S25.111D",
-            "display": "Minor laceration of right innominate or subclavian artery, subsequent encounter"
-          },
-          {
-            "code": "S25.111S",
-            "display": "Minor laceration of right innominate or subclavian artery, sequela"
-          },
-          {
-            "code": "S25.112A",
-            "display": "Minor laceration of left innominate or subclavian artery, initial encounter"
-          },
-          {
-            "code": "S25.112D",
-            "display": "Minor laceration of left innominate or subclavian artery, subsequent encounter"
-          },
-          {
-            "code": "S25.112S",
-            "display": "Minor laceration of left innominate or subclavian artery, sequela"
-          },
-          {
-            "code": "S25.119A",
-            "display": "Minor laceration of unspecified innominate or subclavian artery, initial encounter"
-          },
-          {
-            "code": "S25.119D",
-            "display": "Minor laceration of unspecified innominate or subclavian artery, subsequent encounter"
-          },
-          {
-            "code": "S25.119S",
-            "display": "Minor laceration of unspecified innominate or subclavian artery, sequela"
-          },
-          {
-            "code": "S25.519A",
-            "display": "Laceration of intercostal blood vessels, unspecified side, initial encounter"
-          },
-          {
-            "code": "S25.519D",
-            "display": "Laceration of intercostal blood vessels, unspecified side, subsequent encounter"
-          },
-          {
-            "code": "S25.519S",
-            "display": "Laceration of intercostal blood vessels, unspecified side, sequela"
-          },
-          {
-            "code": "S27.893A",
-            "display": "Laceration of other specified intrathoracic organs, initial encounter"
-          },
-          {
-            "code": "S27.893D",
-            "display": "Laceration of other specified intrathoracic organs, subsequent encounter"
-          },
-          {
-            "code": "S27.893S",
-            "display": "Laceration of other specified intrathoracic organs, sequela"
-          },
-          {
-            "code": "S35.00XA",
-            "display": "Unspecified injury of abdominal aorta, initial encounter"
-          },
-          {
-            "code": "S35.00XD",
-            "display": "Unspecified injury of abdominal aorta, subsequent encounter"
-          },
-          {
-            "code": "S35.00XS",
-            "display": "Unspecified injury of abdominal aorta, sequela"
-          },
-          {
-            "code": "S35.01XA",
-            "display": "Minor laceration of abdominal aorta, initial encounter"
-          },
-          {
-            "code": "S35.01XD",
-            "display": "Minor laceration of abdominal aorta, subsequent encounter"
-          },
-          {
-            "code": "S35.01XS",
-            "display": "Minor laceration of abdominal aorta, sequela"
-          },
-          {
-            "code": "S35.02XA",
-            "display": "Major laceration of abdominal aorta, initial encounter"
-          },
-          {
-            "code": "S35.02XD",
-            "display": "Major laceration of abdominal aorta, subsequent encounter"
-          },
-          {
-            "code": "S35.02XS",
-            "display": "Major laceration of abdominal aorta, sequela"
-          },
-          {
-            "code": "S35.09XS",
-            "display": "Other injury of abdominal aorta, sequela"
-          },
-          {
-            "code": "S35.219A",
-            "display": "Unspecified injury of celiac artery, initial encounter"
-          },
-          {
-            "code": "S35.219D",
-            "display": "Unspecified injury of celiac artery, subsequent encounter"
-          },
-          {
-            "code": "S35.219S",
-            "display": "Unspecified injury of celiac artery, sequela"
-          },
-          {
-            "code": "S35.221A",
-            "display": "Minor laceration of superior mesenteric artery, initial encounter"
-          },
-          {
-            "code": "S35.221D",
-            "display": "Minor laceration of superior mesenteric artery, subsequent encounter"
-          },
-          {
-            "code": "S35.221S",
-            "display": "Minor laceration of superior mesenteric artery, sequela"
-          },
-          {
-            "code": "S35.222A",
-            "display": "Major laceration of superior mesenteric artery, initial encounter"
-          },
-          {
-            "code": "S35.222D",
-            "display": "Major laceration of superior mesenteric artery, subsequent encounter"
-          },
-          {
-            "code": "S35.222S",
-            "display": "Major laceration of superior mesenteric artery, sequela"
-          },
-          {
-            "code": "S35.229A",
-            "display": "Unspecified injury of superior mesenteric artery, initial encounter"
-          },
-          {
-            "code": "S35.229D",
-            "display": "Unspecified injury of superior mesenteric artery, subsequent encounter"
-          },
-          {
-            "code": "S35.229S",
-            "display": "Unspecified injury of superior mesenteric artery, sequela"
-          },
-          {
-            "code": "S35.239A",
-            "display": "Unspecified injury of inferior mesenteric artery, initial encounter"
-          },
-          {
-            "code": "S35.239D",
-            "display": "Unspecified injury of inferior mesenteric artery, subsequent encounter"
-          },
-          {
-            "code": "S35.239S",
-            "display": "Unspecified injury of inferior mesenteric artery, sequela"
-          },
-          {
-            "code": "S35.291A",
-            "display": "Minor laceration of branches of celiac and mesenteric artery, initial encounter"
-          },
-          {
-            "code": "S35.291D",
-            "display": "Minor laceration of branches of celiac and mesenteric artery, subsequent encounter"
-          },
-          {
-            "code": "S35.291S",
-            "display": "Minor laceration of branches of celiac and mesenteric artery, sequela"
-          },
-          {
-            "code": "S35.298A",
-            "display": "Other injury of branches of celiac and mesenteric artery, initial encounter"
-          },
-          {
-            "code": "S35.298D",
-            "display": "Other injury of branches of celiac and mesenteric artery, subsequent encounter"
-          },
-          {
-            "code": "S35.298S",
-            "display": "Other injury of branches of celiac and mesenteric artery, sequela"
-          },
-          {
-            "code": "S35.299A",
-            "display": "Unspecified injury of branches of celiac and mesenteric artery, initial encounter"
-          },
-          {
-            "code": "S35.299D",
-            "display": "Unspecified injury of branches of celiac and mesenteric artery, subsequent encounter"
-          },
-          {
-            "code": "S35.299S",
-            "display": "Unspecified injury of branches of celiac and mesenteric artery, sequela"
-          },
-          {
-            "code": "S35.401A",
-            "display": "Unspecified injury of right renal artery, initial encounter"
-          },
-          {
-            "code": "S35.401D",
-            "display": "Unspecified injury of right renal artery, subsequent encounter"
-          },
-          {
-            "code": "S35.401S",
-            "display": "Unspecified injury of right renal artery, sequela"
-          },
-          {
-            "code": "S35.402A",
-            "display": "Unspecified injury of left renal artery, initial encounter"
-          },
-          {
-            "code": "S35.402D",
-            "display": "Unspecified injury of left renal artery, subsequent encounter"
-          },
-          {
-            "code": "S35.402S",
-            "display": "Unspecified injury of left renal artery, sequela"
-          },
-          {
-            "code": "S35.403A",
-            "display": "Unspecified injury of unspecified renal artery, initial encounter"
-          },
-          {
-            "code": "S35.403D",
-            "display": "Unspecified injury of unspecified renal artery, subsequent encounter"
-          },
-          {
-            "code": "S35.403S",
-            "display": "Unspecified injury of unspecified renal artery, sequela"
-          },
-          {
-            "code": "S35.411A",
-            "display": "Laceration of right renal artery, initial encounter"
-          },
-          {
-            "code": "S35.411D",
-            "display": "Laceration of right renal artery, subsequent encounter"
-          },
-          {
-            "code": "S35.411S",
-            "display": "Laceration of right renal artery, sequela"
-          },
-          {
-            "code": "S35.412A",
-            "display": "Laceration of left renal artery, initial encounter"
-          },
-          {
-            "code": "S35.412D",
-            "display": "Laceration of left renal artery, subsequent encounter"
-          },
-          {
-            "code": "S35.412S",
-            "display": "Laceration of left renal artery, sequela"
-          },
-          {
-            "code": "S35.50XA",
-            "display": "Injury of unspecified iliac blood vessel(s), initial encounter"
-          },
-          {
-            "code": "S35.50XD",
-            "display": "Injury of unspecified iliac blood vessel(s), subsequent encounter"
-          },
-          {
-            "code": "S35.50XS",
-            "display": "Injury of unspecified iliac blood vessel(s), sequela"
-          },
-          {
-            "code": "S35.511A",
-            "display": "Injury of right iliac artery, initial encounter"
-          },
-          {
-            "code": "S35.511D",
-            "display": "Injury of right iliac artery, subsequent encounter"
-          },
-          {
-            "code": "S35.511S",
-            "display": "Injury of right iliac artery, sequela"
-          },
-          {
-            "code": "S35.512A",
-            "display": "Injury of left iliac artery, initial encounter"
-          },
-          {
-            "code": "S35.512D",
-            "display": "Injury of left iliac artery, subsequent encounter"
-          },
-          {
-            "code": "S35.512S",
-            "display": "Injury of left iliac artery, sequela"
-          },
-          {
-            "code": "S35.513A",
-            "display": "Injury of unspecified iliac artery, initial encounter"
-          },
-          {
-            "code": "S35.513D",
-            "display": "Injury of unspecified iliac artery, subsequent encounter"
-          },
-          {
-            "code": "S35.513S",
-            "display": "Injury of unspecified iliac artery, sequela"
-          },
-          {
-            "code": "S35.514A",
-            "display": "Injury of right iliac vein, initial encounter"
-          },
-          {
-            "code": "S35.514D",
-            "display": "Injury of right iliac vein, subsequent encounter"
-          },
-          {
-            "code": "S35.514S",
-            "display": "Injury of right iliac vein, sequela"
-          },
-          {
-            "code": "S35.515A",
-            "display": "Injury of left iliac vein, initial encounter"
-          },
-          {
-            "code": "S35.515D",
-            "display": "Injury of left iliac vein, subsequent encounter"
-          },
-          {
-            "code": "S35.515S",
-            "display": "Injury of left iliac vein, sequela"
-          },
-          {
-            "code": "S35.516A",
-            "display": "Injury of unspecified iliac vein, initial encounter"
-          },
-          {
-            "code": "S35.516D",
-            "display": "Injury of unspecified iliac vein, subsequent encounter"
-          },
-          {
-            "code": "S35.516S",
-            "display": "Injury of unspecified iliac vein, sequela"
-          },
-          {
-            "code": "S35.531A",
-            "display": "Injury of right uterine artery, initial encounter"
-          },
-          {
-            "code": "S35.531D",
-            "display": "Injury of right uterine artery, subsequent encounter"
-          },
-          {
-            "code": "S35.531S",
-            "display": "Injury of right uterine artery, sequela"
-          },
-          {
-            "code": "S35.532A",
-            "display": "Injury of left uterine artery, initial encounter"
-          },
-          {
-            "code": "S35.532D",
-            "display": "Injury of left uterine artery, subsequent encounter"
-          },
-          {
-            "code": "S35.532S",
-            "display": "Injury of left uterine artery, sequela"
-          },
-          {
-            "code": "S35.533A",
-            "display": "Injury of unspecified uterine artery, initial encounter"
-          },
-          {
-            "code": "S35.533D",
-            "display": "Injury of unspecified uterine artery, subsequent encounter"
-          },
-          {
-            "code": "S35.533S",
-            "display": "Injury of unspecified uterine artery, sequela"
-          },
-          {
-            "code": "S35.536A",
-            "display": "Injury of unspecified uterine vein, initial encounter"
-          },
-          {
-            "code": "S35.536D",
-            "display": "Injury of unspecified uterine vein, subsequent encounter"
-          },
-          {
-            "code": "S35.536S",
-            "display": "Injury of unspecified uterine vein, sequela"
-          },
-          {
-            "code": "S36.00XA",
-            "display": "Unspecified injury of spleen, initial encounter"
-          },
-          {
-            "code": "S36.00XD",
-            "display": "Unspecified injury of spleen, subsequent encounter"
-          },
-          {
-            "code": "S36.00XS",
-            "display": "Unspecified injury of spleen, sequela"
-          },
-          {
-            "code": "S36.029A",
-            "display": "Unspecified contusion of spleen, initial encounter"
-          },
-          {
-            "code": "S36.029D",
-            "display": "Unspecified contusion of spleen, subsequent encounter"
-          },
-          {
-            "code": "S36.029S",
-            "display": "Unspecified contusion of spleen, sequela"
-          },
-          {
-            "code": "S36.030A",
-            "display": "Superficial (capsular) laceration of spleen, initial encounter"
-          },
-          {
-            "code": "S36.030D",
-            "display": "Superficial (capsular) laceration of spleen, subsequent encounter"
-          },
-          {
-            "code": "S36.030S",
-            "display": "Superficial (capsular) laceration of spleen, sequela"
-          },
-          {
-            "code": "S36.031A",
-            "display": "Moderate laceration of spleen, initial encounter"
-          },
-          {
-            "code": "S36.031D",
-            "display": "Moderate laceration of spleen, subsequent encounter"
-          },
-          {
-            "code": "S36.031S",
-            "display": "Moderate laceration of spleen, sequela"
-          },
-          {
-            "code": "S36.032A",
-            "display": "Major laceration of spleen, initial encounter"
-          },
-          {
-            "code": "S36.032D",
-            "display": "Major laceration of spleen, subsequent encounter"
-          },
-          {
-            "code": "S36.032S",
-            "display": "Major laceration of spleen, sequela"
-          },
-          {
-            "code": "S36.039A",
-            "display": "Unspecified laceration of spleen, initial encounter"
-          },
-          {
-            "code": "S36.039D",
-            "display": "Unspecified laceration of spleen, subsequent encounter"
-          },
-          {
-            "code": "S36.039S",
-            "display": "Unspecified laceration of spleen, sequela"
-          },
-          {
-            "code": "S36.09XA",
-            "display": "Other injury of spleen, initial encounter"
-          },
-          {
-            "code": "S36.09XD",
-            "display": "Other injury of spleen, subsequent encounter"
-          },
-          {
-            "code": "S36.09XS",
-            "display": "Other injury of spleen, sequela"
-          },
-          {
-            "code": "S45.001A",
-            "display": "Unspecified injury of axillary artery, right side, initial encounter"
-          },
-          {
-            "code": "S45.001D",
-            "display": "Unspecified injury of axillary artery, right side, subsequent encounter"
-          },
-          {
-            "code": "S45.001S",
-            "display": "Unspecified injury of axillary artery, right side, sequela"
-          },
-          {
-            "code": "S45.002A",
-            "display": "Unspecified injury of axillary artery, left side, initial encounter"
-          },
-          {
-            "code": "S45.002D",
-            "display": "Unspecified injury of axillary artery, left side, subsequent encounter"
-          },
-          {
-            "code": "S45.002S",
-            "display": "Unspecified injury of axillary artery, left side, sequela"
-          },
-          {
-            "code": "S45.009A",
-            "display": "Unspecified injury of axillary artery, unspecified side, initial encounter"
-          },
-          {
-            "code": "S45.009D",
-            "display": "Unspecified injury of axillary artery, unspecified side, subsequent encounter"
-          },
-          {
-            "code": "S45.009S",
-            "display": "Unspecified injury of axillary artery, unspecified side, sequela"
-          },
-          {
-            "code": "S45.019A",
-            "display": "Laceration of axillary artery, unspecified side, initial encounter"
-          },
-          {
-            "code": "S45.019D",
-            "display": "Laceration of axillary artery, unspecified side, subsequent encounter"
-          },
-          {
-            "code": "S45.019S",
-            "display": "Laceration of axillary artery, unspecified side, sequela"
-          },
-          {
-            "code": "S45.101A",
-            "display": "Unspecified injury of brachial artery, right side, initial encounter"
-          },
-          {
-            "code": "S45.101D",
-            "display": "Unspecified injury of brachial artery, right side, subsequent encounter"
-          },
-          {
-            "code": "S45.101S",
-            "display": "Unspecified injury of brachial artery, right side, sequela"
-          },
-          {
-            "code": "S45.102A",
-            "display": "Unspecified injury of brachial artery, left side, initial encounter"
-          },
-          {
-            "code": "S45.102D",
-            "display": "Unspecified injury of brachial artery, left side, subsequent encounter"
-          },
-          {
-            "code": "S45.102S",
-            "display": "Unspecified injury of brachial artery, left side, sequela"
-          },
-          {
-            "code": "S45.109A",
-            "display": "Unspecified injury of brachial artery, unspecified side, initial encounter"
-          },
-          {
-            "code": "S45.109D",
-            "display": "Unspecified injury of brachial artery, unspecified side, subsequent encounter"
-          },
-          {
-            "code": "S45.109S",
-            "display": "Unspecified injury of brachial artery, unspecified side, sequela"
-          },
-          {
-            "code": "S45.111A",
-            "display": "Laceration of brachial artery, right side, initial encounter"
-          },
-          {
-            "code": "S45.111D",
-            "display": "Laceration of brachial artery, right side, subsequent encounter"
-          },
-          {
-            "code": "S45.111S",
-            "display": "Laceration of brachial artery, right side, sequela"
-          },
-          {
-            "code": "S45.112A",
-            "display": "Laceration of brachial artery, left side, initial encounter"
-          },
-          {
-            "code": "S45.112D",
-            "display": "Laceration of brachial artery, left side, subsequent encounter"
-          },
-          {
-            "code": "S45.112S",
-            "display": "Laceration of brachial artery, left side, sequela"
-          },
-          {
-            "code": "S45.119A",
-            "display": "Laceration of brachial artery, unspecified side, initial encounter"
-          },
-          {
-            "code": "S45.119D",
-            "display": "Laceration of brachial artery, unspecified side, subsequent encounter"
-          },
-          {
-            "code": "S45.119S",
-            "display": "Laceration of brachial artery, unspecified side, sequela"
-          },
-          {
-            "code": "S45.201A",
-            "display": "Unspecified injury of axillary or brachial vein, right side, initial encounter"
-          },
-          {
-            "code": "S45.201D",
-            "display": "Unspecified injury of axillary or brachial vein, right side, subsequent encounter"
-          },
-          {
-            "code": "S45.201S",
-            "display": "Unspecified injury of axillary or brachial vein, right side, sequela"
-          },
-          {
-            "code": "S45.202A",
-            "display": "Unspecified injury of axillary or brachial vein, left side, initial encounter"
-          },
-          {
-            "code": "S45.202D",
-            "display": "Unspecified injury of axillary or brachial vein, left side, subsequent encounter"
-          },
-          {
-            "code": "S45.202S",
-            "display": "Unspecified injury of axillary or brachial vein, left side, sequela"
-          },
-          {
-            "code": "S45.209A",
-            "display": "Unspecified injury of axillary or brachial vein, unspecified side, initial encounter"
-          },
-          {
-            "code": "S45.209D",
-            "display": "Unspecified injury of axillary or brachial vein, unspecified side, subsequent encounter"
-          },
-          {
-            "code": "S45.209S",
-            "display": "Unspecified injury of axillary or brachial vein, unspecified side, sequela"
-          },
-          {
-            "code": "S45.219A",
-            "display": "Laceration of axillary or brachial vein, unspecified side, initial encounter"
-          },
-          {
-            "code": "S45.219D",
-            "display": "Laceration of axillary or brachial vein, unspecified side, subsequent encounter"
-          },
-          {
-            "code": "S45.219S",
-            "display": "Laceration of axillary or brachial vein, unspecified side, sequela"
-          },
-          {
-            "code": "S45.309A",
-            "display": "Unspecified injury of superficial vein at shoulder and upper arm level, unspecified arm, initial encounter"
-          },
-          {
-            "code": "S45.309D",
-            "display": "Unspecified injury of superficial vein at shoulder and upper arm level, unspecified arm, subsequent encounter"
-          },
-          {
-            "code": "S45.309S",
-            "display": "Unspecified injury of superficial vein at shoulder and upper arm level, unspecified arm, sequela"
-          },
-          {
-            "code": "S45.901A",
-            "display": "Unspecified injury of unspecified blood vessel at shoulder and upper arm level, right arm, initial encounter"
-          },
-          {
-            "code": "S45.901D",
-            "display": "Unspecified injury of unspecified blood vessel at shoulder and upper arm level, right arm, subsequent encounter"
-          },
-          {
-            "code": "S45.901S",
-            "display": "Unspecified injury of unspecified blood vessel at shoulder and upper arm level, right arm, sequela"
-          },
-          {
-            "code": "S45.902A",
-            "display": "Unspecified injury of unspecified blood vessel at shoulder and upper arm level, left arm, initial encounter"
-          },
-          {
-            "code": "S45.902D",
-            "display": "Unspecified injury of unspecified blood vessel at shoulder and upper arm level, left arm, subsequent encounter"
-          },
-          {
-            "code": "S45.902S",
-            "display": "Unspecified injury of unspecified blood vessel at shoulder and upper arm level, left arm, sequela"
-          },
-          {
-            "code": "S45.909A",
-            "display": "Unspecified injury of unspecified blood vessel at shoulder and upper arm level, unspecified arm, initial encounter"
-          },
-          {
-            "code": "S45.909D",
-            "display": "Unspecified injury of unspecified blood vessel at shoulder and upper arm level, unspecified arm, subsequent encounter"
-          },
-          {
-            "code": "S45.909S",
-            "display": "Unspecified injury of unspecified blood vessel at shoulder and upper arm level, unspecified arm, sequela"
-          },
-          {
-            "code": "S55.009A",
-            "display": "Unspecified injury of ulnar artery at forearm level, unspecified arm, initial encounter"
-          },
-          {
-            "code": "S55.009D",
-            "display": "Unspecified injury of ulnar artery at forearm level, unspecified arm, subsequent encounter"
-          },
-          {
-            "code": "S55.009S",
-            "display": "Unspecified injury of ulnar artery at forearm level, unspecified arm, sequela"
-          },
-          {
-            "code": "S55.019A",
-            "display": "Laceration of ulnar artery at forearm level, unspecified arm, initial encounter"
-          },
-          {
-            "code": "S55.019D",
-            "display": "Laceration of ulnar artery at forearm level, unspecified arm, subsequent encounter"
-          },
-          {
-            "code": "S55.019S",
-            "display": "Laceration of ulnar artery at forearm level, unspecified arm, sequela"
-          },
-          {
-            "code": "S55.109A",
-            "display": "Unspecified injury of radial artery at forearm level, unspecified arm, initial encounter"
-          },
-          {
-            "code": "S55.109D",
-            "display": "Unspecified injury of radial artery at forearm level, unspecified arm, subsequent encounter"
-          },
-          {
-            "code": "S55.109S",
-            "display": "Unspecified injury of radial artery at forearm level, unspecified arm, sequela"
-          },
-          {
-            "code": "S55.119A",
-            "display": "Laceration of radial artery at forearm level, unspecified arm, initial encounter"
-          },
-          {
-            "code": "S55.119D",
-            "display": "Laceration of radial artery at forearm level, unspecified arm, subsequent encounter"
-          },
-          {
-            "code": "S55.119S",
-            "display": "Laceration of radial artery at forearm level, unspecified arm, sequela"
-          },
-          {
-            "code": "S55.209A",
-            "display": "Unspecified injury of vein at forearm level, unspecified arm, initial encounter"
-          },
-          {
-            "code": "S55.209D",
-            "display": "Unspecified injury of vein at forearm level, unspecified arm, subsequent encounter"
-          },
-          {
-            "code": "S55.209S",
-            "display": "Unspecified injury of vein at forearm level, unspecified arm, sequela"
-          },
-          {
-            "code": "S55.809A",
-            "display": "Unspecified injury of other blood vessels at forearm level, unspecified arm, initial encounter"
-          },
-          {
-            "code": "S55.809D",
-            "display": "Unspecified injury of other blood vessels at forearm level, unspecified arm, subsequent encounter"
-          },
-          {
-            "code": "S55.809S",
-            "display": "Unspecified injury of other blood vessels at forearm level, unspecified arm, sequela"
-          },
-          {
-            "code": "S55.909A",
-            "display": "Unspecified injury of unspecified blood vessel at forearm level, unspecified arm, initial encounter"
-          },
-          {
-            "code": "S55.909D",
-            "display": "Unspecified injury of unspecified blood vessel at forearm level, unspecified arm, subsequent encounter"
-          },
-          {
-            "code": "S55.909S",
-            "display": "Unspecified injury of unspecified blood vessel at forearm level, unspecified arm, sequela"
-          },
-          {
-            "code": "S55.911A",
-            "display": "Laceration of unspecified blood vessel at forearm level, right arm, initial encounter"
-          },
-          {
-            "code": "S55.911D",
-            "display": "Laceration of unspecified blood vessel at forearm level, right arm, subsequent encounter"
-          },
-          {
-            "code": "S55.911S",
-            "display": "Laceration of unspecified blood vessel at forearm level, right arm, sequela"
-          },
-          {
-            "code": "S55.912A",
-            "display": "Laceration of unspecified blood vessel at forearm level, left arm, initial encounter"
-          },
-          {
-            "code": "S55.912D",
-            "display": "Laceration of unspecified blood vessel at forearm level, left arm, subsequent encounter"
-          },
-          {
-            "code": "S55.912S",
-            "display": "Laceration of unspecified blood vessel at forearm level, left arm, sequela"
-          },
-          {
-            "code": "S65.009A",
-            "display": "Unspecified injury of ulnar artery at wrist and hand level of unspecified arm, initial encounter"
-          },
-          {
-            "code": "S65.009D",
-            "display": "Unspecified injury of ulnar artery at wrist and hand level of unspecified arm, subsequent encounter"
-          },
-          {
-            "code": "S65.009S",
-            "display": "Unspecified injury of ulnar artery at wrist and hand level of unspecified arm, sequela"
-          },
-          {
-            "code": "S65.109A",
-            "display": "Unspecified injury of radial artery at wrist and hand level of unspecified arm, initial encounter"
-          },
-          {
-            "code": "S65.109D",
-            "display": "Unspecified injury of radial artery at wrist and hand level of unspecified arm, subsequent encounter"
-          },
-          {
-            "code": "S65.109S",
-            "display": "Unspecified injury of radial artery at wrist and hand level of unspecified arm, sequela"
-          },
-          {
-            "code": "S65.209A",
-            "display": "Unspecified injury of superficial palmar arch of unspecified hand, initial encounter"
-          },
-          {
-            "code": "S65.209D",
-            "display": "Unspecified injury of superficial palmar arch of unspecified hand, subsequent encounter"
-          },
-          {
-            "code": "S65.209S",
-            "display": "Unspecified injury of superficial palmar arch of unspecified hand, sequela"
-          },
-          {
-            "code": "S65.211A",
-            "display": "Laceration of superficial palmar arch of right hand, initial encounter"
-          },
-          {
-            "code": "S65.211D",
-            "display": "Laceration of superficial palmar arch of right hand, subsequent encounter"
-          },
-          {
-            "code": "S65.211S",
-            "display": "Laceration of superficial palmar arch of right hand, sequela"
-          },
-          {
-            "code": "S65.212A",
-            "display": "Laceration of superficial palmar arch of left hand, initial encounter"
-          },
-          {
-            "code": "S65.212D",
-            "display": "Laceration of superficial palmar arch of left hand, subsequent encounter"
-          },
-          {
-            "code": "S65.212S",
-            "display": "Laceration of superficial palmar arch of left hand, sequela"
-          },
-          {
-            "code": "S65.309A",
-            "display": "Unspecified injury of deep palmar arch of unspecified hand, initial encounter"
-          },
-          {
-            "code": "S65.309D",
-            "display": "Unspecified injury of deep palmar arch of unspecified hand, subsequent encounter"
-          },
-          {
-            "code": "S65.309S",
-            "display": "Unspecified injury of deep palmar arch of unspecified hand, sequela"
-          },
-          {
-            "code": "S65.311A",
-            "display": "Laceration of deep palmar arch of right hand, initial encounter"
-          },
-          {
-            "code": "S65.311D",
-            "display": "Laceration of deep palmar arch of right hand, subsequent encounter"
-          },
-          {
-            "code": "S65.311S",
-            "display": "Laceration of deep palmar arch of right hand, sequela"
-          },
-          {
-            "code": "S65.312A",
-            "display": "Laceration of deep palmar arch of left hand, initial encounter"
-          },
-          {
-            "code": "S65.312D",
-            "display": "Laceration of deep palmar arch of left hand, subsequent encounter"
-          },
-          {
-            "code": "S65.312S",
-            "display": "Laceration of deep palmar arch of left hand, sequela"
-          },
-          {
-            "code": "S65.319A",
-            "display": "Laceration of deep palmar arch of unspecified hand, initial encounter"
-          },
-          {
-            "code": "S65.319D",
-            "display": "Laceration of deep palmar arch of unspecified hand, subsequent encounter"
-          },
-          {
-            "code": "S65.319S",
-            "display": "Laceration of deep palmar arch of unspecified hand, sequela"
-          },
-          {
-            "code": "S65.401A",
-            "display": "Unspecified injury of blood vessel of right thumb, initial encounter"
-          },
-          {
-            "code": "S65.401D",
-            "display": "Unspecified injury of blood vessel of right thumb, subsequent encounter"
-          },
-          {
-            "code": "S65.401S",
-            "display": "Unspecified injury of blood vessel of right thumb, sequela"
-          },
-          {
-            "code": "S65.402A",
-            "display": "Unspecified injury of blood vessel of left thumb, initial encounter"
-          },
-          {
-            "code": "S65.402D",
-            "display": "Unspecified injury of blood vessel of left thumb, subsequent encounter"
-          },
-          {
-            "code": "S65.402S",
-            "display": "Unspecified injury of blood vessel of left thumb, sequela"
-          },
-          {
-            "code": "S65.409A",
-            "display": "Unspecified injury of blood vessel of unspecified thumb, initial encounter"
-          },
-          {
-            "code": "S65.409D",
-            "display": "Unspecified injury of blood vessel of unspecified thumb, subsequent encounter"
-          },
-          {
-            "code": "S65.409S",
-            "display": "Unspecified injury of blood vessel of unspecified thumb, sequela"
-          },
-          {
-            "code": "S65.411A",
-            "display": "Laceration of blood vessel of right thumb, initial encounter"
-          },
-          {
-            "code": "S65.411D",
-            "display": "Laceration of blood vessel of right thumb, subsequent encounter"
-          },
-          {
-            "code": "S65.411S",
-            "display": "Laceration of blood vessel of right thumb, sequela"
-          },
-          {
-            "code": "S65.412A",
-            "display": "Laceration of blood vessel of left thumb, initial encounter"
-          },
-          {
-            "code": "S65.412D",
-            "display": "Laceration of blood vessel of left thumb, subsequent encounter"
-          },
-          {
-            "code": "S65.412S",
-            "display": "Laceration of blood vessel of left thumb, sequela"
-          },
-          {
-            "code": "S65.419A",
-            "display": "Laceration of blood vessel of unspecified thumb, initial encounter"
-          },
-          {
-            "code": "S65.419D",
-            "display": "Laceration of blood vessel of unspecified thumb, subsequent encounter"
-          },
-          {
-            "code": "S65.419S",
-            "display": "Laceration of blood vessel of unspecified thumb, sequela"
-          },
-          {
-            "code": "S65.499A",
-            "display": "Other specified injury of blood vessel of unspecified thumb, initial encounter"
-          },
-          {
-            "code": "S65.499D",
-            "display": "Other specified injury of blood vessel of unspecified thumb, subsequent encounter"
-          },
-          {
-            "code": "S65.499S",
-            "display": "Other specified injury of blood vessel of unspecified thumb, sequela"
-          },
-          {
-            "code": "S65.500A",
-            "display": "Unspecified injury of blood vessel of right index finger, initial encounter"
-          },
-          {
-            "code": "S65.500D",
-            "display": "Unspecified injury of blood vessel of right index finger, subsequent encounter"
-          },
-          {
-            "code": "S65.500S",
-            "display": "Unspecified injury of blood vessel of right index finger, sequela"
-          },
-          {
-            "code": "S65.501A",
-            "display": "Unspecified injury of blood vessel of left index finger, initial encounter"
-          },
-          {
-            "code": "S65.501D",
-            "display": "Unspecified injury of blood vessel of left index finger, subsequent encounter"
-          },
-          {
-            "code": "S65.501S",
-            "display": "Unspecified injury of blood vessel of left index finger, sequela"
-          },
-          {
-            "code": "S65.502A",
-            "display": "Unspecified injury of blood vessel of right middle finger, initial encounter"
-          },
-          {
-            "code": "S65.502D",
-            "display": "Unspecified injury of blood vessel of right middle finger, subsequent encounter"
-          },
-          {
-            "code": "S65.502S",
-            "display": "Unspecified injury of blood vessel of right middle finger, sequela"
-          },
-          {
-            "code": "S65.503A",
-            "display": "Unspecified injury of blood vessel of left middle finger, initial encounter"
-          },
-          {
-            "code": "S65.503D",
-            "display": "Unspecified injury of blood vessel of left middle finger, subsequent encounter"
-          },
-          {
-            "code": "S65.503S",
-            "display": "Unspecified injury of blood vessel of left middle finger, sequela"
-          },
-          {
-            "code": "S65.504A",
-            "display": "Unspecified injury of blood vessel of right ring finger, initial encounter"
-          },
-          {
-            "code": "S65.504D",
-            "display": "Unspecified injury of blood vessel of right ring finger, subsequent encounter"
-          },
-          {
-            "code": "S65.504S",
-            "display": "Unspecified injury of blood vessel of right ring finger, sequela"
-          },
-          {
-            "code": "S65.505A",
-            "display": "Unspecified injury of blood vessel of left ring finger, initial encounter"
-          },
-          {
-            "code": "S65.505D",
-            "display": "Unspecified injury of blood vessel of left ring finger, subsequent encounter"
-          },
-          {
-            "code": "S65.505S",
-            "display": "Unspecified injury of blood vessel of left ring finger, sequela"
-          },
-          {
-            "code": "S65.506A",
-            "display": "Unspecified injury of blood vessel of right little finger, initial encounter"
-          },
-          {
-            "code": "S65.506D",
-            "display": "Unspecified injury of blood vessel of right little finger, subsequent encounter"
-          },
-          {
-            "code": "S65.506S",
-            "display": "Unspecified injury of blood vessel of right little finger, sequela"
-          },
-          {
-            "code": "S65.507A",
-            "display": "Unspecified injury of blood vessel of left little finger, initial encounter"
-          },
-          {
-            "code": "S65.507D",
-            "display": "Unspecified injury of blood vessel of left little finger, subsequent encounter"
-          },
-          {
-            "code": "S65.507S",
-            "display": "Unspecified injury of blood vessel of left little finger, sequela"
-          },
-          {
-            "code": "S65.509A",
-            "display": "Unspecified injury of blood vessel of unspecified finger, initial encounter"
-          },
-          {
-            "code": "S65.509D",
-            "display": "Unspecified injury of blood vessel of unspecified finger, subsequent encounter"
-          },
-          {
-            "code": "S65.509S",
-            "display": "Unspecified injury of blood vessel of unspecified finger, sequela"
-          },
-          {
-            "code": "S65.510A",
-            "display": "Laceration of blood vessel of right index finger, initial encounter"
-          },
-          {
-            "code": "S65.510D",
-            "display": "Laceration of blood vessel of right index finger, subsequent encounter"
-          },
-          {
-            "code": "S65.510S",
-            "display": "Laceration of blood vessel of right index finger, sequela"
-          },
-          {
-            "code": "S65.511A",
-            "display": "Laceration of blood vessel of left index finger, initial encounter"
-          },
-          {
-            "code": "S65.511D",
-            "display": "Laceration of blood vessel of left index finger, subsequent encounter"
-          },
-          {
-            "code": "S65.511S",
-            "display": "Laceration of blood vessel of left index finger, sequela"
-          },
-          {
-            "code": "S65.512A",
-            "display": "Laceration of blood vessel of right middle finger, initial encounter"
-          },
-          {
-            "code": "S65.512D",
-            "display": "Laceration of blood vessel of right middle finger, subsequent encounter"
-          },
-          {
-            "code": "S65.512S",
-            "display": "Laceration of blood vessel of right middle finger, sequela"
-          },
-          {
-            "code": "S65.513A",
-            "display": "Laceration of blood vessel of left middle finger, initial encounter"
-          },
-          {
-            "code": "S65.513D",
-            "display": "Laceration of blood vessel of left middle finger, subsequent encounter"
-          },
-          {
-            "code": "S65.513S",
-            "display": "Laceration of blood vessel of left middle finger, sequela"
-          },
-          {
-            "code": "S65.514A",
-            "display": "Laceration of blood vessel of right ring finger, initial encounter"
-          },
-          {
-            "code": "S65.514D",
-            "display": "Laceration of blood vessel of right ring finger, subsequent encounter"
-          },
-          {
-            "code": "S65.514S",
-            "display": "Laceration of blood vessel of right ring finger, sequela"
-          },
-          {
-            "code": "S65.515A",
-            "display": "Laceration of blood vessel of left ring finger, initial encounter"
-          },
-          {
-            "code": "S65.515D",
-            "display": "Laceration of blood vessel of left ring finger, subsequent encounter"
-          },
-          {
-            "code": "S65.515S",
-            "display": "Laceration of blood vessel of left ring finger, sequela"
-          },
-          {
-            "code": "S65.516A",
-            "display": "Laceration of blood vessel of right little finger, initial encounter"
-          },
-          {
-            "code": "S65.516D",
-            "display": "Laceration of blood vessel of right little finger, subsequent encounter"
-          },
-          {
-            "code": "S65.516S",
-            "display": "Laceration of blood vessel of right little finger, sequela"
-          },
-          {
-            "code": "S65.517A",
-            "display": "Laceration of blood vessel of left little finger, initial encounter"
-          },
-          {
-            "code": "S65.517D",
-            "display": "Laceration of blood vessel of left little finger, subsequent encounter"
-          },
-          {
-            "code": "S65.517S",
-            "display": "Laceration of blood vessel of left little finger, sequela"
-          },
-          {
-            "code": "S65.519A",
-            "display": "Laceration of blood vessel of unspecified finger, initial encounter"
-          },
-          {
-            "code": "S65.519D",
-            "display": "Laceration of blood vessel of unspecified finger, subsequent encounter"
-          },
-          {
-            "code": "S65.519S",
-            "display": "Laceration of blood vessel of unspecified finger, sequela"
-          },
-          {
-            "code": "S65.599A",
-            "display": "Other specified injury of blood vessel of unspecified finger, initial encounter"
-          },
-          {
-            "code": "S65.599D",
-            "display": "Other specified injury of blood vessel of unspecified finger, subsequent encounter"
-          },
-          {
-            "code": "S65.599S",
-            "display": "Other specified injury of blood vessel of unspecified finger, sequela"
-          },
-          {
-            "code": "S65.809A",
-            "display": "Unspecified injury of other blood vessels at wrist and hand level of unspecified arm, initial encounter"
-          },
-          {
-            "code": "S65.809D",
-            "display": "Unspecified injury of other blood vessels at wrist and hand level of unspecified arm, subsequent encounter"
-          },
-          {
-            "code": "S65.809S",
-            "display": "Unspecified injury of other blood vessels at wrist and hand level of unspecified arm, sequela"
-          },
-          {
-            "code": "S65.819A",
-            "display": "Laceration of other blood vessels at wrist and hand level of unspecified arm, initial encounter"
-          },
-          {
-            "code": "S65.819D",
-            "display": "Laceration of other blood vessels at wrist and hand level of unspecified arm, subsequent encounter"
-          },
-          {
-            "code": "S65.819S",
-            "display": "Laceration of other blood vessels at wrist and hand level of unspecified arm, sequela"
-          },
-          {
-            "code": "S65.909A",
-            "display": "Unspecified injury of unspecified blood vessel at wrist and hand level of unspecified arm, initial encounter"
-          },
-          {
-            "code": "S65.909D",
-            "display": "Unspecified injury of unspecified blood vessel at wrist and hand level of unspecified arm, subsequent encounter"
-          },
-          {
-            "code": "S65.909S",
-            "display": "Unspecified injury of unspecified blood vessel at wrist and hand level of unspecified arm, sequela"
-          },
-          {
-            "code": "S75.001A",
-            "display": "Unspecified injury of femoral artery, right leg, initial encounter"
-          },
-          {
-            "code": "S75.001D",
-            "display": "Unspecified injury of femoral artery, right leg, subsequent encounter"
-          },
-          {
-            "code": "S75.001S",
-            "display": "Unspecified injury of femoral artery, right leg, sequela"
-          },
-          {
-            "code": "S75.002A",
-            "display": "Unspecified injury of femoral artery, left leg, initial encounter"
-          },
-          {
-            "code": "S75.002D",
-            "display": "Unspecified injury of femoral artery, left leg, subsequent encounter"
-          },
-          {
-            "code": "S75.002S",
-            "display": "Unspecified injury of femoral artery, left leg, sequela"
-          },
-          {
-            "code": "S75.009A",
-            "display": "Unspecified injury of femoral artery, unspecified leg, initial encounter"
-          },
-          {
-            "code": "S75.009D",
-            "display": "Unspecified injury of femoral artery, unspecified leg, subsequent encounter"
-          },
-          {
-            "code": "S75.009S",
-            "display": "Unspecified injury of femoral artery, unspecified leg, sequela"
-          },
-          {
-            "code": "S75.011A",
-            "display": "Minor laceration of femoral artery, right leg, initial encounter"
-          },
-          {
-            "code": "S75.011D",
-            "display": "Minor laceration of femoral artery, right leg, subsequent encounter"
-          },
-          {
-            "code": "S75.011S",
-            "display": "Minor laceration of femoral artery, right leg, sequela"
-          },
-          {
-            "code": "S75.012A",
-            "display": "Minor laceration of femoral artery, left leg, initial encounter"
-          },
-          {
-            "code": "S75.012D",
-            "display": "Minor laceration of femoral artery, left leg, subsequent encounter"
-          },
-          {
-            "code": "S75.012S",
-            "display": "Minor laceration of femoral artery, left leg, sequela"
-          },
-          {
-            "code": "S75.099A",
-            "display": "Other specified injury of femoral artery, unspecified leg, initial encounter"
-          },
-          {
-            "code": "S75.099D",
-            "display": "Other specified injury of femoral artery, unspecified leg, subsequent encounter"
-          },
-          {
-            "code": "S75.099S",
-            "display": "Other specified injury of femoral artery, unspecified leg, sequela"
-          },
-          {
-            "code": "S75.101A",
-            "display": "Unspecified injury of femoral vein at hip and thigh level, right leg, initial encounter"
-          },
-          {
-            "code": "S75.101D",
-            "display": "Unspecified injury of femoral vein at hip and thigh level, right leg, subsequent encounter"
-          },
-          {
-            "code": "S75.101S",
-            "display": "Unspecified injury of femoral vein at hip and thigh level, right leg, sequela"
-          },
-          {
-            "code": "S75.102A",
-            "display": "Unspecified injury of femoral vein at hip and thigh level, left leg, initial encounter"
-          },
-          {
-            "code": "S75.102D",
-            "display": "Unspecified injury of femoral vein at hip and thigh level, left leg, subsequent encounter"
-          },
-          {
-            "code": "S75.102S",
-            "display": "Unspecified injury of femoral vein at hip and thigh level, left leg, sequela"
-          },
-          {
-            "code": "S75.109A",
-            "display": "Unspecified injury of femoral vein at hip and thigh level, unspecified leg, initial encounter"
-          },
-          {
-            "code": "S75.109D",
-            "display": "Unspecified injury of femoral vein at hip and thigh level, unspecified leg, subsequent encounter"
-          },
-          {
-            "code": "S75.109S",
-            "display": "Unspecified injury of femoral vein at hip and thigh level, unspecified leg, sequela"
-          },
-          {
-            "code": "S75.111A",
-            "display": "Minor laceration of femoral vein at hip and thigh level, right leg, initial encounter"
-          },
-          {
-            "code": "S75.111D",
-            "display": "Minor laceration of femoral vein at hip and thigh level, right leg, subsequent encounter"
-          },
-          {
-            "code": "S75.111S",
-            "display": "Minor laceration of femoral vein at hip and thigh level, right leg, sequela"
-          },
-          {
-            "code": "S75.112A",
-            "display": "Minor laceration of femoral vein at hip and thigh level, left leg, initial encounter"
-          },
-          {
-            "code": "S75.112D",
-            "display": "Minor laceration of femoral vein at hip and thigh level, left leg, subsequent encounter"
-          },
-          {
-            "code": "S75.112S",
-            "display": "Minor laceration of femoral vein at hip and thigh level, left leg, sequela"
-          },
-          {
-            "code": "S75.119A",
-            "display": "Minor laceration of femoral vein at hip and thigh level, unspecified leg, initial encounter"
-          },
-          {
-            "code": "S75.119D",
-            "display": "Minor laceration of femoral vein at hip and thigh level, unspecified leg, subsequent encounter"
-          },
-          {
-            "code": "S75.119S",
-            "display": "Minor laceration of femoral vein at hip and thigh level, unspecified leg, sequela"
-          },
-          {
-            "code": "S75.129A",
-            "display": "Major laceration of femoral vein at hip and thigh level, unspecified leg, initial encounter"
-          },
-          {
-            "code": "S75.129D",
-            "display": "Major laceration of femoral vein at hip and thigh level, unspecified leg, subsequent encounter"
-          },
-          {
-            "code": "S75.129S",
-            "display": "Major laceration of femoral vein at hip and thigh level, unspecified leg, sequela"
-          },
-          {
-            "code": "S75.901A",
-            "display": "Unspecified injury of unspecified blood vessel at hip and thigh level, right leg, initial encounter"
-          },
-          {
-            "code": "S75.901D",
-            "display": "Unspecified injury of unspecified blood vessel at hip and thigh level, right leg, subsequent encounter"
-          },
-          {
-            "code": "S75.901S",
-            "display": "Unspecified injury of unspecified blood vessel at hip and thigh level, right leg, sequela"
-          },
-          {
-            "code": "S75.902A",
-            "display": "Unspecified injury of unspecified blood vessel at hip and thigh level, left leg, initial encounter"
-          },
-          {
-            "code": "S75.902D",
-            "display": "Unspecified injury of unspecified blood vessel at hip and thigh level, left leg, subsequent encounter"
-          },
-          {
-            "code": "S75.902S",
-            "display": "Unspecified injury of unspecified blood vessel at hip and thigh level, left leg, sequela"
-          },
-          {
-            "code": "S75.909A",
-            "display": "Unspecified injury of unspecified blood vessel at hip and thigh level, unspecified leg, initial encounter"
-          },
-          {
-            "code": "S75.909D",
-            "display": "Unspecified injury of unspecified blood vessel at hip and thigh level, unspecified leg, subsequent encounter"
-          },
-          {
-            "code": "S75.909S",
-            "display": "Unspecified injury of unspecified blood vessel at hip and thigh level, unspecified leg, sequela"
-          },
-          {
-            "code": "S85.001A",
-            "display": "Unspecified injury of popliteal artery, right leg, initial encounter"
-          },
-          {
-            "code": "S85.001D",
-            "display": "Unspecified injury of popliteal artery, right leg, subsequent encounter"
-          },
-          {
-            "code": "S85.001S",
-            "display": "Unspecified injury of popliteal artery, right leg, sequela"
-          },
-          {
-            "code": "S85.002A",
-            "display": "Unspecified injury of popliteal artery, left leg, initial encounter"
-          },
-          {
-            "code": "S85.002D",
-            "display": "Unspecified injury of popliteal artery, left leg, subsequent encounter"
-          },
-          {
-            "code": "S85.002S",
-            "display": "Unspecified injury of popliteal artery, left leg, sequela"
-          },
-          {
-            "code": "S85.009A",
-            "display": "Unspecified injury of popliteal artery, unspecified leg, initial encounter"
-          },
-          {
-            "code": "S85.009D",
-            "display": "Unspecified injury of popliteal artery, unspecified leg, subsequent encounter"
-          },
-          {
-            "code": "S85.009S",
-            "display": "Unspecified injury of popliteal artery, unspecified leg, sequela"
-          },
-          {
-            "code": "S85.011A",
-            "display": "Laceration of popliteal artery, right leg, initial encounter"
-          },
-          {
-            "code": "S85.011D",
-            "display": "Laceration of popliteal artery, right leg, subsequent encounter"
-          },
-          {
-            "code": "S85.011S",
-            "display": "Laceration of popliteal artery, right leg, sequela"
-          },
-          {
-            "code": "S85.012A",
-            "display": "Laceration of popliteal artery, left leg, initial encounter"
-          },
-          {
-            "code": "S85.012D",
-            "display": "Laceration of popliteal artery, left leg, subsequent encounter"
-          },
-          {
-            "code": "S85.012S",
-            "display": "Laceration of popliteal artery, left leg, sequela"
-          },
-          {
-            "code": "S85.019A",
-            "display": "Laceration of popliteal artery, unspecified leg, initial encounter"
-          },
-          {
-            "code": "S85.019D",
-            "display": "Laceration of popliteal artery, unspecified leg, subsequent encounter"
-          },
-          {
-            "code": "S85.019S",
-            "display": "Laceration of popliteal artery, unspecified leg, sequela"
-          },
-          {
-            "code": "S85.101A",
-            "display": "Unspecified injury of unspecified tibial artery, right leg, initial encounter"
-          },
-          {
-            "code": "S85.101D",
-            "display": "Unspecified injury of unspecified tibial artery, right leg, subsequent encounter"
-          },
-          {
-            "code": "S85.101S",
-            "display": "Unspecified injury of unspecified tibial artery, right leg, sequela"
-          },
-          {
-            "code": "S85.102A",
-            "display": "Unspecified injury of unspecified tibial artery, left leg, initial encounter"
-          },
-          {
-            "code": "S85.102D",
-            "display": "Unspecified injury of unspecified tibial artery, left leg, subsequent encounter"
-          },
-          {
-            "code": "S85.102S",
-            "display": "Unspecified injury of unspecified tibial artery, left leg, sequela"
-          },
-          {
-            "code": "S85.109A",
-            "display": "Unspecified injury of unspecified tibial artery, unspecified leg, initial encounter"
-          },
-          {
-            "code": "S85.109D",
-            "display": "Unspecified injury of unspecified tibial artery, unspecified leg, subsequent encounter"
-          },
-          {
-            "code": "S85.109S",
-            "display": "Unspecified injury of unspecified tibial artery, unspecified leg, sequela"
-          },
-          {
-            "code": "S85.131A",
-            "display": "Unspecified injury of anterior tibial artery, right leg, initial encounter"
-          },
-          {
-            "code": "S85.131D",
-            "display": "Unspecified injury of anterior tibial artery, right leg, subsequent encounter"
-          },
-          {
-            "code": "S85.131S",
-            "display": "Unspecified injury of anterior tibial artery, right leg, sequela"
-          },
-          {
-            "code": "S85.132A",
-            "display": "Unspecified injury of anterior tibial artery, left leg, initial encounter"
-          },
-          {
-            "code": "S85.132D",
-            "display": "Unspecified injury of anterior tibial artery, left leg, subsequent encounter"
-          },
-          {
-            "code": "S85.132S",
-            "display": "Unspecified injury of anterior tibial artery, left leg, sequela"
-          },
-          {
-            "code": "S85.139A",
-            "display": "Unspecified injury of anterior tibial artery, unspecified leg, initial encounter"
-          },
-          {
-            "code": "S85.139D",
-            "display": "Unspecified injury of anterior tibial artery, unspecified leg, subsequent encounter"
-          },
-          {
-            "code": "S85.139S",
-            "display": "Unspecified injury of anterior tibial artery, unspecified leg, sequela"
-          },
-          {
-            "code": "S85.149A",
-            "display": "Laceration of anterior tibial artery, unspecified leg, initial encounter"
-          },
-          {
-            "code": "S85.149D",
-            "display": "Laceration of anterior tibial artery, unspecified leg, subsequent encounter"
-          },
-          {
-            "code": "S85.149S",
-            "display": "Laceration of anterior tibial artery, unspecified leg, sequela"
-          },
-          {
-            "code": "S85.161A",
-            "display": "Unspecified injury of posterior tibial artery, right leg, initial encounter"
-          },
-          {
-            "code": "S85.161D",
-            "display": "Unspecified injury of posterior tibial artery, right leg, subsequent encounter"
-          },
-          {
-            "code": "S85.161S",
-            "display": "Unspecified injury of posterior tibial artery, right leg, sequela"
-          },
-          {
-            "code": "S85.162A",
-            "display": "Unspecified injury of posterior tibial artery, left leg, initial encounter"
-          },
-          {
-            "code": "S85.162D",
-            "display": "Unspecified injury of posterior tibial artery, left leg, subsequent encounter"
-          },
-          {
-            "code": "S85.162S",
-            "display": "Unspecified injury of posterior tibial artery, left leg, sequela"
-          },
-          {
-            "code": "S85.169A",
-            "display": "Unspecified injury of posterior tibial artery, unspecified leg, initial encounter"
-          },
-          {
-            "code": "S85.169D",
-            "display": "Unspecified injury of posterior tibial artery, unspecified leg, subsequent encounter"
-          },
-          {
-            "code": "S85.169S",
-            "display": "Unspecified injury of posterior tibial artery, unspecified leg, sequela"
-          },
-          {
-            "code": "S85.179A",
-            "display": "Laceration of posterior tibial artery, unspecified leg, initial encounter"
-          },
-          {
-            "code": "S85.179D",
-            "display": "Laceration of posterior tibial artery, unspecified leg, subsequent encounter"
-          },
-          {
-            "code": "S85.179S",
-            "display": "Laceration of posterior tibial artery, unspecified leg, sequela"
-          },
-          {
-            "code": "S85.209A",
-            "display": "Unspecified injury of peroneal artery, unspecified leg, initial encounter"
-          },
-          {
-            "code": "S85.209D",
-            "display": "Unspecified injury of peroneal artery, unspecified leg, subsequent encounter"
-          },
-          {
-            "code": "S85.209S",
-            "display": "Unspecified injury of peroneal artery, unspecified leg, sequela"
-          },
-          {
-            "code": "S85.219A",
-            "display": "Laceration of peroneal artery, unspecified leg, initial encounter"
-          },
-          {
-            "code": "S85.219D",
-            "display": "Laceration of peroneal artery, unspecified leg, subsequent encounter"
-          },
-          {
-            "code": "S85.219S",
-            "display": "Laceration of peroneal artery, unspecified leg, sequela"
-          },
-          {
-            "code": "S85.309A",
-            "display": "Unspecified injury of greater saphenous vein at lower leg level, unspecified leg, initial encounter"
-          },
-          {
-            "code": "S85.309D",
-            "display": "Unspecified injury of greater saphenous vein at lower leg level, unspecified leg, subsequent encounter"
-          },
-          {
-            "code": "S85.309S",
-            "display": "Unspecified injury of greater saphenous vein at lower leg level, unspecified leg, sequela"
-          },
-          {
-            "code": "S85.409A",
-            "display": "Unspecified injury of lesser saphenous vein at lower leg level, unspecified leg, initial encounter"
-          },
-          {
-            "code": "S85.409D",
-            "display": "Unspecified injury of lesser saphenous vein at lower leg level, unspecified leg, subsequent encounter"
-          },
-          {
-            "code": "S85.409S",
-            "display": "Unspecified injury of lesser saphenous vein at lower leg level, unspecified leg, sequela"
-          },
-          {
-            "code": "S85.501A",
-            "display": "Unspecified injury of popliteal vein, right leg, initial encounter"
-          },
-          {
-            "code": "S85.501D",
-            "display": "Unspecified injury of popliteal vein, right leg, subsequent encounter"
-          },
-          {
-            "code": "S85.501S",
-            "display": "Unspecified injury of popliteal vein, right leg, sequela"
-          },
-          {
-            "code": "S85.502A",
-            "display": "Unspecified injury of popliteal vein, left leg, initial encounter"
-          },
-          {
-            "code": "S85.502D",
-            "display": "Unspecified injury of popliteal vein, left leg, subsequent encounter"
-          },
-          {
-            "code": "S85.502S",
-            "display": "Unspecified injury of popliteal vein, left leg, sequela"
-          },
-          {
-            "code": "S85.509A",
-            "display": "Unspecified injury of popliteal vein, unspecified leg, initial encounter"
-          },
-          {
-            "code": "S85.509D",
-            "display": "Unspecified injury of popliteal vein, unspecified leg, subsequent encounter"
-          },
-          {
-            "code": "S85.509S",
-            "display": "Unspecified injury of popliteal vein, unspecified leg, sequela"
-          },
-          {
-            "code": "S85.519A",
-            "display": "Laceration of popliteal vein, unspecified leg, initial encounter"
-          },
-          {
-            "code": "S85.519D",
-            "display": "Laceration of popliteal vein, unspecified leg, subsequent encounter"
-          },
-          {
-            "code": "S85.519S",
-            "display": "Laceration of popliteal vein, unspecified leg, sequela"
-          },
-          {
-            "code": "S85.809A",
-            "display": "Unspecified injury of other blood vessels at lower leg level, unspecified leg, initial encounter"
-          },
-          {
-            "code": "S85.809D",
-            "display": "Unspecified injury of other blood vessels at lower leg level, unspecified leg, subsequent encounter"
-          },
-          {
-            "code": "S85.809S",
-            "display": "Unspecified injury of other blood vessels at lower leg level, unspecified leg, sequela"
-          },
-          {
-            "code": "S85.909A",
-            "display": "Unspecified injury of unspecified blood vessel at lower leg level, unspecified leg, initial encounter"
-          },
-          {
-            "code": "S85.909D",
-            "display": "Unspecified injury of unspecified blood vessel at lower leg level, unspecified leg, subsequent encounter"
-          },
-          {
-            "code": "S85.909S",
-            "display": "Unspecified injury of unspecified blood vessel at lower leg level, unspecified leg, sequela"
-          },
-          {
-            "code": "S95.001A",
-            "display": "Unspecified injury of dorsal artery of right foot, initial encounter"
-          },
-          {
-            "code": "S95.001D",
-            "display": "Unspecified injury of dorsal artery of right foot, subsequent encounter"
-          },
-          {
-            "code": "S95.001S",
-            "display": "Unspecified injury of dorsal artery of right foot, sequela"
-          },
-          {
-            "code": "S95.002A",
-            "display": "Unspecified injury of dorsal artery of left foot, initial encounter"
-          },
-          {
-            "code": "S95.002D",
-            "display": "Unspecified injury of dorsal artery of left foot, subsequent encounter"
-          },
-          {
-            "code": "S95.002S",
-            "display": "Unspecified injury of dorsal artery of left foot, sequela"
-          },
-          {
-            "code": "S95.009A",
-            "display": "Unspecified injury of dorsal artery of unspecified foot, initial encounter"
-          },
-          {
-            "code": "S95.009D",
-            "display": "Unspecified injury of dorsal artery of unspecified foot, subsequent encounter"
-          },
-          {
-            "code": "S95.009S",
-            "display": "Unspecified injury of dorsal artery of unspecified foot, sequela"
-          },
-          {
-            "code": "S95.019A",
-            "display": "Laceration of dorsal artery of unspecified foot, initial encounter"
-          },
-          {
-            "code": "S95.019D",
-            "display": "Laceration of dorsal artery of unspecified foot, subsequent encounter"
-          },
-          {
-            "code": "S95.019S",
-            "display": "Laceration of dorsal artery of unspecified foot, sequela"
-          },
-          {
-            "code": "S95.109A",
-            "display": "Unspecified injury of plantar artery of unspecified foot, initial encounter"
-          },
-          {
-            "code": "S95.109D",
-            "display": "Unspecified injury of plantar artery of unspecified foot, subsequent encounter"
-          },
-          {
-            "code": "S95.109S",
-            "display": "Unspecified injury of plantar artery of unspecified foot, sequela"
-          },
-          {
-            "code": "S95.119A",
-            "display": "Laceration of plantar artery of unspecified foot, initial encounter"
-          },
-          {
-            "code": "S95.119D",
-            "display": "Laceration of plantar artery of unspecified foot, subsequent encounter"
-          },
-          {
-            "code": "S95.119S",
-            "display": "Laceration of plantar artery of unspecified foot, sequela"
-          },
-          {
-            "code": "S95.201A",
-            "display": "Unspecified injury of dorsal vein of right foot, initial encounter"
-          },
-          {
-            "code": "S95.201D",
-            "display": "Unspecified injury of dorsal vein of right foot, subsequent encounter"
-          },
-          {
-            "code": "S95.201S",
-            "display": "Unspecified injury of dorsal vein of right foot, sequela"
-          },
-          {
-            "code": "S95.202A",
-            "display": "Unspecified injury of dorsal vein of left foot, initial encounter"
-          },
-          {
-            "code": "S95.202D",
-            "display": "Unspecified injury of dorsal vein of left foot, subsequent encounter"
-          },
-          {
-            "code": "S95.202S",
-            "display": "Unspecified injury of dorsal vein of left foot, sequela"
-          },
-          {
-            "code": "S95.209A",
-            "display": "Unspecified injury of dorsal vein of unspecified foot, initial encounter"
-          },
-          {
-            "code": "S95.209D",
-            "display": "Unspecified injury of dorsal vein of unspecified foot, subsequent encounter"
-          },
-          {
-            "code": "S95.209S",
-            "display": "Unspecified injury of dorsal vein of unspecified foot, sequela"
-          },
-          {
-            "code": "S95.219A",
-            "display": "Laceration of dorsal vein of unspecified foot, initial encounter"
-          },
-          {
-            "code": "S95.219D",
-            "display": "Laceration of dorsal vein of unspecified foot, subsequent encounter"
-          },
-          {
-            "code": "S95.219S",
-            "display": "Laceration of dorsal vein of unspecified foot, sequela"
-          },
-          {
-            "code": "S95.809A",
-            "display": "Unspecified injury of other blood vessels at ankle and foot level, unspecified leg, initial encounter"
-          },
-          {
-            "code": "S95.809D",
-            "display": "Unspecified injury of other blood vessels at ankle and foot level, unspecified leg, subsequent encounter"
-          },
-          {
-            "code": "S95.809S",
-            "display": "Unspecified injury of other blood vessels at ankle and foot level, unspecified leg, sequela"
-          },
-          {
-            "code": "S95.909A",
-            "display": "Unspecified injury of unspecified blood vessel at ankle and foot level, unspecified leg, initial encounter"
-          },
-          {
-            "code": "S95.909D",
-            "display": "Unspecified injury of unspecified blood vessel at ankle and foot level, unspecified leg, subsequent encounter"
-          },
-          {
-            "code": "S95.909S",
-            "display": "Unspecified injury of unspecified blood vessel at ankle and foot level, unspecified leg, sequela"
           },
           {
             "code": "T38.6X1A",
@@ -15495,66 +11107,6 @@
           {
             "code": "T45.1X5D",
             "display": "Adverse effect of antineoplastic and immunosuppressive drugs, subsequent encounter"
-          },
-          {
-            "code": "T50.A15A",
-            "display": "Adverse effect of pertussis vaccine, including combinations with a pertussis component, initial encounter"
-          },
-          {
-            "code": "T50.A15D",
-            "display": "Adverse effect of pertussis vaccine, including combinations with a pertussis component, subsequent encounter"
-          },
-          {
-            "code": "T50.A15S",
-            "display": "Adverse effect of pertussis vaccine, including combinations with a pertussis component, sequela"
-          },
-          {
-            "code": "T50.A25A",
-            "display": "Adverse effect of mixed bacterial vaccines without a pertussis component, initial encounter"
-          },
-          {
-            "code": "T50.A25D",
-            "display": "Adverse effect of mixed bacterial vaccines without a pertussis component, subsequent encounter"
-          },
-          {
-            "code": "T50.A25S",
-            "display": "Adverse effect of mixed bacterial vaccines without a pertussis component, sequela"
-          },
-          {
-            "code": "T50.B15A",
-            "display": "Adverse effect of smallpox vaccines, initial encounter"
-          },
-          {
-            "code": "T50.B15D",
-            "display": "Adverse effect of smallpox vaccines, subsequent encounter"
-          },
-          {
-            "code": "T50.B15S",
-            "display": "Adverse effect of smallpox vaccines, sequela"
-          },
-          {
-            "code": "T50.B95A",
-            "display": "Adverse effect of other viral vaccines, initial encounter"
-          },
-          {
-            "code": "T50.B95D",
-            "display": "Adverse effect of other viral vaccines, subsequent encounter"
-          },
-          {
-            "code": "T50.B95S",
-            "display": "Adverse effect of other viral vaccines, sequela"
-          },
-          {
-            "code": "T51.94XA",
-            "display": "Toxic effect of unspecified alcohol, undetermined, initial encounter"
-          },
-          {
-            "code": "T51.94XD",
-            "display": "Toxic effect of unspecified alcohol, undetermined, subsequent encounter"
-          },
-          {
-            "code": "T51.94XS",
-            "display": "Toxic effect of unspecified alcohol, undetermined, sequela"
           },
           {
             "code": "T58.01XA",
@@ -15641,18 +11193,6 @@
             "display": "Child sexual abuse, confirmed, sequela"
           },
           {
-            "code": "T75.22XA",
-            "display": "Traumatic vasospastic syndrome, initial encounter"
-          },
-          {
-            "code": "T75.22XD",
-            "display": "Traumatic vasospastic syndrome, subsequent encounter"
-          },
-          {
-            "code": "T75.22XS",
-            "display": "Traumatic vasospastic syndrome, sequela"
-          },
-          {
             "code": "T78.089A",
             "display": "Anaphylactic reaction due to eggs, unspecified, initial encounter"
           },
@@ -15725,18 +11265,6 @@
             "display": "Other mechanical complication of aortic (bifurcation) graft (replacement), sequela"
           },
           {
-            "code": "T82.513A",
-            "display": "Breakdown (mechanical) of balloon (counterpulsation) device, initial encounter"
-          },
-          {
-            "code": "T82.513D",
-            "display": "Breakdown (mechanical) of balloon (counterpulsation) device, subsequent encounter"
-          },
-          {
-            "code": "T82.513S",
-            "display": "Breakdown (mechanical) of balloon (counterpulsation) device, sequela"
-          },
-          {
             "code": "T82.6XXA",
             "display": "Infection and inflammatory reaction due to cardiac valve prosthesis, initial encounter"
           },
@@ -15797,138 +11325,6 @@
             "display": "Other specified complication of cardiac prosthetic devices, implants and grafts, sequela"
           },
           {
-            "code": "T83.729A",
-            "display": "Exposure of other prosthetic materials into organ or tissue, initial encounter"
-          },
-          {
-            "code": "T83.729D",
-            "display": "Exposure of other prosthetic materials into organ or tissue, subsequent encounter"
-          },
-          {
-            "code": "T83.729S",
-            "display": "Exposure of other prosthetic materials into organ or tissue, sequela"
-          },
-          {
-            "code": "T84.328A",
-            "display": "Displacement of other bone devices, implants and grafts, initial encounter"
-          },
-          {
-            "code": "T84.328D",
-            "display": "Displacement of other bone devices, implants and grafts, subsequent encounter"
-          },
-          {
-            "code": "T84.328S",
-            "display": "Displacement of other bone devices, implants and grafts, sequela"
-          },
-          {
-            "code": "T84.410A",
-            "display": "Breakdown (mechanical) of muscle and tendon graft, initial encounter"
-          },
-          {
-            "code": "T84.410D",
-            "display": "Breakdown (mechanical) of muscle and tendon graft, subsequent encounter"
-          },
-          {
-            "code": "T84.410S",
-            "display": "Breakdown (mechanical) of muscle and tendon graft, sequela"
-          },
-          {
-            "code": "T84.610A",
-            "display": "Infection and inflammatory reaction due to internal fixation device of right humerus, initial encounter"
-          },
-          {
-            "code": "T84.610D",
-            "display": "Infection and inflammatory reaction due to internal fixation device of right humerus, subsequent encounter"
-          },
-          {
-            "code": "T84.610S",
-            "display": "Infection and inflammatory reaction due to internal fixation device of right humerus, sequela"
-          },
-          {
-            "code": "T84.611A",
-            "display": "Infection and inflammatory reaction due to internal fixation device of left humerus, initial encounter"
-          },
-          {
-            "code": "T84.611D",
-            "display": "Infection and inflammatory reaction due to internal fixation device of left humerus, subsequent encounter"
-          },
-          {
-            "code": "T84.611S",
-            "display": "Infection and inflammatory reaction due to internal fixation device of left humerus, sequela"
-          },
-          {
-            "code": "T84.620A",
-            "display": "Infection and inflammatory reaction due to internal fixation device of right femur, initial encounter"
-          },
-          {
-            "code": "T84.620D",
-            "display": "Infection and inflammatory reaction due to internal fixation device of right femur, subsequent encounter"
-          },
-          {
-            "code": "T84.620S",
-            "display": "Infection and inflammatory reaction due to internal fixation device of right femur, sequela"
-          },
-          {
-            "code": "T84.621A",
-            "display": "Infection and inflammatory reaction due to internal fixation device of left femur, initial encounter"
-          },
-          {
-            "code": "T84.621D",
-            "display": "Infection and inflammatory reaction due to internal fixation device of left femur, subsequent encounter"
-          },
-          {
-            "code": "T84.621S",
-            "display": "Infection and inflammatory reaction due to internal fixation device of left femur, sequela"
-          },
-          {
-            "code": "T84.622A",
-            "display": "Infection and inflammatory reaction due to internal fixation device of right tibia, initial encounter"
-          },
-          {
-            "code": "T84.622D",
-            "display": "Infection and inflammatory reaction due to internal fixation device of right tibia, subsequent encounter"
-          },
-          {
-            "code": "T84.622S",
-            "display": "Infection and inflammatory reaction due to internal fixation device of right tibia, sequela"
-          },
-          {
-            "code": "T84.623A",
-            "display": "Infection and inflammatory reaction due to internal fixation device of left tibia, initial encounter"
-          },
-          {
-            "code": "T84.623D",
-            "display": "Infection and inflammatory reaction due to internal fixation device of left tibia, subsequent encounter"
-          },
-          {
-            "code": "T84.623S",
-            "display": "Infection and inflammatory reaction due to internal fixation device of left tibia, sequela"
-          },
-          {
-            "code": "T84.624A",
-            "display": "Infection and inflammatory reaction due to internal fixation device of right fibula, initial encounter"
-          },
-          {
-            "code": "T84.624D",
-            "display": "Infection and inflammatory reaction due to internal fixation device of right fibula, subsequent encounter"
-          },
-          {
-            "code": "T84.624S",
-            "display": "Infection and inflammatory reaction due to internal fixation device of right fibula, sequela"
-          },
-          {
-            "code": "T84.625A",
-            "display": "Infection and inflammatory reaction due to internal fixation device of left fibula, initial encounter"
-          },
-          {
-            "code": "T84.625D",
-            "display": "Infection and inflammatory reaction due to internal fixation device of left fibula, subsequent encounter"
-          },
-          {
-            "code": "T84.625S",
-            "display": "Infection and inflammatory reaction due to internal fixation device of left fibula, sequela"
-          },
-          {
             "code": "T85.03XA",
             "display": "Leakage of ventricular intracranial (communicating) shunt, initial encounter"
           },
@@ -15955,14 +11351,6 @@
           {
             "code": "T86.00",
             "display": "Unspecified complication of bone marrow transplant"
-          },
-          {
-            "code": "T86.01",
-            "display": "Bone marrow transplant rejection"
-          },
-          {
-            "code": "T86.02",
-            "display": "Bone marrow transplant failure"
           },
           {
             "code": "T86.03",
@@ -16021,74 +11409,6 @@
             "display": "Other complications of lung transplant"
           },
           {
-            "code": "T86.821",
-            "display": "Skin graft (allograft) (autograft) failure"
-          },
-          {
-            "code": "T86.822",
-            "display": "Skin graft (allograft) (autograft) infection"
-          },
-          {
-            "code": "T86.828",
-            "display": "Other complications of skin graft (allograft) (autograft)"
-          },
-          {
-            "code": "T86.830",
-            "display": "Bone graft rejection"
-          },
-          {
-            "code": "T86.831",
-            "display": "Bone graft failure"
-          },
-          {
-            "code": "T86.832",
-            "display": "Bone graft infection"
-          },
-          {
-            "code": "T86.838",
-            "display": "Other complications of bone graft"
-          },
-          {
-            "code": "T86.839",
-            "display": "Unspecified complication of bone graft"
-          },
-          {
-            "code": "T86.8401",
-            "display": "Corneal transplant rejection, right eye"
-          },
-          {
-            "code": "T86.8402",
-            "display": "Corneal transplant rejection, left eye"
-          },
-          {
-            "code": "T86.8403",
-            "display": "Corneal transplant rejection, bilateral"
-          },
-          {
-            "code": "T86.8419",
-            "display": "Corneal transplant failure, unspecified eye"
-          },
-          {
-            "code": "T86.8421",
-            "display": "Corneal transplant infection, right eye"
-          },
-          {
-            "code": "T86.8422",
-            "display": "Corneal transplant infection, left eye"
-          },
-          {
-            "code": "T86.8429",
-            "display": "Corneal transplant infection, unspecified eye"
-          },
-          {
-            "code": "T86.8491",
-            "display": "Unspecified complication of corneal transplant, right eye"
-          },
-          {
-            "code": "T86.8492",
-            "display": "Unspecified complication of corneal transplant, left eye"
-          },
-          {
             "code": "Y07.010",
             "display": "Husband, current, perpetrator of maltreatment and neglect"
           },
@@ -16111,10 +11431,6 @@
           {
             "code": "Y83.0",
             "display": "Surgical operation with transplant of whole organ as the cause of abnormal reaction of the patient, or of later complication, without mention of misadventure at the time of the procedure"
-          },
-          {
-            "code": "Y83.1",
-            "display": "Surgical operation with implant of artificial internal device as the cause of abnormal reaction of the patient, or of later complication, without mention of misadventure at the time of the procedure"
           },
           {
             "code": "Z04.81",
