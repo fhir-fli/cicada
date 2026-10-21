@@ -14,7 +14,10 @@ observation. The rest need a person. Three kinds go on the sheet:
     grades 'wider' nor puts on the sheet;
   * 'wider' rows reached only through a CDC code broader than the observation,
     or listed one by one, in observation_map_policy.json (broad_codes,
-    review_rows; added 2026-10-21).
+    review_rows; added 2026-10-21);
+  * rows NLM's map never reaches, added by a ruling in
+    observation_map_policy.json (added_icd10cm), written already decided
+    'yes' with the ruling as 'decided by'.
 Observations in observation_map_policy.json's not_from_a_code list get no NLM
 rows; their hand-typed rows stay on the sheet, marked.
 
@@ -49,6 +52,7 @@ CARRIED = ('decision (yes/no)', 'proposed (Claude)', 'unsure', 'why proposed', '
 PARTIAL = 'NLM map: most, not all, of the SNOMED concepts mapped to this code are this observation'
 MINORITY = 'NLM map: under half of the SNOMED concepts mapped to this code are this observation'
 HAND = 'hand-typed 2026-02-06 file; NLM map does not confirm it'
+ADDED = 'added by a ruling (observation_map_policy.json added_icd10cm); NLM map does not reach it'
 # write_oe_code_questions.py sends every row with this reason to OpenEvidence.
 BROAD = 'NLM map: every SNOMED concept mapped here is this observation, but '
 
@@ -94,11 +98,28 @@ def main(schedule_path, meta, policy_path, sheet_path):
                 why += ' (not an ICD-10-CM code in this release)'
             rows[key] = [obs, titles.get(obs, ''), e['code'], e['text'], '', '', '', why]
 
+    # Rows NLM's map never reaches, added by a ruling in the policy file. The
+    # ruling is the decision, so these rows are written decided.
+    added = {}
+    for k, source in policy.get('added_icd10cm', {}).items():
+        if k.startswith('_'):
+            continue
+        obs, icd = k.split('|')
+        key = (obs, icd)
+        if icd not in cm_codes:
+            raise SystemExit(f'added_icd10cm {k}: not an ICD-10-CM code in this release')
+        if key in wider or key in rows:
+            raise SystemExit(f'added_icd10cm {k}: already derived; decide it on the sheet instead')
+        rows[key] = [obs, titles.get(obs, ''), icd, cm_codes[icd], '', '', '', ADDED]
+        added[key] = source
+
     with open(sheet_path, 'w', encoding='utf-8', newline='') as f:
         w = csv.writer(f, delimiter='\t')
         w.writerow(HEADER)
         for key in sorted(rows):
             kept = previous.get(key, {})
+            if key in added:
+                kept = {'decision (yes/no)': 'yes', 'decided by': added[key]}
             w.writerow([kept.get('decision (yes/no)', '')] + rows[key] +
                        [kept.get(k, '') for k in CARRIED[1:]])
             f.flush()

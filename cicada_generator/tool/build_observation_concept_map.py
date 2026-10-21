@@ -174,11 +174,13 @@ def main(schedule_path, meta, policy_path, review_path, out_map, out_tsv):
                 counts['dropped: under half the sources'] += 1
 
     # Reviewed rows the derivation never produced: the hand-typed 2026-02-06
-    # file's rows that NLM's map does not confirm. Only a yes adds anything.
+    # file's rows that NLM's map does not confirm, and the policy's
+    # added_icd10cm rulings. Only a yes adds anything.
+    added = {k for k in policy.get('added_icd10cm', {}) if not k.startswith('_')}
     for (obs, icd), (answer, display, who) in sorted(decisions.items()):
         if answer == 'yes':
-            add('ICD10CM', icd, display, obs, 'wider', 'Hand-typed 2026-02-06 file',
-                f'reviewed: yes ({who})')
+            source = 'Cicada policy ruling' if f'{obs}|{icd}' in added else 'Hand-typed 2026-02-06 file'
+            add('ICD10CM', icd, display, obs, 'wider', source, f'reviewed: yes ({who})')
             counts['reviewed yes (not derived)'] += 1
         else:
             counts['reviewed no'] += 1

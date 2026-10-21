@@ -115,13 +115,14 @@ def evidence_closure(roots, inv):
 
 
 def icd10cm_codes(meta):
-    """Every ICD-10-CM code in the release (MRCONSO SAB ICD10CM)."""
-    codes = set()
+    """Every ICD-10-CM code in the release (MRCONSO SAB ICD10CM) -> its preferred name (TTY PT)."""
+    codes = {}
     with open(f'{meta}/MRCONSO.RRF', encoding='utf-8') as f:
         for line in f:
             c = line.split('|')
             if c[11] == 'ICD10CM':
-                codes.add(c[13])
+                if c[12] == 'PT' or c[13] not in codes:
+                    codes[c[13]] = c[14]
     return codes
 
 

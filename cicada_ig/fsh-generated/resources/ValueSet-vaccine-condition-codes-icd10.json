@@ -4997,6 +4997,10 @@
             "display": "Wiskott-Aldrich syndrome"
           },
           {
+            "code": "D82.1",
+            "display": "Di George's syndrome"
+          },
+          {
             "code": "D83.0",
             "display": "Common variable immunodeficiency with predominant abnormalities of B-cell numbers and function"
           },
@@ -11365,6 +11369,14 @@
             "display": "Unspecified complication of bone marrow transplant"
           },
           {
+            "code": "T86.01",
+            "display": "Bone marrow transplant rejection"
+          },
+          {
+            "code": "T86.02",
+            "display": "Bone marrow transplant failure"
+          },
+          {
             "code": "T86.03",
             "display": "Bone marrow transplant infection"
           },
@@ -11393,20 +11405,68 @@
             "display": "Other complication of kidney transplant"
           },
           {
+            "code": "T86.20",
+            "display": "Unspecified complication of heart transplant"
+          },
+          {
             "code": "T86.21",
             "display": "Heart transplant rejection"
+          },
+          {
+            "code": "T86.22",
+            "display": "Heart transplant failure"
           },
           {
             "code": "T86.23",
             "display": "Heart transplant infection"
           },
           {
+            "code": "T86.290",
+            "display": "Cardiac allograft vasculopathy"
+          },
+          {
             "code": "T86.298",
             "display": "Other complications of heart transplant"
           },
           {
+            "code": "T86.30",
+            "display": "Unspecified complication of heart-lung transplant"
+          },
+          {
+            "code": "T86.31",
+            "display": "Heart-lung transplant rejection"
+          },
+          {
+            "code": "T86.32",
+            "display": "Heart-lung transplant failure"
+          },
+          {
+            "code": "T86.33",
+            "display": "Heart-lung transplant infection"
+          },
+          {
+            "code": "T86.39",
+            "display": "Other complications of heart-lung transplant"
+          },
+          {
+            "code": "T86.40",
+            "display": "Unspecified complication of liver transplant"
+          },
+          {
+            "code": "T86.41",
+            "display": "Liver transplant rejection"
+          },
+          {
+            "code": "T86.42",
+            "display": "Liver transplant failure"
+          },
+          {
             "code": "T86.43",
             "display": "Liver transplant infection"
+          },
+          {
+            "code": "T86.49",
+            "display": "Other complications of liver transplant"
           },
           {
             "code": "T86.5",
@@ -11417,8 +11477,80 @@
             "display": "Lung transplant rejection"
           },
           {
+            "code": "T86.811",
+            "display": "Lung transplant failure"
+          },
+          {
+            "code": "T86.812",
+            "display": "Lung transplant infection"
+          },
+          {
             "code": "T86.818",
             "display": "Other complications of lung transplant"
+          },
+          {
+            "code": "T86.819",
+            "display": "Unspecified complication of lung transplant"
+          },
+          {
+            "code": "T86.850",
+            "display": "Intestine transplant rejection"
+          },
+          {
+            "code": "T86.851",
+            "display": "Intestine transplant failure"
+          },
+          {
+            "code": "T86.852",
+            "display": "Intestine transplant infection"
+          },
+          {
+            "code": "T86.858",
+            "display": "Other complications of intestine transplant"
+          },
+          {
+            "code": "T86.859",
+            "display": "Unspecified complication of intestine transplant"
+          },
+          {
+            "code": "T86.890",
+            "display": "Other transplanted tissue rejection"
+          },
+          {
+            "code": "T86.891",
+            "display": "Other transplanted tissue failure"
+          },
+          {
+            "code": "T86.892",
+            "display": "Other transplanted tissue infection"
+          },
+          {
+            "code": "T86.898",
+            "display": "Other complications of other transplanted tissue"
+          },
+          {
+            "code": "T86.899",
+            "display": "Unspecified complication of other transplanted tissue"
+          },
+          {
+            "code": "T86.90",
+            "display": "Unspecified complication of unspecified transplanted organ and tissue"
+          },
+          {
+            "code": "T86.91",
+            "display": "Unspecified transplanted organ and tissue rejection"
+          },
+          {
+            "code": "T86.92",
+            "display": "Unspecified transplanted organ and tissue failure"
+          },
+          {
+            "code": "T86.93",
+            "display": "Unspecified transplanted organ and tissue infection"
+          },
+          {
+            "code": "T86.99",
+            "display": "Other complications of unspecified transplanted organ and tissue"
           },
           {
             "code": "Y07.010",
@@ -11741,12 +11873,32 @@
             "display": "Lung transplant status"
           },
           {
+            "code": "Z94.3",
+            "display": "Heart and lungs transplant status"
+          },
+          {
             "code": "Z94.4",
             "display": "Liver transplant status"
           },
           {
+            "code": "Z94.81",
+            "display": "Bone marrow transplant status"
+          },
+          {
+            "code": "Z94.82",
+            "display": "Intestine transplant status"
+          },
+          {
+            "code": "Z94.83",
+            "display": "Pancreas transplant status"
+          },
+          {
             "code": "Z94.84",
             "display": "Stem cells transplant status"
+          },
+          {
+            "code": "Z94.89",
+            "display": "Other transplanted organ and tissue status"
           },
           {
             "code": "Z94.9",

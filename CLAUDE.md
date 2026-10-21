@@ -212,6 +212,16 @@ test cases send CDSi observation codes directly and never reach this path**;
     aortic disease (ACIP adult schedule addendum 2025-07-02 excludes only isolated
     hypertension), so 101 are yes; I77.4 celiac artery compression is no. 016 stays
     heart-only.
+- OpenEvidence 2026-10-21, transplant codes: the three transplant observations are nested.
+  Every billable T86/Z94 code (91) is ruled: bone marrow / stem cell -> 004 + 269; named
+  solid organ, incl. Z94.83 pancreas (islet counts) -> 157 + 269; unspecified (T86.9x,
+  Z94.9) and other tissue (T86.89x, Z94.89) -> 269 only; skin, bone, cornea -> none.
+  D82.1 DiGeorge -> 148 only (complete DiGeorge needs immunologic evidence). NLM's map
+  reaches none of the 75 added pairs, so they live in the policy's `added_icd10cm`
+  section; `write_review_sheet.py` writes them onto the sheet decided yes and refuses a
+  key the derivation already reaches. Z94.89 under 269 reverses OpenEvidence 2026-10-19
+  ("corneal or tissue graft"): cornea has its own code, Z94.7. Open: CDC lists SNOMED
+  77128003 DiGeorge under both 147 and 148; asked OpenEvidence whether it should assert 147.
 
 ### ImmDS Server
 

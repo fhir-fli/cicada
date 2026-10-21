@@ -217,6 +217,72 @@ void main() {
       test('iron deficiency is not a chronic hematologic disorder', () {
         expect(_codes(_icd10, 'D50.1'), isNot(contains('258')));
       });
+
+      // CDC names most DiGeorge syndrome as a partial defect; a complete
+      // defect needs immunologic evidence the code does not carry.
+      test('DiGeorge syndrome is a partial T-lymphocyte defect', () {
+        expect(_codes(_icd10, 'D82.1'), contains('148'));
+      });
+
+      // The three transplant conditions are nested: stem cell -> 004 + 269,
+      // solid organ -> 157 + 269, unspecified or other tissue -> 269 only;
+      // skin, bone and corneal grafts need no lasting immunosuppression.
+      // Every billable T86 and Z94 code in ICD-10-CM (UMLS 2025AB).
+      test(
+        'every transplant code reaches exactly its transplant conditions',
+        () {
+          const stemCell = {'004', '269'};
+          const solidOrgan = {'157', '269'};
+          const transplantOnly = {'269'};
+          const none = <String>{};
+          final expected = <String, Set<String>>{
+            for (final c in [
+              'T86.00', 'T86.01', 'T86.02', 'T86.03', 'T86.09', 'T86.5', //
+              'Z94.81', 'Z94.84',
+            ])
+              c: stemCell,
+            for (final c in [
+              'T86.10', 'T86.11', 'T86.12', 'T86.13', 'T86.19', 'Z94.0', //
+              'T86.20', 'T86.21', 'T86.22', 'T86.23', 'T86.290', 'T86.298',
+              'Z94.1', 'T86.30', 'T86.31', 'T86.32', 'T86.33', 'T86.39',
+              'Z94.3', 'T86.40', 'T86.41', 'T86.42', 'T86.43', 'T86.49',
+              'Z94.4', 'T86.810', 'T86.811', 'T86.812', 'T86.818', 'T86.819',
+              'Z94.2', 'T86.850', 'T86.851', 'T86.852', 'T86.858', 'T86.859',
+              'Z94.82', 'Z94.83',
+            ])
+              c: solidOrgan,
+            for (final c in [
+              'T86.890',
+              'T86.891',
+              'T86.892',
+              'T86.898',
+              'T86.899',
+              'Z94.89', //
+              'T86.90', 'T86.91', 'T86.92', 'T86.93', 'T86.99', 'Z94.9',
+            ])
+              c: transplantOnly,
+            for (final c in [
+              'T86.820', 'T86.821', 'T86.822', 'T86.828', 'T86.829', 'Z94.5', //
+              'T86.830', 'T86.831', 'T86.832', 'T86.838', 'T86.839', 'Z94.6',
+              'T86.8401', 'T86.8402', 'T86.8403', 'T86.8409', 'T86.8411',
+              'T86.8412', 'T86.8413', 'T86.8419', 'T86.8421', 'T86.8422',
+              'T86.8423', 'T86.8429', 'T86.8481', 'T86.8482', 'T86.8483',
+              'T86.8489', 'T86.8491', 'T86.8492', 'T86.8493', 'T86.8499',
+              'Z94.7',
+            ])
+              c: none,
+          };
+          expect(expected, hasLength(91));
+          for (final MapEntry(key: code, value: want) in expected.entries) {
+            final found =
+                _codes(
+                  _icd10,
+                  code,
+                ).where(const {'004', '157', '269'}.contains).toSet();
+            expect(found, want, reason: code);
+          }
+        },
+      );
     });
 
     // OpenEvidence 2026-10-20: ACIP's chronic renal failure is stage 4-5

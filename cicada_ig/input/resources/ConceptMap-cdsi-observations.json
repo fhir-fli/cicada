@@ -18321,6 +18321,18 @@
      ]
     },
     {
+     "code": "D82.1",
+     "display": "Di George's syndrome",
+     "target": [
+      {
+       "code": "148",
+       "display": "T-lymphocyte [cell-mediated and humoral] - Partial defects",
+       "equivalence": "wider",
+       "comment": "Cicada policy ruling. reviewed: yes (OpenEvidence 2026-10-21: CDC names most DiGeorge syndrome as a partial T-lymphocyte defect; a complete defect needs immunologic evidence the code does not carry)"
+      }
+     ]
+    },
+    {
      "code": "D83.0",
      "display": "Common variable immunodeficiency with predominant abnormalities of B-cell numbers and function",
      "target": [
@@ -39587,6 +39599,48 @@
        "display": "Recipient of a hematopoietic stem cell transplant",
        "equivalence": "wider",
        "comment": "Hand-typed 2026-02-06 file. reviewed: yes (Claude, confident proposal, 2026-10-18)"
+      },
+      {
+       "code": "269",
+       "display": "Transplantation",
+       "equivalence": "wider",
+       "comment": "Cicada policy ruling. reviewed: yes (OpenEvidence 2026-10-21: a hematopoietic (bone marrow or stem cell) transplant code is HSCT and Transplantation; HSCT revaccination covers autologous and allogeneic)"
+      }
+     ]
+    },
+    {
+     "code": "T86.01",
+     "display": "Bone marrow transplant rejection",
+     "target": [
+      {
+       "code": "004",
+       "display": "Recipient of a hematopoietic stem cell transplant",
+       "equivalence": "wider",
+       "comment": "Cicada policy ruling. reviewed: yes (OpenEvidence 2026-10-21: a hematopoietic (bone marrow or stem cell) transplant code is HSCT and Transplantation; HSCT revaccination covers autologous and allogeneic)"
+      },
+      {
+       "code": "269",
+       "display": "Transplantation",
+       "equivalence": "wider",
+       "comment": "Cicada policy ruling. reviewed: yes (OpenEvidence 2026-10-21: a hematopoietic (bone marrow or stem cell) transplant code is HSCT and Transplantation; HSCT revaccination covers autologous and allogeneic)"
+      }
+     ]
+    },
+    {
+     "code": "T86.02",
+     "display": "Bone marrow transplant failure",
+     "target": [
+      {
+       "code": "004",
+       "display": "Recipient of a hematopoietic stem cell transplant",
+       "equivalence": "wider",
+       "comment": "Cicada policy ruling. reviewed: yes (OpenEvidence 2026-10-21: a hematopoietic (bone marrow or stem cell) transplant code is HSCT and Transplantation; HSCT revaccination covers autologous and allogeneic)"
+      },
+      {
+       "code": "269",
+       "display": "Transplantation",
+       "equivalence": "wider",
+       "comment": "Cicada policy ruling. reviewed: yes (OpenEvidence 2026-10-21: a hematopoietic (bone marrow or stem cell) transplant code is HSCT and Transplantation; HSCT revaccination covers autologous and allogeneic)"
       }
      ]
     },
@@ -39717,6 +39771,24 @@
      ]
     },
     {
+     "code": "T86.20",
+     "display": "Unspecified complication of heart transplant",
+     "target": [
+      {
+       "code": "157",
+       "display": "Solid organ transplantation",
+       "equivalence": "wider",
+       "comment": "Cicada policy ruling. reviewed: yes (OpenEvidence 2026-10-21: a named solid-organ transplant code is solid organ transplantation and Transplantation; islet recipients coded Z94.83 count (CDC immunocompromised guidance))"
+      },
+      {
+       "code": "269",
+       "display": "Transplantation",
+       "equivalence": "wider",
+       "comment": "Cicada policy ruling. reviewed: yes (OpenEvidence 2026-10-21: a named solid-organ transplant code is solid organ transplantation and Transplantation; islet recipients coded Z94.83 count (CDC immunocompromised guidance))"
+      }
+     ]
+    },
+    {
      "code": "T86.21",
      "display": "Heart transplant rejection",
      "target": [
@@ -39731,6 +39803,36 @@
        "display": "Chronic cardiovascular disease",
        "equivalence": "wider",
        "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 7 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: chronic heart disease, cardiac prosthesis or heart transplant)"
+      },
+      {
+       "code": "157",
+       "display": "Solid organ transplantation",
+       "equivalence": "wider",
+       "comment": "Cicada policy ruling. reviewed: yes (OpenEvidence 2026-10-21: a named solid-organ transplant code is solid organ transplantation and Transplantation; islet recipients coded Z94.83 count (CDC immunocompromised guidance))"
+      },
+      {
+       "code": "269",
+       "display": "Transplantation",
+       "equivalence": "wider",
+       "comment": "Cicada policy ruling. reviewed: yes (OpenEvidence 2026-10-21: a named solid-organ transplant code is solid organ transplantation and Transplantation; islet recipients coded Z94.83 count (CDC immunocompromised guidance))"
+      }
+     ]
+    },
+    {
+     "code": "T86.22",
+     "display": "Heart transplant failure",
+     "target": [
+      {
+       "code": "157",
+       "display": "Solid organ transplantation",
+       "equivalence": "wider",
+       "comment": "Cicada policy ruling. reviewed: yes (OpenEvidence 2026-10-21: a named solid-organ transplant code is solid organ transplantation and Transplantation; islet recipients coded Z94.83 count (CDC immunocompromised guidance))"
+      },
+      {
+       "code": "269",
+       "display": "Transplantation",
+       "equivalence": "wider",
+       "comment": "Cicada policy ruling. reviewed: yes (OpenEvidence 2026-10-21: a named solid-organ transplant code is solid organ transplantation and Transplantation; islet recipients coded Z94.83 count (CDC immunocompromised guidance))"
       }
      ]
     },
@@ -39753,6 +39855,24 @@
      ]
     },
     {
+     "code": "T86.290",
+     "display": "Cardiac allograft vasculopathy",
+     "target": [
+      {
+       "code": "157",
+       "display": "Solid organ transplantation",
+       "equivalence": "wider",
+       "comment": "Cicada policy ruling. reviewed: yes (OpenEvidence 2026-10-21: a named solid-organ transplant code is solid organ transplantation and Transplantation; islet recipients coded Z94.83 count (CDC immunocompromised guidance))"
+      },
+      {
+       "code": "269",
+       "display": "Transplantation",
+       "equivalence": "wider",
+       "comment": "Cicada policy ruling. reviewed: yes (OpenEvidence 2026-10-21: a named solid-organ transplant code is solid organ transplantation and Transplantation; islet recipients coded Z94.83 count (CDC immunocompromised guidance))"
+      }
+     ]
+    },
+    {
      "code": "T86.298",
      "display": "Other complications of heart transplant",
      "target": [
@@ -39761,6 +39881,162 @@
        "display": "Cancer",
        "equivalence": "wider",
        "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. every one is"
+      },
+      {
+       "code": "157",
+       "display": "Solid organ transplantation",
+       "equivalence": "wider",
+       "comment": "Cicada policy ruling. reviewed: yes (OpenEvidence 2026-10-21: a named solid-organ transplant code is solid organ transplantation and Transplantation; islet recipients coded Z94.83 count (CDC immunocompromised guidance))"
+      },
+      {
+       "code": "269",
+       "display": "Transplantation",
+       "equivalence": "wider",
+       "comment": "Cicada policy ruling. reviewed: yes (OpenEvidence 2026-10-21: a named solid-organ transplant code is solid organ transplantation and Transplantation; islet recipients coded Z94.83 count (CDC immunocompromised guidance))"
+      }
+     ]
+    },
+    {
+     "code": "T86.30",
+     "display": "Unspecified complication of heart-lung transplant",
+     "target": [
+      {
+       "code": "157",
+       "display": "Solid organ transplantation",
+       "equivalence": "wider",
+       "comment": "Cicada policy ruling. reviewed: yes (OpenEvidence 2026-10-21: a named solid-organ transplant code is solid organ transplantation and Transplantation; islet recipients coded Z94.83 count (CDC immunocompromised guidance))"
+      },
+      {
+       "code": "269",
+       "display": "Transplantation",
+       "equivalence": "wider",
+       "comment": "Cicada policy ruling. reviewed: yes (OpenEvidence 2026-10-21: a named solid-organ transplant code is solid organ transplantation and Transplantation; islet recipients coded Z94.83 count (CDC immunocompromised guidance))"
+      }
+     ]
+    },
+    {
+     "code": "T86.31",
+     "display": "Heart-lung transplant rejection",
+     "target": [
+      {
+       "code": "157",
+       "display": "Solid organ transplantation",
+       "equivalence": "wider",
+       "comment": "Cicada policy ruling. reviewed: yes (OpenEvidence 2026-10-21: a named solid-organ transplant code is solid organ transplantation and Transplantation; islet recipients coded Z94.83 count (CDC immunocompromised guidance))"
+      },
+      {
+       "code": "269",
+       "display": "Transplantation",
+       "equivalence": "wider",
+       "comment": "Cicada policy ruling. reviewed: yes (OpenEvidence 2026-10-21: a named solid-organ transplant code is solid organ transplantation and Transplantation; islet recipients coded Z94.83 count (CDC immunocompromised guidance))"
+      }
+     ]
+    },
+    {
+     "code": "T86.32",
+     "display": "Heart-lung transplant failure",
+     "target": [
+      {
+       "code": "157",
+       "display": "Solid organ transplantation",
+       "equivalence": "wider",
+       "comment": "Cicada policy ruling. reviewed: yes (OpenEvidence 2026-10-21: a named solid-organ transplant code is solid organ transplantation and Transplantation; islet recipients coded Z94.83 count (CDC immunocompromised guidance))"
+      },
+      {
+       "code": "269",
+       "display": "Transplantation",
+       "equivalence": "wider",
+       "comment": "Cicada policy ruling. reviewed: yes (OpenEvidence 2026-10-21: a named solid-organ transplant code is solid organ transplantation and Transplantation; islet recipients coded Z94.83 count (CDC immunocompromised guidance))"
+      }
+     ]
+    },
+    {
+     "code": "T86.33",
+     "display": "Heart-lung transplant infection",
+     "target": [
+      {
+       "code": "157",
+       "display": "Solid organ transplantation",
+       "equivalence": "wider",
+       "comment": "Cicada policy ruling. reviewed: yes (OpenEvidence 2026-10-21: a named solid-organ transplant code is solid organ transplantation and Transplantation; islet recipients coded Z94.83 count (CDC immunocompromised guidance))"
+      },
+      {
+       "code": "269",
+       "display": "Transplantation",
+       "equivalence": "wider",
+       "comment": "Cicada policy ruling. reviewed: yes (OpenEvidence 2026-10-21: a named solid-organ transplant code is solid organ transplantation and Transplantation; islet recipients coded Z94.83 count (CDC immunocompromised guidance))"
+      }
+     ]
+    },
+    {
+     "code": "T86.39",
+     "display": "Other complications of heart-lung transplant",
+     "target": [
+      {
+       "code": "157",
+       "display": "Solid organ transplantation",
+       "equivalence": "wider",
+       "comment": "Cicada policy ruling. reviewed: yes (OpenEvidence 2026-10-21: a named solid-organ transplant code is solid organ transplantation and Transplantation; islet recipients coded Z94.83 count (CDC immunocompromised guidance))"
+      },
+      {
+       "code": "269",
+       "display": "Transplantation",
+       "equivalence": "wider",
+       "comment": "Cicada policy ruling. reviewed: yes (OpenEvidence 2026-10-21: a named solid-organ transplant code is solid organ transplantation and Transplantation; islet recipients coded Z94.83 count (CDC immunocompromised guidance))"
+      }
+     ]
+    },
+    {
+     "code": "T86.40",
+     "display": "Unspecified complication of liver transplant",
+     "target": [
+      {
+       "code": "157",
+       "display": "Solid organ transplantation",
+       "equivalence": "wider",
+       "comment": "Cicada policy ruling. reviewed: yes (OpenEvidence 2026-10-21: a named solid-organ transplant code is solid organ transplantation and Transplantation; islet recipients coded Z94.83 count (CDC immunocompromised guidance))"
+      },
+      {
+       "code": "269",
+       "display": "Transplantation",
+       "equivalence": "wider",
+       "comment": "Cicada policy ruling. reviewed: yes (OpenEvidence 2026-10-21: a named solid-organ transplant code is solid organ transplantation and Transplantation; islet recipients coded Z94.83 count (CDC immunocompromised guidance))"
+      }
+     ]
+    },
+    {
+     "code": "T86.41",
+     "display": "Liver transplant rejection",
+     "target": [
+      {
+       "code": "157",
+       "display": "Solid organ transplantation",
+       "equivalence": "wider",
+       "comment": "Cicada policy ruling. reviewed: yes (OpenEvidence 2026-10-21: a named solid-organ transplant code is solid organ transplantation and Transplantation; islet recipients coded Z94.83 count (CDC immunocompromised guidance))"
+      },
+      {
+       "code": "269",
+       "display": "Transplantation",
+       "equivalence": "wider",
+       "comment": "Cicada policy ruling. reviewed: yes (OpenEvidence 2026-10-21: a named solid-organ transplant code is solid organ transplantation and Transplantation; islet recipients coded Z94.83 count (CDC immunocompromised guidance))"
+      }
+     ]
+    },
+    {
+     "code": "T86.42",
+     "display": "Liver transplant failure",
+     "target": [
+      {
+       "code": "157",
+       "display": "Solid organ transplantation",
+       "equivalence": "wider",
+       "comment": "Cicada policy ruling. reviewed: yes (OpenEvidence 2026-10-21: a named solid-organ transplant code is solid organ transplantation and Transplantation; islet recipients coded Z94.83 count (CDC immunocompromised guidance))"
+      },
+      {
+       "code": "269",
+       "display": "Transplantation",
+       "equivalence": "wider",
+       "comment": "Cicada policy ruling. reviewed: yes (OpenEvidence 2026-10-21: a named solid-organ transplant code is solid organ transplantation and Transplantation; islet recipients coded Z94.83 count (CDC immunocompromised guidance))"
       }
      ]
     },
@@ -39783,6 +40059,24 @@
      ]
     },
     {
+     "code": "T86.49",
+     "display": "Other complications of liver transplant",
+     "target": [
+      {
+       "code": "157",
+       "display": "Solid organ transplantation",
+       "equivalence": "wider",
+       "comment": "Cicada policy ruling. reviewed: yes (OpenEvidence 2026-10-21: a named solid-organ transplant code is solid organ transplantation and Transplantation; islet recipients coded Z94.83 count (CDC immunocompromised guidance))"
+      },
+      {
+       "code": "269",
+       "display": "Transplantation",
+       "equivalence": "wider",
+       "comment": "Cicada policy ruling. reviewed: yes (OpenEvidence 2026-10-21: a named solid-organ transplant code is solid organ transplantation and Transplantation; islet recipients coded Z94.83 count (CDC immunocompromised guidance))"
+      }
+     ]
+    },
+    {
      "code": "T86.5",
      "display": "Complications of stem cell transplant",
      "target": [
@@ -39791,6 +40085,12 @@
        "display": "Transplantation",
        "equivalence": "wider",
        "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 3 SNOMED concepts mapped here are this observation. reviewed: yes (Claude, confident proposal, 2026-10-18)"
+      },
+      {
+       "code": "004",
+       "display": "Recipient of a hematopoietic stem cell transplant",
+       "equivalence": "wider",
+       "comment": "Cicada policy ruling. reviewed: yes (OpenEvidence 2026-10-21: a hematopoietic (bone marrow or stem cell) transplant code is HSCT and Transplantation; HSCT revaccination covers autologous and allogeneic)"
       }
      ]
     },
@@ -39803,6 +40103,54 @@
        "display": "Chronic lung disease",
        "equivalence": "wider",
        "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 5 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: lung transplant recipient has chronic lung disease (also transplant))"
+      },
+      {
+       "code": "157",
+       "display": "Solid organ transplantation",
+       "equivalence": "wider",
+       "comment": "Cicada policy ruling. reviewed: yes (OpenEvidence 2026-10-21: a named solid-organ transplant code is solid organ transplantation and Transplantation; islet recipients coded Z94.83 count (CDC immunocompromised guidance))"
+      },
+      {
+       "code": "269",
+       "display": "Transplantation",
+       "equivalence": "wider",
+       "comment": "Cicada policy ruling. reviewed: yes (OpenEvidence 2026-10-21: a named solid-organ transplant code is solid organ transplantation and Transplantation; islet recipients coded Z94.83 count (CDC immunocompromised guidance))"
+      }
+     ]
+    },
+    {
+     "code": "T86.811",
+     "display": "Lung transplant failure",
+     "target": [
+      {
+       "code": "157",
+       "display": "Solid organ transplantation",
+       "equivalence": "wider",
+       "comment": "Cicada policy ruling. reviewed: yes (OpenEvidence 2026-10-21: a named solid-organ transplant code is solid organ transplantation and Transplantation; islet recipients coded Z94.83 count (CDC immunocompromised guidance))"
+      },
+      {
+       "code": "269",
+       "display": "Transplantation",
+       "equivalence": "wider",
+       "comment": "Cicada policy ruling. reviewed: yes (OpenEvidence 2026-10-21: a named solid-organ transplant code is solid organ transplantation and Transplantation; islet recipients coded Z94.83 count (CDC immunocompromised guidance))"
+      }
+     ]
+    },
+    {
+     "code": "T86.812",
+     "display": "Lung transplant infection",
+     "target": [
+      {
+       "code": "157",
+       "display": "Solid organ transplantation",
+       "equivalence": "wider",
+       "comment": "Cicada policy ruling. reviewed: yes (OpenEvidence 2026-10-21: a named solid-organ transplant code is solid organ transplantation and Transplantation; islet recipients coded Z94.83 count (CDC immunocompromised guidance))"
+      },
+      {
+       "code": "269",
+       "display": "Transplantation",
+       "equivalence": "wider",
+       "comment": "Cicada policy ruling. reviewed: yes (OpenEvidence 2026-10-21: a named solid-organ transplant code is solid organ transplantation and Transplantation; islet recipients coded Z94.83 count (CDC immunocompromised guidance))"
       }
      ]
     },
@@ -39827,6 +40175,234 @@
        "display": "Transplantation",
        "equivalence": "wider",
        "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 4 SNOMED concepts mapped here are this observation. reviewed: yes (Claude, confident proposal, 2026-10-18)"
+      }
+     ]
+    },
+    {
+     "code": "T86.819",
+     "display": "Unspecified complication of lung transplant",
+     "target": [
+      {
+       "code": "157",
+       "display": "Solid organ transplantation",
+       "equivalence": "wider",
+       "comment": "Cicada policy ruling. reviewed: yes (OpenEvidence 2026-10-21: a named solid-organ transplant code is solid organ transplantation and Transplantation; islet recipients coded Z94.83 count (CDC immunocompromised guidance))"
+      },
+      {
+       "code": "269",
+       "display": "Transplantation",
+       "equivalence": "wider",
+       "comment": "Cicada policy ruling. reviewed: yes (OpenEvidence 2026-10-21: a named solid-organ transplant code is solid organ transplantation and Transplantation; islet recipients coded Z94.83 count (CDC immunocompromised guidance))"
+      }
+     ]
+    },
+    {
+     "code": "T86.850",
+     "display": "Intestine transplant rejection",
+     "target": [
+      {
+       "code": "157",
+       "display": "Solid organ transplantation",
+       "equivalence": "wider",
+       "comment": "Cicada policy ruling. reviewed: yes (OpenEvidence 2026-10-21: a named solid-organ transplant code is solid organ transplantation and Transplantation; islet recipients coded Z94.83 count (CDC immunocompromised guidance))"
+      },
+      {
+       "code": "269",
+       "display": "Transplantation",
+       "equivalence": "wider",
+       "comment": "Cicada policy ruling. reviewed: yes (OpenEvidence 2026-10-21: a named solid-organ transplant code is solid organ transplantation and Transplantation; islet recipients coded Z94.83 count (CDC immunocompromised guidance))"
+      }
+     ]
+    },
+    {
+     "code": "T86.851",
+     "display": "Intestine transplant failure",
+     "target": [
+      {
+       "code": "157",
+       "display": "Solid organ transplantation",
+       "equivalence": "wider",
+       "comment": "Cicada policy ruling. reviewed: yes (OpenEvidence 2026-10-21: a named solid-organ transplant code is solid organ transplantation and Transplantation; islet recipients coded Z94.83 count (CDC immunocompromised guidance))"
+      },
+      {
+       "code": "269",
+       "display": "Transplantation",
+       "equivalence": "wider",
+       "comment": "Cicada policy ruling. reviewed: yes (OpenEvidence 2026-10-21: a named solid-organ transplant code is solid organ transplantation and Transplantation; islet recipients coded Z94.83 count (CDC immunocompromised guidance))"
+      }
+     ]
+    },
+    {
+     "code": "T86.852",
+     "display": "Intestine transplant infection",
+     "target": [
+      {
+       "code": "157",
+       "display": "Solid organ transplantation",
+       "equivalence": "wider",
+       "comment": "Cicada policy ruling. reviewed: yes (OpenEvidence 2026-10-21: a named solid-organ transplant code is solid organ transplantation and Transplantation; islet recipients coded Z94.83 count (CDC immunocompromised guidance))"
+      },
+      {
+       "code": "269",
+       "display": "Transplantation",
+       "equivalence": "wider",
+       "comment": "Cicada policy ruling. reviewed: yes (OpenEvidence 2026-10-21: a named solid-organ transplant code is solid organ transplantation and Transplantation; islet recipients coded Z94.83 count (CDC immunocompromised guidance))"
+      }
+     ]
+    },
+    {
+     "code": "T86.858",
+     "display": "Other complications of intestine transplant",
+     "target": [
+      {
+       "code": "157",
+       "display": "Solid organ transplantation",
+       "equivalence": "wider",
+       "comment": "Cicada policy ruling. reviewed: yes (OpenEvidence 2026-10-21: a named solid-organ transplant code is solid organ transplantation and Transplantation; islet recipients coded Z94.83 count (CDC immunocompromised guidance))"
+      },
+      {
+       "code": "269",
+       "display": "Transplantation",
+       "equivalence": "wider",
+       "comment": "Cicada policy ruling. reviewed: yes (OpenEvidence 2026-10-21: a named solid-organ transplant code is solid organ transplantation and Transplantation; islet recipients coded Z94.83 count (CDC immunocompromised guidance))"
+      }
+     ]
+    },
+    {
+     "code": "T86.859",
+     "display": "Unspecified complication of intestine transplant",
+     "target": [
+      {
+       "code": "157",
+       "display": "Solid organ transplantation",
+       "equivalence": "wider",
+       "comment": "Cicada policy ruling. reviewed: yes (OpenEvidence 2026-10-21: a named solid-organ transplant code is solid organ transplantation and Transplantation; islet recipients coded Z94.83 count (CDC immunocompromised guidance))"
+      },
+      {
+       "code": "269",
+       "display": "Transplantation",
+       "equivalence": "wider",
+       "comment": "Cicada policy ruling. reviewed: yes (OpenEvidence 2026-10-21: a named solid-organ transplant code is solid organ transplantation and Transplantation; islet recipients coded Z94.83 count (CDC immunocompromised guidance))"
+      }
+     ]
+    },
+    {
+     "code": "T86.890",
+     "display": "Other transplanted tissue rejection",
+     "target": [
+      {
+       "code": "269",
+       "display": "Transplantation",
+       "equivalence": "wider",
+       "comment": "Cicada policy ruling. reviewed: yes (OpenEvidence 2026-10-21: other transplanted tissue (pancreas, islet, uterus, composite grafts) generally needs lasting immunosuppression, so it is at least Transplantation; solid organ not asserted)"
+      }
+     ]
+    },
+    {
+     "code": "T86.891",
+     "display": "Other transplanted tissue failure",
+     "target": [
+      {
+       "code": "269",
+       "display": "Transplantation",
+       "equivalence": "wider",
+       "comment": "Cicada policy ruling. reviewed: yes (OpenEvidence 2026-10-21: other transplanted tissue (pancreas, islet, uterus, composite grafts) generally needs lasting immunosuppression, so it is at least Transplantation; solid organ not asserted)"
+      }
+     ]
+    },
+    {
+     "code": "T86.892",
+     "display": "Other transplanted tissue infection",
+     "target": [
+      {
+       "code": "269",
+       "display": "Transplantation",
+       "equivalence": "wider",
+       "comment": "Cicada policy ruling. reviewed: yes (OpenEvidence 2026-10-21: other transplanted tissue (pancreas, islet, uterus, composite grafts) generally needs lasting immunosuppression, so it is at least Transplantation; solid organ not asserted)"
+      }
+     ]
+    },
+    {
+     "code": "T86.898",
+     "display": "Other complications of other transplanted tissue",
+     "target": [
+      {
+       "code": "269",
+       "display": "Transplantation",
+       "equivalence": "wider",
+       "comment": "Cicada policy ruling. reviewed: yes (OpenEvidence 2026-10-21: other transplanted tissue (pancreas, islet, uterus, composite grafts) generally needs lasting immunosuppression, so it is at least Transplantation; solid organ not asserted)"
+      }
+     ]
+    },
+    {
+     "code": "T86.899",
+     "display": "Unspecified complication of other transplanted tissue",
+     "target": [
+      {
+       "code": "269",
+       "display": "Transplantation",
+       "equivalence": "wider",
+       "comment": "Cicada policy ruling. reviewed: yes (OpenEvidence 2026-10-21: other transplanted tissue (pancreas, islet, uterus, composite grafts) generally needs lasting immunosuppression, so it is at least Transplantation; solid organ not asserted)"
+      }
+     ]
+    },
+    {
+     "code": "T86.90",
+     "display": "Unspecified complication of unspecified transplanted organ and tissue",
+     "target": [
+      {
+       "code": "269",
+       "display": "Transplantation",
+       "equivalence": "wider",
+       "comment": "Cicada policy ruling. reviewed: yes (OpenEvidence 2026-10-21: an unspecified transplant is Transplantation only; neither stem cell nor solid organ can be inferred)"
+      }
+     ]
+    },
+    {
+     "code": "T86.91",
+     "display": "Unspecified transplanted organ and tissue rejection",
+     "target": [
+      {
+       "code": "269",
+       "display": "Transplantation",
+       "equivalence": "wider",
+       "comment": "Cicada policy ruling. reviewed: yes (OpenEvidence 2026-10-21: an unspecified transplant is Transplantation only; neither stem cell nor solid organ can be inferred)"
+      }
+     ]
+    },
+    {
+     "code": "T86.92",
+     "display": "Unspecified transplanted organ and tissue failure",
+     "target": [
+      {
+       "code": "269",
+       "display": "Transplantation",
+       "equivalence": "wider",
+       "comment": "Cicada policy ruling. reviewed: yes (OpenEvidence 2026-10-21: an unspecified transplant is Transplantation only; neither stem cell nor solid organ can be inferred)"
+      }
+     ]
+    },
+    {
+     "code": "T86.93",
+     "display": "Unspecified transplanted organ and tissue infection",
+     "target": [
+      {
+       "code": "269",
+       "display": "Transplantation",
+       "equivalence": "wider",
+       "comment": "Cicada policy ruling. reviewed: yes (OpenEvidence 2026-10-21: an unspecified transplant is Transplantation only; neither stem cell nor solid organ can be inferred)"
+      }
+     ]
+    },
+    {
+     "code": "T86.99",
+     "display": "Other complications of unspecified transplanted organ and tissue",
+     "target": [
+      {
+       "code": "269",
+       "display": "Transplantation",
+       "equivalence": "wider",
+       "comment": "Cicada policy ruling. reviewed: yes (OpenEvidence 2026-10-21: an unspecified transplant is Transplantation only; neither stem cell nor solid organ can be inferred)"
       }
      ]
     },
@@ -40805,6 +41381,12 @@
        "display": "Solid organ transplantation",
        "equivalence": "wider",
        "comment": "Hand-typed 2026-02-06 file. reviewed: yes (Claude, confident proposal, 2026-10-18)"
+      },
+      {
+       "code": "269",
+       "display": "Transplantation",
+       "equivalence": "wider",
+       "comment": "Cicada policy ruling. reviewed: yes (OpenEvidence 2026-10-21: a named solid-organ transplant code is solid organ transplantation and Transplantation; islet recipients coded Z94.83 count (CDC immunocompromised guidance))"
       }
      ]
     },
@@ -40817,6 +41399,30 @@
        "display": "Solid organ transplantation",
        "equivalence": "wider",
        "comment": "Hand-typed 2026-02-06 file. reviewed: yes (Claude, confident proposal, 2026-10-18)"
+      },
+      {
+       "code": "269",
+       "display": "Transplantation",
+       "equivalence": "wider",
+       "comment": "Cicada policy ruling. reviewed: yes (OpenEvidence 2026-10-21: a named solid-organ transplant code is solid organ transplantation and Transplantation; islet recipients coded Z94.83 count (CDC immunocompromised guidance))"
+      }
+     ]
+    },
+    {
+     "code": "Z94.3",
+     "display": "Heart and lungs transplant status",
+     "target": [
+      {
+       "code": "157",
+       "display": "Solid organ transplantation",
+       "equivalence": "wider",
+       "comment": "Cicada policy ruling. reviewed: yes (OpenEvidence 2026-10-21: a named solid-organ transplant code is solid organ transplantation and Transplantation; islet recipients coded Z94.83 count (CDC immunocompromised guidance))"
+      },
+      {
+       "code": "269",
+       "display": "Transplantation",
+       "equivalence": "wider",
+       "comment": "Cicada policy ruling. reviewed: yes (OpenEvidence 2026-10-21: a named solid-organ transplant code is solid organ transplantation and Transplantation; islet recipients coded Z94.83 count (CDC immunocompromised guidance))"
       }
      ]
     },
@@ -40829,6 +41435,66 @@
        "display": "Solid organ transplantation",
        "equivalence": "wider",
        "comment": "Hand-typed 2026-02-06 file. reviewed: yes (Claude, confident proposal, 2026-10-18)"
+      },
+      {
+       "code": "269",
+       "display": "Transplantation",
+       "equivalence": "wider",
+       "comment": "Cicada policy ruling. reviewed: yes (OpenEvidence 2026-10-21: a named solid-organ transplant code is solid organ transplantation and Transplantation; islet recipients coded Z94.83 count (CDC immunocompromised guidance))"
+      }
+     ]
+    },
+    {
+     "code": "Z94.81",
+     "display": "Bone marrow transplant status",
+     "target": [
+      {
+       "code": "004",
+       "display": "Recipient of a hematopoietic stem cell transplant",
+       "equivalence": "wider",
+       "comment": "Cicada policy ruling. reviewed: yes (OpenEvidence 2026-10-21: a hematopoietic (bone marrow or stem cell) transplant code is HSCT and Transplantation; HSCT revaccination covers autologous and allogeneic)"
+      },
+      {
+       "code": "269",
+       "display": "Transplantation",
+       "equivalence": "wider",
+       "comment": "Cicada policy ruling. reviewed: yes (OpenEvidence 2026-10-21: a hematopoietic (bone marrow or stem cell) transplant code is HSCT and Transplantation; HSCT revaccination covers autologous and allogeneic)"
+      }
+     ]
+    },
+    {
+     "code": "Z94.82",
+     "display": "Intestine transplant status",
+     "target": [
+      {
+       "code": "157",
+       "display": "Solid organ transplantation",
+       "equivalence": "wider",
+       "comment": "Cicada policy ruling. reviewed: yes (OpenEvidence 2026-10-21: a named solid-organ transplant code is solid organ transplantation and Transplantation; islet recipients coded Z94.83 count (CDC immunocompromised guidance))"
+      },
+      {
+       "code": "269",
+       "display": "Transplantation",
+       "equivalence": "wider",
+       "comment": "Cicada policy ruling. reviewed: yes (OpenEvidence 2026-10-21: a named solid-organ transplant code is solid organ transplantation and Transplantation; islet recipients coded Z94.83 count (CDC immunocompromised guidance))"
+      }
+     ]
+    },
+    {
+     "code": "Z94.83",
+     "display": "Pancreas transplant status",
+     "target": [
+      {
+       "code": "157",
+       "display": "Solid organ transplantation",
+       "equivalence": "wider",
+       "comment": "Cicada policy ruling. reviewed: yes (OpenEvidence 2026-10-21: a named solid-organ transplant code is solid organ transplantation and Transplantation; islet recipients coded Z94.83 count (CDC immunocompromised guidance))"
+      },
+      {
+       "code": "269",
+       "display": "Transplantation",
+       "equivalence": "wider",
+       "comment": "Cicada policy ruling. reviewed: yes (OpenEvidence 2026-10-21: a named solid-organ transplant code is solid organ transplantation and Transplantation; islet recipients coded Z94.83 count (CDC immunocompromised guidance))"
       }
      ]
     },
@@ -40841,6 +41507,24 @@
        "display": "Recipient of a hematopoietic stem cell transplant",
        "equivalence": "wider",
        "comment": "Hand-typed 2026-02-06 file. reviewed: yes (Claude, confident proposal, 2026-10-18)"
+      },
+      {
+       "code": "269",
+       "display": "Transplantation",
+       "equivalence": "wider",
+       "comment": "Cicada policy ruling. reviewed: yes (OpenEvidence 2026-10-21: a hematopoietic (bone marrow or stem cell) transplant code is HSCT and Transplantation; HSCT revaccination covers autologous and allogeneic)"
+      }
+     ]
+    },
+    {
+     "code": "Z94.89",
+     "display": "Other transplanted organ and tissue status",
+     "target": [
+      {
+       "code": "269",
+       "display": "Transplantation",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 7 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence 2026-10-21: other transplanted tissue (pancreas, islet, uterus, composite grafts) generally needs lasting immunosuppression, so it is at least Transplantation)"
       }
      ]
     },
