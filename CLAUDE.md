@@ -185,8 +185,15 @@ test cases send CDSi observation codes directly and never reach this path**;
   - 254 chronic cardiovascular disease is cardiac and arterial disease. It excludes venous
     disease, cerebrovascular disease and isolated hypertension.
   - 080 is a severe allergy to a vaccine component, not any adverse effect.
-  The last three are NOT yet applied to the rows the derivation grades `wider` through
-  CDC's broad SNOMED codes (17097001, 128292002, 400047006, 293104008).
+  Applied 2026-10-21 to the rows reached only through CDC SNOMED codes broader than their
+  observation: `observation_map_policy.json` `broad_codes` (016, 017, 040, 080, 086-088,
+  254, 258, 269) and `review_rows` (013 D81.30). `derive_icd10_observation_rows.py` marks
+  those rows, the sheet holds them (1,997 rows), and they count only on a yes. Claude
+  proposed every one (262 yes, 1,426 no, 309 unsure and undecided); all go to OpenEvidence
+  as well (Grey, 2026-10-21: "You should review them AND open evidence should review
+  them"). The codes were found by a census of every CDC code
+  (cicada_generator/tool/broad_code_census.py); 254 and 258 feed only the RSV 50-74 risk
+  series.
 - OpenEvidence 2026-10-20 answered the last five borderline rows:
   - 066 chronic renal failure needs stage 4-5 or ESRD. I12.9 and N18.9 are 161, not 066.
   - 076 progressive neurologic disorder: unspecified encephalopathy (G93.40, G93.49) and

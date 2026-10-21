@@ -11,7 +11,10 @@ observation. The rest need a person. Three kinds go on the sheet:
     (I20.9 angina pectoris under 016 chronic heart disease, 6 of 14; Z90.81
     acquired absence of spleen under 160, 1 of 6);
   * rows the hand-typed 2026-02-06 crosswalk held that the derivation neither
-    grades 'wider' nor puts on the sheet.
+    grades 'wider' nor puts on the sheet;
+  * 'wider' rows reached only through a CDC code broader than the observation,
+    or listed one by one, in observation_map_policy.json (broad_codes,
+    review_rows; added 2026-10-21).
 Observations in observation_map_policy.json's not_from_a_code list get no NLM
 rows; their hand-typed rows stay on the sheet, marked.
 
@@ -46,6 +49,8 @@ CARRIED = ('decision (yes/no)', 'proposed (Claude)', 'unsure', 'why proposed', '
 PARTIAL = 'NLM map: most, not all, of the SNOMED concepts mapped to this code are this observation'
 MINORITY = 'NLM map: under half of the SNOMED concepts mapped to this code are this observation'
 HAND = 'hand-typed 2026-02-06 file; NLM map does not confirm it'
+# write_oe_code_questions.py sends every row with this reason to OpenEvidence.
+BROAD = 'NLM map: every SNOMED concept mapped here is this observation, but '
 
 
 def main(schedule_path, meta, policy_path, sheet_path):
@@ -59,10 +64,15 @@ def main(schedule_path, meta, policy_path, sheet_path):
         for row in csv.DictReader(open(sheet_path, encoding='utf-8'), delimiter='\t'):
             previous[(row['observation'], row['icd10cm'])] = {k: row.get(k, '') or '' for k in CARRIED}
 
+    broad, review_rows = derive_icd.policy_review(policy)
     rows, wider = {}, set()
-    for d in derive_icd.derive(observations, meta):
+    for d in derive_icd.derive(observations, meta, broad, review_rows):
         key = (d['observation'], d['icd10cm'])
-        if d['grade'] == 'wider':
+        if d['grade'] == 'wider' and d['review'] and d['observation'] not in not_from:
+            rows[key] = [d['observation'], titles.get(d['observation'], ''), d['icd10cm'], d['display'],
+                         str(d['nlm_sources']), str(d['sources_in_observation']), d['example_outside'],
+                         BROAD + d['review']]
+        elif d['grade'] == 'wider':
             wider.add(key)
         elif d['observation'] not in not_from:
             why = PARTIAL if d['sources_in_observation'] * 2 >= d['nlm_sources'] else MINORITY

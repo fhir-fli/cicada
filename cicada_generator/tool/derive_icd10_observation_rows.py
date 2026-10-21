@@ -47,11 +47,23 @@ def cdc_snomed(schedule_path):
     return out
 
 
-def derive(observations, meta):
+def derive(observations, meta, broad=None, review_rows=None):
     """Yield one dict per (observation, ICD-10-CM code) pair that shares a SNOMED source.
 
     `observations` maps observation code -> (title, set of CDC SNOMED codes).
+
+    `broad` maps observation code -> {CDC SNOMED code: reason} for CDC codes
+    broader than the observation (observation_map_policy.json broad_codes). A
+    'wider' row whose SNOMED sources are not all reached without those codes
+    keeps its grade but carries a 'review' reason, and is decided on the
+    review sheet like a partial row. Measured 2026-10-21
+    (tool/broad_code_census.py): 400047006 Peripheral vascular disease alone
+    put 1,138 ICD-10-CM codes, 586 of them vessel injuries, under 254 chronic
+    cardiovascular disease. `review_rows` maps 'observation|icd10cm' -> reason
+    for single 'wider' rows sent to review for another cause.
     """
+    broad = broad or {}
+    review_rows = review_rows or {}
     aui_code, names = umls_snomed.snomed_atoms(meta)
     graph = umls_snomed.load_graph(meta, aui_code)
     umls_snomed.check_direction(graph, names)
@@ -59,27 +71,55 @@ def derive(observations, meta):
     sources = umls_snomed.nlm_icd10cm_sources(meta)
     icd_names = umls_snomed.icd10cm_names(meta)
     print(f'{len(sources)} ICD-10-CM codes reached by NLM map', flush=True)
+    for obs_code, codes in broad.items():
+        not_cdc = set(codes) - observations.get(obs_code, ('', set()))[1]
+        if not_cdc:
+            raise SystemExit(f'broad codes {sorted(not_cdc)} are not CDC codes for {obs_code}')
+    for key in review_rows:
+        obs_code, icd = key.split('|')
+        if icd not in sources or obs_code not in observations:
+            raise SystemExit(f'review row {key} names no derived pair')
     for obs_code, (title, listed) in sorted(observations.items()):
         if not listed:
             continue
         s_o = umls_snomed.evidence_closure(listed, inv)
+        wide = broad.get(obs_code, {})
+        s_strict = umls_snomed.evidence_closure(listed - set(wide), inv) if wide else s_o
+        per_wide = {r: umls_snomed.evidence_closure([r], inv) for r in sorted(wide)}
         for icd in sorted(sources):
             f_x = sources[icd]
             inside = f_x & s_o
             if not inside:
                 continue
+            grade = 'wider' if inside == f_x else 'narrower'
+            review = ''
+            if grade == 'wider' and not f_x <= s_strict:
+                used = [r for r, cl in per_wide.items() if (f_x - s_strict) & cl]
+                review = ('reached only through ' + '; '.join(
+                    f'{r} {names.get(r, "?")}: {wide[r]}' for r in used))
+            elif grade == 'wider' and f'{obs_code}|{icd}' in review_rows:
+                review = review_rows[f'{obs_code}|{icd}']
             yield {
                 'observation': obs_code, 'title': title, 'icd10cm': icd,
                 'display': icd_names.get(icd, ''),
-                'grade': 'wider' if inside == f_x else 'narrower',
+                'grade': grade,
                 'nlm_sources': len(f_x), 'sources_in_observation': len(inside),
                 'example_outside': '; '.join(
                     f'{c} {names.get(c, "?")}' for c in sorted(f_x - s_o)[:3]),
+                'review': review,
             }
 
 
+def policy_review(policy):
+    """The broad_codes and review_rows sections of observation_map_policy.json."""
+    broad = {k: {c: r for c, r in v.items() if not c.startswith('_')}
+             for k, v in policy.get('broad_codes', {}).items() if not k.startswith('_')}
+    rows = {k: v for k, v in policy.get('review_rows', {}).items() if not k.startswith('_')}
+    return broad, rows
+
+
 COLUMNS = ['observation', 'title', 'icd10cm', 'display', 'grade', 'nlm_sources',
-           'sources_in_observation', 'example_outside']
+           'sources_in_observation', 'example_outside', 'review']
 
 
 def main(schedule_path, meta, out_path):

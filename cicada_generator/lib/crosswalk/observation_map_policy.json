@@ -31,6 +31,51 @@
     "154": "AIDS, SEVERELY immunocompromised: severity comes from CD4, not the code CDC shares with 155.",
     "155": "AIDS, NOT severely immunocompromised: severity comes from CD4, not the code CDC shares with 154."
   },
+  "broad_codes": {
+    "_comment": [
+      "CDC SNOMED codes broader than the observation they are filed under. An ICD-10-CM code reached only through one",
+      "of them is not asserted automatically: it goes on CROSSWALK-REVIEW.tsv and is decided there (Grey, 2026-10-21:",
+      "Claude reviews them AND OpenEvidence reviews them). Found by tool/broad_code_census.py, 2026-10-21, which",
+      "counted for every CDC code the ICD-10-CM rows reached through it alone; each code with any such row was compared",
+      "with its observation title. Codes whose meaning is the observation itself (Diabetes mellitus, Cancer) are not here."
+    ],
+    "016": {
+      "57809008": "Myocardial disease includes acute myocardial infarction, acute myocarditis and acute cor pulmonale; OpenEvidence 2026-10-19 ruled acute processes are not chronic heart disease",
+      "698247007": "Cardiac arrhythmia includes cardiac arrest, benign ectopy and neonatal rate changes; OpenEvidence 2026-10-19 ruled benign ectopy and isolated conduction findings are not chronic heart disease"
+    },
+    "017": {
+      "17097001": "Chronic disease of respiratory system includes upper-airway disease; OpenEvidence 2026-10-19 ruled chronic lung disease excludes sinusitis, rhinitis and tonsillitis"
+    },
+    "040": {
+      "228366006": "Finding relating to drug misuse behavior is wider than illicit drug use"
+    },
+    "080": {
+      "293104008": "Adverse reaction to component of vaccine product includes any adverse effect; OpenEvidence 2026-10-19 ruled this condition is a severe allergy to a vaccine component"
+    },
+    "086": {
+      "293115003": "an adverse reaction to a pertussis-containing vaccine component is wider than a severe allergic reaction (OpenEvidence 2026-10-19 ruling on adverse effects)"
+    },
+    "087": {
+      "219085007": "an adverse reaction to a diphtheria-containing vaccine component is wider than a severe allergic reaction (OpenEvidence 2026-10-19 ruling on adverse effects)"
+    },
+    "088": {
+      "219084006": "an adverse reaction to a tetanus-containing vaccine component is wider than a severe allergic reaction (OpenEvidence 2026-10-19 ruling on adverse effects)"
+    },
+    "254": {
+      "128292002": "Chronic disease of cardiovascular system includes venous and cerebrovascular disease; OpenEvidence 2026-10-19 ruled this condition is cardiac and arterial disease",
+      "400047006": "Peripheral vascular disease includes vessel injuries, venous disease and skin vascular disorders; OpenEvidence 2026-10-19 ruled this condition is cardiac and arterial disease"
+    },
+    "258": {
+      "414027002": "Disorder of hematopoietic structure includes lymph node, tonsil, spleen and bone disorders, many acute"
+    },
+    "269": {
+      "77465005": "Transplantation to recipient includes skin, bone and corneal grafts and implanted devices"
+    }
+  },
+  "review_rows": {
+    "_comment": "Single 'wider' rows sent to the review sheet for a cause other than a broad CDC code, keyed observation|icd10cm.",
+    "013|D81.30": "SNOMED files adenosine deaminase deficiency under SCID; OpenEvidence 2026-10-19 said unspecified ADA deficiency is not SCID"
+  },
   "code_grades": {
     "_comment": "Grades for single CDC rows, keyed system|code|observation. Default for a CDC row is 'equivalent'.",
     "CDCPHINVS|VXC20|*": ["relatedto", "'Allergy to previous dose of THIS vaccine': names no vaccine, so it cannot say which antigen."],

@@ -138,6 +138,45 @@ void main() {
       expect(_codes(_icd10, 'T50.Z95A'), isEmpty);
     });
 
+    // Some CDC SNOMED codes are broader than the observation they are filed
+    // under (observation_map_policy.json broad_codes, 2026-10-21). Before,
+    // 400047006 Peripheral vascular disease alone put 586 vessel injuries
+    // under 254 chronic cardiovascular disease. A code reached only through
+    // a broad code now counts only on a reviewed yes. Each pair below is one
+    // code that stopped counting and one that still counts.
+    group('a broad CDC code alone asserts nothing', () {
+      const cases = <String, ({String no, String yes})>{
+        '017': (no: 'J32.8', yes: 'J42'), // chronic sinusitis; bronchitis
+        '254': (no: 'S65.009A', yes: 'I70.0'), // artery injury; aortic ASCVD
+        '258': (no: 'L03.021', yes: 'D61.3'), // lymphangitis; aplastic anemia
+        '016': (no: 'M48.9', yes: 'I42.9'), // spondylopathy; cardiomyopathy
+        '269': (no: 'T86.8401', yes: 'T86.11'), // corneal; kidney transplant
+        '080': (no: 'T50.B95A', yes: 'T80.52XA'), // adverse effect; anaphylaxis
+      };
+      cases.forEach((observation, pair) {
+        test(observation, () {
+          expect(_codes(_icd10, pair.no), isNot(contains(observation)));
+          expect(_codes(_icd10, pair.yes), contains(observation));
+        });
+      });
+
+      test('venous thrombosis is not chronic cardiovascular disease', () {
+        expect(_codes(_icd10, 'I82.211'), isNot(contains('254')));
+      });
+
+      // SNOMED files adenosine deaminase deficiency under SCID; OpenEvidence
+      // 2026-10-19: unspecified ADA deficiency is not SCID.
+      test('unspecified ADA deficiency is not SCID', () {
+        expect(_codes(_icd10, 'D81.30'), isNot(contains('013')));
+      });
+
+      // Undecided rows (Claude unsure, OpenEvidence not yet asked) assert
+      // nothing.
+      test('an undecided row asserts nothing', () {
+        expect(_codes(_icd10, 'F19.939'), isNot(contains('040')));
+      });
+    });
+
     // OpenEvidence 2026-10-20: ACIP's chronic renal failure is stage 4-5
     // or ESRD; an unstaged CKD code is chronic kidney disease only.
     test('unstaged CKD is 161, not chronic renal failure', () {

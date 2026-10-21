@@ -19,7 +19,9 @@ assert the observation, 'narrower' and 'relatedto' do not). Rows come from:
   * the policy file's LOINC (positive result required, as dependsOn), RxNorm
     and CPT rows.
 Observations in the policy's not_from_a_code list are never asserted from a
-code: their rows are kept as 'relatedto'.
+code: their rows are kept as 'relatedto'. A 'wider' row reached only through a
+CDC code the policy lists as broad (broad_codes), or listed in review_rows, is
+asserted only when CROSSWALK-REVIEW.tsv says yes.
 
 Writes the ConceptMap JSON and a TSV of every decision, both flushed.
 
@@ -131,13 +133,26 @@ def main(schedule_path, meta, policy_path, review_path, out_map, out_tsv):
     # 2. ICD-10-CM, derived from NLM's map.
     counts = defaultdict(int)
     snomed_only = {k: (v[0], {c for s, c, _ in v[1] if s == 'SNOMED'}) for k, v in observations.items()}
-    for row in derive_icd.derive(snomed_only, meta):
+    broad, review_rows = derive_icd.policy_review(policy)
+    for row in derive_icd.derive(snomed_only, meta, broad, review_rows):
         obs, icd = row['observation'], row['icd10cm']
         if obs in not_from:
             counts['skipped: observation not from a code'] += 1
             continue
         evidence = f"NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): {row['sources_in_observation']} of {row['nlm_sources']} SNOMED concepts mapped here are this observation"
-        if row['grade'] == 'wider':
+        if row['grade'] == 'wider' and row['review']:
+            # Reached only through a broad CDC code (policy broad_codes) or
+            # listed in review_rows: asserted only on a reviewed yes.
+            answer, _, who = decisions.pop((obs, icd), ('', '', ''))
+            if answer == 'yes':
+                add('ICD10CM', icd, row['display'], obs, 'wider', evidence, f'reviewed: yes ({who})')
+                counts['broad, reviewed yes'] += 1
+            elif answer == 'no':
+                counts['broad, reviewed no'] += 1
+            else:
+                add('ICD10CM', icd, row['display'], obs, 'narrower', evidence, 'awaiting review')
+                counts['broad, awaiting review'] += 1
+        elif row['grade'] == 'wider':
             add('ICD10CM', icd, row['display'], obs, 'wider', evidence, 'every one is')
             counts['wider'] += 1
         elif row['sources_in_observation'] * 2 >= row['nlm_sources']:

@@ -1,6 +1,10 @@
 #!/usr/bin/env python3
 """Write the unsure rows of CROSSWALK-REVIEW.tsv as OpenEvidence questions.
 
+Rows reached only through a broad CDC code go to OpenEvidence whether or not
+Claude was sure, until OpenEvidence has answered them (Grey, 2026-10-21: "You
+should review them AND open evidence should review them").
+
 Grey pastes each section into OpenEvidence as it stands (2026-10-18: "put them
 all in a single file and I'll ask open evidence"), so nothing in a section
 may point into this repository. One section per CDSi observation, split so
@@ -17,19 +21,24 @@ import csv
 import re
 import sys
 from collections import defaultdict
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from write_review_sheet import BROAD  # noqa: E402
 
 MAX_CODES = 40
 
 
 def fold(rows):
-    """[(code, name, proposal, reason)] with 7th-character variants folded."""
+    """[(code, name, proposal, label, reason)] with 7th-character variants folded."""
     groups = defaultdict(list)
     order = []
     for r in rows:
         code = r['icd10cm']
         # Only a letter in the 8th place is a 7th-character extension (E11.3599 is not).
         stem = code[:-1] if len(code) == 8 and code[-1].isalpha() else code
-        key = (stem, r['proposed (Claude)'], r['why proposed'])
+        label = 'doubt' if r['unsure'].strip() == 'unsure' else 'reason'
+        key = (stem, r['proposed (Claude)'], label, r['why proposed'])
         if key not in groups:
             order.append(key)
         groups[key].append(r)
@@ -37,11 +46,11 @@ def fold(rows):
     for key in order:
         rs = groups[key]
         if len(rs) == 1:
-            out.append((rs[0]['icd10cm'], rs[0]['icd10cm name'], key[1], key[2]))
+            out.append((rs[0]['icd10cm'], rs[0]['icd10cm name'], key[1], key[2], key[3]))
         else:
             sevenths = '/'.join(r['icd10cm'][-1] for r in rs)
             name = rs[0]['icd10cm name'].rsplit(',', 1)[0]
-            out.append((f'{key[0]}{sevenths}', name, key[1], key[2]))
+            out.append((f'{key[0]}{sevenths}', name, key[1], key[2], key[3]))
     return out
 
 
@@ -67,7 +76,9 @@ def main(sheet, out_path, extra_path):
     every = list(csv.DictReader(open(sheet, encoding='utf-8'), delimiter='\t'))
     all_titles = {r['observation']: r['observation title'] for r in every}
     rows = [r for r in every
-            if r['unsure'].strip() == 'unsure' and not r['decision (yes/no)'].strip()]
+            if (r['unsure'].strip() == 'unsure' and not r['decision (yes/no)'].strip())
+            or (r['why it is here'].startswith(BROAD)
+                and not r['decided by'].startswith('OpenEvidence'))]
     for r in rows:
         r['why proposed'] = self_contained(r['why proposed'], all_titles)
     by_obs = defaultdict(list)
@@ -96,9 +107,10 @@ def main(sheet, out_path, extra_path):
                     'A clinic system has only the ICD-10-CM code on the problem list. For each code '
                     'below, does a patient carrying that code meet this condition for the purpose of '
                     'the ACIP recommendations that use it? Answer yes or no for every code, with the '
-                    'reason and a source. The tentative answer and the doubt are given after each code.\n\n')
-            for code, name, proposal, reason in part:
-                f.write(f'- {code} {name}: tentative {proposal}; doubt: {reason}\n')
+                    'reason and a source. The tentative answer and its reason (or the doubt) are given '
+                    'after each code.\n\n')
+            for code, name, proposal, label, reason in part:
+                f.write(f'- {code} {name}: tentative {proposal}; {label}: {reason}\n')
             f.write('\n')
             f.flush()
         f.write(extra + '\n')
