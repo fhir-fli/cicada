@@ -132,7 +132,8 @@ def main(schedule_path, meta, policy_path, review_path, out_map, out_tsv):
 
     # 2. ICD-10-CM, derived from NLM's map.
     counts = defaultdict(int)
-    snomed_only = {k: (v[0], {c for s, c, _ in v[1] if s == 'SNOMED'}) for k, v in observations.items()}
+    snomed_only = derive_icd.asserting_roots(
+        {k: (v[0], {c for s, c, _ in v[1] if s == 'SNOMED'}) for k, v in observations.items()}, policy)
     broad, review_rows = derive_icd.policy_review(policy)
     for row in derive_icd.derive(snomed_only, meta, broad, review_rows):
         obs, icd = row['observation'], row['icd10cm']

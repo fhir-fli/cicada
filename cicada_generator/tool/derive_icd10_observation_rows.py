@@ -47,6 +47,22 @@ def cdc_snomed(schedule_path):
     return out
 
 
+def asserting_roots(observations, policy):
+    """Drop CDC SNOMED codes the policy grades as not asserting their observation.
+
+    A CDC code graded 'narrower' or 'relatedto' in code_grades does not
+    establish the observation, so the ICD-10-CM codes NLM maps from it must
+    not either. OpenEvidence 2026-10-21: 77128003 DiGeorge sequence, listed by
+    CDC under both 147 and 148, establishes only 148.
+    """
+    out = {}
+    for obs, (title, codes) in observations.items():
+        out[obs] = (title, {c for c in codes
+                            if (policy.get('code_grades', {}).get(f'SNOMED|{c}|{obs}') or ['equivalent'])[0]
+                            in ('equivalent', 'wider')})
+    return out
+
+
 def derive(observations, meta, broad=None, review_rows=None):
     """Yield one dict per (observation, ICD-10-CM code) pair that shares a SNOMED source.
 

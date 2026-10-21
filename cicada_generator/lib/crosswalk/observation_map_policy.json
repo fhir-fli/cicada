@@ -165,7 +165,8 @@
     "CDCPHINVS|VXC20|*": ["relatedto", "'Allergy to previous dose of THIS vaccine': names no vaccine, so it cannot say which antigen."],
     "SNOMED|13645005|017": ["wider", "COPD is a chronic lung disease; 214 is the exact observation."],
     "SNOMED|87433001|017": ["wider", "Emphysema is a chronic lung disease; 215 is the exact observation."],
-    "SNOMED|31323000|147": ["wider", "SCID is a complete T-lymphocyte defect; 013 is the exact observation."]
+    "SNOMED|31323000|147": ["wider", "SCID is a complete T-lymphocyte defect; 013 is the exact observation."],
+    "SNOMED|77128003|147": ["narrower", "OpenEvidence 2026-10-21: DiGeorge sequence spans the immunologic spectrum; complete DiGeorge (congenital athymia, 1-2%) needs immunologic evidence the code does not carry. The code is a partial defect (148) only."]
   },
   "loinc": {
     "_comment": [

@@ -224,6 +224,14 @@ void main() {
         expect(_codes(_icd10, 'D82.1'), contains('148'));
       });
 
+      // CDC lists 77128003 under both 147 and 148: the concept can be
+      // either, but the code alone is not a complete defect.
+      test('SNOMED DiGeorge sequence is partial, not complete', () {
+        final found = _codes(_snomed, '77128003');
+        expect(found, contains('148'));
+        expect(found, isNot(contains('147')));
+      });
+
       // The three transplant conditions are nested: stem cell -> 004 + 269,
       // solid organ -> 157 + 269, unspecified or other tissue -> 269 only;
       // skin, bone and corneal grafts need no lasting immunosuppression.

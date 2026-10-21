@@ -60,7 +60,7 @@ BROAD = 'NLM map: every SNOMED concept mapped here is this observation, but '
 def main(schedule_path, meta, policy_path, sheet_path):
     policy = json.load(open(policy_path, encoding='utf-8'))
     not_from = {k for k in policy['not_from_a_code'] if not k.startswith('_')}
-    observations = derive_icd.cdc_snomed(schedule_path)
+    observations = derive_icd.asserting_roots(derive_icd.cdc_snomed(schedule_path), policy)
     titles = {k: ' '.join((v[0] or '').split()) for k, v in observations.items()}
 
     previous = {}

@@ -11168,7 +11168,7 @@ observationConceptMap = {
       ObservationMapTarget('036', 'equivalent'),
     ],
     '77128003': [
-      ObservationMapTarget('147', 'equivalent'),
+      ObservationMapTarget('147', 'narrower'),
       ObservationMapTarget('148', 'equivalent'),
     ],
     '77176002': [

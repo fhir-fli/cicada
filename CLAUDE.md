@@ -220,8 +220,12 @@ test cases send CDSi observation codes directly and never reach this path**;
   reaches none of the 75 added pairs, so they live in the policy's `added_icd10cm`
   section; `write_review_sheet.py` writes them onto the sheet decided yes and refuses a
   key the derivation already reaches. Z94.89 under 269 reverses OpenEvidence 2026-10-19
-  ("corneal or tissue graft"): cornea has its own code, Z94.7. Open: CDC lists SNOMED
-  77128003 DiGeorge under both 147 and 148; asked OpenEvidence whether it should assert 147.
+  ("corneal or tissue graft"): cornea has its own code, Z94.7.
+- OpenEvidence 2026-10-21: CDC lists SNOMED 77128003 DiGeorge sequence under both 147 and
+  148; that is the concept spanning the spectrum, not every patient having both. Graded
+  'narrower' under 147 in `code_grades`, so the code asserts 148 only. A CDC SNOMED code
+  graded 'narrower' or 'relatedto' is also no longer a root for the ICD-10-CM derivation
+  (`derive_icd10_observation_rows.asserting_roots`).
 
 ### ImmDS Server
 

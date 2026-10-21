@@ -46131,8 +46131,8 @@
       {
        "code": "147",
        "display": "T-lymphocyte [cell-mediated and humoral] - Complete defects",
-       "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "equivalence": "narrower",
+       "comment": "CDC Coded Observations 4.65-508. OpenEvidence 2026-10-21: DiGeorge sequence spans the immunologic spectrum; complete DiGeorge (congenital athymia, 1-2%) needs immunologic evidence the code does not carry. The code is a partial defect (148) only."
       },
       {
        "code": "148",
