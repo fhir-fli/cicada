@@ -187,6 +187,10 @@ test cases send CDSi observation codes directly and never reach this path**;
   - 080 is a severe allergy to a vaccine component, not any adverse effect.
   The last three are NOT yet applied to the rows the derivation grades `wider` through
   CDC's broad SNOMED codes (17097001, 128292002, 400047006, 293104008).
+- OpenEvidence 2026-10-20 answered the last five borderline rows:
+  - 066 chronic renal failure needs stage 4-5 or ESRD. I12.9 and N18.9 are 161, not 066.
+  - 076 progressive neurologic disorder: unspecified encephalopathy (G93.40, G93.49) and
+    P91.811 count until shown static; P91.819 (usually hypoxic-ischaemic) does not.
 
 ### ImmDS Server
 

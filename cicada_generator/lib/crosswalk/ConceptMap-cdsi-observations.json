@@ -25077,6 +25077,30 @@
      ]
     },
     {
+     "code": "G93.40",
+     "display": "Encephalopathy, unspecified",
+     "target": [
+      {
+       "code": "076",
+       "display": "Progressive neurologic disorder",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 4 of 14 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-20: progressive course not excluded; the Tdap/DTaP precaution holds until the condition is documented static or resolved (Liang 2018 MMWR RR 67(2)))"
+      }
+     ]
+    },
+    {
+     "code": "G93.49",
+     "display": "Other encephalopathy",
+     "target": [
+      {
+       "code": "076",
+       "display": "Progressive neurologic disorder",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 40 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-20: progressive course not excluded; the Tdap/DTaP precaution holds until the condition is documented static or resolved (Liang 2018 MMWR RR 67(2)))"
+      }
+     ]
+    },
+    {
      "code": "G96.00",
      "display": "Cerebrospinal fluid leak, unspecified",
      "target": [
@@ -45411,8 +45435,8 @@
       {
        "code": "076",
        "display": "Progressive neurologic disorder",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 3 of 4 SNOMED concepts mapped here are this observation. awaiting review"
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 3 of 4 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-20: the underlying disease, such as a metabolic disorder, may be progressive; unlike P91.819 hypoxic-ischaemic encephalopathy, which leaves a static injury)"
       }
      ]
     },

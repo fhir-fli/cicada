@@ -6405,6 +6405,14 @@
             "display": "Carotid sinus syncope"
           },
           {
+            "code": "G93.40",
+            "display": "Encephalopathy, unspecified"
+          },
+          {
+            "code": "G93.49",
+            "display": "Other encephalopathy"
+          },
+          {
             "code": "G96.00",
             "display": "Cerebrospinal fluid leak, unspecified"
           },
@@ -12427,6 +12435,10 @@
           {
             "code": "P91.0",
             "display": "Neonatal cerebral ischemia"
+          },
+          {
+            "code": "P91.811",
+            "display": "Neonatal encephalopathy in diseases classified elsewhere"
           },
           {
             "code": "P91.829",

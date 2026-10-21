@@ -501,7 +501,7 @@
     "fshType": "ValueSet",
     "fshFile": "vs_vaccine_condition_codes_icd10.fsh",
     "startLine": 4,
-    "endLine": 4113
+    "endLine": 4116
   },
   {
     "outputFile": "ValueSet-vaccine-condition-codes-snomed.json",

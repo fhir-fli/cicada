@@ -5907,6 +5907,12 @@ observationConceptMap = {
       ObservationMapTarget('206', 'wider'),
       ObservationMapTarget('254', 'wider'),
     ],
+    'G93.40': [
+      ObservationMapTarget('076', 'wider'),
+    ],
+    'G93.49': [
+      ObservationMapTarget('076', 'wider'),
+    ],
     'G96.00': [
       ObservationMapTarget('010', 'wider'),
     ],
@@ -10802,7 +10808,7 @@ observationConceptMap = {
       ObservationMapTarget('206', 'wider'),
     ],
     'P91.811': [
-      ObservationMapTarget('076', 'narrower'),
+      ObservationMapTarget('076', 'wider'),
     ],
     'P91.829': [
       ObservationMapTarget('206', 'wider'),

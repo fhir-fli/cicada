@@ -138,6 +138,25 @@ void main() {
       expect(_codes(_icd10, 'T50.Z95A'), isEmpty);
     });
 
+    // OpenEvidence 2026-10-20: ACIP's chronic renal failure is stage 4-5
+    // or ESRD; an unstaged CKD code is chronic kidney disease only.
+    test('unstaged CKD is 161, not chronic renal failure', () {
+      for (final code in ['I12.9', 'N18.9']) {
+        final found = _codes(_icd10, code);
+        expect(found, contains('161'), reason: code);
+        expect(found, isNot(contains('066')), reason: code);
+      }
+    });
+
+    // OpenEvidence 2026-10-20: the DTaP/Tdap precaution holds until the
+    // encephalopathy is documented static (Liang 2018, MMWR RR 67(2)).
+    test('unspecified encephalopathy is 076 until shown static', () {
+      for (final code in ['G93.40', 'G93.49', 'P91.811']) {
+        expect(_codes(_icd10, code), contains('076'), reason: code);
+      }
+      expect(_codes(_icd10, 'P91.819'), isNot(contains('076')));
+    });
+
     test('HIV disease is never travel, Ebola work or perinatal HIV', () {
       final found = _codes(_icd10, 'B20');
       for (final wrong in ['026', '142', '183']) {
