@@ -4,6 +4,8 @@
 Rows reached only through a broad CDC code go to OpenEvidence whether or not
 Claude was sure, until OpenEvidence has answered them (Grey, 2026-10-21: "You
 should review them AND open evidence should review them").
+A row whose 'decided by' starts with HELD is waiting on a hand-written policy
+question in the extra-questions file and is not asked again code by code.
 
 Grey pastes each section into OpenEvidence as it stands (2026-10-18: "put them
 all in a single file and I'll ask open evidence"), so nothing in a section
@@ -27,6 +29,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from write_review_sheet import BROAD  # noqa: E402
 
 MAX_CODES = 40
+HELD = 'held for policy question'
 
 
 def fold(rows):
@@ -76,9 +79,10 @@ def main(sheet, out_path, extra_path):
     every = list(csv.DictReader(open(sheet, encoding='utf-8'), delimiter='\t'))
     all_titles = {r['observation']: r['observation title'] for r in every}
     rows = [r for r in every
-            if (r['unsure'].strip() == 'unsure' and not r['decision (yes/no)'].strip())
-            or (r['why it is here'].startswith(BROAD)
-                and not r['decided by'].startswith('OpenEvidence'))]
+            if not r['decided by'].startswith(HELD)
+            and ((r['unsure'].strip() == 'unsure' and not r['decision (yes/no)'].strip())
+                 or (r['why it is here'].startswith(BROAD)
+                     and not r['decided by'].startswith('OpenEvidence')))]
     for r in rows:
         r['why proposed'] = self_contained(r['why proposed'], all_titles)
     by_obs = defaultdict(list)

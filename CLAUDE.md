@@ -198,6 +198,20 @@ test cases send CDSi observation codes directly and never reach this path**;
   - 066 chronic renal failure needs stage 4-5 or ESRD. I12.9 and N18.9 are 161, not 066.
   - 076 progressive neurologic disorder: unspecified encephalopathy (G93.40, G93.49) and
     P91.811 count until shown static; P91.819 (usually hypoxic-ischaemic) does not.
+- OpenEvidence 2026-10-21 answered all 1,997 broad-code rows (applied by
+  scratch/oe_apply/apply_broad_2026_10_21.py; each row's "decided by" holds the reason).
+  It agreed with Claude on all but 265:
+  - 016: I21.A9 (types 4-5 follow revascularization) and I51.2 are yes.
+  - 254: A52.04/A52.05 (cerebrovascular, reach 206), Q21.12 PFO, Q25.46-48 arch variants,
+    Q93.82 Williams are no.
+  - 258 is non-malignant chronic blood disease only. Every C code, D45, D46.x, D47.4,
+    D47.Z1/Z2/Z9 (neoplasms; they still reach 178/180/181/198) and D50.1 are no.
+  - 102 chronic arterial and aortic rows under 254 (I70-I72, I75, I77, I79.1, E08.51,
+    E13.59, A52.02, M31.4/5, Q25.4x, Q25.72, Q27.1/2, Q87.410, T82.390) were answered
+    yes in one section and no in another (that one used the pneumococcal "chronic heart
+    disease" wording; 254 is RSV only). They are held, decided by "held for policy
+    question", and assert nothing until the question in
+    cicada_generator/lib/crosswalk/oe_policy_questions.md is answered.
 
 ### ImmDS Server
 

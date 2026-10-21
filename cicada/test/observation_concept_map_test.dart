@@ -147,7 +147,7 @@ void main() {
     group('a broad CDC code alone asserts nothing', () {
       const cases = <String, ({String no, String yes})>{
         '017': (no: 'J32.8', yes: 'J42'), // chronic sinusitis; bronchitis
-        '254': (no: 'S65.009A', yes: 'I70.0'), // artery injury; aortic ASCVD
+        '254': (no: 'S65.009A', yes: 'Q21.3'), // artery injury; tetralogy
         '258': (no: 'L03.021', yes: 'D61.3'), // lymphangitis; aplastic anemia
         '016': (no: 'M48.9', yes: 'I42.9'), // spondylopathy; cardiomyopathy
         '269': (no: 'T86.8401', yes: 'T86.11'), // corneal; kidney transplant
@@ -170,10 +170,49 @@ void main() {
         expect(_codes(_icd10, 'D81.30'), isNot(contains('013')));
       });
 
-      // Undecided rows (Claude unsure, OpenEvidence not yet asked) assert
-      // nothing.
-      test('an undecided row asserts nothing', () {
+      // OpenEvidence 2026-10-21: other psychoactive substance does not
+      // establish an illegal drug.
+      test('other psychoactive substance use is not illicit drug use', () {
         expect(_codes(_icd10, 'F19.939'), isNot(contains('040')));
+      });
+
+      // OpenEvidence 2026-10-21 counted chronic arterial disease under 254
+      // in one answer and ruled it out in another. The rows are held for a
+      // policy question and assert nothing until it is answered.
+      test('a held row asserts nothing', () {
+        expect(_codes(_icd10, 'I70.0'), isNot(contains('254')));
+      });
+    });
+
+    // OpenEvidence 2026-10-21 rulings on the broad-code rows that differ
+    // from Claude's tentative answers.
+    group('OpenEvidence 2026-10-21', () {
+      // Types 4a-c and 5 follow coronary revascularization (Thygesen 2018).
+      test('other myocardial infarction type is chronic heart disease', () {
+        expect(_codes(_icd10, 'I21.A9'), contains('016'));
+      });
+
+      test('patent foramen ovale is not chronic cardiovascular disease', () {
+        expect(_codes(_icd10, 'Q21.12'), isNot(contains('254')));
+      });
+
+      // Cerebrovascular disease has its own CDSi condition.
+      test('cerebrovascular syphilis is 206, not 254', () {
+        final found = _codes(_icd10, 'A52.04');
+        expect(found, contains('206'));
+        expect(found, isNot(contains('254')));
+      });
+
+      // ACIP files hematologic malignancy under immunocompromise; the code
+      // still reaches CDC's cancer observations.
+      test('leukemia is not a chronic hematologic disorder', () {
+        final found = _codes(_icd10, 'C91.10');
+        expect(found, isNot(contains('258')));
+        expect(found, containsAll(<String>['178', '198']));
+      });
+
+      test('iron deficiency is not a chronic hematologic disorder', () {
+        expect(_codes(_icd10, 'D50.1'), isNot(contains('258')));
       });
     });
 

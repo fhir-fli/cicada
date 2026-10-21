@@ -61,7 +61,7 @@ ValueSet-preferred-allowed-reason.json                        PreferredAllowedRe
 ValueSet-procedures.json                                      ImmunizationProceduresSnomed       ValueSet    vs_immunization_procedures_snomed.fsh      1 - 17
 ValueSet-series-type-vs.json                                  SeriesTypeVS                       ValueSet    profile_forecast_recommendation.fsh        28 - 33
 ValueSet-target-dose-status-vs.json                           TargetDoseStatusVS                 ValueSet    cicada_response_extensions.fsh             56 - 61
-ValueSet-vaccine-condition-codes-icd10.json                   VaccineConditionCodesIcd10         ValueSet    vs_vaccine_condition_codes_icd10.fsh       4 - 2945
+ValueSet-vaccine-condition-codes-icd10.json                   VaccineConditionCodesIcd10         ValueSet    vs_vaccine_condition_codes_icd10.fsh       4 - 2851
 ValueSet-vaccine-condition-codes-snomed.json                  VaccineConditionCodesSnomed        ValueSet    vs_vaccine_condition_codes_snomed.fsh      1 - 210
 ValueSet-vaccine-gender.json                                  VaccineGenderVS                    ValueSet    cs_vs_vaccine_gender.fsh                   14 - 22
 ValueSet-vaccine-lab-evidence-of-immunity-loinc.json          VaccineLabEvidenceOfImmunityLoinc  ValueSet    vs_vaccine_condition_codes_loinc.fsh       4 - 27
