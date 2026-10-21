@@ -198,8 +198,8 @@ test cases send CDSi observation codes directly and never reach this path**;
   - 066 chronic renal failure needs stage 4-5 or ESRD. I12.9 and N18.9 are 161, not 066.
   - 076 progressive neurologic disorder: unspecified encephalopathy (G93.40, G93.49) and
     P91.811 count until shown static; P91.819 (usually hypoxic-ischaemic) does not.
-- OpenEvidence 2026-10-21 answered all 1,997 broad-code rows (applied by
-  scratch/oe_apply/apply_broad_2026_10_21.py; each row's "decided by" holds the reason).
+- OpenEvidence 2026-10-21 answered all 1,997 broad-code rows (each row's "decided by" in
+  CROSSWALK-REVIEW.tsv holds the reason).
   It agreed with Claude on all but 265:
   - 016: I21.A9 (types 4-5 follow revascularization) and I51.2 are yes.
   - 254: A52.04/A52.05 (cerebrovascular, reach 206), Q21.12 PFO, Q25.46-48 arch variants,
