@@ -1,0 +1,37 @@
+{
+  "resourceType": "Parameters",
+  "parameter": [
+    { "name": "assessmentDate", "valueDate": "2026-01-15" },
+    {
+      "name": "patient",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "example-infant",
+        "gender": "female",
+        "birthDate": "2025-07-01"
+      }
+    },
+    {
+      "name": "immunization",
+      "resource": {
+        "resourceType": "Immunization",
+        "id": "hepb-birth",
+        "status": "completed",
+        "vaccineCode": { "coding": [ { "system": "http://hl7.org/fhir/sid/cvx", "code": "08", "display": "Hep B, adolescent or pediatric" } ] },
+        "patient": { "reference": "Patient/example-infant" },
+        "occurrenceDateTime": "2025-07-01"
+      }
+    },
+    {
+      "name": "immunization",
+      "resource": {
+        "resourceType": "Immunization",
+        "id": "dtap-2mo",
+        "status": "completed",
+        "vaccineCode": { "coding": [ { "system": "http://hl7.org/fhir/sid/cvx", "code": "20", "display": "DTaP" } ] },
+        "patient": { "reference": "Patient/example-infant" },
+        "occurrenceDateTime": "2025-09-01"
+      }
+    }
+  ]
+}
