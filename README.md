@@ -15,7 +15,37 @@ Cicada implements the CDC's [Clinical Decision Support for Immunization (CDSi)](
 - Built-in HTTP server with `$immds-forecast` (CDC) and `$immds-forecast-who` (WHO) endpoints (JSON and XML)
 - 1063/1064 on the CDC healthy suite and 312/337 on the conditions suite; NIST FITS forecasts pass, FITS evaluations do not match (see Test Results)
 
-## Installation
+Cicada is for developers and informaticists who need an immunization
+forecast from FHIR data: an EHR integration, a registry, or an offline app
+(FHIR ANT embeds it). It is a library and a small HTTP server, not an app.
+
+## Try it in two minutes
+
+You need the [Dart SDK](https://dart.dev/get-dart) 3.x and `git`.
+
+```bash
+git clone https://github.com/fhir-fli/cicada.git
+cd cicada/cicada
+dart pub get
+dart run bin/server.dart -p 8080
+```
+
+In a second terminal, from the same `cicada/cicada` directory, forecast for
+the example infant (born 2025-07-01, HepB at birth, DTaP at two months,
+assessed 2026-01-15):
+
+```bash
+curl -s -X POST 'http://localhost:8080/$immds-forecast' \
+  -H 'Content-Type: application/fhir+json' \
+  -d @example/forecast-input.json
+```
+
+The reply is a FHIR `Parameters` resource: one `ImmunizationEvaluation` per
+dose and antigen, and one `ImmunizationRecommendation` with a forecast per
+vaccine group. Swap in `$immds-forecast-who` for the WHO schedule (see the
+warning under "CDC vs WHO Mode").
+
+## Use it as a library
 
 ```yaml
 dependencies:
@@ -25,32 +55,29 @@ dependencies:
       path: cicada
 ```
 
-```bash
-cd cicada && dart pub get
-```
-
-## Quick Start
-
 ```dart
+import 'dart:convert';
+import 'dart:io';
+
 import 'package:cicada/cicada.dart';
-import 'package:fhir_r4/fhir_r4.dart';
 
-// Build a FHIR Parameters resource with patient data
-final parameters = Parameters(parameter: [
-  ParametersParameter(name: FhirString('assessmentDate'),
-      resource: null, /* ... */),
-  ParametersParameter(name: FhirString('patient'),
-      resource: Patient(/* ... */)),
-  ParametersParameter(name: FhirString('immunization'),
-      resource: Immunization(/* ... */)),
-]);
+/// Run from cicada/cicada: dart run example/forecast_example.dart
+void main() {
+  final input = jsonDecode(
+    File('example/forecast-input.json').readAsStringSync(),
+  ) as Map<String, dynamic>;
 
-// Run the CDC forecast (default)
-final result = forecastFromParameters(parameters);
-
-// Run the WHO forecast
-final whoResult = forecastFromParameters(parameters, mode: ForecastMode.who);
+  final cdc = forecastFromMap(input); // CDC schedule (default)
+  final who = forecastFromMap(input, mode: ForecastMode.who);
+  // An example prints its result.
+  // ignore: avoid_print
+  print(jsonEncode(cdc.toJson()));
+  // ignore: avoid_print
+  print(jsonEncode(who.toJson()));
+}
 ```
+
+The same program is `example/forecast_example.dart`.
 
 The input `Parameters` resource contains:
 - A `Patient` resource (demographics: birth date, sex)
