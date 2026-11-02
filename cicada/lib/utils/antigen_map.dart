@@ -4,7 +4,10 @@ Map<String, VaxAntigen> antigenMap(VaxPatient patient) {
   final observations = patient.observations;
 
   final agMap = <String, VaxAntigen>{};
-  for (final data in antigenSupportingData) {
+  // The antigen set comes from the active mode's supporting data. Reading the
+  // CDC list here gave WHO mode the CDC schedule for every antigen (Zoster,
+  // RSV, Meningococcal B, Varicella; no BCG).
+  for (final data in activeAntigenMap.values) {
     if (data.series != null &&
         data.series!.isNotEmpty &&
         data.series!.first.targetDisease != null) {
