@@ -101,6 +101,15 @@ Cicada supports two forecasting modes:
 | Vaccines | DTaP, IPV, MMR, etc. | DTP, OPV+IPV, MR, pentavalent, etc. |
 | Dose timing | 2/4/6 months | 6/10/14 weeks |
 | Spec version | CDSi v4.65-508 | WHO position papers (2025) |
+| Tested against | CDC's 1,401 published cases; NIST FITS forecasts | No external test cases |
+
+**WHO mode is unvalidated.** CDC publishes test cases. We found no WHO
+equivalent (the WHO SMART immunization guide, draft v0.2.0, carries logic but
+no expected forecasts), and cicada's WHO forecasts have not been checked
+against an outside answer. Until
+2026-11-01 WHO mode also used the CDC antigen list, so it returned the U.S.
+schedule (zoster, RSV, MenB, varicella; no BCG). Treat WHO output as a draft
+for review, not a recommendation.
 
 Switch modes at runtime:
 ```dart
