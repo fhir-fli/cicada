@@ -1,4 +1,5 @@
 source	type	path	kind	system	count
+Eu.Dedalus.D4Solutions.COVID-19#1.0.2	Patient	#examples			1
 R4-core-examples	AllergyIntolerance	#examples			7
 R4-core-examples	Condition	#examples			16
 R4-core-examples	Immunization	#examples			5
@@ -22,6 +23,20 @@ ch.fhir.ig.ch-core#6.0.0	Immunization	#examples			3
 ch.fhir.ig.ch-core#6.0.0	MedicationStatement	#examples			1
 ch.fhir.ig.ch-core#6.0.0	Organization	#examples			12
 ch.fhir.ig.ch-core#6.0.0	Patient	#examples			12
+ch.fhir.ig.ch-ips#2.0.0	AllergyIntolerance	#examples			2
+ch.fhir.ig.ch-ips#2.0.0	Condition	#examples			14
+ch.fhir.ig.ch-ips#2.0.0	Immunization	#examples			2
+ch.fhir.ig.ch-ips#2.0.0	MedicationStatement	#examples			12
+ch.fhir.ig.ch-ips#2.0.0	Observation	#examples			6
+ch.fhir.ig.ch-ips#2.0.0	Organization	#examples			4
+ch.fhir.ig.ch-ips#2.0.0	Patient	#examples			4
+ch.fhir.ig.ch-ips#2.0.0	Procedure	#examples			6
+ch.fhir.ig.ch-vacd#6.0.0	AllergyIntolerance	#examples			19
+ch.fhir.ig.ch-vacd#6.0.0	Condition	#examples			87
+ch.fhir.ig.ch-vacd#6.0.0	Immunization	#examples			164
+ch.fhir.ig.ch-vacd#6.0.0	Observation	#examples			8
+ch.fhir.ig.ch-vacd#6.0.0	Organization	#examples			208
+ch.fhir.ig.ch-vacd#6.0.0	Patient	#examples			84
 cicada-condition	Condition	#examples			379
 cicada-condition	Immunization	#examples			512
 cicada-condition	Parameters	#examples			337
@@ -63,6 +78,15 @@ hl7.fhir.be.vaccination#1.1.3	Immunization	#examples			34
 hl7.fhir.be.vaccination#1.1.3	Observation	#examples			3
 hl7.fhir.be.vaccination#1.1.3	Organization	#examples			3
 hl7.fhir.be.vaccination#1.1.3	Parameters	#examples			1
+hl7.fhir.cl.clips#0.4.0	AllergyIntolerance	#examples			2
+hl7.fhir.cl.clips#0.4.0	Condition	#examples			2
+hl7.fhir.cl.clips#0.4.0	Immunization	#examples			1
+hl7.fhir.cl.clips#0.4.0	MedicationStatement	#examples			2
+hl7.fhir.cl.clips#0.4.0	Observation	#examples			7
+hl7.fhir.cl.clips#0.4.0	Organization	#examples			3
+hl7.fhir.cl.clips#0.4.0	Parameters	#examples			1
+hl7.fhir.cl.clips#0.4.0	Patient	#examples			2
+hl7.fhir.cl.clips#0.4.0	Procedure	#examples			1
 hl7.fhir.eu.base#2.0.1	AllergyIntolerance	#examples			1
 hl7.fhir.eu.base#2.0.1	Condition	#examples			1
 hl7.fhir.eu.base#2.0.1	Immunization	#examples			1
@@ -109,10 +133,50 @@ hl7.fhir.uv.ips#2.0.1	Procedure	#examples			3
 hl7.fhir.uv.shc-vaccination#1.0.0	Immunization	#examples			20
 hl7.fhir.uv.shc-vaccination#1.0.0	Observation	#examples			8
 hl7.fhir.uv.shc-vaccination#1.0.0	Patient	#examples			12
+hl7.fhir.uv.smart-health-cards-and-links#1.0.0	Parameters	#examples			2
+ihe.iti.sips#1.0.0	Organization	#examples			1
+ihe.iti.sips#1.0.0	Patient	#examples			1
 nictiz.fhir.nl.r4.immunization#2.0.0	Immunization	#examples			2
 nictiz.fhir.nl.r4.immunization#2.0.0	Organization	#examples			3
 nictiz.fhir.nl.r4.immunization#2.0.0	Patient	#examples			1
 smart.who.int.immunizations#1.0.0	Patient	#examples			2
+vzvz.covid-vaccinations#0.1.3	Immunization	#examples			1
+vzvz.covid-vaccinations#0.1.3	Organization	#examples			1
+vzvz.covid-vaccinations#0.1.3	Patient	#examples			1
+Eu.Dedalus.D4Solutions.COVID-19#1.0.2	Patient	Patient.address.city	str		2
+Eu.Dedalus.D4Solutions.COVID-19#1.0.2	Patient	Patient.address.extension[http://apiframework.dedalus.eu/fhir/StructureDefinition/address-CityCode].url	str		2
+Eu.Dedalus.D4Solutions.COVID-19#1.0.2	Patient	Patient.address.extension[http://apiframework.dedalus.eu/fhir/StructureDefinition/address-CityCode].valueCoding	Coding	urn:oid:2.16.840.1.113883.2.9.4.2.3	2
+Eu.Dedalus.D4Solutions.COVID-19#1.0.2	Patient	Patient.address.extension[http://apiframework.dedalus.eu/fhir/StructureDefinition/address-CityCode].valueCoding.code	str		2
+Eu.Dedalus.D4Solutions.COVID-19#1.0.2	Patient	Patient.address.extension[http://apiframework.dedalus.eu/fhir/StructureDefinition/address-CityCode].valueCoding.system	str		2
+Eu.Dedalus.D4Solutions.COVID-19#1.0.2	Patient	Patient.address.extension[http://apiframework.dedalus.eu/fhir/StructureDefinition/address-Street].url	str		2
+Eu.Dedalus.D4Solutions.COVID-19#1.0.2	Patient	Patient.address.extension[http://apiframework.dedalus.eu/fhir/StructureDefinition/address-Street].valueString	str		2
+Eu.Dedalus.D4Solutions.COVID-19#1.0.2	Patient	Patient.address.extension[http://apiframework.dedalus.eu/fhir/StructureDefinition/address-houseNumber].url	str		2
+Eu.Dedalus.D4Solutions.COVID-19#1.0.2	Patient	Patient.address.extension[http://apiframework.dedalus.eu/fhir/StructureDefinition/address-houseNumber].valueString	str		2
+Eu.Dedalus.D4Solutions.COVID-19#1.0.2	Patient	Patient.address.extension[http://apiframework.dedalus.eu/fhir/StructureDefinition/address-qualifier].url	str		2
+Eu.Dedalus.D4Solutions.COVID-19#1.0.2	Patient	Patient.address.extension[http://apiframework.dedalus.eu/fhir/StructureDefinition/address-qualifier].valueCode	str		2
+Eu.Dedalus.D4Solutions.COVID-19#1.0.2	Patient	Patient.birthDate	str		1
+Eu.Dedalus.D4Solutions.COVID-19#1.0.2	Patient	Patient.gender	str		1
+Eu.Dedalus.D4Solutions.COVID-19#1.0.2	Patient	Patient.id	str		1
+Eu.Dedalus.D4Solutions.COVID-19#1.0.2	Patient	Patient.identifier	Identifier	urn:oid:2.16.840.1.113883.2.9.4.3.2	1
+Eu.Dedalus.D4Solutions.COVID-19#1.0.2	Patient	Patient.identifier.system	str		1
+Eu.Dedalus.D4Solutions.COVID-19#1.0.2	Patient	Patient.identifier.type.coding	Coding	http://hl7.org/fhir/ValueSet/identifier-type	1
+Eu.Dedalus.D4Solutions.COVID-19#1.0.2	Patient	Patient.identifier.type.coding.code	str		1
+Eu.Dedalus.D4Solutions.COVID-19#1.0.2	Patient	Patient.identifier.type.coding.system	str		1
+Eu.Dedalus.D4Solutions.COVID-19#1.0.2	Patient	Patient.identifier.use	str		1
+Eu.Dedalus.D4Solutions.COVID-19#1.0.2	Patient	Patient.identifier.value	str		1
+Eu.Dedalus.D4Solutions.COVID-19#1.0.2	Patient	Patient.meta.lastUpdated	str		1
+Eu.Dedalus.D4Solutions.COVID-19#1.0.2	Patient	Patient.meta.profile	str		1
+Eu.Dedalus.D4Solutions.COVID-19#1.0.2	Patient	Patient.meta.tag	Coding	http://apiframework.dedalus.eu/fhir/CodeSystem/DFourTransaction-ForWorkflow	1
+Eu.Dedalus.D4Solutions.COVID-19#1.0.2	Patient	Patient.meta.tag	Coding	http://apiframework.dedalus.eu/tag/createdBy	1
+Eu.Dedalus.D4Solutions.COVID-19#1.0.2	Patient	Patient.meta.tag	Coding	http://apiframework.dedalus.eu/tag/lastUpdatedBy	1
+Eu.Dedalus.D4Solutions.COVID-19#1.0.2	Patient	Patient.meta.tag.code	str		3
+Eu.Dedalus.D4Solutions.COVID-19#1.0.2	Patient	Patient.meta.tag.system	str		3
+Eu.Dedalus.D4Solutions.COVID-19#1.0.2	Patient	Patient.meta.versionId	str		1
+Eu.Dedalus.D4Solutions.COVID-19#1.0.2	Patient	Patient.resourceType	str		1
+Eu.Dedalus.D4Solutions.COVID-19#1.0.2	Patient	Patient.telecom	Identifier	phone	1
+Eu.Dedalus.D4Solutions.COVID-19#1.0.2	Patient	Patient.telecom.system	str		1
+Eu.Dedalus.D4Solutions.COVID-19#1.0.2	Patient	Patient.telecom.use	str		1
+Eu.Dedalus.D4Solutions.COVID-19#1.0.2	Patient	Patient.telecom.value	str		1
 R4-core-examples	AllergyIntolerance	AllergyIntolerance.asserter	Reference:literal		1
 R4-core-examples	AllergyIntolerance	AllergyIntolerance.asserter.reference	str		1
 R4-core-examples	AllergyIntolerance	AllergyIntolerance.category	str		3
@@ -1610,6 +1674,497 @@ ch.fhir.ig.ch-core#6.0.0	Patient	Patient.telecom._use.extension[http://fhir.ch/i
 ch.fhir.ig.ch-core#6.0.0	Patient	Patient.telecom.system	str		24
 ch.fhir.ig.ch-core#6.0.0	Patient	Patient.telecom.use	str		20
 ch.fhir.ig.ch-core#6.0.0	Patient	Patient.telecom.value	str		24
+ch.fhir.ig.ch-ips#2.0.0	AllergyIntolerance	AllergyIntolerance.clinicalStatus.coding	Coding	http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical	2
+ch.fhir.ig.ch-ips#2.0.0	AllergyIntolerance	AllergyIntolerance.clinicalStatus.coding.code	str		2
+ch.fhir.ig.ch-ips#2.0.0	AllergyIntolerance	AllergyIntolerance.clinicalStatus.coding.display	str		2
+ch.fhir.ig.ch-ips#2.0.0	AllergyIntolerance	AllergyIntolerance.clinicalStatus.coding.system	str		2
+ch.fhir.ig.ch-ips#2.0.0	AllergyIntolerance	AllergyIntolerance.code.coding	Coding	http://snomed.info/sct	2
+ch.fhir.ig.ch-ips#2.0.0	AllergyIntolerance	AllergyIntolerance.code.coding.code	str		2
+ch.fhir.ig.ch-ips#2.0.0	AllergyIntolerance	AllergyIntolerance.code.coding.display	str		2
+ch.fhir.ig.ch-ips#2.0.0	AllergyIntolerance	AllergyIntolerance.code.coding.system	str		2
+ch.fhir.ig.ch-ips#2.0.0	AllergyIntolerance	AllergyIntolerance.id	str		2
+ch.fhir.ig.ch-ips#2.0.0	AllergyIntolerance	AllergyIntolerance.meta.profile	str		2
+ch.fhir.ig.ch-ips#2.0.0	AllergyIntolerance	AllergyIntolerance.patient	Reference:urn		2
+ch.fhir.ig.ch-ips#2.0.0	AllergyIntolerance	AllergyIntolerance.patient.display	str		2
+ch.fhir.ig.ch-ips#2.0.0	AllergyIntolerance	AllergyIntolerance.patient.reference	str		2
+ch.fhir.ig.ch-ips#2.0.0	AllergyIntolerance	AllergyIntolerance.patient.type	str		2
+ch.fhir.ig.ch-ips#2.0.0	AllergyIntolerance	AllergyIntolerance.recordedDate	str		2
+ch.fhir.ig.ch-ips#2.0.0	AllergyIntolerance	AllergyIntolerance.recorder	Reference:urn		2
+ch.fhir.ig.ch-ips#2.0.0	AllergyIntolerance	AllergyIntolerance.recorder.display	str		2
+ch.fhir.ig.ch-ips#2.0.0	AllergyIntolerance	AllergyIntolerance.recorder.reference	str		2
+ch.fhir.ig.ch-ips#2.0.0	AllergyIntolerance	AllergyIntolerance.recorder.type	str		2
+ch.fhir.ig.ch-ips#2.0.0	AllergyIntolerance	AllergyIntolerance.resourceType	str		2
+ch.fhir.ig.ch-ips#2.0.0	AllergyIntolerance	AllergyIntolerance.verificationStatus.coding	Coding	http://terminology.hl7.org/CodeSystem/allergyintolerance-verification	2
+ch.fhir.ig.ch-ips#2.0.0	AllergyIntolerance	AllergyIntolerance.verificationStatus.coding.code	str		2
+ch.fhir.ig.ch-ips#2.0.0	AllergyIntolerance	AllergyIntolerance.verificationStatus.coding.display	str		2
+ch.fhir.ig.ch-ips#2.0.0	AllergyIntolerance	AllergyIntolerance.verificationStatus.coding.system	str		2
+ch.fhir.ig.ch-ips#2.0.0	Condition	Condition.asserter	Reference:urn		2
+ch.fhir.ig.ch-ips#2.0.0	Condition	Condition.asserter.display	str		2
+ch.fhir.ig.ch-ips#2.0.0	Condition	Condition.asserter.reference	str		2
+ch.fhir.ig.ch-ips#2.0.0	Condition	Condition.asserter.type	str		2
+ch.fhir.ig.ch-ips#2.0.0	Condition	Condition.category.coding	Coding	http://terminology.hl7.org/CodeSystem/condition-category	14
+ch.fhir.ig.ch-ips#2.0.0	Condition	Condition.category.coding.code	str		14
+ch.fhir.ig.ch-ips#2.0.0	Condition	Condition.category.coding.display	str		14
+ch.fhir.ig.ch-ips#2.0.0	Condition	Condition.category.coding.system	str		14
+ch.fhir.ig.ch-ips#2.0.0	Condition	Condition.clinicalStatus.coding	Coding	http://terminology.hl7.org/CodeSystem/condition-clinical	14
+ch.fhir.ig.ch-ips#2.0.0	Condition	Condition.clinicalStatus.coding.code	str		14
+ch.fhir.ig.ch-ips#2.0.0	Condition	Condition.clinicalStatus.coding.display	str		14
+ch.fhir.ig.ch-ips#2.0.0	Condition	Condition.clinicalStatus.coding.system	str		14
+ch.fhir.ig.ch-ips#2.0.0	Condition	Condition.code.coding	Coding	http://snomed.info/sct	14
+ch.fhir.ig.ch-ips#2.0.0	Condition	Condition.code.coding.code	str		14
+ch.fhir.ig.ch-ips#2.0.0	Condition	Condition.code.coding.display	str		14
+ch.fhir.ig.ch-ips#2.0.0	Condition	Condition.code.coding.system	str		14
+ch.fhir.ig.ch-ips#2.0.0	Condition	Condition.id	str		14
+ch.fhir.ig.ch-ips#2.0.0	Condition	Condition.meta.profile	str		14
+ch.fhir.ig.ch-ips#2.0.0	Condition	Condition.onsetDateTime	str		2
+ch.fhir.ig.ch-ips#2.0.0	Condition	Condition.recordedDate	str		2
+ch.fhir.ig.ch-ips#2.0.0	Condition	Condition.recorder	Reference:urn		2
+ch.fhir.ig.ch-ips#2.0.0	Condition	Condition.recorder.display	str		2
+ch.fhir.ig.ch-ips#2.0.0	Condition	Condition.recorder.reference	str		2
+ch.fhir.ig.ch-ips#2.0.0	Condition	Condition.recorder.type	str		2
+ch.fhir.ig.ch-ips#2.0.0	Condition	Condition.resourceType	str		14
+ch.fhir.ig.ch-ips#2.0.0	Condition	Condition.severity.coding	Coding	http://snomed.info/sct	14
+ch.fhir.ig.ch-ips#2.0.0	Condition	Condition.severity.coding.code	str		14
+ch.fhir.ig.ch-ips#2.0.0	Condition	Condition.severity.coding.display	str		14
+ch.fhir.ig.ch-ips#2.0.0	Condition	Condition.severity.coding.system	str		14
+ch.fhir.ig.ch-ips#2.0.0	Condition	Condition.subject	Reference:literal		6
+ch.fhir.ig.ch-ips#2.0.0	Condition	Condition.subject	Reference:urn		8
+ch.fhir.ig.ch-ips#2.0.0	Condition	Condition.subject.display	str		8
+ch.fhir.ig.ch-ips#2.0.0	Condition	Condition.subject.reference	str		14
+ch.fhir.ig.ch-ips#2.0.0	Condition	Condition.subject.type	str		8
+ch.fhir.ig.ch-ips#2.0.0	Condition	Condition.verificationStatus.coding	Coding	http://terminology.hl7.org/CodeSystem/condition-ver-status	14
+ch.fhir.ig.ch-ips#2.0.0	Condition	Condition.verificationStatus.coding.code	str		14
+ch.fhir.ig.ch-ips#2.0.0	Condition	Condition.verificationStatus.coding.display	str		14
+ch.fhir.ig.ch-ips#2.0.0	Condition	Condition.verificationStatus.coding.system	str		14
+ch.fhir.ig.ch-ips#2.0.0	Immunization	Immunization.id	str		2
+ch.fhir.ig.ch-ips#2.0.0	Immunization	Immunization.lotNumber	str		2
+ch.fhir.ig.ch-ips#2.0.0	Immunization	Immunization.meta.profile	str		2
+ch.fhir.ig.ch-ips#2.0.0	Immunization	Immunization.occurrenceDateTime	str		2
+ch.fhir.ig.ch-ips#2.0.0	Immunization	Immunization.patient	Reference:urn		2
+ch.fhir.ig.ch-ips#2.0.0	Immunization	Immunization.patient.display	str		2
+ch.fhir.ig.ch-ips#2.0.0	Immunization	Immunization.patient.reference	str		2
+ch.fhir.ig.ch-ips#2.0.0	Immunization	Immunization.patient.type	str		2
+ch.fhir.ig.ch-ips#2.0.0	Immunization	Immunization.protocolApplied.doseNumberPositiveInt	int		2
+ch.fhir.ig.ch-ips#2.0.0	Immunization	Immunization.protocolApplied.targetDisease.coding	Coding	http://snomed.info/sct	6
+ch.fhir.ig.ch-ips#2.0.0	Immunization	Immunization.protocolApplied.targetDisease.coding.code	str		6
+ch.fhir.ig.ch-ips#2.0.0	Immunization	Immunization.protocolApplied.targetDisease.coding.display	str		6
+ch.fhir.ig.ch-ips#2.0.0	Immunization	Immunization.protocolApplied.targetDisease.coding.system	str		6
+ch.fhir.ig.ch-ips#2.0.0	Immunization	Immunization.recorded	str		2
+ch.fhir.ig.ch-ips#2.0.0	Immunization	Immunization.resourceType	str		2
+ch.fhir.ig.ch-ips#2.0.0	Immunization	Immunization.route.coding	Coding	urn:oid:0.4.0.127.0.16.1.1.2.1	2
+ch.fhir.ig.ch-ips#2.0.0	Immunization	Immunization.route.coding.code	str		2
+ch.fhir.ig.ch-ips#2.0.0	Immunization	Immunization.route.coding.display	str		2
+ch.fhir.ig.ch-ips#2.0.0	Immunization	Immunization.route.coding.system	str		2
+ch.fhir.ig.ch-ips#2.0.0	Immunization	Immunization.status	str		2
+ch.fhir.ig.ch-ips#2.0.0	Immunization	Immunization.vaccineCode.coding	Coding	http://fhir.ch/ig/ch-vacd/CodeSystem/ch-vacd-swissmedic-cs	2
+ch.fhir.ig.ch-ips#2.0.0	Immunization	Immunization.vaccineCode.coding	Coding	http://snomed.info/sct	2
+ch.fhir.ig.ch-ips#2.0.0	Immunization	Immunization.vaccineCode.coding.code	str		4
+ch.fhir.ig.ch-ips#2.0.0	Immunization	Immunization.vaccineCode.coding.display	str		4
+ch.fhir.ig.ch-ips#2.0.0	Immunization	Immunization.vaccineCode.coding.system	str		4
+ch.fhir.ig.ch-ips#2.0.0	MedicationStatement	MedicationStatement.contained	resource:Medication		12
+ch.fhir.ig.ch-ips#2.0.0	MedicationStatement	MedicationStatement.contained(Medication).amount.denominator	Coding	http://snomed.info/sct	12
+ch.fhir.ig.ch-ips#2.0.0	MedicationStatement	MedicationStatement.contained(Medication).amount.denominator.code	str		12
+ch.fhir.ig.ch-ips#2.0.0	MedicationStatement	MedicationStatement.contained(Medication).amount.denominator.system	str		12
+ch.fhir.ig.ch-ips#2.0.0	MedicationStatement	MedicationStatement.contained(Medication).amount.denominator.unit	str		12
+ch.fhir.ig.ch-ips#2.0.0	MedicationStatement	MedicationStatement.contained(Medication).amount.denominator.value	int		12
+ch.fhir.ig.ch-ips#2.0.0	MedicationStatement	MedicationStatement.contained(Medication).amount.numerator	Coding	http://snomed.info/sct	12
+ch.fhir.ig.ch-ips#2.0.0	MedicationStatement	MedicationStatement.contained(Medication).amount.numerator.code	str		12
+ch.fhir.ig.ch-ips#2.0.0	MedicationStatement	MedicationStatement.contained(Medication).amount.numerator.system	str		12
+ch.fhir.ig.ch-ips#2.0.0	MedicationStatement	MedicationStatement.contained(Medication).amount.numerator.unit	str		12
+ch.fhir.ig.ch-ips#2.0.0	MedicationStatement	MedicationStatement.contained(Medication).amount.numerator.value	int		12
+ch.fhir.ig.ch-ips#2.0.0	MedicationStatement	MedicationStatement.contained(Medication).code.coding	Coding	urn:oid:2.51.1.1	12
+ch.fhir.ig.ch-ips#2.0.0	MedicationStatement	MedicationStatement.contained(Medication).code.coding.code	str		12
+ch.fhir.ig.ch-ips#2.0.0	MedicationStatement	MedicationStatement.contained(Medication).code.coding.display	str		12
+ch.fhir.ig.ch-ips#2.0.0	MedicationStatement	MedicationStatement.contained(Medication).code.coding.system	str		12
+ch.fhir.ig.ch-ips#2.0.0	MedicationStatement	MedicationStatement.contained(Medication).code.text	str		12
+ch.fhir.ig.ch-ips#2.0.0	MedicationStatement	MedicationStatement.contained(Medication).form.coding	Coding	urn:oid:0.4.0.127.0.16.1.1.2.1	12
+ch.fhir.ig.ch-ips#2.0.0	MedicationStatement	MedicationStatement.contained(Medication).form.coding.code	str		12
+ch.fhir.ig.ch-ips#2.0.0	MedicationStatement	MedicationStatement.contained(Medication).form.coding.display	str		12
+ch.fhir.ig.ch-ips#2.0.0	MedicationStatement	MedicationStatement.contained(Medication).form.coding.system	str		12
+ch.fhir.ig.ch-ips#2.0.0	MedicationStatement	MedicationStatement.contained(Medication).form.text	str		12
+ch.fhir.ig.ch-ips#2.0.0	MedicationStatement	MedicationStatement.contained(Medication).id	str		12
+ch.fhir.ig.ch-ips#2.0.0	MedicationStatement	MedicationStatement.contained(Medication).ingredient.itemCodeableConcept.coding	Coding	http://snomed.info/sct	4
+ch.fhir.ig.ch-ips#2.0.0	MedicationStatement	MedicationStatement.contained(Medication).ingredient.itemCodeableConcept.coding.code	str		4
+ch.fhir.ig.ch-ips#2.0.0	MedicationStatement	MedicationStatement.contained(Medication).ingredient.itemCodeableConcept.coding.display	str		4
+ch.fhir.ig.ch-ips#2.0.0	MedicationStatement	MedicationStatement.contained(Medication).ingredient.itemCodeableConcept.coding.system	str		4
+ch.fhir.ig.ch-ips#2.0.0	MedicationStatement	MedicationStatement.contained(Medication).ingredient.itemCodeableConcept.text	str		4
+ch.fhir.ig.ch-ips#2.0.0	MedicationStatement	MedicationStatement.contained(Medication).ingredient.strength.denominator	Coding	http://snomed.info/sct	4
+ch.fhir.ig.ch-ips#2.0.0	MedicationStatement	MedicationStatement.contained(Medication).ingredient.strength.denominator.code	str		4
+ch.fhir.ig.ch-ips#2.0.0	MedicationStatement	MedicationStatement.contained(Medication).ingredient.strength.denominator.system	str		4
+ch.fhir.ig.ch-ips#2.0.0	MedicationStatement	MedicationStatement.contained(Medication).ingredient.strength.denominator.unit	str		4
+ch.fhir.ig.ch-ips#2.0.0	MedicationStatement	MedicationStatement.contained(Medication).ingredient.strength.denominator.value	int		4
+ch.fhir.ig.ch-ips#2.0.0	MedicationStatement	MedicationStatement.contained(Medication).ingredient.strength.numerator	Coding	http://unitsofmeasure.org	4
+ch.fhir.ig.ch-ips#2.0.0	MedicationStatement	MedicationStatement.contained(Medication).ingredient.strength.numerator.code	str		4
+ch.fhir.ig.ch-ips#2.0.0	MedicationStatement	MedicationStatement.contained(Medication).ingredient.strength.numerator.system	str		4
+ch.fhir.ig.ch-ips#2.0.0	MedicationStatement	MedicationStatement.contained(Medication).ingredient.strength.numerator.unit	str		4
+ch.fhir.ig.ch-ips#2.0.0	MedicationStatement	MedicationStatement.contained(Medication).ingredient.strength.numerator.value	int		4
+ch.fhir.ig.ch-ips#2.0.0	MedicationStatement	MedicationStatement.contained(Medication).meta.profile	str		12
+ch.fhir.ig.ch-ips#2.0.0	MedicationStatement	MedicationStatement.contained(Medication).resourceType	str		12
+ch.fhir.ig.ch-ips#2.0.0	MedicationStatement	MedicationStatement.dosage.doseAndRate.doseQuantity	Coding	http://snomed.info/sct	14
+ch.fhir.ig.ch-ips#2.0.0	MedicationStatement	MedicationStatement.dosage.doseAndRate.doseQuantity.code	str		14
+ch.fhir.ig.ch-ips#2.0.0	MedicationStatement	MedicationStatement.dosage.doseAndRate.doseQuantity.system	str		14
+ch.fhir.ig.ch-ips#2.0.0	MedicationStatement	MedicationStatement.dosage.doseAndRate.doseQuantity.unit	str		14
+ch.fhir.ig.ch-ips#2.0.0	MedicationStatement	MedicationStatement.dosage.doseAndRate.doseQuantity.value	float		2
+ch.fhir.ig.ch-ips#2.0.0	MedicationStatement	MedicationStatement.dosage.doseAndRate.doseQuantity.value	int		12
+ch.fhir.ig.ch-ips#2.0.0	MedicationStatement	MedicationStatement.dosage.patientInstruction	str		12
+ch.fhir.ig.ch-ips#2.0.0	MedicationStatement	MedicationStatement.dosage.route.coding	Coding	urn:oid:0.4.0.127.0.16.1.1.2.1	12
+ch.fhir.ig.ch-ips#2.0.0	MedicationStatement	MedicationStatement.dosage.route.coding.code	str		12
+ch.fhir.ig.ch-ips#2.0.0	MedicationStatement	MedicationStatement.dosage.route.coding.display	str		12
+ch.fhir.ig.ch-ips#2.0.0	MedicationStatement	MedicationStatement.dosage.route.coding.system	str		12
+ch.fhir.ig.ch-ips#2.0.0	MedicationStatement	MedicationStatement.dosage.route.text	str		12
+ch.fhir.ig.ch-ips#2.0.0	MedicationStatement	MedicationStatement.dosage.sequence	int		4
+ch.fhir.ig.ch-ips#2.0.0	MedicationStatement	MedicationStatement.dosage.timing.repeat.boundsPeriod.start	str		12
+ch.fhir.ig.ch-ips#2.0.0	MedicationStatement	MedicationStatement.dosage.timing.repeat.when	str		18
+ch.fhir.ig.ch-ips#2.0.0	MedicationStatement	MedicationStatement.effectivePeriod.start	str		12
+ch.fhir.ig.ch-ips#2.0.0	MedicationStatement	MedicationStatement.id	str		12
+ch.fhir.ig.ch-ips#2.0.0	MedicationStatement	MedicationStatement.medicationReference	Reference:contained		12
+ch.fhir.ig.ch-ips#2.0.0	MedicationStatement	MedicationStatement.medicationReference.reference	str		12
+ch.fhir.ig.ch-ips#2.0.0	MedicationStatement	MedicationStatement.meta.profile	str		12
+ch.fhir.ig.ch-ips#2.0.0	MedicationStatement	MedicationStatement.reasonCode.text	str		12
+ch.fhir.ig.ch-ips#2.0.0	MedicationStatement	MedicationStatement.resourceType	str		12
+ch.fhir.ig.ch-ips#2.0.0	MedicationStatement	MedicationStatement.status	str		12
+ch.fhir.ig.ch-ips#2.0.0	MedicationStatement	MedicationStatement.subject	Reference:literal		4
+ch.fhir.ig.ch-ips#2.0.0	MedicationStatement	MedicationStatement.subject	Reference:urn		8
+ch.fhir.ig.ch-ips#2.0.0	MedicationStatement	MedicationStatement.subject.display	str		8
+ch.fhir.ig.ch-ips#2.0.0	MedicationStatement	MedicationStatement.subject.reference	str		12
+ch.fhir.ig.ch-ips#2.0.0	MedicationStatement	MedicationStatement.subject.type	str		8
+ch.fhir.ig.ch-ips#2.0.0	Observation	Observation.category.coding	Coding	http://terminology.hl7.org/CodeSystem/observation-category	4
+ch.fhir.ig.ch-ips#2.0.0	Observation	Observation.category.coding.code	str		4
+ch.fhir.ig.ch-ips#2.0.0	Observation	Observation.category.coding.display	str		4
+ch.fhir.ig.ch-ips#2.0.0	Observation	Observation.category.coding.system	str		4
+ch.fhir.ig.ch-ips#2.0.0	Observation	Observation.code.coding	Coding	http://loinc.org	6
+ch.fhir.ig.ch-ips#2.0.0	Observation	Observation.code.coding.code	str		6
+ch.fhir.ig.ch-ips#2.0.0	Observation	Observation.code.coding.display	str		6
+ch.fhir.ig.ch-ips#2.0.0	Observation	Observation.code.coding.system	str		6
+ch.fhir.ig.ch-ips#2.0.0	Observation	Observation.effectiveDateTime	str		6
+ch.fhir.ig.ch-ips#2.0.0	Observation	Observation.id	str		6
+ch.fhir.ig.ch-ips#2.0.0	Observation	Observation.meta.profile	str		6
+ch.fhir.ig.ch-ips#2.0.0	Observation	Observation.performer	Reference:urn		6
+ch.fhir.ig.ch-ips#2.0.0	Observation	Observation.performer.display	str		6
+ch.fhir.ig.ch-ips#2.0.0	Observation	Observation.performer.reference	str		6
+ch.fhir.ig.ch-ips#2.0.0	Observation	Observation.performer.type	str		6
+ch.fhir.ig.ch-ips#2.0.0	Observation	Observation.resourceType	str		6
+ch.fhir.ig.ch-ips#2.0.0	Observation	Observation.status	str		6
+ch.fhir.ig.ch-ips#2.0.0	Observation	Observation.subject	Reference:urn		6
+ch.fhir.ig.ch-ips#2.0.0	Observation	Observation.subject.display	str		6
+ch.fhir.ig.ch-ips#2.0.0	Observation	Observation.subject.reference	str		6
+ch.fhir.ig.ch-ips#2.0.0	Observation	Observation.subject.type	str		6
+ch.fhir.ig.ch-ips#2.0.0	Observation	Observation.valueCodeableConcept.coding	Coding	http://loinc.org	2
+ch.fhir.ig.ch-ips#2.0.0	Observation	Observation.valueCodeableConcept.coding.code	str		2
+ch.fhir.ig.ch-ips#2.0.0	Observation	Observation.valueCodeableConcept.coding.display	str		2
+ch.fhir.ig.ch-ips#2.0.0	Observation	Observation.valueCodeableConcept.coding.system	str		2
+ch.fhir.ig.ch-ips#2.0.0	Observation	Observation.valueQuantity	Coding	http://unitsofmeasure.org	4
+ch.fhir.ig.ch-ips#2.0.0	Observation	Observation.valueQuantity.code	str		4
+ch.fhir.ig.ch-ips#2.0.0	Observation	Observation.valueQuantity.system	str		4
+ch.fhir.ig.ch-ips#2.0.0	Observation	Observation.valueQuantity.unit	str		4
+ch.fhir.ig.ch-ips#2.0.0	Observation	Observation.valueQuantity.value	int		4
+ch.fhir.ig.ch-ips#2.0.0	Organization	Organization.address.city	str		4
+ch.fhir.ig.ch-ips#2.0.0	Organization	Organization.address.country	str		4
+ch.fhir.ig.ch-ips#2.0.0	Organization	Organization.address.line	str		4
+ch.fhir.ig.ch-ips#2.0.0	Organization	Organization.address.postalCode	str		4
+ch.fhir.ig.ch-ips#2.0.0	Organization	Organization.id	str		4
+ch.fhir.ig.ch-ips#2.0.0	Organization	Organization.identifier	Identifier	urn:oid:2.51.1.3	4
+ch.fhir.ig.ch-ips#2.0.0	Organization	Organization.identifier.system	str		4
+ch.fhir.ig.ch-ips#2.0.0	Organization	Organization.identifier.value	str		4
+ch.fhir.ig.ch-ips#2.0.0	Organization	Organization.meta.profile	str		4
+ch.fhir.ig.ch-ips#2.0.0	Organization	Organization.name	str		4
+ch.fhir.ig.ch-ips#2.0.0	Organization	Organization.resourceType	str		4
+ch.fhir.ig.ch-ips#2.0.0	Patient	Patient.address.city	str		4
+ch.fhir.ig.ch-ips#2.0.0	Patient	Patient.address.country	str		4
+ch.fhir.ig.ch-ips#2.0.0	Patient	Patient.address.line	str		4
+ch.fhir.ig.ch-ips#2.0.0	Patient	Patient.address.postalCode	str		4
+ch.fhir.ig.ch-ips#2.0.0	Patient	Patient.birthDate	str		4
+ch.fhir.ig.ch-ips#2.0.0	Patient	Patient.gender	str		4
+ch.fhir.ig.ch-ips#2.0.0	Patient	Patient.id	str		4
+ch.fhir.ig.ch-ips#2.0.0	Patient	Patient.identifier	Identifier	http://example.com/fhir/pid	2
+ch.fhir.ig.ch-ips#2.0.0	Patient	Patient.identifier.system	str		2
+ch.fhir.ig.ch-ips#2.0.0	Patient	Patient.identifier.type.coding	Coding	http://terminology.hl7.org/CodeSystem/v2-0203	2
+ch.fhir.ig.ch-ips#2.0.0	Patient	Patient.identifier.type.coding.code	str		2
+ch.fhir.ig.ch-ips#2.0.0	Patient	Patient.identifier.type.coding.display	str		2
+ch.fhir.ig.ch-ips#2.0.0	Patient	Patient.identifier.type.coding.system	str		2
+ch.fhir.ig.ch-ips#2.0.0	Patient	Patient.identifier.value	str		2
+ch.fhir.ig.ch-ips#2.0.0	Patient	Patient.meta.profile	str		4
+ch.fhir.ig.ch-ips#2.0.0	Patient	Patient.name.family	str		4
+ch.fhir.ig.ch-ips#2.0.0	Patient	Patient.name.given	str		4
+ch.fhir.ig.ch-ips#2.0.0	Patient	Patient.resourceType	str		4
+ch.fhir.ig.ch-ips#2.0.0	Procedure	Procedure.asserter	Reference:urn		2
+ch.fhir.ig.ch-ips#2.0.0	Procedure	Procedure.asserter.display	str		2
+ch.fhir.ig.ch-ips#2.0.0	Procedure	Procedure.asserter.reference	str		2
+ch.fhir.ig.ch-ips#2.0.0	Procedure	Procedure.asserter.type	str		2
+ch.fhir.ig.ch-ips#2.0.0	Procedure	Procedure.code.coding	Coding	http://snomed.info/sct	6
+ch.fhir.ig.ch-ips#2.0.0	Procedure	Procedure.code.coding.code	str		6
+ch.fhir.ig.ch-ips#2.0.0	Procedure	Procedure.code.coding.display	str		6
+ch.fhir.ig.ch-ips#2.0.0	Procedure	Procedure.code.coding.system	str		6
+ch.fhir.ig.ch-ips#2.0.0	Procedure	Procedure.id	str		6
+ch.fhir.ig.ch-ips#2.0.0	Procedure	Procedure.meta.profile	str		6
+ch.fhir.ig.ch-ips#2.0.0	Procedure	Procedure.performedDateTime	str		6
+ch.fhir.ig.ch-ips#2.0.0	Procedure	Procedure.performer.actor	Reference:urn		2
+ch.fhir.ig.ch-ips#2.0.0	Procedure	Procedure.performer.actor.display	str		2
+ch.fhir.ig.ch-ips#2.0.0	Procedure	Procedure.performer.actor.reference	str		2
+ch.fhir.ig.ch-ips#2.0.0	Procedure	Procedure.performer.actor.type	str		2
+ch.fhir.ig.ch-ips#2.0.0	Procedure	Procedure.reasonCode.text	str		6
+ch.fhir.ig.ch-ips#2.0.0	Procedure	Procedure.reasonReference	Reference:literal		2
+ch.fhir.ig.ch-ips#2.0.0	Procedure	Procedure.reasonReference	Reference:urn		4
+ch.fhir.ig.ch-ips#2.0.0	Procedure	Procedure.reasonReference.display	str		4
+ch.fhir.ig.ch-ips#2.0.0	Procedure	Procedure.reasonReference.reference	str		6
+ch.fhir.ig.ch-ips#2.0.0	Procedure	Procedure.reasonReference.type	str		4
+ch.fhir.ig.ch-ips#2.0.0	Procedure	Procedure.recorder	Reference:urn		2
+ch.fhir.ig.ch-ips#2.0.0	Procedure	Procedure.recorder.display	str		2
+ch.fhir.ig.ch-ips#2.0.0	Procedure	Procedure.recorder.reference	str		2
+ch.fhir.ig.ch-ips#2.0.0	Procedure	Procedure.recorder.type	str		2
+ch.fhir.ig.ch-ips#2.0.0	Procedure	Procedure.resourceType	str		6
+ch.fhir.ig.ch-ips#2.0.0	Procedure	Procedure.status	str		6
+ch.fhir.ig.ch-ips#2.0.0	Procedure	Procedure.subject	Reference:literal		2
+ch.fhir.ig.ch-ips#2.0.0	Procedure	Procedure.subject	Reference:urn		4
+ch.fhir.ig.ch-ips#2.0.0	Procedure	Procedure.subject.display	str		4
+ch.fhir.ig.ch-ips#2.0.0	Procedure	Procedure.subject.reference	str		6
+ch.fhir.ig.ch-ips#2.0.0	Procedure	Procedure.subject.type	str		4
+ch.fhir.ig.ch-vacd#6.0.0	AllergyIntolerance	AllergyIntolerance.clinicalStatus.coding	Coding	http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical	19
+ch.fhir.ig.ch-vacd#6.0.0	AllergyIntolerance	AllergyIntolerance.clinicalStatus.coding.code	str		19
+ch.fhir.ig.ch-vacd#6.0.0	AllergyIntolerance	AllergyIntolerance.clinicalStatus.coding.system	str		19
+ch.fhir.ig.ch-vacd#6.0.0	AllergyIntolerance	AllergyIntolerance.code.coding	Coding	http://snomed.info/sct	19
+ch.fhir.ig.ch-vacd#6.0.0	AllergyIntolerance	AllergyIntolerance.code.coding.code	str		19
+ch.fhir.ig.ch-vacd#6.0.0	AllergyIntolerance	AllergyIntolerance.code.coding.display	str		19
+ch.fhir.ig.ch-vacd#6.0.0	AllergyIntolerance	AllergyIntolerance.code.coding.system	str		19
+ch.fhir.ig.ch-vacd#6.0.0	AllergyIntolerance	AllergyIntolerance.extension[http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-ext-entry-resource-cross-references].extension[container].url	str		2
+ch.fhir.ig.ch-vacd#6.0.0	AllergyIntolerance	AllergyIntolerance.extension[http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-ext-entry-resource-cross-references].extension[container].valueReference.identifier	Identifier	urn:ietf:rfc:3986	2
+ch.fhir.ig.ch-vacd#6.0.0	AllergyIntolerance	AllergyIntolerance.extension[http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-ext-entry-resource-cross-references].extension[container].valueReference.identifier.system	str		2
+ch.fhir.ig.ch-vacd#6.0.0	AllergyIntolerance	AllergyIntolerance.extension[http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-ext-entry-resource-cross-references].extension[container].valueReference.identifier.value	str		2
+ch.fhir.ig.ch-vacd#6.0.0	AllergyIntolerance	AllergyIntolerance.extension[http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-ext-entry-resource-cross-references].extension[container].valueReference.type	str		2
+ch.fhir.ig.ch-vacd#6.0.0	AllergyIntolerance	AllergyIntolerance.extension[http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-ext-entry-resource-cross-references].extension[entry].url	str		2
+ch.fhir.ig.ch-vacd#6.0.0	AllergyIntolerance	AllergyIntolerance.extension[http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-ext-entry-resource-cross-references].extension[entry].valueReference.identifier	Identifier	urn:oid:2.999.1.2.3.4	2
+ch.fhir.ig.ch-vacd#6.0.0	AllergyIntolerance	AllergyIntolerance.extension[http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-ext-entry-resource-cross-references].extension[entry].valueReference.identifier.system	str		2
+ch.fhir.ig.ch-vacd#6.0.0	AllergyIntolerance	AllergyIntolerance.extension[http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-ext-entry-resource-cross-references].extension[entry].valueReference.identifier.value	str		2
+ch.fhir.ig.ch-vacd#6.0.0	AllergyIntolerance	AllergyIntolerance.extension[http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-ext-entry-resource-cross-references].extension[entry].valueReference.type	str		2
+ch.fhir.ig.ch-vacd#6.0.0	AllergyIntolerance	AllergyIntolerance.extension[http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-ext-entry-resource-cross-references].extension[relationcode].url	str		2
+ch.fhir.ig.ch-vacd#6.0.0	AllergyIntolerance	AllergyIntolerance.extension[http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-ext-entry-resource-cross-references].extension[relationcode].valueCode	str		2
+ch.fhir.ig.ch-vacd#6.0.0	AllergyIntolerance	AllergyIntolerance.extension[http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-ext-entry-resource-cross-references].url	str		2
+ch.fhir.ig.ch-vacd#6.0.0	AllergyIntolerance	AllergyIntolerance.id	str		19
+ch.fhir.ig.ch-vacd#6.0.0	AllergyIntolerance	AllergyIntolerance.identifier	Identifier	urn:ietf:rfc:3986	8
+ch.fhir.ig.ch-vacd#6.0.0	AllergyIntolerance	AllergyIntolerance.identifier	Identifier	urn:oid:2.999.1.2.3.4	11
+ch.fhir.ig.ch-vacd#6.0.0	AllergyIntolerance	AllergyIntolerance.identifier.system	str		19
+ch.fhir.ig.ch-vacd#6.0.0	AllergyIntolerance	AllergyIntolerance.identifier.value	str		19
+ch.fhir.ig.ch-vacd#6.0.0	AllergyIntolerance	AllergyIntolerance.lastOccurrence	str		11
+ch.fhir.ig.ch-vacd#6.0.0	AllergyIntolerance	AllergyIntolerance.meta.profile	str		19
+ch.fhir.ig.ch-vacd#6.0.0	AllergyIntolerance	AllergyIntolerance.note.authorReference	Reference:literal		5
+ch.fhir.ig.ch-vacd#6.0.0	AllergyIntolerance	AllergyIntolerance.note.authorReference.reference	str		5
+ch.fhir.ig.ch-vacd#6.0.0	AllergyIntolerance	AllergyIntolerance.note.text	str		5
+ch.fhir.ig.ch-vacd#6.0.0	AllergyIntolerance	AllergyIntolerance.note.time	str		5
+ch.fhir.ig.ch-vacd#6.0.0	AllergyIntolerance	AllergyIntolerance.onsetDateTime	str		11
+ch.fhir.ig.ch-vacd#6.0.0	AllergyIntolerance	AllergyIntolerance.patient	Reference:literal		19
+ch.fhir.ig.ch-vacd#6.0.0	AllergyIntolerance	AllergyIntolerance.patient.reference	str		19
+ch.fhir.ig.ch-vacd#6.0.0	AllergyIntolerance	AllergyIntolerance.recordedDate	str		19
+ch.fhir.ig.ch-vacd#6.0.0	AllergyIntolerance	AllergyIntolerance.recorder	Reference:literal		19
+ch.fhir.ig.ch-vacd#6.0.0	AllergyIntolerance	AllergyIntolerance.recorder.reference	str		19
+ch.fhir.ig.ch-vacd#6.0.0	AllergyIntolerance	AllergyIntolerance.resourceType	str		19
+ch.fhir.ig.ch-vacd#6.0.0	AllergyIntolerance	AllergyIntolerance.verificationStatus.coding	Coding	http://terminology.hl7.org/CodeSystem/allergyintolerance-verification	19
+ch.fhir.ig.ch-vacd#6.0.0	AllergyIntolerance	AllergyIntolerance.verificationStatus.coding.code	str		19
+ch.fhir.ig.ch-vacd#6.0.0	AllergyIntolerance	AllergyIntolerance.verificationStatus.coding.display	str		8
+ch.fhir.ig.ch-vacd#6.0.0	AllergyIntolerance	AllergyIntolerance.verificationStatus.coding.system	str		19
+ch.fhir.ig.ch-vacd#6.0.0	Condition	Condition.abatementDateTime	str		14
+ch.fhir.ig.ch-vacd#6.0.0	Condition	Condition.category.coding	Coding	http://terminology.hl7.org/CodeSystem/condition-category	51
+ch.fhir.ig.ch-vacd#6.0.0	Condition	Condition.category.coding.code	str		51
+ch.fhir.ig.ch-vacd#6.0.0	Condition	Condition.category.coding.display	str		51
+ch.fhir.ig.ch-vacd#6.0.0	Condition	Condition.category.coding.system	str		51
+ch.fhir.ig.ch-vacd#6.0.0	Condition	Condition.clinicalStatus.coding	Coding	http://terminology.hl7.org/CodeSystem/condition-clinical	86
+ch.fhir.ig.ch-vacd#6.0.0	Condition	Condition.clinicalStatus.coding.code	str		86
+ch.fhir.ig.ch-vacd#6.0.0	Condition	Condition.clinicalStatus.coding.display	str		86
+ch.fhir.ig.ch-vacd#6.0.0	Condition	Condition.clinicalStatus.coding.system	str		86
+ch.fhir.ig.ch-vacd#6.0.0	Condition	Condition.code.coding	Coding	http://snomed.info/sct	87
+ch.fhir.ig.ch-vacd#6.0.0	Condition	Condition.code.coding.code	str		87
+ch.fhir.ig.ch-vacd#6.0.0	Condition	Condition.code.coding.display	str		87
+ch.fhir.ig.ch-vacd#6.0.0	Condition	Condition.code.coding.system	str		87
+ch.fhir.ig.ch-vacd#6.0.0	Condition	Condition.extension[http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-ext-entry-resource-cross-references].extension[container].url	str		10
+ch.fhir.ig.ch-vacd#6.0.0	Condition	Condition.extension[http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-ext-entry-resource-cross-references].extension[container].valueReference.identifier	Identifier	urn:ietf:rfc:3986	10
+ch.fhir.ig.ch-vacd#6.0.0	Condition	Condition.extension[http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-ext-entry-resource-cross-references].extension[container].valueReference.identifier.system	str		10
+ch.fhir.ig.ch-vacd#6.0.0	Condition	Condition.extension[http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-ext-entry-resource-cross-references].extension[container].valueReference.identifier.value	str		10
+ch.fhir.ig.ch-vacd#6.0.0	Condition	Condition.extension[http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-ext-entry-resource-cross-references].extension[container].valueReference.type	str		10
+ch.fhir.ig.ch-vacd#6.0.0	Condition	Condition.extension[http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-ext-entry-resource-cross-references].extension[entry].url	str		10
+ch.fhir.ig.ch-vacd#6.0.0	Condition	Condition.extension[http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-ext-entry-resource-cross-references].extension[entry].valueReference.identifier	Identifier	urn:oid:2.999.1.2.3.4	10
+ch.fhir.ig.ch-vacd#6.0.0	Condition	Condition.extension[http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-ext-entry-resource-cross-references].extension[entry].valueReference.identifier.system	str		10
+ch.fhir.ig.ch-vacd#6.0.0	Condition	Condition.extension[http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-ext-entry-resource-cross-references].extension[entry].valueReference.identifier.value	str		10
+ch.fhir.ig.ch-vacd#6.0.0	Condition	Condition.extension[http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-ext-entry-resource-cross-references].extension[entry].valueReference.type	str		10
+ch.fhir.ig.ch-vacd#6.0.0	Condition	Condition.extension[http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-ext-entry-resource-cross-references].extension[relationcode].url	str		10
+ch.fhir.ig.ch-vacd#6.0.0	Condition	Condition.extension[http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-ext-entry-resource-cross-references].extension[relationcode].valueCode	str		10
+ch.fhir.ig.ch-vacd#6.0.0	Condition	Condition.extension[http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-ext-entry-resource-cross-references].url	str		10
+ch.fhir.ig.ch-vacd#6.0.0	Condition	Condition.extension[http://fhir.ch/ig/ch-vacd/StructureDefinition/ch-vacd-ext-merging-conflict-entry-reference].extension[conflict].url	str		30
+ch.fhir.ig.ch-vacd#6.0.0	Condition	Condition.extension[http://fhir.ch/ig/ch-vacd/StructureDefinition/ch-vacd-ext-merging-conflict-entry-reference].extension[conflict].valueCode	str		30
+ch.fhir.ig.ch-vacd#6.0.0	Condition	Condition.extension[http://fhir.ch/ig/ch-vacd/StructureDefinition/ch-vacd-ext-merging-conflict-entry-reference].extension[entry].url	str		30
+ch.fhir.ig.ch-vacd#6.0.0	Condition	Condition.extension[http://fhir.ch/ig/ch-vacd/StructureDefinition/ch-vacd-ext-merging-conflict-entry-reference].extension[entry].valueReference	Reference:literal		30
+ch.fhir.ig.ch-vacd#6.0.0	Condition	Condition.extension[http://fhir.ch/ig/ch-vacd/StructureDefinition/ch-vacd-ext-merging-conflict-entry-reference].extension[entry].valueReference.reference	str		30
+ch.fhir.ig.ch-vacd#6.0.0	Condition	Condition.extension[http://fhir.ch/ig/ch-vacd/StructureDefinition/ch-vacd-ext-merging-conflict-entry-reference].url	str		30
+ch.fhir.ig.ch-vacd#6.0.0	Condition	Condition.id	str		87
+ch.fhir.ig.ch-vacd#6.0.0	Condition	Condition.identifier	Identifier	urn:ietf:rfc:3986	13
+ch.fhir.ig.ch-vacd#6.0.0	Condition	Condition.identifier	Identifier	urn:oid:2.999.1.2.3.4	74
+ch.fhir.ig.ch-vacd#6.0.0	Condition	Condition.identifier.system	str		87
+ch.fhir.ig.ch-vacd#6.0.0	Condition	Condition.identifier.value	str		87
+ch.fhir.ig.ch-vacd#6.0.0	Condition	Condition.language	str		15
+ch.fhir.ig.ch-vacd#6.0.0	Condition	Condition.meta.profile	str		87
+ch.fhir.ig.ch-vacd#6.0.0	Condition	Condition.note.authorReference	Reference:literal		11
+ch.fhir.ig.ch-vacd#6.0.0	Condition	Condition.note.authorReference.reference	str		11
+ch.fhir.ig.ch-vacd#6.0.0	Condition	Condition.note.text	str		11
+ch.fhir.ig.ch-vacd#6.0.0	Condition	Condition.note.time	str		11
+ch.fhir.ig.ch-vacd#6.0.0	Condition	Condition.onsetDateTime	str		79
+ch.fhir.ig.ch-vacd#6.0.0	Condition	Condition.recordedDate	str		87
+ch.fhir.ig.ch-vacd#6.0.0	Condition	Condition.recorder	Reference:literal		87
+ch.fhir.ig.ch-vacd#6.0.0	Condition	Condition.recorder.reference	str		87
+ch.fhir.ig.ch-vacd#6.0.0	Condition	Condition.resourceType	str		87
+ch.fhir.ig.ch-vacd#6.0.0	Condition	Condition.subject	Reference:literal		87
+ch.fhir.ig.ch-vacd#6.0.0	Condition	Condition.subject.reference	str		87
+ch.fhir.ig.ch-vacd#6.0.0	Condition	Condition.verificationStatus.coding	Coding	http://terminology.hl7.org/CodeSystem/condition-ver-status	87
+ch.fhir.ig.ch-vacd#6.0.0	Condition	Condition.verificationStatus.coding.code	str		87
+ch.fhir.ig.ch-vacd#6.0.0	Condition	Condition.verificationStatus.coding.display	str		87
+ch.fhir.ig.ch-vacd#6.0.0	Condition	Condition.verificationStatus.coding.system	str		87
+ch.fhir.ig.ch-vacd#6.0.0	Immunization	Immunization._occurrenceDateTime.extension[http://hl7.org/fhir/StructureDefinition/data-absent-reason].url	str		1
+ch.fhir.ig.ch-vacd#6.0.0	Immunization	Immunization._occurrenceDateTime.extension[http://hl7.org/fhir/StructureDefinition/data-absent-reason].valueCode	str		1
+ch.fhir.ig.ch-vacd#6.0.0	Immunization	Immunization.extension[http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-ext-entry-resource-cross-references].extension[container].url	str		10
+ch.fhir.ig.ch-vacd#6.0.0	Immunization	Immunization.extension[http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-ext-entry-resource-cross-references].extension[container].valueReference.identifier	Identifier	urn:ietf:rfc:3986	10
+ch.fhir.ig.ch-vacd#6.0.0	Immunization	Immunization.extension[http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-ext-entry-resource-cross-references].extension[container].valueReference.identifier.system	str		10
+ch.fhir.ig.ch-vacd#6.0.0	Immunization	Immunization.extension[http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-ext-entry-resource-cross-references].extension[container].valueReference.identifier.value	str		10
+ch.fhir.ig.ch-vacd#6.0.0	Immunization	Immunization.extension[http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-ext-entry-resource-cross-references].extension[container].valueReference.type	str		10
+ch.fhir.ig.ch-vacd#6.0.0	Immunization	Immunization.extension[http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-ext-entry-resource-cross-references].extension[entry].url	str		10
+ch.fhir.ig.ch-vacd#6.0.0	Immunization	Immunization.extension[http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-ext-entry-resource-cross-references].extension[entry].valueReference.identifier	Identifier	urn:oid:2.999.1.2.3.4	10
+ch.fhir.ig.ch-vacd#6.0.0	Immunization	Immunization.extension[http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-ext-entry-resource-cross-references].extension[entry].valueReference.identifier.system	str		10
+ch.fhir.ig.ch-vacd#6.0.0	Immunization	Immunization.extension[http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-ext-entry-resource-cross-references].extension[entry].valueReference.identifier.value	str		10
+ch.fhir.ig.ch-vacd#6.0.0	Immunization	Immunization.extension[http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-ext-entry-resource-cross-references].extension[entry].valueReference.type	str		10
+ch.fhir.ig.ch-vacd#6.0.0	Immunization	Immunization.extension[http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-ext-entry-resource-cross-references].extension[relationcode].url	str		10
+ch.fhir.ig.ch-vacd#6.0.0	Immunization	Immunization.extension[http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-ext-entry-resource-cross-references].extension[relationcode].valueCode	str		10
+ch.fhir.ig.ch-vacd#6.0.0	Immunization	Immunization.extension[http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-ext-entry-resource-cross-references].url	str		10
+ch.fhir.ig.ch-vacd#6.0.0	Immunization	Immunization.extension[http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-author].url	str		164
+ch.fhir.ig.ch-vacd#6.0.0	Immunization	Immunization.extension[http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-author].valueReference	Reference:literal		164
+ch.fhir.ig.ch-vacd#6.0.0	Immunization	Immunization.extension[http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-author].valueReference.reference	str		164
+ch.fhir.ig.ch-vacd#6.0.0	Immunization	Immunization.extension[http://fhir.ch/ig/ch-vacd/StructureDefinition/ch-vacd-ext-immunization-medication-reference].url	str		130
+ch.fhir.ig.ch-vacd#6.0.0	Immunization	Immunization.extension[http://fhir.ch/ig/ch-vacd/StructureDefinition/ch-vacd-ext-immunization-medication-reference].valueReference	Reference:literal		130
+ch.fhir.ig.ch-vacd#6.0.0	Immunization	Immunization.extension[http://fhir.ch/ig/ch-vacd/StructureDefinition/ch-vacd-ext-immunization-medication-reference].valueReference.reference	str		130
+ch.fhir.ig.ch-vacd#6.0.0	Immunization	Immunization.extension[http://fhir.ch/ig/ch-vacd/StructureDefinition/ch-vacd-ext-merging-conflict-entry-reference].extension[conflict].url	str		10
+ch.fhir.ig.ch-vacd#6.0.0	Immunization	Immunization.extension[http://fhir.ch/ig/ch-vacd/StructureDefinition/ch-vacd-ext-merging-conflict-entry-reference].extension[conflict].valueCode	str		10
+ch.fhir.ig.ch-vacd#6.0.0	Immunization	Immunization.extension[http://fhir.ch/ig/ch-vacd/StructureDefinition/ch-vacd-ext-merging-conflict-entry-reference].extension[entry].url	str		10
+ch.fhir.ig.ch-vacd#6.0.0	Immunization	Immunization.extension[http://fhir.ch/ig/ch-vacd/StructureDefinition/ch-vacd-ext-merging-conflict-entry-reference].extension[entry].valueReference	Reference:literal		10
+ch.fhir.ig.ch-vacd#6.0.0	Immunization	Immunization.extension[http://fhir.ch/ig/ch-vacd/StructureDefinition/ch-vacd-ext-merging-conflict-entry-reference].extension[entry].valueReference.reference	str		10
+ch.fhir.ig.ch-vacd#6.0.0	Immunization	Immunization.extension[http://fhir.ch/ig/ch-vacd/StructureDefinition/ch-vacd-ext-merging-conflict-entry-reference].url	str		10
+ch.fhir.ig.ch-vacd#6.0.0	Immunization	Immunization.extension[http://fhir.ch/ig/ch-vacd/StructureDefinition/ch-vacd-ext-verification-status].url	str		164
+ch.fhir.ig.ch-vacd#6.0.0	Immunization	Immunization.extension[http://fhir.ch/ig/ch-vacd/StructureDefinition/ch-vacd-ext-verification-status].valueCoding	Coding	http://snomed.info/sct	164
+ch.fhir.ig.ch-vacd#6.0.0	Immunization	Immunization.extension[http://fhir.ch/ig/ch-vacd/StructureDefinition/ch-vacd-ext-verification-status].valueCoding.code	str		164
+ch.fhir.ig.ch-vacd#6.0.0	Immunization	Immunization.extension[http://fhir.ch/ig/ch-vacd/StructureDefinition/ch-vacd-ext-verification-status].valueCoding.display	str		164
+ch.fhir.ig.ch-vacd#6.0.0	Immunization	Immunization.extension[http://fhir.ch/ig/ch-vacd/StructureDefinition/ch-vacd-ext-verification-status].valueCoding.system	str		164
+ch.fhir.ig.ch-vacd#6.0.0	Immunization	Immunization.id	str		164
+ch.fhir.ig.ch-vacd#6.0.0	Immunization	Immunization.identifier	Identifier	urn:oid:2.999.1.2.3.4	164
+ch.fhir.ig.ch-vacd#6.0.0	Immunization	Immunization.identifier.system	str		164
+ch.fhir.ig.ch-vacd#6.0.0	Immunization	Immunization.identifier.value	str		164
+ch.fhir.ig.ch-vacd#6.0.0	Immunization	Immunization.language	str		10
+ch.fhir.ig.ch-vacd#6.0.0	Immunization	Immunization.lotNumber	str		164
+ch.fhir.ig.ch-vacd#6.0.0	Immunization	Immunization.meta.profile	str		164
+ch.fhir.ig.ch-vacd#6.0.0	Immunization	Immunization.note.authorReference	Reference:literal		35
+ch.fhir.ig.ch-vacd#6.0.0	Immunization	Immunization.note.authorReference.reference	str		35
+ch.fhir.ig.ch-vacd#6.0.0	Immunization	Immunization.note.text	str		35
+ch.fhir.ig.ch-vacd#6.0.0	Immunization	Immunization.note.time	str		35
+ch.fhir.ig.ch-vacd#6.0.0	Immunization	Immunization.occurrenceDateTime	str		163
+ch.fhir.ig.ch-vacd#6.0.0	Immunization	Immunization.occurrenceString	str		1
+ch.fhir.ig.ch-vacd#6.0.0	Immunization	Immunization.patient	Reference:literal		164
+ch.fhir.ig.ch-vacd#6.0.0	Immunization	Immunization.patient.reference	str		164
+ch.fhir.ig.ch-vacd#6.0.0	Immunization	Immunization.performer.actor	Reference:literal		164
+ch.fhir.ig.ch-vacd#6.0.0	Immunization	Immunization.performer.actor.reference	str		164
+ch.fhir.ig.ch-vacd#6.0.0	Immunization	Immunization.protocolApplied.doseNumberPositiveInt	int		164
+ch.fhir.ig.ch-vacd#6.0.0	Immunization	Immunization.protocolApplied.targetDisease.coding	Coding	http://snomed.info/sct	294
+ch.fhir.ig.ch-vacd#6.0.0	Immunization	Immunization.protocolApplied.targetDisease.coding.code	str		294
+ch.fhir.ig.ch-vacd#6.0.0	Immunization	Immunization.protocolApplied.targetDisease.coding.display	str		294
+ch.fhir.ig.ch-vacd#6.0.0	Immunization	Immunization.protocolApplied.targetDisease.coding.system	str		294
+ch.fhir.ig.ch-vacd#6.0.0	Immunization	Immunization.reasonCode.coding	Coding	http://terminology.hl7.org/CodeSystem/v3-ActCode	11
+ch.fhir.ig.ch-vacd#6.0.0	Immunization	Immunization.reasonCode.coding.code	str		11
+ch.fhir.ig.ch-vacd#6.0.0	Immunization	Immunization.reasonCode.coding.display	str		11
+ch.fhir.ig.ch-vacd#6.0.0	Immunization	Immunization.reasonCode.coding.system	str		11
+ch.fhir.ig.ch-vacd#6.0.0	Immunization	Immunization.recorded	str		164
+ch.fhir.ig.ch-vacd#6.0.0	Immunization	Immunization.resourceType	str		164
+ch.fhir.ig.ch-vacd#6.0.0	Immunization	Immunization.route.coding	Coding	http://standardterms.edqm.eu	153
+ch.fhir.ig.ch-vacd#6.0.0	Immunization	Immunization.route.coding.code	str		153
+ch.fhir.ig.ch-vacd#6.0.0	Immunization	Immunization.route.coding.display	str		153
+ch.fhir.ig.ch-vacd#6.0.0	Immunization	Immunization.route.coding.system	str		153
+ch.fhir.ig.ch-vacd#6.0.0	Immunization	Immunization.status	str		164
+ch.fhir.ig.ch-vacd#6.0.0	Immunization	Immunization.statusReason.coding	Coding	http://terminology.hl7.org/CodeSystem/v3-ActReason	2
+ch.fhir.ig.ch-vacd#6.0.0	Immunization	Immunization.statusReason.coding.code	str		2
+ch.fhir.ig.ch-vacd#6.0.0	Immunization	Immunization.statusReason.coding.display	str		2
+ch.fhir.ig.ch-vacd#6.0.0	Immunization	Immunization.statusReason.coding.system	str		2
+ch.fhir.ig.ch-vacd#6.0.0	Immunization	Immunization.vaccineCode.coding	Coding	http://fhir.ch/ig/ch-vacd/CodeSystem/ch-vacd-swissmedic-cs	163
+ch.fhir.ig.ch-vacd#6.0.0	Immunization	Immunization.vaccineCode.coding	Coding	http://snomed.info/sct	1
+ch.fhir.ig.ch-vacd#6.0.0	Immunization	Immunization.vaccineCode.coding.code	str		164
+ch.fhir.ig.ch-vacd#6.0.0	Immunization	Immunization.vaccineCode.coding.display	str		163
+ch.fhir.ig.ch-vacd#6.0.0	Immunization	Immunization.vaccineCode.coding.system	str		164
+ch.fhir.ig.ch-vacd#6.0.0	Observation	Observation.code.coding	Coding	http://loinc.org	8
+ch.fhir.ig.ch-vacd#6.0.0	Observation	Observation.code.coding.code	str		8
+ch.fhir.ig.ch-vacd#6.0.0	Observation	Observation.code.coding.display	str		8
+ch.fhir.ig.ch-vacd#6.0.0	Observation	Observation.code.coding.system	str		8
+ch.fhir.ig.ch-vacd#6.0.0	Observation	Observation.effectiveDateTime	str		8
+ch.fhir.ig.ch-vacd#6.0.0	Observation	Observation.extension[http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-author].url	str		4
+ch.fhir.ig.ch-vacd#6.0.0	Observation	Observation.extension[http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-author].valueReference	Reference:literal		4
+ch.fhir.ig.ch-vacd#6.0.0	Observation	Observation.extension[http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-author].valueReference.reference	str		4
+ch.fhir.ig.ch-vacd#6.0.0	Observation	Observation.extension[http://fhir.ch/ig/ch-vacd/StructureDefinition/ch-vacd-ext-verification-status].url	str		8
+ch.fhir.ig.ch-vacd#6.0.0	Observation	Observation.extension[http://fhir.ch/ig/ch-vacd/StructureDefinition/ch-vacd-ext-verification-status].valueCoding	Coding	http://snomed.info/sct	8
+ch.fhir.ig.ch-vacd#6.0.0	Observation	Observation.extension[http://fhir.ch/ig/ch-vacd/StructureDefinition/ch-vacd-ext-verification-status].valueCoding.code	str		8
+ch.fhir.ig.ch-vacd#6.0.0	Observation	Observation.extension[http://fhir.ch/ig/ch-vacd/StructureDefinition/ch-vacd-ext-verification-status].valueCoding.display	str		8
+ch.fhir.ig.ch-vacd#6.0.0	Observation	Observation.extension[http://fhir.ch/ig/ch-vacd/StructureDefinition/ch-vacd-ext-verification-status].valueCoding.system	str		8
+ch.fhir.ig.ch-vacd#6.0.0	Observation	Observation.id	str		8
+ch.fhir.ig.ch-vacd#6.0.0	Observation	Observation.identifier	Identifier	urn:ietf:rfc:3986	4
+ch.fhir.ig.ch-vacd#6.0.0	Observation	Observation.identifier	Identifier	urn:oid:2.999.1.2.3.4	4
+ch.fhir.ig.ch-vacd#6.0.0	Observation	Observation.identifier.system	str		8
+ch.fhir.ig.ch-vacd#6.0.0	Observation	Observation.identifier.value	str		8
+ch.fhir.ig.ch-vacd#6.0.0	Observation	Observation.interpretation.coding	Coding	http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation	8
+ch.fhir.ig.ch-vacd#6.0.0	Observation	Observation.interpretation.coding.code	str		8
+ch.fhir.ig.ch-vacd#6.0.0	Observation	Observation.interpretation.coding.display	str		8
+ch.fhir.ig.ch-vacd#6.0.0	Observation	Observation.interpretation.coding.system	str		8
+ch.fhir.ig.ch-vacd#6.0.0	Observation	Observation.meta.profile	str		8
+ch.fhir.ig.ch-vacd#6.0.0	Observation	Observation.performer	Reference:literal		8
+ch.fhir.ig.ch-vacd#6.0.0	Observation	Observation.performer.reference	str		8
+ch.fhir.ig.ch-vacd#6.0.0	Observation	Observation.resourceType	str		8
+ch.fhir.ig.ch-vacd#6.0.0	Observation	Observation.status	str		8
+ch.fhir.ig.ch-vacd#6.0.0	Observation	Observation.subject	Reference:literal		8
+ch.fhir.ig.ch-vacd#6.0.0	Observation	Observation.subject.reference	str		8
+ch.fhir.ig.ch-vacd#6.0.0	Observation	Observation.valueQuantity	Coding	http://unitsofmeasure.org	8
+ch.fhir.ig.ch-vacd#6.0.0	Observation	Observation.valueQuantity.code	str		8
+ch.fhir.ig.ch-vacd#6.0.0	Observation	Observation.valueQuantity.system	str		8
+ch.fhir.ig.ch-vacd#6.0.0	Observation	Observation.valueQuantity.unit	str		8
+ch.fhir.ig.ch-vacd#6.0.0	Observation	Observation.valueQuantity.value	int		8
+ch.fhir.ig.ch-vacd#6.0.0	Organization	Organization.address.city	str		202
+ch.fhir.ig.ch-vacd#6.0.0	Organization	Organization.address.country	str		206
+ch.fhir.ig.ch-vacd#6.0.0	Organization	Organization.address.id	str		4
+ch.fhir.ig.ch-vacd#6.0.0	Organization	Organization.address.line	str		239
+ch.fhir.ig.ch-vacd#6.0.0	Organization	Organization.address.postalCode	str		206
+ch.fhir.ig.ch-vacd#6.0.0	Organization	Organization.address.state	str		202
+ch.fhir.ig.ch-vacd#6.0.0	Organization	Organization.id	str		208
+ch.fhir.ig.ch-vacd#6.0.0	Organization	Organization.identifier	Identifier	urn:oid:2.51.1.3	208
+ch.fhir.ig.ch-vacd#6.0.0	Organization	Organization.identifier.system	str		208
+ch.fhir.ig.ch-vacd#6.0.0	Organization	Organization.identifier.value	str		208
+ch.fhir.ig.ch-vacd#6.0.0	Organization	Organization.meta.profile	str		208
+ch.fhir.ig.ch-vacd#6.0.0	Organization	Organization.name	str		208
+ch.fhir.ig.ch-vacd#6.0.0	Organization	Organization.resourceType	str		208
+ch.fhir.ig.ch-vacd#6.0.0	Organization	Organization.telecom	Identifier	email	195
+ch.fhir.ig.ch-vacd#6.0.0	Organization	Organization.telecom	Identifier	fax	82
+ch.fhir.ig.ch-vacd#6.0.0	Organization	Organization.telecom	Identifier	phone	195
+ch.fhir.ig.ch-vacd#6.0.0	Organization	Organization.telecom	Identifier	url	195
+ch.fhir.ig.ch-vacd#6.0.0	Organization	Organization.telecom.system	str		667
+ch.fhir.ig.ch-vacd#6.0.0	Organization	Organization.telecom.use	str		667
+ch.fhir.ig.ch-vacd#6.0.0	Organization	Organization.telecom.value	str		667
+ch.fhir.ig.ch-vacd#6.0.0	Patient	Patient.address.city	str		81
+ch.fhir.ig.ch-vacd#6.0.0	Patient	Patient.address.country	str		81
+ch.fhir.ig.ch-vacd#6.0.0	Patient	Patient.address.line	str		81
+ch.fhir.ig.ch-vacd#6.0.0	Patient	Patient.address.postalCode	str		84
+ch.fhir.ig.ch-vacd#6.0.0	Patient	Patient.address.type	str		81
+ch.fhir.ig.ch-vacd#6.0.0	Patient	Patient.birthDate	str		84
+ch.fhir.ig.ch-vacd#6.0.0	Patient	Patient.gender	str		84
+ch.fhir.ig.ch-vacd#6.0.0	Patient	Patient.id	str		84
+ch.fhir.ig.ch-vacd#6.0.0	Patient	Patient.identifier	Identifier	urn:oid:2.999.1.2.3.4	84
+ch.fhir.ig.ch-vacd#6.0.0	Patient	Patient.identifier.system	str		84
+ch.fhir.ig.ch-vacd#6.0.0	Patient	Patient.identifier.type.coding	Coding	http://terminology.hl7.org/CodeSystem/v2-0203	84
+ch.fhir.ig.ch-vacd#6.0.0	Patient	Patient.identifier.type.coding.code	str		84
+ch.fhir.ig.ch-vacd#6.0.0	Patient	Patient.identifier.type.coding.system	str		84
+ch.fhir.ig.ch-vacd#6.0.0	Patient	Patient.identifier.value	str		84
+ch.fhir.ig.ch-vacd#6.0.0	Patient	Patient.meta.profile	str		84
+ch.fhir.ig.ch-vacd#6.0.0	Patient	Patient.name.family	str		84
+ch.fhir.ig.ch-vacd#6.0.0	Patient	Patient.name.given	str		84
+ch.fhir.ig.ch-vacd#6.0.0	Patient	Patient.resourceType	str		84
+ch.fhir.ig.ch-vacd#6.0.0	Patient	Patient.telecom	Identifier	phone	81
+ch.fhir.ig.ch-vacd#6.0.0	Patient	Patient.telecom.system	str		81
+ch.fhir.ig.ch-vacd#6.0.0	Patient	Patient.telecom.use	str		81
+ch.fhir.ig.ch-vacd#6.0.0	Patient	Patient.telecom.value	str		81
 cicada-condition	Condition	Condition.clinicalStatus.coding	Coding	http://terminology.hl7.org/CodeSystem/condition-clinical	379
 cicada-condition	Condition	Condition.clinicalStatus.coding.code	str		379
 cicada-condition	Condition	Condition.clinicalStatus.coding.system	str		379
@@ -3339,6 +3894,288 @@ hl7.fhir.be.vaccination#1.1.3	Parameters	Parameters.parameter.name	str		2
 hl7.fhir.be.vaccination#1.1.3	Parameters	Parameters.parameter.valueBoolean	bool		1
 hl7.fhir.be.vaccination#1.1.3	Parameters	Parameters.parameter.valueCanonical	str		1
 hl7.fhir.be.vaccination#1.1.3	Parameters	Parameters.resourceType	str		1
+hl7.fhir.cl.clips#0.4.0	AllergyIntolerance	AllergyIntolerance.clinicalStatus.coding	Coding	http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical	2
+hl7.fhir.cl.clips#0.4.0	AllergyIntolerance	AllergyIntolerance.clinicalStatus.coding.code	str		2
+hl7.fhir.cl.clips#0.4.0	AllergyIntolerance	AllergyIntolerance.clinicalStatus.coding.display	str		2
+hl7.fhir.cl.clips#0.4.0	AllergyIntolerance	AllergyIntolerance.clinicalStatus.coding.system	str		2
+hl7.fhir.cl.clips#0.4.0	AllergyIntolerance	AllergyIntolerance.clinicalStatus.text	str		2
+hl7.fhir.cl.clips#0.4.0	AllergyIntolerance	AllergyIntolerance.code.coding	Coding	http://www.whocc.no/atc	2
+hl7.fhir.cl.clips#0.4.0	AllergyIntolerance	AllergyIntolerance.code.coding.code	str		2
+hl7.fhir.cl.clips#0.4.0	AllergyIntolerance	AllergyIntolerance.code.coding.display	str		2
+hl7.fhir.cl.clips#0.4.0	AllergyIntolerance	AllergyIntolerance.code.coding.system	str		2
+hl7.fhir.cl.clips#0.4.0	AllergyIntolerance	AllergyIntolerance.code.text	str		2
+hl7.fhir.cl.clips#0.4.0	AllergyIntolerance	AllergyIntolerance.id	str		2
+hl7.fhir.cl.clips#0.4.0	AllergyIntolerance	AllergyIntolerance.meta.profile	str		2
+hl7.fhir.cl.clips#0.4.0	AllergyIntolerance	AllergyIntolerance.onsetAge	Coding	http://unitsofmeasure.org	2
+hl7.fhir.cl.clips#0.4.0	AllergyIntolerance	AllergyIntolerance.onsetAge.code	str		2
+hl7.fhir.cl.clips#0.4.0	AllergyIntolerance	AllergyIntolerance.onsetAge.system	str		2
+hl7.fhir.cl.clips#0.4.0	AllergyIntolerance	AllergyIntolerance.onsetAge.unit	str		2
+hl7.fhir.cl.clips#0.4.0	AllergyIntolerance	AllergyIntolerance.onsetAge.value	int		2
+hl7.fhir.cl.clips#0.4.0	AllergyIntolerance	AllergyIntolerance.patient	Reference:literal		1
+hl7.fhir.cl.clips#0.4.0	AllergyIntolerance	AllergyIntolerance.patient	Reference:urn		1
+hl7.fhir.cl.clips#0.4.0	AllergyIntolerance	AllergyIntolerance.patient.reference	str		2
+hl7.fhir.cl.clips#0.4.0	AllergyIntolerance	AllergyIntolerance.reaction.manifestation.coding	Coding	http://snomed.info/sct	1
+hl7.fhir.cl.clips#0.4.0	AllergyIntolerance	AllergyIntolerance.reaction.manifestation.coding.code	str		1
+hl7.fhir.cl.clips#0.4.0	AllergyIntolerance	AllergyIntolerance.reaction.manifestation.coding.display	str		1
+hl7.fhir.cl.clips#0.4.0	AllergyIntolerance	AllergyIntolerance.reaction.manifestation.coding.system	str		1
+hl7.fhir.cl.clips#0.4.0	AllergyIntolerance	AllergyIntolerance.reaction.manifestation.text	str		1
+hl7.fhir.cl.clips#0.4.0	AllergyIntolerance	AllergyIntolerance.reaction.severity	str		1
+hl7.fhir.cl.clips#0.4.0	AllergyIntolerance	AllergyIntolerance.recorder	Reference:literal		1
+hl7.fhir.cl.clips#0.4.0	AllergyIntolerance	AllergyIntolerance.recorder.reference	str		1
+hl7.fhir.cl.clips#0.4.0	AllergyIntolerance	AllergyIntolerance.resourceType	str		2
+hl7.fhir.cl.clips#0.4.0	AllergyIntolerance	AllergyIntolerance.type	str		1
+hl7.fhir.cl.clips#0.4.0	AllergyIntolerance	AllergyIntolerance.verificationStatus.coding	Coding	http://terminology.hl7.org/CodeSystem/allergyintolerance-verification	2
+hl7.fhir.cl.clips#0.4.0	AllergyIntolerance	AllergyIntolerance.verificationStatus.coding.code	str		2
+hl7.fhir.cl.clips#0.4.0	AllergyIntolerance	AllergyIntolerance.verificationStatus.coding.display	str		2
+hl7.fhir.cl.clips#0.4.0	AllergyIntolerance	AllergyIntolerance.verificationStatus.coding.system	str		2
+hl7.fhir.cl.clips#0.4.0	AllergyIntolerance	AllergyIntolerance.verificationStatus.text	str		2
+hl7.fhir.cl.clips#0.4.0	Condition	Condition.asserter	Reference:literal		1
+hl7.fhir.cl.clips#0.4.0	Condition	Condition.asserter.reference	str		1
+hl7.fhir.cl.clips#0.4.0	Condition	Condition.category.coding	Coding	http://loinc.org	2
+hl7.fhir.cl.clips#0.4.0	Condition	Condition.category.coding.code	str		2
+hl7.fhir.cl.clips#0.4.0	Condition	Condition.category.coding.display	str		2
+hl7.fhir.cl.clips#0.4.0	Condition	Condition.category.coding.system	str		2
+hl7.fhir.cl.clips#0.4.0	Condition	Condition.category.text	str		2
+hl7.fhir.cl.clips#0.4.0	Condition	Condition.clinicalStatus.coding	Coding	http://terminology.hl7.org/CodeSystem/condition-clinical	2
+hl7.fhir.cl.clips#0.4.0	Condition	Condition.clinicalStatus.coding.code	str		2
+hl7.fhir.cl.clips#0.4.0	Condition	Condition.clinicalStatus.coding.display	str		2
+hl7.fhir.cl.clips#0.4.0	Condition	Condition.clinicalStatus.coding.system	str		2
+hl7.fhir.cl.clips#0.4.0	Condition	Condition.clinicalStatus.text	str		2
+hl7.fhir.cl.clips#0.4.0	Condition	Condition.code.coding	Coding	http://snomed.info/sct	2
+hl7.fhir.cl.clips#0.4.0	Condition	Condition.code.coding.code	str		2
+hl7.fhir.cl.clips#0.4.0	Condition	Condition.code.coding.display	str		2
+hl7.fhir.cl.clips#0.4.0	Condition	Condition.code.coding.system	str		2
+hl7.fhir.cl.clips#0.4.0	Condition	Condition.code.text	str		2
+hl7.fhir.cl.clips#0.4.0	Condition	Condition.id	str		2
+hl7.fhir.cl.clips#0.4.0	Condition	Condition.meta.profile	str		2
+hl7.fhir.cl.clips#0.4.0	Condition	Condition.onsetPeriod.start	str		2
+hl7.fhir.cl.clips#0.4.0	Condition	Condition.resourceType	str		2
+hl7.fhir.cl.clips#0.4.0	Condition	Condition.severity.coding	Coding	http://snomed.info/sct	1
+hl7.fhir.cl.clips#0.4.0	Condition	Condition.severity.coding.code	str		1
+hl7.fhir.cl.clips#0.4.0	Condition	Condition.severity.coding.display	str		1
+hl7.fhir.cl.clips#0.4.0	Condition	Condition.severity.coding.system	str		1
+hl7.fhir.cl.clips#0.4.0	Condition	Condition.severity.text	str		1
+hl7.fhir.cl.clips#0.4.0	Condition	Condition.subject	Reference:literal		1
+hl7.fhir.cl.clips#0.4.0	Condition	Condition.subject	Reference:urn		1
+hl7.fhir.cl.clips#0.4.0	Condition	Condition.subject.reference	str		2
+hl7.fhir.cl.clips#0.4.0	Immunization	Immunization.id	str		1
+hl7.fhir.cl.clips#0.4.0	Immunization	Immunization.language	str		1
+hl7.fhir.cl.clips#0.4.0	Immunization	Immunization.meta.profile	str		1
+hl7.fhir.cl.clips#0.4.0	Immunization	Immunization.occurrenceDateTime	str		1
+hl7.fhir.cl.clips#0.4.0	Immunization	Immunization.patient	Reference:literal		1
+hl7.fhir.cl.clips#0.4.0	Immunization	Immunization.patient.reference	str		1
+hl7.fhir.cl.clips#0.4.0	Immunization	Immunization.resourceType	str		1
+hl7.fhir.cl.clips#0.4.0	Immunization	Immunization.route.coding	Coding	http://standardterms.edqm.eu	1
+hl7.fhir.cl.clips#0.4.0	Immunization	Immunization.route.coding._display.extension[http://hl7.org/fhir/StructureDefinition/translation].extension[content].url	str		1
+hl7.fhir.cl.clips#0.4.0	Immunization	Immunization.route.coding._display.extension[http://hl7.org/fhir/StructureDefinition/translation].extension[content].valueString	str		1
+hl7.fhir.cl.clips#0.4.0	Immunization	Immunization.route.coding._display.extension[http://hl7.org/fhir/StructureDefinition/translation].extension[lang].url	str		1
+hl7.fhir.cl.clips#0.4.0	Immunization	Immunization.route.coding._display.extension[http://hl7.org/fhir/StructureDefinition/translation].extension[lang].valueCode	str		1
+hl7.fhir.cl.clips#0.4.0	Immunization	Immunization.route.coding._display.extension[http://hl7.org/fhir/StructureDefinition/translation].url	str		1
+hl7.fhir.cl.clips#0.4.0	Immunization	Immunization.route.coding.code	str		1
+hl7.fhir.cl.clips#0.4.0	Immunization	Immunization.route.coding.display	str		1
+hl7.fhir.cl.clips#0.4.0	Immunization	Immunization.route.coding.system	str		1
+hl7.fhir.cl.clips#0.4.0	Immunization	Immunization.route.text	str		1
+hl7.fhir.cl.clips#0.4.0	Immunization	Immunization.site.coding	Coding	http://snomed.info/sct	1
+hl7.fhir.cl.clips#0.4.0	Immunization	Immunization.site.coding._display.extension[http://hl7.org/fhir/StructureDefinition/translation].extension[content].url	str		1
+hl7.fhir.cl.clips#0.4.0	Immunization	Immunization.site.coding._display.extension[http://hl7.org/fhir/StructureDefinition/translation].extension[content].valueString	str		1
+hl7.fhir.cl.clips#0.4.0	Immunization	Immunization.site.coding._display.extension[http://hl7.org/fhir/StructureDefinition/translation].extension[lang].url	str		1
+hl7.fhir.cl.clips#0.4.0	Immunization	Immunization.site.coding._display.extension[http://hl7.org/fhir/StructureDefinition/translation].extension[lang].valueCode	str		1
+hl7.fhir.cl.clips#0.4.0	Immunization	Immunization.site.coding._display.extension[http://hl7.org/fhir/StructureDefinition/translation].url	str		1
+hl7.fhir.cl.clips#0.4.0	Immunization	Immunization.site.coding.code	str		1
+hl7.fhir.cl.clips#0.4.0	Immunization	Immunization.site.coding.display	str		1
+hl7.fhir.cl.clips#0.4.0	Immunization	Immunization.site.coding.system	str		1
+hl7.fhir.cl.clips#0.4.0	Immunization	Immunization.site.text	str		1
+hl7.fhir.cl.clips#0.4.0	Immunization	Immunization.status	str		1
+hl7.fhir.cl.clips#0.4.0	Immunization	Immunization.vaccineCode.coding	Coding	http://snomed.info/sct	1
+hl7.fhir.cl.clips#0.4.0	Immunization	Immunization.vaccineCode.coding	Coding	https://hl7chile.cl/fhir/ig/clcore/CodeSystem/CSCodigoVacunas	1
+hl7.fhir.cl.clips#0.4.0	Immunization	Immunization.vaccineCode.coding._display.extension[http://hl7.org/fhir/StructureDefinition/translation].extension[content].url	str		1
+hl7.fhir.cl.clips#0.4.0	Immunization	Immunization.vaccineCode.coding._display.extension[http://hl7.org/fhir/StructureDefinition/translation].extension[content].valueString	str		1
+hl7.fhir.cl.clips#0.4.0	Immunization	Immunization.vaccineCode.coding._display.extension[http://hl7.org/fhir/StructureDefinition/translation].extension[lang].url	str		1
+hl7.fhir.cl.clips#0.4.0	Immunization	Immunization.vaccineCode.coding._display.extension[http://hl7.org/fhir/StructureDefinition/translation].extension[lang].valueCode	str		1
+hl7.fhir.cl.clips#0.4.0	Immunization	Immunization.vaccineCode.coding._display.extension[http://hl7.org/fhir/StructureDefinition/translation].url	str		1
+hl7.fhir.cl.clips#0.4.0	Immunization	Immunization.vaccineCode.coding.code	str		2
+hl7.fhir.cl.clips#0.4.0	Immunization	Immunization.vaccineCode.coding.display	str		2
+hl7.fhir.cl.clips#0.4.0	Immunization	Immunization.vaccineCode.coding.system	str		2
+hl7.fhir.cl.clips#0.4.0	Immunization	Immunization.vaccineCode.text	str		1
+hl7.fhir.cl.clips#0.4.0	MedicationStatement	MedicationStatement.dosage.doseAndRate.doseQuantity	Coding	http://unitsofmeasure.org	2
+hl7.fhir.cl.clips#0.4.0	MedicationStatement	MedicationStatement.dosage.doseAndRate.doseQuantity.code	str		2
+hl7.fhir.cl.clips#0.4.0	MedicationStatement	MedicationStatement.dosage.doseAndRate.doseQuantity.system	str		2
+hl7.fhir.cl.clips#0.4.0	MedicationStatement	MedicationStatement.dosage.doseAndRate.doseQuantity.unit	str		2
+hl7.fhir.cl.clips#0.4.0	MedicationStatement	MedicationStatement.dosage.doseAndRate.doseQuantity.value	int		2
+hl7.fhir.cl.clips#0.4.0	MedicationStatement	MedicationStatement.dosage.route.coding	Coding	http://standardterms.edqm.eu	2
+hl7.fhir.cl.clips#0.4.0	MedicationStatement	MedicationStatement.dosage.route.coding.code	str		2
+hl7.fhir.cl.clips#0.4.0	MedicationStatement	MedicationStatement.dosage.route.coding.display	str		2
+hl7.fhir.cl.clips#0.4.0	MedicationStatement	MedicationStatement.dosage.route.coding.system	str		2
+hl7.fhir.cl.clips#0.4.0	MedicationStatement	MedicationStatement.dosage.route.text	str		2
+hl7.fhir.cl.clips#0.4.0	MedicationStatement	MedicationStatement.dosage.text	str		2
+hl7.fhir.cl.clips#0.4.0	MedicationStatement	MedicationStatement.dosage.timing.repeat.frequency	int		2
+hl7.fhir.cl.clips#0.4.0	MedicationStatement	MedicationStatement.dosage.timing.repeat.period	int		2
+hl7.fhir.cl.clips#0.4.0	MedicationStatement	MedicationStatement.dosage.timing.repeat.periodUnit	str		2
+hl7.fhir.cl.clips#0.4.0	MedicationStatement	MedicationStatement.effectivePeriod.end	str		2
+hl7.fhir.cl.clips#0.4.0	MedicationStatement	MedicationStatement.effectivePeriod.start	str		2
+hl7.fhir.cl.clips#0.4.0	MedicationStatement	MedicationStatement.id	str		2
+hl7.fhir.cl.clips#0.4.0	MedicationStatement	MedicationStatement.medicationReference	Reference:literal		1
+hl7.fhir.cl.clips#0.4.0	MedicationStatement	MedicationStatement.medicationReference	Reference:urn		1
+hl7.fhir.cl.clips#0.4.0	MedicationStatement	MedicationStatement.medicationReference.display	str		2
+hl7.fhir.cl.clips#0.4.0	MedicationStatement	MedicationStatement.medicationReference.reference	str		2
+hl7.fhir.cl.clips#0.4.0	MedicationStatement	MedicationStatement.meta.profile	str		2
+hl7.fhir.cl.clips#0.4.0	MedicationStatement	MedicationStatement.resourceType	str		2
+hl7.fhir.cl.clips#0.4.0	MedicationStatement	MedicationStatement.status	str		2
+hl7.fhir.cl.clips#0.4.0	MedicationStatement	MedicationStatement.subject	Reference:literal		1
+hl7.fhir.cl.clips#0.4.0	MedicationStatement	MedicationStatement.subject	Reference:urn		1
+hl7.fhir.cl.clips#0.4.0	MedicationStatement	MedicationStatement.subject.reference	str		2
+hl7.fhir.cl.clips#0.4.0	Observation	Observation.category.coding	Coding	http://terminology.hl7.org/CodeSystem/observation-category	4
+hl7.fhir.cl.clips#0.4.0	Observation	Observation.category.coding.code	str		4
+hl7.fhir.cl.clips#0.4.0	Observation	Observation.category.coding.display	str		2
+hl7.fhir.cl.clips#0.4.0	Observation	Observation.category.coding.system	str		4
+hl7.fhir.cl.clips#0.4.0	Observation	Observation.category.text	str		2
+hl7.fhir.cl.clips#0.4.0	Observation	Observation.code.coding	Coding	http://loinc.org	7
+hl7.fhir.cl.clips#0.4.0	Observation	Observation.code.coding.code	str		7
+hl7.fhir.cl.clips#0.4.0	Observation	Observation.code.coding.display	str		7
+hl7.fhir.cl.clips#0.4.0	Observation	Observation.code.coding.system	str		7
+hl7.fhir.cl.clips#0.4.0	Observation	Observation.code.text	str		7
+hl7.fhir.cl.clips#0.4.0	Observation	Observation.component.code.coding	Coding	http://dicom.nema.org/resources/ontology/DCM	1
+hl7.fhir.cl.clips#0.4.0	Observation	Observation.component.code.coding.code	str		1
+hl7.fhir.cl.clips#0.4.0	Observation	Observation.component.code.coding.display	str		1
+hl7.fhir.cl.clips#0.4.0	Observation	Observation.component.code.coding.system	str		1
+hl7.fhir.cl.clips#0.4.0	Observation	Observation.component.code.text	str		1
+hl7.fhir.cl.clips#0.4.0	Observation	Observation.component.valueString	str		1
+hl7.fhir.cl.clips#0.4.0	Observation	Observation.effectiveDateTime	str		7
+hl7.fhir.cl.clips#0.4.0	Observation	Observation.hasMember	Reference:literal		1
+hl7.fhir.cl.clips#0.4.0	Observation	Observation.hasMember.reference	str		1
+hl7.fhir.cl.clips#0.4.0	Observation	Observation.id	str		7
+hl7.fhir.cl.clips#0.4.0	Observation	Observation.meta.profile	str		7
+hl7.fhir.cl.clips#0.4.0	Observation	Observation.note.text	str		1
+hl7.fhir.cl.clips#0.4.0	Observation	Observation.partOf	Reference:literal		1
+hl7.fhir.cl.clips#0.4.0	Observation	Observation.partOf.reference	str		1
+hl7.fhir.cl.clips#0.4.0	Observation	Observation.performer	Reference:literal		7
+hl7.fhir.cl.clips#0.4.0	Observation	Observation.performer.reference	str		7
+hl7.fhir.cl.clips#0.4.0	Observation	Observation.resourceType	str		7
+hl7.fhir.cl.clips#0.4.0	Observation	Observation.status	str		7
+hl7.fhir.cl.clips#0.4.0	Observation	Observation.subject	Reference:literal		7
+hl7.fhir.cl.clips#0.4.0	Observation	Observation.subject.reference	str		7
+hl7.fhir.cl.clips#0.4.0	Observation	Observation.valueCodeableConcept.coding	Coding	http://snomed.info/sct	2
+hl7.fhir.cl.clips#0.4.0	Observation	Observation.valueCodeableConcept.coding.code	str		2
+hl7.fhir.cl.clips#0.4.0	Observation	Observation.valueCodeableConcept.coding.display	str		2
+hl7.fhir.cl.clips#0.4.0	Observation	Observation.valueCodeableConcept.coding.system	str		2
+hl7.fhir.cl.clips#0.4.0	Observation	Observation.valueCodeableConcept.text	str		2
+hl7.fhir.cl.clips#0.4.0	Observation	Observation.valueDateTime	str		1
+hl7.fhir.cl.clips#0.4.0	Observation	Observation.valueQuantity	Coding	http://unitsofmeasure.org	2
+hl7.fhir.cl.clips#0.4.0	Observation	Observation.valueQuantity.code	str		2
+hl7.fhir.cl.clips#0.4.0	Observation	Observation.valueQuantity.system	str		2
+hl7.fhir.cl.clips#0.4.0	Observation	Observation.valueQuantity.unit	str		3
+hl7.fhir.cl.clips#0.4.0	Observation	Observation.valueQuantity.value	float		1
+hl7.fhir.cl.clips#0.4.0	Observation	Observation.valueQuantity.value	int		2
+hl7.fhir.cl.clips#0.4.0	Organization	Organization.address._city.extension[https://hl7chile.cl/fhir/ig/clcore/StructureDefinition/ComunasCl].url	str		2
+hl7.fhir.cl.clips#0.4.0	Organization	Organization.address._city.extension[https://hl7chile.cl/fhir/ig/clcore/StructureDefinition/ComunasCl].valueCodeableConcept.coding	Coding	https://hl7chile.cl/fhir/ig/clcore/CodeSystem/CSCodComunasCL	2
+hl7.fhir.cl.clips#0.4.0	Organization	Organization.address._city.extension[https://hl7chile.cl/fhir/ig/clcore/StructureDefinition/ComunasCl].valueCodeableConcept.coding.code	str		2
+hl7.fhir.cl.clips#0.4.0	Organization	Organization.address._city.extension[https://hl7chile.cl/fhir/ig/clcore/StructureDefinition/ComunasCl].valueCodeableConcept.coding.display	str		2
+hl7.fhir.cl.clips#0.4.0	Organization	Organization.address._city.extension[https://hl7chile.cl/fhir/ig/clcore/StructureDefinition/ComunasCl].valueCodeableConcept.coding.system	str		2
+hl7.fhir.cl.clips#0.4.0	Organization	Organization.address._country.extension[https://hl7chile.cl/fhir/ig/clcore/StructureDefinition/CodigoPaises].url	str		2
+hl7.fhir.cl.clips#0.4.0	Organization	Organization.address._country.extension[https://hl7chile.cl/fhir/ig/clcore/StructureDefinition/CodigoPaises].valueCodeableConcept.coding	Coding	https://hl7chile.cl/fhir/ig/clcore/CodeSystem/CodPais	2
+hl7.fhir.cl.clips#0.4.0	Organization	Organization.address._country.extension[https://hl7chile.cl/fhir/ig/clcore/StructureDefinition/CodigoPaises].valueCodeableConcept.coding.code	str		2
+hl7.fhir.cl.clips#0.4.0	Organization	Organization.address._country.extension[https://hl7chile.cl/fhir/ig/clcore/StructureDefinition/CodigoPaises].valueCodeableConcept.coding.display	str		2
+hl7.fhir.cl.clips#0.4.0	Organization	Organization.address._country.extension[https://hl7chile.cl/fhir/ig/clcore/StructureDefinition/CodigoPaises].valueCodeableConcept.coding.system	str		2
+hl7.fhir.cl.clips#0.4.0	Organization	Organization.address._state.extension[https://hl7chile.cl/fhir/ig/clcore/StructureDefinition/RegionesCl].url	str		2
+hl7.fhir.cl.clips#0.4.0	Organization	Organization.address._state.extension[https://hl7chile.cl/fhir/ig/clcore/StructureDefinition/RegionesCl].valueCodeableConcept.coding	Coding	https://hl7chile.cl/fhir/ig/clcore/CodeSystem/CSCodRegionCL	2
+hl7.fhir.cl.clips#0.4.0	Organization	Organization.address._state.extension[https://hl7chile.cl/fhir/ig/clcore/StructureDefinition/RegionesCl].valueCodeableConcept.coding.code	str		2
+hl7.fhir.cl.clips#0.4.0	Organization	Organization.address._state.extension[https://hl7chile.cl/fhir/ig/clcore/StructureDefinition/RegionesCl].valueCodeableConcept.coding.display	str		2
+hl7.fhir.cl.clips#0.4.0	Organization	Organization.address._state.extension[https://hl7chile.cl/fhir/ig/clcore/StructureDefinition/RegionesCl].valueCodeableConcept.coding.system	str		2
+hl7.fhir.cl.clips#0.4.0	Organization	Organization.address.city	str		2
+hl7.fhir.cl.clips#0.4.0	Organization	Organization.address.country	str		2
+hl7.fhir.cl.clips#0.4.0	Organization	Organization.address.line	str		2
+hl7.fhir.cl.clips#0.4.0	Organization	Organization.address.state	str		2
+hl7.fhir.cl.clips#0.4.0	Organization	Organization.alias	str		3
+hl7.fhir.cl.clips#0.4.0	Organization	Organization.id	str		3
+hl7.fhir.cl.clips#0.4.0	Organization	Organization.identifier	Identifier	https://datos.gob.cl/dataset/establecimientos-de-salud-vigentes/resource/2c44d782-3365-44e3-aefb-2c8b8363a1bc	3
+hl7.fhir.cl.clips#0.4.0	Organization	Organization.identifier.system	str		3
+hl7.fhir.cl.clips#0.4.0	Organization	Organization.identifier.value	str		3
+hl7.fhir.cl.clips#0.4.0	Organization	Organization.meta.profile	str		3
+hl7.fhir.cl.clips#0.4.0	Organization	Organization.name	str		3
+hl7.fhir.cl.clips#0.4.0	Organization	Organization.resourceType	str		3
+hl7.fhir.cl.clips#0.4.0	Organization	Organization.telecom	Identifier	phone	3
+hl7.fhir.cl.clips#0.4.0	Organization	Organization.telecom.system	str		3
+hl7.fhir.cl.clips#0.4.0	Organization	Organization.telecom.use	str		3
+hl7.fhir.cl.clips#0.4.0	Organization	Organization.telecom.value	str		3
+hl7.fhir.cl.clips#0.4.0	Parameters	Parameters.id	str		1
+hl7.fhir.cl.clips#0.4.0	Parameters	Parameters.meta.profile	str		1
+hl7.fhir.cl.clips#0.4.0	Parameters	Parameters.parameter.name	str		2
+hl7.fhir.cl.clips#0.4.0	Parameters	Parameters.parameter.valueIdentifier	Identifier	http://regcivil.cl/Validacion/RUN	1
+hl7.fhir.cl.clips#0.4.0	Parameters	Parameters.parameter.valueIdentifier.system	str		1
+hl7.fhir.cl.clips#0.4.0	Parameters	Parameters.parameter.valueIdentifier.value	str		1
+hl7.fhir.cl.clips#0.4.0	Parameters	Parameters.parameter.valueUri	str		1
+hl7.fhir.cl.clips#0.4.0	Parameters	Parameters.resourceType	str		1
+hl7.fhir.cl.clips#0.4.0	Patient	Patient.active	bool		2
+hl7.fhir.cl.clips#0.4.0	Patient	Patient.address._city.extension[https://hl7chile.cl/fhir/ig/clcore/StructureDefinition/ComunasCl].url	str		2
+hl7.fhir.cl.clips#0.4.0	Patient	Patient.address._city.extension[https://hl7chile.cl/fhir/ig/clcore/StructureDefinition/ComunasCl].valueCodeableConcept.coding	Coding	https://hl7chile.cl/fhir/ig/clcore/CodeSystem/CSCodComunasCL	2
+hl7.fhir.cl.clips#0.4.0	Patient	Patient.address._city.extension[https://hl7chile.cl/fhir/ig/clcore/StructureDefinition/ComunasCl].valueCodeableConcept.coding.code	str		2
+hl7.fhir.cl.clips#0.4.0	Patient	Patient.address._city.extension[https://hl7chile.cl/fhir/ig/clcore/StructureDefinition/ComunasCl].valueCodeableConcept.coding.display	str		2
+hl7.fhir.cl.clips#0.4.0	Patient	Patient.address._city.extension[https://hl7chile.cl/fhir/ig/clcore/StructureDefinition/ComunasCl].valueCodeableConcept.coding.system	str		2
+hl7.fhir.cl.clips#0.4.0	Patient	Patient.address._country.extension[https://hl7chile.cl/fhir/ig/clcore/StructureDefinition/CodigoPaises].url	str		2
+hl7.fhir.cl.clips#0.4.0	Patient	Patient.address._country.extension[https://hl7chile.cl/fhir/ig/clcore/StructureDefinition/CodigoPaises].valueCodeableConcept.coding	Coding	https://hl7chile.cl/fhir/ig/clcore/CodeSystem/CodPais	2
+hl7.fhir.cl.clips#0.4.0	Patient	Patient.address._country.extension[https://hl7chile.cl/fhir/ig/clcore/StructureDefinition/CodigoPaises].valueCodeableConcept.coding.code	str		2
+hl7.fhir.cl.clips#0.4.0	Patient	Patient.address._country.extension[https://hl7chile.cl/fhir/ig/clcore/StructureDefinition/CodigoPaises].valueCodeableConcept.coding.display	str		2
+hl7.fhir.cl.clips#0.4.0	Patient	Patient.address._country.extension[https://hl7chile.cl/fhir/ig/clcore/StructureDefinition/CodigoPaises].valueCodeableConcept.coding.system	str		2
+hl7.fhir.cl.clips#0.4.0	Patient	Patient.address._state.extension[https://hl7chile.cl/fhir/ig/clcore/StructureDefinition/RegionesCl].url	str		2
+hl7.fhir.cl.clips#0.4.0	Patient	Patient.address._state.extension[https://hl7chile.cl/fhir/ig/clcore/StructureDefinition/RegionesCl].valueCodeableConcept.coding	Coding	https://hl7chile.cl/fhir/ig/clcore/CodeSystem/CSCodRegionCL	2
+hl7.fhir.cl.clips#0.4.0	Patient	Patient.address._state.extension[https://hl7chile.cl/fhir/ig/clcore/StructureDefinition/RegionesCl].valueCodeableConcept.coding.code	str		2
+hl7.fhir.cl.clips#0.4.0	Patient	Patient.address._state.extension[https://hl7chile.cl/fhir/ig/clcore/StructureDefinition/RegionesCl].valueCodeableConcept.coding.display	str		2
+hl7.fhir.cl.clips#0.4.0	Patient	Patient.address._state.extension[https://hl7chile.cl/fhir/ig/clcore/StructureDefinition/RegionesCl].valueCodeableConcept.coding.system	str		2
+hl7.fhir.cl.clips#0.4.0	Patient	Patient.address.city	str		2
+hl7.fhir.cl.clips#0.4.0	Patient	Patient.address.country	str		2
+hl7.fhir.cl.clips#0.4.0	Patient	Patient.address.line	str		2
+hl7.fhir.cl.clips#0.4.0	Patient	Patient.address.state	str		2
+hl7.fhir.cl.clips#0.4.0	Patient	Patient.address.text	str		1
+hl7.fhir.cl.clips#0.4.0	Patient	Patient.address.use	str		2
+hl7.fhir.cl.clips#0.4.0	Patient	Patient.birthDate	str		2
+hl7.fhir.cl.clips#0.4.0	Patient	Patient.gender	str		2
+hl7.fhir.cl.clips#0.4.0	Patient	Patient.id	str		2
+hl7.fhir.cl.clips#0.4.0	Patient	Patient.identifier	Identifier	http://regcivil.cl/Validacion/RUN	2
+hl7.fhir.cl.clips#0.4.0	Patient	Patient.identifier.system	str		2
+hl7.fhir.cl.clips#0.4.0	Patient	Patient.identifier.type.coding	Coding	https://hl7chile.cl/fhir/ig/clcore/CodeSystem/CSCodigoDNI	2
+hl7.fhir.cl.clips#0.4.0	Patient	Patient.identifier.type.coding.code	str		2
+hl7.fhir.cl.clips#0.4.0	Patient	Patient.identifier.type.coding.display	str		2
+hl7.fhir.cl.clips#0.4.0	Patient	Patient.identifier.type.coding.system	str		2
+hl7.fhir.cl.clips#0.4.0	Patient	Patient.identifier.type.extension[https://hl7chile.cl/fhir/ig/clcore/StructureDefinition/CodigoPaises].url	str		2
+hl7.fhir.cl.clips#0.4.0	Patient	Patient.identifier.type.extension[https://hl7chile.cl/fhir/ig/clcore/StructureDefinition/CodigoPaises].valueCodeableConcept.coding	Coding	https://hl7chile.cl/fhir/ig/clcore/CodeSystem/CodPais	2
+hl7.fhir.cl.clips#0.4.0	Patient	Patient.identifier.type.extension[https://hl7chile.cl/fhir/ig/clcore/StructureDefinition/CodigoPaises].valueCodeableConcept.coding.code	str		2
+hl7.fhir.cl.clips#0.4.0	Patient	Patient.identifier.type.extension[https://hl7chile.cl/fhir/ig/clcore/StructureDefinition/CodigoPaises].valueCodeableConcept.coding.display	str		2
+hl7.fhir.cl.clips#0.4.0	Patient	Patient.identifier.type.extension[https://hl7chile.cl/fhir/ig/clcore/StructureDefinition/CodigoPaises].valueCodeableConcept.coding.system	str		2
+hl7.fhir.cl.clips#0.4.0	Patient	Patient.identifier.use	str		2
+hl7.fhir.cl.clips#0.4.0	Patient	Patient.identifier.value	str		2
+hl7.fhir.cl.clips#0.4.0	Patient	Patient.meta.profile	str		2
+hl7.fhir.cl.clips#0.4.0	Patient	Patient.name.family	str		2
+hl7.fhir.cl.clips#0.4.0	Patient	Patient.name.given	str		5
+hl7.fhir.cl.clips#0.4.0	Patient	Patient.name.use	str		3
+hl7.fhir.cl.clips#0.4.0	Patient	Patient.resourceType	str		2
+hl7.fhir.cl.clips#0.4.0	Patient	Patient.telecom	Identifier	phone	2
+hl7.fhir.cl.clips#0.4.0	Patient	Patient.telecom.system	str		2
+hl7.fhir.cl.clips#0.4.0	Patient	Patient.telecom.use	str		2
+hl7.fhir.cl.clips#0.4.0	Patient	Patient.telecom.value	str		2
+hl7.fhir.cl.clips#0.4.0	Procedure	Procedure.bodySite.coding	Coding	http://snomed.info/sct	1
+hl7.fhir.cl.clips#0.4.0	Procedure	Procedure.bodySite.coding.code	str		1
+hl7.fhir.cl.clips#0.4.0	Procedure	Procedure.bodySite.coding.display	str		1
+hl7.fhir.cl.clips#0.4.0	Procedure	Procedure.bodySite.coding.system	str		1
+hl7.fhir.cl.clips#0.4.0	Procedure	Procedure.bodySite.text	str		1
+hl7.fhir.cl.clips#0.4.0	Procedure	Procedure.category.coding	Coding	http://snomed.info/sct	1
+hl7.fhir.cl.clips#0.4.0	Procedure	Procedure.category.coding.code	str		1
+hl7.fhir.cl.clips#0.4.0	Procedure	Procedure.category.coding.display	str		1
+hl7.fhir.cl.clips#0.4.0	Procedure	Procedure.category.coding.system	str		1
+hl7.fhir.cl.clips#0.4.0	Procedure	Procedure.category.text	str		1
+hl7.fhir.cl.clips#0.4.0	Procedure	Procedure.code.coding	Coding	http://snomed.info/sct	1
+hl7.fhir.cl.clips#0.4.0	Procedure	Procedure.code.coding.code	str		1
+hl7.fhir.cl.clips#0.4.0	Procedure	Procedure.code.coding.display	str		1
+hl7.fhir.cl.clips#0.4.0	Procedure	Procedure.code.coding.system	str		1
+hl7.fhir.cl.clips#0.4.0	Procedure	Procedure.code.text	str		1
+hl7.fhir.cl.clips#0.4.0	Procedure	Procedure.id	str		1
+hl7.fhir.cl.clips#0.4.0	Procedure	Procedure.meta.profile	str		1
+hl7.fhir.cl.clips#0.4.0	Procedure	Procedure.performedDateTime	str		1
+hl7.fhir.cl.clips#0.4.0	Procedure	Procedure.performer.actor	Reference:literal		1
+hl7.fhir.cl.clips#0.4.0	Procedure	Procedure.performer.actor.reference	str		1
+hl7.fhir.cl.clips#0.4.0	Procedure	Procedure.resourceType	str		1
+hl7.fhir.cl.clips#0.4.0	Procedure	Procedure.status	str		1
+hl7.fhir.cl.clips#0.4.0	Procedure	Procedure.subject	Reference:literal		1
+hl7.fhir.cl.clips#0.4.0	Procedure	Procedure.subject.reference	str		1
 hl7.fhir.eu.base#2.0.1	AllergyIntolerance	AllergyIntolerance._onsetDateTime.extension[http://hl7.eu/fhir/extensions/StructureDefinition/periods-of-life].url	str		1
 hl7.fhir.eu.base#2.0.1	AllergyIntolerance	AllergyIntolerance._onsetDateTime.extension[http://hl7.eu/fhir/extensions/StructureDefinition/periods-of-life].valueCodeableConcept.coding	Coding	http://snomed.info/sct	1
 hl7.fhir.eu.base#2.0.1	AllergyIntolerance	AllergyIntolerance._onsetDateTime.extension[http://hl7.eu/fhir/extensions/StructureDefinition/periods-of-life].valueCodeableConcept.coding.code	str		1
@@ -4979,6 +5816,68 @@ hl7.fhir.uv.shc-vaccination#1.0.0	Patient	Patient.id	str		4
 hl7.fhir.uv.shc-vaccination#1.0.0	Patient	Patient.name.family	str		12
 hl7.fhir.uv.shc-vaccination#1.0.0	Patient	Patient.name.given	str		24
 hl7.fhir.uv.shc-vaccination#1.0.0	Patient	Patient.resourceType	str		12
+hl7.fhir.uv.smart-health-cards-and-links#1.0.0	Parameters	Parameters.id	str		2
+hl7.fhir.uv.smart-health-cards-and-links#1.0.0	Parameters	Parameters.parameter.name	str		6
+hl7.fhir.uv.smart-health-cards-and-links#1.0.0	Parameters	Parameters.parameter.part.name	str		3
+hl7.fhir.uv.smart-health-cards-and-links#1.0.0	Parameters	Parameters.parameter.part.valueInteger	int		1
+hl7.fhir.uv.smart-health-cards-and-links#1.0.0	Parameters	Parameters.parameter.part.valueUri	str		2
+hl7.fhir.uv.smart-health-cards-and-links#1.0.0	Parameters	Parameters.parameter.valueDateTime	str		1
+hl7.fhir.uv.smart-health-cards-and-links#1.0.0	Parameters	Parameters.parameter.valueString	str		2
+hl7.fhir.uv.smart-health-cards-and-links#1.0.0	Parameters	Parameters.parameter.valueUri	str		2
+hl7.fhir.uv.smart-health-cards-and-links#1.0.0	Parameters	Parameters.resourceType	str		2
+ihe.iti.sips#1.0.0	Organization	Organization.active	bool		1
+ihe.iti.sips#1.0.0	Organization	Organization.address.city	str		1
+ihe.iti.sips#1.0.0	Organization	Organization.address.country	str		1
+ihe.iti.sips#1.0.0	Organization	Organization.address.line	str		1
+ihe.iti.sips#1.0.0	Organization	Organization.address.postalCode	str		1
+ihe.iti.sips#1.0.0	Organization	Organization.address.use	str		1
+ihe.iti.sips#1.0.0	Organization	Organization.id	str		1
+ihe.iti.sips#1.0.0	Organization	Organization.identifier	Identifier	urn:oid:2.16.528.1.1007.3.3	1
+ihe.iti.sips#1.0.0	Organization	Organization.identifier.system	str		1
+ihe.iti.sips#1.0.0	Organization	Organization.identifier.value	str		1
+ihe.iti.sips#1.0.0	Organization	Organization.meta.security	Coding	http://terminology.hl7.org/CodeSystem/v3-ActReason	1
+ihe.iti.sips#1.0.0	Organization	Organization.meta.security.code	str		1
+ihe.iti.sips#1.0.0	Organization	Organization.meta.security.system	str		1
+ihe.iti.sips#1.0.0	Organization	Organization.name	str		1
+ihe.iti.sips#1.0.0	Organization	Organization.resourceType	str		1
+ihe.iti.sips#1.0.0	Organization	Organization.telecom	Identifier	phone	1
+ihe.iti.sips#1.0.0	Organization	Organization.telecom.system	str		1
+ihe.iti.sips#1.0.0	Organization	Organization.telecom.use	str		1
+ihe.iti.sips#1.0.0	Organization	Organization.telecom.value	str		1
+ihe.iti.sips#1.0.0	Patient	Patient.active	bool		1
+ihe.iti.sips#1.0.0	Patient	Patient.address.city	str		1
+ihe.iti.sips#1.0.0	Patient	Patient.address.country	str		1
+ihe.iti.sips#1.0.0	Patient	Patient.address.line	str		1
+ihe.iti.sips#1.0.0	Patient	Patient.address.postalCode	str		1
+ihe.iti.sips#1.0.0	Patient	Patient.birthDate	str		1
+ihe.iti.sips#1.0.0	Patient	Patient.contact.address.city	str		1
+ihe.iti.sips#1.0.0	Patient	Patient.contact.address.country	str		1
+ihe.iti.sips#1.0.0	Patient	Patient.contact.address.line	str		1
+ihe.iti.sips#1.0.0	Patient	Patient.contact.address.postalCode	str		1
+ihe.iti.sips#1.0.0	Patient	Patient.contact.name.family	str		1
+ihe.iti.sips#1.0.0	Patient	Patient.contact.name.given	str		1
+ihe.iti.sips#1.0.0	Patient	Patient.contact.relationship.coding	Coding	http://terminology.hl7.org/CodeSystem/v3-RoleCode	1
+ihe.iti.sips#1.0.0	Patient	Patient.contact.relationship.coding.code	str		1
+ihe.iti.sips#1.0.0	Patient	Patient.contact.relationship.coding.system	str		1
+ihe.iti.sips#1.0.0	Patient	Patient.contact.telecom	Identifier	phone	1
+ihe.iti.sips#1.0.0	Patient	Patient.contact.telecom.system	str		1
+ihe.iti.sips#1.0.0	Patient	Patient.contact.telecom.use	str		1
+ihe.iti.sips#1.0.0	Patient	Patient.contact.telecom.value	str		1
+ihe.iti.sips#1.0.0	Patient	Patient.gender	str		1
+ihe.iti.sips#1.0.0	Patient	Patient.id	str		1
+ihe.iti.sips#1.0.0	Patient	Patient.identifier	Identifier	urn:oid:2.16.840.1.113883.2.4.6.3	1
+ihe.iti.sips#1.0.0	Patient	Patient.identifier.system	str		1
+ihe.iti.sips#1.0.0	Patient	Patient.identifier.value	str		1
+ihe.iti.sips#1.0.0	Patient	Patient.meta.security	Coding	http://terminology.hl7.org/CodeSystem/v3-ActReason	1
+ihe.iti.sips#1.0.0	Patient	Patient.meta.security.code	str		1
+ihe.iti.sips#1.0.0	Patient	Patient.meta.security.system	str		1
+ihe.iti.sips#1.0.0	Patient	Patient.name.family	str		1
+ihe.iti.sips#1.0.0	Patient	Patient.name.given	str		1
+ihe.iti.sips#1.0.0	Patient	Patient.resourceType	str		1
+ihe.iti.sips#1.0.0	Patient	Patient.telecom	Identifier	phone	1
+ihe.iti.sips#1.0.0	Patient	Patient.telecom.system	str		1
+ihe.iti.sips#1.0.0	Patient	Patient.telecom.use	str		1
+ihe.iti.sips#1.0.0	Patient	Patient.telecom.value	str		1
 nictiz.fhir.nl.r4.immunization#2.0.0	Immunization	Immunization.contained	resource:Location		1
 nictiz.fhir.nl.r4.immunization#2.0.0	Immunization	Immunization.contained(Location).address._country.extension[http://nictiz.nl/fhir/StructureDefinition/ext-CodeSpecification].url	str		1
 nictiz.fhir.nl.r4.immunization#2.0.0	Immunization	Immunization.contained(Location).address._country.extension[http://nictiz.nl/fhir/StructureDefinition/ext-CodeSpecification].valueCodeableConcept.coding	Coding	urn:iso:std:iso:3166	1
@@ -5097,3 +5996,65 @@ smart.who.int.immunizations#1.0.0	Patient	Patient.resourceType	str		2
 smart.who.int.immunizations#1.0.0	Patient	Patient.telecom	Identifier	phone	2
 smart.who.int.immunizations#1.0.0	Patient	Patient.telecom.system	str		2
 smart.who.int.immunizations#1.0.0	Patient	Patient.telecom.value	str		2
+vzvz.covid-vaccinations#0.1.3	Immunization	Immunization.identifier	Identifier	urn:oid:123.456	1
+vzvz.covid-vaccinations#0.1.3	Immunization	Immunization.identifier.system	str		1
+vzvz.covid-vaccinations#0.1.3	Immunization	Immunization.identifier.value	str		1
+vzvz.covid-vaccinations#0.1.3	Immunization	Immunization.lotNumber	str		1
+vzvz.covid-vaccinations#0.1.3	Immunization	Immunization.meta.profile	str		1
+vzvz.covid-vaccinations#0.1.3	Immunization	Immunization.occurrenceDateTime	str		1
+vzvz.covid-vaccinations#0.1.3	Immunization	Immunization.patient	Reference:literal		1
+vzvz.covid-vaccinations#0.1.3	Immunization	Immunization.patient.reference	str		1
+vzvz.covid-vaccinations#0.1.3	Immunization	Immunization.patient.type	str		1
+vzvz.covid-vaccinations#0.1.3	Immunization	Immunization.performer.actor	Reference:literal		1
+vzvz.covid-vaccinations#0.1.3	Immunization	Immunization.performer.actor.reference	str		1
+vzvz.covid-vaccinations#0.1.3	Immunization	Immunization.performer.actor.type	str		1
+vzvz.covid-vaccinations#0.1.3	Immunization	Immunization.performer.function.coding	Coding	http://terminology.hl7.org/CodeSystem/v2-0443	1
+vzvz.covid-vaccinations#0.1.3	Immunization	Immunization.performer.function.coding.code	str		1
+vzvz.covid-vaccinations#0.1.3	Immunization	Immunization.performer.function.coding.display	str		1
+vzvz.covid-vaccinations#0.1.3	Immunization	Immunization.performer.function.coding.system	str		1
+vzvz.covid-vaccinations#0.1.3	Immunization	Immunization.protocolApplied.doseNumberString	str		1
+vzvz.covid-vaccinations#0.1.3	Immunization	Immunization.reasonCode.coding	Coding	http://rivm.nl/selectiecriterium	1
+vzvz.covid-vaccinations#0.1.3	Immunization	Immunization.reasonCode.coding.code	str		1
+vzvz.covid-vaccinations#0.1.3	Immunization	Immunization.reasonCode.coding.display	str		1
+vzvz.covid-vaccinations#0.1.3	Immunization	Immunization.reasonCode.coding.system	str		1
+vzvz.covid-vaccinations#0.1.3	Immunization	Immunization.resourceType	str		1
+vzvz.covid-vaccinations#0.1.3	Immunization	Immunization.status	str		1
+vzvz.covid-vaccinations#0.1.3	Immunization	Immunization.vaccineCode.coding	Coding	urn:oid:2.16.840.1.113883.2.4.4.7	1
+vzvz.covid-vaccinations#0.1.3	Immunization	Immunization.vaccineCode.coding.code	str		1
+vzvz.covid-vaccinations#0.1.3	Immunization	Immunization.vaccineCode.coding.display	str		1
+vzvz.covid-vaccinations#0.1.3	Immunization	Immunization.vaccineCode.coding.system	str		1
+vzvz.covid-vaccinations#0.1.3	Organization	Organization.id	str		1
+vzvz.covid-vaccinations#0.1.3	Organization	Organization.identifier	Identifier	http://fhir.nl/fhir/NamingSystem/ura	1
+vzvz.covid-vaccinations#0.1.3	Organization	Organization.identifier.system	str		1
+vzvz.covid-vaccinations#0.1.3	Organization	Organization.identifier.value	str		1
+vzvz.covid-vaccinations#0.1.3	Organization	Organization.meta.profile	str		1
+vzvz.covid-vaccinations#0.1.3	Organization	Organization.name	str		1
+vzvz.covid-vaccinations#0.1.3	Organization	Organization.resourceType	str		1
+vzvz.covid-vaccinations#0.1.3	Organization	Organization.telecom	Identifier	email	1
+vzvz.covid-vaccinations#0.1.3	Organization	Organization.telecom	Identifier	phone	1
+vzvz.covid-vaccinations#0.1.3	Organization	Organization.telecom.system	str		2
+vzvz.covid-vaccinations#0.1.3	Organization	Organization.telecom.use	str		2
+vzvz.covid-vaccinations#0.1.3	Organization	Organization.telecom.value	str		2
+vzvz.covid-vaccinations#0.1.3	Patient	Patient.address._line.extension[http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-buildingNumberSuffix].url	str		1
+vzvz.covid-vaccinations#0.1.3	Patient	Patient.address._line.extension[http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-buildingNumberSuffix].valueString	str		1
+vzvz.covid-vaccinations#0.1.3	Patient	Patient.address._line.extension[http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber].url	str		1
+vzvz.covid-vaccinations#0.1.3	Patient	Patient.address._line.extension[http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber].valueString	str		1
+vzvz.covid-vaccinations#0.1.3	Patient	Patient.address.country	str		1
+vzvz.covid-vaccinations#0.1.3	Patient	Patient.address.line	str		1
+vzvz.covid-vaccinations#0.1.3	Patient	Patient.address.postalCode	str		1
+vzvz.covid-vaccinations#0.1.3	Patient	Patient.birthDate	str		1
+vzvz.covid-vaccinations#0.1.3	Patient	Patient.id	str		1
+vzvz.covid-vaccinations#0.1.3	Patient	Patient.identifier	Identifier	urn:oid:2.16.840.1.113883.2.4.6.3	1
+vzvz.covid-vaccinations#0.1.3	Patient	Patient.identifier.system	str		1
+vzvz.covid-vaccinations#0.1.3	Patient	Patient.identifier.value	str		1
+vzvz.covid-vaccinations#0.1.3	Patient	Patient.meta.profile	str		1
+vzvz.covid-vaccinations#0.1.3	Patient	Patient.name._family.extension[http://hl7.org/fhir/StructureDefinition/humanname-own-name].url	str		1
+vzvz.covid-vaccinations#0.1.3	Patient	Patient.name._family.extension[http://hl7.org/fhir/StructureDefinition/humanname-own-name].valueString	str		1
+vzvz.covid-vaccinations#0.1.3	Patient	Patient.name._family.extension[http://hl7.org/fhir/StructureDefinition/humanname-own-prefix].url	str		1
+vzvz.covid-vaccinations#0.1.3	Patient	Patient.name._family.extension[http://hl7.org/fhir/StructureDefinition/humanname-own-prefix].valueString	str		1
+vzvz.covid-vaccinations#0.1.3	Patient	Patient.name._given.extension[http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier].url	str		2
+vzvz.covid-vaccinations#0.1.3	Patient	Patient.name._given.extension[http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier].valueCode	str		2
+vzvz.covid-vaccinations#0.1.3	Patient	Patient.name.family	str		1
+vzvz.covid-vaccinations#0.1.3	Patient	Patient.name.given	str		2
+vzvz.covid-vaccinations#0.1.3	Patient	Patient.name.use	str		1
+vzvz.covid-vaccinations#0.1.3	Patient	Patient.resourceType	str		1

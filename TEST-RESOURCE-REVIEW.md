@@ -39,7 +39,7 @@ use `assessmentDate` / `patient` / `immunization`. None carry a manufacturer.
 
 ## Manufacturer: every source compared (2026-11-02)
 
-Scan of 104 Immunization examples in 20 packages (re-run with international ImmDS, SMART Health Cards vaccination, Belgian vaccination: no new manufacturer forms)
+Scan of 272 Immunization examples in 31 sources (README lists them; the Swiss vaccination guide ch-vacd alone has 92): no new manufacturer forms
 (`cicada_generator/tool/ig_compare/`).
 
 - **Where:** every source that carries a manufacturer puts it in `Immunization.manufacturer`
@@ -74,7 +74,6 @@ Fields we fill that **no guide example fills**:
 - `Immunization.vaccineCode.coding` with system `http://hl7.org/fhir/sid/mvx` (2,363).
 - `Condition.code.coding` with our CodeSystem `cdsi-observation-codes` (379).
 - `Parameters.parameter.resource` = Condition (379); ImmDS defines no such input.
-- `Condition.subject.type` (379): legal R4, but no example uses it.
 
 Every other field we fill matches the guides at the path level. Value-level deviations
 (parameter names, the date-as-name, CVX display, family name, gender branch) are #1, #2, #4, #6, #7.
@@ -85,3 +84,9 @@ Fields most guides fill that we never fill (`guides_not_ours.tsv`), relevant to 
 - `Immunization.manufacturer` (5), `Immunization.primarySource` (8), `vaccineCode.text` (7),
   `protocolApplied.doseNumberPositiveInt` and `.targetDisease` (6), `lotNumber` (9).
 - Patient identifiers, names, address and telecom: carry nothing the forecast uses.
+
+Re-run over 31 sources: our only fields no guide uses are the MVX coding in `vaccineCode`, our
+`cdsi-observation-codes` CodeSystem on Condition, and a Condition as a forecast parameter.
+
+**Rule (Grey 2026-11-02):** build our test resources the way most guides do; make the engine
+read every form any guide uses.
