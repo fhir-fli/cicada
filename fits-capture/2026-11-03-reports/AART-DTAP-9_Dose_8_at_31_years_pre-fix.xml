@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:validationReport xmlns:ns2="https://fits.nist.gov/xml/">
+    <ReportMetaData>
+        <DateExecuted>2026-11-03T14:02:49.365Z</DateExecuted>
+        <Software>
+            <EndPoint>https://coniferous-nonopinionated-josefine.ngrok-free.dev/$immds-forecast</EndPoint>
+            <ConnectionType>FHIRR4</ConnectionType>
+        </Software>
+    </ReportMetaData>
+    <TestCaseMetaData>
+        <Name>Dose 8 at 31 years</Name>
+        <UID>AART-DTAP-9</UID>
+        <MetaData>
+            <version>1</version>
+            <dateCreated>2018-10-18Z</dateCreated>
+            <dateLastUpdated>2020-02-06Z</dateLastUpdated>
+        </MetaData>
+    </TestCaseMetaData>
+    <TestCaseInformation>
+        <Patient>
+            <Gender>Female</Gender>
+            <DateOfBirth>11/03/1995</DateOfBirth>
+        </Patient>
+        <AssessmentDate>11/03/2026</AssessmentDate>
+    </TestCaseInformation>
+    <ValidationResult>
+        <ReportSummary>
+            <Evaluations>
+                <Correct>0</Correct>
+                <Errors>0</Errors>
+                <Warnings>0</Warnings>
+                <Incomplete>8</Incomplete>
+                <CompletionPercentage>0</CompletionPercentage>
+                <CorrectnessPercentage>100</CorrectnessPercentage>
+            </Evaluations>
+            <Forecasts>
+                <Correct>3</Correct>
+                <Errors>0</Errors>
+                <Warnings>1</Warnings>
+                <Incomplete>1</Incomplete>
+                <CompletionPercentage>0</CompletionPercentage>
+                <CorrectnessPercentage>100</CorrectnessPercentage>
+            </Forecasts>
+        </ReportSummary>
+        <EvaluationsReport>
+            <VaccinationEventValidation>
+                <VaccinationEvent>
+                    <Administred name="DTaP, unspecified formulation" cvx="107"/>
+                    <Date>01/03/1996</Date>
+                </VaccinationEvent>
+                <Evaluations>
+                    <Evaluation>
+                        <Evaluation status="Valid">
+                            <Vaccine name="DTaP, unspecified formulation" cvx="107"/>
+                        </Evaluation>
+                        <Assessment>NO_MATCH</Assessment>
+                    </Evaluation>
+                </Evaluations>
+            </VaccinationEventValidation>
+            <VaccinationEventValidation>
+                <VaccinationEvent>
+                    <Administred name="DTaP, unspecified formulation" cvx="107"/>
+                    <Date>03/03/1996</Date>
+                </VaccinationEvent>
+                <Evaluations>
+                    <Evaluation>
+                        <Evaluation status="Valid">
+                            <Vaccine name="DTaP, unspecified formulation" cvx="107"/>
+                        </Evaluation>
+                        <Assessment>NO_MATCH</Assessment>
+                    </Evaluation>
+                </Evaluations>
+            </VaccinationEventValidation>
+            <VaccinationEventValidation>
+                <VaccinationEvent>
+                    <Administred name="DTaP, unspecified formulation" cvx="107"/>
+                    <Date>05/03/1996</Date>
+                </VaccinationEvent>
+                <Evaluations>
+                    <Evaluation>
+                        <Evaluation status="Valid">
+                            <Vaccine name="DTaP, unspecified formulation" cvx="107"/>
+                        </Evaluation>
+                        <Assessment>NO_MATCH</Assessment>
+                    </Evaluation>
+                </Evaluations>
+            </VaccinationEventValidation>
+            <VaccinationEventValidation>
+                <VaccinationEvent>
+                    <Administred name="DTaP, unspecified formulation" cvx="107"/>
+                    <Date>02/03/1997</Date>
+                </VaccinationEvent>
+                <Evaluations>
+                    <Evaluation>
+                        <Evaluation status="Valid">
+                            <Vaccine name="DTaP, unspecified formulation" cvx="107"/>
+                        </Evaluation>
+                        <Assessment>NO_MATCH</Assessment>
+                    </Evaluation>
+                </Evaluations>
+            </VaccinationEventValidation>
+            <VaccinationEventValidation>
+                <VaccinationEvent>
+                    <Administred name="DTaP, unspecified formulation" cvx="107"/>
+                    <Date>11/03/1999</Date>
+                </VaccinationEvent>
+                <Evaluations>
+                    <Evaluation>
+                        <Evaluation status="Valid">
+                            <Vaccine name="DTaP, unspecified formulation" cvx="107"/>
+                        </Evaluation>
+                        <Assessment>NO_MATCH</Assessment>
+                    </Evaluation>
+                </Evaluations>
+            </VaccinationEventValidation>
+            <VaccinationEventValidation>
+                <VaccinationEvent>
+                    <Administred name="Tdap" cvx="115"/>
+                    <Date>11/03/2006</Date>
+                </VaccinationEvent>
+                <Evaluations>
+                    <Evaluation>
+                        <Evaluation status="Valid">
+                            <Vaccine name="Tdap" cvx="115"/>
+                        </Evaluation>
+                        <Assessment>NO_MATCH</Assessment>
+                    </Evaluation>
+                </Evaluations>
+            </VaccinationEventValidation>
+            <VaccinationEventValidation>
+                <VaccinationEvent>
+                    <Administred name="Td (adult), 5 Lf tetanus toxoid, preservative free, adsorbed" cvx="113"/>
+                    <Date>11/03/2016</Date>
+                </VaccinationEvent>
+                <Evaluations>
+                    <Evaluation>
+                        <Evaluation status="Valid">
+                            <Vaccine name="Td(adult) unspecified formulation" cvx="139"/>
+                        </Evaluation>
+                        <Assessment>NO_MATCH</Assessment>
+                    </Evaluation>
+                </Evaluations>
+            </VaccinationEventValidation>
+            <VaccinationEventValidation>
+                <VaccinationEvent>
+                    <Administred name="Tdap" cvx="115"/>
+                    <Date>11/03/2026</Date>
+                </VaccinationEvent>
+                <Evaluations>
+                    <Evaluation>
+                        <Evaluation status="Valid">
+                            <Vaccine name="Tdap" cvx="115"/>
+                        </Evaluation>
+                        <Assessment>NO_MATCH</Assessment>
+                    </Evaluation>
+                </Evaluations>
+            </VaccinationEventValidation>
+        </EvaluationsReport>
+        <ForecastsReport>
+            <ForecastValidation>
+                <Target name="DTaP, unspecified formulation" cvx="107"/>
+                <DoseNumber>
+                    <Expected>9</Expected>
+                    <Actual>8</Actual>
+                    <Assessment>WARNING</Assessment>
+                </DoseNumber>
+                <EarliestDate>
+                    <Expected>11/03/2031</Expected>
+                    <Actual>11/03/2031</Actual>
+                    <Assessment>SUCCESS</Assessment>
+                </EarliestDate>
+                <RecommendedDate>
+                    <Expected>11/03/2036</Expected>
+                    <Actual>11/03/2036</Actual>
+                    <Assessment>SUCCESS</Assessment>
+                </RecommendedDate>
+                <PastDueDate>
+                    <Expected>11/30/2036</Expected>
+                    <Actual>11/30/2036</Actual>
+                    <Assessment>SUCCESS</Assessment>
+                </PastDueDate>
+            </ForecastValidation>
+        </ForecastsReport>
+    </ValidationResult>
+</ns2:validationReport>
