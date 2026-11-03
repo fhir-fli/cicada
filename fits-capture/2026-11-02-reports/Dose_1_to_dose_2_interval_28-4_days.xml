@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:validationReport xmlns:ns2="https://fits.nist.gov/xml/">
+    <ReportMetaData>
+        <DateExecuted>2026-11-03T01:51:38.704Z</DateExecuted>
+        <Software>
+            <EndPoint>https://coniferous-nonopinionated-josefine.ngrok-free.dev/$immds-forecast</EndPoint>
+            <ConnectionType>FHIRR4</ConnectionType>
+        </Software>
+    </ReportMetaData>
+    <TestCaseMetaData>
+        <Name>Dose 1 to dose 2 interval 28-4 days</Name>
+        <UID>2013-0200</UID>
+        <MetaData>
+            <version>1.0</version>
+            <dateCreated>2013-01-01Z</dateCreated>
+            <dateLastUpdated>2020-06-18Z</dateLastUpdated>
+        </MetaData>
+    </TestCaseMetaData>
+    <TestCaseInformation>
+        <Patient>
+            <Gender>Female</Gender>
+            <DateOfBirth>10/09/2026</DateOfBirth>
+        </Patient>
+        <AssessmentDate>11/03/2026</AssessmentDate>
+    </TestCaseInformation>
+    <ValidationResult>
+        <ReportSummary>
+            <Evaluations>
+                <Correct>0</Correct>
+                <Errors>0</Errors>
+                <Warnings>0</Warnings>
+                <Incomplete>2</Incomplete>
+                <CompletionPercentage>0</CompletionPercentage>
+                <CorrectnessPercentage>100</CorrectnessPercentage>
+            </Evaluations>
+            <Forecasts>
+                <Correct>4</Correct>
+                <Errors>0</Errors>
+                <Warnings>0</Warnings>
+                <Incomplete>1</Incomplete>
+                <CompletionPercentage>0</CompletionPercentage>
+                <CorrectnessPercentage>100</CorrectnessPercentage>
+            </Forecasts>
+        </ReportSummary>
+        <EvaluationsReport>
+            <VaccinationEventValidation>
+                <VaccinationEvent>
+                    <Administred name="RECOMBIVAX-PEDS" cvx="08" mvx="MSD"/>
+                    <Date>10/09/2026</Date>
+                </VaccinationEvent>
+                <Evaluations>
+                    <Evaluation>
+                        <Evaluation status="Valid">
+                            <Vaccine name="Hep B, unspecified formulation" cvx="45"/>
+                        </Evaluation>
+                        <Assessment>NO_MATCH</Assessment>
+                    </Evaluation>
+                </Evaluations>
+            </VaccinationEventValidation>
+            <VaccinationEventValidation>
+                <VaccinationEvent>
+                    <Administred name="Hep B, adolescent or pediatric" cvx="08"/>
+                    <Date>11/02/2026</Date>
+                </VaccinationEvent>
+                <Evaluations>
+                    <Evaluation>
+                        <Evaluation status="Valid">
+                            <Vaccine name="Hep B, unspecified formulation" cvx="45"/>
+                        </Evaluation>
+                        <Assessment>NO_MATCH</Assessment>
+                    </Evaluation>
+                </Evaluations>
+            </VaccinationEventValidation>
+        </EvaluationsReport>
+        <ForecastsReport>
+            <ForecastValidation>
+                <Target name="Hep B, unspecified formulation" cvx="45"/>
+                <DoseNumber>
+                    <Expected>3</Expected>
+                    <Actual>3</Actual>
+                    <Assessment>SUCCESS</Assessment>
+                </DoseNumber>
+                <EarliestDate>
+                    <Expected>03/26/2027</Expected>
+                    <Actual>03/26/2027</Actual>
+                    <Assessment>SUCCESS</Assessment>
+                </EarliestDate>
+                <RecommendedDate>
+                    <Expected>04/09/2027</Expected>
+                    <Actual>04/09/2027</Actual>
+                    <Assessment>SUCCESS</Assessment>
+                </RecommendedDate>
+                <PastDueDate>
+                    <Expected>06/05/2028</Expected>
+                    <Actual>06/05/2028</Actual>
+                    <Assessment>SUCCESS</Assessment>
+                </PastDueDate>
+            </ForecastValidation>
+        </ForecastsReport>
+    </ValidationResult>
+</ns2:validationReport>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:validationReport xmlns:ns2="https://fits.nist.gov/xml/">
+    <ReportMetaData>
+        <DateExecuted>2026-11-03T01:51:46.061Z</DateExecuted>
+        <Software>
+            <EndPoint>https://coniferous-nonopinionated-josefine.ngrok-free.dev/$immds-forecast</EndPoint>
+            <ConnectionType>FHIRR4</ConnectionType>
+        </Software>
+    </ReportMetaData>
+    <TestCaseMetaData>
+        <Name>Recombivax Hep B ages 11-15.  Dose 2 recommended in 4-6 months. </Name>
+        <UID>2013-0208</UID>
+        <MetaData>
+            <version>1.0</version>
+            <dateCreated>2013-01-01Z</dateCreated>
+            <dateLastUpdated>2020-06-18Z</dateLastUpdated>
+        </MetaData>
+    </TestCaseMetaData>
+    <TestCaseInformation>
+        <Patient>
+            <Gender>Female</Gender>
+            <DateOfBirth>04/13/2014</DateOfBirth>
+        </Patient>
+        <AssessmentDate>11/03/2026</AssessmentDate>
+    </TestCaseInformation>
+    <ValidationResult>
+        <ReportSummary>
+            <Evaluations>
+                <Correct>0</Correct>
+                <Errors>0</Errors>
+                <Warnings>0</Warnings>
+                <Incomplete>1</Incomplete>
+                <CompletionPercentage>0</CompletionPercentage>
+                <CorrectnessPercentage>100</CorrectnessPercentage>
+            </Evaluations>
+            <Forecasts>
+                <Correct>1</Correct>
+                <Errors>2</Errors>
+                <Warnings>1</Warnings>
+                <Incomplete>1</Incomplete>
+                <CompletionPercentage>0</CompletionPercentage>
+                <CorrectnessPercentage>0</CorrectnessPercentage>
+            </Forecasts>
+        </ReportSummary>
+        <EvaluationsReport>
+            <VaccinationEventValidation>
+                <VaccinationEvent>
+                    <Administred name="RECOMBIVAX-ADULT" cvx="43" mvx="MSD"/>
+                    <Date>11/02/2026</Date>
+                </VaccinationEvent>
+                <Evaluations>
+                    <Evaluation>
+                        <Evaluation status="Valid">
+                            <Vaccine name="Hep B, unspecified formulation" cvx="45"/>
+                        </Evaluation>
+                        <Assessment>NO_MATCH</Assessment>
+                    </Evaluation>
+                </Evaluations>
+            </VaccinationEventValidation>
+        </EvaluationsReport>
+        <ForecastsReport>
+            <ForecastValidation>
+                <Target name="Hep B, unspecified formulation" cvx="45"/>
+                <DoseNumber>
+                    <Expected>2</Expected>
+                    <Actual>2</Actual>
+                    <Assessment>SUCCESS</Assessment>
+                </DoseNumber>
+                <EarliestDate>
+                    <Expected>03/02/2027</Expected>
+                    <Actual>11/30/2026</Actual>
+                    <Assessment>ERROR</Assessment>
+                </EarliestDate>
+                <RecommendedDate>
+                    <Expected>03/02/2027</Expected>
+                    <Actual>11/30/2026</Actual>
+                    <Assessment>ERROR</Assessment>
+                </RecommendedDate>
+                <PastDueDate>
+                    <Expected>06/29/2027</Expected>
+                    <Actual>11/30/2026</Actual>
+                    <Assessment>WARNING</Assessment>
+                </PastDueDate>
+            </ForecastValidation>
+        </ForecastsReport>
+    </ValidationResult>
+</ns2:validationReport>
