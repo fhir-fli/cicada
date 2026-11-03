@@ -62,3 +62,26 @@ Scan of 48 Immunization examples and 177 profile constraints in 17 packages
 Forms the engine must read: contained Organization (identifier with any MVX URI or none; else
 name), `manufacturer.identifier`, `manufacturer.display` (name), a literal reference to an
 Organization supplied in the input, an NDC in `vaccineCode`, and the old MVX coding in `vaccineCode`.
+
+## Every field, every resource (2026-11-02)
+
+`path_census.py` counts every populated field of Parameters, Patient, Immunization, Condition,
+AllergyIntolerance, Observation, Procedure, MedicationStatement and Organization in all the
+guides' examples (5,000+ resources incl. ours) and in our 1,401 cases (`census.tsv`).
+`compare_ours.py` lines each field we fill up against the guides (`ours_vs_guides.tsv`).
+
+Fields we fill that **no guide example fills**:
+- `Immunization.vaccineCode.coding` with system `http://hl7.org/fhir/sid/mvx` (2,363).
+- `Condition.code.coding` with our CodeSystem `cdsi-observation-codes` (379).
+- `Parameters.parameter.resource` = Condition (379); ImmDS defines no such input.
+- `Condition.subject.type` (379): legal R4, but no example uses it.
+
+Every other field we fill matches the guides at the path level. Value-level deviations
+(parameter names, the date-as-name, CVX display, family name, gender branch) are #1, #2, #4, #6, #7.
+
+Fields most guides fill that we never fill (`guides_not_ours.tsv`), relevant to what the engine reads:
+- `Condition.verificationStatus` (11 guides) and `Condition.category` (9). The engine drops
+  refuted and entered-in-error; our tests never send a verificationStatus, so that path is untested.
+- `Immunization.manufacturer` (5), `Immunization.primarySource` (8), `vaccineCode.text` (7),
+  `protocolApplied.doseNumberPositiveInt` and `.targetDisease` (6), `lotNumber` (9).
+- Patient identifiers, names, address and telecom: carry nothing the forecast uses.
