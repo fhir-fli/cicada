@@ -1029,6 +1029,12 @@ Parameters forecastFromMap(
     final newParameters = Parameters.fromJson(parameters);
     return forecastFromParameters(newParameters, mode: mode);
   }
+  if (parameters['resourceType'] == 'Bundle') {
+    return forecastFromParameters(
+      parametersFromBundle(Bundle.fromJson(parameters)),
+      mode: mode,
+    );
+  }
   return const Parameters();
 }
 

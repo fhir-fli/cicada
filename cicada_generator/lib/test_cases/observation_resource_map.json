@@ -1,0 +1,3727 @@
+{
+ "001": {
+  "category": null,
+  "cdsiCodeAdded": true,
+  "code": [
+   {
+    "code": "001",
+    "display": "Patient seeks protection",
+    "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes"
+   }
+  ],
+  "resource": "Observation",
+  "title": "Patient seeks protection"
+ },
+ "002": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "38100",
+    "display": "Splenectomy; total (separate procedure)",
+    "system": "http://www.ama-assn.org/go/cpt"
+   }
+  ],
+  "resource": "Procedure",
+  "title": "Undergoing elective splenectomy"
+ },
+ "003": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "370388006",
+    "display": "Patient Immunocompromised",
+    "system": "http://snomed.info/sct"
+   }
+  ],
+  "resource": "Condition",
+  "title": "Immunocompromised"
+ },
+ "004": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "234336002",
+    "display": "Hemopoietic stem cell transplant [procedure]",
+    "system": "http://snomed.info/sct"
+   }
+  ],
+  "resource": "Procedure",
+  "title": "Recipient of a hematopoietic stem cell transplant"
+ },
+ "005": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "50711007",
+    "display": "Viral hepatitis type C [disorder]",
+    "system": "http://snomed.info/sct"
+   }
+  ],
+  "resource": "Condition",
+  "title": "Hepatitis C virus infection"
+ },
+ "006": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "D66",
+    "display": "Hereditary factor VIII deficiency",
+    "system": "http://hl7.org/fhir/sid/icd-10-cm"
+   }
+  ],
+  "resource": "Condition",
+  "title": "Receives clotting factor concentrates"
+ },
+ "007": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "77386006",
+    "display": "Patient currently pregnant [finding]",
+    "system": "http://snomed.info/sct"
+   }
+  ],
+  "resource": "Condition",
+  "title": "Pregnant"
+ },
+ "008": {
+  "category": null,
+  "cdsiCodeAdded": true,
+  "code": [
+   {
+    "code": "008",
+    "display": "Travel to an area of active cholera transmission",
+    "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes"
+   }
+  ],
+  "resource": "Observation",
+  "title": "Travel to an area of active cholera transmission"
+ },
+ "009": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "413712001",
+    "display": "Breastfeeding [mother] [observable entity]",
+    "system": "http://snomed.info/sct"
+   }
+  ],
+  "resource": "Condition",
+  "title": "Breastfeeding"
+ },
+ "010": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "230744007",
+    "display": "Cerebrospinal fluid leak [disorder]",
+    "system": "http://snomed.info/sct"
+   }
+  ],
+  "resource": "Condition",
+  "title": "Cerebrospinal fluid leaks"
+ },
+ "011": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "449840001",
+    "display": "Cochlear prosthesis in situ [finding]",
+    "system": "http://snomed.info/sct"
+   }
+  ],
+  "resource": "Condition",
+  "title": "Cochlear implants"
+ },
+ "012": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "Z83.2",
+    "display": "Family history of diseases of the blood and blood-forming organs and certain disorders involving the immune mechanism",
+    "system": "http://hl7.org/fhir/sid/icd-10-cm"
+   }
+  ],
+  "resource": "Condition",
+  "title": "Family history of altered immunocompetence"
+ },
+ "013": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "D81.9",
+    "display": "Combined immunodeficiency, unspecified",
+    "system": "http://hl7.org/fhir/sid/icd-10-cm"
+   }
+  ],
+  "resource": "Condition",
+  "title": "Severe Combined Immunodeficiency [SCID]"
+ },
+ "014": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "73211009",
+    "display": "Diabetes mellitus [disorder]",
+    "system": "http://snomed.info/sct"
+   }
+  ],
+  "resource": "Condition",
+  "title": "Diabetes"
+ },
+ "015": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "328383001",
+    "display": "Chronic liver disease [disorder]",
+    "system": "http://snomed.info/sct"
+   }
+  ],
+  "resource": "Condition",
+  "title": "Chronic liver disease"
+ },
+ "016": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "128238001",
+    "display": "Chronic heart disease [disorder]",
+    "system": "http://snomed.info/sct"
+   }
+  ],
+  "resource": "Condition",
+  "title": "Chronic heart disease"
+ },
+ "017": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "413839001",
+    "display": "Chronic lung disease [disorder]",
+    "system": "http://snomed.info/sct"
+   }
+  ],
+  "resource": "Condition",
+  "title": "Chronic lung disease"
+ },
+ "018": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "278971009",
+    "display": "Hepatitis A Immune [Finding]",
+    "system": "http://snomed.info/sct"
+   }
+  ],
+  "resource": "Condition",
+  "title": "Laboratory Evidence of Immunity or confirmation of Hepatitis A disease"
+ },
+ "019": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "271511000",
+    "display": "Hepatitis B Immune [Finding]",
+    "system": "http://snomed.info/sct"
+   }
+  ],
+  "resource": "Condition",
+  "title": "Laboratory Evidence of Immunity or confirmation of Hepatitis B disease"
+ },
+ "020": {
+  "category": "laboratory",
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "7962-4",
+    "display": "Measles virus IgG Ab [Units/volume] in Serum",
+    "system": "http://loinc.org"
+   }
+  ],
+  "resource": "Observation",
+  "title": "Laboratory Evidence of Immunity for Measles",
+  "value": [
+   {
+    "code": "10828004",
+    "display": "Positive",
+    "system": "http://snomed.info/sct"
+   }
+  ]
+ },
+ "021": {
+  "category": "laboratory",
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "7966-5",
+    "display": "Mumps virus IgG Ab [Units/volume] in Serum",
+    "system": "http://loinc.org"
+   }
+  ],
+  "resource": "Observation",
+  "title": "Laboratory Evidence of Immunity for Mumps",
+  "value": [
+   {
+    "code": "10828004",
+    "display": "Positive",
+    "system": "http://snomed.info/sct"
+   }
+  ]
+ },
+ "022": {
+  "category": "laboratory",
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "8014-3",
+    "display": "Rubella virus IgG Ab [Units/volume] in Serum",
+    "system": "http://loinc.org"
+   }
+  ],
+  "resource": "Observation",
+  "title": "Laboratory Evidence of Immunity for Rubella",
+  "value": [
+   {
+    "code": "10828004",
+    "display": "Positive",
+    "system": "http://snomed.info/sct"
+   }
+  ]
+ },
+ "023": {
+  "category": "laboratory",
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "19162-7",
+    "display": "Varicella zoster virus IgG Ab [Presence] in Serum",
+    "system": "http://loinc.org"
+   }
+  ],
+  "resource": "Observation",
+  "title": "Laboratory Evidence of Immunity or confirmation of Varicella disease",
+  "value": [
+   {
+    "code": "10828004",
+    "display": "Positive",
+    "system": "http://snomed.info/sct"
+   }
+  ]
+ },
+ "024": {
+  "category": "laboratory",
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "16935-9",
+    "display": "Hepatitis B virus surface Ab [Units/volume] in Serum",
+    "system": "http://loinc.org"
+   }
+  ],
+  "resource": "Observation",
+  "title": "Healthcare provider verified history of or diagnosis of Varicella",
+  "value": [
+   {
+    "code": "10828004",
+    "display": "Positive",
+    "system": "http://snomed.info/sct"
+   }
+  ]
+ },
+ "025": {
+  "category": "laboratory",
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "32018-4",
+    "display": "Hepatitis A virus IgG Ab [Presence] in Serum",
+    "system": "http://loinc.org"
+   }
+  ],
+  "resource": "Observation",
+  "title": "Healthcare provider verified history or diagnosis of Herpes Zoster",
+  "value": [
+   {
+    "code": "10828004",
+    "display": "Positive",
+    "system": "http://snomed.info/sct"
+   }
+  ]
+ },
+ "026": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "427314002",
+    "display": "Antiviral therapy [procedure]",
+    "system": "http://snomed.info/sct"
+   }
+  ],
+  "resource": "Condition",
+  "title": "Persons with perinatal HIV infection who do not have evidence of severe immunosuppression and who were vaccinated with MMR before establishment of antiviral therapy [ART]"
+ },
+ "027": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "390798007",
+    "display": "Asthma finding [finding]",
+    "system": "http://snomed.info/sct"
+   }
+  ],
+  "resource": "Condition",
+  "title": "Asthma"
+ },
+ "028": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "35327006",
+    "display": "Intussusception [morphologic abnormality]",
+    "system": "http://snomed.info/sct"
+   }
+  ],
+  "resource": "Condition",
+  "title": "Intussusception"
+ },
+ "029": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "69776003",
+    "display": "Acute gastroenteritis [disorder]",
+    "system": "http://snomed.info/sct"
+   }
+  ],
+  "resource": "Condition",
+  "title": "Acute gastroenteritis"
+ },
+ "030": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "R50.9",
+    "display": "Fever, unspecified",
+    "system": "http://hl7.org/fhir/sid/icd-10-cm"
+   }
+  ],
+  "resource": "Condition",
+  "title": "Acute febrile illness"
+ },
+ "031": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "56717001",
+    "display": "Tuberculosis [disorder]",
+    "system": "http://snomed.info/sct"
+   }
+  ],
+  "resource": "Condition",
+  "title": "Tuberculosis"
+ },
+ "032": {
+  "cdsiCodeAdded": true,
+  "code": [
+   {
+    "code": "Z99.2",
+    "display": "Dependence on renal dialysis",
+    "system": "http://hl7.org/fhir/sid/icd-10-cm"
+   },
+   {
+    "code": "032",
+    "display": "Dialysis patient",
+    "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes"
+   }
+  ],
+  "resource": "Condition",
+  "title": "Dialysis patient"
+ },
+ "033": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "281",
+    "display": "Acyclovir",
+    "system": "http://www.nlm.nih.gov/research/umls/rxnorm"
+   }
+  ],
+  "resource": "MedicationStatement",
+  "title": "Taken influenza antiviral medications within the previous 48 hours"
+ },
+ "034": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "1191",
+    "display": "Aspirin",
+    "system": "http://www.nlm.nih.gov/research/umls/rxnorm"
+   }
+  ],
+  "resource": "MedicationStatement",
+  "title": "Receiving long-term aspirin therapy"
+ },
+ "035": {
+  "category": null,
+  "cdsiCodeAdded": true,
+  "code": [
+   {
+    "code": "035",
+    "display": "Antimicrobial or antimalarial taken within 72 hours",
+    "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes"
+   }
+  ],
+  "resource": "Observation",
+  "title": "Antimicrobial or antimalarial taken within 72 hours"
+ },
+ "036": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "76102007",
+    "display": "Male homosexual [finding]",
+    "system": "http://snomed.info/sct"
+   }
+  ],
+  "resource": "Condition",
+  "title": "Men who have sex with men"
+ },
+ "037": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "225516002",
+    "display": "Multiple sexual contacts [finding]",
+    "system": "http://snomed.info/sct"
+   }
+  ],
+  "resource": "Condition",
+  "title": "Not in a long-term, mutually monogamous relationship"
+ },
+ "038": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "225517006",
+    "display": "Sexual partners [observable entity]",
+    "system": "http://snomed.info/sct"
+   }
+  ],
+  "resource": "Condition",
+  "title": "Sex partner of Hepatitis B surface antigen-positive persons"
+ },
+ "039": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "305489005",
+    "display": "Under care of genitourinary medicine physician [finding]",
+    "system": "http://snomed.info/sct"
+   }
+  ],
+  "resource": "Condition",
+  "title": "Receives treatment for STD"
+ },
+ "040": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "307052004",
+    "display": "Illicit drug use [finding]",
+    "system": "http://snomed.info/sct"
+   }
+  ],
+  "resource": "Condition",
+  "title": "Illicit drug use"
+ },
+ "041": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "226034001",
+    "display": "Injecting drug user [finding]",
+    "system": "http://snomed.info/sct"
+   }
+  ],
+  "resource": "Condition",
+  "title": "Illicit injection drug use"
+ },
+ "042": {
+  "category": "social-history",
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "72166-2",
+    "display": "Tobacco smoking status",
+    "system": "http://loinc.org"
+   }
+  ],
+  "resource": "Observation",
+  "title": "Smoke cigarettes",
+  "value": [
+   {
+    "code": "77176002",
+    "display": "Smoker [finding]",
+    "system": "http://snomed.info/sct"
+   }
+  ]
+ },
+ "043": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "228281002",
+    "display": "Problem drinker [finding]",
+    "system": "http://snomed.info/sct"
+   }
+  ],
+  "resource": "Condition",
+  "title": "Alcoholism"
+ },
+ "044": {
+  "category": null,
+  "cdsiCodeAdded": true,
+  "code": [
+   {
+    "code": "044",
+    "display": "Anticipate close personal contact with international adoptee",
+    "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes"
+   }
+  ],
+  "resource": "Observation",
+  "title": "Anticipate close personal contact with international adoptee"
+ },
+ "045": {
+  "category": null,
+  "cdsiCodeAdded": true,
+  "code": [
+   {
+    "code": "045",
+    "display": "Travel to country with a Yellow Fever vaccination entry requirement",
+    "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes"
+   }
+  ],
+  "resource": "Observation",
+  "title": "Travel to country with a Yellow Fever vaccination entry requirement"
+ },
+ "046": {
+  "category": null,
+  "cdsiCodeAdded": true,
+  "code": [
+   {
+    "code": "046",
+    "display": "College students living in residence halls",
+    "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes"
+   }
+  ],
+  "resource": "Observation",
+  "title": "College students living in residence halls"
+ },
+ "047": {
+  "category": null,
+  "cdsiCodeAdded": true,
+  "code": [
+   {
+    "code": "047",
+    "display": "Resident of area at risk for exposure to the disease",
+    "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes"
+   }
+  ],
+  "resource": "Observation",
+  "title": "Resident of area at risk for exposure to the disease"
+ },
+ "048": {
+  "category": null,
+  "cdsiCodeAdded": true,
+  "code": [
+   {
+    "code": "048",
+    "display": "Travelling Internationally",
+    "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes"
+   }
+  ],
+  "resource": "Observation",
+  "title": "Travelling Internationally"
+ },
+ "049": {
+  "category": null,
+  "cdsiCodeAdded": true,
+  "code": [
+   {
+    "code": "049",
+    "display": "Working with Hepatitis A virus in research setting",
+    "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes"
+   }
+  ],
+  "resource": "Observation",
+  "title": "Working with Hepatitis A virus in research setting"
+ },
+ "050": {
+  "category": "social-history",
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "11341-5",
+    "display": "History of Occupation",
+    "system": "http://loinc.org"
+   }
+  ],
+  "resource": "Observation",
+  "title": "Microbiologists routinely exposed to Neisseria meningitidis",
+  "value": [
+   {
+    "code": "17872004",
+    "display": "Neisseria meningitidis [organism]",
+    "system": "http://snomed.info/sct"
+   }
+  ]
+ },
+ "051": {
+  "category": "social-history",
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "11341-5",
+    "display": "History of Occupation",
+    "system": "http://loinc.org"
+   }
+  ],
+  "resource": "Observation",
+  "title": "Microbiology laboratorians who work frequently with S. typhi",
+  "value": [
+   {
+    "code": "5595000",
+    "display": "Salmonella Typhi [organism]",
+    "system": "http://snomed.info/sct"
+   }
+  ]
+ },
+ "052": {
+  "category": "social-history",
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "11341-5",
+    "display": "History of Occupation",
+    "system": "http://loinc.org"
+   }
+  ],
+  "resource": "Observation",
+  "title": "Laboratory personnel who might be exposed to YFV",
+  "value": [
+   {
+    "code": "26630006",
+    "display": "Yellow fever virus [organism]",
+    "system": "http://snomed.info/sct"
+   }
+  ]
+ },
+ "053": {
+  "category": "social-history",
+  "cdsiCodeAdded": true,
+  "code": [
+   {
+    "code": "11341-5",
+    "display": "History of Occupation",
+    "system": "http://loinc.org"
+   }
+  ],
+  "resource": "Observation",
+  "title": "Rabies researchers",
+  "value": [
+   {
+    "code": "159282002",
+    "display": "Laboratory technician [occupation]",
+    "system": "http://snomed.info/sct"
+   },
+   {
+    "code": "053",
+    "display": "Rabies researchers",
+    "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes"
+   }
+  ]
+ },
+ "054": {
+  "category": "social-history",
+  "cdsiCodeAdded": true,
+  "code": [
+   {
+    "code": "11341-5",
+    "display": "History of Occupation",
+    "system": "http://loinc.org"
+   }
+  ],
+  "resource": "Observation",
+  "title": "Laboratory workers who handle specimens that might contain polioviruses",
+  "value": [
+   {
+    "code": "159282002",
+    "display": "Laboratory technician [occupation]",
+    "system": "http://snomed.info/sct"
+   },
+   {
+    "code": "054",
+    "display": "Laboratory workers who handle specimens that might contain polioviruses",
+    "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes"
+   }
+  ]
+ },
+ "055": {
+  "category": "social-history",
+  "cdsiCodeAdded": true,
+  "code": [
+   {
+    "code": "11341-5",
+    "display": "History of Occupation",
+    "system": "http://loinc.org"
+   }
+  ],
+  "resource": "Observation",
+  "title": "Health care personnel",
+  "value": [
+   {
+    "code": "223366009",
+    "display": "Healthcare professional [occupation]",
+    "system": "http://snomed.info/sct"
+   },
+   {
+    "code": "055",
+    "display": "Health care personnel",
+    "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes"
+   }
+  ]
+ },
+ "056": {
+  "category": "social-history",
+  "cdsiCodeAdded": true,
+  "code": [
+   {
+    "code": "11341-5",
+    "display": "History of Occupation",
+    "system": "http://loinc.org"
+   }
+  ],
+  "resource": "Observation",
+  "title": "Health-care workers who have close contact with patients who might be excreting wild polioviruses",
+  "value": [
+   {
+    "code": "223366009",
+    "display": "Healthcare professional [occupation]",
+    "system": "http://snomed.info/sct"
+   },
+   {
+    "code": "056",
+    "display": "Health-care workers who have close contact with patients who might be excreting wild polioviruses",
+    "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes"
+   }
+  ]
+ },
+ "057": {
+  "category": "social-history",
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "11341-5",
+    "display": "History of Occupation",
+    "system": "http://loinc.org"
+   }
+  ],
+  "resource": "Observation",
+  "title": "Public safety worker exposed to blood or infection body fluids",
+  "value": [
+   {
+    "code": "26369006",
+    "display": "Public health nurse [occupation]",
+    "system": "http://snomed.info/sct"
+   }
+  ]
+ },
+ "058": {
+  "category": null,
+  "cdsiCodeAdded": true,
+  "code": [
+   {
+    "code": "058",
+    "display": "Staff of institution for persons with developmental disabilities",
+    "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes"
+   }
+  ],
+  "resource": "Observation",
+  "title": "Staff of institution for persons with developmental disabilities"
+ },
+ "059": {
+  "category": "social-history",
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "11341-5",
+    "display": "History of Occupation",
+    "system": "http://loinc.org"
+   }
+  ],
+  "resource": "Observation",
+  "title": "Occupational exposure for Hepatitis A",
+  "value": [
+   {
+    "code": "158942005",
+    "display": "Residential child care worker [occupation]",
+    "system": "http://snomed.info/sct"
+   }
+  ]
+ },
+ "060": {
+  "category": "social-history",
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "11341-5",
+    "display": "History of Occupation",
+    "system": "http://loinc.org"
+   }
+  ],
+  "resource": "Observation",
+  "title": "Veterinarians and their staff",
+  "value": [
+   {
+    "code": "265940000",
+    "display": "Animal health occupation [occupation]",
+    "system": "http://snomed.info/sct"
+   }
+  ]
+ },
+ "061": {
+  "category": "social-history",
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "11341-5",
+    "display": "History of Occupation",
+    "system": "http://loinc.org"
+   }
+  ],
+  "resource": "Observation",
+  "title": "Animal handlers",
+  "value": [
+   {
+    "code": "159091009",
+    "display": "Trainer - performing animals [occupation]",
+    "system": "http://snomed.info/sct"
+   }
+  ]
+ },
+ "062": {
+  "cdsiCodeAdded": true,
+  "code": [
+   {
+    "code": "24932003",
+    "display": "Exposure to [contextual qualifier] [qualifier value]",
+    "system": "http://snomed.info/sct"
+   },
+   {
+    "code": "062",
+    "display": "Persons whose activities bring them into frequent contact with rabies virus or potentially rabid animals",
+    "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes"
+   }
+  ],
+  "resource": "Condition",
+  "title": "Persons whose activities bring them into frequent contact with rabies virus or potentially rabid animals"
+ },
+ "063": {
+  "category": "social-history",
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "11341-5",
+    "display": "History of Occupation",
+    "system": "http://loinc.org"
+   }
+  ],
+  "resource": "Observation",
+  "title": "Post secondary student",
+  "value": [
+   {
+    "code": "65853000",
+    "display": "Student [occupation]",
+    "system": "http://snomed.info/sct"
+   }
+  ]
+ },
+ "064": {
+  "category": null,
+  "cdsiCodeAdded": true,
+  "code": [
+   {
+    "code": "064",
+    "display": "Military recruits",
+    "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes"
+   }
+  ],
+  "resource": "Observation",
+  "title": "Military recruits"
+ },
+ "065": {
+  "cdsiCodeAdded": true,
+  "code": [
+   {
+    "code": "N18.6",
+    "display": "End stage renal disease",
+    "system": "http://hl7.org/fhir/sid/icd-10-cm"
+   },
+   {
+    "code": "065",
+    "display": "Client of institution for persons with developmental disabilities",
+    "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes"
+   }
+  ],
+  "resource": "Condition",
+  "title": "Client of institution for persons with developmental disabilities"
+ },
+ "066": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "90688005",
+    "display": "Chronic renal failure syndrome [disorder]",
+    "system": "http://snomed.info/sct"
+   }
+  ],
+  "resource": "Condition",
+  "title": "Chronic renal failure"
+ },
+ "068": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "20078004",
+    "display": "Substance abuse treatment center [environment]",
+    "system": "http://snomed.info/sct"
+   }
+  ],
+  "resource": "Condition",
+  "title": "In drug abuse treatment and prevention facility"
+ },
+ "069": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "257656006",
+    "display": "Penal institution [environment]",
+    "system": "http://snomed.info/sct"
+   }
+  ],
+  "resource": "Condition",
+  "title": "In correctional facility"
+ },
+ "070": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "410519009",
+    "display": "At risk context [qualifier value]",
+    "system": "http://snomed.info/sct"
+   }
+  ],
+  "resource": "Condition",
+  "title": "Persons at risk during an outbreak"
+ },
+ "071": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "Z11.59",
+    "display": "Encounter for screening for other viral diseases",
+    "system": "http://hl7.org/fhir/sid/icd-10-cm"
+   }
+  ],
+  "resource": "Condition",
+  "title": "Household contact with hepatitis B surface antigen-positive persons"
+ },
+ "072": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "170484009",
+    "display": "Typhoid carrier [finding]",
+    "system": "http://snomed.info/sct"
+   }
+  ],
+  "resource": "Condition",
+  "title": "Intimate exposure to a documented S. typhi carrier"
+ },
+ "073": {
+  "category": null,
+  "cdsiCodeAdded": true,
+  "code": [
+   {
+    "code": "073",
+    "display": "Household and close contacts of immunocompromised persons",
+    "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes"
+   }
+  ],
+  "resource": "Observation",
+  "title": "Household and close contacts of immunocompromised persons"
+ },
+ "074": {
+  "category": null,
+  "cdsiCodeAdded": true,
+  "code": [
+   {
+    "code": "074",
+    "display": "Negative serological screening for varicella",
+    "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes"
+   }
+  ],
+  "resource": "Observation",
+  "title": "Negative serological screening for varicella"
+ },
+ "075": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "12271241000119109",
+    "display": "Transgender identify [finding]",
+    "system": "http://snomed.info/sct"
+   }
+  ],
+  "resource": "Condition",
+  "title": "Transgender person"
+ },
+ "076": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "84757009",
+    "display": "Epilepsy [disorder]",
+    "system": "http://snomed.info/sct"
+   }
+  ],
+  "resource": "Condition",
+  "title": "Progressive neurologic disorder"
+ },
+ "077": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "Z88.9",
+    "display": "Allergy status to unspecified drugs, medicaments and biological substances",
+    "system": "http://hl7.org/fhir/sid/icd-10-cm"
+   }
+  ],
+  "resource": "Condition",
+  "title": "Received inactivated or unknown measles vaccine between 1963-1967"
+ },
+ "078": {
+  "category": null,
+  "cdsiCodeAdded": true,
+  "code": [
+   {
+    "code": "078",
+    "display": "Received killed or unknown Mumps vaccine before 1979",
+    "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes"
+   }
+  ],
+  "resource": "Observation",
+  "title": "Received killed or unknown Mumps vaccine before 1979"
+ },
+ "079": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "192711008",
+    "display": "Post diphtheria vaccination encephalitis [disorder]",
+    "system": "http://snomed.info/sct"
+   }
+  ],
+  "resource": "Condition",
+  "title": "Encephalopathy not attributable to another identifiable cause within 7 days of administration of a previous dose of Tdap, DTP, or DTaP vaccine"
+ },
+ "080": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "293104008",
+    "display": "Vaccines adverse reaction [disorder]",
+    "system": "http://snomed.info/sct"
+   }
+  ],
+  "resource": "AllergyIntolerance",
+  "title": "Adverse reaction to vaccine component"
+ },
+ "081": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "293117006",
+    "display": "Poliomyelitis vaccine adverse reaction [disorder]",
+    "system": "http://snomed.info/sct"
+   }
+  ],
+  "resource": "AllergyIntolerance",
+  "title": "Severe allergic reaction after previous dose of Polio"
+ },
+ "082": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "451301000124103",
+    "display": "Adverse reaction caused by Japanese encephalitis virus vaccine [disorder]",
+    "system": "http://snomed.info/sct"
+   }
+  ],
+  "resource": "AllergyIntolerance",
+  "title": "Severe allergic reaction after previous dose of Japanese Encephalitis"
+ },
+ "083": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "429301000124101",
+    "display": "Adverse reaction to rotavirus vaccine [disorder]",
+    "system": "http://snomed.info/sct"
+   }
+  ],
+  "resource": "AllergyIntolerance",
+  "title": "Severe allergic reaction after previous dose of Rotavirus"
+ },
+ "084": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "293122006",
+    "display": "Typhoid vaccine adverse reaction [disorder]",
+    "system": "http://snomed.info/sct"
+   }
+  ],
+  "resource": "AllergyIntolerance",
+  "title": "Severe allergic reaction after previous dose of Typhoid"
+ },
+ "085": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "420113004",
+    "display": "Influenza virus vaccine adverse reaction [disorder]",
+    "system": "http://snomed.info/sct"
+   }
+  ],
+  "resource": "AllergyIntolerance",
+  "title": "Severe allergic reaction after previous dose of Influenza"
+ },
+ "086": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "293115003",
+    "display": "Pertussis vaccine adverse reaction [disorder]",
+    "system": "http://snomed.info/sct"
+   }
+  ],
+  "resource": "AllergyIntolerance",
+  "title": "Severe allergic reaction after previous dose of Pertussis"
+ },
+ "087": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "219085007",
+    "display": "Adverse reaction to diphtheria vaccine [disorder]",
+    "system": "http://snomed.info/sct"
+   }
+  ],
+  "resource": "AllergyIntolerance",
+  "title": "Severe allergic reaction after previous dose of Diphtheria"
+ },
+ "088": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "219084006",
+    "display": "Adverse reaction to tetanus vaccine [disorder]",
+    "system": "http://snomed.info/sct"
+   }
+  ],
+  "resource": "AllergyIntolerance",
+  "title": "Severe allergic reaction after previous dose of Tetanus"
+ },
+ "089": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "451331000124106",
+    "display": "Adverse reaction caused by varicella virus live vaccine [disorder]",
+    "system": "http://snomed.info/sct"
+   }
+  ],
+  "resource": "AllergyIntolerance",
+  "title": "Severe allergic reaction after previous dose of Varicella"
+ },
+ "090": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "429311000124103",
+    "display": "Adverse reaction to human papillomavirus vaccine [disorder]",
+    "system": "http://snomed.info/sct"
+   }
+  ],
+  "resource": "AllergyIntolerance",
+  "title": "Severe allergic reaction after previous dose of HPV"
+ },
+ "091": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "219096004",
+    "display": "Adverse reaction to measles vaccine [disorder]",
+    "system": "http://snomed.info/sct"
+   }
+  ],
+  "resource": "AllergyIntolerance",
+  "title": "Severe allergic reaction after previous dose of Measles"
+ },
+ "092": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "293114004",
+    "display": "Mumps vaccine adverse reaction [disorder]",
+    "system": "http://snomed.info/sct"
+   }
+  ],
+  "resource": "AllergyIntolerance",
+  "title": "Severe allergic reaction after previous dose of Mumps"
+ },
+ "093": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "293119009",
+    "display": "Rubella vaccine adverse reaction [disorder]",
+    "system": "http://snomed.info/sct"
+   }
+  ],
+  "resource": "AllergyIntolerance",
+  "title": "Severe allergic reaction after previous dose of Rubella"
+ },
+ "094": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "293116002",
+    "display": "Pneumococcal vaccine adverse reaction [disorder]",
+    "system": "http://snomed.info/sct"
+   }
+  ],
+  "resource": "AllergyIntolerance",
+  "title": "Severe allergic reaction after previous dose of Pneumococcal"
+ },
+ "095": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "219088009",
+    "display": "Adverse reaction to meningococcal vaccine [disorder]",
+    "system": "http://snomed.info/sct"
+   }
+  ],
+  "resource": "AllergyIntolerance",
+  "title": "Severe allergic reaction after previous dose of Meningococcal"
+ },
+ "096": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "293126009",
+    "display": "Hepatitis A vaccine adverse reaction [disorder]",
+    "system": "http://snomed.info/sct"
+   }
+  ],
+  "resource": "AllergyIntolerance",
+  "title": "Severe allergic reaction after previous dose of Hepatitis A"
+ },
+ "097": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "293110008",
+    "display": "Hepatitis B vaccine adverse reaction [disorder]",
+    "system": "http://snomed.info/sct"
+   }
+  ],
+  "resource": "AllergyIntolerance",
+  "title": "Severe allergic reaction after previous dose of Hepatitis B"
+ },
+ "098": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "293127000",
+    "display": "Haemophilus influenzae Type B vaccine adverse reaction [disorder]",
+    "system": "http://snomed.info/sct"
+   }
+  ],
+  "resource": "AllergyIntolerance",
+  "title": "Severe allergic reaction after previous dose of Hib"
+ },
+ "099": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "219095000",
+    "display": "Adverse reaction to yellow fever vaccine [disorder]",
+    "system": "http://snomed.info/sct"
+   }
+  ],
+  "resource": "AllergyIntolerance",
+  "title": "Severe allergic reaction after previous dose of Yellow Fever"
+ },
+ "100": {
+  "cdsiCodeAdded": true,
+  "code": [
+   {
+    "code": "451291000124104",
+    "display": "Adverse reaction caused by zoster vaccine [disorder]",
+    "system": "http://snomed.info/sct"
+   },
+   {
+    "code": "100",
+    "display": "Severe allergic reaction after previous dose of live zoster",
+    "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes"
+   }
+  ],
+  "resource": "AllergyIntolerance",
+  "title": "Severe allergic reaction after previous dose of live zoster"
+ },
+ "101": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "213020009",
+    "display": "Egg protein allergy [disorder]",
+    "system": "http://snomed.info/sct"
+   }
+  ],
+  "resource": "AllergyIntolerance",
+  "title": "Allergic reaction to egg protein"
+ },
+ "102": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "293309006",
+    "display": "Gelatin adverse reaction [disorder]",
+    "system": "http://snomed.info/sct"
+   }
+  ],
+  "resource": "AllergyIntolerance",
+  "title": "Severe allergic reaction to gelatin"
+ },
+ "103": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "T78.40XA",
+    "display": "Allergy, unspecified, initial encounter",
+    "system": "http://hl7.org/fhir/sid/icd-10-cm"
+   }
+  ],
+  "resource": "AllergyIntolerance",
+  "title": "Severe allergic reaction to arginine"
+ },
+ "104": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "300916003",
+    "display": "Latex allergy [disorder]",
+    "system": "http://snomed.info/sct"
+   }
+  ],
+  "resource": "AllergyIntolerance",
+  "title": "Allergic reaction to latex"
+ },
+ "105": {
+  "cdsiCodeAdded": true,
+  "code": [
+   {
+    "code": "T78.1",
+    "display": "Other adverse food reactions, not elsewhere classified",
+    "system": "http://hl7.org/fhir/sid/icd-10-cm"
+   },
+   {
+    "code": "105",
+    "display": "Severe allergic reaction to chicken protein",
+    "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes"
+   }
+  ],
+  "resource": "AllergyIntolerance",
+  "title": "Severe allergic reaction to chicken protein"
+ },
+ "106": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "419522004",
+    "display": "Gentamycin sensitivity [disorder]",
+    "system": "http://snomed.info/sct"
+   }
+  ],
+  "resource": "AllergyIntolerance",
+  "title": "Severe allergic reaction to gentamicin"
+ },
+ "107": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "294468006",
+    "display": "Neomycin allergy [disorder]",
+    "system": "http://snomed.info/sct"
+   }
+  ],
+  "resource": "AllergyIntolerance",
+  "title": "Severe allergic reaction to neomycin"
+ },
+ "108": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "294466005",
+    "display": "Streptomycin allergy [disorder]",
+    "system": "http://snomed.info/sct"
+   }
+  ],
+  "resource": "AllergyIntolerance",
+  "title": "Severe allergic reaction to streptomycin"
+ },
+ "109": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "294530006",
+    "display": "Polymyxin B allergy [disorder]",
+    "system": "http://snomed.info/sct"
+   }
+  ],
+  "resource": "AllergyIntolerance",
+  "title": "Severe allergic reaction to polymyxin B"
+ },
+ "110": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "703936006",
+    "display": "Allergy to yeast [disorder]",
+    "system": "http://snomed.info/sct"
+   }
+  ],
+  "resource": "Condition",
+  "title": "Hypersensitivity to yeast"
+ },
+ "111": {
+  "cdsiCodeAdded": true,
+  "code": [
+   {
+    "code": "T78.49XA",
+    "display": "Other allergy, initial encounter",
+    "system": "http://hl7.org/fhir/sid/icd-10-cm"
+   },
+   {
+    "code": "111",
+    "display": "Hypersensitivity to the preservative 2-phenoxyethanol",
+    "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes"
+   }
+  ],
+  "resource": "Condition",
+  "title": "Hypersensitivity to the preservative 2-phenoxyethanol"
+ },
+ "112": {
+  "category": null,
+  "cdsiCodeAdded": true,
+  "code": [
+   {
+    "code": "112",
+    "display": "Hypersensitivity to alum",
+    "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes"
+   }
+  ],
+  "resource": "Observation",
+  "title": "Hypersensitivity to alum"
+ },
+ "113": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "293118001",
+    "display": "Rabies vaccine adverse reaction [disorder]",
+    "system": "http://snomed.info/sct"
+   }
+  ],
+  "resource": "AllergyIntolerance",
+  "title": "Severe allergic reaction after previous dose of Rabies"
+ },
+ "114": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "46177005",
+    "display": "End stage renal disease [disorder]",
+    "system": "http://snomed.info/sct"
+   }
+  ],
+  "resource": "Condition",
+  "title": "End stage renal disease"
+ },
+ "115": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "64520006",
+    "display": "Protamine sulfate [substance]",
+    "system": "http://snomed.info/sct"
+   }
+  ],
+  "resource": "AllergyIntolerance",
+  "title": "Severe allergic reaction to protamine sulfate"
+ },
+ "116": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "451281000124102",
+    "display": "Adverse reaction caused by meningococcal group B vaccine [disorder]",
+    "system": "http://snomed.info/sct"
+   }
+  ],
+  "resource": "AllergyIntolerance",
+  "title": "Severe allergic reaction after previous dose of Meningococcal B"
+ },
+ "117": {
+  "cdsiCodeAdded": true,
+  "code": [
+   {
+    "code": "117",
+    "display": "Severe allergic reaction to diphtheria toxoid",
+    "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes"
+   }
+  ],
+  "resource": "AllergyIntolerance",
+  "title": "Severe allergic reaction to diphtheria toxoid"
+ },
+ "118": {
+  "cdsiCodeAdded": true,
+  "code": [
+   {
+    "code": "T50.A95A",
+    "display": "Adverse effect of other bacterial vaccines, initial encounter",
+    "system": "http://hl7.org/fhir/sid/icd-10-cm"
+   },
+   {
+    "code": "118",
+    "display": "Severe allergic reaction to tetanus toxoid",
+    "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes"
+   }
+  ],
+  "resource": "AllergyIntolerance",
+  "title": "Severe allergic reaction to tetanus toxoid"
+ },
+ "119": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "219082005",
+    "display": "Adverse reaction caused by cholera vaccine [disorder]",
+    "system": "http://snomed.info/sct"
+   }
+  ],
+  "resource": "AllergyIntolerance",
+  "title": "Severe allergic reaction after previous dose of cholera"
+ },
+ "120": {
+  "category": null,
+  "cdsiCodeAdded": true,
+  "code": [
+   {
+    "code": "120",
+    "display": "Begin Date of antiviral therapy [ART]",
+    "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes"
+   }
+  ],
+  "resource": "Observation",
+  "title": "Begin Date of antiviral therapy [ART]"
+ },
+ "121": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "32911000",
+    "display": "Homeless [finding]",
+    "system": "http://snomed.info/sct"
+   }
+  ],
+  "resource": "Condition",
+  "title": "Homelessness"
+ },
+ "122": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "208",
+    "display": "COVID-19, mRNA, LNP-S, PF, 30 mcg/0.3 mL dose",
+    "system": "http://hl7.org/fhir/sid/cvx"
+   }
+  ],
+  "resource": "AllergyIntolerance",
+  "title": "Severe allergic reaction after previous dose of COVID-19"
+ },
+ "123": {
+  "cdsiCodeAdded": true,
+  "code": [
+   {
+    "code": "123",
+    "display": "Severe allergic reaction after previous dose of Ebola",
+    "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes"
+   }
+  ],
+  "resource": "AllergyIntolerance",
+  "title": "Severe allergic reaction after previous dose of Ebola"
+ },
+ "124": {
+  "cdsiCodeAdded": true,
+  "code": [
+   {
+    "code": "124",
+    "display": "Severe allergic reaction to rice protein",
+    "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes"
+   }
+  ],
+  "resource": "AllergyIntolerance",
+  "title": "Severe allergic reaction to rice protein"
+ },
+ "125": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "13",
+    "display": "Tetanus immune globulin",
+    "system": "http://hl7.org/fhir/sid/cvx"
+   }
+  ],
+  "resource": "Immunization",
+  "title": "Tetanus IG administration"
+ },
+ "126": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "154",
+    "display": "Hepatitis A immune globulin",
+    "system": "http://hl7.org/fhir/sid/cvx"
+   }
+  ],
+  "resource": "Immunization",
+  "title": "Hep A IG administration"
+ },
+ "127": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "30",
+    "display": "Hepatitis B immune globulin",
+    "system": "http://hl7.org/fhir/sid/cvx"
+   }
+  ],
+  "resource": "Immunization",
+  "title": "Hep B IG administration"
+ },
+ "128": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "34",
+    "display": "Rabies immune globulin",
+    "system": "http://hl7.org/fhir/sid/cvx"
+   }
+  ],
+  "resource": "Immunization",
+  "title": "Rabies IG administration"
+ },
+ "129": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "36",
+    "display": "Varicella zoster immune globulin",
+    "system": "http://hl7.org/fhir/sid/cvx"
+   }
+  ],
+  "resource": "Immunization",
+  "title": "Varicella IG administration"
+ },
+ "130": {
+  "category": null,
+  "cdsiCodeAdded": true,
+  "code": [
+   {
+    "code": "130",
+    "display": "Measles prophylaxis IG administration - Standard",
+    "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes"
+   }
+  ],
+  "resource": "Observation",
+  "title": "Measles prophylaxis IG administration - Standard"
+ },
+ "131": {
+  "category": null,
+  "cdsiCodeAdded": true,
+  "code": [
+   {
+    "code": "131",
+    "display": "Measles prophylaxis IG administration - Immunocompromised Contact",
+    "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes"
+   }
+  ],
+  "resource": "Observation",
+  "title": "Measles prophylaxis IG administration - Immunocompromised Contact"
+ },
+ "132": {
+  "cdsiCodeAdded": true,
+  "code": [
+   {
+    "code": "116859006",
+    "display": "Transfusion of blood product [procedure]",
+    "system": "http://snomed.info/sct"
+   },
+   {
+    "code": "132",
+    "display": "RBC [adenine-saline added] blood transfusion",
+    "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes"
+   }
+  ],
+  "resource": "Procedure",
+  "title": "RBC [adenine-saline added] blood transfusion"
+ },
+ "133": {
+  "cdsiCodeAdded": true,
+  "code": [
+   {
+    "code": "116859006",
+    "display": "Transfusion of blood product [procedure]",
+    "system": "http://snomed.info/sct"
+   },
+   {
+    "code": "133",
+    "display": "Packed RBC blood transfusion",
+    "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes"
+   }
+  ],
+  "resource": "Procedure",
+  "title": "Packed RBC blood transfusion"
+ },
+ "134": {
+  "cdsiCodeAdded": true,
+  "code": [
+   {
+    "code": "116859006",
+    "display": "Transfusion of blood product [procedure]",
+    "system": "http://snomed.info/sct"
+   },
+   {
+    "code": "134",
+    "display": "Whole blood transfusion",
+    "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes"
+   }
+  ],
+  "resource": "Procedure",
+  "title": "Whole blood transfusion"
+ },
+ "135": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "13569004",
+    "display": "Transfusion of plasma [procedure]",
+    "system": "http://snomed.info/sct"
+   }
+  ],
+  "resource": "Procedure",
+  "title": "Plasma/platelet products blood transfusion"
+ },
+ "136": {
+  "category": null,
+  "cdsiCodeAdded": true,
+  "code": [
+   {
+    "code": "136",
+    "display": "Cytomegalovirus IGIV",
+    "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes"
+   }
+  ],
+  "resource": "Observation",
+  "title": "Cytomegalovirus IGIV"
+ },
+ "137": {
+  "category": null,
+  "cdsiCodeAdded": true,
+  "code": [
+   {
+    "code": "137",
+    "display": "IGIV - Replacement therapy for immune deficiencies",
+    "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes"
+   }
+  ],
+  "resource": "Observation",
+  "title": "IGIV - Replacement therapy for immune deficiencies"
+ },
+ "138": {
+  "category": null,
+  "cdsiCodeAdded": true,
+  "code": [
+   {
+    "code": "138",
+    "display": "IGIV - Immune thrombocytopenic purpura treatment",
+    "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes"
+   }
+  ],
+  "resource": "Observation",
+  "title": "IGIV - Immune thrombocytopenic purpura treatment"
+ },
+ "139": {
+  "category": null,
+  "cdsiCodeAdded": true,
+  "code": [
+   {
+    "code": "139",
+    "display": "IGIV - Postexposure varicella prophylaxis",
+    "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes"
+   }
+  ],
+  "resource": "Observation",
+  "title": "IGIV - Postexposure varicella prophylaxis"
+ },
+ "140": {
+  "category": null,
+  "cdsiCodeAdded": true,
+  "code": [
+   {
+    "code": "140",
+    "display": "IGIV - Immune thrombocytopenic purpura treatment",
+    "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes"
+   }
+  ],
+  "resource": "Observation",
+  "title": "IGIV - Immune thrombocytopenic purpura treatment"
+ },
+ "141": {
+  "category": null,
+  "cdsiCodeAdded": true,
+  "code": [
+   {
+    "code": "141",
+    "display": "IGIV - Kawasaki disease",
+    "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes"
+   }
+  ],
+  "resource": "Observation",
+  "title": "IGIV - Kawasaki disease"
+ },
+ "142": {
+  "cdsiCodeAdded": true,
+  "code": [
+   {
+    "code": "B20",
+    "display": "Human immunodeficiency virus [HIV] disease",
+    "system": "http://hl7.org/fhir/sid/icd-10-cm"
+   },
+   {
+    "code": "142",
+    "display": "Travel to or working in countries that have high or intermediate endemicity of Hepatitis A",
+    "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes"
+   }
+  ],
+  "resource": "Condition",
+  "title": "Travel to or working in countries that have high or intermediate endemicity of Hepatitis A"
+ },
+ "143": {
+  "category": null,
+  "cdsiCodeAdded": true,
+  "code": [
+   {
+    "code": "143",
+    "display": "Travel to areas or countries where polio is epidemic or endemic",
+    "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes"
+   }
+  ],
+  "resource": "Observation",
+  "title": "Travel to areas or countries where polio is epidemic or endemic"
+ },
+ "144": {
+  "category": null,
+  "cdsiCodeAdded": true,
+  "code": [
+   {
+    "code": "144",
+    "display": "International travel with possible contact with animals in areas where rabies is enzootic and immediate access to appropriate medical care might be limited",
+    "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes"
+   }
+  ],
+  "resource": "Observation",
+  "title": "International travel with possible contact with animals in areas where rabies is enzootic and immediate access to appropriate medical care might be limited"
+ },
+ "145": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "65880007",
+    "display": "X-linked agammaglobulinemia [disorder]",
+    "system": "http://snomed.info/sct"
+   }
+  ],
+  "resource": "Condition",
+  "title": "B-lymphocyte [humoral] - Severe antibody deficiencies"
+ },
+ "146": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "190979003",
+    "display": "Selective immunoglobulin A deficiency [disorder]",
+    "system": "http://snomed.info/sct"
+   }
+  ],
+  "resource": "Condition",
+  "title": "B-lymphocyte [humoral] - Less severe antibody deficiencies"
+ },
+ "147": {
+  "cdsiCodeAdded": true,
+  "code": [
+   {
+    "code": "31323000",
+    "display": "Severe combined immunodeficiency disease [disorder]",
+    "system": "http://snomed.info/sct"
+   },
+   {
+    "code": "147",
+    "display": "T-lymphocyte [cell-mediated and humoral] - Complete defects",
+    "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes"
+   }
+  ],
+  "resource": "Condition",
+  "title": "T-lymphocyte [cell-mediated and humoral] - Complete defects"
+ },
+ "148": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "36070007",
+    "display": "Wiskott-Aldrich syndrome [disorder]",
+    "system": "http://snomed.info/sct"
+   }
+  ],
+  "resource": "Condition",
+  "title": "T-lymphocyte [cell-mediated and humoral] - Partial defects"
+ },
+ "149": {
+  "category": null,
+  "cdsiCodeAdded": true,
+  "code": [
+   {
+    "code": "149",
+    "display": "T-lymphocyte [cell-mediated and humoral] - interferon-gamma/Interleukin 12 axis deficiencies",
+    "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes"
+   }
+  ],
+  "resource": "Observation",
+  "title": "T-lymphocyte [cell-mediated and humoral] - interferon-gamma/Interleukin 12 axis deficiencies"
+ },
+ "150": {
+  "category": null,
+  "cdsiCodeAdded": true,
+  "code": [
+   {
+    "code": "150",
+    "display": "T-lymphocyte [cell-mediated and humoral] - interferon-gamma or interferon-alpha deficiencies",
+    "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes"
+   }
+  ],
+  "resource": "Observation",
+  "title": "T-lymphocyte [cell-mediated and humoral] - interferon-gamma or interferon-alpha deficiencies"
+ },
+ "151": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "24743004",
+    "display": "Complement deficiency disease [disorder]",
+    "system": "http://snomed.info/sct"
+   }
+  ],
+  "resource": "Condition",
+  "title": "Persistent complement, properdin, or factor B deficiency"
+ },
+ "152": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "387759001",
+    "display": "Chronic granulomatous disease [disorder]",
+    "system": "http://snomed.info/sct"
+   }
+  ],
+  "resource": "Condition",
+  "title": "Phagocytic function - Chronic granulomatous disease"
+ },
+ "153": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "77358003",
+    "display": "Congenital leukocyte adherence deficiency [disorder]",
+    "system": "http://snomed.info/sct"
+   }
+  ],
+  "resource": "Condition",
+  "title": "Phagocytic function - Leukocyte adhesion defect, and myeloperoxidase deficiency"
+ },
+ "154": {
+  "cdsiCodeAdded": true,
+  "code": [
+   {
+    "code": "62479008",
+    "display": "Acquired immune deficiency syndrome [disorder]",
+    "system": "http://snomed.info/sct"
+   },
+   {
+    "code": "154",
+    "display": "HIV/AIDS - severely immunocompromised",
+    "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes"
+   }
+  ],
+  "resource": "Condition",
+  "title": "HIV/AIDS - severely immunocompromised"
+ },
+ "155": {
+  "cdsiCodeAdded": true,
+  "code": [
+   {
+    "code": "62479008",
+    "display": "Acquired immune deficiency syndrome [disorder]",
+    "system": "http://snomed.info/sct"
+   },
+   {
+    "code": "155",
+    "display": "HIV/AIDS - not severely immunocompromised",
+    "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes"
+   }
+  ],
+  "resource": "Condition",
+  "title": "HIV/AIDS - not severely immunocompromised"
+ },
+ "156": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "C80.0",
+    "display": "Disseminated malignant neoplasm, unspecified",
+    "system": "http://hl7.org/fhir/sid/icd-10-cm"
+   }
+  ],
+  "resource": "Condition",
+  "title": "Generalized malignant neoplasm"
+ },
+ "157": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "313039003",
+    "display": "Solid organ transplant [procedure]",
+    "system": "http://snomed.info/sct"
+   }
+  ],
+  "resource": "Procedure",
+  "title": "Solid organ transplantation"
+ },
+ "158": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "86553008",
+    "display": "Immunosuppressive therapy [procedure]",
+    "system": "http://snomed.info/sct"
+   }
+  ],
+  "resource": "Procedure",
+  "title": "Immunosuppressive therapy"
+ },
+ "159": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "53438000",
+    "display": "Radiation therapy procedure or service [procedure]",
+    "system": "http://snomed.info/sct"
+   }
+  ],
+  "resource": "Condition",
+  "title": "Radiation therapy"
+ },
+ "160": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "707147002",
+    "display": "Asplenia [disorder]",
+    "system": "http://snomed.info/sct"
+   }
+  ],
+  "resource": "Condition",
+  "title": "Anatomical or functional asplenia"
+ },
+ "161": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "709044004",
+    "display": "Chronic kidney disease [disorder]",
+    "system": "http://snomed.info/sct"
+   }
+  ],
+  "resource": "Condition",
+  "title": "Chronic kidney disease"
+ },
+ "162": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "N04.9",
+    "display": "Nephrotic syndrome with unspecified morphologic changes",
+    "system": "http://hl7.org/fhir/sid/icd-10-cm"
+   }
+  ],
+  "resource": "Condition",
+  "title": "Travel to areas at risk for Yellow Fever transmission"
+ },
+ "163": {
+  "category": null,
+  "cdsiCodeAdded": true,
+  "code": [
+   {
+    "code": "163",
+    "display": "Travel to areas in which there is a recognized risk of exposure to S. typhi",
+    "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes"
+   }
+  ],
+  "resource": "Observation",
+  "title": "Travel to areas in which there is a recognized risk of exposure to S. typhi"
+ },
+ "164": {
+  "category": null,
+  "cdsiCodeAdded": true,
+  "code": [
+   {
+    "code": "164",
+    "display": "Travel to or are residents of countries in which meningococcal disease is hyperendemic or epidemic",
+    "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes"
+   }
+  ],
+  "resource": "Observation",
+  "title": "Travel to or are residents of countries in which meningococcal disease is hyperendemic or epidemic"
+ },
+ "165": {
+  "category": null,
+  "cdsiCodeAdded": true,
+  "code": [
+   {
+    "code": "165",
+    "display": "Longer-term (e.g., 1 month or more) travel to a JE-endemic area",
+    "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes"
+   }
+  ],
+  "resource": "Observation",
+  "title": "Longer-term (e.g., 1 month or more) travel to a JE-endemic area"
+ },
+ "166": {
+  "category": null,
+  "cdsiCodeAdded": true,
+  "code": [
+   {
+    "code": "166",
+    "display": "Travel to countries with high or intermediate prevalence of chronic HBV infection",
+    "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes"
+   }
+  ],
+  "resource": "Observation",
+  "title": "Travel to countries with high or intermediate prevalence of chronic HBV infection"
+ },
+ "167": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "52254009",
+    "display": "Nephrotic syndrome [disorder]",
+    "system": "http://snomed.info/sct"
+   }
+  ],
+  "resource": "Condition",
+  "title": "Nephrotic Syndrome"
+ },
+ "168": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "367336001",
+    "display": "Chemotherapy [procedure]",
+    "system": "http://snomed.info/sct"
+   }
+  ],
+  "resource": "Procedure",
+  "title": "Chemotherapy"
+ },
+ "169": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "213017001",
+    "display": "Sexual abuse [event]",
+    "system": "http://snomed.info/sct"
+   }
+  ],
+  "resource": "Condition",
+  "title": "History of sexual abuse or assault"
+ },
+ "170": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "248986005",
+    "display": "Estimated date of conception [observable entity]",
+    "system": "http://snomed.info/sct"
+   }
+  ],
+  "resource": "Condition",
+  "title": "Onset of pregnancy"
+ },
+ "171": {
+  "category": null,
+  "cdsiCodeAdded": true,
+  "code": [
+   {
+    "code": "171",
+    "display": "Date of hematopoietic stem cell transplant",
+    "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes"
+   }
+  ],
+  "resource": "Observation",
+  "title": "Date of hematopoietic stem cell transplant"
+ },
+ "172": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "187",
+    "display": "Zoster subunit",
+    "system": "http://hl7.org/fhir/sid/cvx"
+   }
+  ],
+  "resource": "AllergyIntolerance",
+  "title": "Severe allergic reaction after previous dose of recombinant zoster"
+ },
+ "173": {
+  "category": null,
+  "cdsiCodeAdded": true,
+  "code": [
+   {
+    "code": "173",
+    "display": "Moving to JE-endemic country to take up residence",
+    "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes"
+   }
+  ],
+  "resource": "Observation",
+  "title": "Moving to JE-endemic country to take up residence"
+ },
+ "174": {
+  "category": null,
+  "cdsiCodeAdded": true,
+  "code": [
+   {
+    "code": "174",
+    "display": "Frequent travel to JE-endemic areas",
+    "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes"
+   }
+  ],
+  "resource": "Observation",
+  "title": "Frequent travel to JE-endemic areas"
+ },
+ "175": {
+  "category": null,
+  "cdsiCodeAdded": true,
+  "code": [
+   {
+    "code": "175",
+    "display": "Patient seeks Hepatitis A protection",
+    "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes"
+   }
+  ],
+  "resource": "Observation",
+  "title": "Patient seeks Hepatitis A protection"
+ },
+ "176": {
+  "category": null,
+  "cdsiCodeAdded": true,
+  "code": [
+   {
+    "code": "176",
+    "display": "Patient seeks Hepatitis B protection",
+    "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes"
+   }
+  ],
+  "resource": "Observation",
+  "title": "Patient seeks Hepatitis B protection"
+ },
+ "177": {
+  "category": null,
+  "cdsiCodeAdded": true,
+  "code": [
+   {
+    "code": "177",
+    "display": "Patient seeks Meningococcal B protection",
+    "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes"
+   }
+  ],
+  "resource": "Observation",
+  "title": "Patient seeks Meningococcal B protection"
+ },
+ "178": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "93143009",
+    "display": "Leukemia, disease [disorder]",
+    "system": "http://snomed.info/sct"
+   }
+  ],
+  "resource": "Condition",
+  "title": "Leukemia"
+ },
+ "179": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "399600009",
+    "display": "Lymphoma [finding]",
+    "system": "http://snomed.info/sct"
+   }
+  ],
+  "resource": "Condition",
+  "title": "Lymphoma"
+ },
+ "180": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "118599009",
+    "display": "Hodgkin's disease [disorder]",
+    "system": "http://snomed.info/sct"
+   }
+  ],
+  "resource": "Condition",
+  "title": "Hodgkin's disease"
+ },
+ "181": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "109989006",
+    "display": "Multiple myeloma [disorder]",
+    "system": "http://snomed.info/sct"
+   }
+  ],
+  "resource": "Condition",
+  "title": "Multiple myeloma"
+ },
+ "182": {
+  "category": null,
+  "cdsiCodeAdded": true,
+  "code": [
+   {
+    "code": "182",
+    "display": "Ebola virus outbreak response",
+    "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes"
+   }
+  ],
+  "resource": "Observation",
+  "title": "Ebola virus outbreak response"
+ },
+ "183": {
+  "cdsiCodeAdded": true,
+  "code": [
+   {
+    "code": "B20",
+    "display": "Human immunodeficiency virus [HIV] disease",
+    "system": "http://hl7.org/fhir/sid/icd-10-cm"
+   },
+   {
+    "code": "183",
+    "display": "Health care personnel at federally designated Ebola treatment center in U.S.",
+    "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes"
+   }
+  ],
+  "resource": "Condition",
+  "title": "Health care personnel at federally designated Ebola treatment center in U.S."
+ },
+ "184": {
+  "category": null,
+  "cdsiCodeAdded": true,
+  "code": [
+   {
+    "code": "184",
+    "display": "Laboratorians or other staff at biosafety level 4 facilities in U.S.",
+    "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes"
+   }
+  ],
+  "resource": "Observation",
+  "title": "Laboratorians or other staff at biosafety level 4 facilities in U.S."
+ },
+ "185": {
+  "category": null,
+  "cdsiCodeAdded": true,
+  "code": [
+   {
+    "code": "185",
+    "display": "Persons in settings that provide services to adults with high proportion of those persons have risk factors for HAV infection",
+    "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes"
+   }
+  ],
+  "resource": "Observation",
+  "title": "Persons in settings that provide services to adults with high proportion of those persons have risk factors for HAV infection"
+ },
+ "186": {
+  "cdsiCodeAdded": true,
+  "code": [
+   {
+    "code": "86406008",
+    "display": "Human immunodeficiency virus infection [disorder]",
+    "system": "http://snomed.info/sct"
+   },
+   {
+    "code": "186",
+    "display": "HIV Infection",
+    "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes"
+   }
+  ],
+  "resource": "Condition",
+  "title": "HIV Infection"
+ },
+ "187": {
+  "cdsiCodeAdded": true,
+  "code": [
+   {
+    "code": "Z88.8",
+    "display": "Allergy status to other drugs, medicaments and biological substances",
+    "system": "http://hl7.org/fhir/sid/icd-10-cm"
+   },
+   {
+    "code": "187",
+    "display": "Allergic reaction to polysorbate 80",
+    "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes"
+   }
+  ],
+  "resource": "AllergyIntolerance",
+  "title": "Allergic reaction to polysorbate 80"
+ },
+ "188": {
+  "cdsiCodeAdded": true,
+  "code": [
+   {
+    "code": "Z88.8",
+    "display": "Allergy status to other drugs, medicaments and biological substances",
+    "system": "http://hl7.org/fhir/sid/icd-10-cm"
+   },
+   {
+    "code": "188",
+    "display": "Known allergy to Polyethylene glycol [PEG]",
+    "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes"
+   }
+  ],
+  "resource": "AllergyIntolerance",
+  "title": "Known allergy to Polyethylene glycol [PEG]"
+ },
+ "189": {
+  "cdsiCodeAdded": true,
+  "code": [
+   {
+    "code": "Z51.11",
+    "display": "Encounter for antineoplastic chemotherapy",
+    "system": "http://hl7.org/fhir/sid/icd-10-cm"
+   },
+   {
+    "code": "189",
+    "display": "Active treatment for solid tumors",
+    "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes"
+   }
+  ],
+  "resource": "Condition",
+  "title": "Active treatment for solid tumors"
+ },
+ "190": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "C96.9",
+    "display": "Malignant neoplasm of lymphoid, hematopoietic and related tissue, unspecified",
+    "system": "http://hl7.org/fhir/sid/icd-10-cm"
+   }
+  ],
+  "resource": "Condition",
+  "title": "Active treatment for hematologic malignancies"
+ },
+ "191": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "1156961008",
+    "display": "Chimeric antigen receptor T-cell immunotherapy [procedure]",
+    "system": "http://snomed.info/sct"
+   }
+  ],
+  "resource": "Procedure",
+  "title": "Receipt of CAR-T-cell therapy"
+ },
+ "192": {
+  "cdsiCodeAdded": true,
+  "code": [
+   {
+    "code": "Z59.3",
+    "display": "Problems related to living in residential institution",
+    "system": "http://hl7.org/fhir/sid/icd-10-cm"
+   },
+   {
+    "code": "192",
+    "display": "Severe allergic reaction after previous dose of any egg-based IIV or LAIV influenza vaccine",
+    "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes"
+   }
+  ],
+  "resource": "AllergyIntolerance",
+  "title": "Severe allergic reaction after previous dose of any egg-based IIV or LAIV influenza vaccine"
+ },
+ "193": {
+  "cdsiCodeAdded": true,
+  "code": [
+   {
+    "code": "193",
+    "display": "Severe allergic reaction after previous dose of any ccIIV influenza vaccine",
+    "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes"
+   }
+  ],
+  "resource": "AllergyIntolerance",
+  "title": "Severe allergic reaction after previous dose of any ccIIV influenza vaccine"
+ },
+ "194": {
+  "cdsiCodeAdded": true,
+  "code": [
+   {
+    "code": "194",
+    "display": "Severe allergic reaction after previous dose of any RIV influenza vaccine",
+    "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes"
+   }
+  ],
+  "resource": "AllergyIntolerance",
+  "title": "Severe allergic reaction after previous dose of any RIV influenza vaccine"
+ },
+ "195": {
+  "category": null,
+  "cdsiCodeAdded": true,
+  "code": [
+   {
+    "code": "195",
+    "display": "Occupations at increased risk for COVID-19 exposure and transmission",
+    "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes"
+   }
+  ],
+  "resource": "Observation",
+  "title": "Occupations at increased risk for COVID-19 exposure and transmission"
+ },
+ "196": {
+  "category": null,
+  "cdsiCodeAdded": true,
+  "code": [
+   {
+    "code": "196",
+    "display": "Residing in an institutional setting at increased risk for COVID-19 exposure and transmission",
+    "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes"
+   }
+  ],
+  "resource": "Observation",
+  "title": "Residing in an institutional setting at increased risk for COVID-19 exposure and transmission"
+ },
+ "197": {
+  "category": null,
+  "cdsiCodeAdded": true,
+  "code": [
+   {
+    "code": "197",
+    "display": "Resident of a long term care facility",
+    "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes"
+   }
+  ],
+  "resource": "Observation",
+  "title": "Resident of a long term care facility"
+ },
+ "198": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "363346000",
+    "display": "Malignant neoplastic disease [disorder]",
+    "system": "http://snomed.info/sct"
+   }
+  ],
+  "resource": "Condition",
+  "title": "Cancer"
+ },
+ "199": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "233703007",
+    "display": "Interstitial lung disease [disorder]",
+    "system": "http://snomed.info/sct"
+   }
+  ],
+  "resource": "Condition",
+  "title": "Interstitial lung disease"
+ },
+ "200": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "190905008",
+    "display": "cystic fibrosis [disorder]",
+    "system": "http://snomed.info/sct"
+   }
+  ],
+  "resource": "Condition",
+  "title": "Cystic fibrosis"
+ },
+ "201": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "I27.0",
+    "display": "Primary pulmonary hypertension",
+    "system": "http://hl7.org/fhir/sid/icd-10-cm"
+   }
+  ],
+  "resource": "Condition",
+  "title": "Pulmonary hypertension"
+ },
+ "202": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "52448006",
+    "display": "Dimensia [disorder]",
+    "system": "http://snomed.info/sct"
+   }
+  ],
+  "resource": "Condition",
+  "title": "Dementia"
+ },
+ "203": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "41040004",
+    "display": "Complete trisomy 21 syndrome [disorder]",
+    "system": "http://snomed.info/sct"
+   }
+  ],
+  "resource": "Condition",
+  "title": "Down syndrome"
+ },
+ "204": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "238131007",
+    "display": "Overweight [finding]",
+    "system": "http://snomed.info/sct"
+   }
+  ],
+  "resource": "Condition",
+  "title": "Obesity"
+ },
+ "205": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "D56.0",
+    "display": "Alpha thalassemia",
+    "system": "http://hl7.org/fhir/sid/icd-10-cm"
+   }
+  ],
+  "resource": "Condition",
+  "title": "Thalassemia"
+ },
+ "206": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "62914000",
+    "display": "Cerebrovascular disease [disorder]",
+    "system": "http://snomed.info/sct"
+   }
+  ],
+  "resource": "Condition",
+  "title": "Cerebrovascular disease"
+ },
+ "207": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "F19.20",
+    "display": "Other psychoactive substance dependence, uncomplicated",
+    "system": "http://hl7.org/fhir/sid/icd-10-cm"
+   }
+  ],
+  "resource": "Condition",
+  "title": "Substance use disorder"
+ },
+ "208": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "F99",
+    "display": "Mental disorder, not otherwise specified",
+    "system": "http://hl7.org/fhir/sid/icd-10-cm"
+   }
+  ],
+  "resource": "Condition",
+  "title": "Mental Health conditions"
+ },
+ "209": {
+  "cdsiCodeAdded": true,
+  "code": [
+   {
+    "code": "J44.1",
+    "display": "Chronic obstructive pulmonary disease with (acute) exacerbation",
+    "system": "http://hl7.org/fhir/sid/icd-10-cm"
+   },
+   {
+    "code": "209",
+    "display": "History of thrombosis with thrombocytopenia following the Janssen COVID-19 Vaccine or any other adenovirus-vectored COVID-19 vaccines",
+    "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes"
+   }
+  ],
+  "resource": "Condition",
+  "title": "History of thrombosis with thrombocytopenia following the Janssen COVID-19 Vaccine or any other adenovirus-vectored COVID-19 vaccines"
+ },
+ "210": {
+  "cdsiCodeAdded": true,
+  "code": [
+   {
+    "code": "210",
+    "display": "Severe allergic reaction after previous dose of Dengue vaccine",
+    "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes"
+   }
+  ],
+  "resource": "AllergyIntolerance",
+  "title": "Severe allergic reaction after previous dose of Dengue vaccine"
+ },
+ "211": {
+  "category": null,
+  "cdsiCodeAdded": true,
+  "code": [
+   {
+    "code": "211",
+    "display": "Evidence of previous dengue infection and living in areas where dengue is endemic",
+    "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes"
+   }
+  ],
+  "resource": "Observation",
+  "title": "Evidence of previous dengue infection and living in areas where dengue is endemic"
+ },
+ "212": {
+  "category": null,
+  "cdsiCodeAdded": true,
+  "code": [
+   {
+    "code": "212",
+    "display": "Health care personnel involved in the care and transport of patients with suspected or confirmed Ebola virus disease at Special Pathogen Treatment Centers",
+    "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes"
+   }
+  ],
+  "resource": "Observation",
+  "title": "Health care personnel involved in the care and transport of patients with suspected or confirmed Ebola virus disease at Special Pathogen Treatment Centers"
+ },
+ "213": {
+  "category": null,
+  "cdsiCodeAdded": true,
+  "code": [
+   {
+    "code": "213",
+    "display": "Laboratorians and support staff members at Laboratory Response Network (LRN) facilities that handle specimens that might contain replication-competent Ebola virus in the United States",
+    "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes"
+   }
+  ],
+  "resource": "Observation",
+  "title": "Laboratorians and support staff members at Laboratory Response Network (LRN) facilities that handle specimens that might contain replication-competent Ebola virus in the United States"
+ },
+ "214": {
+  "cdsiCodeAdded": true,
+  "code": [
+   {
+    "code": "13645005",
+    "display": "Chronic obstructive lung disease [disorder]",
+    "system": "http://snomed.info/sct"
+   },
+   {
+    "code": "214",
+    "display": "Chronic obstructive pulmonary disease",
+    "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes"
+   }
+  ],
+  "resource": "Condition",
+  "title": "Chronic obstructive pulmonary disease"
+ },
+ "215": {
+  "cdsiCodeAdded": true,
+  "code": [
+   {
+    "code": "87433001",
+    "display": "Pulmonary emphysema [disorder]",
+    "system": "http://snomed.info/sct"
+   },
+   {
+    "code": "215",
+    "display": "Emphysema",
+    "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes"
+   }
+  ],
+  "resource": "Condition",
+  "title": "Emphysema"
+ },
+ "216": {
+  "cdsiCodeAdded": true,
+  "code": [
+   {
+    "code": "D84.821",
+    "display": "Immunodeficiency due to drugs",
+    "system": "http://hl7.org/fhir/sid/icd-10-cm"
+   },
+   {
+    "code": "216",
+    "display": "Iatrogenic Immunosuppression",
+    "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes"
+   }
+  ],
+  "resource": "Condition",
+  "title": "Iatrogenic Immunosuppression"
+ },
+ "217": {
+  "category": null,
+  "cdsiCodeAdded": true,
+  "code": [
+   {
+    "code": "217",
+    "display": "Persons working in rabies vaccine production facilities",
+    "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes"
+   }
+  ],
+  "resource": "Observation",
+  "title": "Persons working in rabies vaccine production facilities"
+ },
+ "218": {
+  "category": null,
+  "cdsiCodeAdded": true,
+  "code": [
+   {
+    "code": "218",
+    "display": "Persons performing testing for rabies in diagnostic laboratories",
+    "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes"
+   }
+  ],
+  "resource": "Observation",
+  "title": "Persons performing testing for rabies in diagnostic laboratories"
+ },
+ "219": {
+  "category": null,
+  "cdsiCodeAdded": true,
+  "code": [
+   {
+    "code": "219",
+    "display": "Persons who frequently handle bats",
+    "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes"
+   }
+  ],
+  "resource": "Observation",
+  "title": "Persons who frequently handle bats"
+ },
+ "220": {
+  "category": null,
+  "cdsiCodeAdded": true,
+  "code": [
+   {
+    "code": "220",
+    "display": "Persons who frequently have contact with bats",
+    "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes"
+   }
+  ],
+  "resource": "Observation",
+  "title": "Persons who frequently have contact with bats"
+ },
+ "221": {
+  "category": null,
+  "cdsiCodeAdded": true,
+  "code": [
+   {
+    "code": "221",
+    "display": "Persons who frequently enter high-density bat environments",
+    "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes"
+   }
+  ],
+  "resource": "Observation",
+  "title": "Persons who frequently enter high-density bat environments"
+ },
+ "222": {
+  "category": null,
+  "cdsiCodeAdded": true,
+  "code": [
+   {
+    "code": "222",
+    "display": "Persons who frequently perform animal necropsies",
+    "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes"
+   }
+  ],
+  "resource": "Observation",
+  "title": "Persons who frequently perform animal necropsies"
+ },
+ "223": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "L20.9",
+    "display": "Atopic dermatitis, unspecified",
+    "system": "http://hl7.org/fhir/sid/icd-10-cm"
+   }
+  ],
+  "resource": "AllergyIntolerance",
+  "title": "Severe allergic reaction after previous dose of orthopoxvirus vaccine"
+ },
+ "224": {
+  "category": null,
+  "cdsiCodeAdded": true,
+  "code": [
+   {
+    "code": "224",
+    "display": "History or presence of atopic dermatitis",
+    "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes"
+   }
+  ],
+  "resource": "Observation",
+  "title": "History or presence of atopic dermatitis"
+ },
+ "225": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "L26",
+    "display": "Exfoliative dermatitis",
+    "system": "http://hl7.org/fhir/sid/icd-10-cm"
+   }
+  ],
+  "resource": "Condition",
+  "title": "Household contact with history or presence of atopic dermatitis"
+ },
+ "226": {
+  "category": null,
+  "cdsiCodeAdded": true,
+  "code": [
+   {
+    "code": "226",
+    "display": "Active exfoliative skin conditions",
+    "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes"
+   }
+  ],
+  "resource": "Observation",
+  "title": "Active exfoliative skin conditions"
+ },
+ "227": {
+  "category": null,
+  "cdsiCodeAdded": true,
+  "code": [
+   {
+    "code": "227",
+    "display": "Household contact with active exfoliative skin conditions",
+    "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes"
+   }
+  ],
+  "resource": "Observation",
+  "title": "Household contact with active exfoliative skin conditions"
+ },
+ "228": {
+  "cdsiCodeAdded": true,
+  "code": [
+   {
+    "code": "228",
+    "display": "Household contact is pregnant",
+    "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes"
+   }
+  ],
+  "resource": "Condition",
+  "title": "Household contact is pregnant"
+ },
+ "229": {
+  "category": null,
+  "cdsiCodeAdded": true,
+  "code": [
+   {
+    "code": "229",
+    "display": "Age is less than 1 year",
+    "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes"
+   }
+  ],
+  "resource": "Observation",
+  "title": "Age is less than 1 year"
+ },
+ "230": {
+  "category": null,
+  "cdsiCodeAdded": true,
+  "code": [
+   {
+    "code": "230",
+    "display": "Household contact who is less than 1 year of age",
+    "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes"
+   }
+  ],
+  "resource": "Observation",
+  "title": "Household contact who is less than 1 year of age"
+ },
+ "231": {
+  "category": null,
+  "cdsiCodeAdded": true,
+  "code": [
+   {
+    "code": "231",
+    "display": "3 or more known major cardiac risk factors",
+    "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes"
+   }
+  ],
+  "resource": "Observation",
+  "title": "3 or more known major cardiac risk factors"
+ },
+ "232": {
+  "category": null,
+  "cdsiCodeAdded": true,
+  "code": [
+   {
+    "code": "232",
+    "display": "Research laboratory personnel working with more virulent orthopoxviruses (e.g., Variola virus or mpox virus)",
+    "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes"
+   }
+  ],
+  "resource": "Observation",
+  "title": "Research laboratory personnel working with more virulent orthopoxviruses (e.g., Variola virus or mpox virus)"
+ },
+ "233": {
+  "category": null,
+  "cdsiCodeAdded": true,
+  "code": [
+   {
+    "code": "233",
+    "display": "Clinical laboratory personnel performing diagnostic testing for more virulent orthopoxviruses (e.g., Variola virus or mpox virus)",
+    "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes"
+   }
+  ],
+  "resource": "Observation",
+  "title": "Clinical laboratory personnel performing diagnostic testing for more virulent orthopoxviruses (e.g., Variola virus or mpox virus)"
+ },
+ "234": {
+  "category": null,
+  "cdsiCodeAdded": true,
+  "code": [
+   {
+    "code": "234",
+    "display": "Designated response team members working with more virulent orthopoxviruses (e.g., Variola virus or mpox virus)",
+    "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes"
+   }
+  ],
+  "resource": "Observation",
+  "title": "Designated response team members working with more virulent orthopoxviruses (e.g., Variola virus or mpox virus)"
+ },
+ "235": {
+  "category": null,
+  "cdsiCodeAdded": true,
+  "code": [
+   {
+    "code": "235",
+    "display": "Healthcare personnel who care for patients infected with more virulent orthopoxviruses (e.g., Variola virus or mpox virus)",
+    "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes"
+   }
+  ],
+  "resource": "Observation",
+  "title": "Healthcare personnel who care for patients infected with more virulent orthopoxviruses (e.g., Variola virus or mpox virus)"
+ },
+ "236": {
+  "category": null,
+  "cdsiCodeAdded": true,
+  "code": [
+   {
+    "code": "236",
+    "display": "Research laboratory personnel working with less virulent orthopoxviruses (e.g., Vaccinia virus or Cowpox virus)",
+    "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes"
+   }
+  ],
+  "resource": "Observation",
+  "title": "Research laboratory personnel working with less virulent orthopoxviruses (e.g., Vaccinia virus or Cowpox virus)"
+ },
+ "237": {
+  "category": null,
+  "cdsiCodeAdded": true,
+  "code": [
+   {
+    "code": "237",
+    "display": "Clinical laboratory personnel performing diagnostic testing for less virulent orthopoxviruses (e.g., Vaccinia virus or Cowpox virus)",
+    "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes"
+   }
+  ],
+  "resource": "Observation",
+  "title": "Clinical laboratory personnel performing diagnostic testing for less virulent orthopoxviruses (e.g., Vaccinia virus or Cowpox virus)"
+ },
+ "238": {
+  "category": null,
+  "cdsiCodeAdded": true,
+  "code": [
+   {
+    "code": "238",
+    "display": "Designated response team members working with less virulent orthopoxviruses (e.g., Vaccinia virus or Cowpox virus)",
+    "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes"
+   }
+  ],
+  "resource": "Observation",
+  "title": "Designated response team members working with less virulent orthopoxviruses (e.g., Vaccinia virus or Cowpox virus)"
+ },
+ "239": {
+  "category": null,
+  "cdsiCodeAdded": true,
+  "code": [
+   {
+    "code": "239",
+    "display": "Healthcare personnel who administer ACAM2000",
+    "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes"
+   }
+  ],
+  "resource": "Observation",
+  "title": "Healthcare personnel who administer ACAM2000"
+ },
+ "240": {
+  "cdsiCodeAdded": true,
+  "code": [
+   {
+    "code": "Z20.828",
+    "display": "Contact with and (suspected) exposure to other viral communicable diseases",
+    "system": "http://hl7.org/fhir/sid/icd-10-cm"
+   },
+   {
+    "code": "240",
+    "display": "Healthcare personnel who care for patients infected with less virulent orthopoxviruses (e.g., Vaccinia virus or Cowpox virus)",
+    "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes"
+   }
+  ],
+  "resource": "Condition",
+  "title": "Healthcare personnel who care for patients infected with less virulent orthopoxviruses (e.g., Vaccinia virus or Cowpox virus)"
+ },
+ "241": {
+  "category": null,
+  "cdsiCodeAdded": true,
+  "code": [
+   {
+    "code": "241",
+    "display": "Known exposure to mpox",
+    "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes"
+   }
+  ],
+  "resource": "Observation",
+  "title": "Known exposure to mpox"
+ },
+ "242": {
+  "cdsiCodeAdded": true,
+  "code": [
+   {
+    "code": "Z20.828",
+    "display": "Contact with and (suspected) exposure to other viral communicable diseases",
+    "system": "http://hl7.org/fhir/sid/icd-10-cm"
+   },
+   {
+    "code": "242",
+    "display": "Presumed exposure to mpox",
+    "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes"
+   }
+  ],
+  "resource": "Condition",
+  "title": "Presumed exposure to mpox"
+ },
+ "243": {
+  "category": null,
+  "cdsiCodeAdded": true,
+  "code": [
+   {
+    "code": "243",
+    "display": "Lack of laboratory confirmation of a previous Dengue infection",
+    "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes"
+   }
+  ],
+  "resource": "Observation",
+  "title": "Lack of laboratory confirmation of a previous Dengue infection"
+ },
+ "244": {
+  "cdsiCodeAdded": true,
+  "code": [
+   {
+    "code": "244",
+    "display": "Severe allergic reaction after previous dose of RSV vaccine",
+    "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes"
+   }
+  ],
+  "resource": "AllergyIntolerance",
+  "title": "Severe allergic reaction after previous dose of RSV vaccine"
+ },
+ "245": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "413490006",
+    "display": "American Indian or Alaska Native [racial group]",
+    "system": "http://snomed.info/sct"
+   }
+  ],
+  "resource": "Condition",
+  "title": "American Indian or Alaskan Native"
+ },
+ "246": {
+  "cdsiCodeAdded": true,
+  "code": [
+   {
+    "code": "D84.9",
+    "display": "Immunodeficiency, unspecified",
+    "system": "http://hl7.org/fhir/sid/icd-10-cm"
+   },
+   {
+    "code": "246",
+    "display": "Severe immunocompromise",
+    "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes"
+   }
+  ],
+  "resource": "Condition",
+  "title": "Severe immunocompromise"
+ },
+ "247": {
+  "cdsiCodeAdded": true,
+  "code": [
+   {
+    "code": "J45.40",
+    "display": "Moderate persistent asthma, uncomplicated",
+    "system": "http://hl7.org/fhir/sid/icd-10-cm"
+   },
+   {
+    "code": "247",
+    "display": "Gay, bisexual, or other man who has sex with men (MSM), or a person who has sex with gay, bisexual, or other MSM who in the past 6 months have had one of the following: \r 1) A new diagnosis of \u2265 1 sexually transmitted disease\r 2)  More than one sex partner\r 3)  Sex at a commercial sex venue\r 4)  Sex in association with a large public event in a geographic area where mpox transmission is occurring",
+    "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes"
+   }
+  ],
+  "resource": "Condition",
+  "title": "Gay, bisexual, or other man who has sex with men (MSM), or a person who has sex with gay, bisexual, or other MSM who in the past 6 months have had one of the following: \r 1) A new diagnosis of \u2265 1 sexually transmitted disease\r 2)  More than one sex partner\r 3)  Sex at a commercial sex venue\r 4)  Sex in association with a large public event in a geographic area where mpox transmission is occurring"
+ },
+ "248": {
+  "category": null,
+  "cdsiCodeAdded": true,
+  "code": [
+   {
+    "code": "248",
+    "display": "Sexual partners of gay, bisexual, or other man who has sex with men (MSM), or a person who has sex with gay, bisexual, or other MSM who in the past 6 months have had one of the following: \r 1) A new diagnosis of \u2265 1 sexually transmitted disease\r 2)  More than one sex partner\r 3)  Sex at a commercial sex venue\r 4)  Sex in association with a large public event in a geographic area where mpox transmission is occurring",
+    "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes"
+   }
+  ],
+  "resource": "Observation",
+  "title": "Sexual partners of gay, bisexual, or other man who has sex with men (MSM), or a person who has sex with gay, bisexual, or other MSM who in the past 6 months have had one of the following: \r 1) A new diagnosis of \u2265 1 sexually transmitted disease\r 2)  More than one sex partner\r 3)  Sex at a commercial sex venue\r 4)  Sex in association with a large public event in a geographic area where mpox transmission is occurring"
+ },
+ "249": {
+  "category": null,
+  "cdsiCodeAdded": true,
+  "code": [
+   {
+    "code": "249",
+    "display": "Moving or traveling to an area where TBE is endemic and will have extensive exposure to ticks because of their planned outdoor activities and itinerary",
+    "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes"
+   }
+  ],
+  "resource": "Observation",
+  "title": "Moving or traveling to an area where TBE is endemic and will have extensive exposure to ticks because of their planned outdoor activities and itinerary"
+ },
+ "250": {
+  "category": null,
+  "cdsiCodeAdded": true,
+  "code": [
+   {
+    "code": "250",
+    "display": "Moving or traveling to an area where TBE is endemic who might engage in outdoor activities in areas where ticks are likely to be found",
+    "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes"
+   }
+  ],
+  "resource": "Observation",
+  "title": "Moving or traveling to an area where TBE is endemic who might engage in outdoor activities in areas where ticks are likely to be found"
+ },
+ "251": {
+  "category": null,
+  "cdsiCodeAdded": true,
+  "code": [
+   {
+    "code": "251",
+    "display": "Laboratory workers with a potential for exposure to TBE virus",
+    "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes"
+   }
+  ],
+  "resource": "Observation",
+  "title": "Laboratory workers with a potential for exposure to TBE virus"
+ },
+ "252": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "77",
+    "display": "Tick-borne encephalitis vaccine (non-US)",
+    "system": "http://hl7.org/fhir/sid/cvx"
+   }
+  ],
+  "resource": "AllergyIntolerance",
+  "title": "Severe allergic reaction after previous dose of Tick-borne Encephalitis vaccine"
+ },
+ "253": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "370219009",
+    "display": "Moderate Asthma [disorder]",
+    "system": "http://snomed.info/sct"
+   }
+  ],
+  "resource": "Condition",
+  "title": "Moderate persistent or severe persistent asthma"
+ },
+ "254": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "128292002",
+    "display": "Chronic disease of cardiovascular system [disorder]",
+    "system": "http://snomed.info/sct"
+   }
+  ],
+  "resource": "Condition",
+  "title": "Chronic cardiovascular disease"
+ },
+ "256": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "127013003",
+    "display": "Disorder of kidney due to diabetes mellitus [disorder]",
+    "system": "http://snomed.info/sct"
+   }
+  ],
+  "resource": "Condition",
+  "title": "Diabetes mellitus complicated by chronic kidney disease"
+ },
+ "257": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "408512008",
+    "display": "Body mass index 40+ - severely obese [finding]",
+    "system": "http://snomed.info/sct"
+   }
+  ],
+  "resource": "Condition",
+  "title": "Severe obesity"
+ },
+ "258": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "414027002",
+    "display": "Disorder of hematopoietic structure [disorder]",
+    "system": "http://snomed.info/sct"
+   }
+  ],
+  "resource": "Condition",
+  "title": "Chronic hematologic disorders"
+ },
+ "259": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "D57.1",
+    "display": "Sickle-cell disease without crisis",
+    "system": "http://hl7.org/fhir/sid/icd-10-cm"
+   }
+  ],
+  "resource": "Condition",
+  "title": "Sickle cell disease"
+ },
+ "260": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "350586651000119105",
+    "display": "Chronic respiratory failure due to neuromuscular disease [disorder]",
+    "system": "http://snomed.info/sct"
+   }
+  ],
+  "resource": "Condition",
+  "title": "Neurologic or neuromuscular conditions causing impaired airway clearance or respiratory muscle weakness"
+ },
+ "261": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "160734000",
+    "display": "Lives in nursing home [finding]",
+    "system": "http://snomed.info/sct"
+   }
+  ],
+  "resource": "Condition",
+  "title": "Resident of a nursing home"
+ },
+ "262": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "248279007",
+    "display": "Frailty [finding]",
+    "system": "http://snomed.info/sct"
+   }
+  ],
+  "resource": "Condition",
+  "title": "Frailty"
+ },
+ "263": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "230572002",
+    "display": "Neuropathy due to diabetes mellitus [disorder]",
+    "system": "http://snomed.info/sct"
+   }
+  ],
+  "resource": "Condition",
+  "title": "Diabetes mellitus complicated by neuropathy"
+ },
+ "264": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "4855003",
+    "display": "Retinopathy due to diabetes mellitus [disorder]",
+    "system": "http://snomed.info/sct"
+   }
+  ],
+  "resource": "Condition",
+  "title": "Diabetes mellitus complicated by retinopathy"
+ },
+ "265": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "E11.69",
+    "display": "Type 2 diabetes mellitus with other specified complication",
+    "system": "http://hl7.org/fhir/sid/icd-10-cm"
+   }
+  ],
+  "resource": "Condition",
+  "title": "Diabetes mellitus complicated by end-organ damage"
+ },
+ "266": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "170747006",
+    "display": "Diabetic on insulin [finding]",
+    "system": "http://snomed.info/sct"
+   }
+  ],
+  "resource": "Condition",
+  "title": "Diabetes requiring treatment with insulin"
+ },
+ "267": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "Z94.83",
+    "display": "Pancreas transplant status",
+    "system": "http://hl7.org/fhir/sid/icd-10-cm"
+   }
+  ],
+  "resource": "Condition",
+  "title": "Diabetes requiring treatment with sodium-glucose cotransporter-2 (SGLT2) inhibitor"
+ },
+ "268": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "128531006",
+    "display": "Islet cell transplant [procedure]",
+    "system": "http://snomed.info/sct"
+   }
+  ],
+  "resource": "Procedure",
+  "title": "Islet Transplantation"
+ },
+ "269": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "77465005",
+    "display": "Transplantation [procedure]",
+    "system": "http://snomed.info/sct"
+   }
+  ],
+  "resource": "Procedure",
+  "title": "Transplantation"
+ },
+ "270": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "317",
+    "display": "Chikungunya live attenuated vaccine, 0.5 mL, PF",
+    "system": "http://hl7.org/fhir/sid/cvx"
+   }
+  ],
+  "resource": "AllergyIntolerance",
+  "title": "Severe allergic reaction after previous dose of Chikungunya vaccine"
+ },
+ "271": {
+  "category": null,
+  "cdsiCodeAdded": true,
+  "code": [
+   {
+    "code": "271",
+    "display": "Traveling to a country or territory where there is a chikungunya outbreak",
+    "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes"
+   }
+  ],
+  "resource": "Observation",
+  "title": "Traveling to a country or territory where there is a chikungunya outbreak"
+ },
+ "272": {
+  "category": null,
+  "cdsiCodeAdded": true,
+  "code": [
+   {
+    "code": "272",
+    "display": "Traveling or moving to a country or territory without an outbreak but with elevated chikungunya risk for U.S. travelers if planning to stay for an extended period of time [e.g., 6 months or more]",
+    "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes"
+   }
+  ],
+  "resource": "Observation",
+  "title": "Traveling or moving to a country or territory without an outbreak but with elevated chikungunya risk for U.S. travelers if planning to stay for an extended period of time [e.g., 6 months or more]"
+ },
+ "273": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "124950009",
+    "display": "Deficiency of immunoglobulin [disorder]",
+    "system": "http://snomed.info/sct"
+   }
+  ],
+  "resource": "Condition",
+  "title": "Immunoglobulin deficiency"
+ },
+ "274": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "D84.1",
+    "display": "Defects in the complement system",
+    "system": "http://hl7.org/fhir/sid/icd-10-cm"
+   }
+  ],
+  "resource": "Condition",
+  "title": "Early component complement inhibitor use"
+ },
+ "275": {
+  "category": null,
+  "cdsiCodeAdded": true,
+  "code": [
+   {
+    "code": "275",
+    "display": "Persons at risk during a measles outbreak",
+    "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes"
+   }
+  ],
+  "resource": "Observation",
+  "title": "Persons at risk during a measles outbreak"
+ },
+ "276": {
+  "category": null,
+  "cdsiCodeAdded": true,
+  "code": [
+   {
+    "code": "276",
+    "display": "Age is 60 years or older",
+    "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes"
+   }
+  ],
+  "resource": "Observation",
+  "title": "Age is 60 years or older"
+ },
+ "277": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "D58.2",
+    "display": "Other hemoglobinopathies",
+    "system": "http://hl7.org/fhir/sid/icd-10-cm"
+   }
+  ],
+  "resource": "Condition",
+  "title": "Laboratory worker with potential for exposure to chikungunya virus"
+ },
+ "278": {
+  "cdsiCodeAdded": true,
+  "code": [
+   {
+    "code": "278",
+    "display": "Birth mother received RSV vaccine during pregnancy",
+    "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes"
+   }
+  ],
+  "resource": "Condition",
+  "title": "Birth mother received RSV vaccine during pregnancy"
+ },
+ "279": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "80141007",
+    "display": "hemoglobinopathy [disorder]",
+    "system": "http://snomed.info/sct"
+   }
+  ],
+  "resource": "Condition",
+  "title": "Hemoglobinopathy disorder"
+ },
+ "280": {
+  "cdsiCodeAdded": false,
+  "code": [
+   {
+    "code": "67569000",
+    "display": "Bronchopulmonary dysplasia of newborn [disorder]",
+    "system": "http://snomed.info/sct"
+   }
+  ],
+  "resource": "Condition",
+  "title": "Chronic lung disease of prematurity"
+ }
+}

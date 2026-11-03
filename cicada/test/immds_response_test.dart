@@ -1138,13 +1138,44 @@ void main() {
           'resource': {
             'resourceType': 'Condition',
             'id': 'preg',
+            // As a chart holds it (TEST-RESOURCE-REVIEW.md): CDC's SNOMED
+            // code for CDSi observation 007, active and confirmed.
+            'clinicalStatus': {
+              'coding': [
+                {
+                  'system':
+                      'http://terminology.hl7.org/CodeSystem/condition-clinical',
+                  'code': 'active',
+                },
+              ],
+            },
+            'verificationStatus': {
+              'coding': [
+                {
+                  'system':
+                      'http://terminology.hl7.org/CodeSystem/condition-ver-status',
+                  'code': 'confirmed',
+                },
+              ],
+            },
+            'category': [
+              {
+                'coding': [
+                  {
+                    'system':
+                        'http://terminology.hl7.org/CodeSystem/condition-category',
+                    'code': 'problem-list-item',
+                  },
+                ],
+              },
+            ],
             'subject': {'reference': 'Patient/1'},
             'code': {
               'coding': [
                 {
-                  'system':
-                      'https://www.cdc.gov/vaccines/programs/iis/cdsi.html',
-                  'code': '007',
+                  'system': 'http://snomed.info/sct',
+                  'code': '77386006',
+                  'display': 'Pregnancy',
                 },
               ],
             },
