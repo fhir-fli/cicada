@@ -436,33 +436,30 @@ _extractForecastVaccineInfo(VaxSeries series) {
       }
     }
   }
-  // FORECASTDN-1: The forecast dose number is calculated by counting
-  // satisfied target doses, but for seasonal series doses only those whose
-  // administered date is on or after the seasonal recommendation start date.
+  // FORECASTDN-1: the forecast dose number is the count of satisfied target
+  // doses plus 1; for a series dose with a seasonal recommendation start date,
+  // only target doses whose dose administered is on or after that date.
+  //
+  // Chapter 6 step 5a: satisfying a recurring target dose initialises "a new
+  // target dose identical to the current target dose", so every recurrence is
+  // its own target dose and counts. `evaluatedTargetDose` is keyed by series
+  // dose position and holds a recurring position once however often it was
+  // satisfied, so counting its entries undercounted: 8 valid DTaP/Tdap/Td
+  // doses with two adult boosters forecast dose 8, not 9. `evaluatedDoses`
+  // holds exactly one dose per satisfied target dose (markDoseValid, Table
+  // 6-31), so count those.
   var satisfiedCount = 0;
-  for (final entry in series.evaluatedTargetDose.entries) {
-    if (entry.value != TargetDoseStatus.satisfied) continue;
-    final tdIdx = entry.key;
+  for (final dose in series.evaluatedDoses) {
+    final tdIdx = dose.targetDoseSatisfied;
+    if (tdIdx < 0) continue;
     final sdose = tdIdx < seriesDoses.length ? seriesDoses[tdIdx] : null;
     final seasonalStart = sdose?.seasonalRecommendation?.startDate;
-    if (seasonalStart != null && seasonalStart.isNotEmpty) {
-      // Seasonal: only count if administered date >= seasonal start date.
-      // Use lastWhere because recurring doses may satisfy the same target
-      // dose multiple times — we want the most recent administered dose.
-      final adminDose = series.evaluatedDoses.cast<VaxDose?>().lastWhere(
-        (d) => d!.targetDoseSatisfied == tdIdx,
-        orElse: () => null,
-      );
-      if (adminDose != null) {
-        final startDt = VaxDate.fromString(seasonalStart);
-        if (adminDose.dateGiven >= startDt) {
-          satisfiedCount++;
-        }
-      }
-    } else {
-      // Non-seasonal: always count
-      satisfiedCount++;
+    if (seasonalStart != null &&
+        seasonalStart.isNotEmpty &&
+        dose.dateGiven < VaxDate.fromString(seasonalStart)) {
+      continue;
     }
+    satisfiedCount++;
   }
   final doseNum = satisfiedCount + 1;
   return (cvx: cvxCodes, desc: descriptions, doseNum: doseNum);
