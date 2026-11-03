@@ -30,7 +30,11 @@ class PatientForAssessment extends _$PatientForAssessment {
     final dosesAfterAssessment = <VaxDose>[];
     // The code alone is not enough: `supportingPatientInformation` has to
     // reference the resource that carried it, so keep the reference with it.
-    final otherResourceCodes = <({CodeableConcept code, String? reference})>[];
+    final otherResourceCodes =
+        <({CodeableConcept code, String? reference, Period? period})>[];
+    // Organizations sent with the request, so a manufacturer given as a
+    // literal reference (`Organization/x`) can be resolved.
+    final organizations = <String, Organization>{};
 
     parameters.parameter?.forEach((parameter) {
       if (parameter.name.valueString == 'assessmentDate' &&
@@ -47,14 +51,30 @@ class PatientForAssessment extends _$PatientForAssessment {
                       : null;
               break;
             }
+          case Organization _:
+            {
+              final organization = parameter.resource! as Organization;
+              final id = organization.id?.valueString;
+              if (id != null) {
+                organizations['Organization/$id'] = organization;
+                organizations[id] = organization;
+              }
+              break;
+            }
           case Condition _:
             {
-              conditions.add(parameter.resource! as Condition);
+              final condition = parameter.resource! as Condition;
+              if (!_refutedOrInError(condition.verificationStatus)) {
+                conditions.add(condition);
+              }
               break;
             }
           case AllergyIntolerance _:
             {
-              allergies.add(parameter.resource! as AllergyIntolerance);
+              final allergy = parameter.resource! as AllergyIntolerance;
+              if (!_refutedOrInError(allergy.verificationStatus)) {
+                allergies.add(allergy);
+              }
               break;
             }
           case Immunization _:
@@ -70,24 +90,29 @@ class PatientForAssessment extends _$PatientForAssessment {
           case Observation _:
             {
               final observation = parameter.resource! as Observation;
-              otherResourceCodes.add((
-                code: observation.code,
-                reference:
-                    observation.id == null
-                        ? null
-                        : 'Observation/${observation.id}',
-              ));
+              final code = _observationConcept(observation);
+              if (code != null) {
+                otherResourceCodes.add((
+                  code: code,
+                  reference:
+                      observation.id == null
+                          ? null
+                          : 'Observation/${observation.id}',
+                  period: _periodOf(observation.effectiveX),
+                ));
+              }
               break;
             }
           case Procedure _:
             {
               final resource = parameter.resource! as Procedure;
               final code = resource.code;
-              if (code != null) {
+              if (code != null && !_procedureVoid(resource.status)) {
                 otherResourceCodes.add((
                   code: code,
                   reference:
                       resource.id == null ? null : 'Procedure/${resource.id}',
+                  period: _periodOf(resource.performedX),
                 ));
               }
               break;
@@ -96,13 +121,18 @@ class PatientForAssessment extends _$PatientForAssessment {
             {
               final resource = parameter.resource! as MedicationStatement;
               final code = resource.medicationCodeableConcept;
-              if (code != null) {
+              if (code != null &&
+                  !const {
+                    'entered-in-error',
+                    'not-taken',
+                  }.contains(resource.status.toString())) {
                 otherResourceCodes.add((
                   code: code,
                   reference:
                       resource.id == null
                           ? null
                           : 'MedicationStatement/${resource.id}',
+                  period: _periodOf(resource.effectiveX),
                 ));
               }
               break;
@@ -118,6 +148,7 @@ class PatientForAssessment extends _$PatientForAssessment {
                       resource.id == null
                           ? null
                           : 'MedicationRequest/${resource.id}',
+                  period: null,
                 ));
               }
               break;
@@ -133,6 +164,7 @@ class PatientForAssessment extends _$PatientForAssessment {
                       resource.id == null
                           ? null
                           : 'MedicationAdministration/${resource.id}',
+                  period: _periodOf(resource.effectiveX),
                 ));
               }
               break;
@@ -142,21 +174,6 @@ class PatientForAssessment extends _$PatientForAssessment {
         }
       }
     });
-
-    // Fallback: test data encodes assessment date as the parameter name itself
-    if (assessmentDate == null) {
-      for (final parameter
-          in parameters.parameter ?? const <ParametersParameter>[]) {
-        final name = parameter.name.valueString;
-        if (parameter.resource == null && name != null) {
-          final parsed = DateTime.tryParse(name);
-          if (parsed != null) {
-            assessmentDate = parsed;
-            break;
-          }
-        }
-      }
-    }
 
     // Build the doses now that the birth date and assessment date are known.
     //
@@ -208,7 +225,11 @@ class PatientForAssessment extends _$PatientForAssessment {
             ? VaxDate.now()
             : VaxDate.fromDateTime(assessmentDate!);
     for (final immunization in immunizations) {
-      final dose = VaxDose.fromImmunization(immunization, effectiveDob);
+      final dose = VaxDose.fromImmunization(
+        immunization,
+        effectiveDob,
+        organizations: organizations,
+      );
       if (birthdate != null && dose.dateGiven < birthdate!) {
         implausibleDoses.add((
           dose: dose,
@@ -265,7 +286,8 @@ class PatientForAssessment extends _$PatientForAssessment {
     List<Immunization> immunizations,
     List<AllergyIntolerance> allergies,
     List<VaxDose> pastDoses,
-    List<({CodeableConcept code, String? reference})> otherResourceCodes,
+    List<({CodeableConcept code, String? reference, Period? period})>
+    otherResourceCodes,
     List<ImplausibleDose> implausibleDoses,
     List<VaxDose> dosesAfterAssessment,
   ) {
@@ -276,7 +298,11 @@ class PatientForAssessment extends _$PatientForAssessment {
     // Add observations from Observation, Procedure, Medication* resources
     for (final pair in otherResourceCodes) {
       final obs = observationFromCodeableConcept(pair.code);
-      if (obs != null) observations.add(obs);
+      if (obs != null) {
+        observations.add(
+          pair.period == null ? obs : obs.copyWith(period: pair.period),
+        );
+      }
     }
 
     // Which resource asserted each CDSi observation, so a risk-driven
@@ -351,3 +377,93 @@ String? _displayOf(CodeableConcept? code) {
   }
   return null;
 }
+
+/// A verificationStatus of refuted or entered-in-error: the record says the
+/// condition or allergy is not there. Every other status counts (Grey,
+/// 2026-10-18: unconfirmed, provisional and differential count).
+/// Codes: condition-ver-status and allergyintolerance-verification.
+bool _refutedOrInError(CodeableConcept? verificationStatus) =>
+    verificationStatus?.coding?.any(
+      (c) => const {
+        'refuted',
+        'entered-in-error',
+      }.contains(c.code?.toString()),
+    ) ??
+    false;
+
+/// A Procedure that did not happen or was recorded in error
+/// (event-status: not-done, entered-in-error). A planned one
+/// (preparation, in-progress) still counts: CDSi observation 002 is
+/// "Undergoing elective splenectomy".
+bool _procedureVoid(EventStatus status) => const {
+  'not-done',
+  'entered-in-error',
+}.contains(status.toString());
+
+/// The concept an Observation asserts, as the published guides send it
+/// (TEST-RESOURCE-REVIEW.md):
+/// - a social-history Observation (occupation LOINC 11341-5, smoking status
+///   72166-2, pregnancy status 82810-3) asserts its coded value;
+/// - a laboratory result (a LOINC test code) asserts its code only when the
+///   result is positive: value SNOMED 10828004 "Positive", or
+///   interpretation POS;
+/// - any other Observation asserts its code, then its coded value.
+/// Cancelled and entered-in-error Observations assert nothing.
+CodeableConcept? _observationConcept(Observation observation) {
+  if (const {
+    'cancelled',
+    'entered-in-error',
+  }.contains(observation.status.toString())) {
+    return null;
+  }
+  final value =
+      observation.valueX is CodeableConcept
+          ? observation.valueX! as CodeableConcept
+          : null;
+  final codes = observation.code.coding ?? const <Coding>[];
+  final isLoinc = codes.any((c) => c.system?.toString() == 'http://loinc.org');
+  const valueBearing = {'11341-5', '72166-2', '82810-3'};
+  if (isLoinc && codes.any((c) => valueBearing.contains(c.code?.toString()))) {
+    return value;
+  }
+  if (isLoinc && observationFromCodeableConcept(observation.code) != null) {
+    return _positive(observation, value) ? observation.code : null;
+  }
+  if (observationFromCodeableConcept(observation.code) != null) {
+    return observation.code;
+  }
+  return value ?? observation.code;
+}
+
+bool _positive(Observation observation, CodeableConcept? value) {
+  final positiveValue =
+      value?.coding?.any(
+        (c) =>
+            c.system?.toString() == 'http://snomed.info/sct' &&
+            c.code?.toString() == '10828004',
+      ) ??
+      false;
+  final positiveInterpretation =
+      observation.interpretation?.any(
+        (i) =>
+            i.coding?.any(
+              (c) => c.code?.toString() == 'POS',
+            ) ??
+            false,
+      ) ??
+      false;
+  return positiveValue || positiveInterpretation;
+}
+
+/// The dates a resource's `effective[x]` or `performed[x]` carries, as the
+/// observation's period: a dateTime or instant starts it, a Period gives
+/// both ends. CDSi date observations (120 "Begin Date of antiviral therapy",
+/// 171 "Date of hematopoietic stem cell transplant") are read from here when
+/// they arrive on an Observation, Procedure or medication record rather
+/// than as a Condition's onset.
+Period? _periodOf(dynamic value) => switch (value) {
+  FhirDateTime d => Period(start: d),
+  FhirInstant i => Period(start: FhirDateTime.tryParse(i.valueString)),
+  Period p => p,
+  _ => null,
+};

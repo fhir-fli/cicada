@@ -16,7 +16,11 @@ class VaxDose {
     this.evalReason,
   });
 
-  factory VaxDose.fromImmunization(Immunization immunization, VaxDate dob) {
+  factory VaxDose.fromImmunization(
+    Immunization immunization,
+    VaxDate dob, {
+    Map<String, Organization> organizations = const {},
+  }) {
     final cvx = cvxFromImmunization(immunization);
     // CDSi Logic Spec v4.6 Tables 3-4 and 6-2: Date Administered has no
     // assumed value. This used to substitute 2999-01-01; the patient parser
@@ -42,7 +46,7 @@ class VaxDose {
       volume: parseVolume(immunization.doseQuantity),
       dateGiven: dateGiven,
       cvx: cvx ?? 'none',
-      mvx: mvxFromImmunization(immunization),
+      mvx: mvxFromImmunization(immunization, organizations: organizations),
       antigens: antigensFromCvx(cvx),
       evalStatus: immunizationEvalStatus(dateGiven, cvx, expired, immunization),
       evalReason: immunizationEvalReason(dateGiven, cvx, expired, immunization),

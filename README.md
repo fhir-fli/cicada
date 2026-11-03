@@ -79,13 +79,22 @@ void main() {
 
 The same program is `example/forecast_example.dart`.
 
-The input `Parameters` resource contains:
-- A `Patient` resource (demographics: birth date, sex)
-- `Immunization` resources (past vaccine doses with CVX codes and dates)
-- `Condition` resources (clinical conditions affecting vaccine eligibility)
-- `AllergyIntolerance` resources (allergies/contraindications)
-- `Observation`, `Procedure`, `MedicationStatement` resources (additional clinical context)
-- An assessment date parameter (the date to evaluate against)
+The input is the ImmDS `$immds-forecast` `Parameters` resource
+(`hl7.fhir.us.immds` 1.0.0):
+- `assessmentDate` (`valueDate`): the date to forecast for
+- `patient`: a `Patient` (birth date, sex)
+- `immunization`: one per past dose, CVX in `vaccineCode`, the maker in
+  `manufacturer`
+- Clinical history, one parameter per resource: `Condition`,
+  `AllergyIntolerance`, `Observation`, `Procedure`, `MedicationStatement`,
+  `MedicationRequest`, `MedicationAdministration`, `Organization`
+
+Cicada also reads the other forms published guides use: the manufacturer
+as an identifier, a contained or referenced `Organization`, a name only, or
+an MVX code in `vaccineCode`; a positive lab `Observation` as evidence of
+immunity; refuted or entered-in-error records are ignored. A `Bundle` of
+the same resources (the Swiss `ch-vacd` request shape) is accepted too.
+`test/input_forms_test.dart` has one test per form.
 
 The output `Parameters` resource contains:
 - `ImmunizationEvaluation` resources (one per evaluated dose per antigen)

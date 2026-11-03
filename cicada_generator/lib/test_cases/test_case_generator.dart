@@ -168,7 +168,7 @@ Future<void> _generateTestCases(TestCaseConfig config) async {
     final patient = _buildPatient(rowMap);
     final immunizations = <Immunization>[];
     final vaxDoses = <VaxDose>[];
-    final conditions = <Condition>[];
+    final history = <Resource>[];
 
     // Dynamically find dose columns
     final doseCols = headers.where((h) => h.startsWith('Date_Administered_'));
@@ -183,7 +183,14 @@ Future<void> _generateTestCases(TestCaseConfig config) async {
         final evalStatus = rowMap['Evaluation_Status_$idx']?.toString();
         final evalReason = rowMap['Evaluation_Reason_$idx']?.toString();
 
-        // Build Immunization
+        // Build Immunization the way the published examples do
+        // (TEST-RESOURCE-REVIEW.md): the CVX coding carries CVX's own
+        // display and CDC's product name goes in vaccineCode.text; the
+        // manufacturer goes in Immunization.manufacturer, as an MVX
+        // identifier (HL7 V2-to-FHIR RXA-17: CWE.1 -> identifier.value,
+        // CWE.3 -> identifier.system) with the company name as display.
+        // It never goes in vaccineCode: no example, profile or mapping in
+        // 31 sources puts it there.
         final imm = Immunization(
           id: '${patient.id}_dose$idx'.toFhirString,
           patient: patient.thisReference,
@@ -193,19 +200,21 @@ Future<void> _generateTestCases(TestCaseConfig config) async {
               Coding(
                 system: FhirUri('http://hl7.org/fhir/sid/cvx'),
                 code: FhirCode(cvx),
-                display: vaccineName.toFhirString,
+                display: cvxDisplays[cvx]?.toFhirString,
               ),
-              if (mvx != null && mvx.isNotEmpty)
-                // MVX's own display (the manufacturer), not the vaccine
-                // name: the IG validator rejected "MMR" on mvx#MSD, whose
-                // display is "Merck and Co., Inc.".
-                Coding(
-                  system: FhirUri('http://hl7.org/fhir/sid/mvx'),
-                  code: FhirCode(mvx),
-                  display: mvxDisplays[mvx]?.toFhirString,
-                ),
             ],
+            text: vaccineName.isEmpty ? null : vaccineName.toFhirString,
           ),
+          manufacturer:
+              mvx == null || mvx.trim().isEmpty
+                  ? null
+                  : Reference(
+                    identifier: Identifier(
+                      system: FhirUri('http://hl7.org/fhir/sid/mvx'),
+                      value: mvx.trim().toFhirString,
+                    ),
+                    display: mvxDisplays[mvx.trim()]?.toFhirString,
+                  ),
           occurrenceX: FhirDateTime.fromString(adminDate),
         );
         immunizations.add(imm);
@@ -229,9 +238,9 @@ Future<void> _generateTestCases(TestCaseConfig config) async {
     // Parse observations/conditions based on style
     switch (config.observationStyle) {
       case ObservationStyle.medHistory:
-        _parseMedHistoryObservations(rowMap, headers, conditions, patient);
+        _parseMedHistoryObservations(rowMap, headers, history, patient);
       case ObservationStyle.observationCode:
-        _parseObservationCodeColumns(rowMap, conditions, patient);
+        _parseObservationCodeColumns(rowMap, history, patient);
     }
 
     // Store test doses JSON
@@ -274,20 +283,26 @@ Future<void> _generateTestCases(TestCaseConfig config) async {
       Parameters(
         id: 'parameters-${patient.id}'.toFhirString,
         parameter: [
+          // ImmDS $immds-forecast inputs: assessmentDate (date), patient,
+          // immunization. ImmDS has no input for clinical history; those
+          // resources follow, one parameter each, named by resource type.
           ParametersParameter(
-            name: _extractDateStr(rowMap['Assessment_Date']).toFhirString,
+            name: 'assessmentDate'.toFhirString,
+            valueX: FhirDate.fromString(
+              _extractDateStr(rowMap['Assessment_Date']),
+            ),
           ),
-          ParametersParameter(name: 'Patient'.toFhirString, resource: patient),
+          ParametersParameter(name: 'patient'.toFhirString, resource: patient),
           ...immunizations.map(
             (i) => ParametersParameter(
               name: 'immunization'.toFhirString,
               resource: i,
             ),
           ),
-          ...conditions.map(
-            (c) => ParametersParameter(
-              name: 'condition'.toFhirString,
-              resource: c,
+          ...history.map(
+            (r) => ParametersParameter(
+              name: _parameterName(r).toFhirString,
+              resource: r,
             ),
           ),
         ],
@@ -334,30 +349,20 @@ Future<void> _generateTestCases(TestCaseConfig config) async {
 void _parseMedHistoryObservations(
   Map<String, dynamic> rowMap,
   List<String> headers,
-  List<Condition> conditions,
+  List<Resource> history,
   Patient patient,
 ) {
-  final obsTextCols = headers.where((h) => h == 'Med_History_Text');
-  for (final textCol in obsTextCols) {
-    final textVal = rowMap[textCol]?.toString() ?? '';
-    final codeVal = rowMap['Med_History_Code']?.toString() ?? '';
-    if (textVal.isNotEmpty) {
-      conditions.add(
-        _buildConditionFromObsCode(
-          codeVal,
-          textVal,
-          null,
-          patient,
-        ),
-      );
-    }
+  final textVal = rowMap['Med_History_Text']?.toString() ?? '';
+  final codeVal = rowMap['Med_History_Code']?.toString() ?? '';
+  if (textVal.isNotEmpty) {
+    history.add(_buildHistoryResource(codeVal, null, patient, history.length));
   }
 }
 
 /// Parse Observation_Code_1/2/3 columns (conditions Excel style).
 void _parseObservationCodeColumns(
   Map<String, dynamic> rowMap,
-  List<Condition> conditions,
+  List<Resource> history,
   Patient patient,
 ) {
   for (var idx = 1; idx <= 3; idx++) {
@@ -371,65 +376,161 @@ void _parseObservationCodeColumns(
             ? dateVal.toString().substring(0, 10)
             : null;
 
-    conditions.add(
-      _buildConditionFromObsCode(
-        codeVal,
-        textVal,
-        dateStr,
-        patient,
-      ),
+    history.add(
+      _buildHistoryResource(codeVal, dateStr, patient, history.length),
     );
   }
 }
 
-/// Build a FHIR Condition from a CDSi observation code, with crosswalk codings.
-Condition _buildConditionFromObsCode(
+/// How each CDSi observation is sent: the resource a chart would hold and
+/// the codes CDC lists for it. Built by
+/// `tool/ig_compare/build_observation_resource_map.py` from the evidence in
+/// TEST-RESOURCE-REVIEW.md. Read once.
+final Map<String, dynamic> _observationResourceMap =
+    jsonDecode(
+          File(
+            'cicada_generator/lib/test_cases/observation_resource_map.json',
+          ).readAsStringSync(),
+        )
+        as Map<String, dynamic>;
+
+CodeableConcept _concept(List<dynamic> codings) => CodeableConcept(
+  coding: [
+    for (final c in codings.cast<Map<String, dynamic>>())
+      Coding(
+        system: FhirUri(c['system'] as String),
+        code: FhirCode(c['code'] as String),
+        display: (c['display'] as String?)?.toFhirString,
+      ),
+  ],
+);
+
+CodeableConcept _hl7Concept(String system, String code) => CodeableConcept(
+  coding: [Coding(system: FhirUri(system), code: FhirCode(code))],
+);
+
+/// Builds the FHIR resource for one CDSi observation on a test case.
+///
+/// Statuses and categories follow the guides' examples: Conditions and
+/// AllergyIntolerances are active and confirmed (11 and more guides send
+/// verificationStatus), Conditions are problem-list items, Observations are
+/// final. A planned procedure ("Undergoing ...") is in preparation; any
+/// other is completed. The observation date is the onset, the effective
+/// date, or the performed date, as the resource names it.
+Resource _buildHistoryResource(
   String rawCode,
-  String displayText,
-  String? onsetDate,
+  String? date,
   Patient patient,
+  int index,
 ) {
   final obsCode = rawCode.padLeft(3, '0');
-  final obsList = scheduleSupportingData.observations?.observation ?? [];
-  final match = obsList.firstWhere(
-    (o) => o.observationCode == obsCode,
-    orElse: () => throw Exception('Obs code $obsCode not found'),
-  );
+  final entry = _observationResourceMap[obsCode] as Map<String, dynamic>?;
+  if (entry == null) {
+    throw StateError('CDSi observation $obsCode is not in the resource map');
+  }
+  final id = '${patient.id}_obs${index + 1}'.toFhirString;
+  final code = _concept(entry['code'] as List<dynamic>);
+  final when = date == null ? null : FhirDateTime.fromString(date);
+  switch (entry['resource'] as String) {
+    case 'Condition':
+      return Condition(
+        id: id,
+        clinicalStatus: _hl7Concept(
+          'http://terminology.hl7.org/CodeSystem/condition-clinical',
+          'active',
+        ),
+        verificationStatus: _hl7Concept(
+          'http://terminology.hl7.org/CodeSystem/condition-ver-status',
+          'confirmed',
+        ),
+        category: [
+          _hl7Concept(
+            'http://terminology.hl7.org/CodeSystem/condition-category',
+            'problem-list-item',
+          ),
+        ],
+        code: code,
+        subject: patient.thisReference,
+        onsetX: when,
+      );
+    case 'AllergyIntolerance':
+      return AllergyIntolerance(
+        id: id,
+        clinicalStatus: _hl7Concept(
+          'http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical',
+          'active',
+        ),
+        verificationStatus: _hl7Concept(
+          'http://terminology.hl7.org/CodeSystem/allergyintolerance-verification',
+          'confirmed',
+        ),
+        code: code,
+        patient: patient.thisReference,
+        onsetX: when,
+      );
+    case 'Procedure':
+      final planned = (entry['title'] as String).toLowerCase().startsWith(
+        'undergoing',
+      );
+      return Procedure(
+        id: id,
+        status: planned ? EventStatus.preparation : EventStatus.completed,
+        code: code,
+        subject: patient.thisReference,
+        performedX: when,
+      );
+    case 'MedicationStatement':
+      return MedicationStatement(
+        id: id,
+        status: MedicationStatementStatusCodes.active,
+        medicationX: code,
+        subject: patient.thisReference,
+        effectiveX: when,
+      );
+    case 'Immunization':
+      // Immunization.occurrence[x] is min 1, max 1 ("Vaccine administration
+      // date"; R4 immunization.profile.json snapshot). No date in the
+      // workbook means the case cannot be built faithfully, so stop rather
+      // than invent one.
+      if (when == null) {
+        throw StateError('$obsCode is an Immunization and needs a date');
+      }
+      return Immunization(
+        id: id,
+        status: ImmunizationStatusCodes.completed,
+        vaccineCode: code,
+        patient: patient.thisReference,
+        occurrenceX: when,
+      );
+    case 'Observation':
+      final category = entry['category'] as String?;
+      final value = entry['value'] as List<dynamic>?;
+      return Observation(
+        id: id,
+        status: ObservationStatus.final_,
+        category:
+            category == null
+                ? null
+                : [
+                  _hl7Concept(
+                    'http://terminology.hl7.org/CodeSystem/observation-category',
+                    category,
+                  ),
+                ],
+        code: code,
+        subject: patient.thisReference,
+        effectiveX: when,
+        valueX: value == null ? null : _concept(value),
+      );
+  }
+  throw StateError('Unknown resource ${entry['resource']} for $obsCode');
+}
 
-  return Condition(
-    clinicalStatus: CodeableConcept(
-      coding: [
-        Coding(
-          system: FhirUri(
-            'http://terminology.hl7.org/CodeSystem/condition-clinical',
-          ),
-          code: FhirCode('active'),
-        ),
-      ],
-    ),
-    subject: patient.thisReference,
-    code: CodeableConcept(
-      coding: [
-        Coding(
-          system: FhirUri(
-            'http://fhirfli.dev/fhir/ig/cicada/CodeSystem/cdsi-observation-codes',
-          ),
-          code: FhirCode(obsCode),
-          display: displayText.toFhirString,
-        ),
-        ...?match.codedValues?.codedValue
-            ?.where((cv) => cv.codeSystem == 'SNOMED')
-            .map(
-              (cv) => Coding(
-                system: FhirUri('http://snomed.info/sct'),
-                code: FhirCode(cv.code),
-                display: cv.text?.toFhirString,
-              ),
-            ),
-      ],
-    ),
-    onsetX: onsetDate != null ? FhirDateTime.fromString(onsetDate) : null,
-  );
+/// The Parameters name for a clinical-history resource. ImmDS defines none;
+/// the resource type, lower camel case, says what the parameter holds.
+String _parameterName(Resource r) {
+  final type = r.resourceType.toString();
+  return type[0].toLowerCase() + type.substring(1);
 }
 
 /// Writes the testDoses map as a Dart file.
@@ -585,14 +686,14 @@ Patient _buildPatient(Map<String, dynamic> row) {
     // because the id did not survive a copy-paste. The id is CDC's, the
     // whitespace is not.
     id: row['CDC_Test_ID'].toString().trim().toFhirString,
-    name: [HumanName(family: row['Test_Case_Name']?.toString().toFhirString)],
+    // No name: the workbook's Test_Case_Name is a description of the case,
+    // not a person's name. Gender is AdministrativeGender: the workbooks
+    // carry only F and M.
     birthDate: dob.isNotEmpty ? FhirDate.fromString(dob) : null,
     gender:
-        genderVal.toLowerCase().contains('f')
+        genderVal.toLowerCase().startsWith('f')
             ? AdministrativeGender.female
-            : genderVal.toLowerCase().contains('t')
-            ? AdministrativeGender('transgender')
-            : genderVal.toLowerCase().contains('m')
+            : genderVal.toLowerCase().startsWith('m')
             ? AdministrativeGender.male
             : AdministrativeGender.unknown,
   );

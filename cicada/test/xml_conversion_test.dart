@@ -145,12 +145,13 @@ void main() {
 
   group('XML -> JSON for FITS-style input', () {
     test('simple Parameters with Patient converts correctly', () {
-      // Build a minimal FHIR Parameters XML like FITS would send
+      // Parameter names as FITS sends them (fits-capture/2026-11-02-traffic)
+      // and as ImmDS $immds-forecast names its inputs.
       const xmlInput = '''
 <?xml version="1.0" encoding="UTF-8"?>
 <Parameters xmlns="http://hl7.org/fhir">
   <parameter>
-    <name value="Patient"/>
+    <name value="patient"/>
     <resource>
       <Patient xmlns="http://hl7.org/fhir">
         <id value="test-patient-1"/>
@@ -168,7 +169,7 @@ void main() {
       expect(params, isNotEmpty);
 
       final patientParam = params.first as Map<String, dynamic>;
-      expect(patientParam['name'], 'Patient');
+      expect(patientParam['name'], 'patient');
       final resource = patientParam['resource'] as Map<String, dynamic>;
       expect(resource['resourceType'], 'Patient');
       expect(resource['id'], 'test-patient-1');
@@ -181,7 +182,7 @@ void main() {
 <?xml version="1.0" encoding="UTF-8"?>
 <Parameters xmlns="http://hl7.org/fhir">
   <parameter>
-    <name value="Patient"/>
+    <name value="patient"/>
     <resource>
       <Patient xmlns="http://hl7.org/fhir">
         <id value="test-patient-2"/>
@@ -191,10 +192,18 @@ void main() {
     </resource>
   </parameter>
   <parameter>
-    <name value="Immunization"/>
+    <name value="immunization"/>
     <resource>
       <Immunization xmlns="http://hl7.org/fhir">
         <id value="imm-1"/>
+        <contained>
+          <Organization xmlns="http://hl7.org/fhir">
+            <id value="1"/>
+            <identifier>
+              <value value="MSD"/>
+            </identifier>
+          </Organization>
+        </contained>
         <status value="completed"/>
         <vaccineCode>
           <coding>
@@ -203,6 +212,9 @@ void main() {
           </coding>
         </vaccineCode>
         <occurrenceDateTime value="2024-08-15"/>
+        <manufacturer>
+          <reference value="#1"/>
+        </manufacturer>
       </Immunization>
     </resource>
   </parameter>
@@ -221,6 +233,16 @@ void main() {
       expect(immResource['id'], 'imm-1');
       expect(immResource['status'], 'completed');
       expect(immResource['occurrenceDateTime'], '2024-08-15');
+
+      // The manufacturer as FITS sends it: a contained Organization whose
+      // identifier holds the MVX code, referenced by fragment.
+      expect(immResource['manufacturer'], {'reference': '#1'});
+      final contained = immResource['contained'] as List;
+      expect((contained.single as Map)['resourceType'], 'Organization');
+      expect(
+        ((contained.single as Map)['identifier'] as List).single,
+        {'value': 'MSD'},
+      );
 
       // Check vaccineCode coding
       final vaccineCode = immResource['vaccineCode'] as Map<String, dynamic>;

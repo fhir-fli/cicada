@@ -57,11 +57,17 @@ List<VaxObservation> observationsFromAllergies(
   final seen = <String>{};
   for (final allergy in allergies) {
     // Check AllergyIntolerance.code
+    // The allergy's onset, when it gives a dateTime, dates the observation
+    // as a Condition's onset does.
+    final onset =
+        allergy.onsetX is FhirDateTime
+            ? Period(start: allergy.onsetX! as FhirDateTime)
+            : null;
     final obs = _matchCodingsToObservation(
       allergy.code?.coding,
     );
     if (obs != null && seen.add(obs.observationCode ?? '')) {
-      observations.add(obs);
+      observations.add(onset == null ? obs : obs.copyWith(period: onset));
     }
     // Check each reaction.substance
     if (allergy.reaction != null) {

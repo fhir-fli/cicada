@@ -7,6 +7,7 @@ export 'forecast_trace.dart';
 export 'gender_from_patient.dart';
 export 'is_substandard.dart';
 export 'observations_from_resources.dart';
+export 'parameters_from_bundle.dart';
 export 'period_of_condition.dart';
 export 'relevant_series.dart';
 export 'string_to_list.dart';
