@@ -34,8 +34,6 @@ use `assessmentDate` / `patient` / `immunization`. None carry a manufacturer.
 
 ## Open before fixing
 
-- #5: which resource and which codes each of the 113 CDSi observations should arrive as. Some
-  have no chart code at all (001 "Patient seeks protection").
 
 ## Manufacturer: every source compared (2026-11-02)
 
@@ -90,3 +88,28 @@ Re-run over 31 sources: our only fields no guide uses are the MVX coding in `vac
 
 **Rule (Grey 2026-11-02):** build our test resources the way most guides do; make the engine
 read every form any guide uses.
+
+## Where each CDSi observation goes (draft, 2026-11-02)
+
+Evidence: the Swiss vaccination guide (`ch.fhir.ig.ch-vacd` 6.0.0) defines a forecast *request*
+(`ch-vacd-recommendation-request-message`, a message Bundle). Beside Patient and Immunization it
+carries MedicalProblem and PastIllness (Condition), AllergyIntolerance, and LaboratorySerology
+(Observation). ImmDS (US 1.0.0, international 0.2.0) has no input for any of these.
+
+`classify_observations.py` labels each of CDC's 278 observations by its SNOMED semantic tag (UMLS
+2025AB); `assign_resource.py` drafts a resource (`observations/assigned.tsv`):
+
+| Resource | Count | Rule |
+|---|---|---|
+| Condition | 109 | SNOMED disorder/finding, or ICD-10-CM only |
+| AllergyIntolerance | 50 | title names an allergy or reaction |
+| Procedure | 12 | SNOMED procedure or CPT |
+| Observation, occupation | 12 | SNOMED occupation |
+| Observation, laboratory | 6 | CDC lists a LOINC code |
+| Condition or Observation, pregnancy | 4 | both forms appear in guides |
+| MedicationStatement | 2 | RxNorm code |
+| Observation, smoking | 1 | US Core smoking status |
+| Immunization (immune globulin, CVX) | 5 | CDC lists only a CVX code |
+| No standard code | 77 | CDC lists no code: travel, jobs, contacts, "seeks protection", outbreaks, ages |
+
+The 77 have no code outside CDSi's own list. The only way to send them is the CDSi code itself.

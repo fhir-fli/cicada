@@ -1,0 +1,279 @@
+code	text	systems	snomed_tags
+001	Patient seeks protection		
+002	Undergoing elective splenectomy	CPT	
+003	Immunocompromised	CDCPHINVS,ICD10CM,SNOMED	finding=1
+004	Recipient of a hematopoietic stem cell transplant	ICD10CM,SNOMED	procedure=2
+005	Hepatitis C virus infection	ICD10CM,SNOMED	disorder=1
+006	Receives clotting factor concentrates	ICD10CM	
+007	Pregnant	ICD10CM,SNOMED	not-in-umls=2;finding=1
+008	Travel to an area of active cholera transmission		
+009	Breastfeeding	ICD10CM,SNOMED	observable entity=1
+010	Cerebrospinal fluid leaks	ICD10CM,SNOMED	disorder=1
+011	Cochlear implants	CPT,ICD10CM,SNOMED	finding=1;physical object=1;procedure=1
+012	Family history of altered immunocompetence	ICD10CM	
+013	Severe Combined Immunodeficiency [SCID]	ICD10CM,SNOMED	disorder=1
+014	Diabetes	ICD10CM,SNOMED	disorder=1
+015	Chronic liver disease	ICD10CM,SNOMED	disorder=2
+016	Chronic heart disease	ICD10CM,SNOMED	disorder=7
+017	Chronic lung disease	ICD10CM,SNOMED	disorder=6
+018	Laboratory Evidence of Immunity or confirmation of Hepatitis A disease	ICD10CM,SNOMED	finding=1
+019	Laboratory Evidence of Immunity or confirmation of Hepatitis B disease	ICD10CM,SNOMED	finding=1
+020	Laboratory Evidence of Immunity for Measles	LOINC,SNOMED	finding=1
+021	Laboratory Evidence of Immunity for Mumps	LOINC,SNOMED	finding=1
+022	Laboratory Evidence of Immunity for Rubella	LOINC,SNOMED	finding=1
+023	Laboratory Evidence of Immunity or confirmation of Varicella disease	LOINC,SNOMED	finding=1
+024	Healthcare provider verified history of or diagnosis of Varicella	LOINC,SNOMED	disorder=1
+025	Healthcare provider verified history or diagnosis of Herpes Zoster	LOINC,SNOMED	disorder=1
+026	Persons with perinatal HIV infection who do not have evidence of severe immunosuppression and who were vaccinated with M	ICD10CM,SNOMED	disorder=1;procedure=1
+027	Asthma	ICD10CM,SNOMED	finding=1;disorder=1
+028	Intussusception	CDCPHINVS,ICD10CM,SNOMED	not-in-umls=1;disorder=1
+029	Acute gastroenteritis	ICD10CM,SNOMED	disorder=1
+030	Acute febrile illness	ICD10CM	
+031	Tuberculosis	ICD10CM,SNOMED	disorder=1
+032	Dialysis patient	ICD10CM	
+033	Taken influenza antiviral medications within the previous 48 hours	RXNORM,SNOMED	substance=4;medicinal product=4
+034	Receiving long-term aspirin therapy	ICD10CM,RXNORM,SNOMED	finding=1
+035	Antimicrobial or antimalarial taken within 72 hours		
+036	Men who have sex with men	SNOMED	finding=2
+037	Not in a long-term, mutually monogamous relationship	SNOMED	finding=2;observable entity=1
+038	Sex partner of Hepatitis B surface antigen-positive persons	SNOMED	observable entity=1;qualifier value=1;finding=1
+039	Receives treatment for STD	ICD10CM,SNOMED	finding=2;disorder=1
+040	Illicit drug use	ICD10CM,SNOMED	finding=2
+041	Illicit injection drug use	ICD10CM,SNOMED	disorder=3;finding=2
+042	Smoke cigarettes	ICD10CM,SNOMED	finding=1
+043	Alcoholism	ICD10CM,SNOMED	finding=1;disorder=1
+044	Anticipate close personal contact with international adoptee		
+045	Travel to country with a Yellow Fever vaccination entry requirement		
+046	College students living in residence halls		
+047	Resident of area at risk for exposure to the disease		
+048	Travelling Internationally		
+049	Working with Hepatitis A virus in research setting		
+050	Microbiologists routinely exposed to Neisseria meningitidis	SNOMED	occupation=2;qualifier value=1;organism=1
+051	Microbiology laboratorians who work frequently with S. typhi	SNOMED	occupation=3;qualifier value=1;organism=1
+052	Laboratory personnel who might be exposed to YFV	SNOMED	occupation=1;qualifier value=1;organism=1
+053	Rabies researchers	SNOMED	occupation=1;qualifier value=1;organism=1
+054	Laboratory workers who handle specimens that might contain polioviruses	SNOMED	occupation=1;qualifier value=1;organism=1
+055	Health care personnel	SNOMED	occupation=1
+056	Health-care workers who have close contact with patients who might be excreting wild polioviruses	SNOMED	occupation=1;qualifier value=1;organism=1
+057	Public safety worker exposed to blood or infection body fluids	SNOMED	occupation=6;substance=2;qualifier value=1
+058	Staff of institution for persons with developmental disabilities		
+059	Occupational exposure for Hepatitis A	SNOMED	occupation=8
+060	Veterinarians and their staff	SNOMED	occupation=1
+061	Animal handlers	SNOMED	occupation=1
+062	Persons whose activities bring them into frequent contact with rabies virus or potentially rabid animals	SNOMED	qualifier value=1;organism=1
+063	Post secondary student	SNOMED	occupation=1;environment=1
+064	Military recruits		
+065	Client of institution for persons with developmental disabilities	ICD10CM	
+066	Chronic renal failure	SNOMED	disorder=1
+068	In drug abuse treatment and prevention facility	SNOMED	environment=1
+069	In correctional facility	SNOMED	environment=1
+070	Persons at risk during an outbreak	SNOMED	not-in-umls=1;event=1
+071	Household contact with hepatitis B surface antigen-positive persons	ICD10CM,SNOMED	qualifier value=1;finding=1
+072	Intimate exposure to a documented S. typhi carrier	SNOMED	finding=1
+073	Household and close contacts of immunocompromised persons		
+074	Negative serological screening for varicella		
+075	Transgender person	SNOMED	not-in-umls=1
+076	Progressive neurologic disorder	ICD10CM,SNOMED	disorder=1
+077	Received inactivated or unknown measles vaccine between 1963-1967	ICD10CM	
+078	Received killed or unknown Mumps vaccine before 1979		
+079	Encephalopathy not attributable to another identifiable cause within 7 days of administration of a previous dose of Tdap	CDCPHINVS,SNOMED	disorder=3
+080	Adverse reaction to vaccine component	CDCPHINVS,SNOMED	disorder=1
+081	Severe allergic reaction after previous dose of Polio	CDCPHINVS,CVX,ICD10CM,SNOMED	disorder=1
+082	Severe allergic reaction after previous dose of Japanese Encephalitis	CDCPHINVS,CVX,ICD10CM,SNOMED	disorder=1
+083	Severe allergic reaction after previous dose of Rotavirus	CDCPHINVS,CVX,ICD10CM,SNOMED	disorder=1
+084	Severe allergic reaction after previous dose of Typhoid	CDCPHINVS,CVX,ICD10CM,SNOMED	disorder=1
+085	Severe allergic reaction after previous dose of Influenza	CDCPHINVS,CVX,ICD10CM,SNOMED	disorder=1
+086	Severe allergic reaction after previous dose of Pertussis	CDCPHINVS,CVX,ICD10CM,SNOMED	disorder=1
+087	Severe allergic reaction after previous dose of Diphtheria	CDCPHINVS,CVX,ICD10CM,SNOMED	disorder=1
+088	Severe allergic reaction after previous dose of Tetanus	CDCPHINVS,CVX,ICD10CM,SNOMED	disorder=1
+089	Severe allergic reaction after previous dose of Varicella	CDCPHINVS,CVX,ICD10CM,SNOMED	disorder=1
+090	Severe allergic reaction after previous dose of HPV	CDCPHINVS,CVX,ICD10CM,SNOMED	not-in-umls=1
+091	Severe allergic reaction after previous dose of Measles	CDCPHINVS,CVX,ICD10CM,SNOMED	disorder=1
+092	Severe allergic reaction after previous dose of Mumps	CDCPHINVS,CVX,ICD10CM,SNOMED	disorder=1
+093	Severe allergic reaction after previous dose of Rubella	CDCPHINVS,CVX,ICD10CM,SNOMED	disorder=1
+094	Severe allergic reaction after previous dose of Pneumococcal	CDCPHINVS,CVX,ICD10CM,SNOMED	disorder=1
+095	Severe allergic reaction after previous dose of Meningococcal	CDCPHINVS,CVX,ICD10CM,SNOMED	disorder=2
+096	Severe allergic reaction after previous dose of Hepatitis A	CDCPHINVS,CVX,ICD10CM,SNOMED	disorder=1
+097	Severe allergic reaction after previous dose of Hepatitis B	CDCPHINVS,CVX,ICD10CM,SNOMED	disorder=1
+098	Severe allergic reaction after previous dose of Hib	CDCPHINVS,CVX,ICD10CM,SNOMED	disorder=1
+099	Severe allergic reaction after previous dose of Yellow Fever	CDCPHINVS,CVX,ICD10CM,SNOMED	disorder=1
+100	Severe allergic reaction after previous dose of live zoster	CDCPHINVS,CVX,ICD10CM,SNOMED	not-in-umls=1
+101	Allergic reaction to egg protein	ICD10CM,SNOMED	finding=1;not-in-umls=1
+102	Severe allergic reaction to gelatin	ICD10CM,SNOMED	disorder=1;finding=1
+103	Severe allergic reaction to arginine	ICD10CM	
+104	Allergic reaction to latex	ICD10CM,SNOMED	not-in-umls=2
+105	Severe allergic reaction to chicken protein	ICD10CM	
+106	Severe allergic reaction to gentamicin	ICD10CM,SNOMED	not-in-umls=1;disorder=1;finding=1
+107	Severe allergic reaction to neomycin	ICD10CM,SNOMED	finding=1;disorder=1
+108	Severe allergic reaction to streptomycin	ICD10CM,SNOMED	finding=1;disorder=1
+109	Severe allergic reaction to polymyxin B	ICD10CM,SNOMED	finding=1;disorder=1
+110	Hypersensitivity to yeast	CDCPHINVS,ICD10CM,SNOMED	not-in-umls=1
+111	Hypersensitivity to the preservative 2-phenoxyethanol	CDCPHINVS,ICD10CM	
+112	Hypersensitivity to alum		
+113	Severe allergic reaction after previous dose of Rabies	CDCPHINVS,CVX,ICD10CM,SNOMED	disorder=1
+114	End stage renal disease	SNOMED	disorder=1;finding=1;procedure=1
+115	Severe allergic reaction to protamine sulfate	ICD10CM,SNOMED	substance=1;finding=1
+116	Severe allergic reaction after previous dose of Meningococcal B	CDCPHINVS,CVX,ICD10CM,SNOMED	disorder=1
+117	Severe allergic reaction to diphtheria toxoid		
+118	Severe allergic reaction to tetanus toxoid	ICD10CM	
+119	Severe allergic reaction after previous dose of cholera	CDCPHINVS,CVX,SNOMED	disorder=1
+120	Begin Date of antiviral therapy [ART]		
+121	Homelessness	ICD10CM,SNOMED	finding=1
+122	Severe allergic reaction after previous dose of COVID-19	CDCPHINVS,CVX,ICD10CM	
+123	Severe allergic reaction after previous dose of Ebola		
+124	Severe allergic reaction to rice protein		
+125	Tetanus IG administration	CVX	
+126	Hep A IG administration	CVX	
+127	Hep B IG administration	CVX	
+128	Rabies IG administration	CVX	
+129	Varicella IG administration	CVX	
+130	Measles prophylaxis IG administration - Standard		
+131	Measles prophylaxis IG administration - Immunocompromised Contact		
+132	RBC [adenine-saline added] blood transfusion	SNOMED	procedure=1
+133	Packed RBC blood transfusion	SNOMED	procedure=1
+134	Whole blood transfusion	SNOMED	procedure=1
+135	Plasma/platelet products blood transfusion	SNOMED	procedure=2
+136	Cytomegalovirus IGIV		
+137	IGIV - Replacement therapy for immune deficiencies		
+138	IGIV - Immune thrombocytopenic purpura treatment		
+139	IGIV - Postexposure varicella prophylaxis		
+140	IGIV - Immune thrombocytopenic purpura treatment		
+141	IGIV - Kawasaki disease		
+142	Travel to or working in countries that have high or intermediate endemicity of Hepatitis A	ICD10CM	
+143	Travel to areas or countries where polio is epidemic or endemic		
+144	International travel with possible contact with animals in areas where rabies is enzootic and immediate access to approp		
+145	B-lymphocyte [humoral] - Severe antibody deficiencies	SNOMED	disorder=2
+146	B-lymphocyte [humoral] - Less severe antibody deficiencies	SNOMED	disorder=1;finding=1
+147	T-lymphocyte [cell-mediated and humoral] - Complete defects	SNOMED	disorder=1;not-in-umls=1
+148	T-lymphocyte [cell-mediated and humoral] - Partial defects	SNOMED	disorder=2;not-in-umls=1
+149	T-lymphocyte [cell-mediated and humoral] - interferon-gamma/Interleukin 12 axis deficiencies		
+150	T-lymphocyte [cell-mediated and humoral] - interferon-gamma or interferon-alpha deficiencies		
+151	Persistent complement, properdin, or factor B deficiency	SNOMED	disorder=3
+152	Phagocytic function - Chronic granulomatous disease	SNOMED	disorder=1
+153	Phagocytic function - Leukocyte adhesion defect, and myeloperoxidase deficiency	SNOMED	not-in-umls=1;disorder=1
+154	HIV/AIDS - severely immunocompromised	SNOMED	disorder=1
+155	HIV/AIDS - not severely immunocompromised	ICD10CM,SNOMED	disorder=1
+156	Generalized malignant neoplasm	ICD10CM	
+157	Solid organ transplantation	ICD10CM,SNOMED	procedure=1
+158	Immunosuppressive therapy	ICD10CM,SNOMED	procedure=1
+159	Radiation therapy	ICD10CM,SNOMED	not-in-umls=1
+160	Anatomical or functional asplenia	ICD10CM,SNOMED	disorder=1
+161	Chronic kidney disease	ICD10CM,SNOMED	disorder=1
+162	Travel to areas at risk for Yellow Fever transmission	ICD10CM	
+163	Travel to areas in which there is a recognized risk of exposure to S. typhi		
+164	Travel to or are residents of countries in which meningococcal disease is hyperendemic or epidemic		
+165	Longer-term (e.g., 1 month or more) travel to a JE-endemic area		
+166	Travel to countries with high or intermediate prevalence of chronic HBV infection		
+167	Nephrotic Syndrome	SNOMED	disorder=1
+168	Chemotherapy	ICD10CM,SNOMED	procedure=1
+169	History of sexual abuse or assault	ICD10CM,SNOMED	event=2;not-in-umls=1
+170	Onset of pregnancy	ICD10CM,SNOMED	observable entity=1
+171	Date of hematopoietic stem cell transplant		
+172	Severe allergic reaction after previous dose of recombinant zoster	CDCPHINVS,CVX,SNOMED	not-in-umls=1
+173	Moving to JE-endemic country to take up residence		
+174	Frequent travel to JE-endemic areas		
+175	Patient seeks Hepatitis A protection		
+176	Patient seeks Hepatitis B protection		
+177	Patient seeks Meningococcal B protection		
+178	Leukemia	ICD10CM,SNOMED	disorder=1
+179	Lymphoma	ICD10CM,SNOMED	finding=1
+180	Hodgkin's disease	ICD10CM,SNOMED	disorder=1
+181	Multiple myeloma	ICD10CM,SNOMED	disorder=1
+182	Ebola virus outbreak response		
+183	Health care personnel at federally designated Ebola treatment center in U.S.	ICD10CM	
+184	Laboratorians or other staff at biosafety level 4 facilities in U.S.		
+185	Persons in settings that provide services to adults with high proportion of those persons have risk factors for HAV infe		
+186	HIV Infection	SNOMED	disorder=1
+187	Allergic reaction to polysorbate 80	ICD10CM	
+188	Known allergy to Polyethylene glycol [PEG]	ICD10CM	
+189	Active treatment for solid tumors	ICD10CM	
+190	Active treatment for hematologic malignancies	ICD10CM	
+191	Receipt of CAR-T-cell therapy	ICD10CM,SNOMED	procedure=1
+192	Severe allergic reaction after previous dose of any egg-based IIV or LAIV influenza vaccine	ICD10CM	
+193	Severe allergic reaction after previous dose of any ccIIV influenza vaccine		
+194	Severe allergic reaction after previous dose of any RIV influenza vaccine		
+195	Occupations at increased risk for COVID-19 exposure and transmission		
+196	Residing in an institutional setting at increased risk for COVID-19 exposure and transmission		
+197	Resident of a long term care facility		
+198	Cancer	ICD10CM,SNOMED	disorder=1
+199	Interstitial lung disease	ICD10CM,SNOMED	disorder=1
+200	Cystic fibrosis	ICD10CM,SNOMED	disorder=1
+201	Pulmonary hypertension	ICD10CM,SNOMED	disorder=1
+202	Dementia	ICD10CM,SNOMED	disorder=1
+203	Down syndrome	ICD10CM,SNOMED	disorder=1
+204	Obesity	ICD10CM,SNOMED	finding=2;disorder=1
+205	Thalassemia	ICD10CM,SNOMED	disorder=1
+206	Cerebrovascular disease	ICD10CM,SNOMED	disorder=1
+207	Substance use disorder	ICD10CM	
+208	Mental Health conditions	ICD10CM	
+209	History of thrombosis with thrombocytopenia following the Janssen COVID-19 Vaccine or any other adenovirus-vectored COVI	ICD10CM	
+210	Severe allergic reaction after previous dose of Dengue vaccine		
+211	Evidence of previous dengue infection and living in areas where dengue is endemic		
+212	Health care personnel involved in the care and transport of patients with suspected or confirmed Ebola virus disease at 		
+213	Laboratorians and support staff members at Laboratory Response Network (LRN) facilities that handle specimens that might		
+214	Chronic obstructive pulmonary disease	SNOMED	disorder=1
+215	Emphysema	ICD10CM,SNOMED	disorder=1
+216	Iatrogenic Immunosuppression	ICD10CM	
+217	Persons working in rabies vaccine production facilities		
+218	Persons performing testing for rabies in diagnostic laboratories		
+219	Persons who frequently handle bats		
+220	Persons who frequently have contact with bats		
+221	Persons who frequently enter high-density bat environments		
+222	Persons who frequently perform animal necropsies		
+223	Severe allergic reaction after previous dose of orthopoxvirus vaccine	ICD10CM	
+224	History or presence of atopic dermatitis		
+225	Household contact with history or presence of atopic dermatitis	ICD10CM	
+226	Active exfoliative skin conditions		
+227	Household contact with active exfoliative skin conditions		
+228	Household contact is pregnant		
+229	Age is less than 1 year		
+230	Household contact who is less than 1 year of age		
+231	3 or more known major cardiac risk factors		
+232	Research laboratory personnel working with more virulent orthopoxviruses (e.g., Variola virus or mpox virus)		
+233	Clinical laboratory personnel performing diagnostic testing for more virulent orthopoxviruses (e.g., Variola virus or mp		
+234	Designated response team members working with more virulent orthopoxviruses (e.g., Variola virus or mpox virus)		
+235	Healthcare personnel who care for patients infected with more virulent orthopoxviruses (e.g., Variola virus or mpox viru		
+236	Research laboratory personnel working with less virulent orthopoxviruses (e.g., Vaccinia virus or Cowpox virus)		
+237	Clinical laboratory personnel performing diagnostic testing for less virulent orthopoxviruses (e.g., Vaccinia virus or C		
+238	Designated response team members working with less virulent orthopoxviruses (e.g., Vaccinia virus or Cowpox virus)		
+239	Healthcare personnel who administer ACAM2000		
+240	Healthcare personnel who care for patients infected with less virulent orthopoxviruses (e.g., Vaccinia virus or Cowpox v	ICD10CM	
+241	Known exposure to mpox		
+242	Presumed exposure to mpox	ICD10CM	
+243	Lack of laboratory confirmation of a previous Dengue infection		
+244	Severe allergic reaction after previous dose of RSV vaccine		
+245	American Indian or Alaskan Native	SNOMED	not-in-umls=1
+246	Severe immunocompromise	ICD10CM	
+247	Gay, bisexual, or other man who has sex with men (MSM), or a person who has sex with gay, bisexual, or other MSM who in 	ICD10CM	
+248	Sexual partners of gay, bisexual, or other man who has sex with men (MSM), or a person who has sex with gay, bisexual, o		
+249	Moving or traveling to an area where TBE is endemic and will have extensive exposure to ticks because of their planned o		
+250	Moving or traveling to an area where TBE is endemic who might engage in outdoor activities in areas where ticks are like		
+251	Laboratory workers with a potential for exposure to TBE virus		
+252	Severe allergic reaction after previous dose of Tick-borne Encephalitis vaccine	CDCPHINVS,CVX	
+253	Moderate persistent or severe persistent asthma	SNOMED	disorder=6
+254	Chronic cardiovascular disease	ICD10CM,SNOMED	disorder=14;finding=1;not-in-umls=1
+256	Diabetes mellitus complicated by chronic kidney disease	ICD10CM,SNOMED	disorder=1
+257	Severe obesity	SNOMED	disorder=1;finding=1
+258	Chronic hematologic disorders	ICD10CM,SNOMED	disorder=3
+259	Sickle cell disease	ICD10CM,SNOMED	disorder=1
+260	Neurologic or neuromuscular conditions causing impaired airway clearance or respiratory muscle weakness	ICD10CM,SNOMED	disorder=1;finding=1
+261	Resident of a nursing home	SNOMED	finding=1
+262	Frailty	ICD10CM,SNOMED	finding=1
+263	Diabetes mellitus complicated by neuropathy	ICD10CM,SNOMED	disorder=1
+264	Diabetes mellitus complicated by retinopathy	ICD10CM,SNOMED	disorder=1
+265	Diabetes mellitus complicated by end-organ damage	ICD10CM	
+266	Diabetes requiring treatment with insulin	ICD10CM,SNOMED	finding=1
+267	Diabetes requiring treatment with sodium-glucose cotransporter-2 (SGLT2) inhibitor	ICD10CM	
+268	Islet Transplantation	SNOMED	procedure=1
+269	Transplantation	ICD10CM,SNOMED	procedure=1
+270	Severe allergic reaction after previous dose of Chikungunya vaccine	CVX,ICD10CM	
+271	Traveling to a country or territory where there is a chikungunya outbreak		
+272	Traveling or moving to a country or territory without an outbreak but with elevated chikungunya risk for U.S. travelers 		
+273	Immunoglobulin deficiency	SNOMED	disorder=1
+274	Early component complement inhibitor use	ICD10CM	
+275	Persons at risk during a measles outbreak		
+276	Age is 60 years or older		
+277	Laboratory worker with potential for exposure to chikungunya virus	ICD10CM	
+278	Birth mother received RSV vaccine during pregnancy		
+279	Hemoglobinopathy disorder	SNOMED	disorder=1
+280	Chronic lung disease of prematurity	SNOMED	disorder=1
