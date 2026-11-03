@@ -1,0 +1,49 @@
+source	file	id	status	vaccineCode systems	manufacturer	lot	occurrence	patient	primarySource	protocolApplied	extensions
+ca.infoway.io.psca#1.1.0	Immunization-example.json	Immunization-example	completed	http://snomed.info/sct+text	-	-	occurrenceDateTime	literal	-	1	
+ch.fhir.ig.ch-core#6.0.0	Immunization-ImmunizationEntry.json	ImmunizationEntry	completed	http://snomed.info/sct	-	lot	occurrenceDateTime	literal	-	1	ch-core-ext-entry-resource-cross-references
+ch.fhir.ig.ch-core#6.0.0	Bundle-2-ResourceCrossReferencesDokument.json>bundle	ImmunizationEntry	completed	http://snomed.info/sct	-	lot	occurrenceDateTime	literal	-	1	ch-core-ext-entry-resource-cross-references
+ch.fhir.ig.ch-core#6.0.0	Immunization-CHCoreImmunizationExample.json	CHCoreImmunizationExample	completed	http://fhir.ch/ig/ch-vacd/CodeSystem/ch-vacd-swissmedic-cs	-	lot	occurrenceDateTime	literal	-	1	ch-ext-author
+fhir.r4.ukcore.stu2#2.0.2	UKCore-Immunization-Sn-UnitsOfMeasure-Example.json	UKCore-Immunization-Sn-UnitsOfMeasure-Example	completed	https://dmd.nhs.uk	-	-	occurrenceDateTime	literal	-	0	
+fhir.r4.ukcore.stu2#2.0.2	UKCore-Immunization-Sn-LotNumber-Example.json	UKCore-Immunization-Sn-LotNumber-Example	completed	https://dmd.nhs.uk	-	lot	occurrenceDateTime	literal	-	0	
+fhir.r4.ukcore.stu2#2.0.2	UKCore-Immunization-Sn-ProtocolApplied-Example.json	UKCore-Immunization-Sn-ProtocolApplied-Example	completed	https://dmd.nhs.uk	-	-	occurrenceDateTime	literal	-	1	
+fhir.r4.ukcore.stu2#2.0.2	UKCore-Immunization-Sn-AstraZenecaVaccine-Example.json	UKCore-Immunization-Sn-AstraZenecaVaccine-Example	completed	https://dmd.nhs.uk	-	-	occurrenceDateTime	literal	-	0	
+fhir.r4.ukcore.stu2#2.0.2	UKCore-Immunization-Sn-Performer-Example.json	UKCore-Immunization-Sn-Performer-Example	completed	https://dmd.nhs.uk	-	-	occurrenceDateTime	literal	-	0	
+fhir.r4.ukcore.stu2#2.0.2	UKCore-Immunization-Extension-ParentPresent-Example.json	UKCore-Immunization-Extension-ParentPresent-Example	completed	https://dmd.nhs.uk	-	-	occurrenceDateTime	literal	-	0	Extension-UKCore-ParentPresent
+fhir.r4.ukcore.stu2#2.0.2	UKCore-Immunization-Sn-LeftUpperArmStructure-Example.json	UKCore-Immunization-Sn-LeftUpperArmStructure-Example	completed	https://dmd.nhs.uk	-	-	occurrenceDateTime	literal	-	0	
+fhir.r4.ukcore.stu2#2.0.2	UKCore-Immunization-Sn-PatientConformVaccination-Example.json	UKCore-Immunization-Sn-PatientConformVaccination-Example	completed	https://dmd.nhs.uk	-	-	occurrenceDateTime	literal+identifier(sys=https://fhir.nhs.uk/Id/nhs-number)	-	0	
+fhir.r4.ukcore.stu2#2.0.2	UKCore-Immunization-Sn-IntramuscularRoute-Example.json	UKCore-Immunization-Sn-IntramuscularRoute-Example	completed	https://dmd.nhs.uk	-	-	occurrenceDateTime	literal	-	0	
+fhir.r4.ukcore.stu2#2.0.2	UKCore-Immunization-Sn-Manufacturer-Example.json	UKCore-Immunization-Sn-Manufacturer-Example	completed	https://dmd.nhs.uk	display	-	occurrenceDateTime	literal	-	0	
+fhir.r4.ukcore.stu2#2.0.2	UKCore-Immunization-InfluenzaVaccine-Example.json	UKCore-Immunization-InfluenzaVaccine-Example	completed	https://dmd.nhs.uk	-	-	occurrenceDateTime	literal	-	0	
+fhir.r4.ukcore.stu2#2.0.2	UKCore-Immunization-Extension-VaccinationProcedure-COVID-Example.json	UKCore-Immunization-Extension-VaccinationProcedure-COVID-Example	completed	https://dmd.nhs.uk	-	-	occurrenceDateTime	literal	-	0	Extension-UKCore-VaccinationProcedure
+fhir.r4.ukcore.stu2#2.0.2	UKCore-Immunization-Extension-VaccinationProcedure-Example.json	UKCore-Immunization-Extension-VaccinationProcedure-Example	completed	https://dmd.nhs.uk	-	-	occurrenceDateTime	literal	-	0	Extension-UKCore-VaccinationProcedure
+hl7.fhir.au.base#6.0.0	Immunization-example3.json	example3	completed	http://snomed.info/sct,https://www.humanservices.gov.au/organisations/health-professionals/enablers/air-vaccine-code-formats+text	display	lot	occurrenceDateTime	literal+identifier(sys=http://ns.electronichealth.net.au/id/medicare-number)	True	1	vaccine-serial-number
+hl7.fhir.au.base#6.0.0	Immunization-example0.json	example0	not-done	http://snomed.info/sct	-	-	occurrenceDateTime	literal+display	True	0	
+hl7.fhir.au.base#6.0.0	Immunization-example1.json	example1	completed	https://www.humanservices.gov.au/organisations/health-professionals/enablers/air-vaccine-code-formats+text	-	-	occurrenceDateTime	literal+display	True	0	
+hl7.fhir.au.base#6.0.0	Immunization-example2.json	example2	completed	https://www.humanservices.gov.au/organisations/health-professionals/enablers/air-vaccine-code-formats+text	-	-	occurrenceDateTime	literal+display	True	1	
+hl7.fhir.au.core#2.0.0	Immunization-covid-1.json	covid-1	completed	http://snomed.info/sct,https://www.humanservices.gov.au/organisations/health-professionals/enablers/air-vaccine-code-formats+text	display	lot	occurrenceDateTime	literal	True	0	
+hl7.fhir.au.core#2.0.0	Immunization-zoster-notgiven.json	zoster-notgiven	not-done	http://snomed.info/sct	-	-	occurrenceDateTime	literal+display	True	0	
+hl7.fhir.eu.base#2.0.1	Immunization-immunization-eu-core-example.json	immunization-eu-core-example	completed	http://snomed.info/sct	display	lot	occurrenceDateTime	literal	True	1	
+hl7.fhir.us.core#9.0.0	Immunization-imm-1.json	imm-1	completed	http://hl7.org/fhir/sid/cvx,http://hl7.org/fhir/sid/ndc+text	-	lot	occurrenceDateTime	literal+display	False	0	
+hl7.fhir.uv.ipa#1.1.0	Immunization-ImmExample1.json	ImmExample1	completed	urn:oid:1.2.36.1.2001.1005.17+text	-	lot	occurrenceDateTime	literal	True	0	
+hl7.fhir.uv.ips#2.0.1	Bundle-bundle-no-info-required-sections.json>bundle	4ab062b3-8843-4b98-af62-3d6d178a3772	completed	http://hl7.org/fhir/sid/cvx	-	lot	occurrenceDateTime	literal	-	1	
+hl7.fhir.uv.ips#2.0.1	Bundle-bundle-no-info-required-sections.json>bundle	bd6c6537-6c5a-4fa8-8d26-2b49377425a2	completed	http://hl7.org/fhir/sid/cvx	-	lot	occurrenceDateTime	literal	-	1	
+hl7.fhir.uv.ips#2.0.1	Bundle-bundle-ips-all-sections.json>bundle	17b5a6d7-307b-4726-8c8c-0031e61582ce	completed	http://hl7.org/fhir/sid/cvx	-	lot	occurrenceDateTime	literal	-	1	
+hl7.fhir.uv.ips#2.0.1	Bundle-bundle-ips-all-sections.json>bundle	14e8b0d8-b4e4-4f8e-b263-ef385787453b	completed	http://hl7.org/fhir/sid/cvx	-	lot	occurrenceDateTime	literal	-	1	
+hl7.fhir.uv.ips#2.0.1	Bundle-bundle-ips-all-sections.json>bundle	47befa30-026c-421a-ad32-c0b134597a30	completed	http://hl7.org/fhir/sid/cvx	-	lot	occurrenceDateTime	literal	-	1	
+hl7.fhir.uv.ips#2.0.1	Bundle-bundle-ips-all-sections.json>bundle	2f05b590-ce75-4ac6-be97-c2a275e21cbc	completed	http://hl7.org/fhir/sid/cvx	-	lot	occurrenceDateTime	literal	-	1	
+hl7.fhir.uv.ips#2.0.1	Bundle-bundle-ips-all-sections.json>bundle	c1d3ccb9-8b7d-4732-8e03-abe63be1984c	completed	http://hl7.org/fhir/sid/cvx	-	lot	occurrenceDateTime	literal	-	1	
+hl7.fhir.uv.ips#2.0.1	Bundle-bundle-ips-all-sections.json>bundle	79b66c21-fbd3-4c7f-ae82-ac958ae62e0a	completed	http://hl7.org/fhir/sid/cvx	-	lot	occurrenceDateTime	literal	-	1	
+hl7.fhir.uv.ips#2.0.1	Bundle-bundle-ips-all-sections.json>bundle	9910b96a-793b-4e96-91a9-291c27357f83	completed	http://hl7.org/fhir/sid/cvx	-	lot	occurrenceDateTime	literal	-	1	
+hl7.fhir.uv.ips#2.0.1	Bundle-bundle-ips-all-sections.json>bundle	5b028fb0-bd04-4e75-b2bc-6952771173ea	completed	http://hl7.org/fhir/sid/cvx	-	lot	occurrenceDateTime	literal	-	1	
+hl7.fhir.uv.ips#2.0.1	Immunization-75680.json	75680	completed	http://snomed.info/sct,http://www.whocc.no/atc,https://cnk.apb.be/codings/cnk_product_codes+text	-	lot	occurrenceDateTime	literal	True	0	
+hl7.fhir.uv.ips#2.0.1	Bundle-IPS-examples-Bundle-with-immunization.json>bundle	40b7b6a0-c043-423a-9959-be3707e728b2	completed	http://snomed.info/sct,http://www.whocc.no/atc+text	-	lot	occurrenceDateTime	urn	True	1	
+nictiz.fhir.nl.r4.immunization#2.0.0	1293ac86-6a9e-11ec-0000-020000000000.json	1293ac86-6a9e-11ec-0000-020000000000	completed	http://snomed.info/sct	-	-	occurrenceDateTime	literal+display	-	0	ext-imm-Vaccination.PharmaceuticalProduct
+nictiz.fhir.nl.r4.immunization#2.0.0	39d98ab0-6aca-11ec-0000-020000000000.json	39d98ab0-6aca-11ec-0000-020000000000	completed	http://snomed.info/sct,urn:oid:2.16.840.1.113883.2.4.4.7	-	-	occurrenceDateTime	literal+display	-	0	ext-imm-Vaccination.PharmaceuticalProduct
+hl7.fhir.us.core#3.1.0	Immunization-imm-1.json	imm-1	completed	http://hl7.org/fhir/sid/cvx,http://hl7.org/fhir/sid/ndc	-	-	occurrenceDateTime	literal+display	False	0	
+hl7.fhir.us.immds#1.0.0	Parameters-parameters-in-example.json>param:immunization	ImmDSImmunizationExample	completed	http://hl7.org/fhir/sid/cvx	-	-	occurrenceDateTime	literal	True	0	
+hl7.fhir.us.immds#1.0.0	Immunization-ImmDSImmunizationExample.json	ImmDSImmunizationExample	completed	http://hl7.org/fhir/sid/cvx	-	-	occurrenceDateTime	literal	True	0	
+R4-core-examples	immunization-example.json	example	completed	urn:oid:1.2.36.1.2001.1005.17+text	literal	lot	occurrenceDateTime	literal	True	0	
+R4-core-examples	immunization-example-historical.json	historical	completed	urn:oid:1.2.36.1.2001.1005.17+text	-	-	occurrenceString	literal	False	0	
+R4-core-examples	immunization-example-protocol.json	protocol	completed	http://hl7.org/fhir/sid/cvx+text	literal	lot	occurrenceDateTime	literal	True	2	
+R4-core-examples	immunization-example-refused.json	notGiven	not-done	http://hl7.org/fhir/sid/cvx	-	-	occurrenceDateTime	literal	True	0	
+R4-core-examples	immunization-example-subpotent.json	subpotent	completed	urn:oid:1.2.36.1.2001.1005.17+text	literal	lot	occurrenceDateTime	literal	True	0	
