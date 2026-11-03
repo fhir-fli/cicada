@@ -9,10 +9,11 @@ hl7.fhir.uv.ipa 1.1.0, hl7.fhir.eu.base 2.0.1, hl7.fhir.au.base 6.0.0, hl7.fhir.
 fhir.r4.ukcore.stu2 2.0.2, ca.infoway.io.psca 1.1.0, ca.infoway.io.cafex 2.0.0,
 fhir.org.nz.ig.base 3.1.0, ch.fhir.ig.ch-core 6.0.0, de.basisprofil.r4 1.6.0,
 nictiz.fhir.nl.r4.immunization 2.0.0, smart.who.int.immunizations 1.0.0,
-hl7.fhir.uv.v2mappings 1.0.0.
+hl7.fhir.uv.v2mappings 1.0.0, hl7.fhir.uv.immds 0.2.0 (international ImmDS),
+hl7.fhir.uv.shc-vaccination 1.0.0, hl7.fhir.be.vaccination 1.1.3.
 
 ```bash
 python3 -I scan_immunization.py imm_examples.tsv imm_profiles.tsv <package dirs...> zip:<examples-json.zip>
 ```
 
-Outputs: `imm_examples.tsv` (48 examples, 14 sources), `imm_profiles.tsv` (177 element constraints).
+Outputs: `imm_examples.tsv` (104 examples), `imm_profiles.tsv` (177 element constraints).

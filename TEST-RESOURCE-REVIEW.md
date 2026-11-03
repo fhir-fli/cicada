@@ -4,7 +4,7 @@ Reviewed 2026-11-02. Sources read: FHIR R4 `examples-json.zip` (all 5 Immunizati
 examples, `immunization.profile.json`), ImmDS IG 1.0.0 (`OperationDefinition-ImmDSForecastOperation`,
 `Parameters-parameters-in-example`, `Immunization-ImmDSImmunizationExample`), US Core 3.1.0 `Immunization-imm-1`.
 
-ImmDS `$immds-forecast` inputs: `assessmentDate` (date, 1..1), `patient` (Patient, 1..1),
+ImmDS `$immds-forecast` inputs (US 1.0.0 and international `hl7.fhir.uv.immds` 0.2.0 agree): `assessmentDate` (date, 1..1), `patient` (Patient, 1..1),
 `immunization` (Immunization, 0..*). Nothing else.
 
 ## The CDC suites (generator `cicada_generator/lib/test_cases/test_case_generator.dart`, 1,401 cases)
@@ -39,7 +39,7 @@ use `assessmentDate` / `patient` / `immunization`. None carry a manufacturer.
 
 ## Manufacturer: every source compared (2026-11-02)
 
-Scan of 48 Immunization examples and 177 profile constraints in 17 packages
+Scan of 104 Immunization examples in 20 packages (re-run with international ImmDS, SMART Health Cards vaccination, Belgian vaccination: no new manufacturer forms)
 (`cicada_generator/tool/ig_compare/`).
 
 - **Where:** every source that carries a manufacturer puts it in `Immunization.manufacturer`

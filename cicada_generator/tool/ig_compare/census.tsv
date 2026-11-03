@@ -59,6 +59,10 @@ hl7.fhir.au.core#2.0.0	Observation	#examples			17
 hl7.fhir.au.core#2.0.0	Organization	#examples			3
 hl7.fhir.au.core#2.0.0	Patient	#examples			5
 hl7.fhir.au.core#2.0.0	Procedure	#examples			2
+hl7.fhir.be.vaccination#1.1.3	Immunization	#examples			34
+hl7.fhir.be.vaccination#1.1.3	Observation	#examples			3
+hl7.fhir.be.vaccination#1.1.3	Organization	#examples			3
+hl7.fhir.be.vaccination#1.1.3	Parameters	#examples			1
 hl7.fhir.eu.base#2.0.1	AllergyIntolerance	#examples			1
 hl7.fhir.eu.base#2.0.1	Condition	#examples			1
 hl7.fhir.eu.base#2.0.1	Immunization	#examples			1
@@ -85,6 +89,9 @@ hl7.fhir.us.core#9.0.0	Procedure	#examples			2
 hl7.fhir.us.immds#1.0.0	Immunization	#examples			2
 hl7.fhir.us.immds#1.0.0	Parameters	#examples			2
 hl7.fhir.us.immds#1.0.0	Patient	#examples			2
+hl7.fhir.uv.immds#0.2.0	Immunization	#examples			2
+hl7.fhir.uv.immds#0.2.0	Parameters	#examples			2
+hl7.fhir.uv.immds#0.2.0	Patient	#examples			2
 hl7.fhir.uv.ipa#1.1.0	AllergyIntolerance	#examples			2
 hl7.fhir.uv.ipa#1.1.0	Condition	#examples			2
 hl7.fhir.uv.ipa#1.1.0	Immunization	#examples			1
@@ -99,6 +106,9 @@ hl7.fhir.uv.ips#2.0.1	Observation	#examples			39
 hl7.fhir.uv.ips#2.0.1	Organization	#examples			12
 hl7.fhir.uv.ips#2.0.1	Patient	#examples			8
 hl7.fhir.uv.ips#2.0.1	Procedure	#examples			3
+hl7.fhir.uv.shc-vaccination#1.0.0	Immunization	#examples			20
+hl7.fhir.uv.shc-vaccination#1.0.0	Observation	#examples			8
+hl7.fhir.uv.shc-vaccination#1.0.0	Patient	#examples			12
 nictiz.fhir.nl.r4.immunization#2.0.0	Immunization	#examples			2
 nictiz.fhir.nl.r4.immunization#2.0.0	Organization	#examples			3
 nictiz.fhir.nl.r4.immunization#2.0.0	Patient	#examples			1
@@ -3189,6 +3199,146 @@ hl7.fhir.au.core#2.0.0	Procedure	Procedure.resourceType	str		2
 hl7.fhir.au.core#2.0.0	Procedure	Procedure.status	str		2
 hl7.fhir.au.core#2.0.0	Procedure	Procedure.subject	Reference:literal		2
 hl7.fhir.au.core#2.0.0	Procedure	Procedure.subject.reference	str		2
+hl7.fhir.be.vaccination#1.1.3	Immunization	Immunization.contained	resource:Encounter		18
+hl7.fhir.be.vaccination#1.1.3	Immunization	Immunization.contained	resource:Location		18
+hl7.fhir.be.vaccination#1.1.3	Immunization	Immunization.contained	resource:Medication		3
+hl7.fhir.be.vaccination#1.1.3	Immunization	Immunization.contained	resource:Observation		1
+hl7.fhir.be.vaccination#1.1.3	Immunization	Immunization.contained(Encounter).class.code	str		18
+hl7.fhir.be.vaccination#1.1.3	Immunization	Immunization.contained(Encounter).id	str		18
+hl7.fhir.be.vaccination#1.1.3	Immunization	Immunization.contained(Encounter).location.location	Reference:contained		18
+hl7.fhir.be.vaccination#1.1.3	Immunization	Immunization.contained(Encounter).location.location.reference	str		18
+hl7.fhir.be.vaccination#1.1.3	Immunization	Immunization.contained(Encounter).resourceType	str		18
+hl7.fhir.be.vaccination#1.1.3	Immunization	Immunization.contained(Encounter).serviceProvider	Reference:literal		14
+hl7.fhir.be.vaccination#1.1.3	Immunization	Immunization.contained(Encounter).serviceProvider.reference	str		14
+hl7.fhir.be.vaccination#1.1.3	Immunization	Immunization.contained(Encounter).status	str		18
+hl7.fhir.be.vaccination#1.1.3	Immunization	Immunization.contained(Encounter).subject.identifier	Identifier	https://www.ehealth.fgov.be/standards/fhir/core/NamingSystem/ssin	18
+hl7.fhir.be.vaccination#1.1.3	Immunization	Immunization.contained(Encounter).subject.identifier.system	str		18
+hl7.fhir.be.vaccination#1.1.3	Immunization	Immunization.contained(Encounter).subject.identifier.value	str		18
+hl7.fhir.be.vaccination#1.1.3	Immunization	Immunization.contained(Location).address.country	str		1
+hl7.fhir.be.vaccination#1.1.3	Immunization	Immunization.contained(Location).id	str		18
+hl7.fhir.be.vaccination#1.1.3	Immunization	Immunization.contained(Location).resourceType	str		18
+hl7.fhir.be.vaccination#1.1.3	Immunization	Immunization.contained(Location).type.coding	Coding	https://www.ehealth.fgov.be/standards/fhir/vaccination/CodeSystem/be-cs-care-location	17
+hl7.fhir.be.vaccination#1.1.3	Immunization	Immunization.contained(Location).type.coding.code	str		17
+hl7.fhir.be.vaccination#1.1.3	Immunization	Immunization.contained(Location).type.coding.system	str		17
+hl7.fhir.be.vaccination#1.1.3	Immunization	Immunization.contained(Medication).batch.expirationDate	str		3
+hl7.fhir.be.vaccination#1.1.3	Immunization	Immunization.contained(Medication).batch.lotNumber	str		3
+hl7.fhir.be.vaccination#1.1.3	Immunization	Immunization.contained(Medication).code.coding	Coding	http://www.ehealth.fgov.be/standards/fhir/medication/NamingSystem/be-ns-cnk-codes	3
+hl7.fhir.be.vaccination#1.1.3	Immunization	Immunization.contained(Medication).code.coding.code	str		3
+hl7.fhir.be.vaccination#1.1.3	Immunization	Immunization.contained(Medication).code.coding.system	str		3
+hl7.fhir.be.vaccination#1.1.3	Immunization	Immunization.contained(Medication).id	str		3
+hl7.fhir.be.vaccination#1.1.3	Immunization	Immunization.contained(Medication).identifier.system	str		3
+hl7.fhir.be.vaccination#1.1.3	Immunization	Immunization.contained(Medication).resourceType	str		3
+hl7.fhir.be.vaccination#1.1.3	Immunization	Immunization.contained(Observation).code.coding	Coding	http://snomed.info/sct	1
+hl7.fhir.be.vaccination#1.1.3	Immunization	Immunization.contained(Observation).code.coding.code	str		1
+hl7.fhir.be.vaccination#1.1.3	Immunization	Immunization.contained(Observation).code.coding.system	str		1
+hl7.fhir.be.vaccination#1.1.3	Immunization	Immunization.contained(Observation).code.coding.version	str		1
+hl7.fhir.be.vaccination#1.1.3	Immunization	Immunization.contained(Observation).id	str		1
+hl7.fhir.be.vaccination#1.1.3	Immunization	Immunization.contained(Observation).resourceType	str		1
+hl7.fhir.be.vaccination#1.1.3	Immunization	Immunization.contained(Observation).status	str		1
+hl7.fhir.be.vaccination#1.1.3	Immunization	Immunization.contained(Observation).subject.identifier	Identifier	https://www.ehealth.fgov.be/standards/fhir/core/NamingSystem/ssin	1
+hl7.fhir.be.vaccination#1.1.3	Immunization	Immunization.contained(Observation).subject.identifier.system	str		1
+hl7.fhir.be.vaccination#1.1.3	Immunization	Immunization.contained(Observation).subject.identifier.value	str		1
+hl7.fhir.be.vaccination#1.1.3	Immunization	Immunization.doseQuantity.value	int		20
+hl7.fhir.be.vaccination#1.1.3	Immunization	Immunization.encounter	Reference:contained		18
+hl7.fhir.be.vaccination#1.1.3	Immunization	Immunization.encounter.reference	str		18
+hl7.fhir.be.vaccination#1.1.3	Immunization	Immunization.extension[https://www.ehealth.fgov.be/standards/fhir/core/StructureDefinition/be-ext-recorder].url	str		34
+hl7.fhir.be.vaccination#1.1.3	Immunization	Immunization.extension[https://www.ehealth.fgov.be/standards/fhir/core/StructureDefinition/be-ext-recorder].valueReference	Reference:literal		33
+hl7.fhir.be.vaccination#1.1.3	Immunization	Immunization.extension[https://www.ehealth.fgov.be/standards/fhir/core/StructureDefinition/be-ext-recorder].valueReference.identifier	Identifier	https://www.ehealth.fgov.be/standards/fhir/core/NamingSystem/nihdi	1
+hl7.fhir.be.vaccination#1.1.3	Immunization	Immunization.extension[https://www.ehealth.fgov.be/standards/fhir/core/StructureDefinition/be-ext-recorder].valueReference.identifier.system	str		1
+hl7.fhir.be.vaccination#1.1.3	Immunization	Immunization.extension[https://www.ehealth.fgov.be/standards/fhir/core/StructureDefinition/be-ext-recorder].valueReference.identifier.value	str		1
+hl7.fhir.be.vaccination#1.1.3	Immunization	Immunization.extension[https://www.ehealth.fgov.be/standards/fhir/core/StructureDefinition/be-ext-recorder].valueReference.reference	str		33
+hl7.fhir.be.vaccination#1.1.3	Immunization	Immunization.extension[https://www.ehealth.fgov.be/standards/fhir/vaccination/StructureDefinition/be-ext-administeredProduct].extension[coded].url	str		3
+hl7.fhir.be.vaccination#1.1.3	Immunization	Immunization.extension[https://www.ehealth.fgov.be/standards/fhir/vaccination/StructureDefinition/be-ext-administeredProduct].extension[coded].valueCodeableConcept.coding	Coding	http://whocc.no/atc	1
+hl7.fhir.be.vaccination#1.1.3	Immunization	Immunization.extension[https://www.ehealth.fgov.be/standards/fhir/vaccination/StructureDefinition/be-ext-administeredProduct].extension[coded].valueCodeableConcept.coding	Coding	https://www.ehealth.fgov.be/standards/fhir/medication/NamingSystem/be-ns-cnk-codes	2
+hl7.fhir.be.vaccination#1.1.3	Immunization	Immunization.extension[https://www.ehealth.fgov.be/standards/fhir/vaccination/StructureDefinition/be-ext-administeredProduct].extension[coded].valueCodeableConcept.coding.code	str		3
+hl7.fhir.be.vaccination#1.1.3	Immunization	Immunization.extension[https://www.ehealth.fgov.be/standards/fhir/vaccination/StructureDefinition/be-ext-administeredProduct].extension[coded].valueCodeableConcept.coding.system	str		3
+hl7.fhir.be.vaccination#1.1.3	Immunization	Immunization.extension[https://www.ehealth.fgov.be/standards/fhir/vaccination/StructureDefinition/be-ext-administeredProduct].extension[lotNumber].url	str		12
+hl7.fhir.be.vaccination#1.1.3	Immunization	Immunization.extension[https://www.ehealth.fgov.be/standards/fhir/vaccination/StructureDefinition/be-ext-administeredProduct].extension[lotNumber].valueString	str		12
+hl7.fhir.be.vaccination#1.1.3	Immunization	Immunization.extension[https://www.ehealth.fgov.be/standards/fhir/vaccination/StructureDefinition/be-ext-administeredProduct].extension[reference].url	str		3
+hl7.fhir.be.vaccination#1.1.3	Immunization	Immunization.extension[https://www.ehealth.fgov.be/standards/fhir/vaccination/StructureDefinition/be-ext-administeredProduct].extension[reference].valueReference	Reference:contained		3
+hl7.fhir.be.vaccination#1.1.3	Immunization	Immunization.extension[https://www.ehealth.fgov.be/standards/fhir/vaccination/StructureDefinition/be-ext-administeredProduct].extension[reference].valueReference.reference	str		3
+hl7.fhir.be.vaccination#1.1.3	Immunization	Immunization.extension[https://www.ehealth.fgov.be/standards/fhir/vaccination/StructureDefinition/be-ext-administeredProduct].url	str		14
+hl7.fhir.be.vaccination#1.1.3	Immunization	Immunization.id	str		34
+hl7.fhir.be.vaccination#1.1.3	Immunization	Immunization.identifier	Identifier	https://www.ehealth.fgov.be/covid-vaccination/vaccination-register	3
+hl7.fhir.be.vaccination#1.1.3	Immunization	Immunization.identifier	Identifier	https://www.hospital1.be/vaccination/immunisation-register	1
+hl7.fhir.be.vaccination#1.1.3	Immunization	Immunization.identifier	Identifier	https://www.kindengezin.be/vaccinatie/vaccination-register	12
+hl7.fhir.be.vaccination#1.1.3	Immunization	Immunization.identifier	Identifier	https://www.one.be/vaccination/immunisation-register	9
+hl7.fhir.be.vaccination#1.1.3	Immunization	Immunization.identifier	Identifier	https://www.uzgent.be/vaccinatie/register	1
+hl7.fhir.be.vaccination#1.1.3	Immunization	Immunization.identifier.system	str		26
+hl7.fhir.be.vaccination#1.1.3	Immunization	Immunization.identifier.value	str		26
+hl7.fhir.be.vaccination#1.1.3	Immunization	Immunization.language	str		13
+hl7.fhir.be.vaccination#1.1.3	Immunization	Immunization.meta.profile	str		34
+hl7.fhir.be.vaccination#1.1.3	Immunization	Immunization.note.text	str		1
+hl7.fhir.be.vaccination#1.1.3	Immunization	Immunization.occurrenceDateTime	str		29
+hl7.fhir.be.vaccination#1.1.3	Immunization	Immunization.occurrenceString	str		5
+hl7.fhir.be.vaccination#1.1.3	Immunization	Immunization.patient.identifier	Identifier	https://one_naming_system	1
+hl7.fhir.be.vaccination#1.1.3	Immunization	Immunization.patient.identifier	Identifier	https://www.ehealth.fgov.be/standards/fhir/core/NamingSystem/one-patientid	4
+hl7.fhir.be.vaccination#1.1.3	Immunization	Immunization.patient.identifier	Identifier	https://www.ehealth.fgov.be/standards/fhir/core/NamingSystem/ssin	29
+hl7.fhir.be.vaccination#1.1.3	Immunization	Immunization.patient.identifier.system	str		34
+hl7.fhir.be.vaccination#1.1.3	Immunization	Immunization.patient.identifier.value	str		34
+hl7.fhir.be.vaccination#1.1.3	Immunization	Immunization.performer.actor	Reference:literal		8
+hl7.fhir.be.vaccination#1.1.3	Immunization	Immunization.performer.actor	Reference:no-reference		3
+hl7.fhir.be.vaccination#1.1.3	Immunization	Immunization.performer.actor.display	str		3
+hl7.fhir.be.vaccination#1.1.3	Immunization	Immunization.performer.actor.identifier	Identifier	https://www.ehealth.fgov.be/standards/fhir/core/NamingSystem/nihdi	1
+hl7.fhir.be.vaccination#1.1.3	Immunization	Immunization.performer.actor.identifier	Identifier	https://www.ehealth.fgov.be/standards/fhir/core/NamingSystem/nihdi-professional	9
+hl7.fhir.be.vaccination#1.1.3	Immunization	Immunization.performer.actor.identifier	Identifier	https://www.ehealth.fgov.be/standards/fhir/core/NamingSystem/ssin	19
+hl7.fhir.be.vaccination#1.1.3	Immunization	Immunization.performer.actor.identifier.system	str		29
+hl7.fhir.be.vaccination#1.1.3	Immunization	Immunization.performer.actor.identifier.use	str		15
+hl7.fhir.be.vaccination#1.1.3	Immunization	Immunization.performer.actor.identifier.value	str		34
+hl7.fhir.be.vaccination#1.1.3	Immunization	Immunization.performer.actor.reference	str		8
+hl7.fhir.be.vaccination#1.1.3	Immunization	Immunization.reaction.date	str		2
+hl7.fhir.be.vaccination#1.1.3	Immunization	Immunization.reaction.detail	Reference:contained		1
+hl7.fhir.be.vaccination#1.1.3	Immunization	Immunization.reaction.detail	Reference:literal		1
+hl7.fhir.be.vaccination#1.1.3	Immunization	Immunization.reaction.detail.reference	str		2
+hl7.fhir.be.vaccination#1.1.3	Immunization	Immunization.reasonReference	Reference:literal		1
+hl7.fhir.be.vaccination#1.1.3	Immunization	Immunization.reasonReference.reference	str		1
+hl7.fhir.be.vaccination#1.1.3	Immunization	Immunization.recorded	str		34
+hl7.fhir.be.vaccination#1.1.3	Immunization	Immunization.resourceType	str		34
+hl7.fhir.be.vaccination#1.1.3	Immunization	Immunization.route.coding	Coding	https://www.ehealth.fgov.be/standards/fhir/vaccination/CodeSystem/be-cs-vaccination-administration-route	1
+hl7.fhir.be.vaccination#1.1.3	Immunization	Immunization.route.coding.code	str		1
+hl7.fhir.be.vaccination#1.1.3	Immunization	Immunization.route.coding.system	str		1
+hl7.fhir.be.vaccination#1.1.3	Immunization	Immunization.status	str		34
+hl7.fhir.be.vaccination#1.1.3	Immunization	Immunization.statusReason.coding	Coding	http://terminology.hl7.org/CodeSystem/v3-ActReason	3
+hl7.fhir.be.vaccination#1.1.3	Immunization	Immunization.statusReason.coding	Coding	https://www.ehealth.fgov.be/standards/fhir/vaccination/CodeSystem/be-cs-vaccination-status-reason	1
+hl7.fhir.be.vaccination#1.1.3	Immunization	Immunization.statusReason.coding.code	str		4
+hl7.fhir.be.vaccination#1.1.3	Immunization	Immunization.statusReason.coding.display	str		1
+hl7.fhir.be.vaccination#1.1.3	Immunization	Immunization.statusReason.coding.system	str		4
+hl7.fhir.be.vaccination#1.1.3	Immunization	Immunization.vaccineCode.coding	Coding	http://snomed.info/sct	35
+hl7.fhir.be.vaccination#1.1.3	Immunization	Immunization.vaccineCode.coding	Coding	https://www.ehealth.fgov.be/standards/fhir/vaccination/CodeSystem/be-cs-vaccine-code	1
+hl7.fhir.be.vaccination#1.1.3	Immunization	Immunization.vaccineCode.coding.code	str		36
+hl7.fhir.be.vaccination#1.1.3	Immunization	Immunization.vaccineCode.coding.display	str		6
+hl7.fhir.be.vaccination#1.1.3	Immunization	Immunization.vaccineCode.coding.system	str		36
+hl7.fhir.be.vaccination#1.1.3	Immunization	Immunization.vaccineCode.coding.version	str		9
+hl7.fhir.be.vaccination#1.1.3	Immunization	Immunization.vaccineCode.text	str		1
+hl7.fhir.be.vaccination#1.1.3	Observation	Observation.code.coding	Coding	http://snomed.info/sct	3
+hl7.fhir.be.vaccination#1.1.3	Observation	Observation.code.coding.code	str		3
+hl7.fhir.be.vaccination#1.1.3	Observation	Observation.code.coding.system	str		3
+hl7.fhir.be.vaccination#1.1.3	Observation	Observation.code.coding.version	str		2
+hl7.fhir.be.vaccination#1.1.3	Observation	Observation.id	str		3
+hl7.fhir.be.vaccination#1.1.3	Observation	Observation.language	str		1
+hl7.fhir.be.vaccination#1.1.3	Observation	Observation.resourceType	str		3
+hl7.fhir.be.vaccination#1.1.3	Observation	Observation.status	str		3
+hl7.fhir.be.vaccination#1.1.3	Observation	Observation.subject.identifier	Identifier	https://www.ehealth.fgov.be/standards/fhir/core/NamingSystem/ssin	2
+hl7.fhir.be.vaccination#1.1.3	Observation	Observation.subject.identifier.system	str		2
+hl7.fhir.be.vaccination#1.1.3	Observation	Observation.subject.identifier.value	str		2
+hl7.fhir.be.vaccination#1.1.3	Organization	Organization.active	bool		3
+hl7.fhir.be.vaccination#1.1.3	Organization	Organization.id	str		3
+hl7.fhir.be.vaccination#1.1.3	Organization	Organization.identifier	Identifier	https://www.ehealth.fgov.be/standards/fhir/core/NamingSystem/cbe	1
+hl7.fhir.be.vaccination#1.1.3	Organization	Organization.identifier	Identifier	https://www.ehealth.fgov.be/standards/fhir/core/NamingSystem/nihdi	2
+hl7.fhir.be.vaccination#1.1.3	Organization	Organization.identifier.system	str		3
+hl7.fhir.be.vaccination#1.1.3	Organization	Organization.identifier.value	str		3
+hl7.fhir.be.vaccination#1.1.3	Organization	Organization.meta.profile	str		3
+hl7.fhir.be.vaccination#1.1.3	Organization	Organization.name	str		3
+hl7.fhir.be.vaccination#1.1.3	Organization	Organization.resourceType	str		3
+hl7.fhir.be.vaccination#1.1.3	Organization	Organization.telecom	Identifier	url	2
+hl7.fhir.be.vaccination#1.1.3	Organization	Organization.telecom.system	str		2
+hl7.fhir.be.vaccination#1.1.3	Organization	Organization.telecom.use	str		2
+hl7.fhir.be.vaccination#1.1.3	Organization	Organization.telecom.value	str		2
+hl7.fhir.be.vaccination#1.1.3	Parameters	Parameters.id	str		1
+hl7.fhir.be.vaccination#1.1.3	Parameters	Parameters.parameter.name	str		2
+hl7.fhir.be.vaccination#1.1.3	Parameters	Parameters.parameter.valueBoolean	bool		1
+hl7.fhir.be.vaccination#1.1.3	Parameters	Parameters.parameter.valueCanonical	str		1
+hl7.fhir.be.vaccination#1.1.3	Parameters	Parameters.resourceType	str		1
 hl7.fhir.eu.base#2.0.1	AllergyIntolerance	AllergyIntolerance._onsetDateTime.extension[http://hl7.eu/fhir/extensions/StructureDefinition/periods-of-life].url	str		1
 hl7.fhir.eu.base#2.0.1	AllergyIntolerance	AllergyIntolerance._onsetDateTime.extension[http://hl7.eu/fhir/extensions/StructureDefinition/periods-of-life].valueCodeableConcept.coding	Coding	http://snomed.info/sct	1
 hl7.fhir.eu.base#2.0.1	AllergyIntolerance	AllergyIntolerance._onsetDateTime.extension[http://hl7.eu/fhir/extensions/StructureDefinition/periods-of-life].valueCodeableConcept.coding.code	str		1
@@ -4145,6 +4295,56 @@ hl7.fhir.us.immds#1.0.0	Patient	Patient.meta.profile	str		1
 hl7.fhir.us.immds#1.0.0	Patient	Patient.name.family	str		2
 hl7.fhir.us.immds#1.0.0	Patient	Patient.name.given	str		2
 hl7.fhir.us.immds#1.0.0	Patient	Patient.resourceType	str		2
+hl7.fhir.uv.immds#0.2.0	Immunization	Immunization.contained	resource:Patient		1
+hl7.fhir.uv.immds#0.2.0	Immunization	Immunization.contained(Patient).birthDate	str		1
+hl7.fhir.uv.immds#0.2.0	Immunization	Immunization.contained(Patient).gender	str		1
+hl7.fhir.uv.immds#0.2.0	Immunization	Immunization.contained(Patient).id	str		1
+hl7.fhir.uv.immds#0.2.0	Immunization	Immunization.contained(Patient).identifier._system.extension[http://hl7.org/fhir/StructureDefinition/data-absent-reason].url	str		1
+hl7.fhir.uv.immds#0.2.0	Immunization	Immunization.contained(Patient).identifier._system.extension[http://hl7.org/fhir/StructureDefinition/data-absent-reason].valueCode	str		1
+hl7.fhir.uv.immds#0.2.0	Immunization	Immunization.contained(Patient).identifier._value.extension[http://hl7.org/fhir/StructureDefinition/data-absent-reason].url	str		1
+hl7.fhir.uv.immds#0.2.0	Immunization	Immunization.contained(Patient).identifier._value.extension[http://hl7.org/fhir/StructureDefinition/data-absent-reason].valueCode	str		1
+hl7.fhir.uv.immds#0.2.0	Immunization	Immunization.contained(Patient).meta.profile	str		1
+hl7.fhir.uv.immds#0.2.0	Immunization	Immunization.contained(Patient).name._family.extension[http://hl7.org/fhir/StructureDefinition/data-absent-reason].url	str		1
+hl7.fhir.uv.immds#0.2.0	Immunization	Immunization.contained(Patient).name._family.extension[http://hl7.org/fhir/StructureDefinition/data-absent-reason].valueCode	str		1
+hl7.fhir.uv.immds#0.2.0	Immunization	Immunization.contained(Patient).name._given.extension[http://hl7.org/fhir/StructureDefinition/data-absent-reason].url	str		1
+hl7.fhir.uv.immds#0.2.0	Immunization	Immunization.contained(Patient).name._given.extension[http://hl7.org/fhir/StructureDefinition/data-absent-reason].valueCode	str		1
+hl7.fhir.uv.immds#0.2.0	Immunization	Immunization.contained(Patient).resourceType	str		1
+hl7.fhir.uv.immds#0.2.0	Immunization	Immunization.id	str		2
+hl7.fhir.uv.immds#0.2.0	Immunization	Immunization.meta.lastUpdated	str		2
+hl7.fhir.uv.immds#0.2.0	Immunization	Immunization.meta.profile	str		2
+hl7.fhir.uv.immds#0.2.0	Immunization	Immunization.meta.versionId	str		2
+hl7.fhir.uv.immds#0.2.0	Immunization	Immunization.occurrenceDateTime	str		2
+hl7.fhir.uv.immds#0.2.0	Immunization	Immunization.patient	Reference:contained		1
+hl7.fhir.uv.immds#0.2.0	Immunization	Immunization.patient	Reference:literal		1
+hl7.fhir.uv.immds#0.2.0	Immunization	Immunization.patient.reference	str		2
+hl7.fhir.uv.immds#0.2.0	Immunization	Immunization.primarySource	bool		2
+hl7.fhir.uv.immds#0.2.0	Immunization	Immunization.recorded	str		2
+hl7.fhir.uv.immds#0.2.0	Immunization	Immunization.resourceType	str		2
+hl7.fhir.uv.immds#0.2.0	Immunization	Immunization.status	str		2
+hl7.fhir.uv.immds#0.2.0	Immunization	Immunization.vaccineCode.coding	Coding	http://hl7.org/fhir/sid/cvx	2
+hl7.fhir.uv.immds#0.2.0	Immunization	Immunization.vaccineCode.coding.code	str		2
+hl7.fhir.uv.immds#0.2.0	Immunization	Immunization.vaccineCode.coding.display	str		2
+hl7.fhir.uv.immds#0.2.0	Immunization	Immunization.vaccineCode.coding.system	str		2
+hl7.fhir.uv.immds#0.2.0	Parameters	Parameters.id	str		2
+hl7.fhir.uv.immds#0.2.0	Parameters	Parameters.parameter.name	str		4
+hl7.fhir.uv.immds#0.2.0	Parameters	Parameters.parameter.resource	resource:Immunization		1
+hl7.fhir.uv.immds#0.2.0	Parameters	Parameters.parameter.resource	resource:ImmunizationRecommendation		1
+hl7.fhir.uv.immds#0.2.0	Parameters	Parameters.parameter.resource	resource:Patient		1
+hl7.fhir.uv.immds#0.2.0	Parameters	Parameters.parameter.valueDate	str		1
+hl7.fhir.uv.immds#0.2.0	Parameters	Parameters.resourceType	str		2
+hl7.fhir.uv.immds#0.2.0	Patient	Patient.birthDate	str		2
+hl7.fhir.uv.immds#0.2.0	Patient	Patient.gender	str		2
+hl7.fhir.uv.immds#0.2.0	Patient	Patient.id	str		2
+hl7.fhir.uv.immds#0.2.0	Patient	Patient.identifier._system.extension[http://hl7.org/fhir/StructureDefinition/data-absent-reason].url	str		2
+hl7.fhir.uv.immds#0.2.0	Patient	Patient.identifier._system.extension[http://hl7.org/fhir/StructureDefinition/data-absent-reason].valueCode	str		2
+hl7.fhir.uv.immds#0.2.0	Patient	Patient.identifier._value.extension[http://hl7.org/fhir/StructureDefinition/data-absent-reason].url	str		2
+hl7.fhir.uv.immds#0.2.0	Patient	Patient.identifier._value.extension[http://hl7.org/fhir/StructureDefinition/data-absent-reason].valueCode	str		2
+hl7.fhir.uv.immds#0.2.0	Patient	Patient.meta.profile	str		2
+hl7.fhir.uv.immds#0.2.0	Patient	Patient.name._family.extension[http://hl7.org/fhir/StructureDefinition/data-absent-reason].url	str		2
+hl7.fhir.uv.immds#0.2.0	Patient	Patient.name._family.extension[http://hl7.org/fhir/StructureDefinition/data-absent-reason].valueCode	str		2
+hl7.fhir.uv.immds#0.2.0	Patient	Patient.name._given.extension[http://hl7.org/fhir/StructureDefinition/data-absent-reason].url	str		2
+hl7.fhir.uv.immds#0.2.0	Patient	Patient.name._given.extension[http://hl7.org/fhir/StructureDefinition/data-absent-reason].valueCode	str		2
+hl7.fhir.uv.immds#0.2.0	Patient	Patient.resourceType	str		2
 hl7.fhir.uv.ipa#1.1.0	AllergyIntolerance	AllergyIntolerance.category	str		1
 hl7.fhir.uv.ipa#1.1.0	AllergyIntolerance	AllergyIntolerance.clinicalStatus.coding	Coding	http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical	2
 hl7.fhir.uv.ipa#1.1.0	AllergyIntolerance	AllergyIntolerance.clinicalStatus.coding.code	str		2
@@ -4742,6 +4942,43 @@ hl7.fhir.uv.ips#2.0.1	Procedure	Procedure.status	str		3
 hl7.fhir.uv.ips#2.0.1	Procedure	Procedure.subject	Reference:literal		3
 hl7.fhir.uv.ips#2.0.1	Procedure	Procedure.subject.display	str		2
 hl7.fhir.uv.ips#2.0.1	Procedure	Procedure.subject.reference	str		3
+hl7.fhir.uv.shc-vaccination#1.0.0	Immunization	Immunization.id	str		10
+hl7.fhir.uv.shc-vaccination#1.0.0	Immunization	Immunization.lotNumber	str		20
+hl7.fhir.uv.shc-vaccination#1.0.0	Immunization	Immunization.meta.security	Coding	https://smarthealth.cards/ial	20
+hl7.fhir.uv.shc-vaccination#1.0.0	Immunization	Immunization.meta.security.code	str		20
+hl7.fhir.uv.shc-vaccination#1.0.0	Immunization	Immunization.meta.security.system	str		20
+hl7.fhir.uv.shc-vaccination#1.0.0	Immunization	Immunization.occurrenceDateTime	str		20
+hl7.fhir.uv.shc-vaccination#1.0.0	Immunization	Immunization.patient	Reference:literal		20
+hl7.fhir.uv.shc-vaccination#1.0.0	Immunization	Immunization.patient.reference	str		20
+hl7.fhir.uv.shc-vaccination#1.0.0	Immunization	Immunization.performer.actor	Reference:no-reference		20
+hl7.fhir.uv.shc-vaccination#1.0.0	Immunization	Immunization.performer.actor.display	str		20
+hl7.fhir.uv.shc-vaccination#1.0.0	Immunization	Immunization.resourceType	str		20
+hl7.fhir.uv.shc-vaccination#1.0.0	Immunization	Immunization.status	str		20
+hl7.fhir.uv.shc-vaccination#1.0.0	Immunization	Immunization.vaccineCode.coding	Coding	http://hl7.org/fhir/sid/cvx	20
+hl7.fhir.uv.shc-vaccination#1.0.0	Immunization	Immunization.vaccineCode.coding.code	str		20
+hl7.fhir.uv.shc-vaccination#1.0.0	Immunization	Immunization.vaccineCode.coding.system	str		20
+hl7.fhir.uv.shc-vaccination#1.0.0	Observation	Observation.code.coding	Coding	http://loinc.org	8
+hl7.fhir.uv.shc-vaccination#1.0.0	Observation	Observation.code.coding.code	str		8
+hl7.fhir.uv.shc-vaccination#1.0.0	Observation	Observation.code.coding.system	str		8
+hl7.fhir.uv.shc-vaccination#1.0.0	Observation	Observation.effectiveDateTime	str		8
+hl7.fhir.uv.shc-vaccination#1.0.0	Observation	Observation.id	str		4
+hl7.fhir.uv.shc-vaccination#1.0.0	Observation	Observation.meta.security	Coding	https://smarthealth.cards/ial	8
+hl7.fhir.uv.shc-vaccination#1.0.0	Observation	Observation.meta.security.code	str		8
+hl7.fhir.uv.shc-vaccination#1.0.0	Observation	Observation.meta.security.system	str		8
+hl7.fhir.uv.shc-vaccination#1.0.0	Observation	Observation.performer	Reference:no-reference		8
+hl7.fhir.uv.shc-vaccination#1.0.0	Observation	Observation.performer.display	str		8
+hl7.fhir.uv.shc-vaccination#1.0.0	Observation	Observation.resourceType	str		8
+hl7.fhir.uv.shc-vaccination#1.0.0	Observation	Observation.status	str		8
+hl7.fhir.uv.shc-vaccination#1.0.0	Observation	Observation.subject	Reference:literal		8
+hl7.fhir.uv.shc-vaccination#1.0.0	Observation	Observation.subject.reference	str		8
+hl7.fhir.uv.shc-vaccination#1.0.0	Observation	Observation.valueCodeableConcept.coding	Coding	http://snomed.info/sct	8
+hl7.fhir.uv.shc-vaccination#1.0.0	Observation	Observation.valueCodeableConcept.coding.code	str		8
+hl7.fhir.uv.shc-vaccination#1.0.0	Observation	Observation.valueCodeableConcept.coding.system	str		8
+hl7.fhir.uv.shc-vaccination#1.0.0	Patient	Patient.birthDate	str		12
+hl7.fhir.uv.shc-vaccination#1.0.0	Patient	Patient.id	str		4
+hl7.fhir.uv.shc-vaccination#1.0.0	Patient	Patient.name.family	str		12
+hl7.fhir.uv.shc-vaccination#1.0.0	Patient	Patient.name.given	str		24
+hl7.fhir.uv.shc-vaccination#1.0.0	Patient	Patient.resourceType	str		12
 nictiz.fhir.nl.r4.immunization#2.0.0	Immunization	Immunization.contained	resource:Location		1
 nictiz.fhir.nl.r4.immunization#2.0.0	Immunization	Immunization.contained(Location).address._country.extension[http://nictiz.nl/fhir/StructureDefinition/ext-CodeSpecification].url	str		1
 nictiz.fhir.nl.r4.immunization#2.0.0	Immunization	Immunization.contained(Location).address._country.extension[http://nictiz.nl/fhir/StructureDefinition/ext-CodeSpecification].valueCodeableConcept.coding	Coding	urn:iso:std:iso:3166	1
