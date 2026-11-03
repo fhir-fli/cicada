@@ -1,0 +1,16 @@
+<Parameters xmlns="http://hl7.org/fhir">
+   <parameter>
+      <name value="patient"/>
+      <resource>
+         <Patient xmlns="http://hl7.org/fhir">
+            <id value="c1c69579-be35-428a-af5b-fa4cc16f6c7c"/>
+            <gender value="male"/>
+            <birthDate value="2003-10-05"/>
+         </Patient>
+      </resource>
+   </parameter>
+   <parameter>
+      <name value="assessmentDate"/>
+      <valueDate value="2026-11-02"/>
+   </parameter>
+</Parameters>

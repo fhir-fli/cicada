@@ -1,0 +1,103 @@
+<Parameters xmlns="http://hl7.org/fhir">
+   <parameter>
+      <name value="patient"/>
+      <resource>
+         <Patient xmlns="http://hl7.org/fhir">
+            <id value="544d4f12-cdcd-49e2-ade9-9e41eca8c190"/>
+            <gender value="female"/>
+            <birthDate value="2026-07-02"/>
+         </Patient>
+      </resource>
+   </parameter>
+   <parameter>
+      <name value="assessmentDate"/>
+      <valueDate value="2026-11-02"/>
+   </parameter>
+   <parameter>
+      <name value="immunization"/>
+      <resource>
+         <Immunization xmlns="http://hl7.org/fhir">
+            <id value="017d2105-6ea7-4024-9ea3-51eca025d2f2"/>
+            <contained>
+               <Organization xmlns="http://hl7.org/fhir">
+                  <id value="1"/>
+                  <identifier>
+                     <value value="SKB"/>
+                  </identifier>
+               </Organization>
+            </contained>
+            <status value="completed"/>
+            <vaccineCode>
+               <coding>
+                  <code value="110"/>
+               </coding>
+            </vaccineCode>
+            <patient>
+               <reference value="544d4f12-cdcd-49e2-ade9-9e41eca8c190"/>
+            </patient>
+            <occurrenceDateTime value="2026-09-02T00:00:00+00:00"/>
+            <manufacturer>
+               <reference value="#1"/>
+            </manufacturer>
+         </Immunization>
+      </resource>
+   </parameter>
+   <parameter>
+      <name value="immunization"/>
+      <resource>
+         <Immunization xmlns="http://hl7.org/fhir">
+            <id value="a52a1cf0-983e-41ac-9daf-4a758c050420"/>
+            <contained>
+               <Organization xmlns="http://hl7.org/fhir">
+                  <id value="1"/>
+                  <identifier>
+                     <value value="SKB"/>
+                  </identifier>
+               </Organization>
+            </contained>
+            <status value="completed"/>
+            <vaccineCode>
+               <coding>
+                  <code value="110"/>
+               </coding>
+            </vaccineCode>
+            <patient>
+               <reference value="544d4f12-cdcd-49e2-ade9-9e41eca8c190"/>
+            </patient>
+            <occurrenceDateTime value="2026-09-21T00:00:00+00:00"/>
+            <manufacturer>
+               <reference value="#1"/>
+            </manufacturer>
+         </Immunization>
+      </resource>
+   </parameter>
+   <parameter>
+      <name value="immunization"/>
+      <resource>
+         <Immunization xmlns="http://hl7.org/fhir">
+            <id value="db08b9a5-54be-4856-aaf9-732da8b97942"/>
+            <contained>
+               <Organization xmlns="http://hl7.org/fhir">
+                  <id value="1"/>
+                  <identifier>
+                     <value value="SKB"/>
+                  </identifier>
+               </Organization>
+            </contained>
+            <status value="completed"/>
+            <vaccineCode>
+               <coding>
+                  <code value="110"/>
+               </coding>
+            </vaccineCode>
+            <patient>
+               <reference value="544d4f12-cdcd-49e2-ade9-9e41eca8c190"/>
+            </patient>
+            <occurrenceDateTime value="2026-11-02T00:00:00+00:00"/>
+            <manufacturer>
+               <reference value="#1"/>
+            </manufacturer>
+         </Immunization>
+      </resource>
+   </parameter>
+</Parameters>

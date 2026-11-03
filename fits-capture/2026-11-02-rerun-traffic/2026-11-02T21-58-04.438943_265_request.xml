@@ -1,0 +1,63 @@
+<Parameters xmlns="http://hl7.org/fhir">
+   <parameter>
+      <name value="patient"/>
+      <resource>
+         <Patient xmlns="http://hl7.org/fhir">
+            <id value="6aa8fe8c-87d6-483a-93ef-8d14fdb27782"/>
+            <gender value="male"/>
+            <birthDate value="2003-05-02"/>
+         </Patient>
+      </resource>
+   </parameter>
+   <parameter>
+      <name value="assessmentDate"/>
+      <valueDate value="2026-11-02"/>
+   </parameter>
+   <parameter>
+      <name value="immunization"/>
+      <resource>
+         <Immunization xmlns="http://hl7.org/fhir">
+            <id value="be5a573f-9b9b-4e0a-9249-041ec25a5ce1"/>
+            <contained>
+               <Organization xmlns="http://hl7.org/fhir">
+                  <id value="1"/>
+                  <identifier>
+                     <value value="MSD"/>
+                  </identifier>
+               </Organization>
+            </contained>
+            <status value="completed"/>
+            <vaccineCode>
+               <coding>
+                  <code value="52"/>
+               </coding>
+            </vaccineCode>
+            <patient>
+               <reference value="6aa8fe8c-87d6-483a-93ef-8d14fdb27782"/>
+            </patient>
+            <occurrenceDateTime value="2026-05-02T00:00:00+00:00"/>
+            <manufacturer>
+               <reference value="#1"/>
+            </manufacturer>
+         </Immunization>
+      </resource>
+   </parameter>
+   <parameter>
+      <name value="immunization"/>
+      <resource>
+         <Immunization xmlns="http://hl7.org/fhir">
+            <id value="5e3b4916-0d2b-478c-bd8a-c9bf578ad3a3"/>
+            <status value="completed"/>
+            <vaccineCode>
+               <coding>
+                  <code value="85"/>
+               </coding>
+            </vaccineCode>
+            <patient>
+               <reference value="6aa8fe8c-87d6-483a-93ef-8d14fdb27782"/>
+            </patient>
+            <occurrenceDateTime value="2026-11-02T00:00:00+00:00"/>
+         </Immunization>
+      </resource>
+   </parameter>
+</Parameters>

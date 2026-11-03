@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:validationReport xmlns:ns2="https://fits.nist.gov/xml/">
+    <ReportMetaData>
+        <DateExecuted>2026-11-03T02:58:03.624Z</DateExecuted>
+        <Software>
+            <EndPoint>https://coniferous-nonopinionated-josefine.ngrok-free.dev/$immds-forecast</EndPoint>
+            <ConnectionType>FHIRR4</ConnectionType>
+        </Software>
+    </ReportMetaData>
+    <TestCaseMetaData>
+        <Name>Patient is an adult that was administered two doses of a Hep A (CVX 52 &amp; CVX 85) vaccine at an interval of 4 weeks.</Name>
+        <UID>2026-0023</UID>
+        <MetaData>
+            <version>4.46</version>
+            <dateCreated>2026-07-21Z</dateCreated>
+            <dateLastUpdated>2026-08-03Z</dateLastUpdated>
+        </MetaData>
+    </TestCaseMetaData>
+    <TestCaseInformation>
+        <Patient>
+            <Gender>Male</Gender>
+            <DateOfBirth>10/05/1979</DateOfBirth>
+        </Patient>
+        <AssessmentDate>11/03/2026</AssessmentDate>
+    </TestCaseInformation>
+    <ValidationResult>
+        <ReportSummary>
+            <Evaluations>
+                <Correct>0</Correct>
+                <Errors>0</Errors>
+                <Warnings>0</Warnings>
+                <Incomplete>2</Incomplete>
+                <CompletionPercentage>0</CompletionPercentage>
+                <CorrectnessPercentage>100</CorrectnessPercentage>
+            </Evaluations>
+            <Forecasts>
+                <Correct>3</Correct>
+                <Errors>0</Errors>
+                <Warnings>0</Warnings>
+                <Incomplete>1</Incomplete>
+                <CompletionPercentage>0</CompletionPercentage>
+                <CorrectnessPercentage>100</CorrectnessPercentage>
+            </Forecasts>
+        </ReportSummary>
+        <EvaluationsReport>
+            <VaccinationEventValidation>
+                <VaccinationEvent>
+                    <Administred name="VAQTA-ADULT" cvx="52" mvx="MSD"/>
+                    <Date>10/05/2026</Date>
+                </VaccinationEvent>
+                <Evaluations>
+                    <Evaluation>
+                        <Evaluation status="Valid">
+                            <Vaccine name="Hep A, adult" cvx="52"/>
+                        </Evaluation>
+                        <Assessment>NO_MATCH</Assessment>
+                    </Evaluation>
+                </Evaluations>
+            </VaccinationEventValidation>
+            <VaccinationEventValidation>
+                <VaccinationEvent>
+                    <Administred name="Hep A, unspecified formulation" cvx="85"/>
+                    <Date>11/02/2026</Date>
+                </VaccinationEvent>
+                <Evaluations>
+                    <Evaluation>
+                        <Evaluation status="Not Valid">
+                            <Vaccine name="Hep A, unspecified formulation" cvx="85"/>
+                        </Evaluation>
+                        <Assessment>NO_MATCH</Assessment>
+                    </Evaluation>
+                </Evaluations>
+            </VaccinationEventValidation>
+        </EvaluationsReport>
+        <ForecastsReport>
+            <ForecastValidation>
+                <Target name="Hep A, unspecified formulation" cvx="85"/>
+                <DoseNumber>
+                    <Expected>2</Expected>
+                    <Actual>2</Actual>
+                    <Assessment>SUCCESS</Assessment>
+                </DoseNumber>
+                <EarliestDate>
+                    <Expected>05/02/2027</Expected>
+                    <Actual>05/02/2027</Actual>
+                    <Assessment>SUCCESS</Assessment>
+                </EarliestDate>
+                <RecommendedDate>
+                    <Expected>05/02/2027</Expected>
+                    <Actual>05/02/2027</Actual>
+                    <Assessment>SUCCESS</Assessment>
+                </RecommendedDate>
+            </ForecastValidation>
+        </ForecastsReport>
+    </ValidationResult>
+</ns2:validationReport>

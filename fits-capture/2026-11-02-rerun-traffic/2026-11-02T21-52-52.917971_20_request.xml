@@ -1,0 +1,92 @@
+<Parameters xmlns="http://hl7.org/fhir">
+   <parameter>
+      <name value="patient"/>
+      <resource>
+         <Patient xmlns="http://hl7.org/fhir">
+            <id value="c095e14f-87f2-4818-938c-0fb397a55e30"/>
+            <gender value="female"/>
+            <birthDate value="2006-02-02"/>
+         </Patient>
+      </resource>
+   </parameter>
+   <parameter>
+      <name value="assessmentDate"/>
+      <valueDate value="2006-08-02"/>
+   </parameter>
+   <parameter>
+      <name value="immunization"/>
+      <resource>
+         <Immunization xmlns="http://hl7.org/fhir">
+            <id value="a6438718-d7d8-4a64-8d69-27a3daedb3d1"/>
+            <status value="completed"/>
+            <vaccineCode>
+               <coding>
+                  <code value="45"/>
+               </coding>
+            </vaccineCode>
+            <patient>
+               <reference value="c095e14f-87f2-4818-938c-0fb397a55e30"/>
+            </patient>
+            <occurrenceDateTime value="2006-02-02T00:00:00+00:00"/>
+         </Immunization>
+      </resource>
+   </parameter>
+   <parameter>
+      <name value="immunization"/>
+      <resource>
+         <Immunization xmlns="http://hl7.org/fhir">
+            <id value="73e6e5b8-4b6e-4b72-a2ec-428339c3962b"/>
+            <contained>
+               <Organization xmlns="http://hl7.org/fhir">
+                  <id value="1"/>
+                  <identifier>
+                     <value value="MSD"/>
+                  </identifier>
+               </Organization>
+            </contained>
+            <status value="completed"/>
+            <vaccineCode>
+               <coding>
+                  <code value="51"/>
+               </coding>
+            </vaccineCode>
+            <patient>
+               <reference value="c095e14f-87f2-4818-938c-0fb397a55e30"/>
+            </patient>
+            <occurrenceDateTime value="2006-03-02T00:00:00+00:00"/>
+            <manufacturer>
+               <reference value="#1"/>
+            </manufacturer>
+         </Immunization>
+      </resource>
+   </parameter>
+   <parameter>
+      <name value="immunization"/>
+      <resource>
+         <Immunization xmlns="http://hl7.org/fhir">
+            <id value="7f62762b-b40a-4253-93a5-0ea899d6dc6b"/>
+            <contained>
+               <Organization xmlns="http://hl7.org/fhir">
+                  <id value="1"/>
+                  <identifier>
+                     <value value="MSD"/>
+                  </identifier>
+               </Organization>
+            </contained>
+            <status value="completed"/>
+            <vaccineCode>
+               <coding>
+                  <code value="51"/>
+               </coding>
+            </vaccineCode>
+            <patient>
+               <reference value="c095e14f-87f2-4818-938c-0fb397a55e30"/>
+            </patient>
+            <occurrenceDateTime value="2006-08-02T00:00:00+00:00"/>
+            <manufacturer>
+               <reference value="#1"/>
+            </manufacturer>
+         </Immunization>
+      </resource>
+   </parameter>
+</Parameters>

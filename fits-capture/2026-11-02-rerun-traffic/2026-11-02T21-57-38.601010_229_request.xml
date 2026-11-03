@@ -1,0 +1,52 @@
+<Parameters xmlns="http://hl7.org/fhir">
+   <parameter>
+      <name value="patient"/>
+      <resource>
+         <Patient xmlns="http://hl7.org/fhir">
+            <id value="915c3f59-6201-44f8-8bbb-7f793b2752c3"/>
+            <gender value="female"/>
+            <birthDate value="2025-02-28"/>
+         </Patient>
+      </resource>
+   </parameter>
+   <parameter>
+      <name value="assessmentDate"/>
+      <valueDate value="2026-11-02"/>
+   </parameter>
+   <parameter>
+      <name value="immunization"/>
+      <resource>
+         <Immunization xmlns="http://hl7.org/fhir">
+            <id value="059e26c2-53a2-44ca-a3a6-d0893ff66c60"/>
+            <status value="completed"/>
+            <vaccineCode>
+               <coding>
+                  <code value="85"/>
+               </coding>
+            </vaccineCode>
+            <patient>
+               <reference value="915c3f59-6201-44f8-8bbb-7f793b2752c3"/>
+            </patient>
+            <occurrenceDateTime value="2026-04-28T00:00:00+00:00"/>
+         </Immunization>
+      </resource>
+   </parameter>
+   <parameter>
+      <name value="immunization"/>
+      <resource>
+         <Immunization xmlns="http://hl7.org/fhir">
+            <id value="5f78851e-ae60-428b-8d87-a635c3753fe0"/>
+            <status value="completed"/>
+            <vaccineCode>
+               <coding>
+                  <code value="85"/>
+               </coding>
+            </vaccineCode>
+            <patient>
+               <reference value="915c3f59-6201-44f8-8bbb-7f793b2752c3"/>
+            </patient>
+            <occurrenceDateTime value="2026-10-28T00:00:00+00:00"/>
+         </Immunization>
+      </resource>
+   </parameter>
+</Parameters>

@@ -1,0 +1,70 @@
+<Parameters xmlns="http://hl7.org/fhir">
+   <parameter>
+      <name value="patient"/>
+      <resource>
+         <Patient xmlns="http://hl7.org/fhir">
+            <id value="b155a295-5056-4e3c-bfb8-62a4dbbb61f7"/>
+            <gender value="male"/>
+            <birthDate value="2010-08-02"/>
+         </Patient>
+      </resource>
+   </parameter>
+   <parameter>
+      <name value="assessmentDate"/>
+      <valueDate value="2026-11-02"/>
+   </parameter>
+   <parameter>
+      <name value="immunization"/>
+      <resource>
+         <Immunization xmlns="http://hl7.org/fhir">
+            <id value="b56bde7c-e444-45e8-ac13-7e4a2f55b916"/>
+            <status value="completed"/>
+            <vaccineCode>
+               <coding>
+                  <code value="193"/>
+               </coding>
+            </vaccineCode>
+            <patient>
+               <reference value="b155a295-5056-4e3c-bfb8-62a4dbbb61f7"/>
+            </patient>
+            <occurrenceDateTime value="2026-08-02T00:00:00+00:00"/>
+         </Immunization>
+      </resource>
+   </parameter>
+   <parameter>
+      <name value="immunization"/>
+      <resource>
+         <Immunization xmlns="http://hl7.org/fhir">
+            <id value="92c25cb1-6e94-4684-a670-349f6f5435e3"/>
+            <status value="completed"/>
+            <vaccineCode>
+               <coding>
+                  <code value="193"/>
+               </coding>
+            </vaccineCode>
+            <patient>
+               <reference value="b155a295-5056-4e3c-bfb8-62a4dbbb61f7"/>
+            </patient>
+            <occurrenceDateTime value="2026-08-30T00:00:00+00:00"/>
+         </Immunization>
+      </resource>
+   </parameter>
+   <parameter>
+      <name value="immunization"/>
+      <resource>
+         <Immunization xmlns="http://hl7.org/fhir">
+            <id value="31045bb4-df82-4529-9775-80f8daa5a841"/>
+            <status value="completed"/>
+            <vaccineCode>
+               <coding>
+                  <code value="193"/>
+               </coding>
+            </vaccineCode>
+            <patient>
+               <reference value="b155a295-5056-4e3c-bfb8-62a4dbbb61f7"/>
+            </patient>
+            <occurrenceDateTime value="2026-10-25T00:00:00+00:00"/>
+         </Immunization>
+      </resource>
+   </parameter>
+</Parameters>
