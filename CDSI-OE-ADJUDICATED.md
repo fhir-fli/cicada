@@ -530,3 +530,27 @@ Not applied: OE's suggestions to age out stale active orders ("a set number of
 months", no number given), to use occurrence[x] to raise urgency, and a soft
 advisory for partial splenectomy. On-hold, which OE called a judgment call, is
 not counted.
+
+## 19. ✅ ADJUDICATED 2026-11-09 — Hep A dose 2 past due: CDSi 4.65 stands, the NIST case is stale
+
+**OE: use the 4.65 value (latest recommended interval "19 months + 4 weeks").**
+ACIP sets no overdue date for hepatitis A dose 2; "past due" is a CDSi
+convention, so the supporting data governs an engine that claims CDSi
+conformance. ACIP 2020 (Nelson et al., MMWR Recomm Rep 2020;69(5):1-38): Havrix
+dose 2 at 6-12 months, Vaqta at 6-18 months, minimum 6 months, products
+interchangeable, an interrupted series never restarts. The 2018 NIST value
+(12 months + 4 weeks) tracks the Havrix bound; 4.65 tracks Vaqta's and does not
+depend on the product. Do not branch by product unless CDSi does. Past due only
+drives reminder and recall; it does not change dose validity.
+
+Facts checked before asking, 2026-11-09: CDC's CDSi page (updated 2026-08-14)
+lists Supporting Data 4.65 as current. `AntigenSupportingData- HepA-508.xlsx`
+(4.65) gives dose 2 "19 months + 4 weeks"; its Change History has no entry for
+the value. CDC's healthy test cases v4.46 (August 2026) agree: 6 cases
+(2013-0188, -0190, -0191, 2019-0011, 2026-0001, -0005) give dose 1 on
+2026-08-05 and expect past due 2028-04-01. FITS AART-CONF-5 (created and last
+updated 2018-10-09): dose 1 2026-11-02, expects 2027-11-29; cicada returns
+2028-06-29. Both use CDSi's minus-one-day convention.
+
+Applied: nothing to change in the engine. The FITS WARNING on AART-CONF-5 past
+due is expected; it goes to NIST as a stale case.
