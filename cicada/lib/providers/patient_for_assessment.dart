@@ -31,10 +31,21 @@ class PatientForAssessment extends _$PatientForAssessment {
     // The code alone is not enough: `supportingPatientInformation` has to
     // reference the resource that carried it, so keep the reference with it.
     final otherResourceCodes =
-        <({CodeableConcept code, String? reference, Period? period})>[];
+        <
+          ({
+            CodeableConcept code,
+            String? reference,
+            Period? period,
+            Set<(String, String)> results,
+          })
+        >[];
     // Organizations sent with the request, so a manufacturer given as a
     // literal reference (`Organization/x`) can be resolved.
     final organizations = <String, Organization>{};
+    // Procedures ordered or planned, not yet performed. See
+    // [_plannedObservations].
+    final plannedProcedures =
+        <({CodeableConcept code, String? reference, Period? period})>[];
 
     parameters.parameter?.forEach((parameter) {
       if (parameter.name.valueString == 'assessmentDate' &&
@@ -64,22 +75,28 @@ class PatientForAssessment extends _$PatientForAssessment {
           case Condition _:
             {
               final condition = parameter.resource! as Condition;
-              if (!_refutedOrInError(condition.verificationStatus)) {
-                conditions.add(condition);
-              }
+              if (_isInvalidAssertion(condition.verificationStatus)) break;
+              conditions.add(condition);
               break;
             }
           case AllergyIntolerance _:
             {
               final allergy = parameter.resource! as AllergyIntolerance;
-              if (!_refutedOrInError(allergy.verificationStatus)) {
-                allergies.add(allergy);
-              }
+              if (_isInvalidAssertion(allergy.verificationStatus)) break;
+              allergies.add(allergy);
               break;
             }
           case Immunization _:
             {
               final immunization = parameter.resource! as Immunization;
+              // Only a completed immunization is a dose administered.
+              // Quoted from R4B StructureDefinition-Immunization.json, read
+              // 2026-10-18: status is a modifier "because it is a status
+              // element that contains statuses entered-in-error and not-done
+              // which means that the resource should not be treated as
+              // valid". Measured the same day: a not-done MMR counted as a
+              // dose (test/invalid_status_test.dart).
+              if (immunization.status.toString() != 'completed') break;
               immunizations.add(immunization);
               // Doses are built after the loop, not here. A dose needs the
               // birth date, and the Patient parameter is not guaranteed to
@@ -99,6 +116,8 @@ class PatientForAssessment extends _$PatientForAssessment {
                           ? null
                           : 'Observation/${observation.id}',
                   period: _periodOf(observation.effectiveX),
+                  // A laboratory row counts only with a positive result.
+                  results: resultsOfObservation(observation),
                 ));
               }
               break;
@@ -106,13 +125,21 @@ class PatientForAssessment extends _$PatientForAssessment {
           case Procedure _:
             {
               final resource = parameter.resource! as Procedure;
+              // Only a completed procedure has happened. R4B
+              // CodeSystem-event-status.json, read 2026-10-18: preparation,
+              // in-progress, on-hold, not-done and stopped have not concluded
+              // ("stopped": terminated "prior to the full completion"), and
+              // status is a modifier for entered-in-error
+              // (StructureDefinition-Procedure.json).
+              if (resource.status.toString() != 'completed') break;
               final code = resource.code;
-              if (code != null && !_procedureVoid(resource.status)) {
+              if (code != null) {
                 otherResourceCodes.add((
                   code: code,
                   reference:
                       resource.id == null ? null : 'Procedure/${resource.id}',
                   period: _periodOf(resource.performedX),
+                  results: const <(String, String)>{},
                 ));
               }
               break;
@@ -133,6 +160,7 @@ class PatientForAssessment extends _$PatientForAssessment {
                           ? null
                           : 'MedicationStatement/${resource.id}',
                   period: _periodOf(resource.effectiveX),
+                  results: const <(String, String)>{},
                 ));
               }
               break;
@@ -149,6 +177,7 @@ class PatientForAssessment extends _$PatientForAssessment {
                           ? null
                           : 'MedicationRequest/${resource.id}',
                   period: null,
+                  results: const <(String, String)>{},
                 ));
               }
               break;
@@ -165,6 +194,23 @@ class PatientForAssessment extends _$PatientForAssessment {
                           ? null
                           : 'MedicationAdministration/${resource.id}',
                   period: _periodOf(resource.effectiveX),
+                  results: const <(String, String)>{},
+                ));
+              }
+              break;
+            }
+          case ServiceRequest _:
+            {
+              final request = parameter.resource! as ServiceRequest;
+              final code = request.code;
+              if (code != null && _isOpenRequest(request)) {
+                plannedProcedures.add((
+                  code: code,
+                  reference:
+                      request.id == null
+                          ? null
+                          : 'ServiceRequest/${request.id}',
+                  period: _periodOf(request.occurrenceX),
                 ));
               }
               break;
@@ -272,6 +318,7 @@ class PatientForAssessment extends _$PatientForAssessment {
         allergies,
         pastDoses,
         otherResourceCodes,
+        plannedProcedures,
         implausibleDoses,
         dosesAfterAssessment,
       );
@@ -286,8 +333,17 @@ class PatientForAssessment extends _$PatientForAssessment {
     List<Immunization> immunizations,
     List<AllergyIntolerance> allergies,
     List<VaxDose> pastDoses,
-    List<({CodeableConcept code, String? reference, Period? period})>
+    List<
+      ({
+        CodeableConcept code,
+        String? reference,
+        Period? period,
+        Set<(String, String)> results,
+      })
+    >
     otherResourceCodes,
+    List<({CodeableConcept code, String? reference, Period? period})>
+    plannedProcedures,
     List<ImplausibleDose> implausibleDoses,
     List<VaxDose> dosesAfterAssessment,
   ) {
@@ -297,8 +353,10 @@ class PatientForAssessment extends _$PatientForAssessment {
       ..addAll(observationsFromAllergies(allergies));
     // Add observations from Observation, Procedure, Medication* resources
     for (final pair in otherResourceCodes) {
-      final obs = observationFromCodeableConcept(pair.code);
-      if (obs != null) {
+      for (final obs in observationsFromCodeableConcept(
+        pair.code,
+        results: pair.results,
+      )) {
         observations.add(
           pair.period == null ? obs : obs.copyWith(period: pair.period),
         );
@@ -309,20 +367,28 @@ class PatientForAssessment extends _$PatientForAssessment {
     // recommendation can point at it via supportingPatientInformation.
     // A resource with no id cannot be referenced and is left out.
     final observationSources = <String, Set<SupportingResource>>{};
-    void index(VaxObservation? obs, String? reference, CodeableConcept? code) {
-      final observationCode = obs?.observationCode;
-      if (observationCode == null) return;
+    void index(
+      String? reference,
+      CodeableConcept? code, {
+      Set<(String, String)> results = const <(String, String)>{},
+    }) {
       final display = _displayOf(code);
       if (reference == null && display == null) return;
-      (observationSources[observationCode] ??= <SupportingResource>{}).add((
-        reference: reference,
-        display: display,
-      ));
+      for (final obs in observationsFromCodeableConcept(
+        code,
+        results: results,
+      )) {
+        final observationCode = obs.observationCode;
+        if (observationCode == null) continue;
+        (observationSources[observationCode] ??= <SupportingResource>{}).add((
+          reference: reference,
+          display: display,
+        ));
+      }
     }
 
     for (final condition in conditions) {
       index(
-        observationFromCodeableConcept(condition.code),
         condition.id == null ? null : 'Condition/${condition.id}',
         condition.code,
       );
@@ -330,22 +396,31 @@ class PatientForAssessment extends _$PatientForAssessment {
     for (final allergy in allergies) {
       final ref =
           allergy.id == null ? null : 'AllergyIntolerance/${allergy.id}';
-      index(observationFromCodeableConcept(allergy.code), ref, allergy.code);
+      index(ref, allergy.code);
       for (final reaction
           in allergy.reaction ?? const <AllergyIntoleranceReaction>[]) {
-        index(
-          observationFromCodeableConcept(reaction.substance),
-          ref,
-          reaction.substance,
-        );
+        index(ref, reaction.substance);
       }
     }
     for (final pair in otherResourceCodes) {
-      index(
-        observationFromCodeableConcept(pair.code),
-        pair.reference,
-        pair.code,
-      );
+      index(pair.reference, pair.code, results: pair.results);
+    }
+    // A planned procedure asserts its own observation, never the one the
+    // completed procedure would; it is added and indexed here.
+    for (final planned in plannedProcedures) {
+      final display = _displayOf(planned.code);
+      for (final obs in _plannedObservations(planned.code)) {
+        observations.add(
+          planned.period == null ? obs : obs.copyWith(period: planned.period),
+        );
+        final observationCode = obs.observationCode;
+        if (observationCode == null) continue;
+        if (planned.reference == null && display == null) continue;
+        (observationSources[observationCode] ??= <SupportingResource>{}).add((
+          reference: planned.reference,
+          display: display,
+        ));
+      }
     }
     return VaxPatient(
       assessmentDate:
@@ -378,36 +453,87 @@ String? _displayOf(CodeableConcept? code) {
   return null;
 }
 
-/// A verificationStatus of refuted or entered-in-error: the record says the
-/// condition or allergy is not there. Every other status counts (Grey,
-/// 2026-10-18: unconfirmed, provisional and differential count).
-/// Codes: condition-ver-status and allergyintolerance-verification.
-bool _refutedOrInError(CodeableConcept? verificationStatus) =>
-    verificationStatus?.coding?.any(
-      (c) => const {
-        'refuted',
-        'entered-in-error',
-      }.contains(c.code?.toString()),
-    ) ??
-    false;
+/// Whether a Condition or AllergyIntolerance verificationStatus marks the
+/// record as not valid.
+///
+/// Quoted from R4B StructureDefinition-Condition.json, read 2026-10-18:
+/// verificationStatus is a modifier "because the status contains the code
+/// refuted and entered-in-error that mark the Condition as not currently
+/// valid". AllergyIntolerance's verification codes include the same two
+/// (CodeSystem-allergyintolerance-verification.json). Measured the same day:
+/// a refuted asplenia still asserted 160 (test/invalid_status_test.dart).
+///
+/// Unconfirmed, provisional and differential are not excluded here: the
+/// base specification does not mark them invalid.
+bool _isInvalidAssertion(CodeableConcept? verificationStatus) =>
+    (verificationStatus?.coding ?? const <Coding>[]).any(
+      (c) =>
+          c.code?.toString() == 'refuted' ||
+          c.code?.toString() == 'entered-in-error',
+    );
 
-/// A Procedure that did not happen or was recorded in error
-/// (event-status: not-done, entered-in-error). A planned one
-/// (preparation, in-progress) still counts: CDSi observation 002 is
-/// "Undergoing elective splenectomy".
-bool _procedureVoid(EventStatus status) => const {
-  'not-done',
-  'entered-in-error',
-}.contains(status.toString());
+/// Planned procedure -> the CDSi observation it asserts, keyed by the
+/// observation the completed procedure asserts through the map.
+///
+/// CDSi observation 002 "Undergoing elective splenectomy" (CDSi 4.65
+/// ScheduleSupportingData.xml) lists no code: `<codedValues/>`. Its clarifying
+/// text: "Vaccination 14 or more days before splenectomy is suggested". A
+/// completed total splenectomy asserts 160 asplenia through the map (Grey,
+/// 2026-10-18: CPT 38100, 38102, 38120; partial splenectomy 38101 and
+/// splenorrhaphy 38115 are not mapped). An order for one of those
+/// procedures is therefore a planned total splenectomy, 002. OpenEvidence,
+/// 2026-11-09 (CDSI-OE-ADJUDICATED.md section 18): drive 002 from an active
+/// ServiceRequest; a Procedure exists only on or after the day of surgery,
+/// too late to vaccinate 14 days before; leave partial splenectomy and
+/// splenorrhaphy out.
+const Map<String, String> _plannedObservationFor = {'160': '002'};
+
+/// The observations an open order for [code] asserts: for each observation
+/// the completed procedure would assert, its planned counterpart in
+/// [_plannedObservationFor]. Any other order asserts nothing: an order for
+/// chemotherapy is not receipt of it. In WHO mode, which has no 002, nothing.
+List<VaxObservation> _plannedObservations(CodeableConcept code) {
+  final planned = <String>{
+    for (final obs in observationsFromCodeableConcept(code))
+      if (_plannedObservationFor[obs.observationCode] != null)
+        _plannedObservationFor[obs.observationCode]!,
+  };
+  if (planned.isEmpty) return const <VaxObservation>[];
+  return [
+    for (final obs
+        in activeScheduleData.observations?.observation ??
+            const <VaxObservation>[])
+      if (planned.contains(obs.observationCode)) obs,
+  ];
+}
+
+/// Whether a ServiceRequest is a live order or plan for the procedure.
+///
+/// Read 2026-11-09 at hl7.org/fhir/R4B/servicerequest.html, Scope and Usage:
+/// ServiceRequest is "a record of a request for a procedure or diagnostic or
+/// other service to be planned, proposed, or performed, as distinguished by
+/// the ServiceRequest.intent field value". Only status active is a live
+/// request; draft, on-hold, revoked, completed, entered-in-error and unknown
+/// are not (OpenEvidence 2026-11-09 left on-hold as a judgment call; it is
+/// out until a ruling says otherwise). Every intent counts except option:
+/// R4B CodeSystem-request-intent.json (read 2026-11-09) defines it as "a
+/// component or option for a RequestGroup", not a request on its own.
+/// OpenEvidence 2026-11-09: a documented plan or proposal is already reason
+/// to vaccinate. doNotPerform true is an instruction not to do it.
+bool _isOpenRequest(ServiceRequest request) =>
+    request.status.toString() == 'active' &&
+    request.intent.toString() != 'option' &&
+    request.doNotPerform?.valueBoolean != true;
 
 /// The concept an Observation asserts, as the published guides send it
 /// (TEST-RESOURCE-REVIEW.md):
 /// - a social-history Observation (occupation LOINC 11341-5, smoking status
 ///   72166-2, pregnancy status 82810-3) asserts its coded value;
-/// - a laboratory result (a LOINC test code) asserts its code only when the
-///   result is positive: value SNOMED 10828004 "Positive", or
-///   interpretation POS;
-/// - any other Observation asserts its code, then its coded value.
+/// - an Observation whose code the observation map asserts on asserts its
+///   code. A laboratory row asserts only with a positive result
+///   (ObservationMapTarget.resultAnyOf: interpretation POS/DET/RR, or value
+///   SNOMED 10828004 and its kin), which [resultsOfObservation] supplies;
+/// - any other Observation asserts its coded value, then its code.
 /// Cancelled and entered-in-error Observations assert nothing.
 CodeableConcept? _observationConcept(Observation observation) {
   if (const {
@@ -426,33 +552,13 @@ CodeableConcept? _observationConcept(Observation observation) {
   if (isLoinc && codes.any((c) => valueBearing.contains(c.code?.toString()))) {
     return value;
   }
-  if (isLoinc && observationFromCodeableConcept(observation.code) != null) {
-    return _positive(observation, value) ? observation.code : null;
-  }
-  if (observationFromCodeableConcept(observation.code) != null) {
+  if (observationsFromCodeableConcept(
+    observation.code,
+    results: resultsOfObservation(observation),
+  ).isNotEmpty) {
     return observation.code;
   }
   return value ?? observation.code;
-}
-
-bool _positive(Observation observation, CodeableConcept? value) {
-  final positiveValue =
-      value?.coding?.any(
-        (c) =>
-            c.system?.toString() == 'http://snomed.info/sct' &&
-            c.code?.toString() == '10828004',
-      ) ??
-      false;
-  final positiveInterpretation =
-      observation.interpretation?.any(
-        (i) =>
-            i.coding?.any(
-              (c) => c.code?.toString() == 'POS',
-            ) ??
-            false,
-      ) ??
-      false;
-  return positiveValue || positiveInterpretation;
 }
 
 /// The dates a resource's `effective[x]` or `performed[x]` carries, as the

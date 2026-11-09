@@ -60,7 +60,7 @@ I think there are two things to note about this logic (please let me know if you
 
 Contraindications come in two flavors: **group-level** and **vaccine-level**.
 
-- **Group-level contraindications** apply to the entire antigen. If the patient has a condition (mapped via the observation crosswalk to a CDSi observation code) that matches a group contraindication for the antigen, then the entire antigen is contraindicated. No more vaccines for that antigen should be given.
+- **Group-level contraindications** apply to the entire antigen. If the patient has a condition (mapped through the [ConceptMap](ConceptMap-cdsi-observations.html) to a CDSi observation code) that matches a group contraindication for the antigen, then the entire antigen is contraindicated. No more vaccines for that antigen should be given.
 
 - **Vaccine-level contraindications** apply only to a specific vaccine type (CVX). If the patient has a matching condition, only that specific vaccine is contraindicated, but other vaccines for the same antigen may still be given.
 

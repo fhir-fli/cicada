@@ -10,6 +10,13 @@ for r in rows:
     first = t.split(';')[0].split('=')[0] if t else ''
     if re.search(r'allerg|adverse reaction|reaction after|anaphyla', x): res, rule = 'AllergyIntolerance', 'title: allergy/reaction'
     elif 'RXNORM' in s: res, rule = 'MedicationStatement', 'RxNorm code'
+    # A procedure not yet performed ("Undergoing elective splenectomy") is an order. Read
+    # 2026-11-09 at hl7.org/fhir/R4B/procedure.html, Scope and Usage: Procedure records "current
+    # and historical procedures performed on or for a patient". hl7.org/fhir/R4B/servicerequest.html,
+    # Scope and Usage: ServiceRequest is "a record of a request for a procedure or diagnostic or
+    # other service to be planned, proposed, or performed". OpenEvidence 2026-11-09: the trigger is
+    # the order, since vaccination is due 14+ days before surgery (CDSI-OE-ADJUDICATED.md 18).
+    elif x.startswith('undergoing'): res, rule = 'ServiceRequest', 'planned procedure'
     elif first == 'procedure' or s == ['CPT']: res, rule = 'Procedure', 'SNOMED procedure or CPT'
     elif 'LOINC' in s: res, rule = 'Observation(laboratory)', 'LOINC code'
     elif first == 'occupation': res, rule = 'Observation(occupation)', 'SNOMED occupation'

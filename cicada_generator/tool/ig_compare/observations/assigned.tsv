@@ -1,6 +1,6 @@
 code	text	systems	snomed_tags	resource	rule
 001	Patient seeks protection			NO STANDARD CODE	CDC lists no code
-002	Undergoing elective splenectomy	CPT		Procedure	SNOMED procedure or CPT
+002	Undergoing elective splenectomy	CPT		ServiceRequest	planned procedure
 003	Immunocompromised	CDCPHINVS,ICD10CM,SNOMED	finding=1	Condition	SNOMED finding / ICD-10-CM
 004	Recipient of a hematopoietic stem cell transplant	ICD10CM,SNOMED	procedure=2	Procedure	SNOMED procedure or CPT
 005	Hepatitis C virus infection	ICD10CM,SNOMED	disorder=1	Condition	SNOMED disorder / ICD-10-CM

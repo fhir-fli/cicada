@@ -414,9 +414,14 @@ CodeableConcept _hl7Concept(String system, String code) => CodeableConcept(
 /// Statuses and categories follow the guides' examples: Conditions and
 /// AllergyIntolerances are active and confirmed (11 and more guides send
 /// verificationStatus), Conditions are problem-list items, Observations are
-/// final. A planned procedure ("Undergoing ...") is in preparation; any
-/// other is completed. The observation date is the onset, the effective
-/// date, or the performed date, as the resource names it.
+/// final, Procedures are completed. A planned procedure ("Undergoing
+/// elective splenectomy") is an active ServiceRequest with intent order: R4B
+/// Procedure records procedures "performed", ServiceRequest a request "to be
+/// planned, proposed, or performed" (hl7.org/fhir/R4B/procedure.html and
+/// servicerequest.html, Scope and Usage, read 2026-11-09; OpenEvidence
+/// 2026-11-09, CDSI-OE-ADJUDICATED.md section 18). The observation date is
+/// the onset, the effective, performed or occurrence date, as the resource
+/// names it.
 Resource _buildHistoryResource(
   String rawCode,
   String? date,
@@ -469,15 +474,21 @@ Resource _buildHistoryResource(
         onsetX: when,
       );
     case 'Procedure':
-      final planned = (entry['title'] as String).toLowerCase().startsWith(
-        'undergoing',
-      );
       return Procedure(
         id: id,
-        status: planned ? EventStatus.preparation : EventStatus.completed,
+        status: EventStatus.completed,
         code: code,
         subject: patient.thisReference,
         performedX: when,
+      );
+    case 'ServiceRequest':
+      return ServiceRequest(
+        id: id,
+        status: RequestStatus.active,
+        intent: RequestIntent.order,
+        code: code,
+        subject: patient.thisReference,
+        occurrenceX: when,
       );
     case 'MedicationStatement':
       return MedicationStatement(
