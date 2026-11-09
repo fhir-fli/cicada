@@ -1,0 +1,136 @@
+002	Undergoing elective splenectomy	Splenectomy; total (separate procedure) ; Splenectomy; partial (separate procedure) ; Splenectomy; total, en bloc for extensive disease, in conjunction with other procedure (List in addition to code for primary procedure)
+003	Immunocompromised	Immunodeficiency, unspecified ; Common variable immunodeficiency, unspecified ; Immunodeficiency with predominantly antibody defects, unspecified
+004	Recipient of a hematopoietic stem cell transplant	Stem cells transplant status ; Unspecified complication of bone marrow transplant ; Other complications of bone marrow transplant
+005	Hepatitis C virus infection	Chronic viral hepatitis C ; Acute hepatitis C without hepatic coma ; Acute hepatitis C with hepatic coma
+006	Receives clotting factor concentrates	Hereditary factor VIII deficiency ; Hereditary factor IX deficiency ; Hereditary deficiency of other clotting factors
+007	Pregnant	Pregnant state, incidental ; Supervision of high risk pregnancy, unspecified, unspecified trimester ; Encounter for supervision of normal first pregnancy, unspecified trimester
+009	Breastfeeding	Encounter for care and examination of lactating mother
+010	Cerebrospinal fluid leaks	Cerebrospinal fluid leak, unspecified ; Cranial cerebrospinal fluid leak, spontaneous ; Spinal cerebrospinal fluid leak, spontaneous
+011	Cochlear implants	Cochlear implant status ; Cochlear device implantation
+012	Family history of altered immunocompetence	Family history of diseases of the blood and blood-forming organs and certain disorders involving the immune mechanism
+013	Severe Combined Immunodeficiency [SCID]	Combined immunodeficiency, unspecified ; Severe combined immunodeficiency [SCID] with reticular dysgenesis ; Severe combined immunodeficiency [SCID] with low T- and B-cell numbers
+014	Diabetes	Type 1 diabetes mellitus without complications ; Type 1 diabetes mellitus with hyperglycemia ; Type 2 diabetes mellitus without complications
+015	Chronic liver disease	Alcoholic cirrhosis of liver without ascites ; Alcoholic cirrhosis of liver with ascites ; Chronic hepatitis, unspecified
+016	Chronic heart disease	Atherosclerotic heart disease of native coronary artery without angina pectoris ; Chronic ischemic heart disease, unspecified ; Heart failure, unspecified
+017	Chronic lung disease	Chronic obstructive pulmonary disease, unspecified ; Chronic obstructive pulmonary disease with (acute) exacerbation ; Emphysema, unspecified
+018	Laboratory Evidence of Immunity or confirmation of Hepatitis A disease	Hyposplenism ; Asplenia (congenital) ; Other diseases of spleen
+019	Laboratory Evidence of Immunity or confirmation of Hepatitis B disease	Chronic kidney disease, stage 1 ; Chronic kidney disease, stage 2 (mild) ; Chronic kidney disease, stage 3 unspecified
+020	Laboratory Evidence of Immunity for Measles	Measles virus IgG Ab [Units/volume] in Serum ; Measles virus IgG Ab [Presence] in Serum by Immunoassay ; Measles virus IgG Ab [Presence] in Serum
+021	Laboratory Evidence of Immunity for Mumps	Mumps virus IgG Ab [Units/volume] in Serum ; Mumps virus IgG Ab [Presence] in Serum by Immunoassay ; Mumps virus IgG Ab [Presence] in Serum
+022	Laboratory Evidence of Immunity for Rubella	Rubella virus IgG Ab [Units/volume] in Serum ; Rubella virus IgG Ab [Presence] in Serum ; Rubella virus IgG Ab [Presence] in Serum or Plasma by Immunoassay
+023	Laboratory Evidence of Immunity or confirmation of Varicella disease	Varicella zoster virus IgG Ab [Presence] in Serum ; Varicella zoster virus IgG Ab [Presence] in Serum by Immunoassay ; Varicella zoster virus IgG Ab [Units/volume] in Serum
+024	Healthcare provider verified history of or diagnosis of Varicella	Hepatitis B virus surface Ab [Units/volume] in Serum ; Hepatitis B virus surface Ab [Presence] in Serum ; Hepatitis B virus surface Ab [Presence] in Serum by Immunoassay
+025	Healthcare provider verified history or diagnosis of Herpes Zoster	Hepatitis A virus IgG Ab [Presence] in Serum ; Hepatitis A virus IgG Ab [Presence] in Serum by Immunoassay ; Hepatitis A virus IgG Ab [Units/volume] in Serum
+026	Persons with perinatal HIV infection who do not have evidence of severe immunosuppression and who were vaccinated with MMR before establishment of antiviral therapy [ART]	Human immunodeficiency virus [HIV] disease ; Asymptomatic human immunodeficiency virus [HIV] infection status
+027	Asthma	Mild intermittent asthma, uncomplicated ; Mild persistent asthma, uncomplicated ; Moderate persistent asthma, uncomplicated
+028	Intussusception	Intussusception
+029	Acute gastroenteritis	Noninfective gastroenteritis and colitis, unspecified ; Infectious gastroenteritis and colitis, unspecified ; Rotaviral enteritis
+030	Acute febrile illness	Fever, unspecified
+031	Tuberculosis	Tuberculosis of lung ; Respiratory tuberculosis unspecified ; Tuberculosis of other sites
+032	Dialysis patient	Dependence on renal dialysis
+033	Taken influenza antiviral medications within the previous 48 hours	Acyclovir ; famciclovir ; valACYclovir
+034	Receiving long-term aspirin therapy	Long term (current) use of aspirin ; Aspirin
+039	Receives treatment for STD	Encounter for screening for infections with a predominantly sexual mode of transmission ; Encounter for screening for human immunodeficiency virus [HIV] ; Contact with and (suspected) exposure to infections with a predominantly sexual mode of transmission
+040	Illicit drug use	Other psychoactive substance abuse, uncomplicated ; Cocaine abuse, uncomplicated ; Opioid abuse, uncomplicated
+041	Illicit injection drug use	Opioid abuse, uncomplicated ; Other psychoactive substance abuse, uncomplicated
+042	Smoke cigarettes	Nicotine dependence, cigarettes, uncomplicated ; Tobacco use
+043	Alcoholism	Alcohol dependence, uncomplicated ; Alcohol abuse, uncomplicated
+065	Client of institution for persons with developmental disabilities	End stage renal disease ; Chronic kidney disease, stage 5 ; Chronic kidney disease, unspecified
+071	Household contact with hepatitis B surface antigen-positive persons	Encounter for screening for other viral diseases
+076	Progressive neurologic disorder	Degenerative disease of nervous system, unspecified
+077	Received inactivated or unknown measles vaccine between 1963-1967	Adverse effect of other viral vaccines, initial encounter ; Allergy status to unspecified drugs, medicaments and biological substances
+081	Severe allergic reaction after previous dose of Polio	Adverse effect of other viral vaccines, initial encounter ; Allergy to eggs
+082	Severe allergic reaction after previous dose of Japanese Encephalitis	Adverse effect of other viral vaccines, initial encounter
+083	Severe allergic reaction after previous dose of Rotavirus	Adverse effect of other viral vaccines, initial encounter
+084	Severe allergic reaction after previous dose of Typhoid	Adverse effect of other viral vaccines, initial encounter
+085	Severe allergic reaction after previous dose of Influenza	Adverse effect of other viral vaccines, initial encounter
+086	Severe allergic reaction after previous dose of Pertussis	Adverse effect of pertussis vaccine, including combinations with a pertussis component, initial encounter ; Adverse effect of other viral vaccines, initial encounter
+087	Severe allergic reaction after previous dose of Diphtheria	Adverse effect of other bacterial vaccines, initial encounter ; Adverse effect of other viral vaccines, initial encounter
+088	Severe allergic reaction after previous dose of Tetanus	Adverse effect of other bacterial vaccines, initial encounter ; Adverse effect of other viral vaccines, initial encounter
+089	Severe allergic reaction after previous dose of Varicella	Adverse effect of other viral vaccines, initial encounter
+090	Severe allergic reaction after previous dose of HPV	Adverse effect of other viral vaccines, initial encounter
+091	Severe allergic reaction after previous dose of Measles	Adverse effect of other viral vaccines, initial encounter
+092	Severe allergic reaction after previous dose of Mumps	Adverse effect of other viral vaccines, initial encounter
+093	Severe allergic reaction after previous dose of Rubella	Adverse effect of other viral vaccines, initial encounter
+094	Severe allergic reaction after previous dose of Pneumococcal	Adverse effect of other viral vaccines, initial encounter
+095	Severe allergic reaction after previous dose of Meningococcal	Adverse effect of other viral vaccines, initial encounter
+096	Severe allergic reaction after previous dose of Hepatitis A	Adverse effect of other viral vaccines, initial encounter
+097	Severe allergic reaction after previous dose of Hepatitis B	Adverse effect of other viral vaccines, initial encounter
+098	Severe allergic reaction after previous dose of Hib	Adverse effect of other viral vaccines, initial encounter
+099	Severe allergic reaction after previous dose of Yellow Fever	Adverse effect of other viral vaccines, initial encounter
+100	Severe allergic reaction after previous dose of live zoster	Adverse effect of other viral vaccines, initial encounter
+101	Allergic reaction to egg protein	Allergy to eggs ; Other adverse food reactions, not elsewhere classified
+102	Severe allergic reaction to gelatin	Other adverse food reactions, not elsewhere classified ; Allergy to other foods
+103	Severe allergic reaction to arginine	Allergy, unspecified, initial encounter
+104	Allergic reaction to latex	Latex allergy status
+105	Severe allergic reaction to chicken protein	Other adverse food reactions, not elsewhere classified ; Allergy to other foods
+106	Severe allergic reaction to gentamicin	Allergy status to other antibiotic agents ; Adverse effect of aminoglycosides, initial encounter
+107	Severe allergic reaction to neomycin	Allergy status to other antibiotic agents ; Adverse effect of aminoglycosides, initial encounter
+108	Severe allergic reaction to streptomycin	Allergy status to other antibiotic agents ; Adverse effect of aminoglycosides, initial encounter
+109	Severe allergic reaction to polymyxin B	Allergy status to other antibiotic agents ; Adverse effect of other systemic antibiotics, initial encounter
+110	Hypersensitivity to yeast	Allergy to other foods ; Other adverse food reactions, not elsewhere classified
+111	Hypersensitivity to the preservative 2-phenoxyethanol	Other allergy, initial encounter
+113	Severe allergic reaction after previous dose of Rabies	End stage renal disease
+115	Severe allergic reaction to protamine sulfate	Adverse effect of anticoagulant antagonists, vitamin K and other coagulants, initial encounter ; Allergy status to other drugs, medicaments and biological substances
+116	Severe allergic reaction after previous dose of Meningococcal B	Adverse effect of other bacterial vaccines, initial encounter ; Allergy status to other drugs, medicaments and biological substances
+118	Severe allergic reaction to tetanus toxoid	Adverse effect of other bacterial vaccines, initial encounter ; Allergy status to other drugs, medicaments and biological substances
+121	Homelessness	Homelessness unspecified
+122	Severe allergic reaction after previous dose of COVID-19	Allergy to other foods ; Adverse effect of other viral vaccines, initial encounter
+142	Travel to or working in countries that have high or intermediate endemicity of Hepatitis A	Human immunodeficiency virus [HIV] disease ; Asymptomatic human immunodeficiency virus [HIV] infection status ; Immunodeficiency due to drugs
+155	HIV/AIDS - not severely immunocompromised	Human immunodeficiency virus [HIV] disease ; Asymptomatic human immunodeficiency virus [HIV] infection status
+156	Generalized malignant neoplasm	Disseminated malignant neoplasm, unspecified ; Malignant (primary) neoplasm, unspecified
+157	Solid organ transplantation	Kidney transplant status ; Heart transplant status ; Lung transplant status
+158	Immunosuppressive therapy	Long term (current) use of systemic steroids ; Other long term (current) drug therapy ; Immunodeficiency due to drugs
+159	Radiation therapy	Encounter for antineoplastic radiation therapy
+160	Anatomical or functional asplenia	Hyposplenism ; Asplenia (congenital) ; Acquired absence of spleen
+161	Chronic kidney disease	Chronic kidney disease, stage 1 ; Chronic kidney disease, stage 2 (mild) ; Chronic kidney disease, stage 3 (moderate)
+162	Travel to areas at risk for Yellow Fever transmission	Nephrotic syndrome with unspecified morphologic changes
+168	Chemotherapy	Encounter for antineoplastic chemotherapy ; Encounter for antineoplastic immunotherapy
+169	History of sexual abuse or assault	Encounter for examination and observation of victim following forced sexual exploitation ; Adult sexual abuse, confirmed, initial encounter ; Child sexual abuse, confirmed, initial encounter
+170	Onset of pregnancy	Pregnant state, incidental ; Encounter for supervision of normal pregnancy, unspecified, unspecified trimester
+178	Leukemia	Leukemia, unspecified not having achieved remission ; Acute lymphoblastic leukemia not having achieved remission ; Acute myeloblastic leukemia, not having achieved remission
+179	Lymphoma	Non-Hodgkin lymphoma, unspecified, unspecified site ; Peripheral T-cell lymphoma, not elsewhere classified, unspecified site
+180	Hodgkin's disease	Hodgkin lymphoma, unspecified, unspecified site
+181	Multiple myeloma	Multiple myeloma not having achieved remission
+183	Health care personnel at federally designated Ebola treatment center in U.S.	Human immunodeficiency virus [HIV] disease ; Asymptomatic human immunodeficiency virus [HIV] infection status
+187	Allergic reaction to polysorbate 80	Allergy status to other drugs, medicaments and biological substances ; Other allergy, initial encounter
+188	Known allergy to Polyethylene glycol [PEG]	Allergy status to other drugs, medicaments and biological substances ; Other allergy, initial encounter
+189	Active treatment for solid tumors	Encounter for antineoplastic chemotherapy ; Malignant (primary) neoplasm, unspecified
+190	Active treatment for hematologic malignancies	Encounter for antineoplastic chemotherapy ; Malignant neoplasm of lymphoid, hematopoietic and related tissue, unspecified
+191	Receipt of CAR-T-cell therapy	Stem cells transplant status
+192	Severe allergic reaction after previous dose of any egg-based IIV or LAIV influenza vaccine	Problems related to living in residential institution
+198	Cancer	Malignant (primary) neoplasm, unspecified
+199	Interstitial lung disease	Interstitial pulmonary disease, unspecified ; Pulmonary fibrosis, unspecified ; Other specified interstitial pulmonary diseases
+200	Cystic fibrosis	Cystic fibrosis with pulmonary manifestations ; Cystic fibrosis, unspecified
+201	Pulmonary hypertension	Primary pulmonary hypertension ; Pulmonary hypertension, unspecified ; Pulmonary heart disease, unspecified
+202	Dementia	Unspecified dementia, unspecified severity, without behavioral disturbance, psychotic disturbance, mood disturbance, and anxiety ; Alzheimer's disease, unspecified
+203	Down syndrome	Down syndrome, unspecified
+204	Obesity	Obesity, unspecified ; Morbid (severe) obesity due to excess calories
+205	Thalassemia	Thalassemia, unspecified ; Alpha thalassemia ; Beta thalassemia
+206	Cerebrovascular disease	Cerebrovascular disease, unspecified ; Cerebral infarction, unspecified
+207	Substance use disorder	Other psychoactive substance dependence, uncomplicated ; Other psychoactive substance abuse, uncomplicated
+208	Mental Health conditions	Mental disorder, not otherwise specified
+209	History of thrombosis with thrombocytopenia following the Janssen COVID-19 Vaccine or any other adenovirus-vectored COVID-19 vaccines	Chronic obstructive pulmonary disease with (acute) exacerbation ; Chronic obstructive pulmonary disease, unspecified
+215	Emphysema	Emphysema, unspecified
+216	Iatrogenic Immunosuppression	Immunodeficiency due to drugs ; Disorder involving the immune mechanism, unspecified
+223	Severe allergic reaction after previous dose of orthopoxvirus vaccine	Atopic dermatitis, unspecified ; Other atopic dermatitis
+225	Household contact with history or presence of atopic dermatitis	Exfoliative dermatitis ; Pemphigus, unspecified
+240	Healthcare personnel who care for patients infected with less virulent orthopoxviruses (e.g., Vaccinia virus or Cowpox virus)	Contact with and (suspected) exposure to other viral communicable diseases
+242	Presumed exposure to mpox	Contact with and (suspected) exposure to other viral communicable diseases
+246	Severe immunocompromise	Immunodeficiency, unspecified ; Immunodeficiency due to drugs ; Common variable immunodeficiency, unspecified
+247	Gay, bisexual, or other man who has sex with men (MSM), or a person who has sex with gay, bisexual, or other MSM who in the past 6 months have had one of the following:  1) A new diagnosis of ≥ 1 sexually transmitted disease 2)  More than one sex partner 3)  Sex at a commercial sex venue 4)  Sex in association with a large public event in a geographic area where mpox transmission is occurring	Moderate persistent asthma, uncomplicated ; Severe persistent asthma, uncomplicated
+254	Chronic cardiovascular disease	Atherosclerotic heart disease of native coronary artery without angina pectoris ; Heart disease, unspecified ; Cardiomyopathy, unspecified
+256	Diabetes mellitus complicated by chronic kidney disease	Morbid (severe) obesity due to excess calories ; Morbid (severe) obesity with alveolar hypoventilation
+258	Chronic hematologic disorders	Disease of blood and blood-forming organs, unspecified
+259	Sickle cell disease	Sickle-cell disease without crisis ; Hb-SS disease with crisis, unspecified
+260	Neurologic or neuromuscular conditions causing impaired airway clearance or respiratory muscle weakness	Problems related to living in residential institution
+262	Frailty	Age-related physical debility
+263	Diabetes mellitus complicated by neuropathy	Type 2 diabetes mellitus with diabetic neuropathy, unspecified ; Type 1 diabetes mellitus with diabetic neuropathy, unspecified ; Other specified diabetes mellitus with diabetic neuropathy, unspecified
+264	Diabetes mellitus complicated by retinopathy	Type 2 diabetes mellitus with unspecified diabetic retinopathy without macular edema ; Type 1 diabetes mellitus with unspecified diabetic retinopathy without macular edema
+265	Diabetes mellitus complicated by end-organ damage	Type 2 diabetes mellitus with hyperglycemia ; Type 2 diabetes mellitus with other specified complication ; Type 1 diabetes mellitus with other specified complication
+266	Diabetes requiring treatment with insulin	Long term (current) use of insulin ; Type 1 diabetes mellitus without complications ; Type 2 diabetes mellitus without complications
+267	Diabetes requiring treatment with sodium-glucose cotransporter-2 (SGLT2) inhibitor	Pancreas transplant status
+269	Transplantation	Transplanted organ and tissue status, unspecified
+270	Severe allergic reaction after previous dose of Chikungunya vaccine	Immunodeficiency with predominantly antibody defects, unspecified ; Nonfamilial hypogammaglobulinemia ; Hereditary hypogammaglobulinemia
+274	Early component complement inhibitor use	Defects in the complement system ; Other long term (current) drug therapy
+277	Laboratory worker with potential for exposure to chikungunya virus	Other hemoglobinopathies ; Thalassemia, unspecified ; Sickle-cell trait

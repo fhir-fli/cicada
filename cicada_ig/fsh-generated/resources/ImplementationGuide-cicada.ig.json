@@ -139,6 +139,14 @@
       },
       {
         "reference": {
+          "reference": "ConceptMap/cdsi-observations"
+        },
+        "description": "Every code system Cicada reads, mapped to CDSi observation codes. 'equivalent' and 'wider' rows assert the observation; 'narrower' and 'relatedto' rows link it for clinical judgement and are not asserted. Built by cicada_generator/tool/build_observation_concept_map.py.",
+        "exampleBoolean": false,
+        "name": "Chart codes to CDSi observations"
+      },
+      {
+        "reference": {
           "reference": "CodeSystem/data-integrity"
         },
         "name": "Cicada Data Integrity Code System",
@@ -299,14 +307,6 @@
       },
       {
         "reference": {
-          "reference": "ConceptMap/Icd10ToCdsiObservation"
-        },
-        "name": "ICD-10-CM to CDSi Observation Code Map",
-        "description": "Maps ICD-10-CM codes to CDSi observation codes used in immunization decision support. Generated from the cicada crosswalk.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
           "reference": "StructureDefinition/ProcedureProfile"
         },
         "name": "Immunization Procedures Profile",
@@ -315,18 +315,10 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/vaccine-medication-codes-rxnorm"
-        },
-        "name": "Immunization-Relevant Medications (RxNorm)",
-        "description": "RxNorm codes for medications relevant to immunization decision support, including antivirals and aspirin.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
           "reference": "ValueSet/immunization-procedures-cpt"
         },
         "name": "Immunization-Relevant Procedures (CPT)",
-        "description": "CPT codes for procedures relevant to immunization decision support, including splenectomy and cochlear implant.",
+        "description": "CPT codes that assert a CDSi observation in ConceptMap cdsi-observations.",
         "exampleBoolean": false
       },
       {
@@ -350,7 +342,7 @@
           "reference": "ValueSet/vaccine-lab-evidence-of-immunity-loinc"
         },
         "name": "Lab Evidence of Immunity (LOINC)",
-        "description": "LOINC codes for laboratory tests that provide evidence of immunity, mapped to CDSi observation codes for immunization decision support. Serum IgG in every case, plus total antibody for hepatitis A, which is what evidence of immunity means for these antigens; IgM, cerebrospinal fluid and avidity codes are deliberately excluded.",
+        "description": "LOINC antibody tests that are laboratory evidence of immunity in ConceptMap cdsi-observations, only with a positive result. IgM, cerebrospinal fluid and avidity codes are deliberately excluded.",
         "exampleBoolean": false
       },
       {
@@ -539,14 +531,6 @@
       },
       {
         "reference": {
-          "reference": "ConceptMap/SnomedToCdsiObservation"
-        },
-        "name": "SNOMED CT to CDSi Observation Code Map",
-        "description": "Maps SNOMED CT codes to CDSi observation codes used in immunization decision support. Generated from CDC's supporting data.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
           "reference": "StructureDefinition/target-dose-status-ext"
         },
         "name": "Target Dose Status",
@@ -606,7 +590,7 @@
           "reference": "ValueSet/vaccine-condition-codes-icd10"
         },
         "name": "Vaccine Condition Codes (ICD-10-CM)",
-        "description": "Value set for conditions based on ICD-10-CM that may impact immunization decisions, mapped to CDSi observation codes.",
+        "description": "ICD-10-CM codes that assert a CDSi observation in ConceptMap cdsi-observations.",
         "exampleBoolean": false
       },
       {

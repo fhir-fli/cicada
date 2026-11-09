@@ -145,6 +145,88 @@ across all 30 antigens — but the XML is still the fallback, not the source.)
 - **CDC**: Each antigen (measles.dart, hepb.dart, etc.) contains an `AntigenSupportingData` instance. `antigenSupportingDataMap` provides disease-name-keyed lookup. `schedule_supporting_data.dart` contains `scheduleSupportingData`.
 - **WHO**: `generated_files/who/` mirrors the same structure with `who` prefix: `whoAntigenSupportingDataMap`, `whoScheduleSupportingData`. The barrel file is `who_generated_supporting_data.dart`.
 
+### Chart codes → CDSi observations: one graded ConceptMap
+
+🔴 Until 2026-10-18 a hand-typed crosswalk was merged into CDC's coded values:
+21 of its 136 observations held another observation's codes (ICD-10 D73.0
+asplenia → 018 hepatitis A immunity), a LOINC antibody test counted whatever its
+result, and the matcher kept only the first observation a code reached. **CDC's
+test cases send CDSi observation codes directly and never reach this path**;
+`test/observation_concept_map_test.dart` does.
+
+- Source of truth: `cicada_generator/lib/crosswalk/ConceptMap-cdsi-observations.json`
+  (FHIR R4, every row graded; only `equivalent`/`wider` assert). Built by
+  `cicada_generator/tool/build_observation_concept_map.py <schedule.json> <UMLS META>
+  <observation_map_policy.json> <CROSSWALK-REVIEW.tsv> <out.json> <decisions.tsv>`.
+  UMLS is Grey's 2025AB release at `/home/grey/dev/graiai/2025AB/META`.
+- ICD-10-CM rows are derived from NLM's SNOMED CT → ICD-10-CM map
+  (`tool/derive_icd10_observation_rows.py`, `tool/umls_snomed.py`). Never type them by hand.
+- Hand decisions live only in `crosswalk/observation_map_policy.json` (each with a
+  reason) and Grey's yes/no column in `CROSSWALK-REVIEW.tsv` (repo root). The sheet is
+  written by `tool/write_review_sheet.py`, which carries the decision and Claude's
+  proposal columns over by (observation, code); the builder reads only the decision.
+- NLM's UMLS MRMAP holds two SNOMEDCT_US map sets (to ICD10CM and to WHO ICD10); only
+  the ICD10CM set is read, and its `?` 7th-character placeholders are expanded to real codes.
+- `cicada_generator/lib/main.dart` emits `cicada/lib/generated_files/observation_concept_map.dart`;
+  `tool/generate_ig_terminology.py` copies the map into the IG and regenerates the
+  ICD-10/LOINC/CPT value sets from it. Rebuild order: builder → main.dart → IG generator,
+  all three run by `cicada_generator/tool/rebuild_observation_map.sh`, which fails if the
+  Dart map and the ConceptMap disagree on target count.
+- Unconfirmed, provisional and differential Conditions count (Grey, 2026-10-18); only
+  refuted and entered-in-error are dropped. Only completed Immunizations and Procedures count.
+- A completed total splenectomy (CPT 38100, 38102, 38120) asserts 160 (Grey, 2026-10-18).
+- Cicada handles PHI and **stores none** (Grey, 2026-10-18).
+- The review sheet's unsure rows were answered by OpenEvidence on 2026-10-19 ("decided by"
+  says so on each row). Rulings from that pass:
+  - Z79.82 alone does not establish 034 long-term aspirin; 034 stays never-from-a-code.
+  - Asthma codes are not 017. CDC's pneumococcal data names 017 from age 2 and 027 asthma
+    only from age 19.
+  - 017 chronic lung disease excludes upper-airway disease (sinusitis, rhinitis, tonsillitis).
+  - 254 chronic cardiovascular disease is cardiac and arterial disease. It excludes venous
+    disease, cerebrovascular disease and isolated hypertension.
+  - 080 is a severe allergy to a vaccine component, not any adverse effect.
+  Applied 2026-10-21 to the rows reached only through CDC SNOMED codes broader than their
+  observation: `observation_map_policy.json` `broad_codes` (016, 017, 040, 080, 086-088,
+  254, 258, 269) and `review_rows` (013 D81.30). `derive_icd10_observation_rows.py` marks
+  those rows, the sheet holds them (1,997 rows), and they count only on a yes. Claude
+  proposed every one (262 yes, 1,426 no, 309 unsure and undecided); all go to OpenEvidence
+  as well (Grey, 2026-10-21: "You should review them AND open evidence should review
+  them"). The codes were found by a census of every CDC code
+  (cicada_generator/tool/broad_code_census.py); 254 and 258 feed only the RSV 50-74 risk
+  series.
+- OpenEvidence 2026-10-20 answered the last five borderline rows:
+  - 066 chronic renal failure needs stage 4-5 or ESRD. I12.9 and N18.9 are 161, not 066.
+  - 076 progressive neurologic disorder: unspecified encephalopathy (G93.40, G93.49) and
+    P91.811 count until shown static; P91.819 (usually hypoxic-ischaemic) does not.
+- OpenEvidence 2026-10-21 answered all 1,997 broad-code rows (each row's "decided by" in
+  CROSSWALK-REVIEW.tsv holds the reason).
+  It agreed with Claude on all but 265:
+  - 016: I21.A9 (types 4-5 follow revascularization) and I51.2 are yes.
+  - 254: A52.04/A52.05 (cerebrovascular, reach 206), Q21.12 PFO, Q25.46-48 arch variants,
+    Q93.82 Williams are no.
+  - 258 is non-malignant chronic blood disease only. Every C code, D45, D46.x, D47.4,
+    D47.Z1/Z2/Z9 (neoplasms; they still reach 178/180/181/198) and D50.1 are no.
+  - 102 chronic arterial and aortic rows under 254 were answered yes in one section and no
+    in another (that one used the pneumococcal "chronic heart disease" wording; 254 is RSV
+    50-74 only). The policy answer, same day: 254 is cardiac plus chronic arterial and
+    aortic disease (ACIP adult schedule addendum 2025-07-02 excludes only isolated
+    hypertension), so 101 are yes; I77.4 celiac artery compression is no. 016 stays
+    heart-only.
+- OpenEvidence 2026-10-21, transplant codes: the three transplant observations are nested.
+  Every billable T86/Z94 code (91) is ruled: bone marrow / stem cell -> 004 + 269; named
+  solid organ, incl. Z94.83 pancreas (islet counts) -> 157 + 269; unspecified (T86.9x,
+  Z94.9) and other tissue (T86.89x, Z94.89) -> 269 only; skin, bone, cornea -> none.
+  D82.1 DiGeorge -> 148 only (complete DiGeorge needs immunologic evidence). NLM's map
+  reaches none of the 75 added pairs, so they live in the policy's `added_icd10cm`
+  section; `write_review_sheet.py` writes them onto the sheet decided yes and refuses a
+  key the derivation already reaches. Z94.89 under 269 reverses OpenEvidence 2026-10-19
+  ("corneal or tissue graft"): cornea has its own code, Z94.7.
+- OpenEvidence 2026-10-21: CDC lists SNOMED 77128003 DiGeorge sequence under both 147 and
+  148; that is the concept spanning the spectrum, not every patient having both. Graded
+  'narrower' under 147 in `code_grades`, so the code asserts 148 only. A CDC SNOMED code
+  graded 'narrower' or 'relatedto' is also no longer a root for the ICD-10-CM derivation
+  (`derive_icd10_observation_rows.asserting_roots`).
+
 ### ImmDS Server
 
 `bin/server.dart` runs a Shelf HTTP server implementing the ImmDS forecast operations:
