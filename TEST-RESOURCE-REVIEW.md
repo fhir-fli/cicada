@@ -103,7 +103,8 @@ carries MedicalProblem and PastIllness (Condition), AllergyIntolerance, and Labo
 |---|---|---|
 | Condition | 109 | SNOMED disorder/finding, or ICD-10-CM only |
 | AllergyIntolerance | 50 | title names an allergy or reaction |
-| Procedure | 12 | SNOMED procedure or CPT |
+| Procedure | 11 | SNOMED procedure or CPT |
+| ServiceRequest | 1 | planned procedure: 002 "Undergoing elective splenectomy" (CDSI-OE-ADJUDICATED.md section 18) |
 | Observation, occupation | 12 | SNOMED occupation |
 | Observation, laboratory | 6 | CDC lists a LOINC code |
 | Condition or Observation, pregnancy | 4 | both forms appear in guides |

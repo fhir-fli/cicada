@@ -42,6 +42,10 @@ class PatientForAssessment extends _$PatientForAssessment {
     // Organizations sent with the request, so a manufacturer given as a
     // literal reference (`Organization/x`) can be resolved.
     final organizations = <String, Organization>{};
+    // Procedures ordered or planned, not yet performed. See
+    // [_plannedObservations].
+    final plannedProcedures =
+        <({CodeableConcept code, String? reference, Period? period})>[];
 
     parameters.parameter?.forEach((parameter) {
       if (parameter.name.valueString == 'assessmentDate' &&
@@ -195,6 +199,22 @@ class PatientForAssessment extends _$PatientForAssessment {
               }
               break;
             }
+          case ServiceRequest _:
+            {
+              final request = parameter.resource! as ServiceRequest;
+              final code = request.code;
+              if (code != null && _isOpenRequest(request)) {
+                plannedProcedures.add((
+                  code: code,
+                  reference:
+                      request.id == null
+                          ? null
+                          : 'ServiceRequest/${request.id}',
+                  period: _periodOf(request.occurrenceX),
+                ));
+              }
+              break;
+            }
           default:
             break;
         }
@@ -298,6 +318,7 @@ class PatientForAssessment extends _$PatientForAssessment {
         allergies,
         pastDoses,
         otherResourceCodes,
+        plannedProcedures,
         implausibleDoses,
         dosesAfterAssessment,
       );
@@ -321,6 +342,8 @@ class PatientForAssessment extends _$PatientForAssessment {
       })
     >
     otherResourceCodes,
+    List<({CodeableConcept code, String? reference, Period? period})>
+    plannedProcedures,
     List<ImplausibleDose> implausibleDoses,
     List<VaxDose> dosesAfterAssessment,
   ) {
@@ -382,6 +405,23 @@ class PatientForAssessment extends _$PatientForAssessment {
     for (final pair in otherResourceCodes) {
       index(pair.reference, pair.code, results: pair.results);
     }
+    // A planned procedure asserts its own observation, never the one the
+    // completed procedure would; it is added and indexed here.
+    for (final planned in plannedProcedures) {
+      final display = _displayOf(planned.code);
+      for (final obs in _plannedObservations(planned.code)) {
+        observations.add(
+          planned.period == null ? obs : obs.copyWith(period: planned.period),
+        );
+        final observationCode = obs.observationCode;
+        if (observationCode == null) continue;
+        if (planned.reference == null && display == null) continue;
+        (observationSources[observationCode] ??= <SupportingResource>{}).add((
+          reference: planned.reference,
+          display: display,
+        ));
+      }
+    }
     return VaxPatient(
       assessmentDate:
           assessmentDate == null
@@ -431,6 +471,59 @@ bool _isInvalidAssertion(CodeableConcept? verificationStatus) =>
           c.code?.toString() == 'refuted' ||
           c.code?.toString() == 'entered-in-error',
     );
+
+/// Planned procedure -> the CDSi observation it asserts, keyed by the
+/// observation the completed procedure asserts through the map.
+///
+/// CDSi observation 002 "Undergoing elective splenectomy" (CDSi 4.65
+/// ScheduleSupportingData.xml) lists no code: `<codedValues/>`. Its clarifying
+/// text: "Vaccination 14 or more days before splenectomy is suggested". A
+/// completed total splenectomy asserts 160 asplenia through the map (Grey,
+/// 2026-10-18: CPT 38100, 38102, 38120; partial splenectomy 38101 and
+/// splenorrhaphy 38115 are not mapped). An order for one of those
+/// procedures is therefore a planned total splenectomy, 002. OpenEvidence,
+/// 2026-11-09 (CDSI-OE-ADJUDICATED.md section 18): drive 002 from an active
+/// ServiceRequest; a Procedure exists only on or after the day of surgery,
+/// too late to vaccinate 14 days before; leave partial splenectomy and
+/// splenorrhaphy out.
+const Map<String, String> _plannedObservationFor = {'160': '002'};
+
+/// The observations an open order for [code] asserts: for each observation
+/// the completed procedure would assert, its planned counterpart in
+/// [_plannedObservationFor]. Any other order asserts nothing: an order for
+/// chemotherapy is not receipt of it. In WHO mode, which has no 002, nothing.
+List<VaxObservation> _plannedObservations(CodeableConcept code) {
+  final planned = <String>{
+    for (final obs in observationsFromCodeableConcept(code))
+      if (_plannedObservationFor[obs.observationCode] != null)
+        _plannedObservationFor[obs.observationCode]!,
+  };
+  if (planned.isEmpty) return const <VaxObservation>[];
+  return [
+    for (final obs
+        in activeScheduleData.observations?.observation ??
+            const <VaxObservation>[])
+      if (planned.contains(obs.observationCode)) obs,
+  ];
+}
+
+/// Whether a ServiceRequest is a live order or plan for the procedure.
+///
+/// Read 2026-11-09 at hl7.org/fhir/R4B/servicerequest.html, Scope and Usage:
+/// ServiceRequest is "a record of a request for a procedure or diagnostic or
+/// other service to be planned, proposed, or performed, as distinguished by
+/// the ServiceRequest.intent field value". Only status active is a live
+/// request; draft, on-hold, revoked, completed, entered-in-error and unknown
+/// are not (OpenEvidence 2026-11-09 left on-hold as a judgment call; it is
+/// out until a ruling says otherwise). Every intent counts except option:
+/// R4B CodeSystem-request-intent.json (read 2026-11-09) defines it as "a
+/// component or option for a RequestGroup", not a request on its own.
+/// OpenEvidence 2026-11-09: a documented plan or proposal is already reason
+/// to vaccinate. doNotPerform true is an instruction not to do it.
+bool _isOpenRequest(ServiceRequest request) =>
+    request.status.toString() == 'active' &&
+    request.intent.toString() != 'option' &&
+    request.doNotPerform?.valueBoolean != true;
 
 /// The concept an Observation asserts, as the published guides send it
 /// (TEST-RESOURCE-REVIEW.md):

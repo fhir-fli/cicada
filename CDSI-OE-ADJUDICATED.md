@@ -495,3 +495,38 @@ No configuration switch is needed while that holds.
 
 Applied: labelled 🛑 DELIBERATE DEVIATION FROM CDSi in
 `patient_for_assessment.dart` and on `ImplausibleDoseReason`.
+
+## 18. ✅ ADJUDICATED 2026-11-09 — "undergoing elective splenectomy" comes from an open order
+
+**OE: drive 002 from an active ServiceRequest, not from a Procedure.** The
+trigger is the moment splenectomy is indicated or scheduled; vaccinate 4–6
+weeks before if possible and at least 2 weeks before. A Procedure record
+exists only on or after the day of surgery, too late. An emergency
+splenectomy reaches the engine as a completed Procedure and is asplenia (160),
+so the CPT codes stay under 160. Sources OE cited: Malpica et al., *Am J
+Hematol* 2019; Casciani et al., *JAMA Surg* 2020; AAP Red Book 2024–2027;
+Ladhani et al., BSH guideline, *Br J Haematol* 2024; Rubin & Schaffner, *NEJM*
+2014; Lenti et al., *Nat Rev Dis Primers* 2022.
+
+On the two edges asked: (1) the order's urgent/routine label does not matter;
+planned versus emergency does, and an urgent-but-planned splenectomy is still
+vaccinated now. (2) Partial splenectomy and splenorrhaphy: no CDC/ACIP
+recommendation; do not map them to 002 or 160.
+
+Facts checked before asking, 2026-11-09: CDSi 4.65 ScheduleSupportingData.xml
+gives 002 `<codedValues/>` (no code); the CPT splenectomy codes once under 002
+were ours, moved to 160 by Grey on 2026-10-18. R4B event-status `preparation`
+is "staging activities have begun (e.g. surgical suite preparation)". HL7's R4
+examples: 16 Procedures (15 completed, 1 not-done, none in preparation); the
+one planned surgery (myringotomy) is a ServiceRequest, active, intent order.
+
+Applied: `_isOpenRequest` and `_plannedObservations` in
+`patient_for_assessment.dart` (status active; every intent but option;
+doNotPerform not true; an order whose code asserts 160 asserts 002);
+`test/planned_procedure_test.dart`; the test generator sends 002 as an active
+ServiceRequest (`assign_resource.py`, `test_case_generator.dart`).
+
+Not applied: OE's suggestions to age out stale active orders ("a set number of
+months", no number given), to use occurrence[x] to raise urgency, and a soft
+advisory for partial splenectomy. On-hold, which OE called a judgment call, is
+not counted.
