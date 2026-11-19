@@ -1,7 +1,7 @@
 import 'package:cicada_flutter/src/screens/welcome_screen.dart';
 import 'package:cicada_flutter/src/theme/cicada_theme.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:material_ui/material_ui.dart';
 
 class CicadaApp extends StatelessWidget {
   const CicadaApp({super.key});

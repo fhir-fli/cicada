@@ -4,7 +4,7 @@ publish_to: 'none'
 version: 0.1.0+1
 
 environment:
-  sdk: ^3.10.4
+  sdk: ^3.13.0
 
 dependencies:
   cicada:
@@ -14,6 +14,7 @@ dependencies:
     sdk: flutter
   flutter_riverpod: ^3.0.0
   intl: ^0.20.0
+  material_ui: ^1.11.1
 
 dev_dependencies:
   flutter_test:

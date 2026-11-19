@@ -3,9 +3,9 @@ import 'dart:async';
 import 'package:cicada_flutter/src/models/patient_info.dart';
 import 'package:cicada_flutter/src/screens/vaccine_entry_screen.dart';
 import 'package:cicada_flutter/src/services/app_state.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:intl/intl.dart';
+import 'package:material_ui/material_ui.dart';
 
 class PatientSetupScreen extends ConsumerStatefulWidget {
   const PatientSetupScreen({super.key});

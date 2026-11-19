@@ -1,6 +1,6 @@
 import 'package:cicada_flutter/src/models/forecast_category.dart';
 import 'package:cicada_flutter/src/theme/cicada_theme.dart';
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 
 class StatusBadge extends StatelessWidget {
   const StatusBadge({super.key, required this.category});
