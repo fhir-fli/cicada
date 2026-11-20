@@ -18,6 +18,39 @@ class VaccineGroupCard extends StatelessWidget {
 
   static final _dateFormat = DateFormat.yMMMd();
 
+  /// The lines under the vaccine group name.
+  ///
+  /// A vaccine group holding a standard and a risk series group gets one
+  /// forecast for each (CDSi Logic Specification v4.6, Table 9-2
+  /// FORECASTVG-1; Chapter 9 intro: patients "may end up with more than 1
+  /// vaccine group forecast for a given vaccine group"), so two cards can carry
+  /// the same group name. A risk card says so, and names the chart entries
+  /// that put the patient on that series (the forecast's
+  /// supportingReferences), so the two can be told apart.
+  Widget? _subtitle(ThemeData theme) {
+    final lines = <String>[
+      if (forecast.antigenNames.length > 1) forecast.antigenNames.join(', '),
+      if (forecast.isRiskForecast) _riskLine(),
+    ];
+    if (lines.isEmpty) return null;
+    return Text(
+      lines.join('\n'),
+      style: theme.textTheme.bodySmall?.copyWith(
+        color: theme.colorScheme.onSurfaceVariant,
+      ),
+    );
+  }
+
+  String _riskLine() {
+    final label = forecast.seriesGroupName ?? 'Increased risk';
+    final because = forecast.supportingReferences
+        .map((r) => r.display)
+        .whereType<String>()
+        .toSet()
+        .join(', ');
+    return because.isEmpty ? label : '$label: $because';
+  }
+
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
@@ -31,14 +64,7 @@ class VaccineGroupCard extends StatelessWidget {
             fontWeight: FontWeight.w600,
           ),
         ),
-        subtitle: forecast.antigenNames.length > 1
-            ? Text(
-                forecast.antigenNames.join(', '),
-                style: theme.textTheme.bodySmall?.copyWith(
-                  color: theme.colorScheme.onSurfaceVariant,
-                ),
-              )
-            : null,
+        subtitle: _subtitle(theme),
         trailing: StatusBadge(category: category),
         children: [
           Padding(
