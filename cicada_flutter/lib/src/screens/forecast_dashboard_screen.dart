@@ -3,9 +3,9 @@ import 'package:cicada_flutter/src/models/forecast_category.dart';
 import 'package:cicada_flutter/src/models/patient_info.dart';
 import 'package:cicada_flutter/src/services/app_state.dart';
 import 'package:cicada_flutter/src/widgets/vaccine_group_card.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:intl/intl.dart';
+import 'package:material_ui/material_ui.dart';
 
 class ForecastDashboardScreen extends ConsumerWidget {
   const ForecastDashboardScreen({super.key});

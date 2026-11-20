@@ -2,8 +2,8 @@ import 'package:cicada_flutter/src/models/sample_patients.dart';
 import 'package:cicada_flutter/src/screens/patient_setup_screen.dart';
 import 'package:cicada_flutter/src/screens/vaccine_entry_screen.dart';
 import 'package:cicada_flutter/src/services/app_state.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:material_ui/material_ui.dart';
 
 class WelcomeScreen extends ConsumerWidget {
   const WelcomeScreen({super.key});

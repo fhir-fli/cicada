@@ -1,8 +1,8 @@
 import 'package:cicada/cicada.dart';
 import 'package:cicada_flutter/src/models/forecast_category.dart';
 import 'package:cicada_flutter/src/widgets/status_badge.dart';
-import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import 'package:material_ui/material_ui.dart';
 
 class VaccineGroupCard extends StatelessWidget {
   const VaccineGroupCard({

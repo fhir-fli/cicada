@@ -6,9 +6,9 @@ import 'package:cicada_flutter/src/models/vaccine_data.dart';
 import 'package:cicada_flutter/src/screens/forecast_dashboard_screen.dart';
 import 'package:cicada_flutter/src/services/app_state.dart';
 import 'package:cicada_flutter/src/services/forecast_service.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:intl/intl.dart';
+import 'package:material_ui/material_ui.dart';
 
 class VaccineEntryScreen extends ConsumerStatefulWidget {
   const VaccineEntryScreen({super.key});
@@ -161,20 +161,18 @@ class _VaccineEntryScreenState extends ConsumerState<VaccineEntryScreen> {
   }
 
   void _showAddVaccineSheet(BuildContext context) {
-    unawaited(
-      showModalBottomSheet<void>(
-        context: context,
-        isScrollControlled: true,
-        useSafeArea: true,
-        builder: (_) => DraggableScrollableSheet(
-          initialChildSize: 0.85,
-          minChildSize: 0.5,
-          maxChildSize: 0.95,
-          expand: false,
-          builder: (context, scrollController) => _VaccinePickerSheet(
-            scrollController: scrollController,
-            onSelected: _addVaccine,
-          ),
+    showModalBottomSheet<void>(
+      context: context,
+      isScrollControlled: true,
+      useSafeArea: true,
+      builder: (_) => DraggableScrollableSheet(
+        initialChildSize: 0.85,
+        minChildSize: 0.5,
+        maxChildSize: 0.95,
+        expand: false,
+        builder: (context, scrollController) => _VaccinePickerSheet(
+          scrollController: scrollController,
+          onSelected: _addVaccine,
         ),
       ),
     );
