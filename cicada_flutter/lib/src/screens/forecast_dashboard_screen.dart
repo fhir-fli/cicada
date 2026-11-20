@@ -8,7 +8,11 @@ import 'package:intl/intl.dart';
 import 'package:material_ui/material_ui.dart';
 
 class ForecastDashboardScreen extends ConsumerWidget {
-  const ForecastDashboardScreen({super.key});
+  const ForecastDashboardScreen({super.key, this.fromChart = false});
+
+  /// Whether the forecast was read from the EHR chart. The doses are the
+  /// chart's, so there is nothing to edit and no screen to go back to.
+  final bool fromChart;
 
   static final _dateFormat = DateFormat.yMMMd();
 
@@ -75,12 +79,14 @@ class ForecastDashboardScreen extends ConsumerWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Forecast Results'),
+        automaticallyImplyLeading: !fromChart,
         actions: [
-          IconButton(
-            icon: const Icon(Icons.edit),
-            tooltip: 'Edit vaccines',
-            onPressed: () => Navigator.of(context).pop(),
-          ),
+          if (!fromChart)
+            IconButton(
+              icon: const Icon(Icons.edit),
+              tooltip: 'Edit vaccines',
+              onPressed: () => Navigator.of(context).pop(),
+            ),
         ],
       ),
       body: SafeArea(
@@ -219,8 +225,12 @@ class ForecastDashboardScreen extends ConsumerWidget {
             const SizedBox(width: 8),
             Expanded(
               child: Text(
-                'Based on the information you entered. '
-                'Discuss with your healthcare provider.',
+                fromChart
+                    ? 'Based on the immunizations, conditions, allergies, '
+                          'laboratory results, social history and procedures '
+                          'in this chart. Medications are not read.'
+                    : 'Based on the information you entered. '
+                          'Discuss with your healthcare provider.',
                 style: theme.textTheme.bodySmall?.copyWith(
                   color: theme.colorScheme.onSurfaceVariant,
                 ),

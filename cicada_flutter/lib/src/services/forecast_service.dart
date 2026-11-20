@@ -14,6 +14,10 @@ class ForecastService {
     return evaluateForForecast(parameters);
   }
 
+  /// Run the forecast on [parameters] read from a patient's chart.
+  static ForecastResult runForecastOnChart(Parameters parameters) =>
+      evaluateForForecast(parameters);
+
   /// Build a FHIR [Parameters] resource from user-entered data.
   static Parameters _buildParameters(
     PatientInfo info,
