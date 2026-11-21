@@ -10,7 +10,6 @@ dependencies:
   args: ^2.4.2
   collection: ^1.19.1
   fhir_r4: ^0.14.0
-  fhir_r4_bulk: ^0.14.0
   riverpod: ^3.3.2
   riverpod_annotation: ^4.0.3
   shelf: ^1.4.2
@@ -19,6 +18,7 @@ dependencies:
 
 dev_dependencies:
   build_runner: ^2.11.0
+  fhir_r4_bulk: ^0.14.0
   riverpod_generator: ^4.0.4
   test: ^1.29.0
   very_good_analysis: ^10.1.0

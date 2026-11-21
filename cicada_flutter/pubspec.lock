@@ -180,18 +180,18 @@ packages:
     dependency: "direct main"
     description:
       name: fhir_auth
-      sha256: "0b0c27226b5b4bc010e37c160e959edfb53652660633f783f1f0b2ab7eafe25a"
+      sha256: "09dfb8e273bd96698df69ab08c91bd38a6b2f6e12183eb2d155332fe9fa3c34b"
       url: "https://pub.dev"
     source: hosted
-    version: "0.14.0"
-  fhir_bulk:
+    version: "0.15.0"
+  fhir_auth_core:
     dependency: transitive
     description:
-      name: fhir_bulk
-      sha256: fad07ef6e6a4ba9eb70f2e5af31402a4c34edd3ad4f4682bd6cae4d11bce4f20
+      name: fhir_auth_core
+      sha256: "2903403e98bbcab9fa05de19aa8366795d775027d2b6e0bb3c99a509c8c090fe"
       url: "https://pub.dev"
     source: hosted
-    version: "0.13.0"
+    version: "0.15.0"
   fhir_node:
     dependency: transitive
     description:
@@ -205,14 +205,6 @@ packages:
     description:
       name: fhir_r4
       sha256: "654b4cf3648415028e416df9d1ec21fd0cad147790a304ac1c1559966cd994da"
-      url: "https://pub.dev"
-    source: hosted
-    version: "0.14.0"
-  fhir_r4_bulk:
-    dependency: transitive
-    description:
-      name: fhir_r4_bulk
-      sha256: be573fddfa514617b105071ee40a1042f77023c727d0b8d88850ae94f704e1c8
       url: "https://pub.dev"
     source: hosted
     version: "0.14.0"
