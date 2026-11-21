@@ -261,9 +261,9 @@ and `antigensNeedingDose` so a consumer can tell them apart.
 per case and never says which series group it means, so the test harness picks
 one via `collapseForComparison` in `cicada/test/cdc_row_collapse.dart`. That
 rule is an artefact of CDC's file format and **must not move into `lib/`**. It
-is duplicated into `cicada_generator/lib/cdc_row_collapse.dart` because the two
-packages cannot depend on each other (excel pins archive 3.x, fhir_r4_bulk needs
-4.x); `cdc_row_collapse_sync_test.dart` fails if the copies drift.
+is duplicated into `cicada_generator/lib/cdc_row_collapse.dart` because another
+package can import only `lib/`; `cdc_row_collapse_sync_test.dart` fails if the
+copies drift.
 
 ## Check every package, not the one you have open
 
