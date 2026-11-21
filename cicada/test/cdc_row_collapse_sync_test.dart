@@ -7,10 +7,9 @@ import 'package:test/test.dart';
 /// `cicada_generator/lib/cdc_row_collapse.dart` so the disputed-case report and
 /// the case auditor pick the same forecast the suite compares against.
 ///
-/// They are copies because a relative import cannot cross a package boundary
-/// and the two packages cannot depend on each other: cicada_generator needs
-/// `excel`, which pins `archive` 3.x, while cicada needs `fhir_r4_bulk`, which
-/// needs `archive` 4.x.
+/// They are copies because the rule must stay out of cicada's `lib/`, and
+/// cicada_generator can import only `lib/` (a `package:` URI never reaches
+/// `test/`).
 ///
 /// If they drift, the suite and the report disagree about which cases fail.
 /// This test makes that impossible to do quietly.

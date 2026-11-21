@@ -1,8 +1,8 @@
 // Canonical copy. `cicada_generator/lib/cdc_row_collapse.dart` must hold the
 // same `collapseForComparison`; `cdc_row_collapse_sync_test.dart` fails if the
-// two drift apart. They are duplicated rather than shared because a relative
-// import cannot cross a package boundary and the two packages cannot depend on
-// each other (excel pins archive 3.x, fhir_r4_bulk needs 4.x).
+// two drift apart. They are duplicated rather than shared because this rule
+// must stay out of cicada's lib/, and another package can import only lib/
+// (a package: URI never reaches test/).
 
 import 'package:cicada/cicada.dart';
 
