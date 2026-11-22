@@ -458,7 +458,7 @@ class VaxSeries {
 
   /// ⚠️ DELIBERATE DEVIATION from the literal text of Table 6-7, kept because
   /// the literal reading is clinically wrong. Decided 2026-08-28. Reported to
-  /// CDC; see CDSI-OE-QUERIES.md section 13.
+  /// CDC; see CDSI-OE-ADJUDICATED.md section 13.
   ///
   /// Table 6-7 asks only: "Does the Conditional Skip Series Group identify a
   /// Series Group with at least one relevant patient series with a patient

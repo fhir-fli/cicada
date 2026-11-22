@@ -354,7 +354,9 @@ applied to infants and forecast them at **birth date plus 75 years** — a
 **Adjudicate the remaining failures per case, not as a block.** Cases whose
 supporting data has genuinely moved under them (observation codes retired, an
 RSV season rolled forward, a licensed minimum age lowered) are written up with
-CDC's own row and the clinical question in `CDSI-OE-QUERIES.md`; anything we
+CDC's own row and the clinical question in
+`cicada_generator/lib/crosswalk/oe_policy_questions.md` (pasted to OpenEvidence
+from `CHART-CODE-OE-QUESTIONS.md`); anything we
 conclude CDC got *wrong* goes in there too, for outside adjudication, rather
 than being silently conformed to or silently ignored.
 

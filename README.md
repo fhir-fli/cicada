@@ -252,10 +252,11 @@ Results against CDSi supporting data 4.66-508 (2026-11-21):
   targetDisease coding order (NO_MATCH with CVX first *and* with SNOMED first),
   `date` semantics, the `seriesDoses` choice type, and missing `id`/`meta`.
   Each was a real defect and was fixed anyway. The remaining cause is inside
-  the FITS connector — **ask NIST rather than reshaping the response further.**
+  the FITS connector: NIST confirmed on 2026-08-31 that the bug is in their FHIR R4
+  connector. **Do not reshape the response;** re-run once their fix is deployed.
 
 Every one of the 26 disagreements is written up case by case in
-`CDSI-DISPUTED-CASES.md`, with the clinical adjudication in `CDSI-OE-QUERIES.md`.
+`CDSI-DISPUTED-CASES.md`, with the clinical adjudication in `CDSI-OE-ADJUDICATED.md`.
 23 have been put to an evidence review against current ACIP: most rule for
 cicada against a stale CDC test row, three are defects in CDC's supporting data,
 and where the review ruled against cicada the engine was fixed. One more fails deliberately: a rule that had made it pass appeared in no CDSi
