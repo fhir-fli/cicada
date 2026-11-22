@@ -97,9 +97,24 @@ class ChartReader {
     required String patientId,
     required DateTime assessmentDate,
   }) async {
-    final patient = Resource.fromJson(
-      await _getJson(_url('Patient/${Uri.encodeComponent(patientId)}')),
-    );
+    // The Patient read and the searches do not depend on one another, so
+    // they are all sent at once and the chart takes as long as the slowest
+    // one rather than the sum. Results are used in [searches] order, so the
+    // engine's input is the same as reading them one by one. Each search's
+    // own pages still follow one another: a page's `next` link is only
+    // known once the page has arrived.
+    // Future.wait fails with the first error to arrive, unwrapped, and
+    // keeps the others from going unhandled.
+    final all = await Future.wait<Object>([
+      _getJson(_url('Patient/${Uri.encodeComponent(patientId)}')),
+      for (final (type, query) in searches) _search(type, query, patientId),
+    ]);
+    final patientJson = all.first as Map<String, dynamic>;
+    final results = all
+        .skip(1)
+        .cast<(List<Resource>, ChartSearchReport)>()
+        .toList();
+    final patient = Resource.fromJson(patientJson);
     if (patient is! Patient) {
       throw ChartReadException(
         'Patient/$patientId answered a ${patient.resourceType}, not a Patient',
@@ -116,8 +131,9 @@ class ChartReader {
     final reports = <ChartSearchReport>[];
     // A resource two searches both return is sent once.
     final added = <String>{};
-    for (final (type, query) in searches) {
-      final (resources, report) = await _search(type, query, patientId);
+    for (var i = 0; i < searches.length; i++) {
+      final type = searches[i].$1;
+      final (resources, report) = results[i];
       reports.add(report);
       for (final resource in resources) {
         final id = resource.id?.valueString;

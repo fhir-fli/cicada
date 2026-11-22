@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:convert';
 
 import 'package:cicada/cicada.dart';
@@ -57,7 +58,9 @@ const _patient = {
 
 /// A server holding one patient with three immunizations split over two
 /// pages, an OperationOutcome note in the first page, and nothing else.
-MockClient _server(List<Uri> asked) => MockClient((request) async {
+MockClient _server(List<Uri> asked) => MockClient(_answer(asked));
+
+MockClientHandler _answer(List<Uri> asked) => (request) async {
   asked.add(request.url);
   final url = request.url;
   if (url.path == '/fhir/Patient/p1') return _json(_patient);
@@ -100,7 +103,7 @@ MockClient _server(List<Uri> asked) => MockClient((request) async {
     );
   }
   return _json(_bundle([]));
-});
+};
 
 class _FakeWindow implements BrowserWindow {
   _FakeWindow(this.location);
@@ -162,6 +165,42 @@ void main() {
           reason: '$type $query',
         );
       }
+    });
+
+    test('sends the Patient read and every search before any answer', () async {
+      // Each answer is held until all seven first requests have arrived;
+      // a reader that waits for one answer before the next request never
+      // gets there and the gate times out.
+      final answer = _answer([]);
+      final firstRequests = 1 + ChartReader.searches.length;
+      var arrived = 0;
+      var mostInFlight = 0;
+      var inFlight = 0;
+      final allArrived = Completer<void>();
+      final client = MockClient((request) async {
+        if (request.url.queryParameters['page'] == null) arrived += 1;
+        inFlight += 1;
+        if (inFlight > mostInFlight) mostInFlight = inFlight;
+        if (arrived == firstRequests && !allArrived.isCompleted) {
+          allArrived.complete();
+        }
+        await allArrived.future.timeout(const Duration(seconds: 2));
+        inFlight -= 1;
+        return answer(request);
+      });
+      final read = await ChartReader(
+        client: client,
+        fhirBase: Uri.parse(_base),
+      ).read(patientId: 'p1', assessmentDate: DateTime(2026, 11, 19));
+      expect(mostInFlight, firstRequests);
+      // Same engine input as before: the Immunization pages in order.
+      expect(
+        read.parameters.parameter!
+            .map((p) => p.resource)
+            .whereType<Immunization>()
+            .map((i) => i.id!.valueString),
+        ['i1', 'i2', 'i3'],
+      );
     });
 
     test('an Observation two searches return is sent once', () async {
@@ -227,10 +266,10 @@ void main() {
     });
 
     test('a next link that repeats ends the read at once', () async {
-      var searches = 0;
+      final fetched = <String>[];
       final client = MockClient((request) async {
         if (request.url.path.endsWith('/Patient/p1')) return _json(_patient);
-        searches += 1;
+        fetched.add(request.url.toString());
         return _json(_bundle([], next: request.url.toString()));
       });
       await expectLater(
@@ -240,8 +279,10 @@ void main() {
         ).read(patientId: 'p1', assessmentDate: DateTime(2026, 11, 19)),
         throwsA(isA<ChartReadException>()),
       );
-      // The repeat is caught before it is fetched a second time.
-      expect(searches, 1);
+      // The repeat is caught before any page is fetched a second time.
+      // The searches run at once, so each has fetched its first page.
+      expect(fetched.toSet(), hasLength(fetched.length));
+      expect(fetched, hasLength(ChartReader.searches.length));
     });
   });
 
