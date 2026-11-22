@@ -1,9 +1,9 @@
 [2016-UC-0032]: Patient-2016-UC-0032.html
-[2016-UC-0032-055]: Condition-2016-UC-0032-055.html
 [2016-UC-0032-1]: ImmunizationEvaluation-2016-UC-0032-1.html
 [2016-UC-0032-2]: ImmunizationEvaluation-2016-UC-0032-2.html
 [2016-UC-0032-3]: ImmunizationEvaluation-2016-UC-0032-3.html
 [2016-UC-0032-dose1]: Immunization-2016-UC-0032-dose1.html
+[2016-UC-0032-obs1]: Observation-2016-UC-0032-obs1.html
 [ReactionProfile]: StructureDefinition-ReactionProfile.html
 [allergy-vaccine-reaction]: AllergyIntolerance-allergy-vaccine-reaction.html
 [AntigenNeedingDose]: StructureDefinition-antigen-needing-dose-ext.html

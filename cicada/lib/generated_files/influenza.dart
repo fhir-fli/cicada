@@ -114,14 +114,21 @@ final AntigenSupportingData influenza = AntigenSupportingData.fromJson({
           'observationTitle': 'Asthma',
           'contraindicationText':
               'Do not vaccinate with live attenuated influenza virus '
-              '(LAIV) if the patient is between 2 and 4 years and has '
+              '(LAIV) if the patient is between 2 and 5 years and has '
               'asthma.',
+          'contraindicationGuidance':
+              'Children aged 2 through 4 years who have received a '
+              'diagnosis of asthma or whose parents or caregivers report '
+              'that a health care provider has told them during the '
+              'preceding 12 months that their child had wheezing or asthma '
+              'or whose medical record indicates a wheezing episode has '
+              'occurred during the preceding 12 months.',
           'contraindicatedVaccine': [
             {
               'vaccineType': 'influenza, live, trivalent, intranasal',
               'cvx': '111',
               'beginAge': '2 years',
-              'endAge': '4 years',
+              'endAge': '5 years',
             },
             {
               'vaccineType':
@@ -129,7 +136,7 @@ final AntigenSupportingData influenza = AntigenSupportingData.fromJson({
                   'admin, PF',
               'cvx': '333',
               'beginAge': '2 years',
-              'endAge': '4 years',
+              'endAge': '5 years',
             },
           ],
         },
@@ -160,14 +167,19 @@ final AntigenSupportingData influenza = AntigenSupportingData.fromJson({
           'observationTitle': 'Receiving long-term aspirin therapy',
           'contraindicationText':
               'Do not vaccinate with live attenuated influenza virus '
-              '(LAIV) if the patient is between 2 and 17 years and is '
+              '(LAIV) if the patient is between 2 and 19 years and is '
               'receiving long-term aspirin therapy.',
+          'contraindicationGuidance':
+              'Children and adolescents (aged 6 months through 18 years) '
+              'who are receiving aspirin- or salicylate-containing '
+              'medications and who might be at risk for experiencing Reye '
+              'syndrome after influenza virus infection.',
           'contraindicatedVaccine': [
             {
               'vaccineType': 'influenza, live, trivalent, intranasal',
               'cvx': '111',
               'beginAge': '2 years',
-              'endAge': '17 years',
+              'endAge': '19 years',
             },
             {
               'vaccineType':
@@ -175,7 +187,7 @@ final AntigenSupportingData influenza = AntigenSupportingData.fromJson({
                   'admin, PF',
               'cvx': '333',
               'beginAge': '2 years',
-              'endAge': '17 years',
+              'endAge': '19 years',
             },
           ],
         },
@@ -675,14 +687,13 @@ final AntigenSupportingData influenza = AntigenSupportingData.fromJson({
             'receive influenza vaccine. Any influenza vaccine (egg based '
             'or non-egg based) that is otherwise appropriate for the '
             "recipient's age and health status can be used.",
-        'Solid organ transplant recipients aged 19 through 64 years '
+        'Solid organ transplant recipients aged 18 through 64 years '
             'receiving immunosuppressive medications can receive HD-IIV3 '
             'or aIIV3. No preference over other age-appropriate IIV3 or '
             'RIV3 vaccines.',
-        'For most people who need only one dose of influenza vaccine '
-            'for the season, September and October are generally good '
-            'times to be vaccinated against influenza. Ideally, everyone '
-            'should be vaccinated by the end of October.',
+        'For most persons who need only 1 dose of influenza vaccine '
+            'for the season, vaccination should ideally be offered during '
+            'September or October.',
       ],
       'seriesType': 'Standard',
       'selectSeries': {
@@ -733,15 +744,6 @@ final AntigenSupportingData influenza = AntigenSupportingData.fromJson({
             {
               'vaccineType': 'Influenza, split virus, trivalent, PF',
               'cvx': '140',
-              'beginAge': '3 years',
-              'tradeName': 'Afluria trivalent, preservative free',
-              'mvx': 'SEQ',
-              'volume': '0.5',
-              'forecastVaccineType': 'N',
-            },
-            {
-              'vaccineType': 'Influenza, split virus, trivalent, PF',
-              'cvx': '140',
               'beginAge': '6 months',
               'tradeName': 'Flulaval trivalent, preservative free',
               'mvx': 'IDB',
@@ -768,34 +770,8 @@ final AntigenSupportingData influenza = AntigenSupportingData.fromJson({
               'forecastVaccineType': 'N',
             },
             {
-              'vaccineType': 'Influenza, split virus, trivalent, preservative',
-              'cvx': '141',
-              'beginAge': '3 years',
-              'tradeName': 'Afluria trivalent, with preservative',
-              'mvx': 'SEQ',
-              'volume': '0.5',
-              'forecastVaccineType': 'N',
-            },
-            {
-              'vaccineType': 'Influenza, split virus, trivalent, preservative',
-              'cvx': '141',
-              'beginAge': '6 months',
-              'endAge': '3 years',
-              'tradeName': 'Afluria trivalent, with preservative',
-              'mvx': 'SEQ',
-              'volume': '0.25',
-              'forecastVaccineType': 'N',
-            },
-            {
               'vaccineType': 'Influenza, MDCK, trivalent, PF',
               'cvx': '153',
-              'beginAge': '6 months',
-              'volume': '0.5',
-              'forecastVaccineType': 'N',
-            },
-            {
-              'vaccineType': 'Influenza, MDCK, trivalent, preservative',
-              'cvx': '320',
               'beginAge': '6 months',
               'volume': '0.5',
               'forecastVaccineType': 'N',
@@ -954,8 +930,8 @@ final AntigenSupportingData influenza = AntigenSupportingData.fromJson({
           ],
           'recurringDose': 'No',
           'seasonalRecommendation': {
-            'startDate': '2025-07-01',
-            'endDate': '2026-06-30',
+            'startDate': '2026-07-01',
+            'endDate': '2027-06-30',
           },
         },
         {
@@ -1005,15 +981,6 @@ final AntigenSupportingData influenza = AntigenSupportingData.fromJson({
             {
               'vaccineType': 'Influenza, split virus, trivalent, PF',
               'cvx': '140',
-              'beginAge': '3 years',
-              'tradeName': 'Afluria trivalent, preservative free',
-              'mvx': 'SEQ',
-              'volume': '0.5',
-              'forecastVaccineType': 'N',
-            },
-            {
-              'vaccineType': 'Influenza, split virus, trivalent, PF',
-              'cvx': '140',
               'beginAge': '6 months',
               'tradeName': 'Flulaval trivalent, preservative free',
               'mvx': 'IDB',
@@ -1040,25 +1007,6 @@ final AntigenSupportingData influenza = AntigenSupportingData.fromJson({
               'forecastVaccineType': 'N',
             },
             {
-              'vaccineType': 'Influenza, split virus, trivalent, preservative',
-              'cvx': '141',
-              'beginAge': '3 years',
-              'tradeName': 'Afluria trivalent, with preservative',
-              'mvx': 'SEQ',
-              'volume': '0.5',
-              'forecastVaccineType': 'N',
-            },
-            {
-              'vaccineType': 'Influenza, split virus, trivalent, preservative',
-              'cvx': '141',
-              'beginAge': '6 months',
-              'endAge': '3 years',
-              'tradeName': 'Afluria trivalent, with preservative',
-              'mvx': 'SEQ',
-              'volume': '0.25',
-              'forecastVaccineType': 'N',
-            },
-            {
               'vaccineType': 'Influenza, MDCK, trivalent, PF',
               'cvx': '153',
               'beginAge': '6 months',
@@ -1076,13 +1024,6 @@ final AntigenSupportingData influenza = AntigenSupportingData.fromJson({
               'vaccineType': 'Influenza, adjuvanted, trivalent, PF',
               'cvx': '168',
               'beginAge': '65 years',
-              'volume': '0.5',
-              'forecastVaccineType': 'N',
-            },
-            {
-              'vaccineType': 'Influenza, MDCK, trivalent, preservative',
-              'cvx': '320',
-              'beginAge': '6 months',
               'volume': '0.5',
               'forecastVaccineType': 'N',
             },
@@ -1230,6 +1171,11 @@ final AntigenSupportingData influenza = AntigenSupportingData.fromJson({
               'beginAge': '6 months - 4 days',
               'endAge': '50 years',
             },
+            {
+              'vaccineType': 'Influenza, mRNA, trivalent, PF',
+              'cvx': '338',
+              'beginAge': '50 years - 4 days',
+            },
           ],
           'conditionalSkip': [
             {
@@ -1245,15 +1191,15 @@ final AntigenSupportingData influenza = AntigenSupportingData.fromJson({
                     {
                       'conditionID': '1',
                       'conditionType': 'Vaccine Count by Date',
-                      'startDate': '2025-07-01',
-                      'endDate': '2026-06-30',
+                      'startDate': '2026-07-01',
+                      'endDate': '2027-06-30',
                       'doseCount': '1',
                       'doseType': 'Valid',
                       'doseCountLogic': 'greater than',
                       'vaccineTypes':
                           '15; 16; 88; 111; 135; 140; 141; 144; 149; 150; '
                           '151; 153; 155; 158; 161; 166; 168; 171; 185; '
-                          '186; 197; 205; 320; 333',
+                          '186; 197; 205; 320; 333; 338',
                     },
                   ],
                 },
@@ -1269,15 +1215,15 @@ final AntigenSupportingData influenza = AntigenSupportingData.fromJson({
                     {
                       'conditionID': '1',
                       'conditionType': 'Vaccine Count by Date',
-                      'startDate': '2025-07-01',
-                      'endDate': '2026-06-30',
+                      'startDate': '2026-07-01',
+                      'endDate': '2027-06-30',
                       'doseCount': '0',
                       'doseType': 'Valid',
                       'doseCountLogic': 'greater than',
                       'vaccineTypes':
                           '15; 16; 88; 111; 135; 140; 141; 144; 149; 150; '
                           '151; 153; 155; 158; 161; 166; 168; 171; 185; '
-                          '186; 197; 205; 320; 333',
+                          '186; 197; 205; 320; 333; 338',
                     },
                     {
                       'conditionID': '2',
@@ -1289,7 +1235,7 @@ final AntigenSupportingData influenza = AntigenSupportingData.fromJson({
                       'vaccineTypes':
                           '15; 16; 88; 111; 135; 140; 141; 144; 149; 150; '
                           '151; 153; 155; 158; 161; 166; 168; 171; 185; '
-                          '186; 197; 205; 320; 333',
+                          '186; 197; 205; 320; 333; 338',
                     },
                   ],
                 },
@@ -1298,33 +1244,33 @@ final AntigenSupportingData influenza = AntigenSupportingData.fromJson({
                   'setDescription':
                       'Dose is not required if the patient has received 1 '
                       'or more doses during the current season AND patient '
-                      'has received 2 or more doses before July 1, 2025.',
+                      'has received 2 or more doses before July 1, 2026.',
                   'conditionLogic': 'AND',
                   'condition': [
                     {
                       'conditionID': '1',
                       'conditionType': 'Vaccine Count by Date',
-                      'startDate': '2025-07-01',
-                      'endDate': '2026-06-30',
+                      'startDate': '2026-07-01',
+                      'endDate': '2027-06-30',
                       'doseCount': '0',
                       'doseType': 'Valid',
                       'doseCountLogic': 'greater than',
                       'vaccineTypes':
                           '15; 16; 88; 111; 135; 140; 141; 144; 149; 150; '
                           '151; 153; 155; 158; 161; 166; 168; 171; 185; '
-                          '186; 197; 205; 320; 333',
+                          '186; 197; 205; 320; 333; 338',
                     },
                     {
                       'conditionID': '2',
                       'conditionType': 'Vaccine Count by Date',
-                      'endDate': '2025-07-01',
+                      'endDate': '2026-07-01',
                       'doseCount': '1',
                       'doseType': 'Valid',
                       'doseCountLogic': 'greater than',
                       'vaccineTypes':
                           '15; 16; 88; 111; 135; 140; 141; 144; 149; 150; '
                           '151; 153; 155; 158; 161; 166; 168; 171; 185; '
-                          '186; 197; 205; 320; 333',
+                          '186; 197; 205; 320; 333; 338',
                     },
                   ],
                 },
@@ -1333,8 +1279,8 @@ final AntigenSupportingData influenza = AntigenSupportingData.fromJson({
           ],
           'recurringDose': 'Yes',
           'seasonalRecommendation': {
-            'startDate': '2025-07-01',
-            'endDate': '2026-06-30',
+            'startDate': '2026-07-01',
+            'endDate': '2027-06-30',
           },
         },
       ],
@@ -1351,7 +1297,7 @@ final AntigenSupportingData influenza = AntigenSupportingData.fromJson({
       'excludedIndication': 'n/a',
       'category': 'Routine',
       'additionalMaterial':
-          'https://www.cdc.gov/flu/hcp/vax-summary/index.html',
+          'https://www.cdc.gov/flu/hcp/vax-summary/seasonal-influenza-vaccines.html',
     },
   ],
 });

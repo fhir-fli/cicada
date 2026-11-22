@@ -1119,9 +1119,41 @@
     {
       "code": "280",
       "display": "Chronic lung disease of prematurity"
+    },
+    {
+      "code": "281",
+      "display": "Born preterm, at less than 32 weeks, 0 days gestation"
+    },
+    {
+      "code": "282",
+      "display": "Chronic lung disease attributable to other significant neonatal conditions"
+    },
+    {
+      "code": "283",
+      "display": "Hemodynamically significant congenital heart disease"
+    },
+    {
+      "code": "284",
+      "display": "Anatomic pulmonary abnormalities"
+    },
+    {
+      "code": "285",
+      "display": "Neuromuscular disorders"
+    },
+    {
+      "code": "286",
+      "display": "Autoimmune immunosuppression"
+    },
+    {
+      "code": "287",
+      "display": "Severe allergic reaction (e.g., anaphylaxis) after a previous dose or to a component of an mRNA COVID-19 vaccine"
+    },
+    {
+      "code": "288",
+      "display": "Severe allergic reaction (e.g., anaphylaxis) after a previous dose or to a component of a Novavax COVID-19 vaccine"
     }
   ],
   "caseSensitive": true,
   "experimental": false,
-  "count": 278
+  "count": 286
 }

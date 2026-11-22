@@ -23,4 +23,4 @@ const String cicadaEngineVersion = '0.0.1';
 /// The CDSi supporting-data release the generated antigen files were built
 /// from. A forecast is a function of the engine AND the schedule data, so both
 /// belong in the response.
-const String cdsiSupportingDataVersion = '4.65-508';
+const String cdsiSupportingDataVersion = '4.66-508';

@@ -29,5 +29,18 @@ void main() {
         reason: 'CLAUDE.md names a different CDSi release than the constant',
       );
     });
+
+    // The docs alone let the constant say 4.65 while the generator read
+    // another release; the source folder is what the data was built from.
+    test('cdsiSupportingDataVersion is the release the generator reads', () {
+      final releases =
+          Directory('../cicada_generator/lib')
+              .listSync()
+              .whereType<Directory>()
+              .map((d) => d.uri.pathSegments.where((s) => s.isNotEmpty).last)
+              .where((n) => n.startsWith('Version_'))
+              .toList();
+      expect(releases, ['Version_$cdsiSupportingDataVersion']);
+    });
   });
 }

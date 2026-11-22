@@ -333,19 +333,20 @@ void main() {
   say('');
   say(
     'cicada implements the CDSi logic specification v4.6 against supporting '
-    'data 4.65-508 (August 2026). Each case below is printed as CDC '
+    'data $cdsiSupportingDataVersion. Each case below is printed as CDC '
     'published it — every populated column of their row — followed by what '
     'cicada answers. The question is which answer is clinically correct.',
   );
   say('');
   say(
-    '**Version note.** The healthy cases are v4.46 (August 2026) and match '
-    'the supporting data. The underlying-conditions cases are v4.6 '
+    '**Version note.** The healthy cases are v${healthyWorkbook.version} and '
+    'match the supporting data. The underlying-conditions cases are v4.6 '
     '(September 2025) and predate it, so some of those disagreements may be '
     'the two documents describing different seasons or thresholds rather '
     'than an error by either side — the RSV ones especially: the shipped '
-    'data carries only the 2025-26 season (infant series opens 2025-10-01, '
-    'maternal 2025-09-01) while those cases were written against 2023-24.',
+    'data carries only one season (its series open on '
+    '${rsvSeasonStarts().join(', ')}) while those cases were written '
+    'against 2023-24.',
   );
   say('');
 
@@ -368,12 +369,9 @@ void main() {
   );
 
   emit(
-    'Healthy childhood and adult cases (v4.46 — versions match, so these are '
-        'the sharpest)',
-    repoPath(
-      'cicada_generator/lib/test_cases/'
-      'cdsi-healthy-childhood-and-adult-test-cases-v4.46.xlsx',
-    ),
+    'Healthy childhood and adult cases (v${healthyWorkbook.version} — '
+        'versions match, so these are the sharpest)',
+    healthyWorkbook.path,
     'FITS Exported TestCases',
     healthyNdjson,
     54,
@@ -394,3 +392,14 @@ void main() {
 
   stdout.writeln('wrote ${out.path}');
 }
+
+/// The distinct season start dates in the shipped RSV series, read from the
+/// generated data so the report names the season the engine ran.
+List<String> rsvSeasonStarts() =>
+    (antigenSupportingDataMap['RSV']?.series ?? const <Series>[])
+        .expand((s) => s.seriesDose ?? const <SeriesDose>[])
+        .map((d) => d.seasonalRecommendation?.startDate)
+        .whereType<String>()
+        .toSet()
+        .toList()
+      ..sort();

@@ -21,7 +21,7 @@
             },
             {
               "url": "supportingData",
-              "valueString": "CDSi 4.65-508"
+              "valueString": "CDSi 4.66-508"
             }
           ],
           "url": "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/engine-version-ext"
@@ -404,7 +404,8 @@
       "doseNumberString": "2",
       "supportingPatientInformation": [
         {
-          "display": "Health care personnel"
+          "reference": "Observation/2016-UC-0032-obs1",
+          "display": "Healthcare professional [occupation]"
         }
       ]
     },
@@ -418,7 +419,7 @@
             },
             {
               "url": "supportingData",
-              "valueString": "CDSi 4.65-508"
+              "valueString": "CDSi 4.66-508"
             }
           ],
           "url": "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/engine-version-ext"
@@ -653,7 +654,7 @@
             },
             {
               "url": "supportingData",
-              "valueString": "CDSi 4.65-508"
+              "valueString": "CDSi 4.66-508"
             }
           ],
           "url": "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/engine-version-ext"
@@ -1069,7 +1070,7 @@
             },
             {
               "url": "supportingData",
-              "valueString": "CDSi 4.65-508"
+              "valueString": "CDSi 4.66-508"
             }
           ],
           "url": "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/engine-version-ext"
@@ -1128,19 +1129,19 @@
             },
             {
               "url": "earliestDate",
-              "valueDateTime": "2025-07-01T00:00:00.000-04:00"
+              "valueDateTime": "2026-07-01T00:00:00.000-04:00"
             },
             {
               "url": "recommendedDate",
-              "valueDateTime": "2025-07-01T00:00:00.000-04:00"
+              "valueDateTime": "2026-07-01T00:00:00.000-04:00"
             },
             {
               "url": "pastDueDate",
-              "valueDateTime": "2025-07-01T00:00:00.000-04:00"
+              "valueDateTime": "2026-07-01T00:00:00.000-04:00"
             },
             {
               "url": "seasonalRecommendationStartDate",
-              "valueDateTime": "2025-07-01T00:00:00.000-04:00"
+              "valueDateTime": "2026-07-01T00:00:00.000-04:00"
             }
           ],
           "url": "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/series-detail-ext"
@@ -1165,7 +1166,7 @@
             },
             {
               "url": "material",
-              "valueUrl": "https://www.cdc.gov/flu/hcp/vax-summary/index.html"
+              "valueUrl": "https://www.cdc.gov/flu/hcp/vax-summary/seasonal-influenza-vaccines.html"
             }
           ],
           "url": "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/vaccine-recommendation-category-ext"
@@ -1235,7 +1236,7 @@
               }
             ]
           },
-          "value": "2025-07-01T00:00:00.000-04:00"
+          "value": "2026-07-01T00:00:00.000-04:00"
         },
         {
           "code": {
@@ -1247,7 +1248,7 @@
               }
             ]
           },
-          "value": "2025-07-01T00:00:00.000-04:00"
+          "value": "2026-07-01T00:00:00.000-04:00"
         },
         {
           "code": {
@@ -1259,10 +1260,10 @@
               }
             ]
           },
-          "value": "2025-07-01T00:00:00.000-04:00"
+          "value": "2026-07-01T00:00:00.000-04:00"
         }
       ],
-      "description": "ACIP recommends persons aged 65 years and older preferentially receive any one of the following higher dose or adjuvanted influenza vaccines: trivalent high-dose inactivated influenza vaccine (HD-IIV3), trivalent recombinant influenza vaccine (RIV3), or trivalent adjuvanted inactivated influenza vaccine (aIIV3). If none of these three vaccines is available at an opportunity for vaccine administration, then any other age-appropriate influenza vaccine should be used.\nAll persons aged 6 months and older with egg allergy should receive influenza vaccine. Any influenza vaccine (egg based or non-egg based) that is otherwise appropriate for the recipient's age and health status can be used.\nSolid organ transplant recipients aged 19 through 64 years receiving immunosuppressive medications can receive HD-IIV3 or aIIV3. No preference over other age-appropriate IIV3 or RIV3 vaccines.\nFor most people who need only one dose of influenza vaccine for the season, September and October are generally good times to be vaccinated against influenza. Ideally, everyone should be vaccinated by the end of October.",
+      "description": "ACIP recommends persons aged 65 years and older preferentially receive any one of the following higher dose or adjuvanted influenza vaccines: trivalent high-dose inactivated influenza vaccine (HD-IIV3), trivalent recombinant influenza vaccine (RIV3), or trivalent adjuvanted inactivated influenza vaccine (aIIV3). If none of these three vaccines is available at an opportunity for vaccine administration, then any other age-appropriate influenza vaccine should be used.\nAll persons aged 6 months and older with egg allergy should receive influenza vaccine. Any influenza vaccine (egg based or non-egg based) that is otherwise appropriate for the recipient's age and health status can be used.\nSolid organ transplant recipients aged 18 through 64 years receiving immunosuppressive medications can receive HD-IIV3 or aIIV3. No preference over other age-appropriate IIV3 or RIV3 vaccines.\nFor most persons who need only 1 dose of influenza vaccine for the season, vaccination should ideally be offered during September or October.",
       "series": "Influenza standard series",
       "doseNumberString": "1"
     },
@@ -1276,7 +1277,7 @@
             },
             {
               "url": "supportingData",
-              "valueString": "CDSi 4.65-508"
+              "valueString": "CDSi 4.66-508"
             }
           ],
           "url": "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/engine-version-ext"
@@ -1402,7 +1403,7 @@
             },
             {
               "url": "supportingData",
-              "valueString": "CDSi 4.65-508"
+              "valueString": "CDSi 4.66-508"
             }
           ],
           "url": "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/engine-version-ext"
@@ -1639,7 +1640,7 @@
             },
             {
               "url": "supportingData",
-              "valueString": "CDSi 4.65-508"
+              "valueString": "CDSi 4.66-508"
             }
           ],
           "url": "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/engine-version-ext"
@@ -1850,7 +1851,7 @@
             },
             {
               "url": "supportingData",
-              "valueString": "CDSi 4.65-508"
+              "valueString": "CDSi 4.66-508"
             }
           ],
           "url": "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/engine-version-ext"
@@ -2061,7 +2062,7 @@
             },
             {
               "url": "supportingData",
-              "valueString": "CDSi 4.65-508"
+              "valueString": "CDSi 4.66-508"
             }
           ],
           "url": "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/engine-version-ext"
@@ -2191,7 +2192,7 @@
             },
             {
               "url": "supportingData",
-              "valueString": "CDSi 4.65-508"
+              "valueString": "CDSi 4.66-508"
             }
           ],
           "url": "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/engine-version-ext"
@@ -2212,7 +2213,7 @@
           "extension": [
             {
               "url": "seriesName",
-              "valueString": "COVID-19 start at 6mo-23mo shared clinical decision-making series"
+              "valueString": "COVID-19 start at 6mo-23mo series"
             },
             {
               "url": "seriesGroupName",
@@ -2246,15 +2247,15 @@
             },
             {
               "url": "earliestDate",
-              "valueDateTime": "2025-08-27T00:00:00.000-04:00"
+              "valueDateTime": "2026-09-23T00:00:00.000-04:00"
             },
             {
               "url": "recommendedDate",
-              "valueDateTime": "2025-08-27T00:00:00.000-04:00"
+              "valueDateTime": "2026-09-23T00:00:00.000-04:00"
             },
             {
               "url": "pastDueDate",
-              "valueDateTime": "2025-08-27T00:00:00.000-04:00"
+              "valueDateTime": "2026-09-23T00:00:00.000-04:00"
             },
             {
               "url": "minimumAgeDate",
@@ -2266,7 +2267,7 @@
             },
             {
               "url": "seasonalRecommendationStartDate",
-              "valueDateTime": "2025-08-27T00:00:00.000-04:00"
+              "valueDateTime": "2026-09-23T00:00:00.000-04:00"
             }
           ],
           "url": "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/series-detail-ext"
@@ -2275,7 +2276,7 @@
           "extension": [
             {
               "url": "series",
-              "valueString": "COVID-19 start at 6mo-23mo shared clinical decision-making series"
+              "valueString": "COVID-19 start at 6mo-23mo series"
             },
             {
               "url": "category",
@@ -2283,8 +2284,8 @@
                 "coding": [
                   {
                     "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/vaccine-recommendation-category",
-                    "code": "scdm",
-                    "display": "SCDM"
+                    "code": "routine",
+                    "display": "Routine"
                   }
                 ]
               }
@@ -2350,18 +2351,6 @@
           }
         ]
       },
-      "forecastReason": [
-        {
-          "coding": [
-            {
-              "system": "http://fhirfli.dev/fhir/ig/cicada/CodeSystem/forecast-reason",
-              "code": "shared-clinical-decision-making",
-              "display": "Recommended by shared clinical decision-making"
-            }
-          ],
-          "text": "Recommended by shared clinical decision-making"
-        }
-      ],
       "dateCriterion": [
         {
           "code": {
@@ -2373,7 +2362,7 @@
               }
             ]
           },
-          "value": "2025-08-27T00:00:00.000-04:00"
+          "value": "2026-09-23T00:00:00.000-04:00"
         },
         {
           "code": {
@@ -2385,7 +2374,7 @@
               }
             ]
           },
-          "value": "2025-08-27T00:00:00.000-04:00"
+          "value": "2026-09-23T00:00:00.000-04:00"
         },
         {
           "code": {
@@ -2397,11 +2386,11 @@
               }
             ]
           },
-          "value": "2025-08-27T00:00:00.000-04:00"
+          "value": "2026-09-23T00:00:00.000-04:00"
         }
       ],
-      "description": "Vaccination based on individual-based decision-making- with an emphasis that the risk-benefit of vaccination is most favorable for individuals who are at an increased risk for severe COVID-19 disease and lowest for individuals who are not at an increased risk according to the CDC list of COVID-19 risk factors. see https://www.cdc.gov/covid/hcp/clinical-care/underlying-conditions.html\nFor people who have a history of myocarditis with MIS-C or MIS-A, see https://www.cdc.gov/covid/hcp/vaccine-considerations/special-situations-and-populations.html#cdc_clinical_guidance_recomm_key-covid-19-vaccination-and-mis-c-and-mis-a",
-      "series": "COVID-19 start at 6mo-23mo shared clinical decision-making series",
+      "description": "A 2026-2027 COVID-19 vaccine is recommended for all adults ages 18 years and older. A 2026-2027 COVID-19 vaccine is also recommended for all children ages 6 months - 17 years with moderate to severe immunocompromise. For all other children in this age group, a COVID-19 vaccine is recommended through shared clinical decision making between parents or legal guardians and healthcare professionals - with an emphasis that the risk-benefit of vaccination is most favorable for individuals who are at an increased risk for severe COVID-19 disease and lowest for individuals who are not at an increased risk, according to the CDC list of COVID-19 risk factors. https://www.cdc.gov/covid/hcp/clinical-care/underlying-conditions.html\nFor people who have a history of myocarditis with MIS-C or MIS-A, see https://www.cdc.gov/covid/hcp/vaccine-considerations/special-situations-and-populations.html#cdc_clinical_guidance_recomm_key-covid-19-vaccination-and-mis-c-and-mis-a",
+      "series": "COVID-19 start at 6mo-23mo series",
       "doseNumberString": "1"
     },
     {
@@ -2414,7 +2403,7 @@
             },
             {
               "url": "supportingData",
-              "valueString": "CDSi 4.65-508"
+              "valueString": "CDSi 4.66-508"
             }
           ],
           "url": "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/engine-version-ext"
@@ -2540,7 +2529,7 @@
             },
             {
               "url": "supportingData",
-              "valueString": "CDSi 4.65-508"
+              "valueString": "CDSi 4.66-508"
             }
           ],
           "url": "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/engine-version-ext"
@@ -2746,7 +2735,7 @@
             },
             {
               "url": "supportingData",
-              "valueString": "CDSi 4.65-508"
+              "valueString": "CDSi 4.66-508"
             }
           ],
           "url": "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/engine-version-ext"
@@ -2931,7 +2920,7 @@
             },
             {
               "url": "supportingData",
-              "valueString": "CDSi 4.65-508"
+              "valueString": "CDSi 4.66-508"
             }
           ],
           "url": "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/engine-version-ext"
@@ -3137,7 +3126,7 @@
             },
             {
               "url": "supportingData",
-              "valueString": "CDSi 4.65-508"
+              "valueString": "CDSi 4.66-508"
             }
           ],
           "url": "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/engine-version-ext"
@@ -3263,7 +3252,7 @@
             },
             {
               "url": "supportingData",
-              "valueString": "CDSi 4.65-508"
+              "valueString": "CDSi 4.66-508"
             }
           ],
           "url": "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/engine-version-ext"
@@ -3399,7 +3388,7 @@
             },
             {
               "url": "supportingData",
-              "valueString": "CDSi 4.65-508"
+              "valueString": "CDSi 4.66-508"
             }
           ],
           "url": "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/engine-version-ext"

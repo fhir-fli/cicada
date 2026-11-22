@@ -96,19 +96,19 @@
 <contraindication>
 <observationCode>027</observationCode>
 <observationTitle>Asthma</observationTitle>
-<contraindicationText>Do not vaccinate with live attenuated influenza virus (LAIV) if the patient is between 2 and 4 years and has asthma.</contraindicationText>
-<contraindicationGuidance/>
+<contraindicationText>Do not vaccinate with live attenuated influenza virus (LAIV) if the patient is between 2 and 5 years and has asthma.</contraindicationText>
+<contraindicationGuidance>Children aged 2 through 4 years who have received a diagnosis of asthma or whose parents or caregivers report that a health care provider has told them during the preceding 12 months that their child had wheezing or asthma or whose medical record indicates a wheezing episode has occurred during the preceding 12 months.</contraindicationGuidance>
 <contraindicatedVaccine>
 <vaccineType>influenza, live, trivalent, intranasal</vaccineType>
 <cvx>111</cvx>
 <beginAge>2 years</beginAge>
-<endAge>4 years</endAge>
+<endAge>5 years</endAge>
 </contraindicatedVaccine>
 <contraindicatedVaccine>
 <vaccineType>Influenza, live, trivalent, intranasal, self/caregiver admin, PF</vaccineType>
 <cvx>333</cvx>
 <beginAge>2 years</beginAge>
-<endAge>4 years</endAge>
+<endAge>5 years</endAge>
 </contraindicatedVaccine>
 </contraindication>
 <contraindication>
@@ -132,19 +132,19 @@
 <contraindication>
 <observationCode>034</observationCode>
 <observationTitle>Receiving long-term aspirin therapy</observationTitle>
-<contraindicationText>Do not vaccinate with live attenuated influenza virus (LAIV) if the patient is between 2 and 17 years and is receiving long-term aspirin therapy.</contraindicationText>
-<contraindicationGuidance/>
+<contraindicationText>Do not vaccinate with live attenuated influenza virus (LAIV) if the patient is between 2 and 19 years and is receiving long-term aspirin therapy.</contraindicationText>
+<contraindicationGuidance>Children and adolescents (aged 6 months through 18 years) who are receiving aspirin- or salicylate-containing medications and who might be at risk for experiencing Reye syndrome after influenza virus infection.</contraindicationGuidance>
 <contraindicatedVaccine>
 <vaccineType>influenza, live, trivalent, intranasal</vaccineType>
 <cvx>111</cvx>
 <beginAge>2 years</beginAge>
-<endAge>17 years</endAge>
+<endAge>19 years</endAge>
 </contraindicatedVaccine>
 <contraindicatedVaccine>
 <vaccineType>Influenza, live, trivalent, intranasal, self/caregiver admin, PF</vaccineType>
 <cvx>333</cvx>
 <beginAge>2 years</beginAge>
-<endAge>17 years</endAge>
+<endAge>19 years</endAge>
 </contraindicatedVaccine>
 </contraindication>
 <contraindication>
@@ -587,8 +587,8 @@
 <vaccineGroup>Influenza</vaccineGroup>
 <seriesAdminGuidance>ACIP recommends persons aged 65 years and older preferentially receive any one of the following higher dose or adjuvanted influenza vaccines: trivalent high-dose inactivated influenza vaccine (HD-IIV3), trivalent recombinant influenza vaccine (RIV3), or trivalent adjuvanted inactivated influenza vaccine (aIIV3). If none of these three vaccines is available at an opportunity for vaccine administration, then any other age-appropriate influenza vaccine should be used.</seriesAdminGuidance>
 <seriesAdminGuidance>All persons aged 6 months and older with egg allergy should receive influenza vaccine. Any influenza vaccine (egg based or non-egg based) that is otherwise appropriate for the recipient's age and health status can be used.</seriesAdminGuidance>
-<seriesAdminGuidance>Solid organ transplant recipients aged 19 through 64 years receiving immunosuppressive medications can receive HD-IIV3 or aIIV3. No preference over other age-appropriate IIV3 or RIV3 vaccines.</seriesAdminGuidance>
-<seriesAdminGuidance>For most people who need only one dose of influenza vaccine for the season, September and October are generally good times to be vaccinated against influenza. Ideally, everyone should be vaccinated by the end of October.</seriesAdminGuidance>
+<seriesAdminGuidance>Solid organ transplant recipients aged 18 through 64 years receiving immunosuppressive medications can receive HD-IIV3 or aIIV3. No preference over other age-appropriate IIV3 or RIV3 vaccines.</seriesAdminGuidance>
+<seriesAdminGuidance>For most persons who need only 1 dose of influenza vaccine for the season, vaccination should ideally be offered during September or October.</seriesAdminGuidance>
 <seriesType>Standard</seriesType>
 <equivalentSeriesGroups/>
 <requiredGender/>
@@ -649,16 +649,6 @@
 <preferableVaccine>
 <vaccineType>Influenza, split virus, trivalent, PF</vaccineType>
 <cvx>140</cvx>
-<beginAge>3 years</beginAge>
-<endAge/>
-<tradeName>Afluria trivalent, preservative free</tradeName>
-<mvx>SEQ</mvx>
-<volume>0.5</volume>
-<forecastVaccineType>N</forecastVaccineType>
-</preferableVaccine>
-<preferableVaccine>
-<vaccineType>Influenza, split virus, trivalent, PF</vaccineType>
-<cvx>140</cvx>
 <beginAge>6 months</beginAge>
 <endAge/>
 <tradeName>Flulaval trivalent, preservative free</tradeName>
@@ -687,38 +677,8 @@
 <forecastVaccineType>N</forecastVaccineType>
 </preferableVaccine>
 <preferableVaccine>
-<vaccineType>Influenza, split virus, trivalent, preservative</vaccineType>
-<cvx>141</cvx>
-<beginAge>3 years</beginAge>
-<endAge/>
-<tradeName>Afluria trivalent, with preservative</tradeName>
-<mvx>SEQ</mvx>
-<volume>0.5</volume>
-<forecastVaccineType>N</forecastVaccineType>
-</preferableVaccine>
-<preferableVaccine>
-<vaccineType>Influenza, split virus, trivalent, preservative</vaccineType>
-<cvx>141</cvx>
-<beginAge>6 months</beginAge>
-<endAge>3 years</endAge>
-<tradeName>Afluria trivalent, with preservative</tradeName>
-<mvx>SEQ</mvx>
-<volume>0.25</volume>
-<forecastVaccineType>N</forecastVaccineType>
-</preferableVaccine>
-<preferableVaccine>
 <vaccineType>Influenza, MDCK, trivalent, PF</vaccineType>
 <cvx>153</cvx>
-<beginAge>6 months</beginAge>
-<endAge/>
-<tradeName/>
-<mvx/>
-<volume>0.5</volume>
-<forecastVaccineType>N</forecastVaccineType>
-</preferableVaccine>
-<preferableVaccine>
-<vaccineType>Influenza, MDCK, trivalent, preservative</vaccineType>
-<cvx>320</cvx>
 <beginAge>6 months</beginAge>
 <endAge/>
 <tradeName/>
@@ -896,8 +856,8 @@
 </conditionalSkip>
 <recurringDose>No</recurringDose>
 <seasonalRecommendation>
-<startDate>20250701</startDate>
-<endDate>20260630</endDate>
+<startDate>20260701</startDate>
+<endDate>20270630</endDate>
 </seasonalRecommendation>
 </seriesDose>
 <seriesDose>
@@ -968,16 +928,6 @@
 <preferableVaccine>
 <vaccineType>Influenza, split virus, trivalent, PF</vaccineType>
 <cvx>140</cvx>
-<beginAge>3 years</beginAge>
-<endAge/>
-<tradeName>Afluria trivalent, preservative free</tradeName>
-<mvx>SEQ</mvx>
-<volume>0.5</volume>
-<forecastVaccineType>N</forecastVaccineType>
-</preferableVaccine>
-<preferableVaccine>
-<vaccineType>Influenza, split virus, trivalent, PF</vaccineType>
-<cvx>140</cvx>
 <beginAge>6 months</beginAge>
 <endAge/>
 <tradeName>Flulaval trivalent, preservative free</tradeName>
@@ -1006,26 +956,6 @@
 <forecastVaccineType>N</forecastVaccineType>
 </preferableVaccine>
 <preferableVaccine>
-<vaccineType>Influenza, split virus, trivalent, preservative</vaccineType>
-<cvx>141</cvx>
-<beginAge>3 years</beginAge>
-<endAge/>
-<tradeName>Afluria trivalent, with preservative</tradeName>
-<mvx>SEQ</mvx>
-<volume>0.5</volume>
-<forecastVaccineType>N</forecastVaccineType>
-</preferableVaccine>
-<preferableVaccine>
-<vaccineType>Influenza, split virus, trivalent, preservative</vaccineType>
-<cvx>141</cvx>
-<beginAge>6 months</beginAge>
-<endAge>3 years</endAge>
-<tradeName>Afluria trivalent, with preservative</tradeName>
-<mvx>SEQ</mvx>
-<volume>0.25</volume>
-<forecastVaccineType>N</forecastVaccineType>
-</preferableVaccine>
-<preferableVaccine>
 <vaccineType>Influenza, MDCK, trivalent, PF</vaccineType>
 <cvx>153</cvx>
 <beginAge>6 months</beginAge>
@@ -1049,16 +979,6 @@
 <vaccineType>Influenza, adjuvanted, trivalent, PF</vaccineType>
 <cvx>168</cvx>
 <beginAge>65 years</beginAge>
-<endAge/>
-<tradeName/>
-<mvx/>
-<volume>0.5</volume>
-<forecastVaccineType>N</forecastVaccineType>
-</preferableVaccine>
-<preferableVaccine>
-<vaccineType>Influenza, MDCK, trivalent, preservative</vaccineType>
-<cvx>320</cvx>
-<beginAge>6 months</beginAge>
 <endAge/>
 <tradeName/>
 <mvx/>
@@ -1219,6 +1139,12 @@
 <beginAge>6 months - 4 days</beginAge>
 <endAge>50 years</endAge>
 </allowableVaccine>
+<allowableVaccine>
+<vaccineType>Influenza, mRNA, trivalent, PF</vaccineType>
+<cvx>338</cvx>
+<beginAge>50 years - 4 days</beginAge>
+<endAge/>
+</allowableVaccine>
 <inadvertentVaccine/>
 <conditionalSkip>
 <context>Both</context>
@@ -1232,15 +1158,15 @@
 <condition>
 <conditionID>1</conditionID>
 <conditionType>Vaccine Count by Date</conditionType>
-<startDate>20250701</startDate>
-<endDate>20260630</endDate>
+<startDate>20260701</startDate>
+<endDate>20270630</endDate>
 <beginAge/>
 <endAge/>
 <interval/>
 <doseCount>1</doseCount>
 <doseType>Valid</doseType>
 <doseCountLogic>greater than</doseCountLogic>
-<vaccineTypes>15; 16; 88; 111; 135; 140; 141; 144; 149; 150; 151; 153; 155; 158; 161; 166; 168; 171; 185; 186; 197; 205; 320; 333</vaccineTypes>
+<vaccineTypes>15; 16; 88; 111; 135; 140; 141; 144; 149; 150; 151; 153; 155; 158; 161; 166; 168; 171; 185; 186; 197; 205; 320; 333; 338</vaccineTypes>
 <seriesGroups/>
 </condition>
 </set>
@@ -1253,15 +1179,15 @@
 <condition>
 <conditionID>1</conditionID>
 <conditionType>Vaccine Count by Date</conditionType>
-<startDate>20250701</startDate>
-<endDate>20260630</endDate>
+<startDate>20260701</startDate>
+<endDate>20270630</endDate>
 <beginAge/>
 <endAge/>
 <interval/>
 <doseCount>0</doseCount>
 <doseType>Valid</doseType>
 <doseCountLogic>greater than</doseCountLogic>
-<vaccineTypes>15; 16; 88; 111; 135; 140; 141; 144; 149; 150; 151; 153; 155; 158; 161; 166; 168; 171; 185; 186; 197; 205; 320; 333</vaccineTypes>
+<vaccineTypes>15; 16; 88; 111; 135; 140; 141; 144; 149; 150; 151; 153; 155; 158; 161; 166; 168; 171; 185; 186; 197; 205; 320; 333; 338</vaccineTypes>
 <seriesGroups/>
 </condition>
 <condition>
@@ -1275,50 +1201,50 @@
 <doseCount>0</doseCount>
 <doseType>Total</doseType>
 <doseCountLogic>greater than</doseCountLogic>
-<vaccineTypes>15; 16; 88; 111; 135; 140; 141; 144; 149; 150; 151; 153; 155; 158; 161; 166; 168; 171; 185; 186; 197; 205; 320; 333</vaccineTypes>
+<vaccineTypes>15; 16; 88; 111; 135; 140; 141; 144; 149; 150; 151; 153; 155; 158; 161; 166; 168; 171; 185; 186; 197; 205; 320; 333; 338</vaccineTypes>
 <seriesGroups/>
 </condition>
 </set>
 <set>
 <setID>3</setID>
-<setDescription>Dose is not required if the patient has received 1 or more doses during the current season AND patient has received 2 or more doses before July 1, 2025.</setDescription>
+<setDescription>Dose is not required if the patient has received 1 or more doses during the current season AND patient has received 2 or more doses before July 1, 2026.</setDescription>
 <effectiveDate/>
 <cessationDate/>
 <conditionLogic>AND</conditionLogic>
 <condition>
 <conditionID>1</conditionID>
 <conditionType>Vaccine Count by Date</conditionType>
-<startDate>20250701</startDate>
-<endDate>20260630</endDate>
+<startDate>20260701</startDate>
+<endDate>20270630</endDate>
 <beginAge/>
 <endAge/>
 <interval/>
 <doseCount>0</doseCount>
 <doseType>Valid</doseType>
 <doseCountLogic>greater than</doseCountLogic>
-<vaccineTypes>15; 16; 88; 111; 135; 140; 141; 144; 149; 150; 151; 153; 155; 158; 161; 166; 168; 171; 185; 186; 197; 205; 320; 333</vaccineTypes>
+<vaccineTypes>15; 16; 88; 111; 135; 140; 141; 144; 149; 150; 151; 153; 155; 158; 161; 166; 168; 171; 185; 186; 197; 205; 320; 333; 338</vaccineTypes>
 <seriesGroups/>
 </condition>
 <condition>
 <conditionID>2</conditionID>
 <conditionType>Vaccine Count by Date</conditionType>
 <startDate/>
-<endDate>20250701</endDate>
+<endDate>20260701</endDate>
 <beginAge/>
 <endAge/>
 <interval/>
 <doseCount>1</doseCount>
 <doseType>Valid</doseType>
 <doseCountLogic>greater than</doseCountLogic>
-<vaccineTypes>15; 16; 88; 111; 135; 140; 141; 144; 149; 150; 151; 153; 155; 158; 161; 166; 168; 171; 185; 186; 197; 205; 320; 333</vaccineTypes>
+<vaccineTypes>15; 16; 88; 111; 135; 140; 141; 144; 149; 150; 151; 153; 155; 158; 161; 166; 168; 171; 185; 186; 197; 205; 320; 333; 338</vaccineTypes>
 <seriesGroups/>
 </condition>
 </set>
 </conditionalSkip>
 <recurringDose>Yes</recurringDose>
 <seasonalRecommendation>
-<startDate>20250701</startDate>
-<endDate>20260630</endDate>
+<startDate>20260701</startDate>
+<endDate>20270630</endDate>
 </seasonalRecommendation>
 </seriesDose>
 </series>

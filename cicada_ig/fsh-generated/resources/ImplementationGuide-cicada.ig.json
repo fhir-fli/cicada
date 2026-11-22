@@ -43,14 +43,6 @@
       },
       {
         "reference": {
-          "reference": "Condition/2016-UC-0032-055"
-        },
-        "description": "The one condition in case 2016-UC-0032, CDSi observation 055 Health care personnel, as the engine reads it (VaccineConditionFhir).",
-        "exampleBoolean": false,
-        "name": "2016-UC-0032-055"
-      },
-      {
-        "reference": {
           "reference": "ImmunizationEvaluation/2016-UC-0032-1"
         },
         "description": "The engine's evaluation of the case's MMR dose against measles, with the target-dose status and the sub-step detail extensions.",
@@ -80,6 +72,14 @@
         "description": "The one dose in case 2016-UC-0032, an MMR, as the engine reads it (vax-dose).",
         "exampleBoolean": false,
         "name": "2016-UC-0032-dose1"
+      },
+      {
+        "reference": {
+          "reference": "Observation/2016-UC-0032-obs1"
+        },
+        "description": "The one finding in case 2016-UC-0032, occupation healthcare professional (CDSi observation 055 Health care personnel), as the engine reads it (VaccineObservationFhir).",
+        "exampleBoolean": false,
+        "name": "2016-UC-0032-obs1"
       },
       {
         "reference": {

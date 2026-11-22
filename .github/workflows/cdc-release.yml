@@ -1,0 +1,17 @@
+# Fails when CDC has published CDSi supporting data or healthy test cases
+# newer than the ones cicada is built from, checked weekly. 4.66 (released
+# 2026-10-09, seasons rolled to 2026-2027 per its release notes) went
+# unnoticed here for six weeks. The check is
+# cicada_generator/tool/check_cdc_release.py.
+name: CDC release
+on:
+  schedule:
+    - cron: '0 12 * * 1'
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 -I cicada_generator/tool/check_cdc_release.py .

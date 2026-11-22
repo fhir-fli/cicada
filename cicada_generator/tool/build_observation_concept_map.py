@@ -57,6 +57,16 @@ VALUE = 'http://hl7.org/fhir/StructureDefinition/Observation#Observation.value[x
 CVX_DISPLAYS = Path(__file__).resolve().parent / 'cvx_displays.tsv'
 
 
+def cdsi_version():
+    """The CDSi release the generator reads: its one Version_*-508 folder."""
+    lib = Path(__file__).resolve().parents[1] / 'lib'
+    found = [d.name[len('Version_'):] for d in lib.iterdir()
+             if d.is_dir() and d.name.startswith('Version_')]
+    if len(found) != 1:
+        sys.exit(f'expected one Version_* folder in {lib}, found {found}')
+    return found[0]
+
+
 def cvx_displays():
     out = {}
     with open(CVX_DISPLAYS, encoding='utf-8') as f:
@@ -100,6 +110,7 @@ def main(schedule_path, meta, policy_path, review_path, out_map, out_tsv):
     titles = {k: v[0] for k, v in observations.items()}
     decisions = review_decisions(review_path)
     cvx_names = cvx_displays()
+    cdsi = cdsi_version()
 
     # (system key, code) -> {'display': str, 'targets': [target dicts]}
     elements = defaultdict(lambda: {'display': '', 'targets': []})
@@ -128,7 +139,7 @@ def main(schedule_path, meta, policy_path, review_path, out_map, out_tsv):
         for system, code, text in coded:
             grade = grades.get(f'{system}|{code}|{obs}') or grades.get(f'{system}|{code}|*')
             equivalence, reason = (grade if grade else ('equivalent', ''))
-            add(system, code, text, obs, equivalence, 'CDC Coded Observations 4.65-508', reason)
+            add(system, code, text, obs, equivalence, f'CDC Coded Observations {cdsi}', reason)
 
     # 2. ICD-10-CM, derived from NLM's map.
     counts = defaultdict(int)

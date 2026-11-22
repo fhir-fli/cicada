@@ -29,6 +29,16 @@
       "definition": "Administered outside of preferred age range"
     },
     {
+      "code": "administeredBeforeAllowableAgeRange",
+      "display": "Administered before allowable age range",
+      "definition": "Allowable vaccine type given before its allowable begin age (Logic Specification v4.6 Table 6-29, third rule)"
+    },
+    {
+      "code": "administeredAfterAllowableAgeRange",
+      "display": "Administered after allowable age range",
+      "definition": "Allowable vaccine type given on or after its allowable end age (Logic Specification v4.6 Table 6-29, third rule)"
+    },
+    {
       "code": "noPreferredTypes",
       "display": "No preferred types",
       "definition": "No preferred types"
@@ -41,5 +51,5 @@
   ],
   "experimental": false,
   "caseSensitive": true,
-  "count": 6
+  "count": 8
 }
