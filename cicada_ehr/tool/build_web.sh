@@ -13,6 +13,9 @@ out=build/web
 rm -rf "$out" && mkdir -p "$out" || exit 1
 dart compile js -O2 -DCICADA_CLIENT_ID="$1" -o "$out/main.dart.js" web/main.dart || exit 1
 cp web/index.html web/callback.html "$out/" || exit 1
-# The compiler's sidecar files are not served.
-rm -f "$out"/main.dart.js.deps "$out"/main.dart.js.map
+# The compiler's sidecar files are not served. Its part files
+# (main.dart.js_<n>.part.js, the chart read, engine and display that
+# main.dart loads on its own) are, beside main.dart.js.
+rm -f "$out"/*.deps "$out"/*.map
+ls "$out"/main.dart.js_*.part.js > /dev/null || { echo "no part files: the split is gone"; exit 1; }
 ls -l "$out"
