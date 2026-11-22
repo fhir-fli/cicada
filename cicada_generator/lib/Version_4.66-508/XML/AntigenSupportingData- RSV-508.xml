@@ -142,8 +142,8 @@
 <conditionalSkip/>
 <recurringDose>No</recurringDose>
 <seasonalRecommendation>
-<startDate>20251001</startDate>
-<endDate>20260331</endDate>
+<startDate>20261001</startDate>
+<endDate>20270331</endDate>
 </seasonalRecommendation>
 </seriesDose>
 </series>
@@ -324,8 +324,8 @@
 </conditionalSkip>
 <recurringDose>No</recurringDose>
 <seasonalRecommendation>
-<startDate>20251001</startDate>
-<endDate>20260331</endDate>
+<startDate>20261001</startDate>
+<endDate>20270331</endDate>
 </seasonalRecommendation>
 </seriesDose>
 <seriesDose>
@@ -405,8 +405,8 @@
 <condition>
 <conditionID>1</conditionID>
 <conditionType>Vaccine Count by Date</conditionType>
-<startDate>20250701</startDate>
-<endDate>20260630</endDate>
+<startDate>20260701</startDate>
+<endDate>20270630</endDate>
 <beginAge/>
 <endAge/>
 <interval/>
@@ -420,8 +420,8 @@
 </conditionalSkip>
 <recurringDose>No</recurringDose>
 <seasonalRecommendation>
-<startDate>20251001</startDate>
-<endDate>20260331</endDate>
+<startDate>20261001</startDate>
+<endDate>20270331</endDate>
 </seasonalRecommendation>
 </seriesDose>
 <seriesDose>
@@ -548,8 +548,8 @@
 <condition>
 <conditionID>2</conditionID>
 <conditionType>Vaccine Count by Date and Age</conditionType>
-<startDate>20250701</startDate>
-<endDate>20260630</endDate>
+<startDate>20260701</startDate>
+<endDate>20270630</endDate>
 <beginAge/>
 <endAge>8 months</endAge>
 <interval/>
@@ -623,8 +623,8 @@
 </conditionalSkip>
 <recurringDose>No</recurringDose>
 <seasonalRecommendation>
-<startDate>20251001</startDate>
-<endDate>20260331</endDate>
+<startDate>20261001</startDate>
+<endDate>20270331</endDate>
 </seasonalRecommendation>
 </seriesDose>
 </series>
@@ -765,8 +765,8 @@
 </conditionalSkip>
 <recurringDose>No</recurringDose>
 <seasonalRecommendation>
-<startDate>20250901</startDate>
-<endDate>20260131</endDate>
+<startDate>20260901</startDate>
+<endDate>20270131</endDate>
 </seasonalRecommendation>
 </seriesDose>
 </series>

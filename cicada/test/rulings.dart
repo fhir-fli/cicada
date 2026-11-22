@@ -186,7 +186,9 @@ const rulings = <String, Ruling>{
         "and HepB's data carries inadvertentVaccine empty on all 62 doses; "
         'CDC-REPORT.md §4',
     mismatches: [
-      'dose 2018-0022_dose1: evalReason expected=Inadvertent Vaccine actual=Not a preferable or allowable vaccine,Age: Too Young',
+      // The same two reasons as before 4.66; age first since the dose's
+      // Table 6-29 allowable-age outcome reports the age itself.
+      'dose 2018-0022_dose1: evalReason expected=Inadvertent Vaccine actual=Age: Too Young,Not a preferable or allowable vaccine',
     ],
   ),
   '2020-UC-0003': Ruling(
@@ -267,12 +269,13 @@ const rulings = <String, Ruling>{
   ),
   '2023-UC-0051': Ruling(
     citation:
-        'CDC-REPORT.md §5: the shipped RSV pregnancy series opens 2025-09-01; '
-        'the row expects the 2023 season',
+        'CDC-REPORT.md §5: the shipped RSV pregnancy series opens on the '
+        "current season's start (2026-09-01 in data 4.66); the row expects "
+        'the 2023 season',
     mismatches: [
-      '[RSV] earliest: expected=2023/10/11 actual=2025/09/01',
-      '[RSV] recommended: expected=2023/10/11 actual=2025/09/01',
-      '[RSV] pastDue: expected=2023/11/14 actual=2025/09/01',
+      '[RSV] earliest: expected=2023/10/11 actual=2026/09/01',
+      '[RSV] recommended: expected=2023/10/11 actual=2026/09/01',
+      '[RSV] pastDue: expected=2023/11/14 actual=2026/09/01',
     ],
   ),
   '2025-UC-0010': Ruling(

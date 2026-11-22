@@ -62,7 +62,9 @@ void main(List<String> args) {
     meta: FhirMeta(profile: [profile.toFhirCanonical]),
     patient: Reference(reference: 'Patient/2016-UC-0032'.toFhirString),
   );
-  final json = const JsonEncoder.withIndent('  ').convert(out.toJson());
+  final json = const JsonEncoder.withIndent('  ').convert(
+    _hyphenateReferences(out.toJson()),
+  );
   File(outPath).writeAsStringSync('$json\n');
   stdout.writeln(
     'wrote ${out.recommendation.length} recommendations to $outPath',
@@ -114,6 +116,25 @@ void main(List<String> args) {
         };
         r['subject'] = {'reference': 'Patient/2016-UC-0032'};
         write('Condition-${r['id']}', r);
+      case 'Observation':
+        // Same id rule as the Immunization above; the recommendation's
+        // supportingPatientInformation refers to the renamed id.
+        r['id'] = (r['id'] as String).replaceAll('_', '-');
+        // The same SNOMED display rule as the Condition above.
+        for (final c in [
+          ...?((r['code'] as Map?)?['coding'] as List?),
+          ...?((r['valueCodeableConcept'] as Map?)?['coding'] as List?),
+        ]) {
+          final d = (c as Map)['display'];
+          if (c['system'] == 'http://snomed.info/sct' && d is String) {
+            c['display'] = d.replaceAll(RegExp(r'\s*\[[^\]]*\]\s*$'), '');
+          }
+        }
+        r['meta'] = {
+          'profile': ['$sd/VaccineObservationFhir'],
+        };
+        r['subject'] = {'reference': 'Patient/2016-UC-0032'};
+        write('Observation-${r['id']}', r);
     }
   }
 
@@ -132,3 +153,18 @@ void main(List<String> args) {
     write('ImmunizationEvaluation-2016-UC-0032-$n', j);
   }
 }
+
+/// Every `reference` in [node] with CDC's underscore ids renamed to the
+/// hyphenated ids the examples are written under (the FHIR id pattern
+/// [A-Za-z0-9\-\.]{1,64} has no underscore).
+Object? _hyphenateReferences(Object? node) => switch (node) {
+  final Map<String, dynamic> m => {
+    for (final e in m.entries)
+      e.key:
+          e.key == 'reference' && e.value is String
+              ? (e.value as String).replaceAll('_', '-')
+              : _hyphenateReferences(e.value),
+  },
+  final List<dynamic> l => [for (final x in l) _hyphenateReferences(x)],
+  _ => node,
+};

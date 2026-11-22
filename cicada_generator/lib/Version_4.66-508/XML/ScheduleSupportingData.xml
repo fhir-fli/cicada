@@ -10477,6 +10477,15 @@
 </association>
 </cvxMap>
 <cvxMap>
+<cvx>338</cvx>
+<shortDescription>Influenza, mRNA, trivalent, PF</shortDescription>
+<association>
+<antigen>Influenza</antigen>
+<associationBeginAge/>
+<associationEndAge/>
+</association>
+</cvxMap>
+<cvxMap>
 <cvx>500</cvx>
 <shortDescription>COVID-19 Non-US Vaccine, Product Unknown</shortDescription>
 <association>
@@ -15739,6 +15748,122 @@ vaccine</clarifyingText>
 <code>67569000</code>
 <codeSystem>SNOMED</codeSystem>
 <text>Bronchopulmonary dysplasia of newborn [disorder]</text>
+</codedValue>
+</codedValues>
+</observation>
+<observation>
+<observationCode>281</observationCode>
+<observationTitle>Born preterm, at less than 32 weeks, 0 days gestation </observationTitle>
+<group/>
+<indicationText>Administer to persons born preterm, at less than 32 weeks, 0 days gestation</indicationText>
+<contraindicationText/>
+<clarifyingText>Children born preterm, at less than 32 weeks, 0 days gestation, regardless of the need for medication or other support </clarifyingText>
+<codedValues>
+<codedValue>
+<code>1237576009</code>
+<codeSystem>SNOMED</codeSystem>
+<text>Baby premature at delivery less than 32 weeks [finding]</text>
+</codedValue>
+</codedValues>
+</observation>
+<observation>
+<observationCode>282</observationCode>
+<observationTitle>Chronic lung disease attributable to other significant neonatal conditions</observationTitle>
+<group/>
+<indicationText>Administer to persons with chronic lung disease attributable to other significant neonatal conditions</indicationText>
+<contraindicationText/>
+<clarifyingText>Children with chronic lung disease attributable to other significant neonatal conditions (eg, meconium aspiration or congenital diaphragmatic hernia) who required medical support (ie, chronic corticosteroid therapy, diuretic therapy, or supplemental oxygen) at any time during the 6-month period before the start of the second RSV season</clarifyingText>
+<codedValues/>
+</observation>
+<observation>
+<observationCode>283</observationCode>
+<observationTitle>Hemodynamically significant congenital heart disease</observationTitle>
+<group/>
+<indicationText>Administer to persons with hemodynamically significant congenital heart disease</indicationText>
+<contraindicationText/>
+<clarifyingText>Children with hemodynamically significant congenital heart disease (ie, a defect that can result in symptoms and/or cardiac chamber dilation)</clarifyingText>
+<codedValues/>
+</observation>
+<observation>
+<observationCode>284</observationCode>
+<observationTitle>Anatomic pulmonary abnormalities</observationTitle>
+<group/>
+<indicationText>Administer to persons with anatomic pulmonary abnormalities</indicationText>
+<contraindicationText/>
+<clarifyingText/>
+<codedValues/>
+</observation>
+<observation>
+<observationCode>285</observationCode>
+<observationTitle>Neuromuscular disorders</observationTitle>
+<group/>
+<indicationText>Administer to persons with neuromuscular disorders</indicationText>
+<contraindicationText/>
+<clarifyingText/>
+<codedValues>
+<codedValue>
+<code>257277002</code>
+<codeSystem>SNOMED</codeSystem>
+<text>Combined disorder of muscle AND peripheral nerve [disorder]</text>
+</codedValue>
+</codedValues>
+</observation>
+<observation>
+<observationCode>286</observationCode>
+<observationTitle>Autoimmune immunosuppression</observationTitle>
+<group/>
+<indicationText>Administer to persons with autoimmune-associated immunosuppression</indicationText>
+<contraindicationText/>
+<clarifyingText/>
+<codedValues/>
+</observation>
+<observation>
+<observationCode>287</observationCode>
+<observationTitle>Severe allergic reaction (e.g., anaphylaxis) after a previous dose or to a component of an mRNA COVID-19 vaccine</observationTitle>
+<group/>
+<indicationText/>
+<contraindicationText>Do not administer an mRNA COVID-19 vaccine to persons who experienced a severe allergic reaction (e.g., anaphylaxis) after a previous dose or to a component of an mRNA COVID-19 vaccine</contraindicationText>
+<clarifyingText/>
+<codedValues>
+<codedValue>
+<code>309</code>
+<codeSystem>CVX</codeSystem>
+<text>COVID-19, mRNA, LNP-S, PF, tris-sucrose, 30 mcg/0.3 mL</text>
+</codedValue>
+<codedValue>
+<code>310</code>
+<codeSystem>CVX</codeSystem>
+<text>COVID-19, mRNA, LNP-S, PF, tris-sucrose, 10 mcg/0.3 mL</text>
+</codedValue>
+<codedValue>
+<code>311</code>
+<codeSystem>CVX</codeSystem>
+<text>COVID-19, mRNA, LNP-S, PF, 25 mcg/0.25 mL</text>
+</codedValue>
+<codedValue>
+<code>312</code>
+<codeSystem>CVX</codeSystem>
+<text>COVID-19, mRNA, LNP-S, PF, 50 mcg/0.5 mL</text>
+</codedValue>
+<codedValue>
+<code>334</code>
+<codeSystem>CVX</codeSystem>
+<text>COVID-19, mRNA, LNP-S, PF, 10 mcg/0.2 mL</text>
+</codedValue>
+</codedValues>
+</observation>
+<observation>
+<observationCode>288</observationCode>
+<observationTitle>Severe allergic reaction (e.g., anaphylaxis) after a previous dose or to a component of a Novavax COVID-19 vaccine</observationTitle>
+<group/>
+<indicationText/>
+<contraindicationText>Do not administer a Novavax COVID-19 vaccine to persons who experienced a severe allergic reaction (e.g., anaphylaxis) after a previous dose or to a component of a Novavax COVID-19 vaccine</contraindicationText>
+<clarifyingText/>
+<codedValues>
+<codedValue>
+<code>313</code>
+<codeSystem>CVX</codeSystem>
+<text>COVID-19, subunit, rS-nanoparticle, adjuvanted, PF, 5 mcg/0.5 mL</text>
 </codedValue>
 </codedValues>
 </observation>

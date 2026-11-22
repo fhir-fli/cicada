@@ -69,13 +69,61 @@
 <endAge/>
 </contraindicatedVaccine>
 </contraindication>
+<contraindication>
+<observationCode>287</observationCode>
+<observationTitle>Severe allergic reaction (e.g., anaphylaxis) after a previous dose or to a component of an mRNA COVID-19 vaccine</observationTitle>
+<contraindicationText>Do not administer an mRNA COVID-19 vaccine to persons who experienced a severe allergic reaction (e.g., anaphylaxis) after a previous dose or to a component of an mRNA COVID-19 vaccine</contraindicationText>
+<contraindicationGuidance/>
+<contraindicatedVaccine>
+<vaccineType>COVID-19, mRNA, LNP-S, PF, tris-sucrose, 30 mcg/0.3 mL</vaccineType>
+<cvx>309</cvx>
+<beginAge/>
+<endAge/>
+</contraindicatedVaccine>
+<contraindicatedVaccine>
+<vaccineType>COVID-19, mRNA, LNP-S, PF, tris-sucrose, 10 mcg/0.3 mL</vaccineType>
+<cvx>310</cvx>
+<beginAge/>
+<endAge/>
+</contraindicatedVaccine>
+<contraindicatedVaccine>
+<vaccineType>COVID-19, mRNA, LNP-S, PF, 25 mcg/0.25 mL</vaccineType>
+<cvx>311</cvx>
+<beginAge/>
+<endAge/>
+</contraindicatedVaccine>
+<contraindicatedVaccine>
+<vaccineType>COVID-19, mRNA, LNP-S, PF, 50 mcg/0.5 mL</vaccineType>
+<cvx>312</cvx>
+<beginAge/>
+<endAge/>
+</contraindicatedVaccine>
+<contraindicatedVaccine>
+<vaccineType>COVID-19, mRNA, LNP-S, PF, 10 mcg/0.2 mL</vaccineType>
+<cvx>334</cvx>
+<beginAge/>
+<endAge/>
+</contraindicatedVaccine>
+</contraindication>
+<contraindication>
+<observationCode>288</observationCode>
+<observationTitle>Severe allergic reaction (e.g., anaphylaxis) after a previous dose or to a component of a Novavax COVID-19 vaccine</observationTitle>
+<contraindicationText>Do not administer a Novavax COVID-19 vaccine to persons who experienced a severe allergic reaction (e.g., anaphylaxis) after a previous dose or to a component of a Novavax COVID-19 vaccine</contraindicationText>
+<contraindicationGuidance/>
+<contraindicatedVaccine>
+<vaccineType>COVID-19, subunit, rS-nanoparticle, adjuvanted, PF, 5 mcg/0.5 mL</vaccineType>
+<cvx>313</cvx>
+<beginAge/>
+<endAge/>
+</contraindicatedVaccine>
+</contraindication>
 </vaccine>
 </contraindications>
 <series>
-<seriesName>COVID-19 start at 6mo-23mo shared clinical decision-making series</seriesName>
+<seriesName>COVID-19 start at 6mo-23mo series</seriesName>
 <targetDisease>COVID-19</targetDisease>
 <vaccineGroup>COVID-19</vaccineGroup>
-<seriesAdminGuidance>Vaccination based on individual-based decision-making- with an emphasis that the risk-benefit of vaccination is most favorable for individuals who are at an increased risk for severe COVID-19 disease and lowest for individuals who are not at an increased risk according to the CDC list of COVID-19 risk factors. see https://www.cdc.gov/covid/hcp/clinical-care/underlying-conditions.html</seriesAdminGuidance>
+<seriesAdminGuidance>A 2026-2027 COVID-19 vaccine is recommended for all adults ages 18 years and older. A 2026-2027 COVID-19 vaccine is also recommended for all children ages 6 months - 17 years with moderate to severe immunocompromise. For all other children in this age group, a COVID-19 vaccine is recommended through shared clinical decision making between parents or legal guardians and healthcare professionals - with an emphasis that the risk-benefit of vaccination is most favorable for individuals who are at an increased risk for severe COVID-19 disease and lowest for individuals who are not at an increased risk, according to the CDC list of COVID-19 risk factors. https://www.cdc.gov/covid/hcp/clinical-care/underlying-conditions.html</seriesAdminGuidance>
 <seriesAdminGuidance>For people who have a history of myocarditis with MIS-C or MIS-A, see https://www.cdc.gov/covid/hcp/vaccine-considerations/special-situations-and-populations.html#cdc_clinical_guidance_recomm_key-covid-19-vaccination-and-mis-c-and-mis-a</seriesAdminGuidance>
 <seriesType>Standard</seriesType>
 <equivalentSeriesGroups>2</equivalentSeriesGroups>
@@ -268,7 +316,7 @@
 <conditionalSkip/>
 <recurringDose>No</recurringDose>
 <seasonalRecommendation>
-<startDate>20250827</startDate>
+<startDate>20260923</startDate>
 <endDate/>
 </seasonalRecommendation>
 </seriesDose>
@@ -464,7 +512,7 @@
 <setLogic>OR</setLogic>
 <set>
 <setID>1</setID>
-<setDescription>Target Dose is not needed if patient has received 1 valid dose of Pfizer before 08/27/2025 AND patient is under 2 years old</setDescription>
+<setDescription>Target Dose is not needed if patient has received 1 valid dose of Pfizer before 8/28/2026 AND patient is under 2 years old</setDescription>
 <effectiveDate/>
 <cessationDate/>
 <conditionLogic>AND</conditionLogic>
@@ -472,7 +520,7 @@
 <conditionID>1</conditionID>
 <conditionType>Vaccine Count by Date</conditionType>
 <startDate/>
-<endDate>20250827</endDate>
+<endDate>20260828</endDate>
 <beginAge/>
 <endAge/>
 <interval/>
@@ -499,7 +547,7 @@
 </set>
 <set>
 <setID>2</setID>
-<setDescription>Target Dose is not needed if patient has received 1 valid dose of Novavax before 08/27/2025 AND patient is under 2 years old</setDescription>
+<setDescription>Target Dose is not needed if patient has received 1 valid dose of Novavax before 8/28/2026 AND patient is under 2 years old</setDescription>
 <effectiveDate/>
 <cessationDate/>
 <conditionLogic>AND</conditionLogic>
@@ -507,7 +555,7 @@
 <conditionID>1</conditionID>
 <conditionType>Vaccine Count by Date</conditionType>
 <startDate/>
-<endDate>20250827</endDate>
+<endDate>20260828</endDate>
 <beginAge/>
 <endAge/>
 <interval/>
@@ -534,7 +582,7 @@
 </set>
 <set>
 <setID>3</setID>
-<setDescription>Target Dose is not needed if patient has received 1 valid unspecified dose before 08/27/2025 AND patient is under 2 years old</setDescription>
+<setDescription>Target Dose is not needed if patient has received 1 valid unspecified dose before 8/28/2026 AND patient is under 2 years old</setDescription>
 <effectiveDate/>
 <cessationDate/>
 <conditionLogic>AND</conditionLogic>
@@ -542,7 +590,7 @@
 <conditionID>1</conditionID>
 <conditionType>Vaccine Count by Date</conditionType>
 <startDate/>
-<endDate>20250827</endDate>
+<endDate>20260828</endDate>
 <beginAge/>
 <endAge/>
 <interval/>
@@ -570,7 +618,7 @@
 </conditionalSkip>
 <recurringDose>No</recurringDose>
 <seasonalRecommendation>
-<startDate>20250827</startDate>
+<startDate>20260923</startDate>
 <endDate/>
 </seasonalRecommendation>
 </seriesDose>
@@ -788,7 +836,7 @@
 </conditionalSkip>
 <recurringDose>No</recurringDose>
 <seasonalRecommendation>
-<startDate>20250827</startDate>
+<startDate>20260923</startDate>
 <endDate/>
 </seasonalRecommendation>
 </seriesDose>
@@ -1000,7 +1048,7 @@
 <setLogic>OR</setLogic>
 <set>
 <setID>1</setID>
-<setDescription>Target Dose is not needed if patient received at least 2 valid doses before 08/27/2025</setDescription>
+<setDescription>Target Dose is not needed if patient received at least 2 valid doses before 8/28/2026</setDescription>
 <effectiveDate/>
 <cessationDate/>
 <conditionLogic/>
@@ -1008,7 +1056,7 @@
 <conditionID>1</conditionID>
 <conditionType>Vaccine Count by Date</conditionType>
 <startDate/>
-<endDate>20250827</endDate>
+<endDate>20260828</endDate>
 <beginAge/>
 <endAge/>
 <interval/>
@@ -1021,14 +1069,14 @@
 </set>
 <set>
 <setID>2</setID>
-<setDescription>Target Dose is not needed if patient received at least 2 valid doses on or after 8/27/2025</setDescription>
+<setDescription>Target Dose is not needed if patient received at least 2 valid doses on or after 8/28/2026</setDescription>
 <effectiveDate/>
 <cessationDate/>
 <conditionLogic/>
 <condition>
 <conditionID>1</conditionID>
 <conditionType>Vaccine Count by Date</conditionType>
-<startDate>20250827</startDate>
+<startDate>20260828</startDate>
 <endDate/>
 <beginAge/>
 <endAge/>
@@ -1085,7 +1133,7 @@
 </conditionalSkip>
 <recurringDose>No</recurringDose>
 <seasonalRecommendation>
-<startDate>20250827</startDate>
+<startDate>20260923</startDate>
 <endDate/>
 </seasonalRecommendation>
 </seriesDose>
@@ -1342,14 +1390,14 @@
 <setLogic>n/a</setLogic>
 <set>
 <setID>1</setID>
-<setDescription>Target Dose is not needed after one dose has been administered on or after 8/27/2025</setDescription>
+<setDescription>Target Dose is not needed after one dose has been administered on or after 8/28/2026</setDescription>
 <effectiveDate/>
 <cessationDate/>
 <conditionLogic/>
 <condition>
 <conditionID>1</conditionID>
 <conditionType>Vaccine Count By Date</conditionType>
-<startDate>20250827</startDate>
+<startDate>20260828</startDate>
 <endDate/>
 <beginAge/>
 <endAge/>
@@ -1364,16 +1412,16 @@
 </conditionalSkip>
 <recurringDose>Yes</recurringDose>
 <seasonalRecommendation>
-<startDate>20250827</startDate>
+<startDate>20260923</startDate>
 <endDate/>
 </seasonalRecommendation>
 </seriesDose>
 </series>
 <series>
-<seriesName>COVID-19 start at 2 years+ shared clinical decision-making series</seriesName>
+<seriesName>COVID-19 start at 2 years+ series</seriesName>
 <targetDisease>COVID-19</targetDisease>
 <vaccineGroup>COVID-19</vaccineGroup>
-<seriesAdminGuidance>Vaccination based on individual-based decision-making- with an emphasis that the risk-benefit of vaccination is most favorable for individuals who are at an increased risk for severe COVID-19 disease and lowest for individuals who are not at an increased risk according to the CDC list of COVID-19 risk factors. see https://www.cdc.gov/covid/hcp/clinical-care/underlying-conditions.html</seriesAdminGuidance>
+<seriesAdminGuidance>A 2026-2027 COVID-19 vaccine is recommended for all adults ages 18 years and older. A 2026-2027 COVID-19 vaccine is also recommended for all children ages 6 months - 17 years with moderate to severe immunocompromise. For all other children in this age group, a COVID-19 vaccine is recommended through shared clinical decision making between parents or legal guardians and healthcare professionals - with an emphasis that the risk-benefit of vaccination is most favorable for individuals who are at an increased risk for severe COVID-19 disease and lowest for individuals who are not at an increased risk, according to the CDC list of COVID-19 risk factors. https://www.cdc.gov/covid/hcp/clinical-care/underlying-conditions.html</seriesAdminGuidance>
 <seriesAdminGuidance>The recommended interval for Moderna (mNexspike) is 3 months after the last dose; however a dose administered at least 2 months after the last dose should not be repeated. The recommended interval for those 65 years and older receiving their second dose this season is 6 months.</seriesAdminGuidance>
 <seriesAdminGuidance>For people who have a history of myocarditis with MIS-C or MIS-A, see https://www.cdc.gov/covid/hcp/vaccine-considerations/special-situations-and-populations.html#cdc_clinical_guidance_recomm_key-covid-19-vaccination-and-mis-c-and-mis-a</seriesAdminGuidance>
 <seriesType>Standard</seriesType>
@@ -1693,14 +1741,14 @@
 <setLogic>n/a</setLogic>
 <set>
 <setID>1</setID>
-<setDescription>Target Dose is not needed after one valid dose has been administered on or after 8/27/2025</setDescription>
+<setDescription>Target Dose is not needed after one valid dose has been administered on or after 8/28/2026</setDescription>
 <effectiveDate/>
 <cessationDate/>
 <conditionLogic/>
 <condition>
 <conditionID>1</conditionID>
 <conditionType>Vaccine Count By Date</conditionType>
-<startDate>20250827</startDate>
+<startDate>20260828</startDate>
 <endDate/>
 <beginAge/>
 <endAge/>
@@ -1715,7 +1763,7 @@
 </conditionalSkip>
 <recurringDose>Yes</recurringDose>
 <seasonalRecommendation>
-<startDate>20250827</startDate>
+<startDate>20260923</startDate>
 <endDate/>
 </seasonalRecommendation>
 </seriesDose>
@@ -1849,7 +1897,7 @@
 </conditionalSkip>
 <recurringDose>No</recurringDose>
 <seasonalRecommendation>
-<startDate>20250827</startDate>
+<startDate>20260923</startDate>
 <endDate/>
 </seasonalRecommendation>
 </seriesDose>
@@ -2148,7 +2196,7 @@
 <conditionalSkip/>
 <recurringDose>No</recurringDose>
 <seasonalRecommendation>
-<startDate>20250827</startDate>
+<startDate>20260923</startDate>
 <endDate/>
 </seasonalRecommendation>
 </seriesDose>
@@ -2297,7 +2345,7 @@
 <conditionalSkip/>
 <recurringDose>No</recurringDose>
 <seasonalRecommendation>
-<startDate>20250827</startDate>
+<startDate>20260923</startDate>
 <endDate/>
 </seasonalRecommendation>
 </seriesDose>
@@ -2446,7 +2494,7 @@
 <conditionalSkip/>
 <recurringDose>No</recurringDose>
 <seasonalRecommendation>
-<startDate>20250827</startDate>
+<startDate>20260923</startDate>
 <endDate/>
 </seasonalRecommendation>
 </seriesDose>
@@ -2733,14 +2781,14 @@
 <setLogic>n/a</setLogic>
 <set>
 <setID>1</setID>
-<setDescription>Target Dose is not needed after one dose has been administered on or after 8/27/2025</setDescription>
+<setDescription>Target Dose is not needed after one dose has been administered on or after 8/28/2026</setDescription>
 <effectiveDate/>
 <cessationDate/>
 <conditionLogic/>
 <condition>
 <conditionID>1</conditionID>
 <conditionType>Vaccine Count By Date</conditionType>
-<startDate>20250827</startDate>
+<startDate>20260828</startDate>
 <endDate/>
 <beginAge/>
 <endAge/>
@@ -2755,7 +2803,7 @@
 </conditionalSkip>
 <recurringDose>Yes</recurringDose>
 <seasonalRecommendation>
-<startDate>20250827</startDate>
+<startDate>20260923</startDate>
 <endDate/>
 </seasonalRecommendation>
 </seriesDose>
@@ -2896,7 +2944,7 @@
 <conditionalSkip/>
 <recurringDose>No</recurringDose>
 <seasonalRecommendation>
-<startDate>20250827</startDate>
+<startDate>20260923</startDate>
 <endDate/>
 </seasonalRecommendation>
 </seriesDose>
@@ -3171,7 +3219,7 @@
 <conditionalSkip/>
 <recurringDose>No</recurringDose>
 <seasonalRecommendation>
-<startDate>20250827</startDate>
+<startDate>20260923</startDate>
 <endDate/>
 </seasonalRecommendation>
 </seriesDose>
@@ -3311,7 +3359,7 @@
 <conditionalSkip/>
 <recurringDose>No</recurringDose>
 <seasonalRecommendation>
-<startDate>20250827</startDate>
+<startDate>20260923</startDate>
 <endDate/>
 </seasonalRecommendation>
 </seriesDose>
@@ -3464,7 +3512,7 @@
 <conditionalSkip/>
 <recurringDose>No</recurringDose>
 <seasonalRecommendation>
-<startDate>20250827</startDate>
+<startDate>20260923</startDate>
 <endDate/>
 </seasonalRecommendation>
 </seriesDose>
@@ -3737,14 +3785,14 @@
 <setLogic>n/a</setLogic>
 <set>
 <setID>1</setID>
-<setDescription>Target Dose is not needed after one dose has been administered on or after 8/27/2025</setDescription>
+<setDescription>Target Dose is not needed after one dose has been administered on or after 8/28/2026</setDescription>
 <effectiveDate/>
 <cessationDate/>
 <conditionLogic/>
 <condition>
 <conditionID>1</conditionID>
 <conditionType>Vaccine Count By Date</conditionType>
-<startDate>20250827</startDate>
+<startDate>20260828</startDate>
 <endDate/>
 <beginAge/>
 <endAge/>
@@ -3759,7 +3807,7 @@
 </conditionalSkip>
 <recurringDose>Yes</recurringDose>
 <seasonalRecommendation>
-<startDate>20250827</startDate>
+<startDate>20260923</startDate>
 <endDate/>
 </seasonalRecommendation>
 </seriesDose>
@@ -3897,7 +3945,7 @@
 <conditionalSkip/>
 <recurringDose>No</recurringDose>
 <seasonalRecommendation>
-<startDate>20250827</startDate>
+<startDate>20260923</startDate>
 <endDate/>
 </seasonalRecommendation>
 </seriesDose>
@@ -4113,7 +4161,7 @@
 <conditionalSkip/>
 <recurringDose>No</recurringDose>
 <seasonalRecommendation>
-<startDate>20250827</startDate>
+<startDate>20260923</startDate>
 <endDate/>
 </seasonalRecommendation>
 </seriesDose>
@@ -4204,7 +4252,7 @@
 <conditionalSkip/>
 <recurringDose>No</recurringDose>
 <seasonalRecommendation>
-<startDate>20250827</startDate>
+<startDate>20260923</startDate>
 <endDate/>
 </seasonalRecommendation>
 </seriesDose>
@@ -4411,14 +4459,14 @@
 <setLogic>n/a</setLogic>
 <set>
 <setID>1</setID>
-<setDescription>Target Dose is not needed after one dose has been administered on or after 8/27/2025</setDescription>
+<setDescription>Target Dose is not needed after one dose has been administered on or after 8/28/2026</setDescription>
 <effectiveDate/>
 <cessationDate/>
 <conditionLogic/>
 <condition>
 <conditionID>1</conditionID>
 <conditionType>Vaccine Count By Date</conditionType>
-<startDate>20250827</startDate>
+<startDate>20260828</startDate>
 <endDate/>
 <beginAge/>
 <endAge/>
@@ -4433,7 +4481,7 @@
 </conditionalSkip>
 <recurringDose>Yes</recurringDose>
 <seasonalRecommendation>
-<startDate>20250827</startDate>
+<startDate>20260923</startDate>
 <endDate/>
 </seasonalRecommendation>
 </seriesDose>
@@ -4547,7 +4595,7 @@
 <conditionalSkip/>
 <recurringDose>No</recurringDose>
 <seasonalRecommendation>
-<startDate>20250827</startDate>
+<startDate>20260923</startDate>
 <endDate/>
 </seasonalRecommendation>
 </seriesDose>
@@ -4760,7 +4808,7 @@
 <conditionalSkip/>
 <recurringDose>No</recurringDose>
 <seasonalRecommendation>
-<startDate>20250827</startDate>
+<startDate>20260923</startDate>
 <endDate/>
 </seasonalRecommendation>
 </seriesDose>
@@ -4932,7 +4980,7 @@
 <conditionalSkip/>
 <recurringDose>No</recurringDose>
 <seasonalRecommendation>
-<startDate>20250827</startDate>
+<startDate>20260923</startDate>
 <endDate/>
 </seasonalRecommendation>
 </seriesDose>
@@ -5133,14 +5181,14 @@
 <setLogic>n/a</setLogic>
 <set>
 <setID>1</setID>
-<setDescription>Target Dose is not needed after one dose has been administered on or after 8/27/2025</setDescription>
+<setDescription>Target Dose is not needed after one dose has been administered on or after 8/28/2026</setDescription>
 <effectiveDate/>
 <cessationDate/>
 <conditionLogic/>
 <condition>
 <conditionID>1</conditionID>
 <conditionType>Vaccine Count By Date</conditionType>
-<startDate>20250827</startDate>
+<startDate>20260828</startDate>
 <endDate/>
 <beginAge/>
 <endAge/>
@@ -5155,7 +5203,7 @@
 </conditionalSkip>
 <recurringDose>Yes</recurringDose>
 <seasonalRecommendation>
-<startDate>20250827</startDate>
+<startDate>20260923</startDate>
 <endDate/>
 </seasonalRecommendation>
 </seriesDose>
@@ -5269,7 +5317,7 @@
 <conditionalSkip/>
 <recurringDose>No</recurringDose>
 <seasonalRecommendation>
-<startDate>20250827</startDate>
+<startDate>20260923</startDate>
 <endDate/>
 </seasonalRecommendation>
 </seriesDose>
@@ -5604,7 +5652,7 @@
 <conditionalSkip/>
 <recurringDose>No</recurringDose>
 <seasonalRecommendation>
-<startDate>20250827</startDate>
+<startDate>20260923</startDate>
 <endDate/>
 </seasonalRecommendation>
 </seriesDose>
@@ -5866,7 +5914,7 @@
 </conditionalSkip>
 <recurringDose>No</recurringDose>
 <seasonalRecommendation>
-<startDate>20250827</startDate>
+<startDate>20260923</startDate>
 <endDate/>
 </seasonalRecommendation>
 </seriesDose>
@@ -6107,7 +6155,7 @@
 </conditionalSkip>
 <recurringDose>No</recurringDose>
 <seasonalRecommendation>
-<startDate>20250827</startDate>
+<startDate>20260923</startDate>
 <endDate/>
 </seasonalRecommendation>
 </seriesDose>
@@ -6422,7 +6470,7 @@
 </conditionalSkip>
 <recurringDose>No</recurringDose>
 <seasonalRecommendation>
-<startDate>20250827</startDate>
+<startDate>20260923</startDate>
 <endDate/>
 </seasonalRecommendation>
 </seriesDose>
@@ -6669,14 +6717,14 @@
 <setLogic>n/a</setLogic>
 <set>
 <setID>1</setID>
-<setDescription>Target Dose is not needed after one dose has been administered on or after 8/27/2025</setDescription>
+<setDescription>Target Dose is not needed after one dose has been administered on or after 8/28/2026</setDescription>
 <effectiveDate/>
 <cessationDate/>
 <conditionLogic/>
 <condition>
 <conditionID>1</conditionID>
 <conditionType>Vaccine Count By Date</conditionType>
-<startDate>20250827</startDate>
+<startDate>20260828</startDate>
 <endDate/>
 <beginAge/>
 <endAge/>
@@ -6691,7 +6739,7 @@
 </conditionalSkip>
 <recurringDose>Yes</recurringDose>
 <seasonalRecommendation>
-<startDate>20250827</startDate>
+<startDate>20260923</startDate>
 <endDate/>
 </seasonalRecommendation>
 </seriesDose>
@@ -6792,7 +6840,7 @@
 <conditionalSkip/>
 <recurringDose>No</recurringDose>
 <seasonalRecommendation>
-<startDate>20250827</startDate>
+<startDate>20260923</startDate>
 <endDate/>
 </seasonalRecommendation>
 </seriesDose>
@@ -7101,7 +7149,7 @@
 <conditionalSkip/>
 <recurringDose>No</recurringDose>
 <seasonalRecommendation>
-<startDate>20250827</startDate>
+<startDate>20260923</startDate>
 <endDate/>
 </seasonalRecommendation>
 </seriesDose>
@@ -7347,7 +7395,7 @@
 <conditionalSkip/>
 <recurringDose>No</recurringDose>
 <seasonalRecommendation>
-<startDate>20250827</startDate>
+<startDate>20260923</startDate>
 <endDate/>
 </seasonalRecommendation>
 </seriesDose>
@@ -7606,7 +7654,7 @@
 <conditionalSkip/>
 <recurringDose>No</recurringDose>
 <seasonalRecommendation>
-<startDate>20250827</startDate>
+<startDate>20260923</startDate>
 <endDate/>
 </seasonalRecommendation>
 </seriesDose>
@@ -7879,14 +7927,14 @@
 <setLogic>n/a</setLogic>
 <set>
 <setID>1</setID>
-<setDescription>Target Dose is not needed after one dose has been administered on or after 8/27/2025</setDescription>
+<setDescription>Target Dose is not needed after one dose has been administered on or after 8/28/2026</setDescription>
 <effectiveDate/>
 <cessationDate/>
 <conditionLogic/>
 <condition>
 <conditionID>1</conditionID>
 <conditionType>Vaccine Count By Date</conditionType>
-<startDate>20250827</startDate>
+<startDate>20260828</startDate>
 <endDate/>
 <beginAge/>
 <endAge/>
@@ -7901,7 +7949,7 @@
 </conditionalSkip>
 <recurringDose>Yes</recurringDose>
 <seasonalRecommendation>
-<startDate>20250827</startDate>
+<startDate>20260923</startDate>
 <endDate/>
 </seasonalRecommendation>
 </seriesDose>
@@ -8039,7 +8087,7 @@
 <conditionalSkip/>
 <recurringDose>No</recurringDose>
 <seasonalRecommendation>
-<startDate>20250827</startDate>
+<startDate>20260923</startDate>
 <endDate/>
 </seasonalRecommendation>
 </seriesDose>
@@ -8253,7 +8301,7 @@
 <conditionalSkip/>
 <recurringDose>No</recurringDose>
 <seasonalRecommendation>
-<startDate>20250827</startDate>
+<startDate>20260923</startDate>
 <endDate/>
 </seasonalRecommendation>
 </seriesDose>
@@ -8501,7 +8549,7 @@
 </conditionalSkip>
 <recurringDose>No</recurringDose>
 <seasonalRecommendation>
-<startDate>20250827</startDate>
+<startDate>20260923</startDate>
 <endDate/>
 </seasonalRecommendation>
 </seriesDose>
@@ -8721,7 +8769,7 @@
 <conditionalSkip/>
 <recurringDose>No</recurringDose>
 <seasonalRecommendation>
-<startDate>20250827</startDate>
+<startDate>20260923</startDate>
 <endDate/>
 </seasonalRecommendation>
 </seriesDose>
@@ -8999,14 +9047,14 @@
 <setLogic>n/a</setLogic>
 <set>
 <setID>1</setID>
-<setDescription>Target Dose is not needed after one dose has been administered on or after 8/27/2025</setDescription>
+<setDescription>Target Dose is not needed after one dose has been administered on or after 8/28/2026</setDescription>
 <effectiveDate/>
 <cessationDate/>
 <conditionLogic/>
 <condition>
 <conditionID>1</conditionID>
 <conditionType>Vaccine Count By Date</conditionType>
-<startDate>20250827</startDate>
+<startDate>20260828</startDate>
 <endDate/>
 <beginAge/>
 <endAge/>
@@ -9021,7 +9069,7 @@
 </conditionalSkip>
 <recurringDose>Yes</recurringDose>
 <seasonalRecommendation>
-<startDate>20250827</startDate>
+<startDate>20260923</startDate>
 <endDate/>
 </seasonalRecommendation>
 </seriesDose>
@@ -9159,7 +9207,7 @@
 <conditionalSkip/>
 <recurringDose>No</recurringDose>
 <seasonalRecommendation>
-<startDate>20250827</startDate>
+<startDate>20260923</startDate>
 <endDate/>
 </seasonalRecommendation>
 </seriesDose>
@@ -9370,7 +9418,7 @@
 <conditionalSkip/>
 <recurringDose>No</recurringDose>
 <seasonalRecommendation>
-<startDate>20250827</startDate>
+<startDate>20260923</startDate>
 <endDate/>
 </seasonalRecommendation>
 </seriesDose>
@@ -9443,7 +9491,7 @@
 <conditionalSkip/>
 <recurringDose>No</recurringDose>
 <seasonalRecommendation>
-<startDate>20250827</startDate>
+<startDate>20260923</startDate>
 <endDate/>
 </seasonalRecommendation>
 </seriesDose>
@@ -9663,7 +9711,7 @@
 <conditionalSkip/>
 <recurringDose>No</recurringDose>
 <seasonalRecommendation>
-<startDate>20250827</startDate>
+<startDate>20260923</startDate>
 <endDate/>
 </seasonalRecommendation>
 </seriesDose>
@@ -9941,14 +9989,14 @@
 <setLogic>n/a</setLogic>
 <set>
 <setID>1</setID>
-<setDescription>Target Dose is not needed after one dose has been administered on or after 8/27/2025</setDescription>
+<setDescription>Target Dose is not needed after one dose has been administered on or after 8/28/2026</setDescription>
 <effectiveDate/>
 <cessationDate/>
 <conditionLogic/>
 <condition>
 <conditionID>1</conditionID>
 <conditionType>Vaccine Count By Date</conditionType>
-<startDate>20250827</startDate>
+<startDate>20260828</startDate>
 <endDate/>
 <beginAge/>
 <endAge/>
@@ -9963,7 +10011,7 @@
 </conditionalSkip>
 <recurringDose>Yes</recurringDose>
 <seasonalRecommendation>
-<startDate>20250827</startDate>
+<startDate>20260923</startDate>
 <endDate/>
 </seasonalRecommendation>
 </seriesDose>
@@ -10077,7 +10125,7 @@
 <conditionalSkip/>
 <recurringDose>No</recurringDose>
 <seasonalRecommendation>
-<startDate>20250827</startDate>
+<startDate>20260923</startDate>
 <endDate/>
 </seasonalRecommendation>
 </seriesDose>

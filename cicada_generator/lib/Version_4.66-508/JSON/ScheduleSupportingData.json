@@ -10372,6 +10372,15 @@
                     ]
                 },
                 {
+                    "cvx": "338",
+                    "shortDescription": "Influenza, mRNA, trivalent, PF",
+                    "association": [
+                        {
+                            "antigen": "Influenza"
+                        }
+                    ]
+                },
+                {
                     "cvx": "500",
                     "shortDescription": "COVID-19 Non-US Vaccine, Product Unknown",
                     "association": [
@@ -15051,6 +15060,105 @@
                                 "code": "67569000",
                                 "codeSystem": "SNOMED",
                                 "text": "Bronchopulmonary dysplasia of newborn [disorder]"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "observationCode": "281",
+                    "observationTitle": "Born preterm, at less than 32 weeks, 0 days gestation",
+                    "indicationText": "Administer to persons born preterm, at less than 32 weeks, 0 days gestation",
+                    "clarifyingText": "Children born preterm, at less than 32 weeks, 0 days gestation, regardless of the need for medication or other support",
+                    "codedValues": {
+                        "codedValue": [
+                            {
+                                "code": "1237576009",
+                                "codeSystem": "SNOMED",
+                                "text": "Baby premature at delivery less than 32 weeks [finding]"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "observationCode": "282",
+                    "observationTitle": "Chronic lung disease attributable to other significant neonatal conditions",
+                    "indicationText": "Administer to persons with chronic lung disease attributable to other significant neonatal conditions",
+                    "clarifyingText": "Children with chronic lung disease attributable to other significant neonatal conditions (eg, meconium aspiration or congenital diaphragmatic hernia) who required medical support (ie, chronic corticosteroid therapy, diuretic therapy, or supplemental oxygen) at any time during the 6-month period before the start of the second RSV season"
+                },
+                {
+                    "observationCode": "283",
+                    "observationTitle": "Hemodynamically significant congenital heart disease",
+                    "indicationText": "Administer to persons with hemodynamically significant congenital heart disease",
+                    "clarifyingText": "Children with hemodynamically significant congenital heart disease (ie, a defect that can result in symptoms and/or cardiac chamber dilation)"
+                },
+                {
+                    "observationCode": "284",
+                    "observationTitle": "Anatomic pulmonary abnormalities",
+                    "indicationText": "Administer to persons with anatomic pulmonary abnormalities"
+                },
+                {
+                    "observationCode": "285",
+                    "observationTitle": "Neuromuscular disorders",
+                    "indicationText": "Administer to persons with neuromuscular disorders",
+                    "codedValues": {
+                        "codedValue": [
+                            {
+                                "code": "257277002",
+                                "codeSystem": "SNOMED",
+                                "text": "Combined disorder of muscle AND peripheral nerve [disorder]"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "observationCode": "286",
+                    "observationTitle": "Autoimmune immunosuppression",
+                    "indicationText": "Administer to persons with autoimmune-associated immunosuppression"
+                },
+                {
+                    "observationCode": "287",
+                    "observationTitle": "Severe allergic reaction (e.g., anaphylaxis) after a previous dose or to a component of an mRNA COVID-19 vaccine",
+                    "contraindicationText": "Do not administer an mRNA COVID-19 vaccine to persons who experienced a severe allergic reaction (e.g., anaphylaxis) after a previous dose or to a component of an mRNA COVID-19 vaccine",
+                    "codedValues": {
+                        "codedValue": [
+                            {
+                                "code": "309",
+                                "codeSystem": "CVX",
+                                "text": "COVID-19, mRNA, LNP-S, PF, tris-sucrose, 30 mcg/0.3 mL"
+                            },
+                            {
+                                "code": "310",
+                                "codeSystem": "CVX",
+                                "text": "COVID-19, mRNA, LNP-S, PF, tris-sucrose, 10 mcg/0.3 mL"
+                            },
+                            {
+                                "code": "311",
+                                "codeSystem": "CVX",
+                                "text": "COVID-19, mRNA, LNP-S, PF, 25 mcg/0.25 mL"
+                            },
+                            {
+                                "code": "312",
+                                "codeSystem": "CVX",
+                                "text": "COVID-19, mRNA, LNP-S, PF, 50 mcg/0.5 mL"
+                            },
+                            {
+                                "code": "334",
+                                "codeSystem": "CVX",
+                                "text": "COVID-19, mRNA, LNP-S, PF, 10 mcg/0.2 mL"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "observationCode": "288",
+                    "observationTitle": "Severe allergic reaction (e.g., anaphylaxis) after a previous dose or to a component of a Novavax COVID-19 vaccine",
+                    "contraindicationText": "Do not administer a Novavax COVID-19 vaccine to persons who experienced a severe allergic reaction (e.g., anaphylaxis) after a previous dose or to a component of a Novavax COVID-19 vaccine",
+                    "codedValues": {
+                        "codedValue": [
+                            {
+                                "code": "313",
+                                "codeSystem": "CVX",
+                                "text": "COVID-19, subunit, rS-nanoparticle, adjuvanted, PF, 5 mcg/0.5 mL"
                             }
                         ]
                     }

@@ -29,3 +29,27 @@ String get repoRoot {
 
 /// [relative] resolved against [repoRoot].
 String repoPath(String relative) => '$repoRoot/$relative';
+
+/// The healthy childhood and adult test-case workbook the generator reads,
+/// found by name rather than written in: the tools that named the v4.46
+/// file by hand kept pointing at it after the workbook was replaced.
+/// Exactly one must exist in `cicada_generator/lib/test_cases/`.
+({String path, String version}) get healthyWorkbook {
+  final pattern = RegExp(
+    r'^cdsi-healthy-childhood-and-adult-test-cases-v([\d.]+)\.xlsx$',
+  );
+  final found = [
+    for (final f
+        in Directory(
+          repoPath('cicada_generator/lib/test_cases'),
+        ).listSync().whereType<File>())
+      if (pattern.firstMatch(f.uri.pathSegments.last) case final m?)
+        (path: f.path, version: m.group(1)!),
+  ];
+  if (found.length != 1) {
+    throw StateError(
+      'expected one healthy test-case workbook, found ${found.length}',
+    );
+  }
+  return found.single;
+}

@@ -76,22 +76,82 @@ final AntigenSupportingData covid19 = AntigenSupportingData.fromJson({
             },
           ],
         },
+        {
+          'observationCode': '287',
+          'observationTitle':
+              'Severe allergic reaction (e.g., anaphylaxis) after a '
+              'previous dose or to a component of an mRNA COVID-19 vaccine',
+          'contraindicationText':
+              'Do not administer an mRNA COVID-19 vaccine to persons who '
+              'experienced a severe allergic reaction (e.g., anaphylaxis) '
+              'after a previous dose or to a component of an mRNA COVID-19 '
+              'vaccine',
+          'contraindicatedVaccine': [
+            {
+              'vaccineType':
+                  'COVID-19, mRNA, LNP-S, PF, tris-sucrose, 30 mcg/0.3 mL',
+              'cvx': '309',
+            },
+            {
+              'vaccineType':
+                  'COVID-19, mRNA, LNP-S, PF, tris-sucrose, 10 mcg/0.3 mL',
+              'cvx': '310',
+            },
+            {
+              'vaccineType': 'COVID-19, mRNA, LNP-S, PF, 25 mcg/0.25 mL',
+              'cvx': '311',
+            },
+            {
+              'vaccineType': 'COVID-19, mRNA, LNP-S, PF, 50 mcg/0.5 mL',
+              'cvx': '312',
+            },
+            {
+              'vaccineType': 'COVID-19, mRNA, LNP-S, PF, 10 mcg/0.2 mL',
+              'cvx': '334',
+            },
+          ],
+        },
+        {
+          'observationCode': '288',
+          'observationTitle':
+              'Severe allergic reaction (e.g., anaphylaxis) after a '
+              'previous dose or to a component of a Novavax COVID-19 '
+              'vaccine',
+          'contraindicationText':
+              'Do not administer a Novavax COVID-19 vaccine to persons who '
+              'experienced a severe allergic reaction (e.g., anaphylaxis) '
+              'after a previous dose or to a component of a Novavax '
+              'COVID-19 vaccine',
+          'contraindicatedVaccine': [
+            {
+              'vaccineType':
+                  'COVID-19, subunit, rS-nanoparticle, adjuvanted, PF, 5 '
+                  'mcg/0.5 mL',
+              'cvx': '313',
+            },
+          ],
+        },
       ],
     },
   },
   'series': [
     {
-      'seriesName':
-          'COVID-19 start at 6mo-23mo shared clinical decision-making series',
+      'seriesName': 'COVID-19 start at 6mo-23mo series',
       'targetDisease': 'COVID-19',
       'vaccineGroup': 'COVID-19',
       'seriesAdminGuidance': [
-        'Vaccination based on individual-based decision-making- with '
-            'an emphasis that the risk-benefit of vaccination is most '
-            'favorable for individuals who are at an increased risk for '
-            'severe COVID-19 disease and lowest for individuals who are '
-            'not at an increased risk according to the CDC list of '
-            'COVID-19 risk factors. see '
+        'A 2026-2027 COVID-19 vaccine is recommended for all adults '
+            'ages 18 years and older. A 2026-2027 COVID-19 vaccine is also '
+            'recommended for all children ages 6 months - 17 years with '
+            'moderate to severe immunocompromise. For all other children '
+            'in this age group, a COVID-19 vaccine is recommended through '
+            'shared clinical decision making between parents or legal '
+            'guardians and healthcare professionals - with an emphasis '
+            'that the risk-benefit of vaccination is most favorable for '
+            'individuals who are at an increased risk for severe COVID-19 '
+            'disease and lowest for individuals who are not at an '
+            'increased risk, according to the CDC list of COVID-19 risk '
+            'factors. '
             'https://www.cdc.gov/covid/hcp/clinical-care/underlying-conditions.html'
             '',
         'For people who have a history of myocarditis with MIS-C or '
@@ -292,7 +352,7 @@ final AntigenSupportingData covid19 = AntigenSupportingData.fromJson({
           ],
           'recurringDose': 'No',
           'seasonalRecommendation': {
-            'startDate': '2025-08-27',
+            'startDate': '2026-09-23',
           },
         },
         {
@@ -494,14 +554,14 @@ final AntigenSupportingData covid19 = AntigenSupportingData.fromJson({
                   'setID': '1',
                   'setDescription':
                       'Target Dose is not needed if patient has received 1 '
-                      'valid dose of Pfizer before 08/27/2025 AND patient '
+                      'valid dose of Pfizer before 8/28/2026 AND patient '
                       'is under 2 years old',
                   'conditionLogic': 'AND',
                   'condition': [
                     {
                       'conditionID': '1',
                       'conditionType': 'Vaccine Count by Date',
-                      'endDate': '2025-08-27',
+                      'endDate': '2026-08-28',
                       'doseCount': '1',
                       'doseType': 'Valid',
                       'doseCountLogic': 'equal to',
@@ -519,14 +579,14 @@ final AntigenSupportingData covid19 = AntigenSupportingData.fromJson({
                   'setID': '2',
                   'setDescription':
                       'Target Dose is not needed if patient has received 1 '
-                      'valid dose of Novavax before 08/27/2025 AND patient '
+                      'valid dose of Novavax before 8/28/2026 AND patient '
                       'is under 2 years old',
                   'conditionLogic': 'AND',
                   'condition': [
                     {
                       'conditionID': '1',
                       'conditionType': 'Vaccine Count by Date',
-                      'endDate': '2025-08-27',
+                      'endDate': '2026-08-28',
                       'doseCount': '1',
                       'doseType': 'Valid',
                       'doseCountLogic': 'equal to',
@@ -543,14 +603,14 @@ final AntigenSupportingData covid19 = AntigenSupportingData.fromJson({
                   'setID': '3',
                   'setDescription':
                       'Target Dose is not needed if patient has received 1 '
-                      'valid unspecified dose before 08/27/2025 AND '
-                      'patient is under 2 years old',
+                      'valid unspecified dose before 8/28/2026 AND patient '
+                      'is under 2 years old',
                   'conditionLogic': 'AND',
                   'condition': [
                     {
                       'conditionID': '1',
                       'conditionType': 'Vaccine Count by Date',
-                      'endDate': '2025-08-27',
+                      'endDate': '2026-08-28',
                       'doseCount': '1',
                       'doseType': 'Valid',
                       'doseCountLogic': 'equal to',
@@ -568,7 +628,7 @@ final AntigenSupportingData covid19 = AntigenSupportingData.fromJson({
           ],
           'recurringDose': 'No',
           'seasonalRecommendation': {
-            'startDate': '2025-08-27',
+            'startDate': '2026-09-23',
           },
         },
         {
@@ -787,7 +847,7 @@ final AntigenSupportingData covid19 = AntigenSupportingData.fromJson({
           ],
           'recurringDose': 'No',
           'seasonalRecommendation': {
-            'startDate': '2025-08-27',
+            'startDate': '2026-09-23',
           },
         },
         {
@@ -995,12 +1055,12 @@ final AntigenSupportingData covid19 = AntigenSupportingData.fromJson({
                   'setID': '1',
                   'setDescription':
                       'Target Dose is not needed if patient received at '
-                      'least 2 valid doses before 08/27/2025',
+                      'least 2 valid doses before 8/28/2026',
                   'condition': [
                     {
                       'conditionID': '1',
                       'conditionType': 'Vaccine Count by Date',
-                      'endDate': '2025-08-27',
+                      'endDate': '2026-08-28',
                       'doseCount': '1',
                       'doseType': 'Valid',
                       'doseCountLogic': 'greater than',
@@ -1011,12 +1071,12 @@ final AntigenSupportingData covid19 = AntigenSupportingData.fromJson({
                   'setID': '2',
                   'setDescription':
                       'Target Dose is not needed if patient received at '
-                      'least 2 valid doses on or after 8/27/2025',
+                      'least 2 valid doses on or after 8/28/2026',
                   'condition': [
                     {
                       'conditionID': '1',
                       'conditionType': 'Vaccine Count by Date',
-                      'startDate': '2025-08-27',
+                      'startDate': '2026-08-28',
                       'doseCount': '1',
                       'doseType': 'Valid',
                       'doseCountLogic': 'greater than',
@@ -1058,7 +1118,7 @@ final AntigenSupportingData covid19 = AntigenSupportingData.fromJson({
           ],
           'recurringDose': 'No',
           'seasonalRecommendation': {
-            'startDate': '2025-08-27',
+            'startDate': '2026-09-23',
           },
         },
         {
@@ -1311,12 +1371,12 @@ final AntigenSupportingData covid19 = AntigenSupportingData.fromJson({
                   'setID': '1',
                   'setDescription':
                       'Target Dose is not needed after one dose has been '
-                      'administered on or after 8/27/2025',
+                      'administered on or after 8/28/2026',
                   'condition': [
                     {
                       'conditionID': '1',
                       'conditionType': 'Vaccine Count By Date',
-                      'startDate': '2025-08-27',
+                      'startDate': '2026-08-28',
                       'doseCount': '0',
                       'doseType': 'Valid',
                       'doseCountLogic': 'greater than',
@@ -1328,23 +1388,28 @@ final AntigenSupportingData covid19 = AntigenSupportingData.fromJson({
           ],
           'recurringDose': 'Yes',
           'seasonalRecommendation': {
-            'startDate': '2025-08-27',
+            'startDate': '2026-09-23',
           },
         },
       ],
     },
     {
-      'seriesName':
-          'COVID-19 start at 2 years+ shared clinical decision-making series',
+      'seriesName': 'COVID-19 start at 2 years+ series',
       'targetDisease': 'COVID-19',
       'vaccineGroup': 'COVID-19',
       'seriesAdminGuidance': [
-        'Vaccination based on individual-based decision-making- with '
-            'an emphasis that the risk-benefit of vaccination is most '
-            'favorable for individuals who are at an increased risk for '
-            'severe COVID-19 disease and lowest for individuals who are '
-            'not at an increased risk according to the CDC list of '
-            'COVID-19 risk factors. see '
+        'A 2026-2027 COVID-19 vaccine is recommended for all adults '
+            'ages 18 years and older. A 2026-2027 COVID-19 vaccine is also '
+            'recommended for all children ages 6 months - 17 years with '
+            'moderate to severe immunocompromise. For all other children '
+            'in this age group, a COVID-19 vaccine is recommended through '
+            'shared clinical decision making between parents or legal '
+            'guardians and healthcare professionals - with an emphasis '
+            'that the risk-benefit of vaccination is most favorable for '
+            'individuals who are at an increased risk for severe COVID-19 '
+            'disease and lowest for individuals who are not at an '
+            'increased risk, according to the CDC list of COVID-19 risk '
+            'factors. '
             'https://www.cdc.gov/covid/hcp/clinical-care/underlying-conditions.html'
             '',
         'The recommended interval for Moderna (mNexspike) is 3 months '
@@ -1656,12 +1721,12 @@ final AntigenSupportingData covid19 = AntigenSupportingData.fromJson({
                   'setID': '1',
                   'setDescription':
                       'Target Dose is not needed after one valid dose has '
-                      'been administered on or after 8/27/2025',
+                      'been administered on or after 8/28/2026',
                   'condition': [
                     {
                       'conditionID': '1',
                       'conditionType': 'Vaccine Count By Date',
-                      'startDate': '2025-08-27',
+                      'startDate': '2026-08-28',
                       'doseCount': '0',
                       'doseType': 'Valid',
                       'doseCountLogic': 'greater than',
@@ -1673,7 +1738,7 @@ final AntigenSupportingData covid19 = AntigenSupportingData.fromJson({
           ],
           'recurringDose': 'Yes',
           'seasonalRecommendation': {
-            'startDate': '2025-08-27',
+            'startDate': '2026-09-23',
           },
         },
         {
@@ -1790,7 +1855,7 @@ final AntigenSupportingData covid19 = AntigenSupportingData.fromJson({
           ],
           'recurringDose': 'No',
           'seasonalRecommendation': {
-            'startDate': '2025-08-27',
+            'startDate': '2026-09-23',
           },
         },
       ],
@@ -2099,7 +2164,7 @@ final AntigenSupportingData covid19 = AntigenSupportingData.fromJson({
           ],
           'recurringDose': 'No',
           'seasonalRecommendation': {
-            'startDate': '2025-08-27',
+            'startDate': '2026-09-23',
           },
         },
         {
@@ -2224,7 +2289,7 @@ final AntigenSupportingData covid19 = AntigenSupportingData.fromJson({
           ],
           'recurringDose': 'No',
           'seasonalRecommendation': {
-            'startDate': '2025-08-27',
+            'startDate': '2026-09-23',
           },
         },
         {
@@ -2349,7 +2414,7 @@ final AntigenSupportingData covid19 = AntigenSupportingData.fromJson({
           ],
           'recurringDose': 'No',
           'seasonalRecommendation': {
-            'startDate': '2025-08-27',
+            'startDate': '2026-09-23',
           },
         },
         {
@@ -2616,12 +2681,12 @@ final AntigenSupportingData covid19 = AntigenSupportingData.fromJson({
                   'setID': '1',
                   'setDescription':
                       'Target Dose is not needed after one dose has been '
-                      'administered on or after 8/27/2025',
+                      'administered on or after 8/28/2026',
                   'condition': [
                     {
                       'conditionID': '1',
                       'conditionType': 'Vaccine Count By Date',
-                      'startDate': '2025-08-27',
+                      'startDate': '2026-08-28',
                       'doseCount': '0',
                       'doseType': 'Valid',
                       'doseCountLogic': 'greater than',
@@ -2633,7 +2698,7 @@ final AntigenSupportingData covid19 = AntigenSupportingData.fromJson({
           ],
           'recurringDose': 'Yes',
           'seasonalRecommendation': {
-            'startDate': '2025-08-27',
+            'startDate': '2026-09-23',
           },
         },
         {
@@ -2749,7 +2814,7 @@ final AntigenSupportingData covid19 = AntigenSupportingData.fromJson({
           ],
           'recurringDose': 'No',
           'seasonalRecommendation': {
-            'startDate': '2025-08-27',
+            'startDate': '2026-09-23',
           },
         },
       ],
@@ -3057,7 +3122,7 @@ final AntigenSupportingData covid19 = AntigenSupportingData.fromJson({
           ],
           'recurringDose': 'No',
           'seasonalRecommendation': {
-            'startDate': '2025-08-27',
+            'startDate': '2026-09-23',
           },
         },
         {
@@ -3183,7 +3248,7 @@ final AntigenSupportingData covid19 = AntigenSupportingData.fromJson({
           ],
           'recurringDose': 'No',
           'seasonalRecommendation': {
-            'startDate': '2025-08-27',
+            'startDate': '2026-09-23',
           },
         },
         {
@@ -3316,7 +3381,7 @@ final AntigenSupportingData covid19 = AntigenSupportingData.fromJson({
           ],
           'recurringDose': 'No',
           'seasonalRecommendation': {
-            'startDate': '2025-08-27',
+            'startDate': '2026-09-23',
           },
         },
         {
@@ -3570,12 +3635,12 @@ final AntigenSupportingData covid19 = AntigenSupportingData.fromJson({
                   'setID': '1',
                   'setDescription':
                       'Target Dose is not needed after one dose has been '
-                      'administered on or after 8/27/2025',
+                      'administered on or after 8/28/2026',
                   'condition': [
                     {
                       'conditionID': '1',
                       'conditionType': 'Vaccine Count By Date',
-                      'startDate': '2025-08-27',
+                      'startDate': '2026-08-28',
                       'doseCount': '0',
                       'doseType': 'Valid',
                       'doseCountLogic': 'greater than',
@@ -3587,7 +3652,7 @@ final AntigenSupportingData covid19 = AntigenSupportingData.fromJson({
           ],
           'recurringDose': 'Yes',
           'seasonalRecommendation': {
-            'startDate': '2025-08-27',
+            'startDate': '2026-09-23',
           },
         },
         {
@@ -3703,7 +3768,7 @@ final AntigenSupportingData covid19 = AntigenSupportingData.fromJson({
           ],
           'recurringDose': 'No',
           'seasonalRecommendation': {
-            'startDate': '2025-08-27',
+            'startDate': '2026-09-23',
           },
         },
       ],
@@ -3957,7 +4022,7 @@ final AntigenSupportingData covid19 = AntigenSupportingData.fromJson({
           ],
           'recurringDose': 'No',
           'seasonalRecommendation': {
-            'startDate': '2025-08-27',
+            'startDate': '2026-09-23',
           },
         },
         {
@@ -4039,7 +4104,7 @@ final AntigenSupportingData covid19 = AntigenSupportingData.fromJson({
           ],
           'recurringDose': 'No',
           'seasonalRecommendation': {
-            'startDate': '2025-08-27',
+            'startDate': '2026-09-23',
           },
         },
         {
@@ -4238,12 +4303,12 @@ final AntigenSupportingData covid19 = AntigenSupportingData.fromJson({
                   'setID': '1',
                   'setDescription':
                       'Target Dose is not needed after one dose has been '
-                      'administered on or after 8/27/2025',
+                      'administered on or after 8/28/2026',
                   'condition': [
                     {
                       'conditionID': '1',
                       'conditionType': 'Vaccine Count By Date',
-                      'startDate': '2025-08-27',
+                      'startDate': '2026-08-28',
                       'doseCount': '0',
                       'doseType': 'Valid',
                       'doseCountLogic': 'greater than',
@@ -4255,7 +4320,7 @@ final AntigenSupportingData covid19 = AntigenSupportingData.fromJson({
           ],
           'recurringDose': 'Yes',
           'seasonalRecommendation': {
-            'startDate': '2025-08-27',
+            'startDate': '2026-09-23',
           },
         },
         {
@@ -4350,7 +4415,7 @@ final AntigenSupportingData covid19 = AntigenSupportingData.fromJson({
           ],
           'recurringDose': 'No',
           'seasonalRecommendation': {
-            'startDate': '2025-08-27',
+            'startDate': '2026-09-23',
           },
         },
       ],
@@ -4600,7 +4665,7 @@ final AntigenSupportingData covid19 = AntigenSupportingData.fromJson({
           ],
           'recurringDose': 'No',
           'seasonalRecommendation': {
-            'startDate': '2025-08-27',
+            'startDate': '2026-09-23',
           },
         },
         {
@@ -4752,7 +4817,7 @@ final AntigenSupportingData covid19 = AntigenSupportingData.fromJson({
           ],
           'recurringDose': 'No',
           'seasonalRecommendation': {
-            'startDate': '2025-08-27',
+            'startDate': '2026-09-23',
           },
         },
         {
@@ -4941,12 +5006,12 @@ final AntigenSupportingData covid19 = AntigenSupportingData.fromJson({
                   'setID': '1',
                   'setDescription':
                       'Target Dose is not needed after one dose has been '
-                      'administered on or after 8/27/2025',
+                      'administered on or after 8/28/2026',
                   'condition': [
                     {
                       'conditionID': '1',
                       'conditionType': 'Vaccine Count By Date',
-                      'startDate': '2025-08-27',
+                      'startDate': '2026-08-28',
                       'doseCount': '0',
                       'doseType': 'Valid',
                       'doseCountLogic': 'greater than',
@@ -4958,7 +5023,7 @@ final AntigenSupportingData covid19 = AntigenSupportingData.fromJson({
           ],
           'recurringDose': 'Yes',
           'seasonalRecommendation': {
-            'startDate': '2025-08-27',
+            'startDate': '2026-09-23',
           },
         },
         {
@@ -5053,7 +5118,7 @@ final AntigenSupportingData covid19 = AntigenSupportingData.fromJson({
           ],
           'recurringDose': 'No',
           'seasonalRecommendation': {
-            'startDate': '2025-08-27',
+            'startDate': '2026-09-23',
           },
         },
       ],
@@ -5434,7 +5499,7 @@ final AntigenSupportingData covid19 = AntigenSupportingData.fromJson({
           ],
           'recurringDose': 'No',
           'seasonalRecommendation': {
-            'startDate': '2025-08-27',
+            'startDate': '2026-09-23',
           },
         },
         {
@@ -5683,7 +5748,7 @@ final AntigenSupportingData covid19 = AntigenSupportingData.fromJson({
           ],
           'recurringDose': 'No',
           'seasonalRecommendation': {
-            'startDate': '2025-08-27',
+            'startDate': '2026-09-23',
           },
         },
         {
@@ -5916,7 +5981,7 @@ final AntigenSupportingData covid19 = AntigenSupportingData.fromJson({
           ],
           'recurringDose': 'No',
           'seasonalRecommendation': {
-            'startDate': '2025-08-27',
+            'startDate': '2026-09-23',
           },
         },
         {
@@ -6194,7 +6259,7 @@ final AntigenSupportingData covid19 = AntigenSupportingData.fromJson({
           ],
           'recurringDose': 'No',
           'seasonalRecommendation': {
-            'startDate': '2025-08-27',
+            'startDate': '2026-09-23',
           },
         },
         {
@@ -6429,12 +6494,12 @@ final AntigenSupportingData covid19 = AntigenSupportingData.fromJson({
                   'setID': '1',
                   'setDescription':
                       'Target Dose is not needed after one dose has been '
-                      'administered on or after 8/27/2025',
+                      'administered on or after 8/28/2026',
                   'condition': [
                     {
                       'conditionID': '1',
                       'conditionType': 'Vaccine Count By Date',
-                      'startDate': '2025-08-27',
+                      'startDate': '2026-08-28',
                       'doseCount': '0',
                       'doseType': 'Valid',
                       'doseCountLogic': 'greater than',
@@ -6446,7 +6511,7 @@ final AntigenSupportingData covid19 = AntigenSupportingData.fromJson({
           ],
           'recurringDose': 'Yes',
           'seasonalRecommendation': {
-            'startDate': '2025-08-27',
+            'startDate': '2026-09-23',
           },
         },
         {
@@ -6531,7 +6596,7 @@ final AntigenSupportingData covid19 = AntigenSupportingData.fromJson({
           ],
           'recurringDose': 'No',
           'seasonalRecommendation': {
-            'startDate': '2025-08-27',
+            'startDate': '2026-09-23',
           },
         },
       ],
@@ -6880,7 +6945,7 @@ final AntigenSupportingData covid19 = AntigenSupportingData.fromJson({
           ],
           'recurringDose': 'No',
           'seasonalRecommendation': {
-            'startDate': '2025-08-27',
+            'startDate': '2026-09-23',
           },
         },
         {
@@ -7103,7 +7168,7 @@ final AntigenSupportingData covid19 = AntigenSupportingData.fromJson({
           ],
           'recurringDose': 'No',
           'seasonalRecommendation': {
-            'startDate': '2025-08-27',
+            'startDate': '2026-09-23',
           },
         },
         {
@@ -7332,7 +7397,7 @@ final AntigenSupportingData covid19 = AntigenSupportingData.fromJson({
           ],
           'recurringDose': 'No',
           'seasonalRecommendation': {
-            'startDate': '2025-08-27',
+            'startDate': '2026-09-23',
           },
         },
         {
@@ -7585,12 +7650,12 @@ final AntigenSupportingData covid19 = AntigenSupportingData.fromJson({
                   'setID': '1',
                   'setDescription':
                       'Target Dose is not needed after one dose has been '
-                      'administered on or after 8/27/2025',
+                      'administered on or after 8/28/2026',
                   'condition': [
                     {
                       'conditionID': '1',
                       'conditionType': 'Vaccine Count By Date',
-                      'startDate': '2025-08-27',
+                      'startDate': '2026-08-28',
                       'doseCount': '0',
                       'doseType': 'Valid',
                       'doseCountLogic': 'greater than',
@@ -7602,7 +7667,7 @@ final AntigenSupportingData covid19 = AntigenSupportingData.fromJson({
           ],
           'recurringDose': 'Yes',
           'seasonalRecommendation': {
-            'startDate': '2025-08-27',
+            'startDate': '2026-09-23',
           },
         },
         {
@@ -7718,7 +7783,7 @@ final AntigenSupportingData covid19 = AntigenSupportingData.fromJson({
           ],
           'recurringDose': 'No',
           'seasonalRecommendation': {
-            'startDate': '2025-08-27',
+            'startDate': '2026-09-23',
           },
         },
       ],
@@ -7966,7 +8031,7 @@ final AntigenSupportingData covid19 = AntigenSupportingData.fromJson({
           ],
           'recurringDose': 'No',
           'seasonalRecommendation': {
-            'startDate': '2025-08-27',
+            'startDate': '2026-09-23',
           },
         },
         {
@@ -8207,7 +8272,7 @@ final AntigenSupportingData covid19 = AntigenSupportingData.fromJson({
           ],
           'recurringDose': 'No',
           'seasonalRecommendation': {
-            'startDate': '2025-08-27',
+            'startDate': '2026-09-23',
           },
         },
         {
@@ -8409,7 +8474,7 @@ final AntigenSupportingData covid19 = AntigenSupportingData.fromJson({
           ],
           'recurringDose': 'No',
           'seasonalRecommendation': {
-            'startDate': '2025-08-27',
+            'startDate': '2026-09-23',
           },
         },
         {
@@ -8672,12 +8737,12 @@ final AntigenSupportingData covid19 = AntigenSupportingData.fromJson({
                   'setID': '1',
                   'setDescription':
                       'Target Dose is not needed after one dose has been '
-                      'administered on or after 8/27/2025',
+                      'administered on or after 8/28/2026',
                   'condition': [
                     {
                       'conditionID': '1',
                       'conditionType': 'Vaccine Count By Date',
-                      'startDate': '2025-08-27',
+                      'startDate': '2026-08-28',
                       'doseCount': '0',
                       'doseType': 'Valid',
                       'doseCountLogic': 'greater than',
@@ -8689,7 +8754,7 @@ final AntigenSupportingData covid19 = AntigenSupportingData.fromJson({
           ],
           'recurringDose': 'Yes',
           'seasonalRecommendation': {
-            'startDate': '2025-08-27',
+            'startDate': '2026-09-23',
           },
         },
         {
@@ -8805,7 +8870,7 @@ final AntigenSupportingData covid19 = AntigenSupportingData.fromJson({
           ],
           'recurringDose': 'No',
           'seasonalRecommendation': {
-            'startDate': '2025-08-27',
+            'startDate': '2026-09-23',
           },
         },
       ],
@@ -9056,7 +9121,7 @@ final AntigenSupportingData covid19 = AntigenSupportingData.fromJson({
           ],
           'recurringDose': 'No',
           'seasonalRecommendation': {
-            'startDate': '2025-08-27',
+            'startDate': '2026-09-23',
           },
         },
         {
@@ -9122,7 +9187,7 @@ final AntigenSupportingData covid19 = AntigenSupportingData.fromJson({
           ],
           'recurringDose': 'No',
           'seasonalRecommendation': {
-            'startDate': '2025-08-27',
+            'startDate': '2026-09-23',
           },
         },
         {
@@ -9324,7 +9389,7 @@ final AntigenSupportingData covid19 = AntigenSupportingData.fromJson({
           ],
           'recurringDose': 'No',
           'seasonalRecommendation': {
-            'startDate': '2025-08-27',
+            'startDate': '2026-09-23',
           },
         },
         {
@@ -9587,12 +9652,12 @@ final AntigenSupportingData covid19 = AntigenSupportingData.fromJson({
                   'setID': '1',
                   'setDescription':
                       'Target Dose is not needed after one dose has been '
-                      'administered on or after 8/27/2025',
+                      'administered on or after 8/28/2026',
                   'condition': [
                     {
                       'conditionID': '1',
                       'conditionType': 'Vaccine Count By Date',
-                      'startDate': '2025-08-27',
+                      'startDate': '2026-08-28',
                       'doseCount': '0',
                       'doseType': 'Valid',
                       'doseCountLogic': 'greater than',
@@ -9604,7 +9669,7 @@ final AntigenSupportingData covid19 = AntigenSupportingData.fromJson({
           ],
           'recurringDose': 'Yes',
           'seasonalRecommendation': {
-            'startDate': '2025-08-27',
+            'startDate': '2026-09-23',
           },
         },
         {
@@ -9699,7 +9764,7 @@ final AntigenSupportingData covid19 = AntigenSupportingData.fromJson({
           ],
           'recurringDose': 'No',
           'seasonalRecommendation': {
-            'startDate': '2025-08-27',
+            'startDate': '2026-09-23',
           },
         },
       ],
@@ -9707,11 +9772,10 @@ final AntigenSupportingData covid19 = AntigenSupportingData.fromJson({
   ],
   'vaccineRecommendationCategory': [
     {
-      'worksheetName': 'Start at 6mo-23mo SCDM',
-      'seriesName':
-          'COVID-19 start at 6mo-23mo shared clinical decision-making series',
+      'worksheetName': 'Start at 6mo-23mo',
+      'seriesName': 'COVID-19 start at 6mo-23mo series',
       'patientBeginAge': '0 days',
-      'patientEndAge': 'n/a',
+      'patientEndAge': '18 years',
       'forecastTargetDose': 'Any',
       'includedIndication': 'n/a',
       'excludedIndication': 'n/a',
@@ -9720,15 +9784,38 @@ final AntigenSupportingData covid19 = AntigenSupportingData.fromJson({
           'https://www.cdc.gov/covid/hcp/vaccine-considerations/routine-guidance.html',
     },
     {
-      'worksheetName': 'Start at 2 years+ SCDM',
-      'seriesName':
-          'COVID-19 start at 2 years+ shared clinical decision-making series',
-      'patientBeginAge': '0 days',
+      'worksheetName': 'Start at 6mo-23mo',
+      'seriesName': 'COVID-19 start at 6mo-23mo series',
+      'patientBeginAge': '18 years',
       'patientEndAge': 'n/a',
       'forecastTargetDose': 'Any',
       'includedIndication': 'n/a',
       'excludedIndication': 'n/a',
+      'category': 'Routine',
+      'additionalMaterial':
+          'https://www.cdc.gov/covid/hcp/vaccine-considerations/routine-guidance.html',
+    },
+    {
+      'worksheetName': 'Start at 2 years+',
+      'seriesName': 'COVID-19 start at 2 years+ series',
+      'patientBeginAge': '0 days',
+      'patientEndAge': '18 years',
+      'forecastTargetDose': 'Any',
+      'includedIndication': 'n/a',
+      'excludedIndication': 'n/a',
       'category': 'SCDM',
+      'additionalMaterial':
+          'https://www.cdc.gov/covid/hcp/vaccine-considerations/routine-guidance.html',
+    },
+    {
+      'worksheetName': 'Start at 2 years+',
+      'seriesName': 'COVID-19 start at 2 years+ series',
+      'patientBeginAge': '18 years',
+      'patientEndAge': 'n/a',
+      'forecastTargetDose': 'Any',
+      'includedIndication': 'n/a',
+      'excludedIndication': 'n/a',
+      'category': 'Routine',
       'additionalMaterial':
           'https://www.cdc.gov/covid/hcp/vaccine-considerations/routine-guidance.html',
     },
@@ -9740,7 +9827,7 @@ final AntigenSupportingData covid19 = AntigenSupportingData.fromJson({
       'forecastTargetDose': 'Any',
       'includedIndication': 'Any',
       'excludedIndication': 'n/a',
-      'category': 'SCDM',
+      'category': 'High-Risk',
       'additionalMaterial':
           'https://www.cdc.gov/covid/hcp/vaccine-considerations/immunocompromised.html',
     },
@@ -9753,7 +9840,7 @@ final AntigenSupportingData covid19 = AntigenSupportingData.fromJson({
       'forecastTargetDose': 'Any',
       'includedIndication': 'Any',
       'excludedIndication': 'n/a',
-      'category': 'SCDM',
+      'category': 'High-Risk',
       'additionalMaterial':
           'https://www.cdc.gov/covid/hcp/vaccine-considerations/immunocompromised.html',
     },
@@ -9765,7 +9852,7 @@ final AntigenSupportingData covid19 = AntigenSupportingData.fromJson({
       'forecastTargetDose': 'Any',
       'includedIndication': 'Any',
       'excludedIndication': 'n/a',
-      'category': 'SCDM',
+      'category': 'High-Risk',
       'additionalMaterial':
           'https://www.cdc.gov/covid/hcp/vaccine-considerations/immunocompromised.html',
     },
@@ -9777,7 +9864,7 @@ final AntigenSupportingData covid19 = AntigenSupportingData.fromJson({
       'forecastTargetDose': 'Any',
       'includedIndication': 'Any',
       'excludedIndication': 'n/a',
-      'category': 'SCDM',
+      'category': 'High-Risk',
       'additionalMaterial':
           'https://www.cdc.gov/covid/hcp/vaccine-considerations/immunocompromised.html',
     },
@@ -9791,7 +9878,7 @@ final AntigenSupportingData covid19 = AntigenSupportingData.fromJson({
       'forecastTargetDose': 'Any',
       'includedIndication': 'Any',
       'excludedIndication': 'n/a',
-      'category': 'SCDM',
+      'category': 'High-Risk',
       'additionalMaterial':
           'https://www.cdc.gov/covid/hcp/vaccine-considerations/immunocompromised.html',
     },
@@ -9805,7 +9892,7 @@ final AntigenSupportingData covid19 = AntigenSupportingData.fromJson({
       'forecastTargetDose': 'Any',
       'includedIndication': 'Any',
       'excludedIndication': 'n/a',
-      'category': 'SCDM',
+      'category': 'High-Risk',
       'additionalMaterial':
           'https://www.cdc.gov/covid/hcp/vaccine-considerations/immunocompromised.html',
     },
@@ -9817,7 +9904,7 @@ final AntigenSupportingData covid19 = AntigenSupportingData.fromJson({
       'forecastTargetDose': 'Any',
       'includedIndication': 'Any',
       'excludedIndication': 'n/a',
-      'category': 'SCDM',
+      'category': 'High-Risk',
       'additionalMaterial':
           'https://www.cdc.gov/covid/hcp/vaccine-considerations/immunocompromised.html',
     },
@@ -9831,7 +9918,7 @@ final AntigenSupportingData covid19 = AntigenSupportingData.fromJson({
       'forecastTargetDose': 'Any',
       'includedIndication': 'Any',
       'excludedIndication': 'n/a',
-      'category': 'SCDM',
+      'category': 'High-Risk',
       'additionalMaterial':
           'https://www.cdc.gov/covid/hcp/vaccine-considerations/immunocompromised.html',
     },

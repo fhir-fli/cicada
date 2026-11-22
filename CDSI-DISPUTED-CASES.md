@@ -1,13 +1,13 @@
 # CDSi test cases where cicada disagrees with the CDC data
 
-cicada implements the CDSi logic specification v4.6 against supporting data 4.65-508 (August 2026). Each case below is printed as CDC published it — every populated column of their row — followed by what cicada answers. The question is which answer is clinically correct.
+cicada implements the CDSi logic specification v4.6 against supporting data 4.66-508. Each case below is printed as CDC published it — every populated column of their row — followed by what cicada answers. The question is which answer is clinically correct.
 
-**Version note.** The healthy cases are v4.46 (August 2026) and match the supporting data. The underlying-conditions cases are v4.6 (September 2025) and predate it, so some of those disagreements may be the two documents describing different seasons or thresholds rather than an error by either side — the RSV ones especially: the shipped data carries only the 2025-26 season (infant series opens 2025-10-01, maternal 2025-09-01) while those cases were written against 2023-24.
+**Version note.** The healthy cases are v4.47 and match the supporting data. The underlying-conditions cases are v4.6 (September 2025) and predate it, so some of those disagreements may be the two documents describing different seasons or thresholds rather than an error by either side — the RSV ones especially: the shipped data carries only one season (its series open on 2026-09-01, 2026-10-01) while those cases were written against 2023-24.
 
 
-## Healthy childhood and adult cases (v4.46 — versions match, so these are the sharpest)
+## Healthy childhood and adult cases (v4.47 — versions match, so these are the sharpest)
 
-Source: `cdsi-healthy-childhood-and-adult-test-cases-v4.46.xlsx`, sheet "FITS Exported TestCases".
+Source: `cdsi-healthy-childhood-and-adult-test-cases-v4.47.xlsx`, sheet "FITS Exported TestCases".
 
 ### 2018-0022
 
@@ -16,21 +16,21 @@ CDC row, every populated column:
 ```
 CDC_Test_ID              2018-0022
 Test_Case_Name           Hep B: Patient is 18 years - 5 days with first dose of Hep B (Hepislav) vaccine
-DOB                      2008-08-10
+DOB                      2008-10-14
 gender                   F
 Series_Status            Not complete
-Date_Administered_1      2026-08-05
+Date_Administered_1      2026-10-09
 Vaccine_Name_1           HEPLISAV-B
 CVX_1                    189
 MVX_1                    DVX
 Evaluation_Status_1      Not Valid
 Evaluation_Reason_1      Inadvertent Vaccine
 Forecast_#               1
-Earliest_Date            2026-08-05
-Recommended_Date         2026-08-05
-Past_Due_Date            2026-08-05
+Earliest_Date            2026-10-09
+Recommended_Date         2026-10-09
+Past_Due_Date            2026-10-09
 Vaccine_Group            HepB
-Assessment_Date          2026-08-05
+Assessment_Date          2026-10-09
 Evaluation_Test_Type     Interval: Below Absolute Minimum
 Date_Added               2018-04-13
 Date_Updated             2021-06-28
@@ -42,7 +42,7 @@ Changed_In_Version       4.1
 General_Description      This test cases describes when a patient is administered a dose of the Hep B (Heplisav) vaccine at 18 years - 5 days that the dose is not valid.
 ```
 
-**cicada answers:** status `Not Complete`, forecast #`1`, earliest `2026/08/05`, recommended `2026/08/05`, past due `2026/08/05`.
+**cicada answers:** status `Not Complete`, forecast #`1`, earliest `2026/10/09`, recommended `2026/10/09`, past due `2026/10/09`.
 
 
 ## Underlying-conditions cases (v4.6 — predate the supporting data)
@@ -863,7 +863,7 @@ Forecast_Test_Type       Recommended based on Condition
 Changed_In_Version       4.5
 ```
 
-**cicada answers:** status `Not Complete`, forecast #`1`, earliest `2025/09/01`, recommended `2025/09/01`, past due `2025/09/01`.
+**cicada answers:** status `Not Complete`, forecast #`1`, earliest `2026/09/01`, recommended `2026/09/01`, past due `2026/09/01`.
 
 ### 2025-UC-0010
 

@@ -121,7 +121,7 @@ self-consistent and needs no inadvertent-vaccine definition added.
 
 Each of these rows asks for a series, an interval or an evaluation reason that
 the current supporting data no longer contains. A conformant engine reading
-4.65-508 cannot produce the expected answer, because the rule the row tests is
+4.66-508 (as 4.65-508 before it) cannot produce the expected answer, because the rule the row tests is
 gone. Examples:
 
 - **The risk series was retired.** No HPV risk series is indicated by observation
@@ -136,16 +136,17 @@ gone. Examples:
   `2022-UC-0017` expects 8 weeks where the dose carries `minInt: 1 year`.
 - **The attribute was removed.** `2016-UC-0032` expects an MMR past-due date six
   years out; that dose carries no latest recommended interval at all.
-- **The season moved on.** Every RSV series in 4.65-508 carries the 2025-26
-  season: `2025-10-01` to `2026-03-31` for the standard and the under-20-months
-  risk series, `2025-09-01` to `2026-01-31` for the pregnancy series. The four
-  RSV cases are 2023-season rows expecting 2023 dates. cicada answers with the
-  season it was given, two years later than the row, and for `2023-UC-0048`
+- **The season moved on.** Every RSV series in 4.66-508 carries the 2026-27
+  season: `2026-10-01` to `2027-03-31` for the standard and the under-20-months
+  risk series, `2026-09-01` to `2027-01-31` for the pregnancy series (4.65-508
+  carried 2025-26). The four RSV cases are 2023-season rows expecting 2023
+  dates. cicada answers with the season it was given, three years later than
+  the row, and for `2023-UC-0048`
   (cystic fibrosis, five days old) and `2023-UC-0050` (American Indian or
   Alaskan Native, 19 months) that pushes the earliest date past the series'
   20-month maximum age, so the correct reading of the current data is that the
   child ages out before the season opens. Same month and day as the expected
-  answer in each case, two years on.
+  answer in each case, three years on.
 
 All fifteen were reviewed against current ACIP by an independent evidence review,
 which found **cicada's answer clinically correct in every one** and the CDC row

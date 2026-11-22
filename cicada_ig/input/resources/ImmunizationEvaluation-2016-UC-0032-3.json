@@ -15,7 +15,7 @@
         },
         {
           "url": "supportingData",
-          "valueString": "CDSi 4.65-508"
+          "valueString": "CDSi 4.66-508"
         }
       ],
       "url": "http://fhirfli.dev/fhir/ig/cicada/StructureDefinition/engine-version-ext"

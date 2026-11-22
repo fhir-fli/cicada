@@ -730,11 +730,27 @@ void main() {
   });
 
   group('seasonal series', () {
+    // Inside the influenza season the supporting data carries, so the case
+    // follows the data when CDC rolls the season forward (4.66 moved it to
+    // 2026-07-01..2027-06-30; with fixed 2025-26 dates this test failed on
+    // the new data for the season alone). Dose four months into the
+    // season, assessed two and a half months later.
+    final seasonStart = DateTime.parse(
+      antigenSupportingDataMap['Influenza']!.series!
+          .expand((s) => s.seriesDose ?? const <SeriesDose>[])
+          .map((d) => d.seasonalRecommendation?.startDate)
+          .whereType<String>()
+          .reduce((a, b) => a.compareTo(b) >= 0 ? a : b),
+    );
+    String day(DateTime d) => d.toIso8601String().substring(0, 10);
+    final given = day(seasonStart.add(const Duration(days: 123)));
+    final assessed = day(seasonStart.add(const Duration(days: 198)));
+
     Parameters caseFor({required String dob, required String cvx}) =>
         Parameters.fromJson(<String, dynamic>{
           'resourceType': 'Parameters',
           'parameter': <Map<String, dynamic>>[
-            {'name': 'assessmentDate', 'valueDate': '2026-01-15'},
+            {'name': 'assessmentDate', 'valueDate': assessed},
             {
               'name': 'patient',
               'resource': {
@@ -755,7 +771,7 @@ void main() {
                   ],
                 },
                 'patient': {'reference': 'Patient/1'},
-                'occurrenceDateTime': '2025-11-01',
+                'occurrenceDateTime': given,
               },
             },
           ],

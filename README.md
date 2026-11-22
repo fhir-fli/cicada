@@ -2,7 +2,7 @@
 
 An immunization forecasting engine in Dart that evaluates past vaccine doses and recommends future immunizations based on clinical decision support logic.
 
-Cicada implements the CDC's [Clinical Decision Support for Immunization (CDSi)](https://www.cdc.gov/iis/cdsi/) specification (v4.65-508) and WHO Expanded Programme on Immunization (EPI) recommendations. It accepts FHIR R4 input and produces FHIR R4 output, making it interoperable with any FHIR-compliant system.
+Cicada implements the CDC's [Clinical Decision Support for Immunization (CDSi)](https://www.cdc.gov/iis/cdsi/) specification (v4.66-508) and WHO Expanded Programme on Immunization (EPI) recommendations. It accepts FHIR R4 input and produces FHIR R4 output, making it interoperable with any FHIR-compliant system.
 
 ## Features
 
@@ -136,7 +136,7 @@ Cicada supports two forecasting modes:
 | Antigens | 30+ (U.S. formulations) | 22 (global formulations) |
 | Vaccines | DTaP, IPV, MMR, etc. | DTP, OPV+IPV, MR, pentavalent, etc. |
 | Dose timing | 2/4/6 months | 6/10/14 weeks |
-| Spec version | CDSi v4.65-508 | WHO position papers (2025) |
+| Spec version | CDSi v4.66-508 | WHO position papers (2025) |
 | Tested against | CDC's 1,401 published cases; NIST FITS forecasts | No external test cases |
 
 **WHO mode is unvalidated.** CDC publishes test cases. We found no WHO
@@ -230,15 +230,15 @@ Generated files are written to `cicada/lib/generated_files/` (CDC) and `cicada/l
 ```bash
 cd cicada
 
-# CDC healthy childhood and adult test cases (1,064 cases, v4.46 test data)
+# CDC healthy childhood and adult test cases (1,088 cases, v4.47 test data)
 dart run test/healthy_test.dart
 
 # CDC underlying-conditions test cases (337 cases, v4.6 test data)
 dart run test/condition_test.dart
 ```
 
-Results against CDSi supporting data 4.65-508:
-- **Healthy**: 1063/1064 (99.9%) — one disagreement, `2018-0022`
+Results against CDSi supporting data 4.66-508 (2026-11-21):
+- **Healthy**: 1087/1088 — one disagreement, `2018-0022`
 - **Condition**: 312/337 (92.6%) — 25 disagreements
 - **FITS (external)**: **forecasts only.** 22 cases run 2026-08-29: **70
   forecast values correct, 0 errors.** **Evaluations have never matched** —

@@ -37,7 +37,7 @@
     "fshType": "CodeSystem",
     "fshFile": "cs_vs_preferred_allowed_reason.fsh",
     "startLine": 1,
-    "endLine": 12
+    "endLine": 14
   },
   {
     "outputFile": "CodeSystem-VaccineGender.json",
@@ -61,7 +61,7 @@
     "fshType": "CodeSystem",
     "fshFile": "cs_cdsi_obs_codes.fsh",
     "startLine": 7,
-    "endLine": 291
+    "endLine": 299
   },
   {
     "outputFile": "CodeSystem-data-integrity.json",
@@ -396,8 +396,8 @@
     "fshName": "CdsiObservationCodesVS",
     "fshType": "ValueSet",
     "fshFile": "cs_cdsi_obs_codes.fsh",
-    "startLine": 298,
-    "endLine": 303
+    "startLine": 306,
+    "endLine": 311
   },
   {
     "outputFile": "ValueSet-data-integrity-vs.json",
@@ -468,8 +468,8 @@
     "fshName": "PreferredAllowedReasonVS",
     "fshType": "ValueSet",
     "fshFile": "cs_vs_preferred_allowed_reason.fsh",
-    "startLine": 14,
-    "endLine": 24
+    "startLine": 16,
+    "endLine": 28
   },
   {
     "outputFile": "ValueSet-procedures.json",
@@ -501,7 +501,7 @@
     "fshType": "ValueSet",
     "fshFile": "vs_vaccine_condition_codes_icd10.fsh",
     "startLine": 4,
-    "endLine": 2986
+    "endLine": 3029
   },
   {
     "outputFile": "ValueSet-vaccine-condition-codes-snomed.json",

@@ -3,7 +3,7 @@ import 'package:fhir_r4/fhir_r4.dart';
 import 'package:test/test.dart';
 
 /// Each forecast mode evaluates the antigens of its own supporting data:
-/// CDC mode the CDSi 4.65 antigen set, WHO mode the WHO set. Until
+/// CDC mode the CDSi antigen set, WHO mode the WHO set. Until
 /// 2026-11-01 the antigen map read the CDC list in both modes, so
 /// `$immds-forecast-who` returned the CDC forecast (Zoster, RSV,
 /// Meningococcal B and Varicella present, Tuberculosis absent).

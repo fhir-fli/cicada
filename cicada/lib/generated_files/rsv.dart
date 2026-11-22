@@ -184,8 +184,8 @@ final AntigenSupportingData rsv = AntigenSupportingData.fromJson({
           ],
           'recurringDose': 'No',
           'seasonalRecommendation': {
-            'startDate': '2025-10-01',
-            'endDate': '2026-03-31',
+            'startDate': '2026-10-01',
+            'endDate': '2027-03-31',
           },
         },
       ],
@@ -403,8 +403,8 @@ final AntigenSupportingData rsv = AntigenSupportingData.fromJson({
           ],
           'recurringDose': 'No',
           'seasonalRecommendation': {
-            'startDate': '2025-10-01',
-            'endDate': '2026-03-31',
+            'startDate': '2026-10-01',
+            'endDate': '2027-03-31',
           },
         },
         {
@@ -496,8 +496,8 @@ final AntigenSupportingData rsv = AntigenSupportingData.fromJson({
                     {
                       'conditionID': '1',
                       'conditionType': 'Vaccine Count by Date',
-                      'startDate': '2025-07-01',
-                      'endDate': '2026-06-30',
+                      'startDate': '2026-07-01',
+                      'endDate': '2027-06-30',
                       'doseCount': '1',
                       'doseType': 'Valid',
                       'doseCountLogic': 'equal to',
@@ -510,8 +510,8 @@ final AntigenSupportingData rsv = AntigenSupportingData.fromJson({
           ],
           'recurringDose': 'No',
           'seasonalRecommendation': {
-            'startDate': '2025-10-01',
-            'endDate': '2026-03-31',
+            'startDate': '2026-10-01',
+            'endDate': '2027-03-31',
           },
         },
         {
@@ -630,8 +630,8 @@ final AntigenSupportingData rsv = AntigenSupportingData.fromJson({
                     {
                       'conditionID': '2',
                       'conditionType': 'Vaccine Count by Date and Age',
-                      'startDate': '2025-07-01',
-                      'endDate': '2026-06-30',
+                      'startDate': '2026-07-01',
+                      'endDate': '2027-06-30',
                       'endAge': '8 months',
                       'doseCount': '1',
                       'doseType': 'Valid',
@@ -688,8 +688,8 @@ final AntigenSupportingData rsv = AntigenSupportingData.fromJson({
           ],
           'recurringDose': 'No',
           'seasonalRecommendation': {
-            'startDate': '2025-10-01',
-            'endDate': '2026-03-31',
+            'startDate': '2026-10-01',
+            'endDate': '2027-03-31',
           },
         },
       ],
@@ -852,8 +852,8 @@ final AntigenSupportingData rsv = AntigenSupportingData.fromJson({
           ],
           'recurringDose': 'No',
           'seasonalRecommendation': {
-            'startDate': '2025-09-01',
-            'endDate': '2026-01-31',
+            'startDate': '2026-09-01',
+            'endDate': '2027-01-31',
           },
         },
       ],

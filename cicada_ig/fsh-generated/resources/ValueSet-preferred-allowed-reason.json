@@ -29,6 +29,14 @@
             "display": "Administered outside of preferred age range"
           },
           {
+            "code": "administeredBeforeAllowableAgeRange",
+            "display": "Administered before allowable age range"
+          },
+          {
+            "code": "administeredAfterAllowableAgeRange",
+            "display": "Administered after allowable age range"
+          },
+          {
             "code": "noPreferredTypes",
             "display": "No preferred types"
           },

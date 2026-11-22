@@ -3,10 +3,10 @@ AllergyIntolerance-allergy-vaccine-reaction.json              allergy-vaccine-re
 CodeSystem-EvalReason.json                                    EvalReasonCS                       CodeSystem  cs_vs_eval_reason.fsh                      1 - 21
 CodeSystem-EvalStatus.json                                    EvalStatusCS                       CodeSystem  cs_vs_eval_status.fsh                      1 - 7
 CodeSystem-IntervalReason.json                                IntervalReasonCS                   CodeSystem  cs_vs_interval_reason.fsh                  1 - 9
-CodeSystem-PreferredAllowedReason.json                        PreferredAllowedReasonCS           CodeSystem  cs_vs_preferred_allowed_reason.fsh         1 - 12
+CodeSystem-PreferredAllowedReason.json                        PreferredAllowedReasonCS           CodeSystem  cs_vs_preferred_allowed_reason.fsh         1 - 14
 CodeSystem-VaccineGender.json                                 VaccineGenderCS                    CodeSystem  cs_vs_vaccine_gender.fsh                   2 - 11
 CodeSystem-ValidAgeReason.json                                ValidAgeReasonCS                   CodeSystem  cs_vs_valid_age_reason.fsh                 2 - 10
-CodeSystem-cdsi-observation-codes.json                        CdsiObservationCodes               CodeSystem  cs_cdsi_obs_codes.fsh                      7 - 291
+CodeSystem-cdsi-observation-codes.json                        CdsiObservationCodes               CodeSystem  cs_cdsi_obs_codes.fsh                      7 - 299
 CodeSystem-data-integrity.json                                DataIntegrityCS                    CodeSystem  cicada_response_extensions.fsh             76 - 85
 CodeSystem-forecast-reason.json                               CicadaForecastReasonCS             CodeSystem  cicada_response_extensions.fsh             16 - 32
 CodeSystem-icd-10-cm.json                                     Icd10Cm                            CodeSystem  cs_icd10cm_stub.fsh                        18 - 26
@@ -48,7 +48,7 @@ StructureDefinition-vaccine-type.json                         VaccineType       
 StructureDefinition-vax-dose.json                             VaxDose                            Profile     vax_dose_immunization_profile.fsh          1 - 23
 StructureDefinition-vax-patient.json                          VaxPatient                         Profile     profile_vax_patient.fsh                    2 - 20
 ValueSet-VaccineCodesCvxMvx.json                              VaccineCodesCvxMvx                 ValueSet    vs_vaccine_codes_cvx_mvx.fsh               1 - 6
-ValueSet-cdsi-observation-codes-vs.json                       CdsiObservationCodesVS             ValueSet    cs_cdsi_obs_codes.fsh                      298 - 303
+ValueSet-cdsi-observation-codes-vs.json                       CdsiObservationCodesVS             ValueSet    cs_cdsi_obs_codes.fsh                      306 - 311
 ValueSet-data-integrity-vs.json                               DataIntegrityVS                    ValueSet    cicada_response_extensions.fsh             87 - 92
 ValueSet-dose-status-reason.json                              DoseStatusReasonVS                 ValueSet    cs_vs_dose_status_reason.fsh               1 - 6
 ValueSet-eval-reason.json                                     EvalReasonVS                       ValueSet    cs_vs_eval_reason.fsh                      23 - 42
@@ -57,11 +57,11 @@ ValueSet-forecast-reason-vs.json                              CicadaForecastReas
 ValueSet-forecast-status.json                                 ForecastStatusVS                   ValueSet    cs_vs_forecast_status.fsh                  1 - 14
 ValueSet-immunization-procedures-cpt.json                     ImmunizationProceduresCpt          ValueSet    vs_vaccine_condition_codes_cpt.fsh         4 - 13
 ValueSet-interval-reason.json                                 IntervalReasonVS                   ValueSet    cs_vs_interval_reason.fsh                  11 - 18
-ValueSet-preferred-allowed-reason.json                        PreferredAllowedReasonVS           ValueSet    cs_vs_preferred_allowed_reason.fsh         14 - 24
+ValueSet-preferred-allowed-reason.json                        PreferredAllowedReasonVS           ValueSet    cs_vs_preferred_allowed_reason.fsh         16 - 28
 ValueSet-procedures.json                                      ImmunizationProceduresSnomed       ValueSet    vs_immunization_procedures_snomed.fsh      1 - 17
 ValueSet-series-type-vs.json                                  SeriesTypeVS                       ValueSet    profile_forecast_recommendation.fsh        28 - 33
 ValueSet-target-dose-status-vs.json                           TargetDoseStatusVS                 ValueSet    cicada_response_extensions.fsh             56 - 61
-ValueSet-vaccine-condition-codes-icd10.json                   VaccineConditionCodesIcd10         ValueSet    vs_vaccine_condition_codes_icd10.fsh       4 - 2986
+ValueSet-vaccine-condition-codes-icd10.json                   VaccineConditionCodesIcd10         ValueSet    vs_vaccine_condition_codes_icd10.fsh       4 - 3029
 ValueSet-vaccine-condition-codes-snomed.json                  VaccineConditionCodesSnomed        ValueSet    vs_vaccine_condition_codes_snomed.fsh      1 - 210
 ValueSet-vaccine-gender.json                                  VaccineGenderVS                    ValueSet    cs_vs_vaccine_gender.fsh                   14 - 22
 ValueSet-vaccine-lab-evidence-of-immunity-loinc.json          VaccineLabEvidenceOfImmunityLoinc  ValueSet    vs_vaccine_condition_codes_loinc.fsh       4 - 27

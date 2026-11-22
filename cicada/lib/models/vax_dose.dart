@@ -151,6 +151,16 @@ class VaxDose {
       add(EvalReason.intervalTooShort);
     }
     if (conflict == true) add(EvalReason.liveVirusConflict);
+    // Table 6-29's third rule is an age outcome: the allowable vaccine type
+    // was given outside its allowable age range.
+    if (allowedVaccineReason ==
+        PreferredAllowedReason.administeredBeforeAllowableAgeRange) {
+      add(EvalReason.ageTooYoung);
+    }
+    if (allowedVaccineReason ==
+        PreferredAllowedReason.administeredAfterAllowableAgeRange) {
+      add(EvalReason.ageTooOld);
+    }
     if (allowedVaccine == false) add(EvalReason.notPreferableOrAllowable);
     // Reasons with no sub-step field of their own (expired product, recall,
     // series already completed, and so on) live only in evalReason.
@@ -772,6 +782,7 @@ class VaxDose {
       } else {
         // Check ALL matching entries — same CVX can appear multiple times
         // with different age ranges.
+        var beforeEveryRange = true;
         for (final allowedVax in allowedList) {
           final allowableVaccineTypeBeginAgeDate =
               allowedVax.beginAge == null
@@ -786,10 +797,19 @@ class VaxDose {
             allowedVaccine = true;
             return true;
           }
+          if (allowableVaccineTypeBeginAgeDate <= dateGiven) {
+            beforeEveryRange = false;
+          }
         }
+        // Table 6-29, third rule: an allowable vaccine type given out of
+        // its allowable age range. The outcome is still "not an allowable
+        // vaccine"; which side of the range it fell is kept so the dose can
+        // report the age (evalReasons).
         allowedVaccine = false;
         allowedVaccineReason =
-            PreferredAllowedReason.notAPreferableOrAllowableVaccine;
+            beforeEveryRange
+                ? PreferredAllowedReason.administeredBeforeAllowableAgeRange
+                : PreferredAllowedReason.administeredAfterAllowableAgeRange;
         evalStatus = EvalStatus.notValid;
         evalReason = EvalReason.notPreferableOrAllowable;
         return false;

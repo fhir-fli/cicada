@@ -1,4 +1,4 @@
-// The CDSi healthy childhood and adult test cases (v4.46). Comparison
+// The CDSi healthy childhood and adult test cases (v4.47). Comparison
 // semantics live in cdc_suite.dart, shared with condition_test.dart; only the
 // data is here. Before this suite existed, test/cicada_test.dart ran these
 // 1,064 cases and asserted nothing: the expected results were generated all
@@ -6,7 +6,9 @@
 // in the repo.
 //
 // This suite is the one whose cases match the supporting data in version:
-// v4.46 test cases and 4.65-508 data are both August 2026.
+// v4.47 test cases and 4.66-508 data are both October 2026. v4.47's "FITS
+// Exported TestCases" sheet holds 1,088 case ids (counted from the workbook,
+// 2026-11-21).
 
 import 'package:cicada/generated_files/test_doses.dart';
 import 'package:cicada/generated_files/test_forecasts.dart';
@@ -40,7 +42,7 @@ void main() {
   runCdcSuite(
     name: 'CDSi healthy childhood and adult test cases',
     casesPath: 'test/healthyTestCases.ndjson',
-    caseCount: 1064,
+    caseCount: 1088,
     expectedDoses: testDoses,
     expectedForecasts: testForecasts,
     excelToEngine: healthyExcelToEngine,

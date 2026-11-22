@@ -59,7 +59,7 @@ cicada/
 ├── cicada_flutter/          # Flutter app: hand entry, and the chart launch too
 ├── cicada_generator/        # Code generator that produces generated_files/
 │   └── lib/
-│       ├── Version_4.65-508/ # CDSi source XML/Excel files
+│       ├── Version_4.66-508/ # CDSi source XML/Excel files
 │       ├── WHO/              # WHO source data (Excel = source of truth)
 │       │   ├── antigen/      # WHO antigen definitions (22 .xlsx files)
 │       │   └── schedule/     # WHO schedule supporting data (5 .xlsx files)
@@ -116,7 +116,7 @@ The core pipeline in `forecast/forecast.dart` runs these steps:
 
 The engine supports two modes via `ForecastMode` enum in `forecast/forecast_mode.dart`:
 
-- **`ForecastMode.cdc`** (default) — Uses CDSi v4.65-508 antigen definitions and U.S. schedule
+- **`ForecastMode.cdc`** (default) — Uses CDSi v4.66-508 antigen definitions and U.S. schedule
 - **`ForecastMode.who`** — Uses WHO EPI antigen definitions (22 antigens) and global schedule
 
 Runtime switching uses `activeAntigenMap` and `activeScheduleData` getters that dispatch to the correct dataset. Multi-antigen groups (e.g., DTP, MMR) are derived dynamically from the vaccine-group-to-antigen map.
@@ -141,7 +141,7 @@ Runtime switching uses `activeAntigenMap` and `activeScheduleData` getters that 
 Files in `cicada/lib/generated_files/` are produced by the generator and should not be hand-edited.
 
 🔑 **The Excel is the source of truth, not the XML.** `main.dart` builds from
-`Version_4.65-508/Excel/` and falls back to XML-derived JSON only when a sheet
+`Version_4.66-508/Excel/` and falls back to XML-derived JSON only when a sheet
 fails to parse. Cite the spreadsheets when making a claim about CDC's data.
 (Verified 2026-08-27: for indication observation codes the two agree exactly
 across all 30 antigens — but the XML is still the fallback, not the source.)
@@ -249,7 +249,7 @@ Uses Riverpod (non-Flutter) with `ProviderContainer` for managing:
 
 ## Code Style
 
-Uses `very_good_analysis`. The CDSi supporting data currently implemented is **4.65-508** (Aug 2026). The logic specification is v4.6 (Dec 2024) — CDC versions them separately.
+Uses `very_good_analysis`. The CDSi supporting data currently implemented is **4.66-508** (Oct 2026). A weekly CI job (`.github/workflows/cdc-release.yml`, `cicada_generator/tool/check_cdc_release.py`) fails when CDC publishes a newer release. The logic specification is v4.6 (Dec 2024) — CDC versions them separately.
 
 ## Vaccine group forecasts come in a list
 
@@ -310,7 +310,7 @@ rows after its last real case; those loaded as test cases, matched no
 expectation, asserted nothing and were counted as passes. Fixed in the generator
 2026-08-25; both suites now fail if any case has no id or no expectations.
 
-- **Healthy (v4.46 cases, 4.65-508 data — versions match, so this is the gate).**
+- **Healthy (v4.47 cases, 4.66-508 data — versions match, so this is the gate; 1,088 cases).**
   Its 1 failure is `2018-0022`, a dose-**evaluation reason label**, not a forecast.
 🔴 **One of the 26 ruled rows is a deliberate non-conformance** — `2016-UC-0198`. Rules that had made them pass existed in **no CDSi
 specification** and were removed. **Do not "fix" them.** Before any engine
@@ -361,7 +361,7 @@ than being silently conformed to or silently ignored.
 ## Critical File Access Rules
 
 **NEVER recursively list or read:**
-- `cicada_generator/lib/Version_4.65-508/` — Large CDSi XML/Excel source files
+- `cicada_generator/lib/Version_4.66-508/` — Large CDSi XML/Excel source files
 - `cicada_generator/lib/WHO/` — WHO source data files
 - `cicada_generator/lib/generated_files/` — Large intermediate JSON files
 - `cicada_generator/lib/test_cases/` — Test case data files

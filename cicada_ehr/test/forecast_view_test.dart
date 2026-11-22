@@ -6,7 +6,7 @@ import 'package:test/test.dart';
 /// A girl born 2025-01-15 given hepatitis B vaccine (CVX 08) at birth, two
 /// months and six months, assessed 2026-11-19.
 ///
-/// Every interval clears CDSi's HepB series (supporting data 4.65,
+/// Every interval clears CDSi's HepB series (supporting data 4.66,
 /// "HepB 3-dose series"): dose 2 at 59 days after dose 1 (minimum 4 weeks),
 /// dose 3 at 181 days of age (minimum 24 weeks), 122 days after dose 2
 /// (minimum 8 weeks) and 181 days after dose 1 (minimum 16 weeks). So the
@@ -52,7 +52,7 @@ Parameters _chart() {
 }
 
 /// A woman born 1983-05-01 with an active pregnancy Condition (SNOMED CT
-/// 77386006, one of the codes CDSi supporting data 4.65 lists for its
+/// 77386006, one of the codes CDSi supporting data 4.66 lists for its
 /// pregnancy observation), assessed 2026-11-19.
 (Parameters, Patient) _pregnant() {
   final patient = Patient(

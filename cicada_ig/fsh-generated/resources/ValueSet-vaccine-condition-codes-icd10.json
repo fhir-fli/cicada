@@ -257,6 +257,10 @@
             "display": "Whooping cough due to Bordetella parapertussis with pneumonia"
           },
           {
+            "code": "A48.52",
+            "display": "Wound botulism"
+          },
+          {
             "code": "A50.01",
             "display": "Early congenital syphilitic oculopathy"
           },
@@ -6045,12 +6049,64 @@
             "display": "Cerebellar stroke syndrome"
           },
           {
+            "code": "G51.31",
+            "display": "Clonic hemifacial spasm, right"
+          },
+          {
+            "code": "G51.32",
+            "display": "Clonic hemifacial spasm, left"
+          },
+          {
+            "code": "G51.33",
+            "display": "Clonic hemifacial spasm, bilateral"
+          },
+          {
+            "code": "G54.5",
+            "display": "Neuralgic amyotrophy"
+          },
+          {
+            "code": "G70.00",
+            "display": "Myasthenia gravis without (acute) exacerbation"
+          },
+          {
+            "code": "G70.01",
+            "display": "Myasthenia gravis with (acute) exacerbation"
+          },
+          {
+            "code": "G70.1",
+            "display": "Toxic myoneural disorders"
+          },
+          {
+            "code": "G70.2",
+            "display": "Congenital and developmental myasthenia"
+          },
+          {
+            "code": "G70.80",
+            "display": "Lambert-Eaton syndrome, unspecified"
+          },
+          {
+            "code": "G70.89",
+            "display": "Other specified myoneural disorders"
+          },
+          {
             "code": "G71.09",
             "display": "Other specified muscular dystrophies"
           },
           {
+            "code": "G71.13",
+            "display": "Myotonic chondrodystrophy"
+          },
+          {
             "code": "G72.1",
             "display": "Alcoholic myopathy"
+          },
+          {
+            "code": "G73.1",
+            "display": "Lambert-Eaton syndrome in neoplastic disease"
+          },
+          {
+            "code": "G73.3",
+            "display": "Myasthenic syndromes in other diseases classified elsewhere"
           },
           {
             "code": "G83.82",
@@ -6195,6 +6251,30 @@
           {
             "code": "H47.029",
             "display": "Hemorrhage in optic nerve sheath, unspecified eye"
+          },
+          {
+            "code": "H49.32",
+            "display": "Total (external) ophthalmoplegia, left eye"
+          },
+          {
+            "code": "H49.33",
+            "display": "Total (external) ophthalmoplegia, bilateral"
+          },
+          {
+            "code": "H49.42",
+            "display": "Progressive external ophthalmoplegia, left eye"
+          },
+          {
+            "code": "H49.43",
+            "display": "Progressive external ophthalmoplegia, bilateral"
+          },
+          {
+            "code": "H49.882",
+            "display": "Other paralytic strabismus, left eye"
+          },
+          {
+            "code": "H49.883",
+            "display": "Other paralytic strabismus, bilateral"
           },
           {
             "code": "H54.8",
@@ -9149,6 +9229,18 @@
             "display": "Hypertrophy of (infrapatellar) fat pad"
           },
           {
+            "code": "M79.A21",
+            "display": "Nontraumatic compartment syndrome of right lower extremity"
+          },
+          {
+            "code": "M79.A22",
+            "display": "Nontraumatic compartment syndrome of left lower extremity"
+          },
+          {
+            "code": "M79.A29",
+            "display": "Nontraumatic compartment syndrome of unspecified lower extremity"
+          },
+          {
             "code": "M84.511A",
             "display": "Pathological fracture in neoplastic disease, right shoulder, initial encounter for fracture"
           },
@@ -10109,6 +10201,46 @@
             "display": "Newborn affected by multiple pregnancy"
           },
           {
+            "code": "P07.21",
+            "display": "Extreme immaturity of newborn, gestational age less than 23 completed weeks"
+          },
+          {
+            "code": "P07.22",
+            "display": "Extreme immaturity of newborn, gestational age 23 completed weeks"
+          },
+          {
+            "code": "P07.23",
+            "display": "Extreme immaturity of newborn, gestational age 24 completed weeks"
+          },
+          {
+            "code": "P07.24",
+            "display": "Extreme immaturity of newborn, gestational age 25 completed weeks"
+          },
+          {
+            "code": "P07.25",
+            "display": "Extreme immaturity of newborn, gestational age 26 completed weeks"
+          },
+          {
+            "code": "P07.26",
+            "display": "Extreme immaturity of newborn, gestational age 27 completed weeks"
+          },
+          {
+            "code": "P07.31",
+            "display": "Preterm newborn, gestational age 28 completed weeks"
+          },
+          {
+            "code": "P07.32",
+            "display": "Preterm newborn, gestational age 29 completed weeks"
+          },
+          {
+            "code": "P07.33",
+            "display": "Preterm newborn, gestational age 30 completed weeks"
+          },
+          {
+            "code": "P07.34",
+            "display": "Preterm newborn, gestational age 31 completed weeks"
+          },
+          {
             "code": "P10.0",
             "display": "Subdural hemorrhage due to birth injury"
           },
@@ -10251,6 +10383,10 @@
           {
             "code": "P91.829",
             "display": "Neonatal cerebral infarction, unspecified side"
+          },
+          {
+            "code": "P94.0",
+            "display": "Transient neonatal myasthenia gravis"
           },
           {
             "code": "Q20.0",
@@ -11117,6 +11253,18 @@
             "display": "Poisoning by other hormone antagonists, intentional self-harm, sequela"
           },
           {
+            "code": "T44.1X4A",
+            "display": "Poisoning by other parasympathomimetics [cholinergics], undetermined, initial encounter"
+          },
+          {
+            "code": "T44.1X4D",
+            "display": "Poisoning by other parasympathomimetics [cholinergics], undetermined, subsequent encounter"
+          },
+          {
+            "code": "T44.1X4S",
+            "display": "Poisoning by other parasympathomimetics [cholinergics], undetermined, sequela"
+          },
+          {
             "code": "T45.1X5A",
             "display": "Adverse effect of antineoplastic and immunosuppressive drugs, initial encounter"
           },
@@ -11185,6 +11333,18 @@
             "display": "Toxic effect of carbon monoxide from other source, accidental (unintentional), sequela"
           },
           {
+            "code": "T63.484A",
+            "display": "Toxic effect of venom of other arthropod, undetermined, initial encounter"
+          },
+          {
+            "code": "T63.484D",
+            "display": "Toxic effect of venom of other arthropod, undetermined, subsequent encounter"
+          },
+          {
+            "code": "T63.484S",
+            "display": "Toxic effect of venom of other arthropod, undetermined, sequela"
+          },
+          {
             "code": "T74.21XA",
             "display": "Adult sexual abuse, confirmed, initial encounter"
           },
@@ -11219,6 +11379,18 @@
           {
             "code": "T78.089S",
             "display": "Anaphylactic reaction due to eggs, unspecified, sequela"
+          },
+          {
+            "code": "T79.A9XA",
+            "display": "Traumatic compartment syndrome of other sites, initial encounter"
+          },
+          {
+            "code": "T79.A9XD",
+            "display": "Traumatic compartment syndrome of other sites, subsequent encounter"
+          },
+          {
+            "code": "T79.A9XS",
+            "display": "Traumatic compartment syndrome of other sites, sequela"
           },
           {
             "code": "T80.52XA",

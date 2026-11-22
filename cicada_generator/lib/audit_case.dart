@@ -89,12 +89,9 @@ class Suite {
 
 final List<Suite> suites = <Suite>[
   Suite(
-    'healthy childhood and adult (v4.46)',
+    'healthy childhood and adult (v${healthyWorkbook.version})',
     repoPath('cicada/test/healthyTestCases.ndjson'),
-    repoPath(
-      'cicada_generator/lib/test_cases/'
-      'cdsi-healthy-childhood-and-adult-test-cases-v4.46.xlsx',
-    ),
+    healthyWorkbook.path,
     'FITS Exported TestCases',
     testForecasts,
     testDoses,

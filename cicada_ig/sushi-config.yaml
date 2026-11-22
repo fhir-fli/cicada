@@ -80,8 +80,8 @@ resources:
     description: "Expansion parameters for the build: SNOMED CT is expanded and validated against the US edition, which carries the US-extension concepts CDSi cites."
   Immunization/2016-UC-0032-dose1:
     description: "The one dose in case 2016-UC-0032, an MMR, as the engine reads it (vax-dose)."
-  Condition/2016-UC-0032-055:
-    description: "The one condition in case 2016-UC-0032, CDSi observation 055 Health care personnel, as the engine reads it (VaccineConditionFhir)."
+  Observation/2016-UC-0032-obs1:
+    description: "The one finding in case 2016-UC-0032, occupation healthcare professional (CDSi observation 055 Health care personnel), as the engine reads it (VaccineObservationFhir)."
   ImmunizationEvaluation/2016-UC-0032-1:
     description: "The engine's evaluation of the case's MMR dose against measles, with the target-dose status and the sub-step detail extensions."
   ImmunizationEvaluation/2016-UC-0032-2:

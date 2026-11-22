@@ -22,7 +22,7 @@
        "code": "111",
        "display": "Hypersensitivity to the preservative 2-phenoxyethanol",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -34,7 +34,7 @@
        "code": "110",
        "display": "Hypersensitivity to yeast",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -46,163 +46,163 @@
        "code": "080",
        "display": "Adverse reaction to vaccine component",
        "equivalence": "relatedto",
-       "comment": "CDC Coded Observations 4.65-508. 'Allergy to previous dose of THIS vaccine': names no vaccine, so it cannot say which antigen."
+       "comment": "CDC Coded Observations 4.66-508. 'Allergy to previous dose of THIS vaccine': names no vaccine, so it cannot say which antigen."
       },
       {
        "code": "081",
        "display": "Severe allergic reaction after previous dose of Polio",
        "equivalence": "relatedto",
-       "comment": "CDC Coded Observations 4.65-508. 'Allergy to previous dose of THIS vaccine': names no vaccine, so it cannot say which antigen."
+       "comment": "CDC Coded Observations 4.66-508. 'Allergy to previous dose of THIS vaccine': names no vaccine, so it cannot say which antigen."
       },
       {
        "code": "082",
        "display": "Severe allergic reaction after previous dose of Japanese Encephalitis",
        "equivalence": "relatedto",
-       "comment": "CDC Coded Observations 4.65-508. 'Allergy to previous dose of THIS vaccine': names no vaccine, so it cannot say which antigen."
+       "comment": "CDC Coded Observations 4.66-508. 'Allergy to previous dose of THIS vaccine': names no vaccine, so it cannot say which antigen."
       },
       {
        "code": "083",
        "display": "Severe allergic reaction after previous dose of Rotavirus",
        "equivalence": "relatedto",
-       "comment": "CDC Coded Observations 4.65-508. 'Allergy to previous dose of THIS vaccine': names no vaccine, so it cannot say which antigen."
+       "comment": "CDC Coded Observations 4.66-508. 'Allergy to previous dose of THIS vaccine': names no vaccine, so it cannot say which antigen."
       },
       {
        "code": "084",
        "display": "Severe allergic reaction after previous dose of Typhoid",
        "equivalence": "relatedto",
-       "comment": "CDC Coded Observations 4.65-508. 'Allergy to previous dose of THIS vaccine': names no vaccine, so it cannot say which antigen."
+       "comment": "CDC Coded Observations 4.66-508. 'Allergy to previous dose of THIS vaccine': names no vaccine, so it cannot say which antigen."
       },
       {
        "code": "085",
        "display": "Severe allergic reaction after previous dose of Influenza",
        "equivalence": "relatedto",
-       "comment": "CDC Coded Observations 4.65-508. 'Allergy to previous dose of THIS vaccine': names no vaccine, so it cannot say which antigen."
+       "comment": "CDC Coded Observations 4.66-508. 'Allergy to previous dose of THIS vaccine': names no vaccine, so it cannot say which antigen."
       },
       {
        "code": "086",
        "display": "Severe allergic reaction after previous dose of Pertussis",
        "equivalence": "relatedto",
-       "comment": "CDC Coded Observations 4.65-508. 'Allergy to previous dose of THIS vaccine': names no vaccine, so it cannot say which antigen."
+       "comment": "CDC Coded Observations 4.66-508. 'Allergy to previous dose of THIS vaccine': names no vaccine, so it cannot say which antigen."
       },
       {
        "code": "087",
        "display": "Severe allergic reaction after previous dose of Diphtheria",
        "equivalence": "relatedto",
-       "comment": "CDC Coded Observations 4.65-508. 'Allergy to previous dose of THIS vaccine': names no vaccine, so it cannot say which antigen."
+       "comment": "CDC Coded Observations 4.66-508. 'Allergy to previous dose of THIS vaccine': names no vaccine, so it cannot say which antigen."
       },
       {
        "code": "088",
        "display": "Severe allergic reaction after previous dose of Tetanus",
        "equivalence": "relatedto",
-       "comment": "CDC Coded Observations 4.65-508. 'Allergy to previous dose of THIS vaccine': names no vaccine, so it cannot say which antigen."
+       "comment": "CDC Coded Observations 4.66-508. 'Allergy to previous dose of THIS vaccine': names no vaccine, so it cannot say which antigen."
       },
       {
        "code": "089",
        "display": "Severe allergic reaction after previous dose of Varicella",
        "equivalence": "relatedto",
-       "comment": "CDC Coded Observations 4.65-508. 'Allergy to previous dose of THIS vaccine': names no vaccine, so it cannot say which antigen."
+       "comment": "CDC Coded Observations 4.66-508. 'Allergy to previous dose of THIS vaccine': names no vaccine, so it cannot say which antigen."
       },
       {
        "code": "090",
        "display": "Severe allergic reaction after previous dose of HPV",
        "equivalence": "relatedto",
-       "comment": "CDC Coded Observations 4.65-508. 'Allergy to previous dose of THIS vaccine': names no vaccine, so it cannot say which antigen."
+       "comment": "CDC Coded Observations 4.66-508. 'Allergy to previous dose of THIS vaccine': names no vaccine, so it cannot say which antigen."
       },
       {
        "code": "091",
        "display": "Severe allergic reaction after previous dose of Measles",
        "equivalence": "relatedto",
-       "comment": "CDC Coded Observations 4.65-508. 'Allergy to previous dose of THIS vaccine': names no vaccine, so it cannot say which antigen."
+       "comment": "CDC Coded Observations 4.66-508. 'Allergy to previous dose of THIS vaccine': names no vaccine, so it cannot say which antigen."
       },
       {
        "code": "092",
        "display": "Severe allergic reaction after previous dose of Mumps",
        "equivalence": "relatedto",
-       "comment": "CDC Coded Observations 4.65-508. 'Allergy to previous dose of THIS vaccine': names no vaccine, so it cannot say which antigen."
+       "comment": "CDC Coded Observations 4.66-508. 'Allergy to previous dose of THIS vaccine': names no vaccine, so it cannot say which antigen."
       },
       {
        "code": "093",
        "display": "Severe allergic reaction after previous dose of Rubella",
        "equivalence": "relatedto",
-       "comment": "CDC Coded Observations 4.65-508. 'Allergy to previous dose of THIS vaccine': names no vaccine, so it cannot say which antigen."
+       "comment": "CDC Coded Observations 4.66-508. 'Allergy to previous dose of THIS vaccine': names no vaccine, so it cannot say which antigen."
       },
       {
        "code": "094",
        "display": "Severe allergic reaction after previous dose of Pneumococcal",
        "equivalence": "relatedto",
-       "comment": "CDC Coded Observations 4.65-508. 'Allergy to previous dose of THIS vaccine': names no vaccine, so it cannot say which antigen."
+       "comment": "CDC Coded Observations 4.66-508. 'Allergy to previous dose of THIS vaccine': names no vaccine, so it cannot say which antigen."
       },
       {
        "code": "095",
        "display": "Severe allergic reaction after previous dose of Meningococcal",
        "equivalence": "relatedto",
-       "comment": "CDC Coded Observations 4.65-508. 'Allergy to previous dose of THIS vaccine': names no vaccine, so it cannot say which antigen."
+       "comment": "CDC Coded Observations 4.66-508. 'Allergy to previous dose of THIS vaccine': names no vaccine, so it cannot say which antigen."
       },
       {
        "code": "096",
        "display": "Severe allergic reaction after previous dose of Hepatitis A",
        "equivalence": "relatedto",
-       "comment": "CDC Coded Observations 4.65-508. 'Allergy to previous dose of THIS vaccine': names no vaccine, so it cannot say which antigen."
+       "comment": "CDC Coded Observations 4.66-508. 'Allergy to previous dose of THIS vaccine': names no vaccine, so it cannot say which antigen."
       },
       {
        "code": "097",
        "display": "Severe allergic reaction after previous dose of Hepatitis B",
        "equivalence": "relatedto",
-       "comment": "CDC Coded Observations 4.65-508. 'Allergy to previous dose of THIS vaccine': names no vaccine, so it cannot say which antigen."
+       "comment": "CDC Coded Observations 4.66-508. 'Allergy to previous dose of THIS vaccine': names no vaccine, so it cannot say which antigen."
       },
       {
        "code": "098",
        "display": "Severe allergic reaction after previous dose of Hib",
        "equivalence": "relatedto",
-       "comment": "CDC Coded Observations 4.65-508. 'Allergy to previous dose of THIS vaccine': names no vaccine, so it cannot say which antigen."
+       "comment": "CDC Coded Observations 4.66-508. 'Allergy to previous dose of THIS vaccine': names no vaccine, so it cannot say which antigen."
       },
       {
        "code": "099",
        "display": "Severe allergic reaction after previous dose of Yellow Fever",
        "equivalence": "relatedto",
-       "comment": "CDC Coded Observations 4.65-508. 'Allergy to previous dose of THIS vaccine': names no vaccine, so it cannot say which antigen."
+       "comment": "CDC Coded Observations 4.66-508. 'Allergy to previous dose of THIS vaccine': names no vaccine, so it cannot say which antigen."
       },
       {
        "code": "100",
        "display": "Severe allergic reaction after previous dose of live zoster",
        "equivalence": "relatedto",
-       "comment": "CDC Coded Observations 4.65-508. 'Allergy to previous dose of THIS vaccine': names no vaccine, so it cannot say which antigen."
+       "comment": "CDC Coded Observations 4.66-508. 'Allergy to previous dose of THIS vaccine': names no vaccine, so it cannot say which antigen."
       },
       {
        "code": "113",
        "display": "Severe allergic reaction after previous dose of Rabies",
        "equivalence": "relatedto",
-       "comment": "CDC Coded Observations 4.65-508. 'Allergy to previous dose of THIS vaccine': names no vaccine, so it cannot say which antigen."
+       "comment": "CDC Coded Observations 4.66-508. 'Allergy to previous dose of THIS vaccine': names no vaccine, so it cannot say which antigen."
       },
       {
        "code": "116",
        "display": "Severe allergic reaction after previous dose of Meningococcal B",
        "equivalence": "relatedto",
-       "comment": "CDC Coded Observations 4.65-508. 'Allergy to previous dose of THIS vaccine': names no vaccine, so it cannot say which antigen."
+       "comment": "CDC Coded Observations 4.66-508. 'Allergy to previous dose of THIS vaccine': names no vaccine, so it cannot say which antigen."
       },
       {
        "code": "119",
        "display": "Severe allergic reaction after previous dose of cholera",
        "equivalence": "relatedto",
-       "comment": "CDC Coded Observations 4.65-508. 'Allergy to previous dose of THIS vaccine': names no vaccine, so it cannot say which antigen."
+       "comment": "CDC Coded Observations 4.66-508. 'Allergy to previous dose of THIS vaccine': names no vaccine, so it cannot say which antigen."
       },
       {
        "code": "122",
        "display": "Severe allergic reaction after previous dose of COVID-19",
        "equivalence": "relatedto",
-       "comment": "CDC Coded Observations 4.65-508. 'Allergy to previous dose of THIS vaccine': names no vaccine, so it cannot say which antigen."
+       "comment": "CDC Coded Observations 4.66-508. 'Allergy to previous dose of THIS vaccine': names no vaccine, so it cannot say which antigen."
       },
       {
        "code": "172",
        "display": "Severe allergic reaction after previous dose of recombinant zoster",
        "equivalence": "relatedto",
-       "comment": "CDC Coded Observations 4.65-508. 'Allergy to previous dose of THIS vaccine': names no vaccine, so it cannot say which antigen."
+       "comment": "CDC Coded Observations 4.66-508. 'Allergy to previous dose of THIS vaccine': names no vaccine, so it cannot say which antigen."
       },
       {
        "code": "252",
        "display": "Severe allergic reaction after previous dose of Tick-borne Encephalitis vaccine",
        "equivalence": "relatedto",
-       "comment": "CDC Coded Observations 4.65-508. 'Allergy to previous dose of THIS vaccine': names no vaccine, so it cannot say which antigen."
+       "comment": "CDC Coded Observations 4.66-508. 'Allergy to previous dose of THIS vaccine': names no vaccine, so it cannot say which antigen."
       }
      ]
     },
@@ -214,7 +214,7 @@
        "code": "028",
        "display": "Intussusception",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -226,7 +226,7 @@
        "code": "079",
        "display": "Encephalopathy not attributable to another identifiable cause within 7 days of administration of a previous dose of Tdap, DTP, or DTaP vaccine",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -238,7 +238,7 @@
        "code": "003",
        "display": "Immunocompromised",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     }
@@ -310,19 +310,19 @@
        "code": "086",
        "display": "Severe allergic reaction after previous dose of Pertussis",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       },
       {
        "code": "087",
        "display": "Severe allergic reaction after previous dose of Diphtheria",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       },
       {
        "code": "088",
        "display": "Severe allergic reaction after previous dose of Tetanus",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -334,7 +334,7 @@
        "code": "081",
        "display": "Severe allergic reaction after previous dose of Polio",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -346,19 +346,19 @@
        "code": "091",
        "display": "Severe allergic reaction after previous dose of Measles",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       },
       {
        "code": "092",
        "display": "Severe allergic reaction after previous dose of Mumps",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       },
       {
        "code": "093",
        "display": "Severe allergic reaction after previous dose of Rubella",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -370,13 +370,13 @@
        "code": "091",
        "display": "Severe allergic reaction after previous dose of Measles",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       },
       {
        "code": "093",
        "display": "Severe allergic reaction after previous dose of Rubella",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -388,7 +388,7 @@
        "code": "091",
        "display": "Severe allergic reaction after previous dose of Measles",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -400,7 +400,7 @@
        "code": "093",
        "display": "Severe allergic reaction after previous dose of Rubella",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -412,7 +412,7 @@
        "code": "092",
        "display": "Severe allergic reaction after previous dose of Mumps",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -424,7 +424,7 @@
        "code": "097",
        "display": "Severe allergic reaction after previous dose of Hepatitis B",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -436,13 +436,13 @@
        "code": "087",
        "display": "Severe allergic reaction after previous dose of Diphtheria",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       },
       {
        "code": "088",
        "display": "Severe allergic reaction after previous dose of Tetanus",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -454,7 +454,7 @@
        "code": "081",
        "display": "Severe allergic reaction after previous dose of Polio",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -466,7 +466,7 @@
        "code": "094",
        "display": "Severe allergic reaction after previous dose of Pneumococcal",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -478,7 +478,7 @@
        "code": "084",
        "display": "Severe allergic reaction after previous dose of Typhoid",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -490,31 +490,31 @@
        "code": "086",
        "display": "Severe allergic reaction after previous dose of Pertussis",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       },
       {
        "code": "087",
        "display": "Severe allergic reaction after previous dose of Diphtheria",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       },
       {
        "code": "088",
        "display": "Severe allergic reaction after previous dose of Tetanus",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       },
       {
        "code": "097",
        "display": "Severe allergic reaction after previous dose of Hepatitis B",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       },
       {
        "code": "098",
        "display": "Severe allergic reaction after previous dose of Hib",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -526,13 +526,13 @@
        "code": "096",
        "display": "Severe allergic reaction after previous dose of Hepatitis A",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       },
       {
        "code": "097",
        "display": "Severe allergic reaction after previous dose of Hepatitis B",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -544,19 +544,19 @@
        "code": "086",
        "display": "Severe allergic reaction after previous dose of Pertussis",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       },
       {
        "code": "087",
        "display": "Severe allergic reaction after previous dose of Diphtheria",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       },
       {
        "code": "088",
        "display": "Severe allergic reaction after previous dose of Tetanus",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -568,19 +568,19 @@
        "code": "086",
        "display": "Severe allergic reaction after previous dose of Pertussis",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       },
       {
        "code": "087",
        "display": "Severe allergic reaction after previous dose of Diphtheria",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       },
       {
        "code": "088",
        "display": "Severe allergic reaction after previous dose of Tetanus",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -592,7 +592,7 @@
        "code": "095",
        "display": "Severe allergic reaction after previous dose of Meningococcal",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -604,7 +604,7 @@
        "code": "094",
        "display": "Severe allergic reaction after previous dose of Pneumococcal",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -616,31 +616,31 @@
        "code": "081",
        "display": "Severe allergic reaction after previous dose of Polio",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       },
       {
        "code": "086",
        "display": "Severe allergic reaction after previous dose of Pertussis",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       },
       {
        "code": "087",
        "display": "Severe allergic reaction after previous dose of Diphtheria",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       },
       {
        "code": "088",
        "display": "Severe allergic reaction after previous dose of Tetanus",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       },
       {
        "code": "097",
        "display": "Severe allergic reaction after previous dose of Hepatitis B",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -652,7 +652,7 @@
        "code": "085",
        "display": "Severe allergic reaction after previous dose of Influenza",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -664,13 +664,13 @@
        "code": "087",
        "display": "Severe allergic reaction after previous dose of Diphtheria",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       },
       {
        "code": "088",
        "display": "Severe allergic reaction after previous dose of Tetanus",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -682,7 +682,7 @@
        "code": "095",
        "display": "Severe allergic reaction after previous dose of Meningococcal",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -694,19 +694,19 @@
        "code": "086",
        "display": "Severe allergic reaction after previous dose of Pertussis",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       },
       {
        "code": "087",
        "display": "Severe allergic reaction after previous dose of Diphtheria",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       },
       {
        "code": "088",
        "display": "Severe allergic reaction after previous dose of Tetanus",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -718,7 +718,7 @@
        "code": "083",
        "display": "Severe allergic reaction after previous dose of Rotavirus",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -730,7 +730,7 @@
        "code": "090",
        "display": "Severe allergic reaction after previous dose of HPV",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -742,7 +742,7 @@
        "code": "083",
        "display": "Severe allergic reaction after previous dose of Rotavirus",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -754,31 +754,31 @@
        "code": "081",
        "display": "Severe allergic reaction after previous dose of Polio",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       },
       {
        "code": "086",
        "display": "Severe allergic reaction after previous dose of Pertussis",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       },
       {
        "code": "087",
        "display": "Severe allergic reaction after previous dose of Diphtheria",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       },
       {
        "code": "088",
        "display": "Severe allergic reaction after previous dose of Tetanus",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       },
       {
        "code": "098",
        "display": "Severe allergic reaction after previous dose of Hib",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -790,13 +790,13 @@
        "code": "089",
        "display": "Severe allergic reaction after previous dose of Varicella",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       },
       {
        "code": "100",
        "display": "Severe allergic reaction after previous dose of live zoster",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -808,7 +808,7 @@
        "code": "083",
        "display": "Severe allergic reaction after previous dose of Rotavirus",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -820,7 +820,7 @@
        "code": "082",
        "display": "Severe allergic reaction after previous dose of Japanese Encephalitis",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -832,7 +832,7 @@
        "code": "125",
        "display": "Tetanus IG administration",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -844,25 +844,25 @@
        "code": "081",
        "display": "Severe allergic reaction after previous dose of Polio",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       },
       {
        "code": "086",
        "display": "Severe allergic reaction after previous dose of Pertussis",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       },
       {
        "code": "087",
        "display": "Severe allergic reaction after previous dose of Diphtheria",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       },
       {
        "code": "088",
        "display": "Severe allergic reaction after previous dose of Tetanus",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -874,37 +874,37 @@
        "code": "081",
        "display": "Severe allergic reaction after previous dose of Polio",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       },
       {
        "code": "086",
        "display": "Severe allergic reaction after previous dose of Pertussis",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       },
       {
        "code": "087",
        "display": "Severe allergic reaction after previous dose of Diphtheria",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       },
       {
        "code": "088",
        "display": "Severe allergic reaction after previous dose of Tetanus",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       },
       {
        "code": "097",
        "display": "Severe allergic reaction after previous dose of Hepatitis B",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       },
       {
        "code": "098",
        "display": "Severe allergic reaction after previous dose of Hib",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -916,7 +916,7 @@
        "code": "094",
        "display": "Severe allergic reaction after previous dose of Pneumococcal",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -928,7 +928,7 @@
        "code": "082",
        "display": "Severe allergic reaction after previous dose of Japanese Encephalitis",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -940,7 +940,7 @@
        "code": "085",
        "display": "Severe allergic reaction after previous dose of Influenza",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -952,7 +952,7 @@
        "code": "095",
        "display": "Severe allergic reaction after previous dose of Meningococcal",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -964,7 +964,7 @@
        "code": "090",
        "display": "Severe allergic reaction after previous dose of HPV",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -976,13 +976,13 @@
        "code": "087",
        "display": "Severe allergic reaction after previous dose of Diphtheria",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       },
       {
        "code": "088",
        "display": "Severe allergic reaction after previous dose of Tetanus",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -994,13 +994,13 @@
        "code": "087",
        "display": "Severe allergic reaction after previous dose of Diphtheria",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       },
       {
        "code": "088",
        "display": "Severe allergic reaction after previous dose of Tetanus",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -1012,7 +1012,7 @@
        "code": "085",
        "display": "Severe allergic reaction after previous dose of Influenza",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -1024,7 +1024,7 @@
        "code": "085",
        "display": "Severe allergic reaction after previous dose of Influenza",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -1036,7 +1036,7 @@
        "code": "085",
        "display": "Severe allergic reaction after previous dose of Influenza",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -1048,37 +1048,37 @@
        "code": "081",
        "display": "Severe allergic reaction after previous dose of Polio",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       },
       {
        "code": "086",
        "display": "Severe allergic reaction after previous dose of Pertussis",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       },
       {
        "code": "087",
        "display": "Severe allergic reaction after previous dose of Diphtheria",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       },
       {
        "code": "088",
        "display": "Severe allergic reaction after previous dose of Tetanus",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       },
       {
        "code": "097",
        "display": "Severe allergic reaction after previous dose of Hepatitis B",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       },
       {
        "code": "098",
        "display": "Severe allergic reaction after previous dose of Hib",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -1090,7 +1090,7 @@
        "code": "095",
        "display": "Severe allergic reaction after previous dose of Meningococcal",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -1102,13 +1102,13 @@
        "code": "095",
        "display": "Severe allergic reaction after previous dose of Meningococcal",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       },
       {
        "code": "098",
        "display": "Severe allergic reaction after previous dose of Hib",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -1120,7 +1120,7 @@
        "code": "085",
        "display": "Severe allergic reaction after previous dose of Influenza",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -1132,7 +1132,7 @@
        "code": "085",
        "display": "Severe allergic reaction after previous dose of Influenza",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -1144,7 +1144,7 @@
        "code": "085",
        "display": "Severe allergic reaction after previous dose of Influenza",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -1156,7 +1156,7 @@
        "code": "085",
        "display": "Severe allergic reaction after previous dose of Influenza",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -1168,7 +1168,7 @@
        "code": "094",
        "display": "Severe allergic reaction after previous dose of Pneumococcal",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -1180,7 +1180,7 @@
        "code": "085",
        "display": "Severe allergic reaction after previous dose of Influenza",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -1192,7 +1192,7 @@
        "code": "126",
        "display": "Hep A IG administration",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -1204,7 +1204,7 @@
        "code": "085",
        "display": "Severe allergic reaction after previous dose of Influenza",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -1216,7 +1216,7 @@
        "code": "085",
        "display": "Severe allergic reaction after previous dose of Influenza",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -1228,7 +1228,7 @@
        "code": "085",
        "display": "Severe allergic reaction after previous dose of Influenza",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -1240,7 +1240,7 @@
        "code": "085",
        "display": "Severe allergic reaction after previous dose of Influenza",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -1252,7 +1252,7 @@
        "code": "116",
        "display": "Severe allergic reaction after previous dose of Meningococcal B",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -1264,7 +1264,7 @@
        "code": "116",
        "display": "Severe allergic reaction after previous dose of Meningococcal B",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -1276,7 +1276,7 @@
        "code": "116",
        "display": "Severe allergic reaction after previous dose of Meningococcal B",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -1288,7 +1288,7 @@
        "code": "090",
        "display": "Severe allergic reaction after previous dose of HPV",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -1300,7 +1300,7 @@
        "code": "085",
        "display": "Severe allergic reaction after previous dose of Influenza",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -1312,7 +1312,7 @@
        "code": "095",
        "display": "Severe allergic reaction after previous dose of Meningococcal",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -1324,7 +1324,7 @@
        "code": "098",
        "display": "Severe allergic reaction after previous dose of Hib",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -1336,7 +1336,7 @@
        "code": "119",
        "display": "Severe allergic reaction after previous dose of cholera",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -1348,7 +1348,7 @@
        "code": "119",
        "display": "Severe allergic reaction after previous dose of cholera",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -1360,7 +1360,7 @@
        "code": "119",
        "display": "Severe allergic reaction after previous dose of cholera",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -1372,7 +1372,7 @@
        "code": "113",
        "display": "Severe allergic reaction after previous dose of Rabies",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -1384,7 +1384,7 @@
        "code": "172",
        "display": "Severe allergic reaction after previous dose of recombinant zoster",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -1396,19 +1396,19 @@
        "code": "086",
        "display": "Severe allergic reaction after previous dose of Pertussis",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       },
       {
        "code": "087",
        "display": "Severe allergic reaction after previous dose of Diphtheria",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       },
       {
        "code": "088",
        "display": "Severe allergic reaction after previous dose of Tetanus",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -1420,7 +1420,7 @@
        "code": "122",
        "display": "Severe allergic reaction after previous dose of COVID-19",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -1432,7 +1432,7 @@
        "code": "089",
        "display": "Severe allergic reaction after previous dose of Varicella",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -1444,25 +1444,25 @@
        "code": "086",
        "display": "Severe allergic reaction after previous dose of Pertussis",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       },
       {
        "code": "087",
        "display": "Severe allergic reaction after previous dose of Diphtheria",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       },
       {
        "code": "088",
        "display": "Severe allergic reaction after previous dose of Tetanus",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       },
       {
        "code": "098",
        "display": "Severe allergic reaction after previous dose of Hib",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -1474,7 +1474,7 @@
        "code": "252",
        "display": "Severe allergic reaction after previous dose of Tick-borne Encephalitis vaccine",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -1486,7 +1486,7 @@
        "code": "252",
        "display": "Severe allergic reaction after previous dose of Tick-borne Encephalitis vaccine",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -1498,7 +1498,7 @@
        "code": "252",
        "display": "Severe allergic reaction after previous dose of Tick-borne Encephalitis vaccine",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -1510,13 +1510,13 @@
        "code": "084",
        "display": "Severe allergic reaction after previous dose of Typhoid",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       },
       {
        "code": "099",
        "display": "Severe allergic reaction after previous dose of Yellow Fever",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -1528,7 +1528,7 @@
        "code": "119",
        "display": "Severe allergic reaction after previous dose of cholera",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -1540,13 +1540,13 @@
        "code": "087",
        "display": "Severe allergic reaction after previous dose of Diphtheria",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       },
       {
        "code": "088",
        "display": "Severe allergic reaction after previous dose of Tetanus",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -1558,7 +1558,67 @@
        "code": "127",
        "display": "Hep B IG administration",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
+      }
+     ]
+    },
+    {
+     "code": "309",
+     "display": "COVID-19, mRNA, LNP-S, PF, tris-sucrose, 30 mcg/0.3 mL",
+     "target": [
+      {
+       "code": "287",
+       "display": "Severe allergic reaction (e.g., anaphylaxis) after a previous dose or to a component of an mRNA COVID-19 vaccine",
+       "equivalence": "equivalent",
+       "comment": "CDC Coded Observations 4.66-508."
+      }
+     ]
+    },
+    {
+     "code": "310",
+     "display": "COVID-19, mRNA, LNP-S, PF, tris-sucrose, 10 mcg/0.3 mL",
+     "target": [
+      {
+       "code": "287",
+       "display": "Severe allergic reaction (e.g., anaphylaxis) after a previous dose or to a component of an mRNA COVID-19 vaccine",
+       "equivalence": "equivalent",
+       "comment": "CDC Coded Observations 4.66-508."
+      }
+     ]
+    },
+    {
+     "code": "311",
+     "display": "COVID-19, mRNA, LNP-S, PF, 25 mcg/0.25 mL",
+     "target": [
+      {
+       "code": "287",
+       "display": "Severe allergic reaction (e.g., anaphylaxis) after a previous dose or to a component of an mRNA COVID-19 vaccine",
+       "equivalence": "equivalent",
+       "comment": "CDC Coded Observations 4.66-508."
+      }
+     ]
+    },
+    {
+     "code": "312",
+     "display": "COVID-19, mRNA, LNP-S, PF, 50 mcg/0.5 mL",
+     "target": [
+      {
+       "code": "287",
+       "display": "Severe allergic reaction (e.g., anaphylaxis) after a previous dose or to a component of an mRNA COVID-19 vaccine",
+       "equivalence": "equivalent",
+       "comment": "CDC Coded Observations 4.66-508."
+      }
+     ]
+    },
+    {
+     "code": "313",
+     "display": "COVID-19, subunit, rS-nanoparticle, adjuvanted, PF, 5 mcg/0.5 mL",
+     "target": [
+      {
+       "code": "288",
+       "display": "Severe allergic reaction (e.g., anaphylaxis) after a previous dose or to a component of a Novavax COVID-19 vaccine",
+       "equivalence": "equivalent",
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -1570,7 +1630,7 @@
        "code": "270",
        "display": "Severe allergic reaction after previous dose of Chikungunya vaccine",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -1582,7 +1642,7 @@
        "code": "095",
        "display": "Severe allergic reaction after previous dose of Meningococcal",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -1594,7 +1654,19 @@
        "code": "094",
        "display": "Severe allergic reaction after previous dose of Pneumococcal",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
+      }
+     ]
+    },
+    {
+     "code": "334",
+     "display": "COVID-19, mRNA, LNP-S, PF, 10 mcg/0.2 mL",
+     "target": [
+      {
+       "code": "287",
+       "display": "Severe allergic reaction (e.g., anaphylaxis) after a previous dose or to a component of an mRNA COVID-19 vaccine",
+       "equivalence": "equivalent",
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -1606,7 +1678,7 @@
        "code": "128",
        "display": "Rabies IG administration",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -1618,7 +1690,7 @@
        "code": "088",
        "display": "Severe allergic reaction after previous dose of Tetanus",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -1630,7 +1702,7 @@
        "code": "129",
        "display": "Varicella IG administration",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -1642,13 +1714,13 @@
        "code": "092",
        "display": "Severe allergic reaction after previous dose of Mumps",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       },
       {
        "code": "093",
        "display": "Severe allergic reaction after previous dose of Rubella",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -1660,7 +1732,7 @@
        "code": "082",
        "display": "Severe allergic reaction after previous dose of Japanese Encephalitis",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -1672,7 +1744,7 @@
        "code": "113",
        "display": "Severe allergic reaction after previous dose of Rabies",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -1684,7 +1756,7 @@
        "code": "084",
        "display": "Severe allergic reaction after previous dose of Typhoid",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -1696,7 +1768,7 @@
        "code": "097",
        "display": "Severe allergic reaction after previous dose of Hepatitis B",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -1708,7 +1780,7 @@
        "code": "097",
        "display": "Severe allergic reaction after previous dose of Hepatitis B",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -1720,7 +1792,7 @@
        "code": "097",
        "display": "Severe allergic reaction after previous dose of Hepatitis B",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -1732,7 +1804,7 @@
        "code": "097",
        "display": "Severe allergic reaction after previous dose of Hepatitis B",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -1744,7 +1816,7 @@
        "code": "098",
        "display": "Severe allergic reaction after previous dose of Hib",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -1756,7 +1828,7 @@
        "code": "098",
        "display": "Severe allergic reaction after previous dose of Hib",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -1768,7 +1840,7 @@
        "code": "098",
        "display": "Severe allergic reaction after previous dose of Hib",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -1780,7 +1852,7 @@
        "code": "098",
        "display": "Severe allergic reaction after previous dose of Hib",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -1792,25 +1864,25 @@
        "code": "086",
        "display": "Severe allergic reaction after previous dose of Pertussis",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       },
       {
        "code": "087",
        "display": "Severe allergic reaction after previous dose of Diphtheria",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       },
       {
        "code": "088",
        "display": "Severe allergic reaction after previous dose of Tetanus",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       },
       {
        "code": "098",
        "display": "Severe allergic reaction after previous dose of Hib",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -1822,13 +1894,13 @@
        "code": "097",
        "display": "Severe allergic reaction after previous dose of Hepatitis B",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       },
       {
        "code": "098",
        "display": "Severe allergic reaction after previous dose of Hib",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -1840,7 +1912,7 @@
        "code": "096",
        "display": "Severe allergic reaction after previous dose of Hepatitis A",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -1852,7 +1924,7 @@
        "code": "084",
        "display": "Severe allergic reaction after previous dose of Typhoid",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -1864,7 +1936,7 @@
        "code": "090",
        "display": "Severe allergic reaction after previous dose of HPV",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -1876,7 +1948,7 @@
        "code": "083",
        "display": "Severe allergic reaction after previous dose of Rotavirus",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -1888,7 +1960,7 @@
        "code": "252",
        "display": "Severe allergic reaction after previous dose of Tick-borne Encephalitis vaccine",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -1900,7 +1972,7 @@
        "code": "096",
        "display": "Severe allergic reaction after previous dose of Hepatitis A",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -1912,7 +1984,7 @@
        "code": "096",
        "display": "Severe allergic reaction after previous dose of Hepatitis A",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -1924,7 +1996,7 @@
        "code": "096",
        "display": "Severe allergic reaction after previous dose of Hepatitis A",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -1936,7 +2008,7 @@
        "code": "085",
        "display": "Severe allergic reaction after previous dose of Influenza",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -1948,7 +2020,7 @@
        "code": "081",
        "display": "Severe allergic reaction after previous dose of Polio",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -1960,7 +2032,7 @@
        "code": "113",
        "display": "Severe allergic reaction after previous dose of Rabies",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -1972,7 +2044,7 @@
        "code": "084",
        "display": "Severe allergic reaction after previous dose of Typhoid",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -1984,25 +2056,25 @@
        "code": "089",
        "display": "Severe allergic reaction after previous dose of Varicella",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       },
       {
        "code": "091",
        "display": "Severe allergic reaction after previous dose of Measles",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       },
       {
        "code": "092",
        "display": "Severe allergic reaction after previous dose of Mumps",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       },
       {
        "code": "093",
        "display": "Severe allergic reaction after previous dose of Rubella",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     }
@@ -2033,6 +2105,18 @@
        "display": "Interstitial lung disease",
        "equivalence": "wider",
        "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. every one is"
+      }
+     ]
+    },
+    {
+     "code": "A05.1",
+     "display": "Botulism food poisoning",
+     "target": [
+      {
+       "code": "285",
+       "display": "Neuromuscular disorders",
+       "equivalence": "narrower",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 12 of 13 SNOMED concepts mapped here are this observation. awaiting review"
       }
      ]
     },
@@ -2741,6 +2825,18 @@
        "display": "Interstitial lung disease",
        "equivalence": "wider",
        "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. every one is"
+      }
+     ]
+    },
+    {
+     "code": "A48.52",
+     "display": "Wound botulism",
+     "target": [
+      {
+       "code": "285",
+       "display": "Neuromuscular disorders",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 2 SNOMED concepts mapped here are this observation. every one is"
       }
      ]
     },
@@ -19319,6 +19415,12 @@
        "display": "Diabetes mellitus complicated by neuropathy",
        "equivalence": "wider",
        "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. every one is"
+      },
+      {
+       "code": "285",
+       "display": "Neuromuscular disorders",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. every one is"
       }
      ]
     },
@@ -20193,6 +20295,12 @@
       {
        "code": "263",
        "display": "Diabetes mellitus complicated by neuropathy",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 3 of 3 SNOMED concepts mapped here are this observation. every one is"
+      },
+      {
+       "code": "285",
+       "display": "Neuromuscular disorders",
        "equivalence": "wider",
        "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 3 of 3 SNOMED concepts mapped here are this observation. every one is"
       }
@@ -21521,6 +21629,12 @@
        "display": "Dementia",
        "equivalence": "wider",
        "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 6 of 8 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: dementia is intrinsic to the disease)"
+      },
+      {
+       "code": "285",
+       "display": "Neuromuscular disorders",
+       "equivalence": "narrower",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 6 of 8 SNOMED concepts mapped here are this observation. awaiting review"
       }
      ]
     },
@@ -22041,6 +22155,162 @@
      ]
     },
     {
+     "code": "G51.31",
+     "display": "Clonic hemifacial spasm, right",
+     "target": [
+      {
+       "code": "285",
+       "display": "Neuromuscular disorders",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 2 SNOMED concepts mapped here are this observation. every one is"
+      }
+     ]
+    },
+    {
+     "code": "G51.32",
+     "display": "Clonic hemifacial spasm, left",
+     "target": [
+      {
+       "code": "285",
+       "display": "Neuromuscular disorders",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 2 SNOMED concepts mapped here are this observation. every one is"
+      }
+     ]
+    },
+    {
+     "code": "G51.33",
+     "display": "Clonic hemifacial spasm, bilateral",
+     "target": [
+      {
+       "code": "285",
+       "display": "Neuromuscular disorders",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. every one is"
+      }
+     ]
+    },
+    {
+     "code": "G54.5",
+     "display": "Neuralgic amyotrophy",
+     "target": [
+      {
+       "code": "285",
+       "display": "Neuromuscular disorders",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 4 of 4 SNOMED concepts mapped here are this observation. every one is"
+      }
+     ]
+    },
+    {
+     "code": "G60.0",
+     "display": "Hereditary motor and sensory neuropathy",
+     "target": [
+      {
+       "code": "285",
+       "display": "Neuromuscular disorders",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 50 of 121 SNOMED concepts mapped here are this observation. reviewed: yes (Claude, confident proposal, 2026-11-21)"
+      }
+     ]
+    },
+    {
+     "code": "G70.00",
+     "display": "Myasthenia gravis without (acute) exacerbation",
+     "target": [
+      {
+       "code": "285",
+       "display": "Neuromuscular disorders",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 19 of 19 SNOMED concepts mapped here are this observation. every one is"
+      }
+     ]
+    },
+    {
+     "code": "G70.01",
+     "display": "Myasthenia gravis with (acute) exacerbation",
+     "target": [
+      {
+       "code": "285",
+       "display": "Neuromuscular disorders",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 2 SNOMED concepts mapped here are this observation. every one is"
+      }
+     ]
+    },
+    {
+     "code": "G70.1",
+     "display": "Toxic myoneural disorders",
+     "target": [
+      {
+       "code": "285",
+       "display": "Neuromuscular disorders",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 6 of 6 SNOMED concepts mapped here are this observation. every one is"
+      }
+     ]
+    },
+    {
+     "code": "G70.2",
+     "display": "Congenital and developmental myasthenia",
+     "target": [
+      {
+       "code": "285",
+       "display": "Neuromuscular disorders",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 8 of 8 SNOMED concepts mapped here are this observation. every one is"
+      }
+     ]
+    },
+    {
+     "code": "G70.80",
+     "display": "Lambert-Eaton syndrome, unspecified",
+     "target": [
+      {
+       "code": "285",
+       "display": "Neuromuscular disorders",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 2 SNOMED concepts mapped here are this observation. every one is"
+      }
+     ]
+    },
+    {
+     "code": "G70.89",
+     "display": "Other specified myoneural disorders",
+     "target": [
+      {
+       "code": "285",
+       "display": "Neuromuscular disorders",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 6 of 6 SNOMED concepts mapped here are this observation. every one is"
+      }
+     ]
+    },
+    {
+     "code": "G70.9",
+     "display": "Myoneural disorder, unspecified",
+     "target": [
+      {
+       "code": "285",
+       "display": "Neuromuscular disorders",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 9 of 13 SNOMED concepts mapped here are this observation. reviewed: yes (Claude, confident proposal, 2026-11-21)"
+      }
+     ]
+    },
+    {
+     "code": "G71.00",
+     "display": "Muscular dystrophy, unspecified",
+     "target": [
+      {
+       "code": "285",
+       "display": "Neuromuscular disorders",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 8 SNOMED concepts mapped here are this observation. reviewed: yes (Claude, confident proposal, 2026-11-21)"
+      }
+     ]
+    },
+    {
      "code": "G71.09",
      "display": "Other specified muscular dystrophies",
      "target": [
@@ -22049,6 +22319,84 @@
        "display": "Progressive neurologic disorder",
        "equivalence": "wider",
        "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 73 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: progressive neurologic or neuromuscular disease)"
+      },
+      {
+       "code": "285",
+       "display": "Neuromuscular disorders",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 73 SNOMED concepts mapped here are this observation. reviewed: yes (Claude, confident proposal, 2026-11-21)"
+      }
+     ]
+    },
+    {
+     "code": "G71.11",
+     "display": "Myotonic muscular dystrophy",
+     "target": [
+      {
+       "code": "285",
+       "display": "Neuromuscular disorders",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 11 SNOMED concepts mapped here are this observation. reviewed: yes (Claude, confident proposal, 2026-11-21)"
+      }
+     ]
+    },
+    {
+     "code": "G71.13",
+     "display": "Myotonic chondrodystrophy",
+     "target": [
+      {
+       "code": "285",
+       "display": "Neuromuscular disorders",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. every one is"
+      }
+     ]
+    },
+    {
+     "code": "G71.19",
+     "display": "Other specified myotonic disorders",
+     "target": [
+      {
+       "code": "285",
+       "display": "Neuromuscular disorders",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 18 SNOMED concepts mapped here are this observation. reviewed: yes (Claude, confident proposal, 2026-11-21)"
+      }
+     ]
+    },
+    {
+     "code": "G71.29",
+     "display": "Other congenital myopathy",
+     "target": [
+      {
+       "code": "285",
+       "display": "Neuromuscular disorders",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 3 of 48 SNOMED concepts mapped here are this observation. reviewed: yes (Claude, confident proposal, 2026-11-21)"
+      }
+     ]
+    },
+    {
+     "code": "G71.8",
+     "display": "Other primary disorders of muscles",
+     "target": [
+      {
+       "code": "285",
+       "display": "Neuromuscular disorders",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 15 SNOMED concepts mapped here are this observation. reviewed: yes (Claude, confident proposal, 2026-11-21)"
+      }
+     ]
+    },
+    {
+     "code": "G71.9",
+     "display": "Primary disorder of muscle, unspecified",
+     "target": [
+      {
+       "code": "285",
+       "display": "Neuromuscular disorders",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 5 SNOMED concepts mapped here are this observation. reviewed: yes (Claude, confident proposal, 2026-11-21)"
       }
      ]
     },
@@ -22061,6 +22409,42 @@
        "display": "Alcoholism",
        "equivalence": "wider",
        "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 4 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: alcohol use disorder or its sequela)"
+      }
+     ]
+    },
+    {
+     "code": "G72.3",
+     "display": "Periodic paralysis",
+     "target": [
+      {
+       "code": "285",
+       "display": "Neuromuscular disorders",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 9 SNOMED concepts mapped here are this observation. reviewed: yes (Claude, confident proposal, 2026-11-21)"
+      }
+     ]
+    },
+    {
+     "code": "G73.1",
+     "display": "Lambert-Eaton syndrome in neoplastic disease",
+     "target": [
+      {
+       "code": "285",
+       "display": "Neuromuscular disorders",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 2 SNOMED concepts mapped here are this observation. every one is"
+      }
+     ]
+    },
+    {
+     "code": "G73.3",
+     "display": "Myasthenic syndromes in other diseases classified elsewhere",
+     "target": [
+      {
+       "code": "285",
+       "display": "Neuromuscular disorders",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 4 of 4 SNOMED concepts mapped here are this observation. every one is"
       }
      ]
     },
@@ -22617,6 +23001,78 @@
       {
        "code": "206",
        "display": "Cerebrovascular disease",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. every one is"
+      }
+     ]
+    },
+    {
+     "code": "H49.32",
+     "display": "Total (external) ophthalmoplegia, left eye",
+     "target": [
+      {
+       "code": "285",
+       "display": "Neuromuscular disorders",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. every one is"
+      }
+     ]
+    },
+    {
+     "code": "H49.33",
+     "display": "Total (external) ophthalmoplegia, bilateral",
+     "target": [
+      {
+       "code": "285",
+       "display": "Neuromuscular disorders",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. every one is"
+      }
+     ]
+    },
+    {
+     "code": "H49.42",
+     "display": "Progressive external ophthalmoplegia, left eye",
+     "target": [
+      {
+       "code": "285",
+       "display": "Neuromuscular disorders",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. every one is"
+      }
+     ]
+    },
+    {
+     "code": "H49.43",
+     "display": "Progressive external ophthalmoplegia, bilateral",
+     "target": [
+      {
+       "code": "285",
+       "display": "Neuromuscular disorders",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. every one is"
+      }
+     ]
+    },
+    {
+     "code": "H49.882",
+     "display": "Other paralytic strabismus, left eye",
+     "target": [
+      {
+       "code": "285",
+       "display": "Neuromuscular disorders",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. every one is"
+      }
+     ]
+    },
+    {
+     "code": "H49.883",
+     "display": "Other paralytic strabismus, bilateral",
+     "target": [
+      {
+       "code": "285",
+       "display": "Neuromuscular disorders",
        "equivalence": "wider",
        "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. every one is"
       }
@@ -32721,6 +33177,42 @@
      ]
     },
     {
+     "code": "M79.A21",
+     "display": "Nontraumatic compartment syndrome of right lower extremity",
+     "target": [
+      {
+       "code": "285",
+       "display": "Neuromuscular disorders",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 2 SNOMED concepts mapped here are this observation. every one is"
+      }
+     ]
+    },
+    {
+     "code": "M79.A22",
+     "display": "Nontraumatic compartment syndrome of left lower extremity",
+     "target": [
+      {
+       "code": "285",
+       "display": "Neuromuscular disorders",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 2 of 2 SNOMED concepts mapped here are this observation. every one is"
+      }
+     ]
+    },
+    {
+     "code": "M79.A29",
+     "display": "Nontraumatic compartment syndrome of unspecified lower extremity",
+     "target": [
+      {
+       "code": "285",
+       "display": "Neuromuscular disorders",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. every one is"
+      }
+     ]
+    },
+    {
      "code": "M84.511A",
      "display": "Pathological fracture in neoplastic disease, right shoulder, initial encounter for fracture",
      "target": [
@@ -35655,6 +36147,138 @@
      ]
     },
     {
+     "code": "P07.20",
+     "display": "Extreme immaturity of newborn, unspecified weeks of gestation",
+     "target": [
+      {
+       "code": "281",
+       "display": "Born preterm, at less than 32 weeks, 0 days gestation",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 3 SNOMED concepts mapped here are this observation. reviewed: yes (Claude, confident proposal, 2026-11-21)"
+      }
+     ]
+    },
+    {
+     "code": "P07.21",
+     "display": "Extreme immaturity of newborn, gestational age less than 23 completed weeks",
+     "target": [
+      {
+       "code": "281",
+       "display": "Born preterm, at less than 32 weeks, 0 days gestation",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. every one is"
+      }
+     ]
+    },
+    {
+     "code": "P07.22",
+     "display": "Extreme immaturity of newborn, gestational age 23 completed weeks",
+     "target": [
+      {
+       "code": "281",
+       "display": "Born preterm, at less than 32 weeks, 0 days gestation",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. every one is"
+      }
+     ]
+    },
+    {
+     "code": "P07.23",
+     "display": "Extreme immaturity of newborn, gestational age 24 completed weeks",
+     "target": [
+      {
+       "code": "281",
+       "display": "Born preterm, at less than 32 weeks, 0 days gestation",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. every one is"
+      }
+     ]
+    },
+    {
+     "code": "P07.24",
+     "display": "Extreme immaturity of newborn, gestational age 25 completed weeks",
+     "target": [
+      {
+       "code": "281",
+       "display": "Born preterm, at less than 32 weeks, 0 days gestation",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. every one is"
+      }
+     ]
+    },
+    {
+     "code": "P07.25",
+     "display": "Extreme immaturity of newborn, gestational age 26 completed weeks",
+     "target": [
+      {
+       "code": "281",
+       "display": "Born preterm, at less than 32 weeks, 0 days gestation",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. every one is"
+      }
+     ]
+    },
+    {
+     "code": "P07.26",
+     "display": "Extreme immaturity of newborn, gestational age 27 completed weeks",
+     "target": [
+      {
+       "code": "281",
+       "display": "Born preterm, at less than 32 weeks, 0 days gestation",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. every one is"
+      }
+     ]
+    },
+    {
+     "code": "P07.31",
+     "display": "Preterm newborn, gestational age 28 completed weeks",
+     "target": [
+      {
+       "code": "281",
+       "display": "Born preterm, at less than 32 weeks, 0 days gestation",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. every one is"
+      }
+     ]
+    },
+    {
+     "code": "P07.32",
+     "display": "Preterm newborn, gestational age 29 completed weeks",
+     "target": [
+      {
+       "code": "281",
+       "display": "Born preterm, at less than 32 weeks, 0 days gestation",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. every one is"
+      }
+     ]
+    },
+    {
+     "code": "P07.33",
+     "display": "Preterm newborn, gestational age 30 completed weeks",
+     "target": [
+      {
+       "code": "281",
+       "display": "Born preterm, at less than 32 weeks, 0 days gestation",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. every one is"
+      }
+     ]
+    },
+    {
+     "code": "P07.34",
+     "display": "Preterm newborn, gestational age 31 completed weeks",
+     "target": [
+      {
+       "code": "281",
+       "display": "Born preterm, at less than 32 weeks, 0 days gestation",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. every one is"
+      }
+     ]
+    },
+    {
      "code": "P10.0",
      "display": "Subdural hemorrhage due to birth injury",
      "target": [
@@ -36101,6 +36725,18 @@
        "display": "Cerebrovascular disease",
        "equivalence": "wider",
        "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 3 of 4 SNOMED concepts mapped here are this observation. reviewed: yes (Claude, confident proposal, 2026-10-18)"
+      }
+     ]
+    },
+    {
+     "code": "P94.0",
+     "display": "Transient neonatal myasthenia gravis",
+     "target": [
+      {
+       "code": "285",
+       "display": "Neuromuscular disorders",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. every one is"
       }
      ]
     },
@@ -38817,6 +39453,42 @@
      ]
     },
     {
+     "code": "T44.1X4A",
+     "display": "Poisoning by other parasympathomimetics [cholinergics], undetermined, initial encounter",
+     "target": [
+      {
+       "code": "285",
+       "display": "Neuromuscular disorders",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. every one is"
+      }
+     ]
+    },
+    {
+     "code": "T44.1X4D",
+     "display": "Poisoning by other parasympathomimetics [cholinergics], undetermined, subsequent encounter",
+     "target": [
+      {
+       "code": "285",
+       "display": "Neuromuscular disorders",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. every one is"
+      }
+     ]
+    },
+    {
+     "code": "T44.1X4S",
+     "display": "Poisoning by other parasympathomimetics [cholinergics], undetermined, sequela",
+     "target": [
+      {
+       "code": "285",
+       "display": "Neuromuscular disorders",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. every one is"
+      }
+     ]
+    },
+    {
      "code": "T45.1X5A",
      "display": "Adverse effect of antineoplastic and immunosuppressive drugs, initial encounter",
      "target": [
@@ -39033,6 +39705,42 @@
      ]
     },
     {
+     "code": "T63.484A",
+     "display": "Toxic effect of venom of other arthropod, undetermined, initial encounter",
+     "target": [
+      {
+       "code": "285",
+       "display": "Neuromuscular disorders",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. every one is"
+      }
+     ]
+    },
+    {
+     "code": "T63.484D",
+     "display": "Toxic effect of venom of other arthropod, undetermined, subsequent encounter",
+     "target": [
+      {
+       "code": "285",
+       "display": "Neuromuscular disorders",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. every one is"
+      }
+     ]
+    },
+    {
+     "code": "T63.484S",
+     "display": "Toxic effect of venom of other arthropod, undetermined, sequela",
+     "target": [
+      {
+       "code": "285",
+       "display": "Neuromuscular disorders",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. every one is"
+      }
+     ]
+    },
+    {
      "code": "T74.21XA",
      "display": "Adult sexual abuse, confirmed, initial encounter",
      "target": [
@@ -39137,6 +39845,42 @@
        "display": "Allergic reaction to egg protein",
        "equivalence": "wider",
        "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 2 SNOMED concepts mapped here are this observation. reviewed: yes (Claude, confident proposal, 2026-10-18)"
+      }
+     ]
+    },
+    {
+     "code": "T79.A9XA",
+     "display": "Traumatic compartment syndrome of other sites, initial encounter",
+     "target": [
+      {
+       "code": "285",
+       "display": "Neuromuscular disorders",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. every one is"
+      }
+     ]
+    },
+    {
+     "code": "T79.A9XD",
+     "display": "Traumatic compartment syndrome of other sites, subsequent encounter",
+     "target": [
+      {
+       "code": "285",
+       "display": "Neuromuscular disorders",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. every one is"
+      }
+     ]
+    },
+    {
+     "code": "T79.A9XS",
+     "display": "Traumatic compartment syndrome of other sites, sequela",
+     "target": [
+      {
+       "code": "285",
+       "display": "Neuromuscular disorders",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 1 SNOMED concepts mapped here are this observation. every one is"
       }
      ]
     },
@@ -43270,7 +44014,7 @@
        "code": "007",
        "display": "Pregnant",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -43282,7 +44026,7 @@
        "code": "033",
        "display": "Taken influenza antiviral medications within the previous 48 hours",
        "equivalence": "relatedto",
-       "comment": "CDC Coded Observations 4.65-508. not from a code: Influenza antiviral within the previous 48 hours: needs the administration date, not the drug code."
+       "comment": "CDC Coded Observations 4.66-508. not from a code: Influenza antiviral within the previous 48 hours: needs the administration date, not the drug code."
       }
      ]
     },
@@ -43294,7 +44038,7 @@
        "code": "181",
        "display": "Multiple myeloma",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -43306,7 +44050,7 @@
        "code": "254",
        "display": "Chronic cardiovascular disease",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -43318,7 +44062,7 @@
        "code": "191",
        "display": "Receipt of CAR-T-cell therapy",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -43330,7 +44074,7 @@
        "code": "033",
        "display": "Taken influenza antiviral medications within the previous 48 hours",
        "equivalence": "relatedto",
-       "comment": "CDC Coded Observations 4.65-508. not from a code: Influenza antiviral within the previous 48 hours: needs the administration date, not the drug code."
+       "comment": "CDC Coded Observations 4.66-508. not from a code: Influenza antiviral within the previous 48 hours: needs the administration date, not the drug code."
       }
      ]
     },
@@ -43342,19 +44086,19 @@
        "code": "132",
        "display": "RBC [adenine-saline added] blood transfusion",
        "equivalence": "relatedto",
-       "comment": "CDC Coded Observations 4.65-508. not from a code: A specific transfusion type; CDC's code is any blood product transfusion."
+       "comment": "CDC Coded Observations 4.66-508. not from a code: A specific transfusion type; CDC's code is any blood product transfusion."
       },
       {
        "code": "133",
        "display": "Packed RBC blood transfusion",
        "equivalence": "relatedto",
-       "comment": "CDC Coded Observations 4.65-508. not from a code: A specific transfusion type; CDC's code is any blood product transfusion."
+       "comment": "CDC Coded Observations 4.66-508. not from a code: A specific transfusion type; CDC's code is any blood product transfusion."
       },
       {
        "code": "134",
        "display": "Whole blood transfusion",
        "equivalence": "relatedto",
-       "comment": "CDC Coded Observations 4.65-508. not from a code: A specific transfusion type; CDC's code is any blood product transfusion."
+       "comment": "CDC Coded Observations 4.66-508. not from a code: A specific transfusion type; CDC's code is any blood product transfusion."
       }
      ]
     },
@@ -43366,13 +44110,13 @@
        "code": "038",
        "display": "Sex partner of Hepatitis B surface antigen-positive persons",
        "equivalence": "relatedto",
-       "comment": "CDC Coded Observations 4.65-508. not from a code: Sex partner of an HBsAg-positive person: CDC codes are pieces (sexual partners + contact with + HBsAg positive)."
+       "comment": "CDC Coded Observations 4.66-508. not from a code: Sex partner of an HBsAg-positive person: CDC codes are pieces (sexual partners + contact with + HBsAg positive)."
       },
       {
        "code": "071",
        "display": "Household contact with hepatitis B surface antigen-positive persons",
        "equivalence": "relatedto",
-       "comment": "CDC Coded Observations 4.65-508. not from a code: Household contact with an HBsAg-positive person: CDC codes are pieces (contact with + HBsAg positive)."
+       "comment": "CDC Coded Observations 4.66-508. not from a code: Household contact with an HBsAg-positive person: CDC codes are pieces (contact with + HBsAg positive)."
       }
      ]
     },
@@ -43384,7 +44128,7 @@
        "code": "180",
        "display": "Hodgkin's disease",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -43396,7 +44140,19 @@
        "code": "075",
        "display": "Transgender person",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
+      }
+     ]
+    },
+    {
+     "code": "1237576009",
+     "display": "Baby premature at delivery less than 32 weeks [finding]",
+     "target": [
+      {
+       "code": "281",
+       "display": "Born preterm, at less than 32 weeks, 0 days gestation",
+       "equivalence": "equivalent",
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -43408,7 +44164,7 @@
        "code": "146",
        "display": "B-lymphocyte [humoral] - Less severe antibody deficiencies",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -43420,7 +44176,7 @@
        "code": "273",
        "display": "Immunoglobulin deficiency",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -43432,7 +44188,7 @@
        "code": "256",
        "display": "Diabetes mellitus complicated by chronic kidney disease",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -43444,7 +44200,7 @@
        "code": "135",
        "display": "Plasma/platelet products blood transfusion",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -43456,7 +44212,7 @@
        "code": "016",
        "display": "Chronic heart disease",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -43468,7 +44224,7 @@
        "code": "016",
        "display": "Chronic heart disease",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -43480,7 +44236,7 @@
        "code": "254",
        "display": "Chronic cardiovascular disease",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -43492,7 +44248,7 @@
        "code": "268",
        "display": "Islet Transplantation",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -43504,7 +44260,7 @@
        "code": "254",
        "display": "Chronic cardiovascular disease",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -43516,7 +44272,7 @@
        "code": "135",
        "display": "Plasma/platelet products blood transfusion",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -43528,13 +44284,13 @@
        "code": "017",
        "display": "Chronic lung disease",
        "equivalence": "wider",
-       "comment": "CDC Coded Observations 4.65-508. COPD is a chronic lung disease; 214 is the exact observation."
+       "comment": "CDC Coded Observations 4.66-508. COPD is a chronic lung disease; 214 is the exact observation."
       },
       {
        "code": "214",
        "display": "Chronic obstructive pulmonary disease",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -43546,7 +44302,7 @@
        "code": "041",
        "display": "Illicit injection drug use",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -43558,13 +44314,13 @@
        "code": "050",
        "display": "Microbiologists routinely exposed to Neisseria meningitidis",
        "equivalence": "relatedto",
-       "comment": "CDC Coded Observations 4.65-508. not from a code: Occupation + 'exposure to' + organism: CDC codes are pieces."
+       "comment": "CDC Coded Observations 4.66-508. not from a code: Occupation + 'exposure to' + organism: CDC codes are pieces."
       },
       {
        "code": "051",
        "display": "Microbiology laboratorians who work frequently with S. typhi",
        "equivalence": "relatedto",
-       "comment": "CDC Coded Observations 4.65-508. not from a code: Occupation + 'exposure to' + organism: CDC codes are pieces."
+       "comment": "CDC Coded Observations 4.66-508. not from a code: Occupation + 'exposure to' + organism: CDC codes are pieces."
       }
      ]
     },
@@ -43576,7 +44332,7 @@
        "code": "059",
        "display": "Occupational exposure for Hepatitis A",
        "equivalence": "relatedto",
-       "comment": "CDC Coded Observations 4.65-508. not from a code: Occupation list + exposure: CDC codes are pieces."
+       "comment": "CDC Coded Observations 4.66-508. not from a code: Occupation list + exposure: CDC codes are pieces."
       }
      ]
     },
@@ -43588,7 +44344,7 @@
        "code": "059",
        "display": "Occupational exposure for Hepatitis A",
        "equivalence": "relatedto",
-       "comment": "CDC Coded Observations 4.65-508. not from a code: Occupation list + exposure: CDC codes are pieces."
+       "comment": "CDC Coded Observations 4.66-508. not from a code: Occupation list + exposure: CDC codes are pieces."
       }
      ]
     },
@@ -43600,7 +44356,7 @@
        "code": "061",
        "display": "Animal handlers",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -43612,13 +44368,13 @@
        "code": "050",
        "display": "Microbiologists routinely exposed to Neisseria meningitidis",
        "equivalence": "relatedto",
-       "comment": "CDC Coded Observations 4.65-508. not from a code: Occupation + 'exposure to' + organism: CDC codes are pieces."
+       "comment": "CDC Coded Observations 4.66-508. not from a code: Occupation + 'exposure to' + organism: CDC codes are pieces."
       },
       {
        "code": "051",
        "display": "Microbiology laboratorians who work frequently with S. typhi",
        "equivalence": "relatedto",
-       "comment": "CDC Coded Observations 4.65-508. not from a code: Occupation + 'exposure to' + organism: CDC codes are pieces."
+       "comment": "CDC Coded Observations 4.66-508. not from a code: Occupation + 'exposure to' + organism: CDC codes are pieces."
       }
      ]
     },
@@ -43630,25 +44386,25 @@
        "code": "051",
        "display": "Microbiology laboratorians who work frequently with S. typhi",
        "equivalence": "relatedto",
-       "comment": "CDC Coded Observations 4.65-508. not from a code: Occupation + 'exposure to' + organism: CDC codes are pieces."
+       "comment": "CDC Coded Observations 4.66-508. not from a code: Occupation + 'exposure to' + organism: CDC codes are pieces."
       },
       {
        "code": "052",
        "display": "Laboratory personnel who might be exposed to YFV",
        "equivalence": "relatedto",
-       "comment": "CDC Coded Observations 4.65-508. not from a code: Occupation + 'exposure to' + organism: CDC codes are pieces."
+       "comment": "CDC Coded Observations 4.66-508. not from a code: Occupation + 'exposure to' + organism: CDC codes are pieces."
       },
       {
        "code": "053",
        "display": "Rabies researchers",
        "equivalence": "relatedto",
-       "comment": "CDC Coded Observations 4.65-508. not from a code: Occupation + 'exposure to' + organism: CDC codes are pieces."
+       "comment": "CDC Coded Observations 4.66-508. not from a code: Occupation + 'exposure to' + organism: CDC codes are pieces."
       },
       {
        "code": "054",
        "display": "Laboratory workers who handle specimens that might contain polioviruses",
        "equivalence": "relatedto",
-       "comment": "CDC Coded Observations 4.65-508. not from a code: Occupation + 'exposure to' + organism: CDC codes are pieces."
+       "comment": "CDC Coded Observations 4.66-508. not from a code: Occupation + 'exposure to' + organism: CDC codes are pieces."
       }
      ]
     },
@@ -43660,7 +44416,7 @@
        "code": "059",
        "display": "Occupational exposure for Hepatitis A",
        "equivalence": "relatedto",
-       "comment": "CDC Coded Observations 4.65-508. not from a code: Occupation list + exposure: CDC codes are pieces."
+       "comment": "CDC Coded Observations 4.66-508. not from a code: Occupation list + exposure: CDC codes are pieces."
       }
      ]
     },
@@ -43672,7 +44428,7 @@
        "code": "059",
        "display": "Occupational exposure for Hepatitis A",
        "equivalence": "relatedto",
-       "comment": "CDC Coded Observations 4.65-508. not from a code: Occupation list + exposure: CDC codes are pieces."
+       "comment": "CDC Coded Observations 4.66-508. not from a code: Occupation list + exposure: CDC codes are pieces."
       }
      ]
     },
@@ -43684,7 +44440,7 @@
        "code": "261",
        "display": "Resident of a nursing home",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -43696,13 +44452,13 @@
        "code": "038",
        "display": "Sex partner of Hepatitis B surface antigen-positive persons",
        "equivalence": "relatedto",
-       "comment": "CDC Coded Observations 4.65-508. not from a code: Sex partner of an HBsAg-positive person: CDC codes are pieces (sexual partners + contact with + HBsAg positive)."
+       "comment": "CDC Coded Observations 4.66-508. not from a code: Sex partner of an HBsAg-positive person: CDC codes are pieces (sexual partners + contact with + HBsAg positive)."
       },
       {
        "code": "071",
        "display": "Household contact with hepatitis B surface antigen-positive persons",
        "equivalence": "relatedto",
-       "comment": "CDC Coded Observations 4.65-508. not from a code: Household contact with an HBsAg-positive person: CDC codes are pieces (contact with + HBsAg positive)."
+       "comment": "CDC Coded Observations 4.66-508. not from a code: Household contact with an HBsAg-positive person: CDC codes are pieces (contact with + HBsAg positive)."
       }
      ]
     },
@@ -43714,7 +44470,7 @@
        "code": "072",
        "display": "Intimate exposure to a documented S. typhi carrier",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -43726,7 +44482,7 @@
        "code": "266",
        "display": "Diabetes requiring treatment with insulin",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -43738,7 +44494,7 @@
        "code": "017",
        "display": "Chronic lung disease",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -43750,7 +44506,7 @@
        "code": "050",
        "display": "Microbiologists routinely exposed to Neisseria meningitidis",
        "equivalence": "relatedto",
-       "comment": "CDC Coded Observations 4.65-508. not from a code: Occupation + 'exposure to' + organism: CDC codes are pieces."
+       "comment": "CDC Coded Observations 4.66-508. not from a code: Occupation + 'exposure to' + organism: CDC codes are pieces."
       }
      ]
     },
@@ -43762,7 +44518,7 @@
        "code": "254",
        "display": "Chronic cardiovascular disease",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -43774,7 +44530,7 @@
        "code": "200",
        "display": "Cystic fibrosis",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -43786,7 +44542,7 @@
        "code": "146",
        "display": "B-lymphocyte [humoral] - Less severe antibody deficiencies",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -43798,7 +44554,7 @@
        "code": "079",
        "display": "Encephalopathy not attributable to another identifiable cause within 7 days of administration of a previous dose of Tdap, DTP, or DTaP vaccine",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -43810,7 +44566,7 @@
        "code": "079",
        "display": "Encephalopathy not attributable to another identifiable cause within 7 days of administration of a previous dose of Tdap, DTP, or DTaP vaccine",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -43822,7 +44578,7 @@
        "code": "079",
        "display": "Encephalopathy not attributable to another identifiable cause within 7 days of administration of a previous dose of Tdap, DTP, or DTaP vaccine",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -43834,7 +44590,7 @@
        "code": "027",
        "display": "Asthma",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -43846,7 +44602,7 @@
        "code": "015",
        "display": "Chronic liver disease",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -43858,7 +44614,7 @@
        "code": "068",
        "display": "In drug abuse treatment and prevention facility",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -43870,7 +44626,7 @@
        "code": "169",
        "display": "History of sexual abuse or assault",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -43882,7 +44638,7 @@
        "code": "101",
        "display": "Allergic reaction to egg protein",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -43894,7 +44650,7 @@
        "code": "254",
        "display": "Chronic cardiovascular disease",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -43906,7 +44662,7 @@
        "code": "119",
        "display": "Severe allergic reaction after previous dose of cholera",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -43918,7 +44674,7 @@
        "code": "088",
        "display": "Severe allergic reaction after previous dose of Tetanus",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -43930,7 +44686,7 @@
        "code": "087",
        "display": "Severe allergic reaction after previous dose of Diphtheria",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -43942,7 +44698,7 @@
        "code": "095",
        "display": "Severe allergic reaction after previous dose of Meningococcal",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -43954,7 +44710,7 @@
        "code": "099",
        "display": "Severe allergic reaction after previous dose of Yellow Fever",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -43966,7 +44722,7 @@
        "code": "091",
        "display": "Severe allergic reaction after previous dose of Measles",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -43978,19 +44734,19 @@
        "code": "055",
        "display": "Health care personnel",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       },
       {
        "code": "056",
        "display": "Health-care workers who have close contact with patients who might be excreting wild polioviruses",
        "equivalence": "relatedto",
-       "comment": "CDC Coded Observations 4.65-508. not from a code: Occupation + 'exposure to' + organism: CDC codes are pieces."
+       "comment": "CDC Coded Observations 4.66-508. not from a code: Occupation + 'exposure to' + organism: CDC codes are pieces."
       },
       {
        "code": "059",
        "display": "Occupational exposure for Hepatitis A",
        "equivalence": "relatedto",
-       "comment": "CDC Coded Observations 4.65-508. not from a code: Occupation list + exposure: CDC codes are pieces."
+       "comment": "CDC Coded Observations 4.66-508. not from a code: Occupation list + exposure: CDC codes are pieces."
       }
      ]
     },
@@ -44002,7 +44758,7 @@
        "code": "037",
        "display": "Not in a long-term, mutually monogamous relationship",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -44014,7 +44770,7 @@
        "code": "038",
        "display": "Sex partner of Hepatitis B surface antigen-positive persons",
        "equivalence": "relatedto",
-       "comment": "CDC Coded Observations 4.65-508. not from a code: Sex partner of an HBsAg-positive person: CDC codes are pieces (sexual partners + contact with + HBsAg positive)."
+       "comment": "CDC Coded Observations 4.66-508. not from a code: Sex partner of an HBsAg-positive person: CDC codes are pieces (sexual partners + contact with + HBsAg positive)."
       }
      ]
     },
@@ -44026,7 +44782,7 @@
        "code": "036",
        "display": "Men who have sex with men",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -44038,7 +44794,7 @@
        "code": "041",
        "display": "Illicit injection drug use",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -44050,7 +44806,7 @@
        "code": "043",
        "display": "Alcoholism",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -44062,7 +44818,7 @@
        "code": "040",
        "display": "Illicit drug use",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -44074,7 +44830,7 @@
        "code": "041",
        "display": "Illicit injection drug use",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -44086,7 +44842,7 @@
        "code": "037",
        "display": "Not in a long-term, mutually monogamous relationship",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -44098,7 +44854,7 @@
        "code": "037",
        "display": "Not in a long-term, mutually monogamous relationship",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -44110,7 +44866,7 @@
        "code": "263",
        "display": "Diabetes mellitus complicated by neuropathy",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -44122,7 +44878,7 @@
        "code": "010",
        "display": "Cerebrospinal fluid leaks",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -44134,7 +44890,7 @@
        "code": "145",
        "display": "B-lymphocyte [humoral] - Severe antibody deficiencies",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -44146,7 +44902,7 @@
        "code": "199",
        "display": "Interstitial lung disease",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -44158,7 +44914,7 @@
        "code": "254",
        "display": "Chronic cardiovascular disease",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -44170,7 +44926,7 @@
        "code": "254",
        "display": "Chronic cardiovascular disease",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -44182,7 +44938,7 @@
        "code": "004",
        "display": "Recipient of a hematopoietic stem cell transplant",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -44194,7 +44950,7 @@
        "code": "153",
        "display": "Phagocytic function - Leukocyte adhesion defect, and myeloperoxidase deficiency",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -44206,7 +44962,7 @@
        "code": "151",
        "display": "Persistent complement, properdin, or factor B deficiency",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -44218,7 +44974,7 @@
        "code": "253",
        "display": "Moderate persistent or severe persistent asthma",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -44230,7 +44986,7 @@
        "code": "004",
        "display": "Recipient of a hematopoietic stem cell transplant",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -44242,7 +44998,7 @@
        "code": "204",
        "display": "Obesity",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -44254,7 +45010,7 @@
        "code": "151",
        "display": "Persistent complement, properdin, or factor B deficiency",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -44266,7 +45022,7 @@
        "code": "169",
        "display": "History of sexual abuse or assault",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -44278,7 +45034,7 @@
        "code": "262",
        "display": "Frailty",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -44290,7 +45046,7 @@
        "code": "170",
        "display": "Onset of pregnancy",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -44302,49 +45058,49 @@
        "code": "050",
        "display": "Microbiologists routinely exposed to Neisseria meningitidis",
        "equivalence": "relatedto",
-       "comment": "CDC Coded Observations 4.65-508. not from a code: Occupation + 'exposure to' + organism: CDC codes are pieces."
+       "comment": "CDC Coded Observations 4.66-508. not from a code: Occupation + 'exposure to' + organism: CDC codes are pieces."
       },
       {
        "code": "051",
        "display": "Microbiology laboratorians who work frequently with S. typhi",
        "equivalence": "relatedto",
-       "comment": "CDC Coded Observations 4.65-508. not from a code: Occupation + 'exposure to' + organism: CDC codes are pieces."
+       "comment": "CDC Coded Observations 4.66-508. not from a code: Occupation + 'exposure to' + organism: CDC codes are pieces."
       },
       {
        "code": "052",
        "display": "Laboratory personnel who might be exposed to YFV",
        "equivalence": "relatedto",
-       "comment": "CDC Coded Observations 4.65-508. not from a code: Occupation + 'exposure to' + organism: CDC codes are pieces."
+       "comment": "CDC Coded Observations 4.66-508. not from a code: Occupation + 'exposure to' + organism: CDC codes are pieces."
       },
       {
        "code": "053",
        "display": "Rabies researchers",
        "equivalence": "relatedto",
-       "comment": "CDC Coded Observations 4.65-508. not from a code: Occupation + 'exposure to' + organism: CDC codes are pieces."
+       "comment": "CDC Coded Observations 4.66-508. not from a code: Occupation + 'exposure to' + organism: CDC codes are pieces."
       },
       {
        "code": "054",
        "display": "Laboratory workers who handle specimens that might contain polioviruses",
        "equivalence": "relatedto",
-       "comment": "CDC Coded Observations 4.65-508. not from a code: Occupation + 'exposure to' + organism: CDC codes are pieces."
+       "comment": "CDC Coded Observations 4.66-508. not from a code: Occupation + 'exposure to' + organism: CDC codes are pieces."
       },
       {
        "code": "056",
        "display": "Health-care workers who have close contact with patients who might be excreting wild polioviruses",
        "equivalence": "relatedto",
-       "comment": "CDC Coded Observations 4.65-508. not from a code: Occupation + 'exposure to' + organism: CDC codes are pieces."
+       "comment": "CDC Coded Observations 4.66-508. not from a code: Occupation + 'exposure to' + organism: CDC codes are pieces."
       },
       {
        "code": "057",
        "display": "Public safety worker exposed to blood or infection body fluids",
        "equivalence": "relatedto",
-       "comment": "CDC Coded Observations 4.65-508. not from a code: Occupation + 'exposure to' + body fluids: CDC codes are pieces."
+       "comment": "CDC Coded Observations 4.66-508. not from a code: Occupation + 'exposure to' + body fluids: CDC codes are pieces."
       },
       {
        "code": "062",
        "display": "Persons whose activities bring them into frequent contact with rabies virus or potentially rabid animals",
        "equivalence": "relatedto",
-       "comment": "CDC Coded Observations 4.65-508. not from a code: 'Exposure to' + rabies virus: CDC codes are pieces."
+       "comment": "CDC Coded Observations 4.66-508. not from a code: 'Exposure to' + rabies virus: CDC codes are pieces."
       }
      ]
     },
@@ -44356,7 +45112,19 @@
        "code": "007",
        "display": "Pregnant",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
+      }
+     ]
+    },
+    {
+     "code": "257277002",
+     "display": "Combined disorder of muscle AND peripheral nerve [disorder]",
+     "target": [
+      {
+       "code": "285",
+       "display": "Neuromuscular disorders",
+       "equivalence": "equivalent",
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -44368,7 +45136,7 @@
        "code": "063",
        "display": "Post secondary student",
        "equivalence": "relatedto",
-       "comment": "CDC Coded Observations 4.65-508. not from a code: Student + further-education establishment: CDC codes are pieces."
+       "comment": "CDC Coded Observations 4.66-508. not from a code: Student + further-education establishment: CDC codes are pieces."
       }
      ]
     },
@@ -44380,7 +45148,7 @@
        "code": "069",
        "display": "In correctional facility",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -44392,7 +45160,7 @@
        "code": "057",
        "display": "Public safety worker exposed to blood or infection body fluids",
        "equivalence": "relatedto",
-       "comment": "CDC Coded Observations 4.65-508. not from a code: Occupation + 'exposure to' + body fluids: CDC codes are pieces."
+       "comment": "CDC Coded Observations 4.66-508. not from a code: Occupation + 'exposure to' + body fluids: CDC codes are pieces."
       }
      ]
     },
@@ -44404,7 +45172,7 @@
        "code": "060",
        "display": "Veterinarians and their staff",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -44416,7 +45184,7 @@
        "code": "059",
        "display": "Occupational exposure for Hepatitis A",
        "equivalence": "relatedto",
-       "comment": "CDC Coded Observations 4.65-508. not from a code: Occupation list + exposure: CDC codes are pieces."
+       "comment": "CDC Coded Observations 4.66-508. not from a code: Occupation list + exposure: CDC codes are pieces."
       }
      ]
     },
@@ -44428,7 +45196,7 @@
        "code": "052",
        "display": "Laboratory personnel who might be exposed to YFV",
        "equivalence": "relatedto",
-       "comment": "CDC Coded Observations 4.65-508. not from a code: Occupation + 'exposure to' + organism: CDC codes are pieces."
+       "comment": "CDC Coded Observations 4.66-508. not from a code: Occupation + 'exposure to' + organism: CDC codes are pieces."
       }
      ]
     },
@@ -44440,7 +45208,7 @@
        "code": "019",
        "display": "Laboratory Evidence of Immunity or confirmation of Hepatitis B disease",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -44452,7 +45220,7 @@
        "code": "059",
        "display": "Occupational exposure for Hepatitis A",
        "equivalence": "relatedto",
-       "comment": "CDC Coded Observations 4.65-508. not from a code: Occupation list + exposure: CDC codes are pieces."
+       "comment": "CDC Coded Observations 4.66-508. not from a code: Occupation list + exposure: CDC codes are pieces."
       }
      ]
     },
@@ -44464,7 +45232,7 @@
        "code": "254",
        "display": "Chronic cardiovascular disease",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -44476,7 +45244,7 @@
        "code": "022",
        "display": "Laboratory Evidence of Immunity for Rubella",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -44488,7 +45256,7 @@
        "code": "018",
        "display": "Laboratory Evidence of Immunity or confirmation of Hepatitis A disease",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -44500,7 +45268,7 @@
        "code": "108",
        "display": "Severe allergic reaction to streptomycin",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -44512,7 +45280,7 @@
        "code": "107",
        "display": "Severe allergic reaction to neomycin",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -44524,7 +45292,7 @@
        "code": "109",
        "display": "Severe allergic reaction to polymyxin B",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -44536,7 +45304,7 @@
        "code": "080",
        "display": "Adverse reaction to vaccine component",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -44548,7 +45316,7 @@
        "code": "097",
        "display": "Severe allergic reaction after previous dose of Hepatitis B",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -44560,7 +45328,7 @@
        "code": "092",
        "display": "Severe allergic reaction after previous dose of Mumps",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -44572,7 +45340,7 @@
        "code": "086",
        "display": "Severe allergic reaction after previous dose of Pertussis",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -44584,7 +45352,7 @@
        "code": "094",
        "display": "Severe allergic reaction after previous dose of Pneumococcal",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -44596,7 +45364,7 @@
        "code": "081",
        "display": "Severe allergic reaction after previous dose of Polio",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -44608,7 +45376,7 @@
        "code": "113",
        "display": "Severe allergic reaction after previous dose of Rabies",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -44620,7 +45388,7 @@
        "code": "093",
        "display": "Severe allergic reaction after previous dose of Rubella",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -44632,7 +45400,7 @@
        "code": "084",
        "display": "Severe allergic reaction after previous dose of Typhoid",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -44644,7 +45412,7 @@
        "code": "096",
        "display": "Severe allergic reaction after previous dose of Hepatitis A",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -44656,7 +45424,7 @@
        "code": "098",
        "display": "Severe allergic reaction after previous dose of Hib",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -44668,7 +45436,7 @@
        "code": "102",
        "display": "Severe allergic reaction to gelatin",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -44680,7 +45448,7 @@
        "code": "115",
        "display": "Severe allergic reaction to protamine sulfate",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -44692,7 +45460,7 @@
        "code": "108",
        "display": "Severe allergic reaction to streptomycin",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -44704,7 +45472,7 @@
        "code": "107",
        "display": "Severe allergic reaction to neomycin",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -44716,7 +45484,7 @@
        "code": "106",
        "display": "Severe allergic reaction to gentamicin",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -44728,7 +45496,7 @@
        "code": "109",
        "display": "Severe allergic reaction to polymyxin B",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -44740,7 +45508,7 @@
        "code": "102",
        "display": "Severe allergic reaction to gelatin",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -44752,7 +45520,7 @@
        "code": "104",
        "display": "Allergic reaction to latex",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -44764,7 +45532,7 @@
        "code": "254",
        "display": "Chronic cardiovascular disease",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -44776,7 +45544,7 @@
        "code": "039",
        "display": "Receives treatment for STD",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -44788,7 +45556,7 @@
        "code": "039",
        "display": "Receives treatment for STD",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -44800,7 +45568,7 @@
        "code": "040",
        "display": "Illicit drug use",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -44812,7 +45580,7 @@
        "code": "057",
        "display": "Public safety worker exposed to blood or infection body fluids",
        "equivalence": "relatedto",
-       "comment": "CDC Coded Observations 4.65-508. not from a code: Occupation + 'exposure to' + body fluids: CDC codes are pieces."
+       "comment": "CDC Coded Observations 4.66-508. not from a code: Occupation + 'exposure to' + body fluids: CDC codes are pieces."
       }
      ]
     },
@@ -44824,7 +45592,7 @@
        "code": "157",
        "display": "Solid organ transplantation",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -44836,13 +45604,13 @@
        "code": "013",
        "display": "Severe Combined Immunodeficiency [SCID]",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       },
       {
        "code": "147",
        "display": "T-lymphocyte [cell-mediated and humoral] - Complete defects",
        "equivalence": "wider",
-       "comment": "CDC Coded Observations 4.65-508. SCID is a complete T-lymphocyte defect; 013 is the exact observation."
+       "comment": "CDC Coded Observations 4.66-508. SCID is a complete T-lymphocyte defect; 013 is the exact observation."
       }
      ]
     },
@@ -44854,7 +45622,7 @@
        "code": "057",
        "display": "Public safety worker exposed to blood or infection body fluids",
        "equivalence": "relatedto",
-       "comment": "CDC Coded Observations 4.65-508. not from a code: Occupation + 'exposure to' + body fluids: CDC codes are pieces."
+       "comment": "CDC Coded Observations 4.66-508. not from a code: Occupation + 'exposure to' + body fluids: CDC codes are pieces."
       }
      ]
     },
@@ -44866,7 +45634,7 @@
        "code": "015",
        "display": "Chronic liver disease",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -44878,7 +45646,7 @@
        "code": "121",
        "display": "Homelessness",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -44890,7 +45658,7 @@
        "code": "260",
        "display": "Neurologic or neuromuscular conditions causing impaired airway clearance or respiratory muscle weakness",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -44902,7 +45670,7 @@
        "code": "028",
        "display": "Intussusception",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -44914,7 +45682,7 @@
        "code": "011",
        "display": "Cochlear implants",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -44926,7 +45694,7 @@
        "code": "148",
        "display": "T-lymphocyte [cell-mediated and humoral] - Partial defects",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -44938,7 +45706,7 @@
        "code": "198",
        "display": "Cancer",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -44950,7 +45718,7 @@
        "code": "168",
        "display": "Chemotherapy",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -44962,7 +45730,7 @@
        "code": "253",
        "display": "Moderate persistent or severe persistent asthma",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -44974,7 +45742,7 @@
        "code": "253",
        "display": "Moderate persistent or severe persistent asthma",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -44986,7 +45754,7 @@
        "code": "003",
        "display": "Immunocompromised",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -44998,7 +45766,7 @@
        "code": "020",
        "display": "Laboratory Evidence of Immunity for Measles",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -45010,7 +45778,7 @@
        "code": "021",
        "display": "Laboratory Evidence of Immunity for Mumps",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -45022,7 +45790,7 @@
        "code": "023",
        "display": "Laboratory Evidence of Immunity or confirmation of Varicella disease",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -45034,7 +45802,7 @@
        "code": "033",
        "display": "Taken influenza antiviral medications within the previous 48 hours",
        "equivalence": "relatedto",
-       "comment": "CDC Coded Observations 4.65-508. not from a code: Influenza antiviral within the previous 48 hours: needs the administration date, not the drug code."
+       "comment": "CDC Coded Observations 4.66-508. not from a code: Influenza antiviral within the previous 48 hours: needs the administration date, not the drug code."
       }
      ]
     },
@@ -45046,7 +45814,7 @@
        "code": "033",
        "display": "Taken influenza antiviral medications within the previous 48 hours",
        "equivalence": "relatedto",
-       "comment": "CDC Coded Observations 4.65-508. not from a code: Influenza antiviral within the previous 48 hours: needs the administration date, not the drug code."
+       "comment": "CDC Coded Observations 4.66-508. not from a code: Influenza antiviral within the previous 48 hours: needs the administration date, not the drug code."
       }
      ]
     },
@@ -45058,7 +45826,7 @@
        "code": "033",
        "display": "Taken influenza antiviral medications within the previous 48 hours",
        "equivalence": "relatedto",
-       "comment": "CDC Coded Observations 4.65-508. not from a code: Influenza antiviral within the previous 48 hours: needs the administration date, not the drug code."
+       "comment": "CDC Coded Observations 4.66-508. not from a code: Influenza antiviral within the previous 48 hours: needs the administration date, not the drug code."
       }
      ]
     },
@@ -45070,7 +45838,7 @@
        "code": "033",
        "display": "Taken influenza antiviral medications within the previous 48 hours",
        "equivalence": "relatedto",
-       "comment": "CDC Coded Observations 4.65-508. not from a code: Influenza antiviral within the previous 48 hours: needs the administration date, not the drug code."
+       "comment": "CDC Coded Observations 4.66-508. not from a code: Influenza antiviral within the previous 48 hours: needs the administration date, not the drug code."
       }
      ]
     },
@@ -45082,7 +45850,7 @@
        "code": "152",
        "display": "Phagocytic function - Chronic granulomatous disease",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -45094,7 +45862,7 @@
        "code": "024",
        "display": "Healthcare provider verified history of or diagnosis of Varicella",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -45106,7 +45874,7 @@
        "code": "027",
        "display": "Asthma",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -45118,7 +45886,7 @@
        "code": "017",
        "display": "Chronic lung disease",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -45130,7 +45898,7 @@
        "code": "179",
        "display": "Lymphoma",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -45142,7 +45910,7 @@
        "code": "254",
        "display": "Chronic cardiovascular disease",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -45154,13 +45922,13 @@
        "code": "205",
        "display": "Thalassemia",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       },
       {
        "code": "258",
        "display": "Chronic hematologic disorders",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -45172,7 +45940,7 @@
        "code": "041",
        "display": "Illicit injection drug use",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -45184,7 +45952,7 @@
        "code": "034",
        "display": "Receiving long-term aspirin therapy",
        "equivalence": "relatedto",
-       "comment": "CDC Coded Observations 4.65-508. not from a code: LONG-TERM aspirin therapy: an aspirin order or the CDC finding code does not say long-term."
+       "comment": "CDC Coded Observations 4.66-508. not from a code: LONG-TERM aspirin therapy: an aspirin order or the CDC finding code does not say long-term."
       }
      ]
     },
@@ -45196,7 +45964,7 @@
        "code": "257",
        "display": "Severe obesity",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -45208,7 +45976,7 @@
        "code": "203",
        "display": "Down syndrome",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -45220,7 +45988,7 @@
        "code": "070",
        "display": "Persons at risk during an outbreak",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -45232,7 +46000,7 @@
        "code": "033",
        "display": "Taken influenza antiviral medications within the previous 48 hours",
        "equivalence": "relatedto",
-       "comment": "CDC Coded Observations 4.65-508. not from a code: Influenza antiviral within the previous 48 hours: needs the administration date, not the drug code."
+       "comment": "CDC Coded Observations 4.66-508. not from a code: Influenza antiviral within the previous 48 hours: needs the administration date, not the drug code."
       }
      ]
     },
@@ -45244,7 +46012,7 @@
        "code": "245",
        "display": "American Indian or Alaskan Native",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -45256,7 +46024,7 @@
        "code": "009",
        "display": "Breastfeeding",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -45268,7 +46036,7 @@
        "code": "017",
        "display": "Chronic lung disease",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -45280,7 +46048,7 @@
        "code": "258",
        "display": "Chronic hematologic disorders",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -45292,7 +46060,7 @@
        "code": "204",
        "display": "Obesity",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -45304,13 +46072,13 @@
        "code": "258",
        "display": "Chronic hematologic disorders",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       },
       {
        "code": "259",
        "display": "Sickle cell disease",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -45322,7 +46090,7 @@
        "code": "106",
        "display": "Severe allergic reaction to gentamicin",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -45334,7 +46102,7 @@
        "code": "106",
        "display": "Severe allergic reaction to gentamicin",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -45346,7 +46114,7 @@
        "code": "085",
        "display": "Severe allergic reaction after previous dose of Influenza",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -45358,7 +46126,7 @@
        "code": "169",
        "display": "History of sexual abuse or assault",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -45370,7 +46138,7 @@
        "code": "016",
        "display": "Chronic heart disease",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -45382,7 +46150,7 @@
        "code": "253",
        "display": "Moderate persistent or severe persistent asthma",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -45394,7 +46162,7 @@
        "code": "253",
        "display": "Moderate persistent or severe persistent asthma",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -45406,7 +46174,7 @@
        "code": "026",
        "display": "Persons with perinatal HIV infection who do not have evidence of severe immunosuppression and who were vaccinated with MMR before establishment of antiviral therapy [ART]",
        "equivalence": "relatedto",
-       "comment": "CDC Coded Observations 4.65-508. not from a code: Perinatal HIV, not severely immunosuppressed, AND MMR before antiretroviral therapy: needs timing and CD4."
+       "comment": "CDC Coded Observations 4.66-508. not from a code: Perinatal HIV, not severely immunosuppressed, AND MMR before antiretroviral therapy: needs timing and CD4."
       }
      ]
     },
@@ -45418,7 +46186,7 @@
        "code": "017",
        "display": "Chronic lung disease",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -45430,7 +46198,7 @@
        "code": "083",
        "display": "Severe allergic reaction after previous dose of Rotavirus",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -45442,7 +46210,7 @@
        "code": "090",
        "display": "Severe allergic reaction after previous dose of HPV",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -45454,7 +46222,7 @@
        "code": "011",
        "display": "Cochlear implants",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -45466,7 +46234,7 @@
        "code": "104",
        "display": "Allergic reaction to latex",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -45478,13 +46246,13 @@
        "code": "054",
        "display": "Laboratory workers who handle specimens that might contain polioviruses",
        "equivalence": "relatedto",
-       "comment": "CDC Coded Observations 4.65-508. not from a code: Occupation + 'exposure to' + organism: CDC codes are pieces."
+       "comment": "CDC Coded Observations 4.66-508. not from a code: Occupation + 'exposure to' + organism: CDC codes are pieces."
       },
       {
        "code": "056",
        "display": "Health-care workers who have close contact with patients who might be excreting wild polioviruses",
        "equivalence": "relatedto",
-       "comment": "CDC Coded Observations 4.65-508. not from a code: Occupation + 'exposure to' + organism: CDC codes are pieces."
+       "comment": "CDC Coded Observations 4.66-508. not from a code: Occupation + 'exposure to' + organism: CDC codes are pieces."
       }
      ]
     },
@@ -45496,7 +46264,7 @@
        "code": "114",
        "display": "End stage renal disease",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -45508,7 +46276,7 @@
        "code": "070",
        "display": "Persons at risk during an outbreak",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -45520,7 +46288,7 @@
        "code": "011",
        "display": "Cochlear implants",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -45532,7 +46300,7 @@
        "code": "095",
        "display": "Severe allergic reaction after previous dose of Meningococcal",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -45544,7 +46312,7 @@
        "code": "116",
        "display": "Severe allergic reaction after previous dose of Meningococcal B",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -45556,13 +46324,13 @@
        "code": "100",
        "display": "Severe allergic reaction after previous dose of live zoster",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       },
       {
        "code": "172",
        "display": "Severe allergic reaction after previous dose of recombinant zoster",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -45574,7 +46342,7 @@
        "code": "082",
        "display": "Severe allergic reaction after previous dose of Japanese Encephalitis",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -45586,7 +46354,7 @@
        "code": "089",
        "display": "Severe allergic reaction after previous dose of Varicella",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -45598,7 +46366,7 @@
        "code": "254",
        "display": "Chronic cardiovascular disease",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -45610,7 +46378,7 @@
        "code": "114",
        "display": "End stage renal disease",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -45622,7 +46390,7 @@
        "code": "025",
        "display": "Healthcare provider verified history or diagnosis of Herpes Zoster",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -45634,7 +46402,7 @@
        "code": "264",
        "display": "Diabetes mellitus complicated by retinopathy",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -45646,7 +46414,7 @@
        "code": "028",
        "display": "Intussusception",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -45658,7 +46426,7 @@
        "code": "005",
        "display": "Hepatitis C virus infection",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -45670,7 +46438,7 @@
        "code": "033",
        "display": "Taken influenza antiviral medications within the previous 48 hours",
        "equivalence": "relatedto",
-       "comment": "CDC Coded Observations 4.65-508. not from a code: Influenza antiviral within the previous 48 hours: needs the administration date, not the drug code."
+       "comment": "CDC Coded Observations 4.66-508. not from a code: Influenza antiviral within the previous 48 hours: needs the administration date, not the drug code."
       }
      ]
     },
@@ -45682,7 +46450,7 @@
        "code": "167",
        "display": "Nephrotic Syndrome",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -45694,7 +46462,7 @@
        "code": "202",
        "display": "Dementia",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -45706,7 +46474,7 @@
        "code": "253",
        "display": "Moderate persistent or severe persistent asthma",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -45718,7 +46486,7 @@
        "code": "159",
        "display": "Radiation therapy",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -45730,7 +46498,7 @@
        "code": "016",
        "display": "Chronic heart disease",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -45742,7 +46510,7 @@
        "code": "051",
        "display": "Microbiology laboratorians who work frequently with S. typhi",
        "equivalence": "relatedto",
-       "comment": "CDC Coded Observations 4.65-508. not from a code: Occupation + 'exposure to' + organism: CDC codes are pieces."
+       "comment": "CDC Coded Observations 4.66-508. not from a code: Occupation + 'exposure to' + organism: CDC codes are pieces."
       }
      ]
     },
@@ -45754,7 +46522,7 @@
        "code": "057",
        "display": "Public safety worker exposed to blood or infection body fluids",
        "equivalence": "relatedto",
-       "comment": "CDC Coded Observations 4.65-508. not from a code: Occupation + 'exposure to' + body fluids: CDC codes are pieces."
+       "comment": "CDC Coded Observations 4.66-508. not from a code: Occupation + 'exposure to' + body fluids: CDC codes are pieces."
       }
      ]
     },
@@ -45766,7 +46534,7 @@
        "code": "057",
        "display": "Public safety worker exposed to blood or infection body fluids",
        "equivalence": "relatedto",
-       "comment": "CDC Coded Observations 4.65-508. not from a code: Occupation + 'exposure to' + body fluids: CDC codes are pieces."
+       "comment": "CDC Coded Observations 4.66-508. not from a code: Occupation + 'exposure to' + body fluids: CDC codes are pieces."
       }
      ]
     },
@@ -45778,7 +46546,7 @@
        "code": "031",
        "display": "Tuberculosis",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -45790,7 +46558,7 @@
        "code": "016",
        "display": "Chronic heart disease",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -45802,7 +46570,7 @@
        "code": "254",
        "display": "Chronic cardiovascular disease",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -45814,13 +46582,13 @@
        "code": "053",
        "display": "Rabies researchers",
        "equivalence": "relatedto",
-       "comment": "CDC Coded Observations 4.65-508. not from a code: Occupation + 'exposure to' + organism: CDC codes are pieces."
+       "comment": "CDC Coded Observations 4.66-508. not from a code: Occupation + 'exposure to' + organism: CDC codes are pieces."
       },
       {
        "code": "062",
        "display": "Persons whose activities bring them into frequent contact with rabies virus or potentially rabid animals",
        "equivalence": "relatedto",
-       "comment": "CDC Coded Observations 4.65-508. not from a code: 'Exposure to' + rabies virus: CDC codes are pieces."
+       "comment": "CDC Coded Observations 4.66-508. not from a code: 'Exposure to' + rabies virus: CDC codes are pieces."
       }
      ]
     },
@@ -45832,7 +46600,7 @@
        "code": "057",
        "display": "Public safety worker exposed to blood or infection body fluids",
        "equivalence": "relatedto",
-       "comment": "CDC Coded Observations 4.65-508. not from a code: Occupation + 'exposure to' + body fluids: CDC codes are pieces."
+       "comment": "CDC Coded Observations 4.66-508. not from a code: Occupation + 'exposure to' + body fluids: CDC codes are pieces."
       }
      ]
     },
@@ -45844,13 +46612,13 @@
        "code": "154",
        "display": "HIV/AIDS - severely immunocompromised",
        "equivalence": "relatedto",
-       "comment": "CDC Coded Observations 4.65-508. not from a code: AIDS, SEVERELY immunocompromised: severity comes from CD4, not the code CDC shares with 155."
+       "comment": "CDC Coded Observations 4.66-508. not from a code: AIDS, SEVERELY immunocompromised: severity comes from CD4, not the code CDC shares with 155."
       },
       {
        "code": "155",
        "display": "HIV/AIDS - not severely immunocompromised",
        "equivalence": "relatedto",
-       "comment": "CDC Coded Observations 4.65-508. not from a code: AIDS, NOT severely immunocompromised: severity comes from CD4, not the code CDC shares with 154."
+       "comment": "CDC Coded Observations 4.66-508. not from a code: AIDS, NOT severely immunocompromised: severity comes from CD4, not the code CDC shares with 154."
       }
      ]
     },
@@ -45862,7 +46630,7 @@
        "code": "206",
        "display": "Cerebrovascular disease",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -45874,7 +46642,7 @@
        "code": "254",
        "display": "Chronic cardiovascular disease",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -45886,7 +46654,7 @@
        "code": "115",
        "display": "Severe allergic reaction to protamine sulfate",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -45898,7 +46666,7 @@
        "code": "254",
        "display": "Chronic cardiovascular disease",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -45910,7 +46678,7 @@
        "code": "063",
        "display": "Post secondary student",
        "equivalence": "relatedto",
-       "comment": "CDC Coded Observations 4.65-508. not from a code: Student + further-education establishment: CDC codes are pieces."
+       "comment": "CDC Coded Observations 4.66-508. not from a code: Student + further-education establishment: CDC codes are pieces."
       }
      ]
     },
@@ -45922,7 +46690,7 @@
        "code": "145",
        "display": "B-lymphocyte [humoral] - Severe antibody deficiencies",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -45934,7 +46702,7 @@
        "code": "254",
        "display": "Chronic cardiovascular disease",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -45946,7 +46714,7 @@
        "code": "280",
        "display": "Chronic lung disease of prematurity",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -45958,7 +46726,7 @@
        "code": "260",
        "display": "Neurologic or neuromuscular conditions causing impaired airway clearance or respiratory muscle weakness",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -45970,7 +46738,7 @@
        "code": "148",
        "display": "T-lymphocyte [cell-mediated and humoral] - Partial defects",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -45982,7 +46750,7 @@
        "code": "057",
        "display": "Public safety worker exposed to blood or infection body fluids",
        "equivalence": "relatedto",
-       "comment": "CDC Coded Observations 4.65-508. not from a code: Occupation + 'exposure to' + body fluids: CDC codes are pieces."
+       "comment": "CDC Coded Observations 4.66-508. not from a code: Occupation + 'exposure to' + body fluids: CDC codes are pieces."
       }
      ]
     },
@@ -45994,7 +46762,7 @@
        "code": "029",
        "display": "Acute gastroenteritis",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -46006,7 +46774,7 @@
        "code": "016",
        "display": "Chronic heart disease",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -46018,7 +46786,7 @@
        "code": "110",
        "display": "Hypersensitivity to yeast",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -46030,7 +46798,7 @@
        "code": "160",
        "display": "Anatomical or functional asplenia",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -46042,7 +46810,7 @@
        "code": "161",
        "display": "Chronic kidney disease",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -46054,13 +46822,13 @@
        "code": "201",
        "display": "Pulmonary hypertension",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       },
       {
        "code": "254",
        "display": "Chronic cardiovascular disease",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -46072,7 +46840,7 @@
        "code": "114",
        "display": "End stage renal disease",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -46084,7 +46852,7 @@
        "code": "043",
        "display": "Alcoholism",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -46096,7 +46864,7 @@
        "code": "014",
        "display": "Diabetes",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -46108,7 +46876,7 @@
        "code": "059",
        "display": "Occupational exposure for Hepatitis A",
        "equivalence": "relatedto",
-       "comment": "CDC Coded Observations 4.65-508. not from a code: Occupation list + exposure: CDC codes are pieces."
+       "comment": "CDC Coded Observations 4.66-508. not from a code: Occupation list + exposure: CDC codes are pieces."
       }
      ]
     },
@@ -46120,7 +46888,7 @@
        "code": "036",
        "display": "Men who have sex with men",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -46132,13 +46900,13 @@
        "code": "147",
        "display": "T-lymphocyte [cell-mediated and humoral] - Complete defects",
        "equivalence": "narrower",
-       "comment": "CDC Coded Observations 4.65-508. OpenEvidence 2026-10-21: DiGeorge sequence spans the immunologic spectrum; complete DiGeorge (congenital athymia, 1-2%) needs immunologic evidence the code does not carry. The code is a partial defect (148) only."
+       "comment": "CDC Coded Observations 4.66-508. OpenEvidence 2026-10-21: DiGeorge sequence spans the immunologic spectrum; complete DiGeorge (congenital athymia, 1-2%) needs immunologic evidence the code does not carry. The code is a partial defect (148) only."
       },
       {
        "code": "148",
        "display": "T-lymphocyte [cell-mediated and humoral] - Partial defects",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -46150,7 +46918,7 @@
        "code": "042",
        "display": "Smoke cigarettes",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -46162,7 +46930,7 @@
        "code": "153",
        "display": "Phagocytic function - Leukocyte adhesion defect, and myeloperoxidase deficiency",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -46174,7 +46942,7 @@
        "code": "007",
        "display": "Pregnant",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -46186,7 +46954,7 @@
        "code": "269",
        "display": "Transplantation",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -46198,7 +46966,7 @@
        "code": "016",
        "display": "Chronic heart disease",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -46210,7 +46978,7 @@
        "code": "279",
        "display": "Hemoglobinopathy disorder",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -46222,7 +46990,7 @@
        "code": "039",
        "display": "Receives treatment for STD",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -46234,7 +47002,7 @@
        "code": "151",
        "display": "Persistent complement, properdin, or factor B deficiency",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -46246,13 +47014,13 @@
        "code": "204",
        "display": "Obesity",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       },
       {
        "code": "257",
        "display": "Severe obesity",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -46264,7 +47032,7 @@
        "code": "076",
        "display": "Progressive neurologic disorder",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -46276,7 +47044,7 @@
        "code": "041",
        "display": "Illicit injection drug use",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -46288,13 +47056,13 @@
        "code": "026",
        "display": "Persons with perinatal HIV infection who do not have evidence of severe immunosuppression and who were vaccinated with MMR before establishment of antiviral therapy [ART]",
        "equivalence": "relatedto",
-       "comment": "CDC Coded Observations 4.65-508. not from a code: Perinatal HIV, not severely immunosuppressed, AND MMR before antiretroviral therapy: needs timing and CD4."
+       "comment": "CDC Coded Observations 4.66-508. not from a code: Perinatal HIV, not severely immunosuppressed, AND MMR before antiretroviral therapy: needs timing and CD4."
       },
       {
        "code": "186",
        "display": "HIV Infection",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -46306,7 +47074,7 @@
        "code": "158",
        "display": "Immunosuppressive therapy",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -46318,13 +47086,13 @@
        "code": "017",
        "display": "Chronic lung disease",
        "equivalence": "wider",
-       "comment": "CDC Coded Observations 4.65-508. Emphysema is a chronic lung disease; 215 is the exact observation."
+       "comment": "CDC Coded Observations 4.66-508. Emphysema is a chronic lung disease; 215 is the exact observation."
       },
       {
        "code": "215",
        "display": "Emphysema",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -46336,7 +47104,7 @@
        "code": "057",
        "display": "Public safety worker exposed to blood or infection body fluids",
        "equivalence": "relatedto",
-       "comment": "CDC Coded Observations 4.65-508. not from a code: Occupation + 'exposure to' + body fluids: CDC codes are pieces."
+       "comment": "CDC Coded Observations 4.66-508. not from a code: Occupation + 'exposure to' + body fluids: CDC codes are pieces."
       }
      ]
     },
@@ -46348,7 +47116,7 @@
        "code": "066",
        "display": "Chronic renal failure",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -46360,7 +47128,7 @@
        "code": "101",
        "display": "Allergic reaction to egg protein",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     },
@@ -46372,7 +47140,7 @@
        "code": "178",
        "display": "Leukemia",
        "equivalence": "equivalent",
-       "comment": "CDC Coded Observations 4.65-508."
+       "comment": "CDC Coded Observations 4.66-508."
       }
      ]
     }

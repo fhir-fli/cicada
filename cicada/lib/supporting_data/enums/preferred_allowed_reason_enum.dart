@@ -7,6 +7,16 @@ enum PreferredAllowedReason {
 
   administeredOutsideOfPreferredAgeRange,
 
+  /// Table 6-29, third rule: the vaccine type is an allowable vaccine for
+  /// the target dose, but the date administered is before the allowable
+  /// vaccine type begin age date.
+  administeredBeforeAllowableAgeRange,
+
+  /// Table 6-29, third rule: the vaccine type is an allowable vaccine for
+  /// the target dose, but the date administered is on or after the
+  /// allowable vaccine type end age date.
+  administeredAfterAllowableAgeRange,
+
   noPreferredTypes,
 
   noAllowedTypes;
@@ -21,6 +31,10 @@ enum PreferredAllowedReason {
         return PreferredAllowedReason.lessThanRecommendedVolume;
       case 'administered outside of preferred age range':
         return PreferredAllowedReason.administeredOutsideOfPreferredAgeRange;
+      case 'administered before allowable age range':
+        return PreferredAllowedReason.administeredBeforeAllowableAgeRange;
+      case 'administered after allowable age range':
+        return PreferredAllowedReason.administeredAfterAllowableAgeRange;
       case 'no preferred types':
         return PreferredAllowedReason.noPreferredTypes;
       case 'no allowed types':
@@ -45,6 +59,10 @@ enum PreferredAllowedReason {
         return 'Less than recommended volume';
       case PreferredAllowedReason.administeredOutsideOfPreferredAgeRange:
         return 'Administered outside of preferred age range';
+      case PreferredAllowedReason.administeredBeforeAllowableAgeRange:
+        return 'Administered before allowable age range';
+      case PreferredAllowedReason.administeredAfterAllowableAgeRange:
+        return 'Administered after allowable age range';
       case PreferredAllowedReason.noPreferredTypes:
         return 'No preferred types';
       case PreferredAllowedReason.noAllowedTypes:
