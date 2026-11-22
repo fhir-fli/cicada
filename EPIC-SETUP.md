@@ -77,6 +77,10 @@ One sign-in against Epic's sandbox (standalone, 2026-11-21): after Epic sent
 the browser back, the forecast was on screen 3.2 s after that page began
 loading. 1.6 s to finish the sign-in (page load and token exchange), 1.3 s to
 read the chart (seven requests, one after another), 0.26 s for the engine.
+The seven requests are now sent at once. Six sign-ins on 2026-11-22,
+alternating old and new page: reading the chart took 2.9, 1.4 and 1.2 s one
+after another, and 0.75, 0.65 and 0.55 s at once. The sign-in itself
+(2.1-2.6 s) now takes most of the wait.
 The page loads twice in a launch, once before the sign-in and once after.
 A launch from Epic's own launcher has not been timed for this page yet.
 
