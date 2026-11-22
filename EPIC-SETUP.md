@@ -42,7 +42,7 @@ Every page of each search is followed. Medications and orders are not read.
 
 | Item | Value |
 |---|---|
-| Cicada's own domain | Open: depends on hosting. The page is three static files: `index.html`, `callback.html` (the same page) and `main.dart.js` |
+| Cicada's own domain | Open: depends on hosting. The page is four static files: `index.html`, `callback.html` (the same page), `main.dart.js` and `main.dart.js_1.part.js` |
 | The health system's Interconnect FHIR address | Sign-in and data requests |
 | JavaScript | Required. No WebAssembly, no fonts or code from other domains |
 | Session storage | Required: holds the sign-in for one chart tab while it is open |
@@ -82,6 +82,18 @@ alternating old and new page: reading the chart took 2.9, 1.4 and 1.2 s one
 after another, and 0.75, 0.65 and 0.55 s at once. The sign-in itself
 (2.1-2.6 s) now takes most of the wait.
 The page loads twice in a launch, once before the sign-in and once after.
+The page's code is now in two parts: the sign-in (826 KB, 258 KB
+compressed) and the chart read, engine and display (4.6 MB, 652 KB
+compressed), which the second load fetches while Epic makes the token.
+Before, both loads fetched all 5.4 MB (914 KB compressed). Nine sign-ins on
+2026-11-22, quiet laptop, same-machine server sending compressed files:
+the code arrived in 234-263 ms on the first load and 163-195 ms on the
+second before the split, 57-68 ms and 35-45 ms after. The token request went
+out 214-256 ms after the second load began before, 85-108 ms after. The
+forecast was on screen 1.63-1.81 s after the second load began before (six
+runs), 1.48-1.62 s after (three runs). The second part had always arrived
+before the token did. Of the rest, Epic's token takes about 0.75 s and its
+seven chart reads about 0.6 s.
 A launch from Epic's own launcher has not been timed for this page yet.
 
 ## Changes cicada needs before a health system can use it
