@@ -1,13 +1,12 @@
 import 'dart:convert';
 
-import 'package:cicada_flutter/src/services/chart_reader.dart';
-import 'package:cicada_flutter/src/services/ehr_session.dart';
-import 'package:cicada_flutter/src/services/forecast_service.dart';
-import 'package:fhir_auth/fhir_auth.dart';
+import 'package:cicada/cicada.dart';
+import 'package:cicada_ehr/cicada_ehr.dart';
+import 'package:fhir_auth_core/fhir_auth_core.dart';
 import 'package:fhir_r4/fhir_r4.dart';
-import 'package:flutter_test/flutter_test.dart';
 import 'package:http/http.dart' as http;
 import 'package:http/testing.dart';
+import 'package:test/test.dart';
 
 const _base = 'https://ehr.example/fhir';
 const _epic = 'https://fhir.epic.com/interconnect-fhir-oauth/api/FHIR/R4';
@@ -190,7 +189,7 @@ void main() {
         fhirBase: Uri.parse(_base),
       ).read(patientId: 'p1', assessmentDate: DateTime(2026, 11, 19));
 
-      final result = ForecastService.runForecastOnChart(read.parameters);
+      final result = evaluateForForecast(read.parameters);
       expect(result.patient.pastDoses, hasLength(3));
     });
 

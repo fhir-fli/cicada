@@ -42,37 +42,47 @@ Every page of each search is followed. Medications and orders are not read.
 
 | Item | Value |
 |---|---|
-| Cicada's own domain | Open: depends on hosting |
-| `www.gstatic.com` | Today the page loads its drawing engine (CanvasKit, ~1.6 MB) from here. To be removed: the engine will be served from cicada's own domain |
-| `fonts.gstatic.com` | Today the page loads a font (~64 KB) from here. To be removed the same way |
+| Cicada's own domain | Open: depends on hosting. The page is three static files: `index.html`, `callback.html` (the same page) and `main.dart.js` |
 | The health system's Interconnect FHIR address | Sign-in and data requests |
-| JavaScript and WebAssembly | Required (Flutter web app) |
+| JavaScript | Required. No WebAssembly, no fonts or code from other domains |
 | Session storage | Required: holds the sign-in for one chart tab while it is open |
 | Cookies | Not used |
 
-The domain counts come from loading the page in a fresh browser and
-recording every request (2026-11-20).
+The page loaded nothing from any other domain in 15 timed fresh-browser loads
+(2026-11-21): every request went to the page's own host.
+
+## The page
+
+The chart tab is a plain web page compiled from Dart (`cicada_ehr`), not the
+Flutter app. It has nothing to click or type: it signs in, reads the chart,
+runs the engine and writes the forecast out. Its JavaScript is 5.4 MB, 0.90 MB
+gzip-compressed. Build it with `cicada_ehr/tool/build_web.sh <client id>`.
 
 ## Load time
 
-Epic asks embedded apps to be ready in 1.5 seconds or less on average. Measured
-2026-11-20, fresh browser, page served gzip-compressed, five loads each, time
-to the first drawn screen:
+Epic asks embedded apps to be ready in 1.5 seconds or less on average.
+Measured 2026-11-21, fresh browser, page served gzip-compressed, five loads
+each, time from navigation to the page's first write:
 
 | Network | Time |
 |---|---|
-| Same machine | 1.1-1.6 s |
-| 50 Mbit/s, 20 ms | 1.4-3.3 s |
-| 10 Mbit/s, 60 ms | 3.6-3.9 s |
+| Same machine | 0.71-0.82 s |
+| 50 Mbit/s, 20 ms | 0.65-0.79 s |
+| 10 Mbit/s, 60 ms | 1.39-1.59 s |
 
-A full launch from Epic's sandbox took about 6.4 s from launch to forecast
-(2026-11-20): the page loads twice (before and after sign-in), then makes the
-seven reads above one after another. Work to shorten this is planned.
+The Flutter page measured 1.1-1.6, 1.4-3.3 and 3.6-3.9 s the same way
+(2026-11-20).
+
+One sign-in against Epic's sandbox (standalone, 2026-11-21): after Epic sent
+the browser back, the forecast was on screen 3.2 s after that page began
+loading. 1.6 s to finish the sign-in (page load and token exchange), 1.3 s to
+read the chart (seven requests, one after another), 0.26 s for the engine.
+The page loads twice in a launch, once before the sign-in and once after.
+A launch from Epic's own launcher has not been timed for this page yet.
 
 ## Changes cicada needs before a health system can use it
 
 - Add the health system's FHIR address to `allowedIssuers`
-  (`cicada_flutter/lib/src/services/ehr_session.dart`); today only Epic's
-  sandbox is allowed.
+  (`cicada_ehr/lib/src/ehr_sign_in.dart`); today only Epic's sandbox is
+  allowed.
 - Choose hosting and set the launch URL.
-- Serve the drawing engine and font from cicada's own domain.

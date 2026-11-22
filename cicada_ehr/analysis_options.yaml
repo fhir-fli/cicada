@@ -1,0 +1,17 @@
+include: package:very_good_analysis/analysis_options.yaml
+
+analyzer:
+  exclude:
+    - build/**
+
+# The family's five (see fhir_r4), plus public_member_api_docs: it flags
+# members under lib/src/, which the package layout makes private (as in cql
+# and katydid).
+linter:
+  rules:
+    avoid_positional_boolean_parameters: false
+    always_put_required_named_parameters_first: false
+    document_ignores: false
+    comment_references: false
+    avoid_catches_without_on_clauses: false
+    public_member_api_docs: false

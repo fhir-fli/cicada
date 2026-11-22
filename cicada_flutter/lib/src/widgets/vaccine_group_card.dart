@@ -1,5 +1,5 @@
 import 'package:cicada/cicada.dart';
-import 'package:cicada_flutter/src/models/forecast_category.dart';
+import 'package:cicada_ehr/cicada_ehr.dart';
 import 'package:cicada_flutter/src/widgets/status_badge.dart';
 import 'package:intl/intl.dart';
 import 'package:material_ui/material_ui.dart';
