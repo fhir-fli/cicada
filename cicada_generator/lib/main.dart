@@ -141,9 +141,7 @@ $scheduleBody);
 
   stdout.writeln('Wrote $jsonPath');
 
-  // Only the antigen JSON becomes a Dart file. The directory also holds the
-  // FML map written by generate_observation_map_entries.dart; wrapping that
-  // produced vaccine_observation_codes_map.map.dart, which broke dart format.
+  // Only the antigen JSON becomes a Dart file.
   for (final file in outputDir.listSync()) {
     if (file is File &&
         file.path.endsWith('.json') &&

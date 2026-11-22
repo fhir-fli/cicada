@@ -3,9 +3,10 @@
 🛑 **An archive. Do not paste any of it into OpenEvidence again.** OE has twice
 re-answered a settled question because it was still sitting in the queue.
 
-Open questions live in `CDSI-OE-QUERIES.md`. This file holds only what was
-decided and where it was applied; the question write-ups were deleted on
-2026-09-04 and remain in that file's git history.
+Open questions are written in `cicada_generator/lib/crosswalk/oe_policy_questions.md`
+and pasted from `CHART-CODE-OE-QUESTIONS.md`, the one paste file. This file holds
+only what was decided and where it was applied; the question write-ups were
+deleted on 2026-09-04 and remain in git history (`CDSI-OE-QUERIES.md`).
 
 Fourteen sections were adjudicated between 2026-08-19 and 2026-08-28. The
 question write-ups are gone; what follows is what was decided and where it was
