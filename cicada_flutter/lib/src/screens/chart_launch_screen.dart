@@ -1,12 +1,11 @@
 import 'dart:async';
 
+import 'package:cicada_ehr/cicada_ehr.dart';
 import 'package:cicada_flutter/src/models/patient_info.dart';
 import 'package:cicada_flutter/src/screens/forecast_dashboard_screen.dart';
 import 'package:cicada_flutter/src/services/app_state.dart';
-import 'package:cicada_flutter/src/services/chart_reader.dart';
-import 'package:cicada_flutter/src/services/ehr_session.dart';
 import 'package:cicada_flutter/src/services/forecast_service.dart';
-import 'package:fhir_auth/fhir_auth.dart';
+import 'package:fhir_auth_core/fhir_auth_core.dart';
 import 'package:fhir_r4/fhir_r4.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:material_ui/material_ui.dart';

@@ -53,6 +53,10 @@ cicada/
 │   │   │   └── who/         # Generated WHO antigen + schedule data (do not hand-edit)
 │   │   └── utils/           # Helpers (antigen mapping, CVX lookups, condition parsing, XML conversion)
 │   └── test/
+├── cicada_ehr/              # Pure Dart: SMART sign-in, chart reader, and the
+│   │                        #   display-only chart-tab page (web/) for the EHR
+│   └── tool/build_web.sh    # Compiles the page: build_web.sh <client id>
+├── cicada_flutter/          # Flutter app: hand entry, and the chart launch too
 ├── cicada_generator/        # Code generator that produces generated_files/
 │   └── lib/
 │       ├── Version_4.65-508/ # CDSi source XML/Excel files
@@ -268,7 +272,7 @@ copies drift.
 ## Check every package, not the one you have open
 
 ```bash
-./tool_check_all.sh    # cicada + cicada_generator + cicada_flutter
+./tool_check_all.sh    # every package: cicada, cicada_ehr, cicada_flutter, cicada_generator
 ```
 
 🛑 `dart analyze` in one package cannot see the others. `64bd94f5` changed a

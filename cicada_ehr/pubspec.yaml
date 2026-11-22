@@ -1,0 +1,22 @@
+name: cicada_ehr
+description: >-
+  Cicada inside an EHR: the SMART same-window sign-in, the chart reader that
+  turns a patient's chart into the engine's input, and the display-only
+  forecast page for the EHR's chart tab. Pure Dart, no Flutter.
+publish_to: 'none'
+
+environment:
+  sdk: ^3.8.0
+
+dependencies:
+  cicada:
+    path: ../cicada
+  fhir_auth_core: ^0.15.0
+  fhir_r4: ^0.14.0
+  http: ^1.6.0
+  intl: ^0.20.0
+  web: ^1.1.1
+
+dev_dependencies:
+  test: ^1.29.0
+  very_good_analysis: ^10.1.0

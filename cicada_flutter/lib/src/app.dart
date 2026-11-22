@@ -1,8 +1,8 @@
+import 'package:cicada_ehr/cicada_ehr.dart';
 import 'package:cicada_flutter/src/screens/chart_launch_screen.dart';
 import 'package:cicada_flutter/src/screens/welcome_screen.dart';
-import 'package:cicada_flutter/src/services/ehr_session.dart';
 import 'package:cicada_flutter/src/theme/cicada_theme.dart';
-import 'package:fhir_auth/fhir_auth.dart';
+import 'package:fhir_auth_core/fhir_auth_core.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:material_ui/material_ui.dart';

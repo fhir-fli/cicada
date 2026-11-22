@@ -1,4 +1,4 @@
-import 'package:fhir_auth/fhir_auth.dart';
+import 'package:fhir_auth_core/fhir_auth_core.dart';
 import 'package:http/http.dart' as http;
 
 /// The app's SMART client ID, from `--dart-define=CICADA_CLIENT_ID=...`.
@@ -14,7 +14,7 @@ const Set<String> allowedIssuers = {
 
 /// What the page address asks for.
 enum LaunchRequest {
-  /// No SMART parameters: the manual-entry app.
+  /// No SMART parameters: not opened by an EHR or a sign-in.
   none,
 
   /// `iss` (with `launch` from an EHR, without it for a standalone launch):
@@ -97,6 +97,7 @@ class EhrSignIn {
     );
     final url = await SmartFhirClient(
       config: config,
+      tokenStorage: const _NoTokensBeforeSignIn(),
       httpClient: httpClient,
     ).beginRedirectLogin(store: window.sessionStorage);
     window.assign(url);
@@ -133,4 +134,39 @@ class EhrSignIn {
       patientId: patientId,
     );
   }
+}
+
+/// The storage given to the client that only starts the sign-in.
+///
+/// fhir_auth_core's `SmartFhirClient` requires a token storage, but
+/// `beginRedirectLogin` keeps its login record in the window's session
+/// storage and holds no tokens: the tokens come later, in the client
+/// `completeRedirectLogin` builds over the tab's own storage. Any use of
+/// this one is a mistake, so it says so instead of keeping anything.
+class _NoTokensBeforeSignIn implements TokenStorage {
+  const _NoTokensBeforeSignIn();
+
+  Never _used(String call) => throw StateError(
+    'Token storage $call before the sign-in finished: starting the sign-in '
+    'keeps no tokens.',
+  );
+
+  @override
+  Future<void> saveTokens(SmartTokenResponse tokens) async =>
+      _used('saveTokens');
+
+  @override
+  Future<SmartTokenResponse?> loadTokens() async => _used('loadTokens');
+
+  @override
+  Future<void> clearTokens() async => _used('clearTokens');
+
+  @override
+  Future<void> saveAuthState(AuthState state) async => _used('saveAuthState');
+
+  @override
+  Future<AuthState?> loadAuthState() async => _used('loadAuthState');
+
+  @override
+  Future<bool> hasTokens() async => _used('hasTokens');
 }

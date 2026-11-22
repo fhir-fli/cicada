@@ -26,7 +26,7 @@ jobs:
       - name: Format, analyze & test each package
         run: |
           failed=""
-          for d in cicada cicada_generator cicada_flutter; do
+          for d in cicada cicada_generator cicada_ehr cicada_flutter; do
             echo "::group::$d"
             if grep -q "^  flutter:" "$d/pubspec.yaml"; then bin=flutter; else bin=dart; fi
             if ! (
@@ -37,7 +37,7 @@ jobs:
               $bin pub get || exit 1
               # The package's own directories only: platform folders hold
               # third-party Dart the formatter must not judge.
-              for f in lib test example bin tool; do
+              for f in lib test example bin tool web; do
                 if [ -d "$f" ]; then
                   dart format --output=none --set-exit-if-changed "$f" || exit 1
                 fi
@@ -55,6 +55,11 @@ jobs:
             exit 1
           fi
           echo "All packages passed"
+
+      # The chart-tab page is compiled only by dart compile js, which
+      # analyze and test do not run.
+      - name: Compile the chart-tab page
+        run: cd cicada_ehr && tool/build_web.sh ci-build-no-client-id
 
   # Fails when a package declares a dependency it does not use, or requires
   # an older version of one of our pub.dev packages than the latest.

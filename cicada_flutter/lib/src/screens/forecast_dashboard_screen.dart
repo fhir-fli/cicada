@@ -1,5 +1,5 @@
 import 'package:cicada/cicada.dart';
-import 'package:cicada_flutter/src/models/forecast_category.dart';
+import 'package:cicada_ehr/cicada_ehr.dart';
 import 'package:cicada_flutter/src/models/patient_info.dart';
 import 'package:cicada_flutter/src/services/app_state.dart';
 import 'package:cicada_flutter/src/widgets/vaccine_group_card.dart';
