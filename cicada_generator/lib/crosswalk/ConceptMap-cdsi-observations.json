@@ -2109,18 +2109,6 @@
      ]
     },
     {
-     "code": "A05.1",
-     "display": "Botulism food poisoning",
-     "target": [
-      {
-       "code": "285",
-       "display": "Neuromuscular disorders",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 12 of 13 SNOMED concepts mapped here are this observation. awaiting review"
-      }
-     ]
-    },
-    {
      "code": "A08.0",
      "display": "Rotaviral enteritis",
      "target": [
@@ -21629,12 +21617,6 @@
        "display": "Dementia",
        "equivalence": "wider",
        "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 6 of 8 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: dementia is intrinsic to the disease)"
-      },
-      {
-       "code": "285",
-       "display": "Neuromuscular disorders",
-       "equivalence": "narrower",
-       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 6 of 8 SNOMED concepts mapped here are this observation. awaiting review"
       }
      ]
     },
@@ -22215,6 +22197,30 @@
      ]
     },
     {
+     "code": "G60.2",
+     "display": "Neuropathy in association with hereditary ataxia",
+     "target": [
+      {
+       "code": "285",
+       "display": "Neuromuscular disorders",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 6 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence 2026-11-21: chronic progressive hereditary peripheral nerve disorder; the central ataxia adds to it; yes only when the code alone establishes a chronic generalized motor-unit disorder (AAP RSV policy statement, Pediatrics 2026;158(5):e2026079047))"
+      }
+     ]
+    },
+    {
+     "code": "G60.9",
+     "display": "Hereditary and idiopathic neuropathy, unspecified",
+     "target": [
+      {
+       "code": "285",
+       "display": "Neuromuscular disorders",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 10 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence 2026-11-21: most hereditary neuropathies are Charcot-Marie-Tooth variants with motor involvement; yes only when the code alone establishes a chronic generalized motor-unit disorder (AAP RSV policy statement, Pediatrics 2026;158(5):e2026079047))"
+      }
+     ]
+    },
+    {
      "code": "G70.00",
      "display": "Myasthenia gravis without (acute) exacerbation",
      "target": [
@@ -22445,6 +22451,18 @@
        "display": "Neuromuscular disorders",
        "equivalence": "wider",
        "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 4 of 4 SNOMED concepts mapped here are this observation. every one is"
+      }
+     ]
+    },
+    {
+     "code": "G73.7",
+     "display": "Myopathy in diseases classified elsewhere",
+     "target": [
+      {
+       "code": "285",
+       "display": "Neuromuscular disorders",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 37 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence 2026-11-21: establishes muscle disease, e.g. glycogen and lipid storage myopathies; yes only when the code alone establishes a chronic generalized motor-unit disorder (AAP RSV policy statement, Pediatrics 2026;158(5):e2026079047))"
       }
      ]
     },
@@ -33101,6 +33119,18 @@
        "display": "Interstitial lung disease",
        "equivalence": "wider",
        "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 2 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence, 2026-10-19: fibrosing or predominantly interstitial lung involvement)"
+      }
+     ]
+    },
+    {
+     "code": "M41.40",
+     "display": "Neuromuscular scoliosis, site unspecified",
+     "target": [
+      {
+       "code": "285",
+       "display": "Neuromuscular disorders",
+       "equivalence": "wider",
+       "comment": "NLM SNOMED CT to ICD-10-CM map (UMLS 2025AB): 1 of 6 SNOMED concepts mapped here are this observation. reviewed: yes (OpenEvidence 2026-11-21: by definition secondary to a neuromuscular disorder, and restricts the chest wall; yes only when the code alone establishes a chronic generalized motor-unit disorder (AAP RSV policy statement, Pediatrics 2026;158(5):e2026079047))"
       }
      ]
     },
