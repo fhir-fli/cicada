@@ -489,9 +489,6 @@ observationConceptMap = {
     'A02.22': [
       ObservationMapTarget('199', 'wider'),
     ],
-    'A05.1': [
-      ObservationMapTarget('285', 'narrower'),
-    ],
     'A08.0': [
       ObservationMapTarget('029', 'wider'),
     ],
@@ -5207,7 +5204,6 @@ observationConceptMap = {
     ],
     'G10': [
       ObservationMapTarget('202', 'wider'),
-      ObservationMapTarget('285', 'narrower'),
     ],
     'G11.3': [
       ObservationMapTarget('148', 'wider'),
@@ -5353,6 +5349,12 @@ observationConceptMap = {
     'G60.0': [
       ObservationMapTarget('285', 'wider'),
     ],
+    'G60.2': [
+      ObservationMapTarget('285', 'wider'),
+    ],
+    'G60.9': [
+      ObservationMapTarget('285', 'wider'),
+    ],
     'G70.00': [
       ObservationMapTarget('285', 'wider'),
     ],
@@ -5409,6 +5411,9 @@ observationConceptMap = {
       ObservationMapTarget('285', 'wider'),
     ],
     'G73.3': [
+      ObservationMapTarget('285', 'wider'),
+    ],
+    'G73.7': [
       ObservationMapTarget('285', 'wider'),
     ],
     'G83.82': [
@@ -7960,6 +7965,9 @@ observationConceptMap = {
     ],
     'M33.21': [
       ObservationMapTarget('199', 'wider'),
+    ],
+    'M41.40': [
+      ObservationMapTarget('285', 'wider'),
     ],
     'M47.012': [
       ObservationMapTarget('206', 'wider'),
