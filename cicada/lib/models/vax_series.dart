@@ -945,16 +945,12 @@ class VaxSeries {
   /// can cause a live virus conflict for forecast purposes.
   void _applyLiveVirusConflictDates(SeriesDose seriesDose) {
     final dosesToCheck = allPatientDoses.isNotEmpty ? allPatientDoses : doses;
+    final byPrevious = _liveVirusConflictsByPrevious();
     for (var i = dosesToCheck.length - 1; i >= 0; i--) {
       final dose = dosesToCheck[i];
-      final liveVirusConflicts =
-          activeScheduleData.liveVirusConflicts?.liveVirusConflict
-              ?.where(
-                (element) => element.previous?.cvxAsInt == dose.cvxAsInt,
-              )
-              .toList();
-      if (liveVirusConflicts?.isNotEmpty ?? false) {
-        for (final conflict in liveVirusConflicts!) {
+      final liveVirusConflicts = byPrevious[dose.cvxAsInt];
+      if (liveVirusConflicts != null) {
+        for (final conflict in liveVirusConflicts) {
           final preferredConflict = seriesDose.preferableVaccine
               ?.firstWhereOrNull(
                 (element) => element.cvxAsInt == conflict.current?.cvxAsInt,
@@ -972,6 +968,27 @@ class VaxSeries {
         }
       }
     }
+  }
+
+  /// The schedule's live virus conflicts (CDSi Section 7.1) grouped by the
+  /// previous vaccine's CVX, built once per schedule. Scanning the whole
+  /// list for every past dose in every series was 38% of engine time for a
+  /// fully vaccinated child (VM profiler, 2026-11-23). Keyed by the list
+  /// itself, so a different schedule (CDC or WHO) gets its own grouping.
+  static final _conflictIndex = Expando<Map<int?, List<LiveVirusConflict>>>(
+    'liveVirusConflicts',
+  );
+
+  static Map<int?, List<LiveVirusConflict>> _liveVirusConflictsByPrevious() {
+    final list = activeScheduleData.liveVirusConflicts?.liveVirusConflict;
+    if (list == null) return const {};
+    return _conflictIndex[list] ??= () {
+      final index = <int?, List<LiveVirusConflict>>{};
+      for (final c in list) {
+        (index[c.previous?.cvxAsInt] ??= []).add(c);
+      }
+      return index;
+    }();
   }
 
   /// Tables 7-5 and 7-6: does the antigen or vaccine contraindication apply to

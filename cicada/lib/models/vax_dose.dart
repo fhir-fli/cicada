@@ -255,7 +255,8 @@ class VaxDose {
         allowedVaccineReason ?? this.allowedVaccineReason;
   }
 
-  int get cvxAsInt => int.tryParse(cvx) ?? -1;
+  /// The CVX code as a number, parsed once (see [Vaccine.cvxAsInt]).
+  late final int cvxAsInt = int.tryParse(cvx) ?? -1;
 
   static double? parseVolume(Quantity? doseQuantity) =>
       doseQuantity?.code?.toString().toLowerCase() == 'ml'
