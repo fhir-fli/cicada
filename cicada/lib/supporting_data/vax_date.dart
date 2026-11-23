@@ -1,7 +1,14 @@
 import 'package:fhir_r4/fhir_r4.dart';
 
+/// A calendar date (CDSi dates have no time of day).
+///
+/// Held as a UTC DateTime so that reading its year, month and day, and
+/// building one, never asks the system for a time-zone offset; as a local
+/// DateTime those lookups were 68% of the engine's time after comparisons
+/// stopped building DateTimes (VM profiler, 2026-11-23). The calendar
+/// fields are the ones the caller gave, whatever its own zone.
 class VaxDate extends DateTime {
-  VaxDate(super.year, super.month, super.day);
+  VaxDate(super.year, super.month, super.day) : super.utc();
 
   // JSON constructor with format validation and error handling
   VaxDate.fromJson(String date)
@@ -14,15 +21,16 @@ class VaxDate extends DateTime {
     : this.fromString(date ?? (useMax ? '2999-12-31' : '1900-01-01'), useMax);
 
   // Now and boundary dates constructors
-  VaxDate.now() : super.now();
-  VaxDate.min() : super(1900, 1, 1);
-  VaxDate.max() : super(2999, 12, 31);
+  /// Today's date where the engine runs.
+  VaxDate.now() : this.fromDateTime(DateTime.now());
+  VaxDate.min() : super.utc(1900);
+  VaxDate.max() : super.utc(2999, 12, 31);
 
   VaxDate.fromDateTime(DateTime dateTime)
-    : super(dateTime.year, dateTime.month, dateTime.day);
+    : super.utc(dateTime.year, dateTime.month, dateTime.day);
 
   VaxDate.fromNullableDateTime(DateTime? dateTime, bool useMax)
-    : super(
+    : super.utc(
         dateTime?.year ?? (useMax ? 2999 : 1900),
         dateTime?.month ?? (useMax ? 12 : 1),
         dateTime?.day ?? (useMax ? 31 : 1),
@@ -34,9 +42,17 @@ class VaxDate extends DateTime {
     : this._fromParsed(VaxDate._parse(date, useMax));
 
   VaxDate._fromParsed(VaxDate parsed)
-    : super(parsed.year, parsed.month, parsed.day);
+    : super.utc(parsed.year, parsed.month, parsed.day);
 
   factory VaxDate._parse(String date, bool useMax) {
+    final m = _plainDate.firstMatch(date);
+    if (m != null) {
+      return VaxDate(
+        int.parse(m.group(1)!),
+        int.parse(m.group(2)!),
+        int.parse(m.group(3)!),
+      );
+    }
     final dt = DateTime.tryParse(date);
     if (dt != null) return VaxDate(dt.year, dt.month, dt.day);
     return VaxDate.fromYYYYMMDD(date, useMax);
@@ -74,6 +90,9 @@ class VaxDate extends DateTime {
     }
   }
 
+  // A plain FHIR date, read without building a DateTime.
+  static final _plainDate = RegExp(r'^(\d{4})-(\d{2})-(\d{2})$');
+
   // Overriding toString and toJson methods
   @override
   String toString() =>
@@ -82,16 +101,33 @@ class VaxDate extends DateTime {
 
   // Conversion to DateTime and FHIR types
   DateTime toDateTime() => DateTime(year, month, day);
-  FhirDateTime toFhirDateTime() => FhirDateTime.fromDateTime(toDateTime());
-  FhirDate toFhirDate() => FhirDate.fromDateTime(toDateTime());
 
-  // Operators for comparison
-  bool operator <(VaxDate other) => toDateTime().isBefore(other.toDateTime());
-  bool operator >(VaxDate other) => toDateTime().isAfter(other.toDateTime());
+  /// The date as FHIR writes a date, `YYYY-MM-DD`, with no time and no zone,
+  /// as the ImmDS IG's ImmunizationRecommendation example writes every
+  /// dateCriterion value ("2020-05-28"). Written from a local DateTime it
+  /// carried a time and the machine's offset (`2016-08-22T00:00:00+03:00`);
+  /// read back, that names 2016-08-21T21:00Z, a day early. In every zone
+  /// east of UTC a Condition's onset date came back one day early
+  /// (2016-UC-0130 failed under TZ=Africa/Kampala, Europe/Berlin and
+  /// Pacific/Kiritimati, 2026-11-23).
+  String get _fhirDate =>
+      '${year.toString().padLeft(4, '0')}-'
+      '${month.toString().padLeft(2, '0')}-'
+      '${day.toString().padLeft(2, '0')}';
+  FhirDateTime toFhirDateTime() => FhirDateTime.fromString(_fhirDate);
+  FhirDate toFhirDate() => FhirDate.fromString(_fhirDate);
+
+  // Comparison of calendar dates. A VaxDate is a date without a time, so
+  // two compare by year, month and day; packed into one integer they compare
+  // the same way. Building a local DateTime per comparison asked the system
+  // for the time-zone offset each time: 81% of the engine's time on CDC's
+  // healthy cases (VM profiler, 2026-11-23).
+  int get _ymd => year * 10000 + month * 100 + day;
+  bool operator <(VaxDate other) => _ymd < other._ymd;
+  bool operator >(VaxDate other) => _ymd > other._ymd;
   bool operator <=(VaxDate other) => !(this > other);
   bool operator >=(VaxDate other) => !(this < other);
-  bool isEqualTo(VaxDate other) =>
-      toDateTime().isAtSameMomentAs(other.toDateTime());
+  bool isEqualTo(VaxDate other) => _ymd == other._ymd;
 
   /// Parse a CDSi date offset string into (years, months, days) components.
   static ({int years, int months, int days}) _parseOffset(String description) {
@@ -132,22 +168,29 @@ class VaxDate extends DateTime {
   ///    next month (CALCDT-5)
   /// 3. Add weeks/days (CALCDT-3)
   VaxDate _applyOffset(int years, int months, int days) {
+    // Calendar arithmetic in UTC: the same year, month and day as local
+    // time, without a time-zone lookup per step.
     // Step 1: add years and months (use day=1 to let Dart normalize month)
-    final target = DateTime(year + years, month + months);
-    final daysInTargetMonth = DateTime(target.year, target.month + 1, 0).day;
+    final target = DateTime.utc(year + years, month + months);
+    final daysInTargetMonth =
+        DateTime.utc(
+          target.year,
+          target.month + 1,
+          0,
+        ).day;
 
     // Step 2: CALCDT-5 — if the original day exceeds the target month's
     // length, the date doesn't exist; move to first day of next month
     DateTime newDate;
     if (day > daysInTargetMonth) {
-      newDate = DateTime(target.year, target.month + 1);
+      newDate = DateTime.utc(target.year, target.month + 1);
     } else {
-      newDate = DateTime(target.year, target.month, day);
+      newDate = DateTime.utc(target.year, target.month, day);
     }
 
     // Step 3: CALCDT-3 — add days
     if (days != 0) {
-      newDate = DateTime(newDate.year, newDate.month, newDate.day + days);
+      newDate = DateTime.utc(newDate.year, newDate.month, newDate.day + days);
     }
 
     return VaxDate.fromDateTime(newDate);
